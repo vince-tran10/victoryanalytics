@@ -13,6 +13,9 @@ from recommend import (move_base_value, ability_move_mult, ability_stat_mult, EX
 from bosses import load_battles, load_battles_walk, FIELD, HIGH_STRIKER
 
 CAP = 55
+# tutors open to a 7-badge player who has finished chapters 1-7 (Luck's Tent tiers up to 7 badges, Wispy Shop, Kakori/Terajuma Beach)
+ALLOWED_TUTORS = {"Luck's Tent", "Luck's Tent, 3 Badges", "Luck's Tent, 5 Badges", "Luck's Tent, 7 Badges",
+                  "Terajuma Beach, 5 Badges", "Wispy Path Shop", "Wispy Shop"}
 STATS = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe']
 NATURES = {
     'Hardy': (None, None), 'Docile': (None, None), 'Serious': (None, None), 'Bashful': (None, None), 'Quirky': (None, None),
@@ -64,6 +67,11 @@ class Engine:
             self.byname.setdefault(v['MoveName'].lower(), k)
         self.byname.update({'stomp tantrum': 'STOMPINGTANTRUM', 'lightiningrod': 'LIGHTNINGROD'})
         self.rev = {v: k for k, v in self.D.names.items() if isinstance(v, str) and k in self.D.sp}
+        self.move_rules = os.environ.get('MOVE_RULES', 'strict')
+        try:
+            self.allowed_tms = set(json.load(open(f'{base}/team/allowed_tms.json'))['tms'])
+        except OSError:
+            self.allowed_tms = set()
         self.battles = load_battles_walk(base) if os.environ.get('WALK', '1') == '1' else load_battles(base)
         for b in self.battles:
             b['foes'] = [self.build_foe(m, b) for m in b['mons']]
@@ -293,6 +301,10 @@ class Engine:
             if method == 'Level-up' and (detail == 'Evo' or (detail.isdigit() and int(detail) <= CAP)):
                 legal.add(mid)
             elif method == 'Egg':
+                legal.add(mid)
+            elif self.move_rules == 'ch7' and method == 'TM' and detail in self.allowed_tms:
+                legal.add(mid)
+            elif self.move_rules == 'ch7' and method == 'Tutor' and detail in ALLOWED_TUTORS:
                 legal.add(mid)
         legal |= {'PROTECT', 'FALSESWIPE'}
         for k in known:
