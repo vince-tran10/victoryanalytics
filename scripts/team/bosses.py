@@ -125,7 +125,7 @@ WALK = [
     ('Misfortunate Duo', 'eli', 'Eli & Sharon (10 mons) – Valor Cliffside', 'Mountain Field', 'Doubles', 1.2,
      'Venam is your partner. Rock & Flying 1.5x, Hyper Voice/Icy Wind/Thunder 1.5x (Thunder never misses).'),
     ('Professor Jenner', 'jenner', 'Jenner – Valor Summit', 'Volcanic Top', 'Singles', 0.6,
-     '6v4. Catch his Shadow Tatsugiri. Volcanic Top: Fire/Flying/Rock 1.5x, Ice 0.5x, Surf/Muddy Water 0.5x.'),
+     '6v4. Volcanic Top: Fire/Flying/Rock 1.5x, Ice 0.5x, Surf/Muddy Water 0.5x.'),
     ('Xen Executive Geara', 'geara', 'Geara & Zetta (12 mons) – Valor Summit', 'Volcanic Top Field', 'Doubles', 1.5,
      'Melia is your partner. Fire/Flying/Rock 1.5x (Rock gains Fire), Ice 0.5x, Water 0.9x, Surf/Muddy Water/Hydro Pump/Water Spout 0.5x; Earthquake/Earth Power cause eruptions (1/8 to non-Fire).'),
     ('Taken Tyrant', 'giratina', 'Rift Giratina (boss) – Rift Distortion', 'Wasteland', 'Doubles', 1.0,

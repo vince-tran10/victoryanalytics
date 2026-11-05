@@ -25,14 +25,14 @@ def chips(types):
 
 
 ROLE = {
-    'Golisopod (Aevian Form)': ('Win condition · Skill Link', 'Skill Link makes every 2–5-hit move hit 5 times: Bone Rush (Ground STAB), Pin Missile (Bug STAB) and Rock Blast are each 125 power. Grab TM134 Rock Blast on Valor Mountain: it covers the Fire, Flying and Ice mons that threaten Golisopod and adds 5 one-hit KOs. Before Valor (Texen), run Swords Dance in that slot, since it\'s +3 on Big Top.'),
-    'Annihilape': ('Fast lead / cleaner', 'The fastest hard hitter you have (155 Speed at cap). Defiant punishes Intimidate (Krookodile, Stoutland). Fire Punch covers the Steel and Fairy types its STABs miss.'),
-    'Gholdengo': ('Special lead', 'Good as Gold blocks status (Toxic, Will-O-Wisp, Thunder Wave). Make It Rain hits both foes in doubles and is 1.5x on Big Top. It\'s weak to Ground, so keep it out of the Groudon fight.'),
-    'Rhyperior': ('Physical tank / rock nuke', 'Solid Rock bulk, Stone Edge at Lv 54. Rock is 1.5x on Mountain and Volcanic Top and 1.3x on Deep Earth. Best counter to Amber\'s all-Fire team and Geara\'s fliers.'),
-    'Glaceon': ('Speed control / Groudon answer', 'Icy Wind slows both foes in doubles (1.5x on Mountain). Freeze-Dry hits Water and Ground super-effectively, and Blizzard hits both foes. It\'s your best Groudon answer: your team\'s score in that fight more than doubles with it. Weak to Fire, so swap it out for Amber.'),
-    'Leavanny (Aevian Form)': ('Intimidate lead / fast cleaner', 'The fastest mon on the team (163 Speed). Intimidate softens Chapter 8\'s many physical attackers. Swords Dance and Dragon Claw clean up late. It also has Rage Powder and Electroweb if you want a support set.'),
+    'Golisopod (Aevian Form)': ('Closer / win condition · Skill Link', 'Skill Link makes every 2–5-hit move hit 5 times, so Bone Rush (Ground STAB) and Pin Missile (Bug STAB) are each 125 power. It\'s slow (77 Speed), so it closes behind Leavanny\'s Rage Powder. Swords Dance (+2, or +3 on Big Top) takes it from 51 to 60 of the 68 boss mons one-shot.'),
+    'Annihilape': ('Lead · fast attacker', 'The fastest hard hitter you have (155 Speed at cap). Defiant punishes Intimidate (Krookodile, Stoutland). Fire Punch covers the Steel and Fairy types its STABs miss.'),
+    'Gholdengo': ('Lead · special attacker', 'Good as Gold blocks status (Toxic, Will-O-Wisp, Thunder Wave). Make It Rain hits both foes in doubles and is 1.5x on Big Top. It\'s weak to Ground, so keep it out of the Groudon fight.'),
+    'Rhyperior': ('Mid · Fire wall / rock nuke', 'Solid Rock bulk, Stone Edge at Lv 54. Rock is 1.5x on Mountain and Volcanic Top and 1.3x on Deep Earth. Best counter to Amber\'s all-Fire team and Geara\'s fliers.'),
+    'Glaceon': ('Mid / speed control', 'Icy Wind slows both foes in doubles (1.5x on Mountain), so fewer things outspeed Golisopod later. Freeze-Dry hits Water and Ground super-effectively, and Blizzard hits both foes. Your Groudon answer: the team\'s score in that fight triples with it. Weak to Fire, so it stays in the back against Amber.'),
+    'Leavanny (Aevian Form)': ('Closer partner · Rage Powder', 'Golisopod\'s redirection partner: comes in with Intimidate, uses Rage Powder, and Golisopod gets a free Swords Dance. Bug/Dragon resists Fire, Water, Grass and Electric. The fastest on the team (163 Speed) for clean-up with X-Scissor and Dragon Claw.'),
 }
-ORDER = ['Golisopod (Aevian Form)', 'Annihilape', 'Gholdengo', 'Rhyperior', 'Glaceon', 'Leavanny (Aevian Form)']
+ORDER = ['Annihilape', 'Gholdengo', 'Rhyperior', 'Glaceon', 'Golisopod (Aevian Form)', 'Leavanny (Aevian Form)']
 best = {m['name']: m for m in d['best']}
 cur = {m['name']: m for m in d['current']}
 STAT_ORDER = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe']
@@ -83,10 +83,10 @@ for i, n in enumerate(ORDER, 1):
 VERD = {
     'Golisopod (Aevian Form)': ('keep', 'Your best mon. Picked in 8 of 8 weightings.'),
     'Annihilape': ('keep', 'Picked in 8 of 8 weightings.'),
-    'Gholdengo': ('keep', 'Picked in 6 of 8. Sit it out for Groudon.'),
-    'Whiscash': ('bench', 'First pick off the bench: swap it in for Glaceon against Amber. The crest makes it weakness-free. In doubles its Earthquake hits your partner, and it\'s 0.25x on Swamp and Wasteland.'),
+    'Gholdengo': ('keep', 'Picked in 7 of 8. Sit it out for Groudon.'),
+    'Whiscash': ('bench', 'Best bench option. The crest makes it weakness-free. In doubles its Earthquake hits your partner (1.5x on Deep Earth), and it\'s 0.25x on Swamp and Wasteland, which is why Glaceon edges it for a no-swap six.'),
     'Lapras (Aevian Form)': ('bench', 'No Guard Sing is great, but its only Rock moves at cap are Rock Slide and Rock Tomb (Stone Edge is Lv 65). Seven weaknesses line up with Texen, Groudon and Geara.'),
-    'Leavanny (Aevian Form)': ('keep', 'Back in the six now that TMs and tutors are allowed. Intimidate plus the team\'s best Speed.'),
+    'Leavanny (Aevian Form)': ('keep', 'Keep, but switch Swords Dance to Rage Powder: it becomes Golisopod\'s redirection partner.'),
 }
 cur_rows = ''.join(
     f'<tr><td><strong>{E(disp(n))}</strong><div class="chips">{chips(cur[n]["types"])}</div></td>'
@@ -261,15 +261,15 @@ footer {{ font-size: 13px; color: var(--muted); border-top: 1px solid var(--line
   <p>Is your current party good for singles and doubles, what players on the forums rate, what you missed in Chapters 1–7, and the six I'd take through the rest of Chapter 8, with full builds.</p>
   <div class="facts"><span>Trainer <b>Vincent</b></span><span>Level cap <b>55</b></span><span>Difficulty <b>Classic teams</b></span><span>Roster <b>406 mons</b></span><span>Boss Pokémon checked <b>64 across 12 battles</b></span></div>
 </header>
-
+{ORDER_HTML}
 <section aria-labelledby="v">
   <h2 id="v">Verdict <span class="tag">singles vs doubles</span></h2>
   <div class="verdict">
     <div class="answer">
-      <p class="big">Your party is <em>excellent in singles</em> and <em>a few swaps from its best in doubles</em>.</p>
-      <p>With Chapter 1–7 TMs and tutors allowed, the best six keeps four of your current party. Swap <strong>Lapras-Aevian → Rhyperior</strong> and <strong>Whiscash → Glaceon</strong>. In singles nothing does meaningfully better. In doubles the new six is about 3–4% stronger, and five of Chapter 8's biggest fights are doubles.</p>
-      <p>Rhyperior resists the Fire attacks that dominate the chapter and gets 1.5x Rock on Volcanic Top and Mountain. Glaceon fixes your worst fight, Groudon, and adds Icy Wind speed control. Whiscash stays on the bench for Amber, because its Earthquake hits your partner in doubles.</p>
-      <p>Your instincts were right, and players agree: Golisopod-Aevian is the best mon you own. A V14 player called it "THE MVP" of a team that beat Madame X. Its power is Skill Link: five-hit Bone Rush, Pin Missile and, once you grab TM134 on Valor Mountain, Rock Blast.</p>
+      <p class="big">Your party is <em>excellent in singles</em> and <em>two changes from its best in doubles</em>.</p>
+      <p>Keep four of your current six and change two: <strong>Lapras-Aevian → Rhyperior</strong> and <strong>Whiscash → Glaceon</strong>. This one six handles every Chapter 8 fight without swaps. In singles it's about as good as anything in your boxes; in doubles it's about 4% stronger than your current party.</p>
+      <p><strong>Swords Dance stays.</strong> One Swords Dance takes Golisopod from 51 to 60 of the 68 boss mons one-shot. But it's slow (77 Speed) and most bosses outspeed it, so it needs a redirection partner. That's <strong>Leavanny-Aevian with Rage Powder</strong>, already in your party.</p>
+      <p>Players agree with your picks: a V14 player called Aevian Golisopod "THE MVP" of a team that beat Madame X, and others say it "tanks like a champ and hits like a truck."</p>
     </div>
     <div class="answer">
       <div class="tablewrap"><table class="scores">
@@ -289,17 +289,17 @@ footer {{ font-size: 13px; color: var(--muted); border-top: 1px solid var(--line
     <div class="box">
       <h3>Bench to keep ready</h3>
       <ul>
-        <li><strong>Whiscash (crest) or Jellicent:</strong> swap in for Glaceon against Amber's all-Fire team.</li>
-        <li><strong>Hariyama</strong> (Overflow, Fake Out, Thick Fat): the best doubles-support alternative. It came close to making the six.</li>
-        <li><strong>Lapras-Aevian:</strong> No Guard Sing for a singles boss where you need a free turn.</li>
-        <li><strong>Appletun</strong> (Overflow, Thick Fat): an extra Groudon specialist.</li>
+        <li>The six covers every Chapter 8 fight on its own. These are only for if you want to tinker.</li>
+        <li><strong>Whiscash (crest):</strong> the closest alternative to Glaceon, and better in singles.</li>
+        <li><strong>Glalie-Aevian</strong> (Rock Head, Grassy Surge): strongest alone, but overlaps with Rhyperior.</li>
+        <li><strong>Hariyama</strong> (Fake Out, Thick Fat): a second way to buy Golisopod a free Swords Dance.</li>
       </ul>
     </div>
     <div class="box">
       <h3>How stable is this pick?</h3>
       <p class="legend">The team search re-run with 8 different scoring weightings.</p>
       <ul class="sens">{sens_rows}</ul>
-      <p class="legend">Slots 5 and 6 are the close calls. Every top pair scores within about 1%. Glaceon + Leavanny-Aevian wins because both are Lv 50 and ready now. Meganium is 0.5% better but needs your Lv 25 Chikorita raised 30 levels.</p>
+      <p class="legend">Slots 5 and 6 are the close calls. Glaceon + Leavanny-Aevian is the best pair you can use today and keeps Golisopod's Rage Powder partner. Only Meganium scores higher, by 0.2%, and it needs your Lv 25 Chikorita raised 30 levels.</p>
     </div>
   </div>
 </section>
@@ -318,11 +318,11 @@ footer {{ font-size: 13px; color: var(--muted); border-top: 1px solid var(--line
   <div>{"".join(route)}</div>
 </section>
 
-{AEVIAN_HTML}{ORDER_HTML}{COMMUNITY}{CHECKLIST}
+{AEVIAN_HTML}{COMMUNITY}{CHECKLIST}
 
 <footer>
   <p><strong>Sources.</strong> Boss teams and story order: <a href="https://bigjra.github.io/rejuvenation/">BIGJRA walkthrough</a> (Classic Mode, the larger set you fight). Field effects, base stats, learnsets, crests and shadow data: <a href="https://rejuvenation.wiki.gg/">rejuvenation.wiki.gg</a>. Roster: your 2026-11-04 23:15 export (406 Pokémon).</p>
-  <p><strong>Move rules.</strong> Level-up at or below Lv 55, Egg moves, Chapter 1–7 TMs, tutors unlocked at 7 badges, and known moves. No Move Relearner, no Life Orb, no Megas until Chapter 12.</p>
+  <p><strong>Move rules.</strong> Level-up at or below Lv 55, Egg moves, Chapter 1–7 TMs, tutors unlocked at 7 badges, and known moves. Nothing picked up in Chapter 8 is used; that's for your end-of-chapter review. No Move Relearner, no Life Orb, no Megas until Chapter 12.</p>
   <p><strong>Limits.</strong> Damage is an average-roll estimate at Lv 55. It applies field boosts, STAB, abilities, crests and type items. It doesn't simulate turns, crits, stat boosts, screens or your AI partners. Optional fights (Ancient Guards, Neved) count half. Use the battle tables to sanity-check a fight before you go in.</p>
 </footer>
 </div>

@@ -39,6 +39,6 @@ for mode in ['native', 'Singles', 'Doubles']:
     res[mode] = out
 names = set(res['native']) & set(res['Singles']) & set(res['Doubles'])
 rows = sorted(((sum(res[m][n] for m in res) / 3, n) for n in names), reverse=True)
-for avg, n in rows[:15]:
+for avg, n in rows[:400]:
     print(f'{avg:.3f}', n, {m: round(res[m][n], 3) for m in res}, 'lv:', LV.get(n.split(' + ')[0]), LV.get(n.split(' + ')[1]))
 json.dump(res, open(f'team/pair_{PFX}.json', 'w'))
