@@ -1,0 +1,6943 @@
+[
+ {
+  "type": "text",
+  "text": "You’ll find yourself playing as Aelita!"
+ },
+ {
+  "type": "trainer",
+  "trainer": "POV Trainer: Student Aelita",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Unfezant",
+    "level": 49,
+    "form": "Aevian Form",
+    "item": "Sitrus Berry",
+    "ability": "Sturdy",
+    "typing": "Rock/Fighting",
+    "moves": [
+     "Stealth Rock",
+     "Rock Slide",
+     "Brick Break",
+     "U-turn"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 73",
+    "ivs": "IVs: All 31",
+    "base": "Base Stats: 80 HP, 115 Atk, 85 Def, 55 SpA, 55 SpD, 98 Spe"
+   },
+   {
+    "name": "Pawmot",
+    "level": 50,
+    "form": "",
+    "item": "Punching Glove",
+    "ability": "Iron Fist",
+    "typing": "",
+    "moves": [
+     "Fake Out",
+     "Thunder Punch",
+     "Drain Punch",
+     "Ice Punch"
+    ],
+    "nature": "Jolly",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Lucario",
+    "level": 51,
+    "form": "",
+    "item": "Focus Sash",
+    "ability": "Steadfast",
+    "typing": "",
+    "moves": [
+     "Calm Mind",
+     "Aura Sphere",
+     "Shadow Ball",
+     "Flash Cannon"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Hawlucha",
+    "level": 52,
+    "form": "",
+    "item": "Flying Gem",
+    "ability": "Unburden",
+    "typing": "",
+    "moves": [
+     "X-Scissor",
+     "Drain Punch",
+     "Acrobatics",
+     "Swords Dance"
+    ],
+    "nature": "Jolly",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Blaziken",
+    "level": 51,
+    "form": "",
+    "item": "Muscle Band",
+    "ability": "Speed Boost",
+    "typing": "",
+    "moves": [
+     "Brave Bird",
+     "Protect",
+     "Sky Uppercut",
+     "Blaze Kick"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Staraptor",
+    "level": 51,
+    "form": "",
+    "item": "Assault Vest",
+    "ability": "Reckless",
+    "typing": "",
+    "moves": [
+     "Brave Bird",
+     "Close Combat",
+     "U-turn",
+     "Take Down"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": ""
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Servant Amelia Field: Frozen Dimensional Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Pidgeot",
+    "level": 45,
+    "form": "",
+    "item": "",
+    "ability": "Keen Eye",
+    "typing": "",
+    "moves": [
+     "Feather Dance",
+     "Agility",
+     "Wing Attack",
+     "Roost"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 67",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Noctowl",
+    "level": 46,
+    "form": "",
+    "item": "",
+    "ability": "Insomnia",
+    "typing": "",
+    "moves": [
+     "Take Down",
+     "Uproar",
+     "Roost",
+     "Moonblast"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 69",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Staraptor",
+    "level": 46,
+    "form": "",
+    "item": "",
+    "ability": "Intimidate",
+    "typing": "",
+    "moves": [
+     "Whirlwind",
+     "Aerial Ace",
+     "Take Down",
+     "Agility"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 69",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": ""
+ },
+ {
+  "type": "heading",
+  "level": 2,
+  "text": "Kristiline Town"
+ },
+ {
+  "type": "text",
+  "text": "Talk to the crew. Kreiss will give you the Glacier Badge, raising our level cap to Lv. 55!"
+ },
+ {
+  "type": "text",
+  "text": "Head outside to start exploring Kristiline Town."
+ },
+ {
+  "type": "text",
+  "text": "To the left:"
+ },
+ {
+  "type": "text",
+  "text": "ZCell 071: Kristiline Town"
+ },
+ {
+  "type": "text",
+  "text": "Enter the Sapphire Museum. Talk to the old man to begin the Museum Quest. Back outside, enter the Kristiline Eatery to the left. Talk to a man here and give him the Aquamarine Ore we found earlier in exchange for a Prism Scale!"
+ },
+ {
+  "type": "text",
+  "text": "Outside, pluck the Occa Berry and enter the TM Shop."
+ },
+ {
+  "type": "text",
+  "text": "To the right, you can exchange Heart Scales with an NPC for a changed Hidden Power type. Activate the Kristiline Noctowl Statue! There is a breeder here, beating them grants 5 Exp. Candy L."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Pokémon Caretaker Zeph Field: Beach Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Audino",
+    "level": 50,
+    "form": "",
+    "item": "",
+    "ability": "Healer",
+    "typing": "",
+    "moves": [
+     "Take Down",
+     "Zen Headbutt",
+     "Knock Off",
+     "Simple Beam"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Audino",
+    "level": 50,
+    "form": "",
+    "item": "",
+    "ability": "Healer",
+    "typing": "",
+    "moves": [
+     "Take Down",
+     "Zen Headbutt",
+     "Knock Off",
+     "Simple Beam"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Audino",
+    "level": 50,
+    "form": "",
+    "item": "",
+    "ability": "Healer",
+    "typing": "",
+    "moves": [
+     "Take Down",
+     "Zen Headbutt",
+     "Knock Off",
+     "Simple Beam"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town"
+ },
+ {
+  "type": "text",
+  "text": "Enter the Pokemon Center. If you’ve done all the other virtual badge battles, we can continue that quest."
+ },
+ {
+  "type": "trainer",
+  "trainer": "POV Trainer: Virtual Trainer (Chikorita)",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Meganium",
+    "level": 46,
+    "form": "",
+    "item": "Light Clay",
+    "ability": "Overgrow",
+    "typing": "",
+    "moves": [
+     "Giga Drain",
+     "Reflect",
+     "Synthesis",
+     "Light Screen"
+    ],
+    "nature": "Bold",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Gengar",
+    "level": 44,
+    "form": "",
+    "item": "Expert Belt",
+    "ability": "Levitate",
+    "typing": "",
+    "moves": [
+     "Fire Punch",
+     "Thunderbolt",
+     "Curse",
+     "Sucker Punch"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Ampharos",
+    "level": 44,
+    "form": "",
+    "item": "Leftovers",
+    "ability": "Static",
+    "typing": "",
+    "moves": [
+     "Discharge",
+     "Thunder Wave",
+     "Fire Punch",
+     "Charge"
+    ],
+    "nature": "Quiet",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Espeon",
+    "level": 44,
+    "form": "",
+    "item": "Twisted Spoon",
+    "ability": "Magic Bounce",
+    "typing": "",
+    "moves": [
+     "Psychic",
+     "Bite",
+     "Yawn",
+     "Hidden Power (Grass)"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Politoed",
+    "level": 44,
+    "form": "",
+    "item": "Wide Lens",
+    "ability": "Water Absorb",
+    "typing": "",
+    "moves": [
+     "Surf",
+     "Hypnosis",
+     "Brick Break",
+     "Ice Beam"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town"
+ },
+ {
+  "type": "trainer",
+  "trainer": "POV Trainer: Virtual Trainer (Cyndaquil)",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Typhlosion",
+    "level": 46,
+    "form": "",
+    "item": "Metronome",
+    "ability": "Blaze",
+    "typing": "",
+    "moves": [
+     "Lava Plume",
+     "Quick Attack",
+     "Nature Power",
+     "Thunder Punch"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Qwilfish",
+    "level": 44,
+    "form": "",
+    "item": "Rocky Helmet",
+    "ability": "Intimidate",
+    "typing": "",
+    "moves": [
+     "Toxic Spikes",
+     "Spikes",
+     "Surf",
+     "Venoshock"
+    ],
+    "nature": "Jolly",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Steelix",
+    "level": 44,
+    "form": "",
+    "item": "Leftovers",
+    "ability": "Sturdy",
+    "typing": "",
+    "moves": [
+     "Earthquake",
+     "Stealth Rock",
+     "Gyro Ball",
+     "Curse"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Jolteon",
+    "level": 44,
+    "form": "",
+    "item": "Magnet",
+    "ability": "Volt Absorb",
+    "typing": "",
+    "moves": [
+     "Thunderbolt",
+     "Bite",
+     "Yawn",
+     "Hidden Power (Ice)"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Miltank",
+    "level": 44,
+    "form": "",
+    "item": "Muscle Band",
+    "ability": "Thick Fat",
+    "typing": "",
+    "moves": [
+     "Milk Drink",
+     "Body Slam",
+     "Hammer Arm",
+     "Bulldoze"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town"
+ },
+ {
+  "type": "trainer",
+  "trainer": "POV Trainer: Virtual Trainer (Totodile)",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Feraligatr",
+    "level": 46,
+    "form": "",
+    "item": "King's Rock",
+    "ability": "Torrent",
+    "typing": "",
+    "moves": [
+     "Waterfall",
+     "Crunch",
+     "Ice Fang",
+     "Work Up"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Arcanine",
+    "level": 44,
+    "form": "",
+    "item": "Shell Bell",
+    "ability": "Intimidate",
+    "typing": "",
+    "moves": [
+     "Flamethrower",
+     "Extreme Speed",
+     "Close Combat",
+     "Thunder Fang"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Donphan",
+    "level": 44,
+    "form": "",
+    "item": "Leftovers",
+    "ability": "Sturdy",
+    "typing": "",
+    "moves": [
+     "Rock Slide",
+     "Earthquake",
+     "Body Slam",
+     "Endeavor"
+    ],
+    "nature": "Impish",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Umbreon",
+    "level": 44,
+    "form": "",
+    "item": "Black Glasses",
+    "ability": "Synchronize",
+    "typing": "",
+    "moves": [
+     "Taunt",
+     "Crunch",
+     "Yawn",
+     "Wish"
+    ],
+    "nature": "Serious",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Porygon2",
+    "level": 44,
+    "form": "",
+    "item": "Lax Incense",
+    "ability": "Trace",
+    "typing": "",
+    "moves": [
+     "Psychic",
+     "Recover",
+     "Foul Play",
+     "Thunderbolt"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Gym Leader Pryce Field: Glitch Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Sneasel",
+    "level": 44,
+    "form": "",
+    "item": "",
+    "ability": "Inner Focus",
+    "typing": "",
+    "moves": [
+     "Metal Claw",
+     "Strength",
+     "Beat Up",
+     "Ice Beam"
+    ],
+    "nature": "Sassy",
+    "evs": "EVs: All 66",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Cloyster",
+    "level": 44,
+    "form": "",
+    "item": "",
+    "ability": "Skill Link",
+    "typing": "",
+    "moves": [
+     "Surf",
+     "Icicle Spear",
+     "Spikes",
+     "Explosion"
+    ],
+    "nature": "Rash",
+    "evs": "EVs: All 66",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Dewgong",
+    "level": 43,
+    "form": "",
+    "item": "",
+    "ability": "Thick Fat",
+    "typing": "",
+    "moves": [
+     "Rest",
+     "Dive",
+     "Toxic",
+     "Stockpile"
+    ],
+    "nature": "Relaxed",
+    "evs": "EVs: All 64",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Jynx",
+    "level": 45,
+    "form": "",
+    "item": "Never-Melt Ice",
+    "ability": "Oblivious",
+    "typing": "",
+    "moves": [
+     "Lovely Kiss",
+     "Psychic",
+     "Ice Beam",
+     "Nasty Plot"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: All 67",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Piloswine",
+    "level": 46,
+    "form": "",
+    "item": "Sitrus Berry",
+    "ability": "Oblivious",
+    "typing": "",
+    "moves": [
+     "Stomp Tantrum",
+     "Blizzard",
+     "Amnesia",
+     "Rock Tomb"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 69",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town"
+ },
+ {
+  "type": "text",
+  "text": "Get a Virtual Badge for winning. Talk to her again to take on Clair."
+ },
+ {
+  "type": "trainer",
+  "trainer": "POV Trainer: Virtual Trainer (Chikorita)",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Meganium",
+    "level": 55,
+    "form": "",
+    "item": "Light Clay",
+    "ability": "Overgrow",
+    "typing": "",
+    "moves": [
+     "Giga Drain",
+     "Reflect",
+     "Synthesis",
+     "Light Screen"
+    ],
+    "nature": "Bold",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Gengar",
+    "level": 54,
+    "form": "",
+    "item": "Expert Belt",
+    "ability": "Levitate",
+    "typing": "",
+    "moves": [
+     "Ice Punch",
+     "Thunderbolt",
+     "Curse",
+     "Sucker Punch"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Ampharos",
+    "level": 54,
+    "form": "",
+    "item": "Leftovers",
+    "ability": "Static",
+    "typing": "",
+    "moves": [
+     "Discharge",
+     "Thunder Wave",
+     "Fire Punch",
+     "Rest"
+    ],
+    "nature": "Quiet",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Espeon",
+    "level": 54,
+    "form": "",
+    "item": "Life Orb",
+    "ability": "Magic Bounce",
+    "typing": "",
+    "moves": [
+     "Psychic",
+     "Bite",
+     "Yawn",
+     "Calm Mind"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Politoed",
+    "level": 54,
+    "form": "",
+    "item": "Wide Lens",
+    "ability": "Water Absorb",
+    "typing": "",
+    "moves": [
+     "Hydro Pump",
+     "Hypnosis",
+     "Focus Blast",
+     "Ice Beam"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Skarmory",
+    "level": 54,
+    "form": "",
+    "item": "Rocky Helmet",
+    "ability": "Sturdy",
+    "typing": "",
+    "moves": [
+     "Iron Head",
+     "Brave Bird",
+     "Spikes",
+     "Roost"
+    ],
+    "nature": "Impish",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town"
+ },
+ {
+  "type": "trainer",
+  "trainer": "POV Trainer: Virtual Trainer (Cyndaquil)",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Typhlosion",
+    "level": 55,
+    "form": "",
+    "item": "Metronome",
+    "ability": "Blaze",
+    "typing": "",
+    "moves": [
+     "Lava Plume",
+     "Will-O-Wisp",
+     "Nature Power",
+     "Thunder Punch"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Qwilfish",
+    "level": 54,
+    "form": "",
+    "item": "Rocky Helmet",
+    "ability": "Intimidate",
+    "typing": "",
+    "moves": [
+     "Toxic Spikes",
+     "Spikes",
+     "Surf",
+     "Sludge Bomb"
+    ],
+    "nature": "Jolly",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Steelix",
+    "level": 54,
+    "form": "",
+    "item": "Leftovers",
+    "ability": "Sturdy",
+    "typing": "",
+    "moves": [
+     "Earthquake",
+     "Stealth Rock",
+     "Gyro Ball",
+     "Curse"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Jolteon",
+    "level": 54,
+    "form": "",
+    "item": "Expert Belt",
+    "ability": "Volt Absorb",
+    "typing": "",
+    "moves": [
+     "Thunderbolt",
+     "Bite",
+     "Yawn",
+     "Hidden Power (Ice)"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Miltank",
+    "level": 54,
+    "form": "",
+    "item": "Muscle Band",
+    "ability": "Thick Fat",
+    "typing": "",
+    "moves": [
+     "Milk Drink",
+     "Body Slam",
+     "Hammer Arm",
+     "Bulldoze"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Gligar",
+    "level": 54,
+    "form": "",
+    "item": "Flying Gem",
+    "ability": "Immunity",
+    "typing": "",
+    "moves": [
+     "Roost",
+     "Swords Dance",
+     "Bulldoze",
+     "Acrobatics"
+    ],
+    "nature": "Jolly",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town"
+ },
+ {
+  "type": "trainer",
+  "trainer": "POV Trainer: Virtual Trainer (Totodile)",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Feraligatr",
+    "level": 55,
+    "form": "",
+    "item": "King's Rock",
+    "ability": "Torrent",
+    "typing": "",
+    "moves": [
+     "Waterfall",
+     "Crunch",
+     "Ice Beam",
+     "Work Up"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Arcanine",
+    "level": 54,
+    "form": "",
+    "item": "Shell Bell",
+    "ability": "Intimidate",
+    "typing": "",
+    "moves": [
+     "Flamethrower",
+     "Extreme Speed",
+     "Close Combat",
+     "Thunder Fang"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Donphan",
+    "level": 54,
+    "form": "",
+    "item": "Leftovers",
+    "ability": "Sturdy",
+    "typing": "",
+    "moves": [
+     "Rock Slide",
+     "Earthquake",
+     "Body Slam",
+     "Endeavor"
+    ],
+    "nature": "Impish",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Umbreon",
+    "level": 54,
+    "form": "",
+    "item": "Leftovers",
+    "ability": "Synchronize",
+    "typing": "",
+    "moves": [
+     "Protect",
+     "Crunch",
+     "Yawn",
+     "Wish"
+    ],
+    "nature": "Serious",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Porygon2",
+    "level": 54,
+    "form": "",
+    "item": "Lum Berry",
+    "ability": "Trace",
+    "typing": "",
+    "moves": [
+     "Psychic",
+     "Recover",
+     "Toxic",
+     "Thunderbolt"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Heracross",
+    "level": 54,
+    "form": "",
+    "item": "Salac Berry",
+    "ability": "Moxie",
+    "typing": "",
+    "moves": [
+     "Megahorn",
+     "Close Combat",
+     "Endure",
+     "Swords Dance"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 80",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Gym Leader Clair Field: Glitch Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Dragonair",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Shed Skin",
+    "typing": "",
+    "moves": [
+     "Dragon Breath",
+     "Ice Beam",
+     "Thunder Wave",
+     "Double Team"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Ampharos",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Static",
+    "typing": "",
+    "moves": [
+     "Fire Punch",
+     "Thunder Wave",
+     "Confuse Ray",
+     "Thunderbolt"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Rhydon",
+    "level": 53,
+    "form": "",
+    "item": "Passho Berry",
+    "ability": "Lightning Rod",
+    "typing": "",
+    "moves": [
+     "Earthquake",
+     "Rock Slide",
+     "Strength",
+     "Swords Dance"
+    ],
+    "nature": "Sassy",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Gyarados",
+    "level": 53,
+    "form": "",
+    "item": "Wacan Berry",
+    "ability": "Intimidate",
+    "typing": "",
+    "moves": [
+     "Double-Edge",
+     "Surf",
+     "Bounce",
+     "Dragon Dance"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Dragonair",
+    "level": 54,
+    "form": "",
+    "item": "Yache Berry",
+    "ability": "Marvel Scale",
+    "typing": "",
+    "moves": [
+     "Blizzard",
+     "Thunder Wave",
+     "Fire Blast",
+     "Outrage"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Kingdra",
+    "level": 55,
+    "form": "",
+    "item": "Scope Lens",
+    "ability": "Sniper",
+    "typing": "",
+    "moves": [
+     "Draco Meteor",
+     "Hydro Pump",
+     "Agility",
+     "Focus Energy"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 82",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town"
+ },
+ {
+  "type": "text",
+  "text": "Once you win, you’ll get the eighth Virtual Badge and 25 AP!"
+ },
+ {
+  "type": "text",
+  "text": "Outside, get 3 Passho Berries. Enter the help center to get TM73 Thunder Wave! Go south across the bridge."
+ },
+ {
+  "type": "text",
+  "text": "ZCell 072: Kristiline Town"
+ },
+ {
+  "type": "text",
+  "text": "A Razor Claw is below. Grab an Alolan Sandshrew from the PC, evolve it with an Ice Stone to get Sandslash (Alolan), then trade it with an NPC to get Vulpix (Alolan)! Also here is:"
+ },
+ {
+  "type": "text",
+  "text": "ZCell 073: Kristiline Town"
+ },
+ {
+  "type": "text",
+  "text": "We can also now take Tesla’s yacht to-and-from Kristiline Town via the port the east side of town."
+ },
+ {
+  "type": "text",
+  "text": "Go up, grab a hidden Iapapa Berry, then proceed to the Isle of Angels."
+ },
+ {
+  "type": "text",
+  "text": "At night, you can catch the “legendary” Phione here by giving it a Gourmet Treat."
+ },
+ {
+  "type": "text",
+  "text": "Grab the hidden Dive Ball. To the right is a Shed Shell. Go onto the water to find a hidden Magical Seed and Ice Heal. A fisherman here will trade 10 Occa Berries for a Deep Sea Tooth or Deep Sea Scale. You can grow them in the flower patches if you want these now, or wait till the next chapter to buy them."
+ },
+ {
+  "type": "text",
+  "text": "Grab the hidden Max Repel and Icicle Plate above. TM07 Snowscape is to the left."
+ },
+ {
+  "type": "text",
+  "text": "ZCell 074: Isle of Angels"
+ },
+ {
+  "type": "text",
+  "text": "Back to the right, across the bridge:"
+ },
+ {
+  "type": "text",
+  "text": "ZCell 075: Isle of Angels"
+ },
+ {
+  "type": "text",
+  "text": "Reenter the Church of Theolia. In the room at the top:"
+ },
+ {
+  "type": "text",
+  "text": "ZCell 076: Church of Theolia"
+ },
+ {
+  "type": "text",
+  "text": "Should you want to return to the Tower of Theolia area, you can do so in the room on the left side of the church."
+ },
+ {
+  "type": "heading",
+  "level": 3,
+  "text": "7 Badge Sidequests"
+ },
+ {
+  "type": "text",
+  "text": "That’s all for Kristiline Town and Isle of Angels exploration for now, but we can take care of a few quests and things right now."
+ },
+ {
+  "type": "text",
+  "text": "Take Noctowl to Kakori Village. Mr. Luck’s Tent now has a new move tutor:"
+ },
+ {
+  "type": "text",
+  "text": "Take the truck to Goldenleaf. In the house nearest the eastern gate, you’ll find the artist for the Museum Quest. Next, head back to the outside area of Wispy Tower and enter the Wispy Ruins to the east. Climb down the ivy in the rightmost room, then make your way to the southeast corner of Wispy Chasm. Step on the tile, then head in to and get Griselda’s Treasure 7: the Fearow Crest and Odd Keystone."
+ },
+ {
+  "type": "text",
+  "text": "Head back out to Goldenleaf Town. Enter Narcissa’s Gym and talk to the guy at the front. Make your way all the way back through Backstage Theatre and enter the mirror."
+ },
+ {
+  "type": "text",
+  "text": "Enter this door at the top, then interact with the painting up here. Follow Mew out of the room, through the mirror to get the Odd Key, and to the Lost Castle on the Forgotten Path."
+ },
+ {
+  "type": "text",
+  "text": "Here, we’re going to want to read all the books and keep track of all the numbers. Head up the stairs and talk to Dusclops, and enter the following: 0044, 6677, 3645, 9043, 7171. Enter the next room and get ready for a series of battles. It’s a gauntlet of 3: just be prepared for the Shedinja in the last team."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Guardian Spectre Narcissa Field: Haunted Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Golurk",
+    "level": 48,
+    "form": "",
+    "item": "Sitrus Berry",
+    "ability": "Iron Fist",
+    "typing": "",
+    "moves": [
+     "Phantom Force",
+     "Stomp Tantrum",
+     "Dynamic Punch",
+     "Zen Headbutt"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 72",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Sableye",
+    "level": 48,
+    "form": "",
+    "item": "Leftovers",
+    "ability": "Keen Eye",
+    "typing": "",
+    "moves": [
+     "Will-O-Wisp",
+     "Recover",
+     "Night Shade",
+     "Ominous Wind"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 72",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > 7 Badge Sidequests"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Guardian Spectre Narcissa Field: Haunted Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Banette",
+    "level": 49,
+    "form": "",
+    "item": "Quick Claw",
+    "ability": "Insomnia",
+    "typing": "",
+    "moves": [
+     "Phantom Force",
+     "Will-O-Wisp",
+     "Shadow Sneak",
+     "Gunk Shot"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 73",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Decidueye",
+    "level": 49,
+    "form": "",
+    "item": "Magical Seed",
+    "ability": "Overgrow",
+    "typing": "",
+    "moves": [
+     "Ominous Wind",
+     "Giga Drain",
+     "Baton Pass",
+     "Shadow Ball"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 73",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Oricorio",
+    "level": 50,
+    "form": "Sensu Style",
+    "item": "Leftovers",
+    "ability": "Dancer",
+    "typing": "",
+    "moves": [
+     "Roost",
+     "Air Slash",
+     "Calm Mind",
+     "Revelation Dance"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > 7 Badge Sidequests"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Guardian Spectre Narcissa Field: Haunted Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Swoobat",
+    "level": 50,
+    "form": "",
+    "item": "Magical Seed",
+    "ability": "Unaware",
+    "typing": "",
+    "moves": [
+     "Psychic",
+     "Shadow Ball",
+     "Air Slash",
+     "Calm Mind"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Haunter",
+    "level": 49,
+    "form": "",
+    "item": "Eviolite",
+    "ability": "Levitate",
+    "typing": "",
+    "moves": [
+     "Hypnosis",
+     "Perish Song",
+     "Mean Look",
+     "Rest"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 73",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Mismagius",
+    "level": 51,
+    "form": "",
+    "item": "Wise Glasses",
+    "ability": "Levitate",
+    "typing": "",
+    "moves": [
+     "Shadow Ball",
+     "Nasty Plot",
+     "Thunderbolt",
+     "Will-O-Wisp"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Shedinja",
+    "level": 49,
+    "form": "",
+    "item": "Focus Sash",
+    "ability": "Wonder Guard",
+    "typing": "",
+    "moves": [
+     "Phantom Force",
+     "X-Scissor",
+     "Swords Dance",
+     "Shadow Sneak"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 73",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > 7 Badge Sidequests"
+ },
+ {
+  "type": "text",
+  "text": "Talk to the Chalice on the left side of the area. Inspect the liquid first to get the Wasteland Field Readout. Interact with the chalice next to get the Gold Chalice!"
+ },
+ {
+  "type": "text",
+  "text": "Burst the bubble at the top! This marks the official beginning of the Narcissa’s Hauntings quest, though this is all we can do in it for now."
+ },
+ {
+  "type": "text",
+  "text": "Make your way all the way back to Kristiline Town. Reenter the museum and choose which sculpture you prefer. Completing the Museum Quest, you’ll get $10,000. There is a Cherish Ball in the trash to the right."
+ },
+ {
+  "type": "text",
+  "text": "The Kristiline Help Center is closed, but we can learn about its requests via the Kakori Village Help Center. There’s a quiz event, something involving a princess, and a quest from the Ranger HQ. Only the first one is completable right now."
+ },
+ {
+  "type": "heading",
+  "level": 3,
+  "text": "Kristiline’s Quiz Show!"
+ },
+ {
+  "type": "text",
+  "text": "Enter the house in Kristiline to the east of the Isle of Angels entrance."
+ },
+ {
+  "type": "text",
+  "text": "Head outside and enter the house in the top right of town. Talk to the guy here to start a quiz, similar to the one in the Tower of Theolia. You have to be quick to answer correctly."
+ },
+ {
+  "type": "text",
+  "text": "You’ll get an Exp. Candy XL, Lucky Egg for winning. After…that… head back to the Kakori Help Center to get $10000 and 2 Green Shards. (+1 Karma)"
+ },
+ {
+  "type": "heading",
+  "level": 2,
+  "text": "Corrupted Cave"
+ },
+ {
+  "type": "text",
+  "text": "Now we will proceed with the story. Talk to Aelita in Kristiline Town when you’re ready for a battle!"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Student Aelita Field: Beach Field",
+  "extra": [
+   "Items: Hyper Potion (2)"
+  ],
+  "field": "",
+  "mons": [
+   {
+    "name": "Unfezant",
+    "level": 49,
+    "form": "Aevian Form",
+    "item": "Sitrus Berry",
+    "ability": "Sturdy",
+    "typing": "Rock/Fighting",
+    "moves": [
+     "Stealth Rock",
+     "Rock Slide",
+     "Brick Break",
+     "U-turn"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 73",
+    "ivs": "IVs: All 31",
+    "base": "Base Stats: 80 HP, 115 Atk, 85 Def, 55 SpA, 55 SpD, 98 Spe"
+   },
+   {
+    "name": "Pawmot",
+    "level": 50,
+    "form": "",
+    "item": "Punching Glove",
+    "ability": "Iron Fist",
+    "typing": "",
+    "moves": [
+     "Fake Out",
+     "Thunder Punch",
+     "Drain Punch",
+     "Ice Punch"
+    ],
+    "nature": "Jolly",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Lucario",
+    "level": 51,
+    "form": "",
+    "item": "Focus Sash",
+    "ability": "Steadfast",
+    "typing": "",
+    "moves": [
+     "Calm Mind",
+     "Aura Sphere",
+     "Shadow Ball",
+     "Flash Cannon"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Hawlucha",
+    "level": 52,
+    "form": "",
+    "item": "Flying Gem",
+    "ability": "Unburden",
+    "typing": "",
+    "moves": [
+     "X-Scissor",
+     "Drain Punch",
+     "Acrobatics",
+     "Swords Dance"
+    ],
+    "nature": "Jolly",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Blaziken",
+    "level": 51,
+    "form": "",
+    "item": "Muscle Band",
+    "ability": "Speed Boost",
+    "typing": "",
+    "moves": [
+     "Brave Bird",
+     "Protect",
+     "Sky Uppercut",
+     "Blaze Kick"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Staraptor",
+    "level": 51,
+    "form": "",
+    "item": "Assault Vest",
+    "ability": "Reckless",
+    "typing": "",
+    "moves": [
+     "Brave Bird",
+     "Close Combat",
+     "U-turn",
+     "Take Down"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Corrupted Cave"
+ },
+ {
+  "type": "text",
+  "text": "You’ll need to choose a third character to join you in the upcoming journey. You can choose Reina, Kreiss, or Adam. Talk to Aelita to go to Sheridan. Inside the Sensei’s house, talk to Texen, then head upstairs for a 3v3 battle."
+ },
+ {
+  "type": "trainer",
+  "trainer": "Partner: Student Aelita",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Staraptor",
+    "level": 50,
+    "form": "",
+    "item": "Assault Vest",
+    "ability": "Reckless",
+    "typing": "",
+    "moves": [
+     "Brave Bird",
+     "Close Combat",
+     "U-turn",
+     "Take Down"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Blaziken",
+    "level": 51,
+    "form": "",
+    "item": "Muscle Band",
+    "ability": "Speed Boost",
+    "typing": "",
+    "moves": [
+     "Brave Bird",
+     "Protect",
+     "Sky Uppercut",
+     "Blaze Kick"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Hawlucha",
+    "level": 52,
+    "form": "",
+    "item": "Flying Gem",
+    "ability": "Unburden",
+    "typing": "",
+    "moves": [
+     "X-Scissor",
+     "Drain Punch",
+     "Bounce",
+     "Swords Dance"
+    ],
+    "nature": "Jolly",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Corrupted Cave"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Pseudo Sensei Texen Field: Big Top Arena",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Hitmonchan",
+    "level": 49,
+    "form": "",
+    "item": "Coba Berry",
+    "ability": "Iron Fist",
+    "typing": "",
+    "moves": [
+     "Fake Out",
+     "Mach Punch",
+     "Ice Punch",
+     "Thunder Punch"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 73",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Passimian",
+    "level": 49,
+    "form": "",
+    "item": "Salac Berry",
+    "ability": "Receiver",
+    "typing": "",
+    "moves": [
+     "Acrobatics",
+     "Close Combat",
+     "Rock Slide",
+     "Endure"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 73",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Emboar",
+    "level": 50,
+    "form": "",
+    "item": "Charcoal",
+    "ability": "Reckless",
+    "typing": "",
+    "moves": [
+     "Heat Crash",
+     "Wild Charge",
+     "Sucker Punch",
+     "Brick Break"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Toxicroak",
+    "level": 50,
+    "form": "",
+    "item": "Poison Barb",
+    "ability": "Dry Skin",
+    "typing": "",
+    "moves": [
+     "Poison Jab",
+     "Sucker Punch",
+     "Ice Punch",
+     "Drain Punch"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Machamp",
+    "level": 51,
+    "form": "",
+    "item": "Black Belt",
+    "ability": "Guts",
+    "typing": "",
+    "moves": [
+     "Rock Tomb",
+     "Bullet Punch",
+     "Cross Chop",
+     "High Horsepower"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 252 HP, 252 Atk",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Infernape",
+    "level": 53,
+    "form": "",
+    "item": "Charcoal",
+    "ability": "Iron Fist",
+    "typing": "",
+    "moves": [
+     "Fire Punch",
+     "Thunder Punch",
+     "Rock Slide",
+     "Mach Punch"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 252 Atk, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Corrupted Cave"
+ },
+ {
+  "type": "text",
+  "text": "Luckily Aelita’s team is pretty useful here, thanks to some type advantages. Once you’re back in Carotos Mountain, smash a rock to open a shortcut to the rest of the cave. Enter the Corrupted Cave. Aelita (team above) will join us a partner."
+ },
+ {
+  "type": "text",
+  "text": "You’ll also find Grimer (Alolan) and Garbodor walking around in certain parts."
+ },
+ {
+  "type": "text",
+  "text": "Hidden in the first map is a Poison Gem. The next map has two hidden Super Repels. Follow the path down and to the left."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Servant Deborah Field: Corrupted Cave",
+  "extra": [
+   "Items: Hyper Potion"
+  ],
+  "field": "",
+  "mons": [
+   {
+    "name": "Chimecho",
+    "level": 50,
+    "form": "",
+    "item": "",
+    "ability": "Levitate",
+    "typing": "",
+    "moves": [
+     "Uproar",
+     "Safeguard",
+     "Double-Edge",
+     "Heal Pulse"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Simisage",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Gluttony",
+    "typing": "",
+    "moves": [
+     "Fury Swipes",
+     "Leer",
+     "Lick",
+     "Seed Bomb"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Delphox",
+    "level": 52,
+    "form": "",
+    "item": "",
+    "ability": "Blaze",
+    "typing": "",
+    "moves": [
+     "Light Screen",
+     "Psyshock",
+     "Flamethrower",
+     "Will-O-Wisp"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Corrupted Cave"
+ },
+ {
+  "type": "text",
+  "text": "Climb down the ladder. Go up and get a hidden Moon Stone."
+ },
+ {
+  "type": "text",
+  "text": "The path we will take through this dungeon diverges a bit depending on the third character we brought with. If it’s Reina or Kreiss, you’ll go to the left, else if it is Adam, you’ll go to the right."
+ },
+ {
+  "type": "text",
+  "text": "If you go left, you’ll need to push blocks onto the correct yellow tiles. The correct placements can be noted in the bottom left room. Enter the next room. We’ll need to move the statues on the left side onto the yellow dots corresponding to the positions on the right side. Head into the next room when you succeed."
+ },
+ {
+  "type": "text",
+  "text": "If you go right, you’ll have to complete two battles:"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Ancient Guard Escavalier Field: Deep Earth Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Klinklang",
+    "level": 53,
+    "form": "",
+    "item": "Magnet",
+    "ability": "Clear Body",
+    "typing": "",
+    "moves": [
+     "Gear Grind",
+     "Gravity",
+     "Thunder",
+     "Power Gem"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Sigilyph",
+    "level": 54,
+    "form": "",
+    "item": "Life Orb",
+    "ability": "Magic Guard",
+    "typing": "",
+    "moves": [
+     "Gravity",
+     "Psywave",
+     "Calm Mind",
+     "Trick Room"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Dusclops",
+    "level": 53,
+    "form": "",
+    "item": "Eviolite",
+    "ability": "Pressure",
+    "typing": "",
+    "moves": [
+     "Gravity",
+     "Will-O-Wisp",
+     "Spite",
+     "Confuse Ray"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Clefable",
+    "level": 54,
+    "form": "",
+    "item": "Leftovers",
+    "ability": "Unaware",
+    "typing": "",
+    "moves": [
+     "Gravity",
+     "Moonblast",
+     "Calm Mind",
+     "Cosmic Power"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Corrupted Cave"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Ancient Guard Escavalier Field: Deep Earth Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Tyranitar",
+    "level": 52,
+    "form": "",
+    "item": "Telluric Seed",
+    "ability": "Sand Stream",
+    "typing": "",
+    "moves": [
+     "Body Press",
+     "Earthquake",
+     "Heavy Slam",
+     "Matrix Shot"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Golem",
+    "level": 51,
+    "form": "Alolan Form",
+    "item": "Sitrus Berry",
+    "ability": "Magnet Pull",
+    "typing": "",
+    "moves": [
+     "Heavy Slam",
+     "Wild Charge",
+     "Matrix Shot",
+     "Stone Edge"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Kleavor",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Sharpness",
+    "typing": "",
+    "moves": [
+     "X-Scissor",
+     "Stone Axe",
+     "Slash",
+     "Matrix Shot"
+    ],
+    "nature": "Jolly",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Kabutops",
+    "level": 51,
+    "form": "",
+    "item": "Shuca Berry",
+    "ability": "Weak Armor",
+    "typing": "",
+    "moves": [
+     "Matrix Shot",
+     "Psycho Cut",
+     "Waterfall",
+     "Leech Life"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Gigalith",
+    "level": 52,
+    "form": "",
+    "item": "Telluric Seed",
+    "ability": "Sand Force",
+    "typing": "",
+    "moves": [
+     "Stomp Tantrum",
+     "Gravity",
+     "Stone Edge",
+     "Heavy Slam"
+    ],
+    "nature": "Brave",
+    "evs": "EVs: 252 HP, 252 Atk, 4 SpD",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Aerodactyl",
+    "level": 53,
+    "form": "",
+    "item": "Muscle Band",
+    "ability": "Pressure",
+    "typing": "",
+    "moves": [
+     "Rock Slide",
+     "Earthquake",
+     "Psychic Fangs",
+     "Matrix Shot"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 4 HP, 252 Atk, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Corrupted Cave"
+ },
+ {
+  "type": "text",
+  "text": "Both paths will converge in a central room, where we’ll have to fight a Team Xen Grunt."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Tommen Field: Deep Earth Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Bronzong",
+    "level": 53,
+    "form": "",
+    "item": "",
+    "ability": "Levitate/Heatproof",
+    "typing": "",
+    "moves": [
+     "Heavy Slam",
+     "Iron Defense",
+     "Metal Sound",
+     "Future Sight"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Coalossal",
+    "level": 52,
+    "form": "",
+    "item": "",
+    "ability": "Steam Engine/Flame Body",
+    "typing": "",
+    "moves": [
+     "Ancient Power",
+     "Incinerate",
+     "Stealth Rock",
+     "Heat Crash"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Salazzle",
+    "level": 53,
+    "form": "",
+    "item": "",
+    "ability": "Corrosion",
+    "typing": "",
+    "moves": [
+     "Incinerate",
+     "Venoshock",
+     "Dragon Pulse",
+     "Flamethrower"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Perrserker",
+    "level": 54,
+    "form": "",
+    "item": "",
+    "ability": "Battle Armor/Tough Claws",
+    "typing": "",
+    "moves": [
+     "Screech",
+     "Slash",
+     "Metal Sound",
+     "Thrash"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Corrupted Cave"
+ },
+ {
+  "type": "text",
+  "text": "Relationship Point Choices:"
+ },
+ {
+  "type": "text",
+  "text": "She can do this! (+3 Aelita)"
+ },
+ {
+  "type": "text",
+  "text": "I agree with the Eldest (-3 Aelita)"
+ },
+ {
+  "type": "text",
+  "text": "Go down the ladder on the left from the bonfire room for a huge, optional puzzle. Make note of all the statue positions down the ladder, then get to work putting them all into the right places. This is arduous and pushing one block into a corner means you have to reset the whole thing, so save often. Once you succeed, go into the door at the top to get Zorua (Hisuian) and the Zoroark Crest!"
+ },
+ {
+  "type": "text",
+  "text": "Regardless of which path you took, backtrack down the path to the left past the puzzles. Talk to the blue pillar and show it a Dragon-type Pokemon. This opens a door to the right, where you can get TM86 Grass Knot. Backtrack down the right path to display a Poison-type Pokemon to a pillar. This will open a door leading to the Deep Earth field notes."
+ },
+ {
+  "type": "text",
+  "text": "Return to the entrance room and talk to Eldest. Head in this door and follow the path."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS Boss: Behemoth GroudonField: Deep Earth Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Boss Groudon",
+    "level": 55,
+    "form": "Shields: 1",
+    "item": "Sitrus Berry",
+    "ability": "Drought",
+    "typing": "",
+    "moves": [
+     "Earthquake",
+     "Rock Slide",
+     "Toxic",
+     "Heat Crash"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 100 HP, 252 Atk, 52 Def, 100 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Corrupted Cave"
+ },
+ {
+  "type": "text",
+  "text": "Groudon has the power on both fields to rack up a lot of one-shots, so you have to find a way to get around that. Grass type moves are the best offensive option against it, though Fire moves are aplenty. Paralysis and Burn are very helpful, too."
+ },
+ {
+  "type": "text",
+  "text": "You’ll get the Earth Heart, though you’ll have to make a decision to save the Eldest or refuse to give in. You’ll get the Tower Cellar Key!"
+ },
+ {
+  "type": "text",
+  "text": "Use the warp and return to Aelita. Chase Tommen out of the Garufan area."
+ },
+ {
+  "type": "text",
+  "text": "Relationship Point Choices:"
+ },
+ {
+  "type": "text",
+  "text": "It’s the best for Aelita (+3 Kreiss, if Kreiss is partner)"
+ },
+ {
+  "type": "text",
+  "text": "It’s better down here (-3 Kreiss, if Kreiss is partner)"
+ },
+ {
+  "type": "text",
+  "text": "Relationship Point Choices:"
+ },
+ {
+  "type": "text",
+  "text": "We won’t leave you (+3 Adam & Braixen / Reina, depending on partner)"
+ },
+ {
+  "type": "text",
+  "text": "Maybe we should (-3 Adam & Braixen / Reina, depending on partner)"
+ },
+ {
+  "type": "text",
+  "text": "Agree to return to the Tower Cellar with your partner. Inside, you’ll get the Ocean Relic!"
+ },
+ {
+  "type": "text",
+  "text": "Return to Kristiline to talk to the crew once more, then head over to Jynnobi Pass and enter the temple on the right side."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Head Ranger Crawli Field: Swamp Field",
+  "extra": [
+   "Items: Hyper Potion"
+  ],
+  "field": "",
+  "mons": [
+   {
+    "name": "Orbeetle",
+    "level": 51,
+    "form": "",
+    "item": "Telluric Seed",
+    "ability": "Swarm",
+    "typing": "",
+    "moves": [
+     "Sticky Web",
+     "Ally Switch",
+     "Bug Buzz",
+     "Future Sight"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: 252 HP, 252 SpA, 4 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Galvantula",
+    "level": 52,
+    "form": "",
+    "item": "Focus Sash",
+    "ability": "Swarm",
+    "typing": "",
+    "moves": [
+     "Bug Buzz",
+     "Energy Ball",
+     "Thunder",
+     "Rain Dance"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: 4 HP, 252 SpA, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Ariados",
+    "level": 52,
+    "form": "",
+    "item": "Ariados Crest",
+    "ability": "Swarm",
+    "typing": "",
+    "moves": [
+     "Swords Dance",
+     "Sucker Punch",
+     "Poison Jab",
+     "X-Scissor"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 4 HP, 252 Atk, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Falinks",
+    "level": 52,
+    "form": "",
+    "item": "Sitrus Berry",
+    "ability": "Defiant",
+    "typing": "",
+    "moves": [
+     "No Retreat",
+     "Megahorn",
+     "Close Combat",
+     "Zen Headbutt"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 104 HP, 100 Atk, 100 Def, 100 SpD, 104 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Probopass",
+    "level": 52,
+    "form": "",
+    "item": "Air Balloon",
+    "ability": "Sturdy",
+    "typing": "",
+    "moves": [
+     "Power Gem",
+     "Body Press",
+     "Flash Cannon",
+     "Iron Defense"
+    ],
+    "nature": "Bold",
+    "evs": "EVs: 252 HP, 252 Def, 4 SpA",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Araquanid",
+    "level": 53,
+    "form": "",
+    "item": "Assault Vest",
+    "ability": "Water Bubble",
+    "typing": "",
+    "moves": [
+     "Liquidation",
+     "Poison Jab",
+     "Barbed Web",
+     "Mirror Coat"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 252 HP, 252 Atk",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Corrupted Cave"
+ },
+ {
+  "type": "text",
+  "text": "This isn’t that much fundamentally different than the previous gym fight, though he now has a Defiant Falinks that tries to sweep and a Crested Ariados! Beat him once more to get TM110 Magma Drift! Head up to Route 6."
+ },
+ {
+  "type": "heading",
+  "level": 2,
+  "text": "Route 6"
+ },
+ {
+  "type": "text",
+  "text": "Surf to the left."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Vinessa Field: Water Surface",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Tentacruel",
+    "level": 53,
+    "form": "",
+    "item": "",
+    "ability": "Clear Body/Liquid Ooze",
+    "typing": "",
+    "moves": [
+     "Acid Armor",
+     "Poison Jab",
+     "Surf",
+     "Sludge Wave"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Pelipper",
+    "level": 52,
+    "form": "",
+    "item": "",
+    "ability": "Keen Eye/Drizzle",
+    "typing": "",
+    "moves": [
+     "Swallow",
+     "Fling",
+     "Mist",
+     "Roost"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Route 6"
+ },
+ {
+  "type": "text",
+  "text": "Land on the platform to the left."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Danni  & Team Xen LaylaField: Beach Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Bouffalant",
+    "level": 46,
+    "form": "",
+    "item": "",
+    "ability": "Reckless",
+    "typing": "",
+    "moves": [
+     "Revenge",
+     "Throat Chop",
+     "Scary Face",
+     "Head Charge"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 69",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Beedrill",
+    "level": 46,
+    "form": "",
+    "item": "",
+    "ability": "Swarm",
+    "typing": "",
+    "moves": [
+     "Toxic Spikes",
+     "Pin Missile",
+     "Poison Jab",
+     "Assurance"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 69",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Pinsir",
+    "level": 47,
+    "form": "",
+    "item": "",
+    "ability": "Hyper Cutter",
+    "typing": "",
+    "moves": [
+     "X-Scissor",
+     "Quick Attack",
+     "Storm Throw",
+     "Swords Dance"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Weezing",
+    "level": 46,
+    "form": "",
+    "item": "",
+    "ability": "Levitate",
+    "typing": "",
+    "moves": [
+     "Self-Destruct",
+     "Sludge Bomb",
+     "Will-O-Wisp",
+     "Assurance"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 69",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Hypno",
+    "level": 47,
+    "form": "",
+    "item": "",
+    "ability": "Insomnia",
+    "typing": "",
+    "moves": [
+     "Zen Headbutt",
+     "Swagger",
+     "Psychic",
+     "Nasty Plot"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Victreebel",
+    "level": 47,
+    "form": "",
+    "item": "",
+    "ability": "Chlorophyll",
+    "typing": "",
+    "moves": [
+     "Razor Leaf",
+     "Sleep Powder",
+     "Sweet Scent",
+     "Leaf Blade"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 70",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Heracross",
+    "level": 48,
+    "form": "",
+    "item": "",
+    "ability": "Swarm",
+    "typing": "",
+    "moves": [
+     "Brick Break",
+     "Pin Missile",
+     "Throat Chop",
+     "Thrash"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 72",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Route 6"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Sheila Field: Beach Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Arbok",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Intimidate/Shed Skin",
+    "typing": "",
+    "moves": [
+     "Sludge Bomb",
+     "Gastro Acid",
+     "Belch",
+     "Haze"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Gastrodon",
+    "level": 53,
+    "form": "East Aevian Form",
+    "item": "",
+    "ability": "Sticky Hold/Storm Drain",
+    "typing": "Water/Ground",
+    "moves": [
+     "Muddy Water",
+     "Earth Power",
+     "Rain Dance",
+     "Memento"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 31",
+    "base": "Base Stats: 111 HP, 83 Atk, 68 Def, 92 SpA, 82 SpD, 39 Spe"
+   },
+   {
+    "name": "Yanmega",
+    "level": 54,
+    "form": "",
+    "item": "",
+    "ability": "Speed Boost/Tinted Lens",
+    "typing": "",
+    "moves": [
+     "Feint",
+     "Slash",
+     "Screech",
+     "U-turn"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Route 6"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Malik Field: Beach Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Gabite",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Sand Veil",
+    "typing": "",
+    "moves": [
+     "Bite",
+     "Slash",
+     "Dragon Claw",
+     "Dig"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Arctibax",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "T. Exchange",
+    "typing": "",
+    "moves": [
+     "Ice Fang",
+     "Take Down",
+     "Ice Beam",
+     "Crunch"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Garchomp",
+    "level": 52,
+    "form": "",
+    "item": "",
+    "ability": "Sand Veil",
+    "typing": "",
+    "moves": [
+     "Bite",
+     "Slash",
+     "Dragon Claw",
+     "Dig"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Route 6"
+ },
+ {
+  "type": "text",
+  "text": "Pick up the Full Heal to the right, then enter the ship through the bottom entrance. Go up."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Lexy Field: Short-Circuit Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Palossand",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "W. Compaction",
+    "typing": "",
+    "moves": [
+     "Hypnosis",
+     "Giga Drain",
+     "Iron Defense",
+     "Shadow Ball"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Seismitoad",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Swift Swim/Poison Touch",
+    "typing": "",
+    "moves": [
+     "Flail",
+     "Uproar",
+     "Aqua Ring",
+     "Hyper Voice"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Route 6"
+ },
+ {
+  "type": "text",
+  "text": "In the chests are 2 HP Ups, TM137 Power Swap, PP Up, TM138 Guard Swap, and Hasty Mint. Enter the other room on this level."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Marvy Field: Short-Circuit Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Togetic",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Hustle/Serene Grace",
+    "typing": "",
+    "moves": [
+     "Safeguard",
+     "Follow Me",
+     "Baton Pass",
+     "Last Resort"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Miltank",
+    "level": 52,
+    "form": "",
+    "item": "",
+    "ability": "Thick Fat/Scrappy",
+    "typing": "",
+    "moves": [
+     "Milk Drink",
+     "Body Slam",
+     "Play Rough",
+     "Charm"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Route 6"
+ },
+ {
+  "type": "text",
+  "text": "Pick up the Black Prism. Head back outside the ship and enter on the top level."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Sayali Field: Short-Circuit Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Liepard",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Limber/Unburden",
+    "typing": "",
+    "moves": [
+     "Hone Claws",
+     "Sucker Punch",
+     "Nasty Plot",
+     "Night Slash"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Zangoose",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Immunity",
+    "typing": "",
+    "moves": [
+     "X-Scissor",
+     "Taunt",
+     "Swords Dance",
+     "Close Combat"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Route 6"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Nickoli Field: Short-Circuit Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Perrserker",
+    "level": 52,
+    "form": "",
+    "item": "",
+    "ability": "Battle Armor/Tough Claws",
+    "typing": "",
+    "moves": [
+     "Fury Swipes",
+     "Screech",
+     "Slash",
+     "Metal Sound"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Bastiodon",
+    "level": 52,
+    "form": "",
+    "item": "",
+    "ability": "Sturdy",
+    "typing": "",
+    "moves": [
+     "Ancient Power",
+     "Endure",
+     "Metal Burst",
+     "Iron Head"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Rampardos",
+    "level": 53,
+    "form": "",
+    "item": "",
+    "ability": "Mold Breaker",
+    "typing": "",
+    "moves": [
+     "Slam",
+     "Ancient Power",
+     "Zen Headbutt",
+     "Screech"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Route 6"
+ },
+ {
+  "type": "text",
+  "text": "Exit at the top, and go right for the Prince from the Sands quest. If you didn’t defeat Madame X, you’ll have to fight:"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Harrington Field: Beach Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Golbat",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Inner Focus",
+    "typing": "",
+    "moves": [
+     "Air Cutter",
+     "Bite",
+     "Haze",
+     "Venoshock"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Magneton",
+    "level": 53,
+    "form": "",
+    "item": "",
+    "ability": "Magnet Pull/Sturdy",
+    "typing": "",
+    "moves": [
+     "Flash Cannon",
+     "Discharge",
+     "Metal Sound",
+     "Light Screen"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Magnezone",
+    "level": 52,
+    "form": "",
+    "item": "",
+    "ability": "Magnet Pull/Sturdy",
+    "typing": "",
+    "moves": [
+     "Flash Cannon",
+     "Discharge",
+     "Metal Sound",
+     "Light Screen"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Route 6"
+ },
+ {
+  "type": "text",
+  "text": "Relationship Point Choices:"
+ },
+ {
+  "type": "text",
+  "text": "Personal grudge? (+2 Ryland)"
+ },
+ {
+  "type": "text",
+  "text": "But why? (Neutral)"
+ },
+ {
+  "type": "text",
+  "text": "You will then get an Ability Capsule and Exp. Candy XL."
+ },
+ {
+  "type": "text",
+  "text": "Special Scene: Ryland’s Conviction requires 2 Relationship Points with Ryland at this point. There’s a Starlight Arena Field Readout beyond and 5 hidden Exp. Candy XL."
+ },
+ {
+  "type": "text",
+  "text": "Backtrack to the water of Route 6, and go up and right."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Justy Field: Water Surface",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Flygon",
+    "level": 54,
+    "form": "",
+    "item": "",
+    "ability": "Levitate",
+    "typing": "",
+    "moves": [
+     "Sandstorm",
+     "Earth Power",
+     "Earthquake",
+     "Uproar"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Gastrodon",
+    "level": 55,
+    "form": "West Aevian Form",
+    "item": "",
+    "ability": "Storm Drain/Liquid Ooze",
+    "typing": "Ground/Fairy",
+    "moves": [
+     "Body Slam",
+     "Earth Power",
+     "Strange Steam",
+     "Recover"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 82",
+    "ivs": "IVs: All 31",
+    "base": "Base Stats: 118 HP, 83 Atk, 68 Def, 92 SpA, 82 SpD, 39 Spe"
+   }
+  ],
+  "path": "Kristiline Town > Route 6"
+ },
+ {
+  "type": "text",
+  "text": "There is a hidden Star Piece above. Go under the bridge and up."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Reid Field: Water Surface",
+  "extra": [
+   "Items: Hyper Potion"
+  ],
+  "field": "",
+  "mons": [
+   {
+    "name": "Crustle",
+    "level": 58,
+    "form": "",
+    "item": "",
+    "ability": "Sturdy",
+    "typing": "",
+    "moves": [
+     "Rock Blast",
+     "X-Scissor",
+     "Rock Polish",
+     "Shadow Claw"
+    ],
+    "nature": "Jolly",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Scolipede",
+    "level": 58,
+    "form": "",
+    "item": "",
+    "ability": "Speed Boost",
+    "typing": "",
+    "moves": [
+     "Protect",
+     "Poison Jab",
+     "Aqua Tail",
+     "X-Scissor"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Route 6"
+ },
+ {
+  "type": "text",
+  "text": "Land on this platform to raid another boat."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Troye  & Team Xen HelenField: Beach Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Gigalith",
+    "level": 58,
+    "form": "",
+    "item": "",
+    "ability": "Sand Stream",
+    "typing": "",
+    "moves": [
+     "Rock Slide",
+     "Wide Guard",
+     "Facade",
+     "Body Press"
+    ],
+    "nature": "Brave",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Scizor",
+    "level": 57,
+    "form": "",
+    "item": "",
+    "ability": "Technician",
+    "typing": "",
+    "moves": [
+     "Bullet Punch",
+     "Bug Bite",
+     "Knock Off",
+     "Superpower"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Ambipom",
+    "level": 58,
+    "form": "",
+    "item": "",
+    "ability": "Technician",
+    "typing": "",
+    "moves": [
+     "Fake Out",
+     "Tail Slap",
+     "Thief",
+     "Fire Punch"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Bibarel",
+    "level": 59,
+    "form": "",
+    "item": "",
+    "ability": "Simple",
+    "typing": "",
+    "moves": [
+     "Swords Dance",
+     "Aqua Jet",
+     "Double-Edge",
+     "Superpower"
+    ],
+    "nature": "Jolly",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Decidueye",
+    "level": 57,
+    "form": "",
+    "item": "",
+    "ability": "Long Reach",
+    "typing": "",
+    "moves": [
+     "Giga Drain",
+     "Shadow Ball",
+     "Spirit Shackle",
+     "Brave Bird"
+    ],
+    "nature": "Mild",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Route 6"
+ },
+ {
+  "type": "text",
+  "text": "Pick up Blast Powder and hidden Antidote then enter the ship. Go up."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Xen Analyst Mephisto Field: Short-Circuit Field",
+  "extra": [
+   "Items: X Attack"
+  ],
+  "field": "",
+  "mons": [
+   {
+    "name": "Shadow Drifblim",
+    "level": 35,
+    "form": "",
+    "item": "",
+    "ability": "Aftermath/Unburden",
+    "typing": "",
+    "moves": [
+     "Stockpile",
+     "Swallow",
+     "Mystical Fire",
+     "Hurricane"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 52",
+    "ivs": "IVs: All 20",
+    "base": ""
+   },
+   {
+    "name": "Frosmoth",
+    "level": 58,
+    "form": "",
+    "item": "Sitrus Berry",
+    "ability": "Ice Scales",
+    "typing": "",
+    "moves": [
+     "Quiver Dance",
+     "Ice Beam",
+     "Bug Buzz",
+     "Roost"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Machamp",
+    "level": 58,
+    "form": "",
+    "item": "Muscle Band",
+    "ability": "No Guard",
+    "typing": "",
+    "moves": [
+     "Cross Chop",
+     "Dual Chop",
+     "Double-Edge",
+     "Knock Off"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Route 6"
+ },
+ {
+  "type": "text",
+  "text": "Catch Shadow Drifblim. Press a button above to switch the center tile to the left, then grab the Rare Candy. Use the warp and go around to the right for another fight."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Xen Analyst Zena Field: Short-Circuit Field",
+  "extra": [
+   "Items: X Sp. Atk"
+  ],
+  "field": "",
+  "mons": [
+   {
+    "name": "Skuntank",
+    "level": 56,
+    "form": "",
+    "item": "Black Sludge",
+    "ability": "Stench",
+    "typing": "",
+    "moves": [
+     "Flamethrower",
+     "Crunch",
+     "Pursuit",
+     "Sludge Bomb"
+    ],
+    "nature": "Lonely",
+    "evs": "EVs: All 84",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Seismitoad",
+    "level": 57,
+    "form": "",
+    "item": "",
+    "ability": "Water Absorb",
+    "typing": "",
+    "moves": [
+     "Muddy Water",
+     "Hyper Voice",
+     "Drain Punch",
+     "Toxic"
+    ],
+    "nature": "Sassy",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Cursola",
+    "level": 57,
+    "form": "",
+    "item": "",
+    "ability": "Perish Body",
+    "typing": "",
+    "moves": [
+     "Burning Jealousy",
+     "Hex",
+     "Power Gem",
+     "Nature Power"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Shadow Purugly",
+    "level": 35,
+    "form": "",
+    "item": "",
+    "ability": "Own Tempo",
+    "typing": "",
+    "moves": [
+     "Thrash",
+     "Swords Dance",
+     "Earthquake",
+     "Sucker Punch"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 52",
+    "ivs": "IVs: All 20",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Route 6"
+ },
+ {
+  "type": "text",
+  "text": "Catch Shadow Purugly. Press the button and go down the ladder. In these chests are Protein, Carbos, Iron, Calcium, HP Up, Zinc, and TM139 Speed Swap."
+ },
+ {
+  "type": "text",
+  "text": "Back outside, use the stabilizer on the whirlpool to fight Qwilfish (Hisuian)! Pick up a Soft Sand and Black Prism beyond, plus a hidden Rare Candy! There’s also a Veluza (Aevian) here!"
+ },
+ {
+  "type": "text",
+  "text": "Take the time to return to the entrance to Route 6 from Jynnobi Pass. Exit and reenter until you see a particle effect dropping from the sky - if you do, this is “Starfall Weather”! With Starfall Weather in the sky, take the first north to find Swalot! Continue north, then land on Clobbo Peak Island to the northwest. Pick up the Exp. Candy L and catch Chansey!"
+ },
+ {
+  "type": "text",
+  "text": "Up from here, on the island with the Xen member, you’ll find a hidden Exp. Candy L and Poliwag #6 for the Poliwag Quest!"
+ },
+ {
+  "type": "text",
+  "text": "The final Xen ship on the left side of the map is filled with trainers with Pokemon in the Lv. 70+ range. You can fight them if you wish, but I will have us return later when it is more “safe” to do so. Grab the hidden Moon Stone on the side of the ship, though! An island on the far east side has a locked house and hidden Yellow Shard."
+ },
+ {
+  "type": "text",
+  "text": "With all that taken care of, land on the Valor Shore at the top and activate the Noctowl Statue. Talk to Neved above. If you say “We’ll take them down” you don’t have to fight him, but if you say “We win and save Nim” you will have to fight him (and will get a small bit of extra lore later on):"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Xen Executive Neved Field: Beach Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Empoleon",
+    "level": 53,
+    "form": "",
+    "item": "Chople Berry",
+    "ability": "Torrent",
+    "typing": "",
+    "moves": [
+     "Surf",
+     "Flash Cannon",
+     "Stealth Rock",
+     "Yawn"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Crabominable",
+    "level": 53,
+    "form": "",
+    "item": "Crabom. Crest",
+    "ability": "Iron Fist",
+    "typing": "",
+    "moves": [
+     "Ice Hammer",
+     "Drain Punch",
+     "Mach Punch",
+     "Crabhammer"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Froslass",
+    "level": 52,
+    "form": "Aevian Form",
+    "item": "Shell Bell",
+    "ability": "Adaptability",
+    "typing": "Grass/Water",
+    "moves": [
+     "Giga Drain",
+     "Brine",
+     "Confuse Ray",
+     "Toxic Spikes"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: 4 HP, 252 SpA, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": "Base Stats: 70 HP, 80 Atk, 70 Def, 80 SpA, 70 SpD, 110 Spe"
+   },
+   {
+    "name": "Dhelmise",
+    "level": 54,
+    "form": "",
+    "item": "Coba Berry",
+    "ability": "Steelworker",
+    "typing": "",
+    "moves": [
+     "Anchor Shot",
+     "Power Whip",
+     "Surf",
+     "Shadow Claw"
+    ],
+    "nature": "Brave",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Drapion",
+    "level": 52,
+    "form": "Aevian Form",
+    "item": "Telluric Seed",
+    "ability": "Fur Coat",
+    "typing": "Ice/Poison",
+    "moves": [
+     "Shelter",
+     "Ice Spinner",
+     "Poison Jab",
+     "Earthquake"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 4 HP, 252 Atk, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": "Base Stats: 70 HP, 110 Atk, 90 Def, 60 SpA, 75 SpD, 95 Spe"
+   },
+   {
+    "name": "Barbaracle",
+    "level": 55,
+    "form": "",
+    "item": "Focus Sash",
+    "ability": "Tough Claws",
+    "typing": "",
+    "moves": [
+     "Shell Smash",
+     "Night Slash",
+     "Razor Shell",
+     "Rock Slide"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 4 HP, 252 Atk, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Route 6"
+ },
+ {
+  "type": "text",
+  "text": "Grab the hidden Float Stone, Nugget, Blue Shard, Dusk Ball, and Black Prism. Smash a rock to the right and get TM124 Scary Face. Enter the mountain…"
+ },
+ {
+  "type": "heading",
+  "level": 2,
+  "text": "Valor Mountain"
+ },
+ {
+  "type": "text",
+  "text": "Get the Emotion Powder as you walk in. You’ll be given the quest Save Amber, which is technically optional."
+ },
+ {
+  "type": "text",
+  "text": "Surf to the top to get a hidden Max Repel. Head to the upper left and go up the ladder. Go forward."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Xen Analyst Damen Field: Cave Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Froslass",
+    "level": 50,
+    "form": "",
+    "item": "",
+    "ability": "Snow Cloak",
+    "typing": "",
+    "moves": [
+     "Frost Breath",
+     "Confuse Ray",
+     "Snowscape",
+     "Will-O-Wisp"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Glalie",
+    "level": 50,
+    "form": "",
+    "item": "",
+    "ability": "Inner Focus",
+    "typing": "",
+    "moves": [
+     "Frost Breath",
+     "Bite",
+     "Ice Fang",
+     "Snowscape"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Abomasnow",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Snow Warning",
+    "typing": "",
+    "moves": [
+     "Swagger",
+     "Ingrain",
+     "Wood Hammer",
+     "Blizzard"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain"
+ },
+ {
+  "type": "text",
+  "text": "Activate the Fire Source Crystal! Then, take the ladder here at the bottom to return to 1F."
+ },
+ {
+  "type": "text",
+  "text": "Activate the Ice Crystal here."
+ },
+ {
+  "type": "text",
+  "text": "On this map, to the right is a hidden Water Stone and an Ice Heal. Head to the top of the area - on the right is TM132 Icicle Spear. In the middle is a grunt."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Awul Field: Icy Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Golduck",
+    "level": 52,
+    "form": "",
+    "item": "",
+    "ability": "Damp",
+    "typing": "",
+    "moves": [
+     "Psych Up",
+     "Amnesia",
+     "Hydro Pump",
+     "Wonder Room"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Lumineon",
+    "level": 53,
+    "form": "",
+    "item": "",
+    "ability": "Swift Swim",
+    "typing": "",
+    "moves": [
+     "Aqua Ring",
+     "Whirlpool",
+     "U-turn",
+     "Bounce"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Drednaw",
+    "level": 52,
+    "form": "",
+    "item": "",
+    "ability": "Strong Jaw",
+    "typing": "",
+    "moves": [
+     "Headbutt",
+     "Counter",
+     "Jaw Lock",
+     "Liquidation"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain"
+ },
+ {
+  "type": "text",
+  "text": "In the bottom left corner, you can get a Revive."
+ },
+ {
+  "type": "heading",
+  "level": 3,
+  "text": "Saving Amber (Optional)"
+ },
+ {
+  "type": "text",
+  "text": "We don’t have to Save Amber, but in this section we will. Head down the left ladder from the entrance. Talk to Venam and enter the Chamber of Awakening. You can talk to the tablet here to get the Underwater Field Readout!"
+ },
+ {
+  "type": "text",
+  "text": "On the left, use your new Blast Powder to reach:"
+ },
+ {
+  "type": "text",
+  "text": "ZCell 077: Chamber of Awakening"
+ },
+ {
+  "type": "text",
+  "text": "Stand in the circle for another titanic battle!"
+ },
+ {
+  "type": "trainer",
+  "trainer": "Partner: Punk Girl Venam",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Venusaur",
+    "level": 53,
+    "form": "",
+    "item": "Black Sludge",
+    "ability": "Overgrow",
+    "typing": "",
+    "moves": [
+     "Sludge Bomb",
+     "Hidden Power (Fire)",
+     "Giga Drain",
+     "Earthquake"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: 252 HP, 4 Def, 252 SpD",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Scolipede",
+    "level": 54,
+    "form": "",
+    "item": "Elemental Seed",
+    "ability": "Speed Boost",
+    "typing": "",
+    "moves": [
+     "Aqua Tail",
+     "Protect",
+     "Megahorn",
+     "Poison Jab"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Nidoqueen",
+    "level": 52,
+    "form": "",
+    "item": "Focus Sash",
+    "ability": "Sheer Force",
+    "typing": "",
+    "moves": [
+     "Thunderbolt",
+     "Sludge Bomb",
+     "Earth Power",
+     "Ice Beam"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Seviper",
+    "level": 55,
+    "form": "",
+    "item": "Elemental Seed",
+    "ability": "Shed Skin",
+    "typing": "",
+    "moves": [
+     "Aqua Tail",
+     "Night Slash",
+     "Venam's Kiss",
+     "Poison Jab"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 252 Atk, 4 Def, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Muk",
+    "level": 52,
+    "form": "Alolan Form",
+    "item": "Assault Vest",
+    "ability": "Poison Touch",
+    "typing": "",
+    "moves": [
+     "Crunch",
+     "Gunk Shot",
+     "Minimize",
+     "Ice Punch"
+    ],
+    "nature": "Relaxed",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Toxtricity",
+    "level": 54,
+    "form": "Low Key Form",
+    "item": "Black Sludge",
+    "ability": "Punk Rock",
+    "typing": "",
+    "moves": [
+     "Overdrive",
+     "Boomburst",
+     "Sludge Wave",
+     "Sludge Bomb"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain > Saving Amber (Optional)"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS Boss: Leviathan KyogreField: Water Surface",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Boss Kyogre",
+    "level": 60,
+    "form": "Shields: 4",
+    "item": "",
+    "ability": "Drizzle",
+    "typing": "",
+    "moves": [
+     "Muddy Water",
+     "Ice Beam",
+     "Ancient Power",
+     "Calm Mind"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain > Saving Amber (Optional)"
+ },
+ {
+  "type": "text",
+  "text": "Thankfully, Venam absolutely pulls her weight on this fight with powerful Grass and Electric type moves plus some resistances to Kyogre’s strategies. The stat drops and Whirlpools make trying to sweep with a single Pokemon difficult, so you will likely need a full bench ready to come in. Paralysis and the Storm Drain ability in particular make this battle much easier than it would be otherwise."
+ },
+ {
+  "type": "text",
+  "text": "Relationship Point Choices:"
+ },
+ {
+  "type": "text",
+  "text": "Save Amber in Valor Mountain (+1 Amber, +1 Venam, +1 Tesla)"
+ },
+ {
+  "type": "text",
+  "text": "After winning, Madelis will give you the V.G.C.R. Key."
+ },
+ {
+  "type": "text",
+  "text": "Relationship Point Choices:"
+ },
+ {
+  "type": "text",
+  "text": "Don’t wait till it’s too late. (+2 Venam)"
+ },
+ {
+  "type": "text",
+  "text": "Be kind to her. (+1 Venam)"
+ },
+ {
+  "type": "text",
+  "text": "… (-2 Venam)"
+ },
+ {
+  "type": "heading",
+  "level": 3,
+  "text": "Scaling the Mountain"
+ },
+ {
+  "type": "text",
+  "text": "Return to the first floor. To the right, activate the Fire Crystal."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Cruz Field: Volcanic Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Flareon",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Flash Fire",
+    "typing": "",
+    "moves": [
+     "Fire Spin",
+     "Lava Plume",
+     "Scary Face",
+     "Flare Blitz"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Cherrim",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Flower Gift",
+    "typing": "",
+    "moves": [
+     "Leech Seed",
+     "Take Down",
+     "Petal Blizzard",
+     "Worry Seed"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain > Scaling the Mountain"
+ },
+ {
+  "type": "text",
+  "text": "Go to the top of this room."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Alias Field: Volcanic Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Arcanine",
+    "level": 50,
+    "form": "",
+    "item": "",
+    "ability": "Intimidate",
+    "typing": "",
+    "moves": [
+     "Leer",
+     "Howl",
+     "Bite",
+     "Flamethrower"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Torkoal",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "White Smoke",
+    "typing": "",
+    "moves": [
+     "Iron Defense",
+     "Flamethrower",
+     "Curse",
+     "Heat Wave"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Centiskorch",
+    "level": 52,
+    "form": "",
+    "item": "",
+    "ability": "Flash Fire",
+    "typing": "",
+    "moves": [
+     "Coil",
+     "Slam",
+     "Fire Spin",
+     "Crunch"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain > Scaling the Mountain"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Aldente Field: Volcanic Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Magcargo",
+    "level": 50,
+    "form": "",
+    "item": "",
+    "ability": "Magma Armor",
+    "typing": "",
+    "moves": [
+     "Lava Plume",
+     "Amnesia",
+     "Body Slam",
+     "Recover"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Magmar",
+    "level": 50,
+    "form": "",
+    "item": "",
+    "ability": "Flame Body",
+    "typing": "",
+    "moves": [
+     "Fire Punch",
+     "Lava Plume",
+     "Low Kick",
+     "Flamethrower"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain > Scaling the Mountain"
+ },
+ {
+  "type": "text",
+  "text": "Head up at the top of this area and enter the base. Go upstairs, grab Blunder Policy and Metal Powder, and push the switch in the top right corner."
+ },
+ {
+  "type": "text",
+  "text": "Relationship Point Choices:"
+ },
+ {
+  "type": "text",
+  "text": "Free Reina in Valor (+3 Reina)"
+ },
+ {
+  "type": "text",
+  "text": "Back downstairs, try to leave through the top and you’ll get teased again. Try to leave through the bottom. After… something… head up. Go up and activate the Neutral Source Crystal!"
+ },
+ {
+  "type": "text",
+  "text": "Head back down from here, and you’ll find:"
+ },
+ {
+  "type": "text",
+  "text": "ZCell 078: Valor Mountain (Neutral)"
+ },
+ {
+  "type": "text",
+  "text": "You can also get Heracross if you go down and through the barricade."
+ },
+ {
+  "type": "text",
+  "text": "Head all the way up from here."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Tin Field: Cave Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Onix",
+    "level": 52,
+    "form": "",
+    "item": "",
+    "ability": "Rock Head",
+    "typing": "",
+    "moves": [
+     "Sandstorm",
+     "Dig",
+     "Iron Tail",
+     "Stone Edge"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Onix",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Rock Head",
+    "typing": "",
+    "moves": [
+     "Slam",
+     "Sandstorm",
+     "Dig",
+     "Iron Tail"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain > Scaling the Mountain"
+ },
+ {
+  "type": "text",
+  "text": "Pick up the Hyper Potion and go up the ladder. Loop your way around to the left."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Tobias Field: Cave Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Camerupt",
+    "level": 52,
+    "form": "",
+    "item": "",
+    "ability": "Magma Armor",
+    "typing": "",
+    "moves": [
+     "Curse",
+     "Take Down",
+     "Yawn",
+     "Earthquake"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Cacturne",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Sand Veil",
+    "typing": "",
+    "moves": [
+     "Sucker Punch",
+     "Pin Missile",
+     "Energy Ball",
+     "Cotton Spore"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Claydol",
+    "level": 52,
+    "form": "",
+    "item": "",
+    "ability": "Levitate",
+    "typing": "",
+    "moves": [
+     "Guard Split",
+     "Power Split",
+     "Sandstorm",
+     "Explosion"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain > Scaling the Mountain"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Technician Jensen Field: Cave Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Magneton",
+    "level": 50,
+    "form": "",
+    "item": "",
+    "ability": "Magnet Pull",
+    "typing": "",
+    "moves": [
+     "Magnet Rise",
+     "Flash Cannon",
+     "Discharge",
+     "Metal Sound"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Hippowdon",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Sand Stream",
+    "typing": "",
+    "moves": [
+     "Roar",
+     "Rest",
+     "Earthquake",
+     "Double-Edge"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain > Scaling the Mountain"
+ },
+ {
+  "type": "text",
+  "text": "Grab TM147 Tail Slap hiding behind the Ice Source Crystal, then activate it. To the left, you’ll find:"
+ },
+ {
+  "type": "text",
+  "text": "ZCell 079: Valor Mountain (Cool)"
+ },
+ {
+  "type": "text",
+  "text": "Make your way around and up."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Nagi Field: Icy Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Piloswine",
+    "level": 53,
+    "form": "",
+    "item": "",
+    "ability": "Oblivious",
+    "typing": "",
+    "moves": [
+     "Icy Wind",
+     "Amnesia",
+     "Take Down",
+     "Earthquake"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Sealeo",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Thick Fat",
+    "typing": "",
+    "moves": [
+     "Aurora Beam",
+     "Encore",
+     "Body Slam",
+     "Surf"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain > Scaling the Mountain"
+ },
+ {
+  "type": "text",
+  "text": "Activate the fire crystal at the top here."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Xen Jiarelen Field: Volcanic Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Shuckle",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Sturdy",
+    "typing": "",
+    "moves": [
+     "Guard Split",
+     "Rock Slide",
+     "Gastro Acid",
+     "Sticky Web"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Rhydon",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Lightning Rod",
+    "typing": "",
+    "moves": [
+     "Rock Blast",
+     "Drill Run",
+     "Take Down",
+     "Earthquake"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain > Scaling the Mountain"
+ },
+ {
+  "type": "text",
+  "text": "Head down and right, then drift across to find Vulpix! Give it a Gourmet Treat for a battle."
+ },
+ {
+  "type": "text",
+  "text": "By clicking each crystal in succession, make your way to the top of the room. Back at the top of the room, fall down the hole to the left. You’ll find:"
+ },
+ {
+  "type": "text",
+  "text": "ZCell 080: Valor Mountain (Cool)"
+ },
+ {
+  "type": "text",
+  "text": "Fall down the hole again, then proceed all the way through the barricade and back up the mountain. This time, take the ladder at the top. Exit to the Valor Cliffside."
+ },
+ {
+  "type": "heading",
+  "level": 3,
+  "text": "Valor Cliffside"
+ },
+ {
+  "type": "text",
+  "text": "If we proceed without having saved Amber, we will get (+10 Renegade Points)."
+ },
+ {
+  "type": "text",
+  "text": "Pick up hidden HP Up and Blast Powder."
+ },
+ {
+  "type": "text",
+  "text": "ZCell 081: Valor Cliffside"
+ },
+ {
+  "type": "text",
+  "text": "Head left to fight:"
+ },
+ {
+  "type": "trainer",
+  "trainer": "Partner: Punk Girl Venam",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Venusaur",
+    "level": 53,
+    "form": "",
+    "item": "Black Sludge",
+    "ability": "Overgrow",
+    "typing": "",
+    "moves": [
+     "Sludge Bomb",
+     "Hidden Power (Fire)",
+     "Giga Drain",
+     "Earthquake"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: 252 HP, 4 Def, 252 SpD",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Scolipede",
+    "level": 54,
+    "form": "",
+    "item": "Elemental Seed",
+    "ability": "Speed Boost",
+    "typing": "",
+    "moves": [
+     "Aqua Tail",
+     "Protect",
+     "Megahorn",
+     "Poison Jab"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Nidoqueen",
+    "level": 52,
+    "form": "",
+    "item": "Focus Sash",
+    "ability": "Sheer Force",
+    "typing": "",
+    "moves": [
+     "Thunderbolt",
+     "Sludge Bomb",
+     "Earth Power",
+     "Ice Beam"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Seviper",
+    "level": 55,
+    "form": "",
+    "item": "Elemental Seed",
+    "ability": "Shed Skin",
+    "typing": "",
+    "moves": [
+     "Aqua Tail",
+     "Night Slash",
+     "Venam's Kiss",
+     "Poison Jab"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 252 Atk, 4 Def, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Muk",
+    "level": 52,
+    "form": "Alolan Form",
+    "item": "Assault Vest",
+    "ability": "Poison Touch",
+    "typing": "",
+    "moves": [
+     "Crunch",
+     "Gunk Shot",
+     "Minimize",
+     "Ice Punch"
+    ],
+    "nature": "Relaxed",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Toxtricity",
+    "level": 54,
+    "form": "Low Key Form",
+    "item": "Black Sludge",
+    "ability": "Punk Rock",
+    "typing": "",
+    "moves": [
+     "Overdrive",
+     "Boomburst",
+     "Sludge Wave",
+     "Sludge Bomb"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain > Valor Cliffside"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Misfortunate Duo Eli and Sharon Field: Mountain Field",
+  "extra": [
+   "Items: Hyper Potion (2)"
+  ],
+  "field": "",
+  "mons": [
+   {
+    "name": "Honchkrow",
+    "level": 53,
+    "form": "",
+    "item": "Sharp Beak",
+    "ability": "Super Luck",
+    "typing": "",
+    "moves": [
+     "Brave Bird",
+     "Swagger",
+     "Foul Play",
+     "Thunder Wave"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Mismagius",
+    "level": 53,
+    "form": "",
+    "item": "Life Orb",
+    "ability": "Levitate",
+    "typing": "",
+    "moves": [
+     "Shadow Ball",
+     "Thunderbolt",
+     "Dazzling Gleam",
+     "Calm Mind"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Milotic",
+    "level": 52,
+    "form": "",
+    "item": "Leftovers",
+    "ability": "Competitive",
+    "typing": "",
+    "moves": [
+     "Scald",
+     "Ice Beam",
+     "Toxic",
+     "Recover"
+    ],
+    "nature": "Bold",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Magmar",
+    "level": 51,
+    "form": "",
+    "item": "Eviolite",
+    "ability": "Flame Body",
+    "typing": "",
+    "moves": [
+     "Will-O-Wisp",
+     "Heat Wave",
+     "Psychic",
+     "Follow Me"
+    ],
+    "nature": "Bold",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Electabuzz",
+    "level": 51,
+    "form": "",
+    "item": "Eviolite",
+    "ability": "Vital Spirit",
+    "typing": "",
+    "moves": [
+     "Thunder",
+     "Thunder Wave",
+     "Fire Punch",
+     "Ice Punch"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Donphan",
+    "level": 52,
+    "form": "",
+    "item": "Rocky Helmet",
+    "ability": "Sturdy",
+    "typing": "",
+    "moves": [
+     "Earthquake",
+     "Gyro Ball",
+     "Rock Slide",
+     "Ice Shard"
+    ],
+    "nature": "Brave",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Ursaring",
+    "level": 52,
+    "form": "",
+    "item": "Silk Scarf",
+    "ability": "Guts",
+    "typing": "",
+    "moves": [
+     "Double-Edge",
+     "Protect",
+     "Shadow Claw",
+     "Close Combat"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Gyarados",
+    "level": 52,
+    "form": "",
+    "item": "Wacan Berry",
+    "ability": "Moxie",
+    "typing": "",
+    "moves": [
+     "Dragon Dance",
+     "Waterfall",
+     "Crunch",
+     "Stone Edge"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Tangrowth",
+    "level": 51,
+    "form": "",
+    "item": "Miracle Seed",
+    "ability": "Leaf Guard",
+    "typing": "",
+    "moves": [
+     "Power Whip",
+     "Bulldoze",
+     "Ancient Power",
+     "Knock Off"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Lickilicky",
+    "level": 51,
+    "form": "",
+    "item": "Rocky Helmet",
+    "ability": "Oblivious",
+    "typing": "",
+    "moves": [
+     "Earthquake",
+     "Rock Slide",
+     "Body Slam",
+     "Knock Off"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain > Valor Cliffside"
+ },
+ {
+  "type": "text",
+  "text": "Time for another fight with Eli and Sharon. This is a 12v6 with the help of Venam, so it really shouldn’t be that much of a problem. Make sure Gyarados doesn’t set up!"
+ },
+ {
+  "type": "text",
+  "text": "Head down from here."
+ },
+ {
+  "type": "text",
+  "text": "Relationship Point Choices:"
+ },
+ {
+  "type": "text",
+  "text": "Talk to Venam on Valor’s lowest floor, don’t save Amber, reach the Cliffside (-3 Venam)"
+ },
+ {
+  "type": "text",
+  "text": "Head up and into the next room. Grab TM134 Rock Blast."
+ },
+ {
+  "type": "text",
+  "text": "Relationship Point Choices:"
+ },
+ {
+  "type": "text",
+  "text": "We can do this together! (Melia +3, Venam +3)"
+ },
+ {
+  "type": "text",
+  "text": "Sorta like that, yeah. (Melia +1, Venam +1)"
+ },
+ {
+  "type": "text",
+  "text": "Team Xen is all I care about. (Melia -2, Venam -2)"
+ },
+ {
+  "type": "heading",
+  "level": 3,
+  "text": "Exploration Goodies"
+ },
+ {
+  "type": "text",
+  "text": "Activate the fire crystal here, then return to the main dungeon through the cliffside. On the right side, you’ll find:"
+ },
+ {
+  "type": "text",
+  "text": "ZCell 082: Valor Mountain (Warm)"
+ },
+ {
+  "type": "text",
+  "text": "Head down and go to the left. Drift across then jump in the hole twice. Talk to Growlithe (Hisuian) and give it a Gourmet Treat for a battle. Plus:"
+ },
+ {
+  "type": "text",
+  "text": "ZCell 083: Valor Mountain (Warm)"
+ },
+ {
+  "type": "text",
+  "text": "Next, head up at the top of this room to reenter the blockade. Upstairs the rightmost door will be open now, head outside and feed Tepig five Gourmet Treats for a chance to battle it."
+ },
+ {
+  "type": "text",
+  "text": "Head back to the cliffside (there’s now a warp between Valor Cliffside and Valor Shore, it might be easiest to take the warp) and enter the room beyond. Interact with the neutral crystal, then head back into the dungeon via the cliffside once more. On the left, surf and fall down the hole. Pick up a hidden Rare Candy, then fall down the other hole and grab the Leaf Stone at the bottom! Jump down the ledge, and head up the ladder here. On the right:"
+ },
+ {
+  "type": "text",
+  "text": "ZCell 084: Valor Mountain (Neutral)"
+ },
+ {
+  "type": "text",
+  "text": "One. More. Climb. To the top of the mountain. With the neutral crystal still engaged, head down and this time to the right once you cross the ladder. Pickup the Volcanic Top Field Readout!"
+ },
+ {
+  "type": "text",
+  "text": "Use the warp to reach Valor Cliffside once more. Head all the way back up to the top and enter the summit."
+ },
+ {
+  "type": "heading",
+  "level": 3,
+  "text": "Valor Summit"
+ },
+ {
+  "type": "text",
+  "text": "Pickup the Smoke Ball beyond a Blast Powder rock. There’s a hidden Ultra Potion as you go left."
+ },
+ {
+  "type": "text",
+  "text": "Activate the Noctowl statue."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Professor Jenner Field: Volcanic Top",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Stoutland",
+    "level": 50,
+    "form": "",
+    "item": "Chople Berry",
+    "ability": "Intimidate",
+    "typing": "",
+    "moves": [
+     "Return",
+     "Work Up",
+     "Crunch",
+     "Ice Fang"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Shadow Tatsugiri",
+    "level": 51,
+    "form": "",
+    "item": "Dragon Scale",
+    "ability": "Storm Drain",
+    "typing": "",
+    "moves": [
+     "Dragon Pulse",
+     "Ice Beam",
+     "Flip Turn",
+     "Nasty Plot"
+    ],
+    "nature": "Naive",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Kommo-o",
+    "level": 51,
+    "form": "",
+    "item": "Roseli Berry",
+    "ability": "Soundproof",
+    "typing": "",
+    "moves": [
+     "Clanging Scales",
+     "Rock Slide",
+     "Dragon Dance",
+     "Drain Punch"
+    ],
+    "nature": "Naive",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Klinklang",
+    "level": 51,
+    "form": "",
+    "item": "Assault Vest",
+    "ability": "Clear Body",
+    "typing": "",
+    "moves": [
+     "Gear Grind",
+     "Wild Charge",
+     "Facade",
+     "Power Gem"
+    ],
+    "nature": "Gentle",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain > Valor Summit"
+ },
+ {
+  "type": "text",
+  "text": "Not immensely difficult thanks to it being a 6v4. Catch his Shadow Tatsugiri! If you say “I feel optimistic”, Melia will give you a Focus Sash."
+ },
+ {
+  "type": "text",
+  "text": "Follow the action to the top. Time for a double battle with Melia."
+ },
+ {
+  "type": "trainer",
+  "trainer": "Partner: Pokémon Trainer Melia",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Noivern",
+    "level": 53,
+    "form": "",
+    "item": "Draco Plate",
+    "ability": "Infiltrator",
+    "typing": "",
+    "moves": [
+     "Dark Pulse",
+     "Heat Wave",
+     "Air Slash",
+     "Gilded Arrow"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Zoroark",
+    "level": 53,
+    "form": "",
+    "item": "Dread Plate",
+    "ability": "Illusion",
+    "typing": "",
+    "moves": [
+     "Dark Pulse",
+     "Sludge Bomb",
+     "Flamethrower",
+     "Focus Blast"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: 4 HP, 252 SpA, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Snorlax",
+    "level": 54,
+    "form": "",
+    "item": "Expert Belt",
+    "ability": "Thick Fat",
+    "typing": "",
+    "moves": [
+     "Body Slam",
+     "High Horsepower",
+     "Heavy Slam",
+     "Fire Punch"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 252 HP, 156 Atk, 100 Def",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Togekiss",
+    "level": 55,
+    "form": "",
+    "item": "Leftovers",
+    "ability": "Serene Grace",
+    "typing": "",
+    "moves": [
+     "Aura Sphere",
+     "Gilded Arrow",
+     "Dazzling Gleam",
+     "Flamethrower"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: 156 HP, 100 SpA, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Azumarill",
+    "level": 53,
+    "form": "",
+    "item": "Sitrus Berry",
+    "ability": "Huge Power",
+    "typing": "",
+    "moves": [
+     "Liquidation",
+     "Play Rough",
+     "Aqua Jet",
+     "Knock Off"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Hydreigon",
+    "level": 54,
+    "form": "",
+    "item": "Draco Plate",
+    "ability": "Levitate",
+    "typing": "",
+    "moves": [
+     "Dark Pulse",
+     "Flamethrower",
+     "Gilded Arrow",
+     "Earth Power"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain > Valor Summit"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Xen Executive Geara  & Xen Executive ZettaField: Volcanic Top Field",
+  "extra": [
+   "Items: Ultra Potion (2), Silvally Crest"
+  ],
+  "field": "",
+  "mons": [
+   {
+    "name": "Krookodile",
+    "level": 53,
+    "form": "",
+    "item": "Assault Vest",
+    "ability": "Intimidate",
+    "typing": "",
+    "moves": [
+     "Earthquake",
+     "Rock Slide",
+     "Crunch",
+     "Low Kick"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Grimmsnarl",
+    "level": 54,
+    "form": "",
+    "item": "Light Clay",
+    "ability": "Prankster",
+    "typing": "",
+    "moves": [
+     "Darkest Lariat",
+     "Spirit Break",
+     "Light Screen",
+     "Reflect"
+    ],
+    "nature": "Impish",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Gyarados",
+    "level": 53,
+    "form": "",
+    "item": "Assault Vest",
+    "ability": "Moxie",
+    "typing": "",
+    "moves": [
+     "Waterfall",
+     "Earthquake",
+     "Stone Edge",
+     "Iron Head"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 252 HP, 252 Atk",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Clefable",
+    "level": 55,
+    "form": "",
+    "item": "Sitrus Berry",
+    "ability": "Magic Guard",
+    "typing": "",
+    "moves": [
+     "Thunder Wave",
+     "Thunder",
+     "Moonblast",
+     "Flamethrower"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 82",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Marowak",
+    "level": 53,
+    "form": "Alolan Form",
+    "item": "Thick Club",
+    "ability": "Lightning Rod",
+    "typing": "",
+    "moves": [
+     "Bonemerang",
+     "Shadow Bone",
+     "Low Kick",
+     "Fire Punch"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 252 HP, 252 Atk",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Gengar",
+    "level": 55,
+    "form": "",
+    "item": "Telluric Seed",
+    "ability": "Cursed Body",
+    "typing": "",
+    "moves": [
+     "Shadow Ball",
+     "Sludge Bomb",
+     "Thunder",
+     "Focus Blast"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: 4 HP, 252 SpA, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Minior",
+    "level": 53,
+    "form": "",
+    "item": "Telluric Seed",
+    "ability": "Shields Down",
+    "typing": "",
+    "moves": [
+     "Shell Smash",
+     "Acrobatics",
+     "Rock Slide",
+     "Earthquake"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Absol",
+    "level": 53,
+    "form": "",
+    "item": "Scope Lens",
+    "ability": "Super Luck",
+    "typing": "",
+    "moves": [
+     "Stone Edge",
+     "Sucker Punch",
+     "Night Slash",
+     "Brick Break"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Typhlosion",
+    "level": 54,
+    "form": "",
+    "item": "Charcoal",
+    "ability": "Flash Fire",
+    "typing": "",
+    "moves": [
+     "Eruption",
+     "Heat Wave",
+     "Hidden Power (Grass)",
+     "Focus Blast"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: 4 HP, 252 SpA, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Weavile",
+    "level": 53,
+    "form": "",
+    "item": "Life Orb",
+    "ability": "Pressure",
+    "typing": "",
+    "moves": [
+     "Icicle Crash",
+     "Throat Chop",
+     "Low Kick",
+     "Poison Jab"
+    ],
+    "nature": "Jolly",
+    "evs": "EVs: 4 HP, 252 Atk, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Dragonite",
+    "level": 54,
+    "form": "",
+    "item": "Sitrus Berry",
+    "ability": "Multiscale",
+    "typing": "",
+    "moves": [
+     "Brick Break",
+     "Dragon Claw",
+     "Dual Wingbeat",
+     "Thunder Punch"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Silvally",
+    "level": 55,
+    "form": "",
+    "item": "Ground Memory",
+    "ability": "RKS System",
+    "typing": "",
+    "moves": [
+     "Multi-Attack",
+     "Rock Slide",
+     "Heat Wave",
+     "Thunder"
+    ],
+    "nature": "Naughty",
+    "evs": "EVs: 152 Atk, 100 SpA, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain > Valor Summit"
+ },
+ {
+  "type": "text",
+  "text": "This battle is insane, but at least a fitting final Xen boss to Act 1 of Pokemon Rejuvenation! Zetta’s Typhlosion is intense, as it’s fast and its Eruption is strong. Grimmsnarl also gets basically at least 1 free screen unless you have Brick Break to remove it, so that is also tough to deal with. Their aces, Gengar and Silvally respectively, are also insanely fast and can kill most of your Pokemon. Melia’s team used to be worse, TRUST ME IT WAS SO MUCH WORSE, but now she’s a mostly competent doubles ally. Generally, this fight is won by targeting one of your two opponents and making sure Melia covers you."
+ },
+ {
+  "type": "text",
+  "text": "The Volcanic Field can be used to your advantage: consider using your own Fire moves to take advantage of it. You can also transition to Sky Field with Bounce or to Volcanic Field with Dig, both of which you may be able to get a better footing in."
+ },
+ {
+  "type": "text",
+  "text": "In the beach area, follow the path."
+ },
+ {
+  "type": "text",
+  "text": "New Game+ Contents"
+ },
+ {
+  "type": "text",
+  "text": "Afterwards, return to the top of the mountain, collecting the souls as you go. You can catch Abra, along the way! Follow the path through Rift Distortion!"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Taken Tyrant ??? Field: Wasteland",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Boss Giratina",
+    "level": 57,
+    "form": "Rift Forme",
+    "item": "",
+    "ability": "Pressure",
+    "typing": "Ghost/Poison",
+    "moves": [
+     "Hex",
+     "Sludge Bomb",
+     "Earth Power",
+     "Spikes"
+    ],
+    "nature": "Quiet",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 31",
+    "base": "Base Stats: 150 HP, 100 Atk, 120 Def, 100 SpA, 120 SpD, 50 Spe"
+   },
+   {
+    "name": "Relicanth",
+    "level": 55,
+    "form": "",
+    "item": "Relicanth Crest",
+    "ability": "Sturdy",
+    "typing": "",
+    "moves": [
+     "Stealth Rock",
+     "Liquidation",
+     "Rock Slide",
+     "Body Press"
+    ],
+    "nature": "Careful",
+    "evs": "EVs: All 82",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Swalot",
+    "level": 55,
+    "form": "",
+    "item": "Swalot Crest",
+    "ability": "Liquid Ooze",
+    "typing": "",
+    "moves": [
+     "Belch",
+     "Acid Armor",
+     "Body Press",
+     "Swallow"
+    ],
+    "nature": "Calm",
+    "evs": "EVs: All 82",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Valor Mountain > Valor Summit"
+ },
+ {
+  "type": "text",
+  "text": "I recommend taking out the Crested reinforcements first, as Giratina’s final shield heals its stat boosts and powers it up. This is quite the tough battle on the Wasteland field - you can use your own hazard moves for same-turn damage. The Telluric Seed is also generally a good pick here - alongside a move like Sucker Punch, you can tear through Giratina’s shields."
+ },
+ {
+  "type": "text",
+  "text": "Once everything has been played out, talk to the group in Kakori. Take a Noctowl to Teila Resort and enter the building Tesla works in."
+ },
+ {
+  "type": "text",
+  "text": "Relationship Point Choices:"
+ },
+ {
+  "type": "text",
+  "text": "It’s true… she lied (-3 Crescent)"
+ },
+ {
+  "type": "text",
+  "text": "Relationship Point Choices:"
+ },
+ {
+  "type": "text",
+  "text": "Uh… No? (-3 Crescent)"
+ },
+ {
+  "type": "text",
+  "text": "Yes… (+2 Crescent)"
+ },
+ {
+  "type": "text",
+  "text": "I like trouble (-2 Crescent)"
+ },
+ {
+  "type": "text",
+  "text": "Make a quick detour to Aquamarine Cave if you trusted Jenner earlier:"
+ },
+ {
+  "type": "text",
+  "text": "Relationship Point Choices:"
+ },
+ {
+  "type": "text",
+  "text": "If you trusted Jenner, talk to Melia in the Aquamarine Cave (+3 Melia)"
+ },
+ {
+  "type": "text",
+  "text": "Finally, go to Mynori Sea from Kakori. You’ll see Shiny Tapu Koko on the dock."
+ },
+ {
+  "type": "text",
+  "text": "Relationship Point Choices:"
+ },
+ {
+  "type": "text",
+  "text": "Talk to Crawli on the dock after beating Tapu Koko in the jungle (+6 Crawli)"
+ },
+ {
+  "type": "heading",
+  "level": 2,
+  "text": "Kristiline Town Help Quests"
+ },
+ {
+  "type": "text",
+  "text": "A whole bunch has become available now that we have the TM for Magma Drift and have cleared Valor Mountain. This includes the other two help quests for Kristiline Town… that we get in Kakori Village."
+ },
+ {
+  "type": "heading",
+  "level": 3,
+  "text": "Lurking Lighthouse"
+ },
+ {
+  "type": "text",
+  "text": "Head over to the Kakori Ranger HQ and talk to Alex inside. You’ll get the Lighthouse Key-J to start Lurking Lighthouse! Grab an Electric-type from the PC."
+ },
+ {
+  "type": "text",
+  "text": "Our first destination is Jynnobi Pass. Enter the lighthouse on the left. Note the passcode: 9867. Head upstairs."
+ },
+ {
+  "type": "text",
+  "text": "Back in Kakori, we will learn our next destination: Southbound Lighthouse in the Terajuma Shipyard map."
+ },
+ {
+  "type": "text",
+  "text": "Relationship Point Choices:"
+ },
+ {
+  "type": "text",
+  "text": "It’s true, she said it. (+2 Crawli)"
+ },
+ {
+  "type": "text",
+  "text": "She’s lying. (-2 Crawli)"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Anti-Assist Drew Field: Factory Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Copperajah",
+    "level": 49,
+    "form": "",
+    "item": "",
+    "ability": "Sheer Force",
+    "typing": "",
+    "moves": [
+     "Iron Defense",
+     "Dig",
+     "Strength",
+     "Iron Head"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 73",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Dubwool",
+    "level": 50,
+    "form": "",
+    "item": "",
+    "ability": "Fluffy",
+    "typing": "",
+    "moves": [
+     "Guard Swap",
+     "Reversal",
+     "Cotton Guard",
+     "Double-Edge"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Wailord",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Water Veil",
+    "typing": "",
+    "moves": [
+     "Body Slam",
+     "Rest",
+     "Amnesia",
+     "Hydro Pump"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Kristiline Town Help Quests > Lurking Lighthouse"
+ },
+ {
+  "type": "text",
+  "text": "Grab the Data Drive and go right."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Anti-Assist Ann Field: Factory Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Shelgon",
+    "level": 49,
+    "form": "",
+    "item": "",
+    "ability": "Rock Head",
+    "typing": "",
+    "moves": [
+     "Crunch",
+     "Dragon Claw",
+     "Zen Headbutt",
+     "Focus Energy"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 73",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Weavile",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Pressure",
+    "typing": "",
+    "moves": [
+     "Fury Swipes",
+     "Hone Claws",
+     "Fling",
+     "Nasty Plot"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Donphan",
+    "level": 52,
+    "form": "",
+    "item": "",
+    "ability": "Sturdy",
+    "typing": "",
+    "moves": [
+     "Stomp Tantrum",
+     "Scary Face",
+     "Earthquake",
+     "Giga Impact"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 78",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Kristiline Town Help Quests > Lurking Lighthouse"
+ },
+ {
+  "type": "text",
+  "text": "On the next floor, step on the tiles to get the electrical balls to move."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Anti-Assist Sigyrd Field: Factory Field",
+  "extra": [
+   "Items: Hyper Potion"
+  ],
+  "field": "",
+  "mons": [
+   {
+    "name": "Bastiodon",
+    "level": 58,
+    "form": "",
+    "item": "",
+    "ability": "Sturdy",
+    "typing": "",
+    "moves": [
+     "Endure",
+     "Metal Burst",
+     "Iron Head",
+     "Heavy Slam"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Archeops",
+    "level": 59,
+    "form": "",
+    "item": "",
+    "ability": "Defeatist",
+    "typing": "",
+    "moves": [
+     "Tailwind",
+     "Dragon Claw",
+     "Thrash",
+     "Endeavor"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Armaldo",
+    "level": 57,
+    "form": "",
+    "item": "",
+    "ability": "Battle Armor",
+    "typing": "",
+    "moves": [
+     "Crush Claw",
+     "Rock Blast",
+     "Protect",
+     "X-Scissor"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Kristiline Town Help Quests > Lurking Lighthouse"
+ },
+ {
+  "type": "text",
+  "text": "Enter the door in the top right."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Anti-Assist Jalen Field: Factory Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Skarmory",
+    "level": 58,
+    "form": "",
+    "item": "",
+    "ability": "Sturdy",
+    "typing": "",
+    "moves": [
+     "Metal Sound",
+     "Spikes",
+     "Iron Defense",
+     "Brave Bird"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Pupitar",
+    "level": 60,
+    "form": "",
+    "item": "",
+    "ability": "Rock Head",
+    "typing": "",
+    "moves": [
+     "Stone Edge",
+     "Thrash",
+     "Sandstorm",
+     "Hyper Beam"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Kristiline Town Help Quests > Lurking Lighthouse"
+ },
+ {
+  "type": "text",
+  "text": "This completes the quest, and we can grab the rewards at the Kakori Help Center: $6,245, 2 Red Shards, Revival Herb, and Mareep! (+1 Karma)"
+ },
+ {
+  "type": "text",
+  "text": "Completing this quest causes certain Pokemon to appear at night that didn’t before, namely Clamperl on the northern side of Route 5, accessible via Aquamarine Cave depths."
+ },
+ {
+  "type": "text",
+  "text": "One other result of this sidequest remains. Head back to Jirukala Cavern in the Mynori Sea. Make your way to the monitor at the end and input our code: 9867. Down this path you will find TM51 Steel Wing, 3 Blast Powders, plus:"
+ },
+ {
+  "type": "text",
+  "text": "ZCell 085: Jirukala Cavern"
+ },
+ {
+  "type": "heading",
+  "level": 3,
+  "text": "Tale of Two Hearts"
+ },
+ {
+  "type": "text",
+  "text": "Enter the house at the top of the hill in Kristiline Town to start A Tale of Two Hearts. Agree to accompany Odessa around the town. Talk to NPCs and enter buildings as you wish, eventually making your way to the Isle of Angels. Head up and cross the bridge to the right. After a conversation, return to Kristiline. Return her to her father."
+ },
+ {
+  "type": "text",
+  "text": "You’ll get to play as yourself in Odessa’s body for a bit. Leave the spot on the floor enough times, then you’ll be free to wander on a different map. Read the books, then hop over the boxes on the top right. Walking in front of the father or any red-eyed statues is a no-go."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Pokémon Ranger Charthy Field: No Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Rillaboom",
+    "level": 56,
+    "form": "",
+    "item": "",
+    "ability": "Overgrow",
+    "typing": "",
+    "moves": [
+     "Slam",
+     "Uproar",
+     "Wood Hammer",
+     "Endeavor"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 84",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Ambipom",
+    "level": 56,
+    "form": "",
+    "item": "",
+    "ability": "Technician/Pickup",
+    "typing": "",
+    "moves": [
+     "Double Hit",
+     "Fling",
+     "Nasty Plot",
+     "Last Resort"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 84",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Kristiline Town Help Quests > Tale of Two Hearts"
+ },
+ {
+  "type": "text",
+  "text": "Pull the lever to the left - now the rightmost statue will be off."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Pokémon Ranger Perla Field: No Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Meowscarada",
+    "level": 56,
+    "form": "",
+    "item": "",
+    "ability": "Overgrow",
+    "typing": "",
+    "moves": [
+     "Night Slash",
+     "Energy Ball",
+     "Play Rough",
+     "Knock Off"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 84",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Maractus",
+    "level": 56,
+    "form": "",
+    "item": "",
+    "ability": "Water Absorb/Chlorophyll",
+    "typing": "",
+    "moves": [
+     "Sunny Day",
+     "Solar Beam",
+     "Acupressure",
+     "Petal Dance"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 84",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Kristiline Town Help Quests > Tale of Two Hearts"
+ },
+ {
+  "type": "text",
+  "text": "Make your way to the bottom right to pull another lever, then climb the ladder above. Once you escape, talk to a sailor at the eastern dock to get to Teila Resort. Talk to Amber at the top."
+ },
+ {
+  "type": "text",
+  "text": "You’ll eventually be taken to Valor Shore for a gauntlet!"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Commander Holly  & Dance Prodigy Rorim B.Field: Beach Field",
+  "extra": [
+   "Items: Hyper Potion (2)"
+  ],
+  "field": "",
+  "mons": [
+   {
+    "name": "Scizor",
+    "level": 55,
+    "form": "",
+    "item": "",
+    "ability": "Technician",
+    "typing": "",
+    "moves": [
+     "Bullet Punch",
+     "Knock Off",
+     "Detect",
+     "Swords Dance"
+    ],
+    "nature": "Impish",
+    "evs": "EVs: 252 Atk, 4 SpA, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Escavalier",
+    "level": 57,
+    "form": "",
+    "item": "",
+    "ability": "Overcoat",
+    "typing": "",
+    "moves": [
+     "Megahorn",
+     "Protect",
+     "Swords Dance",
+     "Iron Head"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 252 HP, 252 Atk, 4 SpA",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Scolipede",
+    "level": 58,
+    "form": "",
+    "item": "Lum Berry",
+    "ability": "Speed Boost",
+    "typing": "",
+    "moves": [
+     "Swords Dance",
+     "Megahorn",
+     "Aqua Tail",
+     "Earthquake"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 4 HP, 252 Atk, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Oricorio",
+    "level": 55,
+    "form": "Pom-Pom Style",
+    "item": "",
+    "ability": "Dancer",
+    "typing": "",
+    "moves": [
+     "Calm Mind",
+     "Hidden Power (Ice)",
+     "Revelation Dance",
+     "Air Slash"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: 4 HP, 252 SpA, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Bellossom",
+    "level": 57,
+    "form": "",
+    "item": "",
+    "ability": "Chlorophyll",
+    "typing": "",
+    "moves": [
+     "Quiver Dance",
+     "Teeter Dance",
+     "Giga Drain",
+     "Sludge Bomb"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: 4 HP, 252 SpA, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Quaquaval",
+    "level": 58,
+    "form": "",
+    "item": "Water Gem",
+    "ability": "Moxie",
+    "typing": "",
+    "moves": [
+     "Aqua Step",
+     "Acrobatics",
+     "Bulk Up",
+     "Feather Dance"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: 252 Atk, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Kristiline Town Help Quests > Tale of Two Hearts"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS Boss: ManaphyField: Beach Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Boss Manaphy",
+    "level": 60,
+    "form": "Shields: 2",
+    "item": "Leftovers",
+    "ability": "Hydration",
+    "typing": "",
+    "moves": [
+     "Scald",
+     "Shadow Ball",
+     "Rain Dance",
+     "Take Heart"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "SOS Phione",
+    "level": 50,
+    "form": "Appears: Less than 2 Shield(s)  (Continuous)",
+    "item": "",
+    "ability": "Hydration",
+    "typing": "",
+    "moves": [
+     "Water Pulse",
+     "Energy Ball",
+     "Helping Hand",
+     "Dazzling Gleam"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Kristiline Town Help Quests > Tale of Two Hearts"
+ },
+ {
+  "type": "text",
+  "text": "Take Heart will increase its Special Attack and Special Defense, making it hit very hard on both fields. The Phione are able come in and cover weaknesses and add to the amount of work you need to do at the end of this fight."
+ },
+ {
+  "type": "text",
+  "text": "I recommend lowering its other stats, namely Speed and potentially Defense. It has no way to recover or raise these, so if you’re able to get off a Scary Face and a Screech you can probably just one-shot the rest of its health bars."
+ },
+ {
+  "type": "text",
+  "text": "With that out of the way, return to the Isle of Angels bridge. Return to her house and go up. The quest will be done - head back inside to get the Phione Crest from the father."
+ },
+ {
+  "type": "heading",
+  "level": 3,
+  "text": "Infinite Potential"
+ },
+ {
+  "type": "text",
+  "text": "With the previous two quests complete, head into the Kristiline Help Center. Talk to Jenkel to begin Infinite Potential."
+ },
+ {
+  "type": "text",
+  "text": "Head to the Kakori Gym area to talk to Holly. Go next to the Terajuma Excavation Site and talk to the folks inside the building. Our next destination is Terajuma Beach. Talk to the suspicious individual. You’ll need to follow him into the Jungle and to the right."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Anti-Assist Kurt Field: Forest Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Milotic",
+    "level": 58,
+    "form": "",
+    "item": "Flame Orb",
+    "ability": "Marvel Scale",
+    "typing": "",
+    "moves": [
+     "Surf",
+     "Aqua Ring",
+     "Toxic",
+     "Light Screen"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Vaporeon",
+    "level": 60,
+    "form": "",
+    "item": "",
+    "ability": "Water Absorb",
+    "typing": "",
+    "moves": [
+     "Muddy Water",
+     "Acid Armor",
+     "Hydro Pump",
+     "Last Resort"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Kristiline Town Help Quests > Infinite Potential"
+ },
+ {
+  "type": "text",
+  "text": "Take a Noctowl over to Valor Shore, then surf to the right below. Enter the shack. Grab the Psychic Memory."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: ??? ??? Field: Factory Field",
+  "extra": [
+   "Items: Max Potion (2)"
+  ],
+  "field": "",
+  "mons": [
+   {
+    "name": "Raichu",
+    "level": 60,
+    "form": "Alolan Form",
+    "item": "Focus Sash",
+    "ability": "Surge Surfer",
+    "typing": "",
+    "moves": [
+     "Thunderbolt",
+     "Psychic",
+     "Focus Blast",
+     "Hidden Power (Ice)"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: 4 Def, 252 SpA, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Clawitzer",
+    "level": 60,
+    "form": "",
+    "item": "Mystic Water",
+    "ability": "Mega Launcher",
+    "typing": "",
+    "moves": [
+     "Muddy Water",
+     "Dark Pulse",
+     "Aura Sphere",
+     "Ice Beam"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: 252 HP, 4 Def, 252 SpA",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Orthworm",
+    "level": 60,
+    "form": "",
+    "item": "Sitrus Berry",
+    "ability": "Earth Eater",
+    "typing": "",
+    "moves": [
+     "Heavy Slam",
+     "Shed Tail",
+     "Rock Slide",
+     "Body Press"
+    ],
+    "nature": "Impish",
+    "evs": "EVs: 252 HP, 252 Def, 4 SpD",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Rotom",
+    "level": 60,
+    "form": "Mow Rotom",
+    "item": "White Herb",
+    "ability": "Levitate",
+    "typing": "",
+    "moves": [
+     "Leaf Storm",
+     "Dark Pulse",
+     "Volt Switch",
+     "Thunderbolt"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: 4 Def, 252 SpA, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Swampert",
+    "level": 60,
+    "form": "",
+    "item": "Rindo Berry",
+    "ability": "Torrent",
+    "typing": "",
+    "moves": [
+     "High Horsepower",
+     "Ice Punch",
+     "Earthquake",
+     "Waterfall"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 252 HP, 252 Atk, 4 Def",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Xurkitree",
+    "level": 64,
+    "form": "",
+    "item": "Shuca Berry",
+    "ability": "Beast Boost",
+    "typing": "",
+    "moves": [
+     "Thunderbolt",
+     "Grass Knot",
+     "Dazzling Gleam",
+     "Hidden Power (Ice)"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: 4 Def, 252 SpA, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Kristiline Town Help Quests > Infinite Potential"
+ },
+ {
+  "type": "text",
+  "text": "Be very careful of a Xurkitree sweep."
+ },
+ {
+  "type": "text",
+  "text": "Once you win, talk to Odessa in Kristiline. Follow her to the island to the south of the Pokemon Center and talk to her again. Reenter the Kristiline Help Center next."
+ },
+ {
+  "type": "text",
+  "text": "Sounds like the Shipyard is our next destination, so head over there. Go right."
+ },
+ {
+  "type": "text",
+  "text": "Grab a Data Drive inside and go up."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Diabolical Evil Genius Malamar Field: Short-Circuit Field",
+  "extra": [
+   "Items: Hyper Potion (2)"
+  ],
+  "field": "",
+  "mons": [
+   {
+    "name": "Inkay",
+    "level": 50,
+    "form": "",
+    "item": "Fighting Gem",
+    "ability": "Contrary",
+    "typing": "",
+    "moves": [
+     "Superpower",
+     "Psycho Cut",
+     "Knock Off",
+     "Rest"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 75",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Inkay",
+    "level": 55,
+    "form": "",
+    "item": "Dark Gem",
+    "ability": "Contrary",
+    "typing": "",
+    "moves": [
+     "Superpower",
+     "Psycho Cut",
+     "Knock Off",
+     "Rest"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 82",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Inkay",
+    "level": 60,
+    "form": "",
+    "item": "Psychic Gem",
+    "ability": "Contrary",
+    "typing": "",
+    "moves": [
+     "Superpower",
+     "Psycho Cut",
+     "Knock Off",
+     "Rest"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Inkay",
+    "level": 70,
+    "form": "",
+    "item": "Tanga Berry",
+    "ability": "Contrary",
+    "typing": "",
+    "moves": [
+     "Superpower",
+     "Psycho Cut",
+     "Knock Off",
+     "Rest"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Inkay",
+    "level": 80,
+    "form": "",
+    "item": "Focus Sash",
+    "ability": "Contrary",
+    "typing": "",
+    "moves": [
+     "Superpower",
+     "Psycho Cut",
+     "Knock Off",
+     "Rest"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Inkay",
+    "level": 90,
+    "form": "",
+    "item": "Normalium Z",
+    "ability": "Contrary",
+    "typing": "",
+    "moves": [
+     "Happy Hour",
+     "Superpower",
+     "Knock Off",
+     "Psycho Cut"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 85",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Kristiline Town Help Quests > Infinite Potential"
+ },
+ {
+  "type": "text",
+  "text": "Not too bad thanks to Inkay’s bad stats, despite the level disadvantage. Use Bug moves for OHKOs!"
+ },
+ {
+  "type": "text",
+  "text": "Once this quest is over, return to the Kakori Help Center to get 2 Yellow Shards and Inkay! (+1 Karma)"
+ },
+ {
+  "type": "heading",
+  "level": 2,
+  "text": "Backtracking: Magma Drift"
+ },
+ {
+  "type": "heading",
+  "level": 3,
+  "text": "Tyluric Temple 3"
+ },
+ {
+  "type": "text",
+  "text": "There are a few more sidequests and areas we can explore with Magma Drift."
+ },
+ {
+  "type": "text",
+  "text": "Enter the Izakaya in the Kakori Ranger HQ to get the My Dearest Rowlet quest."
+ },
+ {
+  "type": "text",
+  "text": "Reenter the Tyluric Temple and progress as we did before. You’ll see Rowlet on the right; talk to him and he will proceed further. Surf down once you reach an outside area and follow the path. Drift across the magma: go right first, then up the tornado. You’ll eventually reach:"
+ },
+ {
+  "type": "text",
+  "text": "ZCell 086: Tyluric Temple"
+ },
+ {
+  "type": "text",
+  "text": "You can also use a Gourmet Treat to catch Magby and obtain *5 Exp. Candy L."
+ },
+ {
+  "type": "text",
+  "text": "Go back in the cave and drift all the way left."
+ },
+ {
+  "type": "text",
+  "text": "ZCell 087: Tyluric Temple"
+ },
+ {
+  "type": "text",
+  "text": "There is a chest containing a Gimmighoul and 100 Gimmighoul Coins on the right."
+ },
+ {
+  "type": "text",
+  "text": "ZCell 088: Tyluric Temple"
+ },
+ {
+  "type": "text",
+  "text": "You can pick 6 Roseli Berries, 6 Wacan Berries, and 6 Liechi Berries."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Team Anti-Assist Marcie  & Xen Analyst ChikieField: Forest Field",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Rillaboom",
+    "level": 53,
+    "form": "",
+    "item": "",
+    "ability": "Overgrow",
+    "typing": "",
+    "moves": [
+     "Knock Off",
+     "Slam",
+     "Uproar",
+     "Wood Hammer"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Tsareena",
+    "level": 54,
+    "form": "",
+    "item": "",
+    "ability": "Leaf Guard/Q. Majesty",
+    "typing": "",
+    "moves": [
+     "Stomp",
+     "Teeter Dance",
+     "Aromatic Mist",
+     "Leaf Storm"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Porygon2",
+    "level": 53,
+    "form": "",
+    "item": "",
+    "ability": "Trace/Download",
+    "typing": "",
+    "moves": [
+     "Recover",
+     "Discharge",
+     "Tri Attack",
+     "Lock-On"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Eelektross",
+    "level": 54,
+    "form": "",
+    "item": "",
+    "ability": "Levitate",
+    "typing": "",
+    "moves": [
+     "Headbutt",
+     "Acid",
+     "Discharge",
+     "Wild Charge"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Backtracking: Magma Drift > Tyluric Temple 3"
+ },
+ {
+  "type": "text",
+  "text": "You will then be able to battle and catch Rowlet. Cute!"
+ },
+ {
+  "type": "text",
+  "text": "New Game+ Contents"
+ },
+ {
+  "type": "text",
+  "text": "First, grab Chansey from the PC, and take Noctowl to Terajuma Beach. Show it to the person below for an Oval Charm!"
+ },
+ {
+  "type": "heading",
+  "level": 3,
+  "text": "Floria Island Magma Driftin’"
+ },
+ {
+  "type": "text",
+  "text": "We’ve got business on Floria Island! Take the boat from Kakori to Gearen. Talk to Ayuda in the Help Center - for getting 75 Zygarde Cells we will get a Cell Imprint and Safety Goggles! Our next threshold is 100."
+ },
+ {
+  "type": "text",
+  "text": "Enter the Magnolia library and talk to Zumi again. Now that we have Mareep, we will be given a Mareep (Aevian) as well at 6 Exp. Candy M. Our next target for PictoZumi is Toxel."
+ },
+ {
+  "type": "text",
+  "text": "Next, take the truck to Sheridan. Grab something from the PC with either Dark Pulse or Night Daze: the Lv. 50 Spiritomb we caught earlier comes with the former. Make your way to Route 3’s Phasial Cave, and take the ladder across some water in the bottom right to return to the Poliwag area. Now that we’ve found all six, we can catch Poliwag! In the main area of the cave, you can use Rock Climb to reach a new ladder. Use Dark Pulse in this area to transform the field. Across the bridge is an Ability Capsule and the Scolipite, as well as the Dark Crystal Cavern Field Readout and another Gimmighoul with 100 Gimmighoul Coins!"
+ },
+ {
+  "type": "text",
+  "text": "Take the time to ensure you have Metal Powder, a Poke Ball, and 3 Cell Batteries in your bag. Enter Carotos Mountain. Drift to the left and grab TM36 Sludge Bomb! Smash some rocks and drift to the right. Use two Blast Powders to get the Cyndaquil egg."
+ },
+ {
+  "type": "text",
+  "text": "ZCell 089: Carotos Mountain"
+ },
+ {
+  "type": "text",
+  "text": "Head down to the corrupted cave area. Take the first Magma Drift path to reach the Corrupted Cave Field Readout! Backtrack to the land and go southeast.Magma Drift here and follow the path to a hidden Poison Barb and eventually Aevian Paras!"
+ },
+ {
+  "type": "text",
+  "text": "Now that we have Madelis’ key, enter the ladder up and right from the Sheridan Arena entrance to reach the V.G.C.R. Use the key on the right and enter this room."
+ },
+ {
+  "type": "text",
+  "text": "Here, we’ll need to step on switches to progress. I’ll note that we can learn Madelis’ Xen Executive ID in here for use in future playthroughs: it is XE089321. Follow the blue path to reach a machine containing the Ancient Teachings."
+ },
+ {
+  "type": "text",
+  "text": "Next, we’ll need to reach the room’s center. While doing this, you can reach the Houndoominite in a machine on the right. Follow the green path to reach a machine."
+ },
+ {
+  "type": "text",
+  "text": "Insert the necessary items to get Ralts! Push the red button at the bottom to escape the room."
+ },
+ {
+  "type": "text",
+  "text": "Next, the people of Akuwa Town have FINALLY been returned to their home, so head to Akuwa Town."
+ },
+ {
+  "type": "text",
+  "text": "In the house behind the Cut tree, you’ll get a Synthetic Seed, Nugget, and Cleanse Tag. A building to the north contains 5 Quick Balls."
+ },
+ {
+  "type": "text",
+  "text": "The house next door contains move tutors:"
+ },
+ {
+  "type": "text",
+  "text": "Enter the mart to see a scene with Karrina. She’ll then give you a Repel."
+ },
+ {
+  "type": "text",
+  "text": "Enter the ACDMC in the upper right."
+ },
+ {
+  "type": "text",
+  "text": "At the top right counter, you can revive any fossils you’ve obtained so far. So, that means you can now get: Omanyte, Kabuto, Anorith, Lileep, Shieldon, Cranidos, Amaura, and Tyrunt. Using two of the malformed Galar fossils allows you to get Arctozolt and Arctovish at this time!"
+ },
+ {
+  "type": "heading",
+  "level": 2,
+  "text": "Lyric Badge"
+ },
+ {
+  "type": "text",
+  "text": "Make your way back to Teila Resort and enter Club S.T.F.U."
+ },
+ {
+  "type": "text",
+  "text": "Special Scene: Calling Home requires talking to Kreiss here."
+ },
+ {
+  "type": "text",
+  "text": "Talk to Reina in here to get a Dusk Stone and Exp. Candy M. Talk to the girl at the top. She’ll tell us about building hype. Do whatever you have to do to build the hype - talk to people, battle trainers, change the song with the guy on the right. The battles here (note that major character fights are 2v2):"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Guitarist Lucina Field: Concert Venue",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Lilligant",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Chlorophyll",
+    "typing": "",
+    "moves": [
+     "Petal Dance",
+     "Sleep Powder",
+     "Quiver Dance",
+     "Giga Drain"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Toxtricity",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Punk Rock",
+    "typing": "",
+    "moves": [
+     "Overdrive",
+     "Ion Deluge",
+     "Sludge Wave",
+     "Focus Blast"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 76",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Lyric Badge"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Trendy Girl Reina Field: Concert Venue",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Honchkrow",
+    "level": 51,
+    "form": "",
+    "item": "",
+    "ability": "Insomnia",
+    "typing": "",
+    "moves": [
+     "Night Slash",
+     "Brave Bird",
+     "Superpower",
+     "Sucker Punch"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 252 Atk, 4 Def, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Swoobat",
+    "level": 53,
+    "form": "",
+    "item": "",
+    "ability": "Unaware",
+    "typing": "",
+    "moves": [
+     "Psychic",
+     "Shadow Ball",
+     "Air Slash",
+     "Calm Mind"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: 204 HP, 4 Def, 252 SpA, 48 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Lyric Badge"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Head Ranger Crawli Field: Concert Venue",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Araquanid",
+    "level": 54,
+    "form": "",
+    "item": "Mystic Water",
+    "ability": "Water Bubble",
+    "typing": "",
+    "moves": [
+     "Liquidation",
+     "Aqua Ring",
+     "Barbed Web",
+     "Poison Jab"
+    ],
+    "nature": "Jolly",
+    "evs": "EVs: 4 HP, 252 Atk, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Golisopod",
+    "level": 54,
+    "form": "",
+    "item": "Sitrus Berry",
+    "ability": "EmergencyExit",
+    "typing": "",
+    "moves": [
+     "First Impression",
+     "Aqua Jet",
+     "Leech Life",
+     "Liquidation"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Lyric Badge"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Punk Girl Venam Field: Concert Venue",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Seviper",
+    "level": 54,
+    "form": "",
+    "item": "Assault Vest",
+    "ability": "Shed Skin",
+    "typing": "",
+    "moves": [
+     "Sludge Wave",
+     "Giga Drain",
+     "Flamethrower",
+     "Earthquake"
+    ],
+    "nature": "Quiet",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Nidoqueen",
+    "level": 55,
+    "form": "",
+    "item": "Poison Barb",
+    "ability": "Poison Point",
+    "typing": "",
+    "moves": [
+     "Sludge Wave",
+     "Earthquake",
+     "Crunch",
+     "Rock Slide"
+    ],
+    "nature": "Brave",
+    "evs": "EVs: All 82",
+    "ivs": "IVs: All 20",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Lyric Badge"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: League Scout Amanda Field: Concert Venue",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Incineroar",
+    "level": 54,
+    "form": "",
+    "item": "Assault Vest",
+    "ability": "Intimidate",
+    "typing": "",
+    "moves": [
+     "Flare Blitz",
+     "Fake Out",
+     "Darkest Lariat",
+     "Thunder Punch"
+    ],
+    "nature": "Adamant",
+    "evs": "EVs: 252 HP, 252 Atk, 4 SpD",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Torkoal",
+    "level": 52,
+    "form": "",
+    "item": "Heat Rock",
+    "ability": "Drought",
+    "typing": "",
+    "moves": [
+     "Eruption",
+     "Heat Wave",
+     "Earth Power",
+     "Solar Beam"
+    ],
+    "nature": "Quiet",
+    "evs": "EVs: 252 HP, 252 SpA, 4 SpD",
+    "ivs": "IVs: All 31",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Lyric Badge"
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Pokémon Ranger Alex  & Pokémon Ranger SamField: Concert Venue",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Machamp",
+    "level": 54,
+    "form": "",
+    "item": "Coba Berry",
+    "ability": "Guts",
+    "typing": "",
+    "moves": [
+     "Strength",
+     "Knock Off",
+     "Brick Break",
+     "Rock Slide"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Ampharos",
+    "level": 54,
+    "form": "",
+    "item": "Shuca Berry",
+    "ability": "Static",
+    "typing": "",
+    "moves": [
+     "Thunder",
+     "Power Gem",
+     "Confuse Ray",
+     "Dragon Pulse"
+    ],
+    "nature": "Hardy",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Lyric Badge"
+ },
+ {
+  "type": "text",
+  "text": "A breeder will show up at some point, too! Beating her grants 7 Exp. Candy M."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Pokémon Caretaker Laila Field: Concert Venue",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Audino",
+    "level": 55,
+    "form": "",
+    "item": "",
+    "ability": "Healer",
+    "typing": "",
+    "moves": [
+     "Take Down",
+     "Zen Headbutt",
+     "Knock Off",
+     "Simple Beam"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 82",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Audino",
+    "level": 55,
+    "form": "",
+    "item": "",
+    "ability": "Healer",
+    "typing": "",
+    "moves": [
+     "Take Down",
+     "Zen Headbutt",
+     "Knock Off",
+     "Simple Beam"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 82",
+    "ivs": "IVs: All 10",
+    "base": ""
+   },
+   {
+    "name": "Audino",
+    "level": 55,
+    "form": "",
+    "item": "",
+    "ability": "Healer",
+    "typing": "",
+    "moves": [
+     "Take Down",
+     "Zen Headbutt",
+     "Knock Off",
+     "Simple Beam"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: All 82",
+    "ivs": "IVs: All 10",
+    "base": ""
+   }
+  ],
+  "path": "Kristiline Town > Lyric Badge"
+ },
+ {
+  "type": "text",
+  "text": "Once you’ve hyped to the max, head into the battlefield."
+ },
+ {
+  "type": "trainer",
+  "trainer": "VS: Music Enthusiast Amber Field: Concert Venue",
+  "extra": [],
+  "field": "",
+  "mons": [
+   {
+    "name": "Camerupt",
+    "level": 53,
+    "form": "",
+    "item": "Focus Sash",
+    "ability": "Solid Rock",
+    "typing": "",
+    "moves": [
+     "Fever Pitch",
+     "Hidden Power (Electric)",
+     "Magnitude",
+     "Stealth Rock"
+    ],
+    "nature": "Quiet",
+    "evs": "EVs: All 79",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Arcanine",
+    "level": 54,
+    "form": "Hisuian Form",
+    "item": "Normal Gem",
+    "ability": "Rock Head",
+    "typing": "",
+    "moves": [
+     "Extreme Speed",
+     "Reversal",
+     "Head Smash",
+     "Flare Blitz"
+    ],
+    "nature": "Jolly",
+    "evs": "EVs: All 81",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Scovillain",
+    "level": 54,
+    "form": "",
+    "item": "Synthetic Seed",
+    "ability": "Moody",
+    "typing": "",
+    "moves": [
+     "Protect",
+     "Flamethrower",
+     "Giga Drain",
+     "Will-O-Wisp"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: 252 HP, 4 SpA, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Blaziken",
+    "level": 53,
+    "form": "",
+    "item": "Air Balloon",
+    "ability": "Speed Boost",
+    "typing": "",
+    "moves": [
+     "Fever Pitch",
+     "Reversal",
+     "Thunder Punch",
+     "Protect"
+    ],
+    "nature": "Naive",
+    "evs": "EVs: 4 HP, 100 Atk, 252 SpA, 152 Spe",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Skeledirge",
+    "level": 54,
+    "form": "",
+    "item": "Passho Berry",
+    "ability": "Unaware",
+    "typing": "",
+    "moves": [
+     "Torch Song",
+     "Shadow Ball",
+     "Earth Power",
+     "Alluring Voice"
+    ],
+    "nature": "Modest",
+    "evs": "EVs: 252 HP, 252 SpA",
+    "ivs": "IVs: All 31",
+    "base": ""
+   },
+   {
+    "name": "Toxtricity",
+    "level": 55,
+    "form": "Aevian Form",
+    "item": "Air Balloon",
+    "ability": "Punk Rock",
+    "typing": "Fire/Poison",
+    "moves": [
+     "Fever Pitch",
+     "Acid Spray",
+     "Hyper Voice",
+     "Hidden Power (Grass)"
+    ],
+    "nature": "Timid",
+    "evs": "EVs: 104 HP, 152 SpA, 252 Spe",
+    "ivs": "IVs: All 31",
+    "base": "Base Stats: 75 HP, 75 Atk, 70 Def, 114 SpA, 70 SpD, 98 Spe"
+   }
+  ],
+  "path": "Kristiline Town > Lyric Badge"
+ },
+ {
+  "type": "text",
+  "text": "Fever Pitch: Fire | Special | 1 Pwr | 100% Acc | The user emits a rocking hot sound, getting stronger with more hype."
+ },
+ {
+  "type": "text",
+  "text": "Relationship Point Choices:"
+ },
+ {
+  "type": "text",
+  "text": "End the battle on Concert Field Lv. 1 (-2 Amber)"
+ },
+ {
+  "type": "text",
+  "text": "Beat Amber on any other field than Concert Lv. 1 (+3 Amber)"
+ },
+ {
+  "type": "text",
+  "text": "It’s time for the second gym battle on the Concert Venue, though this time under different circumstances. Most notably, Fever Pitch, Magnitude, and Reversal all hit for full damage on the high levels of the Concert Venue, so you’re going to take lots of damage. Depending on how much you care about relationship points, you can get away with intentionally nerfing the Concert Venue and using Stomping Tantrum for huge damage. There are lots of ways to do so: intentionally missing low-accuracy moves works, raising Evasion works, moves like Play Nice and Tickle will work as well. If you’re going to stick it out on the maximum hype field - use the field’s tools to your own advantage: max power Magnitude is a fantastic choice if you can get around the Air Balloons."
+ },
+ {
+  "type": "text",
+  "text": "Win to get the Lyric Badge, which brings the level cap up to Lv. 60, and TM50 Overheat! Head outside and watch the cutscene."
+ }
+]
