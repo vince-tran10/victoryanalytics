@@ -82,3 +82,6 @@ cloud environment: rejuvenation.wiki.gg, bigjra.github.io, www.rebornevo.com, po
 Report: (1) new mons since the previous export, (2) Active-box yes/no (tier vs Active median ~0.50, weakest ~0.2-0.3),
 (3) for keepers: ability, nature, EVs, 4 moves. Move rules for this check: level-up <= 55, Egg, Ch1-7 TMs, known moves
 (no tutors). Run from workspace/: `MOVE_RULES=ch7_notutor python3 -I ../scripts/team/new_mons.py "$PWD" team/<old roster>.json team/<new roster>.json team/new_mons_<date>.json`
+- Box audit (report section 04): `python3 -I scripts/team/box_audit.py output/chapter8_report.html <new export> <old export> <old ACTIVE_START>`.
+  It finds the Active box by the A-Z reset after the party. 10:27 export: Active starts at #357 (58 mons), Overflow 350.
+  Active-box bar (Vincent, 11-05): only mons strong enough to contend on their own, genuinely top tier; the bar is high.
