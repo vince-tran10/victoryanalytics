@@ -65,6 +65,9 @@ for m in new:
     else:
         added.append(m)
 
+if os.environ.get('PICK'):
+    pick = {int(x) for x in os.environ['PICK'].split(',')}
+    added = [m for m in new if m['dump'] in pick]
 res = []
 for m in added:
     best = None

@@ -1,0 +1,267 @@
+[
+ {
+  "dump": 56,
+  "owned": "Clawitzer",
+  "level": 45,
+  "now_ability": "Mega Launcher",
+  "now_moves": [
+   "Smack Down",
+   "Hone Claws",
+   "Water Pulse",
+   "Sludge Bomb"
+  ],
+  "final": "Clawitzer",
+  "evolve": "",
+  "gate": "",
+  "types": "Water",
+  "score": 0.576,
+  "tier": "B",
+  "ability": "Mega Launcher",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Water Pulse",
+   "Aura Sphere",
+   "Surf",
+   "Protect"
+  ],
+  "move_src": {
+   "Water Pulse": "known",
+   "Aura Sphere": "Lv 42",
+   "Surf": "HM03",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 0.52,
+   "guard1": 0.6,
+   "guard2": 0.85,
+   "tommen": 0.92,
+   "groudon": -0.19,
+   "crawli": 0.73,
+   "neved": 0.72,
+   "eli": 0.53,
+   "jenner": 0.62,
+   "geara": 0.6,
+   "giratina": 0.48,
+   "amber": 0.89
+  }
+ },
+ {
+  "dump": 124,
+  "owned": "Hariyama",
+  "level": 45,
+  "now_ability": "Thick Fat",
+  "now_moves": [
+   "Fake Out",
+   "Force Palm",
+   "Bulk Up",
+   "Detect"
+  ],
+  "final": "Hariyama",
+  "evolve": "",
+  "gate": "",
+  "types": "Fighting",
+  "score": 0.648,
+  "tier": "A",
+  "ability": "Thick Fat",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Close Combat",
+   "Rock Tomb",
+   "Heavy Slam",
+   "Protect"
+  ],
+  "move_src": {
+   "Close Combat": "Lv 46",
+   "Rock Tomb": "TM39",
+   "Heavy Slam": "Lv 54",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 0.88,
+   "guard1": 0.64,
+   "guard2": 0.91,
+   "tommen": 0.85,
+   "groudon": -0.21,
+   "crawli": 0.75,
+   "neved": 0.72,
+   "eli": 0.72,
+   "jenner": 0.81,
+   "geara": 0.69,
+   "giratina": 0.54,
+   "amber": 0.75
+  }
+ },
+ {
+  "dump": 184,
+  "owned": "Mudbray",
+  "level": 35,
+  "now_ability": "Inner Focus",
+  "now_moves": [
+   "Strength",
+   "Counter",
+   "High Horsepower",
+   "Heavy Slam"
+  ],
+  "final": "Mudsdale",
+  "evolve": "Mudsdale (Level 30)",
+  "gate": "",
+  "types": "Ground",
+  "score": 0.68,
+  "tier": "A",
+  "ability": "Inner Focus",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "High Horsepower",
+   "Rock Tomb",
+   "Superpower",
+   "Protect"
+  ],
+  "move_src": {
+   "High Horsepower": "known",
+   "Rock Tomb": "TM39",
+   "Superpower": "Lv 52",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 0.81,
+   "guard1": 0.89,
+   "guard2": 1.01,
+   "tommen": 1.02,
+   "groudon": 0.16,
+   "crawli": 0.66,
+   "neved": 0.44,
+   "eli": 0.67,
+   "jenner": 0.8,
+   "geara": 0.68,
+   "giratina": 0.7,
+   "amber": 0.67
+  }
+ },
+ {
+  "dump": 209,
+  "owned": "Passimian",
+  "level": 45,
+  "now_ability": "Defiant",
+  "now_moves": [
+   "Fling",
+   "Bulk Up",
+   "Thrash",
+   "Double-Edge"
+  ],
+  "final": "Passimian",
+  "evolve": "",
+  "gate": "",
+  "types": "Fighting",
+  "score": 0.661,
+  "tier": "A",
+  "ability": "Defiant",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Close Combat",
+   "Rock Tomb",
+   "Vital Throw",
+   "Protect"
+  ],
+  "move_src": {
+   "Close Combat": "Lv 50",
+   "Rock Tomb": "TM39",
+   "Vital Throw": "Egg",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 0.88,
+   "guard1": 0.56,
+   "guard2": 0.94,
+   "tommen": 0.77,
+   "groudon": 0.15,
+   "crawli": 0.66,
+   "neved": 0.72,
+   "eli": 0.7,
+   "jenner": 0.93,
+   "geara": 0.72,
+   "giratina": 0.5,
+   "amber": 0.64
+  }
+ },
+ {
+  "dump": 272,
+  "owned": "Slowbro",
+  "level": 45,
+  "now_ability": "Own Tempo",
+  "now_moves": [
+   "Surf",
+   "Slack Off",
+   "Psychic",
+   "Psych Up"
+  ],
+  "final": "Slowbro",
+  "evolve": "",
+  "gate": "",
+  "types": "Water/Psychic",
+  "score": 0.589,
+  "tier": "A",
+  "ability": "Own Tempo",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Psychic",
+   "Brine",
+   "Surf",
+   "Protect"
+  ],
+  "move_src": {
+   "Psychic": "known",
+   "Brine": "TM135",
+   "Surf": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 1.01,
+   "guard1": 0.42,
+   "guard2": 0.69,
+   "tommen": 0.71,
+   "groudon": 0.22,
+   "crawli": 0.7,
+   "neved": 0.65,
+   "eli": 0.49,
+   "jenner": 0.53,
+   "geara": 0.42,
+   "giratina": 0.55,
+   "amber": 0.81
+  }
+ }
+]

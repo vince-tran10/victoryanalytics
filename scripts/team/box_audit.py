@@ -6,6 +6,8 @@ The Active box starts where the alphabetical order resets after the party.
 """
 import re, sys, json, html, collections, subprocess, os
 REPORT, NEW, OLD, OLD_START = sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4])
+PROMO = {p['n']: p for p in json.load(open(sys.argv[5]))} if len(sys.argv) > 5 else {}
+NOTE = sys.argv[6] if len(sys.argv) > 6 else ''
 here = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -73,6 +75,8 @@ esc = html.escape
 def li(d):
     name = esc(d['species']) + (f' <span class="nick">“{esc(d["nick"])}”</span>' if d['nick'] else '')
     tag = ' <span class="b party">changed</span>' if (k(d), d['box']) in moved_in else ''
+    if d['n'] in PROMO and d['box'] == 'Overflow':
+        tag += ' <span class="b promote">promote</span>'
     return (f'<li data-n="{esc(d["species"].lower())} {esc(d["nick"].lower())}"><span class="idx num">#{d["n"]}</span>'
             f'<span class="nm">{name}{tag}</span><span class="lv num">Lv {d.get("level", "?")}</span></li>')
 
@@ -84,8 +88,11 @@ def group(title, b, opened, note):
             f'<ul class="roster">{"".join(li(d) for d in items)}</ul></details>')
 
 
-checks = [f'Total <b class="num">{len(N)}</b> = Party <b class="num">{cnt["Party"]}</b> + Active <b class="num">{cnt["Active"]}</b> + Overflow <b class="num">{cnt["Overflow"]}</b>',
+checks0 = [f'Total <b class="num">{len(N)}</b> = Party <b class="num">{cnt["Party"]}</b> + Active <b class="num">{cnt["Active"]}</b> + Overflow <b class="num">{cnt["Overflow"]}</b>',
           f'Active box starts at export entry <b class="num">#{ACT}</b> ({esc(N[ACT-1]["species"])}); each box is A–Z']
+checks = checks0
+if PROMO:
+    checks.append(f'Overflow scan: <b class="num">{len(PROMO)}</b> Pokémon clear the Active-box bar (A tier or better on their own) and aren\'t already in your party or Active box. Tagged <span class="b promote">promote</span> below')
 if oddsort:
     checks.append('Out of A–Z order in Overflow: ' + ', '.join(f'{esc(d["species"])} (#{d["n"]})' for d in oddsort))
 chg = ('<li>' + '</li><li>'.join(esc(c) for c in changes) + '</li>') if changes else '<li>No changes</li>'
@@ -95,12 +102,12 @@ sec = f'''<!--BOXAUDIT-->
   <h2 id="s4"><span class="n">04</span> Box audit <span class="tag">who you own, and where · export {len(N)} mons</span></h2>
   <div class="audit-top">
     <div class="panel pad"><h3>Completeness check</h3><ul class="plain">{''.join('<li>' + c + '</li>' for c in checks)}</ul></div>
-    <div class="panel pad"><h3>Since last export</h3><ul class="plain">{chg}</ul></div>
+    <div class="panel pad"><h3>Since last export</h3>{('<p class="legend">' + esc(NOTE) + '</p>') if NOTE else ''}<ul class="plain">{chg}</ul></div>
   </div>
   <label class="find">Find a Pokémon <input type="search" id="boxfind" placeholder="e.g. Furret" autocomplete="off"></label>
   {group("Party", "Party", True, "")}
   {group("Active box", "Active", True, "")}
-  {group("Overflow boxes", "Overflow", False, "tap to expand")}
+  {group("Overflow boxes", "Overflow", bool(PROMO), (str(len(PROMO)) + " to promote · see To do") if PROMO else "tap to expand")}
 </section>
 <!--/BOXAUDIT-->'''
 css = '''<style id="boxaudit-css">
@@ -115,6 +122,7 @@ css = '''<style id="boxaudit-css">
 .find { display: flex; gap: 10px; align-items: center; font-size: 13.5px; flex-wrap: wrap }
 .find input { font: inherit; padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--ink); min-width: 0; flex: 1; max-width: 280px }
 .roster li[hidden] { display: none }
+.b.promote { background: var(--good-soft); color: var(--good) }
 </style>'''
 js = '''<script id="boxaudit-js">
 (function(){var i=document.getElementById('boxfind');if(!i)return;i.addEventListener('input',function(){var q=i.value.trim().toLowerCase();

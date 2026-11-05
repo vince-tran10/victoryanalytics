@@ -1,0 +1,109 @@
+[
+ {
+  "n": 184,
+  "owned": "Mudbray",
+  "final": "Mudsdale",
+  "level": 35,
+  "tier": "A",
+  "score": 0.68,
+  "ability": "Inner Focus",
+  "nature": "Adamant (yours: Bashful)",
+  "evs_txt": "252 HP / 252 Atk / 4 SpD",
+  "moves": [
+   "High Horsepower",
+   "Rock Tomb",
+   "Superpower (Lv 52)",
+   "Protect"
+  ],
+  "move_src": {
+   "High Horsepower": "known",
+   "Rock Tomb": "TM39",
+   "Superpower": "Lv 52",
+   "Protect": "TM17"
+  },
+  "later": [
+   "Superpower at Lv 52"
+  ],
+  "nature_now": "Bashful"
+ },
+ {
+  "n": 209,
+  "owned": "Passimian",
+  "final": "Passimian",
+  "level": 45,
+  "tier": "A",
+  "score": 0.661,
+  "ability": "Defiant",
+  "nature": "Adamant (yours: Mild)",
+  "evs_txt": "252 HP / 252 Atk / 4 SpD",
+  "moves": [
+   "Close Combat (Lv 50)",
+   "Double-Edge",
+   "Rock Tomb",
+   "Protect"
+  ],
+  "move_src": {
+   "Close Combat": "Lv 50",
+   "Double-Edge": "known",
+   "Rock Tomb": "TM39",
+   "Protect": "TM17"
+  },
+  "later": [
+   "Close Combat at Lv 50"
+  ],
+  "nature_now": "Mild"
+ },
+ {
+  "n": 124,
+  "owned": "Hariyama",
+  "final": "Hariyama",
+  "level": 45,
+  "tier": "A",
+  "score": 0.648,
+  "ability": "Thick Fat",
+  "nature": "Adamant (yours: Quiet)",
+  "evs_txt": "252 HP / 252 Atk / 4 SpD",
+  "moves": [
+   "Close Combat (Lv 46)",
+   "Heavy Slam (Lv 54)",
+   "Fake Out",
+   "Protect"
+  ],
+  "move_src": {
+   "Close Combat": "Lv 46",
+   "Heavy Slam": "Lv 54",
+   "Fake Out": "known",
+   "Protect": "TM17"
+  },
+  "later": [
+   "Close Combat at Lv 46",
+   "Heavy Slam at Lv 54"
+  ],
+  "nature_now": "Quiet"
+ },
+ {
+  "n": 272,
+  "owned": "Slowbro",
+  "final": "Slowbro",
+  "level": 45,
+  "tier": "A",
+  "score": 0.589,
+  "ability": "Own Tempo",
+  "nature": "Modest (yours: Careful)",
+  "evs_txt": "252 HP / 252 SpA / 4 SpD",
+  "moves": [
+   "Psychic",
+   "Brine",
+   "Surf",
+   "Protect"
+  ],
+  "move_src": {
+   "Psychic": "known",
+   "Brine": "TM135",
+   "Surf": "known",
+   "Protect": "TM17"
+  },
+  "later": [],
+  "nature_now": "Careful"
+ }
+]
