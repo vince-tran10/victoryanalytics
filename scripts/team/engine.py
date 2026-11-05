@@ -81,6 +81,12 @@ class Engine:
         except OSError:
             self.allowed_tms = set()
         self.battles = load_battles_walk(base) if os.environ.get('WALK', '1') == '1' else load_battles(base)
+        done = set(filter(None, os.environ.get('DONE', '').split(',')))      # fights already beaten
+        self.battles = [b for b in self.battles if b['key'] not in done]
+        sw = float(os.environ.get('SINGLES_W', '1'))                         # weight singles fights more
+        for b in self.battles:
+            if b['format'] == 'Singles':
+                b['weight'] *= sw
         for b in self.battles:
             b['foes'] = [self.build_foe(m, b) for m in b['mons']]
             b['foe_intimidate'] = any(f['ability'] == 'INTIMIDATE' for f in b['foes'])

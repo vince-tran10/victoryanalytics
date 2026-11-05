@@ -198,3 +198,15 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Near: Musharna 0.570, Exeggutor-Alola (Leaf Stone) 0.567. Team option: Meganium (Chikorita #55, Lv 25) + Rhyperior for
   Glalie + Lapras = +1.1%, better in 8/8 weightings but small; not recommended unless he wants to raise Chikorita.
   Engine only follows each species' first evolution branch (e.g. Eevee → Vaporeon).
+
+## After Aelita (singles-first rebuild)
+- Vincent beat Aelita with the counter six (Goli lead, Gholdengo for Hawlucha, Rhyperior for Blaziken/Staraptor, Lapras Sing).
+- Engine env: DONE=aelita,narcissa (fights beaten), SINGLES_W=2 (singles count double; his preference: CPU singles are
+  the hard part). Protect is the 4th move on every mon. Runs r17_*.json, finals f17_*.json.
+- NEW SIX: Annihilape + Chandelure (lead), Rhyperior + Exeggutor-Alola (mid; Exeggcute #101 Lv 36 + Leaf Stone),
+  Golisopod-Aevian + Glalie-Aevian (closer). Out: Arcanine, Lapras-Aevian (back to Active).
+  native 1.200 / singles 1.136 / doubles 1.348 vs previous six 1.164 / 1.093 / 1.332; wins 8/8 weightings.
+  One-shots 99/103 remaining (singles 40/44) vs 95 (39); fewer "moving first" (44 vs 58): slower but bulkier.
+  Best-score six (1.204) used Ludicolo instead of Glalie, but worse in singles; not chosen.
+- Singles win cons (44 singles boss mons): Golisopod 31 one-shots (37 after SD), one-shot by 6; Annihilape 22/27/32
+  (fresh/1/2 hits), one-shot by only 2. Golisopod stays the main win con in singles.

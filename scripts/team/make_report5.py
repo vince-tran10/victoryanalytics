@@ -54,12 +54,12 @@ def disp(n):
 TEAM = [
     ('Lead', 'Annihilape', 'Fighting/Ghost', 'Defiant', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Black Belt',
      [('Close Combat', 0), ('Rage Fist', 0), ('Sucker Punch', 0), ('Protect', 0)], []),
-    ('Lead', 'Arcanine', 'Fire', 'Intimidate', 'Adamant', '252 Atk / 252 Spe / 4 Def', 'Sitrus Berry',
-     [('Flare Blitz', 0), ('Extreme Speed', 0), ('Close Combat', 0), ('Protect', 0)], []),
-    ('Mid', 'Chandelure', 'Ghost/Fire', 'Flash Fire', 'Timid', '252 SpA / 252 Spe / 4 HP', 'Focus Sash',
+    ('Lead', 'Chandelure', 'Ghost/Fire', 'Flash Fire', 'Timid', '252 SpA / 252 Spe / 4 HP', 'Focus Sash',
      [('Shadow Ball', 0), ('Overheat', 0), ('Will-O-Wisp', 0), ('Protect', 0)], []),
-    ('Mid', 'Lapras-Aevian', 'Rock/Psychic', 'No Guard', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone',
-     [('Rock Slide', 0), ('Zen Headbutt', 0), ('Dragon Dance', 0), ('Sing', 0)], []),
+    ('Mid', 'Rhyperior', 'Ground/Rock', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone',
+     [('Stone Edge', 0), ('Headlong Rush', 0), ('Slack Off', 0), ('Protect', 0)], []),
+    ('Mid', 'Exeggutor-Alola', 'Grass/Dragon', 'Frisk', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Sitrus Berry',
+     [('Leaf Storm', 0), ('Giga Drain', 0), ('Extrasensory', 0), ('Protect', 0)], []),
     ('Closer', 'Golisopod-Aevian', 'Bug/Ground', 'Skill Link', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand',
      [('Bone Rush', 0), ('Pin Missile', 0), ('Swords Dance', 0), ('Protect', 0)], []),
     ('Closer', 'Glalie-Aevian', 'Grass/Rock', 'Grassy Surge', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry',
@@ -71,6 +71,7 @@ JOB = {'Annihilape': 'Fastest hitter.',
        'Glaceon': 'Icy Wind slows the back line for Golisopod. Freeze-Dry and Blizzard are your Groudon answer.',
        'Golisopod-Aevian': 'Win condition. Skill Link makes Bone Rush and Pin Missile 125 power. After one Swords Dance it one-shots 60 of 68 boss mons.',
        'Leavanny-Aevian': 'Rage Powder pulls attacks so Golisopod gets a free Swords Dance; Focus Sash guarantees it survives that turn. Intimidate on entry.'}
+EVOLVE_FIRST = {'Exeggutor-Alola': 'Evolve Exeggcute (Overflow) with a Leaf Stone, train it to Lv 55 and put it in the party. Build in section 02'}
 REPL = {('Annihilape', 'Sucker Punch'): 'Fire Punch: priority hit on faster foes',
         ('Annihilape', 'Rage Fist'): 'Shadow Punch: Move Relearner, +50 power per hit taken',
         ('Gholdengo', 'Power Gem'): 'Recover: Move Relearner, hits the Fire types',
@@ -84,7 +85,7 @@ def verify(name, ab, nat, evs, item, moves):
     if not d:
         cands0 = [x for x in cur if x['species'] == name]
         d0 = min(cands0, key=lambda x: (x['box'] != 'Active', len(verify_mon(x, ab, nat, evs, item, moves))), default=None)
-        out = [f"Put {name} in the party (now in {d0['box']} #{d0['n']})" if d0 else f'Put {name} in the party']
+        out = [f"Put {name} in the party (now in {d0['box']} #{d0['n']})" if d0 else (EVOLVE_FIRST.get(name) or f'Put {name} in the party')]
         if d0:
             out += [c for c in verify_mon(d0, ab, nat, evs, item, moves)]
         return out
@@ -153,7 +154,7 @@ ready_rows, R_TOT, R_KO, R_FAST, R_RISK = readiness()
 
 # ---------------------------------------------------------------- 1b) relearner upgrades
 UP = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'upgrades_relearn.json')))
-ORDER = ['Annihilape', 'Arcanine', 'Chandelure', 'Lapras-Aevian', 'Golisopod-Aevian', 'Glalie-Aevian']
+ORDER = ['Annihilape', 'Chandelure', 'Rhyperior', 'Exeggutor-Alola', 'Golisopod-Aevian', 'Glalie-Aevian']
 up_cards, up_same, up_left, up_done = [], [], 0, []
 for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP),
                 key=lambda d: (d['box'] != 'Party', ORDER.index(d['species']) if d['species'] in ORDER else 9, not UP[d['species']].get('big'), d['species'])):
@@ -178,7 +179,7 @@ for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP
     if abg: extra += f'<div class="chg2">Ability: {E(d.get("ability"))} → <b>{E(u["ability"])}</b> (Ability Capsule)</div>'
     if u.get('later'): extra += f'<div class="mnote">Later: {E(u["later"])}</div>'
     status = '<span class="ok">Done ✓</span>' if done else ('<span class="b big">big upgrade</span>' if u.get('big') else '<span class="b small">upgrade</span>')
-    role = {'Annihilape': 'lead', 'Arcanine': 'lead', 'Chandelure': 'mid', 'Lapras-Aevian': 'mid'}.get(d['species'], 'closer' if d['box'] == 'Party' else '')
+    role = {'Annihilape': 'lead', 'Chandelure': 'lead', 'Rhyperior': 'mid', 'Exeggutor-Alola': 'mid'}.get(d['species'], 'closer' if d['box'] == 'Party' else '')
     up_cards.append(f'''<li class="mon up{" isparty" if d["box"] == "Party" else ""}"><div class="mtop"><strong>{E(d["species"])}</strong>{status}</div>
 <div class="chips">{chips(d["types"] or "")}<span class="lv">Lv {d["level"]}</span>{'<span class="b party">Party</span>' if d["box"] == "Party" else ''}</div>
 <ul class="mv">{mv}</ul>{('<div class="mnote">Out: ' + E(', '.join(gone)) + '</div>') if gone and not done else ''}{extra}
@@ -455,21 +456,22 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
     <div class="panel">
       <h3>Game plan</h3>
       <ul>
-        <li><strong>Two win conditions.</strong> Annihilape is the main one. Once it has been hit, Rage Fist one-shots 67 of the 113 boss mons, and 83 after two hits, with no setup turn. Golisopod is the closer: after one Swords Dance it one-shots 95 of 113.</li>
-        <li><strong class="role-lead">Lead</strong> Annihilape + Arcanine. Arcanine's Intimidate weakens physical attackers on entry and Extreme Speed picks off weakened foes. Let Ape take a hit, then Rage Fist.</li>
-        <li><strong class="role-mid">Mid</strong> Chandelure's Will-O-Wisp burns physical threats; Lapras-Aevian's Sing never misses (No Guard), and Rock Slide hits both foes. Sleep and burns are what buy Golisopod its Swords Dance turn.</li>
-        <li><strong class="role-closer">Closer</strong> Golisopod sets up Swords Dance on a sleeping or burned foe, then sweeps. Glalie-Aevian's Grassy Surge heals the team every turn, and Grassy Glide hits first in the terrain.</li>
-        <li><strong>Only the lead changes, never the six.</strong> Golisopod leads vs Aelita (Bone Rush breaks Sturdy), Tommen, Troye &amp; Helen, Zena, Giratina and the ??? Factory fight. Arcanine + Chandelure lead vs Crawli, Narcissa, Danni &amp; Layla, Holly &amp; Rorim and Marcie. Glalie-Aevian + Arcanine vs Eli &amp; Sharon. Glalie-Aevian leads vs Groudon, Kyogre and Manaphy (Grass hits all three). Texen (bring 3): Chandelure, Annihilape, Golisopod.</li>
+        <li><strong>Built for singles.</strong> Remaining fights only (Aelita and earlier are done), singles counted double, Protect in every 4th slot.</li>
+        <li><strong>Two win conditions.</strong> Golisopod is the strongest: in singles it one-shots 31 of 44 boss mons, 37 after one Swords Dance, and only 6 can one-shot it. Annihilape is the safe opener: only 2 of 44 can one-shot it, and Rage Fist grows every time it's hit.</li>
+        <li><strong class="role-lead">Lead</strong> Annihilape takes the first hit, then Rage Fist. Chandelure leads into physical teams and burns them with Will-O-Wisp.</li>
+        <li><strong class="role-mid">Mid</strong> Rhyperior walls Fire, Flying and Rock and hits back with Stone Edge. Exeggutor-Alola is your Water/Ground answer and the Groudon hitter.</li>
+        <li><strong class="role-closer">Closer</strong> Golisopod sets up Swords Dance only when the foe can't hurt it (it one-shots most mons without a boost), then sweeps. Glalie-Aevian's Grassy Surge heals each turn, and Grassy Glide hits first.</li>
+        <li><strong>Only the lead changes, never the six.</strong> Golisopod leads vs Tommen, Troye &amp; Helen, Giratina and the ??? Factory fight. Rhyperior leads vs Zena, Amber and Eli &amp; Sharon. Exeggutor-Alola leads vs Groudon. Glalie-Aevian leads vs Kyogre and Manaphy. Chandelure leads vs Crawli, Danni &amp; Layla, Holly &amp; Rorim and Marcie. Texen (bring 3): Chandelure, Annihilape, Golisopod.</li>
       </ul>
     </div>
     <div class="panel scores">
       <h3>Team strength, in plain terms</h3>
       <div class="score"><span>Boss mons someone in your six can one-shot</span><b class="num">{R_KO}/{R_TOT}</b><i></i></div>
       <div class="score"><span>…and does it before that foe moves</span><b class="num">{R_FAST}/{R_TOT}</b><i></i></div>
-      <div class="score"><span>After one Golisopod Swords Dance</span><b class="num">95/113</b><i></i></div>
-      <div class="score"><span>Annihilape alone, after its Rage Fist takes 1 / 2 hits</span><b class="num">67 / 83</b><i></i></div>
-      <p class="legend">Checked against all 22 Chapter 8 fights (113 boss mons). The ones without a one-shot answer are the three bosses with boosted HP (Groudon, Kyogre, Manaphy), Multiscale Dragonite, and four that take 92–99% (Kleavor, Kommo-o, Grimmsnarl, Gyarados). Most often one-shot on your side: {", ".join(f"{E(disp(k))} ({v} boss hits)" for k, v in sorted(R_RISK.items(), key=lambda x: -x[1])[:3])}. Chandelure's Focus Sash is what keeps it alive.</p>
-      <p class="legend">Hardest fight: <b>Kyogre</b> (Lv 60 boss in rain). Nobody one-shots it, so lead Glalie-Aevian and chip it with Grass moves.</p>
+      <div class="score"><span>After one Golisopod Swords Dance</span><b class="num">89/103</b><i></i></div>
+      <div class="score"><span>Annihilape alone, after its Rage Fist takes 1 / 2 hits</span><b class="num">58 / 73</b><i></i></div>
+      <p class="legend">Checked against the 20 fights you have left (103 boss mons). The ones without a one-shot answer are the three bosses with boosted HP (Groudon, Kyogre, Manaphy) and Kommo-o (96%). Most often one-shot on your side: {", ".join(f"{E(disp(k))} ({v} boss hits)" for k, v in sorted(R_RISK.items(), key=lambda x: -x[1])[:3])}. Switch those out of bad matchups early.</p>
+      <p class="legend">Hardest fight: <b>Kyogre</b> (Lv 60 boss in rain). Nobody one-shots it, so lead Glalie-Aevian and chip it with Grass moves; Exeggutor-Alola's Giga Drain backs it up.</p>
     </div>
   </div>
 </section>
