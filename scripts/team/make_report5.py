@@ -19,6 +19,7 @@ for d in cur:
 rows.sort(key=lambda r: (r['where'] != 'Party', -r['score']))
 rows.sort(key=lambda r: -r['score'])
 promo = json.load(open(PROMO))
+BLURB = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'blurbs.json')))
 fn, fs, fd = (json.load(open(p)) for p in (F9N, F9S, F9D))
 E = html.escape
 TYPE = {'Normal': ('#A8A77A', '#1d1d12'), 'Fire': ('#EE8130', '#2a1200'), 'Water': ('#6390F0', '#0a1530'),
@@ -90,6 +91,12 @@ def verify(name, ab, nat, evs, item, moves):
     return out
 
 
+def ev_lines(evs):
+    parts = sorted(((int(v), k) for v, k in (x.split() for x in evs.split(' / '))), key=lambda t: -t[0])
+    keep = parts[:2] + [t for t in parts[2:3] if t[0] >= 60]
+    return '<ul class="evl">' + ''.join(f'<li><b class="num">{v}</b> {k}</li>' for v, k in keep) + '</ul>'
+
+
 team_rows, team_todo = [], []
 prev = None
 for role, name, types, ab, nat, evs, item, moves, changes in TEAM:
@@ -100,8 +107,8 @@ for role, name, types, ab, nat, evs, item, moves, changes in TEAM:
     ch = ('<ul class="chg">' + ''.join(f'<li>{E(c)}</li>' for c in changes) + '</ul>') if changes else '<span class="ok">Done ✓ (matches export)</span>'
     rc = f'<td class="role role-{role.lower()}" rowspan="2">{role}</td>' if role != prev else ''
     prev = role
-    team_rows.append(f'''<tr>{rc}<td><strong>{E(name)}</strong><div class="chips">{chips(types)}</div><div class="job">{E(JOB[name])}</div></td>
-<td>{E(ab)}</td><td>{E(nat)}</td><td class="evs">{E(evs)}</td><td>{E(item)}</td><td><ul class="mv">{mv}</ul></td><td>{ch}</td></tr>''')
+    team_rows.append(f'''<tr>{rc}<td><strong>{E(name)}</strong><div class="chips">{chips(types)}</div></td>
+<td>{E(ab)}</td><td>{E(nat)}</td><td>{ev_lines(evs)}</td><td>{E(item)}</td><td><ul class="mv">{mv}</ul></td><td>{ch}</td></tr>''')
 
 
 def readiness():
@@ -170,7 +177,7 @@ for r in rows:
     where = ''
     cards[tier].append(f'''<li class="mon"><div class="mtop"><strong>{E(disp(r["name"]))}</strong><span class="num sc">{r["score"]:.2f}</span></div>
 <div class="chips">{chips(r["types"])}<span class="lv">Lv {r["level"]}</span>{where}{badges}</div>
-<div class="mnote">Best vs {E(best)}{(" · " + E(note)) if note else ""}</div></li>''')
+<div class="mnote">{E(BLURB.get(r["name"], note))}</div></li>''')
 tier_html = ''.join(
     f'<div class="tier t{t}"><div class="tl"><b>{t}</b><span>{E(desc)}</span></div><ul class="tmons">{"".join(cards[t])}</ul></div>'
     for t, _, desc in TIERS if cards[t])
@@ -293,6 +300,8 @@ tbody tr:last-child td {{ border-bottom: 0 }}
 .role-lead {{ color: var(--accent) }} .role-mid {{ color: var(--warn) }} .role-closer {{ color: var(--good) }}
 .job {{ color: var(--muted); font-size: 12.5px; margin-top: 4px; max-width: 30ch }}
 .evs {{ font-family: var(--mono); font-size: 12px; white-space: nowrap }}
+.evl {{ list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; white-space: nowrap; font-size: 13px }}
+.evl b {{ font-weight: 600; display: inline-block; min-width: 2.2em }}
 .chips {{ display: flex; gap: 4px; flex-wrap: wrap; align-items: center; margin-top: 4px }}
 .type {{ font: 600 10px var(--mono); letter-spacing: .05em; text-transform: uppercase; padding: 2px 6px; border-radius: 3px }}
 .mv {{ list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; min-width: 120px }}
@@ -354,9 +363,9 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
     <div class="panel">
       <h3>Game plan</h3>
       <ul>
-        <li><strong>Lead</strong> Annihilape + Gholdengo for fast damage. Remove Typhlosion before Eruption fires.</li>
-        <li><strong>Mid</strong> Rhyperior handles Fire and fliers. Glaceon's Icy Wind slows the back line.</li>
-        <li><strong>Closer</strong> Leavanny uses Rage Powder, Golisopod uses Swords Dance, then sweeps. In singles, Golisopod sets up on a switch-in it walls.</li>
+        <li><strong class="role-lead">Lead</strong> Annihilape + Gholdengo for fast damage. Remove Typhlosion before Eruption fires.</li>
+        <li><strong class="role-mid">Mid</strong> Rhyperior handles Fire and fliers. Glaceon's Icy Wind slows the back line.</li>
+        <li><strong class="role-closer">Closer</strong> Leavanny uses Rage Powder, Golisopod uses Swords Dance, then sweeps. In singles, Golisopod sets up on a switch-in it walls.</li>
         <li><strong>Only the lead changes, never the six.</strong> Eli &amp; Sharon: Rhyperior + Gholdengo lead. Groudon: Glaceon leads and Gholdengo sits out. Giratina: lead the closer pair. Amber: Rhyperior leads. Texen (bring 3): Gholdengo, Annihilape, Golisopod.</li>
       </ul>
     </div>
@@ -366,21 +375,12 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
       <div class="score"><span>…and does it before that foe moves</span><b class="num">{R_FAST}/{R_TOT}</b><i></i></div>
       <div class="score"><span>After one Golisopod Swords Dance</span><b class="num">60/68</b><i></i></div>
       <p class="legend">The only fights without a one-shot answer are <b>Groudon</b> (a boss with boosted HP: chip it with Glaceon's Ice moves) and Eli &amp; Sharon's Milotic (best hit: Annihilape, about 85%). Most often one-shot on your side: {", ".join(f"{E(disp(k))} ({v} boss hits)" for k, v in sorted(R_RISK.items(), key=lambda x: -x[1])[:3])}. Leavanny's Focus Sash is what lets it live through those.</p>
-      <p class="legend">The old 1.35 → 1.36 numbers were an internal score. They're replaced by these counts; no other six from your 414 does better on them.</p>
     </div>
   </div>
-  <details class="panel ready"><summary><b>Fight by fight</b> <span class="legend">12 Chapter 8 battles · tap to expand</span></summary>
-  <div class="tablewrap"><table>
-    <thead><tr><th>Fight</th><th>One-shot answers</th><th>…moving first</th><th>Foes that can one-shot one of yours</th><th>Biggest danger</th></tr></thead>
-    <tbody>{"".join(ready_rows)}</tbody>
-  </table></div>
-  <p class="legend pad2">One-shot answers: boss mons where your best Pokémon for it does 100%+ in one hit (average roll, field applied). Moving first: it's also faster. Leavanny has a Focus Sash, so a one-shot on it from full HP only breaks the Sash.</p>
-  </details>
 </section>
 
 <section aria-labelledby="s2">
   <h2 id="s2"><span class="n">02</span> Chapter 8 tier list <span class="tag">party + Active box · {len(seen)} Pokémon</span></h2>
-  <p class="legend">Ranked only for Chapter 8, the fights still ahead of you after Angie: Texen, Garufa (Guards, Tommen, Groudon), Crawli, Neved, Eli &amp; Sharon, Jenner, Geara &amp; Zetta, Rift Giratina, Amber. Each score is that Pokémon alone with its best legal moveset at Lv 55 and the fields applied, so a high tier doesn't guarantee a party spot (see Donphan). <b>Party</b> = in your six. The number is the score; "Best vs" lists its two best fights.</p>
   <div class="board">{tier_html}</div>
 </section>
 

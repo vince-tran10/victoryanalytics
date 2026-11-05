@@ -105,3 +105,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 10:55 export: all 4 promoted (Active now starts at #353, 62 mons; Overflow 346). Builds verified; only Hariyama's
   nature (Quiet → Adamant) is open. make_report5 now verifies promoted mons' builds; pass box_audit only the promotes
   still in Overflow (numbers shift between exports). Set EXPORT_LABEL for the header.
+- Report layout (11-05 feedback): EVs shown as stacked top-2 (or 3) stats; no job text under team names; no fight-by-fight
+  table; tier list has no intro legend and each card uses a written description from `workspace/team/blurbs.json`
+  (add one for any new Active mon). Box audit shows only "Since last export" (completeness check kept as an HTML comment).
+  Final step of every rebuild: `python3 -I scripts/team/highlight.py output/chapter8_report.html` bolds+underlines every
+  Pokémon name; party mons use role colours (lead teal, mid amber, closer green).
