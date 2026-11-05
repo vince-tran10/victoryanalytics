@@ -211,6 +211,21 @@ for p in promo:
         promo_todo.append((f"{p['final']} (Active box): " + '; '.join(gaps) + '.', 'low'))
 if promo_todo:
     TODO.append(('New catches', promo_todo))
+CUTS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'cuts.json')))
+cut_todo = []
+for sp, why in CUTS['move'].items():
+    hits = [d for d in cur if d['box'] == 'Active' and d['species'] == sp]
+    if hits:
+        cut_todo.append((f"{sp}{' ×' + str(len(hits)) if len(hits) > 1 else ''} (#{', #'.join(str(d['n']) for d in hits)}): move to Overflow. {why}", 'mid'))
+for d in cur:
+    if d['box'] == 'Active' and d['species'] in party:
+        cut_todo.append((f"{d['species']} (#{d['n']}): move to Overflow. It's a second copy of the one in your party.", 'mid'))
+for sp, why in CUTS['maybe'].items():
+    hits = [d for d in cur if d['box'] == 'Active' and d['species'] == sp]
+    if hits:
+        cut_todo.append((f"{sp} (#{hits[0]['n']}): your call. {why}", 'low'))
+if cut_todo:
+    TODO.append(('Box cleanup: Active → Overflow', cut_todo))
 todo_html = ''
 k = 0
 for group, items in TODO:

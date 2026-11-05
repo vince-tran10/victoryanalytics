@@ -110,3 +110,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   (add one for any new Active mon). Box audit shows only "Since last export" (completeness check kept as an HTML comment).
   Final step of every rebuild: `python3 -I scripts/team/highlight.py output/chapter8_report.html` bolds+underlines every
   Pokémon name; party mons use role colours (lead teal, mid amber, closer green).
+- Box cleanup (11-05): `workspace/team/cuts.json` lists Active mons to move back to Overflow ("move") and borderline
+  ("maybe"). make_report5 turns them into to-dos (auto-dropped once they leave Active); box_audit tags them. Kept despite
+  low scores for future value: Zoroark (Ch8 crest), Electrode-Hisui (crest per forum; cut if it doesn't show in Ch8),
+  Chandelure & Meowstic (Mega stones, Ch12), Ampharos-Aevian (crest, late), Froslass-Aevian, Sylveon (Hyper Voice at
+  9 badges), Porygon-Z, Drapion-Aevian, Tangrowth (backup Rage Powder).

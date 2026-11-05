@@ -8,6 +8,7 @@ import re, sys, json, html, collections, subprocess, os
 REPORT, NEW, OLD, OLD_START = sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4])
 PROMO = {p['n']: p for p in json.load(open(sys.argv[5]))} if len(sys.argv) > 5 else {}
 NOTE = sys.argv[6] if len(sys.argv) > 6 else ''
+CUTS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(sys.argv[5])), 'cuts.json'))) if len(sys.argv) > 5 else {'move': {}, 'maybe': {}}
 here = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -25,6 +26,7 @@ ACT = starts[0]
 box = lambda n, s: 'Party' if n <= 6 else ('Active' if n >= s else 'Overflow')
 for d in N:
     d['box'] = box(d['n'], ACT)
+PARTY_SP = {d['species'] for d in N if d['box'] == 'Party'}
 oddsort = [b for a, b in zip(N, N[1:]) if b['n'] not in (7, ACT) and b['n'] > 7
            and b['species'].lower() < a['species'].lower()
            and not (b['species'].split('-')[0] == a['species'].split('-')[0])]
@@ -75,6 +77,10 @@ esc = html.escape
 def li(d):
     name = esc(d['species']) + (f' <span class="nick">“{esc(d["nick"])}”</span>' if d['nick'] else '')
     tag = ' <span class="b party">changed</span>' if (k(d), d['box']) in moved_in else ''
+    if d['box'] == 'Active' and (d['species'] in CUTS['move'] or d['species'] in PARTY_SP):
+        tag += ' <span class="b cut">to overflow</span>'
+    elif d['box'] == 'Active' and d['species'] in CUTS['maybe']:
+        tag += ' <span class="b maybe">your call</span>'
     if d['n'] in PROMO and d['box'] == 'Overflow':
         tag += ' <span class="b promote">promote</span>'
     return (f'<li data-n="{esc(d["species"].lower())} {esc(d["nick"].lower())}"><span class="idx num">#{d["n"]}</span>'
@@ -108,7 +114,7 @@ sec = f'''<!--BOXAUDIT-->
   </div>
   <label class="find">Find a Pokémon <input type="search" id="boxfind" placeholder="e.g. Furret" autocomplete="off"></label>
   {group("Party", "Party", True, "")}
-  {group("Active box", "Active", True, "")}
+  {group("Active box", "Active", True, (str(sum(1 for d in N if d['box'] == 'Active' and (d['species'] in CUTS['move'] or d['species'] in PARTY_SP))) + " to move back to Overflow · see To do") if CUTS['move'] else "")}
   {group("Overflow boxes", "Overflow", bool(PROMO), (str(len(PROMO)) + " to promote · see To do") if PROMO else "tap to expand")}
 </section>
 <!--/BOXAUDIT-->'''
@@ -125,6 +131,7 @@ css = '''<style id="boxaudit-css">
 .find input { font: inherit; padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--ink); min-width: 0; flex: 1; max-width: 280px }
 .roster li[hidden] { display: none }
 .b.promote { background: var(--good-soft); color: var(--good) }
+.b.cut { background: var(--bad-soft); color: var(--bad) } .b.maybe { background: var(--line); color: var(--muted) }
 </style>'''
 js = '''<script id="boxaudit-js">
 (function(){var i=document.getElementById('boxfind');if(!i)return;i.addEventListener('input',function(){var q=i.value.trim().toLowerCase();
