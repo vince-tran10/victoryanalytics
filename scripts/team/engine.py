@@ -14,8 +14,10 @@ from bosses import load_battles, load_battles_walk, FIELD, HIGH_STRIKER
 
 CAP = 55
 # tutors open to a 7-badge player who has finished chapters 1-7 (Luck's Tent tiers up to 7 badges, Wispy Shop, Kakori/Terajuma Beach)
-ALLOWED_TUTORS = {"Luck's Tent", "Luck's Tent, 3 Badges", "Luck's Tent, 5 Badges", "Luck's Tent, 7 Badges",
-                  "Terajuma Beach, 5 Badges", "Wispy Path Shop", "Wispy Shop"}
+# Tutors count only when the wiki lists a badge number and it is <= 7 (Vincent's rule, 11-05).
+# Tutors with no badge number (plain Luck's Tent, Wispy Path Shop, Akuwa Town, ...) are skipped.
+ALLOWED_TUTORS = {"Luck's Tent, 3 Badges", "Luck's Tent, 5 Badges", "Luck's Tent, 7 Badges", "Terajuma Beach, 5 Badges",
+                  "Luck's Tent, 3 Badges, Hiyoshi City", "Luck's Tent, 5 Badges, Hiyoshi City", "Luck's Tent, 7 Badges, Hiyoshi City"}
 STATS = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe']
 NATURES = {
     'Hardy': (None, None), 'Docile': (None, None), 'Serious': (None, None), 'Bashful': (None, None), 'Quirky': (None, None),

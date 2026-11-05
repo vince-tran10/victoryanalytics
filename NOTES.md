@@ -127,3 +127,14 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   no unique KOs); Rhyperior Stone Edge at Lv 54.
 - Next time: end-of-Chapter-8 export → run the standing procedure (new mons, promote scan, cut list), then review
   Chapter 8 pickups (Rock Blast TM134, Zoroark crest, Akuwa tutors) and re-run for Chapter 9 (Trick Room).
+
+## Move rules, refined (11-05, after the cleanup)
+- Tutors: only those with a wiki badge number <= 7 (Luck's Tent 3/5/7 Badges incl. Hiyoshi City, Terajuma Beach 5 Badges).
+  No-badge tutors (plain Luck's Tent, Wispy Path Shop, Akuwa Town, Goomidra, Neo East Gearen, Axis High) are skipped.
+  engine.py ALLOWED_TUTORS updated; the current six is unaffected (all its moves are already known).
+- Move Relearner (still not allowed) is the big lock: it unlocks relearner-only moves (e.g. Rage Fist on Annihilape,
+  Hammer Arm on Rhyperior) AND any level-up move below a mon's current level that it never learned. Future builds should
+  treat "level-up" as moves at or above the current level, unless already known. Already-recommended bench builds that
+  break this: Azumarill Aqua Tail (Lv 21) / Play Rough (Lv 25), Cursola Strength Sap (Lv 35).
+- Vincent: Showdown player; wants the most meta, community-proven builds (Aevian gimmicks, crests, Trick Room when it
+  arrives); fine retrying; goal = best team for the CURRENT chapter only. Factor speed tiers / AI behaviour into builds.
