@@ -349,41 +349,68 @@ class Engine:
                 legal.add(mid)
         return legal
 
-    def final_form(self, sid, form, level):
-        """Follow evolutions that can happen at or below the cap. Returns (sid, form, path_text)."""
-        path = []
-        self._gate = ''
-        cur, cf = sid, form
-        for _ in range(3):
+    def evo_paths(self, sid, form, gender=''):
+        """Every evolution route this mon can take (5-field entries: target, form, method, param, condition).
+        Entries with a special condition (Alolan/Galarian map switches, cold maps...) are skipped; gender-locked
+        entries need the right gender. Returns a list of paths; each path is a list of (sid, form, method, param)."""
+        def usable(cur, cf):
             f = self.D.form(cur, cf)
             ev = f.get('Evolutions') or []
-            if not (isinstance(ev, list) and ev and ev[0] in self.D.sp):
-                break
-            nxt, nform, method, param = ev[0], str(ev[1]) if len(ev) > 1 else '0', ev[2] if len(ev) > 2 else '', ev[3] if len(ev) > 3 else ''
-            if method.startswith('Level') and str(param).isdigit() and int(param) > CAP:
-                path.append(f'{self.D.nm(nxt)} needs Lv {param} (past cap)')
-                break
-            if str(nform) not in self.D.sp[nxt]:
-                nform = '0'
-            # regional forms evolve into the same regional form when it exists
-            fn = self.D.sp[cur][str(cf)].get('FormName', '')
-            if cf != '0':
-                for k in [k for k in self.D.sp[nxt] if k.isdigit()]:
-                    if self.D.sp[nxt][k].get('FormName', '').split()[0] == fn.split()[0]:
-                        nform = k; break
-            path.append(f'{self.D.nm(nxt)} ({method} {param})'.replace(' )', ')'))
-            if (method.startswith('Item') or 'Item' in method) and str(param).upper() in ITEMS_CH1_7:
-                pass   # evolution item obtainable in Chapters 1-7: evolve right away
-            elif method.startswith('Item') or method.startswith('Trade') or 'Item' in method:
-                self._gate = f'{method} {self.D.nm(param) if param else ""}'.strip()
-            cur, cf = nxt, nform
-        return cur, cf, '; '.join(path)
+            out = []
+            if not isinstance(ev, list):
+                return out
+            for i in range(0, len(ev), 5):
+                e = ev[i:i + 5] + [''] * (5 - len(ev[i:i + 5]))
+                nxt, nform, method, param, cond = e[0], str(e[1] or '0'), str(e[2] or ''), str(e[3] or ''), str(e[4] or '')
+                if nxt not in self.D.sp or cond:
+                    continue
+                if method.endswith('Female') and gender != 'F': continue
+                if method.endswith('Male') and gender != 'M': continue
+                if str(nform) not in self.D.sp[nxt]:
+                    nform = '0'
+                fn = self.D.sp[cur][str(cf)].get('FormName', '')
+                if cf != '0':   # regional/Aevian forms evolve into the matching form
+                    for k in [k for k in self.D.sp[nxt] if k.isdigit()]:
+                        if self.D.sp[nxt][k].get('FormName', '').split()[0] == fn.split()[0]:
+                            nform = k; break
+                out.append((nxt, nform, method, param))
+            # one route per distinct target form
+            seen, uniq = set(), []
+            for o in out:
+                if (o[0], o[1]) not in seen:
+                    seen.add((o[0], o[1])); uniq.append(o)
+            return uniq
+        paths = []
+        def dfs(cur, cf, path, depth):
+            opts = usable(cur, cf) if depth < 3 else []
+            opts = [o for o in opts if not (o[2].startswith('Level') and o[3].isdigit() and int(o[3]) > CAP)]
+            if not opts:
+                paths.append(path); return
+            for o in opts:
+                dfs(o[0], o[1], path + [o], depth + 1)
+        dfs(sid, str(form), [], 0)
+        return paths
 
-    def build_me(self, mon, evolve=True, ability_override=None):
+    def final_form(self, sid, form, level, branch=0, gender=''):
+        """Follow one evolution route (branch index into evo_paths). Returns (sid, form, path_text)."""
+        self._gate = ''
+        paths = self.evo_paths(sid, form, gender)
+        path = paths[min(branch, len(paths) - 1)] if paths else []
+        cur, cf, txt = sid, form, []
+        for nxt, nform, method, param in path:
+            txt.append(f'{self.D.nm(nxt)} ({method} {self.D.nm(param) if param and not param.isdigit() else param})'.replace(' )', ')'))
+            if 'Item' in method and str(param).upper() in ITEMS_CH1_7:
+                pass   # evolution item obtainable in Chapters 1-7: evolve right away
+            elif 'Item' in method or method.startswith('Trade'):
+                self._gate = self._gate or f'{method} {self.D.nm(param) if param else ""}'.strip()
+            cur, cf = nxt, nform
+        return cur, cf, '; '.join(txt)
+
+    def build_me(self, mon, evolve=True, ability_override=None, branch=0):
         sid, form = mon['sid'], mon['form']
         evo_text = ''
         if evolve:
-            sid2, form2, evo_text = self.final_form(sid, form, mon.get('level', 1))
+            sid2, form2, evo_text = self.final_form(sid, form, mon.get('level', 1), branch, mon.get('gender') or '')
             if 'past cap' in evo_text and sid2 == sid:
                 pass
             sid, form = sid2, form2

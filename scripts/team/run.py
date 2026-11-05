@@ -18,16 +18,18 @@ def where(m):
 
 
 cands = {}
-for m in roster:
-    m['where'] = where(m)
-    base_me = E.build_me(m)
+for m0 in roster:
+  m0['where'] = where(m0)
+  for branch in range(len(E.evo_paths(m0['sid'], m0['form'], m0.get('gender') or '')) or 1):
+    m = m0
+    base_me = E.build_me(m, branch=branch)
     f = E.D.form(base_me['sid'], base_me['form'])
     capsule = list(dict.fromkeys(f.get('Abilities') or []))   # Ability Capsule swaps between the two regular abilities
     options = [(base_me['ability'], False)] + [(a, True) for a in capsule if a != base_me['ability']]
     if base_me['ability'] == f.get('HiddenAbility'):
         options = options[:1]          # already on its hidden ability: keep it
     for ab, changed in options:
-        me = E.build_me(m, ability_override=ab) if changed else base_me
+        me = E.build_me(m, ability_override=ab, branch=branch) if changed else base_me
         me['ability_changed'] = changed
         key = (me['sid'], me['form'], me['ability'])
         prev = cands.get(key)

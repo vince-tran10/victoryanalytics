@@ -2,11 +2,11 @@
  {
   "n": 101,
   "owned": "Exeggcute",
-  "final": "Exeggutor-Alola",
+  "final": "Exeggutor",
   "level": 36,
-  "tier": "B",
-  "score": 0.546,
-  "ability": "Frisk",
+  "tier": "A",
+  "score": 0.565,
+  "ability": "Chlorophyll",
   "nature": "Modest (yours: Lax)",
   "evs_txt": "252 HP / 252 SpA",
   "moves": [
@@ -15,7 +15,7 @@
    "Extrasensory",
    "Protect"
   ],
-  "why": "Joins the six: Grass/Dragon special tank that covers the Water/Ground fights and hits Groudon hardest of anyone you own. Weak alone, strong in the team.",
+  "why": "Bench pick, not the six. Grass/Psychic special attacker: Chlorophyll doubles its Speed in Groudon's sun, and it hits Groudon hardest of anything you own (94%). Swap it in for that one fight.",
   "level_note": "Use a Leaf Stone (Chapters 1\u20137), then level 36 \u2192 55."
  }
 ]

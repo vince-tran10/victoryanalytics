@@ -5,7 +5,7 @@ current_rows(new_export, old_export, f11_json) -> list of dicts, one per mon in 
 """
 import json, re, os, sys, collections, subprocess
 here = os.path.dirname(os.path.abspath(__file__))
-TIER = [('S', .70), ('A', .58), ('B', .50), ('C', .40), ('D', -9)]
+TIER = [('S', .60), ('A', .53), ('B', .48), ('C', .40), ('D', -9)]  # rescaled 11-05: remaining fights, singles x2
 tier = lambda s: next(t for t, c in TIER if s >= c)
 
 

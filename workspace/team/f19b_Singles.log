@@ -1,0 +1,26 @@
+Annihilape | Party 55 | Defiant  | Adamant {'Atk': 252, 'Spe': 252, 'Def': 4} | ['Close Combat', 'Rage Fist', 'Sucker Punch', 'Protect'] | Black Belt (already holding) | 
+Chandelure | Party 55 | Flash Fire  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Shadow Ball', 'Overheat', 'Will-O-Wisp', 'Protect'] | Focus Sash (already holding) | 
+Rhyperior | Active 55 | Solid Rock  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Stone Edge', 'Headlong Rush', 'Slack Off', 'Protect'] | Hard Stone (already holding) | 
+Azumarill | Active 55 | Huge Power  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Aqua Tail', 'Play Rough', 'Superpower', 'Protect'] | Sitrus Berry | 
+Golisopod (Aevian Form) | Party 55 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Bone Rush', 'Pin Missile', 'Swords Dance', 'Protect'] | Soft Sand (already holding) | 
+Glalie (Aevian Form) | Party 55 | Grassy Surge  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'] | Sitrus Berry (already holding) | 
+texen 1.362 -> 1.367 leads ['Annihilape'] swaps [('Gholdengo', 'Glalie (Aevian Form)', 0.063), ('Crobat', 'Glalie (Aevian Form)', 0.043), ('Lunatone (Lunatone Dominant Fusion)', 'Glalie (Aevian Form)', 0.041)]
+guard1 1.51 -> 1.521 leads ['Annihilape'] swaps [('Nidoking', 'Glalie (Aevian Form)', 0.103), ('Drapion (Aevian Form)', 'Glalie (Aevian Form)', 0.08), ('Revavroom', 'Glalie (Aevian Form)', 0.076)]
+guard2 1.258 -> 1.384 leads ['Rhyperior'] swaps [('Donphan', 'Chandelure', 0.103), ('Gholdengo', 'Chandelure', 0.102), ('Sandaconda', 'Chandelure', 0.1)]
+tommen 1.592 -> 1.597 leads ['Golisopod (Aevian Form)'] swaps [('Crawdaunt', 'Azumarill', 0.061), ('Tentacruel', 'Glalie (Aevian Form)', 0.053), ('Swampert', 'Glalie (Aevian Form)', 0.033)]
+groudon 0.289 -> 0.406 leads ['Chandelure'] swaps [('Exeggutor', 'Annihilape', 0.247), ('Glaceon', 'Annihilape', 0.206), ('Camerupt', 'Annihilape', 0.165)]
+crawli 1.362 -> 1.378 leads ['Golisopod (Aevian Form)'] swaps [('Gholdengo', 'Rhyperior', 0.084), ('Swanna', 'Rhyperior', 0.056), ('Braviary', 'Rhyperior', 0.053)]
+neved 1.13 -> 1.157 leads ['Azumarill'] swaps [('Braviary', 'Rhyperior', 0.096), ('Glaceon', 'Rhyperior', 0.095), ('Toucannon', 'Rhyperior', 0.083)]
+eli 1.314 -> 1.342 leads ['Rhyperior'] swaps [('Gholdengo', 'Chandelure', 0.034), ('Ampharos (Aevian Form)', 'Chandelure', 0.022), ('Avalugg (Hisuian Form)', 'Azumarill', 0.021)]
+jenner 1.422 -> 1.498 leads ['Annihilape'] swaps [('Dachsbun', 'Rhyperior', 0.035), ('Gastrodon (West Aevian Form)', 'Rhyperior', 0.029), ('Pawmot', 'Rhyperior', 0.027)]
+geara 1.137 -> 1.192 leads ['Golisopod (Aevian Form)'] swaps [('Barbaracle', 'Annihilape', 0.034)]
+giratina 1.26 -> 1.326 leads ['Golisopod (Aevian Form)'] swaps [('Meganium', 'Glalie (Aevian Form)', 0.069), ('Tsareena', 'Glalie (Aevian Form)', 0.065), ('Venusaur', 'Glalie (Aevian Form)', 0.063)]
+danni 1.651 -> 1.571 leads ['Annihilape'] swaps [('Gholdengo', 'Rhyperior', 0.081), ('Crobat', 'Glalie (Aevian Form)', 0.06), ('Arcanine', 'Rhyperior', 0.058)]
+troye 1.452 -> 1.333 leads ['Golisopod (Aevian Form)'] swaps [('Arcanine', 'Rhyperior', 0.124), ('Talonflame', 'Rhyperior', 0.105), ('Mabosstiff', 'Rhyperior', 0.087)]
+zena 1.444 -> 1.458 leads ['Rhyperior'] swaps [('Meganium', 'Chandelure', 0.087), ('Venusaur', 'Chandelure', 0.086), ('Roserade', 'Azumarill', 0.072)]
+kyogre -0.134 -> -0.076 leads ['Glalie (Aevian Form)'] swaps [('Abomasnow', 'Rhyperior', 0.085), ('Froslass (Aevian Form)', 'Rhyperior', 0.076), ('Tsareena', 'Rhyperior', 0.075)]
+holly 1.347 -> 1.313 leads ['Golisopod (Aevian Form)'] swaps [('Arcanine', 'Rhyperior', 0.083), ('Coalossal', 'Rhyperior', 0.061), ('Talonflame', 'Annihilape', 0.054)]
+manaphy 0.943 -> 0.943 leads ['Glalie (Aevian Form)'] swaps [('Venusaur', 'Rhyperior', 0.18), ('Roserade', 'Rhyperior', 0.173), ('Meganium', 'Rhyperior', 0.147)]
+factory 1.063 -> 1.053 leads ['Golisopod (Aevian Form)'] swaps [('Ludicolo', 'Rhyperior', 0.102), ('Venusaur', 'Rhyperior', 0.083), ('Meganium', 'Rhyperior', 0.079)]
+marcie 1.52 -> 1.395 leads ['Chandelure'] swaps [('Leavanny (Aevian Form)', 'Rhyperior', 0.159), ('Leavanny', 'Rhyperior', 0.144), ('Scolipede', 'Rhyperior', 0.143)]
+amber 1.237 -> 1.322 leads ['Azumarill'] swaps [('Lapras (Aevian Form)', 'Golisopod (Aevian Form)', 0.074), ('Lunatone (Lunatone Dominant Fusion)', 'Golisopod (Aevian Form)', 0.065), ('Jellicent', 'Golisopod (Aevian Form)', 0.065)]

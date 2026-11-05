@@ -210,3 +210,16 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Best-score six (1.204) used Ludicolo instead of Glalie, but worse in singles; not chosen.
 - Singles win cons (44 singles boss mons): Golisopod 31 one-shots (37 after SD), one-shot by 6; Annihilape 22/27/32
   (fresh/1/2 hits), one-shot by only 2. Golisopod stays the main win con in singles.
+
+## Correction: no Alolan Exeggutor (11-05)
+- Bug: engine took the FIRST evolution entry. Entries are 5 fields (target, form, method, param, condition); the first
+  Exeggcute entry is the conditional Alolan one. New engine.evo_paths(): skips entries with a condition, respects
+  gender-locked methods, and enumerates EVERY route (Eevee, Oddish/Gloom, Tyrogue, Wurmple...). run.py scores each route.
+- Re-run r18 (DONE=aelita,narcissa, SINGLES_W=2) + exhaustive.py (every six from the top ~25): top 12 sixes within 0.4%,
+  i.e. a tie. Picked on practicality: FINAL SIX = Annihilape + Chandelure (lead), Rhyperior + Azumarill (mid),
+  Golisopod-Aevian + Glalie-Aevian (closer). All already built (only Rhyperior/Azumarill to party, Sitrus on Azumarill).
+  f19b_*.json: 100/103 one-shots (singles 41/44), same as the Exeggutor version, but Azumarill is one-shot by 3 boss
+  mons vs Exeggutor's 19. Exeggutor version only wins Groudon (0.60 vs 0.41).
+- Regular Exeggutor (Exeggcute #101 + Leaf Stone, Chlorophyll) = A tier bench, the Groudon specialist (promote json 1424).
+- Tier cutoffs rescaled (remaining fights + singles x2 compress scores): S .60 / A .53 / B .48 / C .40.
+  Top 5 = the team core (Golisopod .649, Annihilape .622, Glalie .610, Azumarill .601, Rhyperior .597).
