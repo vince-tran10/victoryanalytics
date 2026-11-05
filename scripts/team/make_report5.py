@@ -179,10 +179,31 @@ tier_html = ''.join(
 TODO = []
 if team_todo:
     TODO.append(('Team', team_todo))
-if promo:
-    TODO.append(('New catches: promote from Overflow', [(
-        f"#{p['n']} {p['owned']}{(' → evolve to ' + p['final']) if p['final'] != p['owned'] else ''} ({p['tier']} tier): move to the Active box. "
-        f"{p['ability']}, {p['nature']}, {p['evs_txt']}; {', '.join(p['moves'])}.", 'mid') for p in promo]))
+import re as _re
+promo_todo, promo_left = [], []
+for p in promo:
+    nat = p['nature'].split(' ')[0]
+    mv = [_re.sub(r' \(Lv \d+\)$', '', m) for m in p['moves']]
+    now = next((d for d in cur if d['species'] in (p['final'], p['owned']) and d['box'] != 'Overflow'), None)
+    if not now:
+        promo_left.append(p)
+        promo_todo.append((f"#{p['n']} {p['owned']}{(' → evolve to ' + p['final']) if p['final'] != p['owned'] else ''} ({p['tier']} tier): move to the Active box. "
+                           f"{p['ability']}, {p['nature']}, {p['evs_txt']}; {', '.join(p['moves'])}.", 'mid'))
+        continue
+    gaps = []
+    if now['species'] != p['final']:
+        gaps.append(f"evolve to {p['final']}")
+    if now.get('nature') != nat:
+        gaps.append(f"nature {now.get('nature')} → {nat} (mint)")
+    if now.get('ability') != p['ability']:
+        gaps.append(f"ability {now.get('ability')} → {p['ability']}")
+    for m, full in zip(mv, p['moves']):
+        if m not in now['moves']:
+            gaps.append(f"learn {full}")
+    if gaps:
+        promo_todo.append((f"{p['final']} (Active box): " + '; '.join(gaps) + '.', 'low'))
+if promo_todo:
+    TODO.append(('New catches', promo_todo))
 todo_html = ''
 k = 0
 for group, items in TODO:
@@ -320,7 +341,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 <header class="mast">
   <span class="eyebrow">Pokémon Rejuvenation · Chapter 8 · Classic teams</span>
   <h1>Chapter 8 Team Report</h1>
-  <div class="facts"><span>Trainer <b>Vincent</b></span><span>Cap <b>55</b></span><span>Badges <b>7</b></span><span>Moves <b>Ch 1–7 TMs &amp; tutors only</b></span><span>Checked vs <b>68 boss mons, 12 battles</b></span><span>Export <b>{E(os.path.basename(NEWX))[:0]}5 Nov 10:43, {len(cur)} mons</b></span></div>
+  <div class="facts"><span>Trainer <b>Vincent</b></span><span>Cap <b>55</b></span><span>Badges <b>7</b></span><span>Moves <b>Ch 1–7 TMs &amp; tutors only</b></span><span>Checked vs <b>68 boss mons, 12 battles</b></span><span>Export <b>{E(os.environ.get('EXPORT_LABEL', '5 Nov'))}, {len(cur)} mons</b></span></div>
 </header>
 
 <section aria-labelledby="s1">

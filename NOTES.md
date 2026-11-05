@@ -102,3 +102,6 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Ursaring->Ursaluna (S but needs Peat Block).
 - 10:43 export is byte-identical to 10:27. Active box has 43 mons below A tier: candidates for a cut review.
 - "Team strength" panel now shows one-shot counts (66/68, 37/68 moving first, 60/68 after SD) + per-fight table.
+- 10:55 export: all 4 promoted (Active now starts at #353, 62 mons; Overflow 346). Builds verified; only Hariyama's
+  nature (Quiet → Adamant) is open. make_report5 now verifies promoted mons' builds; pass box_audit only the promotes
+  still in Overflow (numbers shift between exports). Set EXPORT_LABEL for the header.

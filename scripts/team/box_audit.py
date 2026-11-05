@@ -93,6 +93,8 @@ checks0 = [f'Total <b class="num">{len(N)}</b> = Party <b class="num">{cnt["Part
 checks = checks0
 if PROMO:
     checks.append(f'Overflow scan: <b class="num">{len(PROMO)}</b> Pokémon clear the Active-box bar (A tier or better on their own) and aren\'t already in your party or Active box. Tagged <span class="b promote">promote</span> below')
+else:
+    checks.append('Overflow scan: nobody else clears the Active-box bar (A tier or better on their own, ready now, not already owned in Active). Closest: Clawitzer, Scraggy → Scrafty (Lv 39), Ursaring → Ursaluna (needs a Peat Block)')
 if oddsort:
     checks.append('Out of A–Z order in Overflow: ' + ', '.join(f'{esc(d["species"])} (#{d["n"]})' for d in oddsort))
 chg = ('<li>' + '</li><li>'.join(esc(c) for c in changes) + '</li>') if changes else '<li>No changes</li>'
