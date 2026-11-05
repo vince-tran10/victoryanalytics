@@ -1,0 +1,373 @@
+[
+ {
+  "dump": 36,
+  "owned": "Braviary",
+  "level": 55,
+  "now_ability": "Keen Eye",
+  "now_moves": [
+   "Tailwind",
+   "Scary Face",
+   "Aerial Ace",
+   "Slash"
+  ],
+  "final": "Braviary",
+  "evolve": "",
+  "gate": "",
+  "types": "Normal/Flying",
+  "score": 0.665,
+  "tier": "A",
+  "ability": "Keen Eye",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Brave Bird",
+   "Superpower",
+   "Sky Attack",
+   "Protect"
+  ],
+  "move_src": {
+   "Brave Bird": "known",
+   "Superpower": "evolution",
+   "Sky Attack": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 0.94,
+   "guard1": 0.73,
+   "guard2": 0.15,
+   "tommen": 0.72,
+   "groudon": -0.21,
+   "crawli": 1.05,
+   "neved": 0.76,
+   "eli": 0.86,
+   "jenner": 0.92,
+   "geara": 0.7,
+   "giratina": 0.58,
+   "amber": 0.67
+  }
+ },
+ {
+  "dump": 59,
+  "owned": "Clawitzer",
+  "level": 55,
+  "now_ability": "Mega Launcher",
+  "now_moves": [
+   "Smack Down",
+   "Hone Claws",
+   "Water Pulse",
+   "Sludge Bomb"
+  ],
+  "final": "Clawitzer",
+  "evolve": "",
+  "gate": "",
+  "types": "Water",
+  "score": 0.631,
+  "tier": "A",
+  "ability": "Mega Launcher",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Water Pulse",
+   "Aura Sphere",
+   "Dark Pulse",
+   "Protect"
+  ],
+  "move_src": {
+   "Water Pulse": "known",
+   "Aura Sphere": "Lv 42",
+   "Dark Pulse": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 0.55,
+   "guard1": 0.81,
+   "guard2": 0.85,
+   "tommen": 1.01,
+   "groudon": -0.19,
+   "crawli": 0.8,
+   "neved": 0.79,
+   "eli": 0.61,
+   "jenner": 0.62,
+   "geara": 0.67,
+   "giratina": 0.58,
+   "amber": 0.89
+  }
+ },
+ {
+  "dump": 123,
+  "owned": "Golett",
+  "level": 55,
+  "now_ability": "Iron Fist",
+  "now_moves": [
+   "Curse",
+   "Night Shade",
+   "Stomping Tantrum",
+   "Iron Defense"
+  ],
+  "final": "Golurk",
+  "evolve": "Golurk (Level 43)",
+  "gate": "",
+  "types": "Ground/Ghost",
+  "score": 0.641,
+  "tier": "A",
+  "ability": "Iron Fist",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "High Horsepower",
+   "Rock Tomb",
+   "Hammer Arm",
+   "Protect"
+  ],
+  "move_src": {
+   "High Horsepower": "Lv 1",
+   "Rock Tomb": "TM39",
+   "Hammer Arm": "Lv 52",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 0.9,
+   "guard1": 0.87,
+   "guard2": 1.0,
+   "tommen": 1.12,
+   "groudon": 0.15,
+   "crawli": 0.69,
+   "neved": 0.28,
+   "eli": 0.63,
+   "jenner": 0.65,
+   "geara": 0.47,
+   "giratina": 0.71,
+   "amber": 0.64
+  }
+ },
+ {
+  "dump": 217,
+  "owned": "Palossand",
+  "level": 55,
+  "now_ability": "Water Compaction",
+  "now_moves": [
+   "Absorb",
+   "Harden",
+   "Astonish",
+   "Sand Tomb"
+  ],
+  "final": "Palossand",
+  "evolve": "",
+  "gate": "",
+  "types": "Ghost/Ground",
+  "score": 0.597,
+  "tier": "A",
+  "ability": "W. Compaction",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Earth Power",
+   "Shadow Ball",
+   "Ancient Power",
+   "Protect"
+  ],
+  "move_src": {
+   "Earth Power": "Lv 54",
+   "Shadow Ball": "Lv 47",
+   "Ancient Power": "Egg",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 0.8,
+   "guard1": 0.81,
+   "guard2": 1.02,
+   "tommen": 1.03,
+   "groudon": 0.21,
+   "crawli": 0.55,
+   "neved": 0.41,
+   "eli": 0.56,
+   "jenner": 0.52,
+   "geara": 0.46,
+   "giratina": 0.66,
+   "amber": 0.58
+  }
+ },
+ {
+  "dump": 259,
+  "owned": "Scraggy",
+  "level": 55,
+  "now_ability": "Moxie",
+  "now_moves": [
+   "Torment",
+   "Beat Up",
+   "Scary Face",
+   "Power-Up Punch"
+  ],
+  "final": "Scrafty",
+  "evolve": "Scrafty (Level 39)",
+  "gate": "",
+  "types": "Dark/Fighting",
+  "score": 0.605,
+  "tier": "A",
+  "ability": "Moxie",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "High Jump Kick",
+   "Crunch",
+   "Brick Break",
+   "Protect"
+  ],
+  "move_src": {
+   "High Jump Kick": "Lv 48",
+   "Crunch": "Lv 42",
+   "Brick Break": "Lv 32",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 0.63,
+   "guard1": 0.6,
+   "guard2": 0.89,
+   "tommen": 0.84,
+   "groudon": 0.14,
+   "crawli": 0.71,
+   "neved": 0.74,
+   "eli": 0.68,
+   "jenner": 0.74,
+   "geara": 0.56,
+   "giratina": 0.54,
+   "amber": 0.55
+  }
+ },
+ {
+  "dump": 288,
+  "owned": "Slowking-Galar",
+  "level": 55,
+  "now_ability": "Regenerator",
+  "now_moves": [
+   "Amnesia",
+   "Surf",
+   "Slack Off",
+   "Trick Room"
+  ],
+  "final": "Slowking (Galarian Form)",
+  "evolve": "",
+  "gate": "",
+  "types": "Poison/Psychic",
+  "score": 0.601,
+  "tier": "A",
+  "ability": "Regenerator",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Psychic",
+   "Power Gem",
+   "Mud Barrage",
+   "Protect"
+  ],
+  "move_src": {
+   "Psychic": "Lv 36",
+   "Power Gem": "known",
+   "Mud Barrage": "TM108",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 0.94,
+   "guard1": 0.71,
+   "guard2": 0.66,
+   "tommen": 0.95,
+   "groudon": -0.15,
+   "crawli": 0.72,
+   "neved": 0.66,
+   "eli": 0.56,
+   "jenner": 0.61,
+   "geara": 0.49,
+   "giratina": 0.65,
+   "amber": 0.73
+  }
+ },
+ {
+  "dump": 299,
+  "owned": "Stantler",
+  "level": 55,
+  "now_ability": "Frisk",
+  "now_moves": [
+   "Confuse Ray",
+   "Calm Mind",
+   "Role Play",
+   "Megahorn"
+  ],
+  "final": "Wyrdeer",
+  "evolve": "Wyrdeer (HasMove PSYSHIELDBASH)",
+  "gate": "",
+  "types": "Normal/Psychic",
+  "score": 0.619,
+  "tier": "A",
+  "ability": "Intimidate",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Double-Edge",
+   "Psyshield Bash",
+   "Work Up",
+   "Protect"
+  ],
+  "move_src": {
+   "Double-Edge": "Lv 55",
+   "Psyshield Bash": "evolution",
+   "Work Up": "TM01",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 0.95,
+   "guard1": 0.61,
+   "guard2": 0.63,
+   "tommen": 0.83,
+   "groudon": 0.15,
+   "crawli": 0.66,
+   "neved": 0.55,
+   "eli": 0.7,
+   "jenner": 0.56,
+   "geara": 0.55,
+   "giratina": 0.57,
+   "amber": 0.7
+  }
+ }
+]

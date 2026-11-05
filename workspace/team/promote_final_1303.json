@@ -1,0 +1,23 @@
+[
+ {"n": 36, "owned": "Braviary", "final": "Braviary", "level": 38, "tier": "A", "score": 0.665, "ability": "Keen Eye", "nature": "Adamant (yours: Gentle)",
+  "evs_txt": "252 HP / 252 Atk", "moves": ["Brave Bird", "Superpower", "Tailwind", "Protect"],
+  "why": "Brave Bird and Superpower hit everything hard, and Tailwind doubles your side's Speed in doubles. Your best unused physical attacker.", "level_note": "Level 38 → 55."},
+ {"n": 123, "owned": "Golett", "final": "Golurk", "level": 30, "tier": "A", "score": 0.641, "ability": "Iron Fist", "nature": "Adamant (yours: Timid)",
+  "evs_txt": "252 HP / 252 Atk", "moves": ["High Horsepower", "Shadow Punch", "Hammer Arm", "Protect"],
+  "why": "Iron Fist boosts Shadow Punch and Hammer Arm by 20%: the Showdown Iron Fist Golurk set. Ground/Ghost, stronger than Runerigus.", "level_note": "Evolves at Lv 43, then on to 55."},
+ {"n": 59, "owned": "Clawitzer", "final": "Clawitzer", "level": 45, "tier": "A", "score": 0.631, "ability": "Mega Launcher", "nature": "Modest (yours: Rash)",
+  "evs_txt": "252 HP / 252 SpA", "moves": ["Water Pulse", "Aura Sphere", "Dark Pulse", "Protect"],
+  "why": "Mega Launcher boosts all its pulse moves by 50%, and Aura Sphere never misses. Dragon Pulse can replace Protect in singles.", "level_note": "Level 45 → 55."},
+ {"n": 299, "owned": "Stantler", "final": "Wyrdeer", "level": 35, "tier": "A", "score": 0.619, "ability": "Intimidate", "nature": "Adamant ✓",
+  "evs_txt": "252 HP / 252 Atk", "moves": ["Double-Edge", "Psyshield Bash", "Megahorn", "Protect"],
+  "why": "Intimidate on entry plus strong Normal and Psychic STAB. Needs an Ability Capsule (Frisk → Intimidate).", "level_note": "Learns Psyshield Bash at Lv 43; level once more to evolve into Wyrdeer.", "capsule": true},
+ {"n": 259, "owned": "Scraggy", "final": "Scrafty", "level": 30, "tier": "A", "score": 0.605, "ability": "Moxie", "nature": "Adamant ✓",
+  "evs_txt": "252 HP / 252 Atk", "moves": ["High Jump Kick", "Crunch", "Fake Out", "Protect"],
+  "why": "Moxie boosts its Attack after each KO, and Fake Out buys turns in doubles (a VGC staple). Coaching is a doubles alternative to Protect.", "level_note": "Evolves at Lv 39, then on to 55."},
+ {"n": 288, "owned": "Slowking-Galar", "final": "Slowking-Galar", "level": 45, "tier": "A", "score": 0.601, "ability": "Regenerator", "nature": "Modest (yours: Impish)",
+  "evs_txt": "252 HP / 252 SpA", "moves": ["Psychic", "Power Gem", "Slack Off", "Trick Room"],
+  "why": "Regenerator plus Slack Off make it hard to wear down. It already knows Trick Room, the one Trick Room setter you have before Chapter 9. Take Quiet instead of Modest if you'll use Trick Room a lot.", "level_note": "Level 45 → 55."},
+ {"n": 217, "owned": "Palossand", "final": "Palossand", "level": 5, "tier": "A", "score": 0.597, "ability": "Water Compaction", "nature": "Modest (yours: Adamant)",
+  "evs_txt": "252 HP / 252 SpA", "moves": ["Earth Power", "Shadow Ball", "Giga Drain", "Protect"],
+  "why": "Water Compaction raises Defence by 2 when it's hit by Water. Ghost/Ground special attacker with a different role from Golurk.", "level_note": "Level 5 → 55, a long climb."}
+]

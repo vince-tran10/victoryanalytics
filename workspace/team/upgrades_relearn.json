@@ -1,48 +1,323 @@
 {
-"Annihilape": {"moves": ["Close Combat", "Rage Fist", "Sucker Punch", "Protect"], "big": true,
+ "Annihilape": {
+  "moves": [
+   "Close Combat",
+   "Rage Fist",
+   "Sucker Punch",
+   "Protect"
+  ],
+  "big": true,
   "why": "Rage Fist is the move that made Annihilape a Showdown staple: 50 power, +50 every time Ape is hit (up to 350). After one hit it one-shots 44 of 68 bosses (38 now), after two hits 54. Ghost STAB replaces Shadow Punch. Sucker Punch replaces Fire Punch (priority, as planned).",
-  "style": "Lead that wants to get hit: let it take a hit, then Rage Fist hits like a truck. Protect does not count as a hit."},
-"Gholdengo": {"moves": ["Make It Rain", "Shadow Ball", "Power Gem", "Protect"], "big": false,
-  "why": "Power Gem (Lv 49) hits the Fire types that resist Make It Rain (Typhlosion, Camerupt, Arcanine at Amber and Geara & Zetta): +4 one-shots. Replaces Recover; Protect stays for doubles."},
-"Rhyperior": {"moves": ["Headlong Rush", "Rock Blast", "Slack Off", "Protect"], "big": false,
-  "why": "Rock Blast (Lv 30) beats Rock Slide right now (+3 one-shots) and breaks Sturdy and Focus Sash. At Lv 54, Stone Edge replaces Rock Blast (+3 more).", "later": "Stone Edge at Lv 54 replaces Rock Blast"},
-"Glaceon": {"moves": ["Freeze-Dry", "Blizzard", "Icy Wind", "Protect"], "why": "Nothing better unlocks. The relearner only adds weak moves (Ice Shard, Swift)."},
-"Golisopod-Aevian": {"moves": ["Bone Rush", "Pin Missile", "Swords Dance", "Protect"], "why": "Already the meta set. Skill Link multi-hits plus Swords Dance; nothing beats it."},
-"Leavanny-Aevian": {"moves": ["Rage Powder", "X-Scissor", "Dragon Claw", "Protect"], "why": "Support set stays. Its relearner moves (Swords Dance, Dragon Rush) don't fit a redirector."},
-"Arcanine": {"moves": ["Flare Blitz", "Extreme Speed", "Close Combat", "Play Rough"], "big": true,
-  "why": "Flare Blitz (relearner) is its Showdown signature: 120-power Fire STAB, replacing Fire Fang (65)."},
-"Azumarill": {"moves": ["Aqua Tail", "Play Rough", "Superpower", "Protect"], "big": true,
-  "why": "Huge Power needs physical STABs. Aqua Tail (Lv 21) and Play Rough (Lv 25) replace Hydro Pump and Double-Edge; Protect replaces Rain Dance. The Showdown Belly Drum + Aqua Jet set needs a bred Marill (egg moves)."},
-"Camerupt": {"moves": ["Eruption", "Earth Power", "Lava Plume", "Protect"], "big": true, "nature": "Modest", "nature_now": "Adamant",
-  "why": "Eruption (relearner) at full HP is 150 power and hits both foes in doubles: jumps Camerupt from B to A tier. Needs a Modest mint (it's special); Earth Power (Lv 26) replaces Earthquake."},
-"Chandelure": {"moves": ["Shadow Ball", "Overheat", "Will-O-Wisp", "Protect"], "big": false,
-  "why": "Overheat (relearner) replaces Incinerate for real Fire damage; Will-O-Wisp (relearner) cripples physical bosses instead of Hex."},
-"Crabominable": {"moves": ["Close Combat", "Ice Hammer", "Crabhammer", "Protect"], "why": "Close Combat (Lv 49) replaces Brick Break: 120 power instead of 75."},
-"Crawdaunt": {"moves": ["Knock Off", "Razor Shell", "Dragon Dance", "Protect"], "why": "Knock Off (Lv 16) hits harder than Crunch against item holders (every boss mon) and removes the item. Crabhammer at Lv 52 replaces Razor Shell.", "later": "Crabhammer at Lv 52 replaces Razor Shell"},
-"Crobat": {"moves": ["Brave Bird", "Cross Poison", "Tailwind", "Protect"], "big": true,
-  "why": "Tailwind (relearner) doubles your side's Speed for 4 turns: Crobat becomes a doubles speed-control lead. Replaces Quick Attack."},
-"Cursola": {"moves": ["Shadow Ball", "Power Gem", "Strength Sap", "Protect"], "nature": "Modest", "nature_now": "Careful",
-  "why": "Strength Sap (Lv 35) heals and lowers the target's Attack; Shadow Ball (TM30) for STAB. Night Shade, Grudge and Mirror Coat go. Needs a Modest mint."},
-"Drapion-Aevian": {"moves": ["Gunk Shot", "Knock Off", "Avalanche", "Ice Fang"], "why": "Avalanche (Lv 39) doubles in power after being hit, which suits Fur Coat's huge Defence. Replaces X-Scissor. Icicle Crash at Lv 54 replaces Ice Fang.", "later": "Icicle Crash at Lv 54 replaces Ice Fang"},
-"Feraligatr": {"moves": ["Agility", "Aqua Tail", "Crunch", "Superpower"], "big": true, "nature": "Adamant", "nature_now": "Hasty",
-  "why": "Agility (Lv 1) plus Sheer Force turns it into a sweeper: one boost outspeeds every boss mon. Crunch (Lv 32) replaces Thrash and Hydro Pump. Needs an Adamant mint."},
-"Glalie-Aevian": {"moves": ["Grassy Glide", "Wood Hammer", "Rock Slide", "Protect"], "big": true, "ability": "Grassy Surge", "ability_now": "Rock Head",
-  "why": "Grassy Glide (relearner) is priority in Grassy Terrain. Capsule to Grassy Surge and it sets the terrain itself, so it hits first every turn and heals: its best score (A tier). Replaces Double-Edge."},
-"Golem": {"moves": ["Stone Edge", "Earthquake", "Stealth Rock", "Protect"], "why": "Earthquake (Lv 40) replaces Rock Blast for Ground STAB."},
-"Jellicent": {"moves": ["Water Spout", "Shadow Ball", "Recover", "Destiny Bond"], "why": "Recover (Lv 28) keeps HP high, and Water Spout is strongest at full HP. Replaces Hydro Pump."},
-"Klawf": {"moves": ["Swords Dance", "Rock Blast", "High Horsepower", "Rock Slide"], "why": "Rock Blast (Lv 24) replaces X-Scissor: STAB multi-hit after Swords Dance."},
-"Lapras-Aevian": {"moves": ["Rock Slide", "Zen Headbutt", "Dragon Dance", "Sing"], "why": "Zen Headbutt (Lv 35) adds Psychic STAB to the Dragon Dance set. No Guard Sing still never misses. Replaces Protect."},
-"Lunatone-Idol": {"moves": ["Psychic", "Moonblast", "Icy Wind", "Ancient Power"], "why": "Moonblast (relearner) hits Dragons, Dark and Fighting. Replaces Protect, since Focus Sash already keeps it alive."},
-"Musharna-Aevian": {"moves": ["Play Rough", "Throat Chop", "Moonlight", "Protect"], "why": "Moonlight (relearner) gives it recovery, which a bulky Trick Room setter wants. Replaces Yawn."},
-"Pangoro": {"moves": ["Sky Uppercut", "Crunch", "Bullet Punch", "Work Up"], "why": "Sky Uppercut and Bullet Punch (relearner) replace Low Sweep and Body Slam: stronger Fighting STAB plus priority."},
-"Passimian": {"moves": ["Close Combat", "Rock Tomb", "Bulk Up", "Protect"], "why": "Bulk Up (Lv 35) replaces Double-Edge. Defiant plus Bulk Up snowballs."},
-"Porygon-Z": {"moves": ["Nasty Plot", "Tri Attack", "Shadow Ball", "Discharge"], "big": true,
-  "why": "Nasty Plot (relearner) is the Showdown set: +2 Special Attack on Adaptability Tri Attack. Shadow Ball (TM30) and Discharge (Lv 40) cover Ghosts and Steels. Agility, Recover and Protect go."},
-"Runerigus": {"moves": ["Earthquake", "Shadow Claw", "Curse", "Protect"], "nature": "Adamant", "nature_now": "Quiet",
-  "why": "Physical attacker: Shadow Claw replaces Shadow Ball and Slam, and Curse makes it a slow tank that grows. Needs an Adamant mint."},
-"Slowbro": {"moves": ["Surf", "Psychic", "Slack Off", "Protect"], "why": "Slack Off (Lv 33) is Slowbro's standard recovery. Replaces Brine."},
-"Solrock-Idol": {"moves": ["Stone Edge", "Flare Blitz", "Zen Headbutt", "Protect"], "big": true, "why": "Flare Blitz (relearner) replaces Rock Slide: Fire coverage, its best score."},
-"Sylveon": {"moves": ["Moonblast", "Swift", "Shadow Ball", "Protect"], "why": "Pixilate turns Swift (Lv 20) into a Fairy move that hits both foes: a spread move before Hyper Voice. Shadow Ball (TM30) replaces Draining Kiss."},
-"Throh": {"moves": ["Superpower", "Storm Throw", "Bulk Up", "Wide Guard"], "big": true,
-  "why": "Storm Throw (always crits), Bulk Up and Wide Guard (doubles) all unlock. Replaces Seismic Toss, Endure and Reversal."}
+  "style": "Lead that wants to get hit: let it take a hit, then Rage Fist hits like a truck. Protect does not count as a hit."
+ },
+ "Gholdengo": {
+  "moves": [
+   "Make It Rain",
+   "Shadow Ball",
+   "Power Gem",
+   "Protect"
+  ],
+  "big": false,
+  "why": "Power Gem (Lv 49) hits the Fire types that resist Make It Rain (Typhlosion, Camerupt, Arcanine at Amber and Geara & Zetta): +4 one-shots. Replaces Recover; Protect stays for doubles."
+ },
+ "Rhyperior": {
+  "moves": [
+   "Headlong Rush",
+   "Stone Edge",
+   "Slack Off",
+   "Protect"
+  ],
+  "big": false,
+  "why": "Stone Edge replaces Rock Slide: +6 one-shots, and 1.5x on Mountain and Volcanic Top."
+ },
+ "Glaceon": {
+  "moves": [
+   "Freeze-Dry",
+   "Blizzard",
+   "Icy Wind",
+   "Protect"
+  ],
+  "why": "Nothing better unlocks. The relearner only adds weak moves (Ice Shard, Swift)."
+ },
+ "Golisopod-Aevian": {
+  "moves": [
+   "Bone Rush",
+   "Pin Missile",
+   "Swords Dance",
+   "Protect"
+  ],
+  "why": "Already the meta set. Skill Link multi-hits plus Swords Dance; nothing beats it."
+ },
+ "Leavanny-Aevian": {
+  "moves": [
+   "Rage Powder",
+   "X-Scissor",
+   "Dragon Claw",
+   "Protect"
+  ],
+  "why": "Support set stays. Its relearner moves (Swords Dance, Dragon Rush) don't fit a redirector."
+ },
+ "Arcanine": {
+  "moves": [
+   "Flare Blitz",
+   "Extreme Speed",
+   "Close Combat",
+   "Play Rough"
+  ],
+  "big": true,
+  "why": "Flare Blitz (relearner) is its Showdown signature: 120-power Fire STAB, replacing Fire Fang (65)."
+ },
+ "Azumarill": {
+  "moves": [
+   "Aqua Tail",
+   "Play Rough",
+   "Superpower",
+   "Protect"
+  ],
+  "big": true,
+  "why": "Huge Power needs physical STABs. Aqua Tail (Lv 21) and Play Rough (Lv 25) replace Hydro Pump and Double-Edge; Protect replaces Rain Dance. The Showdown Belly Drum + Aqua Jet set needs a bred Marill (egg moves)."
+ },
+ "Camerupt": {
+  "moves": [
+   "Eruption",
+   "Earth Power",
+   "Lava Plume",
+   "Protect"
+  ],
+  "big": true,
+  "nature": "Modest",
+  "nature_now": "Adamant",
+  "why": "Eruption (relearner) at full HP is 150 power and hits both foes in doubles: jumps Camerupt from B to A tier. Needs a Modest mint (it's special); Earth Power (Lv 26) replaces Earthquake."
+ },
+ "Chandelure": {
+  "moves": [
+   "Shadow Ball",
+   "Overheat",
+   "Will-O-Wisp",
+   "Protect"
+  ],
+  "big": false,
+  "why": "Overheat (relearner) replaces Incinerate for real Fire damage; Will-O-Wisp (relearner) cripples physical bosses instead of Hex."
+ },
+ "Crabominable": {
+  "moves": [
+   "Close Combat",
+   "Ice Hammer",
+   "Crabhammer",
+   "Protect"
+  ],
+  "why": "Close Combat (Lv 49) replaces Brick Break: 120 power instead of 75."
+ },
+ "Crawdaunt": {
+  "moves": [
+   "Knock Off",
+   "Crabhammer",
+   "Dragon Dance",
+   "Protect"
+  ],
+  "why": "Knock Off hits harder than Crunch against item holders (every boss mon) and removes the item. Adaptability Crabhammer replaces Razor Shell."
+ },
+ "Crobat": {
+  "moves": [
+   "Brave Bird",
+   "Cross Poison",
+   "Tailwind",
+   "Protect"
+  ],
+  "big": true,
+  "why": "Tailwind (relearner) doubles your side's Speed for 4 turns: Crobat becomes a doubles speed-control lead. Replaces Quick Attack."
+ },
+ "Cursola": {
+  "moves": [
+   "Shadow Ball",
+   "Power Gem",
+   "Strength Sap",
+   "Protect"
+  ],
+  "nature": "Modest",
+  "nature_now": "Careful",
+  "why": "Strength Sap (Lv 35) heals and lowers the target's Attack; Shadow Ball (TM30) for STAB. Night Shade, Grudge and Mirror Coat go. Needs a Modest mint."
+ },
+ "Drapion-Aevian": {
+  "moves": [
+   "Gunk Shot",
+   "Knock Off",
+   "Icicle Crash",
+   "X-Scissor"
+  ],
+  "why": "Icicle Crash gives it strong Ice STAB on its Fur Coat body; Gunk Shot and Knock Off cover the rest."
+ },
+ "Feraligatr": {
+  "moves": [
+   "Agility",
+   "Aqua Tail",
+   "Crunch",
+   "Superpower"
+  ],
+  "big": true,
+  "nature": "Adamant",
+  "nature_now": "Hasty",
+  "why": "Agility (Lv 1) plus Sheer Force turns it into a sweeper: one boost outspeeds every boss mon. Crunch (Lv 32) replaces Thrash and Hydro Pump. Needs an Adamant mint."
+ },
+ "Glalie-Aevian": {
+  "moves": [
+   "Grassy Glide",
+   "Wood Hammer",
+   "Rock Slide",
+   "Protect"
+  ],
+  "big": true,
+  "ability": "Grassy Surge",
+  "ability_now": "Rock Head",
+  "why": "Grassy Glide (relearner) is priority in Grassy Terrain. Capsule to Grassy Surge and it sets the terrain itself, so it hits first every turn and heals: its best score (A tier). Replaces Double-Edge."
+ },
+ "Golem": {
+  "moves": [
+   "Stone Edge",
+   "Earthquake",
+   "Stealth Rock",
+   "Protect"
+  ],
+  "why": "Earthquake (Lv 40) replaces Rock Blast for Ground STAB."
+ },
+ "Jellicent": {
+  "moves": [
+   "Water Spout",
+   "Shadow Ball",
+   "Recover",
+   "Destiny Bond"
+  ],
+  "why": "Recover (Lv 28) keeps HP high, and Water Spout is strongest at full HP. Replaces Hydro Pump."
+ },
+ "Klawf": {
+  "moves": [
+   "Swords Dance",
+   "Rock Blast",
+   "High Horsepower",
+   "Rock Slide"
+  ],
+  "why": "Rock Blast (Lv 24) replaces X-Scissor: STAB multi-hit after Swords Dance."
+ },
+ "Lapras-Aevian": {
+  "moves": [
+   "Rock Slide",
+   "Zen Headbutt",
+   "Dragon Dance",
+   "Sing"
+  ],
+  "why": "Zen Headbutt (Lv 35) adds Psychic STAB to the Dragon Dance set. No Guard Sing still never misses. Replaces Protect."
+ },
+ "Lunatone-Idol": {
+  "moves": [
+   "Psychic",
+   "Moonblast",
+   "Icy Wind",
+   "Ancient Power"
+  ],
+  "why": "Moonblast (relearner) hits Dragons, Dark and Fighting. Replaces Protect, since Focus Sash already keeps it alive."
+ },
+ "Musharna-Aevian": {
+  "moves": [
+   "Play Rough",
+   "Throat Chop",
+   "Moonlight",
+   "Protect"
+  ],
+  "why": "Moonlight (relearner) gives it recovery, which a bulky Trick Room setter wants. Replaces Yawn."
+ },
+ "Pangoro": {
+  "moves": [
+   "Sky Uppercut",
+   "Crunch",
+   "Bullet Punch",
+   "Work Up"
+  ],
+  "why": "Sky Uppercut and Bullet Punch (relearner) replace Low Sweep and Body Slam: stronger Fighting STAB plus priority."
+ },
+ "Passimian": {
+  "moves": [
+   "Close Combat",
+   "Rock Tomb",
+   "Bulk Up",
+   "Protect"
+  ],
+  "why": "Bulk Up (Lv 35) replaces Double-Edge. Defiant plus Bulk Up snowballs."
+ },
+ "Porygon-Z": {
+  "moves": [
+   "Nasty Plot",
+   "Tri Attack",
+   "Shadow Ball",
+   "Discharge"
+  ],
+  "big": true,
+  "why": "Nasty Plot (relearner) is the Showdown set: +2 Special Attack on Adaptability Tri Attack. Shadow Ball (TM30) and Discharge (Lv 40) cover Ghosts and Steels. Agility, Recover and Protect go."
+ },
+ "Runerigus": {
+  "moves": [
+   "Earthquake",
+   "Shadow Claw",
+   "Curse",
+   "Protect"
+  ],
+  "nature": "Adamant",
+  "nature_now": "Quiet",
+  "why": "Physical attacker: Shadow Claw replaces Shadow Ball and Slam, and Curse makes it a slow tank that grows. Needs an Adamant mint."
+ },
+ "Slowbro": {
+  "moves": [
+   "Surf",
+   "Psychic",
+   "Slack Off",
+   "Protect"
+  ],
+  "why": "Slack Off (Lv 33) is Slowbro's standard recovery. Replaces Brine."
+ },
+ "Solrock-Idol": {
+  "moves": [
+   "Stone Edge",
+   "Flare Blitz",
+   "Zen Headbutt",
+   "Protect"
+  ],
+  "big": true,
+  "why": "Flare Blitz (relearner) replaces Rock Slide: Fire coverage, its best score."
+ },
+ "Sylveon": {
+  "moves": [
+   "Moonblast",
+   "Swift",
+   "Shadow Ball",
+   "Protect"
+  ],
+  "why": "Pixilate turns Swift (Lv 20) into a Fairy move that hits both foes: a spread move before Hyper Voice. Shadow Ball (TM30) replaces Draining Kiss."
+ },
+ "Throh": {
+  "moves": [
+   "Superpower",
+   "Storm Throw",
+   "Bulk Up",
+   "Wide Guard"
+  ],
+  "big": true,
+  "why": "Storm Throw (always crits), Bulk Up and Wide Guard (doubles) all unlock. Replaces Seismic Toss, Endure and Reversal."
+ },
+ "Zoroark": {
+  "moves": [
+   "Night Daze",
+   "Extrasensory",
+   "Nasty Plot",
+   "Taunt"
+  ],
+  "why": "Nasty Plot (Lv 52) replaces Agility: +2 Special Attack behind Illusion. Gets much stronger with its Chapter 8 crest."
+ },
+ "Meowscarada": {
+  "moves": [
+   "Flower Trick",
+   "Knock Off",
+   "U-turn",
+   "Play Rough"
+  ],
+  "why": "Knock Off (Lv 52) replaces Night Slash: harder hits against item holders, and it removes the item."
+ }
 }

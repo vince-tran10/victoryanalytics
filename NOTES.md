@@ -152,3 +152,14 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Feraligatr Agility (Adamant mint), Crobat Tailwind, Throh Storm Throw/Bulk Up/Wide Guard, Arcanine/Solrock Flare Blitz,
   Azumarill Aqua Tail/Play Rough. Report section 02 shows cards that flip to Done once the export matches.
 - Sections now: 01 team, 02 relearner upgrades, 03 tier list, 04 to-do, 05 box audit.
+
+## 13:03 export (relearner changes made) + Lv 55 assumption
+- Vincent levels anyone in consideration to 55, so scoring uses team/roster5_lv55.json (all levels = 55) and every
+  level-up move <= 55 counts. Runs: team/r13_*.json(.pkl), finals team/f13_*.json (report reads f13).
+- Party matches plan (Rage Fist, Sucker Punch, Power Gem, Stone Edge learned). Six still best. 66/68 one-shot, 39 first.
+- 24 Active relearner builds done. Open: Meowscarada Knock Off (Lv 52), Zoroark Nasty Plot (Lv 52), Runerigus Adamant mint.
+- Overflow promotes at Lv 55 (team/promote_final_1303.json, builds shown as cards in report section 02):
+  Braviary, Golett→Golurk (Iron Fist), Clawitzer, Stantler→Wyrdeer (capsule Intimidate), Scraggy→Scrafty,
+  Slowking-Galar (knows Trick Room), Palossand. Near misses: Swampert (Water/Ground role covered), Slowking (Slowbro),
+  Musharna (Musharna-Aevian); gated: Ursaluna (Peat Block), Exeggutor-Alola (Leaf Stone), Nidoking (Moon Stone).
+- Runerigus = optional cut once Golurk/Palossand are promoted (cuts.json "maybe").

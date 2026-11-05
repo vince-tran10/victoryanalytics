@@ -55,7 +55,7 @@ TEAM = [
     ('Lead', 'Gholdengo', 'Steel/Ghost', 'Good as Gold', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Metal Coat',
      [('Make It Rain', 0), ('Shadow Ball', 0), ('Power Gem', 0), ('Protect', 0)], []),
     ('Mid', 'Rhyperior', 'Ground/Rock', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone',
-     [('Rock Blast', 0), ('Headlong Rush', 0), ('Slack Off', 0), ('Protect', 0)],
+     [('Stone Edge', 0), ('Headlong Rush', 0), ('Slack Off', 0), ('Protect', 0)],
      []),
     ('Mid', 'Glaceon', 'Ice', 'Ice Body', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Never-Melt Ice',
      [('Freeze-Dry', 0), ('Blizzard', 0), ('Icy Wind', 0), ('Protect', 0)], []),
@@ -92,8 +92,6 @@ def verify(name, ab, nat, evs, item, moves):
     for m, _ in moves:
         if m not in d['moves']:
             out.append(LATER.get((name, m), f'Teach {m}' + (f' (replaces {REPL[(name, m)]})' if (name, m) in REPL else '')).format(lv=d['level']))
-    if name == 'Rhyperior' and 'Stone Edge' not in d['moves']:
-        out.append(f"Lv 54 (now Lv {d['level']}): Stone Edge replaces Rock Blast")
     return out
 
 
@@ -141,11 +139,13 @@ ready_rows, R_TOT, R_KO, R_FAST, R_RISK = readiness()
 # ---------------------------------------------------------------- 1b) relearner upgrades
 UP = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'upgrades_relearn.json')))
 ORDER = ['Annihilape', 'Gholdengo', 'Rhyperior', 'Glaceon', 'Golisopod-Aevian', 'Leavanny-Aevian']
-up_cards, up_same, up_left = [], [], 0
+up_cards, up_same, up_left, up_done = [], [], 0, []
 for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP),
                 key=lambda d: (d['box'] != 'Party', ORDER.index(d['species']) if d['species'] in ORDER else 9, not UP[d['species']].get('big'), d['species'])):
     u = UP[d['species']]
     if sorted(u['moves']) == sorted(d['moves']) and not u.get('nature') and not u.get('ability') and d['box'] == 'Active' and 'later' not in u:
+        if not u['why'].startswith(('Nothing', 'Already', 'Support')):
+            up_done.append(d['species'])
         continue
     if set(u['moves']) == set(d['moves']) and 'Swords Dance' in u['moves'] + ['Swords Dance'] and u['why'].startswith(('Nothing', 'Already', 'Support')):
         up_same.append(d['species']); continue
@@ -154,6 +154,8 @@ for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP
     abg = u.get('ability') and d.get('ability') != u['ability']
     done = not gaps and not natg and not abg
     up_left += 0 if done else 1
+    if done and d['box'] != 'Party':
+        up_done.append(d['species']); continue
     mv = ''.join(f'<li class="{"new" if m in gaps else ""}">{E(m)}</li>' for m in u['moves'])
     gone = [m for m in d['moves'] if m not in u['moves']]
     extra = ''
@@ -168,6 +170,23 @@ for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP
 <div class="mnote">{E(u["why"])}</div>{('<div class="mnote"><b>Playstyle:</b> ' + E(u["style"]) + '</div>') if u.get("style") else ''}</li>''')
 up_same += [d['species'] for d in cur if d['box'] != 'Overflow' and d['species'] not in UP and d['species'] not in up_same and d['score']]
 up_same = sorted(set(up_same))
+promo_cards = []
+for p in promo:
+    nat = p['nature'].split(' ')[0]
+    now = next((d for d in cur if d['species'] in (p['final'], p['owned']) and d['box'] != 'Overflow'), None)
+    src = now or next((d for d in cur if d['n'] == p['n']), None)
+    mvs = [m.split(' (Lv')[0] for m in p['moves']]
+    if now and now['species'] == p['final'] and set(mvs) <= set(now['moves']) and now.get('nature') == nat and now.get('ability') == p['ability']:
+        continue
+    have = set(src['moves']) if src else set()
+    mv = ''.join(f'<li class="{"" if m in have else "new"}">{E(m)}</li>' for m in mvs)
+    where = 'in Active, finish the build' if now else f'Overflow #{p["n"]}'
+    abl = f'{E(p["ability"])}' + (' (Ability Capsule)' if p.get('capsule') else '')
+    promo_cards.append(f'''<li class="mon up"><div class="mtop"><strong>{E(p["final"])}</strong><span class="b promote">promote · {E(p["tier"])} tier</span></div>
+<div class="chips"><span class="lv">{E(where)} · Lv {src["level"] if src else "?"}{(" " + E(p["owned"])) if p["owned"] != p["final"] else ""}</span></div>
+<div class="mnote"><b>{abl}</b> · {E(p["nature"])} · {E(p["evs_txt"])}</div>
+<ul class="mv">{mv}</ul>
+<div class="mnote">{E(p.get("level_note", ""))}</div><div class="mnote">{E(p.get("why", ""))}</div></li>''')
 
 # ---------------------------------------------------------------- 2) tier list
 FLAGS = {  # community / role notes (short)
@@ -231,8 +250,7 @@ for p in promo:
     now = next((d for d in cur if d['species'] in (p['final'], p['owned']) and d['box'] != 'Overflow'), None)
     if not now:
         promo_left.append(p)
-        promo_todo.append((f"#{p['n']} {p['owned']}{(' → evolve to ' + p['final']) if p['final'] != p['owned'] else ''} ({p['tier']} tier): move to the Active box. "
-                           f"{p['ability']}, {p['nature']}, {p['evs_txt']}; {', '.join(p['moves'])}.", 'mid'))
+        promo_todo.append((f"#{p['n']} {p['owned']}{(' → evolve to ' + p['final']) if p['final'] != p['owned'] else ''} ({p['tier']} tier): move to the Active box. Build in section 02.", 'mid'))
         continue
     gaps = []
     if now['species'] != p['final']:
@@ -388,6 +406,7 @@ tbody tr:last-child td {{ border-bottom: 0 }}
 .mnote {{ font-size: 12px; color: var(--muted) }}
 .upgrid {{ padding: 0; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) }}
 .up {{ background: var(--panel); gap: 6px }} .up .mv {{ font-size: 13.5px }}
+.b.promote {{ background: var(--good-soft); color: var(--good) }}
 .b.big {{ background: var(--bad-soft); color: var(--bad) }} .b.small {{ background: var(--accent-soft); color: var(--accent) }}
 .chg2 {{ font-size: 12.5px; color: var(--warn) }}
 .todos {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px }}
@@ -442,7 +461,9 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
   <h2 id="s1b"><span class="n">02</span> Move Relearner upgrades <span class="tag">party + Active box · {up_left} to do</span></h2>
   <p class="legend">With the relearner unlocked, any level-up move up to its level plus relearner-only moves are open (egg moves still need breeding). New moves are highlighted. Each card checks itself against your export and flips to Done ✓ once it matches.</p>
   <ul class="tmons upgrid">{"".join(up_cards)}</ul>
+  {('<p class="legend"><b class="ok">Done ✓ per your export:</b> ' + E(", ".join(sorted(up_done))) + '.</p>') if up_done else ''}
   <p class="legend">No relearner upgrade worth making: {E(", ".join(up_same))}.</p>
+  {('<h3>Promote from Overflow <span class="legend">every Pokémon re-scored at Lv 55 with relearner, TM, egg and level-up moves</span></h3><ul class="tmons upgrid">' + "".join(promo_cards) + '</ul>') if promo_cards else ''}
 </section>
 
 <section aria-labelledby="s2">
