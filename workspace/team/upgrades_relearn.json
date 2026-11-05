@@ -7,7 +7,7 @@
    "Protect"
   ],
   "big": true,
-  "why": "Rage Fist is the move that made Annihilape a Showdown staple: 50 power, +50 every time Ape is hit (up to 350). After one hit it one-shots 44 of 68 bosses (38 now), after two hits 54. Ghost STAB replaces Shadow Punch. Sucker Punch replaces Fire Punch (priority, as planned).",
+  "why": "Rage Fist is the move that made Annihilape a Showdown staple: 50 power, +50 every time Ape is hit (up to 350). Across all 113 Chapter 8 boss mons it one-shots 67 after one hit and 83 after two. Sucker Punch gives priority.",
   "style": "Lead that wants to get hit: let it take a hit, then Rage Fist hits like a truck. Protect does not count as a hit."
  },
  "Gholdengo": {
@@ -62,10 +62,10 @@
    "Flare Blitz",
    "Extreme Speed",
    "Close Combat",
-   "Play Rough"
+   "Protect"
   ],
   "big": true,
-  "why": "Flare Blitz (relearner) is its Showdown signature: 120-power Fire STAB, replacing Fire Fang (65)."
+  "why": "Flare Blitz (relearner) is its Showdown signature: 120-power Fire STAB, replacing Fire Fang. Protect over Play Rough because it now leads in doubles."
  },
  "Azumarill": {
   "moves": [

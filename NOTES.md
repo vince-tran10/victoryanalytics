@@ -185,3 +185,10 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   best in 6/8 weightings. One-shots 105/113 (65 first) vs old 100/113 (56). Goli +2 SD 95/113; Ape RF 67 (1 hit) / 83.
   Hardest: Kyogre (nobody one-shots). Chandelure is one-shot by 16 boss mons (keep Focus Sash).
 - make_report5 now verifies EVs (stats >= 100) and finds the Active copy when a mon isn't in the party.
+
+## 14:24 export (426 mons)
+- Party = the new six, fully built (to-do list empty). Old six members Gholdengo/Rhyperior/Glaceon/Leavanny in Active.
+- Layout now: party #1–6, Overflow A–Z #7–366, a new-catch box #367–378 (unsorted), Active #379–426 (48).
+  current_box.active_start: last A/B-name reset whose previous entry starts with M–Z; box_audit uses it too.
+- 12 new catches scored (team/new_mons_1424.json): none reach A. Best: Gastrodon West Aevian (Ground/Fairy) 0.552,
+  Roselia-Aevian → Roserade-Aevian 0.548 (needs Sun Stone). Rest C/D.

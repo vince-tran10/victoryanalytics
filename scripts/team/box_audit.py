@@ -25,7 +25,7 @@ PN, PO = party_size(N), party_size(O)
 # Active box = last alphabetical reset after #7
 resets = [b['n'] for a, b in zip(N, N[1:]) if b['n'] > PN + 1 and b['species'].lower() < a['species'].lower()]
 starts = [r for r in resets if all(N[i - 1]['species'].lower() <= N[i]['species'].lower() for i in range(r, len(N)))]
-ACT = starts[0]
+ACT = active_start(N)
 box = lambda n, s, p=None: 'Party' if n <= (PN if p is None else p) else ('Active' if n >= s else 'Overflow')
 for d in N:
     d['box'] = box(d['n'], ACT)
