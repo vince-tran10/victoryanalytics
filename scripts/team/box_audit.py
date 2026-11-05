@@ -6,7 +6,9 @@ The Active box starts where the alphabetical order resets after the party.
 """
 import re, sys, json, html, collections, subprocess, os
 REPORT, NEW, OLD, OLD_START = sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4])
-PROMO = {p['n']: p for p in json.load(open(sys.argv[5]))} if len(sys.argv) > 5 else {}
+PROMO = {}
+_act = os.path.join(os.path.dirname(os.path.abspath(sys.argv[5])), 'actions.json') if len(sys.argv) > 5 else ''
+ACTIONS = {int(k): v for k, v in json.load(open(_act)).items()} if _act and os.path.exists(_act) else {}
 NOTE = sys.argv[6] if len(sys.argv) > 6 else ''
 CUTS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(sys.argv[5])), 'cuts.json'))) if len(sys.argv) > 5 else {'move': {}, 'maybe': {}}
 here = os.path.dirname(os.path.abspath(__file__))
@@ -79,19 +81,18 @@ esc = html.escape
 
 def li(d):
     name = esc(d['species']) + (f' <span class="nick">“{esc(d["nick"])}”</span>' if d['nick'] else '')
-    tag = ' <span class="b party">changed</span>' if (k(d), d['box']) in moved_in else ''
-    if d['box'] == 'Active' and (d['species'] in CUTS['move'] or d['species'] in PARTY_SP):
-        tag += ' <span class="b cut">to overflow</span>'
-    elif d['box'] == 'Active' and d['species'] in CUTS['maybe']:
-        tag += ' <span class="b maybe">your call</span>'
-    if d['n'] in PROMO and d['box'] == 'Overflow':
-        tag += ' <span class="b promote">promote</span>'
-    return (f'<li data-n="{esc(d["species"].lower())} {esc(d["nick"].lower())}"><span class="idx num">#{d["n"]}</span>'
-            f'<span class="nm">{name}{tag}</span><span class="lv num">Lv {d.get("level", "?")}</span></li>')
+    act = ACTIONS.get(d['n'])
+    cls = ' class="act"' if act else ''
+    why = f'<span class="why">{esc(act)}</span>' if act else ''
+    return (f'<li{cls} data-n="{esc(d["species"].lower())} {esc(d["nick"].lower())}"><span class="idx num">#{d["n"]}</span>'
+            f'<span class="nm">{name}{why}</span><span class="lv num">Lv {d.get("level", "?")}</span></li>')
 
 
 def group(title, b, opened, note):
     items = [d for d in N if d['box'] == b]
+    n_act = sum(1 for d in items if d['n'] in ACTIONS)
+    note = (f'<span class="actn">{n_act} to move</span>' if n_act else 'nothing to move') + (f' · {note}' if note else '')
+    opened = opened or bool(n_act)
     return (f'<details class="bx panel"{" open" if opened else ""}><summary><b>{title}</b> '
             f'<span class="num">{len(items)}</span><span class="legend">{note}</span></summary>'
             f'<ul class="roster">{"".join(li(d) for d in items)}</ul></details>')
@@ -106,19 +107,33 @@ else:
     checks.append('Overflow scan: nobody else clears the Active-box bar (A tier or better on their own, ready now, not already owned in Active). Closest: Clawitzer, Scraggy → Scrafty (Lv 39), Ursaring → Ursaluna (needs a Peat Block)')
 if oddsort:
     checks.append('Out of A–Z order in Overflow: ' + ', '.join(f'{esc(d["species"])} (#{d["n"]})' for d in oddsort))
-chg = ('<li>' + '</li><li>'.join(esc(c) for c in changes) + '</li>') if changes else '<li>No changes</li>'
+COLS = [('Into the party', lambda c: c.endswith('→ Party')), ('Out of the party', lambda c: 'Party →' in c),
+        ('Overflow → Active', lambda c: c.endswith('Overflow → Active') and 'evolved' not in c),
+        ('Active → Overflow', lambda c: c.endswith('Active → Overflow')),
+        ('Evolved', lambda c: 'evolved' in c), ('New catches', lambda c: ': new, in' in c), ('Gone', lambda c: ': gone' in c)]
+buckets = {t: [] for t, _ in COLS}
+for c in changes:
+    for t, f in COLS:
+        if f(c):
+            nm = c.split(':')[0]
+            if t == 'Evolved':
+                nm = c.split(':')[0].replace(' evolved into ', ' → ') + ' (' + c.split(': ')[1] + ')'
+            buckets[t].append(nm); break
+chg = ''.join(f'<div class="chgcol"><h4>{esc(t)} <span class="num">{len(v)}</span></h4><ul class="plain">' + ''.join(f'<li>{esc(x)}</li>' for x in v) + '</ul></div>'
+              for t, v in buckets.items() if v) or '<p>No changes.</p>'
 gn = ('<li>' + '</li><li>'.join(esc(c) for c in gone) + '</li>') if gone else '<li>None</li>'
 sec = f'''<!--BOXAUDIT-->
 <section aria-labelledby="s4">
   <h2 id="s4"><span class="n">05</span> Box audit <span class="tag">who you own, and where · export {len(N)} mons</span></h2>
   <div class="audit-top">
     <!-- completeness check (hidden): {' | '.join(re.sub('<[^>]+>', '', c) for c in checks)} -->
-    <div class="panel pad"><h3>Since last export</h3>{('<p class="legend">' + esc(NOTE) + '</p>') if NOTE else ''}<ul class="plain">{chg}</ul></div>
+    <div class="panel pad"><h3>Since last export</h3>{('<p class="legend">' + esc(NOTE) + '</p>') if NOTE else ''}<div class="chgcols">{chg}</div></div>
   </div>
+  <p class="legend"><span class="actkey">Red</span> = needs moving to match the ideal six and the box plan; what to do is written under the name. Same items as the To do list.</p>
   <label class="find">Find a Pokémon <input type="search" id="boxfind" placeholder="e.g. Furret" autocomplete="off"></label>
   {group("Party", "Party", True, "")}
-  {group("Active box", "Active", True, (str(sum(1 for d in N if d['box'] == 'Active' and (d['species'] in CUTS['move'] or d['species'] in PARTY_SP))) + " to move back to Overflow · see To do") if CUTS['move'] else "")}
-  {group("Overflow boxes", "Overflow", bool(PROMO), (str(len(PROMO)) + " to promote · see To do") if PROMO else "tap to expand")}
+  {group("Active box", "Active", True, "")}
+  {group("Overflow boxes", "Overflow", False, "tap to expand")}
 </section>
 <!--/BOXAUDIT-->'''
 css = '''<style id="boxaudit-css">
@@ -134,6 +149,13 @@ css = '''<style id="boxaudit-css">
 .find input { font: inherit; padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--ink); min-width: 0; flex: 1; max-width: 280px }
 .roster li[hidden] { display: none }
 .b.promote { background: var(--good-soft); color: var(--good) }
+.chgcols { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px }
+.chgcol h4 { margin: 0 0 4px; font: 600 12px var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--muted) }
+.chgcol h4 .num { color: var(--accent) }
+.roster li.act { background: var(--bad-soft); border-bottom-color: var(--bad); border-radius: 4px }
+.roster li.act .nm, .roster li.act .idx { color: var(--bad) }
+.roster li .why { display: block; font-size: 11px; color: var(--bad); line-height: 1.3 }
+.actn { color: var(--bad); font-weight: 600 } .actkey { background: var(--bad-soft); color: var(--bad); padding: 0 6px; border-radius: 4px; font-weight: 600 }
 .b.cut { background: var(--bad-soft); color: var(--bad) } .b.maybe { background: var(--line); color: var(--muted) }
 </style>'''
 js = '''<script id="boxaudit-js">

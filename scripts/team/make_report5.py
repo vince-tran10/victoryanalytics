@@ -72,6 +72,7 @@ JOB = {'Annihilape': 'Fastest hitter.',
        'Golisopod-Aevian': 'Win condition. Skill Link makes Bone Rush and Pin Missile 125 power. After one Swords Dance it one-shots 60 of 68 boss mons.',
        'Leavanny-Aevian': 'Rage Powder pulls attacks so Golisopod gets a free Swords Dance; Focus Sash guarantees it survives that turn. Intimidate on entry.'}
 EVOLVE_FIRST = {}
+ACTIONS = {}   # export entry number -> what to do; read by box_audit.py for the red highlights
 REPL = {('Annihilape', 'Sucker Punch'): 'Fire Punch: priority hit on faster foes',
         ('Annihilape', 'Rage Fist'): 'Shadow Punch: Move Relearner, +50 power per hit taken',
         ('Gholdengo', 'Power Gem'): 'Recover: Move Relearner, hits the Fire types',
@@ -85,6 +86,8 @@ def verify(name, ab, nat, evs, item, moves):
     if not d:
         cands0 = [x for x in cur if x['species'] == name]
         d0 = min(cands0, key=lambda x: (x['box'] != 'Active', len(verify_mon(x, ab, nat, evs, item, moves))), default=None)
+        if d0:
+            ACTIONS[d0['n']] = f"Move into the party (part of the ideal six)"
         out = [f"Put {name} in the party (now in {d0['box']} #{d0['n']})" if d0 else (EVOLVE_FIRST.get(name) or f'Put {name} in the party')]
         if d0:
             out += [c for c in verify_mon(d0, ab, nat, evs, item, moves)]
@@ -151,6 +154,12 @@ def readiness():
 
 ready_rows, R_TOT, R_KO, R_FAST, R_RISK = readiness()
 
+
+IDEAL = [t[1] for t in TEAM]
+for d in cur:
+    if d['box'] == 'Party' and d['species'] not in IDEAL:
+        ACTIONS[d['n']] = 'Move out of the party, back to the Active box'
+        team_todo.append((f"{d['species']}: move out of the party, back to the Active box", 'high'))
 
 # ---------------------------------------------------------------- 1b) relearner upgrades
 UP = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'upgrades_relearn.json')))
@@ -243,7 +252,7 @@ for r in rows:
     tier = next(t for t, cut, _ in TIERS if r['score'] >= cut)
     flag, note = FLAGS.get(r['name'], ('', ''))
     best = ', '.join(SHORT[k] for k in r['best'][:2])
-    badges = '<span class="b party">Party</span>' if r['where'] == 'Party' else ''
+    badges = '<span class="b party">Party</span>' if disp(r['name']) in IDEAL else ''
     if r['where'] == 'New catch':
         note = ('New catch (Overflow box). ' + note).strip()
     where = ''
@@ -266,6 +275,9 @@ for p in promo:
     now = next((d for d in cur if d['species'] in (p['final'], p['owned']) and d['box'] != 'Overflow'), None)
     if not now:
         promo_left.append(p)
+        od = next((d for d in cur if d['box'] == 'Overflow' and d['species'] in (p['owned'], p['final'])), None)
+        if od:
+            ACTIONS[od['n']] = f"Promote to the Active box{(' (evolve into ' + p['final'] + ')') if p['final'] != od['species'] else ''}. Build in section 02"
         promo_todo.append((f"#{p['n']} {p['owned']}{(' → evolve to ' + p['final']) if p['final'] != p['owned'] else ''} ({p['tier']} tier): move to the Active box. Build in section 02.", 'mid'))
         continue
     gaps = []
@@ -290,13 +302,16 @@ for sp, why in CUTS['move'].items():
     hits = [d for d in cur if d['box'] == 'Active' and d['species'] == sp]
     if hits:
         cut_todo.append((f"{sp}{' ×' + str(len(hits)) if len(hits) > 1 else ''} (#{', #'.join(str(d['n']) for d in hits)}): move to Overflow. {why}", 'mid'))
+        for d in hits: ACTIONS[d['n']] = 'Move to Overflow'
 for d in cur:
-    if d['box'] == 'Active' and d['species'] in party:
+    if d['box'] == 'Active' and d['species'] in party and d['species'] in IDEAL and d['n'] not in ACTIONS:
         cut_todo.append((f"{d['species']} (#{d['n']}): move to Overflow. It's a second copy of the one in your party.", 'mid'))
+        ACTIONS[d['n']] = 'Move to Overflow (duplicate)'
 for sp, why in CUTS['maybe'].items():
     hits = [d for d in cur if d['box'] == 'Active' and d['species'] == sp]
     if hits:
         cut_todo.append((f"{sp} (#{hits[0]['n']}): your call. {why}", 'low'))
+        ACTIONS[hits[0]['n']] = 'Your call: Overflow'
 if cut_todo:
     TODO.append(('Box cleanup: Active → Overflow', cut_todo))
 todo_html = ''
@@ -516,4 +531,5 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 </script>
 '''
 open(OUT, 'w', encoding='utf-8').write(page)
+json.dump({str(k): v for k, v in ACTIONS.items()}, open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'actions.json'), 'w'), indent=1)
 print('wrote', OUT, len(page), 'tiers:', {t: len(v) for t, v in cards.items()})

@@ -237,3 +237,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   f20: one-shots 95/103 with fields, 92/103 without; singles 39/44 both. Whiscash: EQ / Aqua Tail / Rock Tomb / Protect.
   Close alternative: Mabosstiff for Whiscash (better doubles, slightly worse singles).
 - Report: section 02 now shows only open relearner cards (done ones disappear).
+- Report consistency (11-05): make_report5 builds ACTIONS {export # -> what to do} for: party members not in the ideal six
+  (move out), ideal-six copies in Active (move in), promotes still in Overflow (matched by species, never by number:
+  the old #101 tag landed on Farfetch'd after renumbering), cuts. Saved to workspace/team/actions.json; box_audit
+  highlights exactly those rows red (no tags) and the To do list carries the same items. Tier-list "Party" badge = the
+  ideal six (section 01), not the current party. "Since last export" is split into columns by change type.
