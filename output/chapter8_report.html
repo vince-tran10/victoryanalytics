@@ -1,0 +1,480 @@
+<title>Chapter 8 Team Report</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a trainer's scouting dossier — verdict first, then the six as profile cards, then the battle route in story order. */
+:root {
+  --bg: #f3f5f6; --panel: #ffffff; --ink: #142026; --muted: #5a6a72; --line: #d7dfe3;
+  --accent: #0e7c86; --accent-soft: #dff1f2; --good: #1f7a3d; --good-soft: #e1f3e6; --warn: #9a6200; --warn-soft: #fbefd9;
+  --bad: #b3261e; --bad-soft: #fbe3e1; --bar: #c9d6db;
+  --display: "Chakra Petch", "Arial Narrow", system-ui, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f171b; --panel: #162127; --ink: #e5eef1; --muted: #93a6ae; --line: #26363e;
+  --accent: #4cc3cc; --accent-soft: #12343a; --good: #6fd08f; --good-soft: #143222; --warn: #f0b85a; --warn-soft: #3a2c12;
+  --bad: #ff8a80; --bad-soft: #3d1a18; --bar: #2b3c44; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0f171b; --panel: #162127; --ink: #e5eef1; --muted: #93a6ae; --line: #26363e;
+  --accent: #4cc3cc; --accent-soft: #12343a; --good: #6fd08f; --good-soft: #143222; --warn: #f0b85a; --warn-soft: #3a2c12;
+  --bad: #ff8a80; --bad-soft: #3d1a18; --bar: #2b3c44; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--body); margin: 0 }
+.wrap { max-width: 1120px; margin: 0 auto; padding-block: 32px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 40px }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-spacing: .01em }
+h1 { font-size: clamp(30px, 5vw, 44px); line-height: 1.05 }
+h2 { font-size: 24px; display: flex; gap: 12px; align-items: baseline }
+h2 .tag { font: 500 12px var(--mono); color: var(--muted); letter-spacing: .08em; text-transform: uppercase }
+h3 { font-size: 20px }
+p { margin: 0; max-width: 70ch }
+a { color: var(--accent) }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.sub { color: var(--muted); font-size: 13px }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums }
+section { display: grid; gap: 16px; min-width: 0 }
+.masthead { display: grid; gap: 14px; border-bottom: 2px solid var(--ink); padding-bottom: 22px }
+.eyebrow { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent) }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 20px; font: 13px var(--mono); color: var(--muted) }
+.facts b { color: var(--ink); font-weight: 500 }
+.verdict { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 24px; align-items: start }
+.answer { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; display: grid; gap: 12px }
+.answer .big { font-family: var(--display); font-size: 22px; line-height: 1.25 }
+.answer .big em { font-style: normal; color: var(--accent) }
+table { border-collapse: collapse; width: 100% }
+th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top }
+thead th { font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted) }
+.scores td.num, .scores thead th:not(:first-child) { text-align: right }
+.delta.up { color: var(--good) } .delta.down { color: var(--bad) }
+.tablewrap { overflow-x: auto; min-width: 0 }
+.chips { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px }
+.type { font: 600 10.5px var(--mono); letter-spacing: .06em; text-transform: uppercase; padding: 2px 7px; border-radius: 3px }
+.team { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px }
+.mon { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: grid; gap: 12px; align-content: start; min-width: 0 }
+.mon header { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: start }
+.slot { font: 700 26px var(--display); color: var(--accent); line-height: 1 }
+.where { font: 500 11px var(--mono); padding: 3px 8px; border-radius: 99px; white-space: nowrap }
+.where.in { background: var(--good-soft); color: var(--good) }
+.where.out { background: var(--warn-soft); color: var(--warn) }
+.role { font: 600 13px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted) }
+.kv { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; margin: 0 }
+.kv div { min-width: 0 }
+.kv dt { font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted) }
+.kv dd { margin: 0; font-weight: 500 }
+.moves { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px }
+.moves li { border: 1px solid var(--line); border-radius: 6px; padding: 6px 9px; font-weight: 500; display: flex; justify-content: space-between; gap: 6px }
+.moves li.new { border-color: var(--warn); background: var(--warn-soft) }
+.moves li b { font: 500 10px var(--mono); text-transform: uppercase; color: var(--warn); align-self: center }
+.stats { display: grid; gap: 3px }
+.srow { display: grid; grid-template-columns: 34px 1fr 34px; gap: 8px; align-items: center; font: 12px var(--mono) }
+.sk { color: var(--muted) } .sv { text-align: right; font-variant-numeric: tabular-nums }
+.sbar { height: 6px; background: var(--bar); border-radius: 3px; overflow: hidden }
+.sbar i { display: block; height: 100%; background: var(--accent) }
+.blurb { color: var(--muted); font-size: 14px }
+.pill { font: 600 11px var(--mono); text-transform: uppercase; letter-spacing: .06em; padding: 3px 9px; border-radius: 99px }
+.pill.keep { background: var(--good-soft); color: var(--good) } .pill.bench { background: var(--warn-soft); color: var(--warn) }
+.battle { background: var(--panel); border: 1px solid var(--line); border-radius: 10px }
+.battle + .battle { margin-top: 8px }
+.battle summary { cursor: pointer; list-style: none; display: grid; grid-template-columns: 32px minmax(0, 2fr) minmax(0, 1.2fr) minmax(0, 1.4fr) 56px; gap: 12px; align-items: center; padding: 14px 16px }
+.battle summary::-webkit-details-marker { display: none }
+.step { font: 700 18px var(--display); color: var(--accent) }
+.bname { min-width: 0 }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center }
+.fmt { font: 600 10.5px var(--mono); text-transform: uppercase; letter-spacing: .06em; padding: 2px 7px; border-radius: 3px; border: 1px solid var(--line) }
+.fmt.doubles { background: var(--accent-soft); color: var(--accent); border-color: transparent }
+.field { font-size: 13px; color: var(--muted) }
+.leads { font-size: 13px }
+.opt { display: inline-block; font: 500 10.5px var(--mono); color: var(--warn); background: var(--warn-soft); padding: 1px 6px; border-radius: 3px }
+.bbody { padding: 0 16px 16px; display: grid; gap: 10px; min-width: 0 }
+.note { font-size: 14px }
+.foes td.num { font-weight: 500 }
+.good { color: var(--good) } .ok { color: var(--warn) } .bad { color: var(--bad) }
+.lv { font: 12px var(--mono); color: var(--muted) }
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px }
+.box { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; display: grid; gap: 10px; align-content: start; min-width: 0 }
+.box h3 { font-size: 17px }
+.box ul { margin: 0; padding-left: 18px; display: grid; gap: 8px }
+.sens { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px }
+.sens li { display: grid; grid-template-columns: minmax(0, 1fr) auto 40px; gap: 10px; align-items: center; font-size: 14px }
+.dots { display: flex; gap: 3px } .dots i { width: 10px; height: 10px; border-radius: 2px; background: var(--bar) } .dots i.on { background: var(--accent) }
+.legend { font-size: 13px; color: var(--muted) }
+footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 6px }
+@media (max-width: 820px) {
+  .verdict, .two { grid-template-columns: 1fr }
+  .battle summary { grid-template-columns: 28px minmax(0, 1fr) 52px; }
+  .battle summary .meta, .battle summary .leads { grid-column: 2 / 3 }
+  .battle summary .delta { grid-row: 1; grid-column: 3 }
+}
+@media (max-width: 420px) { .moves, .kv { grid-template-columns: 1fr } .team { grid-template-columns: 1fr } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important } }
+</style>
+
+<div class="wrap">
+<header class="masthead">
+  <span class="eyebrow">Pokémon Rejuvenation · Chapter 8: Those We Lose</span>
+  <h1>Chapter 8 Team Report</h1>
+  <p>Is your current party good for singles and doubles, what the community rates, and the six I'd take through the rest of the chapter, with full builds.</p>
+  <div class="facts"><span>Trainer <b>Vincent</b></span><span>Level cap <b>55</b></span><span>Difficulty <b>Classic teams</b></span><span>Roster <b>406 mons</b></span><span>Boss Pokémon checked <b>64 across 12 battles</b></span></div>
+</header>
+
+<section aria-labelledby="v">
+  <h2 id="v">Verdict <span class="tag">singles vs doubles</span></h2>
+  <div class="verdict">
+    <div class="answer">
+      <p class="big">Your party is <em>excellent in singles</em> and <em>good but beatable in doubles</em>.</p>
+      <p>In singles nothing in your boxes does meaningfully better: the best six I found is within about 1%. In doubles the best six is about 6% stronger, and five of Chapter 8's biggest fights are doubles: Texen, Crawli, Eli &amp; Sharon, Geara &amp; Zetta and Rift Giratina.</p>
+      <p>The gap comes from three things. Whiscash's Earthquake hits your own partner. Lapras-Aevian and Leavanny-Aevian are frail to the Rock, Fire and Flying moves that Mountain and Volcanic Top boost by 1.5x. And nobody has Fake Out or redirection to protect Golisopod while it sets up.</p>
+      <p>Your instincts were right: Golisopod-Aevian is the best mon you own, and the crest really does make Whiscash weakness-free.</p>
+    </div>
+    <div class="answer">
+      <div class="tablewrap"><table class="scores">
+        <thead><tr><th>Every fight scored as</th><th>Your party</th><th>Recommended</th><th>Gain</th></tr></thead>
+        <tbody><tr><th scope="row">Singles</th><td class="num">1.21</td><td class="num">1.23</td><td class="num delta up">+1%</td></tr><tr><th scope="row">Doubles</th><td class="num">1.33</td><td class="num">1.41</td><td class="num delta up">+6%</td></tr><tr><th scope="row">As the game plays them</th><td class="num">1.27</td><td class="num">1.32</td><td class="num delta up">+4%</td></tr></tbody>
+      </table></div>
+      <p class="legend">Score = how much of each boss team the six can knock out before getting knocked out, at Lv 55 with each battle's field applied. Higher is better. Your current party is scored with the moves it runs today.</p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="six">
+  <h2 id="six">Recommended six <span class="tag">full profiles</span></h2>
+  <p class="legend">Every move is legal under your rules: level-up at or below 55, Egg moves, TM17 Protect, or already known. Highlighted moves are ones the mon doesn't know yet. Stat bars are actual stats at Lv 55 with this spread.</p>
+  <div class="team">
+<article class="mon">
+  <header><span class="slot">1</span><div><h3>Golisopod-Aevian</h3><div class="chips"><span class="type" style="background:#A6B91A;color:#1c2003">Bug</span><span class="type" style="background:#E2BF65;color:#2b2208">Ground</span></div></div><span class="where in">In party</span></header>
+  <p class="role">Win condition</p>
+  <dl class="kv">
+    <div><dt>Ability</dt><dd>Skill Link</dd></div>
+    <div><dt>Nature</dt><dd>Adamant</dd></div>
+    <div><dt>EVs</dt><dd>252 HP / 252 Atk / 4 SpD</dd></div>
+    <div><dt>Item</dt><dd>Soft Sand</dd></div>
+    <div><dt>Level</dt><dd>Lv 50 → 55</dd></div>
+  </dl>
+  <ul class="moves"><li class="">Bone Rush</li><li class="">Pin Missile</li><li class="">Swords Dance</li><li class="">Protect</li></ul>
+  <div class="stats" aria-label="Stats at level 55"><div class="srow"><span class="sk">HP</span><span class="sbar"><i style="width:71%"></i></span><span class="sv">199</span></div><div class="srow"><span class="sk">Atk</span><span class="sbar"><i style="width:76%"></i></span><span class="sv">213</span></div><div class="srow"><span class="sk">Def</span><span class="sbar"><i style="width:59%"></i></span><span class="sv">165</span></div><div class="srow"><span class="sk">SpA</span><span class="sbar"><i style="width:25%"></i></span><span class="sv">69</span></div><div class="srow"><span class="sk">SpD</span><span class="sbar"><i style="width:47%"></i></span><span class="sv">132</span></div><div class="srow"><span class="sk">Spe</span><span class="sbar"><i style="width:28%"></i></span><span class="sv">77</span></div></div>
+  <p class="blurb">Skill Link Bone Rush hits 5 times. That&#x27;s 1.5x more on Deep Earth (Tommen, Guards, Groudon section), and Swords Dance is +3 on Big Top. Slow, so let Tangrowth&#x27;s Rage Powder or Hariyama&#x27;s Fake Out cover it while it sets up.</p>
+</article>
+<article class="mon">
+  <header><span class="slot">2</span><div><h3>Annihilape</h3><div class="chips"><span class="type" style="background:#C22E28;color:#ffffff">Fighting</span><span class="type" style="background:#735797;color:#ffffff">Ghost</span></div></div><span class="where in">In party</span></header>
+  <p class="role">Fast lead / cleaner</p>
+  <dl class="kv">
+    <div><dt>Ability</dt><dd>Defiant</dd></div>
+    <div><dt>Nature</dt><dd>Adamant</dd></div>
+    <div><dt>EVs</dt><dd>252 Atk / 4 Def / 252 Spe</dd></div>
+    <div><dt>Item</dt><dd>Black Belt</dd></div>
+    <div><dt>Level</dt><dd>Lv 50 → 55</dd></div>
+  </dl>
+  <ul class="moves"><li class="">Close Combat</li><li class="">Shadow Punch</li><li class="">Fire Punch</li><li class="">Protect</li></ul>
+  <div class="stats" aria-label="Stats at level 55"><div class="srow"><span class="sk">HP</span><span class="sbar"><i style="width:72%"></i></span><span class="sv">203</span></div><div class="srow"><span class="sk">Atk</span><span class="sbar"><i style="width:72%"></i></span><span class="sv">201</span></div><div class="srow"><span class="sk">Def</span><span class="sbar"><i style="width:39%"></i></span><span class="sv">110</span></div><div class="srow"><span class="sk">SpA</span><span class="sbar"><i style="width:25%"></i></span><span class="sv">69</span></div><div class="srow"><span class="sk">SpD</span><span class="sbar"><i style="width:43%"></i></span><span class="sv">121</span></div><div class="srow"><span class="sk">Spe</span><span class="sbar"><i style="width:55%"></i></span><span class="sv">155</span></div></div>
+  <p class="blurb">The fastest hard hitter you have (155 Speed at cap). Defiant punishes Intimidate (Krookodile, Stoutland). Fire Punch covers the Steel and Fairy types its STABs miss.</p>
+</article>
+<article class="mon">
+  <header><span class="slot">3</span><div><h3>Gholdengo</h3><div class="chips"><span class="type" style="background:#B7B7CE;color:#1b1b2a">Steel</span><span class="type" style="background:#735797;color:#ffffff">Ghost</span></div></div><span class="where in">In party</span></header>
+  <p class="role">Special lead</p>
+  <dl class="kv">
+    <div><dt>Ability</dt><dd>Good as Gold</dd></div>
+    <div><dt>Nature</dt><dd>Modest</dd></div>
+    <div><dt>EVs</dt><dd>252 HP / 252 SpA / 4 SpD</dd></div>
+    <div><dt>Item</dt><dd>Metal Coat</dd></div>
+    <div><dt>Level</dt><dd>Lv 50 → 55</dd></div>
+  </dl>
+  <ul class="moves"><li class="">Make It Rain</li><li class="">Shadow Ball</li><li class="">Recover</li><li class="">Protect</li></ul>
+  <div class="stats" aria-label="Stats at level 55"><div class="srow"><span class="sk">HP</span><span class="sbar"><i style="width:76%"></i></span><span class="sv">212</span></div><div class="srow"><span class="sk">Atk</span><span class="sbar"><i style="width:28%"></i></span><span class="sv">79</span></div><div class="srow"><span class="sk">Def</span><span class="sbar"><i style="width:45%"></i></span><span class="sv">126</span></div><div class="srow"><span class="sk">SpA</span><span class="sbar"><i style="width:80%"></i></span><span class="sv">223</span></div><div class="srow"><span class="sk">SpD</span><span class="sbar"><i style="width:44%"></i></span><span class="sv">122</span></div><div class="srow"><span class="sk">Spe</span><span class="sbar"><i style="width:41%"></i></span><span class="sv">114</span></div></div>
+  <p class="blurb">Good as Gold blocks status (Toxic, Will-O-Wisp, Thunder Wave). Make It Rain hits both foes in doubles and is 1.5x on Big Top. It&#x27;s weak to Ground, so keep it out of the Groudon fight.</p>
+</article>
+<article class="mon">
+  <header><span class="slot">4</span><div><h3>Rhyperior</h3><div class="chips"><span class="type" style="background:#E2BF65;color:#2b2208">Ground</span><span class="type" style="background:#B6A136;color:#221d05">Rock</span></div></div><span class="where out">From Active box</span></header>
+  <p class="role">Physical tank / rock nuke</p>
+  <dl class="kv">
+    <div><dt>Ability</dt><dd>Solid Rock</dd></div>
+    <div><dt>Nature</dt><dd>Adamant</dd></div>
+    <div><dt>EVs</dt><dd>252 HP / 252 Atk / 4 SpD</dd></div>
+    <div><dt>Item</dt><dd>Focus Sash</dd></div>
+    <div><dt>Level</dt><dd>Lv 50 → 55</dd></div>
+  </dl>
+  <ul class="moves"><li class="new">Stone Edge<b>learn</b></li><li class="">Headlong Rush</li><li class="">Slack Off</li><li class="">Protect</li></ul>
+  <div class="stats" aria-label="Stats at level 55"><div class="srow"><span class="sk">HP</span><span class="sbar"><i style="width:87%"></i></span><span class="sv">243</span></div><div class="srow"><span class="sk">Atk</span><span class="sbar"><i style="width:82%"></i></span><span class="sv">231</span></div><div class="srow"><span class="sk">Def</span><span class="sbar"><i style="width:59%"></i></span><span class="sv">165</span></div><div class="srow"><span class="sk">SpA</span><span class="sbar"><i style="width:26%"></i></span><span class="sv">73</span></div><div class="srow"><span class="sk">SpD</span><span class="sbar"><i style="width:30%"></i></span><span class="sv">83</span></div><div class="srow"><span class="sk">Spe</span><span class="sbar"><i style="width:24%"></i></span><span class="sv">66</span></div></div>
+  <p class="blurb">Solid Rock bulk, Stone Edge at Lv 54. Rock is 1.5x on Mountain and Volcanic Top and 1.3x on Deep Earth. Best counter to Amber&#x27;s all-Fire team and Geara&#x27;s fliers.</p>
+</article>
+<article class="mon">
+  <header><span class="slot">5</span><div><h3>Hariyama</h3><div class="chips"><span class="type" style="background:#C22E28;color:#ffffff">Fighting</span></div></div><span class="where out">From Overflow box</span></header>
+  <p class="role">Doubles support / bulk</p>
+  <dl class="kv">
+    <div><dt>Ability</dt><dd>Thick Fat</dd></div>
+    <div><dt>Nature</dt><dd>Adamant</dd></div>
+    <div><dt>EVs</dt><dd>252 HP / 252 Atk / 4 SpD</dd></div>
+    <div><dt>Item</dt><dd>Sitrus Berry</dd></div>
+    <div><dt>Level</dt><dd>Lv 45 → 55</dd></div>
+  </dl>
+  <ul class="moves"><li class="new">Close Combat<b>learn</b></li><li class="new">Knock Off<b>learn</b></li><li class="">Fake Out</li><li class="new">Protect<b>learn</b></li></ul>
+  <div class="stats" aria-label="Stats at level 55"><div class="srow"><span class="sk">HP</span><span class="sbar"><i style="width:98%"></i></span><span class="sv">275</span></div><div class="srow"><span class="sk">Atk</span><span class="sbar"><i style="width:74%"></i></span><span class="sv">206</span></div><div class="srow"><span class="sk">Def</span><span class="sbar"><i style="width:31%"></i></span><span class="sv">88</span></div><div class="srow"><span class="sk">SpA</span><span class="sbar"><i style="width:21%"></i></span><span class="sv">59</span></div><div class="srow"><span class="sk">SpD</span><span class="sbar"><i style="width:31%"></i></span><span class="sv">88</span></div><div class="srow"><span class="sk">Spe</span><span class="sbar"><i style="width:28%"></i></span><span class="sv">77</span></div></div>
+  <p class="blurb">Fake Out buys Golisopod a free Swords Dance. Thick Fat halves Fire and Ice. Huge HP (275 at cap) and Close Combat. It&#x27;s in your Overflow box, so promote it.</p>
+</article>
+<article class="mon">
+  <header><span class="slot">6</span><div><h3>Tangrowth</h3><div class="chips"><span class="type" style="background:#7AC74C;color:#132608">Grass</span></div></div><span class="where out">From Active box</span></header>
+  <p class="role">Redirect + sleep pivot</p>
+  <dl class="kv">
+    <div><dt>Ability</dt><dd>Regenerator</dd></div>
+    <div><dt>Nature</dt><dd>Adamant</dd></div>
+    <div><dt>EVs</dt><dd>252 HP / 252 Atk / 4 Def</dd></div>
+    <div><dt>Item</dt><dd>Sitrus Berry</dd></div>
+    <div><dt>Level</dt><dd>Lv 45 → 55</dd></div>
+  </dl>
+  <ul class="moves"><li class="new">Power Whip<b>learn</b></li><li class="">Knock Off</li><li class="">Sleep Powder</li><li class="new">Rage Powder<b>learn</b></li></ul>
+  <div class="stats" aria-label="Stats at level 55"><div class="srow"><span class="sk">HP</span><span class="sbar"><i style="width:81%"></i></span><span class="sv">226</span></div><div class="srow"><span class="sk">Atk</span><span class="sbar"><i style="width:65%"></i></span><span class="sv">182</span></div><div class="srow"><span class="sk">Def</span><span class="sbar"><i style="width:57%"></i></span><span class="sv">160</span></div><div class="srow"><span class="sk">SpA</span><span class="sbar"><i style="width:46%"></i></span><span class="sv">128</span></div><div class="srow"><span class="sk">SpD</span><span class="sbar"><i style="width:28%"></i></span><span class="sv">77</span></div><div class="srow"><span class="sk">Spe</span><span class="sbar"><i style="width:28%"></i></span><span class="sv">77</span></div></div>
+  <p class="blurb">Rage Powder (Egg move) pulls attacks off your setup mon. Sleep Powder never misses on Swamp. Regenerator heals 1/3 on switch. It&#x27;s your Grass answer to Groudon, which every team struggles with.</p>
+</article></div>
+  <div class="two">
+    <div class="box">
+      <h3>Bench to keep ready</h3>
+      <ul>
+        <li><strong>Whiscash (crest):</strong> swap in for Amber's all-Fire team and for singles fights.</li>
+        <li><strong>Lapras-Aevian:</strong> No Guard Sing for a singles boss where you need a free turn.</li>
+        <li><strong>Appletun</strong> (Overflow, Thick Fat): the best Groudon specialist you own, ahead of Tangrowth.</li>
+        <li><strong>Jellicent / Tentacruel</strong> (Active): strong Amber swaps if you'd rather keep Whiscash out.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>How stable is this pick?</h3>
+      <p class="legend">The team search re-run with 8 different scoring weightings.</p>
+      <ul class="sens"><li><span>Rhyperior</span><span class="dots"><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i></span><span class="num">8/8</span></li><li><span>Annihilape</span><span class="dots"><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i></span><span class="num">8/8</span></li><li><span>Golisopod-Aevian</span><span class="dots"><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i></span><span class="num">8/8</span></li><li><span>Gholdengo</span><span class="dots"><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i></i></span><span class="num">7/8</span></li><li><span>Hariyama</span><span class="dots"><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i></i><i></i></span><span class="num">6/8</span></li><li><span>Wyrdeer</span><span class="dots"><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i class=on></i><i></i><i></i><i></i></span><span class="num">5/8</span></li><li><span>Whiscash</span><span class="dots"><i class=on></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="num">1/8</span></li><li><span>Glalie-Aevian</span><span class="dots"><i class=on></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="num">1/8</span></li></ul>
+      <p class="legend">Slot 6 is the close call. Wyrdeer (your Overflow Stantler, Intimidate) is the alternative to Tangrowth, but it needs Lv 35 → 55 and to evolve.</p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="cur">
+  <h2 id="cur">Your current party, mon by mon</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Pokémon</th><th>Call</th><th>Solo score</th><th>Why</th></tr></thead>
+    <tbody><tr><td><strong>Golisopod-Aevian</strong><div class="chips"><span class="type" style="background:#A6B91A;color:#1c2003">Bug</span><span class="type" style="background:#E2BF65;color:#2b2208">Ground</span></div></td><td><span class="pill keep">Keep</span></td><td class="num">0.74</td><td>Your best mon. Picked in 8 of 8 weightings.</td></tr><tr><td><strong>Annihilape</strong><div class="chips"><span class="type" style="background:#C22E28;color:#ffffff">Fighting</span><span class="type" style="background:#735797;color:#ffffff">Ghost</span></div></td><td><span class="pill keep">Keep</span></td><td class="num">0.69</td><td>Picked in 8 of 8 weightings.</td></tr><tr><td><strong>Gholdengo</strong><div class="chips"><span class="type" style="background:#B7B7CE;color:#1b1b2a">Steel</span><span class="type" style="background:#735797;color:#ffffff">Ghost</span></div></td><td><span class="pill keep">Keep</span></td><td class="num">0.60</td><td>Picked in 7 of 8. Sit it out for Groudon.</td></tr><tr><td><strong>Whiscash</strong><div class="chips"><span class="type" style="background:#6390F0;color:#0a1530">Water</span><span class="type" style="background:#E2BF65;color:#2b2208">Ground</span></div></td><td><span class="pill bench">Bench</span></td><td class="num">0.61</td><td>First pick off the bench. The crest makes it weakness-free, and it&#x27;s great vs Amber and in singles. In doubles its Earthquake hits your partner, and it&#x27;s 0.25x on Swamp and Wasteland.</td></tr><tr><td><strong>Lapras-Aevian</strong><div class="chips"><span class="type" style="background:#B6A136;color:#221d05">Rock</span><span class="type" style="background:#F95587;color:#2e0414">Psychic</span></div></td><td><span class="pill bench">Bench</span></td><td class="num">0.40</td><td>No Guard Sing is great, but its only Rock moves at cap are Rock Slide and Rock Tomb (Stone Edge is Lv 65). Seven weaknesses line up with Texen, Groudon and Geara.</td></tr><tr><td><strong>Leavanny-Aevian</strong><div class="chips"><span class="type" style="background:#A6B91A;color:#1c2003">Bug</span><span class="type" style="background:#6F35FC;color:#ffffff">Dragon</span></div></td><td><span class="pill bench">Bench</span></td><td class="num">0.40</td><td>Dragon Claw and X-Scissor barely dent Chapter 8&#x27;s Steel, Fairy and Fire mons. It&#x27;s frail to Rock, Fire and Flying, all 1.5x on Mountain and Volcanic Top.</td></tr></tbody>
+  </table></div>
+</section>
+
+<section aria-labelledby="route">
+  <h2 id="route">Battle route <span class="tag">story order, from the walkthrough</span></h2>
+  <p class="legend">Open any battle to see every boss Pokémon, your best answer from the recommended six, and its biggest threat. The number on the right is the recommended six's gain over your current party. Texen is a multi battle: you bring 3 (Gholdengo, Annihilape, Golisopod) and Aelita brings 3.</p>
+  <div>
+<details class="battle">
+  <summary>
+    <span class="step">1</span>
+    <span class="bname"><strong>Texen (Fighting gym)</strong> <span class="sub">Sheridan</span> </span>
+    <span class="meta"><span class="fmt doubles">Doubles</span><span class="field">Big Top Arena</span></span>
+    <span class="leads">Lead: Gholdengo + Annihilape</span>
+    <span class="num delta up">+0.06</span>
+  </summary>
+  <div class="bbody">
+    <p class="note">Multi battle: you bring 3, Aelita brings Staraptor/Blaziken/Hawlucha. High Striker physical Fighting &amp; slam moves roll 0.5x–3x; Swords Dance +3, Dragon Dance +2/+2, Sing never misses; Make It Rain &amp; Acrobatics 1.5x.</p>
+    <p class="note"><strong>Best one-mon swap:</strong> Tauros (Paldean Combat Breed) for Rhyperior <span class="sub">(Overflow, Lv 45)</span></p>
+    <div class="tablewrap"><table class="foes"><thead><tr><th>Boss Pokémon</th><th>Your best answer</th><th>Damage</th><th>Faster?</th><th>Biggest threat to</th><th>Takes</th></tr></thead><tbody><tr><td><strong>Hitmonchan</strong> <span class="lv">Lv 49</span><div class="chips"><span class="type" style="background:#C22E28;color:#ffffff">Fighting</span></div><div class="sub">Iron Fist · Coba Berry</div></td><td>Gholdengo<div class="sub">Make It Rain</div></td><td class="num good">OHKO</td><td>Yes</td><td>Golisopod-Aevian<div class="sub">Ice Punch</div></td><td class="num good">27%</td></tr><tr><td><strong>Passimian</strong> <span class="lv">Lv 49</span><div class="chips"><span class="type" style="background:#C22E28;color:#ffffff">Fighting</span></div><div class="sub">Receiver · Salac Berry</div></td><td>Gholdengo<div class="sub">Make It Rain</div></td><td class="num good">OHKO</td><td>Yes</td><td>Annihilape<div class="sub">Acrobatics</div></td><td class="num ok">96%</td></tr><tr><td><strong>Emboar</strong> <span class="lv">Lv 50</span><div class="chips"><span class="type" style="background:#EE8130;color:#2a1200">Fire</span><span class="type" style="background:#C22E28;color:#ffffff">Fighting</span></div><div class="sub">Reckless · Charcoal</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num good">OHKO</td><td>Yes</td><td>Gholdengo<div class="sub">Heat Crash</div></td><td class="num ok">75%</td></tr><tr><td><strong>Toxicroak</strong> <span class="lv">Lv 50</span><div class="chips"><span class="type" style="background:#A33EA1;color:#ffffff">Poison</span><span class="type" style="background:#C22E28;color:#ffffff">Fighting</span></div><div class="sub">Dry Skin · Poison Barb</div></td><td>Golisopod-Aevian<div class="sub">Bone Rush</div></td><td class="num good">OHKO</td><td>No</td><td>Tangrowth<div class="sub">Poison Jab</div></td><td class="num ok">50%</td></tr><tr><td><strong>Machamp</strong> <span class="lv">Lv 51</span><div class="chips"><span class="type" style="background:#C22E28;color:#ffffff">Fighting</span></div><div class="sub">Guts · Black Belt</div></td><td>Golisopod-Aevian<div class="sub">Bone Rush</div></td><td class="num good">OHKO</td><td>Yes</td><td>Gholdengo<div class="sub">High Horsepower</div></td><td class="num bad">140%</td></tr><tr><td><strong>Infernape</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#EE8130;color:#2a1200">Fire</span><span class="type" style="background:#C22E28;color:#ffffff">Fighting</span></div><div class="sub">Iron Fist · Charcoal</div></td><td>Rhyperior<div class="sub">Headlong Rush</div></td><td class="num good">OHKO</td><td>No</td><td>Gholdengo<div class="sub">Fire Punch</div></td><td class="num ok">80%</td></tr></tbody></table></div>
+  </div>
+</details>
+<details class="battle">
+  <summary>
+    <span class="step">2</span>
+    <span class="bname"><strong>Ancient Guard #1 (Gravity/Trick Room)</strong> <span class="sub">Garufa Sanctuary (Adam path)</span> <span class="opt">Adam path only</span></span>
+    <span class="meta"><span class="fmt singles">Singles</span><span class="field">Deep Earth Field</span></span>
+    <span class="leads">Lead: Annihilape</span>
+    <span class="num delta up">+0.01</span>
+  </summary>
+  <div class="bbody">
+    <p class="note">Only if you brought Adam. Gravity + Trick Room team. Deep Earth: Ground 1.5x vs non-Ground, Rock &amp; Psychic 1.3x, Gravity always on (Levitate/Flying get hit by Ground), priority moves 0.7x.</p>
+    <p class="note"><strong>Best one-mon swap:</strong> Mabosstiff for Tangrowth <span class="sub">(Active, Lv 50)</span></p>
+    <div class="tablewrap"><table class="foes"><thead><tr><th>Boss Pokémon</th><th>Your best answer</th><th>Damage</th><th>Faster?</th><th>Biggest threat to</th><th>Takes</th></tr></thead><tbody><tr><td><strong>Klinklang</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#B7B7CE;color:#1b1b2a">Steel</span></div><div class="sub">Clear Body · Magnet</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num good">OHKO</td><td>Yes</td><td>Annihilape<div class="sub">Gear Grind</div></td><td class="num good">43%</td></tr><tr><td><strong>Sigilyph</strong> <span class="lv">Lv 54</span><div class="chips"><span class="type" style="background:#F95587;color:#2e0414">Psychic</span><span class="type" style="background:#A98FF3;color:#1a1036">Flying</span></div><div class="sub">Magic Guard · Life Orb</div></td><td>Golisopod-Aevian<div class="sub">Bone Rush</div></td><td class="num good">OHKO</td><td>No</td><td>Golisopod-Aevian<div class="sub"></div></td><td class="num good">0%</td></tr><tr><td><strong>Dusclops</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#735797;color:#ffffff">Ghost</span></div><div class="sub">Pressure · Eviolite</div></td><td>Golisopod-Aevian<div class="sub">Bone Rush</div></td><td class="num good">OHKO</td><td>Yes</td><td>Golisopod-Aevian<div class="sub"></div></td><td class="num good">0%</td></tr><tr><td><strong>Clefable</strong> <span class="lv">Lv 54</span><div class="chips"><span class="type" style="background:#D685AD;color:#2b0c1c">Fairy</span></div><div class="sub">Unaware · Leftovers</div></td><td>Gholdengo<div class="sub">Make It Rain</div></td><td class="num good">OHKO</td><td>Yes</td><td>Hariyama<div class="sub">Moonblast</div></td><td class="num ok">70%</td></tr></tbody></table></div>
+  </div>
+</details>
+<details class="battle">
+  <summary>
+    <span class="step">3</span>
+    <span class="bname"><strong>Ancient Guard #2 (Rock team)</strong> <span class="sub">Garufa Sanctuary (Adam path)</span> <span class="opt">Adam path only</span></span>
+    <span class="meta"><span class="fmt singles">Singles</span><span class="field">Deep Earth Field</span></span>
+    <span class="leads">Lead: Rhyperior</span>
+    <span class="num delta up">+0.09</span>
+  </summary>
+  <div class="bbody">
+    <p class="note">Only if you brought Adam. Tyranitar/Gigalith sand; Matrix Shot on most of them.</p>
+    <p class="note"><strong>Best one-mon swap:</strong> Donphan for Hariyama <span class="sub">(Active, Lv 50)</span></p>
+    <div class="tablewrap"><table class="foes"><thead><tr><th>Boss Pokémon</th><th>Your best answer</th><th>Damage</th><th>Faster?</th><th>Biggest threat to</th><th>Takes</th></tr></thead><tbody><tr><td><strong>Tyranitar</strong> <span class="lv">Lv 52</span><div class="chips"><span class="type" style="background:#B6A136;color:#221d05">Rock</span><span class="type" style="background:#705746;color:#ffffff">Dark</span></div><div class="sub">Sand Stream · Telluric Seed</div></td><td>Rhyperior<div class="sub">Headlong Rush</div></td><td class="num good">OHKO</td><td>No</td><td>Gholdengo<div class="sub">Earthquake</div></td><td class="num ok">88%</td></tr><tr><td><strong>Golem</strong> <span class="lv">Lv 51</span><div class="chips"><span class="type" style="background:#B6A136;color:#221d05">Rock</span><span class="type" style="background:#F7D02C;color:#2b2300">Electric</span></div><div class="sub">Magnet Pull · Sitrus Berry</div></td><td>Gholdengo<div class="sub">Make It Rain</div></td><td class="num good">OHKO</td><td>Yes</td><td>Annihilape<div class="sub">Wild Charge</div></td><td class="num good">42%</td></tr><tr><td><strong>Kleavor</strong> <span class="lv">Lv 51</span><div class="chips"><span class="type" style="background:#A6B91A;color:#1c2003">Bug</span><span class="type" style="background:#B6A136;color:#221d05">Rock</span></div><div class="sub">Sharpness</div></td><td>Rhyperior<div class="sub">Stone Edge</div></td><td class="num good">OHKO</td><td>No</td><td>Tangrowth<div class="sub">X-Scissor</div></td><td class="num good">47%</td></tr><tr><td><strong>Kabutops</strong> <span class="lv">Lv 51</span><div class="chips"><span class="type" style="background:#B6A136;color:#221d05">Rock</span><span class="type" style="background:#6390F0;color:#0a1530">Water</span></div><div class="sub">Weak Armor · Shuca Berry</div></td><td>Gholdengo<div class="sub">Make It Rain</div></td><td class="num good">OHKO</td><td>Yes</td><td>Rhyperior<div class="sub">Waterfall</div></td><td class="num ok">62%</td></tr><tr><td><strong>Gigalith</strong> <span class="lv">Lv 52</span><div class="chips"><span class="type" style="background:#B6A136;color:#221d05">Rock</span></div><div class="sub">Sand Force · Telluric Seed</div></td><td>Rhyperior<div class="sub">Headlong Rush</div></td><td class="num good">OHKO</td><td>Yes</td><td>Gholdengo<div class="sub">Stomping Tantrum</div></td><td class="num ok">75%</td></tr><tr><td><strong>Aerodactyl</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#B6A136;color:#221d05">Rock</span><span class="type" style="background:#A98FF3;color:#1a1036">Flying</span></div><div class="sub">Pressure · Muscle Band</div></td><td>Rhyperior<div class="sub">Headlong Rush</div></td><td class="num good">OHKO</td><td>No</td><td>Gholdengo<div class="sub">Earthquake</div></td><td class="num ok">98%</td></tr></tbody></table></div>
+  </div>
+</details>
+<details class="battle">
+  <summary>
+    <span class="step">4</span>
+    <span class="bname"><strong>Tommen</strong> <span class="sub">Garufa Sanctuary</span> </span>
+    <span class="meta"><span class="fmt singles">Singles</span><span class="field">Deep Earth Field</span></span>
+    <span class="leads">Lead: Golisopod-Aevian</span>
+    <span class="num delta down">-0.06</span>
+  </summary>
+  <div class="bbody">
+    <p class="note">Bronzong, Coalossal, Salazzle (Corrosion), Perrserker.</p>
+    <p class="note"><strong>Best one-mon swap:</strong> Crawdaunt for Tangrowth <span class="sub">(Active, Lv 50)</span></p>
+    <div class="tablewrap"><table class="foes"><thead><tr><th>Boss Pokémon</th><th>Your best answer</th><th>Damage</th><th>Faster?</th><th>Biggest threat to</th><th>Takes</th></tr></thead><tbody><tr><td><strong>Bronzong</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#B7B7CE;color:#1b1b2a">Steel</span><span class="type" style="background:#F95587;color:#2e0414">Psychic</span></div><div class="sub">Levitate</div></td><td>Golisopod-Aevian<div class="sub">Bone Rush</div></td><td class="num good">OHKO</td><td>Yes</td><td>Hariyama<div class="sub">Future Sight</div></td><td class="num ok">97%</td></tr><tr><td><strong>Coalossal</strong> <span class="lv">Lv 52</span><div class="chips"><span class="type" style="background:#B6A136;color:#221d05">Rock</span><span class="type" style="background:#EE8130;color:#2a1200">Fire</span></div><div class="sub">Steam Engine</div></td><td>Rhyperior<div class="sub">Headlong Rush</div></td><td class="num good">OHKO</td><td>Yes</td><td>Tangrowth<div class="sub">Incinerate</div></td><td class="num ok">50%</td></tr><tr><td><strong>Salazzle</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#A33EA1;color:#ffffff">Poison</span><span class="type" style="background:#EE8130;color:#2a1200">Fire</span></div><div class="sub">Corrosion</div></td><td>Rhyperior<div class="sub">Headlong Rush</div></td><td class="num good">OHKO</td><td>No</td><td>Tangrowth<div class="sub">Flamethrower</div></td><td class="num bad">101%</td></tr><tr><td><strong>Perrserker</strong> <span class="lv">Lv 54</span><div class="chips"><span class="type" style="background:#B7B7CE;color:#1b1b2a">Steel</span></div><div class="sub">Battle Armor</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num good">OHKO</td><td>Yes</td><td>Hariyama<div class="sub">Thrash</div></td><td class="num good">32%</td></tr></tbody></table></div>
+  </div>
+</details>
+<details class="battle">
+  <summary>
+    <span class="step">5</span>
+    <span class="bname"><strong>Behemoth Groudon (boss)</strong> <span class="sub">Garufa Sanctuary</span> </span>
+    <span class="meta"><span class="fmt singles">Singles</span><span class="field">Deep Earth Field</span></span>
+    <span class="leads">Lead: Tangrowth</span>
+    <span class="num delta up">+0.07</span>
+  </summary>
+  <div class="bbody">
+    <p class="note">Boss, 1 shield, Drought sun. Its Earthquake gets Deep Earth&#x27;s 1.5x vs non-Ground; Ground types resist Ground here. Water is halved in sun.</p>
+    <p class="note"><strong>Best one-mon swap:</strong> Appletun for Hariyama <span class="sub">(Overflow, Lv 45)</span></p>
+    <div class="tablewrap"><table class="foes"><thead><tr><th>Boss Pokémon</th><th>Your best answer</th><th>Damage</th><th>Faster?</th><th>Biggest threat to</th><th>Takes</th></tr></thead><tbody><tr><td><strong>Groudon</strong> <span class="lv">Lv 55</span><div class="chips"><span class="type" style="background:#E2BF65;color:#2b2208">Ground</span></div><div class="sub">Drought · Sitrus Berry</div></td><td>Tangrowth<div class="sub">Power Whip</div></td><td class="num bad">42%</td><td>No</td><td>Gholdengo<div class="sub">Earthquake</div></td><td class="num bad">185%</td></tr></tbody></table></div>
+  </div>
+</details>
+<details class="battle">
+  <summary>
+    <span class="step">6</span>
+    <span class="bname"><strong>Crawli (Head Ranger)</strong> <span class="sub">Jynnobi Pass</span> </span>
+    <span class="meta"><span class="fmt doubles">Doubles</span><span class="field">Swamp Field</span></span>
+    <span class="leads">Lead: Golisopod-Aevian + Gholdengo</span>
+    <span class="num delta up">+0.04</span>
+  </summary>
+  <div class="bbody">
+    <p class="note">Bug/Grass/Water 1.3x, Fire 0.8x, Earthquake/Bulldoze 0.25x; grounded mons lose 1 Speed every turn; Sticky Web lead.</p>
+    <p class="note"><strong>Best one-mon swap:</strong> Frosmoth for Rhyperior <span class="sub">(Overflow, Lv 45)</span></p>
+    <div class="tablewrap"><table class="foes"><thead><tr><th>Boss Pokémon</th><th>Your best answer</th><th>Damage</th><th>Faster?</th><th>Biggest threat to</th><th>Takes</th></tr></thead><tbody><tr><td><strong>Orbeetle</strong> <span class="lv">Lv 51</span><div class="chips"><span class="type" style="background:#A6B91A;color:#1c2003">Bug</span><span class="type" style="background:#F95587;color:#2e0414">Psychic</span></div><div class="sub">Swarm · Telluric Seed</div></td><td>Gholdengo<div class="sub">Shadow Ball</div></td><td class="num good">OHKO</td><td>Yes</td><td>Tangrowth<div class="sub">Bug Buzz</div></td><td class="num bad">123%</td></tr><tr><td><strong>Galvantula</strong> <span class="lv">Lv 52</span><div class="chips"><span class="type" style="background:#A6B91A;color:#1c2003">Bug</span><span class="type" style="background:#F7D02C;color:#2b2300">Electric</span></div><div class="sub">Swarm · Focus Sash</div></td><td>Golisopod-Aevian<div class="sub">Bone Rush</div></td><td class="num good">OHKO</td><td>No</td><td>Tangrowth<div class="sub">Bug Buzz</div></td><td class="num bad">129%</td></tr><tr><td><strong>Ariados</strong> <span class="lv">Lv 52</span><div class="chips"><span class="type" style="background:#A6B91A;color:#1c2003">Bug</span><span class="type" style="background:#A33EA1;color:#ffffff">Poison</span></div><div class="sub">Swarm · Ariados Crest</div></td><td>Rhyperior<div class="sub">Stone Edge</div></td><td class="num good">OHKO</td><td>No</td><td>Tangrowth<div class="sub">X-Scissor</div></td><td class="num ok">59%</td></tr><tr><td><strong>Falinks</strong> <span class="lv">Lv 52</span><div class="chips"><span class="type" style="background:#C22E28;color:#ffffff">Fighting</span></div><div class="sub">Defiant · Sitrus Berry</div></td><td>Gholdengo<div class="sub">Make It Rain</div></td><td class="num good">OHKO</td><td>Yes</td><td>Tangrowth<div class="sub">Megahorn</div></td><td class="num good">47%</td></tr><tr><td><strong>Probopass</strong> <span class="lv">Lv 52</span><div class="chips"><span class="type" style="background:#B6A136;color:#221d05">Rock</span><span class="type" style="background:#B7B7CE;color:#1b1b2a">Steel</span></div><div class="sub">Sturdy · Air Balloon</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num good">OHKO</td><td>Yes</td><td>Rhyperior<div class="sub">Flash Cannon</div></td><td class="num good">37%</td></tr><tr><td><strong>Araquanid</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#6390F0;color:#0a1530">Water</span><span class="type" style="background:#A6B91A;color:#1c2003">Bug</span></div><div class="sub">Water Bubble · Assault Vest</div></td><td>Rhyperior<div class="sub">Stone Edge</div></td><td class="num good">OHKO</td><td>Yes</td><td>Rhyperior<div class="sub">Liquidation</div></td><td class="num ok">78%</td></tr></tbody></table></div>
+  </div>
+</details>
+<details class="battle">
+  <summary>
+    <span class="step">7</span>
+    <span class="bname"><strong>Neved (optional)</strong> <span class="sub">Valor Shore</span> <span class="opt">Only if you choose &quot;We win and save Nim&quot;</span></span>
+    <span class="meta"><span class="fmt singles">Singles</span><span class="field">Beach Field</span></span>
+    <span class="leads">Lead: Annihilape</span>
+    <span class="num delta down">-0.01</span>
+  </summary>
+  <div class="bbody">
+    <p class="note">Only if you choose &quot;We win and save Nim&quot;. Beach: Surf/Muddy Water/Razor Shell/Crabhammer 1.5x, mud moves 2x, Aura Sphere/Focus Blast/Zen Headbutt 1.3x.</p>
+    <p class="note"><strong>Best one-mon swap:</strong> Crobat for Rhyperior <span class="sub">(Active, Lv 50)</span></p>
+    <div class="tablewrap"><table class="foes"><thead><tr><th>Boss Pokémon</th><th>Your best answer</th><th>Damage</th><th>Faster?</th><th>Biggest threat to</th><th>Takes</th></tr></thead><tbody><tr><td><strong>Empoleon</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#6390F0;color:#0a1530">Water</span><span class="type" style="background:#B7B7CE;color:#1b1b2a">Steel</span></div><div class="sub">Torrent · Chople Berry</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num good">OHKO</td><td>Yes</td><td>Rhyperior<div class="sub">Surf</div></td><td class="num bad">213%</td></tr><tr><td><strong>Crabominable</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#C22E28;color:#ffffff">Fighting</span><span class="type" style="background:#96D9D6;color:#0d2a29">Ice</span></div><div class="sub">Iron Fist · Crabom. Crest</div></td><td>Gholdengo<div class="sub">Make It Rain</div></td><td class="num good">OHKO</td><td>Yes</td><td>Rhyperior<div class="sub">Crabhammer</div></td><td class="num ok">87%</td></tr><tr><td><strong>Froslass</strong> <span class="lv">Lv 52</span><div class="chips"><span class="type" style="background:#7AC74C;color:#132608">Grass</span><span class="type" style="background:#6390F0;color:#0a1530">Water</span></div><div class="sub">Adaptability · Shell Bell</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num good">OHKO</td><td>No</td><td>Rhyperior<div class="sub">Brine</div></td><td class="num bad">168%</td></tr><tr><td><strong>Dhelmise</strong> <span class="lv">Lv 54</span><div class="chips"><span class="type" style="background:#735797;color:#ffffff">Ghost</span><span class="type" style="background:#7AC74C;color:#132608">Grass</span></div><div class="sub">Steelworker · Coba Berry</div></td><td>Gholdengo<div class="sub">Shadow Ball</div></td><td class="num good">OHKO</td><td>Yes</td><td>Rhyperior<div class="sub">Surf</div></td><td class="num bad">110%</td></tr><tr><td><strong>Drapion</strong> <span class="lv">Lv 52</span><div class="chips"><span class="type" style="background:#96D9D6;color:#0d2a29">Ice</span><span class="type" style="background:#A33EA1;color:#ffffff">Poison</span></div><div class="sub">Fur Coat · Telluric Seed</div></td><td>Rhyperior<div class="sub">Headlong Rush</div></td><td class="num good">OHKO</td><td>No</td><td>Gholdengo<div class="sub">Earthquake</div></td><td class="num ok">58%</td></tr><tr><td><strong>Barbaracle</strong> <span class="lv">Lv 55</span><div class="chips"><span class="type" style="background:#B6A136;color:#221d05">Rock</span><span class="type" style="background:#6390F0;color:#0a1530">Water</span></div><div class="sub">Tough Claws · Focus Sash</div></td><td>Tangrowth<div class="sub">Power Whip</div></td><td class="num good">OHKO</td><td>No</td><td>Rhyperior<div class="sub">Razor Shell</div></td><td class="num bad">105%</td></tr></tbody></table></div>
+  </div>
+</details>
+<details class="battle">
+  <summary>
+    <span class="step">8</span>
+    <span class="bname"><strong>Eli &amp; Sharon (10 mons)</strong> <span class="sub">Valor Cliffside</span> </span>
+    <span class="meta"><span class="fmt doubles">Doubles</span><span class="field">Mountain Field</span></span>
+    <span class="leads">Lead: Rhyperior + Gholdengo</span>
+    <span class="num delta up">+0.11</span>
+  </summary>
+  <div class="bbody">
+    <p class="note">Venam is your partner. Rock &amp; Flying 1.5x, Hyper Voice/Icy Wind/Thunder 1.5x (Thunder never misses).</p>
+    <p class="note"><strong>Best one-mon swap:</strong> Ampharos for Gholdengo <span class="sub">(Overflow, Lv 50)</span></p>
+    <div class="tablewrap"><table class="foes"><thead><tr><th>Boss Pokémon</th><th>Your best answer</th><th>Damage</th><th>Faster?</th><th>Biggest threat to</th><th>Takes</th></tr></thead><tbody><tr><td><strong>Honchkrow</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#705746;color:#ffffff">Dark</span><span class="type" style="background:#A98FF3;color:#1a1036">Flying</span></div><div class="sub">Super Luck · Sharp Beak</div></td><td>Rhyperior<div class="sub">Stone Edge</div></td><td class="num good">OHKO</td><td>No</td><td>Annihilape<div class="sub">Brave Bird</div></td><td class="num bad">226%</td></tr><tr><td><strong>Mismagius</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#735797;color:#ffffff">Ghost</span></div><div class="sub">Levitate · Life Orb</div></td><td>Rhyperior<div class="sub">Stone Edge</div></td><td class="num good">OHKO</td><td>No</td><td>Annihilape<div class="sub">Shadow Ball</div></td><td class="num ok">87%</td></tr><tr><td><strong>Milotic</strong> <span class="lv">Lv 52</span><div class="chips"><span class="type" style="background:#6390F0;color:#0a1530">Water</span></div><div class="sub">Competitive · Leftovers</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num ok">85%</td><td>Yes</td><td>Rhyperior<div class="sub">Scald</div></td><td class="num bad">101%</td></tr><tr><td><strong>Magmar</strong> <span class="lv">Lv 51</span><div class="chips"><span class="type" style="background:#EE8130;color:#2a1200">Fire</span></div><div class="sub">Flame Body · Eviolite</div></td><td>Rhyperior<div class="sub">Stone Edge</div></td><td class="num good">OHKO</td><td>No</td><td>Tangrowth<div class="sub">Heat Wave</div></td><td class="num ok">61%</td></tr><tr><td><strong>Electabuzz</strong> <span class="lv">Lv 51</span><div class="chips"><span class="type" style="background:#F7D02C;color:#2b2300">Electric</span></div><div class="sub">Vital Spirit · Eviolite</div></td><td>Rhyperior<div class="sub">Headlong Rush</div></td><td class="num good">OHKO</td><td>No</td><td>Hariyama<div class="sub">Thunder</div></td><td class="num good">34%</td></tr><tr><td><strong>Donphan</strong> <span class="lv">Lv 52</span><div class="chips"><span class="type" style="background:#E2BF65;color:#2b2208">Ground</span></div><div class="sub">Sturdy · Rocky Helmet</div></td><td>Tangrowth<div class="sub">Power Whip</div></td><td class="num ok">90%</td><td>Yes</td><td>Gholdengo<div class="sub">Earthquake</div></td><td class="num ok">60%</td></tr><tr><td><strong>Ursaring</strong> <span class="lv">Lv 52</span><div class="chips"><span class="type" style="background:#A8A77A;color:#1d1d12">Normal</span></div><div class="sub">Guts · Silk Scarf</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num good">OHKO</td><td>Yes</td><td>Hariyama<div class="sub">Double-Edge</div></td><td class="num ok">67%</td></tr><tr><td><strong>Gyarados</strong> <span class="lv">Lv 52</span><div class="chips"><span class="type" style="background:#6390F0;color:#0a1530">Water</span><span class="type" style="background:#A98FF3;color:#1a1036">Flying</span></div><div class="sub">Moxie · Wacan Berry</div></td><td>Rhyperior<div class="sub">Stone Edge</div></td><td class="num good">OHKO</td><td>No</td><td>Rhyperior<div class="sub">Waterfall</div></td><td class="num ok">67%</td></tr><tr><td><strong>Tangrowth</strong> <span class="lv">Lv 51</span><div class="chips"><span class="type" style="background:#7AC74C;color:#132608">Grass</span></div><div class="sub">Leaf Guard · Miracle Seed</div></td><td>Gholdengo<div class="sub">Make It Rain</div></td><td class="num good">OHKO</td><td>Yes</td><td>Rhyperior<div class="sub">Power Whip</div></td><td class="num ok">84%</td></tr><tr><td><strong>Lickilicky</strong> <span class="lv">Lv 51</span><div class="chips"><span class="type" style="background:#A8A77A;color:#1d1d12">Normal</span></div><div class="sub">Oblivious · Rocky Helmet</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num good">OHKO</td><td>Yes</td><td>Gholdengo<div class="sub">Earthquake</div></td><td class="num good">30%</td></tr></tbody></table></div>
+  </div>
+</details>
+<details class="battle">
+  <summary>
+    <span class="step">9</span>
+    <span class="bname"><strong>Jenner</strong> <span class="sub">Valor Summit</span> </span>
+    <span class="meta"><span class="fmt singles">Singles</span><span class="field">Volcanic Top</span></span>
+    <span class="leads">Lead: Annihilape</span>
+    <span class="num delta up">+0.01</span>
+  </summary>
+  <div class="bbody">
+    <p class="note">6v4. Catch his Shadow Tatsugiri. Volcanic Top: Fire/Flying/Rock 1.5x, Ice 0.5x, Surf/Muddy Water 0.5x.</p>
+    <p class="note"><strong>Best one-mon swap:</strong> Musharna-Aevian for Tangrowth <span class="sub">(Active, Lv 50)</span></p>
+    <div class="tablewrap"><table class="foes"><thead><tr><th>Boss Pokémon</th><th>Your best answer</th><th>Damage</th><th>Faster?</th><th>Biggest threat to</th><th>Takes</th></tr></thead><tbody><tr><td><strong>Stoutland</strong> <span class="lv">Lv 50</span><div class="chips"><span class="type" style="background:#A8A77A;color:#1d1d12">Normal</span></div><div class="sub">Intimidate · Chople Berry</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num good">OHKO</td><td>Yes</td><td>Hariyama<div class="sub">Return</div></td><td class="num good">40%</td></tr><tr><td><strong>Tatsugiri</strong> <span class="lv">Lv 51</span><div class="chips"><span class="type" style="background:#6F35FC;color:#ffffff">Dragon</span><span class="type" style="background:#6390F0;color:#0a1530">Water</span></div><div class="sub">Storm Drain · Dragon Scale</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num good">OHKO</td><td>Yes</td><td>Tangrowth<div class="sub">Dragon Pulse</div></td><td class="num good">46%</td></tr><tr><td><strong>Kommo-o</strong> <span class="lv">Lv 51</span><div class="chips"><span class="type" style="background:#6F35FC;color:#ffffff">Dragon</span><span class="type" style="background:#C22E28;color:#ffffff">Fighting</span></div><div class="sub">Soundproof · Roseli Berry</div></td><td>Gholdengo<div class="sub">Make It Rain</div></td><td class="num good">OHKO</td><td>No</td><td>Tangrowth<div class="sub">Clanging Scales</div></td><td class="num ok">52%</td></tr><tr><td><strong>Klinklang</strong> <span class="lv">Lv 51</span><div class="chips"><span class="type" style="background:#B7B7CE;color:#1b1b2a">Steel</span></div><div class="sub">Clear Body · Assault Vest</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num good">OHKO</td><td>Yes</td><td>Annihilape<div class="sub">Gear Grind</div></td><td class="num good">40%</td></tr></tbody></table></div>
+  </div>
+</details>
+<details class="battle">
+  <summary>
+    <span class="step">10</span>
+    <span class="bname"><strong>Geara &amp; Zetta (12 mons)</strong> <span class="sub">Valor Summit</span> </span>
+    <span class="meta"><span class="fmt doubles">Doubles</span><span class="field">Volcanic Top Field</span></span>
+    <span class="leads">Lead: Annihilape + Golisopod-Aevian</span>
+    <span class="num delta up">+0.10</span>
+  </summary>
+  <div class="bbody">
+    <p class="note">Melia is your partner. Fire/Flying/Rock 1.5x (Rock gains Fire), Ice 0.5x, Water 0.9x, Surf/Muddy Water/Hydro Pump/Water Spout 0.5x; Earthquake/Earth Power cause eruptions (1/8 to non-Fire).</p>
+    <p class="note"><strong>Best one-mon swap:</strong> Luxray for Golisopod-Aevian <span class="sub">(Overflow, Lv 45)</span></p>
+    <div class="tablewrap"><table class="foes"><thead><tr><th>Boss Pokémon</th><th>Your best answer</th><th>Damage</th><th>Faster?</th><th>Biggest threat to</th><th>Takes</th></tr></thead><tbody><tr><td><strong>Krookodile</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#E2BF65;color:#2b2208">Ground</span><span class="type" style="background:#705746;color:#ffffff">Dark</span></div><div class="sub">Intimidate · Assault Vest</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num good">OHKO</td><td>Yes</td><td>Gholdengo<div class="sub">Crunch</div></td><td class="num ok">67%</td></tr><tr><td><strong>Grimmsnarl</strong> <span class="lv">Lv 54</span><div class="chips"><span class="type" style="background:#705746;color:#ffffff">Dark</span><span class="type" style="background:#D685AD;color:#2b0c1c">Fairy</span></div><div class="sub">Prankster · Light Clay</div></td><td>Gholdengo<div class="sub">Make It Rain</div></td><td class="num good">OHKO</td><td>Yes</td><td>Annihilape<div class="sub">Spirit Break</div></td><td class="num ok">71%</td></tr><tr><td><strong>Gyarados</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#6390F0;color:#0a1530">Water</span><span class="type" style="background:#A98FF3;color:#1a1036">Flying</span></div><div class="sub">Moxie · Assault Vest</div></td><td>Rhyperior<div class="sub">Stone Edge</div></td><td class="num good">OHKO</td><td>No</td><td>Rhyperior<div class="sub">Waterfall</div></td><td class="num ok">72%</td></tr><tr><td><strong>Clefable</strong> <span class="lv">Lv 55</span><div class="chips"><span class="type" style="background:#D685AD;color:#2b0c1c">Fairy</span></div><div class="sub">Magic Guard · Sitrus Berry</div></td><td>Gholdengo<div class="sub">Make It Rain</div></td><td class="num good">OHKO</td><td>Yes</td><td>Tangrowth<div class="sub">Flamethrower</div></td><td class="num bad">106%</td></tr><tr><td><strong>Marowak</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#EE8130;color:#2a1200">Fire</span><span class="type" style="background:#735797;color:#ffffff">Ghost</span></div><div class="sub">Lightning Rod · Thick Club</div></td><td>Rhyperior<div class="sub">Stone Edge</div></td><td class="num good">OHKO</td><td>No</td><td>Gholdengo<div class="sub">Fire Punch</div></td><td class="num bad">167%</td></tr><tr><td><strong>Gengar</strong> <span class="lv">Lv 55</span><div class="chips"><span class="type" style="background:#735797;color:#ffffff">Ghost</span><span class="type" style="background:#A33EA1;color:#ffffff">Poison</span></div><div class="sub">Cursed Body · Telluric Seed</div></td><td>Golisopod-Aevian<div class="sub">Bone Rush</div></td><td class="num good">OHKO</td><td>No</td><td>Tangrowth<div class="sub">Sludge Bomb</div></td><td class="num bad">139%</td></tr><tr><td><strong>Minior</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#B6A136;color:#221d05">Rock</span><span class="type" style="background:#A98FF3;color:#1a1036">Flying</span></div><div class="sub">Shields Down · Telluric Seed</div></td><td>Gholdengo<div class="sub">Make It Rain</div></td><td class="num good">OHKO</td><td>Yes</td><td>Annihilape<div class="sub">Acrobatics</div></td><td class="num ok">51%</td></tr><tr><td><strong>Absol</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#705746;color:#ffffff">Dark</span></div><div class="sub">Super Luck · Scope Lens</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num good">OHKO</td><td>Yes</td><td>Gholdengo<div class="sub">Sucker Punch</div></td><td class="num ok">64%</td></tr><tr><td><strong>Typhlosion</strong> <span class="lv">Lv 54</span><div class="chips"><span class="type" style="background:#EE8130;color:#2a1200">Fire</span></div><div class="sub">Flash Fire · Charcoal</div></td><td>Rhyperior<div class="sub">Stone Edge</div></td><td class="num good">OHKO</td><td>No</td><td>Tangrowth<div class="sub">Eruption</div></td><td class="num bad">312%</td></tr><tr><td><strong>Weavile</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#705746;color:#ffffff">Dark</span><span class="type" style="background:#96D9D6;color:#0d2a29">Ice</span></div><div class="sub">Pressure · Life Orb</div></td><td>Rhyperior<div class="sub">Stone Edge</div></td><td class="num good">OHKO</td><td>No</td><td>Gholdengo<div class="sub">Throat Chop</div></td><td class="num ok">94%</td></tr><tr><td><strong>Dragonite</strong> <span class="lv">Lv 54</span><div class="chips"><span class="type" style="background:#6F35FC;color:#ffffff">Dragon</span><span class="type" style="background:#A98FF3;color:#1a1036">Flying</span></div><div class="sub">Multiscale · Sitrus Berry</div></td><td>Rhyperior<div class="sub">Stone Edge</div></td><td class="num ok">94%</td><td>No</td><td>Annihilape<div class="sub">Dual Wingbeat</div></td><td class="num bad">123%</td></tr><tr><td><strong>Silvally</strong> <span class="lv">Lv 55</span><div class="chips"><span class="type" style="background:#E2BF65;color:#2b2208">Ground</span></div><div class="sub">RKS System · Ground Memory</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num good">OHKO</td><td>No</td><td>Gholdengo<div class="sub">Multi-Attack</div></td><td class="num ok">98%</td></tr></tbody></table></div>
+  </div>
+</details>
+<details class="battle">
+  <summary>
+    <span class="step">11</span>
+    <span class="bname"><strong>Rift Giratina (boss)</strong> <span class="sub">Rift Distortion</span> </span>
+    <span class="meta"><span class="fmt doubles">Doubles</span><span class="field">Wasteland</span></span>
+    <span class="leads">Lead: Golisopod-Aevian + Rhyperior</span>
+    <span class="num delta up">+0.11</span>
+  </summary>
+  <div class="bbody">
+    <p class="note">Boss Rift Giratina (Ghost/Poison) + crested Relicanth + crested Swalot. Hazards are consumed (Spikes 1/3 HP per layer); Earthquake 0.25x; sludge moves 1.2x.</p>
+    <p class="note"><strong>Best one-mon swap:</strong> Meganium for Gholdengo <span class="sub">(Overflow, Lv 25)</span></p>
+    <div class="tablewrap"><table class="foes"><thead><tr><th>Boss Pokémon</th><th>Your best answer</th><th>Damage</th><th>Faster?</th><th>Biggest threat to</th><th>Takes</th></tr></thead><tbody><tr><td><strong>Giratina</strong> <span class="lv">Lv 57</span><div class="chips"><span class="type" style="background:#735797;color:#ffffff">Ghost</span><span class="type" style="background:#A33EA1;color:#ffffff">Poison</span></div><div class="sub">Pressure</div></td><td>Golisopod-Aevian<div class="sub">Bone Rush</div></td><td class="num good">OHKO</td><td>No</td><td>Tangrowth<div class="sub">Sludge Bomb</div></td><td class="num bad">136%</td></tr><tr><td><strong>Relicanth</strong> <span class="lv">Lv 55</span><div class="chips"><span class="type" style="background:#6390F0;color:#0a1530">Water</span><span class="type" style="background:#B6A136;color:#221d05">Rock</span></div><div class="sub">Sturdy · Relicanth Crest</div></td><td>Tangrowth<div class="sub">Power Whip</div></td><td class="num good">OHKO</td><td>No</td><td>Rhyperior<div class="sub">Liquidation</div></td><td class="num ok">58%</td></tr><tr><td><strong>Swalot</strong> <span class="lv">Lv 55</span><div class="chips"><span class="type" style="background:#A33EA1;color:#ffffff">Poison</span></div><div class="sub">Liquid Ooze · Swalot Crest</div></td><td>Golisopod-Aevian<div class="sub">Bone Rush</div></td><td class="num good">OHKO</td><td>No</td><td>Tangrowth<div class="sub">Belch</div></td><td class="num ok">96%</td></tr></tbody></table></div>
+  </div>
+</details>
+<details class="battle">
+  <summary>
+    <span class="step">12</span>
+    <span class="bname"><strong>Amber (Lyric Badge gym)</strong> <span class="sub">Club STFU</span> </span>
+    <span class="meta"><span class="fmt singles">Singles</span><span class="field">Concert Venue</span></span>
+    <span class="leads">Lead: Rhyperior</span>
+    <span class="num delta down">-0.03</span>
+  </summary>
+  <div class="bbody">
+    <p class="note">Sound 1.5x; starts at No Hype (minimum rolls). All-Fire team.</p>
+    <p class="note"><strong>Best one-mon swap:</strong> Jellicent for Tangrowth <span class="sub">(Active, Lv 45)</span></p>
+    <div class="tablewrap"><table class="foes"><thead><tr><th>Boss Pokémon</th><th>Your best answer</th><th>Damage</th><th>Faster?</th><th>Biggest threat to</th><th>Takes</th></tr></thead><tbody><tr><td><strong>Camerupt</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#EE8130;color:#2a1200">Fire</span><span class="type" style="background:#E2BF65;color:#2b2208">Ground</span></div><div class="sub">Solid Rock · Focus Sash</div></td><td>Rhyperior<div class="sub">Headlong Rush</div></td><td class="num good">OHKO</td><td>Yes</td><td>Tangrowth<div class="sub">Fever Pitch</div></td><td class="num bad">140%</td></tr><tr><td><strong>Arcanine</strong> <span class="lv">Lv 54</span><div class="chips"><span class="type" style="background:#EE8130;color:#2a1200">Fire</span><span class="type" style="background:#B6A136;color:#221d05">Rock</span></div><div class="sub">Rock Head · Normal Gem</div></td><td>Rhyperior<div class="sub">Headlong Rush</div></td><td class="num good">OHKO</td><td>No</td><td>Gholdengo<div class="sub">Flare Blitz</div></td><td class="num ok">92%</td></tr><tr><td><strong>Scovillain</strong> <span class="lv">Lv 54</span><div class="chips"><span class="type" style="background:#7AC74C;color:#132608">Grass</span><span class="type" style="background:#EE8130;color:#2a1200">Fire</span></div><div class="sub">Moody · Synthetic Seed</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num good">OHKO</td><td>Yes</td><td>Rhyperior<div class="sub">Giga Drain</div></td><td class="num bad">101%</td></tr><tr><td><strong>Blaziken</strong> <span class="lv">Lv 53</span><div class="chips"><span class="type" style="background:#EE8130;color:#2a1200">Fire</span><span class="type" style="background:#C22E28;color:#ffffff">Fighting</span></div><div class="sub">Speed Boost · Air Balloon</div></td><td>Annihilape<div class="sub">Close Combat</div></td><td class="num good">OHKO</td><td>Yes</td><td>Tangrowth<div class="sub">Fever Pitch</div></td><td class="num bad">153%</td></tr><tr><td><strong>Skeledirge</strong> <span class="lv">Lv 54</span><div class="chips"><span class="type" style="background:#EE8130;color:#2a1200">Fire</span><span class="type" style="background:#735797;color:#ffffff">Ghost</span></div><div class="sub">Unaware · Passho Berry</div></td><td>Rhyperior<div class="sub">Headlong Rush</div></td><td class="num good">OHKO</td><td>No</td><td>Tangrowth<div class="sub">Torch Song</div></td><td class="num bad">171%</td></tr><tr><td><strong>Toxtricity</strong> <span class="lv">Lv 55</span><div class="chips"><span class="type" style="background:#EE8130;color:#2a1200">Fire</span><span class="type" style="background:#A33EA1;color:#ffffff">Poison</span></div><div class="sub">Punk Rock · Air Balloon</div></td><td>Rhyperior<div class="sub">Stone Edge</div></td><td class="num good">OHKO</td><td>No</td><td>Tangrowth<div class="sub">Fever Pitch</div></td><td class="num bad">157%</td></tr></tbody></table></div>
+  </div>
+</details></div>
+</section>
+
+<section aria-labelledby="comm">
+  <h2 id="comm">Community, crests and shadow Pokémon</h2>
+  <div class="two">
+    <div class="box">
+      <h3>What players rate</h3>
+      <ul>
+        <li>A Reborn Evolved poster ranked <strong>Aevian Golisopod</strong> the best Aevian, ahead of Aevian Gyarados, Breloom and Milotic (<a href="https://www.rebornevo.com/forums/profile/93723-acemaster171/">forum</a>).</li>
+        <li>"Strongest Pokémon" threads name Crest Delcatty, Crest Bastiodon and Haxorus (<a href="https://www.rebornevo.com/forums/topic/61826-which-is-overall-strongest-pokemon-in-rejuvenation-your-opinion/">thread</a>). Those crests are Chapter 14+ or Karma Files, so they're not available yet.</li>
+        <li>Older threads like Wide Guard Fighting types such as Hariyama and Machamp for doubles, and Thick Fat Mamoswine (<a href="https://www.rebornevo.com/forums/topic/47495-good-pokemon-for-rejuvenation/">thread</a>).</li>
+        <li>Most community discussion predates V14, so treat it as background. The matchup numbers in this report are from the current game data.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Crests you can get this chapter</h3>
+      <ul>
+        <li><strong>Zoroark Crest:</strong> Garufa Sanctuary, behind the Hisuian Zorua block puzzle. Zoroark gains the copied mon's ability and STAB. You have Zoroark in Active.</li>
+        <li><strong>Electrode Crest:</strong> Route 6, centre chest of the Xen battleship nearest Valor Mountain. It halves the target's Defense and adds stats based on Speed. You own Hisuian Electrode.</li>
+        <li><strong>Phione Crest:</strong> Tale of Two Hearts quest in Kristiline.</li>
+        <li>Coming in Chapter 9: <strong>Meganium Crest</strong>, which gives your side damage reduction and healing every turn. Your shiny Lv 25 Chikorita is worth raising for it.</li>
+      </ul>
+      <p class="legend">Source: <a href="https://rejuvenation.wiki.gg/wiki/Crests">Rejuvenation wiki, Crests</a>.</p>
+    </div>
+    <div class="box">
+      <h3>Shadow Pokémon to snag this chapter</h3>
+      <ul>
+        <li><strong>Shadow Tatsugiri</strong> (Professor Jenner, Valor Summit): Lv 51 with 31 IVs, Nasty Plot, Dragon Pulse, Ice Beam, Flip Turn. The best of the three.</li>
+        <li><strong>Shadow Drifblim</strong> (Analyst Mephisto, Route 6): purifies with Hurricane and Mystical Fire, both 1.5x on Mountain and Volcanic Top.</li>
+        <li><strong>Shadow Purugly</strong> (Analyst Zena, Route 6): Swords Dance and Earthquake.</li>
+      </ul>
+      <p class="legend">Source: <a href="https://rejuvenation.wiki.gg/wiki/Shadow_Pokemon">Rejuvenation wiki, Shadow Pokémon</a>.</p>
+    </div>
+    <div class="box">
+      <h3>Purified mons already in your boxes</h3>
+      <p>These know moves they couldn't normally learn, and I scored them with those moves. None makes the top six; Claydol is the best of them.</p>
+      <ul>
+        <li>Claydol: Steel Beam, Flamethrower, Rock Blast</li>
+        <li>Glalie: Stealth Rock · Lumineon: Quiver Dance · Cacturne: Fake Out, Obstruct</li>
+        <li>Persian: Glare, Destiny Bond · Quagsire: Lava Plume · Manectric: Frost Breath, Mat Block</li>
+        <li>Galarian Stunfisk, Masquerain, Rapidash, Pidove</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Sources.</strong> Boss teams and story order: <a href="https://bigjra.github.io/rejuvenation/">BIGJRA walkthrough</a> (Classic Mode, the larger set you fight). Field effects, base stats, learnsets, crests and shadow data: <a href="https://rejuvenation.wiki.gg/">rejuvenation.wiki.gg</a>. Roster: your 2026-11-04 23:15 export (406 Pokémon).</p>
+  <p><strong>Limits.</strong> Damage is an average-roll estimate at Lv 55. It applies field boosts, STAB, abilities, crests and type items. It doesn't simulate turns, crits, stat boosts, screens or your AI partners. Optional fights (Ancient Guards, Neved) count half. Use the battle tables to sanity-check a fight before you go in.</p>
+</footer>
+</div>
