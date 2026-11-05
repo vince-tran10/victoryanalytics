@@ -51,11 +51,11 @@ def disp(n):
 # (role, name, types, ability, nature, evs, item, moves[(move, is_new)], change notes)
 TEAM = [
     ('Lead', 'Annihilape', 'Fighting/Ghost', 'Defiant', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Black Belt',
-     [('Close Combat', 0), ('Shadow Punch', 0), ('Sucker Punch', 0), ('Protect', 0)], []),
+     [('Close Combat', 0), ('Rage Fist', 0), ('Sucker Punch', 0), ('Protect', 0)], []),
     ('Lead', 'Gholdengo', 'Steel/Ghost', 'Good as Gold', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Metal Coat',
-     [('Make It Rain', 0), ('Shadow Ball', 0), ('Recover', 0), ('Protect', 0)], []),
+     [('Make It Rain', 0), ('Shadow Ball', 0), ('Power Gem', 0), ('Protect', 0)], []),
     ('Mid', 'Rhyperior', 'Ground/Rock', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone',
-     [('Stone Edge', 2), ('Headlong Rush', 0), ('Slack Off', 0), ('Protect', 0)],
+     [('Rock Blast', 0), ('Headlong Rush', 0), ('Slack Off', 0), ('Protect', 0)],
      []),
     ('Mid', 'Glaceon', 'Ice', 'Ice Body', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Never-Melt Ice',
      [('Freeze-Dry', 0), ('Blizzard', 0), ('Icy Wind', 0), ('Protect', 0)], []),
@@ -70,7 +70,10 @@ JOB = {'Annihilape': 'Fastest hitter.',
        'Glaceon': 'Icy Wind slows the back line for Golisopod. Freeze-Dry and Blizzard are your Groudon answer.',
        'Golisopod-Aevian': 'Win condition. Skill Link makes Bone Rush and Pin Missile 125 power. After one Swords Dance it one-shots 60 of 68 boss mons.',
        'Leavanny-Aevian': 'Rage Powder pulls attacks so Golisopod gets a free Swords Dance; Focus Sash guarantees it survives that turn. Intimidate on entry.'}
-REPL = {('Annihilape', 'Sucker Punch'): 'Fire Punch: priority hit on faster foes; Fire Punch had no unique one-shots'}
+REPL = {('Annihilape', 'Sucker Punch'): 'Fire Punch: priority hit on faster foes',
+        ('Annihilape', 'Rage Fist'): 'Shadow Punch: Move Relearner, +50 power per hit taken',
+        ('Gholdengo', 'Power Gem'): 'Recover: Move Relearner, hits the Fire types',
+        ('Rhyperior', 'Rock Blast'): 'Rock Slide: Move Relearner, until Stone Edge at Lv 54'}
 LATER = {('Rhyperior', 'Stone Edge'): 'Stone Edge comes at Lv 54 on its own (Rhyperior is Lv {lv}); replace Rock Slide then'}
 
 
@@ -89,6 +92,8 @@ def verify(name, ab, nat, evs, item, moves):
     for m, _ in moves:
         if m not in d['moves']:
             out.append(LATER.get((name, m), f'Teach {m}' + (f' (replaces {REPL[(name, m)]})' if (name, m) in REPL else '')).format(lv=d['level']))
+    if name == 'Rhyperior' and 'Stone Edge' not in d['moves']:
+        out.append(f"Lv 54 (now Lv {d['level']}): Stone Edge replaces Rock Blast")
     return out
 
 
@@ -102,7 +107,7 @@ team_rows, team_todo = [], []
 prev = None
 for role, name, types, ab, nat, evs, item, moves, changes in TEAM:
     changes = verify(name, ab, nat, evs, item, moves)
-    team_todo += [(f'{name}: {c}', 'mid' if 'on its own' in c else 'high') for c in changes]
+    team_todo += [(f'{name}: {c}', 'mid' if c.startswith('Lv ') else 'high') for c in changes]
     moves = [(m, 2 if (name, m) in LATER and m not in party.get(name, {}).get('moves', []) else 0) for m, _ in moves]
     mv = ''.join(f'<li class="{"new" if n == 1 else ("soon" if n == 2 else "")}">{E(m)}</li>' for m, n in moves)
     ch = ('<ul class="chg">' + ''.join(f'<li>{E(c)}</li>' for c in changes) + '</ul>') if changes else '<span class="ok">Done ✓ (matches export)</span>'
@@ -132,6 +137,37 @@ def readiness():
 
 ready_rows, R_TOT, R_KO, R_FAST, R_RISK = readiness()
 
+
+# ---------------------------------------------------------------- 1b) relearner upgrades
+UP = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'upgrades_relearn.json')))
+ORDER = ['Annihilape', 'Gholdengo', 'Rhyperior', 'Glaceon', 'Golisopod-Aevian', 'Leavanny-Aevian']
+up_cards, up_same, up_left = [], [], 0
+for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP),
+                key=lambda d: (d['box'] != 'Party', ORDER.index(d['species']) if d['species'] in ORDER else 9, not UP[d['species']].get('big'), d['species'])):
+    u = UP[d['species']]
+    if sorted(u['moves']) == sorted(d['moves']) and not u.get('nature') and not u.get('ability') and d['box'] == 'Active' and 'later' not in u:
+        continue
+    if set(u['moves']) == set(d['moves']) and 'Swords Dance' in u['moves'] + ['Swords Dance'] and u['why'].startswith(('Nothing', 'Already', 'Support')):
+        up_same.append(d['species']); continue
+    gaps = [m for m in u['moves'] if m not in d['moves']]
+    natg = u.get('nature') and d.get('nature') != u['nature']
+    abg = u.get('ability') and d.get('ability') != u['ability']
+    done = not gaps and not natg and not abg
+    up_left += 0 if done else 1
+    mv = ''.join(f'<li class="{"new" if m in gaps else ""}">{E(m)}</li>' for m in u['moves'])
+    gone = [m for m in d['moves'] if m not in u['moves']]
+    extra = ''
+    if natg: extra += f'<div class="chg2">Nature: {E(d.get("nature"))} → <b>{E(u["nature"])}</b> (mint)</div>'
+    if abg: extra += f'<div class="chg2">Ability: {E(d.get("ability"))} → <b>{E(u["ability"])}</b> (Ability Capsule)</div>'
+    if u.get('later'): extra += f'<div class="mnote">Later: {E(u["later"])}</div>'
+    status = '<span class="ok">Done ✓</span>' if done else ('<span class="b big">big upgrade</span>' if u.get('big') else '<span class="b small">upgrade</span>')
+    role = {'Annihilape': 'lead', 'Gholdengo': 'lead', 'Rhyperior': 'mid', 'Glaceon': 'mid'}.get(d['species'], 'closer' if d['box'] == 'Party' else '')
+    up_cards.append(f'''<li class="mon up{" isparty" if d["box"] == "Party" else ""}"><div class="mtop"><strong>{E(d["species"])}</strong>{status}</div>
+<div class="chips">{chips(d["types"] or "")}<span class="lv">Lv {d["level"]}</span>{'<span class="b party">Party</span>' if d["box"] == "Party" else ''}</div>
+<ul class="mv">{mv}</ul>{('<div class="mnote">Out: ' + E(', '.join(gone)) + '</div>') if gone and not done else ''}{extra}
+<div class="mnote">{E(u["why"])}</div>{('<div class="mnote"><b>Playstyle:</b> ' + E(u["style"]) + '</div>') if u.get("style") else ''}</li>''')
+up_same += [d['species'] for d in cur if d['box'] != 'Overflow' and d['species'] not in UP and d['species'] not in up_same and d['score']]
+up_same = sorted(set(up_same))
 
 # ---------------------------------------------------------------- 2) tier list
 FLAGS = {  # community / role notes (short)
@@ -212,6 +248,8 @@ for p in promo:
         promo_todo.append((f"{p['final']} (Active box): " + '; '.join(gaps) + '.', 'low'))
 if promo_todo:
     TODO.append(('New catches', promo_todo))
+if up_left:
+    TODO.append(('Move Relearner', [(f'{up_left} Pokémon still to update. Work through the cards in section 02; each flips to Done ✓ once your export matches.', 'mid')]))
 CUTS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'cuts.json')))
 cut_todo = []
 for sp, why in CUTS['move'].items():
@@ -348,6 +386,10 @@ tbody tr:last-child td {{ border-bottom: 0 }}
 .b.six {{ background: var(--accent-soft); color: var(--accent) }} .b.op {{ background: var(--bad-soft); color: var(--bad) }}
 .b.sup {{ background: var(--good-soft); color: var(--good) }} .b.party {{ background: var(--warn-soft); color: var(--warn) }}
 .mnote {{ font-size: 12px; color: var(--muted) }}
+.upgrid {{ padding: 0; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) }}
+.up {{ background: var(--panel); gap: 6px }} .up .mv {{ font-size: 13.5px }}
+.b.big {{ background: var(--bad-soft); color: var(--bad) }} .b.small {{ background: var(--accent-soft); color: var(--accent) }}
+.chg2 {{ font-size: 12.5px; color: var(--warn) }}
 .todos {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px }}
 .tgroup {{ background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 8px; align-content: start }}
 .todo {{ list-style: none; margin: 0; padding: 0; display: grid; gap: 8px }}
@@ -379,7 +421,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
     <div class="panel">
       <h3>Game plan</h3>
       <ul>
-        <li><strong class="role-lead">Lead</strong> Annihilape + Gholdengo for fast damage. Remove Typhlosion before Eruption fires; Sucker Punch finishes weakened fast foes first.</li>
+        <li><strong class="role-lead">Lead</strong> Annihilape + Gholdengo for fast damage. Annihilape wants to take a hit: every hit makes Rage Fist 50 stronger. Sucker Punch finishes weakened fast foes, like Typhlosion before Eruption.</li>
         <li><strong class="role-mid">Mid</strong> Rhyperior handles Fire and fliers. Glaceon's Icy Wind slows the back line.</li>
         <li><strong class="role-closer">Closer</strong> Leavanny uses Rage Powder, Golisopod uses Swords Dance, then sweeps. In singles, Golisopod sets up on a switch-in it walls.</li>
         <li><strong>Only the lead changes, never the six.</strong> Eli &amp; Sharon: Rhyperior + Gholdengo lead. Groudon: Glaceon leads and Gholdengo sits out. Giratina: lead the closer pair. Amber: Rhyperior leads. Texen (bring 3): Gholdengo, Annihilape, Golisopod.</li>
@@ -390,18 +432,26 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
       <div class="score"><span>Boss mons someone in your six can one-shot</span><b class="num">{R_KO}/{R_TOT}</b><i></i></div>
       <div class="score"><span>…and does it before that foe moves</span><b class="num">{R_FAST}/{R_TOT}</b><i></i></div>
       <div class="score"><span>After one Golisopod Swords Dance</span><b class="num">60/68</b><i></i></div>
+      <div class="score"><span>Annihilape alone, after its Rage Fist takes 1 / 2 hits</span><b class="num">44 / 54</b><i></i></div>
       <p class="legend">The only fights without a one-shot answer are <b>Groudon</b> (a boss with boosted HP: chip it with Glaceon's Ice moves) and Eli &amp; Sharon's Milotic (best hit: Annihilape, about 85%). Most often one-shot on your side: {", ".join(f"{E(disp(k))} ({v} boss hits)" for k, v in sorted(R_RISK.items(), key=lambda x: -x[1])[:3])}. Leavanny's Focus Sash is what lets it live through those.</p>
     </div>
   </div>
 </section>
 
+<section aria-labelledby="s1b">
+  <h2 id="s1b"><span class="n">02</span> Move Relearner upgrades <span class="tag">party + Active box · {up_left} to do</span></h2>
+  <p class="legend">With the relearner unlocked, any level-up move up to its level plus relearner-only moves are open (egg moves still need breeding). New moves are highlighted. Each card checks itself against your export and flips to Done ✓ once it matches.</p>
+  <ul class="tmons upgrid">{"".join(up_cards)}</ul>
+  <p class="legend">No relearner upgrade worth making: {E(", ".join(up_same))}.</p>
+</section>
+
 <section aria-labelledby="s2">
-  <h2 id="s2"><span class="n">02</span> Chapter 8 tier list <span class="tag">party + Active box · {len(seen)} Pokémon</span></h2>
+  <h2 id="s2"><span class="n">03</span> Chapter 8 tier list <span class="tag">party + Active box · {len(seen)} Pokémon</span></h2>
   <div class="board">{tier_html}</div>
 </section>
 
 <section aria-labelledby="s3">
-  <h2 id="s3"><span class="n">03</span> To do</h2>
+  <h2 id="s3"><span class="n">04</span> To do</h2>
   <div class="todos">{todo_html or '<p>Nothing left: the export matches the plan.</p>'}</div>
   <p class="legend">Built from your latest export: anything the export shows as done is removed, and anything you ticked that the export doesn't show done comes back. Ticks are saved in this browser only. Levels come naturally; nothing here needs grinding.</p>
 </section>

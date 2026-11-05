@@ -138,3 +138,17 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   break this: Azumarill Aqua Tail (Lv 21) / Play Rough (Lv 25), Cursola Strength Sap (Lv 35).
 - Vincent: Showdown player; wants the most meta, community-proven builds (Aevian gimmicks, crests, Trick Room when it
   arrives); fine retrying; goal = best team for the CURRENT chapter only. Factor speed tiers / AI behaviour into builds.
+
+## Move Relearner unlocked (11-05, after 11:44 export)
+- MOVE_RULES=relearn: Ch1-7 TMs + badge tutors (<= 7) + every level-up move <= cap + relearner-only moves + Egg (breeding).
+  Runs: team/r_relearn_{native,Singles,Doubles}.json(.pkl), finals team/f12_*.json (report now reads f12).
+- Six unchanged (best team; Ludicolo swap is +0.4% but loses Rage Powder). New party moves:
+  Annihilape CC / **Rage Fist** / Sucker Punch / Protect (Rage Fist: 38 → 44 one-shots after 1 hit, 54 after 2;
+  engine models it at base 50, so team counts undersell it); Gholdengo Make It Rain / Shadow Ball / **Power Gem** / Protect
+  (+4 one-shots); Rhyperior Headlong Rush / **Rock Blast** / Slack Off / Protect, Stone Edge at Lv 54 replaces Rock Blast.
+  Team: 66/68 one-shot, 39/68 moving first (was 37).
+- Active-box relearner builds: workspace/team/upgrades_relearn.json (all moves validated legal vs relearn_1144.json).
+  Big ones: Camerupt Eruption (Modest mint), Glalie-Aevian Grassy Glide + Grassy Surge capsule, Porygon-Z Nasty Plot,
+  Feraligatr Agility (Adamant mint), Crobat Tailwind, Throh Storm Throw/Bulk Up/Wide Guard, Arcanine/Solrock Flare Blitz,
+  Azumarill Aqua Tail/Play Rough. Report section 02 shows cards that flip to Done once the export matches.
+- Sections now: 01 team, 02 relearner upgrades, 03 tier list, 04 to-do, 05 box audit.

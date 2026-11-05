@@ -317,10 +317,12 @@ class Engine:
                 legal.add(mid)
             elif method == 'Egg':
                 legal.add(mid)
-            elif self.move_rules in ('ch7', 'ch7_notutor') and method == 'TM' and detail in self.allowed_tms:
+            elif self.move_rules in ('ch7', 'ch7_notutor', 'relearn') and method == 'TM' and detail in self.allowed_tms:
                 legal.add(mid)
-            elif self.move_rules == 'ch7' and method == 'Tutor' and detail in ALLOWED_TUTORS:
+            elif self.move_rules in ('ch7', 'relearn') and method in ('Tutor', 'TM/Tutor') and detail in ALLOWED_TUTORS:
                 legal.add(mid)
+            elif self.move_rules == 'relearn' and method == 'Move Relearner':
+                legal.add(mid)   # Move Relearner unlocked (11-05): relearner-only moves + any level-up move <= cap
         legal |= {'PROTECT', 'FALSESWIPE'}
         for k in known:
             mid = self.move_id(k)

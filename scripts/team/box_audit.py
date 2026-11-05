@@ -107,7 +107,7 @@ chg = ('<li>' + '</li><li>'.join(esc(c) for c in changes) + '</li>') if changes 
 gn = ('<li>' + '</li><li>'.join(esc(c) for c in gone) + '</li>') if gone else '<li>None</li>'
 sec = f'''<!--BOXAUDIT-->
 <section aria-labelledby="s4">
-  <h2 id="s4"><span class="n">04</span> Box audit <span class="tag">who you own, and where · export {len(N)} mons</span></h2>
+  <h2 id="s4"><span class="n">05</span> Box audit <span class="tag">who you own, and where · export {len(N)} mons</span></h2>
   <div class="audit-top">
     <!-- completeness check (hidden): {' | '.join(re.sub('<[^>]+>', '', c) for c in checks)} -->
     <div class="panel pad"><h3>Since last export</h3>{('<p class="legend">' + esc(NOTE) + '</p>') if NOTE else ''}<ul class="plain">{chg}</ul></div>
