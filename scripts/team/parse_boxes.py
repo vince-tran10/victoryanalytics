@@ -14,6 +14,7 @@ for i,b in enumerate(blocks,1):
         if x.startswith('Ability:'): d['ability']=x[8:].strip()
         if x.startswith('Level:'): d['level']=int(x[6:])
         if x.endswith(' Nature'): d['nature']=x[:-7]
+        if x.startswith('EVs:'): d['evs']={k:int(v) for v,k in re.findall(r'(\d+) (HP|Atk|Def|SpA|SpD|Spe)',x)}
     out.append(d)
 json.dump(out,open(sys.argv[2],'w'),indent=0)
 print(len(out))

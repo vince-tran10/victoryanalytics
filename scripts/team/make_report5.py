@@ -28,7 +28,9 @@ TYPE = {'Normal': ('#A8A77A', '#1d1d12'), 'Fire': ('#EE8130', '#2a1200'), 'Water
         'Flying': ('#A98FF3', '#1a1036'), 'Psychic': ('#F95587', '#2e0414'), 'Bug': ('#A6B91A', '#1c2003'),
         'Rock': ('#B6A136', '#221d05'), 'Ghost': ('#735797', '#ffffff'), 'Dragon': ('#6F35FC', '#ffffff'),
         'Dark': ('#705746', '#ffffff'), 'Steel': ('#B7B7CE', '#1b1b2a'), 'Fairy': ('#D685AD', '#2b0c1c')}
-SHORT = {'texen': 'Texen', 'guard1': 'Guard #1', 'guard2': 'Guard #2', 'tommen': 'Tommen', 'groudon': 'Groudon',
+SHORT = {'aelita': 'Aelita', 'narcissa': 'Narcissa', 'danni': 'Danni & Layla', 'troye': 'Troye & Helen', 'zena': 'Zena',
+         'kyogre': 'Kyogre', 'holly': 'Holly & Rorim', 'manaphy': 'Manaphy', 'factory': '??? (Factory)', 'marcie': 'Marcie & Chikie',
+         'texen': 'Texen', 'guard1': 'Guard #1', 'guard2': 'Guard #2', 'tommen': 'Tommen', 'groudon': 'Groudon',
          'crawli': 'Crawli', 'neved': 'Neved', 'eli': 'Eli & Sharon', 'jenner': 'Jenner', 'geara': 'Geara & Zetta',
          'giratina': 'Giratina', 'amber': 'Amber'}
 
@@ -52,17 +54,16 @@ def disp(n):
 TEAM = [
     ('Lead', 'Annihilape', 'Fighting/Ghost', 'Defiant', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Black Belt',
      [('Close Combat', 0), ('Rage Fist', 0), ('Sucker Punch', 0), ('Protect', 0)], []),
-    ('Lead', 'Gholdengo', 'Steel/Ghost', 'Good as Gold', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Metal Coat',
-     [('Make It Rain', 0), ('Shadow Ball', 0), ('Power Gem', 0), ('Protect', 0)], []),
-    ('Mid', 'Rhyperior', 'Ground/Rock', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone',
-     [('Stone Edge', 0), ('Headlong Rush', 0), ('Slack Off', 0), ('Protect', 0)],
-     []),
-    ('Mid', 'Glaceon', 'Ice', 'Ice Body', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Never-Melt Ice',
-     [('Freeze-Dry', 0), ('Blizzard', 0), ('Icy Wind', 0), ('Protect', 0)], []),
+    ('Lead', 'Arcanine', 'Fire', 'Intimidate', 'Adamant', '252 Atk / 252 Spe / 4 Def', 'Sitrus Berry',
+     [('Flare Blitz', 0), ('Extreme Speed', 0), ('Close Combat', 0), ('Protect', 0)], []),
+    ('Mid', 'Chandelure', 'Ghost/Fire', 'Flash Fire', 'Timid', '252 SpA / 252 Spe / 4 HP', 'Focus Sash',
+     [('Shadow Ball', 0), ('Overheat', 0), ('Will-O-Wisp', 0), ('Protect', 0)], []),
+    ('Mid', 'Lapras-Aevian', 'Rock/Psychic', 'No Guard', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone',
+     [('Rock Slide', 0), ('Zen Headbutt', 0), ('Dragon Dance', 0), ('Sing', 0)], []),
     ('Closer', 'Golisopod-Aevian', 'Bug/Ground', 'Skill Link', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand',
      [('Bone Rush', 0), ('Pin Missile', 0), ('Swords Dance', 0), ('Protect', 0)], []),
-    ('Closer', 'Leavanny-Aevian', 'Bug/Dragon', 'Intimidate', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Focus Sash',
-     [('Rage Powder', 0), ('X-Scissor', 0), ('Dragon Claw', 0), ('Protect', 0)], []),
+    ('Closer', 'Glalie-Aevian', 'Grass/Rock', 'Grassy Surge', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry',
+     [('Grassy Glide', 0), ('Wood Hammer', 0), ('Rock Slide', 0), ('Protect', 0)], []),
 ]
 JOB = {'Annihilape': 'Fastest hitter.',
        'Gholdengo': 'Make It Rain hits both foes (1.5x on Big Top). Immune to status moves.',
@@ -81,8 +82,22 @@ def verify(name, ab, nat, evs, item, moves):
     """What the export says still needs doing for this party slot."""
     d = party.get(name)
     if not d:
-        return [f'Put {name} in the party']
+        cands0 = [x for x in cur if x['species'] == name]
+        d0 = min(cands0, key=lambda x: (x['box'] != 'Active', len(verify_mon(x, ab, nat, evs, item, moves))), default=None)
+        out = [f"Put {name} in the party (now in {d0['box']} #{d0['n']})" if d0 else f'Put {name} in the party']
+        if d0:
+            out += [c for c in verify_mon(d0, ab, nat, evs, item, moves)]
+        return out
+    return verify_mon(d, ab, nat, evs, item, moves)
+
+
+def verify_mon(d, ab, nat, evs, item, moves):
+    name = d['species']
     out = []
+    want = {k: int(v) for v, k in (x.split() for x in evs.split(' / ')) if int(v) >= 100}
+    have = {k for k, v in (d.get('evs') or {}).items() if v >= 100}
+    if d.get('evs') is not None and set(want) != have:
+        out.append('EVs: ' + ' / '.join(f'{v} {k}' for k, v in want.items()) + ' (now ' + (' / '.join(sorted(have)) or 'none') + ')')
     if d['item'] != item:
         out.append(f"Item: {d['item'] or 'none'} → {item}")
     if d.get('ability') != ab:
@@ -138,7 +153,7 @@ ready_rows, R_TOT, R_KO, R_FAST, R_RISK = readiness()
 
 # ---------------------------------------------------------------- 1b) relearner upgrades
 UP = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'upgrades_relearn.json')))
-ORDER = ['Annihilape', 'Gholdengo', 'Rhyperior', 'Glaceon', 'Golisopod-Aevian', 'Leavanny-Aevian']
+ORDER = ['Annihilape', 'Arcanine', 'Chandelure', 'Lapras-Aevian', 'Golisopod-Aevian', 'Glalie-Aevian']
 up_cards, up_same, up_left, up_done = [], [], 0, []
 for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP),
                 key=lambda d: (d['box'] != 'Party', ORDER.index(d['species']) if d['species'] in ORDER else 9, not UP[d['species']].get('big'), d['species'])):
@@ -163,7 +178,7 @@ for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP
     if abg: extra += f'<div class="chg2">Ability: {E(d.get("ability"))} → <b>{E(u["ability"])}</b> (Ability Capsule)</div>'
     if u.get('later'): extra += f'<div class="mnote">Later: {E(u["later"])}</div>'
     status = '<span class="ok">Done ✓</span>' if done else ('<span class="b big">big upgrade</span>' if u.get('big') else '<span class="b small">upgrade</span>')
-    role = {'Annihilape': 'lead', 'Gholdengo': 'lead', 'Rhyperior': 'mid', 'Glaceon': 'mid'}.get(d['species'], 'closer' if d['box'] == 'Party' else '')
+    role = {'Annihilape': 'lead', 'Arcanine': 'lead', 'Chandelure': 'mid', 'Lapras-Aevian': 'mid'}.get(d['species'], 'closer' if d['box'] == 'Party' else '')
     up_cards.append(f'''<li class="mon up{" isparty" if d["box"] == "Party" else ""}"><div class="mtop"><strong>{E(d["species"])}</strong>{status}</div>
 <div class="chips">{chips(d["types"] or "")}<span class="lv">Lv {d["level"]}</span>{'<span class="b party">Party</span>' if d["box"] == "Party" else ''}</div>
 <ul class="mv">{mv}</ul>{('<div class="mnote">Out: ' + E(', '.join(gone)) + '</div>') if gone and not done else ''}{extra}
@@ -440,20 +455,21 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
     <div class="panel">
       <h3>Game plan</h3>
       <ul>
-        <li><strong>Two win conditions.</strong> Annihilape is the main one: fast, hard to one-shot (only 5 of 68 boss mons can), and no setup turn needed. Once it has been hit, Rage Fist one-shots 44 of 68, and 54 after two hits. Golisopod is the backup closer for the slow, bulky mons Ape can't finish.</li>
-        <li><strong class="role-lead">Lead</strong> Annihilape + Gholdengo. Let Ape take a hit, then Rage Fist. Sucker Punch picks off weakened fast foes, like Typhlosion before Eruption.</li>
-        <li><strong class="role-mid">Mid</strong> Rhyperior handles Fire and fliers. Glaceon's Icy Wind slows the back line.</li>
-        <li><strong class="role-closer">Closer</strong> Leavanny uses Rage Powder, Golisopod uses Swords Dance, then sweeps. In singles, Golisopod sets up on a switch-in it walls.</li>
-        <li><strong>Only the lead changes, never the six.</strong> Eli &amp; Sharon: Rhyperior + Gholdengo lead. Groudon: Glaceon leads and Gholdengo sits out. Giratina: lead the closer pair. Amber: Rhyperior leads. Texen (bring 3): Gholdengo, Annihilape, Golisopod.</li>
+        <li><strong>Two win conditions.</strong> Annihilape is the main one. Once it has been hit, Rage Fist one-shots 67 of the 113 boss mons, and 83 after two hits, with no setup turn. Golisopod is the closer: after one Swords Dance it one-shots 95 of 113.</li>
+        <li><strong class="role-lead">Lead</strong> Annihilape + Arcanine. Arcanine's Intimidate weakens physical attackers on entry and Extreme Speed picks off weakened foes. Let Ape take a hit, then Rage Fist.</li>
+        <li><strong class="role-mid">Mid</strong> Chandelure's Will-O-Wisp burns physical threats; Lapras-Aevian's Sing never misses (No Guard), and Rock Slide hits both foes. Sleep and burns are what buy Golisopod its Swords Dance turn.</li>
+        <li><strong class="role-closer">Closer</strong> Golisopod sets up Swords Dance on a sleeping or burned foe, then sweeps. Glalie-Aevian's Grassy Surge heals the team every turn, and Grassy Glide hits first in the terrain.</li>
+        <li><strong>Only the lead changes, never the six.</strong> Golisopod leads vs Aelita (Bone Rush breaks Sturdy), Tommen, Troye &amp; Helen, Zena, Giratina and the ??? Factory fight. Arcanine + Chandelure lead vs Crawli, Narcissa, Danni &amp; Layla, Holly &amp; Rorim and Marcie. Glalie-Aevian + Arcanine vs Eli &amp; Sharon. Glalie-Aevian leads vs Groudon, Kyogre and Manaphy (Grass hits all three). Texen (bring 3): Chandelure, Annihilape, Golisopod.</li>
       </ul>
     </div>
     <div class="panel scores">
       <h3>Team strength, in plain terms</h3>
       <div class="score"><span>Boss mons someone in your six can one-shot</span><b class="num">{R_KO}/{R_TOT}</b><i></i></div>
       <div class="score"><span>…and does it before that foe moves</span><b class="num">{R_FAST}/{R_TOT}</b><i></i></div>
-      <div class="score"><span>After one Golisopod Swords Dance</span><b class="num">60/68</b><i></i></div>
-      <div class="score"><span>Annihilape alone, after its Rage Fist takes 1 / 2 hits</span><b class="num">44 / 54</b><i></i></div>
-      <p class="legend">The only fights without a one-shot answer are <b>Groudon</b> (a boss with boosted HP: chip it with Glaceon's Ice moves) and Eli &amp; Sharon's Milotic (best hit: Annihilape, about 85%). Most often one-shot on your side: {", ".join(f"{E(disp(k))} ({v} boss hits)" for k, v in sorted(R_RISK.items(), key=lambda x: -x[1])[:3])}. Leavanny's Focus Sash is what lets it live through those.</p>
+      <div class="score"><span>After one Golisopod Swords Dance</span><b class="num">95/113</b><i></i></div>
+      <div class="score"><span>Annihilape alone, after its Rage Fist takes 1 / 2 hits</span><b class="num">67 / 83</b><i></i></div>
+      <p class="legend">Checked against all 22 Chapter 8 fights (113 boss mons). The ones without a one-shot answer are the three bosses with boosted HP (Groudon, Kyogre, Manaphy), Multiscale Dragonite, and four that take 92–99% (Kleavor, Kommo-o, Grimmsnarl, Gyarados). Most often one-shot on your side: {", ".join(f"{E(disp(k))} ({v} boss hits)" for k, v in sorted(R_RISK.items(), key=lambda x: -x[1])[:3])}. Chandelure's Focus Sash is what keeps it alive.</p>
+      <p class="legend">Hardest fight: <b>Kyogre</b> (Lv 60 boss in rain). Nobody one-shots it, so lead Glalie-Aevian and chip it with Grass moves.</p>
     </div>
   </div>
 </section>

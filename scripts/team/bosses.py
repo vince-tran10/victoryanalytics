@@ -102,12 +102,20 @@ FIELD.update({
                                            'SCORCHINGSANDS': 1.5, 'WAVECRASH': 1.5, 'FOCUSBLAST': 1.3, 'AURASPHERE': 1.3,
                                            'ZENHEADBUTT': 1.3, 'PSYCHIC': 1.2}},
     'Volcanic Top': None,
+    # approximations for the late-chapter fields (main type boosts only)
+    'Haunted Field': {'types': {'GHOST': 1.5}, 'moves': {}},
+    'Water Surface': {'types': {'WATER': 1.5, 'ELECTRIC': 1.5}, 'moves': {}},
+    'Short-Circuit Field': {'types': {'ELECTRIC': 1.5}, 'moves': {}},
+    'Factory Field': {'types': {'ELECTRIC': 1.2}, 'moves': {}},
+    'Forest Field': {'types': {'GRASS': 1.5, 'BUG': 1.5}, 'moves': {}},
 })
 FIELD['Volcanic Top'] = FIELD['Volcanic Top Field']
 FIELD['Mountain Field'] = FIELD['Mountain']
 
 # (match in trainer header, key, label, field, format, weight, notes)
 WALK = [
+    ('VS: Student Aelita', 'aelita', 'Aelita – Kristiline Town', 'Beach Field', 'Singles', 0.8,
+     'Fighting/Flying team: Unfezant-Aevian (Sturdy, Stealth Rock), Pawmot (Fake Out, Iron Fist punches), Lucario (Sash, Calm Mind), Hawlucha (Unburden + Flying Gem Acrobatics), Blaziken (Speed Boost), Staraptor (Reckless). Beach: Aura Sphere/Focus Blast 1.3x, Water/mud moves boosted.'),
     ('Pseudo Sensei Texen', 'texen', 'Texen (Fighting gym) – Sheridan', 'Big Top Arena', 'Doubles', 1.0,
      'Multi battle: you bring 3, Aelita brings Staraptor/Blaziken/Hawlucha. High Striker physical Fighting & slam moves roll 0.5x–3x; Swords Dance +3, Dragon Dance +2/+2, Sing never misses; Make It Rain & Acrobatics 1.5x.'),
     ('Ancient Guard Escavalier', 'guard1', 'Ancient Guard #1 (Gravity/Trick Room) – Garufa Sanctuary (Adam path)', 'Deep Earth Field', 'Singles', 0.5,
@@ -130,6 +138,16 @@ WALK = [
      'Melia is your partner. Fire/Flying/Rock 1.5x (Rock gains Fire), Ice 0.5x, Water 0.9x, Surf/Muddy Water/Hydro Pump/Water Spout 0.5x; Earthquake/Earth Power cause eruptions (1/8 to non-Fire).'),
     ('Taken Tyrant', 'giratina', 'Rift Giratina (boss) – Rift Distortion', 'Wasteland', 'Doubles', 1.0,
      'Boss Rift Giratina (Ghost/Poison) + crested Relicanth + crested Swalot. Hazards are consumed (Spikes 1/3 HP per layer); Earthquake 0.25x; sludge moves 1.2x.'),
+    ('Guardian Spectre Narcissa', 'narcissa', 'Narcissa – Haunted Field', 'Haunted Field', 'Singles', 0.6,
+     'Swoobat, Haunter, Mismagius, Shedinja (Wonder Guard: only super-effective hits work).'),
+    ('Team Xen Danni', 'danni', 'Danni & Layla (7 mons) – Beach', 'Beach Field', 'Doubles', 0.6, 'Bug-heavy doubles.'),
+    ('Team Xen Troye', 'troye', 'Troye & Helen – Beach', 'Beach Field', 'Doubles', 0.8, 'Gigalith sand, Scizor, Ambipom, Bibarel, Decidueye (Lv 57–59).'),
+    ('Xen Analyst Zena', 'zena', 'Zena – Short-Circuit Field', 'Short-Circuit Field', 'Singles', 0.5, 'Skuntank, Seismitoad, Cursola, Shadow Purugly.'),
+    ('Leviathan Kyogre', 'kyogre', 'Leviathan Kyogre (boss) – Water Surface', 'Water Surface', 'Singles', 1.0, 'Boss Kyogre Lv 60 with Drizzle rain.'),
+    ('Commander Holly', 'holly', 'Holly & Rorim – Beach', 'Beach Field', 'Doubles', 1.0, 'Scizor, Escavalier, Speed Boost Scolipede, Oricorio, Bellossom, Quaquaval (Lv 55–58).'),
+    ('Manaphy', 'manaphy', 'Manaphy (boss) – Beach', 'Beach Field', 'Singles', 0.8, 'Boss Manaphy Lv 60 calling Phione.'),
+    ('VS: ??? ???', 'factory', '??? – Factory Field', 'Factory Field', 'Singles', 1.2, 'Raichu, Clawitzer, Orthworm, Rotom, Swampert, Xurkitree (Lv 60–64).'),
+    ('Team Anti-Assist Marcie', 'marcie', 'Marcie & Chikie – Forest', 'Forest Field', 'Doubles', 0.5, 'Rillaboom, Tsareena, Porygon2, Eelektross.'),
     ('Music Enthusiast Amber', 'amber', 'Amber (Lyric Badge gym) – Club STFU', 'Concert Venue', 'Singles', 1.0,
      'Sound 1.5x; starts at No Hype (minimum rolls). All-Fire team.'),
 ]

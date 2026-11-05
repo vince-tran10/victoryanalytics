@@ -174,3 +174,14 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - Win-con check (alone, Lv 55): Golisopod +2 SD 60/68 one-shots but only 11 first (Spe 77); Annihilape Rage Fist after
   1 hit 44 (36 first), after 2 hits 54 (44 first), one-shot by only 5/68; Porygon-Z +2 NP 57 (47 first) but 2-shot by
   53/68. Plan: Annihilape = main win con, Golisopod = backup closer. Slowking-Galar: Power Gem > Venoshock (no Sludge Bomb).
+
+## Full Chapter 8 coverage (after Aelita loss, 13:29 export)
+- The model only had 12 fights. bosses.py WALK now has 22 (added Aelita, Narcissa, Danni & Layla, Troye & Helen, Zena,
+  Kyogre, Holly & Rorim, Manaphy, ??? Factory, Marcie & Chikie; 113 boss mons). Skipped: POV/virtual-trainer fights
+  (Pryce/Clair), partners, small grunt fights, Malamar's Lv 50–90 Inkay gimmick. Late fields are rough approximations.
+- Engine: foe type gems 1.3x, Gem/itemless Acrobatics 2x; Speed Boost foes x1.5 Speed, Unburden x2; Kyogre rain.
+- NEW SIX (r15/f15, Party+Active, Lv 55, relearn): Annihilape + Arcanine (lead), Chandelure + Lapras-Aevian (mid),
+  Golisopod-Aevian + Glalie-Aevian (closer). native 1.277 / singles 1.180 / doubles 1.407 vs old six 1.256/1.160/1.388;
+  best in 6/8 weightings. One-shots 105/113 (65 first) vs old 100/113 (56). Goli +2 SD 95/113; Ape RF 67 (1 hit) / 83.
+  Hardest: Kyogre (nobody one-shots). Chandelure is one-shot by 16 boss mons (keep Focus Sash).
+- make_report5 now verifies EVs (stats >= 100) and finds the Active copy when a mon isn't in the party.

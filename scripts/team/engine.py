@@ -199,10 +199,18 @@ class Engine:
             fm *= field['priority']
         if battle['key'] == 'groudon':  # Drought sun
             fm *= 1.5 if mtype == 'FIRE' else 0.5 if mtype == 'WATER' else 1.0
+        if battle['key'] == 'kyogre':   # Drizzle rain
+            fm *= 1.5 if mtype == 'WATER' else 0.5 if mtype == 'FIRE' else 1.0
         if mid in ('FLOWERTRICK', 'FROSTBREATH', 'STORMTHROW', 'ZIPPYZAP'):
             fm *= 1.5   # always a critical hit
         if att_is_me and ab == 'GRASSYSURGE' and mtype == 'GRASS':
             fm *= 1.3   # Grassy Terrain on entry
+        if not att_is_me:   # foe gems: 1.3x on the matching type; Acrobatics doubles once the gem is used
+            it = (att.get('item') or '')
+            if it.endswith(' Gem') and it.split()[0].upper() == mtype:
+                fm *= 1.3 * (2 if mid == 'ACROBATICS' else 1)
+            elif mid == 'ACROBATICS' and not it:
+                fm *= 2
         mult *= fm
         # stats
         am_stat = ability_stat_mult(ab) if att_is_me else (1, 1, 1)
@@ -479,6 +487,10 @@ class Engine:
                         taken, takenmv = d, mv['MoveName']
                 my_spe = me['stats']['Spe']
                 foe_spe = foe['stats']['Spe'] * (1.5 if foe['item'] == 'Choice Scarf' else 1)
+                if foe.get('ability') == 'SPEEDBOOST':
+                    foe_spe *= 1.5   # one boost (Protect turn 1)
+                elif foe.get('ability') == 'UNBURDEN' and (foe.get('item') or '').endswith((' Gem', 'Berry', 'Seed')):
+                    foe_spe *= 2
                 faster = my_spe > foe_spe
                 hits_to_ko = math.ceil(100 / best) if best > 0 else 99
                 hits_to_die = math.ceil(100 / taken) if taken > 0 else 99
