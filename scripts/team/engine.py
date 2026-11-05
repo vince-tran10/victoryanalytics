@@ -18,6 +18,11 @@ CAP = 55
 # Tutors with no badge number (plain Luck's Tent, Wispy Path Shop, Akuwa Town, ...) are skipped.
 ALLOWED_TUTORS = {"Luck's Tent, 3 Badges", "Luck's Tent, 5 Badges", "Luck's Tent, 7 Badges", "Terajuma Beach, 5 Badges",
                   "Luck's Tent, 3 Badges, Hiyoshi City", "Luck's Tent, 5 Badges, Hiyoshi City", "Luck's Tent, 7 Badges, Hiyoshi City"}
+# evolution items obtainable in Chapters 1-7 (BIGJRA walkthrough). Not: Peat Block, Razor Claw/Fang, King's Rock,
+# Prism Scale, Protector, Electirizer, Magmarizer, Dubious Disc, Oval Stone, Linking Cord.
+ITEMS_CH1_7 = {'SUNSTONE', 'SHINYSTONE', 'MOONSTONE', 'LEAFSTONE', 'WATERSTONE', 'FIRESTONE', 'THUNDERSTONE', 'ICESTONE',
+               'DUSKSTONE', 'DAWNSTONE', 'UPGRADE', 'REAPERCLOTH', 'SACHET', 'WHIPPEDDREAM', 'GALARICACUFF',
+               'GALARICAWREATH', 'SWEETAPPLE', 'TARTAPPLE', 'METALCOAT'}
 STATS = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe']
 NATURES = {
     'Hardy': (None, None), 'Docile': (None, None), 'Serious': (None, None), 'Bashful': (None, None), 'Quirky': (None, None),
@@ -361,7 +366,9 @@ class Engine:
                     if self.D.sp[nxt][k].get('FormName', '').split()[0] == fn.split()[0]:
                         nform = k; break
             path.append(f'{self.D.nm(nxt)} ({method} {param})'.replace(' )', ')'))
-            if method.startswith('Item') or method.startswith('Trade') or 'Item' in method:
+            if (method.startswith('Item') or 'Item' in method) and str(param).upper() in ITEMS_CH1_7:
+                pass   # evolution item obtainable in Chapters 1-7: evolve right away
+            elif method.startswith('Item') or method.startswith('Trade') or 'Item' in method:
                 self._gate = f'{method} {self.D.nm(param) if param else ""}'.strip()
             cur, cf = nxt, nform
         return cur, cf, '; '.join(path)

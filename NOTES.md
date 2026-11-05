@@ -192,3 +192,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   current_box.active_start: last A/B-name reset whose previous entry starts with M–Z; box_audit uses it too.
 - 12 new catches scored (team/new_mons_1424.json): none reach A. Best: Gastrodon West Aevian (Ground/Fairy) 0.552,
   Roselia-Aevian → Roserade-Aevian 0.548 (needs Sun Stone). Rest C/D.
+- Evolution items: Vincent evolves catches immediately if the item exists in Ch1-7 (engine ITEMS_CH1_7: all elemental
+  stones, Upgrade, Reaper Cloth, Sachet, Whipped Dream, Galarica, Apples, Metal Coat). Peat Block, trade evos etc stay gated.
+  Re-scan r16 (22 fights, Lv 55): no Overflow mon reaches A. Roserade-Aevian 0.548, Roserade 0.506, Gothitelle 0.480.
+  Near: Musharna 0.570, Exeggutor-Alola (Leaf Stone) 0.567. Team option: Meganium (Chikorita #55, Lv 25) + Rhyperior for
+  Glalie + Lapras = +1.1%, better in 8/8 weightings but small; not recommended unless he wants to raise Chikorita.
+  Engine only follows each species' first evolution branch (e.g. Eevee → Vaporeon).
