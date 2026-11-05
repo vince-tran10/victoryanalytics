@@ -44,7 +44,10 @@ for tok in re.split(r'(<[^>]+>)', page):
 page = ''.join(out)
 css = '''<style id="pk-css">
 .pk { font-weight: 650; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; text-decoration-color: color-mix(in srgb, currentColor 45%, transparent) }
-.pk-lead { color: var(--accent) } .pk-mid { color: var(--warn) } .pk-closer { color: var(--good) }
+:root { --lead: #1d5fd1; --mid: #b45309; --closer: #a3218f }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --lead: #7aa9ff; --mid: #f5a54a; --closer: #f07fd9 } }
+:root[data-theme="dark"] { --lead: #7aa9ff; --mid: #f5a54a; --closer: #f07fd9 }
+.pk-lead, .role-lead { color: var(--lead) !important } .pk-mid, .role-mid { color: var(--mid) !important } .pk-closer, .role-closer { color: var(--closer) !important }
 strong .pk, h3 .pk { font-weight: inherit }
 .roster .pk { text-decoration: none; font-weight: 500 }
 .roster .pk-lead, .roster .pk-mid, .roster .pk-closer { font-weight: 650 }

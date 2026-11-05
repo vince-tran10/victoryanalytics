@@ -115,3 +115,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   low scores for future value: Zoroark (Ch8 crest), Electrode-Hisui (crest per forum; cut if it doesn't show in Ch8),
   Chandelure & Meowstic (Mega stones, Ch12), Ampharos-Aevian (crest, late), Froslass-Aevian, Sylveon (Hyper Voice at
   9 badges), Porygon-Z, Drapion-Aevian, Tangrowth (backup Rage Powder).
+- 11:33 export: cleanup done (Active 43, starts #372). Vincent also moved Froslass-Aevian and all 5 "maybe"s out.
+  Only Mismagius-Aevian (#398) still in Active. Meowscarada kept on purpose (his starter); removed from cuts.json.
+  Second Annihilape (shadow: Sucker Punch/Explosion/Cross Chop/Swagger) is in Overflow; none of those help the party
+  Ape (Sucker Punch/Explosion aren't in Annihilape's learnset; Cross Chop is Lv 22 relearn-only and weaker than CC).
+- Role colours are now lead blue / mid amber / closer magenta (vars --lead/--mid/--closer in highlight.py).
