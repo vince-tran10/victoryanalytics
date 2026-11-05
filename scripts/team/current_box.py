@@ -20,8 +20,17 @@ def disp(n):
              .replace(' (Lunatone Dominant Fusion)', '-Idol').replace(' (Solrock Dominant Fusion)', '-Idol'))
 
 
+def party_size(N):
+    """Party = entries before the Overflow A-Z run (first 'A…' name that sorts below the entry before it)."""
+    for i in range(1, min(7, len(N))):
+        if N[i]['species'][:1].upper() == 'A' and N[i]['species'].lower() < N[i - 1]['species'].lower():
+            return i
+    return 6
+
+
 def active_start(N):
-    for i in range(7, len(N)):
+    P = party_size(N)
+    for i in range(P + 1, len(N)):
         if N[i]['species'].lower() < N[i - 1]['species'].lower() and all(
                 N[j - 1]['species'].lower() <= N[j]['species'].lower() for j in range(i + 1, len(N))):
             return N[i]['n']
@@ -43,7 +52,7 @@ def current_rows(new_export, old_export, f11):
     act = active_start(N)
     rows = []
     for d in N:
-        d['box'] = 'Party' if d['n'] <= 6 else ('Active' if d['n'] >= act else 'Overflow')
+        d['box'] = 'Party' if d['n'] <= party_size(N) else ('Active' if d['n'] >= act else 'Overflow')
         ents = by_sp.get(d['species']) or by_final.get(d['species']) or []
         if not ents:
             rows.append(dict(d, final=d['species'], score=None)); continue

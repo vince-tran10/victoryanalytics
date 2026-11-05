@@ -163,3 +163,14 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Slowking-Galar (knows Trick Room), Palossand. Near misses: Swampert (Water/Ground role covered), Slowking (Slowbro),
   Musharna (Musharna-Aevian); gated: Ursaluna (Peat Block), Exeggutor-Alola (Leaf Stone), Nidoking (Moon Stone).
 - Runerigus = optional cut once Golurk/Palossand are promoted (cuts.json "maybe").
+
+## 13:29 export: team rebuild review
+- Party = Golisopod only (Vincent emptied it to re-pick). Party size is now auto-detected (current_box.party_size: the
+  Overflow run starts at the first 'A…' name that sorts below the previous entry). run.py still takes PARTY_N env.
+- 6 of 7 promotions landed with exact builds (Golurk in Active; a second Golett stays in Overflow). Runerigus → Overflow.
+- Search (Party+Active only: POOL_NO_OVERFLOW=1, Lv 55, relearn): r14_*.json, f14_*.json. Best six = same six
+  (native 1.357, singles 1.250, doubles 1.465). Chandelure-for-Gholdengo ties (1.357; better doubles 1.482, worse singles
+  1.229). Trick Room six (Camerupt + Slowking-Galar) 1.296, clearly worse.
+- Win-con check (alone, Lv 55): Golisopod +2 SD 60/68 one-shots but only 11 first (Spe 77); Annihilape Rage Fist after
+  1 hit 44 (36 first), after 2 hits 54 (44 first), one-shot by only 5/68; Porygon-Z +2 NP 57 (47 first) but 2-shot by
+  53/68. Plan: Annihilape = main win con, Golisopod = backup closer. Slowking-Galar: Power Gem > Venoshock (no Sludge Bomb).

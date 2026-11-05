@@ -14,7 +14,7 @@ loc_rank = {'Party': 0, 'Active': 1, 'Overflow': 2}
 
 def where(m):
     i = m['dump']
-    return 'Party' if i <= 6 else ('Active' if i >= int(os.environ.get('ACTIVE_START', '356')) else 'Overflow')
+    return 'Party' if i <= int(os.environ.get('PARTY_N', '6')) else ('Active' if i >= int(os.environ.get('ACTIVE_START', '356')) else 'Overflow')
 
 
 cands = {}
@@ -96,7 +96,7 @@ for me in cands:
     me['solo_total'] = team_score([me])
 cands.sort(key=lambda m: -m['solo_total'])
 ready = [c for c in cands if not c['gate']]
-pool = ready[:80]
+pool = [c for c in ready if not os.environ.get('POOL_NO_OVERFLOW') or c['src']['where'] != 'Overflow'][:80]
 
 
 def ok(team, c):

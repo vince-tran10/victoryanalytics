@@ -176,7 +176,7 @@ for p in promo:
     now = next((d for d in cur if d['species'] in (p['final'], p['owned']) and d['box'] != 'Overflow'), None)
     src = now or next((d for d in cur if d['n'] == p['n']), None)
     mvs = [m.split(' (Lv')[0] for m in p['moves']]
-    if now and now['species'] == p['final'] and set(mvs) <= set(now['moves']) and now.get('nature') == nat and now.get('ability') == p['ability']:
+    if now and now['species'] == p['final'] and set(mvs) <= set(now['moves']) and now.get('nature') == nat and (now.get('ability') or '').replace('W. ', 'Water ') == p['ability']:
         continue
     have = set(src['moves']) if src else set()
     mv = ''.join(f'<li class="{"" if m in have else "new"}">{E(m)}</li>' for m in mvs)
@@ -257,7 +257,7 @@ for p in promo:
         gaps.append(f"evolve to {p['final']}")
     if now.get('nature') != nat:
         gaps.append(f"nature {now.get('nature')} → {nat} (mint)")
-    if now.get('ability') != p['ability']:
+    if (now.get('ability') or '').replace('W. ', 'Water ') != p['ability']:
         gaps.append(f"ability {now.get('ability')} → {p['ability']}")
     for m, full in zip(mv, p['moves']):
         if m not in now['moves']:
@@ -440,7 +440,8 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
     <div class="panel">
       <h3>Game plan</h3>
       <ul>
-        <li><strong class="role-lead">Lead</strong> Annihilape + Gholdengo for fast damage. Annihilape wants to take a hit: every hit makes Rage Fist 50 stronger. Sucker Punch finishes weakened fast foes, like Typhlosion before Eruption.</li>
+        <li><strong>Two win conditions.</strong> Annihilape is the main one: fast, hard to one-shot (only 5 of 68 boss mons can), and no setup turn needed. Once it has been hit, Rage Fist one-shots 44 of 68, and 54 after two hits. Golisopod is the backup closer for the slow, bulky mons Ape can't finish.</li>
+        <li><strong class="role-lead">Lead</strong> Annihilape + Gholdengo. Let Ape take a hit, then Rage Fist. Sucker Punch picks off weakened fast foes, like Typhlosion before Eruption.</li>
         <li><strong class="role-mid">Mid</strong> Rhyperior handles Fire and fliers. Glaceon's Icy Wind slows the back line.</li>
         <li><strong class="role-closer">Closer</strong> Leavanny uses Rage Powder, Golisopod uses Swords Dance, then sweeps. In singles, Golisopod sets up on a switch-in it walls.</li>
         <li><strong>Only the lead changes, never the six.</strong> Eli &amp; Sharon: Rhyperior + Gholdengo lead. Groudon: Glaceon leads and Gholdengo sits out. Giratina: lead the closer pair. Amber: Rhyperior leads. Texen (bring 3): Gholdengo, Annihilape, Golisopod.</li>
