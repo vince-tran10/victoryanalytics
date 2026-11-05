@@ -22,8 +22,11 @@ def disp(n):
 
 def party_size(N):
     """Party = entries before the Overflow A-Z run (first 'A…' name that sorts below the entry before it)."""
+    def sorted_run(i, n=15):
+        xs = [d['species'].lower() for d in N[i:i + n]]
+        return len(xs) == n and all(a <= b for a, b in zip(xs, xs[1:]))
     for i in range(1, min(7, len(N))):
-        if N[i]['species'][:1].upper() == 'A' and N[i]['species'].lower() < N[i - 1]['species'].lower():
+        if N[i]['species'][:1].upper() == 'A' and sorted_run(i):
             return i
     return 6
 

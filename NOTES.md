@@ -242,3 +242,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   the old #101 tag landed on Farfetch'd after renumbering), cuts. Saved to workspace/team/actions.json; box_audit
   highlights exactly those rows red (no tags) and the To do list carries the same items. Tier-list "Party" badge = the
   ideal six (section 01), not the current party. "Since last export" is split into columns by change type.
+- 15:54 export: party = the ideal six, fully built; to-do empty, no red rows. party_size() now needs a 15-entry A–Z run (an 'A' name like Azumarill in the party had been mistaken for the Overflow start).
