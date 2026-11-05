@@ -197,6 +197,8 @@ class Engine:
             fm *= field['priority']
         if battle['key'] == 'groudon':  # Drought sun
             fm *= 1.5 if mtype == 'FIRE' else 0.5 if mtype == 'WATER' else 1.0
+        if mid in ('FLOWERTRICK', 'FROSTBREATH', 'STORMTHROW', 'ZIPPYZAP'):
+            fm *= 1.5   # always a critical hit
         if att_is_me and ab == 'GRASSYSURGE' and mtype == 'GRASS':
             fm *= 1.3   # Grassy Terrain on entry
         mult *= fm
