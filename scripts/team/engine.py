@@ -315,7 +315,7 @@ class Engine:
                 legal.add(mid)
             elif method == 'Egg':
                 legal.add(mid)
-            elif self.move_rules == 'ch7' and method == 'TM' and detail in self.allowed_tms:
+            elif self.move_rules in ('ch7', 'ch7_notutor') and method == 'TM' and detail in self.allowed_tms:
                 legal.add(mid)
             elif self.move_rules == 'ch7' and method == 'Tutor' and detail in ALLOWED_TUTORS:
                 legal.add(mid)

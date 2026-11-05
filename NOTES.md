@@ -77,3 +77,8 @@ cloud environment: rejuvenation.wiki.gg, bigjra.github.io, www.rebornevo.com, po
 1. Make the team changes in game (report section 01), then do the to-do list (section 03).
 2. End of Chapter 8: send a new export; review Chapter 8 pickups (Rock Blast TM134 for Golisopod, Zoroark/Electrode Crests,
    Shadow Tatsugiri, Akuwa tutors) and re-run for Chapter 9 (Trick Room arrives).
+
+## Standing procedure for every new export (Vincent's request, 11-05)
+Report: (1) new mons since the previous export, (2) Active-box yes/no (tier vs Active median ~0.50, weakest ~0.2-0.3),
+(3) for keepers: ability, nature, EVs, 4 moves. Move rules for this check: level-up <= 55, Egg, Ch1-7 TMs, known moves
+(no tutors). Run from workspace/: `MOVE_RULES=ch7_notutor python3 -I ../scripts/team/new_mons.py "$PWD" team/<old roster>.json team/<new roster>.json team/new_mons_<date>.json`
