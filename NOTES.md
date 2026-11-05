@@ -19,7 +19,7 @@ Read this first in a new session. It's the current state as of **2026-11-05, aft
 ## Current recommendation (one six, singles and doubles)
 | Role | Pokémon | Ability | Nature | EVs | Item | Moves | Change in game |
 |---|---|---|---|---|---|---|---|
-| Lead | Annihilape | Defiant | Adamant | 252 Atk / 252 Spe / 4 HP | Black Belt | Close Combat, Shadow Punch, Fire Punch, Protect | done |
+| Lead | Annihilape | Defiant | Adamant | 252 Atk / 252 Spe | Black Belt | Close Combat, Shadow Punch, **Sucker Punch**, Protect | teach Sucker Punch over Fire Punch (Vincent can teach it) |
 | Lead | Gholdengo | Good as Gold | Modest | 252 HP / 252 SpA / 4 SpD | Metal Coat | Make It Rain, Shadow Ball, Recover, Protect | none |
 | Mid | Rhyperior | Solid Rock | Adamant | 252 HP / 252 Atk / 4 SpD | **Hard Stone** | Stone Edge (learns at Lv 54 naturally), Headlong Rush, Slack Off, Protect | item: Focus Sash → Hard Stone (from Lapras) |
 | Mid | Glaceon | Ice Body | Modest | 252 HP / 252 SpA / 4 SpD | Never-Melt Ice | Freeze-Dry, Blizzard, Icy Wind, Protect | done |
@@ -120,3 +120,10 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Second Annihilape (shadow: Sucker Punch/Explosion/Cross Chop/Swagger) is in Overflow; none of those help the party
   Ape (Sucker Punch/Explosion aren't in Annihilape's learnset; Cross Chop is Lv 22 relearn-only and weaker than CC).
 - Role colours are now lead blue / mid amber / closer magenta (vars --lead/--mid/--closer in highlight.py).
+
+## State at 11:44 export (last sheet before Vincent plays through Chapter 8)
+- Party unchanged; Active box 42 (starts #373), Overflow 366. Box cleanup complete (Mismagius-Aevian moved).
+- Open to-dos: Annihilape Sucker Punch replaces Fire Punch (same 38/68 one-shots, +1 moving first: Gengar; Fire Punch had
+  no unique KOs); Rhyperior Stone Edge at Lv 54.
+- Next time: end-of-Chapter-8 export → run the standing procedure (new mons, promote scan, cut list), then review
+  Chapter 8 pickups (Rock Blast TM134, Zoroark crest, Akuwa tutors) and re-run for Chapter 9 (Trick Room).

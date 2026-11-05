@@ -51,7 +51,7 @@ def disp(n):
 # (role, name, types, ability, nature, evs, item, moves[(move, is_new)], change notes)
 TEAM = [
     ('Lead', 'Annihilape', 'Fighting/Ghost', 'Defiant', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Black Belt',
-     [('Close Combat', 0), ('Shadow Punch', 0), ('Fire Punch', 0), ('Protect', 0)], []),
+     [('Close Combat', 0), ('Shadow Punch', 0), ('Sucker Punch', 0), ('Protect', 0)], []),
     ('Lead', 'Gholdengo', 'Steel/Ghost', 'Good as Gold', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Metal Coat',
      [('Make It Rain', 0), ('Shadow Ball', 0), ('Recover', 0), ('Protect', 0)], []),
     ('Mid', 'Rhyperior', 'Ground/Rock', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone',
@@ -64,12 +64,13 @@ TEAM = [
     ('Closer', 'Leavanny-Aevian', 'Bug/Dragon', 'Intimidate', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Focus Sash',
      [('Rage Powder', 0), ('X-Scissor', 0), ('Dragon Claw', 0), ('Protect', 0)], []),
 ]
-JOB = {'Annihilape': 'Fastest hitter. Breaks Dark, Normal and Steel; Defiant punishes Intimidate.',
+JOB = {'Annihilape': 'Fastest hitter.',
        'Gholdengo': 'Make It Rain hits both foes (1.5x on Big Top). Immune to status moves.',
        'Rhyperior': 'Resists Fire. Stone Edge (Hard Stone, 1.5x on Mountain and Volcanic Top) deals with Fire mons and fliers.',
        'Glaceon': 'Icy Wind slows the back line for Golisopod. Freeze-Dry and Blizzard are your Groudon answer.',
        'Golisopod-Aevian': 'Win condition. Skill Link makes Bone Rush and Pin Missile 125 power. After one Swords Dance it one-shots 60 of 68 boss mons.',
        'Leavanny-Aevian': 'Rage Powder pulls attacks so Golisopod gets a free Swords Dance; Focus Sash guarantees it survives that turn. Intimidate on entry.'}
+REPL = {('Annihilape', 'Sucker Punch'): 'Fire Punch: priority hit on faster foes; Fire Punch had no unique one-shots'}
 LATER = {('Rhyperior', 'Stone Edge'): 'Stone Edge comes at Lv 54 on its own (Rhyperior is Lv {lv}); replace Rock Slide then'}
 
 
@@ -87,7 +88,7 @@ def verify(name, ab, nat, evs, item, moves):
         out.append(f"Nature: {d.get('nature')} → {nat} (mint)")
     for m, _ in moves:
         if m not in d['moves']:
-            out.append(LATER.get((name, m), f'Teach {m}').format(lv=d['level']))
+            out.append(LATER.get((name, m), f'Teach {m}' + (f' (replaces {REPL[(name, m)]})' if (name, m) in REPL else '')).format(lv=d['level']))
     return out
 
 
@@ -378,7 +379,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
     <div class="panel">
       <h3>Game plan</h3>
       <ul>
-        <li><strong class="role-lead">Lead</strong> Annihilape + Gholdengo for fast damage. Remove Typhlosion before Eruption fires.</li>
+        <li><strong class="role-lead">Lead</strong> Annihilape + Gholdengo for fast damage. Remove Typhlosion before Eruption fires; Sucker Punch finishes weakened fast foes first.</li>
         <li><strong class="role-mid">Mid</strong> Rhyperior handles Fire and fliers. Glaceon's Icy Wind slows the back line.</li>
         <li><strong class="role-closer">Closer</strong> Leavanny uses Rage Powder, Golisopod uses Swords Dance, then sweeps. In singles, Golisopod sets up on a switch-in it walls.</li>
         <li><strong>Only the lead changes, never the six.</strong> Eli &amp; Sharon: Rhyperior + Gholdengo lead. Groudon: Glaceon leads and Gholdengo sits out. Giratina: lead the closer pair. Amber: Rhyperior leads. Texen (bring 3): Gholdengo, Annihilape, Golisopod.</li>
