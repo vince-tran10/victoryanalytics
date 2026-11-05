@@ -91,3 +91,91 @@ def load_battles(base):
 if __name__ == '__main__':
     for b in load_battles(sys.argv[1]):
         print(b['key'], b['field'], len(b['mons']), [m['specie'] for m in b['mons']])
+
+
+# ---------------------------------------------------------------- BIGJRA walkthrough (Classic Mode) version
+FIELD.update({
+    'Deep Earth Field': {'types': {'ROCK': 1.3, 'PSYCHIC': 1.3}, 'moves': {}, 'ground_vs_nonground': 1.5, 'gravity': True,
+                         'priority': 0.7},
+    'Beach Field': {'types': {}, 'moves': {'MUDBOMB': 2, 'MUDSHOT': 2, 'MUDSLAP': 2, 'SANDTOMB': 2, 'BRINE': 1.5,
+                                           'CRABHAMMER': 1.5, 'MUDDYWATER': 1.5, 'RAZORSHELL': 1.5, 'SURF': 1.5,
+                                           'SCORCHINGSANDS': 1.5, 'WAVECRASH': 1.5, 'FOCUSBLAST': 1.3, 'AURASPHERE': 1.3,
+                                           'ZENHEADBUTT': 1.3, 'PSYCHIC': 1.2}},
+    'Volcanic Top': None,
+})
+FIELD['Volcanic Top'] = FIELD['Volcanic Top Field']
+FIELD['Mountain Field'] = FIELD['Mountain']
+
+# (match in trainer header, key, label, field, format, weight, notes)
+WALK = [
+    ('Pseudo Sensei Texen', 'texen', 'Texen (Fighting gym) – Sheridan', 'Big Top Arena', 'Doubles', 1.0,
+     'Multi battle: you bring 3, Aelita brings Staraptor/Blaziken/Hawlucha. High Striker physical Fighting & slam moves roll 0.5x–3x; Swords Dance +3, Dragon Dance +2/+2, Sing never misses; Make It Rain & Acrobatics 1.5x.'),
+    ('Ancient Guard Escavalier', 'guard1', 'Ancient Guard #1 (Gravity/Trick Room) – Garufa Sanctuary (Adam path)', 'Deep Earth Field', 'Singles', 0.5,
+     'Only if you brought Adam. Gravity + Trick Room team. Deep Earth: Ground 1.5x vs non-Ground, Rock & Psychic 1.3x, Gravity always on (Levitate/Flying get hit by Ground), priority moves 0.7x.'),
+    ('Ancient Guard Escavalier#2', 'guard2', 'Ancient Guard #2 (Rock team) – Garufa Sanctuary (Adam path)', 'Deep Earth Field', 'Singles', 0.5,
+     'Only if you brought Adam. Tyranitar/Gigalith sand; Matrix Shot on most of them.'),
+    ('Team Xen Tommen', 'tommen', 'Tommen – Garufa Sanctuary', 'Deep Earth Field', 'Singles', 0.6,
+     'Bronzong, Coalossal, Salazzle (Corrosion), Perrserker.'),
+    ('Behemoth Groudon', 'groudon', 'Behemoth Groudon (boss) – Garufa Sanctuary', 'Deep Earth Field', 'Singles', 1.0,
+     'Boss, 1 shield, Drought sun. Its Earthquake gets Deep Earth\'s 1.5x vs non-Ground; Ground types resist Ground here. Water is halved in sun.'),
+    ('Head Ranger Crawli', 'crawli', 'Crawli (Head Ranger) – Jynnobi Pass', 'Swamp Field', 'Doubles', 1.0,
+     'Bug/Grass/Water 1.3x, Fire 0.8x, Earthquake/Bulldoze 0.25x; grounded mons lose 1 Speed every turn; Sticky Web lead.'),
+    ('Xen Executive Neved', 'neved', 'Neved (optional) – Valor Shore', 'Beach Field', 'Singles', 0.5,
+     'Only if you choose "We win and save Nim". Beach: Surf/Muddy Water/Razor Shell/Crabhammer 1.5x, mud moves 2x, Aura Sphere/Focus Blast/Zen Headbutt 1.3x.'),
+    ('Misfortunate Duo', 'eli', 'Eli & Sharon (10 mons) – Valor Cliffside', 'Mountain Field', 'Doubles', 1.2,
+     'Venam is your partner. Rock & Flying 1.5x, Hyper Voice/Icy Wind/Thunder 1.5x (Thunder never misses).'),
+    ('Professor Jenner', 'jenner', 'Jenner – Valor Summit', 'Volcanic Top', 'Singles', 0.6,
+     '6v4. Catch his Shadow Tatsugiri. Volcanic Top: Fire/Flying/Rock 1.5x, Ice 0.5x, Surf/Muddy Water 0.5x.'),
+    ('Xen Executive Geara', 'geara', 'Geara & Zetta (12 mons) – Valor Summit', 'Volcanic Top Field', 'Doubles', 1.5,
+     'Melia is your partner. Fire/Flying/Rock 1.5x (Rock gains Fire), Ice 0.5x, Water 0.9x, Surf/Muddy Water/Hydro Pump/Water Spout 0.5x; Earthquake/Earth Power cause eruptions (1/8 to non-Fire).'),
+    ('Taken Tyrant', 'giratina', 'Rift Giratina (boss) – Rift Distortion', 'Wasteland', 'Doubles', 1.0,
+     'Boss Rift Giratina (Ghost/Poison) + crested Relicanth + crested Swalot. Hazards are consumed (Spikes 1/3 HP per layer); Earthquake 0.25x; sludge moves 1.2x.'),
+    ('Music Enthusiast Amber', 'amber', 'Amber (Lyric Badge gym) – Club STFU', 'Concert Venue', 'Singles', 1.0,
+     'Sound 1.5x; starts at No Hype (minimum rolls). All-Fire team.'),
+]
+
+
+def _evs(s):
+    s = (s or '').replace('EVs:', '').strip()
+    order = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe']
+    m = re.match(r'All (\d+)', s)
+    if m:
+        return ';'.join([m.group(1)] * 6)
+    d = dict((k, int(v)) for v, k in re.findall(r'(\d+) (HP|Atk|Def|SpA|SpD|Spe)', s))
+    return ';'.join(str(d.get(k, 0)) for k in order) if d else ''
+
+
+def load_battles_walk(base):
+    ev = json.load(open(f'{base}/team/walk_ch8.json'))
+    trainers = [e for e in ev if e['type'] == 'trainer']
+    out = []
+    used = set()
+    for match, key, label, field, fmt, weight, notes in WALK:
+        want_second = match.endswith('#2')
+        mt = match.replace('#2', '')
+        hits = [i for i, t in enumerate(trainers) if mt in t['trainer'] and 'Partner' not in t['trainer']]
+        if not hits:
+            continue
+        idx = hits[1] if want_second and len(hits) > 1 else hits[0]
+        # if the same trainer appears twice in the chapter (e.g. two difficulty sets), keep the bigger / higher one
+        if not want_second and len(hits) > 1 and key not in ('guard1',):
+            idx = max(hits, key=lambda i: (len(trainers[i]['mons']), max(m['level'] or 0 for m in trainers[i]['mons'])))
+        t = trainers[idx]
+        mons = []
+        for m in t['mons']:
+            name = re.sub(r'^(Boss|Shadow|SOS)\s+', '', m['name']).strip()
+            shields = re.search(r'Shields:\s*(\d+)', m['form'] or '')
+            base_override = None
+            if m['base']:
+                vals = [int(x) for x in re.findall(r'(\d+) (?:HP|Atk|Def|SpA|SpD|Spe)', m['base'])]
+                if len(vals) == 6:
+                    base_override = vals
+            mons.append({'specie': name, 'level': m['level'], 'types': (m['typing'] or '').lower(),
+                         'ability': (m['ability'] or '').split('/')[0], 'nature': m['nature'], 'heldItem': m['item'],
+                         'evs': _evs(m['evs']), 'boss': m['name'].startswith('Boss'),
+                         'shields': shields.group(1) if shields else '', 'form_text': m['form'],
+                         'base_override': base_override,
+                         **{f'move{i + 1}': f'{mv};;' for i, mv in enumerate(m['moves'][:4])}})
+        out.append(dict(key=key, label=label, field=field, format=fmt, weight=weight, notes=notes, mons=mons,
+                        trainer=t['trainer']))
+    return out

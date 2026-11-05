@@ -10,7 +10,7 @@ import json, math, os, re, sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from dataset import Data
 from recommend import (move_base_value, ability_move_mult, ability_stat_mult, EXCLUDE, TWO_TURN, type_eff as _te)
-from bosses import load_battles, FIELD, HIGH_STRIKER
+from bosses import load_battles, load_battles_walk, FIELD, HIGH_STRIKER
 
 CAP = 55
 STATS = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe']
@@ -64,10 +64,12 @@ class Engine:
             self.byname.setdefault(v['MoveName'].lower(), k)
         self.byname.update({'stomp tantrum': 'STOMPINGTANTRUM', 'lightiningrod': 'LIGHTNINGROD'})
         self.rev = {v: k for k, v in self.D.names.items() if isinstance(v, str) and k in self.D.sp}
-        self.battles = load_battles(base)
+        self.battles = load_battles_walk(base) if os.environ.get('WALK', '1') == '1' else load_battles(base)
         for b in self.battles:
             b['foes'] = [self.build_foe(m, b) for m in b['mons']]
             b['foe_intimidate'] = any(f['ability'] == 'INTIMIDATE' for f in b['foes'])
+            if os.environ.get('FORCE_FORMAT') in ('Singles', 'Doubles'):
+                b['format'] = os.environ['FORCE_FORMAT']
 
     # ------------------------------------------------------------ helpers
     def chart_eff(self, atk_type, def_types):
@@ -96,6 +98,17 @@ class Engine:
                 types = [x for x in [f.get('Type1'), f.get('Type2')] if x]
         else:
             bs = {s: 90 for s in STATS}
+        if m.get('base_override'):
+            bs = dict(zip(STATS, m['base_override']))
+        reg = next((r for r in ('Alolan', 'Galarian', 'Hisuian', 'Paldean', 'Aevian') if r in (m.get('form_text') or '')), None)
+        if reg and sid and not m.get('base_override'):
+            for k in [k for k in self.D.sp[sid] if k.isdigit()]:
+                f = self.D.form(sid, k)
+                if reg in (f.get('FormName') or ''):
+                    form = k; bs = dict(zip(STATS, f['BaseStats']))
+                    types = [x for x in [f.get('Type1'), f.get('Type2')] if x]
+        if name == 'Silvally' and 'Memory' in (m.get('heldItem') or ''):
+            types = [m['heldItem'].split()[0].upper()]
         if name == 'Minior':
             bs = {'HP': 60, 'Atk': 60, 'Def': 100, 'SpA': 60, 'SpD': 100, 'Spe': 60}  # Meteor form until 50% HP
         evs_raw = m.get('evs') or ''
@@ -161,6 +174,10 @@ class Engine:
             fm *= 2.47 if ab in ('GUTS', 'HUGEPOWER', 'PUREPOWER', 'SHEERFORCE') else 1.33
         if battle['field'] == 'Corrupted Cave' and battle.get('sun'):
             pass
+        if field.get('ground_vs_nonground') and mtype == 'GROUND':
+            fm *= field['ground_vs_nonground'] if 'GROUND' not in dfn['types'] else 0.5
+        if field.get('priority') and int(mv.get('Priority') or 0) > 0:
+            fm *= field['priority']
         if battle['key'] == 'groudon':  # Drought sun
             fm *= 1.5 if mtype == 'FIRE' else 0.5 if mtype == 'WATER' else 1.0
         mult *= fm
@@ -202,9 +219,16 @@ class Engine:
         if dfn.get('item') == 'Eviolite':
             Dv *= 1.5
         # type effectiveness + immunities
-        eff = self.chart_eff(mtype, dfn['types'])
+        gravity = field.get('gravity')
+        eff = self.chart_eff(mtype, [t for t in dfn['types'] if not (gravity and mtype == 'GROUND' and t == 'FLYING')])
         dab = dfn['ability']
-        if FOE_ABIL_IMMUNE.get(dab) == mtype or (mtype == 'GROUND' and dfn.get('item') == 'Air Balloon'):
+        if gravity and mtype == 'GROUND' and dab == 'LEVITATE':
+            dab = ''
+        if FOE_ABIL_IMMUNE.get(dab) == mtype or (mtype == 'GROUND' and dfn.get('item') == 'Air Balloon' and not gravity):
+            eff = 0
+        if dfn.get('item') == 'Whiscash Crest' and mtype == 'GRASS':
+            eff = 0
+        if dfn.get('item') == 'Skuntank Crest' and mtype == 'GROUND':
             eff = 0
         if dab == 'GOODASGOLD' and cat == 'Status':
             eff = 0

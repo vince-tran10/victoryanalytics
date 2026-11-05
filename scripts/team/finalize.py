@@ -40,7 +40,13 @@ SUPPORT_ORDER = ['FAKEOUT', 'FOLLOWME', 'RAGEPOWDER', 'SPORE', 'WILLOWISP', 'ICY
                  'KNOCKOFF', 'STEALTHROCK']
 
 
+OVERRIDE = json.loads(os.environ.get('MOVES', '{}'))
+NAT_OVERRIDE = json.loads(os.environ.get('NATURES', '{}'))
+
+
 def full_moveset(m):
+    if m['name'] in OVERRIDE:
+        return OVERRIDE[m['name']]
     atk = list(m['attacks'])
     legal = m['legal']
     out = [moves[x]['MoveName'] for x in atk]
@@ -115,11 +121,26 @@ def why(m):
 
 
 best = d['best']
+if os.environ.get('TEAM'):
+    want = os.environ['TEAM'].split('|')
+    pick = []
+    for n in want:
+        xs = [c for c in d['cands'] if c['name'] == n and not c.get('ability_changed')] or [c for c in d['cands'] if c['name'] == n]
+        pick.append(max(xs, key=lambda c: (c['src']['where'] != 'Overflow', c['solo_total'])))
+    best = pick
 current = d['current']
 cands = d['cands']
 ready = [c for c in cands if not c['gate']]
 
 # re-score with the exact movesets shown: recommended six = final sets, current party = moves it runs today
+import engine as _eng
+_orig_spread = E.spread_for
+def _spread(me):
+    if me['name'] in NAT_OVERRIDE:
+        o = NAT_OVERRIDE[me['name']]
+        return o['cat'], o['evs'], o['nature']
+    return _orig_spread(me)
+E.spread_for = _spread
 for m in best:
     m['final_moves'] = full_moveset(m)
     ids = {E.move_id(x) for x in m['final_moves']}
