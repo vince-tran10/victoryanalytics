@@ -14,7 +14,7 @@ loc_rank = {'Party': 0, 'Active': 1, 'Overflow': 2}
 
 def where(m):
     i = m['dump']
-    return 'Party' if i <= 6 else ('Active' if i >= 356 else 'Overflow')
+    return 'Party' if i <= 6 else ('Active' if i >= int(os.environ.get('ACTIVE_START', '356')) else 'Overflow')
 
 
 cands = {}
