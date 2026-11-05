@@ -28,7 +28,7 @@ for mode in ['native', 'Singles', 'Doubles']:
     core = [get(n) for n in ['Golisopod (Aevian Form)', 'Annihilape', 'Rhyperior', 'Gholdengo']]
     ready = [c for c in cands if not c['gate'] and not c.get('ability_changed') and all(c['sid'] != k['sid'] for k in core)]
     ready.sort(key=lambda c: -tscore(core + [c]))
-    force = {'Hariyama', 'Arcanine', 'Whiscash', 'Wyrdeer', 'Tangrowth', 'Meganium', 'Lapras (Aevian Form)', 'Glaceon', 'Sylveon', 'Jellicent', 'Leavanny (Aevian Form)', 'Ludicolo', 'Appletun'}
+    force = {'Hariyama', 'Arcanine', 'Whiscash', 'Wyrdeer', 'Tangrowth', 'Meganium', 'Lapras (Aevian Form)', 'Glaceon', 'Sylveon', 'Jellicent', 'Leavanny (Aevian Form)', 'Ludicolo', 'Appletun', 'Glalie (Aevian Form)'}
     pool = ready[:30] + [c for c in ready[30:] if c['name'] in force]
     for c in pool: LV[c['name']] = c['src'].get('level')
     out = {}

@@ -70,6 +70,7 @@ class Engine:
         self.move_rules = os.environ.get('MOVE_RULES', 'strict')
         try:
             self.allowed_tms = set(json.load(open(f'{base}/team/allowed_tms.json'))['tms'])
+            self.allowed_tms |= set(x for x in os.environ.get('EXTRA_TMS', '').split(',') if x)
         except OSError:
             self.allowed_tms = set()
         self.battles = load_battles_walk(base) if os.environ.get('WALK', '1') == '1' else load_battles(base)
@@ -161,6 +162,14 @@ class Engine:
         p, _ = move_base_value(mid, mv, ctx)
         if p <= 0:
             return 0.0
+        # accuracy: move_base_value folds accuracy into p; correct it for No Guard and Gravity (Deep Earth, 1.67x in Rejuv)
+        acc = int(mv.get('Accuracy') or 0)
+        if 0 < acc < 100:
+            accf = acc / 100
+            if att.get('ability') == 'NOGUARD' or dfn.get('ability') == 'NOGUARD':
+                p = p / accf
+            elif FIELD.get(battle['field'], {}).get('gravity'):
+                p = p / accf * min(1.0, accf * 1.67)
         mtype = mv['Type']
         mult = 1.0
         ab = att['ability']
@@ -188,6 +197,8 @@ class Engine:
             fm *= field['priority']
         if battle['key'] == 'groudon':  # Drought sun
             fm *= 1.5 if mtype == 'FIRE' else 0.5 if mtype == 'WATER' else 1.0
+        if att_is_me and ab == 'GRASSYSURGE' and mtype == 'GRASS':
+            fm *= 1.3   # Grassy Terrain on entry
         mult *= fm
         # stats
         am_stat = ability_stat_mult(ab) if att_is_me else (1, 1, 1)

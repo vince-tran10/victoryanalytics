@@ -105,3 +105,59 @@ CHECKLIST = '''
     </div>
   </div>
 </section>'''
+
+AEVIAN_HTML = '''
+<section aria-labelledby="aev">
+  <h2 id="aev">What makes your Aevian forms strong</h2>
+  <p class="legend">For each Aevian (and Idol fusion) you own: the perk that sets it apart, the moves that make the most of it, and how the analysis scores it. Multi-hit moves are 25 power per hit, so 5 hits = 125 power.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Pokémon</th><th>Main perk</th><th>Moves that make the most of it</th><th>How it's scored / verdict</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Golisopod-Aevian</strong><div class="chips"><span class="type" style="background:#A6B91A;color:#1c2003">Bug</span><span class="type" style="background:#E2BF65;color:#2b2208">Ground</span></div></td>
+        <td><strong>Skill Link</strong>: every 2–5-hit move hits 5 times. It also loses regular Golisopod's Emergency Exit drawback and becomes Bug/Ground, which makes it immune to Electric.</td>
+        <td><strong>Bone Rush</strong> (Ground STAB, 1.5x on Deep Earth), <strong>Pin Missile</strong> (Bug STAB), <strong>Rock Blast</strong> (TM134, Valor Mountain, Chapter 8) for Fire/Flying/Ice. Then Swords Dance or Protect. Accuracy is 90–95%; Deep Earth's Gravity makes it near-perfect.</td>
+        <td>Skill Link 5-hit maths is applied. Rock Blast adds 5 OHKOs (51 → 56). <strong>Core: 8 of 8 runs.</strong></td></tr>
+      <tr><td><strong>Lapras-Aevian</strong><div class="chips"><span class="type" style="background:#B6A136;color:#221d05">Rock</span><span class="type" style="background:#F95587;color:#2e0414">Psychic</span></div></td>
+        <td><strong>No Guard</strong>: its moves never miss (and nor do moves aimed at it). 135 HP.</td>
+        <td><strong>Sing</strong> (never misses), <strong>Rock Blast</strong> (TM134, never misses), Dragon Dance (Egg), Zen Headbutt. Stone Edge (Lv 65) and Zap Cannon come later; Zap Cannon becomes 100% paralysis with No Guard.</td>
+        <td>No Guard accuracy is <em>now</em> applied (it wasn't before), so Lapras rose: in 4 of 8 runs. Bench / Texen option.</td></tr>
+      <tr><td><strong>Glalie-Aevian</strong><div class="chips"><span class="type" style="background:#7AC74C;color:#132608">Grass</span><span class="type" style="background:#B6A136;color:#221d05">Rock</span></div></td>
+        <td><strong>Rock Head</strong>: no recoil. <strong>Grassy Surge</strong> sets Grassy Terrain (Grass 1.3x, priority Grassy Glide).</td>
+        <td>Rock Head: <strong>Wood Hammer</strong>, Double-Edge, Head Smash later, with no recoil. Plus <strong>Rock Blast</strong> (TM134). Grassy Surge: Grassy Glide.</td>
+        <td>Rock Head and Grassy Surge are applied. Strong alone (6 of 8 runs) but overlaps with Rhyperior on Rock. <strong>Best alternative</strong> for slot 5 or 6.</td></tr>
+      <tr><td><strong>Leavanny-Aevian</strong><div class="chips"><span class="type" style="background:#A6B91A;color:#1c2003">Bug</span><span class="type" style="background:#6F35FC;color:#ffffff">Dragon</span></div></td>
+        <td><strong>Intimidate</strong> on a fast (97 base) attacker, plus a Bug/Dragon typing that resists Fire, Grass, Water and Electric.</td>
+        <td>Swords Dance, X-Scissor, Dragon Claw. Support option: Rage Powder (Lv 32) and Electroweb (Marnie tutor). Scale Shot (TM165) comes later.</td>
+        <td>Intimidate is applied. <strong>In the six.</strong></td></tr>
+      <tr><td><strong>Musharna-Aevian</strong><div class="chips"><span class="type" style="background:#705746;color:#ffffff">Dark</span><span class="type" style="background:#D685AD;color:#2b0c1c">Fairy</span></div></td>
+        <td><strong>Tough Claws</strong> (contact moves 1.3x) on a 116 HP / 107 Atk Dark/Fairy.</td>
+        <td>Play Rough, Throat Chop (both contact). Trick Room arrives around Chapter 9, and players rate it as a Trick Room setter. Lovely Kiss needs the Move Relearner (excluded).</td>
+        <td>Tough Claws is applied. Your Chapter 9 Trick Room upgrade.</td></tr>
+      <tr><td><strong>Drapion-Aevian</strong><div class="chips"><span class="type" style="background:#96D9D6;color:#0d2a29">Ice</span><span class="type" style="background:#A33EA1;color:#ffffff">Poison</span></div></td>
+        <td><strong>Fur Coat</strong>: physical damage taken is halved.</td>
+        <td>Icicle Spear (Lv 1, multi-hit), Ice Fang, Poison Jab, Knock Off. Shelter (Egg).</td>
+        <td>Fur Coat is applied. Solid physical wall, but Ice/Poison is weak to Fire, Ground, Rock and Steel this chapter.</td></tr>
+      <tr><td><strong>Ampharos-Aevian</strong><div class="chips"><span class="type" style="background:#96D9D6;color:#0d2a29">Ice</span><span class="type" style="background:#F7D02C;color:#2b2300">Electric</span></div></td>
+        <td><strong>Filter</strong> (super-effective hits 0.75x). Its crest comes much later (.Karma Files).</td>
+        <td>Discharge, Icy Wind, Power Gem. Players call it "a Trick Room god" once crested.</td>
+        <td>Filter is applied. Later-game pick.</td></tr>
+      <tr><td><strong>Mismagius-Aevian</strong><div class="chips"><span class="type" style="background:#7AC74C;color:#132608">Grass</span><span class="type" style="background:#735797;color:#ffffff">Ghost</span></div></td>
+        <td><strong>Magic Bounce</strong> reflects status and hazards. Fast mixed attacker (105/105/105).</td>
+        <td>Shadow Ball, Giga Drain.</td>
+        <td>Damage is scored. Magic Bounce's reflection can't be scored, so it's slightly undervalued.</td></tr>
+      <tr><td><strong>Palossand (Icy Aevian)</strong><div class="chips"><span class="type" style="background:#735797;color:#ffffff">Ghost</span><span class="type" style="background:#96D9D6;color:#0d2a29">Ice</span></div></td>
+        <td><strong>Bulletproof</strong> blocks ball and bomb moves. High Defense.</td>
+        <td>Freeze-Dry, Shadow Ball, Giga Drain.</td>
+        <td>Bulletproof is applied. Players rate it the weakest Aevian; bench.</td></tr>
+      <tr><td><strong>Unfezant-Aevian</strong><div class="chips"><span class="type" style="background:#B6A136;color:#221d05">Rock</span><span class="type" style="background:#C22E28;color:#ffffff">Fighting</span></div></td>
+        <td><strong>Sturdy / Defiant / Rock Head</strong>. Fast (98 base) Rock/Fighting.</td>
+        <td>Rock Slide, Brick Break, Rock Blast (Lv 55 or TM134).</td>
+        <td>Applied. Outclassed by Rhyperior and Annihilape here.</td></tr>
+      <tr><td><strong>Lunatone / Solrock Idol</strong> (fusions)</td>
+        <td><strong>Lunar Idol / Solar Idol</strong>: Levitate, plus 1.5x Ice or Fire moves and a stat boost in hail or sun.</td>
+        <td>Lunatone: Psychic, Icy Wind, Ancient Power. Solrock: Stone Edge, Zen Headbutt.</td>
+        <td>Both idol abilities are applied. Good situational picks (Solrock in Groudon's sun).</td></tr>
+    </tbody>
+  </table></div>
+  <p class="legend">What I fixed this round: No Guard accuracy (Lapras), Grassy Surge (Glalie) and Deep Earth's Gravity accuracy boost weren't in the damage maths before. They are now, and the team was re-scored. Aevian Froslass (Adaptability) would join this list if you catch a female Aevian Snorunt.</p>
+</section>'''

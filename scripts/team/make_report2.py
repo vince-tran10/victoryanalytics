@@ -25,7 +25,7 @@ def chips(types):
 
 
 ROLE = {
-    'Golisopod (Aevian Form)': ('Win condition', 'Skill Link Bone Rush hits 5 times. That\'s 1.5x more on Deep Earth (Tommen, Guards, Groudon section), and Swords Dance is +3 on Big Top. Slow, so let Tangrowth\'s Rage Powder or Hariyama\'s Fake Out cover it while it sets up.'),
+    'Golisopod (Aevian Form)': ('Win condition · Skill Link', 'Skill Link makes every 2–5-hit move hit 5 times: Bone Rush (Ground STAB), Pin Missile (Bug STAB) and Rock Blast are each 125 power. Grab TM134 Rock Blast on Valor Mountain: it covers the Fire, Flying and Ice mons that threaten Golisopod and adds 5 one-hit KOs. Before Valor (Texen), run Swords Dance in that slot, since it\'s +3 on Big Top.'),
     'Annihilape': ('Fast lead / cleaner', 'The fastest hard hitter you have (155 Speed at cap). Defiant punishes Intimidate (Krookodile, Stoutland). Fire Punch covers the Steel and Fairy types its STABs miss.'),
     'Gholdengo': ('Special lead', 'Good as Gold blocks status (Toxic, Will-O-Wisp, Thunder Wave). Make It Rain hits both foes in doubles and is 1.5x on Big Top. It\'s weak to Ground, so keep it out of the Groudon fight.'),
     'Rhyperior': ('Physical tank / rock nuke', 'Solid Rock bulk, Stone Edge at Lv 54. Rock is 1.5x on Mountain and Volcanic Top and 1.3x on Deep Earth. Best counter to Amber\'s all-Fire team and Geara\'s fliers.'),
@@ -269,7 +269,7 @@ footer {{ font-size: 13px; color: var(--muted); border-top: 1px solid var(--line
       <p class="big">Your party is <em>excellent in singles</em> and <em>a few swaps from its best in doubles</em>.</p>
       <p>With Chapter 1–7 TMs and tutors allowed, the best six keeps four of your current party. Swap <strong>Lapras-Aevian → Rhyperior</strong> and <strong>Whiscash → Glaceon</strong>. In singles nothing does meaningfully better. In doubles the new six is about 3–4% stronger, and five of Chapter 8's biggest fights are doubles.</p>
       <p>Rhyperior resists the Fire attacks that dominate the chapter and gets 1.5x Rock on Volcanic Top and Mountain. Glaceon fixes your worst fight, Groudon, and adds Icy Wind speed control. Whiscash stays on the bench for Amber, because its Earthquake hits your partner in doubles.</p>
-      <p>Your instincts were right, and players agree: Golisopod-Aevian is the best mon you own. A V14 player called it "THE MVP" of a team that beat Madame X.</p>
+      <p>Your instincts were right, and players agree: Golisopod-Aevian is the best mon you own. A V14 player called it "THE MVP" of a team that beat Madame X. Its power is Skill Link: five-hit Bone Rush, Pin Missile and, once you grab TM134 on Valor Mountain, Rock Blast.</p>
     </div>
     <div class="answer">
       <div class="tablewrap"><table class="scores">
@@ -318,7 +318,7 @@ footer {{ font-size: 13px; color: var(--muted); border-top: 1px solid var(--line
   <div>{"".join(route)}</div>
 </section>
 
-{ORDER_HTML}{COMMUNITY}{CHECKLIST}
+{AEVIAN_HTML}{ORDER_HTML}{COMMUNITY}{CHECKLIST}
 
 <footer>
   <p><strong>Sources.</strong> Boss teams and story order: <a href="https://bigjra.github.io/rejuvenation/">BIGJRA walkthrough</a> (Classic Mode, the larger set you fight). Field effects, base stats, learnsets, crests and shadow data: <a href="https://rejuvenation.wiki.gg/">rejuvenation.wiki.gg</a>. Roster: your 2026-11-04 23:15 export (406 Pokémon).</p>
