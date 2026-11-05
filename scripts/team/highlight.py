@@ -7,7 +7,7 @@ here = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(here, '..'))
 from dataset import Data
 D = Data(os.path.join(here, '..', '..', 'workspace'))
-ROLE = {'Annihilape': 'lead', 'Chandelure': 'lead', 'Rhyperior': 'mid', 'Azumarill': 'mid', 'Golisopod': 'closer', 'Glalie': 'closer'}
+ROLE = {'Annihilape': 'lead', 'Chandelure': 'lead', 'Whiscash': 'mid', 'Azumarill': 'mid', 'Golisopod': 'closer', 'Glalie': 'closer'}
 names = {v for k, v in D.names.items() if k in D.sp and isinstance(v, str) and len(v) > 2}
 SUF = r'(?:-(?:Aevian|Hisui|Galar|Alola|Idol|Paldea|M|F)(?: \(Icy\))?| \((?:Aevian|Hisuian|Galarian|Alolan|Icy Aevian)(?: Form)?(?: Male)?\)| \((?:Lunatone|Solrock) Dominant Fusion\))?'
 pat = re.compile(r'(?<![\w\-#])(' + '|'.join(re.escape(n) for n in sorted(names, key=len, reverse=True)) + r')' + SUF + r"(?![\w])")

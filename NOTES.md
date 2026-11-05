@@ -223,3 +223,17 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - Regular Exeggutor (Exeggcute #101 + Leaf Stone, Chlorophyll) = A tier bench, the Groudon specialist (promote json 1424).
 - Tier cutoffs rescaled (remaining fights + singles x2 compress scores): S .60 / A .53 / B .48 / C .40.
   Top 5 = the team core (Golisopod .649, Annihilape .622, Glalie .610, Azumarill .601, Rhyperior .597).
+
+## 15:27 export: weakness rule + field-neutral rebuild
+- Narcissa gauntlet = 3 battles (narcissa1/2/narcissa in WALK, '#N' picks the Nth listing). Beaten with Braviary +
+  Mabosstiff in for Annihilape + Chandelure. DONE=aelita,narcissa1,narcissa2,narcissa.
+- Box detection: Overflow ends at the first reset after a W–Z name; Active = next reset starting with A/B (a new-catch
+  box can sit between). 15:27: Active #380–428; new catches Swinub, Delibird; Exeggcute evolved → Exeggutor (Active #428).
+- Engine NOFIELD=1 switches field multipliers off. exhaustive2.py: every six from the top ~24, WEAK_MAX=2 (no attacking
+  type super-effective on 3+ members; Whiscash Crest = no weaknesses; Levitate/Flash Fire/absorb abilities, Thick Fat),
+  objective = average(field, no-field). Runs r20_* (field) and r20n_* (no field). Top 15 within 1% again.
+- IDEAL SIX (Active-only, no training): Annihilape + Chandelure (lead), Azumarill + Whiscash (mid),
+  Golisopod-Aevian + Glalie-Aevian (closer). Shared 2x weaknesses only Flying/Ghost/Ice/Water (2 each).
+  f20: one-shots 95/103 with fields, 92/103 without; singles 39/44 both. Whiscash: EQ / Aqua Tail / Rock Tomb / Protect.
+  Close alternative: Mabosstiff for Whiscash (better doubles, slightly worse singles).
+- Report: section 02 now shows only open relearner cards (done ones disappear).

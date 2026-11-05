@@ -170,7 +170,7 @@ class Engine:
         cat = mv['Category']
         if cat == 'Status':
             return 0.0
-        field = FIELD.get(battle['field'], {})
+        field = {} if os.environ.get('NOFIELD') else FIELD.get(battle['field'], {})
         ctx = {'weight': att.get('weight', 50), 'spe': att['stats']['Spe'], 'setup': False}
         p, _ = move_base_value(mid, mv, ctx)
         if p <= 0:
@@ -181,7 +181,7 @@ class Engine:
             accf = acc / 100
             if att.get('ability') == 'NOGUARD' or dfn.get('ability') == 'NOGUARD':
                 p = p / accf
-            elif FIELD.get(battle['field'], {}).get('gravity'):
+            elif not os.environ.get('NOFIELD') and FIELD.get(battle['field'], {}).get('gravity'):
                 p = p / accf * min(1.0, accf * 1.67)
         mtype = mv['Type']
         mult = 1.0

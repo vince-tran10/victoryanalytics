@@ -138,8 +138,12 @@ WALK = [
      'Melia is your partner. Fire/Flying/Rock 1.5x (Rock gains Fire), Ice 0.5x, Water 0.9x, Surf/Muddy Water/Hydro Pump/Water Spout 0.5x; Earthquake/Earth Power cause eruptions (1/8 to non-Fire).'),
     ('Taken Tyrant', 'giratina', 'Rift Giratina (boss) – Rift Distortion', 'Wasteland', 'Doubles', 1.0,
      'Boss Rift Giratina (Ghost/Poison) + crested Relicanth + crested Swalot. Hazards are consumed (Spikes 1/3 HP per layer); Earthquake 0.25x; sludge moves 1.2x.'),
-    ('Guardian Spectre Narcissa', 'narcissa', 'Narcissa – Haunted Field', 'Haunted Field', 'Singles', 0.6,
-     'Swoobat, Haunter, Mismagius, Shedinja (Wonder Guard: only super-effective hits work).'),
+    ('Guardian Spectre Narcissa#1', 'narcissa1', 'Narcissa 1/3 – Haunted Field', 'Haunted Field', 'Singles', 0.4,
+     'Gauntlet part 1: Golurk (Iron Fist), Sableye (Will-O-Wisp, Recover).'),
+    ('Guardian Spectre Narcissa#2', 'narcissa2', 'Narcissa 2/3 – Haunted Field', 'Haunted Field', 'Singles', 0.5,
+     'Gauntlet part 2: Banette (Quick Claw, Shadow Sneak), Decidueye (Baton Pass), Oricorio-Sensu (Calm Mind).'),
+    ('Guardian Spectre Narcissa#3', 'narcissa', 'Narcissa 3/3 – Haunted Field', 'Haunted Field', 'Singles', 0.6,
+     'Gauntlet part 3: Swoobat (Unaware, Calm Mind), Haunter (Perish Song + Mean Look), Mismagius (Nasty Plot), Shedinja (Wonder Guard + Focus Sash).'),
     ('Team Xen Danni', 'danni', 'Danni & Layla (7 mons) – Beach', 'Beach Field', 'Doubles', 0.6, 'Bug-heavy doubles.'),
     ('Team Xen Troye', 'troye', 'Troye & Helen – Beach', 'Beach Field', 'Doubles', 0.8, 'Gigalith sand, Scizor, Ambipom, Bibarel, Decidueye (Lv 57–59).'),
     ('Xen Analyst Zena', 'zena', 'Zena – Short-Circuit Field', 'Short-Circuit Field', 'Singles', 0.5, 'Skuntank, Seismitoad, Cursola, Shadow Purugly.'),
@@ -169,14 +173,15 @@ def load_battles_walk(base):
     out = []
     used = set()
     for match, key, label, field, fmt, weight, notes in WALK:
-        want_second = match.endswith('#2')
-        mt = match.replace('#2', '')
+        nth = int(match.rsplit('#', 1)[1]) if re.search(r'#\d+$', match) else 0
+        want_second = nth == 2
+        mt = re.sub(r'#\d+$', '', match)
         hits = [i for i, t in enumerate(trainers) if mt in t['trainer'] and 'Partner' not in t['trainer']]
         if not hits:
             continue
-        idx = hits[1] if want_second and len(hits) > 1 else hits[0]
+        idx = hits[nth - 1] if nth and len(hits) >= nth else hits[0]
         # if the same trainer appears twice in the chapter (e.g. two difficulty sets), keep the bigger / higher one
-        if not want_second and len(hits) > 1 and key not in ('guard1',):
+        if not nth and len(hits) > 1 and key not in ('guard1',):
             idx = max(hits, key=lambda i: (len(trainers[i]['mons']), max(m['level'] or 0 for m in trainers[i]['mons'])))
         t = trainers[idx]
         mons = []
