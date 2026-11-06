@@ -91,7 +91,7 @@ def li(d):
 def group(title, b, opened, note):
     items = [d for d in N if d['box'] == b]
     n_act = sum(1 for d in items if d['n'] in ACTIONS)
-    note = (f'<span class="actn">{n_act} to move</span>' if n_act else 'nothing to move') + (f' · {note}' if note else '')
+    note = (f'<span class="actn">{n_act} to move</span>' if n_act else '') + (f' · {note}' if note and n_act else note)
     opened = opened or bool(n_act)
     return (f'<details class="bx panel"{" open" if opened else ""}><summary><b>{title}</b> '
             f'<span class="num">{len(items)}</span><span class="legend">{note}</span></summary>'
@@ -124,12 +124,12 @@ chg = ''.join(f'<div class="chgcol"><h4>{esc(t)} <span class="num">{len(v)}</spa
 gn = ('<li>' + '</li><li>'.join(esc(c) for c in gone) + '</li>') if gone else '<li>None</li>'
 sec = f'''<!--BOXAUDIT-->
 <section aria-labelledby="s4">
-  <h2 id="s4"><span class="n">05</span> Box audit <span class="tag">who you own, and where · export {len(N)} mons</span></h2>
+  <h2 id="s4">Boxes</h2>
   <div class="audit-top">
     <!-- completeness check (hidden): {' | '.join(re.sub('<[^>]+>', '', c) for c in checks)} -->
     <div class="panel pad"><h3>Since last export</h3>{('<p class="legend">' + esc(NOTE) + '</p>') if NOTE else ''}<div class="chgcols">{chg}</div></div>
   </div>
-  <p class="legend"><span class="actkey">Red</span> = needs moving to match the ideal six and the box plan; what to do is written under the name. Same items as the To do list.</p>
+  <p class="legend"><span class="actkey">Red</span> = move it</p>
   <label class="find">Find a Pokémon <input type="search" id="boxfind" placeholder="e.g. Furret" autocomplete="off"></label>
   {group("Party", "Party", True, "")}
   {group("Active box", "Active", True, "")}

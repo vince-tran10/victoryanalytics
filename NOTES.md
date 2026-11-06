@@ -298,3 +298,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   net +1 switch-ins), To do (s3 + s1b relearner), Tier list (s2), Boxes (s4). Remembers the last tab; #hash links work.
   Long paragraphs replaced with bullets.
 - Clean-up (11-06): matrices behind 'Show matrices'; C/D tiers collapsed; header = export, fights left, cap; relearner section hidden when nothing pending.
+- Guide mode (11-06): page = "Chapter 8 Guide", 5 tabs: Team (table, rules ✓ + matrices toggle, "How to play it"
+  5 bullets), Fights (next 3 fight cards: lead + threats → answer; lead by fight), To do, Tier list (no descriptions;
+  C/D collapsed), Boxes. Explanations live in chat, not on the page. "To change" column only appears when something
+  is pending. Relearner section only lists non-party mons and is removed when empty.

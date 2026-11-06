@@ -1,7 +1,7 @@
 """Group the report's sections into tabs (runs last, after box_audit.py and highlight.py).
 usage: python3 -I tabs.py report.html"""
 import re, sys
-TABS = [('team', 'Team', ['s1']), ('fights', 'Fights', ['s1f']), ('rules', 'Rules', ['s1r']),
+TABS = [('team', 'Team', ['s1']), ('fights', 'Fights', ['s1f']),
         ('todo', 'To do', ['s3', 's1b']), ('tiers', 'Tier list', ['s2']), ('boxes', 'Boxes', ['s4'])]
 p = sys.argv[1]; page = open(p, encoding='utf-8').read()
 if 'id="tabbar"' in page:

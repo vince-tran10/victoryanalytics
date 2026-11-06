@@ -3,7 +3,7 @@
 usage: make_report5.py NEW_EXPORT OLD_EXPORT F11_native F11_Singles F11_Doubles PROMOTE_JSON OUT
 To-dos are checked against NEW_EXPORT: anything the export shows as done is dropped.
 """
-import json, sys, html, os, hashlib
+import json, sys, html, os, hashlib, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from current_box import current_rows, tier as tier_of
 import sheet_extras as SX
@@ -115,7 +115,7 @@ def verify_mon(d, ab, nat, evs, item, moves):
         out.append(f"Lv {d['level']} → 55")
     for m, _ in moves:
         if m not in d['moves']:
-            out.append(LATER.get((name, m), f'Teach {m}' + (f' (replaces {REPL[(name, m)]})' if (name, m) in REPL else '')).format(lv=d['level']))
+            out.append(LATER.get((name, m), f'Teach {m}' + (f' (replaces {REPL[(name, m)].split(":")[0]})' if (name, m) in REPL else '')).format(lv=d['level']))
     return out
 
 
@@ -126,6 +126,7 @@ def ev_lines(evs):
 
 
 team_rows, team_todo, LEVELS = [], [], []
+ANY_CHANGE = any(verify(t[1], t[3], t[4], t[5], t[6], t[7]) for t in TEAM)
 prev = None
 for role, name, types, ab, nat, evs, item, moves, changes in TEAM:
     changes = verify(name, ab, nat, evs, item, moves)
@@ -137,7 +138,7 @@ for role, name, types, ab, nat, evs, item, moves, changes in TEAM:
     rc = f'<td class="role role-{role.lower()}" rowspan="2">{role}</td>' if role != prev else ''
     prev = role
     team_rows.append(f'''<tr>{rc}<td><strong>{E(name)}</strong><div class="chips">{chips(types)}</div></td>
-<td>{E(ab)}</td><td>{E(nat)}</td><td>{ev_lines(evs)}</td><td>{E(item)}</td><td><ul class="mv">{mv}</ul></td><td>{ch}</td></tr>''')
+<td>{E(ab)}<div class="legend">{E(nat)}</div></td><td>{ev_lines(evs)}</td><td>{E(item)}</td><td><ul class="mv">{mv}</ul></td>{'<td>' + ch + '</td>' if ANY_CHANGE else ''}</tr>''')
 
 
 def readiness():
@@ -190,7 +191,7 @@ for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP
     abg = u.get('ability') and d.get('ability') != u['ability']
     done = not gaps and not natg and not abg
     up_left += 0 if done else 1
-    if done:
+    if done or d['box'] == 'Party' or d['species'] in IDEAL:
         up_done.append(d['species']); continue
     mv = ''.join(f'<li class="{"new" if m in gaps else ""}">{E(m)}</li>' for m in u['moves'])
     gone = [m for m in d['moves'] if m not in u['moves']]
@@ -203,7 +204,7 @@ for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP
     up_cards.append(f'''<li class="mon up{" isparty" if d["box"] == "Party" else ""}"><div class="mtop"><strong>{E(d["species"])}</strong>{status}</div>
 <div class="chips">{chips(d["types"] or "")}<span class="lv">Lv {d["level"]}</span>{'<span class="b party">Party</span>' if d["box"] == "Party" else ''}</div>
 <ul class="mv">{mv}</ul>{('<div class="mnote">Out: ' + E(', '.join(gone)) + '</div>') if gone and not done else ''}{extra}
-<div class="mnote">{E(u["why"])}</div>{('<div class="mnote"><b>Playstyle:</b> ' + E(u["style"]) + '</div>') if u.get("style") else ''}</li>''')
+</li>''')
 up_same += [d['species'] for d in cur if d['box'] != 'Overflow' and d['species'] not in UP and d['species'] not in up_same and d['score']]
 up_same = sorted(set(up_same))
 promo_cards = []
@@ -269,7 +270,7 @@ for r in rows:
     where = ''
     cards[tier].append(f'''<li class="mon"><div class="mtop"><strong>{E(disp(r["name"]))}</strong><span class="num sc">{r["score"]:.2f}</span></div>
 <div class="chips">{chips(r["types"])}<span class="lv">Lv {r["level"]}</span>{where}{badges}</div>
-<div class="mnote">{E(BLURB.get(r["name"], note))}</div></li>''')
+</li>''')
 _tier = lambda t, desc: f'<div class="tier t{t}"><div class="tl"><b>{t}</b><span>{E(desc)}</span></div><ul class="tmons">{"".join(cards[t])}</ul></div>'
 tier_html = ''.join(_tier(t, d) for t, _, d in TIERS if cards[t] and t in 'SAB')
 _low = [(t, d) for t, _, d in TIERS if cards[t] and t in 'CD']
@@ -308,8 +309,7 @@ for p in promo:
         promo_todo.append((f"{p['final']} (Active box): " + '; '.join(gaps) + '.', 'low'))
 if promo_todo:
     TODO.append(('New catches', promo_todo))
-if up_left:
-    TODO.append(('Move Relearner', [(f'{up_left} Pokémon still to update. Work through the cards in section 02; each flips to Done ✓ once your export matches.', 'mid')]))
+
 CUTS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'cuts.json')))
 cut_todo = []
 for sp, why in CUTS['move'].items():
@@ -363,7 +363,7 @@ meta = {
 }
 meta_json = json.dumps(meta, ensure_ascii=False).replace('</', '<\\/')
 
-page = f'''<title>Chapter 8 Team Report</title>
+page = f'''<title>Chapter 8 Guide</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -471,102 +471,61 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 <div class="wrap">
 <header class="mast">
   <span class="eyebrow">Pokémon Rejuvenation · Chapter 8 · Classic teams</span>
-  <h1>Chapter 8 Team Report</h1>
+  <h1>Chapter 8 Guide</h1>
   <div class="facts"><span>Export <b>{E(os.environ.get('EXPORT_LABEL', '5 Nov'))}</b></span><span>Fights left <b>{len(fn['plans'])}</b></span><span>Level cap <b>55</b></span></div>
 </header>
 
 <section aria-labelledby="s1">
-  <h2 id="s1"><span class="n">01</span> Your team <span class="tag">lead · mid · closer — same plan for singles and doubles</span></h2>
+  <h2 id="s1">Team</h2>
   <div class="panel tablewrap"><table class="team">
-    <thead><tr><th>Role</th><th>Pokémon</th><th>Ability</th><th>Nature</th><th>EVs</th><th>Item</th><th>Moves</th><th>Change in game</th></tr></thead>
+    <thead><tr><th>Role</th><th>Pokémon</th><th>Ability / nature</th><th>EVs</th><th>Item</th><th>Moves</th>{'<th>To change</th>' if ANY_CHANGE else ''}</tr></thead>
     <tbody>{"".join(team_rows)}</tbody>
   </table></div>
-  <div class="panel pad"><h3>Game plan</h3>
+  {RULES_HTML}
+  <div class="panel pad"><h3>How to play it</h3>
     <ul class="gp">
-      <li><strong class="role-lead">Lead</strong>
-        <ul><li><b>Annihilape</b>: take a hit, then Rage Fist (+50 power per hit); Sucker Punch for faster foes</li>
-            <li><b>Gholdengo</b>: can't be statused; Make It Rain hits both foes in doubles</li></ul></li>
-      <li><strong class="role-mid">Mid</strong>
-        <ul><li><b>Clawitzer</b>: Mega Launcher pulses (+50%); Aura Sphere never misses</li>
-            <li><b>Musharna-Aevian</b>: Glare = speed control; resists Ghost/Dark, immune to Psychic/Dragon</li></ul></li>
-      <li><strong class="role-closer">Closer</strong>
-        <ul><li><b>Golisopod-Aevian</b>: Swords Dance only when safe, then sweep</li>
-            <li><b>Glalie-Aevian</b>: Grassy Terrain heals every turn; Grassy Glide hits first</li></ul></li>
-      <li><strong>Vs fast setup sweepers</strong>
-        <ul><li>Glare first, then hit</li><li>Protect on the turn a boss mon comes in, to scout</li>
-            <li>Attack Speed Boost users on turn 2 (they Protect turn 1)</li><li>Never trade hits with a boosted foe: switch to the resist</li></ul></li>
+      <li><b>Lead</b> Annihilape (take a hit → Rage Fist) + Gholdengo</li>
+      <li><b>Fast setup sweeper?</b> Musharna Glares it, then hit it</li>
+      <li><b>Speed Boost users</b> Protect turn 1, so attack turn 2</li>
+      <li><b>Boosted foe?</b> Don't trade hits; switch to the resist</li>
+      <li><b>Close it out</b> Golisopod: Swords Dance when safe, then sweep</li>
     </ul>
   </div>
 </section>
 
 <section aria-labelledby="s1f">
-  <h2 id="s1f">Fights <span class="tag">{len(fn['plans'])} left · one six, only the lead changes</span></h2>
+  <h2 id="s1f">Fights</h2>
   {NEXT_HTML}
-  <div class="plan">
-    <div class="panel pad"><h3>Lead by fight</h3>
-      <ul>
-        <li><b>Annihilape</b>: both Ancient Guards, Jenner, Geara &amp; Zetta</li>
-        <li><b>Golisopod-Aevian</b>: Tommen, Giratina, Danni &amp; Layla, Troye &amp; Helen, Zena, Holly &amp; Rorim, Marcie, ??? Factory</li>
-        <li><b>Gholdengo</b>: Texen, Crawli, Eli &amp; Sharon</li>
-        <li><b>Clawitzer</b>: Neved, Amber</li>
-        <li><b>Glalie-Aevian</b>: Groudon, Kyogre, Manaphy</li>
-      </ul>
-      <h3>Field use <span class="legend">16 of 20 fights</span></h3>
-      <ul>
-        <li><b>Deep Earth</b> (Guards, Tommen, Groudon): Bone Rush, Rock Slide, Power Gem</li>
-        <li><b>Swamp</b> (Crawli): Pin Missile, Wood Hammer, Water Pulse</li>
-        <li><b>Forest / Mountain / Volcanic Top</b>: Glalie, Gholdengo, Golisopod</li>
-        <li><b>Beach / Water Surface</b>: Clawitzer (Aura Sphere, Water Pulse)</li>
-        <li><b>Big Top</b> (Texen): Make It Rain</li>
-        <li><b>No field user</b>: Zena, ??? Factory, Giratina, Amber</li>
-      </ul>
-    </div>
-    <div class="panel scores">
-      <h3>Team strength</h3>
-      <div class="score"><span>Boss mons someone can one-shot</span><b class="num">{R_KO}/{R_TOT}</b><i></i></div>
-      <div class="score"><span>…before that foe moves</span><b class="num">{R_FAST}/{R_TOT}</b><i></i></div>
-      <div class="score"><span>…with fields switched off</span><b class="num">89/103</b><i></i></div>
-      <div class="score"><span>Golisopod after one Swords Dance</span><b class="num">89/103</b><i></i></div>
-      <div class="score"><span>Annihilape, Rage Fist after 1 / 2 hits</span><b class="num">58 / 73</b><i></i></div>
-      <ul class="legend">
-        <li>No one-shot answer: Groudon, Kyogre, Manaphy (bosses with boosted HP)</li>
-        <li>Close calls (69–91%): Gyarados, Dragonite, Scizor, Escavalier</li>
-        <li>Most at risk: {", ".join(f"{E(disp(k))} ({v} boss hits)" for k, v in sorted(R_RISK.items(), key=lambda x: -x[1])[:3])}</li>
-        <li>Hardest fight: <b>Kyogre</b> → lead Glalie-Aevian, chip with Grass</li>
-        <li>Groudon → swap in Exeggutor (Active; Chlorophyll in sun)</li>
-      </ul>
-    </div>
+  <div class="panel pad"><h3>Lead by fight</h3>
+    <ul>
+      <li><b>Annihilape</b>: Ancient Guards, Jenner, Geara &amp; Zetta</li>
+      <li><b>Golisopod-Aevian</b>: Tommen, Giratina, Danni &amp; Layla, Troye &amp; Helen, Zena, Holly &amp; Rorim, Marcie, ??? Factory</li>
+      <li><b>Gholdengo</b>: Texen, Crawli, Eli &amp; Sharon</li>
+      <li><b>Clawitzer</b>: Neved, Amber</li>
+      <li><b>Glalie-Aevian</b>: Groudon, Kyogre, Manaphy</li>
+    </ul>
   </div>
 </section>
 
-<section aria-labelledby="s1r">
-  <h2 id="s1r">Rules <span class="tag">your three hard rules · checked every rebuild</span></h2>
-  {RULES_HTML}
-  <div class="panel pad"><h3>Net +1 types and their switch-ins</h3>
-    <ul><li><b>Fire</b> → Clawitzer</li><li><b>Flying</b> → Gholdengo</li><li><b>Ghost</b> → Musharna-Aevian</li><li><b>Fairy</b> → Gholdengo</li></ul>
-  </div>
-</section>
-
-{'' if not up_cards and not promo_cards else ''}<section aria-labelledby="s1b"{'' if up_cards or promo_cards else ' hidden'}>
-  <h2 id="s1b"><span class="n">02</span> Move Relearner upgrades <span class="tag">party + Active box · {up_left} to do</span></h2>
-  <p class="legend">Only open upgrades are listed; a card disappears once your export shows it done.</p>
+<section aria-labelledby="s1b">
+  <h2 id="s1b">Move Relearner</h2>
   <ul class="tmons upgrid">{"".join(up_cards)}</ul>
   {'' if up_cards else '<p class="ok">All relearner upgrades are done.</p>'}
   {('<h3>Promote from Overflow <span class="legend">every Pokémon re-scored at Lv 55 with relearner, TM, egg and level-up moves</span></h3><ul class="tmons upgrid">' + "".join(promo_cards) + '</ul>') if promo_cards else ''}
 </section>
 
 <section aria-labelledby="s2">
-  <h2 id="s2"><span class="n">03</span> Chapter 8 tier list <span class="tag">party + Active box · {len(seen)} Pokémon</span></h2>
+  <h2 id="s2">Tier list</h2>
   <div class="board">{tier_html}</div>
 </section>
 
 <section aria-labelledby="s3">
-  <h2 id="s3"><span class="n">04</span> To do</h2>
+  <h2 id="s3">To do</h2>
   <div class="todos">{todo_html or '<p>Nothing left: the export matches the plan.</p>'}</div>
-  <ul class="legend"><li>Built from your latest export: done items disappear, unfinished ones come back</li><li>Ticks are saved in this browser only</li></ul>
+
 </section>
 
-<footer>Sources: <a href="https://bigjra.github.io/rejuvenation/">BIGJRA walkthrough</a> (Classic Mode), <a href="https://rejuvenation.wiki.gg/">Rejuvenation wiki</a>, <a href="https://www.rebornevo.com/forums/">Reborn Evolved forums</a>, your latest export. Damage is an average-roll estimate; turns, crits and partner AI aren't simulated.</footer>
+<footer>Sources: <a href="https://bigjra.github.io/rejuvenation/">BIGJRA walkthrough</a>, <a href="https://rejuvenation.wiki.gg/">Rejuvenation wiki</a>, Smogon. Damage numbers are estimates.</footer>
 </div>
 
 <script type="application/json" id="report-data">{meta_json}</script>
@@ -585,6 +544,8 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 }})();
 </script>
 '''
+if not up_cards and not promo_cards:
+    page = re.sub(r'<section aria-labelledby="s1b">.*?</section>\s*', '', page, count=1, flags=re.S)
 page = page.replace('</style>', SX.CSS.replace('{{', '{').replace('}}', '}') + '</style>', 1)
 open(OUT, 'w', encoding='utf-8').write(page)
 json.dump({str(k): v for k, v in ACTIONS.items()}, open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'actions.json'), 'w'), indent=1)

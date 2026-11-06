@@ -69,14 +69,14 @@ def rules_panel(team):
         orow.append(f'<tr><th class="ty">{t.capitalize()}</th>{cells}<td class="c mr-c">{se or ""}</td><td class="c mw-c">{nve or ""}</td>'
                     f'<td class="c n{"n" if se - nve > 0 else ("p" if se - nve < 0 else "z")}">{se - nve:+d}</td></tr>')
     head = ''.join(f'<th class="mh">{E(n.split("-")[0][:7])}</th>' for n, *_ in mons)
-    ok = lambda b: '<span class="ok">✓ pass</span>' if b else '<span class="bad">✗ fail</span>'
-    checks = (f'<ul class="rules"><li>{ok(not weak3)} <b>(a)</b> No type is super-effective on 3+ of the six'
+    ok = lambda b: '<span class="ok">✓</span>' if b else '<span class="bad">✗ fail</span>'
+    checks = (f'<ul class="rules"><li>{ok(not weak3)} No type hits 3+ super-effectively'
               f'{(": " + E(", ".join(t.capitalize() for t in weak3))) if weak3 else ""}</li>'
-              f'<li>{ok(not nores)} <b>(b)</b> Every type is resisted or blocked by at least one'
+              f'<li>{ok(not nores)} Every type resisted'
               f'{(": none for " + E(", ".join(t.capitalize() for t in nores))) if nores else ""}</li>'
-              f'<li>{ok(not nose)} <b>(c)</b> Every type can be hit super-effectively by at least one'
+              f'<li>{ok(not nose)} Every type hit super-effectively'
               f'{(": nothing hits " + E(", ".join(t.capitalize() for t in nose))) if nose else ""}</li>'
-              f'<li class="legend">Net +1 (watch): {E(", ".join(t.capitalize() for t in pos)) or "none"}. Protect sits in every 4th slot.</li></ul>')
+              f'<li class="legend">Watch: {E(", ".join(t.capitalize() for t in pos)) or "none"}</li></ul>')
     tbl = lambda title, a, b, rows: (f'<div class="mx"><h4>{title}</h4><div class="tablewrap"><table class="mxt"><thead><tr><th></th>{head}'
                                      f'<th class="c">{a}</th><th class="c">{b}</th><th class="c">Net</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div></div>')
     return (f'<div class="panel pad rulesp"><h3>Team rules</h3>{checks}<details class="mxd"><summary>Show matrices</summary><div class="mxs">'
@@ -128,11 +128,10 @@ def next_fights(plans, team, base, n=3, short=None, disp=lambda x: x):
         thr = [t for _, t in sorted(thr, key=lambda x: not x[0])][:4]
         leads = ' + '.join(disp(x) for x in p['leads'])
         ko = sum(1 for fo in p['foes'] if fo['answer_dmg'] >= 100)
-        cards.append(f'''<div class="panel pad nf"><h4>{E((short or {}).get(p["key"], p["label"]))} <span class="legend">{E(p["format"])} · {E(p["field"])} · Lv {max(fo["lvl"] or 0 for fo in p["foes"])}</span></h4>
-<div><b>Lead:</b> {E(leads)} · <b>One-shot answers:</b> {ko}/{len(p["foes"])}</div>
-<div><b>Field users:</b> {E(", ".join(users)) or "none (field doesn't boost your attacks here)"}</div>
-{('<div><b>Watch out for:</b><ul class="plain">' + "".join(thr) + '</ul></div>') if thr else '<div class="legend">No setup or speed threats.</div>'}</div>''')
-    return '<h3 class="nfh">Next fights <span class="legend">in story order · tell me when you beat one and it drops off</span></h3><div class="nfs">' + ''.join(cards) + '</div>'
+        cards.append(f'''<div class="panel pad nf"><h4>{E((short or {}).get(p["key"], p["label"]))} <span class="legend">{E(p["format"])} · {E(p["field"])}</span></h4>
+<div><b>Lead:</b> {E(leads)}</div>
+{('<ul class="plain">' + "".join(thr) + '</ul>') if thr else ''}</div>''')
+    return '<div class="nfs">' + ''.join(cards) + '</div>'
 
 
 CSS = '''
