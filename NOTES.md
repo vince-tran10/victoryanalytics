@@ -263,3 +263,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   89 without fields, singles 41/44; max one-shot threats per member 7 (Gholdengo). Uncovered fields: Zena, Factory
   (Electric fields), Giratina (Wasteland), Amber (Concert Venue).
 - To do from 15:54 export: Clawitzer needs 252 HP / 252 SpA EVs + Sitrus (from Azumarill); Musharna-A Sitrus (Braviary's).
+- 16:41 export (429): party = Option B six, fully built (Clawitzer EVs + Sitrus done). To-do empty, no red rows. New catch: Golett (Overflow; Golurk already in Active).
