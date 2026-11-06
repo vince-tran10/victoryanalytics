@@ -253,3 +253,13 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   resist). Net +1 on Fire, Flying, Ghost, Fairy (switch-ins Azumarill, Gholdengo, Mabosstiff, Gholdengo).
   Zero-red option: Whiscash for Annihilape, 1.158 (−1.8%). f21_*: 93/103 one-shots (52 first) with fields, 89 without;
   singles 39/44; max one-shot threats on any member 9 (Mabosstiff).
+
+## Option B = ideal six (11-06): rules (a)+(b)+(c) + field use
+- scripts/team/rules_search.py: (c) = every type hit SE by >= 1 member's attacks; field users per fight = members with
+  an attack boosted >= 1.2x by that field. 2,958 sixes pass (a)+(b)+(c) from a 42-mon pool; best per ace in
+  team/rules_aces.json. Max field coverage 19/20 (Amber's Concert Venue: nobody has sound moves) costs ~8%.
+- IDEAL SIX (Option B): Annihilape + Gholdengo (lead), Clawitzer + Musharna-Aevian (mid), Golisopod-A + Glalie-A
+  (closer). Score 1.173 (A = 1.179), field users in 16/20 fights (A: 11/20). f22_*: 95/103 one-shots (50 first),
+  89 without fields, singles 41/44; max one-shot threats per member 7 (Gholdengo). Uncovered fields: Zena, Factory
+  (Electric fields), Giratina (Wasteland), Amber (Concert Venue).
+- To do from 15:54 export: Clawitzer needs 252 HP / 252 SpA EVs + Sitrus (from Azumarill); Musharna-A Sitrus (Braviary's).

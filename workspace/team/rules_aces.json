@@ -1,0 +1,287 @@
+[
+ {
+  "score": 1.179075575800569,
+  "ace": "Golisopod-A",
+  "team": [
+   "Golisopod-A",
+   "Annihilape",
+   "Glalie-A",
+   "Azumarill",
+   "Gholdengo",
+   "Mabosstiff"
+  ],
+  "red": 4,
+  "fields": [
+   1.25,
+   11,
+   20,
+   0
+  ]
+ },
+ {
+  "score": 1.1631443972451172,
+  "ace": "Glalie-A",
+  "team": [
+   "Glalie-A",
+   "Exeggutor",
+   "Whiscash",
+   "Gholdengo",
+   "Musharna-A",
+   "Arcanine"
+  ],
+  "red": 3,
+  "fields": [
+   1.55,
+   11,
+   20,
+   0
+  ]
+ },
+ {
+  "score": 1.1602083084402066,
+  "ace": "Annihilape",
+  "team": [
+   "Annihilape",
+   "Glalie-A",
+   "Azumarill",
+   "Whiscash",
+   "Braviary",
+   "Gholdengo"
+  ],
+  "red": 1,
+  "fields": [
+   1.4,
+   11,
+   20,
+   0
+  ]
+ },
+ {
+  "score": 1.1475706072088239,
+  "ace": "Azumarill",
+  "team": [
+   "Azumarill",
+   "Exeggutor",
+   "Whiscash",
+   "Gholdengo",
+   "Scrafty",
+   "Arcanine"
+  ],
+  "red": 3,
+  "fields": [
+   1.2,
+   11,
+   20,
+   0
+  ]
+ },
+ {
+  "score": 1.1444637155047799,
+  "ace": "Exeggutor",
+  "team": [
+   "Exeggutor",
+   "Hariyama",
+   "Whiscash",
+   "Gholdengo",
+   "Musharna-A",
+   "Arcanine"
+  ],
+  "red": 3,
+  "fields": [
+   1.45,
+   11,
+   20,
+   0
+  ]
+ },
+ {
+  "score": 1.1076894526178331,
+  "ace": "Rhyperior",
+  "team": [
+   "Rhyperior",
+   "Hariyama",
+   "Gholdengo",
+   "Jellicent",
+   "Musharna-A",
+   "Vikavolt"
+  ],
+  "red": 3,
+  "fields": [
+   1.45,
+   13,
+   20,
+   0
+  ]
+ },
+ {
+  "score": 1.100512314852193,
+  "ace": "Passimian",
+  "team": [
+   "Passimian",
+   "Whiscash",
+   "Gholdengo",
+   "Jellicent",
+   "Musharna-A",
+   "Vikavolt"
+  ],
+  "red": 2,
+  "fields": [
+   1.4,
+   13,
+   20,
+   0
+  ]
+ },
+ {
+  "score": 1.100137338316324,
+  "ace": "Hariyama",
+  "team": [
+   "Hariyama",
+   "Whiscash",
+   "Gholdengo",
+   "Jellicent",
+   "Musharna-A",
+   "Vikavolt"
+  ],
+  "red": 2,
+  "fields": [
+   1.4,
+   13,
+   20,
+   0
+  ]
+ },
+ {
+  "score": 1.0965796784519557,
+  "ace": "Whiscash",
+  "team": [
+   "Whiscash",
+   "Gholdengo",
+   "Jellicent",
+   "Scrafty",
+   "Vikavolt",
+   "Sylveon"
+  ],
+  "red": 1,
+  "fields": [
+   1.05,
+   13,
+   20,
+   0
+  ]
+ },
+ {
+  "score": 1.094228227624778,
+  "ace": "Clawitzer",
+  "team": [
+   "Clawitzer",
+   "Whiscash",
+   "Gholdengo",
+   "Musharna-A",
+   "Vikavolt",
+   "Chandelure"
+  ],
+  "red": 3,
+  "fields": [
+   1.4,
+   18,
+   20,
+   0
+  ]
+ },
+ {
+  "score": 1.0906217058080758,
+  "ace": "Camerupt",
+  "team": [
+   "Camerupt",
+   "Gholdengo",
+   "Jellicent",
+   "Scrafty",
+   "Vikavolt",
+   "Sylveon"
+  ],
+  "red": 2,
+  "fields": [
+   1.1,
+   13,
+   20,
+   0
+  ]
+ },
+ {
+  "score": 1.0887520613081936,
+  "ace": "Mudsdale",
+  "team": [
+   "Mudsdale",
+   "Gholdengo",
+   "Jellicent",
+   "Scrafty",
+   "Vikavolt",
+   "Sylveon"
+  ],
+  "red": 2,
+  "fields": [
+   1.1,
+   13,
+   20,
+   0
+  ]
+ },
+ {
+  "score": 1.0856735208735167,
+  "ace": "Gholdengo",
+  "team": [
+   "Gholdengo",
+   "Jellicent",
+   "Donphan",
+   "Scrafty",
+   "Vikavolt",
+   "Sylveon"
+  ],
+  "red": 2,
+  "fields": [
+   1.1,
+   13,
+   20,
+   0
+  ]
+ },
+ {
+  "score": 1.0784945668896908,
+  "ace": "Braviary",
+  "team": [
+   "Braviary",
+   "Gholdengo",
+   "Jellicent",
+   "Vikavolt",
+   "Golem",
+   "Sylveon"
+  ],
+  "red": 2,
+  "fields": [
+   1.25,
+   13,
+   20,
+   0
+  ]
+ },
+ {
+  "score": 1.0782760394801818,
+  "ace": "Feraligatr",
+  "team": [
+   "Feraligatr",
+   "Gholdengo",
+   "Donphan",
+   "Musharna-A",
+   "Vikavolt",
+   "Chandelure"
+  ],
+  "red": 4,
+  "fields": [
+   1.2,
+   13,
+   20,
+   0
+  ]
+ }
+]
