@@ -315,3 +315,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   #366–380, all 15 → Overflow (best: Gastrodon West Aevian 0.527, Swinub→Mamoswine 0.484).
 - Golden Chalice (HAUNTEDCHALICE) = key item that starts Narcissa's Hauntings (Ch8 → expires Ch16); quest rewards:
   Gengarite G, Shiinotic Crest, Fairy Memory, a stamp, Dazzling Gleam TM. No battle use.
+- 6 Nov 11:09 export: staging emptied (all 15 → Overflow). Only open to-do: level the six to 55.
+- Colours: highlight.py reads workspace/team/team_roles.json (written by make_report5 from TEAM); a role colour only
+  applies to the exact form on the team (plain Glalie/Musharna never get it), and inside box lists role colours are off,
+  so in the Boxes tab only red (= move it) carries meaning. "Since last export" has Staging → Active/Overflow columns.

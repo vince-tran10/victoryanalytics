@@ -566,5 +566,6 @@ if not up_cards and not promo_cards:
     page = re.sub(r'<section aria-labelledby="s1b">.*?</section>\s*', '', page, count=1, flags=re.S)
 page = page.replace('</style>', SX.CSS.replace('{{', '{').replace('}}', '}') + '</style>', 1)
 open(OUT, 'w', encoding='utf-8').write(page)
+json.dump({t[1]: t[0].lower() for t in TEAM}, open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'team_roles.json'), 'w'), indent=1)
 json.dump({str(k): v for k, v in ACTIONS.items()}, open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'actions.json'), 'w'), indent=1)
 print('wrote', OUT, len(page), 'tiers:', {t: len(v) for t, v in cards.items()})

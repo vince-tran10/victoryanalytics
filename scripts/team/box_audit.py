@@ -109,10 +109,12 @@ else:
     checks.append('Overflow scan: nobody else clears the Active-box bar (A tier or better on their own, ready now, not already owned in Active). Closest: Clawitzer, Scraggy → Scrafty (Lv 39), Ursaring → Ursaluna (needs a Peat Block)')
 if oddsort:
     checks.append('Out of A–Z order in Overflow: ' + ', '.join(f'{esc(d["species"])} (#{d["n"]})' for d in oddsort))
-COLS = [('Into the party', lambda c: c.endswith('→ Party')), ('Out of the party', lambda c: 'Party →' in c),
+COLS = [('Evolved', lambda c: 'evolved' in c), ('Into the party', lambda c: c.endswith('→ Party')), ('Out of the party', lambda c: 'Party →' in c),
         ('Overflow → Active', lambda c: c.endswith('Overflow → Active') and 'evolved' not in c),
         ('Active → Overflow', lambda c: c.endswith('Active → Overflow')),
-        ('Evolved', lambda c: 'evolved' in c), ('New catches', lambda c: ': new, in' in c), ('Gone', lambda c: ': gone' in c)]
+        ('Staging → Active', lambda c: c.endswith('Staging → Active')), ('Staging → Overflow', lambda c: c.endswith('Staging → Overflow')),
+        ('New catches', lambda c: ': new, in' in c), ('Gone', lambda c: ': gone' in c),
+        ('Other moves', lambda c: '→' in c)]
 buckets = {t: [] for t, _ in COLS}
 for c in changes:
     for t, f in COLS:
@@ -155,6 +157,7 @@ css = '''<style id="boxaudit-css">
 .chgcols { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px }
 .chgcol h4 { margin: 0 0 4px; font: 600 12px var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--muted) }
 .chgcol h4 .num { color: var(--accent) }
+.chgcol .plain { display: block; columns: 140px auto; column-gap: 18px } .chgcol .plain li { break-inside: avoid; margin-bottom: 3px }
 .roster li.act { background: var(--bad-soft); border-bottom-color: var(--bad); border-radius: 4px }
 .roster li.act .nm, .roster li.act .idx { color: var(--bad) }
 .roster li .why { display: block; font-size: 11px; color: var(--bad); line-height: 1.3 }
