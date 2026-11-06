@@ -112,7 +112,7 @@ def verify_mon(d, ab, nat, evs, item, moves):
     if d.get('nature') != nat:
         out.append(f"Nature: {d.get('nature')} → {nat} (mint)")
     if (d.get('level') or 55) < 55:
-        out.append(f"Lv {d['level']} → 55: level up (the cap; bosses ahead are Lv {NEXT_LV}+)")
+        out.append(f"Lv {d['level']} → 55")
     for m, _ in moves:
         if m not in d['moves']:
             out.append(LATER.get((name, m), f'Teach {m}' + (f' (replaces {REPL[(name, m)]})' if (name, m) in REPL else '')).format(lv=d['level']))
@@ -478,33 +478,70 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
     <thead><tr><th>Role</th><th>Pokémon</th><th>Ability</th><th>Nature</th><th>EVs</th><th>Item</th><th>Moves</th><th>Change in game</th></tr></thead>
     <tbody>{"".join(team_rows)}</tbody>
   </table></div>
-  {RULES_HTML}
+  <div class="panel pad"><h3>Game plan</h3>
+    <ul class="gp">
+      <li><strong class="role-lead">Lead</strong>
+        <ul><li><b>Annihilape</b>: take a hit, then Rage Fist (+50 power per hit); Sucker Punch for faster foes</li>
+            <li><b>Gholdengo</b>: can't be statused; Make It Rain hits both foes in doubles</li></ul></li>
+      <li><strong class="role-mid">Mid</strong>
+        <ul><li><b>Clawitzer</b>: Mega Launcher pulses (+50%); Aura Sphere never misses</li>
+            <li><b>Musharna-Aevian</b>: Glare = speed control; resists Ghost/Dark, immune to Psychic/Dragon</li></ul></li>
+      <li><strong class="role-closer">Closer</strong>
+        <ul><li><b>Golisopod-Aevian</b>: Swords Dance only when safe, then sweep</li>
+            <li><b>Glalie-Aevian</b>: Grassy Terrain heals every turn; Grassy Glide hits first</li></ul></li>
+      <li><strong>Vs fast setup sweepers</strong>
+        <ul><li>Glare first, then hit</li><li>Protect on the turn a boss mon comes in, to scout</li>
+            <li>Attack Speed Boost users on turn 2 (they Protect turn 1)</li><li>Never trade hits with a boosted foe: switch to the resist</li></ul></li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="s1f">
+  <h2 id="s1f">Fights <span class="tag">{len(fn['plans'])} left · one six, only the lead changes</span></h2>
+  {NEXT_HTML}
   <div class="plan">
-    <div class="panel">
-      <h3>Game plan</h3>
+    <div class="panel pad"><h3>Lead by fight</h3>
       <ul>
-        <li><strong>All three team rules met.</strong> (a) no attacking type is super-effective on 3+ of the six; (b) every type is resisted or blocked by at least one; (c) every type can be hit super-effectively by at least one. Four types sit at net +1 (Fire, Flying, Ghost, Fairy), none higher.</li>
-        <li><strong>Uses the field in 16 of 20 fights.</strong> Deep Earth: Bone Rush, Rock Slide and Power Gem (3 users). Swamp: Pin Missile, Wood Hammer, Water Pulse (3). Forest, Mountain and Volcanic Top: Glalie, Gholdengo or Golisopod (2). Beach and Water Surface: Clawitzer's Aura Sphere and Water Pulse. Big Top: Make It Rain. No field user vs Zena, the ??? Factory fight, Giratina and Amber.</li>
-        <li><strong>Two win conditions.</strong> Golisopod hits hardest: in singles it one-shots 31 of 44 boss mons, 37 after one Swords Dance. Annihilape is the safe opener: only 2 of 44 can one-shot it, and Rage Fist grows every time it's hit.</li>
-        <li><strong class="role-lead">Lead</strong> Annihilape takes the first hit, then Rage Fist. Gholdengo can't be statused (Good as Gold), resists Flying, Psychic, Fairy and Dragon, and Make It Rain hits both foes in doubles.</li>
-        <li><strong class="role-mid">Mid</strong> Clawitzer's Mega Launcher boosts Water Pulse, Aura Sphere and Dark Pulse by 50%; Aura Sphere never misses. Musharna-Aevian (Dark/Fairy, Tough Claws) resists Ghost and Dark, is immune to Psychic and Dragon, and is your speed control: <b>Glare</b> never misses and halves a target's Speed for the rest of the fight.</li>
-        <li><strong>Vs fast setup sweepers</strong> (Speed Boost Scolipede and Moxie Quaquaval at Holly &amp; Rorim, Weavile and Dragonite at Geara &amp; Zetta): bring Musharna in, Glare first, then let your slower hitters finish it. Protect on the turn a boss mon comes in to see what it does; attack Speed Boost users on turn 2.</li>
-        <li><strong class="role-closer">Closer</strong> Golisopod uses Swords Dance only when the foe can't hurt it, then sweeps. Glalie-Aevian's Grassy Surge heals each turn, and Grassy Glide hits first.</li>
-        <li><strong>Only the lead changes, never the six.</strong> Annihilape leads vs both Ancient Guards, Jenner and Geara &amp; Zetta. Golisopod leads vs Tommen, Giratina, Danni &amp; Layla, Troye &amp; Helen, Zena, Holly &amp; Rorim, Marcie and the ??? Factory fight. Gholdengo leads vs Texen, Crawli and Eli &amp; Sharon. Clawitzer leads vs Neved and Amber. Glalie-Aevian leads vs Groudon, Kyogre and Manaphy.</li>
+        <li><b>Annihilape</b>: both Ancient Guards, Jenner, Geara &amp; Zetta</li>
+        <li><b>Golisopod-Aevian</b>: Tommen, Giratina, Danni &amp; Layla, Troye &amp; Helen, Zena, Holly &amp; Rorim, Marcie, ??? Factory</li>
+        <li><b>Gholdengo</b>: Texen, Crawli, Eli &amp; Sharon</li>
+        <li><b>Clawitzer</b>: Neved, Amber</li>
+        <li><b>Glalie-Aevian</b>: Groudon, Kyogre, Manaphy</li>
+      </ul>
+      <h3>Field use <span class="legend">16 of 20 fights</span></h3>
+      <ul>
+        <li><b>Deep Earth</b> (Guards, Tommen, Groudon): Bone Rush, Rock Slide, Power Gem</li>
+        <li><b>Swamp</b> (Crawli): Pin Missile, Wood Hammer, Water Pulse</li>
+        <li><b>Forest / Mountain / Volcanic Top</b>: Glalie, Gholdengo, Golisopod</li>
+        <li><b>Beach / Water Surface</b>: Clawitzer (Aura Sphere, Water Pulse)</li>
+        <li><b>Big Top</b> (Texen): Make It Rain</li>
+        <li><b>No field user</b>: Zena, ??? Factory, Giratina, Amber</li>
       </ul>
     </div>
     <div class="panel scores">
-      <h3>Team strength, in plain terms</h3>
-      <div class="score"><span>Boss mons someone in your six can one-shot</span><b class="num">{R_KO}/{R_TOT}</b><i></i></div>
-      <div class="score"><span>…and does it before that foe moves</span><b class="num">{R_FAST}/{R_TOT}</b><i></i></div>
-      <div class="score"><span>After one Golisopod Swords Dance</span><b class="num">89/103</b><i></i></div>
-      <div class="score"><span>Annihilape alone, after its Rage Fist takes 1 / 2 hits</span><b class="num">58 / 73</b><i></i></div>
-      <div class="score"><span>Boss mons one-shot with field effects switched off</span><b class="num">89/103</b><i></i></div>
-      <p class="legend">Checked against the fights you have left (103 boss mons). Without a one-shot answer: the three bosses with boosted HP (Groudon, Kyogre, Manaphy), plus a few that take 69–91% (Gyarados, Dragonite, Scizor, Escavalier). Most often one-shot on your side: {", ".join(f"{E(disp(k))} ({v} boss hits)" for k, v in sorted(R_RISK.items(), key=lambda x: -x[1])[:3])}. Nobody on the team is one-shot by more than 7 of them.</p>
-      <p class="legend">Hardest fight: <b>Kyogre</b> (Lv 60 boss in rain). Nobody one-shots it: lead Glalie-Aevian and chip it with Grass moves. For Groudon, Exeggutor (Active box; Chlorophyll doubles its Speed in sun) is the one swap worth making.</p>
+      <h3>Team strength</h3>
+      <div class="score"><span>Boss mons someone can one-shot</span><b class="num">{R_KO}/{R_TOT}</b><i></i></div>
+      <div class="score"><span>…before that foe moves</span><b class="num">{R_FAST}/{R_TOT}</b><i></i></div>
+      <div class="score"><span>…with fields switched off</span><b class="num">89/103</b><i></i></div>
+      <div class="score"><span>Golisopod after one Swords Dance</span><b class="num">89/103</b><i></i></div>
+      <div class="score"><span>Annihilape, Rage Fist after 1 / 2 hits</span><b class="num">58 / 73</b><i></i></div>
+      <ul class="legend">
+        <li>No one-shot answer: Groudon, Kyogre, Manaphy (bosses with boosted HP)</li>
+        <li>Close calls (69–91%): Gyarados, Dragonite, Scizor, Escavalier</li>
+        <li>Most at risk: {", ".join(f"{E(disp(k))} ({v} boss hits)" for k, v in sorted(R_RISK.items(), key=lambda x: -x[1])[:3])}</li>
+        <li>Hardest fight: <b>Kyogre</b> → lead Glalie-Aevian, chip with Grass</li>
+        <li>Groudon → swap in Exeggutor (Active; Chlorophyll in sun)</li>
+      </ul>
     </div>
   </div>
-  {NEXT_HTML}
+</section>
+
+<section aria-labelledby="s1r">
+  <h2 id="s1r">Rules <span class="tag">your three hard rules · checked every rebuild</span></h2>
+  {RULES_HTML}
+  <div class="panel pad"><h3>Net +1 types and their switch-ins</h3>
+    <ul><li><b>Fire</b> → Clawitzer</li><li><b>Flying</b> → Gholdengo</li><li><b>Ghost</b> → Musharna-Aevian</li><li><b>Fairy</b> → Gholdengo</li></ul>
+  </div>
 </section>
 
 <section aria-labelledby="s1b">
@@ -523,7 +560,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 <section aria-labelledby="s3">
   <h2 id="s3"><span class="n">04</span> To do</h2>
   <div class="todos">{todo_html or '<p>Nothing left: the export matches the plan.</p>'}</div>
-  <p class="legend">Built from your latest export: anything the export shows as done is removed, and anything you ticked that the export doesn't show done comes back. Ticks are saved in this browser only. Levels come naturally; nothing here needs grinding.</p>
+  <ul class="legend"><li>Built from your latest export: done items disappear, unfinished ones come back</li><li>Ticks are saved in this browser only</li></ul>
 </section>
 
 <footer>Sources: <a href="https://bigjra.github.io/rejuvenation/">BIGJRA walkthrough</a> (Classic Mode), <a href="https://rejuvenation.wiki.gg/">Rejuvenation wiki</a>, <a href="https://www.rebornevo.com/forums/">Reborn Evolved forums</a>, your latest export. Damage is an average-roll estimate; turns, crits and partner AI aren't simulated.</footer>

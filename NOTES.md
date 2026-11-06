@@ -293,3 +293,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - Vincent profile: Showdown player, wants meta/OP builds, hard rules (a)(b)(c), Protect 4th, one six per chapter,
   singles weighted, fields a bonus; verifies everything → accuracy and cross-section consistency matter most; likes a
   condensed sheet (no clutter); items owned = type boosters, Sitrus, Focus Sash, Lum; Meowscarada kept (starter).
+- Tabs (11-06): scripts/team/tabs.py runs LAST (make_report5 → box_audit → highlight → tabs). Tabs: Team (s1: table +
+  game plan bullets), Fights (s1f: next fights, lead by fight, field use, strength), Rules (s1r: rules panel + matrices,
+  net +1 switch-ins), To do (s3 + s1b relearner), Tier list (s2), Boxes (s4). Remembers the last tab; #hash links work.
+  Long paragraphs replaced with bullets.
