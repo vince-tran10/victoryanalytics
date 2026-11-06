@@ -302,3 +302,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   5 bullets), Fights (next 3 fight cards: lead + threats → answer; lead by fight), To do, Tier list (no descriptions;
   C/D collapsed), Boxes. Explanations live in chat, not on the page. "To change" column only appears when something
   is pending. Relearner section only lists non-party mons and is removed when empty.
+- 6 Nov 10:52 export: Mystic Water on Clawitzer + Glare on Musharna done; only open to-do = level the six to 55. No box moves.
