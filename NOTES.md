@@ -265,3 +265,15 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - To do from 15:54 export: Clawitzer needs 252 HP / 252 SpA EVs + Sitrus (from Azumarill); Musharna-A Sitrus (Braviary's).
 - 16:41 export (429): party = Option B six, fully built (Clawitzer EVs + Sitrus done). To-do empty, no red rows. New catch: Golett (Overflow; Golurk already in Active).
 - 11-06: Musharna-Aevian Moonlight → Glare (speed control; Protect stays 4th). Leads unchanged.
+
+## Smogon knowledge layer (11-06)
+- Hosts added to the environment: www.smogon.com, data.pkmn.cc, pkmn.github.io.
+- workspace/smogon/sets_gen9{ubers,ou,uu,ru,nu,doublesou}.json = Smogon analysis sets (pkmn.github.io/smogon/data/sets/).
+  chaos_*.json (gitignored, 20 MB) = smogon.com/stats/2026-10/chaos usage (OU-1695, DOU-1695, UU/RU/NU-1630, VGC regG);
+  usage_digest_2026-10.json = top moves/abilities/items/spreads/teammates per species per format (committed).
+- scripts/team/smogon_meta.py: meta(species), usage(species, fmt), sd_name() (Rejuv → Showdown; Aevian/Idol → None),
+  analogs(ability) = SV species running that ability (templates for Aevian forms: Skill Link → Cloyster/Toucannon,
+  Tough Claws → Lycanroc-Dusk/Perrserker, Grassy Surge → Rillaboom/Thwackey).
+- Use on every rebuild: compare each build with the meta sets/usage and flag meta moves that are legal under our rules.
+  First pass (ideal six): Clawitzer meta = Water Pulse/Aura Sphere/Dragon Pulse(90%)/Dark Pulse(39%);
+  Gholdengo meta third move = Recover (we use Power Gem for Fire coverage + fields); Nasty Plot/Focus Blast not legal.
