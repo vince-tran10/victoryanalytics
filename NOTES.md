@@ -243,3 +243,13 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   highlights exactly those rows red (no tags) and the To do list carries the same items. Tier-list "Party" badge = the
   ideal six (section 01), not the current party. "Since last export" is split into columns by change type.
 - 15:54 export: party = the ideal six, fully built; to-do empty, no red rows. party_size() now needs a 15-entry A–Z run (an 'A' name like Azumarill in the party had been mistaken for the Overflow start).
+
+## Defensive-matrix rules (Vincent, 11-06)
+- Rules: (a) no attacking type super-effective on 3+ of the six; (b) every type resisted or immune on >= 1.
+  Net (weak − resist) is secondary. scripts/team/defense_search.py (env WEAK_MAX, RESIST_MIN, NET_MAX, NET_POS_MAX);
+  Whiscash Crest = Sap Sipper (Grass immunity) — its only weakness, so crested Whiscash has none.
+- IDEAL SIX: Annihilape + Gholdengo (lead), Azumarill + Mabosstiff (mid), Golisopod-Aevian + Glalie-Aevian (closer).
+  Best-scoring six passing (a)+(b): 1.179 (vs 1.190 for Chandelure/Whiscash six, which fails (b): no Flying/Psychic/Ghost
+  resist). Net +1 on Fire, Flying, Ghost, Fairy (switch-ins Azumarill, Gholdengo, Mabosstiff, Gholdengo).
+  Zero-red option: Whiscash for Annihilape, 1.158 (−1.8%). f21_*: 93/103 one-shots (52 first) with fields, 89 without;
+  singles 39/44; max one-shot threats on any member 9 (Mabosstiff).

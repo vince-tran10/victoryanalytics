@@ -54,12 +54,12 @@ def disp(n):
 TEAM = [
     ('Lead', 'Annihilape', 'Fighting/Ghost', 'Defiant', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Black Belt',
      [('Close Combat', 0), ('Rage Fist', 0), ('Sucker Punch', 0), ('Protect', 0)], []),
-    ('Lead', 'Chandelure', 'Ghost/Fire', 'Flash Fire', 'Timid', '252 SpA / 252 Spe / 4 HP', 'Focus Sash',
-     [('Shadow Ball', 0), ('Overheat', 0), ('Will-O-Wisp', 0), ('Protect', 0)], []),
+    ('Lead', 'Gholdengo', 'Steel/Ghost', 'Good as Gold', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Metal Coat',
+     [('Make It Rain', 0), ('Shadow Ball', 0), ('Power Gem', 0), ('Protect', 0)], []),
     ('Mid', 'Azumarill', 'Water/Fairy', 'Huge Power', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry',
      [('Aqua Tail', 0), ('Play Rough', 0), ('Superpower', 0), ('Protect', 0)], []),
-    ('Mid', 'Whiscash', 'Water/Ground', 'Oblivious', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Whiscash Crest',
-     [('Earthquake', 0), ('Aqua Tail', 0), ('Rock Tomb', 0), ('Protect', 0)], []),
+    ('Mid', 'Mabosstiff', 'Dark', 'Intimidate', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Black Glasses',
+     [('Jaw Lock', 0), ('Crunch', 0), ('Snarl', 0), ('Protect', 0)], []),
     ('Closer', 'Golisopod-Aevian', 'Bug/Ground', 'Skill Link', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand',
      [('Bone Rush', 0), ('Pin Missile', 0), ('Swords Dance', 0), ('Protect', 0)], []),
     ('Closer', 'Glalie-Aevian', 'Grass/Rock', 'Grassy Surge', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry',
@@ -163,7 +163,7 @@ for d in cur:
 
 # ---------------------------------------------------------------- 1b) relearner upgrades
 UP = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'upgrades_relearn.json')))
-ORDER = ['Annihilape', 'Chandelure', 'Azumarill', 'Whiscash', 'Golisopod-Aevian', 'Glalie-Aevian']
+ORDER = ['Annihilape', 'Gholdengo', 'Azumarill', 'Mabosstiff', 'Golisopod-Aevian', 'Glalie-Aevian']
 up_cards, up_same, up_left, up_done = [], [], 0, []
 for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP),
                 key=lambda d: (d['box'] != 'Party', ORDER.index(d['species']) if d['species'] in ORDER else 9, not UP[d['species']].get('big'), d['species'])):
@@ -188,7 +188,7 @@ for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP
     if abg: extra += f'<div class="chg2">Ability: {E(d.get("ability"))} → <b>{E(u["ability"])}</b> (Ability Capsule)</div>'
     if u.get('later'): extra += f'<div class="mnote">Later: {E(u["later"])}</div>'
     status = '<span class="ok">Done ✓</span>' if done else ('<span class="b big">big upgrade</span>' if u.get('big') else '<span class="b small">upgrade</span>')
-    role = {'Annihilape': 'lead', 'Chandelure': 'lead', 'Whiscash': 'mid', 'Azumarill': 'mid'}.get(d['species'], 'closer' if d['box'] == 'Party' else '')
+    role = {'Annihilape': 'lead', 'Gholdengo': 'lead', 'Mabosstiff': 'mid', 'Azumarill': 'mid'}.get(d['species'], 'closer' if d['box'] == 'Party' else '')
     up_cards.append(f'''<li class="mon up{" isparty" if d["box"] == "Party" else ""}"><div class="mtop"><strong>{E(d["species"])}</strong>{status}</div>
 <div class="chips">{chips(d["types"] or "")}<span class="lv">Lv {d["level"]}</span>{'<span class="b party">Party</span>' if d["box"] == "Party" else ''}</div>
 <ul class="mv">{mv}</ul>{('<div class="mnote">Out: ' + E(', '.join(gone)) + '</div>') if gone and not done else ''}{extra}
@@ -471,12 +471,12 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
     <div class="panel">
       <h3>Game plan</h3>
       <ul>
-        <li><strong>Built to last, not around a field.</strong> Picked for the fights you have left (Aelita and Narcissa are done), singles counted double, Protect in every 4th slot, and scored both with and without field effects. <b>No attacking type hits more than 2 of the six super-effectively</b>: Flying, Ghost, Ice and Water hit two each, everything else hits one or none.</li>
+        <li><strong>Your defensive rules, both met.</strong> No attacking type is super-effective on 3+ of the six, and every type is resisted (or blocked by an immunity) by at least one. Four types sit at net +1, each with a switch-in: Fire → Azumarill, Flying → Gholdengo, Ghost → Mabosstiff, Fairy → Gholdengo. Picked for the fights you have left (Aelita and Narcissa are done), singles counted double, Protect in every 4th slot, scored with and without fields.</li>
         <li><strong>Two win conditions.</strong> Golisopod hits hardest: in singles it one-shots 31 of 44 boss mons, 37 after one Swords Dance. Annihilape is the safe opener: only 2 of 44 can one-shot it, and Rage Fist grows every time it's hit.</li>
-        <li><strong class="role-lead">Lead</strong> Annihilape takes the first hit, then Rage Fist. Chandelure leads into physical teams and burns them with Will-O-Wisp; keep its Focus Sash, it's the frailest of the six.</li>
-        <li><strong class="role-mid">Mid</strong> Azumarill (Huge Power) handles Dragons, Dark and Fire. Whiscash's crest removes every weakness, so it can switch into almost anything and hit back with Earthquake and Aqua Tail.</li>
+        <li><strong class="role-lead">Lead</strong> Annihilape takes the first hit, then Rage Fist. Gholdengo can't be statused (Good as Gold), resists Flying, Psychic, Fairy and Dragon, and Make It Rain hits both foes in doubles.</li>
+        <li><strong class="role-mid">Mid</strong> Azumarill (Huge Power) is the Fire, Water, Ice and Dragon sponge. Mabosstiff's Intimidate weakens physical attackers, it resists Ghost and Dark and is immune to Psychic, and Jaw Lock traps.</li>
         <li><strong class="role-closer">Closer</strong> Golisopod uses Swords Dance only when the foe can't hurt it, then sweeps. Glalie-Aevian's Grassy Surge heals each turn, and Grassy Glide hits first.</li>
-        <li><strong>Only the lead changes, never the six.</strong> Golisopod leads vs Tommen, Troye &amp; Helen, Giratina and the ??? Factory fight. Whiscash leads vs both Ancient Guards and Zena. Azumarill leads vs Neved and Amber. Glalie-Aevian leads vs Eli &amp; Sharon, Kyogre and Manaphy. Annihilape leads vs Jenner and Geara &amp; Zetta. Chandelure leads vs Groudon (burn it first), Crawli, Danni &amp; Layla, Holly &amp; Rorim and Marcie. Texen (bring 3): Chandelure, Annihilape, Golisopod.</li>
+        <li><strong>Only the lead changes, never the six.</strong> Annihilape leads vs both Ancient Guards, Jenner and Geara &amp; Zetta. Golisopod leads vs Giratina, Danni &amp; Layla, Troye &amp; Helen, Zena, Holly &amp; Rorim, Marcie and the ??? Factory fight. Gholdengo leads vs Texen, Crawli and Eli &amp; Sharon. Mabosstiff leads vs Tommen. Azumarill leads vs Neved and Amber. Glalie-Aevian leads vs Groudon, Kyogre and Manaphy.</li>
       </ul>
     </div>
     <div class="panel scores">
@@ -485,9 +485,9 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
       <div class="score"><span>…and does it before that foe moves</span><b class="num">{R_FAST}/{R_TOT}</b><i></i></div>
       <div class="score"><span>After one Golisopod Swords Dance</span><b class="num">89/103</b><i></i></div>
       <div class="score"><span>Annihilape alone, after its Rage Fist takes 1 / 2 hits</span><b class="num">58 / 73</b><i></i></div>
-      <div class="score"><span>Boss mons one-shot with field effects switched off</span><b class="num">92/103</b><i></i></div>
-      <p class="legend">Checked against the fights you have left (103 boss mons). Without a one-shot answer: the three bosses with boosted HP (Groudon, Kyogre, Manaphy), plus a few that take 67–99% (Kleavor, Gyarados, Dragonite, Skeledirge). Most often one-shot on your side: {", ".join(f"{E(disp(k))} ({v} boss hits)" for k, v in sorted(R_RISK.items(), key=lambda x: -x[1])[:3])}. Keep Chandelure's Focus Sash on and switch it out of bad matchups early.</p>
-      <p class="legend">Hardest fight: <b>Kyogre</b> (Lv 60 boss in rain). Nobody one-shots it: lead Glalie-Aevian and chip it with Grass moves. For Groudon, Exeggutor (Chlorophyll doubles its Speed in sun) is the one swap worth making.</p>
+      <div class="score"><span>Boss mons one-shot with field effects switched off</span><b class="num">89/103</b><i></i></div>
+      <p class="legend">Checked against the fights you have left (103 boss mons). Without a one-shot answer: the three bosses with boosted HP (Groudon, Kyogre, Manaphy), plus a few that take 69–92% (Gyarados, Dragonite, Scizor, Escavalier, Orthworm, Skeledirge). Most often one-shot on your side: {", ".join(f"{E(disp(k))} ({v} boss hits)" for k, v in sorted(R_RISK.items(), key=lambda x: -x[1])[:3])}. Nobody on the team is one-shot by more than 9 of them.</p>
+      <p class="legend">Hardest fight: <b>Kyogre</b> (Lv 60 boss in rain). Nobody one-shots it: lead Glalie-Aevian and chip it with Grass moves. For Groudon, Exeggutor (Active box; Chlorophyll doubles its Speed in sun) is the one swap worth making.</p>
     </div>
   </div>
 </section>
