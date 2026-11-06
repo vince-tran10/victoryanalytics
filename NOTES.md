@@ -277,3 +277,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - Use on every rebuild: compare each build with the meta sets/usage and flag meta moves that are legal under our rules.
   First pass (ideal six): Clawitzer meta = Water Pulse/Aura Sphere/Dragon Pulse(90%)/Dark Pulse(39%);
   Gholdengo meta third move = Recover (we use Power Gem for Fire coverage + fields); Nasty Plot/Focus Blast not legal.
+- National Dex added (11-06): SV lacks many species (Dexit). sets_gen9nationaldex{,uu,ubers,doubles}.json + chaos
+  gen9nationaldex-1630, gen9nationaldexuu-1630, gen9nationaldexdoubles-1500. Coverage of party+Active (55 species):
+  39 SV, 7 National Dex only (Crobat, Cursola, Jellicent, Pangoro, Tangrowth, Throh, Unfezant), 9 Rejuv-only forms
+  (Aevian/Idol → analogs by ability). Champions data not used: smaller roster + different mechanics = different meta.

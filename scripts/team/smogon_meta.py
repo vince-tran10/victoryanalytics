@@ -4,8 +4,8 @@ Rejuvenation-only forms (Aevian, Idol fusions) are mapped to SV analogs that sha
 import json, os, re, glob
 HERE = os.path.dirname(os.path.abspath(__file__))
 SM = os.path.join(HERE, '..', '..', 'workspace', 'smogon')
-SINGLES = ['gen9ubers', 'gen9ou', 'gen9uu', 'gen9ru', 'gen9nu']
-DOUBLES = ['gen9doublesou']
+SINGLES = ['gen9ubers', 'gen9ou', 'gen9uu', 'gen9ru', 'gen9nu', 'gen9nationaldexubers', 'gen9nationaldex', 'gen9nationaldexuu']
+DOUBLES = ['gen9doublesou', 'gen9nationaldexdoubles']   # National Dex = every species, incl. those cut from SV
 def _load(pat):
     out = {}
     for f in sorted(glob.glob(os.path.join(SM, pat))):
@@ -32,10 +32,10 @@ def meta(name):
         if name in SETS.get(f, {}): out['singles_sets'][f] = SETS[f][name]
     for f in DOUBLES:
         if name in SETS.get(f, {}): out['doubles_sets'][f] = SETS[f][name]
-    for f in ['gen9ou-1695', 'gen9uu-1630', 'gen9ru-1630', 'gen9nu-1630']:
+    for f in ['gen9ou-1695', 'gen9uu-1630', 'gen9ru-1630', 'gen9nu-1630', 'gen9nationaldex-1630', 'gen9nationaldexuu-1630']:
         u = usage(name, f)
         if u and (out['singles_usage'] is None or u['usage'] > out['singles_usage']['usage']): out['singles_usage'] = u
-    for f in ['gen9doublesou-1695', 'gen9vgc2024regg-1630']:
+    for f in ['gen9doublesou-1695', 'gen9vgc2024regg-1630', 'gen9nationaldexdoubles-1500']:
         u = usage(name, f)
         if u and (out['doubles_usage'] is None or u['usage'] > out['doubles_usage']['usage']): out['doubles_usage'] = u
     return out
