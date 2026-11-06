@@ -303,3 +303,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   C/D collapsed), Boxes. Explanations live in chat, not on the page. "To change" column only appears when something
   is pending. Relearner section only lists non-party mons and is removed when empty.
 - 6 Nov 10:52 export: Mystic Water on Clawitzer + Glare on Musharna done; only open to-do = level the six to 55. No box moves.
+- 6 Nov: Vincent keeps an unsorted new-catch box at the START of Active (after the A–Z Overflow run). active_start()
+  now returns the first reset after the Overflow Z… names. Those 15 (#366–380 in the 10:52 export) all score below the
+  Active bar on r20 (best: Gastrodon West Aevian 0.527 with capsule, Swinub→Mamoswine 0.484) → cuts.json "move"
+  (Gastrodon@55 = the West Aevian one; the regular Gastrodon stays). Box-cleanup to-dos are folded into one line.

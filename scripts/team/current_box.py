@@ -37,10 +37,8 @@ def active_start(N):
     resets = [i for i in range(P + 1, len(N)) if N[i]['species'].lower() < N[i - 1]['species'].lower()]
     # Overflow ends at the first reset after a 'Z…' name; Active is the next reset that starts with an A/B name
     zend = next((i for i in resets if N[i - 1]['species'][:1].upper() >= 'W'), None)
-    if zend is not None:
-        ab = [i for i in resets if i >= zend and N[i]['species'][:1].upper() in 'AB' and len(N) - i >= 10]
-        if ab:
-            return N[ab[0]]['n']
+    if zend is not None:   # everything after the A–Z Overflow run is Active (incl. an unsorted new-catch box)
+        return N[zend]['n']
     for i in range(P + 1, len(N)):
         if N[i]['species'].lower() < N[i - 1]['species'].lower() and all(
                 N[j - 1]['species'].lower() <= N[j]['species'].lower() for j in range(i + 1, len(N))):

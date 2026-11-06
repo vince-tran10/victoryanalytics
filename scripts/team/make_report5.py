@@ -313,9 +313,10 @@ if promo_todo:
 CUTS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'cuts.json')))
 cut_todo = []
 for sp, why in CUTS['move'].items():
-    hits = [d for d in cur if d['box'] == 'Active' and d['species'] == sp]
+    sp_, lv_ = (sp.split('@') + [None])[:2]
+    hits = [d for d in cur if d['box'] == 'Active' and d['species'] == sp_ and (lv_ is None or str(d['level']) == lv_)]
     if hits:
-        cut_todo.append((f"{sp}{' ×' + str(len(hits)) if len(hits) > 1 else ''} (#{', #'.join(str(d['n']) for d in hits)}): move to Overflow. {why}", 'mid'))
+        cut_todo.append((f"{sp_}{' ×' + str(len(hits)) if len(hits) > 1 else ''} (#{', #'.join(str(d['n']) for d in hits)}): move to Overflow", 'mid'))
         for d in hits: ACTIONS[d['n']] = 'Move to Overflow'
 for d in cur:
     if d['box'] == 'Active' and d['species'] in party and d['species'] in IDEAL and d['n'] not in ACTIONS:
@@ -327,7 +328,11 @@ for sp, why in CUTS['maybe'].items():
         cut_todo.append((f"{sp} (#{hits[0]['n']}): your call. {why}", 'low'))
         ACTIONS[hits[0]['n']] = 'Your call: Overflow'
 if cut_todo:
-    TODO.append(('Box cleanup: Active → Overflow', cut_todo))
+    _mv = [t for t, pr in cut_todo if t.endswith('move to Overflow')]
+    _other = [(t, pr) for t, pr in cut_todo if not t.endswith('move to Overflow')]
+    if _mv:
+        _other.insert(0, ('Move to Overflow: ' + ', '.join(t.replace(': move to Overflow', '') for t in _mv), 'mid'))
+    TODO.append(('Box cleanup', _other))
 todo_html = ''
 k = 0
 for group, items in TODO:
