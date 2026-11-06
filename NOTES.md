@@ -282,3 +282,14 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   39 SV, 7 National Dex only (Crobat, Cursola, Jellicent, Pangoro, Tangrowth, Throh, Unfezant), 9 Rejuv-only forms
   (Aevian/Idol → analogs by ability). Champions data not used: smaller roster + different mechanics = different meta.
 - 11-06: Clawitzer item Sitrus → Mystic Water (meta uses damage items; rules unaffected). Dark Pulse kept over Dragon Pulse: both pass rule (c); Dark Pulse one-shots 49/103 vs 44/103.
+
+## Sheet upgrades from "what I've learned" (11-06)
+- scripts/team/sheet_extras.py: rules_panel() = Team rules (a)/(b)/(c) pass/fail + Half-Dozen-style defensive matrix
+  (Weak/Resist/Net, abilities + Whiscash crest) and offensive matrix (SE/NVE/Net from attacking moves) for the ideal six;
+  next_fights() = next 3 fights in walkthrough order (lead, one-shot answers, field users, setup/speed/one-shot threats
+  with answers). Fights drop off via DONE=... when the f-file is regenerated.
+- Level check: party members below 55 get "Lv X → 55" in the Change column and ONE combined to-do line.
+- Header now shows real counts (boss mons / fights left) and the current move rules. Stale Rage Fist numbers removed.
+- Vincent profile: Showdown player, wants meta/OP builds, hard rules (a)(b)(c), Protect 4th, one six per chapter,
+  singles weighted, fields a bonus; verifies everything → accuracy and cross-section consistency matter most; likes a
+  condensed sheet (no clutter); items owned = type boosters, Sitrus, Focus Sash, Lum; Meowscarada kept (starter).

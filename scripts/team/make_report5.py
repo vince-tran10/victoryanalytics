@@ -6,6 +6,7 @@ To-dos are checked against NEW_EXPORT: anything the export shows as done is drop
 import json, sys, html, os, hashlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from current_box import current_rows, tier as tier_of
+import sheet_extras as SX
 
 NEWX, OLDX, F9N, F9S, F9D, PROMO, OUT = sys.argv[1:8]
 cur, ACT = current_rows(NEWX, OLDX, F9N)
@@ -72,6 +73,7 @@ JOB = {'Annihilape': 'Fastest hitter.',
        'Golisopod-Aevian': 'Win condition. Skill Link makes Bone Rush and Pin Missile 125 power. After one Swords Dance it one-shots 60 of 68 boss mons.',
        'Leavanny-Aevian': 'Rage Powder pulls attacks so Golisopod gets a free Swords Dance; Focus Sash guarantees it survives that turn. Intimidate on entry.'}
 EVOLVE_FIRST = {}
+NEXT_LV = max(fo['lvl'] or 0 for p in sorted(fn['plans'], key=lambda p: SX.story_order(os.path.dirname(os.path.dirname(os.path.abspath(F9N)))).get(p['key'], 999))[:3] for fo in p['foes'])
 ACTIONS = {}   # export entry number -> what to do; read by box_audit.py for the red highlights
 REPL = {('Musharna-Aevian', 'Glare'): 'Moonlight: paralysis halves a sweeper\'s Speed, so your slow hitters move first',
         ('Annihilape', 'Sucker Punch'): 'Fire Punch: priority hit on faster foes',
@@ -109,6 +111,8 @@ def verify_mon(d, ab, nat, evs, item, moves):
         out.append(f"Ability: {d.get('ability')} → {ab} (Ability Capsule)")
     if d.get('nature') != nat:
         out.append(f"Nature: {d.get('nature')} → {nat} (mint)")
+    if (d.get('level') or 55) < 55:
+        out.append(f"Lv {d['level']} → 55: level up (the cap; bosses ahead are Lv {NEXT_LV}+)")
     for m, _ in moves:
         if m not in d['moves']:
             out.append(LATER.get((name, m), f'Teach {m}' + (f' (replaces {REPL[(name, m)]})' if (name, m) in REPL else '')).format(lv=d['level']))
@@ -121,11 +125,12 @@ def ev_lines(evs):
     return '<ul class="evl">' + ''.join(f'<li><b class="num">{v}</b> {k}</li>' for v, k in keep) + '</ul>'
 
 
-team_rows, team_todo = [], []
+team_rows, team_todo, LEVELS = [], [], []
 prev = None
 for role, name, types, ab, nat, evs, item, moves, changes in TEAM:
     changes = verify(name, ab, nat, evs, item, moves)
-    team_todo += [(f'{name}: {c}', 'mid' if c.startswith('Lv ') else 'high') for c in changes]
+    team_todo += [(f'{name}: {c}', 'high') for c in changes if not c.startswith('Lv ')]
+    LEVELS += [(name, c.split()[1]) for c in changes if c.startswith('Lv ')]
     moves = [(m, 2 if (name, m) in LATER and m not in party.get(name, {}).get('moves', []) else 0) for m, _ in moves]
     mv = ''.join(f'<li class="{"new" if n == 1 else ("soon" if n == 2 else "")}">{E(m)}</li>' for m, n in moves)
     ch = ('<ul class="chg">' + ''.join(f'<li>{E(c)}</li>' for c in changes) + '</ul>') if changes else '<span class="ok">Done ✓ (matches export)</span>'
@@ -156,7 +161,12 @@ def readiness():
 ready_rows, R_TOT, R_KO, R_FAST, R_RISK = readiness()
 
 
+if LEVELS:
+    team_todo.append(('Level the six to 55 (the cap; the next bosses are Lv ' + str(NEXT_LV) + '+): ' + ', '.join(f'{n} {lv}' for n, lv in LEVELS), 'mid'))
 IDEAL = [t[1] for t in TEAM]
+TEAM_X = [(t[1], t[2], t[3], t[6], [m for m, _ in t[7]]) for t in TEAM]
+RULES_HTML = SX.rules_panel(TEAM_X)
+NEXT_HTML = SX.next_fights(fn['plans'], TEAM_X, os.path.dirname(os.path.dirname(os.path.abspath(F9N))), 3, SHORT, disp)
 for d in cur:
     if d['box'] == 'Party' and d['species'] not in IDEAL:
         ACTIONS[d['n']] = 'Move out of the party, back to the Active box'
@@ -459,7 +469,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 <header class="mast">
   <span class="eyebrow">Pokémon Rejuvenation · Chapter 8 · Classic teams</span>
   <h1>Chapter 8 Team Report</h1>
-  <div class="facts"><span>Trainer <b>Vincent</b></span><span>Cap <b>55</b></span><span>Badges <b>7</b></span><span>Moves <b>Ch 1–7 TMs &amp; tutors only</b></span><span>Checked vs <b>68 boss mons, 12 battles</b></span><span>Export <b>{E(os.environ.get('EXPORT_LABEL', '5 Nov'))}, {len(cur)} mons</b></span></div>
+  <div class="facts"><span>Trainer <b>Vincent</b></span><span>Cap <b>55</b></span><span>Badges <b>7</b></span><span>Moves <b>level-up, relearner, egg, Ch 1–7 TMs, tutors ≤ 7 badges</b></span><span>Checked vs <b>{R_TOT} boss mons, {len(fn['plans'])} fights left</b></span><span>Export <b>{E(os.environ.get('EXPORT_LABEL', '5 Nov'))}, {len(cur)} mons</b></span></div>
 </header>
 
 <section aria-labelledby="s1">
@@ -468,6 +478,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
     <thead><tr><th>Role</th><th>Pokémon</th><th>Ability</th><th>Nature</th><th>EVs</th><th>Item</th><th>Moves</th><th>Change in game</th></tr></thead>
     <tbody>{"".join(team_rows)}</tbody>
   </table></div>
+  {RULES_HTML}
   <div class="plan">
     <div class="panel">
       <h3>Game plan</h3>
@@ -493,6 +504,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
       <p class="legend">Hardest fight: <b>Kyogre</b> (Lv 60 boss in rain). Nobody one-shots it: lead Glalie-Aevian and chip it with Grass moves. For Groudon, Exeggutor (Active box; Chlorophyll doubles its Speed in sun) is the one swap worth making.</p>
     </div>
   </div>
+  {NEXT_HTML}
 </section>
 
 <section aria-labelledby="s1b">
@@ -533,6 +545,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 }})();
 </script>
 '''
+page = page.replace('</style>', SX.CSS.replace('{{', '{').replace('}}', '}') + '</style>', 1)
 open(OUT, 'w', encoding='utf-8').write(page)
 json.dump({str(k): v for k, v in ACTIONS.items()}, open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'actions.json'), 'w'), indent=1)
 print('wrote', OUT, len(page), 'tiers:', {t: len(v) for t, v in cards.items()})
