@@ -79,8 +79,8 @@ def rules_panel(team):
               f'<li class="legend">Net +1 (watch): {E(", ".join(t.capitalize() for t in pos)) or "none"}. Protect sits in every 4th slot.</li></ul>')
     tbl = lambda title, a, b, rows: (f'<div class="mx"><h4>{title}</h4><div class="tablewrap"><table class="mxt"><thead><tr><th></th>{head}'
                                      f'<th class="c">{a}</th><th class="c">{b}</th><th class="c">Net</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div></div>')
-    return (f'<div class="panel pad rulesp"><h3>Team rules</h3>{checks}<div class="mxs">'
-            + tbl('Defensive matrix', 'Weak', 'Resist', drow) + tbl('Offensive matrix', 'SE', 'NVE', orow) + '</div></div>')
+    return (f'<div class="panel pad rulesp"><h3>Team rules</h3>{checks}<details class="mxd"><summary>Show matrices</summary><div class="mxs">'
+            + tbl('Defensive matrix', 'Weak', 'Resist', drow) + tbl('Offensive matrix', 'SE', 'NVE', orow) + '</div></details></div>')
 
 
 def story_order(base):
@@ -149,5 +149,7 @@ CSS = '''
 .mxt .c {{ font-family: var(--mono); font-weight: 600 }} .mxt .mw-c {{ color: var(--bad) }} .mxt .mr-c {{ color: var(--good) }}
 .mxt .np {{ background: var(--bad-soft); color: var(--bad) }} .mxt .nn {{ background: var(--good-soft); color: var(--good) }} .mxt .nz {{ color: var(--muted) }}
 .nfs {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px }}
-.nf {{ font-size: 13.5px }} .nfh {{ margin-top: 4px }}
+.nf {{ font-size: 13.5px }}
+.mxd summary, .tierd > summary {{ cursor: pointer; font: 600 13px var(--display); color: var(--accent); padding: 6px 0 }}
+.mxd[open] summary {{ margin-bottom: 8px }} .nfh {{ margin-top: 4px }}
 '''

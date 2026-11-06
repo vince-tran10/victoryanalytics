@@ -297,3 +297,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   game plan bullets), Fights (s1f: next fights, lead by fight, field use, strength), Rules (s1r: rules panel + matrices,
   net +1 switch-ins), To do (s3 + s1b relearner), Tier list (s2), Boxes (s4). Remembers the last tab; #hash links work.
   Long paragraphs replaced with bullets.
+- Clean-up (11-06): matrices behind 'Show matrices'; C/D tiers collapsed; header = export, fights left, cap; relearner section hidden when nothing pending.

@@ -270,9 +270,12 @@ for r in rows:
     cards[tier].append(f'''<li class="mon"><div class="mtop"><strong>{E(disp(r["name"]))}</strong><span class="num sc">{r["score"]:.2f}</span></div>
 <div class="chips">{chips(r["types"])}<span class="lv">Lv {r["level"]}</span>{where}{badges}</div>
 <div class="mnote">{E(BLURB.get(r["name"], note))}</div></li>''')
-tier_html = ''.join(
-    f'<div class="tier t{t}"><div class="tl"><b>{t}</b><span>{E(desc)}</span></div><ul class="tmons">{"".join(cards[t])}</ul></div>'
-    for t, _, desc in TIERS if cards[t])
+_tier = lambda t, desc: f'<div class="tier t{t}"><div class="tl"><b>{t}</b><span>{E(desc)}</span></div><ul class="tmons">{"".join(cards[t])}</ul></div>'
+tier_html = ''.join(_tier(t, d) for t, _, d in TIERS if cards[t] and t in 'SAB')
+_low = [(t, d) for t, _, d in TIERS if cards[t] and t in 'CD']
+if _low:
+    tier_html += (f'<details class="tierd"><summary>Show C and D tiers ({sum(len(cards[t]) for t, _ in _low)} Pokémon)</summary>'
+                  + ''.join(_tier(t, d) for t, d in _low) + '</details>')
 
 # ---------------------------------------------------------------- 3) to-do
 TODO = []
@@ -469,7 +472,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 <header class="mast">
   <span class="eyebrow">Pokémon Rejuvenation · Chapter 8 · Classic teams</span>
   <h1>Chapter 8 Team Report</h1>
-  <div class="facts"><span>Trainer <b>Vincent</b></span><span>Cap <b>55</b></span><span>Badges <b>7</b></span><span>Moves <b>level-up, relearner, egg, Ch 1–7 TMs, tutors ≤ 7 badges</b></span><span>Checked vs <b>{R_TOT} boss mons, {len(fn['plans'])} fights left</b></span><span>Export <b>{E(os.environ.get('EXPORT_LABEL', '5 Nov'))}, {len(cur)} mons</b></span></div>
+  <div class="facts"><span>Export <b>{E(os.environ.get('EXPORT_LABEL', '5 Nov'))}</b></span><span>Fights left <b>{len(fn['plans'])}</b></span><span>Level cap <b>55</b></span></div>
 </header>
 
 <section aria-labelledby="s1">
@@ -544,7 +547,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
   </div>
 </section>
 
-<section aria-labelledby="s1b">
+{'' if not up_cards and not promo_cards else ''}<section aria-labelledby="s1b"{'' if up_cards or promo_cards else ' hidden'}>
   <h2 id="s1b"><span class="n">02</span> Move Relearner upgrades <span class="tag">party + Active box · {up_left} to do</span></h2>
   <p class="legend">Only open upgrades are listed; a card disappears once your export shows it done.</p>
   <ul class="tmons upgrid">{"".join(up_cards)}</ul>
