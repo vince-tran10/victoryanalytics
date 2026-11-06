@@ -22,21 +22,23 @@ def parse(p):
 
 N, O = parse(NEW), parse(OLD)
 sys.path.insert(0, here)
-from current_box import party_size, active_start
+from current_box import party_size, active_start, box_of
 PN, PO = party_size(N), party_size(O)
+BN = box_of(N)
 # Active box = last alphabetical reset after #7
 resets = [b['n'] for a, b in zip(N, N[1:]) if b['n'] > PN + 1 and b['species'].lower() < a['species'].lower()]
 starts = [r for r in resets if all(N[i - 1]['species'].lower() <= N[i]['species'].lower() for i in range(r, len(N)))]
 ACT = active_start(N)
 box = lambda n, s, p=None: 'Party' if n <= (PN if p is None else p) else ('Active' if n >= s else 'Overflow')
 for d in N:
-    d['box'] = box(d['n'], ACT)
+    d['box'] = BN[d['n']]
 PARTY_SP = {d['species'] for d in N if d['box'] == 'Party'}
 oddsort = [b for a, b in zip(N, N[1:]) if b['n'] not in (PN + 1, ACT) and b['n'] > PN + 1
            and b['species'].lower() < a['species'].lower()
            and not (b['species'].split('-')[0] == a['species'].split('-')[0])]
 k = lambda d: (d['species'], d['gender'], d['nick'])
-oc = collections.Counter((k(d), box(d['n'], active_start(O), PO)) for d in O)
+BO = box_of(O)
+oc = collections.Counter((k(d), BO[d['n']]) for d in O)
 nc = collections.Counter((k(d), d['box']) for d in N)
 moved_in = nc - oc
 changes = sorted(f"{s} → {b}" for (kk, b), c in moved_in.items() for s in [kk[0]] * c)
@@ -132,6 +134,7 @@ sec = f'''<!--BOXAUDIT-->
   <p class="legend"><span class="actkey">Red</span> = move it</p>
   <label class="find">Find a Pokémon <input type="search" id="boxfind" placeholder="e.g. Furret" autocomplete="off"></label>
   {group("Party", "Party", True, "")}
+  {group("Staging", "Staging", True, "decide: Active or Overflow") if any(d['box'] == 'Staging' for d in N) else ''}
   {group("Active box", "Active", True, "")}
   {group("Overflow boxes", "Overflow", False, "tap to expand")}
 </section>

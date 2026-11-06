@@ -31,13 +31,35 @@ def party_size(N):
     return 6
 
 
+def staging_range(N):
+    """(first, last) export numbers of the staging box between Overflow and Active, or None."""
+    P = party_size(N)
+    resets = [i for i in range(P + 1, len(N)) if N[i]['species'].lower() < N[i - 1]['species'].lower()]
+    zend = next((i for i in resets if N[i - 1]['species'][:1].upper() >= 'W'), None)
+    a = active_start(N)
+    if zend is None or N[zend]['n'] >= a:
+        return None
+    return (N[zend]['n'], a - 1)
+
+
+def box_of(N):
+    P, a, st = party_size(N), active_start(N), staging_range(N)
+    return {d['n']: 'Party' if d['n'] <= P else ('Staging' if st and st[0] <= d['n'] <= st[1] else ('Active' if d['n'] >= a else 'Overflow')) for d in N}
+
+
 def active_start(N):
     """Active box = the last A–Z run that starts with an 'A'/'B' name after Overflow (a new-catch box may sit between)."""
     P = party_size(N)
     resets = [i for i in range(P + 1, len(N)) if N[i]['species'].lower() < N[i - 1]['species'].lower()]
     # Overflow ends at the first reset after a 'Z…' name; Active is the next reset that starts with an A/B name
     zend = next((i for i in resets if N[i - 1]['species'][:1].upper() >= 'W'), None)
-    if zend is not None:   # everything after the A–Z Overflow run is Active (incl. an unsorted new-catch box)
+    if zend is not None:   # Overflow A–Z, then (optional) unsorted Staging box, then Active A–Z
+        def run(i):   # the Active A–Z run to the end: only a few out-of-order names (party swaps dropped in loosely)
+            xs = [d['species'].lower() for d in N[i:]]
+            return len(xs) >= 10 and sum(a > b for a, b in zip(xs, xs[1:])) <= max(8, len(xs) // 4)
+        ab = [i for i in resets if i >= zend and N[i]['species'][:1].upper() in 'AB' and run(i)]
+        if ab:
+            return N[ab[0]]['n']
         return N[zend]['n']
     for i in range(P + 1, len(N)):
         if N[i]['species'].lower() < N[i - 1]['species'].lower() and all(
@@ -60,8 +82,9 @@ def current_rows(new_export, old_export, f11):
         by_final[disp(r['name'])].append(r)
     act = active_start(N)
     rows = []
+    BOX = box_of(N)
     for d in N:
-        d['box'] = 'Party' if d['n'] <= party_size(N) else ('Active' if d['n'] >= act else 'Overflow')
+        d['box'] = BOX[d['n']] if BOX.get(d['n']) == 'Staging' else 'Party' if d['n'] <= party_size(N) else ('Active' if d['n'] >= act else 'Overflow')
         ents = by_sp.get(d['species']) or by_final.get(d['species']) or []
         if not ents:
             rows.append(dict(d, final=d['species'], score=None)); continue

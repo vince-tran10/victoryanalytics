@@ -13,7 +13,7 @@ cur, ACT = current_rows(NEWX, OLDX, F9N)
 party = {d['species']: d for d in cur if d['box'] == 'Party'}
 rows = []
 for d in cur:
-    if d['box'] == 'Overflow' or d['score'] is None:
+    if d['box'] in ('Overflow', 'Staging') or d['score'] is None:
         continue
     rows.append(dict(name=d['name'], where=d['box'], level=d['level'], score=d['score'], types=d['types'],
                      best=sorted(d['solo'], key=d['solo'].get, reverse=True), solo=d['solo'], attacks=d['attacks'], ability=d['ability']))
@@ -327,6 +327,19 @@ for sp, why in CUTS['maybe'].items():
     if hits:
         cut_todo.append((f"{sp} (#{hits[0]['n']}): your call. {why}", 'low'))
         ACTIONS[hits[0]['n']] = 'Your call: Overflow'
+# staging box: every mon gets a verdict (Active needs A tier on its own and a species not already in Party/Active)
+_have = {d['final'] for d in cur if d['box'] in ('Party', 'Active')}
+_to_act, _to_ovf = [], []
+for d in cur:
+    if d['box'] != 'Staging':
+        continue
+    ok = d['score'] is not None and d['score'] >= 0.53 and d['final'] not in _have
+    ACTIONS[d['n']] = 'Move to Active' if ok else 'Move to Overflow'
+    (_to_act if ok else _to_ovf).append(f"{d['species']} (#{d['n']})")
+if _to_act:
+    cut_todo.insert(0, ('Staging → Active: ' + ', '.join(_to_act), 'high'))
+if _to_ovf:
+    cut_todo.insert(0, ('Staging → Overflow: ' + ', '.join(_to_ovf), 'mid'))
 if cut_todo:
     _mv = [t for t, pr in cut_todo if t.endswith('move to Overflow')]
     _other = [(t, pr) for t, pr in cut_todo if not t.endswith('move to Overflow')]

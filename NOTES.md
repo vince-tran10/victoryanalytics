@@ -307,3 +307,11 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   now returns the first reset after the Overflow Z… names. Those 15 (#366–380 in the 10:52 export) all score below the
   Active bar on r20 (best: Gastrodon West Aevian 0.527 with capsule, Swinub→Mamoswine 0.484) → cuts.json "move"
   (Gastrodon@55 = the West Aevian one; the regular Gastrodon stays). Box-cleanup to-dos are folded into one line.
+- STAGING box (6 Nov): Vincent's box between Overflow (A–Z) and Active (A–Z) is a staging area for new catches.
+  current_box.staging_range()/box_of(): Overflow ends at the first reset after a W–Z name; Active = first later reset
+  that starts with an A/B name and runs (mostly) A–Z to the end (≤ max(8, len/4) out-of-order names, since party swaps
+  get dropped in loosely). Staging mons get a verdict: → Active if A tier (≥ 0.53) and species not already in
+  Party/Active, else → Overflow (red rows + one To do line). Staging is excluded from the tier list. 10:52 export:
+  #366–380, all 15 → Overflow (best: Gastrodon West Aevian 0.527, Swinub→Mamoswine 0.484).
+- Golden Chalice (HAUNTEDCHALICE) = key item that starts Narcissa's Hauntings (Ch8 → expires Ch16); quest rewards:
+  Gengarite G, Shiinotic Crest, Fairy Memory, a stamp, Dazzling Gleam TM. No battle use.
