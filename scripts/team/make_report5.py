@@ -59,7 +59,7 @@ TEAM = [
     ('Mid', 'Clawitzer', 'Water', 'Mega Launcher', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Sitrus Berry',
      [('Water Pulse', 0), ('Aura Sphere', 0), ('Dark Pulse', 0), ('Protect', 0)], []),
     ('Mid', 'Musharna-Aevian', 'Dark/Fairy', 'Tough Claws', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry',
-     [('Play Rough', 0), ('Throat Chop', 0), ('Moonlight', 0), ('Protect', 0)], []),
+     [('Play Rough', 0), ('Throat Chop', 0), ('Glare', 0), ('Protect', 0)], []),
     ('Closer', 'Golisopod-Aevian', 'Bug/Ground', 'Skill Link', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand',
      [('Bone Rush', 0), ('Pin Missile', 0), ('Swords Dance', 0), ('Protect', 0)], []),
     ('Closer', 'Glalie-Aevian', 'Grass/Rock', 'Grassy Surge', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry',
@@ -73,7 +73,8 @@ JOB = {'Annihilape': 'Fastest hitter.',
        'Leavanny-Aevian': 'Rage Powder pulls attacks so Golisopod gets a free Swords Dance; Focus Sash guarantees it survives that turn. Intimidate on entry.'}
 EVOLVE_FIRST = {}
 ACTIONS = {}   # export entry number -> what to do; read by box_audit.py for the red highlights
-REPL = {('Annihilape', 'Sucker Punch'): 'Fire Punch: priority hit on faster foes',
+REPL = {('Musharna-Aevian', 'Glare'): 'Moonlight: paralysis halves a sweeper\'s Speed, so your slow hitters move first',
+        ('Annihilape', 'Sucker Punch'): 'Fire Punch: priority hit on faster foes',
         ('Annihilape', 'Rage Fist'): 'Shadow Punch: Move Relearner, +50 power per hit taken',
         ('Gholdengo', 'Power Gem'): 'Recover: Move Relearner, hits the Fire types',
         ('Rhyperior', 'Rock Blast'): 'Rock Slide: Move Relearner, until Stone Edge at Lv 54'}
@@ -475,7 +476,8 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
         <li><strong>Uses the field in 16 of 20 fights.</strong> Deep Earth: Bone Rush, Rock Slide and Power Gem (3 users). Swamp: Pin Missile, Wood Hammer, Water Pulse (3). Forest, Mountain and Volcanic Top: Glalie, Gholdengo or Golisopod (2). Beach and Water Surface: Clawitzer's Aura Sphere and Water Pulse. Big Top: Make It Rain. No field user vs Zena, the ??? Factory fight, Giratina and Amber.</li>
         <li><strong>Two win conditions.</strong> Golisopod hits hardest: in singles it one-shots 31 of 44 boss mons, 37 after one Swords Dance. Annihilape is the safe opener: only 2 of 44 can one-shot it, and Rage Fist grows every time it's hit.</li>
         <li><strong class="role-lead">Lead</strong> Annihilape takes the first hit, then Rage Fist. Gholdengo can't be statused (Good as Gold), resists Flying, Psychic, Fairy and Dragon, and Make It Rain hits both foes in doubles.</li>
-        <li><strong class="role-mid">Mid</strong> Clawitzer's Mega Launcher boosts Water Pulse, Aura Sphere and Dark Pulse by 50%; Aura Sphere never misses. Musharna-Aevian (Dark/Fairy, Tough Claws) resists Ghost and Dark, is immune to Psychic and Dragon, and heals with Moonlight.</li>
+        <li><strong class="role-mid">Mid</strong> Clawitzer's Mega Launcher boosts Water Pulse, Aura Sphere and Dark Pulse by 50%; Aura Sphere never misses. Musharna-Aevian (Dark/Fairy, Tough Claws) resists Ghost and Dark, is immune to Psychic and Dragon, and is your speed control: <b>Glare</b> never misses and halves a target's Speed for the rest of the fight.</li>
+        <li><strong>Vs fast setup sweepers</strong> (Speed Boost Scolipede and Moxie Quaquaval at Holly &amp; Rorim, Weavile and Dragonite at Geara &amp; Zetta): bring Musharna in, Glare first, then let your slower hitters finish it. Protect on the turn a boss mon comes in to see what it does; attack Speed Boost users on turn 2.</li>
         <li><strong class="role-closer">Closer</strong> Golisopod uses Swords Dance only when the foe can't hurt it, then sweeps. Glalie-Aevian's Grassy Surge heals each turn, and Grassy Glide hits first.</li>
         <li><strong>Only the lead changes, never the six.</strong> Annihilape leads vs both Ancient Guards, Jenner and Geara &amp; Zetta. Golisopod leads vs Tommen, Giratina, Danni &amp; Layla, Troye &amp; Helen, Zena, Holly &amp; Rorim, Marcie and the ??? Factory fight. Gholdengo leads vs Texen, Crawli and Eli &amp; Sharon. Clawitzer leads vs Neved and Amber. Glalie-Aevian leads vs Groudon, Kyogre and Manaphy.</li>
       </ul>

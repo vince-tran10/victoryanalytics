@@ -220,10 +220,10 @@
   "moves": [
    "Play Rough",
    "Throat Chop",
-   "Moonlight",
+   "Glare",
    "Protect"
   ],
-  "why": "Moonlight (relearner) gives it recovery, which a bulky Trick Room setter wants. Replaces Yawn."
+  "why": "Glare (paralysis that never misses) replaces Moonlight: it halves a fast sweeper's Speed for the whole fight, so your slow hitters move first. Protect stays 4th."
  },
  "Pangoro": {
   "moves": [

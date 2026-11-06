@@ -264,3 +264,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   (Electric fields), Giratina (Wasteland), Amber (Concert Venue).
 - To do from 15:54 export: Clawitzer needs 252 HP / 252 SpA EVs + Sitrus (from Azumarill); Musharna-A Sitrus (Braviary's).
 - 16:41 export (429): party = Option B six, fully built (Clawitzer EVs + Sitrus done). To-do empty, no red rows. New catch: Golett (Overflow; Golurk already in Active).
+- 11-06: Musharna-Aevian Moonlight → Glare (speed control; Protect stays 4th). Leads unchanged.
