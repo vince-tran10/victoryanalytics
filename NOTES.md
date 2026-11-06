@@ -281,3 +281,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   gen9nationaldex-1630, gen9nationaldexuu-1630, gen9nationaldexdoubles-1500. Coverage of party+Active (55 species):
   39 SV, 7 National Dex only (Crobat, Cursola, Jellicent, Pangoro, Tangrowth, Throh, Unfezant), 9 Rejuv-only forms
   (Aevian/Idol → analogs by ability). Champions data not used: smaller roster + different mechanics = different meta.
+- 11-06: Clawitzer item Sitrus → Mystic Water (meta uses damage items; rules unaffected). Dark Pulse kept over Dragon Pulse: both pass rule (c); Dark Pulse one-shots 49/103 vs 44/103.

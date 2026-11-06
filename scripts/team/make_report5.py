@@ -56,7 +56,7 @@ TEAM = [
      [('Close Combat', 0), ('Rage Fist', 0), ('Sucker Punch', 0), ('Protect', 0)], []),
     ('Lead', 'Gholdengo', 'Steel/Ghost', 'Good as Gold', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Metal Coat',
      [('Make It Rain', 0), ('Shadow Ball', 0), ('Power Gem', 0), ('Protect', 0)], []),
-    ('Mid', 'Clawitzer', 'Water', 'Mega Launcher', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Sitrus Berry',
+    ('Mid', 'Clawitzer', 'Water', 'Mega Launcher', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Mystic Water',
      [('Water Pulse', 0), ('Aura Sphere', 0), ('Dark Pulse', 0), ('Protect', 0)], []),
     ('Mid', 'Musharna-Aevian', 'Dark/Fairy', 'Tough Claws', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry',
      [('Play Rough', 0), ('Throat Chop', 0), ('Glare', 0), ('Protect', 0)], []),
