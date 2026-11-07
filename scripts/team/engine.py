@@ -356,6 +356,14 @@ class Engine:
         def usable(cur, cf):
             f = self.D.form(cur, cf)
             ev = f.get('Evolutions') or []
+            if not ev and str(cf) != '0':
+                # regional/Aevian forms often leave Evolutions blank: inherit the base form's route if the target has this form
+                base_ev = self.D.form(cur, '0').get('Evolutions') or []
+                fn0 = (self.D.sp[cur][str(cf)].get('FormName') or '').split()[:1]
+                if isinstance(base_ev, list) and base_ev and fn0 and any(
+                        (self.D.sp.get(base_ev[i], {}).get(k, {}).get('FormName') or '').split()[:1] == fn0
+                        for i in range(0, len(base_ev), 5) for k in self.D.sp.get(base_ev[i], {}) if str(k).isdigit()):
+                    ev = base_ev
             out = []
             if not isinstance(ev, list):
                 return out
@@ -369,10 +377,12 @@ class Engine:
                 if str(nform) not in self.D.sp[nxt]:
                     nform = '0'
                 fn = self.D.sp[cur][str(cf)].get('FormName', '')
-                if cf != '0':   # regional/Aevian forms evolve into the matching form
-                    for k in [k for k in self.D.sp[nxt] if k.isdigit()]:
-                        if self.D.sp[nxt][k].get('FormName', '').split()[0] == fn.split()[0]:
-                            nform = k; break
+                if cf != '0':   # regional/Aevian forms evolve into the matching form (exact name first, then first word)
+                    ks = [k for k in self.D.sp[nxt] if k.isdigit()]
+                    exact = [k for k in ks if self.D.sp[nxt][k].get('FormName', '') == fn]
+                    loose = [k for k in ks if (self.D.sp[nxt][k].get('FormName', '').split() or [''])[0] == (fn.split() or [''])[0]]
+                    if exact or loose:
+                        nform = (exact or loose)[0]
                 out.append((nxt, nform, method, param))
             # one route per distinct target form
             seen, uniq = set(), []

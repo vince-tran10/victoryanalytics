@@ -319,3 +319,14 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - Colours: highlight.py reads workspace/team/team_roles.json (written by make_report5 from TEAM); a role colour only
   applies to the exact form on the team (plain Glalie/Musharna never get it), and inside box lists role colours are off,
   so in the Boxes tab only red (= move it) carries meaning. "Since last export" has Staging → Active/Overflow columns.
+
+## 6 Nov 22:44 export (434 mons)
+- Party levels 51–54; Musharna-Aevian lost its Sitrus Berry (to-do). Staging #381–385: Grimer-Alola, Golbat, Garbodor,
+  Salandit (male: can't become Salazzle), Zoroark-Hisui holding the Zoroark Crest. All below the Active bar → Overflow.
+- Engine fix: regional/Aevian forms with blank Evolutions inherit the base form's route when the target has that form
+  (Grimer-Alola → Muk-Alola, Zorua-Hisui → Zoroark-Hisui, Shellos Aevian → Gastrodon Aevian); form matching prefers an
+  exact FormName (West Aevian ≠ West Sea). Runs r23_* (roster9), finals f23_* (95/103 one-shots, 50 first).
+- Zoroark Crest (wiki): copies the ability + STAB types of the mon Zoroark is disguised as (last party slot). Not in the
+  damage engine. Hisuian Zoroark legal set: Nasty Plot / Shadow Ball / Bitter Malice / Extrasensory; no pulse or strong
+  coverage moves, so the crest adds little now. It's a Chapter 8 pickup → review at end of chapter (Hyper Voice tutor at
+  9 badges may change it).

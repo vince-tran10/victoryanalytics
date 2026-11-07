@@ -1,0 +1,307 @@
+[
+ {
+  "dump": 381,
+  "owned": "Grimer-Alola",
+  "level": 55,
+  "now_ability": "Poison Touch",
+  "now_moves": [
+   "Toxic",
+   "Knock Off",
+   "Crunch",
+   "Screech"
+  ],
+  "final": "Muk (Alolan Form)",
+  "evolve": "Muk (Level 38)",
+  "gate": "",
+  "types": "Poison/Dark",
+  "score": 0.43,
+  "tier": "C",
+  "ability": "Poison Touch",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Crunch",
+   "Gunk Shot",
+   "Knock Off",
+   "Protect"
+  ],
+  "move_src": {
+   "Crunch": "known",
+   "Gunk Shot": "Lv 40",
+   "Knock Off": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 0.5,
+   "guard1": 0.79,
+   "guard2": 0.24,
+   "tommen": 0.54,
+   "groudon": -0.26,
+   "crawli": 0.72,
+   "neved": 0.52,
+   "eli": 0.55,
+   "jenner": 0.44,
+   "geara": 0.51,
+   "giratina": 0.39,
+   "danni": 0.83,
+   "troye": 0.54,
+   "zena": 0.73,
+   "kyogre": 0.06,
+   "holly": 0.58,
+   "manaphy": 0.38,
+   "factory": 0.41,
+   "marcie": 0.74,
+   "amber": 0.59
+  }
+ },
+ {
+  "dump": 382,
+  "owned": "Golbat",
+  "level": 55,
+  "now_ability": "Infiltrator",
+  "now_moves": [
+   "Air Cutter",
+   "Bite",
+   "Haze",
+   "Venoshock"
+  ],
+  "final": "Crobat",
+  "evolve": "Crobat (Happiness 0)",
+  "gate": "",
+  "types": "Poison/Flying",
+  "score": 0.42,
+  "tier": "C",
+  "ability": "Inner Focus",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Brave Bird",
+   "Wing Attack",
+   "Pluck",
+   "Protect"
+  ],
+  "move_src": {
+   "Brave Bird": "Egg",
+   "Wing Attack": "Egg",
+   "Pluck": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 1.09,
+   "guard1": 0.54,
+   "guard2": -0.15,
+   "tommen": 0.27,
+   "groudon": -0.22,
+   "crawli": 0.83,
+   "neved": 0.5,
+   "eli": 0.77,
+   "jenner": 0.84,
+   "geara": 0.61,
+   "giratina": 0.43,
+   "danni": 1.11,
+   "troye": 0.66,
+   "zena": 0.74,
+   "kyogre": -0.28,
+   "holly": 0.89,
+   "manaphy": 0.47,
+   "factory": -0.01,
+   "marcie": 0.86,
+   "amber": 0.54
+  }
+ },
+ {
+  "dump": 383,
+  "owned": "Garbodor",
+  "level": 55,
+  "now_ability": "Aftermath",
+  "now_moves": [
+   "Pain Split",
+   "Gunk Shot",
+   "Explosion",
+   "Curse"
+  ],
+  "final": "Garbodor",
+  "evolve": "",
+  "gate": "",
+  "types": "Poison",
+  "score": 0.266,
+  "tier": "D",
+  "ability": "Aftermath",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Gunk Shot",
+   "Mud Barrage",
+   "Cross Poison",
+   "Protect"
+  ],
+  "move_src": {
+   "Gunk Shot": "known",
+   "Mud Barrage": "TM108",
+   "Cross Poison": "TM144",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 0.45,
+   "guard1": 0.65,
+   "guard2": 0.26,
+   "tommen": 0.49,
+   "groudon": -0.29,
+   "crawli": 0.56,
+   "neved": 0.41,
+   "eli": 0.39,
+   "jenner": 0.36,
+   "geara": 0.28,
+   "giratina": 0.2,
+   "danni": 0.63,
+   "troye": 0.33,
+   "zena": 0.5,
+   "kyogre": -0.3,
+   "holly": 0.39,
+   "manaphy": 0.35,
+   "factory": 0.05,
+   "marcie": 0.66,
+   "amber": 0.42
+  }
+ },
+ {
+  "dump": 384,
+  "owned": "Salandit",
+  "level": 55,
+  "now_ability": "Corrosion",
+  "now_moves": [
+   "Venoshock",
+   "Dragon Pulse",
+   "Flamethrower",
+   "Toxic"
+  ],
+  "final": "Salandit",
+  "evolve": "",
+  "gate": "",
+  "types": "Poison/Fire",
+  "score": 0.108,
+  "tier": "D",
+  "ability": "Corrosion",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Flamethrower",
+   "Dragon Pulse",
+   "Flame Burst",
+   "Protect"
+  ],
+  "move_src": {
+   "Flamethrower": "known",
+   "Dragon Pulse": "known",
+   "Flame Burst": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 0.35,
+   "guard1": 0.43,
+   "guard2": -0.16,
+   "tommen": 0.24,
+   "groudon": -0.18,
+   "crawli": 0.36,
+   "neved": 0.03,
+   "eli": 0.1,
+   "jenner": 0.32,
+   "geara": 0.1,
+   "giratina": 0.02,
+   "danni": 0.78,
+   "troye": 0.29,
+   "zena": 0.16,
+   "kyogre": -0.33,
+   "holly": 0.52,
+   "manaphy": -0.06,
+   "factory": -0.03,
+   "marcie": 0.54,
+   "amber": 0.12
+  }
+ },
+ {
+  "dump": 385,
+  "owned": "Zoroark-Hisui",
+  "level": 55,
+  "now_ability": "Illusion",
+  "now_moves": [
+   "Curse",
+   "Taunt",
+   "Knock Off",
+   "Spite"
+  ],
+  "final": "Zoroark (Hisuian Form)",
+  "evolve": "",
+  "gate": "",
+  "types": "Normal/Ghost",
+  "score": 0.288,
+  "tier": "D",
+  "ability": "Illusion",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Shadow Ball",
+   "Extrasensory",
+   "Bitter Malice",
+   "Protect"
+  ],
+  "move_src": {
+   "Shadow Ball": "Lv 40",
+   "Extrasensory": "Egg",
+   "Bitter Malice": "Lv 46",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "texen": 0.65,
+   "guard1": 0.73,
+   "guard2": 0.12,
+   "tommen": 0.68,
+   "groudon": -0.18,
+   "crawli": 0.62,
+   "neved": 0.31,
+   "eli": 0.41,
+   "jenner": 0.41,
+   "geara": 0.12,
+   "giratina": 0.49,
+   "danni": 0.86,
+   "troye": 0.43,
+   "zena": 0.47,
+   "kyogre": -0.31,
+   "holly": 0.37,
+   "manaphy": 0.36,
+   "factory": 0.13,
+   "marcie": 0.29,
+   "amber": 0.29
+  }
+ }
+]
