@@ -86,18 +86,19 @@ COUNTERS = {'groudon': dict(title='Groudon', note='Boss · Deep Earth · Drought
           'Exeggutor Leaf Storm (then switch or Giga Drain: Leaf Storm drops SpA)',
           'Glaceon / Camerupt finish it; Sashes let each survive one hit',
           "Don't stall: its Sitrus Berry and the terrain heal it too"]),
-    'kyogre': dict(title='Kyogre', note='Optional boss · Water Surface · Drizzle rain · 3.4x HP', six=[
-    ('Meowscarada', 'Protean', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Focus Sash', ['Flower Trick', 'Knock Off', 'U-turn', 'Protect'], 'Lead: faster, 2 Flower Tricks ~26% each'),
-    ('Electivire', 'Motor Drive', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Focus Sash', ['Thunder Punch', 'Cross Chop', 'Quick Attack', 'Protect'], 'Faster, 2 Thunder Punches ~30% each'),
-    ('Annihilape', 'Defiant', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Focus Sash', ['Close Combat', 'Rage Fist', 'Sucker Punch', 'Protect'], 'Faster, 2 Close Combats ~18% each'),
-    ('Glalie-Aevian', 'Grassy Surge', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Focus Sash', ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'], 'Wood Hammer ~36%'),
-    ('Vikavolt', 'Levitate', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash', ['Thunderbolt', 'Bug Buzz', 'Sticky Web', 'Protect'], 'Thunderbolt ~35% (before Calm Minds)'),
-    ('Exeggutor', 'Chlorophyll', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash', ['Leaf Storm', 'Giga Drain', 'Extrasensory', 'Protect'], 'Leaf Storm ~22%, finisher')],
-    plan=['Everyone holds a Focus Sash: each survives one hit. Kyogre one-shots almost anything, so the Sash is your second attack',
-          'Lead Meowscarada, then Electivire, then Annihilape: all three outspeed it and get 2 hits each',
-          'Use physical moves first: Calm Mind raises its Special Defense, not Defense',
-          'Glalie, Vikavolt and Exeggutor are slower: bring them in after a faint, take the hit on the Sash, then attack',
-          'No recoil moves while on a Sash at full HP except as the last hit (Wood Hammer, Leaf Storm are fine as the one shot)'])}
+    'kyogre': dict(title='Kyogre', note='Optional boss · Water Surface · Drizzle rain · 3.4x HP · all six outspeed it', six=[
+    ('Ludicolo', 'Swift Swim', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry', ['Bullet Seed', 'Razor Leaf', 'Trailblaze', 'Protect'], 'Lead. Speed doubles in rain; resists Water 4x, takes ~39% max. Bullet Seed ~15% x4'),
+    ('Heliolisk', 'Dry Skin', 'Timid', '252 SpA / 252 Spe / 4 HP', 'Sitrus Berry', ['Thunder', 'Thunderbolt', 'Discharge', 'Protect'], 'Immune to Water + heals in rain. Thunder never misses in rain, ~20% x3'),
+    ('Electivire', 'Motor Drive', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Focus Sash', ['Thunder Punch', 'Cross Chop', 'Quick Attack', 'Protect'], '2 Thunder Punches ~30% each'),
+    ('Boltund', 'Strong Jaw', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Focus Sash', ['Thunder Fang', 'Wild Charge', 'Spark', 'Protect'], '2 Thunder Fangs ~30% each'),
+    ('Togedemaru', 'Sturdy', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Magnet', ['Zing Zap', 'Wild Charge', 'Spark', 'Protect'], 'Sturdy = built-in Sash, so it holds Magnet. 2 Zing Zaps ~33% each'),
+    ('Meowscarada', 'Protean', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Focus Sash', ['Flower Trick', 'Knock Off', 'U-turn', 'Protect'], '2 Flower Tricks ~27% each (always crit)')],
+    plan=['All six are faster than Kyogre in its own rain: you always hit first',
+          'Lead Ludicolo, then Heliolisk: the two bulky ones go first, before Calm Mind boosts stack up',
+          'Then the Sash/Sturdy hitters: each gets 2 hits (hit, survive on Sash, hit again)',
+          'Heliolisk uses Thunder, not Thunderbolt: rain makes it 100% accurate',
+          'No recoil moves (Wild Charge) on Sash users until their 2nd hit; total damage ~350% of what you need is 100%'])}
+CF_PREEVO = {'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
 CF = COUNTERS.get(FIGHT)
 CF_NAMES = [x[0] for x in CF['six']] if CF else []
 NEXT_LV = max(fo['lvl'] or 0 for p in sorted(fn['plans'], key=lambda p: SX.story_order(os.path.dirname(os.path.dirname(os.path.abspath(F9N)))).get(p['key'], 999))[:3] for fo in p['foes'])
@@ -224,9 +225,12 @@ if CF:
         if d:
             issues = verify_mon(d, ab_, nat_, evs_, item_, [(m, 0) for m in mv_])
         else:
-            d0 = min((x for x in cur if x['species'] == nm_), key=lambda x: (x['box'] == 'Overflow', -(x.get('level') or 0)), default=None)
-            issues = ([f"Put in the party (now {d0['box']} #{d0['n']})"] + verify_mon(d0, ab_, nat_, evs_, item_, [(m, 0) for m in mv_])) if d0 else [f'Put {nm_} in the party']
-        todo_cf += [(f'{CF["title"]} · {nm_}: {x}', 'high') for x in issues]
+            pre, how = CF_PREEVO.get(nm_, (nm_, ''))
+            d0 = min((x for x in cur if x['species'] == pre), key=lambda x: (x['box'] == 'Overflow', -(x.get('level') or 0)), default=None)
+            if d0 and how:
+                d0 = dict(d0, species=nm_, moves=[], ability=d0.get('ability'))
+            issues = ([f"{pre} {d0['box']} #{d0['n']} → party" + (f", evolve ({how})" if how else '')] + verify_mon(d0, ab_, nat_, evs_, item_, [(m, 0) for m in mv_])) if d0 else [f'Put {nm_} in the party']
+        if issues: todo_cf.append((f'{CF["title"]} · {nm_}: ' + '; '.join(issues), 'high'))
         rows_.append(f'<tr><td><strong>{E(nm_)}</strong></td><td class="legend">{E(item_)}</td><td>{E(" / ".join(mv_))}</td><td>{E(note_)}</td>'
                      f'<td>{"<span class=ok>✓</span>" if not issues else "<span class=chg2>" + E("; ".join(issues)) + "</span>"}</td></tr>')
     _back = [x for x in IDEAL if x not in CF_NAMES]

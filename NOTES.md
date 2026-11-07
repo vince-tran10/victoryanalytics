@@ -392,3 +392,17 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Glalie 36%, Vikavolt 35%, Exeggutor 22% → ~240% total. All Focus Sash. Physical first (Calm Mind = SpD).
   Counter rows for boxed mons now show box location + level/item/move to-dos. Swap-back line lists main-six members
   missing from the counter lineup. build_k.sh = build.sh with FIGHT=kyogre.
+
+## STANDING RULE (7 Nov): DEBUG MODE — build effort never counts
+- Vincent plays with debug mode: any owned Pokémon can be levelled, given any nature/EVs/ability (capsule) and any
+  legal move instantly. NEVER filter or rank by build effort, level, or "already built". Pick purely on battle merit
+  (speed, field, moves, typing, how hard the foe hits). Still: owned Pokémon only, legal moves (learnset ≤ cap,
+  relearner, egg, Ch1–7 TMs/tutors), no Megas/Life Orb, items he owns.
+- KYOGRE counter v2 (debug mode, 7 Nov): scripts/team/kyogre_counter.py scans EVERY owned mon × evo branch × ability ×
+  spread (bulky/fast, phys/spec) × item; sums damage dealt before fainting (speed order, Sash/Sitrus, recoil as share
+  of damage dealt to Kyogre's 3.4x HP — this kills Wood Hammer users; special moves x0.85 for Calm Mind; Swift Swim x2).
+  Output team/kyogre_counter.json. Six (all outspeed Kyogre in rain): Ludicolo (Swift Swim, Sitrus) 58%, Heliolisk
+  (Helioptile #143 + Sun Stone, Dry Skin, Sitrus; use Thunder: 100% in rain, engine undervalues it) 59%, Electivire
+  (#98, Sash) 60%, Boltund (Yamper #388, Sash) 60%, Togedemaru (#347, Sturdy + Magnet) ~66%, Meowscarada (Sash) 55%
+  → ~350%. v1 (Glalie/Annihilape/Vikavolt/Exeggutor) was ~200% after the recoil fix. CF_PREEVO maps counters to the
+  pre-evolution he owns; counter to-dos are one line per mon.

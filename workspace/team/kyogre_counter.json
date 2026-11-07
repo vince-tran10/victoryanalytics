@@ -1,0 +1,1265 @@
+[
+ [
+  63.567590497737555,
+  {
+   "dump": 420,
+   "name": "Jellicent",
+   "owned": "Jellicent",
+   "lv": 55,
+   "ability": "WATERABSORB",
+   "nature": "Modest",
+   "evs": {
+    "SpA": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "item": "Sitrus Berry",
+   "move": "Water Spout",
+   "hits": 5,
+   "spe": 88,
+   "faster": false,
+   "takes": 23,
+   "moves": [
+    "Water Spout",
+    "Shock Wave",
+    "Surf"
+   ],
+   "types": [
+    "WATER",
+    "GHOST"
+   ],
+   "where": 420
+  }
+ ],
+ [
+  59.82832046845888,
+  {
+   "dump": 98,
+   "name": "Electivire",
+   "owned": "Electivire",
+   "lv": 55,
+   "ability": "VITALSPIRIT",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Thunder Punch",
+   "hits": 2,
+   "spe": 161,
+   "faster": true,
+   "takes": 157,
+   "moves": [
+    "Thunder Punch",
+    "Trailblaze",
+    "Hammer Arm"
+   ],
+   "types": [
+    "ELECTRIC"
+   ],
+   "where": 98
+  }
+ ],
+ [
+  59.82832046845888,
+  {
+   "dump": 388,
+   "name": "Boltund",
+   "owned": "Yamper",
+   "lv": 55,
+   "ability": "STRONGJAW",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "item": "Focus Sash",
+   "move": "Thunder Fang",
+   "hits": 2,
+   "spe": 155,
+   "faster": true,
+   "takes": 177,
+   "moves": [
+    "Thunder Fang",
+    "Wild Charge",
+    "Spark"
+   ],
+   "types": [
+    "ELECTRIC"
+   ],
+   "where": 388
+  }
+ ],
+ [
+  59.32975113122173,
+  {
+   "dump": 143,
+   "name": "Heliolisk",
+   "owned": "Helioptile",
+   "lv": 55,
+   "ability": "DRYSKIN",
+   "nature": "Modest",
+   "evs": {
+    "SpA": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Sitrus Berry",
+   "move": "Thunderbolt",
+   "hits": 3,
+   "spe": 176,
+   "faster": true,
+   "takes": 56,
+   "moves": [
+    "Thunderbolt",
+    "Discharge",
+    "Thunder"
+   ],
+   "types": [
+    "ELECTRIC",
+    "NORMAL"
+   ],
+   "where": 143
+  }
+ ],
+ [
+  57.61245674740485,
+  {
+   "dump": 171,
+   "name": "Ludicolo",
+   "owned": "Lotad",
+   "lv": 55,
+   "ability": "SWIFTSWIM",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "item": "Sitrus Berry",
+   "move": "Bullet Seed",
+   "hits": 4,
+   "spe": 198,
+   "faster": true,
+   "takes": 39,
+   "moves": [
+    "Bullet Seed",
+    "Razor Leaf",
+    "Trailblaze"
+   ],
+   "types": [
+    "WATER",
+    "GRASS"
+   ],
+   "where": 171
+  }
+ ],
+ [
+  55.396593026350814,
+  {
+   "dump": 347,
+   "name": "Togedemaru",
+   "owned": "Togedemaru",
+   "lv": 55,
+   "ability": "STURDY",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Zing Zap",
+   "hits": 2,
+   "spe": 162,
+   "faster": true,
+   "takes": 191,
+   "moves": [
+    "Wild Charge",
+    "Zing Zap",
+    "Spark"
+   ],
+   "types": [
+    "ELECTRIC",
+    "STEEL"
+   ],
+   "where": 347
+  }
+ ],
+ [
+  54.676437317008265,
+  {
+   "dump": 426,
+   "name": "Meowscarada",
+   "owned": "Meowscarada",
+   "lv": 55,
+   "ability": "OVERGROW",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "item": "Focus Sash",
+   "move": "Flower Trick",
+   "hits": 2,
+   "spe": 157,
+   "faster": true,
+   "takes": 105,
+   "moves": [
+    "Flower Trick",
+    "Petal Blizzard",
+    "Seed Bomb"
+   ],
+   "types": [
+    "GRASS",
+    "DARK"
+   ],
+   "where": 426
+  }
+ ],
+ [
+  51.703486824594094,
+  {
+   "dump": 35,
+   "name": "Brambleghast",
+   "owned": "Brambleghast",
+   "lv": 55,
+   "ability": "INFILTRATOR",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Power Whip",
+   "hits": 2,
+   "spe": 155,
+   "faster": true,
+   "takes": 147,
+   "moves": [
+    "Power Whip",
+    "Bullet Seed",
+    "Trailblaze"
+   ],
+   "types": [
+    "GRASS",
+    "GHOST"
+   ],
+   "where": 35
+  }
+ ],
+ [
+  49.856933723715734,
+  {
+   "dump": 237,
+   "name": "Pawmot",
+   "owned": "Pawmi",
+   "lv": 55,
+   "ability": "VOLTABSORB",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Spark",
+   "hits": 2,
+   "spe": 172,
+   "faster": true,
+   "takes": 214,
+   "moves": [
+    "Wild Charge",
+    "Spark",
+    "Thunder Fang"
+   ],
+   "types": [
+    "ELECTRIC",
+    "FIGHTING"
+   ],
+   "where": 237
+  }
+ ],
+ [
+  48.74900186318872,
+  {
+   "dump": 244,
+   "name": "Raichu",
+   "owned": "Pichu",
+   "lv": 55,
+   "ability": "LIGHTNINGROD",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Thunder Punch",
+   "hits": 2,
+   "spe": 177,
+   "faster": true,
+   "takes": 184,
+   "moves": [
+    "Volt Tackle",
+    "Thunder Punch",
+    "Spark"
+   ],
+   "types": [
+    "ELECTRIC"
+   ],
+   "where": 244
+  }
+ ],
+ [
+  48.010380622837374,
+  {
+   "dump": 34,
+   "name": "Tsareena",
+   "owned": "Bounsweet",
+   "lv": 55,
+   "ability": "LEAFGUARD",
+   "nature": "Jolly",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Power Whip",
+   "hits": 2,
+   "spe": 148,
+   "faster": true,
+   "takes": 100,
+   "moves": [
+    "Power Whip",
+    "Trop Kick",
+    "Bullet Seed"
+   ],
+   "types": [
+    "GRASS"
+   ],
+   "where": 34
+  }
+ ],
+ [
+  46.53313814213468,
+  {
+   "dump": 180,
+   "name": "Luxray",
+   "owned": "Luxray",
+   "lv": 55,
+   "ability": "RIVALRY",
+   "nature": "Jolly",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Spark",
+   "hits": 2,
+   "spe": 146,
+   "faster": true,
+   "takes": 163,
+   "moves": [
+    "Spark",
+    "Thunder Fang",
+    "Trailblaze"
+   ],
+   "types": [
+    "ELECTRIC"
+   ],
+   "where": 180
+  }
+ ],
+ [
+  46.53313814213468,
+  {
+   "dump": 194,
+   "name": "Medicham",
+   "owned": "Medicham",
+   "lv": 55,
+   "ability": "PUREPOWER",
+   "nature": "Jolly",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Thunder Punch",
+   "hits": 2,
+   "spe": 158,
+   "faster": true,
+   "takes": 194,
+   "moves": [
+    "Thunder Punch",
+    "High Jump Kick",
+    "Axe Kick"
+   ],
+   "types": [
+    "FIGHTING",
+    "PSYCHIC"
+   ],
+   "where": 194
+  }
+ ],
+ [
+  45.425206281607664,
+  {
+   "dump": 32,
+   "name": "Zebstrika",
+   "owned": "Blitzle",
+   "lv": 55,
+   "ability": "SAPSIPPER",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "item": "Focus Sash",
+   "move": "Spark",
+   "hits": 2,
+   "spe": 149,
+   "faster": true,
+   "takes": 165,
+   "moves": [
+    "Wild Charge",
+    "Spark",
+    "Thrash"
+   ],
+   "types": [
+    "ELECTRIC"
+   ],
+   "where": 32
+  }
+ ],
+ [
+  44.317274421080654,
+  {
+   "dump": 26,
+   "name": "Victreebel",
+   "owned": "Bellsprout",
+   "lv": 55,
+   "ability": "CHLOROPHYLL",
+   "nature": "Jolly",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Power Whip",
+   "hits": 2,
+   "spe": 146,
+   "faster": true,
+   "takes": 124,
+   "moves": [
+    "Power Whip",
+    "Leaf Blade",
+    "Bullet Seed"
+   ],
+   "types": [
+    "GRASS",
+    "POISON"
+   ],
+   "where": 26
+  }
+ ],
+ [
+  42.84003194037797,
+  {
+   "dump": 286,
+   "name": "Leavanny",
+   "owned": "Sewaddle",
+   "lv": 55,
+   "ability": "OVERCOAT",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Leaf Blade",
+   "hits": 2,
+   "spe": 157,
+   "faster": true,
+   "takes": 114,
+   "moves": [
+    "Leaf Blade",
+    "Bullet Seed",
+    "Razor Leaf"
+   ],
+   "types": [
+    "BUG",
+    "GRASS"
+   ],
+   "where": 286
+  }
+ ],
+ [
+  41.36278945967528,
+  {
+   "dump": 113,
+   "name": "Froslass (Aevian Form)",
+   "owned": "Froslass-Aevian",
+   "lv": 55,
+   "ability": "ADAPTABILITY",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "item": "Sitrus Berry",
+   "move": "Bullet Seed",
+   "hits": 2,
+   "spe": 143,
+   "faster": false,
+   "takes": 55,
+   "moves": [
+    "Bullet Seed",
+    "Razor Leaf",
+    "Deluge"
+   ],
+   "types": [
+    "GRASS",
+    "WATER"
+   ],
+   "where": 113
+  }
+ ],
+ [
+  40.62416821932393,
+  {
+   "dump": 69,
+   "name": "Breloom",
+   "owned": "Breloom",
+   "lv": 55,
+   "ability": "POISONHEAL",
+   "nature": "Jolly",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Seed Bomb",
+   "hits": 2,
+   "spe": 146,
+   "faster": true,
+   "takes": 160,
+   "moves": [
+    "Seed Bomb",
+    "Bullet Seed",
+    "Sky Uppercut"
+   ],
+   "types": [
+    "GRASS",
+    "FIGHTING"
+   ],
+   "where": 69
+  }
+ ],
+ [
+  39.885546978972584,
+  {
+   "dump": 354,
+   "name": "Hitmonchan",
+   "owned": "Tyrogue",
+   "lv": 55,
+   "ability": "IRONFIST",
+   "nature": "Jolly",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Thunder Punch",
+   "hits": 2,
+   "spe": 154,
+   "faster": true,
+   "takes": 153,
+   "moves": [
+    "Thunder Punch",
+    "Close Combat",
+    "High Jump Kick"
+   ],
+   "types": [
+    "FIGHTING"
+   ],
+   "where": 354
+  }
+ ],
+ [
+  39.55316742081449,
+  {
+   "dump": 38,
+   "name": "Venusaur",
+   "owned": "Bulbasaur",
+   "lv": 55,
+   "ability": "OVERGROW",
+   "nature": "Jolly",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Power Whip",
+   "hits": 2,
+   "spe": 158,
+   "faster": true,
+   "takes": 94,
+   "moves": [
+    "Power Whip",
+    "Petal Blizzard",
+    "Seed Bomb"
+   ],
+   "types": [
+    "GRASS",
+    "POISON"
+   ],
+   "where": 38
+  }
+ ],
+ [
+  39.55316742081449,
+  {
+   "dump": 350,
+   "name": "Sceptile",
+   "owned": "Treecko",
+   "lv": 55,
+   "ability": "OVERGROW",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "item": "Focus Sash",
+   "move": "Leaf Blade",
+   "hits": 2,
+   "spe": 154,
+   "faster": true,
+   "takes": 93,
+   "moves": [
+    "Leaf Blade",
+    "Bullet Seed",
+    "Trailblaze"
+   ],
+   "types": [
+    "GRASS"
+   ],
+   "where": 350
+  }
+ ],
+ [
+  38.925339366515836,
+  {
+   "dump": 269,
+   "name": "Roserade",
+   "owned": "Roselia",
+   "lv": 55,
+   "ability": "TECHNICIAN",
+   "nature": "Modest",
+   "evs": {
+    "SpA": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Petal Dance",
+   "hits": 2,
+   "spe": 155,
+   "faster": true,
+   "takes": 103,
+   "moves": [
+    "Petal Dance",
+    "Magical Leaf",
+    "Giga Drain"
+   ],
+   "types": [
+    "GRASS",
+    "POISON"
+   ],
+   "where": 269
+  }
+ ],
+ [
+  38.77761511844557,
+  {
+   "dump": 234,
+   "name": "Simisage",
+   "owned": "Pansage",
+   "lv": 55,
+   "ability": "OVERGROW",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Seed Bomb",
+   "hits": 2,
+   "spe": 167,
+   "faster": true,
+   "takes": 138,
+   "moves": [
+    "Seed Bomb",
+    "Bullet Seed",
+    "Vine Whip"
+   ],
+   "types": [
+    "GRASS"
+   ],
+   "where": 234
+  }
+ ],
+ [
+  37.963977658371036,
+  {
+   "dump": 93,
+   "name": "Vaporeon",
+   "owned": "Eevee",
+   "lv": 55,
+   "ability": "WATERABSORB",
+   "nature": "Modest",
+   "evs": {
+    "SpA": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "item": "Sitrus Berry",
+   "move": "Surf",
+   "hits": 5,
+   "spe": 93,
+   "faster": false,
+   "takes": 21,
+   "moves": [
+    "Surf",
+    "Hydro Pump",
+    "Muddy Water"
+   ],
+   "types": [
+    "WATER"
+   ],
+   "where": 93
+  }
+ ],
+ [
+  37.66968325791855,
+  {
+   "dump": 101,
+   "name": "Emolga",
+   "owned": "Emolga",
+   "lv": 55,
+   "ability": "MOTORDRIVE",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Spark",
+   "hits": 2,
+   "spe": 170,
+   "faster": true,
+   "takes": 238,
+   "moves": [
+    "Spark",
+    "Nuzzle",
+    "Acrobatics"
+   ],
+   "types": [
+    "ELECTRIC",
+    "FLYING"
+   ],
+   "where": 101
+  }
+ ],
+ [
+  37.66968325791855,
+  {
+   "dump": 184,
+   "name": "Manectric",
+   "owned": "Manectric",
+   "lv": 55,
+   "ability": "MINUS",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Spark",
+   "hits": 2,
+   "spe": 172,
+   "faster": true,
+   "takes": 214,
+   "moves": [
+    "Wild Charge",
+    "Spark",
+    "Thunder Fang"
+   ],
+   "types": [
+    "ELECTRIC"
+   ],
+   "where": 184
+  }
+ ],
+ [
+  37.66968325791855,
+  {
+   "dump": 291,
+   "name": "Shiftry",
+   "owned": "Shiftry",
+   "lv": 55,
+   "ability": "PICKPOCKET",
+   "nature": "Jolly",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Leaf Blade",
+   "hits": 2,
+   "spe": 158,
+   "faster": true,
+   "takes": 131,
+   "moves": [
+    "Leaf Blade",
+    "Bullet Seed",
+    "Razor Leaf"
+   ],
+   "types": [
+    "GRASS",
+    "DARK"
+   ],
+   "where": 291
+  }
+ ],
+ [
+  37.32817021130449,
+  {
+   "dump": 57,
+   "name": "Cinccino",
+   "owned": "Cinccino",
+   "lv": 55,
+   "ability": "SKILLLINK",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "item": "Focus Sash",
+   "move": "Bullet Seed",
+   "hits": 2,
+   "spe": 148,
+   "faster": true,
+   "takes": 171,
+   "moves": [
+    "Bullet Seed",
+    "Tail Slap",
+    "Take Down"
+   ],
+   "types": [
+    "NORMAL"
+   ],
+   "where": 57
+  }
+ ],
+ [
+  36.93106201756721,
+  {
+   "dump": 206,
+   "name": "Mismagius (Aevian Form)",
+   "owned": "Mismagius-Aevian",
+   "lv": 55,
+   "ability": "TANGLINGHAIR",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Bullet Seed",
+   "hits": 2,
+   "spe": 172,
+   "faster": true,
+   "takes": 160,
+   "moves": [
+    "Bullet Seed",
+    "Vine Whip",
+    "Phantom Force"
+   ],
+   "types": [
+    "GRASS",
+    "GHOST"
+   ],
+   "where": 206
+  }
+ ],
+ [
+  36.56175139739154,
+  {
+   "dump": 158,
+   "name": "Kilowattrel",
+   "owned": "Kilowattrel",
+   "lv": 55,
+   "ability": "WINDPOWER",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "item": "Focus Sash",
+   "move": "Spark",
+   "hits": 2,
+   "spe": 159,
+   "faster": true,
+   "takes": 176,
+   "moves": [
+    "Spark",
+    "Dual Wingbeat",
+    "Pluck"
+   ],
+   "types": [
+    "ELECTRIC",
+    "FLYING"
+   ],
+   "where": 158
+  }
+ ],
+ [
+  36.34016502528613,
+  {
+   "dump": 3,
+   "name": "Annihilape",
+   "owned": "Annihilape",
+   "lv": 55,
+   "ability": "DEFIANT",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Close Combat",
+   "hits": 2,
+   "spe": 155,
+   "faster": true,
+   "takes": 121,
+   "moves": [
+    "Close Combat",
+    "Cross Chop",
+    "Thrash"
+   ],
+   "types": [
+    "FIGHTING",
+    "GHOST"
+   ],
+   "where": 3
+  }
+ ],
+ [
+  36.192440777215865,
+  {
+   "dump": 278,
+   "name": "Sawsbuck",
+   "owned": "Sawsbuck",
+   "lv": 55,
+   "ability": "SERENEGRACE",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Bullet Seed",
+   "hits": 2,
+   "spe": 161,
+   "faster": true,
+   "takes": 124,
+   "moves": [
+    "Bullet Seed",
+    "Horn Leech",
+    "Double-Edge"
+   ],
+   "types": [
+    "NORMAL",
+    "GRASS"
+   ],
+   "where": 278
+  }
+ ],
+ [
+  35.78619909502263,
+  {
+   "dump": 153,
+   "name": "Jolteon",
+   "owned": "Jolteon",
+   "lv": 55,
+   "ability": "VOLTABSORB",
+   "nature": "Modest",
+   "evs": {
+    "SpA": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "item": "Focus Sash",
+   "move": "Discharge",
+   "hits": 2,
+   "spe": 165,
+   "faster": true,
+   "takes": 126,
+   "moves": [
+    "Discharge",
+    "Thunder",
+    "Shock Wave"
+   ],
+   "types": [
+    "ELECTRIC"
+   ],
+   "where": 153
+  }
+ ],
+ [
+  35.52768166089966,
+  {
+   "dump": 6,
+   "name": "Glalie (Aevian Form)",
+   "owned": "Glalie-Aevian",
+   "lv": 55,
+   "ability": "GRASSYSURGE",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "item": "Focus Sash",
+   "move": "Wood Hammer",
+   "hits": 1,
+   "spe": 77,
+   "faster": false,
+   "takes": 115,
+   "moves": [
+    "Wood Hammer",
+    "Bullet Seed",
+    "Grassy Glide"
+   ],
+   "types": [
+    "GRASS",
+    "ROCK"
+   ],
+   "where": 6
+  }
+ ],
+ [
+  35.45381953686453,
+  {
+   "dump": 43,
+   "name": "Scovillain",
+   "owned": "Capsakid",
+   "lv": 55,
+   "ability": "MOODY",
+   "nature": "Jolly",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Seed Bomb",
+   "hits": 2,
+   "spe": 152,
+   "faster": true,
+   "takes": 209,
+   "moves": [
+    "Seed Bomb",
+    "Bullet Seed",
+    "Razor Leaf"
+   ],
+   "types": [
+    "GRASS",
+    "FIRE"
+   ],
+   "where": 43
+  }
+ ],
+ [
+  34.89985360660101,
+  {
+   "dump": 55,
+   "name": "Meganium",
+   "owned": "Chikorita",
+   "lv": 55,
+   "ability": "OVERGROW",
+   "nature": "Jolly",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Petal Blizzard",
+   "hits": 2,
+   "spe": 158,
+   "faster": true,
+   "takes": 94,
+   "moves": [
+    "Petal Blizzard",
+    "Bullet Seed",
+    "Razor Leaf"
+   ],
+   "types": [
+    "GRASS"
+   ],
+   "where": 55
+  }
+ ],
+ [
+  34.345887676337505,
+  {
+   "dump": 92,
+   "name": "Eelektross",
+   "owned": "Eelektross",
+   "lv": 55,
+   "ability": "LEVITATE",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "item": "Focus Sash",
+   "move": "Wild Charge",
+   "hits": 1,
+   "spe": 77,
+   "faster": false,
+   "takes": 129,
+   "moves": [
+    "Wild Charge",
+    "Thunder Fang",
+    "Thrash"
+   ],
+   "types": [
+    "ELECTRIC"
+   ],
+   "where": 92
+  }
+ ],
+ [
+  34.12430130423211,
+  {
+   "dump": 425,
+   "name": "Mabosstiff",
+   "owned": "Mabosstiff",
+   "lv": 55,
+   "ability": "STAKEOUT",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Focus Sash",
+   "move": "Thunder Fang",
+   "hits": 2,
+   "spe": 150,
+   "faster": true,
+   "takes": 178,
+   "moves": [
+    "Thunder Fang",
+    "Jaw Lock",
+    "Crunch"
+   ],
+   "types": [
+    "DARK"
+   ],
+   "where": 425
+  }
+ ],
+ [
+  34.068904711205754,
+  {
+   "dump": 107,
+   "name": "Lumineon",
+   "owned": "Finneon",
+   "lv": 55,
+   "ability": "STORMDRAIN",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "HP": 4
+   },
+   "item": "Sitrus Berry",
+   "move": "Aqua Tail",
+   "hits": 4,
+   "spe": 156,
+   "faster": true,
+   "takes": 38,
+   "moves": [
+    "Aqua Tail",
+    "Deluge",
+    "Take Down"
+   ],
+   "types": [
+    "WATER"
+   ],
+   "where": 107
+  }
+ ],
+ [
+  33.97657705616183,
+  {
+   "dump": 7,
+   "name": "Abomasnow",
+   "owned": "Abomasnow",
+   "lv": 55,
+   "ability": "SOUNDPROOF",
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "item": "Sitrus Berry",
+   "move": "Bullet Seed",
+   "hits": 2,
+   "spe": 88,
+   "faster": false,
+   "takes": 60,
+   "moves": [
+    "Wood Hammer",
+    "Bullet Seed",
+    "Razor Leaf"
+   ],
+   "types": [
+    "GRASS",
+    "ICE"
+   ],
+   "where": 7
+  }
+ ]
+]
