@@ -337,3 +337,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   export + 5-step plan) on Team and Fights; main-six differences become "After <fight>: …" notes (no red rows, no
   priority to-dos) plus one "swap back" to-do. COUNTERS dict in make_report5. Unset FIGHT after the fight.
 - DONE now also has texen, guard1, guard2, tommen (he's at Groudon). f24_*: 16 fights left.
+- 7 Nov: Groudon beaten → DONE += groudon, f25_* (15 fights left; next crawli, danni, troye, zena, neved, kyogre…).
+  FIGHT mode off; report built from the 23:04 export so the to-do = swap back (3 in, 3 out, items back to main-six).
+  "Lead by fight" is now generated from plans (was hard-coded and kept beaten fights).
+- One-team check (7 Nov): 705 sixes pass rules a/b/c; best-for-Groudon passing six was 98.3% overall but drops both
+  aces and loses Giratina. Main six B stays. Next known-hard: Leviathan Kyogre (Lv 60, Drizzle, Calm Mind, Muddy Water
+  OHKOs 5/6; best hit Glalie Wood Hammer 36%) — no box mon does better; needs a strategy/new catch before it.

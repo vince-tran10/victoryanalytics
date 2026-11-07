@@ -187,6 +187,18 @@ IDEAL = [t[1] for t in TEAM]
 TEAM_X = [(t[1], t[2], t[3], t[6], [m for m, _ in t[7]]) for t in TEAM]
 RULES_HTML = SX.rules_panel(TEAM_X)
 NEXT_HTML = SX.next_fights(fn['plans'], TEAM_X, os.path.dirname(os.path.dirname(os.path.abspath(F9N))), 3, SHORT, disp)
+
+def _leads_html():
+    order = SX.story_order(os.path.dirname(os.path.dirname(os.path.abspath(F9N))))
+    by = {}
+    for p in sorted(fn['plans'], key=lambda p: order.get(p['key'], 999)):
+        if not p.get('leads'): continue
+        lab = re.split(r' [–-] ', p['label'])[0]; lab = re.sub(r' \(.*?\)', '', lab).replace('&', '&amp;')
+        if lab == '???': lab = '??? (Factory)'
+        by.setdefault(disp(p['leads'][0]), []).append(lab)
+    items = ''.join(f'<li><b>{k}</b>: {", ".join(v)}</li>' for k, v in by.items())
+    return f'<div class="panel pad"><h3>Lead by fight</h3>\n    <ul>{items}</ul>\n  </div>'
+LEADS_HTML = _leads_html()
 for d in cur:
     if d['box'] == 'Party' and d['species'] not in IDEAL and not (CF and d['species'] in CF_NAMES):
         ACTIONS[d['n']] = 'Move out of the party, back to the Active box'
@@ -552,15 +564,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
   <h2 id="s1f">Fights</h2>
   {CF_HTML}
   {NEXT_HTML}
-  <div class="panel pad"><h3>Lead by fight</h3>
-    <ul>
-      <li><b>Annihilape</b>: Ancient Guards, Jenner, Geara &amp; Zetta</li>
-      <li><b>Golisopod-Aevian</b>: Tommen, Giratina, Danni &amp; Layla, Troye &amp; Helen, Zena, Holly &amp; Rorim, Marcie, ??? Factory</li>
-      <li><b>Gholdengo</b>: Texen, Crawli, Eli &amp; Sharon</li>
-      <li><b>Clawitzer</b>: Neved, Amber</li>
-      <li><b>Glalie-Aevian</b>: Groudon, Kyogre, Manaphy</li>
-    </ul>
-  </div>
+  {LEADS_HTML}
 </section>
 
 <section aria-labelledby="s1b">
