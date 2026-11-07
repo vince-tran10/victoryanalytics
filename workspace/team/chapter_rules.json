@@ -1,0 +1,71 @@
+{
+ "major": [
+  "BUG",
+  "DARK",
+  "ELECTRIC",
+  "FAIRY",
+  "FIGHTING",
+  "FIRE",
+  "FLYING",
+  "GHOST",
+  "GRASS",
+  "GROUND",
+  "ICE",
+  "NORMAL",
+  "POISON",
+  "PSYCHIC",
+  "ROCK",
+  "STEEL",
+  "WATER"
+ ],
+ "W": {
+  "WATER": 9.169,
+  "STEEL": 0.792,
+  "ICE": 3.556,
+  "FIGHTING": 2.91,
+  "GRASS": 2.239,
+  "GHOST": 2.123,
+  "POISON": 1.988,
+  "GROUND": 2.385,
+  "DARK": 2.456,
+  "ROCK": 3.953,
+  "FLYING": 0.888,
+  "ELECTRIC": 2.761,
+  "FAIRY": 1.903,
+  "FIRE": 3.065,
+  "PSYCHIC": 0.631,
+  "NORMAL": 1.416,
+  "ROCK/FIRE": 0.938,
+  "DRAGON": 0.125,
+  "BUG": 0.59
+ },
+ "top": [
+  [
+   0.9868513274088246,
+   -1.8486679986679984,
+   [
+    "Glalie-A",
+    "Azumarill",
+    "Camerupt",
+    "Gholdengo",
+    "Wyrdeer",
+    "Vikavolt"
+   ],
+   [
+    "Glalie (Aevian Form)",
+    "Azumarill",
+    "Camerupt",
+    "Gholdengo",
+    "Wyrdeer",
+    "Vikavolt"
+   ]
+  ]
+ ],
+ "current": [
+  1.0409546946184531,
+  -1.3386446886446886,
+  [
+   "no SE hit on Escavalier, Gyarados, Scizor, Victreebel, Weezing"
+  ]
+ ]
+}

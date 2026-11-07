@@ -349,3 +349,13 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Build: scratchpad build.sh equivalent = make_report5 (f26) → box_audit → highlight → tabs.
 - Hard-fight check (10 fights): main six is #2 of 1016 rule-passing sixes (99.9% of #1 = noise). Every legal move swap
   on the six tested: best +0.6% (Annihilape Fire Punch) → no changes. Kyogre unsolved by any six (best 0.26 vs 0.24).
+- CHAPTER RULES (7 Nov, Vincent's new rule set): scripts/team/chapter_rules.py (+ chapter_rules_variants.py).
+  Only the 10 HARD fights left count. Threat types = opponents' damaging move types after field type changes (Volcanic
+  Top: Rock gains Fire) and -ate abilities, weighted by fight (singles x2, field/weather multipliers). Vincent chose
+  "weighted": types in 2+ hard fights or on a boss = MAJOR (hard rule), others only in weighted exposure.
+  (b) no MAJOR type SE on 3+, (c) every MAJOR type resisted, (d) every opposing mon hit SE by >=1 member (real typing,
+  immunity abilities). Result: 17 of 18 types are MAJOR (only Dragon, Rock/Fire minor) → (b)/(c) barely change; current
+  six passes them. Strict (d): only 1 six passes (Glalie-A, Azumarill, Camerupt, Gholdengo, Wyrdeer, Vikavolt), 94.8% of
+  the current six's hard-fight score. Current misses SE on Gyarados (Geara, Volcanic Top), Weezing (Levitate), Victreebel,
+  Scizor, Escavalier; it one-shots Weezing/Victreebel/Scizor anyway → only Gyarados (73%) and Escavalier (83%) lack an
+  answer. Asked Vincent how strict (d) should be.
