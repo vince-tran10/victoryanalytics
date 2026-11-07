@@ -46,7 +46,7 @@ def fmt(v):
     return '' if v == 1 else ('0' if v == 0 else {0.25: '¼', 0.5: '½', 2: '2×', 4: '4×'}.get(v, f'{v:g}×'))
 
 
-def rules_panel(team):
+def rules_panel(team, chapter=None, disp=lambda x: x):
     """team: list of (name, types 'A/B', ability, item, moves)."""
     mons = [(n, [t.upper() for t in ty.split('/')], ab, it, mv) for n, ty, ab, it, mv in team]
     drow, orow, weak3, nores, nose, pos = [], [], [], [], [], []
@@ -77,6 +77,18 @@ def rules_panel(team):
               f'<li>{ok(not nose)} Every type hit super-effectively'
               f'{(": nothing hits " + E(", ".join(t.capitalize() for t in nose))) if nose else ""}</li>'
               f'<li class="legend">Watch: {E(", ".join(t.capitalize() for t in pos)) or "none"}</li></ul>')
+    if chapter:
+        c = chapter; mi = c['misses']
+        miss = '; '.join(f"{E(m['foe'])} ({E(m['fight'])}): {E(disp(m['best']))} {m['dmg']}%" for m in mi)
+        checks = (f'<ul class="rules"><li class="legend">Chapter rules: only the {c["fights"]} hard fights left count '
+                  f'({c["foes"]} Pokémon). Types = the moves they actually use, after field changes.</li>'
+                  f'<li>{ok(not c["weak3"])} No attack type they use hits 3+ super-effectively'
+                  f'{(": " + E(", ".join(c["weak3"]))) if c["weak3"] else ""}</li>'
+                  f'<li>{ok(not c["nores"])} Every attack type they use is resisted'
+                  f'{(": none for " + E(", ".join(c["nores"]))) if c["nores"] else ""}</li>'
+                  f'<li>{ok(len(mi) <= 2)} Every opposing Pokémon is hit super-effectively or one-shot'
+                  f'{(" — " + str(len(mi)) + " allowed miss" + ("es" if len(mi) != 1 else "") + ": " + miss) if mi else ""}</li>'
+                  f'<li class="legend">One-off types (tiebreak only): {E(", ".join(c["minor"])) or "none"}</li></ul>')
     tbl = lambda title, a, b, rows: (f'<div class="mx"><h4>{title}</h4><div class="tablewrap"><table class="mxt"><thead><tr><th></th>{head}'
                                      f'<th class="c">{a}</th><th class="c">{b}</th><th class="c">Net</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div></div>')
     return (f'<div class="panel pad rulesp"><h3>Team rules</h3>{checks}<details class="mxd"><summary>Show matrices</summary><div class="mxs">'

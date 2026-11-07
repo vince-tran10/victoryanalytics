@@ -359,3 +359,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   the current six's hard-fight score. Current misses SE on Gyarados (Geara, Volcanic Top), Weezing (Levitate), Victreebel,
   Scizor, Escavalier; it one-shots Weezing/Victreebel/Scizor anyway → only Gyarados (73%) and Escavalier (83%) lack an
   answer. Asked Vincent how strict (d) should be.
+- 7 Nov: Vincent agreed: (d) = every opposing mon in the hard fights is hit SE OR one-shot by someone; at most 2 misses.
+  Result: current six is #1 of 1059 passing sixes (misses: Gyarados in Geara 73% Glalie, Escavalier in Holly 83%
+  Golisopod). With ≤1 miss the best is Chandelure for Annihilape (98.4%). Team unchanged.
+  Rules panel now reads team/chapter_status.json (written by `TEAM_NAMES='[...]' chapter_rules.py . 30 --status`, run with
+  the same DONE) → "Chapter rules" checks. Re-run --status whenever DONE or the six changes.

@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.dirname(__file__)); sys.path.insert(0, os.path.join(o
 os.environ.setdefault('FORCE_FORMAT', 'native')
 from engine import Engine
 from bosses import FIELD
-BASE = sys.argv[1]; N = int(sys.argv[2]) if len(sys.argv) > 2 else 30
+BASE = sys.argv[1]; N = int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2].isdigit() else 30
 E = Engine(BASE); D = E.D
 RUN = pickle.load(open(f'{BASE}/team/r23_native.json.pkl', 'rb')); RUNN = pickle.load(open(f'{BASE}/team/r23n_native.json.pkl', 'rb'))
 IMM = {'LEVITATE': 'GROUND', 'FLASHFIRE': 'FIRE', 'WATERABSORB': 'WATER', 'STORMDRAIN': 'WATER', 'DRYSKIN': 'WATER',
@@ -113,6 +113,28 @@ def check(ks):
     miss = [FOES[i][1]['name'] for i in range(len(FOES)) if not any(HT[k][i] for k in ks)]
     if miss: bad.append('no SE hit on ' + ', '.join(sorted(set(miss))))
     return bad
+FI = {}
+for i, (bk, fo) in enumerate(FOES):
+    b = [b for b in HARD if b['key'] == bk][0]; FI[i] = (bk, [id(f) for f in b['foes']].index(id(fo)))
+def off(k, i): return byk[k]['matchups'][FI[i][0]][FI[i][1]]['off']
+def misses(ks):   # (d): not hit SE and not one-shot by anyone
+    return [i for i in range(len(FOES)) if not any(HT[k][i] or off(k, i) >= 100 for k in ks)]
+SHORTF = {'neved': 'Neved', 'eli': 'Eli & Sharon', 'geara': 'Geara & Zetta', 'giratina': 'Giratina', 'danni': 'Danni & Layla',
+          'kyogre': 'Kyogre', 'holly': 'Holly & Rorim', 'manaphy': 'Manaphy', 'factory': '??? (Factory)', 'amber': 'Amber'}
+def status(names):
+    ks = list({nm(byk[k]): k for k in byk if byk[k]['name'] in names and byk[k]['src']['where'] == 'Party'}.values())
+    weak3 = ['/'.join(s) for s in MAJOR if sum(WK[k][s] for k in ks) >= 3]
+    nores = ['/'.join(s) for s in MAJOR if not any(RS[k][s] for k in ks)]
+    ms = []
+    for i in misses(ks):
+        bk, fo = FOES[i]; b = max(ks, key=lambda k: off(k, i))
+        ms.append({'foe': fo['name'], 'fight': SHORTF.get(bk, bk), 'best': byk[b]['name'], 'dmg': round(off(b, i))})
+    return {'fights': len(HARD), 'foes': len(FOES), 'major': ['/'.join(s).title() for s in MAJOR],
+            'minor': ['/'.join(s).title() for s in W if s not in MAJOR], 'weak3': weak3, 'nores': nores, 'misses': ms,
+            'n_types': len(W)}
+if __name__ == '__main__' and '--status' in sys.argv:
+    names = json.loads(os.environ['TEAM_NAMES'])
+    json.dump(status(names), open(f'{BASE}/team/chapter_status.json', 'w'), indent=1); print(json.dumps(status(names), indent=1)); sys.exit()
 if __name__ == '__main__':
     print('hard fights:', [(b['key'], b['format'], b['field'], len(b['foes'])) for b in HARD])
     print('threat types (weight, fights):')

@@ -185,7 +185,8 @@ if LEVELS:
     team_todo.append(('Level the six to 55 (the cap; the next bosses are Lv ' + str(NEXT_LV) + '+): ' + ', '.join(f'{n} {lv}' for n, lv in LEVELS), 'mid'))
 IDEAL = [t[1] for t in TEAM]
 TEAM_X = [(t[1], t[2], t[3], t[6], [m for m, _ in t[7]]) for t in TEAM]
-RULES_HTML = SX.rules_panel(TEAM_X)
+_CS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(F9N))), 'team', 'chapter_status.json')
+RULES_HTML = SX.rules_panel(TEAM_X, json.load(open(_CS)) if os.path.exists(_CS) else None, disp)
 NEXT_HTML = SX.hard_fights(fn['plans'], TEAM_X, os.path.dirname(os.path.dirname(os.path.abspath(F9N))), SHORT, disp)
 
 def _leads_html():

@@ -1,0 +1,44 @@
+{
+ "fights": 10,
+ "foes": 59,
+ "major": [
+  "Bug",
+  "Dark",
+  "Electric",
+  "Fairy",
+  "Fighting",
+  "Fire",
+  "Flying",
+  "Ghost",
+  "Grass",
+  "Ground",
+  "Ice",
+  "Normal",
+  "Poison",
+  "Psychic",
+  "Rock",
+  "Steel",
+  "Water"
+ ],
+ "minor": [
+  "Rock/Fire",
+  "Dragon"
+ ],
+ "weak3": [],
+ "nores": [],
+ "misses": [
+  {
+   "foe": "Gyarados",
+   "fight": "Geara & Zetta",
+   "best": "Glalie (Aevian Form)",
+   "dmg": 73
+  },
+  {
+   "foe": "Escavalier",
+   "fight": "Holly & Rorim",
+   "best": "Golisopod (Aevian Form)",
+   "dmg": 83
+  }
+ ],
+ "n_types": 19
+}
