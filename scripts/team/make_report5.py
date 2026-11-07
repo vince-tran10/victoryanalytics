@@ -85,7 +85,19 @@ COUNTERS = {'groudon': dict(title='Groudon', note='Boss · Deep Earth · Drought
           'Musharna Glares Groudon, then your slow hitters move first',
           'Exeggutor Leaf Storm (then switch or Giga Drain: Leaf Storm drops SpA)',
           'Glaceon / Camerupt finish it; Sashes let each survive one hit',
-          "Don't stall: its Sitrus Berry and the terrain heal it too"])}
+          "Don't stall: its Sitrus Berry and the terrain heal it too"]),
+    'kyogre': dict(title='Kyogre', note='Optional boss · Water Surface · Drizzle rain · 3.4x HP', six=[
+    ('Meowscarada', 'Protean', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Focus Sash', ['Flower Trick', 'Knock Off', 'U-turn', 'Protect'], 'Lead: faster, 2 Flower Tricks ~26% each'),
+    ('Electivire', 'Motor Drive', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Focus Sash', ['Thunder Punch', 'Cross Chop', 'Quick Attack', 'Protect'], 'Faster, 2 Thunder Punches ~30% each'),
+    ('Annihilape', 'Defiant', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Focus Sash', ['Close Combat', 'Rage Fist', 'Sucker Punch', 'Protect'], 'Faster, 2 Close Combats ~18% each'),
+    ('Glalie-Aevian', 'Grassy Surge', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Focus Sash', ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'], 'Wood Hammer ~36%'),
+    ('Vikavolt', 'Levitate', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash', ['Thunderbolt', 'Bug Buzz', 'Sticky Web', 'Protect'], 'Thunderbolt ~35% (before Calm Minds)'),
+    ('Exeggutor', 'Chlorophyll', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash', ['Leaf Storm', 'Giga Drain', 'Extrasensory', 'Protect'], 'Leaf Storm ~22%, finisher')],
+    plan=['Everyone holds a Focus Sash: each survives one hit. Kyogre one-shots almost anything, so the Sash is your second attack',
+          'Lead Meowscarada, then Electivire, then Annihilape: all three outspeed it and get 2 hits each',
+          'Use physical moves first: Calm Mind raises its Special Defense, not Defense',
+          'Glalie, Vikavolt and Exeggutor are slower: bring them in after a faint, take the hit on the Sash, then attack',
+          'No recoil moves while on a Sash at full HP except as the last hit (Wood Hammer, Leaf Storm are fine as the one shot)'])}
 CF = COUNTERS.get(FIGHT)
 CF_NAMES = [x[0] for x in CF['six']] if CF else []
 NEXT_LV = max(fo['lvl'] or 0 for p in sorted(fn['plans'], key=lambda p: SX.story_order(os.path.dirname(os.path.dirname(os.path.abspath(F9N)))).get(p['key'], 999))[:3] for fo in p['foes'])
@@ -209,14 +221,17 @@ if CF:
     rows_, todo_cf = [], []
     for nm_, ab_, nat_, evs_, item_, mv_, note_ in CF['six']:
         d = party.get(nm_)
-        issues = verify_mon(d, ab_, nat_, evs_, item_, [(m, 0) for m in mv_]) if d else [f'Put {nm_} in the party']
-        issues = [x for x in issues if not x.startswith('Lv ')]
+        if d:
+            issues = verify_mon(d, ab_, nat_, evs_, item_, [(m, 0) for m in mv_])
+        else:
+            d0 = min((x for x in cur if x['species'] == nm_), key=lambda x: (x['box'] == 'Overflow', -(x.get('level') or 0)), default=None)
+            issues = ([f"Put in the party (now {d0['box']} #{d0['n']})"] + verify_mon(d0, ab_, nat_, evs_, item_, [(m, 0) for m in mv_])) if d0 else [f'Put {nm_} in the party']
         todo_cf += [(f'{CF["title"]} · {nm_}: {x}', 'high') for x in issues]
         rows_.append(f'<tr><td><strong>{E(nm_)}</strong></td><td class="legend">{E(item_)}</td><td>{E(" / ".join(mv_))}</td><td>{E(note_)}</td>'
                      f'<td>{"<span class=ok>✓</span>" if not issues else "<span class=chg2>" + E("; ".join(issues)) + "</span>"}</td></tr>')
-    _back = [x for x in IDEAL if x not in party]
+    _back = [x for x in IDEAL if x not in CF_NAMES]
     team_todo[:0] = todo_cf
-    team_todo.append((f"After {CF['title']}: swap back to the main six (" + ', '.join(_back) + ' back in)', 'low'))
+    team_todo.append((f"After {CF['title']}: swap back to the main six (" + ', '.join(_back) + ' back in, with their usual items)', 'low'))
     CF_HTML = (f'<div class="panel pad cf"><h3>Now: {E(CF["title"])} <span class="legend">{E(CF["note"])} · hard-counter lineup, this fight only</span></h3>'
                f'<div class="tablewrap"><table class="cft"><tbody>{"".join(rows_)}</tbody></table></div>'
                f'<ol class="plain">{"".join("<li>" + E(x) + "</li>" for x in CF["plan"])}</ol></div>')

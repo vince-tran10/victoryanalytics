@@ -385,3 +385,10 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   path "Saving Amber (Optional)"), Eli & Sharon, Geara & Zetta, Giratina, Holly & Rorim, Manaphy, ??? Factory, Amber.
   Not hard: Danni & Layla, Troye & Helen (Team Xen grunts), Zena (Xen Analyst, 4), Jenner (4 at Lv 50–51), Marcie & Chikie (4).
   Fights table has a "Why hard" column. Chapter rules on these 8 (46 mons): current six #1 of 1631; misses Gyarados, Escavalier.
+- KYOGRE counter (7 Nov): Kyogre hp_mult 3.4, Lv 60, Spe 144, Muddy Water/Ice Beam/Ancient Power/Calm Mind, rain +
+  Water Surface. off% already includes hp_mult, so team damage just has to add to 100%. Sim (scratchpad kyo2.py): each
+  mon's total damage before fainting with Sash/Sitrus, speed order, no recoil on Sash. Lineup (FIGHT=kyogre, COUNTERS):
+  Meowscarada 52% (2 Flower Tricks), Electivire (Overflow #98, already Jolly 252/252, Lv 45) 60%, Annihilape 36%,
+  Glalie 36%, Vikavolt 35%, Exeggutor 22% → ~240% total. All Focus Sash. Physical first (Calm Mind = SpD).
+  Counter rows for boxed mons now show box location + level/item/move to-dos. Swap-back line lists main-six members
+  missing from the counter lineup. build_k.sh = build.sh with FIGHT=kyogre.
