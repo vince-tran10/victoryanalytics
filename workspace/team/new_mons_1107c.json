@@ -1,0 +1,164 @@
+[
+ {
+  "dump": 394,
+  "owned": "Machamp",
+  "level": 55,
+  "now_ability": "Steadfast",
+  "now_moves": [
+   "Dual Chop",
+   "Bulk Up",
+   "Seismic Toss",
+   "Dynamic Punch"
+  ],
+  "final": "Machamp",
+  "evolve": "",
+  "gate": "",
+  "types": "Fighting",
+  "score": 0.496,
+  "tier": "C",
+  "ability": "No Guard",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Dynamic Punch",
+   "Knock Off",
+   "Rock Tomb",
+   "Protect"
+  ],
+  "move_src": {
+   "Dynamic Punch": "known",
+   "Knock Off": "Lv 16",
+   "Rock Tomb": "TM39",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.71,
+   "jenner": 0.76,
+   "geara": 0.59,
+   "giratina": 0.49,
+   "danni": 0.76,
+   "troye": 0.8,
+   "zena": 0.74,
+   "kyogre": -0.28,
+   "holly": 0.65,
+   "manaphy": 0.43,
+   "factory": 0.41,
+   "marcie": 0.69,
+   "amber": 0.63
+  }
+ },
+ {
+  "dump": 395,
+  "owned": "Chimecho",
+  "level": 55,
+  "now_ability": "Levitate",
+  "now_moves": [
+   "Uproar",
+   "Safeguard",
+   "Double-Edge",
+   "Heal Pulse"
+  ],
+  "final": "Chimecho",
+  "evolve": "",
+  "gate": "",
+  "types": "Psychic",
+  "score": 0.329,
+  "tier": "D",
+  "ability": "Levitate",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Extrasensory",
+   "Signal Beam",
+   "Shadow Ball",
+   "Protect"
+  ],
+  "move_src": {
+   "Extrasensory": "Lv 22",
+   "Signal Beam": "known",
+   "Shadow Ball": "TM30",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.39,
+   "jenner": 0.45,
+   "geara": 0.31,
+   "giratina": 0.48,
+   "danni": 0.85,
+   "troye": 0.37,
+   "zena": 0.46,
+   "kyogre": -0.32,
+   "holly": 0.37,
+   "manaphy": 0.29,
+   "factory": 0.32,
+   "marcie": 0.53,
+   "amber": 0.53
+  }
+ },
+ {
+  "dump": 396,
+  "owned": "Swalot",
+  "level": 55,
+  "now_ability": "Liquid Ooze",
+  "now_moves": [
+   "Swallow",
+   "Sludge Bomb",
+   "Gastro Acid",
+   "Belch"
+  ],
+  "final": "Swalot",
+  "evolve": "",
+  "gate": "",
+  "types": "Poison",
+  "score": 0.31,
+  "tier": "D",
+  "ability": "Liquid Ooze",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Gunk Shot",
+   "Bullet Seed",
+   "Curse",
+   "Protect"
+  ],
+  "move_src": {
+   "Gunk Shot": "known",
+   "Bullet Seed": "TM131",
+   "Curse": "Egg",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.49,
+   "jenner": 0.31,
+   "geara": 0.37,
+   "giratina": 0.39,
+   "danni": 0.59,
+   "troye": 0.42,
+   "zena": 0.63,
+   "kyogre": -0.3,
+   "holly": 0.45,
+   "manaphy": 0.33,
+   "factory": 0.22,
+   "marcie": 0.63,
+   "amber": 0.38
+  }
+ }
+]

@@ -1,0 +1,19 @@
+Annihilape | Party 55 | Defiant  | Adamant {'Atk': 252, 'Spe': 252, 'Def': 4} | ['Close Combat', 'Rage Fist', 'Sucker Punch', 'Protect'] | Black Belt (already holding) | 
+Gholdengo | Party 55 | Good as Gold  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Make It Rain', 'Shadow Ball', 'Power Gem', 'Protect'] | Metal Coat (already holding) | 
+Clawitzer | Party 55 | Mega Launcher  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Water Pulse', 'Aura Sphere', 'Dark Pulse', 'Protect'] | Mystic Water (already holding) | 
+Musharna (Aevian Form) | Party 55 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Play Rough', 'Throat Chop', 'Glare', 'Protect'] | Sitrus Berry (already holding) | 
+Golisopod (Aevian Form) | Party 55 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Bone Rush', 'Pin Missile', 'Swords Dance', 'Protect'] | Soft Sand (already holding) | 
+Glalie (Aevian Form) | Party 55 | Grassy Surge  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'] | Sitrus Berry (already holding) | 
+eli 1.359 -> 1.359 leads ['Gholdengo'] swaps [('Rhyperior', 'Musharna (Aevian Form)', 0.02)]
+jenner 1.489 -> 1.489 leads ['Annihilape'] swaps [('Dachsbun', 'Glalie (Aevian Form)', 0.031), ('Pawmot', 'Golisopod (Aevian Form)', 0.027), ('Gastrodon (West Aevian Form)', 'Glalie (Aevian Form)', 0.025)]
+geara 1.132 -> 1.132 leads ['Golisopod (Aevian Form)'] swaps [('Rhyperior', 'Annihilape', 0.078), ('Barbaracle', 'Musharna (Aevian Form)', 0.046), ('Donphan', 'Musharna (Aevian Form)', 0.04)]
+giratina 1.278 -> 1.278 leads ['Golisopod (Aevian Form)'] swaps [('Meganium', 'Musharna (Aevian Form)', 0.069), ('Tsareena', 'Musharna (Aevian Form)', 0.065), ('Venusaur', 'Musharna (Aevian Form)', 0.063)]
+danni 1.62 -> 1.62 leads ['Annihilape'] swaps [('Bombirdier', 'Golisopod (Aevian Form)', 0.059), ('Crobat', 'Golisopod (Aevian Form)', 0.055), ('Arcanine', 'Golisopod (Aevian Form)', 0.05)]
+troye 1.385 -> 1.385 leads ['Gholdengo'] swaps [('Arcanine', 'Glalie (Aevian Form)', 0.099), ('Talonflame', 'Glalie (Aevian Form)', 0.085), ('Salazzle', 'Glalie (Aevian Form)', 0.051)]
+zena 1.446 -> 1.446 leads ['Golisopod (Aevian Form)'] swaps [('Meganium', 'Gholdengo', 0.085), ('Venusaur', 'Clawitzer', 0.084), ('Roserade', 'Clawitzer', 0.072)]
+kyogre -0.076 -> -0.076 leads ['Glalie (Aevian Form)'] swaps [('Abomasnow', 'Musharna (Aevian Form)', 0.085), ('Froslass (Aevian Form)', 'Musharna (Aevian Form)', 0.076), ('Tsareena', 'Musharna (Aevian Form)', 0.075)]
+holly 1.211 -> 1.211 leads ['Golisopod (Aevian Form)'] swaps [('Arcanine', 'Clawitzer', 0.156), ('Talonflame', 'Clawitzer', 0.124), ('Coalossal', 'Clawitzer', 0.108)]
+manaphy 0.972 -> 0.972 leads ['Glalie (Aevian Form)'] swaps [('Venusaur', 'Musharna (Aevian Form)', 0.15), ('Roserade', 'Musharna (Aevian Form)', 0.144), ('Meganium', 'Musharna (Aevian Form)', 0.118)]
+factory 1.077 -> 1.077 leads ['Golisopod (Aevian Form)'] swaps [('Ludicolo', 'Gholdengo', 0.083), ('Venusaur', 'Gholdengo', 0.064), ('Meganium', 'Gholdengo', 0.06)]
+marcie 1.372 -> 1.372 leads ['Golisopod (Aevian Form)'] swaps [('Leavanny (Aevian Form)', 'Clawitzer', 0.18), ('Leavanny', 'Clawitzer', 0.166), ('Scolipede', 'Clawitzer', 0.164)]
+amber 1.245 -> 1.245 leads ['Clawitzer'] swaps [('Jellicent', 'Golisopod (Aevian Form)', 0.106), ('Barbaracle', 'Golisopod (Aevian Form)', 0.1), ('Lapras (Aevian Form)', 'Gholdengo', 0.098)]

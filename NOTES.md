@@ -370,3 +370,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Drifblim (purified: Hurricane/Mystical Fire) 0.385 D, Overqwil 0.348, Purugly (purified: Thrash/SD/EQ/Sucker Punch) 0.330.
   All → Overflow. None helps Kyogre (best in whole box still Glalie 0.18; Overflow Raichu/Pawmot 0.20–0.22, all OHKO'd).
   Build script: scratchpad build.sh (make_report5 f27 → box_audit vs 2304 export, oldstart 385 → highlight → tabs).
+- 7 Nov 08:43 export (447): Neved skipped → DONE += neved (9 hard fights left). roster11, r25_* (+ r25n), f28_*,
+  ACTIVE_START=397. Staging #394–396: Machamp 0.496 C, Chimecho 0.329 D, Swalot 0.310 D → Overflow. Blissey (new, put
+  straight into Active #397, Healer support set) 0.248 D → cuts.json move. Pyukumuku ×2 + Gastrodon went to Overflow.
+  chapter_rules.py now reads CR_RUN (default r25). Current six still #1 of 1592 passing sixes; same 2 misses.
+  Danni & Layla = Team Xen Danni & Layla, normal double battle (7 mons combined), Beach Field; one-shot 7/7.
