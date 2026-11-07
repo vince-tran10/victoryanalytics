@@ -95,9 +95,9 @@ def story_order(base):
     return order
 
 
-def next_fights(plans, team, base, n=3, short=None, disp=lambda x: x):
+def next_fights(plans, team, base, n=3, short=None, disp=lambda x: x, keep_order=False):
     order = story_order(base)
-    plans = sorted(plans, key=lambda p: order.get(p['key'], 999))[:n]
+    plans = (plans if keep_order else sorted(plans, key=lambda p: order.get(p['key'], 999)))[:n]
     tm = {disp(x[0]): x for x in team}
     cards = []
     for p in plans:
@@ -128,10 +128,47 @@ def next_fights(plans, team, base, n=3, short=None, disp=lambda x: x):
         thr = [t for _, t in sorted(thr, key=lambda x: not x[0])][:4]
         leads = ' + '.join(disp(x) for x in p['leads'])
         ko = sum(1 for fo in p['foes'] if fo['answer_dmg'] >= 100)
-        cards.append(f'''<div class="panel pad nf"><h4>{E((short or {}).get(p["key"], p["label"]))} <span class="legend">{E(p["format"])} · {E(p["field"])}</span></h4>
+        cards.append(f'''<div class="panel pad nf"><h4>{E((short or {}).get(p["key"], p["label"]))} <span class="legend">{E(p["format"])}{" · Boss" if "boss" in p["label"].lower() else ""} · {E(p["field"])}</span></h4>
+<div class="legend nfn">{E(p.get("notes", ""))}</div>
 <div><b>Lead:</b> {E(leads)}</div>
+{('<div><b>Field boosts:</b> ' + E(", ".join(users)) + '</div>') if users else '<div class="legend">No field boost on your six</div>'}
 {('<ul class="plain">' + "".join(thr) + '</ul>') if thr else ''}</div>''')
     return '<div class="nfs">' + ''.join(cards) + '</div>'
+
+
+def is_hard(p):
+    return 'boss' in (p['label'] + ' ' + p.get('notes', '')).lower() or len(p['foes']) >= 6
+
+
+def hard_fights(plans, team, base, short=None, disp=lambda x: x):
+    """All remaining hard fights (boss, or 6+ opposing Pokémon): overview table + one card each."""
+    order = story_order(base)
+    hard = [p for p in sorted(plans, key=lambda p: order.get(p['key'], 999)) if is_hard(p)]
+    rows = []
+    for i, p in enumerate(hard, 1):
+        boss = 'boss' in (p['label'] + ' ' + p.get('notes', '')).lower()
+        n = len(p['foes'])
+        name = (short or {}).get(p['key'], re.sub(r' \(.*?\)', '', re.split(r' [–-] ', p['label'])[0]))
+        if name == '???': name = '??? (Factory)'
+        opt = ' <span class="legend">optional</span>' if 'optional' in p['label'].lower() else ''
+        risk = sum(1 for fo in p['foes'] if fo['threat_dmg'] >= 100)
+        if boss:
+            best = p['foes'][0]
+            st = f"best hit {round(best['answer_dmg'])}% ({disp(best['answer'])})"
+            cls = 'bad' if best['answer_dmg'] < 50 else 'warn'
+        else:
+            ko = sum(1 for fo in p['foes'] if fo['answer_dmg'] >= 100)
+            st = f"one-shot {ko}/{n}"
+            cls = 'ok' if ko == n and risk <= 1 else 'warn'
+        st += f" · {risk} can one-shot us" if risk and not boss else ''
+        fmt = f'<span class="fmt {p["format"].lower()}">{E(p["format"])}</span>'
+        rows.append(f'<tr><td class="c">{i}</td><td><b>{E(name)}</b>{opt}</td><td>{fmt}</td>'
+                    f'<td>{"<span class=bossb>Boss</span>" if boss else ""}</td><td>{E(p["field"])}</td><td class="c">{n}</td>'
+                    f'<td>{E(" + ".join(disp(x) for x in p["leads"]))}</td><td class="st {cls}">{E(st)}</td></tr>')
+    table = ('<div class="panel pad"><h3>Hard fights left <span class="legend">boss, or 6+ Pokémon · story order</span></h3>'
+             '<div class="tw"><table class="hft"><thead><tr><th>#</th><th>Fight</th><th>Format</th><th>Boss</th><th>Field</th>'
+             '<th>Mons</th><th>Lead</th><th>Your six</th></tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div></div>')
+    return table + next_fights(hard, team, base, len(hard), short, disp, keep_order=True)
 
 
 CSS = '''
@@ -148,7 +185,13 @@ CSS = '''
 .mxt .c {{ font-family: var(--mono); font-weight: 600 }} .mxt .mw-c {{ color: var(--bad) }} .mxt .mr-c {{ color: var(--good) }}
 .mxt .np {{ background: var(--bad-soft); color: var(--bad) }} .mxt .nn {{ background: var(--good-soft); color: var(--good) }} .mxt .nz {{ color: var(--muted) }}
 .nfs {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px }}
-.nf {{ font-size: 13.5px }}
+.nf {{ font-size: 13.5px }} .nfn {{ margin: 0 0 6px; font-size: 12px }}
+.hft td, .hft th {{ padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: left; font-size: 13px }}
+.hft .c {{ text-align: center; font-family: var(--mono) }} .tw {{ overflow-x: auto }}
+.fmt {{ font: 600 11px var(--mono); padding: 2px 6px; border-radius: 4px; background: var(--line) }}
+.fmt.singles {{ color: var(--lead); }} .fmt.doubles {{ color: var(--mid); }}
+.bossb {{ font: 700 11px var(--mono); padding: 2px 6px; border-radius: 4px; background: var(--bad-soft); color: var(--bad) }}
+.hft .st {{ font-size: 12.5px; white-space: nowrap }} .hft .st.ok {{ color: var(--good) }} .hft .st.warn {{ color: #b45309 }} .hft .st.bad {{ color: var(--bad); font-weight: 600 }}
 .mxd summary, .tierd > summary {{ cursor: pointer; font: 600 13px var(--display); color: var(--accent); padding: 6px 0 }}
 .mxd[open] summary {{ margin-bottom: 8px }} .nfh {{ margin-top: 4px }}
 '''

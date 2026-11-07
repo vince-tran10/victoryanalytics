@@ -343,3 +343,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - One-team check (7 Nov): 705 sixes pass rules a/b/c; best-for-Groudon passing six was 98.3% overall but drops both
   aces and loses Giratina. Main six B stays. Next known-hard: Leviathan Kyogre (Lv 60, Drizzle, Calm Mind, Muddy Water
   OHKOs 5/6; best hit Glalie Wood Hammer 36%) — no box mon does better; needs a strategy/new catch before it.
+- 7 Nov: Crawli beaten → DONE += crawli, f26_*. Fights tab rebuilt: SX.hard_fights() = table of every remaining HARD
+  fight (boss, or 6+ opposing mons; story order) with format / boss / field / mons / lead / "your six" status, then one
+  card per hard fight (field notes, lead, field-boosted moves on the six, threats → answers). Lead-by-fight list dropped.
+  Build: scratchpad build.sh equivalent = make_report5 (f26) → box_audit → highlight → tabs.
+- Hard-fight check (10 fights): main six is #2 of 1016 rule-passing sixes (99.9% of #1 = noise). Every legal move swap
+  on the six tested: best +0.6% (Annihilape Fire Punch) → no changes. Kyogre unsolved by any six (best 0.26 vs 0.24).

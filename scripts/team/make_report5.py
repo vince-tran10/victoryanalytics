@@ -186,7 +186,7 @@ if LEVELS:
 IDEAL = [t[1] for t in TEAM]
 TEAM_X = [(t[1], t[2], t[3], t[6], [m for m, _ in t[7]]) for t in TEAM]
 RULES_HTML = SX.rules_panel(TEAM_X)
-NEXT_HTML = SX.next_fights(fn['plans'], TEAM_X, os.path.dirname(os.path.dirname(os.path.abspath(F9N))), 3, SHORT, disp)
+NEXT_HTML = SX.hard_fights(fn['plans'], TEAM_X, os.path.dirname(os.path.dirname(os.path.abspath(F9N))), SHORT, disp)
 
 def _leads_html():
     order = SX.story_order(os.path.dirname(os.path.dirname(os.path.abspath(F9N))))
@@ -564,7 +564,6 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
   <h2 id="s1f">Fights</h2>
   {CF_HTML}
   {NEXT_HTML}
-  {LEADS_HTML}
 </section>
 
 <section aria-labelledby="s1b">
