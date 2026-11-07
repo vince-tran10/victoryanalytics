@@ -375,3 +375,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   straight into Active #397, Healer support set) 0.248 D → cuts.json move. Pyukumuku ×2 + Gastrodon went to Overflow.
   chapter_rules.py now reads CR_RUN (default r25). Current six still #1 of 1592 passing sixes; same 2 misses.
   Danni & Layla = Team Xen Danni & Layla, normal double battle (7 mons combined), Beach Field; one-shot 7/7.
+- HARD redefined (7 Nov, Vincent: "only HARD fights"): boss, or a trainer bringing a full 6 (2-trainer doubles: each
+  side needs 6) → sheet_extras.is_hard(), shared by chapter_rules. Left: Kyogre, Geara & Zetta, Giratina, Manaphy,
+  ??? (Factory), Amber. Dropped: Danni & Layla (3+4), Eli & Sharon (5+5), Holly & Rorim (3+3).
+  Chapter rules on these 6 (30 mons): 12 major types; current six passes with 1 miss (Gyarados, Geara). Rank #3 of 9611,
+  0.7% behind #1 (Slowking-Galar for Gholdengo, 2 misses) = noise → no change.

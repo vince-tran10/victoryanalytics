@@ -39,7 +39,8 @@ def sig_of(mid, mv, ability, field):
     if t == 'NORMAL' and ability in ATE: t = ATE[ability]
     add = (ADD.get(field) or {}).get(t)
     return (t, add) if add else (t,)
-HARD = [b for b in E.battles if 'boss' in (b['label'] + ' ' + b.get('notes', '')).lower() or len(b['foes']) >= 6]
+from sheet_extras import is_hard
+HARD = [b for b in E.battles if is_hard(b)]
 def bw(b): return b['weight'] * (2 if b['format'] == 'Singles' else 1)
 def isboss(b): return 'boss' in (b['label'] + ' ' + b.get('notes', '')).lower()
 # ---- threat types (what the opponents actually throw) ----
