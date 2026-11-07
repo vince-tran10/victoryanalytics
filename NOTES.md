@@ -364,3 +364,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Golisopod). With ≤1 miss the best is Chandelure for Annihilape (98.4%). Team unchanged.
   Rules panel now reads team/chapter_status.json (written by `TEAM_NAMES='[...]' chapter_rules.py . 30 --status`, run with
   the same DONE) → "Chapter rules" checks. Re-run --status whenever DONE or the six changes.
+- 7 Nov 08:33 export (441): swapped back to main six (Golisopod has Soft Sand; Musharna + Glalie have NO item → Sitrus
+  to-do; Clawitzer Lv 54). Staging #385–391 scored (team/new_mons_1107b.json, roster10, r24_*, f27_*, ACTIVE_START=392):
+  Veluza-Aevian 0.487 C, Gastrodon (West Aevian, Storm Drain) 0.472, Golisopod (regular) 0.458, Mantyke→Mantine 0.415,
+  Drifblim (purified: Hurricane/Mystical Fire) 0.385 D, Overqwil 0.348, Purugly (purified: Thrash/SD/EQ/Sucker Punch) 0.330.
+  All → Overflow. None helps Kyogre (best in whole box still Glalie 0.18; Overflow Raichu/Pawmot 0.20–0.22, all OHKO'd).
+  Build script: scratchpad build.sh (make_report5 f27 → box_audit vs 2304 export, oldstart 385 → highlight → tabs).

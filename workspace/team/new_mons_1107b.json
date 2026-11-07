@@ -1,0 +1,387 @@
+[
+ {
+  "dump": 385,
+  "owned": "Golisopod",
+  "level": 55,
+  "now_ability": "Emergency Exit",
+  "now_moves": [
+   "Struggle Bug",
+   "Sand Attack",
+   "Defense Curl",
+   "Spikes"
+  ],
+  "final": "Golisopod",
+  "evolve": "",
+  "gate": "",
+  "types": "Bug/Water",
+  "score": 0.458,
+  "tier": "C",
+  "ability": "EmergencyExit",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Liquidation",
+   "X-Scissor",
+   "Razor Shell",
+   "Protect"
+  ],
+  "move_src": {
+   "Liquidation": "Lv 44",
+   "X-Scissor": "TM81",
+   "Razor Shell": "Lv 32",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "neved": 0.47,
+   "eli": 0.55,
+   "jenner": 0.38,
+   "geara": 0.56,
+   "giratina": 0.36,
+   "danni": 0.84,
+   "troye": 0.55,
+   "zena": 0.64,
+   "kyogre": 0.09,
+   "holly": 0.61,
+   "manaphy": 0.36,
+   "factory": 0.18,
+   "marcie": 0.82,
+   "amber": 0.78
+  }
+ },
+ {
+  "dump": 386,
+  "owned": "Overqwil",
+  "level": 55,
+  "now_ability": "Swift Swim",
+  "now_moves": [
+   "Pin Missile",
+   "Toxic Spikes",
+   "Stockpile",
+   "Spit Up"
+  ],
+  "final": "Overqwil",
+  "evolve": "",
+  "gate": "",
+  "types": "Dark/Poison",
+  "score": 0.348,
+  "tier": "D",
+  "ability": "Swift Swim",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Crunch",
+   "Barb Barrage",
+   "Bounce",
+   "Protect"
+  ],
+  "move_src": {
+   "Crunch": "Lv 48",
+   "Barb Barrage": "Lv 28",
+   "Bounce": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "neved": 0.47,
+   "eli": 0.45,
+   "jenner": 0.41,
+   "geara": 0.31,
+   "giratina": 0.35,
+   "danni": 0.82,
+   "troye": 0.51,
+   "zena": 0.73,
+   "kyogre": -0.29,
+   "holly": 0.45,
+   "manaphy": 0.35,
+   "factory": 0.25,
+   "marcie": 0.55,
+   "amber": 0.47
+  }
+ },
+ {
+  "dump": 387,
+  "owned": "Veluza-Aevian",
+  "level": 55,
+  "now_ability": "Regenerator",
+  "now_moves": [
+   "Wave Crash",
+   "Extreme Speed",
+   "Head Smash",
+   "Recover"
+  ],
+  "final": "Veluza (Aevian Form)",
+  "evolve": "",
+  "gate": "",
+  "types": "Water/Fire",
+  "score": 0.487,
+  "tier": "C",
+  "ability": "Reckless",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Wave Crash",
+   "Flare Blitz",
+   "Head Smash",
+   "Protect"
+  ],
+  "move_src": {
+   "Wave Crash": "known",
+   "Flare Blitz": "Lv 40",
+   "Head Smash": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "neved": 0.65,
+   "eli": 0.46,
+   "jenner": 0.63,
+   "geara": 0.48,
+   "giratina": 0.43,
+   "danni": 1.11,
+   "troye": 0.83,
+   "zena": 0.73,
+   "kyogre": -0.24,
+   "holly": 0.88,
+   "manaphy": 0.44,
+   "factory": 0.21,
+   "marcie": 0.53,
+   "amber": 0.82
+  }
+ },
+ {
+  "dump": 388,
+  "owned": "Mantyke",
+  "level": 55,
+  "now_ability": "Water Absorb",
+  "now_moves": [
+   "Air Slash",
+   "Aqua Ring",
+   "Bounce",
+   "Take Down"
+  ],
+  "final": "Mantine",
+  "evolve": "Mantine (HasInParty Remoraid)",
+  "gate": "",
+  "types": "Water/Flying",
+  "score": 0.415,
+  "tier": "C",
+  "ability": "Water Absorb",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Air Slash",
+   "Surf",
+   "Brine",
+   "Protect"
+  ],
+  "move_src": {
+   "Air Slash": "known",
+   "Surf": "HM03",
+   "Brine": "TM135",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "neved": 0.62,
+   "eli": 0.51,
+   "jenner": 0.49,
+   "geara": 0.34,
+   "giratina": 0.33,
+   "danni": 0.97,
+   "troye": 0.53,
+   "zena": 0.54,
+   "kyogre": 0.06,
+   "holly": 0.76,
+   "manaphy": 0.25,
+   "factory": 0.11,
+   "marcie": 0.37,
+   "amber": 0.73
+  }
+ },
+ {
+  "dump": 389,
+  "owned": "Gastrodon",
+  "level": 55,
+  "now_ability": "Storm Drain",
+  "now_moves": [
+   "Body Slam",
+   "Earth Power",
+   "Strange Steam",
+   "Recover"
+  ],
+  "final": "Gastrodon (West Aevian Form)",
+  "evolve": "",
+  "gate": "",
+  "types": "Ground/Fairy",
+  "score": 0.472,
+  "tier": "C",
+  "ability": "Storm Drain",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Earth Power",
+   "Strange Steam",
+   "Mud Bomb",
+   "Protect"
+  ],
+  "move_src": {
+   "Earth Power": "known",
+   "Strange Steam": "known",
+   "Mud Bomb": "Lv 11",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "neved": 0.55,
+   "eli": 0.48,
+   "jenner": 0.75,
+   "geara": 0.65,
+   "giratina": 0.68,
+   "danni": 0.64,
+   "troye": 0.52,
+   "zena": 0.64,
+   "kyogre": 0.04,
+   "holly": 0.45,
+   "manaphy": 0.31,
+   "factory": 0.41,
+   "marcie": 0.3,
+   "amber": 0.56
+  }
+ },
+ {
+  "dump": 390,
+  "owned": "Drifblim",
+  "level": 55,
+  "now_ability": "Aftermath",
+  "now_moves": [
+   "Stockpile",
+   "Swallow",
+   "Mystical Fire",
+   "Hurricane"
+  ],
+  "final": "Drifblim",
+  "evolve": "",
+  "gate": "",
+  "types": "Ghost/Flying",
+  "score": 0.385,
+  "tier": "D",
+  "ability": "Aftermath",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Hurricane",
+   "Shadow Ball",
+   "Mystical Fire",
+   "Protect"
+  ],
+  "move_src": {
+   "Hurricane": "known",
+   "Shadow Ball": "Lv 20",
+   "Mystical Fire": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "neved": 0.44,
+   "eli": 0.56,
+   "jenner": 0.62,
+   "geara": 0.37,
+   "giratina": 0.44,
+   "danni": 1.06,
+   "troye": 0.53,
+   "zena": 0.56,
+   "kyogre": -0.32,
+   "holly": 0.78,
+   "manaphy": 0.31,
+   "factory": 0.19,
+   "marcie": 0.58,
+   "amber": 0.49
+  }
+ },
+ {
+  "dump": 391,
+  "owned": "Purugly",
+  "level": 55,
+  "now_ability": "Own Tempo",
+  "now_moves": [
+   "Thrash",
+   "Swords Dance",
+   "Earthquake",
+   "Sucker Punch"
+  ],
+  "final": "Purugly",
+  "evolve": "",
+  "gate": "",
+  "types": "Normal",
+  "score": 0.33,
+  "tier": "D",
+  "ability": "Thick Fat",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Thrash",
+   "Sucker Punch",
+   "Swords Dance",
+   "Protect"
+  ],
+  "move_src": {
+   "Thrash": "known",
+   "Sucker Punch": "known",
+   "Swords Dance": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "neved": 0.26,
+   "eli": 0.49,
+   "jenner": 0.46,
+   "geara": 0.37,
+   "giratina": 0.32,
+   "danni": 0.82,
+   "troye": 0.28,
+   "zena": 0.68,
+   "kyogre": -0.28,
+   "holly": 0.4,
+   "manaphy": 0.41,
+   "factory": -0.05,
+   "marcie": 0.43,
+   "amber": 0.8
+  }
+ }
+]
