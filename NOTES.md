@@ -330,3 +330,10 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   damage engine. Hisuian Zoroark legal set: Nasty Plot / Shadow Ball / Bitter Malice / Extrasensory; no pulse or strong
   coverage moves, so the crest adds little now. It's a Chapter 8 pickup → review at end of chapter (Hyper Voice tutor at
   9 badges may change it).
+- 6 Nov 23:04 export: Groudon lineup in party (Glalie-A, Musharna-A, Exeggutor, Glaceon, Camerupt, Golisopod-A), all
+  Lv 55, all holding Focus Sash; Zoroark-Hisui (crest, Nasty Plot set) moved to Active as a specialist.
+  Camerupt is Modest with 252 HP/252 Atk → needs 252 SpA (Eruption/Earth Power are special).
+- FIGHT mode: env FIGHT=groudon makes make_report5 show a "Now: <fight>" hard-counter panel (lineup checked against the
+  export + 5-step plan) on Team and Fights; main-six differences become "After <fight>: …" notes (no red rows, no
+  priority to-dos) plus one "swap back" to-do. COUNTERS dict in make_report5. Unset FIGHT after the fight.
+- DONE now also has texen, guard1, guard2, tommen (he's at Groudon). f24_*: 16 fights left.

@@ -73,6 +73,21 @@ JOB = {'Annihilape': 'Fastest hitter.',
        'Golisopod-Aevian': 'Win condition. Skill Link makes Bone Rush and Pin Missile 125 power. After one Swords Dance it one-shots 60 of 68 boss mons.',
        'Leavanny-Aevian': 'Rage Powder pulls attacks so Golisopod gets a free Swords Dance; Focus Sash guarantees it survives that turn. Intimidate on entry.'}
 EVOLVE_FIRST = {}
+FIGHT = os.environ.get('FIGHT', '')
+COUNTERS = {'groudon': dict(title='Groudon', note='Boss · Deep Earth · Drought sun · 1 shield', six=[
+    ('Glalie-Aevian', 'Grassy Surge', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Focus Sash', ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'], 'Lead: Grassy Terrain halves Earthquake'),
+    ('Musharna-Aevian', 'Tough Claws', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Focus Sash', ['Play Rough', 'Throat Chop', 'Glare', 'Protect'], 'Glare it (paralysis)'),
+    ('Exeggutor', 'Chlorophyll', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash', ['Leaf Storm', 'Giga Drain', 'Extrasensory', 'Protect'], 'Faster in sun; Leaf Storm 94%'),
+    ('Glaceon', 'Ice Body', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash', ['Freeze-Dry', 'Blizzard', 'Icy Wind', 'Protect'], 'Freeze-Dry ~80%'),
+    ('Camerupt', 'Solid Rock', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash', ['Eruption', 'Earth Power', 'Lava Plume', 'Protect'], 'Eruption at full HP ~72%'),
+    ('Golisopod-Aevian', 'Skill Link', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Focus Sash', ['Bone Rush', 'Pin Missile', 'Swords Dance', 'Protect'], 'Back-up; takes Earthquake well')],
+    plan=['Lead Glalie-Aevian: Grassy Terrain halves Earthquake and heals you',
+          'Musharna Glares Groudon, then your slow hitters move first',
+          'Exeggutor Leaf Storm (then switch or Giga Drain: Leaf Storm drops SpA)',
+          'Glaceon / Camerupt finish it; Sashes let each survive one hit',
+          "Don't stall: its Sitrus Berry and the terrain heal it too"])}
+CF = COUNTERS.get(FIGHT)
+CF_NAMES = [x[0] for x in CF['six']] if CF else []
 NEXT_LV = max(fo['lvl'] or 0 for p in sorted(fn['plans'], key=lambda p: SX.story_order(os.path.dirname(os.path.dirname(os.path.abspath(F9N)))).get(p['key'], 999))[:3] for fo in p['foes'])
 ACTIONS = {}   # export entry number -> what to do; read by box_audit.py for the red highlights
 REPL = {('Musharna-Aevian', 'Glare'): 'Moonlight: paralysis halves a sweeper\'s Speed, so your slow hitters move first',
@@ -89,8 +104,10 @@ def verify(name, ab, nat, evs, item, moves):
     if not d:
         cands0 = [x for x in cur if x['species'] == name]
         d0 = min(cands0, key=lambda x: (x['box'] != 'Active', len(verify_mon(x, ab, nat, evs, item, moves))), default=None)
-        if d0:
+        if d0 and not CF:
             ACTIONS[d0['n']] = f"Move into the party (part of the ideal six)"
+        if CF:
+            return [f"After {CF['title']}: back into the party"]
         out = [f"Put {name} in the party (now in {d0['box']} #{d0['n']})" if d0 else (EVOLVE_FIRST.get(name) or f'Put {name} in the party')]
         if d0:
             out += [c for c in verify_mon(d0, ab, nat, evs, item, moves)]
@@ -130,7 +147,9 @@ ANY_CHANGE = any(verify(t[1], t[3], t[4], t[5], t[6], t[7]) for t in TEAM)
 prev = None
 for role, name, types, ab, nat, evs, item, moves, changes in TEAM:
     changes = verify(name, ab, nat, evs, item, moves)
-    team_todo += [(f'{name}: {c}', 'high') for c in changes if not c.startswith('Lv ')]
+    if CF and name in CF_NAMES:
+        changes = [c if c.startswith(('Lv ', 'After ')) else f"After {CF['title']}: {c}" for c in changes]
+    team_todo += [(f'{name}: {c}', 'high') for c in changes if not c.startswith('Lv ') and not c.startswith('After ')]
     LEVELS += [(name, c.split()[1]) for c in changes if c.startswith('Lv ')]
     moves = [(m, 2 if (name, m) in LATER and m not in party.get(name, {}).get('moves', []) else 0) for m, _ in moves]
     mv = ''.join(f'<li class="{"new" if n == 1 else ("soon" if n == 2 else "")}">{E(m)}</li>' for m, n in moves)
@@ -169,9 +188,25 @@ TEAM_X = [(t[1], t[2], t[3], t[6], [m for m, _ in t[7]]) for t in TEAM]
 RULES_HTML = SX.rules_panel(TEAM_X)
 NEXT_HTML = SX.next_fights(fn['plans'], TEAM_X, os.path.dirname(os.path.dirname(os.path.abspath(F9N))), 3, SHORT, disp)
 for d in cur:
-    if d['box'] == 'Party' and d['species'] not in IDEAL:
+    if d['box'] == 'Party' and d['species'] not in IDEAL and not (CF and d['species'] in CF_NAMES):
         ACTIONS[d['n']] = 'Move out of the party, back to the Active box'
         team_todo.append((f"{d['species']}: move out of the party, back to the Active box", 'high'))
+CF_HTML = ''
+if CF:
+    rows_, todo_cf = [], []
+    for nm_, ab_, nat_, evs_, item_, mv_, note_ in CF['six']:
+        d = party.get(nm_)
+        issues = verify_mon(d, ab_, nat_, evs_, item_, [(m, 0) for m in mv_]) if d else [f'Put {nm_} in the party']
+        issues = [x for x in issues if not x.startswith('Lv ')]
+        todo_cf += [(f'{CF["title"]} · {nm_}: {x}', 'high') for x in issues]
+        rows_.append(f'<tr><td><strong>{E(nm_)}</strong></td><td class="legend">{E(item_)}</td><td>{E(" / ".join(mv_))}</td><td>{E(note_)}</td>'
+                     f'<td>{"<span class=ok>✓</span>" if not issues else "<span class=chg2>" + E("; ".join(issues)) + "</span>"}</td></tr>')
+    _back = [x for x in IDEAL if x not in party]
+    team_todo[:0] = todo_cf
+    team_todo.append((f"After {CF['title']}: swap back to the main six (" + ', '.join(_back) + ' back in)', 'low'))
+    CF_HTML = (f'<div class="panel pad cf"><h3>Now: {E(CF["title"])} <span class="legend">{E(CF["note"])} · hard-counter lineup, this fight only</span></h3>'
+               f'<div class="tablewrap"><table class="cft"><tbody>{"".join(rows_)}</tbody></table></div>'
+               f'<ol class="plain">{"".join("<li>" + E(x) + "</li>" for x in CF["plan"])}</ol></div>')
 
 # ---------------------------------------------------------------- 1b) relearner upgrades
 UP = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'upgrades_relearn.json')))
@@ -472,6 +507,7 @@ tbody tr:last-child td {{ border-bottom: 0 }}
 .b.promote {{ background: var(--good-soft); color: var(--good) }}
 .b.big {{ background: var(--bad-soft); color: var(--bad) }} .b.small {{ background: var(--accent-soft); color: var(--accent) }}
 .chg2 {{ font-size: 12.5px; color: var(--warn) }}
+.cf {{ border: 2px solid var(--accent) }} .cft td {{ padding: 6px 8px; font-size: 13px }} .cf ol.plain {{ padding-left: 20px }}
 .todos {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px }}
 .tgroup {{ background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 8px; align-content: start }}
 .todo {{ list-style: none; margin: 0; padding: 0; display: grid; gap: 8px }}
@@ -495,6 +531,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 
 <section aria-labelledby="s1">
   <h2 id="s1">Team</h2>
+  {CF_HTML}
   <div class="panel tablewrap"><table class="team">
     <thead><tr><th>Role</th><th>Pokémon</th><th>Ability / nature</th><th>EVs</th><th>Item</th><th>Moves</th>{'<th>To change</th>' if ANY_CHANGE else ''}</tr></thead>
     <tbody>{"".join(team_rows)}</tbody>
@@ -513,6 +550,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 
 <section aria-labelledby="s1f">
   <h2 id="s1f">Fights</h2>
+  {CF_HTML}
   {NEXT_HTML}
   <div class="panel pad"><h3>Lead by fight</h3>
     <ul>
