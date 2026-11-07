@@ -380,3 +380,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   ??? (Factory), Amber. Dropped: Danni & Layla (3+4), Eli & Sharon (5+5), Holly & Rorim (3+3).
   Chapter rules on these 6 (30 mons): 12 major types; current six passes with 1 miss (Gyarados, Geara). Rank #3 of 9611,
   0.7% behind #1 (Slowking-Galar for Gholdengo, 2 misses) = noise → no change.
+- HARD redefined again (7 Nov, Vincent: boss or an actual hard fight, not grunt fodder): hand-checked trainer classes
+  from walk_ch8 → sheet_extras.HARD_WHY / NOT_HARD (unknown new fights: bosses only). Hard: Kyogre (OPTIONAL — walkthrough
+  path "Saving Amber (Optional)"), Eli & Sharon, Geara & Zetta, Giratina, Holly & Rorim, Manaphy, ??? Factory, Amber.
+  Not hard: Danni & Layla, Troye & Helen (Team Xen grunts), Zena (Xen Analyst, 4), Jenner (4 at Lv 50–51), Marcie & Chikie (4).
+  Fights table has a "Why hard" column. Chapter rules on these 8 (46 mons): current six #1 of 1631; misses Gyarados, Escavalier.

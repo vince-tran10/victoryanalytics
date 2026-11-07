@@ -148,15 +148,34 @@ def next_fights(plans, team, base, n=3, short=None, disp=lambda x: x, keep_order
     return '<div class="nfs">' + ''.join(cards) + '</div>'
 
 
+# Hand-checked against the walkthrough's trainer classes (7 Nov): bosses + real story/key fights, no grunt fodder.
+HARD_WHY = {
+    'kyogre': 'Legendary boss (optional, Saving Amber)',
+    'eli': 'Misfortunate Duo story fight, 10 mons, Venam partner',
+    'geara': 'Two Xen Executives, 12 mons, Melia partner',
+    'giratina': 'Rift boss, crested partners',
+    'holly': 'Commander Holly quest fight, Lv 55–58 (over cap)',
+    'manaphy': 'Boss, Lv 60',
+    'factory': 'Mystery trainer, Lv 60–64 (over cap)',
+    'amber': 'Gym leader (Lyric Badge)',
+    # earlier ones, kept for the record
+    'aelita': 'Rival', 'narcissa': 'Gym leader', 'narcissa1': 'Gauntlet', 'narcissa2': 'Gauntlet', 'texen': 'Gym leader',
+    'groudon': 'Legendary boss', 'crawli': 'Head Ranger', 'tommen': 'Xen boss',
+}
+NOT_HARD = {'danni': 'Team Xen grunts', 'troye': 'Team Xen grunts', 'zena': 'Xen Analyst, 4 mons',
+            'jenner': 'Story fight but 4 mons at Lv 50–51', 'marcie': '4 mons at Lv 53–54', 'neved': 'Optional',
+            'guard1': 'Optional', 'guard2': 'Optional'}
+
+
 def is_hard(p):
-    """Hard = a boss, or a trainer bringing a full 6 (in a 2-trainer doubles fight, each side needs 6)."""
-    lab = p['label'].split(' – ')[0].split(' - ')[0]
-    trainers = 2 if (' & ' in lab or ' and ' in lab) else 1
-    return 'boss' in (p['label'] + ' ' + p.get('notes', '')).lower() or len(p['foes']) / trainers >= 6
+    """Hard = a boss or a real story/key fight (gym leader, executives, named story trainers), never grunt fodder."""
+    if p['key'] in HARD_WHY: return True
+    if p['key'] in NOT_HARD: return False
+    return 'boss' in (p['label'] + ' ' + p.get('notes', '')).lower()   # unknown new fight: only bosses by default
 
 
 def hard_fights(plans, team, base, short=None, disp=lambda x: x):
-    """All remaining hard fights (boss, or a trainer with a full 6): overview table + one card each."""
+    """All remaining hard fights (bosses and real story fights, no grunts): overview table + one card each."""
     order = story_order(base)
     hard = [p for p in sorted(plans, key=lambda p: order.get(p['key'], 999)) if is_hard(p)]
     rows = []
@@ -178,11 +197,11 @@ def hard_fights(plans, team, base, short=None, disp=lambda x: x):
         st += f" · {risk} can one-shot us" if risk and not boss else ''
         fmt = f'<span class="fmt {p["format"].lower()}">{E(p["format"])}</span>'
         rows.append(f'<tr><td class="c">{i}</td><td><b>{E(name)}</b>{opt}</td><td>{fmt}</td>'
-                    f'<td>{"<span class=bossb>Boss</span>" if boss else ""}</td><td>{E(p["field"])}</td><td class="c">{n}</td>'
+                    f'<td>{"<span class=bossb>Boss</span>" if boss else ""}</td><td>{E(p["field"])}</td><td class="c">{n}</td><td class="legend">{E(HARD_WHY.get(p["key"], ""))}</td>'
                     f'<td>{E(" + ".join(disp(x) for x in p["leads"]))}</td><td class="st {cls}">{E(st)}</td></tr>')
-    table = ('<div class="panel pad"><h3>Hard fights left <span class="legend">bosses, or a trainer with a full 6 · story order</span></h3>'
+    table = ('<div class="panel pad"><h3>Hard fights left <span class="legend">bosses and real story fights, no grunts · story order</span></h3>'
              '<div class="tw"><table class="hft"><thead><tr><th>#</th><th>Fight</th><th>Format</th><th>Boss</th><th>Field</th>'
-             '<th>Mons</th><th>Lead</th><th>Your six</th></tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div></div>')
+             '<th>Mons</th><th>Why hard</th><th>Lead</th><th>Your six</th></tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div></div>')
     return table + next_fights(hard, team, base, len(hard), short, disp, keep_order=True)
 
 
