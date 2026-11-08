@@ -142,7 +142,7 @@ def next_fights(plans, team, base, n=3, short=None, disp=lambda x: x, keep_order
         ko = sum(1 for fo in p['foes'] if fo['answer_dmg'] >= 100)
         cards.append(f'''<div class="panel pad nf"><h4>{E((short or {}).get(p["key"], p["label"]))} <span class="legend">{E(p["format"])}{" · Boss" if "boss" in p["label"].lower() else ""} · {E(p["field"])}</span></h4>
 <div class="legend nfn">{E(p.get("notes", ""))}</div>
-<div><b>Lead:</b> {E(leads)}</div>
+<div><b>Opener:</b> {E(leads)}</div>
 {('<div><b>Field boosts:</b> ' + E(", ".join(users)) + '</div>') if users else '<div class="legend">No field boost on your six</div>'}
 {('<ul class="plain">' + "".join(thr) + '</ul>') if thr else ''}</div>''')
     return '<div class="nfs">' + ''.join(cards) + '</div>'
@@ -201,9 +201,10 @@ def hard_fights(plans, team, base, short=None, disp=lambda x: x):
             cls = 'ok' if ko == n and risk <= 1 else 'warn'
         st += f" · {risk} can one-shot us" if risk and not boss else ''
         fmt = f'<span class="fmt {p["format"].lower()}">{E(p["format"])}</span>'
-        rows.append(f'<tr><td class="c">{i}</td><td><b>{E(name)}</b>{opt}</td><td>{fmt}</td>'
-                    f'<td>{"<span class=bossb>Boss</span>" if boss else ""}</td><td>{E(p["field"])}</td><td class="c">{n}</td><td class="legend">{E(HARD_WHY.get(p["key"], ""))}</td>'
-                    f'<td>{E(" + ".join(disp(x) for x in p["leads"]))}</td><td class="st {cls}">{E(st)}</td></tr>')
+        rows.append(f'<tr><td class="c hn">{i}</td><td class="hf"><b>{E(name)}</b>{opt} <span class="hm">{fmt}{" <span class=bossb>Boss</span>" if boss else ""}</span></td>'
+                    f'<td class="hd">{fmt}</td><td class="hd">{"<span class=bossb>Boss</span>" if boss else ""}</td>'
+                    f'<td data-l="Field">{E(p["field"])}</td><td class="c" data-l="Mons">{n}</td><td class="legend" data-l="Why">{E(HARD_WHY.get(p["key"], ""))}</td>'
+                    f'<td data-l="Opener"><span>{E(" + ".join(disp(x) for x in p["leads"]))}</span></td><td class="st {cls}" data-l="Your six"><span>{E(st)}</span></td></tr>')
     table = ('<div class="panel pad"><h3>Hard fights left <span class="legend">bosses and real story fights, no grunts · story order</span></h3>'
              '<div class="tw"><table class="hft"><thead><tr><th>#</th><th>Fight</th><th>Format</th><th>Boss</th><th>Field</th>'
              '<th>Mons</th><th>Why hard</th><th>Best opener (matchup)</th><th>Your six</th></tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div></div>')
@@ -230,7 +231,16 @@ CSS = '''
 .fmt {{ font: 600 11px var(--mono); padding: 2px 6px; border-radius: 4px; background: var(--line) }}
 .fmt.singles {{ color: var(--lead); }} .fmt.doubles {{ color: var(--mid); }}
 .bossb {{ font: 700 11px var(--mono); padding: 2px 6px; border-radius: 4px; background: var(--bad-soft); color: var(--bad) }}
-.hft .st {{ font-size: 12.5px; white-space: nowrap }} .hft .st.ok {{ color: var(--good) }} .hft .st.warn {{ color: #b45309 }} .hft .st.bad {{ color: var(--bad); font-weight: 600 }}
+.hft .st {{ font-size: 12.5px; white-space: nowrap }} .hft .hm {{ display: none }}
+@media (max-width: 680px) {{
+  .hft thead, .hft .hd, .hft .hn {{ display: none }}
+  .hft, .hft tbody, .hft tr, .hft td {{ display: block; width: 100% }}
+  .hft tr {{ border-bottom: 1px solid var(--line); padding: 10px 0 }}
+  .hft td {{ border: 0 !important; padding: 2px 0 !important; text-align: left !important }}
+  .hft .hm {{ display: inline-flex; gap: 6px; margin-left: 6px }}
+  .hft td[data-l] {{ display: grid; grid-template-columns: 78px 1fr; gap: 8px; white-space: normal }}
+  .hft td[data-l]::before {{ content: attr(data-l); font: 500 11px var(--mono); color: var(--muted); text-transform: uppercase; padding-top: 2px }}
+}} .hft .st.ok {{ color: var(--good) }} .hft .st.warn {{ color: #b45309 }} .hft .st.bad {{ color: var(--bad); font-weight: 600 }}
 .mxd summary, .tierd > summary {{ cursor: pointer; font: 600 13px var(--display); color: var(--accent); padding: 6px 0 }}
 .mxd[open] summary {{ margin-bottom: 8px }} .nfh {{ margin-top: 4px }}
 '''

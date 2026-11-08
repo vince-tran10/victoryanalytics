@@ -186,10 +186,11 @@ for role, name, types, ab, nat, evs, item, moves, changes in TEAM:
     moves = [(m, 2 if (name, m) in LATER and m not in party.get(name, {}).get('moves', []) else 0) for m, _ in moves]
     mv = ''.join(f'<li class="{"new" if n == 1 else ("soon" if n == 2 else "")}">{E(m)}</li>' for m, n in moves)
     ch = ('<ul class="chg">' + ''.join(f'<li>{E(c)}</li>' for c in changes) + '</ul>') if changes else '<span class="ok">Done ✓ (matches export)</span>'
-    rc = f'<td class="role role-{role.lower()}" rowspan="2">{role}</td>' if role != prev else ''
+    _span = sum(1 for t in TEAM if t[0] == role)   # roles can have 1–3 members
+    rc = f'<td class="role role-{role.lower()}" rowspan="{_span}">{role}</td>' if role != prev else ''
     prev = role
-    team_rows.append(f'''<tr>{rc}<td><strong>{E(name)}</strong><div class="chips">{chips(types)}</div></td>
-<td>{E(ab)}<div class="legend">{E(nat)}</div></td><td>{ev_lines(evs)}</td><td>{E(item)}</td><td><ul class="mv">{mv}</ul></td><td>{ch}</td></tr>''')
+    team_rows.append(f'''<tr>{rc}<td class="tm-name"><strong>{E(name)}</strong><div class="chips">{chips(types)}</div></td>
+<td data-l="Ability">{E(ab)}<div class="legend">{E(nat)}</div></td><td data-l="EVs">{ev_lines(evs)}</td><td data-l="Item">{E(item)}</td><td data-l="Moves"><ul class="mv">{mv}</ul></td><td data-l="Status">{ch}</td></tr>''')
 
 
 def readiness():
@@ -683,6 +684,19 @@ th, td {{ text-align: left; padding: 10px; border-bottom: 1px solid var(--line);
 thead th {{ font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); white-space: nowrap }}
 tbody tr:last-child td {{ border-bottom: 0 }}
 .team td {{ font-size: 13.5px }}
+@media (max-width: 680px) {{
+  .team thead {{ display: none }}
+  .team, .team tbody, .team tr, .team td {{ display: block; width: 100% }}
+  .team tr {{ border-bottom: 1px solid var(--line); padding: 8px 12px 10px }}
+  .team td {{ border: 0 !important; padding: 2px 0 !important }}
+  .team td.role {{ font-size: 12px; letter-spacing: .08em; padding: 10px 0 0 !important; border-top: 2px solid var(--line) !important }}
+  .team td.tm-name {{ padding-top: 6px !important }}
+  .team td[data-l] {{ display: grid; grid-template-columns: 64px 1fr; gap: 8px; align-items: start }}
+  .team td[data-l]::before {{ content: attr(data-l); font: 500 11px var(--mono); color: var(--muted); text-transform: uppercase; padding-top: 2px }}
+  .team td[data-l] > .legend, .team td[data-l] > *:not(:first-child) {{ grid-column: 2 }}
+  .team .evl, .team ul.mv {{ margin: 0 }}
+  .team ul.mv {{ display: flex; flex-wrap: wrap; gap: 2px 10px }}
+}}
 .role {{ font: 700 13px var(--display); letter-spacing: .06em; text-transform: uppercase; border-right: 1px solid var(--line); width: 74px }}
 .role-lead {{ color: var(--accent) }} .role-mid {{ color: var(--warn) }} .role-closer {{ color: var(--good) }}
 .job {{ color: var(--muted); font-size: 12.5px; margin-top: 4px; max-width: 30ch }}
@@ -743,7 +757,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 <header class="mast">
   <span class="eyebrow">Pokémon Rejuvenation · Chapter 8 · Classic teams</span>
   <h1>Chapter 8 Guide</h1>
-  <div class="facts"><span>Export <b>{E(os.environ.get('EXPORT_LABEL', '5 Nov'))}</b></span><span>Fights left <b>{len(fn['plans'])}</b></span><span>Level cap <b>55</b></span></div>
+  <div class="facts"><span>Export <b>{E(os.environ.get('EXPORT_LABEL', '5 Nov'))}</b></span><span>Hard fights left <b>{sum(1 for p in fn['plans'] if SX.is_hard(p))}</b></span><span>Level cap <b>55</b></span></div>
 </header>
 
 <section aria-labelledby="s1">

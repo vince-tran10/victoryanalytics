@@ -17,7 +17,7 @@ panels = ''.join(f'<div class="tabp" id="panel-{k}" role="tabpanel" aria-labelle
                  '\n'.join(secs[s] for s in ids if s in secs) + '</div>' for k, _, ids in TABS)
 page = page.replace('</header>', '</header>\n' + bar + '\n' + panels, 1)
 css = '''<style id="tabs-css">
-.tabs { position: sticky; top: 0; z-index: 5; display: flex; gap: 6px; overflow-x: auto; padding: 8px 0; background: var(--bg); border-bottom: 1px solid var(--line); scrollbar-width: none }
+.tabs { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; gap: 6px; overflow-x: auto; padding: 8px 0; background: var(--bg); border-bottom: 1px solid var(--line); scrollbar-width: none }
 .tabs::-webkit-scrollbar { display: none }
 .tabs button { font: 600 13px var(--display); letter-spacing: .03em; padding: 7px 14px; border-radius: 99px; border: 1px solid var(--line); background: var(--panel); color: var(--muted); cursor: pointer; white-space: nowrap }
 .tabs button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff }

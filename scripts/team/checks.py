@@ -112,12 +112,16 @@ html_sec = f'''<section aria-labelledby="s5">
 </section>
 '''
 CSS = ('.cat td, .cat th { padding: 5px 8px; border-bottom: 1px solid var(--line); text-align: left; font-size: 13px; vertical-align: top }'
-       ' .cat .warn, .warn { color: #b45309; font-weight: 600 }')
+       ' .cat .warn, .warn { color: #b45309; font-weight: 600 }'
+       ' @media (max-width: 680px) { .cat thead { display: none } .cat tr { display: grid; grid-template-columns: 22px 1fr; padding: 4px 0;'
+       ' border-bottom: 1px solid var(--line) } .cat td { border: 0 !important; padding: 2px 4px !important }'
+       ' .cat td:nth-child(n+3) { grid-column: 2 } .cat td:only-child, .cat tr td:first-child:nth-last-child(2),'
+       ' .cat tr td:first-child:nth-last-child(2) ~ td { grid-column: auto } }')
 page = re.sub(r'<section aria-labelledby="s5">.*?</section>\s*', '', page, flags=re.S)
 anchor = page.rfind('<footer') if '<footer' in page else page.rfind('</main>')
 page = page[:anchor] + html_sec + page[anchor:]
-if '.cat td' not in page:
-    page = page.replace('</style>', CSS + '</style>', 1)
+page = re.sub(r'\.cat td, \.cat th \{.*?(?=</style>)', '', page, flags=re.S)
+page = page.replace('</style>', CSS + '</style>', 1)
 open(OUT, 'w', encoding='utf-8').write(page)
 for nm, ok, d, blk in checks:
     print(('PASS ' if ok else ('FAIL ' if blk else 'WARN ')) + nm + (f' — {d}' if d else ''))

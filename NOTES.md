@@ -515,3 +515,11 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Dead piece fixed: Ludicolo Swift Swim (no rain) → Own Tempo. checks.py: 3 synergy checks (state.json "abilities").
 - 8 Nov: roles now = game plan, not matchup: Lead Vikavolt (Sticky Web) + Ludicolo (Fake Out); Mid Rhyperior, Armarouge,
   Musharna (Glare); Closer Annihilape. Fights tab column renamed "Best opener (matchup)" (per-fight engine pick).
+- 8 Nov DEEP CHECK (scripts/team/deep_check.py; log workspace/team/deep_check_1108.log): whole box (all Overflow allowed,
+  FORCE_POOL identity specialists incl. Trick Room setters), 123,139 sixes pass rules; support-aware (setup, Glare/Web/
+  T-Wave, Fake Out, Trick Room mode), lock-in moves out, role/identity filter. Current six #4, top +0.70%
+  (Golisopod-A, Glalie-A, Azumarill, Armarouge, Scrafty, Ampharos) = tie; current has the highest raw score of the top
+  group (1.1315 vs 1.1053). No Trick Room team in the top 2000. Kept.
+- Visual pass (desktop 1280 + phone 390, all tabs): role cell rowspan = role size (3 Mids broke the table); Team, Fights
+  and C&A tables stack into labelled cards under 680px; tab bar wraps; header shows "Hard fights left 7"; fight cards
+  say "Opener".
