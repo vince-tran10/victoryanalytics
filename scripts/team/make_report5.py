@@ -52,21 +52,30 @@ def disp(n):
 
 # ---------------------------------------------------------------- 1) team
 # (role, name, types, ability, nature, evs, item, moves[(move, is_new)], change notes)
-TEAM = [
-    ('Lead', 'Annihilape', 'Fighting/Ghost', 'Defiant', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Black Belt',
-     [('Close Combat', 0), ('Rage Fist', 0), ('Sucker Punch', 0), ('Protect', 0)], []),
-    ('Lead', 'Gholdengo', 'Steel/Ghost', 'Good as Gold', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Metal Coat',
-     [('Make It Rain', 0), ('Shadow Ball', 0), ('Power Gem', 0), ('Protect', 0)], []),
-    ('Mid', 'Clawitzer', 'Water', 'Mega Launcher', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Mystic Water',
-     [('Water Pulse', 0), ('Aura Sphere', 0), ('Dark Pulse', 0), ('Protect', 0)], []),
-    ('Mid', 'Musharna-Aevian', 'Dark/Fairy', 'Tough Claws', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry',
+TEAM = [   # best six for the 7 remaining hard fights on exact game data (8 Nov): #1 of the chapter-rules search
+    ('Lead', 'Rhyperior', 'Ground/Rock', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone',
+     [('Stone Edge', 0), ('Headlong Rush', 0), ('Fire Fang', 0), ('Protect', 0)], []),
+    ('Lead', 'Musharna-Aevian', 'Dark/Fairy', 'Tough Claws', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry',
      [('Play Rough', 0), ('Throat Chop', 0), ('Glare', 0), ('Protect', 0)], []),
-    ('Closer', 'Golisopod-Aevian', 'Bug/Ground', 'Skill Link', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand',
-     [('Bone Rush', 0), ('Pin Missile', 0), ('Swords Dance', 0), ('Protect', 0)], []),
-    ('Closer', 'Glalie-Aevian', 'Grass/Rock', 'Grassy Surge', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry',
-     [('Grassy Glide', 0), ('Wood Hammer', 0), ('Rock Slide', 0), ('Protect', 0)], []),
+    ('Mid', 'Armarouge', 'Fire/Psychic', 'Flash Fire', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Sitrus Berry',
+     [('Flamethrower', 0), ('Psyshock', 0), ('Calm Mind', 0), ('Protect', 0)], []),
+    ('Mid', 'Annihilape', 'Fighting/Ghost', 'Defiant', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Black Belt',
+     [('Close Combat', 0), ('Rage Fist', 0), ('Sucker Punch', 0), ('Protect', 0)], []),
+    ('Closer', 'Vikavolt', 'Bug/Electric', 'Levitate', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Magnet',
+     [('Thunderbolt', 0), ('Bug Buzz', 0), ('Sticky Web', 0), ('Protect', 0)], []),
+    ('Closer', 'Ludicolo', 'Water/Grass', 'Swift Swim', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Mystic Water',
+     [('Fake Out', 0), ('Energy Ball', 0), ('Hydro Pump', 0), ('Protect', 0)], []),
 ]
+PLAY = ['<b>Lead</b> Rhyperior + Musharna: Glare the fastest threat, Rhyperior hits (Stone Edge 1.5x on Mountain / Volcanic Top)',
+        '<b>Doubles</b> Ludicolo Fake Out buys a free turn for a partner\'s big hit or Armarouge\'s Calm Mind',
+        '<b>Armarouge</b> Calm Mind when the foe can\'t hurt it much, then Flamethrower / Psyshock',
+        '<b>Annihilape</b> comes in on hits: every hit taken powers Rage Fist',
+        '<b>Speed Boost users</b> Protect turn 1, so attack turn 2. <b>Singles:</b> Vikavolt Sticky Web first, then Thunderbolt']
 JOB = {'Annihilape': 'Fastest hitter.',
+       'Ludicolo': 'Fake Out lead: a free turn for Annihilape. Grass + Water hits the Water/Ground mons.',
+       'Armarouge': 'Fire/Psychic special attacker; Calm Mind turns it into a sweeper.',
+       'Vikavolt': 'Electric/Bug special hitter (Magnet); Levitate dodges Ground. Sticky Web slows the foe team.',
+       'Musharna-Aevian': 'Glare (never misses) halves a sweeper\'s Speed. Tough Claws Play Rough / Throat Chop.',
        'Gholdengo': 'Make It Rain hits both foes (1.5x on Big Top). Immune to status moves.',
        'Rhyperior': 'Resists Fire. Stone Edge (Hard Stone, 1.5x on Mountain and Volcanic Top) deals with Fire mons and fliers.',
        'Glaceon': 'Icy Wind slows the back line for Golisopod. Freeze-Dry and Blizzard are your Groudon answer.',
@@ -117,6 +126,8 @@ def verify(name, ab, nat, evs, item, moves):
     if not d:
         cands0 = [x for x in cur if x['species'] == name]
         d0 = min(cands0, key=lambda x: (x['box'] != 'Active', len(verify_mon(x, ab, nat, evs, item, moves))), default=None)
+        if d0:
+            TEAM_SRC[name] = (d0['species'], d0['n'], d0['box'])
         if d0 and not CF:
             ACTIONS[d0['n']] = f"Move into the party (part of the ideal six)"
         if CF:
@@ -143,9 +154,12 @@ def verify_mon(d, ab, nat, evs, item, moves):
         out.append(f"Nature: {d.get('nature')} → {nat} (mint)")
     if (d.get('level') or 55) < 55:
         out.append(f"Lv {d['level']} → 55")
-    for m, _ in moves:
+    _target = [m for m, _ in moves]
+    _gone = [m for m in d['moves'] if m not in _target]
+    for m in _target:
         if m not in d['moves']:
-            out.append(LATER.get((name, m), f'Teach {m}' + (f' (replaces {REPL[(name, m)].split(":")[0]})' if (name, m) in REPL else '')).format(lv=d['level']))
+            rep = _gone.pop(0) if _gone else None
+            out.append(LATER.get((name, m), f'Teach {m}' + (f' (replaces {rep})' if rep else '')).format(lv=d['level']))
     return out
 
 
@@ -156,7 +170,7 @@ def ev_lines(evs):
 
 
 team_rows, team_todo, LEVELS = [], [], []
-TEAM_CHANGES, CF_ISSUES = {}, {}
+TEAM_CHANGES, CF_ISSUES, TEAM_SRC = {}, {}, {}
 ANY_CHANGE = any(verify(t[1], t[3], t[4], t[5], t[6], t[7]) for t in TEAM)
 prev = None
 for role, name, types, ab, nat, evs, item, moves, changes in TEAM:
@@ -290,7 +304,7 @@ def plan_moves(have, target, phys, ability):
 
 # ---------------------------------------------------------------- 1b) relearner upgrades
 UP = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'upgrades_relearn.json')))
-ORDER = ['Annihilape', 'Gholdengo', 'Clawitzer', 'Musharna-Aevian', 'Golisopod-Aevian', 'Glalie-Aevian']
+ORDER = [t[1] for t in TEAM]
 up_cards, up_same, up_left, up_done = [], [], 0, []
 up_names = set()
 PROFILE = {}   # (species, export #, box) -> list of profile changes
@@ -323,7 +337,7 @@ for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP
     if abg: extra += f'<div class="chg2">Ability: {E(d.get("ability"))} → <b>{E(u["ability"])}</b> (Ability Capsule)</div>'
     if u.get('later'): extra += f'<div class="mnote">Later: {E(u["later"])}</div>'
     status = '<span class="ok">Done ✓</span>' if done else ('<span class="b big">big upgrade</span>' if u.get('big') else '<span class="b small">upgrade</span>')
-    role = {'Annihilape': 'lead', 'Gholdengo': 'lead', 'Clawitzer': 'mid', 'Musharna-Aevian': 'mid'}.get(d['species'], 'closer' if d['box'] == 'Party' else '')
+    role = {t[1]: t[0].lower() for t in TEAM}.get(d['species'], '')
     up_names.add(d['species'])
     _fx = [f"Teach {m}" + (f" (replaces {o})" if o else '') for m, o in zip(gaps, gone + [None] * len(gaps))]
     if natg: _fx.append(f"Nature: {d.get('nature')} → {u['nature']} (mint)")
@@ -568,9 +582,13 @@ for role, name, *_ in TEAM:
     pd = party.get(name)
     ch = [c for c in TEAM_CHANGES.get(name, []) if not c.startswith(_BOXMOVE)]
     if CF and name in CF_NAMES: ch = []
-    key = (pd['species'], pd['n'], pd['box']) if pd else None
-    if key and key in PROFILE: ch += PROFILE.pop(key)
-    if ch: _cards.append((0, name, f"Party #{pd['n']}" if pd else 'main six', ch))
+    key = (pd['species'], pd['n'], pd['box']) if pd else TEAM_SRC.get(name)
+    if key and key in PROFILE:   # merge relearner / build-fix lines, skipping ones the team build already says
+        _spec = next(t for t in TEAM if t[1] == name)   # the team build wins over generic box suggestions
+        ch += [x for x in PROFILE.pop(key) if x not in ch and not (x.startswith('Teach ') and x.split(' (')[0] in {c.split(' (')[0] for c in ch})
+               and not x.startswith(('Ability:', 'Nature:', 'EVs:'))]
+    where = f"Party #{pd['n']}" if pd else (f"{key[2]} #{key[1]} → party" if key else 'main six')
+    if ch: _cards.append((0, name, where, ch))
 if CF:
     for nm_, (dd, iss) in CF_ISSUES.items():
         k2 = (dd['species'], dd['n'], dd['box'])
@@ -734,13 +752,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
   </table></div>
   {RULES_HTML}
   <div class="panel pad"><h3>How to play it</h3>
-    <ul class="gp">
-      <li><b>Lead</b> Annihilape (take a hit → Rage Fist) + Gholdengo</li>
-      <li><b>Fast setup sweeper?</b> Musharna Glares it, then hit it</li>
-      <li><b>Speed Boost users</b> Protect turn 1, so attack turn 2</li>
-      <li><b>Boosted foe?</b> Don't trade hits; switch to the resist</li>
-      <li><b>Close it out</b> Golisopod: Swords Dance when safe, then sweep</li>
-    </ul>
+    <ul class="gp">{"".join("<li>" + x + "</li>" for x in PLAY)}</ul>
   </div>
 </section>
 

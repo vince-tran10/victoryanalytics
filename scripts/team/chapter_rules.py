@@ -125,7 +125,8 @@ def misses(ks):   # (d): not hit SE and not one-shot by anyone
 SHORTF = {'neved': 'Neved', 'eli': 'Eli & Sharon', 'geara': 'Geara & Zetta', 'giratina': 'Giratina', 'danni': 'Danni & Layla',
           'kyogre': 'Kyogre', 'holly': 'Holly & Rorim', 'manaphy': 'Manaphy', 'factory': '??? (Factory)', 'amber': 'Amber'}
 def status(names):
-    ks = list({nm(byk[k]): k for k in byk if byk[k]['name'] in names and byk[k]['src']['where'] == 'Party'}.values())
+    ks = [min((k for k in byk if byk[k]['name'] == n), key=lambda k: (byk[k]['src']['where'] != 'Party', -byk[k]['solo_total']))
+          for n in names if any(byk[k]['name'] == n for k in byk)]
     weak3 = ['/'.join(s) for s in MAJOR if sum(WK[k][s] for k in ks) >= 3]
     nores = ['/'.join(s) for s in MAJOR if not any(RS[k][s] for k in ks)]
     ms = []

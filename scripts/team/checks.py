@@ -19,8 +19,9 @@ def chk(name, ok, detail='', blocking=True): checks.append((name, bool(ok), deta
 todo = sec('s3').group(0) if sec('s3') else ''
 team = sec('s1').group(0) if sec('s1') else ''
 cards = re.findall(r'<div class="tgroup pcard"><h3>(.*?) <span', todo)
-chk('Party matches the six (Done ✓ on all 6)', text(team).count('Done ✓') >= 6 or st.get('fight'),
-    f"{text(team).count('Done ✓')}/6 Done ✓")
+_done = text(team).count('Done ✓'); _moving_in = sum(1 for v in acts.values() if v.startswith('Move into the party'))
+chk('Every member of the six is Done ✓ or has a build card + a green move into the party',
+    _done + _moving_in >= 6 or st.get('fight'), f"{_done} done, {_moving_in} moving in")
 chk('To do: one card per Pokémon (no duplicates)', len(cards) == len(set(cards)), f'{len(cards)} cards')
 chk('To do: no "X or Y" answers', not re.search(r'\b(\w+) or (\w+)\b', re.sub(r'<p class="legend">.*?</p>', '', text(todo))),
     'checked every card line')

@@ -4,9 +4,9 @@
  "export_label": "8 Nov 09:13",
  "active_start": 414,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 21,
- "run": 35,
- "final": 39,
+ "roster": 24,
+ "run": 38,
+ "final": 42,
  "done": [
   "aelita",
   "narcissa1",
@@ -23,48 +23,48 @@
  ],
  "fight": null,
  "team": [
-  "Annihilape",
-  "Gholdengo",
-  "Clawitzer",
+  "Rhyperior",
   "Musharna (Aevian Form)",
-  "Golisopod (Aevian Form)",
-  "Glalie (Aevian Form)"
+  "Armarouge",
+  "Annihilape",
+  "Vikavolt",
+  "Ludicolo"
  ],
  "moves": {
-  "Golisopod (Aevian Form)": [
-   "Bone Rush",
-   "Pin Missile",
-   "Swords Dance",
-   "Protect"
-  ],
   "Annihilape": [
    "Close Combat",
    "Rage Fist",
    "Sucker Punch",
    "Protect"
   ],
-  "Gholdengo": [
-   "Make It Rain",
-   "Shadow Ball",
-   "Power Gem",
+  "Ludicolo": [
+   "Fake Out",
+   "Energy Ball",
+   "Hydro Pump",
    "Protect"
   ],
-  "Glalie (Aevian Form)": [
-   "Grassy Glide",
-   "Wood Hammer",
-   "Rock Slide",
-   "Protect"
-  ],
-  "Clawitzer": [
-   "Water Pulse",
-   "Aura Sphere",
-   "Dark Pulse",
+  "Armarouge": [
+   "Flamethrower",
+   "Psyshock",
+   "Calm Mind",
    "Protect"
   ],
   "Musharna (Aevian Form)": [
    "Play Rough",
    "Throat Chop",
    "Glare",
+   "Protect"
+  ],
+  "Rhyperior": [
+   "Stone Edge",
+   "Headlong Rush",
+   "Fire Fang",
+   "Protect"
+  ],
+  "Vikavolt": [
+   "Thunderbolt",
+   "Bug Buzz",
+   "Sticky Web",
    "Protect"
   ]
  },
@@ -83,13 +83,13 @@
  },
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
-  "rank": 25,
+  "rank": 1,
   "of": 6809,
-  "gap": 2.24,
+  "gap": 0.0,
   "top": [
    {
     "score": 1.125,
-    "pct": 102.2,
+    "pct": 100.0,
     "team": [
      "Annihilape",
      "Rhyperior",
@@ -104,7 +104,7 @@
    },
    {
     "score": 1.1198,
-    "pct": 101.8,
+    "pct": 99.5,
     "team": [
      "Golisopod-A",
      "Glalie-A",
@@ -120,7 +120,7 @@
    },
    {
     "score": 1.1197,
-    "pct": 101.8,
+    "pct": 99.5,
     "team": [
      "Rhyperior",
      "Chandelure",
@@ -135,8 +135,7 @@
    }
   ],
   "current_misses": [
-   "Gyarados",
-   "Escavalier"
+   "Clefable"
   ]
  },
  "team_check_cache": true

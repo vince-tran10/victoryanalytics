@@ -493,3 +493,12 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - Team on exact data: current six #25 of 6809, best six +2.24% (Annihilape, Rhyperior, Armarouge, Vikavolt,
   Musharna-A, Ludicolo [special Ludicolo]); 2-swap option (Armarouge + Ludicolo for Annihilape + Clawitzer) +1.0%.
   Verified robust: B ahead with/without fields and singles x1/x2/x3. Asked Vincent before changing.
+- 8 Nov: NEW SIX (Vincent: "best team for the remaining hard fights") = #1 of 6809 on exact game data:
+  Lead Rhyperior (Stone Edge/Headlong Rush/Fire Fang/Protect, Hard Stone) + Musharna-A; Mid Armarouge (Flamethrower/
+  Psyshock/Calm Mind/Protect, Sitrus) + Annihilape; Closer Vikavolt (TB/Bug Buzz/Sticky Web/Protect, Magnet) + Ludicolo
+  (special: Fake Out/Energy Ball/Hydro Pump/Protect, Modest 252 HP/SpA, Mystic Water, Swift Swim). Move tests on this six:
+  Hydro Pump = Surf (and doesn't hit the partner in 4 doubles fights); Mud Barrage ≈ 0 on Armarouge/Vikavolt (keep
+  Calm Mind / Sticky Web); Fire Fang over Slack Off +0.3%. Out: Golisopod-A, Glalie-A, Gholdengo, Clawitzer → Active.
+  Only coverage miss: Clefable (Geara & Zetta, Rhyperior 86%). make_report5: TEAM drives ORDER/roles/PLAY bullets;
+  team card merges its box fixes (TEAM_SRC) and ignores generic Ability/Nature/EV lines; teach lines pair replacements;
+  team_check/chapter_rules take members from Party else Active; checks.py party check accepts green moves-in.

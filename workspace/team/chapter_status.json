@@ -28,16 +28,10 @@
  "nores": [],
  "misses": [
   {
-   "foe": "Gyarados",
+   "foe": "Clefable",
    "fight": "Geara & Zetta",
-   "best": "Glalie (Aevian Form)",
-   "dmg": 73
-  },
-  {
-   "foe": "Escavalier",
-   "fight": "Holly & Rorim",
-   "best": "Golisopod (Aevian Form)",
-   "dmg": 83
+   "best": "Rhyperior",
+   "dmg": 86
   }
  ],
  "n_types": 19

@@ -17,7 +17,8 @@ def base_ok(combo):
 def misses(combo):
     return [i for i in range(len(C.FOES)) if not any(C.HT[k][i] or OFF[k][i] >= 100 for k in combo)]
 _names = json.loads(os.environ['TEAM_NAMES'])
-ck = tuple({C.byk[k]['name']: k for k in keys if C.byk[k]['name'] in _names and C.byk[k]['src']['where'] == 'Party'}.values())
+ck = tuple(min((k for k in keys if C.byk[k]['name'] == n), key=lambda k: (C.byk[k]['src']['where'] != 'Party', -C.byk[k]['solo_total']))
+           for n in _names if any(C.byk[k]['name'] == n for k in keys))
 cs = C.score(ck)
 L = [combo for combo in itertools.combinations(keys, 6) if base_ok(combo) and len(misses(combo)) <= 2]
 r = sorted(((C.score(ks), ks) for ks in L), reverse=True)

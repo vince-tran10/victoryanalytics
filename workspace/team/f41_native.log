@@ -1,0 +1,18 @@
+Annihilape | Party 55 | Defiant  | Adamant {'Atk': 252, 'Spe': 252, 'Def': 4} | ['Close Combat', 'Rage Fist', 'Sucker Punch', 'Protect'] | Black Belt (already holding) | 
+Ludicolo | Active 55 | Swift Swim  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Fake Out', 'Energy Ball', 'Hydro Pump', 'Protect'] | Focus Sash (already holding) | 
+Armarouge | Active 55 | Flash Fire  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Flamethrower', 'Psyshock', 'Calm Mind', 'Protect'] | Sitrus Berry | 
+Musharna (Aevian Form) | Party 55 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Play Rough', 'Throat Chop', 'Glare', 'Protect'] | Sitrus Berry (already holding) | 
+Rhyperior | Active 55 | Solid Rock  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Stone Edge', 'Headlong Rush', 'Fire Fang', 'Protect'] | Hard Stone (already holding) | 
+Vikavolt | Active 55 | Levitate  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Thunderbolt', 'Bug Buzz', 'Sticky Web', 'Protect'] | Magnet (already holding) | 
+eli 1.447 -> 1.495 leads ['Rhyperior', 'Musharna (Aevian Form)'] swaps [('Electivire', 'Vikavolt', 0.058), ('Ampharos', 'Vikavolt', 0.054), ('Ampharos (Aevian Form)', 'Vikavolt', 0.054)]
+jenner 1.481 -> 1.483 leads ['Annihilape'] swaps [('Dachsbun', 'Vikavolt', 0.034), ('Azumarill', 'Vikavolt', 0.034), ('Arcanine', 'Vikavolt', 0.03)]
+geara 1.25 -> 1.248 leads ['Annihilape', 'Musharna (Aevian Form)'] swaps [('Electivire', 'Vikavolt', 0.072), ('Ampharos', 'Vikavolt', 0.069), ('Luxray', 'Vikavolt', 0.066)]
+giratina 1.137 -> 1.163 leads ['Rhyperior', 'Armarouge'] swaps [('Golisopod (Aevian Form)', 'Vikavolt', 0.134), ('Electivire', 'Vikavolt', 0.06), ('Meganium', 'Vikavolt', 0.053)]
+danni 1.708 -> 1.73 leads ['Annihilape', 'Rhyperior'] swaps [('Arcanine', 'Rhyperior', 0.105), ('Vivillon', 'Rhyperior', 0.087), ('Gholdengo', 'Vikavolt', 0.079)]
+troye 1.516 -> 1.543 leads ['Annihilape', 'Rhyperior'] swaps [('Arcanine', 'Vikavolt', 0.109), ('Mabosstiff', 'Vikavolt', 0.055), ('Talonflame', 'Vikavolt', 0.054)]
+zena 1.452 -> 1.445 leads ['Rhyperior'] swaps [('Meganium', 'Vikavolt', 0.08), ('Venusaur', 'Vikavolt', 0.079), ('Roserade', 'Vikavolt', 0.067)]
+holly 1.281 -> 1.386 leads ['Armarouge', 'Rhyperior'] swaps [('Arcanine', 'Rhyperior', 0.134), ('Veluza (Aevian Form)', 'Rhyperior', 0.079), ('Jynx', 'Ludicolo', 0.076)]
+manaphy 0.865 -> 0.832 leads ['Vikavolt'] swaps [('Sunflora', 'Rhyperior', 0.158), ('Venusaur', 'Rhyperior', 0.143), ('Heliolisk', 'Rhyperior', 0.135)]
+factory 1.016 -> 1.101 leads ['Musharna (Aevian Form)'] swaps [('Whiscash', 'Rhyperior', 0.07), ('Golisopod (Aevian Form)', 'Rhyperior', 0.062), ('Gogoat', 'Rhyperior', 0.048)]
+marcie 1.469 -> 1.517 leads ['Vikavolt', 'Armarouge'] swaps [('Leavanny (Aevian Form)', 'Rhyperior', 0.199), ('Arcanine', 'Rhyperior', 0.144), ('Vivillon', 'Rhyperior', 0.137)]
+amber 1.277 -> 1.317 leads ['Rhyperior'] swaps [('Druddigon', 'Vikavolt', 0.094), ('Jellicent', 'Vikavolt', 0.085), ('Tentacruel', 'Vikavolt', 0.076)]
