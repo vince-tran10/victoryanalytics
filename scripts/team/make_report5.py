@@ -312,12 +312,23 @@ for d in sorted((d for d in cur if d['box'] == 'Active' and d.get('score') is no
         fx.append(f"Ability: {d.get('ability')} → {d['capsule'][0]} (Ability Capsule)")
     if not (PROTECT_LIKE & set(d['moves'])) and d['species'] not in up_names and d['species'] not in NO_PROTECT:
         KEEP = {'Swords Dance', 'Dragon Dance', 'Nasty Plot', 'Calm Mind', 'Bulk Up', 'Quiver Dance', 'Shell Smash', 'Glare', 'Spore',
-                'Sleep Powder', 'Sing', 'Belly Drum', 'Trick Room', 'Tailwind', 'Recover', 'Roost', 'Slack Off', 'Rage Powder', 'Follow Me'}
+                'Sleep Powder', 'Sing', 'Belly Drum', 'Yawn', 'Fake Out', 'Leech Seed', 'Trick Room', 'Tailwind', 'Recover', 'Roost', 'Slack Off', 'Rage Powder', 'Follow Me'}
         rec = set(d.get('attacks') or [])
+        RECOVERY = {'Slack Off', 'Recover', 'Roost', 'Synthesis', 'Moonlight', 'Morning Sun', 'Soft-Boiled', 'Milk Drink', 'Rest'}
         def _val(m):
             v = SX.MV.get(m) or {}
+            if m in ('Fake Out', 'U-turn', 'Volt Switch', 'Flip Turn', 'Rapid Spin', 'Icy Wind', 'Electroweb', 'Snarl'):
+                return 2   # utility attacks: their job isn't damage
+            if v.get('Category') in ('Physical', 'Special') and v['Category'] != ('Physical' if phys else 'Special'):
+                return 0.5   # attack that doesn't use this build's attacking stat (e.g. Knock Off on special Tangrowth)
+            _same = [SX.MV.get(o) for o in d['moves'] if o != m and SX.MV.get(o) and SX.MV[o].get('Type') == v.get('Type') and SX.MV[o]['Category'] != 'Status']
+            if v.get('Category') != 'Status' and any(int(o.get('Strength') or 0) > int(v.get('Strength') or 0) for o in _same):
+                return 1.0   # weaker duplicate of another attack of the same type (Psyshock next to Psychic)
             if m in rec: return 3
-            if v.get('Category') == 'Status': return 2 if m in KEEP else 0
+            if v.get('Category') == 'Status':
+                if m in RECOVERY and (d.get('ability') or '').replace(' ', '').upper() == 'REGENERATOR':
+                    return 1.5   # Regenerator already heals a third on every switch
+                return 2 if m in KEEP else 0
             return 1 + int(v.get('Strength') or 0) / 1000
         drop = min(d['moves'], key=_val) if d['moves'] else None
         fx.append(f'Teach Protect (replaces {drop})' if drop and len(d['moves']) >= 4 else 'Teach Protect')

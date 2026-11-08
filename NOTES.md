@@ -441,3 +441,11 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   NO_PROTECT = {'Lapras-Aevian'} ONLY (agreed No Guard Sing / Dragon Dance / Rock Slide / Zen Headbutt set). Old
   relearner tips that drop Protect (Lunatone Ancient Power etc.) are overridden. Mons moving Overflow/Staging → Active
   (green) get a To do card ("Overflow → Active #n") with their full build gaps, teaches paired with what they replace.
+- 8 Nov 08:55 export (459): staging #403–406 (Beartic 0.458, Piloswine→Mamoswine 0.520, Sandslash-Alola 0.239,
+  Vulpix→Ninetales 0.415) → all Overflow. ACTIVE_AT=459:407 STAGING_AT=459:403-406. roster14, r28_*, f32_*, CR_RUN r28.
+  Druddigon now in Active, fully built. Abomasnow/Cetitan/Reuniclus fixed by Vincent.
+- "Protect replaces X" picker (make_report5 _val): utility attacks (Fake Out, U-turn, Icy Wind…) = 2; attacks using the
+  wrong attacking stat for the build = 0.5 (Knock Off on special Tangrowth); weaker same-type duplicate = 1.0 (Psyshock
+  next to Psychic); engine-recommended attacks = 3; KEEP status (setup, sleep, Yawn, Leech Seed, Trick Room…) = 2;
+  recovery on Regenerator mons = 1.5 (Slowking-Galar drops Slack Off). Vincent's calls: Gastrodon keeps Yawn (drop
+  Muddy Water), Meowstic keeps Fake Out (drop Psyshock), Slowking-G gets Protect (drop Slack Off), Tangrowth keeps Leech Seed (drop Knock Off).

@@ -1,0 +1,214 @@
+[
+ {
+  "dump": 403,
+  "owned": "Beartic",
+  "level": 55,
+  "now_ability": "Swift Swim",
+  "now_moves": [
+   "Thrash",
+   "Rest",
+   "Blizzard",
+   "Sheer Cold"
+  ],
+  "final": "Beartic",
+  "evolve": "",
+  "gate": "",
+  "types": "Ice",
+  "score": 0.458,
+  "tier": "C",
+  "ability": "Swift Swim",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Icicle Crash",
+   "Superpower",
+   "Rock Tomb",
+   "Protect"
+  ],
+  "move_src": {
+   "Icicle Crash": "evolution",
+   "Superpower": "Lv 51",
+   "Rock Tomb": "TM39",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.64,
+   "jenner": 0.58,
+   "geara": 0.47,
+   "giratina": 0.41,
+   "danni": 0.83,
+   "troye": 0.73,
+   "zena": 0.62,
+   "holly": 0.55,
+   "manaphy": 0.36,
+   "factory": 0.35,
+   "marcie": 0.73,
+   "amber": 0.09
+  }
+ },
+ {
+  "dump": 404,
+  "owned": "Piloswine",
+  "level": 55,
+  "now_ability": "Thick Fat",
+  "now_moves": [
+   "Endure",
+   "Icy Wind",
+   "Amnesia",
+   "Take Down"
+  ],
+  "final": "Mamoswine",
+  "evolve": "Mamoswine (HasMove Ancientpower)",
+  "gate": "",
+  "types": "Ice/Ground",
+  "score": 0.52,
+  "tier": "B",
+  "ability": "Thick Fat",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Earthquake",
+   "Icicle Crash",
+   "Rock Tomb",
+   "Protect"
+  ],
+  "move_src": {
+   "Earthquake": "Lv 51",
+   "Icicle Crash": "Egg",
+   "Rock Tomb": "TM39",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.65,
+   "jenner": 0.61,
+   "geara": 0.51,
+   "giratina": 0.3,
+   "danni": 0.8,
+   "troye": 0.5,
+   "zena": 0.9,
+   "holly": 0.45,
+   "manaphy": 0.42,
+   "factory": 0.28,
+   "marcie": 0.44,
+   "amber": 0.65
+  }
+ },
+ {
+  "dump": 405,
+  "owned": "Sandslash-Alola",
+  "level": 55,
+  "now_ability": "Slush Rush",
+  "now_moves": [
+   "Swords Dance",
+   "Slash",
+   "Metal Claw",
+   "Icicle Crash"
+  ],
+  "final": "Sandslash (Alolan Form)",
+  "evolve": "",
+  "gate": "",
+  "types": "Ice/Steel",
+  "score": 0.239,
+  "tier": "D",
+  "ability": "Slush Rush",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Icicle Crash",
+   "Drill Run",
+   "Iron Head",
+   "Protect"
+  ],
+  "move_src": {
+   "Icicle Crash": "known",
+   "Drill Run": "known",
+   "Iron Head": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.46,
+   "jenner": 0.34,
+   "geara": 0.29,
+   "giratina": 0.31,
+   "danni": 0.74,
+   "troye": 0.25,
+   "zena": 0.42,
+   "holly": 0.45,
+   "manaphy": 0.18,
+   "factory": -0.06,
+   "marcie": 0.61,
+   "amber": -0.07
+  }
+ },
+ {
+  "dump": 406,
+  "owned": "Vulpix",
+  "level": 55,
+  "now_ability": "Flash Fire",
+  "now_moves": [
+   "Imprison",
+   "Fire Spin",
+   "Heat Wave",
+   "Tail Slap"
+  ],
+  "final": "Ninetales",
+  "evolve": "Ninetales (Item Fire Stone)",
+  "gate": "",
+  "types": "Fire",
+  "score": 0.415,
+  "tier": "C",
+  "ability": "Flash Fire",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Fire Blast",
+   "Extrasensory",
+   "Flamethrower",
+   "Protect"
+  ],
+  "move_src": {
+   "Fire Blast": "known",
+   "Extrasensory": "known",
+   "Flamethrower": "Lv 1",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.39,
+   "jenner": 0.58,
+   "geara": 0.39,
+   "giratina": 0.34,
+   "danni": 1.0,
+   "troye": 0.55,
+   "zena": 0.5,
+   "holly": 0.76,
+   "manaphy": 0.17,
+   "factory": 0.16,
+   "marcie": 0.71,
+   "amber": 0.36
+  }
+ }
+]
