@@ -244,9 +244,14 @@ if CF:
 UP = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'upgrades_relearn.json')))
 ORDER = ['Annihilape', 'Gholdengo', 'Clawitzer', 'Musharna-Aevian', 'Golisopod-Aevian', 'Glalie-Aevian']
 up_cards, up_same, up_left, up_done = [], [], 0, []
+up_names = set()
 for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP),
                 key=lambda d: (d['box'] != 'Party', ORDER.index(d['species']) if d['species'] in ORDER else 9, not UP[d['species']].get('big'), d['species'])):
-    u = UP[d['species']]
+    u = dict(UP[d['species']])
+    if 'Protect' not in u['moves']:   # standing rule: Protect is always the 4th move
+        mv4 = list(u['moves'])
+        i = max(j for j, m in enumerate(mv4) if m not in ('Swords Dance', 'Glare', 'Nasty Plot', 'Calm Mind', 'Dragon Dance', 'Bulk Up'))
+        mv4[i] = 'Protect'; u['moves'] = mv4
     if sorted(u['moves']) == sorted(d['moves']) and not u.get('nature') and not u.get('ability') and d['box'] == 'Active' and 'later' not in u:
         if not u['why'].startswith(('Nothing', 'Already', 'Support')):
             up_done.append(d['species'])
@@ -268,12 +273,32 @@ for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP
     if u.get('later'): extra += f'<div class="mnote">Later: {E(u["later"])}</div>'
     status = '<span class="ok">Done ✓</span>' if done else ('<span class="b big">big upgrade</span>' if u.get('big') else '<span class="b small">upgrade</span>')
     role = {'Annihilape': 'lead', 'Gholdengo': 'lead', 'Clawitzer': 'mid', 'Musharna-Aevian': 'mid'}.get(d['species'], 'closer' if d['box'] == 'Party' else '')
+    up_names.add(d['species'])
     up_cards.append(f'''<li class="mon up{" isparty" if d["box"] == "Party" else ""}"><div class="mtop"><strong>{E(d["species"])}</strong>{status}</div>
 <div class="chips">{chips(d["types"] or "")}<span class="lv">Lv {d["level"]}</span>{'<span class="b party">Party</span>' if d["box"] == "Party" else ''}</div>
 <ul class="mv">{mv}</ul>{('<div class="mnote">Out: ' + E(', '.join(gone)) + '</div>') if gone and not done else ''}{extra}
 </li>''')
 up_same += [d['species'] for d in cur if d['box'] != 'Overflow' and d['species'] not in UP and d['species'] not in up_same and d['score']]
 up_same = sorted(set(up_same))
+# ---------------------------------------------------------------- 1c) build fixes (Active): EVs, nature, ability, Protect
+PHYS_NAT, SPEC_NAT = {'Adamant', 'Jolly', 'Brave'}, {'Modest', 'Timid', 'Quiet'}
+fix_cards = []
+for d in sorted((d for d in cur if d['box'] == 'Active' and d.get('score') is not None), key=lambda d: d['species']):
+    atk = [SX.MV.get(m) for m in (d.get('attacks') or [])]
+    phys = sum(1 for v in atk if v and v['Category'] == 'Physical') >= sum(1 for v in atk if v and v['Category'] == 'Special')
+    key, nats, want_nat = ('Atk', PHYS_NAT, 'Adamant or Jolly') if phys else ('SpA', SPEC_NAT, 'Modest or Timid')
+    fx = []
+    if (d.get('evs') or {}).get(key, 0) < 100:
+        fx.append(f"EVs: 252 {key} + 252 HP or Spe (now {' / '.join(f'{v} {k}' for k, v in (d.get('evs') or {}).items() if v >= 100) or 'none'})")
+    if d.get('nature') not in nats:
+        fx.append(f"Nature: {d.get('nature')} → {want_nat} (mint)")
+    if d.get('capsule') and d['capsule'][0].replace(' ', '').lower() != (d.get('ability') or '').replace(' ', '').lower():
+        fx.append(f"Ability: {d.get('ability')} → {d['capsule'][0]} (Ability Capsule)")
+    if 'Protect' not in d['moves'] and d['species'] not in up_names:
+        fx.append('Teach Protect (4th slot)')
+    if fx:
+        fix_cards.append(f'<li class="mon up"><div class="mtop"><strong>{E(d["species"])}</strong><span class="legend">Active #{d["n"]}</span></div>'
+                         f'<ul class="chg">{"".join("<li>" + E(x) + "</li>" for x in fx)}</ul></li>')
 promo_cards = []
 for p in promo:
     nat = p['nature'].split(' ')[0]
@@ -601,6 +626,12 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
   {('<h3>Promote from Overflow <span class="legend">every Pokémon re-scored at Lv 55 with relearner, TM, egg and level-up moves</span></h3><ul class="tmons upgrid">' + "".join(promo_cards) + '</ul>') if promo_cards else ''}
 </section>
 
+<section aria-labelledby="s1c">
+  <h2 id="s1c">Build fixes</h2>
+  <p class="legend">Active Pokémon whose EVs, nature, ability or Protect don't match a proper build. Moves are in Move Relearner.</p>
+  <ul class="tmons upgrid">{"".join(fix_cards)}</ul>
+</section>
+
 <section aria-labelledby="s2">
   <h2 id="s2">Tier list</h2>
   <div class="board">{tier_html}</div>
@@ -631,6 +662,8 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 }})();
 </script>
 '''
+if not fix_cards:
+    page = re.sub(r'<section aria-labelledby="s1c">.*?</section>\s*', '', page, count=1, flags=re.S)
 if not up_cards and not promo_cards:
     page = re.sub(r'<section aria-labelledby="s1b">.*?</section>\s*', '', page, count=1, flags=re.S)
 page = page.replace('</style>', SX.CSS.replace('{{', '{').replace('}}', '}') + '</style>', 1)

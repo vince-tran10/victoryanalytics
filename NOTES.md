@@ -422,3 +422,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   normal Active-bar verdict → Ludicolo + Abomasnow Active, rest of the Kyogre crew Overflow. Meowscarada always (starter).
   Note: with 12 fights left, 20 Active mons score < 0.53 (scale shifted as fights dropped) — offered an Active clean-up /
   rescaled bar, not done yet.
+- 8 Nov: Move Relearner suggestions now enforce Protect (replace the last non-setup move with Protect) — Meowscarada's
+  card wanted Play Rough over Protect. New To do box "Build fixes" (section s1c, tabs.py To do = s3+s1b+s1c): Active
+  mons with no EVs in their attacking stat, a nature that doesn't boost it (phys ok: Adamant/Jolly/Brave; spec ok:
+  Modest/Timid/Quiet), a better ability (capsule), or no Protect (unless their relearner card already adds it).
+  Party checks stay in the Team table/Team to-dos.
