@@ -480,3 +480,16 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   → make_report5 / box_audit / highlight / tabs → summary), state in workspace/team/state.json, /export slash
   command in .claude/commands/export.md. Verified: replaying the 09:13 export gives a byte-identical page text
   (75 s). current_box overrides keyed "<size>@<n>=<Species>".
+
+- 8 Nov: GAME DATA. Vincent uploaded Scripts.zip (game code + Definitions). Classic = trainertext/bosstext (the _story
+  files are Story mode). scripts/gamedata/{to_json.rb, gamedata.py, fields.py, compare.py}; data in workspace/gamedata
+  (gitignored, public repo). Engine now: exact Classic teams for the 7 hard fights (bosses.load_battles_walk source=game),
+  exact fields (bosses.FIELD overridden from fieldtext incl. add/mtype2 second types, Concert roll 0.85), bosses split
+  into HP-bar phases (hp_mult = bars; stages; field_override), calc_stats iv param. Corrections: Giratina shields (none →
+  2 = 3 bars, last bar Dragon/Poison +1 Atk/SpA), Manaphy 3 bars (+3 SpA, Water Surface last bar), Kyogre 5 bars,
+  Oricorio Pom-Pom, Rotom-Mow, 6 missing Hidden Powers, Volcanic Top / Wasteland / Beach / Factory / Water Surface
+  multipliers. Code-verified: EV default min(85,lvl*1.5), NPC IV default 10, shield = full heal, 2nd-type multiply.
+- C&A checks tab (s5, scripts/team/checks.py; tabs.py tab 'checks'); update.py runs compare.py + checks.py before tabs.
+- Team on exact data: current six #25 of 6809, best six +2.24% (Annihilape, Rhyperior, Armarouge, Vikavolt,
+  Musharna-A, Ludicolo [special Ludicolo]); 2-swap option (Armarouge + Ludicolo for Annihilape + Clawitzer) +1.0%.
+  Verified robust: B ahead with/without fields and singles x1/x2/x3. Asked Vincent before changing.

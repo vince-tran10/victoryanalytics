@@ -12,6 +12,15 @@ Live guide: https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS (publish `output/c
 State (beaten fights, the six and its moves, box overrides, last export, file counters) lives in
 `workspace/team/state.json`. Fight keys: see `scripts/team/bosses.py` (eli, geara, giratina, holly, manaphy, factory, amber…).
 
+## Game data (exact, from Vincent's game files)
+- Rejuvenation's own definitions (Classic): `workspace/gamedata/*.json`, converted from his `Scripts/Rejuv/Definitions/*.rb`
+  by `ruby scripts/gamedata/to_json.rb <Definitions dir> workspace/gamedata <Scripts dir>`. Kept OUT of git (public repo):
+  a fresh session must ask Vincent to re-upload the Scripts zip. update.py warns if missing (then walkthrough data is used).
+- `scripts/gamedata/gamedata.py`: hard fight → exact trainer/boss entries (`FIGHTS`), boss phases (N shields = N+1 full
+  HP bars, onBreakEffects → moves/form/stat stages/field per bar), SOS mons. `fields.py`: exact field multipliers,
+  second types (typeAddOns/typeMods), field changes. `compare.py`: game vs guide diff (feeds the C&A tab).
+- Verified game rules: unlisted trainer EVs = min(85, lvl×1.5), IVs = 10; Concert Venue hype 1 = min rolls (85%).
+
 ## Game facts
 - Rejuvenation V14, Chapter 8, Classic mode, 7 badges, level cap 55. Everyone is levelled to 55.
 - **Debug mode:** any owned Pokémon can be levelled, re-natured, re-EV'd, ability-capsuled, taught any legal move,
@@ -50,7 +59,7 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
 
 ## Guide page
 - Clean, a guide not an essay: bullets, no paragraphs; explanations go in chat, not on the page.
-- Tabs: Team · Fights · To do · Tier list · Boxes.
+- Tabs: Team · Fights · To do · Tier list · Boxes · C&A checks.
 - **Team tab:** the ideal six with a Status column (Done ✓ per member, always shown) plus the rules panel.
 - **Fights tab:** every remaining hard fight: Singles/Doubles, Boss tag, field, why it's hard, lead.
 - **To do tab = profile fixes only:** one card per Pokémon listing everything it needs (moves with replacements, EVs,
@@ -58,6 +67,9 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
 - **Boxes tab = all box moves:** GREEN = move into Active / the party, RED = move out. A Pokémon moving into Active also
   gets a To do build card.
 - Role colours (lead blue / mid amber / closer magenta) only on the exact team forms, never in box lists.
+
+- **C&A checks tab:** automatic pass/fail checks (scripts/team/checks.py, run by update.py; a blocking FAIL means don't
+  publish), data sources, corrections from game files, game rules verified in code, known gaps.
 
 ## Boss counters (debug mode)
 - Use `scripts/team/kyogre_counter.py`'s method: every owned Pokémon × ability × spread × item; total damage dealt

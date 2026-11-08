@@ -4,9 +4,9 @@
  "export_label": "8 Nov 09:13",
  "active_start": 414,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 16,
- "run": 30,
- "final": 34,
+ "roster": 21,
+ "run": 35,
+ "final": 39,
  "done": [
   "aelita",
   "narcissa1",
@@ -83,35 +83,19 @@
  },
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
-  "rank": 12,
-  "of": 6964,
-  "gap": 0.83,
+  "rank": 25,
+  "of": 6809,
+  "gap": 2.24,
   "top": [
    {
-    "score": 1.1658,
-    "pct": 100.8,
-    "team": [
-     "Golisopod-A",
-     "Glalie-A",
-     "Musharna-A",
-     "Armarouge",
-     "Gholdengo",
-     "Ludicolo"
-    ],
-    "misses": [
-     "Lickilicky (eli)",
-     "Gyarados (geara)"
-    ]
-   },
-   {
-    "score": 1.1634,
-    "pct": 100.6,
+    "score": 1.125,
+    "pct": 102.2,
     "team": [
      "Annihilape",
      "Rhyperior",
-     "Musharna-A",
      "Armarouge",
-     "Whiscash",
+     "Vikavolt",
+     "Musharna-A",
      "Ludicolo"
     ],
     "misses": [
@@ -119,22 +103,41 @@
     ]
    },
    {
-    "score": 1.1625,
-    "pct": 100.5,
+    "score": 1.1198,
+    "pct": 101.8,
     "team": [
-     "Annihilape",
+     "Golisopod-A",
+     "Glalie-A",
+     "Armarouge",
+     "Musharna-A",
+     "Ludicolo",
+     "Gholdengo"
+    ],
+    "misses": [
+     "Lickilicky (eli)",
+     "Gyarados (geara)"
+    ]
+   },
+   {
+    "score": 1.1197,
+    "pct": 101.8,
+    "team": [
      "Rhyperior",
      "Chandelure",
+     "Vikavolt",
      "Musharna-A",
      "Whiscash",
      "Ludicolo"
     ],
-    "misses": []
+    "misses": [
+     "Lickilicky (eli)"
+    ]
    }
   ],
   "current_misses": [
    "Gyarados",
    "Escavalier"
   ]
- }
+ },
+ "team_check_cache": true
 }

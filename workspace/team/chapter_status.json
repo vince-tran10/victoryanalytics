@@ -1,8 +1,9 @@
 {
  "fights": 7,
- "foes": 45,
+ "foes": 48,
  "major": [
   "Dark",
+  "Dragon",
   "Electric",
   "Fairy",
   "Fighting",
@@ -21,7 +22,6 @@
  ],
  "minor": [
   "Rock/Fire",
-  "Dragon",
   "Bug"
  ],
  "weak3": [],

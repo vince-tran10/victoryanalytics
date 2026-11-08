@@ -199,6 +199,31 @@ def load_battles_walk(base):
                          'shields': shields.group(1) if shields else '', 'form_text': m['form'],
                          'base_override': base_override,
                          **{f'move{i + 1}': f'{mv};;' for i, mv in enumerate(m['moves'][:4])}})
+        src = 'walkthrough'
+        if _GD is not None and key in _GD.FIGHTS and os.environ.get('GAMEDATA', '1') == '1':
+            mons, src = _GD.walk_mons(key), 'game'   # exact Classic data from the game's own files
         out.append(dict(key=key, label=label, field=field, format=fmt, weight=weight, notes=notes, mons=mons,
-                        trainer=t['trainer']))
+                        trainer=t['trainer'], source=src))
     return out
+
+
+# ---------------------------------------------------------------- game data (exact) overrides, when available
+try:
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'gamedata'))
+    import gamedata as _GD, fields as _GF
+    if not _GD.available():
+        _GD = None
+except Exception:
+    _GD = None
+if _GD is not None and os.environ.get('GAMEDATA', '1') == '1':
+    for _ours, _gk in _GF.MAP.items():
+        _g = _GF.game_field(_gk)
+        _keep = {k: v for k, v in (FIELD.get(_ours) or {}).items() if k not in ('types', 'moves', 'sound')}
+        _types = dict(_g['types']); _sound = _types.pop('soundmove', None)
+        FIELD[_ours] = dict(_keep, types=_types, moves=_g['moves'], add=_g['add'],
+                            mtype2={mv: t for t, mvs in _g['typeMods'].items() for mv in mvs}, game=_gk,
+                            **({'sound': _sound} if _sound else {}))
+
+    # Concert Venue starts at hype level 1: every damage roll is the minimum, 85% (game: Battle_Move.rb, random = 85 if CONCERT1)
+    if 'Concert Venue' in FIELD:
+        FIELD['Concert Venue']['roll'] = 0.85

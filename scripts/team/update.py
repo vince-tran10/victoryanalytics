@@ -34,9 +34,14 @@ def main():
     ap.add_argument('--label')
     a = ap.parse_args()
     st = json.load(open(STATE))
+    sys.path.insert(0, os.path.join(ROOT, 'scripts', 'gamedata'))
+    import gamedata as _gd
+    if not _gd.available():
+        print('!! Game data missing (workspace/gamedata). Fights fall back to walkthrough data. Re-upload the Scripts zip, then:\n'
+              '   ruby scripts/gamedata/to_json.rb <Scripts/Rejuv/Definitions> workspace/gamedata <Scripts>')
 
     # 1) copy the export in under a dated name
-    m = re.search(r'(\d{4}-\d{2}-\d{2})_(\d{2})-(\d{2})', os.path.basename(a.export))
+    m = re.search(r'(\d{4}-\d{2}-\d{2})_(\d{2})-?(\d{2})', os.path.basename(a.export))
     stamp = f'{m.group(1)}_{m.group(2)}{m.group(3)}' if m else 'latest'
     new = f'party_and_boxes_{stamp}.txt'
     if os.path.abspath(a.export) != os.path.join(WS, new):
@@ -114,7 +119,14 @@ def main():
     sh(['../scripts/team/make_report5.py', new, st['base_export'], f'team/f{fin}_native.json', f'team/f{fin}_Singles.json',
         f'team/f{fin}_Doubles.json', st['promote'], OUT], pe)
     sh(['../scripts/team/box_audit.py', OUT, new, st['export'], str(st['active_start']), st['promote'], ''], pe)
-    sh(['../scripts/team/highlight.py', OUT], pe); sh(['../scripts/team/tabs.py', OUT], pe)
+    sh(['../scripts/team/highlight.py', OUT], pe)
+    sh(['../scripts/gamedata/compare.py', 'team/gamedata_compare.json'], pe)
+    st['team_check_cache'] = True
+    json.dump(dict(st, export=new), open(STATE, 'w'), indent=1, ensure_ascii=False)   # checks.py reads team_check
+    r = subprocess.run([sys.executable, '-I', '../scripts/team/checks.py', OUT], cwd=WS, env=pe, capture_output=True, text=True)
+    print('C&A checks:'); print('  ' + r.stdout.strip().replace('\n', '\n  '))
+    blocked = r.returncode != 0
+    sh(['../scripts/team/tabs.py', OUT], pe)
 
     # 8) summary
     acts = json.load(open(os.path.join(TEAMD, 'actions.json')))
@@ -130,7 +142,10 @@ def main():
 
     st.update(export=new, export_label=label, active_start=stg[0] if stg else act, run=run, final=fin, roster=rost)
     json.dump(st, open(STATE, 'w'), indent=1, ensure_ascii=False)
-    print('state.json updated. Next: publish output/chapter8_report.html (Artifact, same URL), commit, push.')
+    if blocked:
+        print('!! A blocking C&A check FAILED: fix it before publishing.')
+    else:
+        print('state.json updated. Next: publish output/chapter8_report.html (Artifact, same URL), commit, push.')
 
 
 if __name__ == '__main__':

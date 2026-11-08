@@ -37,7 +37,9 @@ def eff(sig, types, ability='', crest=''):
 def sig_of(mid, mv, ability, field):
     t = mv['Type']
     if t == 'NORMAL' and ability in ATE: t = ATE[ability]
-    add = (ADD.get(field) or {}).get(t)
+    f = FIELD.get(field) or {}
+    # field second type, exactly as the game: a move-specific typeMod or a type-wide add-on (game data via bosses.FIELD)
+    add = (f.get('mtype2') or {}).get(mid) or (f.get('add') or {}).get(t) or (ADD.get(field) or {}).get(t)
     return (t, add) if add else (t,)
 from sheet_extras import is_hard
 HARD = [b for b in E.battles if is_hard(b)]
@@ -46,13 +48,13 @@ def isboss(b): return 'boss' in (b['label'] + ' ' + b.get('notes', '')).lower()
 # ---- threat types (what the opponents actually throw) ----
 W = collections.Counter(); FIGHTS = collections.defaultdict(set); BOSS = set(); WHO = collections.defaultdict(list)
 for b in HARD:
-    f = FIELD.get(b['field']) or {}
     for fo in b['foes']:
+        ffield = fo.get('field_override') or b['field']; f = FIELD.get(ffield) or {}
         mvs = fo['moves'] if isinstance(fo['moves'], list) else eval(fo['moves'])
         seen = set()
         for mid, mv in mvs:
             if mv['Category'] == 'Status' or int(mv.get('Strength') or 0) <= 1: continue
-            s = sig_of(mid, mv, fo['ability'], b['field'])
+            s = sig_of(mid, mv, fo['ability'], ffield)
             if s in seen: continue
             seen.add(s)
             mult = f.get('types', {}).get(mv['Type'], 1) * f.get('moves', {}).get(mid, 1) * WEATHER.get(b['key'], {}).get(mv['Type'], 1)
@@ -82,7 +84,7 @@ RS = {key(c): {s: eff(s, c['types'], c['ability'], crest(c)) <= .5 for s in W} f
 FB = {b['key']: b['field'] for b in HARD}
 def hits(c, bk, fo):
     fty = fo['types']; ab = (fo['ability'] or '').upper().replace(' ', '')
-    return any(eff(s, fty, ab) >= 2 for s in atk_sigs(c, FB[bk]))
+    return any(eff(s, fty, ab) >= 2 for s in atk_sigs(c, fo.get('field_override') or FB[bk]))
 HT = {key(c): [hits(c, bk, fo) for bk, fo in FOES] for c in pool}
 byk = {key(c): c for c in pool}
 nm = lambda c: c['name'].replace(' (Aevian Form)', '-A').replace(' (Aevian Form Male)', '-A').replace(' (Galarian Form)', '-Galar').replace(' (Hisuian Form)', '-Hisui')

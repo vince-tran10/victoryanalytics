@@ -2,7 +2,7 @@
 usage: python3 -I tabs.py report.html"""
 import re, sys
 TABS = [('team', 'Team', ['s1']), ('fights', 'Fights', ['s1f']),
-        ('todo', 'To do', ['s3']), ('tiers', 'Tier list', ['s2']), ('boxes', 'Boxes', ['s4'])]
+        ('todo', 'To do', ['s3']), ('tiers', 'Tier list', ['s2']), ('boxes', 'Boxes', ['s4']), ('checks', 'C&A checks', ['s5'])]
 p = sys.argv[1]; page = open(p, encoding='utf-8').read()
 if 'id="tabbar"' in page:
     sys.exit('already tabbed')

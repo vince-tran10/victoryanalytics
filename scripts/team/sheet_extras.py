@@ -181,15 +181,20 @@ def hard_fights(plans, team, base, short=None, disp=lambda x: x):
     rows = []
     for i, p in enumerate(hard, 1):
         boss = 'boss' in (p['label'] + ' ' + p.get('notes', '')).lower()
-        n = len(p['foes'])
+        _base = lambda nm: re.sub(r'\s*\(bars? [\d-]+\)$', '', nm)
+        n = len({_base(fo['foe']) for fo in p['foes']})   # a boss split into HP-bar phases is still one Pokémon
+        _bars = [int(x) for fo in p['foes'] for x in re.findall(r'\d+', (re.search(r'\(bars? ([\d-]+)\)$', fo['foe']) or [None, ''])[1])]
         name = (short or {}).get(p['key'], re.sub(r' \(.*?\)', '', re.split(r' [–-] ', p['label'])[0]))
         if name == '???': name = '??? (Factory)'
         opt = ' <span class="legend">optional</span>' if 'optional' in p['label'].lower() else ''
         risk = sum(1 for fo in p['foes'] if fo['threat_dmg'] >= 100)
         if boss:
             best = p['foes'][0]
-            st = f"best hit {round(best['answer_dmg'])}% ({disp(best['answer'])})"
-            cls = 'bad' if best['answer_dmg'] < 50 else 'warn'
+            _m = re.search(r'\(bars? (\d+)(?:-(\d+))?\)$', best['foe'])
+            _rowbars = (int(_m.group(2) or _m.group(1)) - int(_m.group(1)) + 1) if _m else 1
+            _per_bar = best['answer_dmg'] * _rowbars
+            st = f"best hit {round(_per_bar)}% of a bar ({disp(best['answer'])}) · {max(_bars) if _bars else 1} HP bars"
+            cls = 'bad' if _per_bar < 50 else 'warn'
         else:
             ko = sum(1 for fo in p['foes'] if fo['answer_dmg'] >= 100)
             st = f"one-shot {ko}/{n}"

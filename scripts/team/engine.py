@@ -55,14 +55,14 @@ def stat(base, ev, nat_mult, level=CAP, iv=31, hp=False):
     return math.floor((math.floor((2 * base + iv + ev // 4) * level / 100) + 5) * nat_mult)
 
 
-def calc_stats(bs, evs, nature, level=CAP):
+def calc_stats(bs, evs, nature, level=CAP, iv=31):
     up, down = NATURES.get(nature, (None, None))
     out = {}
     for s in STATS:
         nm = 1.1 if s == up else 0.9 if s == down else 1.0
         if up == down:
             nm = 1.0
-        out[s] = stat(bs[s], evs.get(s, 0), nm, level, hp=(s == 'HP'))
+        out[s] = stat(bs[s], evs.get(s, 0), nm, level, iv=iv, hp=(s == 'HP'))
     return out
 
 
@@ -141,7 +141,10 @@ class Engine:
         evs = dict(zip(STATS, ev + [0] * (6 - len(ev))))
         nat = (m.get('nature') or 'Hardy').capitalize()
         lvl = int(re.sub(r'\D', '', str(m.get('level') or '50')) or 50)
-        st = calc_stats(bs, evs, nat, lvl)
+        st = calc_stats(bs, evs, nat, lvl, iv=int(m.get('iv', 31)))
+        for _s, _c in (m.get('stages') or {}).items():   # boss phase stat stages (+1 = x1.5 ...)
+            if _s in st:
+                st[_s] = math.floor(st[_s] * (max(2, 2 + _c) / max(2, 2 - _c)))
         moves = []
         for i in range(1, 5):
             raw = m.get(f'move{i}', '')
@@ -160,9 +163,11 @@ class Engine:
                 mv['Type'] = types[0]
             moves.append((mid, mv))
         ability = norm_ab(m.get('ability'))
-        hp_mult = 1 + (int(m['shields']) if str(m.get('shields') or '').isdigit() else 0) * 0.6 if m.get('boss') else 1
-        return dict(name=name, sid=sid, types=types, stats=st, level=lvl, moves=moves, ability=ability,
-                    item=m.get('heldItem', ''), hp_mult=hp_mult, raw=m)
+        # N shields = N+1 full HP bars (game: Battler.rb pbReduceHP heals to full on a shield break; overflow is lost)
+        hp_mult = (int(m['bars']) if m.get('bars') else 1 + (int(m['shields']) if str(m.get('shields') or '').isdigit() else 0)) if m.get('boss') else 1
+        disp_name = name + (m.get('phase_label') or '')
+        return dict(name=disp_name, sid=sid, types=types, stats=st, level=lvl, moves=moves, ability=ability,
+                    item=m.get('heldItem', ''), hp_mult=hp_mult, raw=m, field_override=m.get('field_override'))
 
     # ------------------------------------------------------------ damage
     def damage_pct(self, att, dfn, mid, mv, battle, att_is_me):
@@ -170,7 +175,8 @@ class Engine:
         cat = mv['Category']
         if cat == 'Status':
             return 0.0
-        field = {} if os.environ.get('NOFIELD') else FIELD.get(battle['field'], {})
+        _fo = (dfn if att_is_me else att).get('field_override')   # a boss phase can change the field (Manaphy -> Water Surface)
+        field = {} if os.environ.get('NOFIELD') else FIELD.get(_fo or battle['field'], {})
         ctx = {'weight': att.get('weight', 50), 'spe': att['stats']['Spe'], 'setup': False}
         p, _ = move_base_value(mid, mv, ctx)
         if p <= 0:
@@ -276,6 +282,10 @@ class Engine:
             eff = 0
         if dab == 'WONDERGUARD' and eff <= 1:
             eff = 0
+        # field second type (game: Battle_Move.rb fieldTypeChangeModifier multiplies a 2nd type in, like Flying Press)
+        _t2 = (field.get('mtype2') or {}).get(mid) or (field.get('add') or {}).get(mtype)
+        if _t2 and eff:
+            eff *= self.chart_eff(_t2, dfn['types'])
         if eff == 0:
             return 0.0
         if dab in ('FILTER', 'SOLIDROCK', 'PRISMARMOR') and eff > 1:
@@ -323,7 +333,7 @@ class Engine:
             mult *= 0.8
         L = att['level']
         base = math.floor(math.floor(math.floor(2 * L / 5 + 2) * p * A / max(1, Dv)) / 50) + 2
-        dmg = base * stab * eff * mult * 0.925
+        dmg = base * stab * eff * mult * field.get('roll', 0.925)   # average roll; fields can force min/max
         hp = dfn['stats']['HP'] * dfn.get('hp_mult', 1)
         return 100.0 * dmg / max(1, hp)
 

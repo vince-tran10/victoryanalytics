@@ -1,0 +1,293 @@
+{
+ "eli": {
+  "label": "Eli & Sharon (10 mons) – Valor Cliffside",
+  "game_src": [
+   "Eli and Sharon (MISFORTUNATEDUO #10)"
+  ],
+  "n_game": 10,
+  "n_guide": 10,
+  "rows": [
+   {
+    "mon": "Honchkrow",
+    "diff": []
+   },
+   {
+    "mon": "Mismagius",
+    "diff": []
+   },
+   {
+    "mon": "Milotic",
+    "diff": []
+   },
+   {
+    "mon": "Magmar",
+    "diff": []
+   },
+   {
+    "mon": "Electabuzz",
+    "diff": []
+   },
+   {
+    "mon": "Donphan",
+    "diff": []
+   },
+   {
+    "mon": "Ursaring",
+    "diff": []
+   },
+   {
+    "mon": "Gyarados",
+    "diff": []
+   },
+   {
+    "mon": "Tangrowth",
+    "diff": []
+   },
+   {
+    "mon": "Lickilicky",
+    "diff": []
+   }
+  ]
+ },
+ "geara": {
+  "label": "Geara & Zetta (12 mons) – Valor Summit",
+  "game_src": [
+   "Geara (XENEXECUTIVE_3 #2)",
+   "Zetta (XENEXECUTIVE_1 #8)"
+  ],
+  "n_game": 12,
+  "n_guide": 12,
+  "rows": [
+   {
+    "mon": "Krookodile",
+    "diff": []
+   },
+   {
+    "mon": "Grimmsnarl",
+    "diff": []
+   },
+   {
+    "mon": "Gyarados",
+    "diff": []
+   },
+   {
+    "mon": "Clefable",
+    "diff": []
+   },
+   {
+    "mon": "Marowak",
+    "diff": []
+   },
+   {
+    "mon": "Gengar",
+    "diff": []
+   },
+   {
+    "mon": "Minior",
+    "diff": []
+   },
+   {
+    "mon": "Absol",
+    "diff": []
+   },
+   {
+    "mon": "Typhlosion",
+    "diff": []
+   },
+   {
+    "mon": "Weavile",
+    "diff": []
+   },
+   {
+    "mon": "Dragonite",
+    "diff": []
+   },
+   {
+    "mon": "Silvally",
+    "diff": []
+   }
+  ]
+ },
+ "giratina": {
+  "label": "Rift Giratina (boss) – Rift Distortion",
+  "game_src": [
+   "??? (ALGRISELDA #0)"
+  ],
+  "n_game": 3,
+  "n_guide": 4,
+  "rows": [
+   {
+    "mon": "Giratina",
+    "diff": [
+     "MISSING in guide data"
+    ]
+   },
+   {
+    "mon": "Relicanth",
+    "diff": []
+   },
+   {
+    "mon": "Swalot",
+    "diff": []
+   },
+   {
+    "mon": "Giratina (bars 1-2)",
+    "diff": [
+     "EXTRA in guide data (not in the game entry)"
+    ]
+   },
+   {
+    "mon": "Giratina (bar 3)",
+    "diff": [
+     "EXTRA in guide data (not in the game entry)"
+    ]
+   }
+  ]
+ },
+ "holly": {
+  "label": "Holly & Rorim – Beach",
+  "game_src": [
+   "Holly (COMMANDER #0)",
+   "Rorim B. (DISCOTEEN #3)"
+  ],
+  "n_game": 6,
+  "n_guide": 6,
+  "rows": [
+   {
+    "mon": "Scizor",
+    "diff": []
+   },
+   {
+    "mon": "Escavalier",
+    "diff": []
+   },
+   {
+    "mon": "Scolipede",
+    "diff": []
+   },
+   {
+    "mon": "Oricorio",
+    "diff": []
+   },
+   {
+    "mon": "Bellossom",
+    "diff": []
+   },
+   {
+    "mon": "Quaquaval",
+    "diff": []
+   }
+  ]
+ },
+ "manaphy": {
+  "label": "Manaphy (boss) – Beach",
+  "game_src": [
+   "boss SEAPRINCE"
+  ],
+  "n_game": 1,
+  "n_guide": 4,
+  "rows": [
+   {
+    "mon": "Manaphy",
+    "diff": [
+     "MISSING in guide data"
+    ]
+   },
+   {
+    "mon": "Manaphy (bar 1)",
+    "diff": [
+     "EXTRA in guide data (not in the game entry)"
+    ]
+   },
+   {
+    "mon": "Manaphy (bar 2)",
+    "diff": [
+     "EXTRA in guide data (not in the game entry)"
+    ]
+   },
+   {
+    "mon": "Manaphy (bar 3)",
+    "diff": [
+     "EXTRA in guide data (not in the game entry)"
+    ]
+   },
+   {
+    "mon": "Phione",
+    "diff": [
+     "EXTRA in guide data (not in the game entry)"
+    ]
+   }
+  ]
+ },
+ "factory": {
+  "label": "??? – Factory Field",
+  "game_src": [
+   "??? (UNKNOWN_1 #1)"
+  ],
+  "n_game": 6,
+  "n_guide": 6,
+  "rows": [
+   {
+    "mon": "Raichu",
+    "diff": []
+   },
+   {
+    "mon": "Clawitzer",
+    "diff": []
+   },
+   {
+    "mon": "Orthworm",
+    "diff": []
+   },
+   {
+    "mon": "Rotom",
+    "diff": []
+   },
+   {
+    "mon": "Swampert",
+    "diff": []
+   },
+   {
+    "mon": "Xurkitree",
+    "diff": []
+   }
+  ]
+ },
+ "amber": {
+  "label": "Amber (Lyric Badge gym) – Club STFU",
+  "game_src": [
+   "Amber (LEADER_AMBER #0)"
+  ],
+  "n_game": 6,
+  "n_guide": 6,
+  "rows": [
+   {
+    "mon": "Camerupt",
+    "diff": []
+   },
+   {
+    "mon": "Arcanine",
+    "diff": []
+   },
+   {
+    "mon": "Scovillain",
+    "diff": []
+   },
+   {
+    "mon": "Blaziken",
+    "diff": []
+   },
+   {
+    "mon": "Skeledirge",
+    "diff": []
+   },
+   {
+    "mon": "Toxtricity",
+    "diff": []
+   }
+  ]
+ },
+ "kyogre": {
+  "note": "not in engine (beaten or not tracked)"
+ }
+}
