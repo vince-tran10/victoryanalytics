@@ -406,3 +406,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   (#98, Sash) 60%, Boltund (Yamper #388, Sash) 60%, Togedemaru (#347, Sturdy + Magnet) ~66%, Meowscarada (Sash) 55%
   → ~350%. v1 (Glalie/Annihilape/Vikavolt/Exeggutor) was ~200% after the recoil fix. CF_PREEVO maps counters to the
   pre-evolution he owns; counter to-dos are one line per mon.
+- 8 Nov: Vincent CRUSHED Kyogre with counter v2 (Ludicolo/Heliolisk/Electivire/Boltund/Togedemaru/Meowscarada) →
+  validates the debug-mode counter method (kyogre_counter.py: every owned mon × ability × spread × item, damage dealt
+  before fainting, recoil vs boss HP). Use the same method for the next boss counters (Manaphy, Giratina).
+  DONE += kyogre, f29_*, FIGHT mode off. 7 hard fights left; main six back.
