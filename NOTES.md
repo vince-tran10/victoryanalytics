@@ -465,3 +465,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 8 Nov: Vincent: EV/nature advice must be ONE answer, never "X or Y". ev_pick(): attacking stat + Spe if base Speed
   ≥ 85 (same threshold as engine.spread_for) else HP. nat_pick(): Speed spread → Jolly/Timid, HP spread → Adamant/Modest.
   (Ceruledge therefore Jolly 252 Atk / 252 Spe.)
+- 8 Nov 09:13 export (470, last for a while): all sorted, no staging, Active from #414, no new mons. Everything built:
+  To do empty, no box moves, party 6/6 Done ✓. Box overrides now keyed '<size>@<n>=<Species>' (current_box._override_hit)
+  because 0901 and 0913 were both 470: ACTIVE_AT=470@403=Beartic:418 STAGING_AT=470@403=Beartic:403-417.
+  roster16, r30_*, f34_*, CR_RUN r30. Team (36 pool): current #12, 0.8% behind #1 (Golisopod, Glalie, Musharna,
+  Armarouge, Gholdengo, Ludicolo). Within model noise → no change, but Armarouge + Ludicolo keep showing up; revisit
+  if the gap grows. Next: Eli & Sharon, Geara & Zetta, Giratina (boss), Holly & Rorim, Manaphy (boss), ??? Factory, Amber.

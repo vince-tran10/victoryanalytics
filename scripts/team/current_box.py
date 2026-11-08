@@ -31,10 +31,19 @@ def party_size(N):
     return 6
 
 
+def _override_hit(key, N):
+    """key = '<export size>' or '<export size>@<n>=<Species>' (the species at export #n must match too)."""
+    size, _, cond = key.partition('@')
+    if size != str(len(N)): return False
+    if not cond: return True
+    n, sp = cond.split('=', 1)
+    return any(d['n'] == int(n) and d['species'] == sp for d in N)
+
+
 def staging_range(N):
     """(first, last) export numbers of the staging box between Overflow and Active, or None."""
     for _e in filter(None, os.environ.get('STAGING_AT', '').split(',')):
-        if _e.split(':')[0] == str(len(N)):
+        if _override_hit(_e.split(':')[0], N):
             a, b = _e.split(':')[1].split('-'); return (int(a), int(b))
     P = party_size(N)
     resets = [i for i in range(P + 1, len(N)) if N[i]['species'].lower() < N[i - 1]['species'].lower()]
@@ -52,7 +61,7 @@ def box_of(N):
 
 def active_start(N):
     for _e in filter(None, os.environ.get('ACTIVE_AT', '').split(',')):
-        if _e.split(':')[0] == str(len(N)): return int(_e.split(':')[1])
+        if _override_hit(_e.split(':')[0], N): return int(_e.split(':')[1])
     """Active box = the last A–Z run that starts with an 'A'/'B' name after Overflow (a new-catch box may sit between)."""
     P = party_size(N)
     resets = [i for i in range(P + 1, len(N)) if N[i]['species'].lower() < N[i - 1]['species'].lower()]
