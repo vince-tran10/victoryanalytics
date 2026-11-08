@@ -70,7 +70,7 @@ for c in sorted(RUN['cands'], key=lambda c: -c['solo_total']):
     best.setdefault((c['sid'], c['form']), c)
 pool = sorted(best.values(), key=lambda c: -c['solo_total'])[:N]
 for c in best.values():
-    if c['src']['where'] == 'Party' and c not in pool: pool.append(c)
+    if (c['src']['where'] == 'Party' or c['name'] in os.environ.get('FORCE_POOL', '').split('|')) and c not in pool: pool.append(c)
 def crest(c): return c['src'].get('item') or ''
 def atk_sigs(c, field=''):
     out = set()
