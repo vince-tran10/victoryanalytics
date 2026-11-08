@@ -436,3 +436,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Box moves never appear in To do: Boxes tab only, GREEN = move into Active/party (ACTIONS text starting Move to Active /
   Move into the party / Promote), RED = move out. Build-fix category (phys/spec) comes from the moves the mon actually
   knows (tie → engine attacks), so a physical Ludicolo isn't told to go special.
+- 8 Nov fixes: "Teach Protect" always names the move it replaces (lowest value: not an engine-recommended attack,
+  status moves not in KEEP go first, then weakest attack). Protect-likes (Detect, King's Shield…) count as Protect.
+  NO_PROTECT = {'Lapras-Aevian'} ONLY (agreed No Guard Sing / Dragon Dance / Rock Slide / Zen Headbutt set). Old
+  relearner tips that drop Protect (Lunatone Ancient Power etc.) are overridden. Mons moving Overflow/Staging → Active
+  (green) get a To do card ("Overflow → Active #n") with their full build gaps, teaches paired with what they replace.

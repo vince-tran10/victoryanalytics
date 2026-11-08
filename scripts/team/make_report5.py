@@ -250,10 +250,12 @@ ORDER = ['Annihilape', 'Gholdengo', 'Clawitzer', 'Musharna-Aevian', 'Golisopod-A
 up_cards, up_same, up_left, up_done = [], [], 0, []
 up_names = set()
 PROFILE = {}   # (species, export #, box) -> list of profile changes
+NO_PROTECT = {'Lapras-Aevian'}   # agreed exceptions only: No Guard Sing + Dragon Dance + STAB Lapras
+PROTECT_LIKE = {'Protect', 'Detect', "King's Shield", 'Spiky Shield', 'Baneful Bunker', 'Silk Trap', 'Obstruct', 'Burning Bulwark'}
 for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP),
                 key=lambda d: (d['box'] != 'Party', ORDER.index(d['species']) if d['species'] in ORDER else 9, not UP[d['species']].get('big'), d['species'])):
     u = dict(UP[d['species']])
-    if 'Protect' not in u['moves']:   # standing rule: Protect is always the 4th move
+    if not (PROTECT_LIKE & set(u['moves'])) and d['species'] not in NO_PROTECT:   # standing rule: Protect is always the 4th move
         mv4 = list(u['moves'])
         i = max(j for j, m in enumerate(mv4) if m not in ('Swords Dance', 'Glare', 'Nasty Plot', 'Calm Mind', 'Dragon Dance', 'Bulk Up'))
         mv4[i] = 'Protect'; u['moves'] = mv4
@@ -308,8 +310,17 @@ for d in sorted((d for d in cur if d['box'] == 'Active' and d.get('score') is no
         fx.append(f"Nature: {d.get('nature')} → {want_nat} (mint)")
     if d.get('capsule') and d['capsule'][0].replace(' ', '').lower() != (d.get('ability') or '').replace(' ', '').lower():
         fx.append(f"Ability: {d.get('ability')} → {d['capsule'][0]} (Ability Capsule)")
-    if 'Protect' not in d['moves'] and d['species'] not in up_names:
-        fx.append('Teach Protect (4th slot)')
+    if not (PROTECT_LIKE & set(d['moves'])) and d['species'] not in up_names and d['species'] not in NO_PROTECT:
+        KEEP = {'Swords Dance', 'Dragon Dance', 'Nasty Plot', 'Calm Mind', 'Bulk Up', 'Quiver Dance', 'Shell Smash', 'Glare', 'Spore',
+                'Sleep Powder', 'Sing', 'Belly Drum', 'Trick Room', 'Tailwind', 'Recover', 'Roost', 'Slack Off', 'Rage Powder', 'Follow Me'}
+        rec = set(d.get('attacks') or [])
+        def _val(m):
+            v = SX.MV.get(m) or {}
+            if m in rec: return 3
+            if v.get('Category') == 'Status': return 2 if m in KEEP else 0
+            return 1 + int(v.get('Strength') or 0) / 1000
+        drop = min(d['moves'], key=_val) if d['moves'] else None
+        fx.append(f'Teach Protect (replaces {drop})' if drop and len(d['moves']) >= 4 else 'Teach Protect')
     if fx:
         PROFILE.setdefault((d['species'], d['n'], d['box']), []).extend(fx)
         fix_cards.append(f'<li class="mon up"><div class="mtop"><strong>{E(d["species"])}</strong><span class="legend">Active #{d["n"]}</span></div>'
@@ -399,6 +410,10 @@ for p in promo:
         promo_left.append(p)
         od = next((d for d in cur if d['box'] == 'Overflow' and d['species'] in (p['owned'], p['final'])), None)
         if od:
+            _iss = ([f"Evolve into {p['final']}"] if p['final'] != od['species'] else []) + verify_mon(dict(od, species=p['final']), p['ability'], nat, p['evs_txt'], od['item'], [(m, 0) for m in mv])
+            _gone = [m for m in od['moves'] if m not in mv]
+            _iss = [(x + f' (replaces {_gone.pop(0)})') if x.startswith('Teach ') and _gone else x for x in _iss]
+            if _iss: PROFILE.setdefault((p['final'], od['n'], 'Overflow → Active'), []).extend(_iss)
             ACTIONS[od['n']] = f"Move to Active{(' (evolve into ' + p['final'] + ')') if p['final'] != od['species'] else ''}: {p['ability']}, {nat}, {p['evs_txt']}, {' / '.join(mv)}"
         promo_todo.append((f"#{p['n']} {p['owned']}{(' → evolve to ' + p['final']) if p['final'] != p['owned'] else ''} ({p['tier']} tier): move to the Active box. Build in section 02.", 'mid'))
         continue
