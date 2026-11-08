@@ -502,3 +502,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Only coverage miss: Clefable (Geara & Zetta, Rhyperior 86%). make_report5: TEAM drives ORDER/roles/PLAY bullets;
   team card merges its box fixes (TEAM_SRC) and ignores generic Ability/Nature/EV lines; teach lines pair replacements;
   team_check/chapter_rules take members from Party else Active; checks.py party check accepts green moves-in.
+- 8 Nov: SUPPORT CHECK (scripts/team/support_check.py; ALSO_OVF=<top Overflow names>, NO_PETALDANCE=1): re-ranks the top
+  300 rule-passing sixes (pool Party+Active+top-12 Overflow, 20,785 pass) with setup moves (CM/SD/DD/NP/Bulk Up ×1.5–2 if
+  it survives a hit, −15% for the turn), Glare/Thunder Wave/Stun Spore (foe Speed ÷2), Sticky Web (÷1.5 grounded), Fake
+  Out (+3% doubles). Lock-in moves (Petal Dance/Outrage/Thrash) re-scored out — they made Venusaur look +1.3–1.5%.
+  Result: new six #4 of 300, top is +0.7% (Golisopod/Glalie/Azumarill/Armarouge/Scrafty/Ampharos) = tie; new six has
+  the highest raw score of the top group. Kept. Not modelled: AI move choice, partners, Rage Fist/Defiant growth.
