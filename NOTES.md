@@ -508,3 +508,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Out (+3% doubles). Lock-in moves (Petal Dance/Outrage/Thrash) re-scored out — they made Venusaur look +1.3–1.5%.
   Result: new six #4 of 300, top is +0.7% (Golisopod/Glalie/Azumarill/Armarouge/Scrafty/Ampharos) = tie; new six has
   the highest raw score of the top group. Kept. Not modelled: AI move choice, partners, Rage Fist/Defiant growth.
+- 8 Nov: RULE (e) SYNERGY / ONE IDENTITY (Vincent): no dead conditional abilities/moves (enabler must be on the team),
+  no anti-synergy, one stated game plan. Box scan: no Drizzle/Drought/Sand Stream owned (only move weather), Snow
+  Warning (Abomasnow, Vanilluxe, Ninetales-A), Trick Room only Slowking-G / Porygon-Z / Oranguru, lots of speed control.
+  Current identity: slow hard hitters + speed control (Glare, Sticky Web) + Fake Out tempo; Annihilape fast cleaner.
+  Dead piece fixed: Ludicolo Swift Swim (no rain) → Own Tempo. checks.py: 3 synergy checks (state.json "abilities").

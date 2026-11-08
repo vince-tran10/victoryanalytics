@@ -4,9 +4,9 @@
  "export_label": "8 Nov 09:13",
  "active_start": 414,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 24,
- "run": 38,
- "final": 42,
+ "roster": 25,
+ "run": 39,
+ "final": 43,
  "done": [
   "aelita",
   "narcissa1",
@@ -138,5 +138,13 @@
    "Clefable"
   ]
  },
- "team_check_cache": true
+ "team_check_cache": true,
+ "abilities": {
+  "Rhyperior": "Solid Rock",
+  "Musharna (Aevian Form)": "Tough Claws",
+  "Armarouge": "Flash Fire",
+  "Annihilape": "Defiant",
+  "Vikavolt": "Levitate",
+  "Ludicolo": "Own Tempo"
+ }
 }

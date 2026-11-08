@@ -63,10 +63,12 @@ TEAM = [   # best six for the 7 remaining hard fights on exact game data (8 Nov)
      [('Close Combat', 0), ('Rage Fist', 0), ('Sucker Punch', 0), ('Protect', 0)], []),
     ('Closer', 'Vikavolt', 'Bug/Electric', 'Levitate', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Magnet',
      [('Thunderbolt', 0), ('Bug Buzz', 0), ('Sticky Web', 0), ('Protect', 0)], []),
-    ('Closer', 'Ludicolo', 'Water/Grass', 'Swift Swim', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Mystic Water',
+    ('Closer', 'Ludicolo', 'Water/Grass', 'Own Tempo', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Mystic Water',
      [('Fake Out', 0), ('Energy Ball', 0), ('Hydro Pump', 0), ('Protect', 0)], []),
 ]
-PLAY = ['<b>Lead</b> Rhyperior + Musharna: Glare the fastest threat, Rhyperior hits (Stone Edge 1.5x on Mountain / Volcanic Top)',
+IDENTITY = ('<b>Identity</b> Slow, hard-hitting core (Rhyperior, Vikavolt, Armarouge) backed by speed control: '
+            'Musharna\'s Glare, Vikavolt\'s Sticky Web, Ludicolo\'s Fake Out. Annihilape is the fast cleaner.')
+PLAY = [IDENTITY, '<b>Lead</b> Rhyperior + Musharna: Glare the fastest threat, Rhyperior hits (Stone Edge 1.5x on Mountain / Volcanic Top)',
         '<b>Doubles</b> Ludicolo Fake Out buys a free turn for a partner\'s big hit or Armarouge\'s Calm Mind',
         '<b>Armarouge</b> Calm Mind when the foe can\'t hurt it much, then Flamethrower / Psyshock',
         '<b>Annihilape</b> comes in on hits: every hit taken powers Rage Fist',

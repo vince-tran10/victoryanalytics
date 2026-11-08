@@ -37,6 +37,12 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
 - (b) No attack type the hard-fight opponents actually use (move types, after field changes) hits 3+ of the six
   super-effectively. (c) Every such type is resisted by ≥ 1. Types in 2+ hard fights or on a boss are hard rules;
   one-offs are a tiebreak. (d) Every opposing Pokémon is hit super-effectively OR one-shot; at most 2 misses.
+- (e) **Synergy / one identity:** the six has ONE stated game plan (e.g. "slow hard hitters + speed control"), with
+  enablers and beneficiaries on the team, and NO dead pieces: every conditional ability or move needs its enabler on
+  the team (Swift Swim/Rain Dish/Dry Skin → rain setter; Chlorophyll/Solar Power → sun; Sand Rush/Force → sand;
+  Slush Rush/Ice Body → snow; Surge Surfer → Electric Terrain…). No anti-synergy (e.g. Glare or fast mons under Trick
+  Room). Weather teams aren't realistic yet: no Drizzle/Drought/Sand Stream owned. Checked by checks.py.
+- Current identity: slow, hard-hitting core + speed control (Glare, Sticky Web) + Fake Out tempo; Annihilape = fast cleaner.
 - Then rank by battle score (singles count double). Fields are a tiebreak, not a team rule.
 - Meta / Smogon builds preferred (SV + National Dex data in `workspace/smogon`; doubles data for doubles roles).
 

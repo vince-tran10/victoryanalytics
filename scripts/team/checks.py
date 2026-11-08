@@ -47,6 +47,20 @@ if os.path.exists(cmp):
     left = [(k, r['mon'], d) for k, v in C.items() for r in v.get('rows', []) for d in r['diff']
             if not d.startswith(('BOSS', 'calls SOS', 'MISSING', 'EXTRA'))]
     chk('Every hard-fight Pokémon matches the game data exactly', not left, f'{len(left)} differences' if left else 'level, item, ability, nature, moves, types, EVs')
+NEEDS = {'Swift Swim': 'rain', 'Rain Dish': 'rain', 'Dry Skin': 'rain', 'Hydration': 'rain', 'Chlorophyll': 'sun', 'Solar Power': 'sun',
+         'Leaf Guard': 'sun', 'Flower Gift': 'sun', 'Sand Rush': 'sand', 'Sand Force': 'sand', 'Sand Veil': 'sand', 'Slush Rush': 'snow',
+         'Ice Body': 'snow', 'Snow Cloak': 'snow', 'Surge Surfer': 'e-terrain', 'Grass Pelt': 'g-terrain', 'Quark Drive': 'e-terrain',
+         'Protosynthesis': 'sun'}
+GIVES = {'Drizzle': 'rain', 'Rain Dance': 'rain', 'Drought': 'sun', 'Sunny Day': 'sun', 'Sand Stream': 'sand', 'Sandstorm': 'sand',
+         'Snow Warning': 'snow', 'Snowscape': 'snow', 'Electric Surge': 'e-terrain', 'Electric Terrain': 'e-terrain',
+         'Grassy Surge': 'g-terrain', 'Grassy Terrain': 'g-terrain'}
+_ab = st.get('abilities') or {}; _mv = st.get('moves') or {}
+_have = {GIVES[x] for x in list(_ab.values()) + [m for ms in _mv.values() for m in ms] if x in GIVES}
+_dead = [f"{n}: {a} (needs {NEEDS[a]})" for n, a in _ab.items() if a in NEEDS and NEEDS[a] not in _have]
+_tr = any('Trick Room' in ms for ms in _mv.values()); _glare = any('Glare' in ms or 'Thunder Wave' in ms for ms in _mv.values())
+chk('Synergy: no dead abilities (every conditional ability has its enabler on the team)', not _dead, '; '.join(_dead) or 'none dead')
+chk('Synergy: no anti-synergy (Glare / paralysis under Trick Room)', not (_tr and _glare), '')
+chk('Synergy: the team states one identity', 'Identity' in text(team) or 'Identity' in page, '')
 tc = st.get('team_check') or {}
 chk('Team passes the chapter rules', tc.get('rank') is not None, f"#{tc.get('rank')} of {tc.get('of')}")
 chk('Team is within 1% of the best six', (tc.get('gap') or 0) <= 1.0,
