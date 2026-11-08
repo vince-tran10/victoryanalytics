@@ -410,3 +410,10 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   validates the debug-mode counter method (kyogre_counter.py: every owned mon × ability × spread × item, damage dealt
   before fainting, recoil vs boss HP). Use the same method for the next boss counters (Manaphy, Giratina).
   DONE += kyogre, f29_*, FIGHT mode off. 7 hard fights left; main six back.
+- 8 Nov 08:32 export (453): main six back in party, all Lv 55 + right items (Clawitzer now 55). Vincent's boxes:
+  Overflow A–Z to #392, then ONE unsorted box #393–403 (new catches + the Kyogre crew), Active A–Z from #404 (Ampharos-A).
+  Auto-detection picked 395 → current_box now honours env overrides keyed by export size: ACTIVE_AT=453:404,
+  STAGING_AT=453:393-403 (only applied to the export with that many mons). roster12, r26_*, f30_*, chapter_rules
+  CR_RUN default r26. New: Abomasnow #397 0.538 A → Active; Boldore (Gigalith needs trade) 0.527, Palossand-A ×2
+  0.515/0.512, Nidorino→Nidoking 0.488, Cryogonal 0.296 → Overflow. SPECIALISTS dict in make_report5: boss-counter mons
+  (Kyogre crew, Groudon crew, Meowscarada) always → Active. Six: #3 of 2744 under chapter rules, 0.3% off #1 → no change.

@@ -1,0 +1,320 @@
+[
+ {
+  "dump": 393,
+  "owned": "Nidorino",
+  "level": 55,
+  "now_ability": "Rivalry",
+  "now_moves": [
+   "Toxic Spikes",
+   "Double Kick",
+   "Horn Attack",
+   "Helping Hand"
+  ],
+  "final": "Nidoking",
+  "evolve": "Nidoking (Item Moon Stone)",
+  "gate": "",
+  "types": "Poison/Ground",
+  "score": 0.488,
+  "tier": "C",
+  "ability": "Rivalry",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Drill Run",
+   "Head Smash",
+   "Poison Jab",
+   "Protect"
+  ],
+  "move_src": {
+   "Drill Run": "known",
+   "Head Smash": "Egg",
+   "Poison Jab": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.66,
+   "jenner": 0.59,
+   "geara": 0.58,
+   "giratina": 0.56,
+   "danni": 0.81,
+   "troye": 0.47,
+   "zena": 0.71,
+   "holly": 0.55,
+   "manaphy": 0.1,
+   "factory": 0.17,
+   "marcie": 0.49,
+   "amber": 0.69
+  }
+ },
+ {
+  "dump": 394,
+  "owned": "Sandygast-Aevian",
+  "level": 55,
+  "now_ability": "Clear Body",
+  "now_moves": [
+   "Iron Defense",
+   "Giga Drain",
+   "Shadow Ball",
+   "Power Gem"
+  ],
+  "final": "Palossand (Rocky Aevian Form)",
+  "evolve": "Palossand (Level 42)",
+  "gate": "",
+  "types": "Ghost/Rock",
+  "score": 0.512,
+  "tier": "B",
+  "ability": "Clear Body",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Power Gem",
+   "Shadow Ball",
+   "Giga Drain",
+   "Protect"
+  ],
+  "move_src": {
+   "Power Gem": "known",
+   "Shadow Ball": "known",
+   "Giga Drain": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.69,
+   "jenner": 0.49,
+   "geara": 0.64,
+   "giratina": 0.54,
+   "danni": 0.8,
+   "troye": 0.51,
+   "zena": 0.6,
+   "holly": 0.61,
+   "manaphy": 0.32,
+   "factory": 0.24,
+   "marcie": 0.28,
+   "amber": 0.67
+  }
+ },
+ {
+  "dump": 395,
+  "owned": "Boldore",
+  "level": 55,
+  "now_ability": "Sturdy",
+  "now_moves": [
+   "Headbutt",
+   "Rock Slide",
+   "Rock Blast",
+   "Sandstorm"
+  ],
+  "final": "Gigalith",
+  "evolve": "Gigalith (Trade 0)",
+  "gate": "Trade 0",
+  "types": "Rock",
+  "score": 0.527,
+  "tier": "B",
+  "ability": "Sturdy",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Stone Edge",
+   "Rock Tomb",
+   "Rock Slide",
+   "Protect"
+  ],
+  "move_src": {
+   "Stone Edge": "Lv 48",
+   "Rock Tomb": "TM39",
+   "Rock Slide": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.78,
+   "jenner": 0.54,
+   "geara": 0.78,
+   "giratina": 0.35,
+   "danni": 0.83,
+   "troye": 0.46,
+   "zena": 0.61,
+   "holly": 0.61,
+   "manaphy": 0.32,
+   "factory": 0.16,
+   "marcie": 0.36,
+   "amber": 0.77
+  }
+ },
+ {
+  "dump": 396,
+  "owned": "Cryogonal",
+  "level": 55,
+  "now_ability": "Levitate",
+  "now_moves": [
+   "Freeze-Dry",
+   "Light Screen",
+   "Reflect",
+   "Recover"
+  ],
+  "final": "Cryogonal",
+  "evolve": "",
+  "gate": "",
+  "types": "Ice",
+  "score": 0.296,
+  "tier": "D",
+  "ability": "Levitate",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Ice Beam",
+   "Ancient Power",
+   "Icy Wind",
+   "Protect"
+  ],
+  "move_src": {
+   "Ice Beam": "Lv 48",
+   "Ancient Power": "Lv 20",
+   "Icy Wind": "Lv 12",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.44,
+   "jenner": 0.09,
+   "geara": 0.22,
+   "giratina": 0.28,
+   "danni": 0.64,
+   "troye": 0.14,
+   "zena": 0.53,
+   "holly": 0.37,
+   "manaphy": 0.2,
+   "factory": 0.23,
+   "marcie": 0.55,
+   "amber": 0.29
+  }
+ },
+ {
+  "dump": 397,
+  "owned": "Abomasnow",
+  "level": 55,
+  "now_ability": "Soundproof",
+  "now_moves": [
+   "Icy Wind",
+   "Swagger",
+   "Ingrain",
+   "Wood Hammer"
+  ],
+  "final": "Abomasnow",
+  "evolve": "",
+  "gate": "",
+  "types": "Grass/Ice",
+  "score": 0.538,
+  "tier": "B",
+  "ability": "Soundproof",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Wood Hammer",
+   "Ice Punch",
+   "Icy Wind",
+   "Protect"
+  ],
+  "move_src": {
+   "Wood Hammer": "known",
+   "Ice Punch": "evolution",
+   "Icy Wind": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.68,
+   "jenner": 0.39,
+   "geara": 0.37,
+   "giratina": 0.52,
+   "danni": 0.78,
+   "troye": 0.52,
+   "zena": 0.62,
+   "holly": 0.46,
+   "manaphy": 0.71,
+   "factory": 0.6,
+   "marcie": 0.88,
+   "amber": 0.31
+  }
+ },
+ {
+  "dump": 403,
+  "owned": "Sandygast-Aevian",
+  "level": 55,
+  "now_ability": "Steam Engine",
+  "now_moves": [
+   "Iron Defense",
+   "Giga Drain",
+   "Shadow Ball",
+   "Lava Plume"
+  ],
+  "final": "Palossand (Fiery Aevian Form)",
+  "evolve": "Palossand (Level 42)",
+  "gate": "",
+  "types": "Ghost/Fire",
+  "score": 0.515,
+  "tier": "B",
+  "ability": "Steam Engine",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Shadow Ball",
+   "Lava Plume",
+   "Giga Drain",
+   "Protect"
+  ],
+  "move_src": {
+   "Shadow Ball": "known",
+   "Lava Plume": "known",
+   "Giga Drain": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.47,
+   "jenner": 0.63,
+   "geara": 0.49,
+   "giratina": 0.56,
+   "danni": 0.89,
+   "troye": 0.62,
+   "zena": 0.6,
+   "holly": 0.78,
+   "manaphy": 0.32,
+   "factory": 0.35,
+   "marcie": 0.57,
+   "amber": 0.47
+  }
+ }
+]

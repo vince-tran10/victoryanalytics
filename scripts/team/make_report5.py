@@ -394,14 +394,18 @@ for sp, why in CUTS['maybe'].items():
     if hits:
         cut_todo.append((f"{sp} (#{hits[0]['n']}): your call. {why}", 'low'))
         ACTIONS[hits[0]['n']] = 'Your call: Overflow'
+# boss specialists stay in Active whatever their overall score
+SPECIALISTS = {'Ludicolo': 'Kyogre', 'Heliolisk': 'Kyogre', 'Electivire': 'Kyogre', 'Boltund': 'Kyogre', 'Togedemaru': 'Kyogre',
+               'Meowscarada': 'starter, Kyogre', 'Exeggutor': 'Groudon', 'Glaceon': 'Groudon', 'Camerupt': 'Groudon'}
 # staging box: every mon gets a verdict (Active needs A tier on its own and a species not already in Party/Active)
 _have = {d['final'] for d in cur if d['box'] in ('Party', 'Active')}
 _to_act, _to_ovf = [], []
 for d in cur:
     if d['box'] != 'Staging':
         continue
-    ok = d['score'] is not None and d['score'] >= 0.53 and d['final'] not in _have
-    ACTIONS[d['n']] = 'Move to Active' if ok else 'Move to Overflow'
+    spec = d['species'] in SPECIALISTS
+    ok = spec or (d['score'] is not None and d['score'] >= 0.53 and d['final'] not in _have)
+    ACTIONS[d['n']] = ('Move to Active (boss specialist: ' + SPECIALISTS[d['species']] + ')') if spec else ('Move to Active' if ok else 'Move to Overflow')
     (_to_act if ok else _to_ovf).append(f"{d['species']} (#{d['n']})")
 if _to_act:
     cut_todo.insert(0, ('Staging → Active: ' + ', '.join(_to_act), 'high'))
