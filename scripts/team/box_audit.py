@@ -84,7 +84,7 @@ esc = html.escape
 def li(d):
     name = esc(d['species']) + (f' <span class="nick">“{esc(d["nick"])}”</span>' if d['nick'] else '')
     act = ACTIONS.get(d['n'])
-    cls = ' class="act"' if act else ''
+    cls = (' class="act in"' if act.startswith(('Move to Active', 'Move into the party', 'Promote')) else ' class="act"') if act else ''
     why = f'<span class="why">{esc(act)}</span>' if act else ''
     return (f'<li{cls} data-n="{esc(d["species"].lower())} {esc(d["nick"].lower())}"><span class="idx num">#{d["n"]}</span>'
             f'<span class="nm">{name}{why}</span><span class="lv num">Lv {d.get("level", "?")}</span></li>')
@@ -133,7 +133,7 @@ sec = f'''<!--BOXAUDIT-->
     <!-- completeness check (hidden): {' | '.join(re.sub('<[^>]+>', '', c) for c in checks)} -->
     <div class="panel pad"><h3>Since last export</h3>{('<p class="legend">' + esc(NOTE) + '</p>') if NOTE else ''}<div class="chgcols">{chg}</div></div>
   </div>
-  <p class="legend"><span class="actkey">Red</span> = move it</p>
+  <p class="legend"><span class="actkey in">Green</span> = move into Active / the party · <span class="actkey">Red</span> = move out (Overflow)</p>
   <label class="find">Find a Pokémon <input type="search" id="boxfind" placeholder="e.g. Furret" autocomplete="off"></label>
   {group("Party", "Party", True, "")}
   {group("Staging", "Staging", True, "decide: Active or Overflow") if any(d['box'] == 'Staging' for d in N) else ''}
@@ -160,8 +160,10 @@ css = '''<style id="boxaudit-css">
 .chgcol .plain { display: block; columns: 140px auto; column-gap: 18px } .chgcol .plain li { break-inside: avoid; margin-bottom: 3px }
 .roster li.act { background: var(--bad-soft); border-bottom-color: var(--bad); border-radius: 4px }
 .roster li.act .nm, .roster li.act .idx { color: var(--bad) }
+.roster li.act.in { background: var(--good-soft); border-bottom-color: var(--good) }
+.roster li.act.in .nm, .roster li.act.in .idx { color: var(--good) }
 .roster li .why { display: block; font-size: 11px; color: var(--bad); line-height: 1.3 }
-.actn { color: var(--bad); font-weight: 600 } .actkey { background: var(--bad-soft); color: var(--bad); padding: 0 6px; border-radius: 4px; font-weight: 600 }
+.actn { color: var(--bad); font-weight: 600 } .actkey { background: var(--bad-soft); color: var(--bad); padding: 0 6px; border-radius: 4px; font-weight: 600 } .actkey.in { background: var(--good-soft); color: var(--good) }
 .b.cut { background: var(--bad-soft); color: var(--bad) } .b.maybe { background: var(--line); color: var(--muted) }
 </style>'''
 js = '''<script id="boxaudit-js">

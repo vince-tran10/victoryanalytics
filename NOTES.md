@@ -427,3 +427,12 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   mons with no EVs in their attacking stat, a nature that doesn't boost it (phys ok: Adamant/Jolly/Brave; spec ok:
   Modest/Timid/Quiet), a better ability (capsule), or no Protect (unless their relearner card already adds it).
   Party checks stay in the Team table/Team to-dos.
+- 8 Nov 08:45 export (455): staging emptied, Active A–Z from #404. New: Druddigon (#93 Overflow) A 0.692 → Move to
+  Active (team/promote_1108.json = Exeggutor + Druddigon; ACTIONS text now carries the build). Heracross C 0.492.
+  Druddigon allowed in the chapter-rules search (ALSO_OVF env) but no passing six with it beats the current one.
+  roster13, r27_*, f31_*, CR_RUN default r27. Keep ACTIVE_AT/STAGING_AT=453:… set when the 0832 export is the "old" one.
+- LAYOUT CHANGE (Vincent): To do tab = PROFILE FIXES ONLY, one card per Pokémon (Team changes, Kyogre-style counter
+  issues, relearner moves, build fixes, promo gaps all merged per mon via PROFILE dict; s1b/s1c sections removed).
+  Box moves never appear in To do: Boxes tab only, GREEN = move into Active/party (ACTIONS text starting Move to Active /
+  Move into the party / Promote), RED = move out. Build-fix category (phys/spec) comes from the moves the mon actually
+  knows (tie → engine attacks), so a physical Ludicolo isn't told to go special.

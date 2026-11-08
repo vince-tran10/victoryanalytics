@@ -12,7 +12,7 @@ from engine import Engine
 from bosses import FIELD
 BASE = sys.argv[1]; N = int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2].isdigit() else 30
 E = Engine(BASE); D = E.D
-RUN = pickle.load(open(f'{BASE}/team/{os.environ.get('CR_RUN','r26')}_native.json.pkl', 'rb')); RUNN = pickle.load(open(f'{BASE}/team/{os.environ.get('CR_RUN','r26')}n_native.json.pkl', 'rb'))
+RUN = pickle.load(open(f'{BASE}/team/{os.environ.get('CR_RUN','r27')}_native.json.pkl', 'rb')); RUNN = pickle.load(open(f'{BASE}/team/{os.environ.get('CR_RUN','r27')}n_native.json.pkl', 'rb'))
 IMM = {'LEVITATE': 'GROUND', 'FLASHFIRE': 'FIRE', 'WATERABSORB': 'WATER', 'STORMDRAIN': 'WATER', 'DRYSKIN': 'WATER',
        'VOLTABSORB': 'ELECTRIC', 'LIGHTNINGROD': 'ELECTRIC', 'MOTORDRIVE': 'ELECTRIC', 'SAPSIPPER': 'GRASS', 'EARTHEATER': 'GROUND',
        'WELLBAKEDBODY': 'FIRE'}
@@ -64,7 +64,7 @@ FOES = [(b['key'], fo) for b in HARD for fo in b['foes']]
 def key(c): return (c['sid'], c['form'], c['ability'])
 best = {}
 for c in sorted(RUN['cands'], key=lambda c: -c['solo_total']):
-    if c['gate'] or c['src']['where'] == 'Overflow': continue
+    if c['gate'] or (c['src']['where'] == 'Overflow' and c['name'] not in os.environ.get('ALSO_OVF', '')): continue
     best.setdefault((c['sid'], c['form']), c)
 pool = sorted(best.values(), key=lambda c: -c['solo_total'])[:N]
 for c in best.values():

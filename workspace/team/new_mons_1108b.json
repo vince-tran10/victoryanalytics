@@ -1,0 +1,108 @@
+[
+ {
+  "dump": 93,
+  "owned": "Druddigon",
+  "level": 55,
+  "now_ability": "Sheer Force",
+  "now_moves": [
+   "Dragon Claw",
+   "Hone Claws",
+   "Crunch",
+   "Iron Head"
+  ],
+  "final": "Druddigon",
+  "evolve": "",
+  "gate": "",
+  "types": "Dragon",
+  "score": 0.692,
+  "tier": "A",
+  "ability": "Sheer Force",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Outrage",
+   "Superpower",
+   "Hone Claws",
+   "Protect"
+  ],
+  "move_src": {
+   "Outrage": "Lv 50",
+   "Superpower": "Lv 55",
+   "Hone Claws": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.65,
+   "jenner": 0.77,
+   "geara": 0.61,
+   "giratina": 0.49,
+   "danni": 0.99,
+   "troye": 0.81,
+   "zena": 0.84,
+   "holly": 0.81,
+   "manaphy": 0.48,
+   "factory": 0.52,
+   "marcie": 0.71,
+   "amber": 0.93
+  }
+ },
+ {
+  "dump": 150,
+  "owned": "Heracross",
+  "level": 55,
+  "now_ability": "Moxie",
+  "now_moves": [
+   "Brick Break",
+   "Pin Missile",
+   "Throat Chop",
+   "Thrash"
+  ],
+  "final": "Heracross",
+  "evolve": "",
+  "gate": "",
+  "types": "Bug/Fighting",
+  "score": 0.492,
+  "tier": "C",
+  "ability": "Swarm",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Megahorn",
+   "Brick Break",
+   "Throat Chop",
+   "Protect"
+  ],
+  "move_src": {
+   "Megahorn": "Lv 55",
+   "Brick Break": "known",
+   "Throat Chop": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.69,
+   "jenner": 0.7,
+   "geara": 0.44,
+   "giratina": 0.43,
+   "danni": 0.89,
+   "troye": 0.58,
+   "zena": 0.81,
+   "holly": 0.4,
+   "manaphy": 0.48,
+   "factory": 0.33,
+   "marcie": 1.08,
+   "amber": 0.11
+  }
+ }
+]

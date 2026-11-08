@@ -156,10 +156,12 @@ def ev_lines(evs):
 
 
 team_rows, team_todo, LEVELS = [], [], []
+TEAM_CHANGES, CF_ISSUES = {}, {}
 ANY_CHANGE = any(verify(t[1], t[3], t[4], t[5], t[6], t[7]) for t in TEAM)
 prev = None
 for role, name, types, ab, nat, evs, item, moves, changes in TEAM:
     changes = verify(name, ab, nat, evs, item, moves)
+    TEAM_CHANGES[name] = list(changes)
     if CF and name in CF_NAMES:
         changes = [c if c.startswith(('Lv ', 'After ')) else f"After {CF['title']}: {c}" for c in changes]
     team_todo += [(f'{name}: {c}', 'high') for c in changes if not c.startswith('Lv ') and not c.startswith('After ')]
@@ -230,6 +232,8 @@ if CF:
             if d0 and how:
                 d0 = dict(d0, species=nm_, moves=[], ability=d0.get('ability'))
             issues = ([f"{pre} {d0['box']} #{d0['n']} → party" + (f", evolve ({how})" if how else '')] + verify_mon(d0, ab_, nat_, evs_, item_, [(m, 0) for m in mv_])) if d0 else [f'Put {nm_} in the party']
+        _dd = d if d else d0
+        if _dd: CF_ISSUES[nm_] = (_dd, [x for x in issues if '→ party' not in x and not x.startswith('Put ')])
         if issues: todo_cf.append((f'{CF["title"]} · {nm_}: ' + '; '.join(issues), 'high'))
         rows_.append(f'<tr><td><strong>{E(nm_)}</strong></td><td class="legend">{E(item_)}</td><td>{E(" / ".join(mv_))}</td><td>{E(note_)}</td>'
                      f'<td>{"<span class=ok>✓</span>" if not issues else "<span class=chg2>" + E("; ".join(issues)) + "</span>"}</td></tr>')
@@ -245,6 +249,7 @@ UP = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'upgrade
 ORDER = ['Annihilape', 'Gholdengo', 'Clawitzer', 'Musharna-Aevian', 'Golisopod-Aevian', 'Glalie-Aevian']
 up_cards, up_same, up_left, up_done = [], [], 0, []
 up_names = set()
+PROFILE = {}   # (species, export #, box) -> list of profile changes
 for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP),
                 key=lambda d: (d['box'] != 'Party', ORDER.index(d['species']) if d['species'] in ORDER else 9, not UP[d['species']].get('big'), d['species'])):
     u = dict(UP[d['species']])
@@ -265,8 +270,8 @@ for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP
     up_left += 0 if done else 1
     if done or d['box'] == 'Party' or d['species'] in IDEAL:
         up_done.append(d['species']); continue
-    mv = ''.join(f'<li class="{"new" if m in gaps else ""}">{E(m)}</li>' for m in u['moves'])
     gone = [m for m in d['moves'] if m not in u['moves']]
+    mv = ''.join(f'<li class="{"new" if m in gaps else ""}">{E(m)}</li>' for m in u['moves'])
     extra = ''
     if natg: extra += f'<div class="chg2">Nature: {E(d.get("nature"))} → <b>{E(u["nature"])}</b> (mint)</div>'
     if abg: extra += f'<div class="chg2">Ability: {E(d.get("ability"))} → <b>{E(u["ability"])}</b> (Ability Capsule)</div>'
@@ -274,6 +279,11 @@ for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP
     status = '<span class="ok">Done ✓</span>' if done else ('<span class="b big">big upgrade</span>' if u.get('big') else '<span class="b small">upgrade</span>')
     role = {'Annihilape': 'lead', 'Gholdengo': 'lead', 'Clawitzer': 'mid', 'Musharna-Aevian': 'mid'}.get(d['species'], 'closer' if d['box'] == 'Party' else '')
     up_names.add(d['species'])
+    _fx = [f"Teach {m}" + (f" (replaces {o})" if o else '') for m, o in zip(gaps, gone + [None] * len(gaps))]
+    if natg: _fx.append(f"Nature: {d.get('nature')} → {u['nature']} (mint)")
+    if abg: _fx.append(f"Ability: {d.get('ability')} → {u['ability']} (Ability Capsule)")
+    if u.get('later'): _fx.append('Later: ' + u['later'])
+    PROFILE.setdefault((d['species'], d['n'], d['box']), []).extend(_fx)
     up_cards.append(f'''<li class="mon up{" isparty" if d["box"] == "Party" else ""}"><div class="mtop"><strong>{E(d["species"])}</strong>{status}</div>
 <div class="chips">{chips(d["types"] or "")}<span class="lv">Lv {d["level"]}</span>{'<span class="b party">Party</span>' if d["box"] == "Party" else ''}</div>
 <ul class="mv">{mv}</ul>{('<div class="mnote">Out: ' + E(', '.join(gone)) + '</div>') if gone and not done else ''}{extra}
@@ -284,8 +294,12 @@ up_same = sorted(set(up_same))
 PHYS_NAT, SPEC_NAT = {'Adamant', 'Jolly', 'Brave'}, {'Modest', 'Timid', 'Quiet'}
 fix_cards = []
 for d in sorted((d for d in cur if d['box'] == 'Active' and d.get('score') is not None), key=lambda d: d['species']):
-    atk = [SX.MV.get(m) for m in (d.get('attacks') or [])]
-    phys = sum(1 for v in atk if v and v['Category'] == 'Physical') >= sum(1 for v in atk if v and v['Category'] == 'Special')
+    _own = [SX.MV.get(m) for m in d['moves']]
+    _p, _s = (sum(1 for v in _own if v and v['Category'] == c) for c in ('Physical', 'Special'))
+    if _p == _s:   # tie / no attacks: fall back to the engine's recommended attacks
+        atk = [SX.MV.get(m) for m in (d.get('attacks') or [])]
+        _p, _s = (sum(1 for v in atk if v and v['Category'] == c) for c in ('Physical', 'Special'))
+    phys = _p >= _s
     key, nats, want_nat = ('Atk', PHYS_NAT, 'Adamant or Jolly') if phys else ('SpA', SPEC_NAT, 'Modest or Timid')
     fx = []
     if (d.get('evs') or {}).get(key, 0) < 100:
@@ -297,6 +311,7 @@ for d in sorted((d for d in cur if d['box'] == 'Active' and d.get('score') is no
     if 'Protect' not in d['moves'] and d['species'] not in up_names:
         fx.append('Teach Protect (4th slot)')
     if fx:
+        PROFILE.setdefault((d['species'], d['n'], d['box']), []).extend(fx)
         fix_cards.append(f'<li class="mon up"><div class="mtop"><strong>{E(d["species"])}</strong><span class="legend">Active #{d["n"]}</span></div>'
                          f'<ul class="chg">{"".join("<li>" + E(x) + "</li>" for x in fx)}</ul></li>')
 promo_cards = []
@@ -384,7 +399,7 @@ for p in promo:
         promo_left.append(p)
         od = next((d for d in cur if d['box'] == 'Overflow' and d['species'] in (p['owned'], p['final'])), None)
         if od:
-            ACTIONS[od['n']] = f"Promote to the Active box{(' (evolve into ' + p['final'] + ')') if p['final'] != od['species'] else ''}. Build in section 02"
+            ACTIONS[od['n']] = f"Move to Active{(' (evolve into ' + p['final'] + ')') if p['final'] != od['species'] else ''}: {p['ability']}, {nat}, {p['evs_txt']}, {' / '.join(mv)}"
         promo_todo.append((f"#{p['n']} {p['owned']}{(' → evolve to ' + p['final']) if p['final'] != p['owned'] else ''} ({p['tier']} tier): move to the Active box. Build in section 02.", 'mid'))
         continue
     gaps = []
@@ -398,6 +413,7 @@ for p in promo:
         if m not in now['moves']:
             gaps.append(f"learn {full}")
     if gaps:
+        PROFILE.setdefault((now['species'], now['n'], now['box']), []).extend(g[0].upper() + g[1:] for g in gaps)
         promo_todo.append((f"{p['final']} (Active box): " + '; '.join(gaps) + '.', 'low'))
 if promo_todo:
     TODO.append(('New catches', promo_todo))
@@ -456,6 +472,34 @@ for group, items in TODO:
         lis += (f'<li class="p-{pri}"><input type="checkbox" id="{tid}"><label for="{tid}">{E(text)}</label>'
                 f'<span class="pri">{ {"high": "Priority", "mid": "Soon", "low": "Optional", "done": "Done"}[pri] }</span></li>')
     todo_html += f'<div class="tgroup"><h3>{E(group)}</h3><ul class="todo">{lis}</ul></div>'
+
+# ---------------------------------------------------------------- 3b) PROFILE FIXES: one card per Pokémon (replaces the grouped list)
+# Box moves (into/out of party, staging, cuts) live in the Boxes tab only (green = move in, red = move out).
+_BOXMOVE = ('Put ', 'After ', 'Move ')
+_cards = []   # (sort key, species, where, [changes])
+for role, name, *_ in TEAM:
+    pd = party.get(name)
+    ch = [c for c in TEAM_CHANGES.get(name, []) if not c.startswith(_BOXMOVE)]
+    if CF and name in CF_NAMES: ch = []
+    key = (pd['species'], pd['n'], pd['box']) if pd else None
+    if key and key in PROFILE: ch += PROFILE.pop(key)
+    if ch: _cards.append((0, name, f"Party #{pd['n']}" if pd else 'main six', ch))
+if CF:
+    for nm_, (dd, iss) in CF_ISSUES.items():
+        k2 = (dd['species'], dd['n'], dd['box'])
+        extra = PROFILE.pop(k2, []) if k2 in PROFILE else []
+        if iss or extra: _cards.append((-1, nm_, f"{CF['title']} lineup · {dd['box']} #{dd['n']}", iss + extra))
+for (sp, n, box), ch in sorted(PROFILE.items(), key=lambda kv: (kv[0][2] != 'Party', kv[0][0])):
+    if ch: _cards.append((1 if box == 'Party' else 2, sp, f'{box} #{n}', ch))
+_cards.sort(key=lambda c: (c[0], c[1]))
+todo_html = ''
+for _, name, where, ch in _cards:
+    lis = ''
+    for text in ch:
+        tid = 'todo-' + hashlib.md5((name + text).encode()).hexdigest()[:8]
+        lis += f'<li class="p-mid"><input type="checkbox" id="{tid}"><label for="{tid}">{E(text)}</label></li>'
+    todo_html += f'<div class="tgroup pcard"><h3>{E(name)} <span class="legend">{E(where)}</span></h3><ul class="todo">{lis}</ul></div>'
+N_PROFILE = len(_cards)
 
 # ---------------------------------------------------------------- 4) hidden metadata
 meta = {
@@ -639,7 +683,8 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 
 <section aria-labelledby="s3">
   <h2 id="s3">To do</h2>
-  <div class="todos">{todo_html or '<p>Nothing left: the export matches the plan.</p>'}</div>
+  <p class="legend">Profile fixes only: one card per Pokémon with everything it needs. Box moves are on the Boxes tab.</p>
+  <div class="todos pcards">{todo_html or '<p class="ok">Nothing to fix: every Party and Active Pokémon matches its build ✓</p>'}</div>
 
 </section>
 
@@ -662,9 +707,9 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 }})();
 </script>
 '''
-if not fix_cards:
+if True:
     page = re.sub(r'<section aria-labelledby="s1c">.*?</section>\s*', '', page, count=1, flags=re.S)
-if not up_cards and not promo_cards:
+if True:
     page = re.sub(r'<section aria-labelledby="s1b">.*?</section>\s*', '', page, count=1, flags=re.S)
 page = page.replace('</style>', SX.CSS.replace('{{', '{').replace('}}', '}') + '</style>', 1)
 open(OUT, 'w', encoding='utf-8').write(page)

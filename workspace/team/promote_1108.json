@@ -1,0 +1,40 @@
+[
+ {
+  "n": 101,
+  "owned": "Exeggcute",
+  "final": "Exeggutor",
+  "level": 36,
+  "tier": "A",
+  "score": 0.565,
+  "ability": "Chlorophyll",
+  "nature": "Modest (yours: Lax)",
+  "evs_txt": "252 HP / 252 SpA",
+  "moves": [
+   "Leaf Storm",
+   "Giga Drain",
+   "Extrasensory",
+   "Protect"
+  ],
+  "why": "Bench pick, not the six. Grass/Psychic special attacker: Chlorophyll doubles its Speed in Groudon's sun, and it hits Groudon hardest of anything you own (94%). Swap it in for that one fight.",
+  "level_note": "Use a Leaf Stone (Chapters 1\u20137), then level 36 \u2192 55."
+ },
+ {
+  "n": 93,
+  "owned": "Druddigon",
+  "final": "Druddigon",
+  "level": 46,
+  "tier": "A",
+  "score": 0.692,
+  "ability": "Sheer Force",
+  "nature": "Adamant",
+  "evs_txt": "252 HP / 252 Atk",
+  "moves": [
+   "Outrage",
+   "Superpower",
+   "Fire Fang",
+   "Protect"
+  ],
+  "why": "New catch, A tier on its own (0.692). Sheer Force Outrage / Superpower; Fire Fang for Steel types.",
+  "level_note": "Level 46 \u2192 55."
+ }
+]
