@@ -170,7 +170,7 @@ for role, name, types, ab, nat, evs, item, moves, changes in TEAM:
     rc = f'<td class="role role-{role.lower()}" rowspan="2">{role}</td>' if role != prev else ''
     prev = role
     team_rows.append(f'''<tr>{rc}<td><strong>{E(name)}</strong><div class="chips">{chips(types)}</div></td>
-<td>{E(ab)}<div class="legend">{E(nat)}</div></td><td>{ev_lines(evs)}</td><td>{E(item)}</td><td><ul class="mv">{mv}</ul></td>{'<td>' + ch + '</td>' if ANY_CHANGE else ''}</tr>''')
+<td>{E(ab)}<div class="legend">{E(nat)}</div></td><td>{ev_lines(evs)}</td><td>{E(item)}</td><td><ul class="mv">{mv}</ul></td><td>{ch}</td></tr>''')
 
 
 def readiness():
@@ -395,8 +395,12 @@ for sp, why in CUTS['maybe'].items():
         cut_todo.append((f"{sp} (#{hits[0]['n']}): your call. {why}", 'low'))
         ACTIONS[hits[0]['n']] = 'Your call: Overflow'
 # boss specialists stay in Active whatever their overall score
-SPECIALISTS = {'Ludicolo': 'Kyogre', 'Heliolisk': 'Kyogre', 'Electivire': 'Kyogre', 'Boltund': 'Kyogre', 'Togedemaru': 'Kyogre',
-               'Meowscarada': 'starter, Kyogre', 'Exeggutor': 'Groudon', 'Glaceon': 'Groudon', 'Camerupt': 'Groudon'}
+# (only while that fight is still ahead; once beaten they get the normal Active-bar verdict)
+_SPEC_ALL = {'Ludicolo': 'kyogre', 'Heliolisk': 'kyogre', 'Electivire': 'kyogre', 'Boltund': 'kyogre', 'Togedemaru': 'kyogre',
+             'Exeggutor': 'groudon', 'Glaceon': 'groudon', 'Camerupt': 'groudon'}
+_DONE = set(filter(None, os.environ.get('DONE', '').split(',')))
+SPECIALISTS = {k: v.title() for k, v in _SPEC_ALL.items() if v not in _DONE}
+SPECIALISTS['Meowscarada'] = 'your starter'
 # staging box: every mon gets a verdict (Active needs A tier on its own and a species not already in Party/Active)
 _have = {d['final'] for d in cur if d['box'] in ('Party', 'Active')}
 _to_act, _to_ovf = [], []
@@ -569,7 +573,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
   <h2 id="s1">Team</h2>
   {CF_HTML}
   <div class="panel tablewrap"><table class="team">
-    <thead><tr><th>Role</th><th>Pokémon</th><th>Ability / nature</th><th>EVs</th><th>Item</th><th>Moves</th>{'<th>To change</th>' if ANY_CHANGE else ''}</tr></thead>
+    <thead><tr><th>Role</th><th>Pokémon</th><th>Ability / nature</th><th>EVs</th><th>Item</th><th>Moves</th><th>Status</th></tr></thead>
     <tbody>{"".join(team_rows)}</tbody>
   </table></div>
   {RULES_HTML}

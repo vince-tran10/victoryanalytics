@@ -417,3 +417,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   CR_RUN default r26. New: Abomasnow #397 0.538 A → Active; Boldore (Gigalith needs trade) 0.527, Palossand-A ×2
   0.515/0.512, Nidorino→Nidoking 0.488, Cryogonal 0.296 → Overflow. SPECIALISTS dict in make_report5: boss-counter mons
   (Kyogre crew, Groudon crew, Meowscarada) always → Active. Six: #3 of 2744 under chapter rules, 0.3% off #1 → no change.
+- 8 Nov fixes: Team table ALWAYS shows a "Status" column (Done ✓ per member); hiding it when nothing was pending made
+  the ✓ disappear. SPECIALISTS now only covers fights NOT in DONE (_SPEC_ALL fight keys); Kyogre/Groudon crews get the
+  normal Active-bar verdict → Ludicolo + Abomasnow Active, rest of the Kyogre crew Overflow. Meowscarada always (starter).
+  Note: with 12 fights left, 20 Active mons score < 0.53 (scale shifted as fights dropped) — offered an Active clean-up /
+  rescaled bar, not done yet.
