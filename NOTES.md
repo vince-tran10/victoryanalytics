@@ -523,3 +523,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - Visual pass (desktop 1280 + phone 390, all tabs): role cell rowspan = role size (3 Mids broke the table); Team, Fights
   and C&A tables stack into labelled cards under 680px; tab bar wraps; header shows "Hard fights left 7"; fight cards
   say "Opener".
+- 8 Nov: SINGLES + ONE STRUCTURE (Vincent: most battles are singles; same leads/positions every fight). lead_check.py:
+  every member vs the exact opposing leads (game order; doubles = each trainer's first mon). Singles-only score: current
+  six best (1.102 vs deep#1 1.052, deep#2 1.091, old 1.063) — the overall ties came from doubles. Vikavolt is NOT a safe
+  lead (one-shot by Honchkrow @Eli, Camerupt @Amber). Musharna survives every opposing lead in all 7 fights → Lead;
+  Rhyperior survives all 4 doubles leads → 2nd lead (one-shot by Manaphy, singles, so it's in the back there).
+  Party order = plan: Musharna, Rhyperior, Vikavolt, Armarouge, Ludicolo, Annihilape.

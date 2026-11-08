@@ -43,6 +43,9 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Slush Rush/Ice Body → snow; Surge Surfer → Electric Terrain…). No anti-synergy (e.g. Glare or fast mons under Trick
   Room). Weather teams aren't realistic yet: no Drizzle/Drought/Sand Stream owned. Checked by checks.py.
 - Current identity: slow, hard-hitting core + speed control (Glare, Sticky Web) + Fake Out tempo; Annihilape = fast cleaner.
+- **One structure for singles AND doubles** (most battles are singles): party order = plan. Slot 1 leads singles, slots
+  1–2 lead doubles. Leads must survive the opposing leads' hits in every hard fight (checked vs exact game lead order).
+  Current order: Musharna, Rhyperior, Vikavolt, Armarouge, Ludicolo, Annihilape.
 - Then rank by battle score (singles count double). Fields are a tiebreak, not a team rule.
 - Meta / Smogon builds preferred (SV + National Dex data in `workspace/smogon`; doubles data for doubles roles).
 
