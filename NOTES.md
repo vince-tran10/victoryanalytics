@@ -462,3 +462,6 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   (Golisopod 44 → 63), one-shot by 12 boss mons (frail). → Active as a Swords Dance sweeper (SPECIALISTS, permanent),
   not the six. Build: Flash Fire, Adamant 252 Atk/252 Spe, Bitter Blade / Shadow Claw / Swords Dance / Protect,
   Focus Sash suggested (to get the SD up). Poltergeist not learnable.
+- 8 Nov: Vincent: EV/nature advice must be ONE answer, never "X or Y". ev_pick(): attacking stat + Spe if base Speed
+  ≥ 85 (same threshold as engine.spread_for) else HP. nat_pick(): Speed spread → Jolly/Timid, HP spread → Adamant/Modest.
+  (Ceruledge therefore Jolly 252 Atk / 252 Spe.)

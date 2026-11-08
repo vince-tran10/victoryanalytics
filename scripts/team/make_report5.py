@@ -245,6 +245,24 @@ if CF:
                f'<ol class="plain">{"".join("<li>" + E(x) + "</li>" for x in CF["plan"])}</ol></div>')
 
 
+_BASE_SPE = {}
+for _sid, _sp in SX.D.sp.items():
+    for _idx in [k for k in _sp if k.isdigit()]:
+        try:
+            _f = SX.D.form(_sid, _idx)
+            _nm = SX.D.nm(_sid) + ('' if _idx == '0' else f" ({_f.get('FormName')})")
+            _BASE_SPE.setdefault(_nm, _f['BaseStats'][5] if len(_f.get('BaseStats') or []) > 5 else 0)
+        except Exception:
+            pass
+def nat_pick(d, phys):
+    """One nature: speed-invested builds take the Speed nature (Jolly/Timid), bulky ones the power nature (Adamant/Modest)."""
+    fast = ev_pick(d, 'Atk').endswith('Spe')
+    return ('Jolly' if fast else 'Adamant') if phys else ('Timid' if fast else 'Modest')
+def ev_pick(d, key):
+    """The two EV stats: the attacking stat + Speed if it's naturally fast (base >= 85, same as the engine), else HP."""
+    spe = _BASE_SPE.get(d.get('name') or '', _BASE_SPE.get(d.get('final') or d['species'], 0))
+    return f"252 {key} / 252 {'Spe' if spe >= 85 else 'HP'}"
+
 KEEP_STATUS = {'Swords Dance', 'Dragon Dance', 'Nasty Plot', 'Calm Mind', 'Bulk Up', 'Quiver Dance', 'Shell Smash', 'Glare', 'Spore',
                'Sleep Powder', 'Sing', 'Belly Drum', 'Yawn', 'Fake Out', 'Leech Seed', 'Trick Room', 'Tailwind', 'Recover', 'Roost',
                'Slack Off', 'Rage Powder', 'Follow Me', 'Agility', 'Coil', 'Work Up', 'Hone Claws'}
@@ -328,10 +346,11 @@ for d in sorted((d for d in cur if d['box'] == 'Active' and d.get('score') is no
         atk = [SX.MV.get(m) for m in (d.get('attacks') or [])]
         _p, _s = (sum(1 for v in atk if v and v['Category'] == c) for c in ('Physical', 'Special'))
     phys = _p >= _s
-    key, nats, want_nat = ('Atk', PHYS_NAT, 'Adamant or Jolly') if phys else ('SpA', SPEC_NAT, 'Modest or Timid')
+    key, nats = ('Atk', PHYS_NAT) if phys else ('SpA', SPEC_NAT)
+    want_nat = nat_pick(d, phys)
     fx = []
     if (d.get('evs') or {}).get(key, 0) < 100:
-        fx.append(f"EVs: 252 {key} + 252 HP or Spe (now {' / '.join(f'{v} {k}' for k, v in (d.get('evs') or {}).items() if v >= 100) or 'none'})")
+        fx.append(f"EVs: {ev_pick(d, key)} (now {' / '.join(f'{v} {k}' for k, v in (d.get('evs') or {}).items() if v >= 100) or 'none'})")
     if d.get('nature') not in nats:
         fx.append(f"Nature: {d.get('nature')} → {want_nat} (mint)")
     if d.get('capsule') and d['capsule'][0].replace(' ', '').lower() != (d.get('ability') or '').replace(' ', '').lower():
@@ -508,10 +527,11 @@ for d in cur:
     if ok and d.get('attacks'):
         _atk = list(d['attacks'])[:3] + ['Protect']
         _ph = sum(1 for m in _atk if (SX.MV.get(m) or {}).get('Category') == 'Physical') >= sum(1 for m in _atk if (SX.MV.get(m) or {}).get('Category') == 'Special')
-        _key, _nats, _nat = ('Atk', {'Adamant', 'Jolly', 'Brave'}, 'Adamant') if _ph else ('SpA', {'Modest', 'Timid', 'Quiet'}, 'Modest')
+        _key, _nats = ('Atk', {'Adamant', 'Jolly', 'Brave'}) if _ph else ('SpA', {'Modest', 'Timid', 'Quiet'})
+        _nat = nat_pick(d, _ph)
         _iss = []
         if d['final'] != d['species']: _iss.append(f"Evolve into {d['final']}" + (f" ({d['evolve']})" if d.get('evolve') else ''))
-        if (d.get('evs') or {}).get(_key, 0) < 100: _iss.append(f"EVs: 252 {_key} + 252 HP or Spe (now {' / '.join(f'{v} {k}' for k, v in (d.get('evs') or {}).items() if v >= 100) or 'none'})")
+        if (d.get('evs') or {}).get(_key, 0) < 100: _iss.append(f"EVs: {ev_pick(d, _key)} (now {' / '.join(f'{v} {k}' for k, v in (d.get('evs') or {}).items() if v >= 100) or 'none'})")
         if d.get('nature') not in _nats: _iss.append(f"Nature: {d.get('nature')} → {_nat} (mint)")
         if d.get('capsule') and d['capsule'][0].replace(' ', '').lower() != (d.get('ability') or '').replace(' ', '').lower():
             _iss.append(f"Ability: {d.get('ability')} → {d['capsule'][0]} (Ability Capsule)")
