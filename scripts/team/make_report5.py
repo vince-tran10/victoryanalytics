@@ -493,7 +493,9 @@ _SPEC_ALL = {'Ludicolo': 'kyogre', 'Heliolisk': 'kyogre', 'Electivire': 'kyogre'
              'Exeggutor': 'groudon', 'Glaceon': 'groudon', 'Camerupt': 'groudon'}
 _DONE = set(filter(None, os.environ.get('DONE', '').split(',')))
 SPECIALISTS = {k: v.title() for k, v in _SPEC_ALL.items() if v not in _DONE}
+SPECIALISTS = {k: 'boss specialist: ' + v for k, v in SPECIALISTS.items()}
 SPECIALISTS['Meowscarada'] = 'your starter'
+SPECIALISTS['Ceruledge'] = 'Swords Dance sweeper: +2 one-shots 50 of 69 boss mons'
 # staging box: every mon gets a verdict (Active needs A tier on its own and a species not already in Party/Active)
 _have = {d['final'] for d in cur if d['box'] in ('Party', 'Active')}
 _to_act, _to_ovf = [], []
@@ -502,7 +504,7 @@ for d in cur:
         continue
     spec = d['species'] in SPECIALISTS
     ok = spec or (d['score'] is not None and d['score'] >= 0.53 and d['final'] not in _have)
-    ACTIONS[d['n']] = ('Move to Active (boss specialist: ' + SPECIALISTS[d['species']] + ')') if spec else ('Move to Active' if ok else 'Move to Overflow')
+    ACTIONS[d['n']] = ('Move to Active (' + SPECIALISTS[d['species']] + ')') if spec else ('Move to Active' if ok else 'Move to Overflow')
     if ok and d.get('attacks'):
         _atk = list(d['attacks'])[:3] + ['Protect']
         _ph = sum(1 for m in _atk if (SX.MV.get(m) or {}).get('Category') == 'Physical') >= sum(1 for m in _atk if (SX.MV.get(m) or {}).get('Category') == 'Special')

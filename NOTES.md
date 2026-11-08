@@ -458,3 +458,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - GASTRODON (doubles, Vincent asked straight): Smogon Doubles OU usage → Earth Power / Muddy Water / Yawn / Protect,
   Modest 252 HP/252 SpA, Storm Drain, Sitrus. Ice Beam (67% usage) not learnable yet. Recover only 8% → it goes.
   Stored in upgrades_relearn.json (overrides earlier "drop Muddy Water" advice, which was wrong for doubles).
+- Ceruledge (#414, 09:01 export): engine score 0.513 ignores Swords Dance. Checked: plain 22/69 one-shots, +2 SD 50/69
+  (Golisopod 44 → 63), one-shot by 12 boss mons (frail). → Active as a Swords Dance sweeper (SPECIALISTS, permanent),
+  not the six. Build: Flash Fire, Adamant 252 Atk/252 Spe, Bitter Blade / Shadow Claw / Swords Dance / Protect,
+  Focus Sash suggested (to get the SD up). Poltergeist not learnable.
