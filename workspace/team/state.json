@@ -1,0 +1,140 @@
+{
+ "_doc": "Read/written by scripts/team/update.py. Edit by hand only to change the six or its moves.",
+ "export": "party_and_boxes_2026-11-08_0913.txt",
+ "export_label": "8 Nov 09:13",
+ "active_start": 414,
+ "base_export": "party_and_boxes_2026-11-05.txt",
+ "roster": 16,
+ "run": 30,
+ "final": 34,
+ "done": [
+  "aelita",
+  "narcissa1",
+  "narcissa2",
+  "narcissa",
+  "texen",
+  "guard1",
+  "guard2",
+  "tommen",
+  "groudon",
+  "crawli",
+  "neved",
+  "kyogre"
+ ],
+ "fight": null,
+ "team": [
+  "Annihilape",
+  "Gholdengo",
+  "Clawitzer",
+  "Musharna (Aevian Form)",
+  "Golisopod (Aevian Form)",
+  "Glalie (Aevian Form)"
+ ],
+ "moves": {
+  "Golisopod (Aevian Form)": [
+   "Bone Rush",
+   "Pin Missile",
+   "Swords Dance",
+   "Protect"
+  ],
+  "Annihilape": [
+   "Close Combat",
+   "Rage Fist",
+   "Sucker Punch",
+   "Protect"
+  ],
+  "Gholdengo": [
+   "Make It Rain",
+   "Shadow Ball",
+   "Power Gem",
+   "Protect"
+  ],
+  "Glalie (Aevian Form)": [
+   "Grassy Glide",
+   "Wood Hammer",
+   "Rock Slide",
+   "Protect"
+  ],
+  "Clawitzer": [
+   "Water Pulse",
+   "Aura Sphere",
+   "Dark Pulse",
+   "Protect"
+  ],
+  "Musharna (Aevian Form)": [
+   "Play Rough",
+   "Throat Chop",
+   "Glare",
+   "Protect"
+  ]
+ },
+ "promote": "team/promote_1108.json",
+ "overrides": {
+  "ACTIVE_AT": [
+   "453:404",
+   "459:407",
+   "470@403=Beartic:418"
+  ],
+  "STAGING_AT": [
+   "453:393-403",
+   "459:403-406",
+   "470@403=Beartic:403-417"
+  ]
+ },
+ "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
+ "team_check": {
+  "rank": 12,
+  "of": 6964,
+  "gap": 0.83,
+  "top": [
+   {
+    "score": 1.1658,
+    "pct": 100.8,
+    "team": [
+     "Golisopod-A",
+     "Glalie-A",
+     "Musharna-A",
+     "Armarouge",
+     "Gholdengo",
+     "Ludicolo"
+    ],
+    "misses": [
+     "Lickilicky (eli)",
+     "Gyarados (geara)"
+    ]
+   },
+   {
+    "score": 1.1634,
+    "pct": 100.6,
+    "team": [
+     "Annihilape",
+     "Rhyperior",
+     "Musharna-A",
+     "Armarouge",
+     "Whiscash",
+     "Ludicolo"
+    ],
+    "misses": [
+     "Clefable (geara)"
+    ]
+   },
+   {
+    "score": 1.1625,
+    "pct": 100.5,
+    "team": [
+     "Annihilape",
+     "Rhyperior",
+     "Chandelure",
+     "Musharna-A",
+     "Whiscash",
+     "Ludicolo"
+    ],
+    "misses": []
+   }
+  ],
+  "current_misses": [
+   "Gyarados",
+   "Escavalier"
+  ]
+ }
+}

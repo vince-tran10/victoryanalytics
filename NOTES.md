@@ -1,3 +1,6 @@
+> **Standing rules now live in `CLAUDE.md`** (loaded automatically). This file is the history log. Per export run
+> `python3 scripts/team/update.py <export>` (or `/export <export>`); state is in `workspace/team/state.json`.
+
 # Hand-off notes: Pokémon Rejuvenation Chapter 8 team analysis
 
 Read this first in a new session. It's the current state as of **2026-11-05, after the 10:14 export (414 mons)**. The live guide is the report page
@@ -471,3 +474,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   roster16, r30_*, f34_*, CR_RUN r30. Team (36 pool): current #12, 0.8% behind #1 (Golisopod, Glalie, Musharna,
   Armarouge, Gholdengo, Ludicolo). Within model noise → no change, but Armarouge + Ludicolo keep showing up; revisit
   if the gap grows. Next: Eli & Sharon, Geara & Zetta, Giratina (boss), Holly & Rorim, Manaphy (boss), ??? Factory, Amber.
+
+- 8 Nov: AUTOMATION. CLAUDE.md = standing rules (auto-loaded). scripts/team/update.py = one command per export
+  (copy → box layout → roster → 4 engine runs → new catches → finalize ×3 → chapter rules → team_check.py (36 pool)
+  → make_report5 / box_audit / highlight / tabs → summary), state in workspace/team/state.json, /export slash
+  command in .claude/commands/export.md. Verified: replaying the 09:13 export gives a byte-identical page text
+  (75 s). current_box overrides keyed "<size>@<n>=<Species>".

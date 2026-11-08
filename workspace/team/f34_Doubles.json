@@ -4650,7 +4650,7 @@
    "types": "Fighting/Ice",
    "bst": 478,
    "attacks": [
-    "Superpower",
+    "Close Combat",
     "Crabhammer",
     "Ice Hammer"
    ],
@@ -12622,7 +12622,7 @@
    "attacks": [
     "Iron Head",
     "Double-Edge",
-    "Night Slash"
+    "Shadow Claw"
    ],
    "solo": {
     "eli": 0.564,
@@ -17838,7 +17838,7 @@
    "bst": 440,
    "attacks": [
     "Sucker Punch",
-    "Secret Power",
+    "Facade",
     "Rock Tomb"
    ],
    "solo": {
@@ -18116,7 +18116,7 @@
    "attacks": [
     "Iron Head",
     "Double-Edge",
-    "Night Slash"
+    "Shadow Claw"
    ],
    "solo": {
     "eli": 0.448,
@@ -18389,7 +18389,7 @@
    "bst": 480,
    "attacks": [
     "Jump Kick",
-    "Headbutt",
+    "Facade",
     "Assurance"
    ],
    "solo": {
@@ -18424,7 +18424,7 @@
    "bst": 480,
    "attacks": [
     "Jump Kick",
-    "Headbutt",
+    "Facade",
     "Assurance"
    ],
    "solo": {
@@ -18459,7 +18459,7 @@
    "bst": 480,
    "attacks": [
     "Jump Kick",
-    "Headbutt",
+    "Facade",
     "Assurance"
    ],
    "solo": {
@@ -19555,7 +19555,7 @@
    "bst": 405,
    "attacks": [
     "Spark",
-    "Bite",
+    "Thief",
     "Trailblaze"
    ],
    "solo": {
@@ -19590,7 +19590,7 @@
    "bst": 405,
    "attacks": [
     "Spark",
-    "Bite",
+    "Thief",
     "Trailblaze"
    ],
    "solo": {
@@ -19832,7 +19832,7 @@
    "bst": 480,
    "attacks": [
     "Deluge",
-    "Secret Power",
+    "Facade",
     "Surf"
    ],
    "solo": {
@@ -20037,7 +20037,7 @@
    "types": "Normal/Flying",
    "bst": 377,
    "attacks": [
-    "Pluck",
+    "Aerial Ace",
     "Leaf Blade",
     "Knock Off"
    ],
@@ -20177,7 +20177,7 @@
    "types": "Normal/Flying",
    "bst": 377,
    "attacks": [
-    "Pluck",
+    "Aerial Ace",
     "Leaf Blade",
     "Knock Off"
    ],
@@ -20350,7 +20350,7 @@
    "types": "Normal/Flying",
    "bst": 488,
    "attacks": [
-    "Secret Power",
+    "Facade",
     "Night Slash"
    ],
    "solo": {
@@ -20898,7 +20898,7 @@
    "types": "Normal",
    "bst": 420,
    "attacks": [
-    "Headbutt",
+    "Facade",
     "Fire Blast",
     "Thief"
    ],
@@ -21002,7 +21002,7 @@
    "bst": 440,
    "attacks": [
     "Tail Slap",
-    "Night Slash",
+    "Shadow Claw",
     "Play Rough"
    ],
    "solo": {

@@ -7161,7 +7161,7 @@
    "types": "Dark",
    "bst": 505,
    "attacks": [
-    "Jaw Lock",
+    "Crunch",
     "Play Rough"
    ],
    "solo": {
@@ -8225,7 +8225,7 @@
    "types": "Dark",
    "bst": 505,
    "attacks": [
-    "Jaw Lock",
+    "Crunch",
     "Play Rough"
    ],
    "solo": {
@@ -9187,7 +9187,7 @@
    "attacks": [
     "Liquidation",
     "Rock Tomb",
-    "Jaw Lock"
+    "Crunch"
    ],
    "solo": {
     "eli": 0.565,
@@ -17948,7 +17948,7 @@
    "bst": 440,
    "attacks": [
     "Sucker Punch",
-    "Secret Power",
+    "Dizzy Punch",
     "Rock Tomb"
    ],
    "solo": {
@@ -18362,7 +18362,7 @@
    "attacks": [
     "Jump Kick",
     "Brutal Swing",
-    "Secret Power"
+    "Dizzy Punch"
    ],
    "solo": {
     "eli": 0.264,
@@ -18397,7 +18397,7 @@
    "attacks": [
     "Jump Kick",
     "Brutal Swing",
-    "Secret Power"
+    "Dizzy Punch"
    ],
    "solo": {
     "eli": 0.264,
@@ -18432,7 +18432,7 @@
    "attacks": [
     "Jump Kick",
     "Brutal Swing",
-    "Secret Power"
+    "Dizzy Punch"
    ],
    "solo": {
     "eli": 0.264,
@@ -19705,7 +19705,7 @@
    "types": "Normal",
    "bst": 420,
    "attacks": [
-    "Secret Power",
+    "Headbutt",
     "Fire Blast",
     "Thief"
    ],
@@ -20501,7 +20501,7 @@
    "bst": 405,
    "attacks": [
     "Spark",
-    "Thief",
+    "Bite",
     "Trailblaze"
    ],
    "solo": {
@@ -20536,7 +20536,7 @@
    "bst": 405,
    "attacks": [
     "Spark",
-    "Thief",
+    "Bite",
     "Trailblaze"
    ],
    "solo": {

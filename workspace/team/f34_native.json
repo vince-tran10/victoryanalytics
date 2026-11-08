@@ -6332,7 +6332,7 @@
    "bst": 485,
    "attacks": [
     "Dragon Pulse",
-    "Apple Acid"
+    "Energy Ball"
    ],
    "solo": {
     "eli": 0.512,
@@ -6504,7 +6504,7 @@
    "types": "Dark",
    "bst": 505,
    "attacks": [
-    "Crunch",
+    "Jaw Lock",
     "Play Rough"
    ],
    "solo": {
@@ -8464,7 +8464,7 @@
    "types": "Dark",
    "bst": 505,
    "attacks": [
-    "Crunch",
+    "Jaw Lock",
     "Play Rough"
    ],
    "solo": {
@@ -9490,7 +9490,7 @@
    "attacks": [
     "Liquidation",
     "Rock Tomb",
-    "Crunch"
+    "Jaw Lock"
    ],
    "solo": {
     "eli": 0.608,
@@ -17984,7 +17984,7 @@
    "bst": 440,
    "attacks": [
     "Sucker Punch",
-    "Dizzy Punch",
+    "Secret Power",
     "Rock Tomb"
    ],
    "solo": {
@@ -18330,7 +18330,7 @@
    "bst": 472,
    "attacks": [
     "Sucker Punch",
-    "Headbutt"
+    "Retaliate"
    ],
    "solo": {
     "eli": 0.37,
@@ -18399,7 +18399,7 @@
    "attacks": [
     "Jump Kick",
     "Brutal Swing",
-    "Dizzy Punch"
+    "Secret Power"
    ],
    "solo": {
     "eli": 0.314,
@@ -18434,7 +18434,7 @@
    "attacks": [
     "Jump Kick",
     "Brutal Swing",
-    "Dizzy Punch"
+    "Secret Power"
    ],
    "solo": {
     "eli": 0.314,
@@ -18469,7 +18469,7 @@
    "attacks": [
     "Jump Kick",
     "Brutal Swing",
-    "Dizzy Punch"
+    "Secret Power"
    ],
    "solo": {
     "eli": 0.314,
@@ -20635,7 +20635,7 @@
    "types": "Normal",
    "bst": 420,
    "attacks": [
-    "Headbutt",
+    "Secret Power",
     "Fire Blast",
     "Thief"
    ],
