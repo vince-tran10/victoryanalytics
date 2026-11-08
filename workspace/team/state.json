@@ -4,9 +4,9 @@
  "export_label": "8 Nov 09:13",
  "active_start": 414,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 25,
- "run": 39,
- "final": 43,
+ "roster": 26,
+ "run": 40,
+ "final": 44,
  "done": [
   "aelita",
   "narcissa1",
@@ -23,12 +23,12 @@
  ],
  "fight": null,
  "team": [
-  "Rhyperior",
-  "Musharna (Aevian Form)",
-  "Armarouge",
-  "Annihilape",
   "Vikavolt",
-  "Ludicolo"
+  "Ludicolo",
+  "Rhyperior",
+  "Armarouge",
+  "Musharna (Aevian Form)",
+  "Annihilape"
  ],
  "moves": {
   "Annihilape": [

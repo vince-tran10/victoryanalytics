@@ -52,27 +52,28 @@ def disp(n):
 
 # ---------------------------------------------------------------- 1) team
 # (role, name, types, ability, nature, evs, item, moves[(move, is_new)], change notes)
-TEAM = [   # best six for the 7 remaining hard fights on exact game data (8 Nov): #1 of the chapter-rules search
-    ('Lead', 'Rhyperior', 'Ground/Rock', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone',
+TEAM = [   # best six for the 7 remaining hard fights on exact game data (8 Nov); roles = game plan (identity), not matchups
+    ('Lead', 'Vikavolt', 'Bug/Electric', 'Levitate', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Magnet',
+     [('Thunderbolt', 0), ('Bug Buzz', 0), ('Sticky Web', 0), ('Protect', 0)], []),
+    ('Lead', 'Ludicolo', 'Water/Grass', 'Own Tempo', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Mystic Water',
+     [('Fake Out', 0), ('Energy Ball', 0), ('Hydro Pump', 0), ('Protect', 0)], []),
+    ('Mid', 'Rhyperior', 'Ground/Rock', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone',
      [('Stone Edge', 0), ('Headlong Rush', 0), ('Fire Fang', 0), ('Protect', 0)], []),
-    ('Lead', 'Musharna-Aevian', 'Dark/Fairy', 'Tough Claws', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry',
-     [('Play Rough', 0), ('Throat Chop', 0), ('Glare', 0), ('Protect', 0)], []),
     ('Mid', 'Armarouge', 'Fire/Psychic', 'Flash Fire', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Sitrus Berry',
      [('Flamethrower', 0), ('Psyshock', 0), ('Calm Mind', 0), ('Protect', 0)], []),
-    ('Mid', 'Annihilape', 'Fighting/Ghost', 'Defiant', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Black Belt',
+    ('Mid', 'Musharna-Aevian', 'Dark/Fairy', 'Tough Claws', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry',
+     [('Play Rough', 0), ('Throat Chop', 0), ('Glare', 0), ('Protect', 0)], []),
+    ('Closer', 'Annihilape', 'Fighting/Ghost', 'Defiant', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Black Belt',
      [('Close Combat', 0), ('Rage Fist', 0), ('Sucker Punch', 0), ('Protect', 0)], []),
-    ('Closer', 'Vikavolt', 'Bug/Electric', 'Levitate', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Magnet',
-     [('Thunderbolt', 0), ('Bug Buzz', 0), ('Sticky Web', 0), ('Protect', 0)], []),
-    ('Closer', 'Ludicolo', 'Water/Grass', 'Own Tempo', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Mystic Water',
-     [('Fake Out', 0), ('Energy Ball', 0), ('Hydro Pump', 0), ('Protect', 0)], []),
 ]
-IDENTITY = ('<b>Identity</b> Slow, hard-hitting core (Rhyperior, Vikavolt, Armarouge) backed by speed control: '
-            'Musharna\'s Glare, Vikavolt\'s Sticky Web, Ludicolo\'s Fake Out. Annihilape is the fast cleaner.')
-PLAY = [IDENTITY, '<b>Lead</b> Rhyperior + Musharna: Glare the fastest threat, Rhyperior hits (Stone Edge 1.5x on Mountain / Volcanic Top)',
-        '<b>Doubles</b> Ludicolo Fake Out buys a free turn for a partner\'s big hit or Armarouge\'s Calm Mind',
-        '<b>Armarouge</b> Calm Mind when the foe can\'t hurt it much, then Flamethrower / Psyshock',
-        '<b>Annihilape</b> comes in on hits: every hit taken powers Rage Fist',
-        '<b>Speed Boost users</b> Protect turn 1, so attack turn 2. <b>Singles:</b> Vikavolt Sticky Web first, then Thunderbolt']
+IDENTITY = ('<b>Identity</b> Slow, hard-hitting core (Rhyperior, Armarouge) backed by speed control: '
+            'Vikavolt\'s Sticky Web, Musharna\'s Glare, Ludicolo\'s Fake Out. Annihilape is the fast cleaner.')
+PLAY = [IDENTITY,
+        '<b>Lead (turns 1–2)</b> Vikavolt sets Sticky Web; in doubles Ludicolo Fake Outs the biggest threat so Web goes up safely',
+        '<b>Mid</b> Rhyperior and Armarouge do the damage on slowed foes; Armarouge Calm Minds when it can\'t be hurt much; '
+        'Musharna Glares anything still faster',
+        '<b>Close</b> Annihilape: fastest member, Sucker Punch priority, Rage Fist strongest late after taking hits',
+        '<b>Singles</b> lead Vikavolt (Web, then Thunderbolt). <b>Speed Boost users</b> Protect turn 1, attack turn 2']
 JOB = {'Annihilape': 'Fastest hitter.',
        'Ludicolo': 'Fake Out lead: a free turn for Annihilape. Grass + Water hits the Water/Ground mons.',
        'Armarouge': 'Fire/Psychic special attacker; Calm Mind turns it into a sweeper.',

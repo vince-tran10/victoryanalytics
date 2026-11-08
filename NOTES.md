@@ -513,3 +513,5 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Warning (Abomasnow, Vanilluxe, Ninetales-A), Trick Room only Slowking-G / Porygon-Z / Oranguru, lots of speed control.
   Current identity: slow hard hitters + speed control (Glare, Sticky Web) + Fake Out tempo; Annihilape fast cleaner.
   Dead piece fixed: Ludicolo Swift Swim (no rain) → Own Tempo. checks.py: 3 synergy checks (state.json "abilities").
+- 8 Nov: roles now = game plan, not matchup: Lead Vikavolt (Sticky Web) + Ludicolo (Fake Out); Mid Rhyperior, Armarouge,
+  Musharna (Glare); Closer Annihilape. Fights tab column renamed "Best opener (matchup)" (per-fight engine pick).

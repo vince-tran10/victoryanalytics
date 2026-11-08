@@ -206,7 +206,7 @@ def hard_fights(plans, team, base, short=None, disp=lambda x: x):
                     f'<td>{E(" + ".join(disp(x) for x in p["leads"]))}</td><td class="st {cls}">{E(st)}</td></tr>')
     table = ('<div class="panel pad"><h3>Hard fights left <span class="legend">bosses and real story fights, no grunts · story order</span></h3>'
              '<div class="tw"><table class="hft"><thead><tr><th>#</th><th>Fight</th><th>Format</th><th>Boss</th><th>Field</th>'
-             '<th>Mons</th><th>Why hard</th><th>Lead</th><th>Your six</th></tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div></div>')
+             '<th>Mons</th><th>Why hard</th><th>Best opener (matchup)</th><th>Your six</th></tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div></div>')
     return table + next_fights(hard, team, base, len(hard), short, disp, keep_order=True)
 
 
