@@ -33,8 +33,9 @@ def party_size(N):
 
 def staging_range(N):
     """(first, last) export numbers of the staging box between Overflow and Active, or None."""
-    if os.environ.get('STAGING_AT') and os.environ['STAGING_AT'].split(':')[0] == str(len(N)):
-        a, b = os.environ['STAGING_AT'].split(':')[1].split('-'); return (int(a), int(b))
+    for _e in filter(None, os.environ.get('STAGING_AT', '').split(',')):
+        if _e.split(':')[0] == str(len(N)):
+            a, b = _e.split(':')[1].split('-'); return (int(a), int(b))
     P = party_size(N)
     resets = [i for i in range(P + 1, len(N)) if N[i]['species'].lower() < N[i - 1]['species'].lower()]
     zend = next((i for i in resets if N[i - 1]['species'][:1].upper() >= 'W'), None)
@@ -50,7 +51,8 @@ def box_of(N):
 
 
 def active_start(N):
-    if os.environ.get('ACTIVE_AT') and os.environ['ACTIVE_AT'].split(':')[0] == str(len(N)): return int(os.environ['ACTIVE_AT'].split(':')[1])
+    for _e in filter(None, os.environ.get('ACTIVE_AT', '').split(',')):
+        if _e.split(':')[0] == str(len(N)): return int(_e.split(':')[1])
     """Active box = the last A–Z run that starts with an 'A'/'B' name after Overflow (a new-catch box may sit between)."""
     P = party_size(N)
     resets = [i for i in range(P + 1, len(N)) if N[i]['species'].lower() < N[i - 1]['species'].lower()]

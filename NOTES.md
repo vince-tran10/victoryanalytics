@@ -449,3 +449,12 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   next to Psychic); engine-recommended attacks = 3; KEEP status (setup, sleep, Yawn, Leech Seed, Trick Room…) = 2;
   recovery on Regenerator mons = 1.5 (Slowking-Galar drops Slack Off). Vincent's calls: Gastrodon keeps Yawn (drop
   Muddy Water), Meowstic keeps Fake Out (drop Psyshock), Slowking-G gets Protect (drop Slack Off), Tangrowth keeps Leech Seed (drop Knock Off).
+- 8 Nov 09:01 export (470): staging #403–417 (4 old + 11 new), Active from #418. Env overrides now take lists:
+  ACTIVE_AT=459:407,470:418 STAGING_AT=459:403-406,470:403-417. roster15, r29_*, f33_*, CR_RUN r29.
+  New → Active: Armarouge 0.596, Drampa 0.571, Turtonator 0.566 (staging→Active mons get a To do build card via
+  plan_moves(): recommended attacks + Protect, free slot keeps the best existing move by move_value — keeps Calm Mind /
+  Shell Smash). Rest → Overflow (Ceruledge 0.513, Bellibolt/Tadbulb 0.463, Starmie 0.429, Centiskorch 0.407, Heatmor,
+  Absol, Barraskewda). Team search widened to 36-mon pool (seko36.py): current six #6, 0.3% off #1 → no change.
+- GASTRODON (doubles, Vincent asked straight): Smogon Doubles OU usage → Earth Power / Muddy Water / Yawn / Protect,
+  Modest 252 HP/252 SpA, Storm Drain, Sitrus. Ice Beam (67% usage) not learnable yet. Recover only 8% → it goes.
+  Stored in upgrades_relearn.json (overrides earlier "drop Muddy Water" advice, which was wrong for doubles).

@@ -244,6 +244,32 @@ if CF:
                f'<div class="tablewrap"><table class="cft"><tbody>{"".join(rows_)}</tbody></table></div>'
                f'<ol class="plain">{"".join("<li>" + E(x) + "</li>" for x in CF["plan"])}</ol></div>')
 
+
+KEEP_STATUS = {'Swords Dance', 'Dragon Dance', 'Nasty Plot', 'Calm Mind', 'Bulk Up', 'Quiver Dance', 'Shell Smash', 'Glare', 'Spore',
+               'Sleep Powder', 'Sing', 'Belly Drum', 'Yawn', 'Fake Out', 'Leech Seed', 'Trick Room', 'Tailwind', 'Recover', 'Roost',
+               'Slack Off', 'Rage Powder', 'Follow Me', 'Agility', 'Coil', 'Work Up', 'Hone Claws'}
+UTILITY_ATK = {'Fake Out', 'U-turn', 'Volt Switch', 'Flip Turn', 'Rapid Spin', 'Icy Wind', 'Electroweb', 'Snarl'}
+RECOVERY = {'Slack Off', 'Recover', 'Roost', 'Synthesis', 'Moonlight', 'Morning Sun', 'Soft-Boiled', 'Milk Drink', 'Rest'}
+def move_value(m, moves, phys, rec, ability):
+    v = SX.MV.get(m) or {}
+    if m in UTILITY_ATK: return 2
+    if v.get('Category') in ('Physical', 'Special') and v['Category'] != ('Physical' if phys else 'Special'): return 0.5
+    same = [SX.MV.get(o) for o in moves if o != m and SX.MV.get(o) and SX.MV[o].get('Type') == v.get('Type') and SX.MV[o]['Category'] != 'Status']
+    if v.get('Category') != 'Status' and any(int(o.get('Strength') or 0) > int(v.get('Strength') or 0) for o in same): return 1.0
+    if m in rec: return 3
+    if v.get('Category') == 'Status':
+        if m in RECOVERY and (ability or '').replace(' ', '').upper() == 'REGENERATOR': return 1.5
+        return 2 if m in KEEP_STATUS else 0
+    return 1 + int(v.get('Strength') or 0) / 1000
+def plan_moves(have, target, phys, ability):
+    """target attacks (+Protect) -> list of 'Teach X (replaces Y)' lines; free slots keep the best existing moves."""
+    keep = list(dict.fromkeys(list(target) + ['Protect']))[:4]
+    rest = sorted((m for m in have if m not in keep), key=lambda m: -move_value(m, have, phys, set(target), ability))
+    while len(keep) < 4 and rest:
+        keep.append(rest.pop(0))
+    drop = sorted((m for m in have if m not in keep), key=lambda m: move_value(m, have, phys, set(target), ability))
+    return [f'Teach {m}' + (f' (replaces {drop.pop(0)})' if drop else '') for m in keep if m not in have]
+
 # ---------------------------------------------------------------- 1b) relearner upgrades
 UP = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'upgrades_relearn.json')))
 ORDER = ['Annihilape', 'Gholdengo', 'Clawitzer', 'Musharna-Aevian', 'Golisopod-Aevian', 'Glalie-Aevian']
@@ -477,6 +503,19 @@ for d in cur:
     spec = d['species'] in SPECIALISTS
     ok = spec or (d['score'] is not None and d['score'] >= 0.53 and d['final'] not in _have)
     ACTIONS[d['n']] = ('Move to Active (boss specialist: ' + SPECIALISTS[d['species']] + ')') if spec else ('Move to Active' if ok else 'Move to Overflow')
+    if ok and d.get('attacks'):
+        _atk = list(d['attacks'])[:3] + ['Protect']
+        _ph = sum(1 for m in _atk if (SX.MV.get(m) or {}).get('Category') == 'Physical') >= sum(1 for m in _atk if (SX.MV.get(m) or {}).get('Category') == 'Special')
+        _key, _nats, _nat = ('Atk', {'Adamant', 'Jolly', 'Brave'}, 'Adamant') if _ph else ('SpA', {'Modest', 'Timid', 'Quiet'}, 'Modest')
+        _iss = []
+        if d['final'] != d['species']: _iss.append(f"Evolve into {d['final']}" + (f" ({d['evolve']})" if d.get('evolve') else ''))
+        if (d.get('evs') or {}).get(_key, 0) < 100: _iss.append(f"EVs: 252 {_key} + 252 HP or Spe (now {' / '.join(f'{v} {k}' for k, v in (d.get('evs') or {}).items() if v >= 100) or 'none'})")
+        if d.get('nature') not in _nats: _iss.append(f"Nature: {d.get('nature')} → {_nat} (mint)")
+        if d.get('capsule') and d['capsule'][0].replace(' ', '').lower() != (d.get('ability') or '').replace(' ', '').lower():
+            _iss.append(f"Ability: {d.get('ability')} → {d['capsule'][0]} (Ability Capsule)")
+        if (d.get('level') or 55) < 55: _iss.append(f"Lv {d['level']} → 55")
+        _iss += plan_moves(d['moves'], list(d['attacks'])[:3], _ph, d.get('ability'))
+        if _iss: PROFILE.setdefault((d['final'], d['n'], 'Staging → Active'), []).extend(_iss)
     (_to_act if ok else _to_ovf).append(f"{d['species']} (#{d['n']})")
 if _to_act:
     cut_todo.insert(0, ('Staging → Active: ' + ', '.join(_to_act), 'high'))

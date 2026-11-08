@@ -1,0 +1,585 @@
+[
+ {
+  "dump": 407,
+  "owned": "Starmie",
+  "level": 55,
+  "now_ability": "Natural Cure",
+  "now_moves": [
+   "Tackle",
+   "Harden",
+   "Water Gun",
+   "Confuse Ray"
+  ],
+  "final": "Starmie",
+  "evolve": "",
+  "gate": "",
+  "types": "Water/Psychic",
+  "score": 0.429,
+  "tier": "C",
+  "ability": "Natural Cure",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Psychic",
+   "Brine",
+   "Power Gem",
+   "Protect"
+  ],
+  "move_src": {
+   "Psychic": "known",
+   "Brine": "TM135",
+   "Power Gem": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.43,
+   "jenner": 0.54,
+   "geara": 0.37,
+   "giratina": 0.53,
+   "danni": 0.85,
+   "troye": 0.47,
+   "zena": 0.42,
+   "holly": 0.56,
+   "manaphy": 0.38,
+   "factory": 0.05,
+   "marcie": 0.09,
+   "amber": 0.73
+  }
+ },
+ {
+  "dump": 408,
+  "owned": "Drampa",
+  "level": 55,
+  "now_ability": "Sap Sipper",
+  "now_moves": [
+   "Light Screen",
+   "Fly",
+   "Hyper Voice",
+   "Outrage"
+  ],
+  "final": "Drampa",
+  "evolve": "",
+  "gate": "",
+  "types": "Normal/Dragon",
+  "score": 0.571,
+  "tier": "B",
+  "ability": "Sap Sipper",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Dragon Pulse",
+   "Hyper Voice",
+   "Surf",
+   "Protect"
+  ],
+  "move_src": {
+   "Dragon Pulse": "Lv 35",
+   "Hyper Voice": "known",
+   "Surf": "HM03",
+   "Protect": "Lv 10"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.61,
+   "jenner": 0.57,
+   "geara": 0.52,
+   "giratina": 0.42,
+   "danni": 0.8,
+   "troye": 0.54,
+   "zena": 0.59,
+   "holly": 0.66,
+   "manaphy": 0.4,
+   "factory": 0.38,
+   "marcie": 0.61,
+   "amber": 0.89
+  }
+ },
+ {
+  "dump": 409,
+  "owned": "Turtonator",
+  "level": 55,
+  "now_ability": "Shell Armor",
+  "now_moves": [
+   "Shell Trap",
+   "Shell Smash",
+   "Overheat",
+   "Explosion"
+  ],
+  "final": "Turtonator",
+  "evolve": "",
+  "gate": "",
+  "types": "Fire/Dragon",
+  "score": 0.566,
+  "tier": "B",
+  "ability": "Shell Armor",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Overheat",
+   "Dragon Pulse",
+   "Flamethrower",
+   "Protect"
+  ],
+  "move_src": {
+   "Overheat": "known",
+   "Dragon Pulse": "Lv 28",
+   "Flamethrower": "Lv 36",
+   "Protect": "Lv 8"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.54,
+   "jenner": 0.75,
+   "geara": 0.63,
+   "giratina": 0.38,
+   "danni": 0.99,
+   "troye": 0.68,
+   "zena": 0.55,
+   "holly": 0.91,
+   "manaphy": 0.3,
+   "factory": 0.43,
+   "marcie": 0.87,
+   "amber": 0.48
+  }
+ },
+ {
+  "dump": 410,
+  "owned": "Sizzlipede",
+  "level": 55,
+  "now_ability": "White Smoke",
+  "now_moves": [
+   "Crunch",
+   "Fire Lash",
+   "Lunge",
+   "Burn Up"
+  ],
+  "final": "Centiskorch",
+  "evolve": "Centiskorch (Level 28)",
+  "gate": "",
+  "types": "Fire/Bug",
+  "score": 0.407,
+  "tier": "C",
+  "ability": "Flash Fire",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Fire Lash",
+   "Thunder Fang",
+   "Crunch",
+   "Protect"
+  ],
+  "move_src": {
+   "Fire Lash": "known",
+   "Thunder Fang": "TM142",
+   "Crunch": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.35,
+   "jenner": 0.38,
+   "geara": 0.32,
+   "giratina": 0.3,
+   "danni": 0.93,
+   "troye": 0.48,
+   "zena": 0.49,
+   "holly": 0.72,
+   "manaphy": 0.31,
+   "factory": 0.28,
+   "marcie": 0.7,
+   "amber": 0.35
+  }
+ },
+ {
+  "dump": 411,
+  "owned": "Heatmor",
+  "level": 55,
+  "now_ability": "Gluttony",
+  "now_moves": [
+   "Hone Claws",
+   "Amnesia",
+   "Fire Spin",
+   "Inferno"
+  ],
+  "final": "Heatmor",
+  "evolve": "",
+  "gate": "",
+  "types": "Fire",
+  "score": 0.369,
+  "tier": "D",
+  "ability": "Flash Fire",
+  "capsule": true,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Flame Burst",
+   "Giga Drain",
+   "Rock Tomb",
+   "Protect"
+  ],
+  "move_src": {
+   "Flame Burst": "known",
+   "Giga Drain": "known",
+   "Rock Tomb": "TM39",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.39,
+   "jenner": 0.44,
+   "geara": 0.32,
+   "giratina": 0.39,
+   "danni": 0.82,
+   "troye": 0.54,
+   "zena": 0.55,
+   "holly": 0.7,
+   "manaphy": 0.15,
+   "factory": 0.19,
+   "marcie": 0.55,
+   "amber": 0.23
+  }
+ },
+ {
+  "dump": 412,
+  "owned": "Absol",
+  "level": 55,
+  "now_ability": "Justified",
+  "now_moves": [
+   "Sucker Punch",
+   "Swords Dance",
+   "Future Sight",
+   "Perish Song"
+  ],
+  "final": "Absol",
+  "evolve": "",
+  "gate": "",
+  "types": "Dark",
+  "score": 0.343,
+  "tier": "D",
+  "ability": "Super Luck",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Sucker Punch",
+   "Rock Tomb",
+   "Night Slash",
+   "Protect"
+  ],
+  "move_src": {
+   "Sucker Punch": "known",
+   "Rock Tomb": "TM39",
+   "Night Slash": "Lv 30",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.43,
+   "jenner": 0.31,
+   "geara": 0.33,
+   "giratina": 0.34,
+   "danni": 0.71,
+   "troye": 0.34,
+   "zena": 0.69,
+   "holly": 0.3,
+   "manaphy": 0.28,
+   "factory": 0.18,
+   "marcie": 0.29,
+   "amber": 0.33
+  }
+ },
+ {
+  "dump": 413,
+  "owned": "Armarouge",
+  "level": 55,
+  "now_ability": "Flash Fire",
+  "now_moves": [
+   "Lava Plume",
+   "Calm Mind",
+   "Ally Switch",
+   "Flamethrower"
+  ],
+  "final": "Armarouge",
+  "evolve": "",
+  "gate": "",
+  "types": "Fire/Psychic",
+  "score": 0.596,
+  "tier": "A",
+  "ability": "Flash Fire",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Flamethrower",
+   "Psyshock",
+   "Mystical Fire",
+   "Protect"
+  ],
+  "move_src": {
+   "Flamethrower": "known",
+   "Psyshock": "evolution",
+   "Mystical Fire": "Lv 1",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.62,
+   "jenner": 0.78,
+   "geara": 0.59,
+   "giratina": 0.6,
+   "danni": 1.11,
+   "troye": 0.65,
+   "zena": 0.63,
+   "holly": 0.85,
+   "manaphy": 0.3,
+   "factory": 0.3,
+   "marcie": 0.86,
+   "amber": 0.68
+  }
+ },
+ {
+  "dump": 414,
+  "owned": "Ceruledge",
+  "level": 55,
+  "now_ability": "Flash Fire",
+  "now_moves": [
+   "Lava Plume",
+   "Swords Dance",
+   "Ally Switch",
+   "Bitter Blade"
+  ],
+  "final": "Ceruledge",
+  "evolve": "",
+  "gate": "",
+  "types": "Fire/Ghost",
+  "score": 0.513,
+  "tier": "B",
+  "ability": "Flash Fire",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Bitter Blade",
+   "Shadow Claw",
+   "Solar Blade",
+   "Protect"
+  ],
+  "move_src": {
+   "Bitter Blade": "known",
+   "Shadow Claw": "evolution",
+   "Solar Blade": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.55,
+   "jenner": 0.64,
+   "geara": 0.4,
+   "giratina": 0.45,
+   "danni": 1.13,
+   "troye": 0.53,
+   "zena": 0.66,
+   "holly": 0.82,
+   "manaphy": 0.29,
+   "factory": 0.27,
+   "marcie": 0.88,
+   "amber": 0.49
+  }
+ },
+ {
+  "dump": 415,
+  "owned": "Barraskewda",
+  "level": 55,
+  "now_ability": "Swift Swim",
+  "now_moves": [
+   "Dive",
+   "Focus Energy",
+   "Crunch",
+   "Liquidation"
+  ],
+  "final": "Barraskewda",
+  "evolve": "",
+  "gate": "",
+  "types": "Water",
+  "score": 0.311,
+  "tier": "D",
+  "ability": "Swift Swim",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Liquidation",
+   "Crunch",
+   "Dive",
+   "Protect"
+  ],
+  "move_src": {
+   "Liquidation": "known",
+   "Crunch": "known",
+   "Dive": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.28,
+   "jenner": 0.29,
+   "geara": 0.26,
+   "giratina": 0.17,
+   "danni": 0.67,
+   "troye": 0.34,
+   "zena": 0.64,
+   "holly": 0.22,
+   "manaphy": 0.19,
+   "factory": 0.09,
+   "marcie": 0.02,
+   "amber": 0.64
+  }
+ },
+ {
+  "dump": 416,
+  "owned": "Tadbulb",
+  "level": 55,
+  "now_ability": "Own Tempo",
+  "now_moves": [
+   "Weather Ball",
+   "Electric Terrain",
+   "Sucker Punch",
+   "Zap Cannon"
+  ],
+  "final": "Bellibolt",
+  "evolve": "Bellibolt (Item Thunder Stone)",
+  "gate": "",
+  "types": "Electric",
+  "score": 0.463,
+  "tier": "C",
+  "ability": "Electromorph.",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Discharge",
+   "Mud Barrage",
+   "Electroweb",
+   "Protect"
+  ],
+  "move_src": {
+   "Discharge": "Lv 32",
+   "Mud Barrage": "TM108",
+   "Electroweb": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.5,
+   "jenner": 0.39,
+   "geara": 0.4,
+   "giratina": 0.42,
+   "danni": 0.47,
+   "troye": 0.4,
+   "zena": 0.6,
+   "holly": 0.48,
+   "manaphy": 0.63,
+   "factory": 0.35,
+   "marcie": 0.44,
+   "amber": 0.5
+  }
+ },
+ {
+  "dump": 417,
+  "owned": "Bellibolt",
+  "level": 55,
+  "now_ability": "Electromorphosis",
+  "now_moves": [
+   "Weather Ball",
+   "Electric Terrain",
+   "Sucker Punch",
+   "Zap Cannon"
+  ],
+  "final": "Bellibolt",
+  "evolve": "",
+  "gate": "",
+  "types": "Electric",
+  "score": 0.463,
+  "tier": "C",
+  "ability": "Electromorph.",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Discharge",
+   "Mud Barrage",
+   "Electroweb",
+   "Protect"
+  ],
+  "move_src": {
+   "Discharge": "Lv 32",
+   "Mud Barrage": "TM108",
+   "Electroweb": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.5,
+   "jenner": 0.39,
+   "geara": 0.4,
+   "giratina": 0.42,
+   "danni": 0.47,
+   "troye": 0.4,
+   "zena": 0.6,
+   "holly": 0.48,
+   "manaphy": 0.63,
+   "factory": 0.35,
+   "marcie": 0.44,
+   "amber": 0.5
+  }
+ }
+]

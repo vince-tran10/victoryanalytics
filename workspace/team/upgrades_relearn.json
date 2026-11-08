@@ -319,5 +319,14 @@
    "Play Rough"
   ],
   "why": "Knock Off (Lv 52) replaces Night Slash: harder hits against item holders, and it removes the item."
+ },
+ "Gastrodon": {
+  "moves": [
+   "Earth Power",
+   "Muddy Water",
+   "Yawn",
+   "Protect"
+  ],
+  "why": "Doubles meta set (Smogon Doubles OU usage: Earth Power 92%, Protect 85%, Muddy Water 44%, Yawn 14%, Recover 8%). Muddy Water only hits foes (Surf hits your partner). Ice Beam is the usual 3rd move but it is not learnable yet."
  }
 }

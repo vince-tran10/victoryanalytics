@@ -12,7 +12,7 @@ from engine import Engine
 from bosses import FIELD
 BASE = sys.argv[1]; N = int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2].isdigit() else 30
 E = Engine(BASE); D = E.D
-RUN = pickle.load(open(f'{BASE}/team/{os.environ.get('CR_RUN','r28')}_native.json.pkl', 'rb')); RUNN = pickle.load(open(f'{BASE}/team/{os.environ.get('CR_RUN','r28')}n_native.json.pkl', 'rb'))
+RUN = pickle.load(open(f'{BASE}/team/{os.environ.get('CR_RUN','r29')}_native.json.pkl', 'rb')); RUNN = pickle.load(open(f'{BASE}/team/{os.environ.get('CR_RUN','r29')}n_native.json.pkl', 'rb'))
 IMM = {'LEVITATE': 'GROUND', 'FLASHFIRE': 'FIRE', 'WATERABSORB': 'WATER', 'STORMDRAIN': 'WATER', 'DRYSKIN': 'WATER',
        'VOLTABSORB': 'ELECTRIC', 'LIGHTNINGROD': 'ELECTRIC', 'MOTORDRIVE': 'ELECTRIC', 'SAPSIPPER': 'GRASS', 'EARTHEATER': 'GROUND',
        'WELLBAKEDBODY': 'FIRE'}
