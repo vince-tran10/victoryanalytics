@@ -10,6 +10,7 @@ import json, math, os, re, sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from dataset import Data
 from recommend import (move_base_value, ability_move_mult, ability_stat_mult, EXCLUDE, TWO_TURN, type_eff as _te)
+import crests
 from bosses import load_battles, load_battles_walk, FIELD, HIGH_STRIKER
 
 CAP = 55
@@ -195,6 +196,9 @@ class Engine:
         if att_is_me:
             t2, am, stab_o = ability_move_mult(ab, (mid, dict(mv, _power=p, _drawback=1.0)), mtype, att['types'])
             mtype = t2; mult *= am
+            if att.get('crest'):
+                mtype = crests.move_type(att, mid, mv, mtype)
+                mult *= crests.atk_mult(att, dfn, mid, mv, mtype, int(mv.get('Strength') or 0))
         else:
             stab_o = 2.0 if ab == 'ADAPTABILITY' and mtype in att['types'] else None
         if mid == 'SKILLLINK':
@@ -282,6 +286,9 @@ class Engine:
             eff = 0
         if dab == 'WONDERGUARD' and eff <= 1:
             eff = 0
+        if dfn.get('crest'):
+            eff = crests.def_typemod(dfn, mtype, eff, lambda a, t: self.chart_eff(a, [t]))
+            mult *= crests.def_final(att, dfn, eff)
         # field second type (game: Battle_Move.rb fieldTypeChangeModifier multiplies a 2nd type in, like Flying Press)
         _t2 = (field.get('mtype2') or {}).get(mid) or (field.get('add') or {}).get(mtype)
         if _t2 and eff:
@@ -322,6 +329,8 @@ class Engine:
             mult *= 1.25
         # stab
         stab = stab_o if stab_o else (1.5 if mtype in att['types'] else 1.0)
+        if att.get('crest') and crests.extra_stab(att, mtype):
+            stab = max(stab, 1.5)
         if item == 'Expert Belt' and eff > 1:
             mult *= 1.2
         # spread in doubles
@@ -454,7 +463,8 @@ class Engine:
         except ValueError:
             weight = 50
         final_name = self.D.nm(sid) + ('' if form == '0' else f" ({f.get('FormName')})")
-        return dict(name=final_name, owned_as=mon['name'], sid=sid, form=form, formname=f.get('FormName'), types=types, base=bs,
+        _crest = sid if crests.enabled(sid, form, f.get('FormName')) else None
+        return dict(name=final_name, owned_as=mon['name'], sid=sid, form=form, formname=f.get('FormName'), types=types, base=bs, crest=_crest,
                     abilities=abil_list, ability=ab, legal=legal, item=mon.get('item', ''), weight=weight,
                     evo=evo_text, gate=gate, level=CAP, src=mon)
 
@@ -516,6 +526,8 @@ class Engine:
     def evaluate(self, me, moveset=None):
         cat, evs, nature = self.spread_for(me)
         me['stats'] = calc_stats(me['base'], evs, nature)
+        if me.get('crest'):
+            crests.apply_stats(me)
         me['nature'], me['evs'], me['cat'] = nature, evs, cat
         damaging = self.damaging_moves(me)
         if moveset is not None:

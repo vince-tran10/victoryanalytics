@@ -529,3 +529,14 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   lead (one-shot by Honchkrow @Eli, Camerupt @Amber). Musharna survives every opposing lead in all 7 fights → Lead;
   Rhyperior survives all 4 doubles leads → 2nd lead (one-shot by Manaphy, singles, so it's in the back there).
   Party order = plan: Musharna, Rhyperior, Vikavolt, Armarouge, Ludicolo, Annihilape.
+- 9 Nov: CRESTS. Game map PBStuff.POKEMONTOCREST → workspace/gamedata/crest_map.json (66 species). Effects from game code
+  (Rejuv/Battle/Battler.rb crestStats; Battle_Move.rb crest damage mults, irregularTypeMods, finalmult, crest STAB) in
+  scripts/team/crests.py; engine applies them when CRESTS=1 (or a species list). Whiscash stays item-modelled. Not
+  modelled: Castform, Cherrim, Luvdisc, Zoroark, Furret, Swalot, Zangoose, Thievul, Vespiquen, Plusle/Minun, Sunflora,
+  Ledian, Delcatty, Probopass. crest_tier.py + crest_tab.py → new "Crests" tab (S–D vs the six's members); update.py runs
+  a CRESTS=1 engine run (rc<run>) every export. 56 owned crest-eligible mons; held crests seen: Ariados, Furret x2,
+  Whiscash, Zoroark x2 (bag crests are NOT in exports → state.json "crests_owned" list, ask Vincent).
+  Crested S tier: Druddigon 0.69, Crabominable 0.68, Wyrdeer 0.60, Sawsbuck, Ampharos-A, Cinccino, Dusknoir.
+  Deep check with all crests (CR_RUN=rc1): best +1.35% (Golisopod/Ampharos-A/Chandelure/Musharna/Whiscash/Ludicolo) is
+  WORSE in singles (1.080 vs 1.102); +1.2% Crabominable/Druddigon/Wyrdeer/Rhyperior/Ludicolo/Gholdengo ties singles
+  (1.106), doubles +3%, 0 misses, Gholdengo survives all 7 leads. Needs 3 crests → waiting on Vincent's crest list.
