@@ -553,3 +553,6 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   (team/deep_check_aevian_1109.log): best Aevian six +0.58% with 2 misses vs 1 = tie; Veluza six −0.08%. Six kept.
 - 9 Nov export (8 Nov 22:32): ideal six now in the party, 5/6 Done ✓; only fix left: Ludicolo Focus Sash → Mystic Water.
   No box moves. Team still #1 of 6040. checks.py: a party member with a To do card now counts (was a false FAIL).
+- 9 Nov export (8 Nov 23:03): new Growlithe-Hisui A 0.603 (→ Arcanine-H, Active), Tepig A 0.646 (→ Emboar, Active),
+  Turtonator B (Overflow). Ludicolo fixed; Musharna lost its Sitrus (card). Team search: current #5, best +0.69%
+  (Glalie-A, Armarouge, Arcanine-H, Musharna-A, Whiscash, Ludicolo) = within 1%, one-six rule → kept.

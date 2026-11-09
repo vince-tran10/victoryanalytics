@@ -1,0 +1,214 @@
+[
+ {
+  "dump": 414,
+  "owned": "Growlithe-Hisui",
+  "level": 55,
+  "now_ability": "Intimidate",
+  "now_moves": [
+   "Helping Hand",
+   "Fire Fang",
+   "Head Smash",
+   "Morning Sun"
+  ],
+  "final": "Arcanine (Hisuian Form)",
+  "evolve": "Arcanine (Item Fire Stone)",
+  "gate": "",
+  "types": "Fire/Rock",
+  "score": 0.603,
+  "tier": "A",
+  "ability": "Intimidate",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Flare Blitz",
+   "Head Smash",
+   "Rock Tomb",
+   "Protect"
+  ],
+  "move_src": {
+   "Flare Blitz": "known",
+   "Head Smash": "known",
+   "Rock Tomb": "TM39",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.85,
+   "jenner": 0.72,
+   "geara": 0.69,
+   "giratina": 0.22,
+   "danni": 1.17,
+   "troye": 0.81,
+   "zena": 0.62,
+   "holly": 0.85,
+   "manaphy": 0.1,
+   "factory": 0.28,
+   "marcie": 0.93,
+   "amber": 0.84
+  }
+ },
+ {
+  "dump": 415,
+  "owned": "Turtonator",
+  "level": 55,
+  "now_ability": "Shell Armor",
+  "now_moves": [
+   "Body Slam",
+   "Flamethrower",
+   "Shell Trap",
+   "Shell Smash"
+  ],
+  "final": "Turtonator",
+  "evolve": "",
+  "gate": "",
+  "types": "Fire/Dragon",
+  "score": 0.57,
+  "tier": "B",
+  "ability": "Shell Armor",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Overheat",
+   "Dragon Pulse",
+   "Shell Smash",
+   "Protect"
+  ],
+  "move_src": {
+   "Overheat": "Lv 48",
+   "Dragon Pulse": "Lv 28",
+   "Shell Smash": "known",
+   "Protect": "Lv 8"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.54,
+   "jenner": 0.8,
+   "geara": 0.66,
+   "giratina": 0.26,
+   "danni": 0.99,
+   "troye": 0.78,
+   "zena": 0.55,
+   "holly": 0.95,
+   "manaphy": 0.14,
+   "factory": 0.49,
+   "marcie": 0.87,
+   "amber": 0.51
+  }
+ },
+ {
+  "dump": 416,
+  "owned": "Tepig",
+  "level": 55,
+  "now_ability": "Thick Fat",
+  "now_moves": [
+   "Flame Charge",
+   "Superpower",
+   "Burn Up",
+   "Sucker Punch"
+  ],
+  "final": "Emboar",
+  "evolve": "Pignite (Level 17); Emboar (Level 36)",
+  "gate": "",
+  "types": "Fire/Fighting",
+  "score": 0.646,
+  "tier": "A",
+  "ability": "Reckless",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Superpower",
+   "Heat Crash",
+   "Head Smash",
+   "Protect"
+  ],
+  "move_src": {
+   "Superpower": "known",
+   "Heat Crash": "Lv 31",
+   "Head Smash": "Lv 50",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.84,
+   "jenner": 0.82,
+   "geara": 0.64,
+   "giratina": 0.45,
+   "danni": 1.07,
+   "troye": 0.97,
+   "zena": 0.74,
+   "holly": 0.89,
+   "manaphy": 0.24,
+   "factory": 0.2,
+   "marcie": 0.92,
+   "amber": 0.89
+  }
+ },
+ {
+  "dump": 468,
+  "owned": "Turtonator",
+  "level": 55,
+  "now_ability": "Shell Armor",
+  "now_moves": [
+   "Protect",
+   "Shell Smash",
+   "Overheat",
+   "Dragon Pulse"
+  ],
+  "final": "Turtonator",
+  "evolve": "",
+  "gate": "",
+  "types": "Fire/Dragon",
+  "score": 0.548,
+  "tier": "B",
+  "ability": "Shell Armor",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Overheat",
+   "Dragon Pulse",
+   "Flamethrower",
+   "Protect"
+  ],
+  "move_src": {
+   "Overheat": "known",
+   "Dragon Pulse": "known",
+   "Flamethrower": "Lv 36",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.54,
+   "jenner": 0.8,
+   "geara": 0.65,
+   "giratina": 0.24,
+   "danni": 0.99,
+   "troye": 0.68,
+   "zena": 0.55,
+   "holly": 0.94,
+   "manaphy": 0.1,
+   "factory": 0.49,
+   "marcie": 0.87,
+   "amber": 0.45
+  }
+ }
+]

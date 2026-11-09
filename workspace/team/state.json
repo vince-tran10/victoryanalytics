@@ -1,12 +1,12 @@
 {
  "_doc": "Read/written by scripts/team/update.py. Edit by hand only to change the six or its moves.",
- "export": "party_and_boxes_2026-11-08_2232.txt",
- "export_label": "8 Nov 22:32",
+ "export": "party_and_boxes_2026-11-08_2303.txt",
+ "export_label": "8 Nov 23:03",
  "active_start": 414,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 40,
- "run": 54,
- "final": 58,
+ "roster": 41,
+ "run": 55,
+ "final": 59,
  "done": [
   "aelita",
   "narcissa1",
@@ -83,54 +83,55 @@
  },
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
-  "rank": 1,
-  "of": 6040,
-  "gap": 0.0,
+  "rank": 5,
+  "of": 8199,
+  "gap": 0.69,
   "top": [
    {
-    "score": 1.1249,
-    "pct": 100.0,
+    "score": 1.138,
+    "pct": 100.7,
     "team": [
-     "Annihilape",
-     "Rhyperior",
+     "Glalie-A",
      "Armarouge",
-     "Vikavolt",
+     "Arcanine-Hisui",
      "Musharna-A",
+     "Whiscash",
      "Ludicolo"
     ],
     "misses": [
+     "Lickilicky (eli)",
      "Clefable (geara)"
     ]
    },
    {
-    "score": 1.1196,
-    "pct": 99.5,
+    "score": 1.1325,
+    "pct": 100.2,
     "team": [
-     "Rhyperior",
-     "Chandelure",
+     "Glalie-A",
+     "Arcanine-Hisui",
      "Vikavolt",
      "Musharna-A",
      "Whiscash",
      "Ludicolo"
     ],
     "misses": [
-     "Lickilicky (eli)"
+     "Lickilicky (eli)",
+     "Clefable (geara)"
     ]
    },
    {
-    "score": 1.1193,
-    "pct": 99.5,
+    "score": 1.1324,
+    "pct": 100.2,
     "team": [
-     "Golisopod-A",
      "Glalie-A",
-     "Armarouge",
+     "Arcanine-Hisui",
+     "Chandelure",
      "Musharna-A",
-     "Gholdengo",
+     "Whiscash",
      "Ludicolo"
     ],
     "misses": [
-     "Lickilicky (eli)",
-     "Gyarados (geara)"
+     "Lickilicky (eli)"
     ]
    }
   ],
