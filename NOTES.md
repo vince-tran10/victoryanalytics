@@ -540,3 +540,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Deep check with all crests (CR_RUN=rc1): best +1.35% (Golisopod/Ampharos-A/Chandelure/Musharna/Whiscash/Ludicolo) is
   WORSE in singles (1.080 vs 1.102); +1.2% Crabominable/Druddigon/Wyrdeer/Rhyperior/Ludicolo/Gholdengo ties singles
   (1.106), doubles +3%, 0 misses, Gholdengo survives all 7 leads. Needs 3 crests → waiting on Vincent's crest list.
+- 9 Nov: crest availability (BIGJRA walkthrough Ch1-8 in workspace/walkthrough; rejuvenation.wiki.gg is blocked by the
+  session network): Ch5 Ariados (Griselda T2) + Cairo's house Route 4 (Noctowl, Plusle, Minun, Simisage/sear/pour,
+  Thievul); Ch7 Furret, Whiscash; Ch8 Fearow (Griselda T7), Zoroark, Silvally (Geara & Zetta reward), Phione (Tale of
+  Two Hearts). Enemy-only: Crabominable (Neved, skipped), Relicanth, Swalot. Druddigon/Stantler/Sawsbuck/Ampharos-A/
+  Cinccino/Dusknoir/Reuniclus/Meganium/Luxray/Boltund not in Ch1-8 → later. Vincent has none of Crab/Drudd/Stantler.
+  → No team-level crest is available now; current six stays. Crests tab has an Availability column (crest_tab.py AVAIL).
