@@ -551,3 +551,5 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Aevian form, tier by hard-fight score + OP stars / signature tool + learn level / meta analog (kit facts from montext).
   Fillet Away (Veluza-A) now counted as setup (+2/+2/+2 at half HP). Deep check with every Aevian forced in
   (team/deep_check_aevian_1109.log): best Aevian six +0.58% with 2 misses vs 1 = tie; Veluza six −0.08%. Six kept.
+- 9 Nov export (8 Nov 22:32): ideal six now in the party, 5/6 Done ✓; only fix left: Ludicolo Focus Sash → Mystic Water.
+  No box moves. Team still #1 of 6040. checks.py: a party member with a To do card now counts (was a false FAIL).

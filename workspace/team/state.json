@@ -1,12 +1,12 @@
 {
  "_doc": "Read/written by scripts/team/update.py. Edit by hand only to change the six or its moves.",
- "export": "party_and_boxes_2026-11-08_0913.txt",
- "export_label": "8 Nov 09:13",
+ "export": "party_and_boxes_2026-11-08_2232.txt",
+ "export_label": "8 Nov 22:32",
  "active_start": 414,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 38,
- "run": 52,
- "final": 56,
+ "roster": 40,
+ "run": 54,
+ "final": 58,
  "done": [
   "aelita",
   "narcissa1",
@@ -84,11 +84,11 @@
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
   "rank": 1,
-  "of": 6809,
+  "of": 6040,
   "gap": 0.0,
   "top": [
    {
-    "score": 1.125,
+    "score": 1.1249,
     "pct": 100.0,
     "team": [
      "Annihilape",
@@ -103,23 +103,7 @@
     ]
    },
    {
-    "score": 1.1198,
-    "pct": 99.5,
-    "team": [
-     "Golisopod-A",
-     "Glalie-A",
-     "Armarouge",
-     "Musharna-A",
-     "Ludicolo",
-     "Gholdengo"
-    ],
-    "misses": [
-     "Lickilicky (eli)",
-     "Gyarados (geara)"
-    ]
-   },
-   {
-    "score": 1.1197,
+    "score": 1.1196,
     "pct": 99.5,
     "team": [
      "Rhyperior",
@@ -131,6 +115,22 @@
     ],
     "misses": [
      "Lickilicky (eli)"
+    ]
+   },
+   {
+    "score": 1.1193,
+    "pct": 99.5,
+    "team": [
+     "Golisopod-A",
+     "Glalie-A",
+     "Armarouge",
+     "Musharna-A",
+     "Gholdengo",
+     "Ludicolo"
+    ],
+    "misses": [
+     "Lickilicky (eli)",
+     "Gyarados (geara)"
     ]
    }
   ],
