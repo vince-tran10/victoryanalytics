@@ -6,7 +6,8 @@ import chapter_rules as C
 E = C.E; D = C.D
 keys = list(C.byk)
 SETUP = {'SWORDSDANCE': ('Atk', 2.0), 'DRAGONDANCE': ('Atk', 1.5), 'BULKUP': ('Atk', 1.5), 'HONECLAWS': ('Atk', 1.5),
-         'NASTYPLOT': ('SpA', 2.0), 'CALMMIND': ('SpA', 1.5), 'QUIVERDANCE': ('SpA', 1.5), 'SHELLSMASH': ('Both', 2.0)}
+         'NASTYPLOT': ('SpA', 2.0), 'CALMMIND': ('SpA', 1.5), 'QUIVERDANCE': ('SpA', 1.5), 'SHELLSMASH': ('Both', 2.0),
+         'FILLETAWAY': ('Both', 2.0)}   # Veluza-A: +2 Atk/SpA/Spe for half its HP
 info = {}
 if os.environ.get('NO_PETALDANCE'):   # Petal Dance locks in 2-3 turns + confusion: re-score those mons without it
     for k in keys:
@@ -52,7 +53,11 @@ def adj_q(k, bk, j, gi, team_glare, team_web, tr=False):
     sp_q = min(off, 120) / 100 * (1.15 if f2 else 1.0) * (1 - min(taken, 100) / 200) * (0.95 if f2 and not faster else 1)
     q = max(q, sp_q)
     s = info[k]['setup']
-    if s and (taken < 100 or (f2 and taken < 100)):                     # survives a hit to set up
+    if s and s[0] == 'Fillet Away':                                     # pays 50% HP, +2 Speed: must survive a hit at half HP
+        if taken < 50:
+            su = min(off * s[1], 120) / 100 * 1.15 * (1 - min(taken * 2 + 50, 100) / 200) * 0.85
+            q = max(q, su)
+    elif s and (taken < 100 or (f2 and taken < 100)):                     # survives a hit to set up
         su = min(off * s[1], 120) / 100 * (1.15 if f2 else 1.0) * (1 - min(taken * 2, 100) / 200) * 0.85
         q = max(q, su)
     return q

@@ -546,3 +546,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Two Hearts). Enemy-only: Crabominable (Neved, skipped), Relicanth, Swalot. Druddigon/Stantler/Sawsbuck/Ampharos-A/
   Cinccino/Dusknoir/Reuniclus/Meganium/Luxray/Boltund not in Ch1-8 → later. Vincent has none of Crab/Drudd/Stantler.
   → No team-level crest is available now; current six stays. Crests tab has an Availability column (crest_tab.py AVAIL).
+- 9 Nov: general Tier list tab dropped. "Crest tiers" = only crests Vincent holds (Whiscash A, Zoroark ×2 / Furret / Ariados D;
+  Zoroark/Furret effects situational, not scored). New "Aevian tiers" tab (scripts/team/aevian_tab.py, s7): every owned
+  Aevian form, tier by hard-fight score + OP stars / signature tool + learn level / meta analog (kit facts from montext).
+  Fillet Away (Veluza-A) now counted as setup (+2/+2/+2 at half HP). Deep check with every Aevian forced in
+  (team/deep_check_aevian_1109.log): best Aevian six +0.58% with 2 misses vs 1 = tie; Veluza six −0.08%. Six kept.

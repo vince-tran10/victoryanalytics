@@ -6,7 +6,8 @@ import chapter_rules as C
 E = C.E; D = C.D
 keys = list(C.byk)
 SETUP = {'SWORDSDANCE': ('Atk', 2.0), 'DRAGONDANCE': ('Atk', 1.5), 'BULKUP': ('Atk', 1.5), 'HONECLAWS': ('Atk', 1.5),
-         'NASTYPLOT': ('SpA', 2.0), 'CALMMIND': ('SpA', 1.5), 'QUIVERDANCE': ('SpA', 1.5), 'SHELLSMASH': ('Both', 2.0)}
+         'NASTYPLOT': ('SpA', 2.0), 'CALMMIND': ('SpA', 1.5), 'QUIVERDANCE': ('SpA', 1.5), 'SHELLSMASH': ('Both', 2.0),
+         'FILLETAWAY': ('Both', 2.0)}   # Veluza-A: +2 Atk/SpA/Spe for half its HP
 info = {}
 if os.environ.get('NO_PETALDANCE'):   # Petal Dance locks in 2-3 turns + confusion: re-score those mons without it
     for k in keys:

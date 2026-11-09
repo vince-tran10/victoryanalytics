@@ -26,29 +26,30 @@ NOT_MODELLED = {'Castform Crest', 'Cherrim Crest', 'Luvdisc Crest', 'Zoroark Cre
 TIERS = [('S', 'Better than your six\'s median member with the crest'), ('A', 'Team-level with the crest'),
          ('B', 'Close to team level'), ('C', 'Crest helps, still not team level'), ('D', 'Crest does little here / not modelled')]
 rows = {t: [] for t, _ in TIERS}
+NOTE = {'Zoroark Crest': 'Copies the ability + typing (as STAB) of your last party slot (Annihilape: Defiant, Fighting/Ghost STAB)',
+        'Furret Crest': 'Free Substitute on entry (costs 25% HP)', 'Ariados Crest': '+50% Speed; always crits slowed or poisoned foes',
+        'Whiscash Crest': '+20% Atk / SpA, Grass immunity (absorbs it for +Atk)'}
 for r in T['rows']:
-    have = r['crest'] in owned or r['held']
-    if have: status = '<span class="ok">you have it</span>'
-    elif r['crest'] in AVAIL: status = '<span class="warn">get it: ' + E(AVAIL[r['crest']]) + '</span>'
-    elif r['crest'] in ENEMY_ONLY: status = '<span class="legend">not obtainable: ' + E(ENEMY_ONLY[r['crest']]) + '</span>'
-    else: status = '<span class="legend">not yet (not in Ch 1–8)</span>'
+    if not (r['crest'] in owned or r['held']): continue        # only crests you actually hold
+    status = '<span class="ok">' + E(NOTE.get(r['crest'], 'held')) + '</span>'
     nm = ' <span class="legend">(effect not modelled)</span>' if r['crest'] in NOT_MODELLED else ''
     rows[r['tier']].append(
         f"<tr><td><b>{E(r['name'])}</b><div class='legend'>{E(r['where'])} #{r['dump']}</div></td>"
         f"<td>{E(r['crest'])}{nm}<div class='legend'>{E(desc.get(r['crest'], '')[:140])}</div></td>"
-        f"<td class='c' data-l='with crest'>{r['with_crest']:.2f}</td><td class='c' data-l='without'>{r['without']:.2f}</td>"
-        f"<td class='c {'up' if r['gain'] > 0.005 else ''}' data-l='gain'>{r['gain']:+.2f}</td><td>{status}</td></tr>")
+        f"<td class='c' data-l='with crest'>{r['with_crest']:.2f}</td><td class='c' data-l='without'>{'—' if r['without'] is None else format(r['without'], '.2f')}</td>"
+        f"<td class='c {'up' if (r['gain'] or 0) > 0.005 else ''}' data-l='gain'>{'—' if r['gain'] is None else format(r['gain'], '+.2f')}</td><td>{status}</td></tr>")
 body = ''
 for t, why in TIERS:
     if not rows[t]: continue
     body += (f"<div class='panel pad'><h3><span class='tier t{t}'>{t}</span> {E(why)} <span class='legend'>{len(rows[t])}</span></h3>"
              f"<div class='tablewrap'><table class='crt'><thead><tr><th>Pokémon</th><th>Crest</th><th>With crest</th><th>Without</th>"
-             f"<th>Gain</th><th>Availability</th></tr></thead><tbody>{''.join(rows[t])}</tbody></table></div></div>")
+             f"<th>Gain</th><th>What the crest does</th></tr></thead><tbody>{''.join(rows[t])}</tbody></table></div></div>")
 team_line = ', '.join(f"{k.replace(' (Aevian Form)', '-A')} {v:.2f}" for k, v in T['team'].items())
 sec = f'''<section aria-labelledby="s6">
   <h2 id="s6">Crests</h2>
-  <p class="legend">Every crest-eligible Pokémon you own, scored on the 7 hard fights (exact game data) with vs without its crest.
-  Effects come from the game code. For reference, your six without crests: {E(team_line)}.</p>
+  <ul class="legend"><li>Only Pokémon whose crest you hold (from your export). Scored on the remaining hard fights with vs without it; effects from the game code.</li>
+  <li>Your six for reference: {E(team_line)}.</li>
+  <li>Verdict: none of your crests is strong enough for the team. Zoroark / Furret effects are situational (not scored).</li></ul>
   {body}
 </section>
 '''

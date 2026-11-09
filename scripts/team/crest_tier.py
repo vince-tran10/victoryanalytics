@@ -37,12 +37,18 @@ for n, c in with_c.items():
     rows.append(dict(name=n, crest=cname, held=cname in held, where=c['src']['where'], dump=c['src'].get('dump'),
                      with_crest=round(s1, 3), without=round(s0, 3), gain=round(s1 - s0, 3), attacks=[C.D.moves[m]['MoveName'] for m in c['attacks']],
                      ability=c['ability']))
+# Whiscash Crest is scored as its held item in every run (crests.enabled skips it): add it from the normal run
+for n, c in without.items():
+    if c['sid'] == 'WHISCASH' and c['src'].get('item') == 'Whiscash Crest':
+        rows.append(dict(name=n, crest='Whiscash Crest', held=True, where=c['src']['where'], dump=c['src'].get('dump'),
+                         with_crest=round(solo(c), 3), without=None, gain=None, attacks=[C.D.moves[m]['MoveName'] for m in c['attacks']],
+                         ability=c['ability']))
 rows.sort(key=lambda r: -r['with_crest'])
 lo, med = anchor[0], anchor[len(anchor) // 2]
 for r in rows:
-    r['tier'] = 'S' if r['with_crest'] >= med else 'A' if r['with_crest'] >= lo else 'B' if r['with_crest'] >= lo * 0.85 else 'C' if r['gain'] >= 0.02 else 'D'
+    r['tier'] = 'S' if r['with_crest'] >= med else 'A' if r['with_crest'] >= lo else 'B' if r['with_crest'] >= lo * 0.85 else 'C' if (r['gain'] or 0) >= 0.02 else 'D'
 json.dump(dict(anchor_low=round(lo, 3), anchor_median=round(med, 3), team={n: round(solo(without[n]), 3) for n in team if n in without}, rows=rows),
           open('team/crest_tier.json', 'w'), indent=1)
 print('your six (no crest):', {n: round(solo(without[n]), 3) for n in team if n in without})
 for r in rows:
-    print(f"{r['tier']} {r['with_crest']:.3f} (no crest {r['without']:.3f}, {r['gain']:+.3f}) {r['name']:30s} {r['crest']:20s} {'HELD' if r['held'] else ''} {r['where']} {r['attacks']}")
+    print(f"{r['tier']} {r['with_crest']:.3f} (no crest {r['without']}, {r['gain']}) {r['name']:30s} {r['crest']:20s} {'HELD' if r['held'] else ''} {r['where']} {r['attacks']}")

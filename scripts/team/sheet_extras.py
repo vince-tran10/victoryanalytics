@@ -11,7 +11,7 @@ IMM = {'Flash Fire': 'FIRE', 'Levitate': 'GROUND', 'Water Absorb': 'WATER', 'Sto
        'Volt Absorb': 'ELECTRIC', 'Lightning Rod': 'ELECTRIC', 'Motor Drive': 'ELECTRIC', 'Sap Sipper': 'GRASS',
        'Earth Eater': 'GROUND', 'Well-Baked Body': 'FIRE'}
 CREST_IMM = {'Whiscash Crest': 'GRASS'}
-SETUP = {'Swords Dance', 'Dragon Dance', 'Nasty Plot', 'Calm Mind', 'Quiver Dance', 'Shell Smash', 'Bulk Up', 'Agility',
+SETUP = {'Fillet Away', 'Swords Dance', 'Dragon Dance', 'Nasty Plot', 'Calm Mind', 'Quiver Dance', 'Shell Smash', 'Bulk Up', 'Agility',
          'Rock Polish', 'Shift Gear', 'Coil', 'Belly Drum', 'Tail Glow', 'Work Up', 'Growth', 'Victory Dance', 'Tidy Up',
          'Hone Claws', 'Iron Defense', 'Cosmic Power', 'Amnesia', 'Curse', 'Tailwind', 'Trick Room', 'Baton Pass'}
 SPEED_AB = {'Speed Boost', 'Unburden', 'Moxie', 'Swift Swim', 'Chlorophyll', 'Sand Rush', 'Slush Rush', 'Surge Surfer', 'Beast Boost'}

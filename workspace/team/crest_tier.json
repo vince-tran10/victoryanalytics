@@ -124,6 +124,23 @@
    "tier": "S"
   },
   {
+   "name": "Whiscash",
+   "crest": "Whiscash Crest",
+   "held": true,
+   "where": "Active",
+   "dump": 463,
+   "with_crest": 0.509,
+   "without": null,
+   "gain": null,
+   "attacks": [
+    "Aqua Tail",
+    "Earthquake",
+    "Spark"
+   ],
+   "ability": "OBLIVIOUS",
+   "tier": "A"
+  },
+  {
    "name": "Reuniclus",
    "crest": "Reuniclus Crest",
    "held": false,
@@ -214,7 +231,7 @@
    "without": 0.359,
    "gain": 0.104,
    "attacks": [
-    "Facade",
+    "Secret Power",
     "Night Slash",
     "Fire Fang"
    ],
@@ -593,7 +610,7 @@
    "gain": 0.047,
    "attacks": [
     "Surf",
-    "Facade",
+    "Secret Power",
     "Deluge"
    ],
    "ability": "HYDRATION",
@@ -818,7 +835,7 @@
    "without": 0.164,
    "gain": 0.0,
    "attacks": [
-    "Facade",
+    "Secret Power",
     "Fire Blast",
     "Hydro Pump"
    ],

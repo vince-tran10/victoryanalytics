@@ -124,6 +124,7 @@ def main():
     sh(['../scripts/team/run.py', WS, f'team/roster{rost}_lv55.json', f'team/rc{run}_native.json'], dict(env, FORCE_FORMAT='native', CRESTS='1'))
     sh(['../scripts/team/crest_tier.py'], dict(env, CR_RUN=f'r{run}', CREST_RUN=f'rc{run}', BASE_RUN=f'r{run}'))
     sh(['../scripts/team/crest_tab.py', OUT], pe)
+    sh(['../scripts/team/aevian_tab.py', OUT], dict(pe, BASE_RUN=f'r{run}'))
     sh(['../scripts/gamedata/compare.py', 'team/gamedata_compare.json'], pe)
     st['team_check_cache'] = True
     json.dump(dict(st, export=new), open(STATE, 'w'), indent=1, ensure_ascii=False)   # checks.py reads team_check
