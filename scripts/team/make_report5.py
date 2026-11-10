@@ -112,6 +112,19 @@ COUNTERS = {'groudon': dict(title='Groudon', note='Boss · Deep Earth · Drought
           'Then the Sash/Sturdy hitters: each gets 2 hits (hit, survive on Sash, hit again)',
           'Heliolisk uses Thunder, not Thunderbolt: rain makes it 100% accurate',
           'No recoil moves (Wild Charge) on Sash users until their 2nd hit; total damage ~350% of what you need is 100%'])}
+COUNTERS['geara'] = dict(title='Geara & Zetta', note='Tag battle with Melia · Volcanic Top: Fire/Rock/Flying 1.5x, Rock gains Fire, Thunder never misses, eruptions', six=[
+    ('Rhyperior', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone', ['Stone Edge', 'Headlong Rush', 'Fire Fang', 'Protect'], 'Lead. Eruption-immune; takes 1/4 from boosted Rock+Fire; Stone Edge = Rock+Fire 1.5x'),
+    ('Veluza-Aevian', 'Reckless', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Mystic Water', ['Wave Crash', 'Flare Blitz', 'Head Smash', 'Protect'], 'Fire type: eruption-immune. Flare Blitz 1.5x, Head Smash = Rock+Fire 1.5x. Keep away from Thunder'),
+    ('Whiscash', 'Oblivious', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Whiscash Crest', ['Earthquake', 'Aqua Tail', 'Rock Tomb', 'Protect'], 'Immune to Thunder; 1/4 from Rock+Fire. Earthquake triggers eruptions that hurt them more'),
+    ('Swampert', 'Torrent', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand', ['Earthquake', 'Rock Slide', 'Amnesia', 'Protect'], 'Same field defence as Whiscash; Rock Slide = Rock+Fire 1.5x on both foes; Amnesia vs Eruption/Thunder'),
+    ('Glalie-Aevian', 'Grassy Surge', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry', ['Grassy Glide', 'Rock Slide', 'Wood Hammer', 'Protect'], 'Rock Slide STAB Rock+Fire 1.5x on both foes; Grassy terrain heals off eruption chip'),
+    ('Dragalge', 'Adaptability', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Dragon Fang', ['Dragon Pulse', 'Sludge Bomb', 'Toxic', 'Protect'], 'Resists Fire, Rock+Fire and Thunder; 1/16 eruptions. Safe switch-in')],
+    plan=['Field: Fire / Rock / Flying 1.5x; Rock moves gain Fire; Eruption & Heat Wave 1.8x; Thunder 1.5x and never misses; Ice 0.5x, Water 0.9x',
+          'Eruptions: Earthquake / Earth Power / Eruption = end of turn 1/8 HP x Fire weakness to every non-Fire mon (Solid Rock, Sturdy, Fire types immune)',
+          'Their plan: Typhlosion Eruption, Rock Slide / Stone Edge (Rock+Fire), Thunder (Clefable, Gengar, Silvally), Earthquake eruptions',
+          'Your plan: resist all of it (Ground/Water/Rock/Dragon) and hit back with boosted Rock+Fire; your Earthquakes chip them more than you',
+          'Turn 1: Minior has Shell Trap primed (Telluric Seed): do NOT hit it with a physical move; hit Krookodile or Protect',
+          'Kill Minior before Shell Smash, Typhlosion before Eruption. Veluza stays out vs Thunder users. Stop Earthquakes when Melia is low'])
 CF_PREEVO = {'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
 CF = COUNTERS.get(FIGHT)
 CF_NAMES = [x[0] for x in CF['six']] if CF else []
@@ -253,10 +266,14 @@ if CF:
                 d0 = dict(d0, species=nm_, moves=[], ability=d0.get('ability'))
             issues = ([f"{pre} {d0['box']} #{d0['n']} → party" + (f", evolve ({how})" if how else '')] + verify_mon(d0, ab_, nat_, evs_, item_, [(m, 0) for m in mv_])) if d0 else [f'Put {nm_} in the party']
         _dd = d if d else d0
+        if not d and d0: ACTIONS[d0['n']] = f"Move into the party ({CF['title']} lineup)"
         if _dd: CF_ISSUES[nm_] = (_dd, [x for x in issues if '→ party' not in x and not x.startswith('Put ')])
         if issues: todo_cf.append((f'{CF["title"]} · {nm_}: ' + '; '.join(issues), 'high'))
         rows_.append(f'<tr><td><strong>{E(nm_)}</strong></td><td class="legend">{E(item_)}</td><td>{E(" / ".join(mv_))}</td><td>{E(note_)}</td>'
                      f'<td>{"<span class=ok>✓</span>" if not issues else "<span class=chg2>" + E("; ".join(issues)) + "</span>"}</td></tr>')
+    for d in cur:
+        if d['box'] == 'Party' and d['species'] not in CF_NAMES:
+            ACTIONS[d['n']] = f"Move out of the party until after {CF['title']} (back to the Active box)"
     _back = [x for x in IDEAL if x not in CF_NAMES]
     team_todo[:0] = todo_cf
     team_todo.append((f"After {CF['title']}: swap back to the main six (" + ', '.join(_back) + ' back in, with their usual items)', 'low'))

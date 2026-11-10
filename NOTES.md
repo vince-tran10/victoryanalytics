@@ -561,3 +561,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   effectiveness to every non-Fire mon; immune: Fire types, Solid Rock, Sturdy, Battle/Shell Armor, Flash Fire, Magic
   Guard...; Gholdengo takes 25% per eruption), tag battle double-targeting. Field-aware rescore (deff×1.5 + eruption chip):
   best six Rhyperior, Veluza-A, Dragalge, Glalie-A, Whiscash, Swampert. CLAUDE.md: fields are now a core factor.
+- 10 Nov: Geara & Zetta FIGHT MODE on the page (state fight=geara; make_report5 COUNTERS['geara']): field-built six
+  Rhyperior, Veluza-A, Whiscash, Swampert, Glalie-A, Dragalge with field plan (boosts, eruptions, Shell Trap turn 1).
+  Swampert keeps Rock Slide + Amnesia (setup rule): Earthquake replaces Take Down, Protect replaces Muddy Water.
+  Fight mode now writes Boxes moves too (green into party, red out "until after <fight>").
