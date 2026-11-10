@@ -114,18 +114,18 @@ COUNTERS = {'groudon': dict(title='Groudon', note='Boss · Deep Earth · Drought
           'No recoil moves (Wild Charge) on Sash users until their 2nd hit; total damage ~350% of what you need is 100%'])}
 COUNTERS['geara'] = dict(title='Geara & Zetta', note='Tag battle with Melia · Volcanic Top: Fire/Rock/Flying 1.5x, Rock gains Fire, Thunder never misses, eruptions', six=[
     ('Rhyperior', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone', ['Stone Edge', 'Headlong Rush', 'Fire Fang', 'Protect'], 'Lead. Eruption-immune; takes 1/4 from boosted Rock+Fire; Stone Edge = Rock+Fire 1.5x'),
-    ('Veluza-Aevian', 'Reckless', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Mystic Water', ['Wave Crash', 'Flare Blitz', 'Head Smash', 'Protect'], 'Fire type: eruption-immune. Flare Blitz 1.5x, Head Smash = Rock+Fire 1.5x. Keep away from Thunder'),
+    ('Veluza-Aevian', 'Reckless', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Mystic Water', ['Wave Crash', 'Flare Blitz', 'Head Smash', 'Protect'], 'Fire type: eruption-immune. Flare Blitz 1.5x, Head Smash = Rock+Fire 1.5x. Keep away from Thunder'),
     ('Whiscash', 'Oblivious', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Whiscash Crest', ['Earthquake', 'Aqua Tail', 'Rock Tomb', 'Protect'], 'Immune to Thunder; 1/4 from Rock+Fire. Earthquake triggers eruptions that hurt them more'),
     ('Swampert', 'Torrent', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand', ['Earthquake', 'Rock Slide', 'Amnesia', 'Protect'], 'Same field defence as Whiscash; Rock Slide = Rock+Fire 1.5x on both foes; Amnesia vs Eruption/Thunder'),
     ('Glalie-Aevian', 'Grassy Surge', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry', ['Grassy Glide', 'Rock Slide', 'Wood Hammer', 'Protect'], 'Rock Slide STAB Rock+Fire 1.5x on both foes; Grassy terrain heals off eruption chip'),
-    ('Dragalge', 'Adaptability', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Dragon Fang', ['Dragon Pulse', 'Sludge Bomb', 'Toxic', 'Protect'], 'Resists Fire, Rock+Fire and Thunder; 1/16 eruptions. Safe switch-in')],
+    ('Arcanine-Hisui', 'Intimidate', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Hard Stone', ['Flare Blitz', 'Head Smash', 'Rock Slide', 'Protect'], 'Fire type: eruption-immune. Both STABs boosted 1.5x (Rock gains Fire); Intimidate cuts both foes (8 of 12 are physical). 4x weak to Ground/Water: switch out vs Krookodile, Gyarados, Marowak, Silvally')],
     plan=['Field: Fire / Rock / Flying 1.5x; Rock moves gain Fire; Eruption & Heat Wave 1.8x; Thunder 1.5x and never misses; Ice 0.5x, Water 0.9x',
           'Eruptions: Earthquake / Earth Power / Eruption = end of turn 1/8 HP x Fire weakness to every non-Fire mon (Solid Rock, Sturdy, Fire types immune)',
           'Their plan: Typhlosion Eruption, Rock Slide / Stone Edge (Rock+Fire), Thunder (Clefable, Gengar, Silvally), Earthquake eruptions',
-          'Your plan: resist all of it (Ground/Water/Rock/Dragon) and hit back with boosted Rock+Fire; your Earthquakes chip them more than you',
+          'Your plan: every member hits with a field-boosted move (Fire, Rock+Fire, or Earthquake eruptions) and resists what the field boosts. Water ×0.9 only: Wave Crash still kills their Ground / Fire mons',
           'Turn 1: Minior has Shell Trap primed (Telluric Seed): do NOT hit it with a physical move; hit Krookodile or Protect',
           'Kill Minior before Shell Smash, Typhlosion before Eruption. Veluza stays out vs Thunder users. Stop Earthquakes when Melia is low'])
-CF_PREEVO = {'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
+CF_PREEVO = {'Arcanine-Hisui': ('Growlithe-Hisui', 'Fire Stone'), 'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
 CF = COUNTERS.get(FIGHT)
 CF_NAMES = [x[0] for x in CF['six']] if CF else []
 NEXT_LV = max(fo['lvl'] or 0 for p in sorted(fn['plans'], key=lambda p: SX.story_order(os.path.dirname(os.path.dirname(os.path.abspath(F9N)))).get(p['key'], 999))[:3] for fo in p['foes'])
@@ -263,7 +263,7 @@ if CF:
             pre, how = CF_PREEVO.get(nm_, (nm_, ''))
             d0 = min((x for x in cur if x['species'] == pre), key=lambda x: (x['box'] == 'Overflow', -(x.get('level') or 0)), default=None)
             if d0 and how:
-                d0 = dict(d0, species=nm_, moves=[], ability=d0.get('ability'))
+                d0 = dict(d0, species=nm_, _orig=d0['species'], ability=d0.get('ability'))   # keeps its real moves for 'replaces'
             issues = ([f"{pre} {d0['box']} #{d0['n']} → party" + (f", evolve ({how})" if how else '')] + verify_mon(d0, ab_, nat_, evs_, item_, [(m, 0) for m in mv_])) if d0 else [f'Put {nm_} in the party']
         _dd = d if d else d0
         if not d and d0: ACTIONS[d0['n']] = f"Move into the party ({CF['title']} lineup)"
@@ -614,8 +614,10 @@ for role, name, *_ in TEAM:
     if ch: _cards.append((0, name, where, ch))
 if CF:
     for nm_, (dd, iss) in CF_ISSUES.items():
-        k2 = (dd['species'], dd['n'], dd['box'])
-        extra = PROFILE.pop(k2, []) if k2 in PROFILE else []
+        _gen = []
+        for k2 in [k for k in PROFILE if k[1] == dd['n']]:   # any generic card for the same export entry: the lineup build wins
+            _gen += PROFILE.pop(k2)
+        extra = [x for x in _gen if x.startswith('Evolve')]
         if iss or extra: _cards.append((-1, nm_, f"{CF['title']} lineup · {dd['box']} #{dd['n']}", iss + extra))
 for (sp, n, box), ch in sorted(PROFILE.items(), key=lambda kv: (kv[0][2] != 'Party', kv[0][0])):
     if ch: _cards.append((1 if box == 'Party' else 2, sp, f'{box} #{n}', ch))
@@ -849,5 +851,8 @@ if True:
 page = page.replace('</style>', SX.CSS.replace('{{', '{').replace('}}', '}') + '</style>', 1)
 open(OUT, 'w', encoding='utf-8').write(page)
 json.dump({t[1]: t[0].lower() for t in TEAM}, open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'team_roles.json'), 'w'), indent=1)
+if CF:   # fight-mode moves win over staging verdicts
+    for nm_, (dd, _i) in CF_ISSUES.items():
+        if dd['box'] != 'Party': ACTIONS[dd['n']] = f"Move into the party ({CF['title']} lineup)"
 json.dump({str(k): v for k, v in ACTIONS.items()}, open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'actions.json'), 'w'), indent=1)
 print('wrote', OUT, len(page), 'tiers:', {t: len(v) for t, v in cards.items()})

@@ -231,7 +231,7 @@
    "without": 0.359,
    "gain": 0.104,
    "attacks": [
-    "Secret Power",
+    "Facade",
     "Night Slash",
     "Fire Fang"
    ],
@@ -610,7 +610,7 @@
    "gain": 0.047,
    "attacks": [
     "Surf",
-    "Secret Power",
+    "Facade",
     "Deluge"
    ],
    "ability": "HYDRATION",
@@ -835,7 +835,7 @@
    "without": 0.164,
    "gain": 0.0,
    "attacks": [
-    "Secret Power",
+    "Facade",
     "Fire Blast",
     "Hydro Pump"
    ],

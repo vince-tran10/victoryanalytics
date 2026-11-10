@@ -565,3 +565,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Rhyperior, Veluza-A, Whiscash, Swampert, Glalie-A, Dragalge with field plan (boosts, eruptions, Shell Trap turn 1).
   Swampert keeps Rock Slide + Amnesia (setup rule): Earthquake replaces Take Down, Protect replaces Muddy Water.
   Fight mode now writes Boxes moves too (green into party, red out "until after <fight>").
+- 10 Nov: Geara lineup revised (Vincent: "why Water if the field shuts it down?"). Facts: Water moves only ×0.9 (Surf/
+  Muddy Water/Hydro Pump/Water Spout ×0.5); Water typing resists the boosted Fire and Rock+Fire. All-field-attacker six
+  = −6.6% (Fire types die to their Ground/Water). Final: Rhyperior, Veluza-A (Jolly per EV rule), Arcanine-H (for
+  Dragalge: −0.2% tie, + Intimidate on both foes, both STABs field-boosted), Glalie-A, Whiscash, Swampert.
+  make_report5 fight mode: pre-evo lineup members keep their real moves (replacements), one card per export entry,
+  fight-mode box moves win over staging verdicts.
