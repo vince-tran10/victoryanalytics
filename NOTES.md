@@ -556,3 +556,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 9 Nov export (8 Nov 23:03): new Growlithe-Hisui A 0.603 (→ Arcanine-H, Active), Tepig A 0.646 (→ Emboar, Active),
   Turtonator B (Overflow). Ludicolo fixed; Musharna lost its Sitrus (card). Team search: current #5, best +0.69%
   (Glalie-A, Armarouge, Arcanine-H, Musharna-A, Whiscash, Ludicolo) = within 1%, one-six rule → kept.
+- 10 Nov: Vincent LOST Geara & Zetta with the per-fight best six (Rhyperior, Clawitzer, Dragalge, Whiscash, Glalie-A,
+  Gholdengo). Model gaps: Volcanic Top eruptions not modelled (EQ/Earth Power/Eruption → end of turn 1/8 HP × Fire
+  effectiveness to every non-Fire mon; immune: Fire types, Solid Rock, Sturdy, Battle/Shell Armor, Flash Fire, Magic
+  Guard...; Gholdengo takes 25% per eruption), tag battle double-targeting. Field-aware rescore (deff×1.5 + eruption chip):
+  best six Rhyperior, Veluza-A, Dragalge, Glalie-A, Whiscash, Swampert. CLAUDE.md: fields are now a core factor.

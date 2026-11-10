@@ -46,7 +46,11 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
 - **One structure for singles AND doubles** (most battles are singles): party order = plan. Slot 1 leads singles, slots
   1–2 lead doubles. Leads must survive the opposing leads' hits in every hard fight (checked vs exact game lead order).
   Current order: Musharna, Rhyperior, Vikavolt, Armarouge, Ludicolo, Annihilape.
-- Then rank by battle score (singles count double). Fields are a tiebreak, not a team rule.
+- Then rank by battle score (singles count double).
+- **Fields are a core factor (Vincent, 10 Nov): exploit them.** Score every fight with its full field mechanics from the game
+  code (boosts, added types, end-of-turn field damage like Volcanic Top eruptions and who is immune, field changes), favour
+  Pokémon the field boosts or protects, and for partner/tag battles count double-targeting and spread moves hitting the ally.
+  Lesson: Geara & Zetta (Volcanic Top) was lost with a six picked without eruption damage or tag-battle targeting.
 - Meta / Smogon builds preferred (SV + National Dex data in `workspace/smogon`; doubles data for doubles roles).
 
 ## Build rules
