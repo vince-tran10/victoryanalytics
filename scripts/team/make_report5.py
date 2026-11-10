@@ -318,7 +318,8 @@ def move_value(m, moves, phys, rec, ability):
     return 1 + int(v.get('Strength') or 0) / 1000
 def plan_moves(have, target, phys, ability):
     """target attacks (+Protect) -> list of 'Teach X (replaces Y)' lines; free slots keep the best existing moves."""
-    keep = list(dict.fromkeys(list(target) + ['Protect']))[:4]
+    ks = [m for m in have if m in KEEP_STATUS and m not in RECOVERY and m not in target]   # never cut setup / Yawn / Fake Out ...
+    keep = list(dict.fromkeys(list(target)[:max(1, 3 - len(ks))] + ks + ['Protect']))[:4]
     rest = sorted((m for m in have if m not in keep), key=lambda m: -move_value(m, have, phys, set(target), ability))
     while len(keep) < 4 and rest:
         keep.append(rest.pop(0))
@@ -503,7 +504,7 @@ for p in promo:
         promo_left.append(p)
         od = next((d for d in cur if d['box'] == 'Overflow' and d['species'] in (p['owned'], p['final'])), None)
         if od:
-            _iss = ([f"Evolve into {p['final']}"] if p['final'] != od['species'] else []) + verify_mon(dict(od, species=p['final']), p['ability'], nat, p['evs_txt'], od['item'], [(m, 0) for m in mv])
+            _iss = ([f"Evolve into {p['final']}"] if p['final'] != od['species'] and not od['species'].startswith(p['final'] + ' ') else []) + verify_mon(dict(od, species=p['final']), p['ability'], nat, p['evs_txt'], od['item'], [(m, 0) for m in mv])
             _gone = [m for m in od['moves'] if m not in mv]
             _iss = [(x + f' (replaces {_gone.pop(0)})') if x.startswith('Teach ') and _gone else x for x in _iss]
             if _iss: PROFILE.setdefault((p['final'], od['n'], 'Overflow → Active'), []).extend(_iss)
@@ -567,7 +568,7 @@ for d in cur:
         _key, _nats = ('Atk', {'Adamant', 'Jolly', 'Brave'}) if _ph else ('SpA', {'Modest', 'Timid', 'Quiet'})
         _nat = nat_pick(d, _ph)
         _iss = []
-        if d['final'] != d['species']: _iss.append(f"Evolve into {d['final']}" + (f" ({d['evolve']})" if d.get('evolve') else ''))
+        if d['final'] != d['species'] and not d['species'].startswith(d['final'] + ' '): _iss.append(f"Evolve into {d['final']}" + (f" ({d['evolve']})" if d.get('evolve') else ''))
         if (d.get('evs') or {}).get(_key, 0) < 100: _iss.append(f"EVs: {ev_pick(d, _key)} (now {' / '.join(f'{v} {k}' for k, v in (d.get('evs') or {}).items() if v >= 100) or 'none'})")
         if d.get('nature') not in _nats: _iss.append(f"Nature: {d.get('nature')} → {_nat} (mint)")
         if d.get('capsule') and d['capsule'][0].replace(' ', '').lower() != (d.get('ability') or '').replace(' ', '').lower():

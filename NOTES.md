@@ -571,3 +571,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Dragalge: −0.2% tie, + Intimidate on both foes, both STABs field-boosted), Glalie-A, Whiscash, Swampert.
   make_report5 fight mode: pre-evo lineup members keep their real moves (replacements), one card per export entry,
   fight-mode box moves win over staging verdicts.
+- 10 Nov export (12:16): party = Geara lineup, all 6 ✓ in fight panel. New: purified Tatsugiri (Droopy) B 0.577 →
+  Active. Dondozo: wild only, Evergreen Trench Lv 78–84 (2%) / Xen Garden water Lv 80–95 (5%) = far post-Ch8, so
+  Commander is dead for now. plan_moves now never cuts setup/KEEP_STATUS moves (Tatsugiri card had Protect replacing
+  Nasty Plot); "Evolve into X" no longer shown for form names (Tatsugiri Droopy Form).

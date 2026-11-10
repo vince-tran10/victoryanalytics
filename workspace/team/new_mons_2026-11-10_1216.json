@@ -1,0 +1,55 @@
+[
+ {
+  "dump": 413,
+  "owned": "Tatsugiri Droopy Form",
+  "level": 55,
+  "now_ability": "Storm Drain",
+  "now_moves": [
+   "Dragon Pulse",
+   "Searing Shot",
+   "Flip Turn",
+   "Nasty Plot"
+  ],
+  "final": "Tatsugiri",
+  "evolve": "",
+  "gate": "",
+  "types": "Dragon/Water",
+  "score": 0.577,
+  "tier": "B",
+  "ability": "Storm Drain",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Dragon Pulse",
+   "Searing Shot",
+   "Surf",
+   "Protect"
+  ],
+  "move_src": {
+   "Dragon Pulse": "known",
+   "Searing Shot": "known",
+   "Surf": "HM03",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.5,
+   "jenner": 0.74,
+   "geara": 0.44,
+   "giratina": 0.27,
+   "danni": 0.88,
+   "troye": 0.68,
+   "zena": 0.72,
+   "holly": 0.67,
+   "manaphy": 0.37,
+   "factory": 0.45,
+   "marcie": 0.4,
+   "amber": 0.9
+  }
+ }
+]
