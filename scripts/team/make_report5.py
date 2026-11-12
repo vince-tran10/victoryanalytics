@@ -112,19 +112,19 @@ COUNTERS = {'groudon': dict(title='Groudon', note='Boss · Deep Earth · Drought
           'Then the Sash/Sturdy hitters: each gets 2 hits (hit, survive on Sash, hit again)',
           'Heliolisk uses Thunder, not Thunderbolt: rain makes it 100% accurate',
           'No recoil moves (Wild Charge) on Sash users until their 2nd hit; total damage ~350% of what you need is 100%'])}
-COUNTERS['geara'] = dict(title='Geara & Zetta', note='Tag battle with Melia · Volcanic Top: Fire/Rock/Flying 1.5x, Rock gains Fire, Thunder never misses, eruptions', six=[
-    ('Rhyperior', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone', ['Stone Edge', 'Headlong Rush', 'Fire Fang', 'Protect'], 'Lead. Eruption-immune; takes 1/4 from boosted Rock+Fire; Stone Edge = Rock+Fire 1.5x'),
-    ('Veluza-Aevian', 'Reckless', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Mystic Water', ['Wave Crash', 'Flare Blitz', 'Head Smash', 'Protect'], 'Fire type: eruption-immune. Flare Blitz 1.5x, Head Smash = Rock+Fire 1.5x. Keep away from Thunder'),
-    ('Whiscash', 'Oblivious', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Whiscash Crest', ['Earthquake', 'Aqua Tail', 'Rock Tomb', 'Protect'], 'Immune to Thunder; 1/4 from Rock+Fire. Earthquake triggers eruptions that hurt them more'),
-    ('Swampert', 'Torrent', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand', ['Earthquake', 'Rock Slide', 'Amnesia', 'Protect'], 'Same field defence as Whiscash; Rock Slide = Rock+Fire 1.5x on both foes; Amnesia vs Eruption/Thunder'),
-    ('Glalie-Aevian', 'Grassy Surge', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry', ['Grassy Glide', 'Rock Slide', 'Wood Hammer', 'Protect'], 'Rock Slide STAB Rock+Fire 1.5x on both foes; Grassy terrain heals off eruption chip'),
-    ('Arcanine-Hisui', 'Intimidate', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Hard Stone', ['Flare Blitz', 'Head Smash', 'Rock Slide', 'Protect'], 'Fire type: eruption-immune. Both STABs boosted 1.5x (Rock gains Fire); Intimidate cuts both foes (8 of 12 are physical). 4x weak to Ground/Water: switch out vs Krookodile, Gyarados, Marowak, Silvally')],
-    plan=['Field: Fire / Rock / Flying 1.5x; Rock moves gain Fire; Eruption & Heat Wave 1.8x; Thunder 1.5x and never misses; Ice 0.5x, Water 0.9x',
-          'Eruptions: Earthquake / Earth Power / Eruption = end of turn 1/8 HP x Fire weakness to every non-Fire mon (Solid Rock, Sturdy, Fire types immune)',
-          'Their plan: Typhlosion Eruption, Rock Slide / Stone Edge (Rock+Fire), Thunder (Clefable, Gengar, Silvally), Earthquake eruptions',
-          'Your plan: every member hits with a field-boosted move (Fire, Rock+Fire, or Earthquake eruptions) and resists what the field boosts. Water ×0.9 only: Wave Crash still kills their Ground / Fire mons',
-          'Turn 1: Minior has Shell Trap primed (Telluric Seed): do NOT hit it with a physical move; hit Krookodile or Protect',
-          'Kill Minior before Shell Smash, Typhlosion before Eruption. Veluza stays out vs Thunder users. Stop Earthquakes when Melia is low'])
+COUNTERS['geara'] = dict(title='Geara & Zetta', note='Tag battle with Melia · Volcanic Top · Grimmsnarl screens · crested Silvally', six=[
+    ('Rhyperior', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone', ['Stone Edge', 'Headlong Rush', 'Fire Fang', 'Protect'], 'Lead. Eruption-immune; takes the least from both leads; only safe answer to crested Silvally and Typhlosion'),
+    ('Unfezant-M', 'Defiant', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Focus Sash', ['Head Smash', 'Brick Break', 'Brave Bird', 'Detect'], 'SCREEN BREAKER: Brick Break the turn after Grimmsnarl sets Reflect/Light Screen. Krookodile Intimidate = +2 Atk (Defiant). Head Smash Rock+Fire, Brave Bird 1.5x'),
+    ('Arcanine-Hisui', 'Intimidate', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Hard Stone', ['Flare Blitz', 'Rock Slide', 'Head Smash', 'Protect'], 'Both STABs 1.5x; Intimidate both foes. Out vs Krookodile, Gyarados, Marowak, Silvally'),
+    ('Veluza-Aevian', 'Reckless', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Mystic Water', ['Wave Crash', 'Flare Blitz', 'Head Smash', 'Protect'], 'Eruption-immune; Wave Crash kills Krookodile / Marowak / Typhlosion. Out vs Thunder users and Silvally'),
+    ('Turtonator', 'Shell Armor', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash', ['Overheat', 'Dragon Pulse', 'Shell Smash', 'Protect'], 'Fire type + Shell Armor: eruption-immune, no crits (Absol). Resists Fire / Water / Thunder; Shell Smash then Overheat 1.5x'),
+    ('Whiscash', 'Oblivious', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Whiscash Crest', ['Earthquake', 'Aqua Tail', 'Rock Tomb', 'Protect'], 'Immune to Thunder (Clefable, Gengar, Silvally); Earthquake misses Noivern / Togekiss / Hydreigon on Melia\'s side')],
+    plan=['Field: Fire / Rock / Flying 1.5x; Rock gains Fire; Eruption & Heat Wave 1.8x; Thunder 1.5x, never misses; eruptions 1/8 x Fire weakness (Fire types, Solid Rock, Sturdy, Shell Armor immune)',
+          'Grimmsnarl (Geara #2) uses Prankster Reflect + Light Screen for 8 turns: send Unfezant-A and Brick Break at once (it breaks both)',
+          'Turn 1: Minior has Shell Trap primed: no physical hit on it; hit Krookodile or Protect. Kill Minior before Shell Smash',
+          'Crested Silvally (Sheer Force, +20%): Rock Slide / Heat Wave / Thunder hit hardest in the fight. Only Rhyperior takes it well',
+          'Typhlosion: Rhyperior, Veluza or Turtonator; every eruption powers its Flash Fire, so stop Earthquakes while it is in',
+          'Melia (likely Noivern, Zoroark, Snorlax, Togekiss, Azumarill, Hydreigon): Noivern ignores screens; Earthquake hits only her Zoroark / Snorlax / Azumarill'])
 CF_PREEVO = {'Arcanine-Hisui': ('Growlithe-Hisui', 'Fire Stone'), 'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
 CF = COUNTERS.get(FIGHT)
 CF_NAMES = [x[0] for x in CF['six']] if CF else []

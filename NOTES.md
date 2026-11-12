@@ -575,3 +575,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Active. Dondozo: wild only, Evergreen Trench Lv 78–84 (2%) / Xen Garden water Lv 80–95 (5%) = far post-Ch8, so
   Commander is dead for now. plan_moves now never cuts setup/KEEP_STATUS moves (Tatsugiri card had Protect replacing
   Nasty Plot); "Evolve into X" no longer shown for form names (Tatsugiri Droopy Form).
+- 12 Nov: Geara lost twice more. Missed by the model: Grimmsnarl Prankster Reflect + Light Screen (Light Clay, 8 turns)
+  and Zetta's Silvally is CRESTED (SILVCREST in trainer items → Battler.rb: +20% Atk/SpA, Ground Memory → Sheer Force).
+  Melia partner = ENIGMA 5 (Lv 53-55 Noivern, Zoroark, Snorlax, Togekiss, Azumarill, Hydreigon; best match, not
+  confirmed). Fight score now: screens ×0.67 unless a screen breaker (×0.9), Silvally ×1.4, Typhlosion Flash Fire ×1.3,
+  eruptions, double-targeting. Breaker = +28% (0.846 vs 0.662). New lineup: Rhyperior, Unfezant-A ("Unfezant-M" in
+  export; Brick Break), Arcanine-H, Veluza-A, Turtonator, Whiscash (Grapploct six 0.8462 vs this 0.8428 = tie, field fit).
