@@ -584,3 +584,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 13 Nov: Geara lead → Unfezant-A (Vincent asked re Defiant). Krookodile's Intimidate fires once, on the lead turn, so
   Defiant only works as lead; Unfezant outspeeds both leads (164), Brick Break 117% on Krookodile, takes 84% from its EQ
   (Sash covers a double-target), and is already in when Grimmsnarl screens. Rhyperior 2nd.
+- 13 Nov: Vincent confirmed Melia = Noivern lead, Zoroark, Snorlax, Togekiss, Azumarill, Hydreigon (ENIGMA 5) and
+  Typhlosion's Hidden Power = GRASS (game data had no type). Turn-by-turn lead check (engine damage_pct, Intimidate,
+  Telluric Seed +1 Def, Shell Smash, Minior Core +2 = 318 Spe): lead CLAWITZER (special Water Pulse 132% Minior t1 =
+  no Shell Trap, 92% Krookodile t2, takes 39% max). Whiscash out (−1.7%, least loss). Order: Clawitzer, Unfezant-A,
+  Rhyperior, Veluza-A, Arcanine-H, Turtonator. Rhyperior is NOT a Typhlosion answer (HP Grass 67%).
