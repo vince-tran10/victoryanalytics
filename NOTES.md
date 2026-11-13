@@ -606,3 +606,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   New six: Golisopod-A, Reuniclus (Magic Guard), Rhyperior, Lunatone-Idol, Annihilape, Roserade = 0.852 vs 0.814 old
   (Gholdengo, Bruxish, Exeggutor out: Bruxish/Exeggutor take ~100% from Giratina). Fight mode hides cards of mons leaving.
 - 13 Nov: Giratina lead → Golisopod-A + Rhyperior (Vincent: why lead Magic Guard when no hazards are up yet). Reuniclus saved for the last form (Toxic Spikes every turn + SR/Spikes, +1/+1).
+- 13 Nov: BEAT GIRATINA (+ Eli & Sharon). Left: Holly (Beach, doubles), Manaphy (Beach boss), Factory, Amber (Concert).
+  New general six via scripts/team/fights/remaining_eval.py + remaining_team.py (full legal movesets vs every foe, field
+  game code, chapter rules b/c/d): Vikavolt, Chandelure, Ludicolo, Whiscash, Crabominable, Heliolisk (1.219; old-method
+  best Glalie-A/Ludicolo/Chandelure/Turtonator/Musharna-A/Whiscash = 1.210 on the new method, +2.8% on the old = tie).
+  Identity: block their main attack type (Flash Fire / Dry Skin / Levitate + Ground). Dry Skin counted live (Water
+  immunity) in checks/deep_check/CLAUDE.md. update.py needs ALSO_OVF=Heliolisk while it sits in Overflow.

@@ -1,92 +1,12 @@
 {
  "eli": {
-  "label": "Eli & Sharon (10 mons) – Valor Cliffside",
-  "game_src": [
-   "Eli and Sharon (MISFORTUNATEDUO #10)"
-  ],
-  "n_game": 10,
-  "n_guide": 10,
-  "rows": [
-   {
-    "mon": "Honchkrow",
-    "diff": []
-   },
-   {
-    "mon": "Mismagius",
-    "diff": []
-   },
-   {
-    "mon": "Milotic",
-    "diff": []
-   },
-   {
-    "mon": "Magmar",
-    "diff": []
-   },
-   {
-    "mon": "Electabuzz",
-    "diff": []
-   },
-   {
-    "mon": "Donphan",
-    "diff": []
-   },
-   {
-    "mon": "Ursaring",
-    "diff": []
-   },
-   {
-    "mon": "Gyarados",
-    "diff": []
-   },
-   {
-    "mon": "Tangrowth",
-    "diff": []
-   },
-   {
-    "mon": "Lickilicky",
-    "diff": []
-   }
-  ]
+  "note": "not in engine (beaten or not tracked)"
  },
  "geara": {
   "note": "not in engine (beaten or not tracked)"
  },
  "giratina": {
-  "label": "Rift Giratina (boss) – Rift Distortion",
-  "game_src": [
-   "??? (ALGRISELDA #0)"
-  ],
-  "n_game": 3,
-  "n_guide": 4,
-  "rows": [
-   {
-    "mon": "Giratina",
-    "diff": [
-     "MISSING in guide data"
-    ]
-   },
-   {
-    "mon": "Relicanth",
-    "diff": []
-   },
-   {
-    "mon": "Swalot",
-    "diff": []
-   },
-   {
-    "mon": "Giratina (bars 1-2)",
-    "diff": [
-     "EXTRA in guide data (not in the game entry)"
-    ]
-   },
-   {
-    "mon": "Giratina (bar 3)",
-    "diff": [
-     "EXTRA in guide data (not in the game entry)"
-    ]
-   }
-  ]
+  "note": "not in engine (beaten or not tracked)"
  },
  "holly": {
   "label": "Holly & Rorim – Beach",

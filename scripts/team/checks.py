@@ -49,7 +49,7 @@ if os.path.exists(cmp):
     left = [(k, r['mon'], d) for k, v in C.items() for r in v.get('rows', []) for d in r['diff']
             if not d.startswith(('BOSS', 'calls SOS', 'MISSING', 'EXTRA'))]
     chk('Every hard-fight Pokémon matches the game data exactly', not left, f'{len(left)} differences' if left else 'level, item, ability, nature, moves, types, EVs')
-NEEDS = {'Swift Swim': 'rain', 'Rain Dish': 'rain', 'Dry Skin': 'rain', 'Hydration': 'rain', 'Chlorophyll': 'sun', 'Solar Power': 'sun',
+NEEDS = {'Swift Swim': 'rain', 'Rain Dish': 'rain', 'Hydration': 'rain', 'Chlorophyll': 'sun', 'Solar Power': 'sun',
          'Leaf Guard': 'sun', 'Flower Gift': 'sun', 'Sand Rush': 'sand', 'Sand Force': 'sand', 'Sand Veil': 'sand', 'Slush Rush': 'snow',
          'Ice Body': 'snow', 'Snow Cloak': 'snow', 'Surge Surfer': 'e-terrain', 'Grass Pelt': 'g-terrain', 'Quark Drive': 'e-terrain',
          'Protosynthesis': 'sun'}

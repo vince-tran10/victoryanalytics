@@ -4,9 +4,9 @@
  "export_label": "13 Nov 10:55",
  "active_start": 412,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 62,
- "run": 76,
- "final": 80,
+ "roster": 65,
+ "run": 79,
+ "final": 83,
  "done": [
   "aelita",
   "narcissa1",
@@ -20,52 +20,54 @@
   "crawli",
   "neved",
   "kyogre",
-  "geara"
+  "geara",
+  "giratina",
+  "eli"
  ],
- "fight": "giratina",
+ "fight": null,
  "team": [
-  "Musharna (Aevian Form)",
-  "Rhyperior",
   "Vikavolt",
-  "Armarouge",
+  "Chandelure",
   "Ludicolo",
-  "Annihilape"
+  "Whiscash",
+  "Crabominable",
+  "Heliolisk"
  ],
  "moves": {
-  "Annihilape": [
-   "Close Combat",
-   "Rage Fist",
-   "Sucker Punch",
+  "Vikavolt": [
+   "Thunderbolt",
+   "Bug Buzz",
+   "Mud Barrage",
+   "Protect"
+  ],
+  "Chandelure": [
+   "Overheat",
+   "Shadow Ball",
+   "Shock Wave",
    "Protect"
   ],
   "Ludicolo": [
    "Fake Out",
    "Energy Ball",
-   "Hydro Pump",
+   "Surf",
    "Protect"
   ],
-  "Armarouge": [
-   "Flamethrower",
-   "Psyshock",
-   "Calm Mind",
+  "Whiscash": [
+   "Earthquake",
+   "Aqua Tail",
+   "Zen Headbutt",
    "Protect"
   ],
-  "Musharna (Aevian Form)": [
-   "Play Rough",
-   "Throat Chop",
-   "Glare",
+  "Crabominable": [
+   "Close Combat",
+   "Ice Hammer",
+   "Crabhammer",
    "Protect"
   ],
-  "Rhyperior": [
-   "Stone Edge",
-   "Headlong Rush",
-   "Fire Fang",
-   "Protect"
-  ],
-  "Vikavolt": [
+  "Heliolisk": [
    "Thunderbolt",
-   "Bug Buzz",
-   "Sticky Web",
+   "Surf",
+   "Glare",
    "Protect"
   ]
  },
@@ -84,69 +86,59 @@
  },
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
-  "rank": 5,
-  "of": 8199,
-  "gap": 0.69,
+  "rank": 191,
+  "of": 74544,
+  "gap": 2.82,
   "top": [
    {
-    "score": 1.138,
-    "pct": 100.7,
+    "score": 1.1752,
+    "pct": 102.8,
     "team": [
      "Glalie-A",
-     "Armarouge",
-     "Arcanine-Hisui",
+     "Ludicolo",
+     "Chandelure",
+     "Turtonator",
      "Musharna-A",
-     "Whiscash",
-     "Ludicolo"
+     "Whiscash"
     ],
-    "misses": [
-     "Lickilicky (eli)",
-     "Clefable (geara)"
-    ]
+    "misses": []
    },
    {
-    "score": 1.1325,
-    "pct": 100.2,
+    "score": 1.1718,
+    "pct": 102.5,
     "team": [
      "Glalie-A",
-     "Arcanine-Hisui",
+     "Ludicolo",
      "Vikavolt",
-     "Musharna-A",
-     "Whiscash",
-     "Ludicolo"
-    ],
-    "misses": [
-     "Lickilicky (eli)",
-     "Clefable (geara)"
-    ]
-   },
-   {
-    "score": 1.1324,
-    "pct": 100.2,
-    "team": [
-     "Glalie-A",
-     "Arcanine-Hisui",
      "Chandelure",
      "Musharna-A",
-     "Whiscash",
-     "Ludicolo"
+     "Whiscash"
     ],
-    "misses": [
-     "Lickilicky (eli)"
-    ]
+    "misses": []
+   },
+   {
+    "score": 1.1714,
+    "pct": 102.5,
+    "team": [
+     "Glalie-A",
+     "Ludicolo",
+     "Armarouge",
+     "Turtonator",
+     "Musharna-A",
+     "Whiscash"
+    ],
+    "misses": []
    }
   ],
-  "current_misses": [
-   "Clefable"
-  ]
+  "current_misses": []
  },
  "team_check_cache": true,
  "abilities": {
-  "Rhyperior": "Solid Rock",
-  "Musharna (Aevian Form)": "Tough Claws",
-  "Armarouge": "Flash Fire",
-  "Annihilape": "Defiant",
   "Vikavolt": "Levitate",
-  "Ludicolo": "Own Tempo"
+  "Chandelure": "Flash Fire",
+  "Ludicolo": "Own Tempo",
+  "Whiscash": "Oblivious",
+  "Crabominable": "Iron Fist",
+  "Heliolisk": "Dry Skin"
  }
 }

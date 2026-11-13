@@ -77,7 +77,7 @@ def score_support(ks, tr=None):
         w = C.bw(b); tot += v * w; tw += w
     return tot / tw
 def ok(ks): return all(sum(C.WK[k][s] for k in ks) < 3 and any(C.RS[k][s] for k in ks) for s in C.MAJOR) and len(C.misses(ks)) <= 2
-NEEDS = {'SWIFTSWIM': 'rain', 'RAINDISH': 'rain', 'DRYSKIN': 'rain', 'HYDRATION': 'rain', 'CHLOROPHYLL': 'sun', 'SOLARPOWER': 'sun',
+NEEDS = {'SWIFTSWIM': 'rain', 'RAINDISH': 'rain', 'HYDRATION': 'rain', 'CHLOROPHYLL': 'sun', 'SOLARPOWER': 'sun',
          'LEAFGUARD': 'sun', 'SANDRUSH': 'sand', 'SANDFORCE': 'sand', 'SANDVEIL': 'sand', 'SLUSHRUSH': 'snow', 'ICEBODY': 'snow',
          'SNOWCLOAK': 'snow', 'SURGESURFER': 'eterrain', 'GRASSPELT': 'gterrain'}
 GIVES = {'DRIZZLE': 'rain', 'DROUGHT': 'sun', 'SANDSTREAM': 'sand', 'SNOWWARNING': 'snow', 'ELECTRICSURGE': 'eterrain', 'GRASSYSURGE': 'gterrain'}

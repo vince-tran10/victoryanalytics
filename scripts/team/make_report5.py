@@ -52,30 +52,29 @@ def disp(n):
 
 # ---------------------------------------------------------------- 1) team
 # (role, name, types, ability, nature, evs, item, moves[(move, is_new)], change notes)
-TEAM = [   # best six (8 Nov, exact game data). ORDER = PARTY ORDER: slot 1 leads singles, slots 1-2 lead doubles
-    ('Lead', 'Musharna-Aevian', 'Dark/Fairy', 'Tough Claws', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry',
-     [('Play Rough', 0), ('Throat Chop', 0), ('Glare', 0), ('Protect', 0)], []),
-    ('Lead', 'Rhyperior', 'Ground/Rock', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone',
-     [('Stone Edge', 0), ('Headlong Rush', 0), ('Fire Fang', 0), ('Protect', 0)], []),
-    ('Mid', 'Vikavolt', 'Bug/Electric', 'Levitate', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Magnet',
-     [('Thunderbolt', 0), ('Bug Buzz', 0), ('Sticky Web', 0), ('Protect', 0)], []),
-    ('Mid', 'Armarouge', 'Fire/Psychic', 'Flash Fire', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Sitrus Berry',
-     [('Flamethrower', 0), ('Psyshock', 0), ('Calm Mind', 0), ('Protect', 0)], []),
+TEAM = [   # best six for the remaining fights (13 Nov, full-moveset + field re-check). ORDER = PARTY ORDER: slot 1 leads singles, slots 1-2 lead doubles
+    ('Lead', 'Vikavolt', 'Bug/Electric', 'Levitate', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Magnet',
+     [('Thunderbolt', 0), ('Bug Buzz', 0), ('Mud Barrage', 0), ('Protect', 0)], []),
+    ('Lead', 'Chandelure', 'Ghost/Fire', 'Flash Fire', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash',
+     [('Overheat', 0), ('Shadow Ball', 0), ('Shock Wave', 0), ('Protect', 0)], []),
     ('Mid', 'Ludicolo', 'Water/Grass', 'Own Tempo', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Mystic Water',
-     [('Fake Out', 0), ('Energy Ball', 0), ('Hydro Pump', 0), ('Protect', 0)], []),
-    ('Closer', 'Annihilape', 'Fighting/Ghost', 'Defiant', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Black Belt',
-     [('Close Combat', 0), ('Rage Fist', 0), ('Sucker Punch', 0), ('Protect', 0)], []),
+     [('Fake Out', 0), ('Energy Ball', 0), ('Surf', 0), ('Protect', 0)], []),
+    ('Mid', 'Whiscash', 'Water/Ground', 'Oblivious', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Whiscash Crest',
+     [('Earthquake', 0), ('Aqua Tail', 0), ('Zen Headbutt', 0), ('Protect', 0)], []),
+    ('Mid', 'Crabominable', 'Fighting/Ice', 'Iron Fist', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Black Belt',
+     [('Close Combat', 0), ('Ice Hammer', 0), ('Crabhammer', 0), ('Protect', 0)], []),
+    ('Closer', 'Heliolisk', 'Electric/Normal', 'Dry Skin', 'Timid', '252 SpA / 252 Spe / 4 HP', 'Focus Sash',
+     [('Thunderbolt', 0), ('Surf', 0), ('Glare', 0), ('Protect', 0)], []),
 ]
-IDENTITY = ('<b>Identity</b> Slow, hard-hitting core (Rhyperior, Armarouge, Vikavolt) backed by speed control: '
-            'Musharna\'s Glare, Vikavolt\'s Sticky Web, Ludicolo\'s Fake Out. Annihilape is the fast cleaner.')
+
+IDENTITY = ('<b>Identity</b> Block their main attack, hit back super-effectively: Flash Fire Chandelure vs Amber\'s all-Fire team, '
+            'Dry Skin Heliolisk vs Manaphy / Beach Water, Levitate Vikavolt + Ground Whiscash vs Factory Electric. Glare + Fake Out for tempo.')
 PLAY = [IDENTITY,
-        '<b>Party order = the plan, same in singles and doubles:</b> 1 Musharna · 2 Rhyperior · 3 Vikavolt · 4 Armarouge · 5 Ludicolo · 6 Annihilape',
-        '<b>Lead</b> Musharna (survives every opposing lead in all 7 fights): Glare the fastest threat, or hit it. '
-        'Doubles: Rhyperior leads beside it (survives all 4 doubles leads)',
-        '<b>Mid</b> Rhyperior and Armarouge do the damage on slowed foes (Armarouge Calm Minds when safe); Vikavolt sets Sticky Web '
-        'on entry; Ludicolo Fake Outs the turn it comes in',
-        '<b>Close</b> Annihilape: fastest member, Sucker Punch priority, Rage Fist strongest late after taking hits',
-        '<b>Watch</b> Manaphy one-shots Rhyperior: keep it in the back there. Speed Boost users: Protect turn 1, attack turn 2']
+        '<b>Party order = the plan, same in singles and doubles:</b> 1 Vikavolt · 2 Chandelure · 3 Ludicolo · 4 Whiscash · 5 Crabominable · 6 Heliolisk',
+        '<b>Lead</b> Vikavolt: survives Manaphy, Raichu and Camerupt; Thunderbolt ~1 Manaphy bar a hit. Doubles (Holly): Chandelure beside it for the Bug/Steels',
+        '<b>Mid</b> Ludicolo Fake Outs on entry; Whiscash takes every Electric hit (never Earthquake at the Factory: it turns the field into Short-Circuit); Crabominable hits Rotom, Oricorio, Bellossom',
+        '<b>Close</b> Heliolisk: fastest member, Glare the Speed Boost users (Scolipede, Blaziken), immune to Water',
+        '<b>Fields</b> Beach: Surf 1.5x, Mud Barrage 2x, Aura Sphere 1.3x · Factory: Electric 1.2x · Concert: hype rolls, sound 1.5x']
 JOB = {'Annihilape': 'Fastest hitter.',
        'Ludicolo': 'Fake Out lead: a free turn for Annihilape. Grass + Water hits the Water/Ground mons.',
        'Armarouge': 'Fire/Psychic special attacker; Calm Mind turns it into a sweeper.',
@@ -642,7 +641,7 @@ if CF:
         extra = [x for x in _gen if x.startswith('Evolve') and not any(i.startswith('Evolve') for i in iss)]
         if iss or extra: _cards.append((-1, nm_, f"{CF['title']} lineup · {dd['box']} #{dd['n']}", iss + extra))
 for (sp, n, box), ch in sorted(PROFILE.items(), key=lambda kv: (kv[0][2] != 'Party', kv[0][0])):
-    if CF and box == 'Party' and sp not in CF_NAMES: continue   # leaving the party for this fight
+    if box == 'Party' and sp not in (CF_NAMES if CF else IDEAL): continue   # leaving the party
     if ch: _cards.append((1 if box == 'Party' else 2, sp, f'{box} #{n}', ch))
 _cards.sort(key=lambda c: (c[0], c[1]))
 todo_html = ''

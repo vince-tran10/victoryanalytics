@@ -22,7 +22,9 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
 - Verified game rules: unlisted trainer EVs = min(85, lvl×1.5), IVs = 10; Concert Venue hype 1 = min rolls (85%).
 
 ## Game facts
-- Rejuvenation V14, Chapter 8, Classic mode, 7 badges, level cap 55. Everyone is levelled to 55.
+- Rejuvenation V14, Chapter 8, Classic mode, 7 badges, level cap 55.
+- Every fight is scored with FULL legal movesets vs the actual targets (resistances!) and the field's game-code mechanics
+  (scripts/team/fights/*_eval.py). Lesson 13 Nov: Venoshock picked into targets that all resist it. Everyone is levelled to 55.
 - **Debug mode:** any owned Pokémon can be levelled, re-natured, re-EV'd, ability-capsuled, taught any legal move,
   instantly. NEVER filter or rank by build effort. Pick purely on battle merit.
 - Legal moves: level-up ≤ 55, Move Relearner, egg, Ch1–7 TMs, tutors ≤ 7 badges. Evolution items from Ch1–7 OK.
@@ -39,13 +41,15 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   one-offs are a tiebreak. (d) Every opposing Pokémon is hit super-effectively OR one-shot; at most 2 misses.
 - (e) **Synergy / one identity:** the six has ONE stated game plan (e.g. "slow hard hitters + speed control"), with
   enablers and beneficiaries on the team, and NO dead pieces: every conditional ability or move needs its enabler on
-  the team (Swift Swim/Rain Dish/Dry Skin → rain setter; Chlorophyll/Solar Power → sun; Sand Rush/Force → sand;
+  the team (Swift Swim/Rain Dish → rain setter; Dry Skin counts as live for its Water immunity; Chlorophyll/Solar Power → sun; Sand Rush/Force → sand;
   Slush Rush/Ice Body → snow; Surge Surfer → Electric Terrain…). No anti-synergy (e.g. Glare or fast mons under Trick
   Room). Weather teams aren't realistic yet: no Drizzle/Drought/Sand Stream owned. Checked by checks.py.
-- Current identity: slow, hard-hitting core + speed control (Glare, Sticky Web) + Fake Out tempo; Annihilape = fast cleaner.
+- Current identity (13 Nov, remaining fights Holly/Manaphy/Factory/Amber): block their main attack type and hit back SE —
+  Flash Fire Chandelure (Amber all-Fire), Dry Skin Heliolisk (Manaphy/Beach Water), Levitate Vikavolt + Whiscash (Factory Electric);
+  Glare + Fake Out for tempo.
 - **One structure for singles AND doubles** (most battles are singles): party order = plan. Slot 1 leads singles, slots
   1–2 lead doubles. Leads must survive the opposing leads' hits in every hard fight (checked vs exact game lead order).
-  Current order: Musharna, Rhyperior, Vikavolt, Armarouge, Ludicolo, Annihilape.
+  Current order: Vikavolt, Chandelure, Ludicolo, Whiscash, Crabominable, Heliolisk.
 - Then rank by battle score (singles count double).
 - **Fields are a core factor (Vincent, 10 Nov): exploit them.** Score every fight with its full field mechanics from the game
   code (boosts, added types, end-of-turn field damage like Volcanic Top eruptions and who is immune, field changes), favour
