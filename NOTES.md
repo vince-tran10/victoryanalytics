@@ -598,3 +598,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Scored with that: Golisopod-A (Bone Rush + Spikes), Gholdengo, Rhyperior, Bruxish, Exeggutor, Roserade (0.931).
   make_report5: CF_PREEVO Roserade←Roselia (Shiny Stone); pre-evo cards now say "Evolve into X".
 - 13 Nov export (10:55): Giratina lineup in the party, 5/6 match; Roserade needs a Sitrus Berry. New: Abra (D, Overflow).
+- 13 Nov: Roserade Venoshock → Extrasensory for Giratina (Venoshock resisted by all three: Giratina 1/4, Swalot/Relicanth 1/2; engine took the Wasteland 130 BP at face value). Engine gap to fix: move choice should weight resistances of the actual targets.

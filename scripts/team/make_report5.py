@@ -132,7 +132,7 @@ COUNTERS['giratina'] = dict(title='Giratina (Taken Tyrant)', note='Boss · Waste
     ('Rhyperior', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone', ['Stone Edge', 'Headlong Rush', 'Fire Fang', 'Protect'], 'Headlong Rush 2x on Giratina (Earthquake is 0.25x here: never use it). Takes little from Relicanth / Swalot'),
     ('Bruxish', 'Strong Jaw', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Black Glasses', ['Psychic Fangs', 'Wave Crash', 'Crunch', 'Protect'], 'Psychic Fangs 2x on both Giratina forms; Crunch 2x on bars 1-2 (Strong Jaw 1.5x)'),
     ('Exeggutor', 'Chlorophyll', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash', ['Leaf Storm', 'Extrasensory', 'Psyshock', 'Protect'], 'Relicanth killer (Leaf Storm 4x, 290%). Psyshock 2x on Giratina. No Giga Drain: Liquid Ooze is 2x here'),
-    ('Roserade', 'Technician', 'Timid', '252 SpA / 252 Spe / 4 HP', 'Sitrus Berry', ['Magical Leaf', 'Mud Barrage', 'Venoshock', 'Protect'], 'Poison type: immune to the Toxic Spikes chip. Magical Leaf 4x on Relicanth')],
+    ('Roserade', 'Technician', 'Timid', '252 SpA / 252 Spe / 4 HP', 'Sitrus Berry', ['Magical Leaf', 'Mud Barrage', 'Extrasensory', 'Protect'], 'Poison type: immune to the Toxic Spikes chip. Magical Leaf 4x on Relicanth; Extrasensory 2x on Giratina (both forms) and Swalot')],
     plan=['Wasteland: Earthquake / Bulldoze 0.25x (use Headlong Rush, Bone Rush); Sludge moves 1.2x; draining Swalot (Liquid Ooze) hurts 2x',
           'Hazards are consumed at once: Spikes = 33% to grounded foes, Stealth Rock = double SR damage, Toxic Spikes = 12.5% + poison',
           'Giratina lays Toxic Spikes on your side every turn: poison doubles its Hex. Steel / Poison / Flying mons are immune (Gholdengo, Roserade)',
