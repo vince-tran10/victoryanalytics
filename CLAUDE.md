@@ -56,8 +56,10 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
 ## Build rules
 - **Protect is always the 4th move.** Only exception: Lapras-Aevian (No Guard: Rock Slide / Zen Headbutt /
   Dragon Dance / Sing). Detect etc. count as Protect.
-- When suggesting a move, ALWAYS say what it replaces. Never cut setup moves, Yawn, Fake Out, Leech Seed, Trick Room,
-  sleep moves; cut wrong-stat attacks, weaker same-type duplicates, or recovery on Regenerator mons first.
+- When suggesting a move, ALWAYS say what it replaces. Setup moves, Yawn, Fake Out, Leech Seed, Trick Room, sleep moves
+  stay ONLY when they are clearly better than a coverage/other move for that Pokémon's job (Vincent, 13 Nov); otherwise
+  replace them and say why (e.g. Shell Smash + Overheat cancel out). Cut wrong-stat attacks, weaker same-type duplicates,
+  or recovery on Regenerator mons first.
 - **One answer only:** never "X or Y" for EVs, natures, moves or items. EVs = 252 attacking stat + 252 Spe if base
   Speed ≥ 85, else 252 HP. Nature follows (Jolly/Timid with Speed EVs, Adamant/Modest with HP).
 - Judge physical vs special from the moves the Pokémon actually knows.

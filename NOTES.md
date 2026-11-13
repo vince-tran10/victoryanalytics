@@ -589,3 +589,6 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Telluric Seed +1 Def, Shell Smash, Minior Core +2 = 318 Spe): lead CLAWITZER (special Water Pulse 132% Minior t1 =
   no Shell Trap, 92% Krookodile t2, takes 39% max). Whiscash out (−1.7%, least loss). Order: Clawitzer, Unfezant-A,
   Rhyperior, Veluza-A, Arcanine-H, Turtonator. Rhyperior is NOT a Typhlosion answer (HP Grass 67%).
+- 13 Nov export (10:27): Geara lineup in the party, 5/6 match. CLAUDE.md rule corrected (Vincent): setup moves stay only
+  when clearly better than a coverage move for the job. Turtonator: Flamethrower replaces Shell Smash (Overheat cancels
+  the +2 SpA, Shell Smash drops its defences while it tanks). Unfezant runs Protect (= Detect).
