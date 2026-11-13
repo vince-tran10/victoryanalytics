@@ -54,9 +54,9 @@ def disp(n):
 # (role, name, types, ability, nature, evs, item, moves[(move, is_new)], change notes)
 TEAM = [   # best six for the remaining fights (13 Nov, full-moveset + field re-check). ORDER = PARTY ORDER: slot 1 leads singles, slots 1-2 lead doubles
     ('Lead', 'Vikavolt', 'Bug/Electric', 'Levitate', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Magnet',
-     [('Thunderbolt', 0), ('Bug Buzz', 0), ('Mud Barrage', 0), ('Protect', 0)], []),
+     [('Thunderbolt', 0), ('Bug Buzz', 0), ('Sticky Web', 0), ('Protect', 0)], []),
     ('Lead', 'Chandelure', 'Ghost/Fire', 'Flash Fire', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash',
-     [('Overheat', 0), ('Shadow Ball', 0), ('Shock Wave', 0), ('Protect', 0)], []),
+     [('Overheat', 0), ('Shadow Ball', 0), ('Will-O-Wisp', 0), ('Protect', 0)], []),
     ('Mid', 'Ludicolo', 'Water/Grass', 'Own Tempo', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Mystic Water',
      [('Fake Out', 0), ('Energy Ball', 0), ('Surf', 0), ('Protect', 0)], []),
     ('Mid', 'Whiscash', 'Water/Ground', 'Oblivious', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Whiscash Crest',
@@ -68,11 +68,11 @@ TEAM = [   # best six for the remaining fights (13 Nov, full-moveset + field re-
 ]
 
 IDENTITY = ('<b>Identity</b> Block their main attack, hit back super-effectively: Flash Fire Chandelure vs Amber\'s all-Fire team, '
-            'Dry Skin Heliolisk vs Manaphy / Beach Water, Levitate Vikavolt + Ground Whiscash vs Factory Electric. Glare + Fake Out for tempo.')
+            'Dry Skin Heliolisk vs Manaphy / Beach Water, Levitate Vikavolt + Ground Whiscash vs Factory Electric. Speed control: Sticky Web, Glare; Will-O-Wisp vs physical; Fake Out tempo.')
 PLAY = [IDENTITY,
         '<b>Party order = the plan, same in singles and doubles:</b> 1 Vikavolt · 2 Chandelure · 3 Ludicolo · 4 Whiscash · 5 Crabominable · 6 Heliolisk',
         '<b>Lead</b> Vikavolt: survives Manaphy, Raichu and Camerupt; Thunderbolt ~1 Manaphy bar a hit. Doubles (Holly): Chandelure beside it for the Bug/Steels',
-        '<b>Mid</b> Ludicolo Fake Outs on entry; Whiscash takes every Electric hit (never Earthquake at the Factory: it turns the field into Short-Circuit); Crabominable hits Rotom, Oricorio, Bellossom',
+        '<b>Mid</b> Ludicolo Fake Outs on entry (doubles: Surf hits your partner too, fine next to Heliolisk, whose Dry Skin heals from it; never next to Chandelure); Whiscash takes every Electric hit (never Earthquake at the Factory: it turns the field into Short-Circuit); Crabominable hits Rotom, Oricorio, Bellossom',
         '<b>Close</b> Heliolisk: fastest member, Glare the Speed Boost users (Scolipede, Blaziken), immune to Water',
         '<b>Fields</b> Beach: Surf 1.5x, Mud Barrage 2x, Aura Sphere 1.3x · Factory: Electric 1.2x · Concert: hype rolls, sound 1.5x']
 JOB = {'Annihilape': 'Fastest hitter.',

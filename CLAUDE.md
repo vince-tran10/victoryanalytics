@@ -24,7 +24,10 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
 ## Game facts
 - Rejuvenation V14, Chapter 8, Classic mode, 7 badges, level cap 55.
 - Every fight is scored with FULL legal movesets vs the actual targets (resistances!) and the field's game-code mechanics
-  (scripts/team/fights/*_eval.py). Lesson 13 Nov: Venoshock picked into targets that all resist it. Everyone is levelled to 55.
+  (scripts/team/fights/*_eval.py). Lesson 13 Nov: Venoshock picked into targets that all resist it.
+- Never swap a status move (Sticky Web, Will-O-Wisp, Glare…) for an attack without measuring the attack's MARGINAL gain
+  (vs the member's other attacks, foe by foe) against what the status move does in each fight. Lesson 13 Nov: Mud Barrage /
+  Shock Wave were picked over Sticky Web / Will-O-Wisp and added almost nothing. Everyone is levelled to 55.
 - **Debug mode:** any owned Pokémon can be levelled, re-natured, re-EV'd, ability-capsuled, taught any legal move,
   instantly. NEVER filter or rank by build effort. Pick purely on battle merit.
 - Legal moves: level-up ≤ 55, Move Relearner, egg, Ch1–7 TMs, tutors ≤ 7 badges. Evolution items from Ch1–7 OK.

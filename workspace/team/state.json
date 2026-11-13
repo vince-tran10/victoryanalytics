@@ -4,9 +4,9 @@
  "export_label": "13 Nov 10:55",
  "active_start": 412,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 65,
- "run": 79,
- "final": 83,
+ "roster": 66,
+ "run": 80,
+ "final": 84,
  "done": [
   "aelita",
   "narcissa1",
@@ -37,13 +37,13 @@
   "Vikavolt": [
    "Thunderbolt",
    "Bug Buzz",
-   "Mud Barrage",
+   "Sticky Web",
    "Protect"
   ],
   "Chandelure": [
    "Overheat",
    "Shadow Ball",
-   "Shock Wave",
+   "Will-O-Wisp",
    "Protect"
   ],
   "Ludicolo": [

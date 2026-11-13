@@ -612,3 +612,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   best Glalie-A/Ludicolo/Chandelure/Turtonator/Musharna-A/Whiscash = 1.210 on the new method, +2.8% on the old = tie).
   Identity: block their main attack type (Flash Fire / Dry Skin / Levitate + Ground). Dry Skin counted live (Water
   immunity) in checks/deep_check/CLAUDE.md. update.py needs ALSO_OVF=Heliolisk while it sits in Overflow.
+- 13 Nov: move swaps defended with marginal damage per foe: reverted Vikavolt Mud Barrage → Sticky Web (only gained vs Arcanine) and Chandelure Shock Wave → Will-O-Wisp (only Manaphy bar 3 / Clawitzer). Kept Surf (Ludicolo, Heliolisk), Zen Headbutt, Glare. Rule added to CLAUDE.md.
