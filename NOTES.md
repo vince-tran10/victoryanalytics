@@ -597,3 +597,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   poison), EQ 0.25x, sludge 1.2x, Liquid Ooze 2x; boss delayed action lays Toxic Spikes on the player side every turn.
   Scored with that: Golisopod-A (Bone Rush + Spikes), Gholdengo, Rhyperior, Bruxish, Exeggutor, Roserade (0.931).
   make_report5: CF_PREEVO Roserade←Roselia (Shiny Stone); pre-evo cards now say "Evolve into X".
+- 13 Nov export (10:55): Giratina lineup in the party, 5/6 match; Roserade needs a Sitrus Berry. New: Abra (D, Overflow).

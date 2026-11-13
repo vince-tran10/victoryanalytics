@@ -1,0 +1,106 @@
+[
+ {
+  "dump": 6,
+  "owned": "Roserade",
+  "level": 55,
+  "now_ability": "Technician",
+  "now_moves": [
+   "Magical Leaf",
+   "Mud Barrage",
+   "Venoshock",
+   "Protect"
+  ],
+  "final": "Roserade",
+  "evolve": "",
+  "gate": "",
+  "types": "Grass/Poison",
+  "score": 0.545,
+  "tier": "B",
+  "ability": "Natural Cure",
+  "capsule": true,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Petal Dance",
+   "Mud Barrage",
+   "Venoshock",
+   "Protect"
+  ],
+  "move_src": {
+   "Petal Dance": "known",
+   "Mud Barrage": "known",
+   "Venoshock": "known",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.64,
+   "jenner": 0.56,
+   "giratina": 0.52,
+   "danni": 0.75,
+   "troye": 0.57,
+   "zena": 0.83,
+   "holly": 0.53,
+   "manaphy": 0.72,
+   "factory": 0.44,
+   "marcie": 0.99,
+   "amber": 0.15
+  }
+ },
+ {
+  "dump": 8,
+  "owned": "Abra",
+  "level": 55,
+  "now_ability": "Inner Focus",
+  "now_moves": [
+   "Shadow Ball",
+   "Psybeam",
+   "Magic Coat",
+   "Substitute"
+  ],
+  "final": "Alakazam",
+  "evolve": "Kadabra (Level 16); Alakazam (Trade 0)",
+  "gate": "Trade 0",
+  "types": "Psychic",
+  "score": 0.374,
+  "tier": "D",
+  "ability": "Inner Focus",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Psychic",
+   "Shadow Ball",
+   "Psyshock",
+   "Protect"
+  ],
+  "move_src": {
+   "Psychic": "Lv 35",
+   "Shadow Ball": "known",
+   "Psyshock": "Lv 30",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "eli": 0.27,
+   "jenner": 0.56,
+   "giratina": 0.5,
+   "danni": 0.7,
+   "troye": 0.22,
+   "zena": 0.33,
+   "holly": 0.34,
+   "manaphy": 0.31,
+   "factory": 0.23,
+   "marcie": 0.39,
+   "amber": 0.48
+  }
+ }
+]
