@@ -581,3 +581,6 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   confirmed). Fight score now: screens ×0.67 unless a screen breaker (×0.9), Silvally ×1.4, Typhlosion Flash Fire ×1.3,
   eruptions, double-targeting. Breaker = +28% (0.846 vs 0.662). New lineup: Rhyperior, Unfezant-A ("Unfezant-M" in
   export; Brick Break), Arcanine-H, Veluza-A, Turtonator, Whiscash (Grapploct six 0.8462 vs this 0.8428 = tie, field fit).
+- 13 Nov: Geara lead → Unfezant-A (Vincent asked re Defiant). Krookodile's Intimidate fires once, on the lead turn, so
+  Defiant only works as lead; Unfezant outspeeds both leads (164), Brick Break 117% on Krookodile, takes 84% from its EQ
+  (Sash covers a double-target), and is already in when Grimmsnarl screens. Rhyperior 2nd.
