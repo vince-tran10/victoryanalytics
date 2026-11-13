@@ -605,3 +605,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Steel/Poison/airborne; Magic Guard immune to all; TSpikes every turn only after shield break 1 via queueDelays).
   New six: Golisopod-A, Reuniclus (Magic Guard), Rhyperior, Lunatone-Idol, Annihilape, Roserade = 0.852 vs 0.814 old
   (Gholdengo, Bruxish, Exeggutor out: Bruxish/Exeggutor take ~100% from Giratina). Fight mode hides cards of mons leaving.
+- 13 Nov: Giratina lead → Golisopod-A + Rhyperior (Vincent: why lead Magic Guard when no hazards are up yet). Reuniclus saved for the last form (Toxic Spikes every turn + SR/Spikes, +1/+1).

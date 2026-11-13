@@ -128,8 +128,8 @@ COUNTERS['geara'] = dict(title='Geara & Zetta', note='Tag battle: you 1 slot, Me
           'Melia: Noivern (Infiltrator ignores screens), Zoroark, Snorlax, Togekiss, Azumarill, Hydreigon. Her Flying / Levitate mons are immune to Silvally\'s Ground hits'])
 COUNTERS['giratina'] = dict(title='Giratina (Taken Tyrant)', note='Boss · Wasteland · 2 shields (3 bars) · crested Relicanth + Swalot', six=[
     ('Golisopod-Aevian', 'Skill Link', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand', ['Bone Rush', 'Spikes', 'Swords Dance', 'Protect'], 'LEAD. Bone Rush ~1 full bar per hit on both Giratina forms; 132% Relicanth (multi-hit beats Sturdy), 188% Swalot'),
-    ('Reuniclus', 'Magic Guard', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Sitrus Berry', ['Psychic', 'Shadow Ball', 'Recover', 'Protect'], 'LEAD 2. Magic Guard: immune to ALL Wasteland hazards (Spikes 33%, Stealth Rock, Toxic Spikes + poison). Psychic 2x on both forms (~57% a bar), 94% Swalot'),
-    ('Rhyperior', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone', ['Stone Edge', 'Headlong Rush', 'Fire Fang', 'Protect'], 'Headlong Rush ~82% a bar on both forms, 105% Relicanth. Never Earthquake (0.25x)'),
+    ('Rhyperior', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone', ['Stone Edge', 'Headlong Rush', 'Fire Fang', 'Protect'], 'LEAD 2. Headlong Rush ~82% a bar on both forms, 105% Relicanth. Never Earthquake (0.25x)'),
+    ('Reuniclus', 'Magic Guard', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Sitrus Berry', ['Psychic', 'Shadow Ball', 'Recover', 'Protect'], 'SAVE FOR THE LAST FORM. Magic Guard: immune to ALL Wasteland hazards (Spikes 33%, Stealth Rock, Toxic Spikes + poison). Psychic 2x on both forms (~57% a bar), 94% Swalot'),
     ('Lunatone-Idol', 'Lunar Idol', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash', ['Psychic', 'Icy Wind', 'Shadow Ball', 'Protect'], 'Lunar Idol: immune to Earth Power. Psychic 2x on both forms (~60% a bar); Icy Wind (1.5x Ice) slows both foes and hits the Dragon form'),
     ('Annihilape', 'Defiant', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Black Belt', ['Close Combat', 'Rage Fist', 'Sucker Punch', 'Protect'], 'Close Combat 110% on Relicanth; fast. Rage Fist for the Ghost form'),
     ('Roserade', 'Technician', 'Timid', '252 SpA / 252 Spe / 4 HP', 'Sitrus Berry', ['Magical Leaf', 'Mud Barrage', 'Extrasensory', 'Protect'], 'Poison type: immune to Toxic Spikes. Magical Leaf 226% Relicanth (Sturdy: needs a 2nd hit)')],
@@ -137,7 +137,8 @@ COUNTERS['giratina'] = dict(title='Giratina (Taken Tyrant)', note='Boss · Waste
           'Magic Guard ignores all of it (Reuniclus). Giratina uses Spikes (both forms) and Stealth Rock (last form); Relicanth uses Stealth Rock',
           'After the 1st shield breaks, Giratina lays Toxic Spikes on your side EVERY turn: Golisopod / Rhyperior / Lunatone / Annihilape take ~25% a turn then; Reuniclus and Roserade take none',
           'Earthquake 0.25x (use Bone Rush / Headlong Rush); never drain Swalot (Liquid Ooze 2x)',
-          'Turn 1: Golisopod Bone Rush Relicanth (gets through Sturdy); Reuniclus Psychic Giratina. Then Bone Rush Swalot. Kill both partners before the last shield',
+          'Turn 1: Golisopod Bone Rush Relicanth (gets through Sturdy); Rhyperior Headlong Rush Giratina. Then Bone Rush Swalot. Kill both partners before the last shield',
+          'Bring Reuniclus in for the last form: hazards stack every turn then and Magic Guard ignores all of them (Recover to stay up)',
           'Swords Dance once Giratina is alone; then Bone Rush = a full bar each hit. Its last form: Dragon/Poison, +1 Atk / SpA, stat drops cleared'])
 CF_PREEVO = {'Arcanine-Hisui': ('Growlithe-Hisui', 'Fire Stone'), 'Roserade': ('Roselia', 'Shiny Stone'), 'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
 CF = COUNTERS.get(FIGHT)
