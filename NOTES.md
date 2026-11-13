@@ -592,3 +592,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 13 Nov export (10:27): Geara lineup in the party, 5/6 match. CLAUDE.md rule corrected (Vincent): setup moves stay only
   when clearly better than a coverage move for the job. Turtonator: Flamethrower replaces Shell Smash (Overheat cancels
   the +2 SpA, Shell Smash drops its defences while it tanks). Unfezant runs Protect (= Detect).
+- 13 Nov: BEAT GERA & ZETTA (Clawitzer lead lineup). Fight mode → giratina (Taken Tyrant, Wasteland, boss 2 shields,
+  crested Relicanth + Swalot). Game code: Wasteland consumes hazards (Spikes 33% grounded, SR double, TSpikes 12.5% +
+  poison), EQ 0.25x, sludge 1.2x, Liquid Ooze 2x; boss delayed action lays Toxic Spikes on the player side every turn.
+  Scored with that: Golisopod-A (Bone Rush + Spikes), Gholdengo, Rhyperior, Bruxish, Exeggutor, Roserade (0.931).
+  make_report5: CF_PREEVO Roserade←Roselia (Shiny Stone); pre-evo cards now say "Evolve into X".

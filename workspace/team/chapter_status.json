@@ -1,9 +1,8 @@
 {
- "fights": 7,
- "foes": 48,
+ "fights": 6,
+ "foes": 36,
  "major": [
   "Dark",
-  "Dragon",
   "Electric",
   "Fairy",
   "Fighting",
@@ -17,22 +16,15 @@
   "Poison",
   "Psychic",
   "Rock",
-  "Steel",
   "Water"
  ],
  "minor": [
-  "Rock/Fire",
+  "Dragon",
+  "Steel",
   "Bug"
  ],
  "weak3": [],
  "nores": [],
- "misses": [
-  {
-   "foe": "Clefable",
-   "fight": "Geara & Zetta",
-   "best": "Rhyperior",
-   "dmg": 86
-  }
- ],
- "n_types": 19
+ "misses": [],
+ "n_types": 18
 }

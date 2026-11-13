@@ -126,7 +126,19 @@ COUNTERS['geara'] = dict(title='Geara & Zetta', note='Tag battle: you 1 slot, Me
           'Typhlosion has Hidden Power GRASS: Veluza or Turtonator, never Rhyperior. Every eruption powers its Flash Fire',
           'Crested Silvally (Sheer Force): Rhyperior. Thunder users (Clefable, Gengar, Silvally): Rhyperior is immune',
           'Melia: Noivern (Infiltrator ignores screens), Zoroark, Snorlax, Togekiss, Azumarill, Hydreigon. Her Flying / Levitate mons are immune to Silvally\'s Ground hits'])
-CF_PREEVO = {'Arcanine-Hisui': ('Growlithe-Hisui', 'Fire Stone'), 'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
+COUNTERS['giratina'] = dict(title='Giratina (Taken Tyrant)', note='Boss · Wasteland · 2 shields (3 bars) · crested Relicanth + Swalot', six=[
+    ('Golisopod-Aevian', 'Skill Link', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand', ['Bone Rush', 'Spikes', 'Swords Dance', 'Protect'], 'LEAD. Bone Rush 5 hits: 2x on Giratina (both forms), Relicanth, Swalot; multi-hit breaks Relicanth\'s Sturdy. Spikes on Wasteland = 33% to every grounded foe'),
+    ('Gholdengo', 'Good as Gold', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Metal Coat', ['Make It Rain', 'Shadow Ball', 'Power Gem', 'Protect'], 'LEAD 2. Steel: immune to Sludge Bomb, Venoshock, poison and Giratina\'s Toxic Spikes; resists Dragon Pulse. Shadow Ball 2x on bars 1-2'),
+    ('Rhyperior', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone', ['Stone Edge', 'Headlong Rush', 'Fire Fang', 'Protect'], 'Headlong Rush 2x on Giratina (Earthquake is 0.25x here: never use it). Takes little from Relicanth / Swalot'),
+    ('Bruxish', 'Strong Jaw', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Black Glasses', ['Psychic Fangs', 'Wave Crash', 'Crunch', 'Protect'], 'Psychic Fangs 2x on both Giratina forms; Crunch 2x on bars 1-2 (Strong Jaw 1.5x)'),
+    ('Exeggutor', 'Chlorophyll', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash', ['Leaf Storm', 'Extrasensory', 'Psyshock', 'Protect'], 'Relicanth killer (Leaf Storm 4x, 290%). Psyshock 2x on Giratina. No Giga Drain: Liquid Ooze is 2x here'),
+    ('Roserade', 'Technician', 'Timid', '252 SpA / 252 Spe / 4 HP', 'Sitrus Berry', ['Magical Leaf', 'Mud Barrage', 'Venoshock', 'Protect'], 'Poison type: immune to the Toxic Spikes chip. Magical Leaf 4x on Relicanth')],
+    plan=['Wasteland: Earthquake / Bulldoze 0.25x (use Headlong Rush, Bone Rush); Sludge moves 1.2x; draining Swalot (Liquid Ooze) hurts 2x',
+          'Hazards are consumed at once: Spikes = 33% to grounded foes, Stealth Rock = double SR damage, Toxic Spikes = 12.5% + poison',
+          'Giratina lays Toxic Spikes on your side every turn: poison doubles its Hex. Steel / Poison / Flying mons are immune (Gholdengo, Roserade)',
+          'Kill the crested partners first (Relicanth: Sturdy + Stealth Rock; Swalot: Stockpile + Belch). Giratina\'s last shield cures its drops and gives +1 Atk / SpA',
+          'Bar 3 = Dragon/Poison: Dragon Pulse, Venoshock (counts you as poisoned here), Stealth Rock, Spikes. Psychic Fangs / Psyshock / Bone Rush still 2x'])
+CF_PREEVO = {'Arcanine-Hisui': ('Growlithe-Hisui', 'Fire Stone'), 'Roserade': ('Roselia', 'Shiny Stone'), 'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
 CF = COUNTERS.get(FIGHT)
 CF_NAMES = [x[0] for x in CF['six']] if CF else []
 NEXT_LV = max(fo['lvl'] or 0 for p in sorted(fn['plans'], key=lambda p: SX.story_order(os.path.dirname(os.path.dirname(os.path.abspath(F9N)))).get(p['key'], 999))[:3] for fo in p['foes'])
@@ -266,6 +278,12 @@ if CF:
             if d0 and how:
                 d0 = dict(d0, species=nm_, _orig=d0['species'], ability=d0.get('ability'))   # keeps its real moves for 'replaces'
             issues = ([f"{pre} {d0['box']} #{d0['n']} → party" + (f", evolve ({how})" if how else '')] + verify_mon(d0, ab_, nat_, evs_, item_, [(m, 0) for m in mv_])) if d0 else [f'Put {nm_} in the party']
+        if not d and d0 and how:   # pre-evolution: say evolve + the ability it needs (the pre-evo has another ability list)
+            _src = next((x for x in cur if x['n'] == d0['n']), d0)
+            _add = [f"Evolve into {nm_} ({how})"]
+            if (_src.get('ability') or '') != ab_ and not any(x.startswith('Ability:') for x in issues):
+                _add.append(f"Ability: {_src.get('ability')} → {ab_} (Ability Capsule)")
+            issues = issues[:1] + _add + [x for x in issues[1:] if not x.startswith('Evolve')]
         _dd = d if d else d0
         if not d and d0: ACTIONS[d0['n']] = f"Move into the party ({CF['title']} lineup)"
         if _dd: CF_ISSUES[nm_] = (_dd, [x for x in issues if '→ party' not in x and not x.startswith('Put ')])
@@ -619,7 +637,7 @@ if CF:
         _gen = []
         for k2 in [k for k in PROFILE if k[1] == dd['n']]:   # any generic card for the same export entry: the lineup build wins
             _gen += PROFILE.pop(k2)
-        extra = [x for x in _gen if x.startswith('Evolve')]
+        extra = [x for x in _gen if x.startswith('Evolve') and not any(i.startswith('Evolve') for i in iss)]
         if iss or extra: _cards.append((-1, nm_, f"{CF['title']} lineup · {dd['box']} #{dd['n']}", iss + extra))
 for (sp, n, box), ch in sorted(PROFILE.items(), key=lambda kv: (kv[0][2] != 'Party', kv[0][0])):
     if ch: _cards.append((1 if box == 'Party' else 2, sp, f'{box} #{n}', ch))

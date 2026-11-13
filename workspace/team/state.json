@@ -4,9 +4,9 @@
  "export_label": "13 Nov 10:27",
  "active_start": 413,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 54,
- "run": 68,
- "final": 72,
+ "roster": 57,
+ "run": 71,
+ "final": 75,
  "done": [
   "aelita",
   "narcissa1",
@@ -19,9 +19,10 @@
   "groudon",
   "crawli",
   "neved",
-  "kyogre"
+  "kyogre",
+  "geara"
  ],
- "fight": "geara",
+ "fight": "giratina",
  "team": [
   "Musharna (Aevian Form)",
   "Rhyperior",

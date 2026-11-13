@@ -50,63 +50,7 @@
   ]
  },
  "geara": {
-  "label": "Geara & Zetta (12 mons) – Valor Summit",
-  "game_src": [
-   "Geara (XENEXECUTIVE_3 #2)",
-   "Zetta (XENEXECUTIVE_1 #8)"
-  ],
-  "n_game": 12,
-  "n_guide": 12,
-  "rows": [
-   {
-    "mon": "Krookodile",
-    "diff": []
-   },
-   {
-    "mon": "Grimmsnarl",
-    "diff": []
-   },
-   {
-    "mon": "Gyarados",
-    "diff": []
-   },
-   {
-    "mon": "Clefable",
-    "diff": []
-   },
-   {
-    "mon": "Marowak",
-    "diff": []
-   },
-   {
-    "mon": "Gengar",
-    "diff": []
-   },
-   {
-    "mon": "Minior",
-    "diff": []
-   },
-   {
-    "mon": "Absol",
-    "diff": []
-   },
-   {
-    "mon": "Typhlosion",
-    "diff": []
-   },
-   {
-    "mon": "Weavile",
-    "diff": []
-   },
-   {
-    "mon": "Dragonite",
-    "diff": []
-   },
-   {
-    "mon": "Silvally",
-    "diff": []
-   }
-  ]
+  "note": "not in engine (beaten or not tracked)"
  },
  "giratina": {
   "label": "Rift Giratina (boss) – Rift Distortion",
