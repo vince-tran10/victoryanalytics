@@ -799,7 +799,7 @@
    "without": 0.166,
    "gain": 0.0,
    "attacks": [
-    "Secret Power",
+    "Headbutt",
     "Fire Blast",
     "Hydro Pump"
    ],
@@ -818,7 +818,7 @@
    "attacks": [
     "Slash",
     "Close Combat",
-    "Shadow Claw"
+    "Night Slash"
    ],
    "ability": "IMMUNITY",
    "tier": "D"

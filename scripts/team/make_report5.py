@@ -127,17 +127,18 @@ COUNTERS['geara'] = dict(title='Geara & Zetta', note='Tag battle: you 1 slot, Me
           'Crested Silvally (Sheer Force): Rhyperior. Thunder users (Clefable, Gengar, Silvally): Rhyperior is immune',
           'Melia: Noivern (Infiltrator ignores screens), Zoroark, Snorlax, Togekiss, Azumarill, Hydreigon. Her Flying / Levitate mons are immune to Silvally\'s Ground hits'])
 COUNTERS['giratina'] = dict(title='Giratina (Taken Tyrant)', note='Boss · Wasteland · 2 shields (3 bars) · crested Relicanth + Swalot', six=[
-    ('Golisopod-Aevian', 'Skill Link', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand', ['Bone Rush', 'Spikes', 'Swords Dance', 'Protect'], 'LEAD. Bone Rush 5 hits: 2x on Giratina (both forms), Relicanth, Swalot; multi-hit breaks Relicanth\'s Sturdy. Spikes on Wasteland = 33% to every grounded foe'),
-    ('Gholdengo', 'Good as Gold', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Metal Coat', ['Make It Rain', 'Shadow Ball', 'Power Gem', 'Protect'], 'LEAD 2. Steel: immune to Sludge Bomb, Venoshock, poison and Giratina\'s Toxic Spikes; resists Dragon Pulse. Shadow Ball 2x on bars 1-2'),
-    ('Rhyperior', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone', ['Stone Edge', 'Headlong Rush', 'Fire Fang', 'Protect'], 'Headlong Rush 2x on Giratina (Earthquake is 0.25x here: never use it). Takes little from Relicanth / Swalot'),
-    ('Bruxish', 'Strong Jaw', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Black Glasses', ['Psychic Fangs', 'Wave Crash', 'Crunch', 'Protect'], 'Psychic Fangs 2x on both Giratina forms; Crunch 2x on bars 1-2 (Strong Jaw 1.5x)'),
-    ('Exeggutor', 'Chlorophyll', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash', ['Leaf Storm', 'Extrasensory', 'Psyshock', 'Protect'], 'Relicanth killer (Leaf Storm 4x, 290%). Psyshock 2x on Giratina. No Giga Drain: Liquid Ooze is 2x here'),
-    ('Roserade', 'Technician', 'Timid', '252 SpA / 252 Spe / 4 HP', 'Sitrus Berry', ['Magical Leaf', 'Mud Barrage', 'Extrasensory', 'Protect'], 'Poison type: immune to the Toxic Spikes chip. Magical Leaf 4x on Relicanth; Extrasensory 2x on Giratina (both forms) and Swalot')],
-    plan=['Wasteland: Earthquake / Bulldoze 0.25x (use Headlong Rush, Bone Rush); Sludge moves 1.2x; draining Swalot (Liquid Ooze) hurts 2x',
-          'Hazards are consumed at once: Spikes = 33% to grounded foes, Stealth Rock = double SR damage, Toxic Spikes = 12.5% + poison',
-          'Giratina lays Toxic Spikes on your side every turn: poison doubles its Hex. Steel / Poison / Flying mons are immune (Gholdengo, Roserade)',
-          'Kill the crested partners first (Relicanth: Sturdy + Stealth Rock; Swalot: Stockpile + Belch). Giratina\'s last shield cures its drops and gives +1 Atk / SpA',
-          'Bar 3 = Dragon/Poison: Dragon Pulse, Venoshock (counts you as poisoned here), Stealth Rock, Spikes. Psychic Fangs / Psyshock / Bone Rush still 2x'])
+    ('Golisopod-Aevian', 'Skill Link', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand', ['Bone Rush', 'Spikes', 'Swords Dance', 'Protect'], 'LEAD. Bone Rush ~1 full bar per hit on both Giratina forms; 132% Relicanth (multi-hit beats Sturdy), 188% Swalot'),
+    ('Reuniclus', 'Magic Guard', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Sitrus Berry', ['Psychic', 'Shadow Ball', 'Recover', 'Protect'], 'LEAD 2. Magic Guard: immune to ALL Wasteland hazards (Spikes 33%, Stealth Rock, Toxic Spikes + poison). Psychic 2x on both forms (~57% a bar), 94% Swalot'),
+    ('Rhyperior', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone', ['Stone Edge', 'Headlong Rush', 'Fire Fang', 'Protect'], 'Headlong Rush ~82% a bar on both forms, 105% Relicanth. Never Earthquake (0.25x)'),
+    ('Lunatone-Idol', 'Lunar Idol', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash', ['Psychic', 'Icy Wind', 'Shadow Ball', 'Protect'], 'Lunar Idol: immune to Earth Power. Psychic 2x on both forms (~60% a bar); Icy Wind (1.5x Ice) slows both foes and hits the Dragon form'),
+    ('Annihilape', 'Defiant', 'Adamant', '252 Atk / 252 Spe / 4 HP', 'Black Belt', ['Close Combat', 'Rage Fist', 'Sucker Punch', 'Protect'], 'Close Combat 110% on Relicanth; fast. Rage Fist for the Ghost form'),
+    ('Roserade', 'Technician', 'Timid', '252 SpA / 252 Spe / 4 HP', 'Sitrus Berry', ['Magical Leaf', 'Mud Barrage', 'Extrasensory', 'Protect'], 'Poison type: immune to Toxic Spikes. Magical Leaf 226% Relicanth (Sturdy: needs a 2nd hit)')],
+    plan=['Wasteland (game code): every hazard is consumed at end of turn. Spikes = 33% to each grounded mon per layer; Stealth Rock = 25% x Rock weakness to everyone; Toxic Spikes = 12.5% + poison (not Steel / Poison / airborne)',
+          'Magic Guard ignores all of it (Reuniclus). Giratina uses Spikes (both forms) and Stealth Rock (last form); Relicanth uses Stealth Rock',
+          'After the 1st shield breaks, Giratina lays Toxic Spikes on your side EVERY turn: Golisopod / Rhyperior / Lunatone / Annihilape take ~25% a turn then; Reuniclus and Roserade take none',
+          'Earthquake 0.25x (use Bone Rush / Headlong Rush); never drain Swalot (Liquid Ooze 2x)',
+          'Turn 1: Golisopod Bone Rush Relicanth (gets through Sturdy); Reuniclus Psychic Giratina. Then Bone Rush Swalot. Kill both partners before the last shield',
+          'Swords Dance once Giratina is alone; then Bone Rush = a full bar each hit. Its last form: Dragon/Poison, +1 Atk / SpA, stat drops cleared'])
 CF_PREEVO = {'Arcanine-Hisui': ('Growlithe-Hisui', 'Fire Stone'), 'Roserade': ('Roselia', 'Shiny Stone'), 'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
 CF = COUNTERS.get(FIGHT)
 CF_NAMES = [x[0] for x in CF['six']] if CF else []
@@ -640,6 +641,7 @@ if CF:
         extra = [x for x in _gen if x.startswith('Evolve') and not any(i.startswith('Evolve') for i in iss)]
         if iss or extra: _cards.append((-1, nm_, f"{CF['title']} lineup · {dd['box']} #{dd['n']}", iss + extra))
 for (sp, n, box), ch in sorted(PROFILE.items(), key=lambda kv: (kv[0][2] != 'Party', kv[0][0])):
+    if CF and box == 'Party' and sp not in CF_NAMES: continue   # leaving the party for this fight
     if ch: _cards.append((1 if box == 'Party' else 2, sp, f'{box} #{n}', ch))
 _cards.sort(key=lambda c: (c[0], c[1]))
 todo_html = ''

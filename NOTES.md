@@ -599,3 +599,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   make_report5: CF_PREEVO Roserade←Roselia (Shiny Stone); pre-evo cards now say "Evolve into X".
 - 13 Nov export (10:55): Giratina lineup in the party, 5/6 match; Roserade needs a Sitrus Berry. New: Abra (D, Overflow).
 - 13 Nov: Roserade Venoshock → Extrasensory for Giratina (Venoshock resisted by all three: Giratina 1/4, Swalot/Relicanth 1/2; engine took the Wasteland 130 BP at face value). Engine gap to fix: move choice should weight resistances of the actual targets.
+- 13 Nov: Vincent flagged the Venoshock miss → full Giratina re-check (scripts/team/fights/giratina_eval.py): every owned
+  mon × ability, FULL legal moveset scored vs each foe form (engine damage_pct, field), foe best hits, and the Wasteland
+  hazard code (Battle.rb 7018: Spikes 1/3 per layer grounded, SR 1/4 × Rock eff to all, TSpikes 1/8 + poison not
+  Steel/Poison/airborne; Magic Guard immune to all; TSpikes every turn only after shield break 1 via queueDelays).
+  New six: Golisopod-A, Reuniclus (Magic Guard), Rhyperior, Lunatone-Idol, Annihilape, Roserade = 0.852 vs 0.814 old
+  (Gholdengo, Bruxish, Exeggutor out: Bruxish/Exeggutor take ~100% from Giratina). Fight mode hides cards of mons leaving.
