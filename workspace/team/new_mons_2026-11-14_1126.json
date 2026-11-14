@@ -1,0 +1,688 @@
+[
+ {
+  "dump": 416,
+  "owned": "Parasect-Aevian",
+  "level": 55,
+  "now_ability": "Resuscitation",
+  "now_moves": [
+   "Cross Poison",
+   "Venom Drench",
+   "Sleep Powder",
+   "X-Scissor"
+  ],
+  "final": "Parasect (Aevian Form)",
+  "evolve": "",
+  "gate": "",
+  "types": "Bug/Poison",
+  "score": 0.238,
+  "tier": "D",
+  "ability": "Resuscitation",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "X-Scissor",
+   "Cross Poison",
+   "Knock Off",
+   "Protect"
+  ],
+  "move_src": {
+   "X-Scissor": "known",
+   "Cross Poison": "known",
+   "Knock Off": "Egg",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.08,
+   "danni": 0.59,
+   "troye": 0.32,
+   "zena": 0.53,
+   "holly": 0.38,
+   "manaphy": 0.09,
+   "marcie": 0.84,
+   "amber": -0.06
+  }
+ },
+ {
+  "dump": 417,
+  "owned": "Gallade",
+  "level": 55,
+  "now_ability": "Steadfast",
+  "now_moves": [
+   "Growl",
+   "Disarming Voice",
+   "Double Team",
+   "Shadow Sneak"
+  ],
+  "final": "Gallade",
+  "evolve": "",
+  "gate": "",
+  "types": "Psychic/Fighting",
+  "score": 0.766,
+  "tier": "S",
+  "ability": "Sharpness",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Sacred Sword",
+   "Psycho Cut",
+   "Aerial Ace",
+   "Protect"
+  ],
+  "move_src": {
+   "Sacred Sword": "known",
+   "Psycho Cut": "Lv 42",
+   "Aerial Ace": "Lv 18",
+   "Protect": "Lv 28"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.94,
+   "danni": 1.08,
+   "troye": 0.78,
+   "zena": 0.85,
+   "holly": 0.76,
+   "manaphy": 0.37,
+   "marcie": 0.8,
+   "amber": 0.82
+  }
+ },
+ {
+  "dump": 418,
+  "owned": "Throh",
+  "level": 55,
+  "now_ability": "Guts",
+  "now_moves": [
+   "Wide Guard",
+   "Revenge",
+   "Bulk Up",
+   "Knock Off"
+  ],
+  "final": "Throh",
+  "evolve": "",
+  "gate": "",
+  "types": "Fighting",
+  "score": 0.622,
+  "tier": "A",
+  "ability": "Inner Focus",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Superpower",
+   "Knock Off",
+   "Storm Throw",
+   "Protect"
+  ],
+  "move_src": {
+   "Superpower": "Lv 55",
+   "Knock Off": "known",
+   "Storm Throw": "Lv 30",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.85,
+   "danni": 0.63,
+   "troye": 0.82,
+   "zena": 0.72,
+   "holly": 0.54,
+   "manaphy": 0.33,
+   "marcie": 0.72,
+   "amber": 0.6
+  }
+ },
+ {
+  "dump": 419,
+  "owned": "Omastar",
+  "level": 55,
+  "now_ability": "Swift Swim",
+  "now_moves": [
+   "Ancient Power",
+   "Brine",
+   "Protect",
+   "Rock Blast"
+  ],
+  "final": "Omastar",
+  "evolve": "",
+  "gate": "",
+  "types": "Rock/Water",
+  "score": 0.478,
+  "tier": "C",
+  "ability": "Swift Swim",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Surf",
+   "Mud Barrage",
+   "Ancient Power",
+   "Protect"
+  ],
+  "move_src": {
+   "Surf": "Lv 56",
+   "Mud Barrage": "TM108",
+   "Ancient Power": "known",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.38,
+   "danni": 0.82,
+   "troye": 0.49,
+   "zena": 0.54,
+   "holly": 0.56,
+   "manaphy": 0.11,
+   "marcie": 0.09,
+   "amber": 0.75
+  }
+ },
+ {
+  "dump": 420,
+  "owned": "Kabutops",
+  "level": 55,
+  "now_ability": "Weak Armor",
+  "now_moves": [
+   "Ancient Power",
+   "Brine",
+   "Protect",
+   "Leech Life"
+  ],
+  "final": "Kabutops",
+  "evolve": "",
+  "gate": "",
+  "types": "Rock/Water",
+  "score": 0.42,
+  "tier": "C",
+  "ability": "Weak Armor",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Razor Shell",
+   "Leech Life",
+   "Rock Tomb",
+   "Protect"
+  ],
+  "move_src": {
+   "Razor Shell": "TM146",
+   "Leech Life": "known",
+   "Rock Tomb": "TM39",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.34,
+   "danni": 0.79,
+   "troye": 0.39,
+   "zena": 0.5,
+   "holly": 0.47,
+   "manaphy": 0.01,
+   "marcie": 0.29,
+   "amber": 0.67
+  }
+ },
+ {
+  "dump": 421,
+  "owned": "Cradily",
+  "level": 55,
+  "now_ability": "Storm Drain",
+  "now_moves": [
+   "Stockpile",
+   "Spit Up",
+   "Swallow",
+   "Energy Ball"
+  ],
+  "final": "Cradily",
+  "evolve": "",
+  "gate": "",
+  "types": "Rock/Grass",
+  "score": 0.424,
+  "tier": "C",
+  "ability": "Storm Drain",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Rock Tomb",
+   "Bullet Seed",
+   "Energy Ball",
+   "Protect"
+  ],
+  "move_src": {
+   "Rock Tomb": "TM39",
+   "Bullet Seed": "TM131",
+   "Energy Ball": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.29,
+   "danni": 0.52,
+   "troye": 0.38,
+   "zena": 0.72,
+   "holly": 0.28,
+   "manaphy": 0.43,
+   "marcie": 0.39,
+   "amber": 0.42
+  }
+ },
+ {
+  "dump": 422,
+  "owned": "Armaldo",
+  "level": 55,
+  "now_ability": "Swift Swim",
+  "now_moves": [
+   "Crush Claw",
+   "Rock Blast",
+   "Protect",
+   "X-Scissor"
+  ],
+  "final": "Armaldo",
+  "evolve": "",
+  "gate": "",
+  "types": "Rock/Bug",
+  "score": 0.482,
+  "tier": "C",
+  "ability": "Swift Swim",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Rock Blast",
+   "X-Scissor",
+   "Rock Tomb",
+   "Protect"
+  ],
+  "move_src": {
+   "Rock Blast": "known",
+   "X-Scissor": "known",
+   "Rock Tomb": "TM39",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.43,
+   "danni": 0.82,
+   "troye": 0.43,
+   "zena": 0.59,
+   "holly": 0.52,
+   "manaphy": 0.11,
+   "marcie": 0.79,
+   "amber": 0.58
+  }
+ },
+ {
+  "dump": 423,
+  "owned": "Cradily",
+  "level": 55,
+  "now_ability": "Storm Drain",
+  "now_moves": [
+   "Stockpile",
+   "Spit Up",
+   "Swallow",
+   "Energy Ball"
+  ],
+  "final": "Cradily",
+  "evolve": "",
+  "gate": "",
+  "types": "Rock/Grass",
+  "score": 0.424,
+  "tier": "C",
+  "ability": "Storm Drain",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Rock Tomb",
+   "Bullet Seed",
+   "Energy Ball",
+   "Protect"
+  ],
+  "move_src": {
+   "Rock Tomb": "TM39",
+   "Bullet Seed": "TM131",
+   "Energy Ball": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.29,
+   "danni": 0.52,
+   "troye": 0.38,
+   "zena": 0.72,
+   "holly": 0.28,
+   "manaphy": 0.43,
+   "marcie": 0.39,
+   "amber": 0.42
+  }
+ },
+ {
+  "dump": 424,
+  "owned": "Bastiodon",
+  "level": 55,
+  "now_ability": "Soundproof",
+  "now_moves": [
+   "Ancient Power",
+   "Endure",
+   "Metal Burst",
+   "Iron Head"
+  ],
+  "final": "Bastiodon",
+  "evolve": "",
+  "gate": "",
+  "types": "Rock/Steel",
+  "score": 0.285,
+  "tier": "D",
+  "ability": "Soundproof",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Rock Tomb",
+   "Iron Head",
+   "Double-Edge",
+   "Protect"
+  ],
+  "move_src": {
+   "Rock Tomb": "TM39",
+   "Iron Head": "known",
+   "Double-Edge": "Egg",
+   "Protect": "Lv 1"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.27,
+   "danni": 0.54,
+   "troye": 0.22,
+   "zena": 0.42,
+   "holly": 0.35,
+   "manaphy": 0.0,
+   "marcie": 0.31,
+   "amber": 0.36
+  }
+ },
+ {
+  "dump": 425,
+  "owned": "Cranidos",
+  "level": 55,
+  "now_ability": "Mold Breaker",
+  "now_moves": [
+   "Ancient Power",
+   "Zen Headbutt",
+   "Screech",
+   "Head Smash"
+  ],
+  "final": "Rampardos",
+  "evolve": "Rampardos (Level 30)",
+  "gate": "",
+  "types": "Rock",
+  "score": 0.614,
+  "tier": "A",
+  "ability": "Mold Breaker",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Head Smash",
+   "Zen Headbutt",
+   "Thrash",
+   "Protect"
+  ],
+  "move_src": {
+   "Head Smash": "known",
+   "Zen Headbutt": "known",
+   "Thrash": "Egg",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.62,
+   "danni": 1.01,
+   "troye": 0.55,
+   "zena": 0.68,
+   "holly": 0.55,
+   "manaphy": 0.2,
+   "marcie": 0.47,
+   "amber": 0.89
+  }
+ },
+ {
+  "dump": 426,
+  "owned": "Aurorus",
+  "level": 55,
+  "now_ability": "Snow Warning",
+  "now_moves": [
+   "Freeze-Dry",
+   "Ice Beam",
+   "Light Screen",
+   "Snowscape"
+  ],
+  "final": "Aurorus",
+  "evolve": "",
+  "gate": "",
+  "types": "Rock/Ice",
+  "score": 0.379,
+  "tier": "D",
+  "ability": "Snow Warning",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Ice Beam",
+   "Ancient Power",
+   "Icy Wind",
+   "Protect"
+  ],
+  "move_src": {
+   "Ice Beam": "known",
+   "Ancient Power": "Lv 1",
+   "Icy Wind": "Lv 12",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.15,
+   "danni": 0.7,
+   "troye": 0.2,
+   "zena": 0.52,
+   "holly": 0.46,
+   "manaphy": 0.2,
+   "marcie": 0.49,
+   "amber": 0.5
+  }
+ },
+ {
+  "dump": 427,
+  "owned": "Tyrantrum",
+  "level": 55,
+  "now_ability": "Rock Head",
+  "now_moves": [
+   "Dragon Claw",
+   "Thrash",
+   "Earthquake",
+   "Horn Drill"
+  ],
+  "final": "Tyrantrum",
+  "evolve": "",
+  "gate": "",
+  "types": "Rock/Dragon",
+  "score": 0.54,
+  "tier": "B",
+  "ability": "Strong Jaw",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Dragon Claw",
+   "Fire Fang",
+   "Rock Slide",
+   "Protect"
+  ],
+  "move_src": {
+   "Dragon Claw": "known",
+   "Fire Fang": "TM141",
+   "Rock Slide": "Lv 28",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.52,
+   "danni": 0.92,
+   "troye": 0.56,
+   "zena": 0.68,
+   "holly": 0.71,
+   "manaphy": 0.13,
+   "marcie": 0.56,
+   "amber": 0.6
+  }
+ },
+ {
+  "dump": 428,
+  "owned": "Arctozolt",
+  "level": 55,
+  "now_ability": "Volt Absorb",
+  "now_moves": [
+   "Pluck",
+   "Avalanche",
+   "Freeze-Dry",
+   "Slam"
+  ],
+  "final": "Arctozolt",
+  "evolve": "",
+  "gate": "",
+  "types": "Electric/Ice",
+  "score": 0.316,
+  "tier": "D",
+  "ability": "Volt Absorb",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Thunder Fang",
+   "Pluck",
+   "Surf",
+   "Protect"
+  ],
+  "move_src": {
+   "Thunder Fang": "TM142",
+   "Pluck": "known",
+   "Surf": "HM03",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.28,
+   "danni": 0.64,
+   "troye": 0.38,
+   "zena": 0.45,
+   "holly": 0.39,
+   "manaphy": 0.29,
+   "marcie": 0.29,
+   "amber": 0.14
+  }
+ },
+ {
+  "dump": 429,
+  "owned": "Arctovish",
+  "level": 55,
+  "now_ability": "Ice Body",
+  "now_moves": [
+   "Bite",
+   "Aurora Veil",
+   "Freeze-Dry",
+   "Super Fang"
+  ],
+  "final": "Arctovish",
+  "evolve": "",
+  "gate": "",
+  "types": "Water/Ice",
+  "score": 0.351,
+  "tier": "D",
+  "ability": "Water Absorb",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Surf",
+   "Ice Fang",
+   "Deluge",
+   "Protect"
+  ],
+  "move_src": {
+   "Surf": "HM03",
+   "Ice Fang": "TM140",
+   "Deluge": "TM104",
+   "Protect": "Lv 7"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.14,
+   "danni": 0.58,
+   "troye": 0.38,
+   "zena": 0.52,
+   "holly": 0.43,
+   "manaphy": 0.05,
+   "marcie": 0.27,
+   "amber": 0.53
+  }
+ }
+]

@@ -686,6 +686,7 @@ if CF:
 for (sp, n, box), ch in sorted(PROFILE.items(), key=lambda kv: (kv[0][2] != 'Party', kv[0][0])):
     if box == 'Party' and sp not in (CF_NAMES if CF else IDEAL): continue   # leaving the party
     if CF and box == 'Active': continue   # fight mode: only the lineup and staging verdicts, no generic Active-box rebuilds
+    if str(ACTIONS.get(n, '')).startswith('Move to Overflow'): continue   # no build card for a mon going to Overflow
     if ch: _cards.append((1 if box == 'Party' else 2, sp, f'{box} #{n}', ch))
 _cards.sort(key=lambda c: (c[0], c[1]))
 todo_html = ''

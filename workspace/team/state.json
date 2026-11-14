@@ -1,12 +1,12 @@
 {
  "_doc": "Read/written by scripts/team/update.py. Edit by hand only to change the six or its moves.",
- "export": "party_and_boxes_2026-11-14_0906.txt",
- "export_label": "14 Nov 09:06",
- "active_start": 411,
+ "export": "party_and_boxes_2026-11-14_1126.txt",
+ "export_label": "14 Nov 11:26",
+ "active_start": 416,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 77,
- "run": 91,
- "final": 95,
+ "roster": 80,
+ "run": 94,
+ "final": 98,
  "done": [
   "aelita",
   "narcissa1",
@@ -77,12 +77,14 @@
   "ACTIVE_AT": [
    "453:404",
    "459:407",
-   "470@403=Beartic:418"
+   "470@403=Beartic:418",
+   "499@416=Parasect-Aevian:430"
   ],
   "STAGING_AT": [
    "453:393-403",
    "459:403-406",
-   "470@403=Beartic:403-417"
+   "470@403=Beartic:403-417",
+   "499@416=Parasect-Aevian:416-429"
   ]
  },
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",

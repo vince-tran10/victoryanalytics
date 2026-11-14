@@ -646,3 +646,6 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   raises hype on entry). Scored at Hype 1 with >= 2 hype-lowering tools required (1.427). Fight mode amber.
 - 14 Nov export (09:06): Amber lineup in the party, 5/6 match; Veluza-A holds Focus Sash (Mystic Water: take Clawitzer's).
   New: Magby (C), Inkay (C), Chansey (D) → Overflow. Fight-mode Team table now shows ability · nature · EVs per member.
+- 14 Nov export (11:26): 18 new mons; staging #416-429 (override saved). Gallade S 0.766 and Cranidos→Rampardos A → Active;
+  12 to Overflow. Amber re-check with Gallade: lineup unchanged (1.427 vs best Gallade swap 1.421). Scolipite / Houndoomite
+  noted: Megas not allowed until the Omni Ring (Ch 12). Staging cards no longer shown for mons going to Overflow.
