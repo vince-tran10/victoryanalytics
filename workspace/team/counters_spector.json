@@ -1,0 +1,56 @@
+{
+ "preview": true,
+ "current": {
+  "counters": 6,
+  "pairs": [
+   {
+    "foe": "Murkrow",
+    "mon": "Raichu",
+    "ability": "LIGHTNINGROD",
+    "dealt": 115,
+    "taken": 0,
+    "ok": true
+   },
+   {
+    "foe": "Gothitelle",
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 113,
+    "taken": 23,
+    "ok": true
+   },
+   {
+    "foe": "Gengar",
+    "mon": "Drampa",
+    "ability": "SAPSIPPER",
+    "dealt": 130,
+    "taken": 0,
+    "ok": true
+   },
+   {
+    "foe": "Houndstone",
+    "mon": "Zoroark (Hisuian Form)",
+    "ability": "ILLUSION",
+    "dealt": 114,
+    "taken": 0,
+    "ok": true
+   },
+   {
+    "foe": "Ninetales",
+    "mon": "Crawdaunt",
+    "ability": "ADAPTABILITY",
+    "dealt": 130,
+    "taken": 23,
+    "ok": true
+   },
+   {
+    "foe": "Banette",
+    "mon": "Porygon-Z",
+    "ability": "ADAPTABILITY",
+    "dealt": 130,
+    "taken": 0,
+    "ok": true
+   }
+  ]
+ }
+}

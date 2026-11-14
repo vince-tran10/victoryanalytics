@@ -84,7 +84,17 @@ FIGHTS = {
     'factory':  [('???', 'UNKNOWN_1', 1)],
     'amber':    [('Amber', 'LEADER_AMBER', 0)],
     'kyogre':   [('boss', 'BOSSKYOGRE')],
+    # Chapter 9 (Vincent's list, in order)
+    'darkgardevoir': [('boss', 'DARKGARDEVOIR')],
+    'garbodor': [('boss', 'RIFTGARBODOR')],
+    'karrina':  [('Karrina', 'GANGLEADER', 2)],
+    'spector':  [('Spector', 'LEADER_SPECTOR', 0)],
+    'spector2': [('Spector', 'LEADER_SPECTOR2', 0)],
+    'jenner9':  [('Jenner', 'SPIRITJENNER', 0)],
+    'amanda':   [('Amanda', 'TRAINER_AMANDA', 2)],
+    'erick':    [('Erick', 'LEADER_ERICK', 0)],
 }
+PARTNER = {'darkgardevoir': ('Melia', 'ENIGMA_1', 0), 'garbodor': ('Melia', 'ENIGMA_1', 0)}
 
 
 def fight_mons(key):
@@ -95,7 +105,12 @@ def fight_mons(key):
             out.append(norm_mon(m, f'boss {e[1]}'))
         else:
             t = trainer(*e)
-            out += [norm_mon(m, f'{e[0]} ({e[1]} #{e[2]})') for m in t['mons']]
+            te = t.get('trainereffect') or {}
+            for i, m in enumerate(t['mons']):
+                nm = norm_mon(m, f'{e[0]} ({e[1]} #{e[2]})')
+                tc = (te.get(str(i)) or {}).get('typeChange') if te.get('effectmode') == 'Party' else None
+                if tc: nm['types'] = list(tc)            # trainer effect retypes it in battle
+                out.append(nm)
     return out
 
 
@@ -127,13 +142,14 @@ def boss_rows(m, bkey):
     b = boss(bkey)
     base = dict(m); base.update(b['moninfo'])
     S = b.get('shieldCount', 0); eff = b.get('onBreakEffects', {})
-    state = dict(moves=list(base.get('moves', [])), form=base.get('form', 0), item=base.get('item'), stages={}, field=None)
+    state = dict(moves=list(base.get('moves', [])), form=base.get('form', 0), item=base.get('item'), stages={}, field=None, types=None)
     bars = [dict(state, stages=dict(state['stages']))]
     for k in range(S, 0, -1):
         e = eff.get(str(k)) or {}
         if e.get('movesetUpdate'): state['moves'] = list(e['movesetUpdate'])
         if e.get('formchange') is not None: state['form'] = e['formchange']
         if e.get('itemchange'): state['item'] = e['itemchange']
+        if e.get('typeChange'): state['types'] = list(e['typeChange'])
         if e.get('fieldChange'): state['field'] = FIELD_NAME.get(e['fieldChange'], e['fieldChange'])
         for s, c in (e.get('bossStatChanges') or {}).items():
             st = STAT_IDX.get(int(s)); state['stages'][st] = max(-6, min(6, state['stages'].get(st, 0) + c))
@@ -146,8 +162,10 @@ def boss_rows(m, bkey):
         st = bars[i]; n = j - i + 1
         gm = dict(base, moves=st['moves'], form=st['form'], item=st['item'])
         label = '' if len(bars) == 1 or (i == 0 and j == len(bars) - 1) else (f' (bars {i + 1}-{j + 1})' if n > 1 else f' (bar {i + 1})')
-        rows.append(_walk_mon(gm, {'boss': True, 'bars': n, 'shields': str(n - 1), 'stages': st['stages'], 'field_override': st['field'],
-                                  'phase': label.strip(' ()'), 'phase_label': label}))
+        ex = {'boss': True, 'bars': n, 'shields': str(n - 1), 'stages': st['stages'], 'field_override': st['field'],
+              'phase': label.strip(' ()'), 'phase_label': label}
+        if st.get('types'): ex['types'] = '/'.join(t.lower() for t in st['types'])
+        rows.append(_walk_mon(gm, ex))
         i = j + 1
     for sm in ((b.get('sosDetails') or {}).get('moninfos') or {}).values():
         rows.append(_walk_mon(sm, {'sos': True}))
@@ -160,6 +178,11 @@ def walk_mons(key):
         if e[0] == 'boss':
             out += boss_rows({}, e[1])
         else:
-            for m in trainer(*e)['mons']:
-                out += boss_rows(m, m['boss']) if m.get('boss') else [_walk_mon(m)]
+            t = trainer(*e)
+            te = t.get('trainereffect') or {}
+            for i, m in enumerate(t['mons']):
+                extra = {}
+                tc = (te.get(str(i)) or {}).get('typeChange') if te.get('effectmode') == 'Party' else None
+                if tc: extra['types'] = '/'.join(x.lower() for x in tc)          # trainer effect: "Garufan magic altered its type"
+                out += boss_rows(m, m['boss']) if m.get('boss') else [_walk_mon(m, extra)]
     return out

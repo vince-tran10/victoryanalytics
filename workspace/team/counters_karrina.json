@@ -1,0 +1,56 @@
+{
+ "preview": true,
+ "current": {
+  "counters": 6,
+  "pairs": [
+   {
+    "foe": "Runerigus",
+    "mon": "Ribombee",
+    "ability": "SHIELDDUST",
+    "dealt": 128,
+    "taken": 27,
+    "ok": true
+   },
+   {
+    "foe": "Musharna",
+    "mon": "Shedinja",
+    "ability": "WONDERGUARD",
+    "dealt": 101,
+    "taken": 0,
+    "ok": true
+   },
+   {
+    "foe": "Granbull",
+    "mon": "Rhyperior",
+    "ability": "SOLIDROCK",
+    "dealt": 124,
+    "taken": 48,
+    "ok": true
+   },
+   {
+    "foe": "Alakazam",
+    "mon": "Klinklang",
+    "ability": "CLEARBODY",
+    "dealt": 129,
+    "taken": 43,
+    "ok": true
+   },
+   {
+    "foe": "Fearow",
+    "mon": "Avalugg",
+    "ability": "OWNTEMPO",
+    "dealt": 130,
+    "taken": 21,
+    "ok": true
+   },
+   {
+    "foe": "Nidoking",
+    "mon": "Swampert",
+    "ability": "TORRENT",
+    "dealt": 130,
+    "taken": 29,
+    "ok": true
+   }
+  ]
+ }
+}

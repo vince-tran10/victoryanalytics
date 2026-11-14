@@ -5,7 +5,8 @@ import gamedata as G
 MAP = {'Mountain': 'MOUNTAIN', 'Mountain Field': 'MOUNTAIN', 'Volcanic Top': 'VOLCANICTOP', 'Volcanic Top Field': 'VOLCANICTOP',
        'Wasteland': 'WASTELAND', 'Beach Field': 'ASHENBEACH', 'Factory Field': 'FACTORY', 'Concert Venue': 'CONCERT1',
        'Water Surface': 'WATERSURFACE', 'Short-Circuit Field': 'SHORTCIRCUIT', 'Forest Field': 'FOREST', 'Swamp Field': 'SWAMP',
-       'Big Top Arena': 'BIGTOP', 'Deep Earth Field': 'DEEPEARTH', 'Corrupted Cave': 'CORRUPTED'}
+       'Big Top Arena': 'BIGTOP', 'Deep Earth Field': 'DEEPEARTH', 'Corrupted Cave': 'CORRUPTED',
+       'Blessed Field': 'HOLY', 'Haunted Field': 'HAUNTED', 'Murkwater Surface': 'MURKWATERSURFACE'}
 def game_field(key):
     f = G.load('fieldtext')[key]
     types = {t: float(m) for m, ts in f.get('typeBoosts', {}).items() for t in ts}

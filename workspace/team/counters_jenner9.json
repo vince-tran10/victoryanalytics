@@ -1,0 +1,56 @@
+{
+ "preview": true,
+ "current": {
+  "counters": 5,
+  "pairs": [
+   {
+    "foe": "Stoutland",
+    "mon": "Passimian",
+    "ability": "DEFIANT",
+    "dealt": 112,
+    "taken": 65,
+    "ok": true
+   },
+   {
+    "foe": "Appletun",
+    "mon": "Frosmoth",
+    "ability": "ICESCALES",
+    "dealt": 103,
+    "taken": 40,
+    "ok": true
+   },
+   {
+    "foe": "Noivern",
+    "mon": "Aurorus",
+    "ability": "SNOWWARNING",
+    "dealt": 130,
+    "taken": 39,
+    "ok": true
+   },
+   {
+    "foe": "Porygon-Z",
+    "mon": "Annihilape",
+    "ability": "DEFIANT",
+    "dealt": 130,
+    "taken": 89,
+    "ok": false
+   },
+   {
+    "foe": "Kommo-o",
+    "mon": "Florges",
+    "ability": "SYMBIOSIS",
+    "dealt": 130,
+    "taken": 52,
+    "ok": true
+   },
+   {
+    "foe": "Klinklang",
+    "mon": "Chandelure",
+    "ability": "FLASHFIRE",
+    "dealt": 130,
+    "taken": 43,
+    "ok": true
+   }
+  ]
+ }
+}

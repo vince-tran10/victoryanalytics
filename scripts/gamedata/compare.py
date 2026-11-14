@@ -19,7 +19,10 @@ for key in G.FIGHTS:
     eng = list(b['foes'])
     used = set()
     for g in game:
-        cand = [i for i, f in enumerate(eng) if i not in used and norm(f['name']) == norm(g['name'])]
+        base = lambda n: norm(re.sub(r' \(bars? [^)]*\)$', '', n))
+        cand = [i for i, f in enumerate(eng) if i not in used and base(f['name']) == norm(g['name'])]
+        if len(cand) > 1 and g.get('shields'):          # a boss split into one row per HP bar: the later bars are its phases
+            used.update(cand[1:]); cand = cand[:1]
         if not cand:
             rows.append(dict(mon=g['name'], diff=['MISSING in guide data'])); continue
         i = cand[0]; used.add(i); f = eng[i]; raw = f['raw']; d = []

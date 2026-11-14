@@ -4,17 +4,21 @@ usage (from workspace/): counters_tab.py <report.html>"""
 import glob, html, json, os, re, sys
 E = html.escape
 OUT = sys.argv[1]; page = open(OUT, encoding='utf-8').read()
-TITLES = {'amber': 'Amber (Concert Venue)', 'factory': '??? (Factory)', 'holly': 'Holly & Rorim', 'manaphy': 'Manaphy', 'giratina': 'Giratina'}
+TITLES = {'darkgardevoir': '1 · Dark Gardevoir (boss, Forest)', 'garbodor': '2 · Rift Garbodor (boss, Corrupted Cave)', 'karrina': '3 · Karrina (Blessed Field)',
+          'spector': '4a · Spector day (Haunted)', 'spector2': '4b · Spector night (Haunted)', 'jenner9': '5 · Jenner (Concert Venue)',
+          'amanda': '6 · Amanda (Factory)', 'erick': '7 · Erick, gym (Murkwater Surface)'}
 done = set(json.load(open('team/state.json')).get('done', []))
 blocks = ''
-for f in sorted(glob.glob('team/counters_*.json')):
+ORDER = list(TITLES)
+for f in sorted(glob.glob('team/counters_*.json'), key=lambda f: ORDER.index(os.path.basename(f)[9:-5]) if os.path.basename(f)[9:-5] in ORDER else 99):
     key = os.path.basename(f)[9:-5]
     if key in done: continue
     d = json.load(open(f)); c = d.get('current') or d['best'][0]
     rows = ''.join(f"<tr><td><b>{E(p['foe'])}</b></td><td>{E(p['mon'].replace(' (Aevian Form)', '-A').replace(' (Hisuian Form)', '-Hisui').replace(' (Galarian Form)', '-Galar'))}</td>"
                    f"<td class='c' data-l='deals'>{p['dealt']}%</td><td class='c' data-l='takes'>{p['taken']}%</td>"
                    f"<td>{'<span class=ok>✓</span>' if p['ok'] else '<span class=warn>weak</span>'}</td></tr>" for p in c['pairs'])
-    blocks += (f"<div class='panel pad'><h3>{E(TITLES.get(key, key))}: one counter per Pokémon "
+    tag = ' <span class="legend">(box preview: team built before the fight)</span>' if d.get('preview') else ' <span class="legend">(your lineup)</span>'
+    blocks += (f"<div class='panel pad'><h3>{E(TITLES.get(key, key))}{tag}: one counter per Pokémon "
                f"<span class='legend'>{c['counters']}/{len(c['pairs'])} countered</span></h3><div class='tablewrap'><table class='ctr'>"
                f"<thead><tr><th>Their Pokémon</th><th>Your counter</th><th>Deals</th><th>Takes</th><th></th></tr></thead><tbody>{rows}</tbody></table></div></div>")
 if blocks:

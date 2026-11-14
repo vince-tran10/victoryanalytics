@@ -1,0 +1,56 @@
+{
+ "preview": true,
+ "current": {
+  "counters": 5,
+  "pairs": [
+   {
+    "foe": "Incineroar",
+    "mon": "Unfezant (Aevian Form Male)",
+    "ability": "DEFIANT",
+    "dealt": 130,
+    "taken": 55,
+    "ok": true
+   },
+   {
+    "foe": "Hatterene",
+    "mon": "Muk (Alolan Form)",
+    "ability": "POISONTOUCH",
+    "dealt": 82,
+    "taken": 36,
+    "ok": false
+   },
+   {
+    "foe": "Druddigon",
+    "mon": "Klinklang",
+    "ability": "CLEARBODY",
+    "dealt": 127,
+    "taken": 40,
+    "ok": true
+   },
+   {
+    "foe": "Torkoal",
+    "mon": "Ludicolo",
+    "ability": "OWNTEMPO",
+    "dealt": 118,
+    "taken": 62,
+    "ok": true
+   },
+   {
+    "foe": "Bronzong",
+    "mon": "Chandelure",
+    "ability": "FLASHFIRE",
+    "dealt": 110,
+    "taken": 56,
+    "ok": true
+   },
+   {
+    "foe": "Miltank",
+    "mon": "Annihilape",
+    "ability": "DEFIANT",
+    "dealt": 126,
+    "taken": 36,
+    "ok": true
+   }
+  ]
+ }
+}

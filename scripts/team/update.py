@@ -88,7 +88,7 @@ def main():
                SINGLES_W='2', MOVES=json.dumps(st['moves']), CR_RUN=f'r{run}', TEAM_NAMES=json.dumps(st['team']))
     sh(['../scripts/team/roster.py', WS, new, f'team/roster{rost}.json'], env)
     R = json.load(open(os.path.join(TEAMD, f'roster{rost}.json')))
-    for x in R: x['level'] = 55
+    for x in R: x['level'] = st.get('cap', 55)
     json.dump(R, open(os.path.join(TEAMD, f'roster{rost}_lv55.json'), 'w'))
     print('Scoring (4 engine runs)...')
     for f in ('native', 'Singles', 'Doubles'):

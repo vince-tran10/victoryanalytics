@@ -1,0 +1,56 @@
+{
+ "preview": true,
+ "current": {
+  "counters": 4,
+  "pairs": [
+   {
+    "foe": "Stonjourner",
+    "mon": "Gastrodon",
+    "ability": "SANDFORCE",
+    "dealt": 130,
+    "taken": 24,
+    "ok": true
+   },
+   {
+    "foe": "Sigilyph",
+    "mon": "Sylveon",
+    "ability": "PIXILATE",
+    "dealt": 101,
+    "taken": 59,
+    "ok": true
+   },
+   {
+    "foe": "Luxray",
+    "mon": "Rhyperior",
+    "ability": "SOLIDROCK",
+    "dealt": 130,
+    "taken": 27,
+    "ok": true
+   },
+   {
+    "foe": "Golisopod",
+    "mon": "Chandelure",
+    "ability": "FLASHFIRE",
+    "dealt": 118,
+    "taken": 256,
+    "ok": false
+   },
+   {
+    "foe": "Typhlosion",
+    "mon": "Meowscarada",
+    "ability": "PROTEAN",
+    "dealt": 129,
+    "taken": 392,
+    "ok": false
+   },
+   {
+    "foe": "Banette",
+    "mon": "Zoroark (Hisuian Form)",
+    "ability": "ILLUSION",
+    "dealt": 130,
+    "taken": 58,
+    "ok": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "preview": true,
+ "current": {
+  "counters": 5,
+  "pairs": [
+   {
+    "foe": "Electivire",
+    "mon": "Kingler",
+    "ability": "HYPERCUTTER",
+    "dealt": 113,
+    "taken": 48,
+    "ok": true
+   },
+   {
+    "foe": "Raichu",
+    "mon": "Shedinja",
+    "ability": "WONDERGUARD",
+    "dealt": 130,
+    "taken": 0,
+    "ok": true
+   },
+   {
+    "foe": "Magneton",
+    "mon": "Gallade",
+    "ability": "SHARPNESS",
+    "dealt": 111,
+    "taken": 57,
+    "ok": true
+   },
+   {
+    "foe": "Togedemaru",
+    "mon": "Salazzle",
+    "ability": "OBLIVIOUS",
+    "dealt": 130,
+    "taken": 51,
+    "ok": true
+   },
+   {
+    "foe": "Chandelure",
+    "mon": "Musharna (Aevian Form)",
+    "ability": "TOUGHCLAWS",
+    "dealt": 104,
+    "taken": 64,
+    "ok": true
+   },
+   {
+    "foe": "Toxtricity",
+    "mon": "Bruxish",
+    "ability": "STRONGJAW",
+    "dealt": 130,
+    "taken": 295,
+    "ok": false
+   }
+  ]
+ }
+}

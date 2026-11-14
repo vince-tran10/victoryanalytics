@@ -18,31 +18,239 @@
   "note": "not in engine (beaten or not tracked)"
  },
  "amber": {
-  "label": "Amber (Lyric Badge gym) – Club STFU",
+  "note": "not in engine (beaten or not tracked)"
+ },
+ "kyogre": {
+  "note": "not in engine (beaten or not tracked)"
+ },
+ "darkgardevoir": {
+  "label": "Dark Gardevoir (boss) – Forest",
   "game_src": [
-   "Amber (LEADER_AMBER #0)"
+   "boss DARKGARDEVOIR"
+  ],
+  "n_game": 1,
+  "n_guide": 1,
+  "rows": [
+   {
+    "mon": "Gardevoir",
+    "diff": [
+     "BOSS 1 shields (guide HP x2); phases: at 1 shield(s): "
+    ]
+   }
+  ]
+ },
+ "garbodor": {
+  "label": "Rift Garbodor (boss) – Corrupted Cave",
+  "game_src": [
+   "boss RIFTGARBODOR"
+  ],
+  "n_game": 1,
+  "n_guide": 4,
+  "rows": [
+   {
+    "mon": "Garbodor",
+    "diff": [
+     "BOSS 3 shields (guide HP x1); phases: at 3 shield(s): Garbodor gorged itself on rotten berries!, moves → Drain Punch/Giga Drain/Darkest Lariat/Belch, boss stats {'Atk': 1, 'SpA': 1}; at 2 shield(s): Garbodor gorged itself on scrap metal!, moves → Drain Punch/Giga Drain/Gyro Ball/Belch, boss stats {'Def': 1, 'SpD': 1}; at 1 shield(s): Garbodor desperately gorged itself on nearby rocks!, moves → Rock Blast/Giga Drain/Gyro Ball/Belch, boss stats {'Atk': 2, 'Def': -1, 'SpA': 2, 'SpD': -1}"
+    ]
+   }
+  ]
+ },
+ "karrina": {
+  "label": "Gang Leader Karrina – Blessed Field",
+  "game_src": [
+   "Karrina (GANGLEADER #2)"
   ],
   "n_game": 6,
   "n_guide": 6,
   "rows": [
    {
-    "mon": "Camerupt",
+    "mon": "Runerigus",
     "diff": []
    },
    {
-    "mon": "Arcanine",
+    "mon": "Musharna",
     "diff": []
    },
    {
-    "mon": "Scovillain",
+    "mon": "Granbull",
     "diff": []
    },
    {
-    "mon": "Blaziken",
+    "mon": "Alakazam",
     "diff": []
    },
    {
-    "mon": "Skeledirge",
+    "mon": "Fearow",
+    "diff": []
+   },
+   {
+    "mon": "Nidoking",
+    "diff": []
+   }
+  ]
+ },
+ "spector": {
+  "label": "Spector (day) – Haunted Field",
+  "game_src": [
+   "Spector (LEADER_SPECTOR #0)"
+  ],
+  "n_game": 6,
+  "n_guide": 6,
+  "rows": [
+   {
+    "mon": "Murkrow",
+    "diff": []
+   },
+   {
+    "mon": "Gothitelle",
+    "diff": []
+   },
+   {
+    "mon": "Gengar",
+    "diff": []
+   },
+   {
+    "mon": "Houndstone",
+    "diff": []
+   },
+   {
+    "mon": "Ninetales",
+    "diff": []
+   },
+   {
+    "mon": "Banette",
+    "diff": []
+   }
+  ]
+ },
+ "spector2": {
+  "label": "Spector (night) – Haunted Field",
+  "game_src": [
+   "Spector (LEADER_SPECTOR2 #0)"
+  ],
+  "n_game": 6,
+  "n_guide": 6,
+  "rows": [
+   {
+    "mon": "Stonjourner",
+    "diff": []
+   },
+   {
+    "mon": "Sigilyph",
+    "diff": []
+   },
+   {
+    "mon": "Luxray",
+    "diff": []
+   },
+   {
+    "mon": "Golisopod",
+    "diff": []
+   },
+   {
+    "mon": "Typhlosion",
+    "diff": []
+   },
+   {
+    "mon": "Banette",
+    "diff": []
+   }
+  ]
+ },
+ "jenner9": {
+  "label": "Spirit Jenner – Concert Venue",
+  "game_src": [
+   "Jenner (SPIRITJENNER #0)"
+  ],
+  "n_game": 6,
+  "n_guide": 6,
+  "rows": [
+   {
+    "mon": "Stoutland",
+    "diff": []
+   },
+   {
+    "mon": "Appletun",
+    "diff": []
+   },
+   {
+    "mon": "Noivern",
+    "diff": []
+   },
+   {
+    "mon": "Porygon-Z",
+    "diff": []
+   },
+   {
+    "mon": "Kommo-o",
+    "diff": []
+   },
+   {
+    "mon": "Klinklang",
+    "diff": []
+   }
+  ]
+ },
+ "amanda": {
+  "label": "League Scout Amanda – Factory",
+  "game_src": [
+   "Amanda (TRAINER_AMANDA #2)"
+  ],
+  "n_game": 6,
+  "n_guide": 6,
+  "rows": [
+   {
+    "mon": "Incineroar",
+    "diff": []
+   },
+   {
+    "mon": "Hatterene",
+    "diff": []
+   },
+   {
+    "mon": "Druddigon",
+    "diff": []
+   },
+   {
+    "mon": "Torkoal",
+    "diff": []
+   },
+   {
+    "mon": "Bronzong",
+    "diff": []
+   },
+   {
+    "mon": "Miltank",
+    "diff": []
+   }
+  ]
+ },
+ "erick": {
+  "label": "Erick (Pulse Badge gym) – Murkwater Surface",
+  "game_src": [
+   "Erick (LEADER_ERICK #0)"
+  ],
+  "n_game": 6,
+  "n_guide": 6,
+  "rows": [
+   {
+    "mon": "Electivire",
+    "diff": []
+   },
+   {
+    "mon": "Raichu",
+    "diff": []
+   },
+   {
+    "mon": "Magneton",
+    "diff": []
+   },
+   {
+    "mon": "Togedemaru",
+    "diff": []
+   },
+   {
+    "mon": "Chandelure",
     "diff": []
    },
    {
@@ -50,8 +258,5 @@
     "diff": []
    }
   ]
- },
- "kyogre": {
-  "note": "not in engine (beaten or not tracked)"
  }
 }

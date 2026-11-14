@@ -33,7 +33,8 @@ SHORT = {'aelita': 'Aelita', 'narcissa': 'Narcissa', 'danni': 'Danni & Layla', '
          'kyogre': 'Kyogre', 'holly': 'Holly & Rorim', 'manaphy': 'Manaphy', 'factory': '??? (Factory)', 'marcie': 'Marcie & Chikie',
          'texen': 'Texen', 'guard1': 'Guard #1', 'guard2': 'Guard #2', 'tommen': 'Tommen', 'groudon': 'Groudon',
          'crawli': 'Crawli', 'neved': 'Neved', 'eli': 'Eli & Sharon', 'jenner': 'Jenner', 'geara': 'Geara & Zetta',
-         'giratina': 'Giratina', 'amber': 'Amber'}
+         'giratina': 'Giratina', 'amber': 'Amber', 'darkgardevoir': 'Dark Gardevoir', 'garbodor': 'Rift Garbodor',
+         'karrina': 'Karrina', 'spector': 'Spector (day)', 'spector2': 'Spector (night)', 'jenner9': 'Spirit Jenner', 'amanda': 'Amanda', 'erick': 'Erick'}
 
 
 def chips(types):
@@ -87,6 +88,8 @@ JOB = {'Annihilape': 'Fastest hitter.',
        'Leavanny-Aevian': 'Rage Powder pulls attacks so Golisopod gets a free Swords Dance; Focus Sash guarantees it survives that turn. Intimidate on entry.'}
 EVOLVE_FIRST = {}
 FIGHT = os.environ.get('FIGHT', '')
+_ST = json.load(open(os.path.join(os.path.dirname(os.path.abspath(sys.argv[3])), 'state.json')))
+CAP = int(_ST.get('cap', 55)); CHAPTER = int(_ST.get('chapter', 8))
 COUNTERS = {'groudon': dict(title='Groudon', note='Boss · Deep Earth · Drought sun · 1 shield', six=[
     ('Glalie-Aevian', 'Grassy Surge', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Focus Sash', ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'], 'Lead: Grassy Terrain halves Earthquake'),
     ('Musharna-Aevian', 'Tough Claws', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Focus Sash', ['Play Rough', 'Throat Chop', 'Glare', 'Protect'], 'Glare it (paralysis)'),
@@ -179,7 +182,20 @@ COUNTERS['amber'] = dict(title='Amber', note='Gym · singles · Concert Venue ·
           'Arcanine (Extreme Speed, Reversal): Jellicent is immune to both. Blaziken (Speed Boost): kill it before it boosts, Veluza / Jellicent',
           'Skeledirge (Unaware, Torch Song): Jellicent Shadow Ball, Swampert Earthquake. Toxtricity (Punk Rock): Earthquake after the balloon pops, or Water',
           'LAST TURN: raise hype before the final KO (Slowking Eerie Spell, or switch Rhyperior in) so the battle ends above Hype 1: +3 Amber, not -2'])
-CF_PREEVO = {'Tsareena': ('Bounsweet', 'level up → Steenee, then level up knowing Stomp'), 'Arcanine-Hisui': ('Growlithe-Hisui', 'Fire Stone'), 'Raichu': ('Pichu', 'friendship → Pikachu, then Thunder Stone'), 'Roserade': ('Roselia', 'Shiny Stone'), 'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
+COUNTERS['darkgardevoir'] = dict(title='Dark Gardevoir', note='Boss · Lv 60 Dark/Fairy · Speed 199 · Magician + Lum Berry · Calm Mind · 1 shield (break: drops cured, Reflect + Safeguard 5 turns) · Melia partner · Forest', six=[
+    ('Muk-Alola', 'Poison Touch', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Black Sludge', ['Knock Off', 'Clear Smog', 'Gunk Shot', 'Protect'], 'LEAD. Turn 1 Knock Off (removes its Lum Berry). Clear Smog every time it Calm Minds. Psyshock can\'t touch it (Dark); takes 22% Dark Pulse, 51% Moonblast. If Magician steals its Black Sludge, Gardevoir loses 1/8 a turn'),
+    ('Glalie-Aevian', 'Grassy Surge', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Iron Ball', ['Switcheroo', 'Wood Hammer', 'Grassy Glide', 'Protect'], 'Switcheroo hands it the Iron Ball: Speed 199 → 99 for the rest of the fight (shield breaks don\'t change its item). Wood Hammer 119% of a bar'),
+    ('Copperajah', 'Sheer Force', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Metal Coat', ['Iron Head', 'Play Rough', 'Double-Edge', 'Protect'], 'BAR 1 COUNTER: Iron Head (Steel, super-effective) 126% of a bar. Takes 53% max'),
+    ('Klinklang', 'Clear Body', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Metal Coat', ['Gear Grind', 'Shift Gear', 'Screech', 'Protect'], 'BAR 2 COUNTER: Gear Grind 132% (66% under Reflect: two hits). Faster than it once it holds the Iron Ball (155 vs 99)'),
+    ('Escavalier', 'Overcoat', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Metal Coat', ['Iron Head', 'X-Scissor', 'Swords Dance', 'Protect'], 'Backup Steel hitter: Iron Head 102% of a bar, takes 50% max'),
+    ('Crobat', 'Infiltrator', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Poison Barb', ['Cross Poison', 'Brave Bird', 'Haze', 'Protect'], 'Infiltrator ignores its Reflect AND Safeguard after the break: Cross Poison 67% of a bar through Reflect. Haze resets Calm Mind')],
+    plan=['It is faster (199) and stacks Calm Mind; after the shield break its stat drops are cured and it gets Reflect + Safeguard for 5 turns',
+          'Turn 1: Muk-Alola Knock Off (Lum Berry gone). Clear Smog every time it uses Calm Mind (special: Reflect doesn\'t weaken it)',
+          'Then Glalie-A Switcheroo: it gets the Iron Ball (Speed halved; its item stays through the shield break)',
+          'Bar 1: Copperajah Iron Head (126%) / Klinklang Gear Grind (132%). Bar 2 (Reflect 5 turns): Klinklang twice, or Crobat (Infiltrator ignores Reflect)',
+          'Magician: once its Lum is gone it steals the item of whoever it hits. Muk\'s Black Sludge hurts it 1/8 a turn if stolen',
+          'Melia: Togekiss / Azumarill hit it; Hydreigon and Zoroark are weak to its Moonblast'])
+CF_PREEVO = {'Muk-Alola': ('Grimer-Alola', 'level up once (Lv 38)'), 'Tsareena': ('Bounsweet', 'level up → Steenee, then level up knowing Stomp'), 'Arcanine-Hisui': ('Growlithe-Hisui', 'Fire Stone'), 'Raichu': ('Pichu', 'friendship → Pikachu, then Thunder Stone'), 'Roserade': ('Roselia', 'Shiny Stone'), 'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
 CF = COUNTERS.get(FIGHT)
 CF_NAMES = [x[0] for x in CF['six']] if CF else []
 NEXT_LV = max(fo['lvl'] or 0 for p in sorted(fn['plans'], key=lambda p: SX.story_order(os.path.dirname(os.path.dirname(os.path.abspath(F9N)))).get(p['key'], 999))[:3] for fo in p['foes'])
@@ -224,8 +240,8 @@ def verify_mon(d, ab, nat, evs, item, moves):
         out.append(f"Ability: {d.get('ability')} → {ab} (Ability Capsule)")
     if d.get('nature') != nat:
         out.append(f"Nature: {d.get('nature')} → {nat} (mint)")
-    if (d.get('level') or 55) < 55:
-        out.append(f"Lv {d['level']} → 55")
+    if (d.get('level') or CAP) < CAP:
+        out.append(f"Lv {d['level']} → {CAP}")
     _target = [m for m, _ in moves]
     _gone = [m for m in d['moves'] if m not in _target]
     for m in _target:
@@ -284,7 +300,7 @@ ready_rows, R_TOT, R_KO, R_FAST, R_RISK = readiness()
 
 
 if LEVELS:
-    team_todo.append(('Level the six to 55 (the cap; the next bosses are Lv ' + str(NEXT_LV) + '+): ' + ', '.join(f'{n} {lv}' for n, lv in LEVELS), 'mid'))
+    team_todo.append((f'Level the six to {CAP} (the cap; the next bosses are Lv ' + str(NEXT_LV) + '+): ' + ', '.join(f'{n} {lv}' for n, lv in LEVELS), 'mid'))
 IDEAL = [t[1] for t in TEAM]
 TEAM_X = [(t[1], t[2], t[3], t[6], [m for m, _ in t[7]]) for t in TEAM]
 _CS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(F9N))), 'team', 'chapter_status.json')
@@ -646,7 +662,7 @@ for d in cur:
         if d.get('nature') not in _nats: _iss.append(f"Nature: {d.get('nature')} → {_nat} (mint)")
         if d.get('capsule') and d['capsule'][0].replace(' ', '').lower() != (d.get('ability') or '').replace(' ', '').lower():
             _iss.append(f"Ability: {d.get('ability')} → {d['capsule'][0]} (Ability Capsule)")
-        if (d.get('level') or 55) < 55: _iss.append(f"Lv {d['level']} → 55")
+        if (d.get('level') or CAP) < CAP: _iss.append(f"Lv {d['level']} → {CAP}")
         _tb = next((t for t in TEAM if t[1] == d['final']), None)   # a team species: its build follows the team set
         _itm = _tb[6] if _tb else best_item([m for m in list(d['attacks'])[:3]], _ph)
         if _itm and (d.get('item') or '') != _itm: _iss.append(f"Item: {d.get('item') or 'none'} → {_itm}")
@@ -714,7 +730,7 @@ N_PROFILE = len(_cards)
 
 # ---------------------------------------------------------------- 4) hidden metadata
 meta = {
-    'generated': '2026-11-05', 'trainer': 'Vincent', 'level_cap': 55, 'badges': 7, 'difficulty': 'Classic (walkthrough sets)',
+    'generated': '2026-11-05', 'trainer': 'Vincent', 'level_cap': CAP, 'badges': 8 if CAP >= 60 else 7, 'difficulty': 'Classic (walkthrough sets)',
     'move_rules': 'level-up <= 55, Egg, Chapter 1-7 TMs (71), tutors at 7 badges (Luck\'s Tent tiers 0/3/5/7, Wispy Shop, Kakori Beach), known moves; no Relearner, no Life Orb, no Megas, no Chapter 8 pickups',
     'readiness': {'one_shot': R_KO, 'one_shot_first': R_FAST, 'of': R_TOT, 'risk': R_RISK},
     'promote': promo,
@@ -736,7 +752,7 @@ meta = {
 }
 meta_json = json.dumps(meta, ensure_ascii=False).replace('</', '<\\/')
 
-page = f'''<title>Chapter 8 Guide</title>
+page = f'''<title>Chapter {CHAPTER} Guide</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -858,8 +874,8 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 <div class="wrap">
 <header class="mast">
   <span class="eyebrow">Pokémon Rejuvenation · Chapter 8 · Classic teams</span>
-  <h1>Chapter 8 Guide</h1>
-  <div class="facts"><span>Export <b>{E(os.environ.get('EXPORT_LABEL', '5 Nov'))}</b></span><span>Hard fights left <b>{sum(1 for p in fn['plans'] if SX.is_hard(p))}</b></span><span>Level cap <b>55</b></span></div>
+  <h1>Chapter {CHAPTER} Guide</h1>
+  <div class="facts"><span>Export <b>{E(os.environ.get('EXPORT_LABEL', '5 Nov'))}</b></span><span>Hard fights left <b>{sum(1 for p in fn['plans'] if SX.is_hard(p))}</b></span><span>Level cap <b>{CAP}</b></span></div>
 </header>
 
 <section aria-labelledby="s1">

@@ -204,7 +204,33 @@ def load_battles_walk(base):
             mons, src = _GD.walk_mons(key), 'game'   # exact Classic data from the game's own files
         out.append(dict(key=key, label=label, field=field, format=fmt, weight=weight, notes=notes, mons=mons,
                         trainer=t['trainer'], source=src))
+    # Chapter 9 fights (Vincent's list, 14 Nov): straight from the game files, no walkthrough entry needed
+    if _GD is not None:
+        for key, label, field, fmt, weight, notes in CH9:
+            if key in _GD.FIGHTS:
+                out.append(dict(key=key, label=label, field=field, format=fmt, weight=weight, notes=notes, mons=_GD.walk_mons(key),
+                                trainer=label, source='game'))
     return out
+
+
+CH9 = [
+    ('darkgardevoir', 'Dark Gardevoir (boss) – Forest', 'Forest Field', 'Doubles', 1.0,
+     'Boss Lv 60 Dark/Fairy, Magician, Lum Berry, Calm Mind, 1 shield (break: drops cured, Reflect + Safeguard 5 turns). Melia is your partner.'),
+    ('garbodor', 'Rift Garbodor (boss) – Corrupted Cave', 'Corrupted Cave', 'Doubles', 1.0,
+     'Boss Lv 60, 3 shields, Poison Heal + Black Sludge; type/moves/item change every bar. Melia is your partner.'),
+    ('karrina', 'Gang Leader Karrina – Blessed Field', 'Blessed Field', 'Singles', 1.0,
+     'Lv 58-63, every mon type-changed by Garufan magic; Fearow Crest, Sheer Force Nidoking, Magic Guard Alakazam.'),
+    ('spector', 'Spector (day) – Haunted Field', 'Haunted Field', 'Doubles', 0.5,
+     'Perish Song + Shadow Tag/Mean Look trap, sleep, Mega Banette. Only one of the two Spector teams (day / night).'),
+    ('spector2', 'Spector (night) – Haunted Field', 'Haunted Field', 'Doubles', 0.5,
+     'Offensive doubles: Eruption, Heat Wave, Rock Slide, priority, Mega Banette.'),
+    ('jenner9', 'Spirit Jenner – Concert Venue', 'Concert Venue', 'Singles', 1.0,
+     'Lv 63-66: Mega Appletun, Choice Scarf Porygon-Z, Kommonium Z Kommo-o, Shift Gear Klinklang.'),
+    ('amanda', 'League Scout Amanda – Factory', 'Factory Field', 'Doubles', 1.0,
+     'Trick Room team: Fake Out Incineroar, Hatterene + Bronzong set Trick Room, Torkoal Drought Eruption, crested Druddigon.'),
+    ('erick', 'Erick (Pulse Badge gym) – Murkwater Surface', 'Murkwater Surface', 'Doubles', 1.0,
+     'Gym: Electric team, Ground nullified, Electric boosted; Mega Toxtricity, Thunder Raid, Motor Drive.'),
+]
 
 
 # ---------------------------------------------------------------- game data (exact) overrides, when available

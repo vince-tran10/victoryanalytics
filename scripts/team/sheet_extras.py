@@ -104,6 +104,8 @@ def story_order(base):
         hits = [i for i, t in enumerate(ev) if mt in t['trainer'] and 'Partner' not in t['trainer']]
         if hits:
             order[key] = hits[nth - 1] if nth and len(hits) >= nth else max(hits, key=lambda i: len(ev[i]['mons']))
+    for i, k in enumerate(['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick']):
+        order[k] = 100000 + i   # Chapter 9, Vincent's order
     return order
 
 
@@ -149,7 +151,7 @@ def next_fights(plans, team, base, n=3, short=None, disp=lambda x: x, keep_order
 
 
 # Hand-checked against the walkthrough's trainer classes (7 Nov): bosses + real story/key fights, no grunt fodder.
-HARD_WHY = {
+HARD_WHY = {'darkgardevoir': 'Boss, Melia partner', 'garbodor': 'Rift boss, 3 shields, Melia partner', 'karrina': 'Gang leader, Lv 58-63', 'spector': 'Quest boss fight (day team)', 'spector2': 'Quest boss fight (night team)', 'jenner9': 'Quest fight, Lv 63-66', 'amanda': 'League Scout, Trick Room', 'erick': 'Gym leader (Pulse Badge)', 
     'kyogre': 'Legendary boss (optional, Saving Amber)',
     'eli': 'Misfortunate Duo story fight, 10 mons, Venam partner',
     'geara': 'Two Xen Executives, 12 mons, Melia partner',

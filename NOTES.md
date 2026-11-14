@@ -663,3 +663,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   counters.py (best one-to-one pairing; counter = deals >= 90% or outspeeds + OHKO, takes < 70%) and counters_tab.py
   (Fights tab "Counters" section, run by update.py). Amber: current six already 6/6 (66.32 vs best 66.40, which drops
   Slowking-Galar's hype tools) → kept.
+- 14 Nov: CHAPTER 9. Amber beaten; state chapter 9, cap 60 (update.py levels to state cap; page shows Chapter/cap).
+  8 Ch9 fights wired from the game files (gamedata.FIGHTS + bosses.CH9; boss typeChange per bar, trainer-effect retypes,
+  fields HOLY / HAUNTED / MURKWATERSURFACE; compare.py matches per-bar boss rows). Evaluated all 8; box_counters.py gives a
+  one-counter-per-foe preview per fight (Fights tab "Counters"). Garbodor 0/4 → needs a boss plan later.
+  Dark Gardevoir lineup (fight mode): Muk-Alola lead (Knock Off Lum, Clear Smog CM), Glalie-A (Switcheroo Iron Ball),
+  Copperajah (bar 1, Iron Head 126%), Klinklang (bar 2), Escavalier, Crobat (Infiltrator vs Reflect/Safeguard).

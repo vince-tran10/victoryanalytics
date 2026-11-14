@@ -1,20 +1,43 @@
 {
- "fights": 1,
- "foes": 6,
- "major": [],
- "minor": [
-  "Fire",
+ "fights": 8,
+ "foes": 41,
+ "major": [
+  "Bug",
+  "Dark",
+  "Dragon",
   "Electric",
-  "Normal",
-  "Rock",
-  "Grass",
-  "Ghost",
-  "Ground",
   "Fairy",
-  "Poison"
+  "Fighting",
+  "Fire",
+  "Flying",
+  "Ghost",
+  "Grass",
+  "Ground",
+  "Normal",
+  "Poison",
+  "Poison/Rock",
+  "Psychic",
+  "Rock",
+  "Steel"
+ ],
+ "minor": [
+  "Fire/Ghost",
+  "Ice"
  ],
  "weak3": [],
- "nores": [],
- "misses": [],
- "n_types": 9
+ "nores": [
+  "DRAGON",
+  "FLYING",
+  "GHOST",
+  "PSYCHIC"
+ ],
+ "misses": [
+  {
+   "foe": "Gardevoir",
+   "fight": "darkgardevoir",
+   "best": "Crabominable",
+   "dmg": 44
+  }
+ ],
+ "n_types": 19
 }

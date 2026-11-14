@@ -1,0 +1,40 @@
+{
+ "preview": true,
+ "current": {
+  "counters": 0,
+  "pairs": [
+   {
+    "foe": "Garbodor (bar 1)",
+    "mon": "Hariyama",
+    "ability": "GUTS",
+    "dealt": 34,
+    "taken": 40,
+    "ok": false
+   },
+   {
+    "foe": "Garbodor (bar 2)",
+    "mon": "Chandelure",
+    "ability": "FLASHFIRE",
+    "dealt": 47,
+    "taken": 89,
+    "ok": false
+   },
+   {
+    "foe": "Garbodor (bar 3)",
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 76,
+    "taken": 75,
+    "ok": false
+   },
+   {
+    "foe": "Garbodor (bar 4)",
+    "mon": "Rhyperior",
+    "ability": "SOLIDROCK",
+    "dealt": 105,
+    "taken": 351,
+    "ok": false
+   }
+  ]
+ }
+}

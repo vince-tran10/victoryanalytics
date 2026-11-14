@@ -4,9 +4,9 @@
  "export_label": "14 Nov 11:40",
  "active_start": 429,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 83,
- "run": 97,
- "final": 101,
+ "roster": 87,
+ "run": 101,
+ "final": 105,
  "done": [
   "aelita",
   "narcissa1",
@@ -25,9 +25,10 @@
   "eli",
   "factory",
   "holly",
-  "manaphy"
+  "manaphy",
+  "amber"
  ],
- "fight": "amber",
+ "fight": "darkgardevoir",
  "team": [
   "Vikavolt",
   "Chandelure",
@@ -148,5 +149,7 @@
  },
  "crests_owned": [
   "Phione Crest"
- ]
+ ],
+ "cap": 60,
+ "chapter": 9
 }

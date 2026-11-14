@@ -22,12 +22,14 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
 - Verified game rules: unlisted trainer EVs = min(85, lvl×1.5), IVs = 10; Concert Venue hype 1 = min rolls (85%).
 
 ## Game facts
-- Rejuvenation V14, Chapter 8, Classic mode, 7 badges, level cap 55.
+- Rejuvenation V14, **Chapter 9** (since 14 Nov), Classic mode, 8 badges, **level cap 60** (state.json cap/chapter; LEVELCAPS in
+  SystemConstants.rb: 9th badge → 65). Ch 9 hard fights, in order: Dark Gardevoir (boss, Melia), Rift Garbodor (boss, Melia),
+  Karrina, Spector (day / night), Spirit Jenner, Amanda, Erick (gym). Keys in gamedata.FIGHTS / bosses.CH9.
 - Every fight is scored with FULL legal movesets vs the actual targets (resistances!) and the field's game-code mechanics
   (scripts/team/fights/*_eval.py). Lesson 13 Nov: Venoshock picked into targets that all resist it.
 - Never swap a status move (Sticky Web, Will-O-Wisp, Glare…) for an attack without measuring the attack's MARGINAL gain
   (vs the member's other attacks, foe by foe) against what the status move does in each fight. Lesson 13 Nov: Mud Barrage /
-  Shock Wave were picked over Sticky Web / Will-O-Wisp and added almost nothing. Everyone is levelled to 55.
+  Shock Wave were picked over Sticky Web / Will-O-Wisp and added almost nothing. Everyone is levelled to the cap.
 - **Debug mode:** any owned Pokémon can be levelled, re-natured, re-EV'd, ability-capsuled, taught any legal move,
   instantly. NEVER filter or rank by build effort. Pick purely on battle merit.
 - Legal moves: level-up ≤ 55, Move Relearner, egg, Ch1–7 TMs, tutors ≤ 7 badges. Evolution items from Ch1–7 OK.
