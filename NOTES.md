@@ -638,3 +638,6 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Orthworm answer). Six: Golisopod-A (lead), Glalie-A, Turtonator, Armarouge, Dragalge, Tsareena (from Bounsweet #42).
 - 14 Nov: Factory lead → Glalie-A (Wood Hammer into Raichu's Sash, then priority Grassy Glide); Golisopod-A saved for Xurkitree. Vincent: the lead only faces their lead. Rule 8 added to the fight protocol. Walkthrough tip found: "Be very careful of a Xurkitree sweep"; fight is optional (Infinite Potential quest); 8th badge → cap 60 (LEVELCAPS).
 - 14 Nov: BEAT ??? (Factory). Left: Amber (Concert Venue, gym, 8th badge → cap 60) and Holly/Manaphy if not done.
+- 14 Nov: Amber brief (scripts/team/fights/amber_team.py): variable power from game code (Fever Pitch 40/130, Reversal
+  200 and Magnitude 150 at Hype 4, rolls min/max); best six Jellicent, Arcanine-H, Rhyperior, Annihilape, Swampert,
+  Armarouge (Hype 4 60% / Hype 1 40%). Waiting on Vincent: low-hype plan (finish above Hype 1 for +3 Amber) or high-hype.
