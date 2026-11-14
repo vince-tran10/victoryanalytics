@@ -618,3 +618,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   first unboosted hit. Fight mode holly: Arcanine-H, Crobat (Haze/Tailwind), Turtonator (Roar), Chandelure (Haze),
   Solrock-Idol, Heliolisk = 1.469 vs general six 1.209 on Holly (+21%), plus 3 anti-setup tools. Fix: fight mode
   no longer looks for a pre-evo when the evolved mon is owned. TODO: model setup turns in the evaluator.
+- 14 Nov: Holly and Manaphy are back to back on the Beach with no team change (Vincent). Manaphy boss data checked:
+  break 1 = SpA +3 for 2 turns (bossStatChanges index 3 = SpA, from seed descriptions) + status cure + Phione SOS;
+  break 2 = Water Surface (Electric 1.5x, Ground 0x, Fire blocked, Take Heart +2/+2), Elemental Seed (+1 SpD, Aqua Ring).
+  Nothing restores its Def/Spe → Screech plan (Vincent's tip). One six for both: Crobat (Haze + Screech), Veluza-A,
+  Glalie-A, Abomasnow, Raichu (from Pichu #256), Turtonator (Roar). Fight mode "holly" now covers both fights.

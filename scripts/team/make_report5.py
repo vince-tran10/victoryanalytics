@@ -139,20 +139,20 @@ COUNTERS['giratina'] = dict(title='Giratina (Taken Tyrant)', note='Boss · Waste
           'Turn 1: Golisopod Bone Rush Relicanth (gets through Sturdy); Rhyperior Headlong Rush Giratina. Then Bone Rush Swalot. Kill both partners before the last shield',
           'Bring Reuniclus in for the last form: hazards stack every turn then and Magic Guard ignores all of them (Recover to stay up)',
           'Swords Dance once Giratina is alone; then Bone Rush = a full bar each hit. Its last form: Dragon/Poison, +1 Atk / SpA, stat drops cleared'])
-COUNTERS['holly'] = dict(title='Holly & Rorim', note='Doubles · Beach · Lv 55-58 · setup team (Swords Dance x3, Quiver Dance, Bulk Up, Calm Mind +2 on Beach) · Oricorio copies every dance', six=[
-    ('Arcanine-Hisui', 'Intimidate', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Hard Stone', ['Flare Blitz', 'Rock Slide', 'Head Smash', 'Protect'], 'LEAD. Intimidate both. Flare Blitz 4x on Scizor / Escavalier; Rock Slide hits both, 2x on Oricorio. Out vs Scolipede (Earthquake) and Quaquaval'),
-    ('Crobat', 'Infiltrator', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Sitrus Berry', ['Brave Bird', 'Haze', 'Tailwind', 'Protect'], 'LEAD 2. Fastest (199). Turn 1 Tailwind; Haze the moment anything is boosted. Brave Bird 2x on Scolipede, Bellossom, Quaquaval'),
-    ('Turtonator', 'Shell Armor', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash', ['Flamethrower', 'Dragon Pulse', 'Roar', 'Protect'], 'Roar boosted foes out. Flamethrower 4x Scizor / Escavalier, 2x Scolipede / Bellossom. Takes 25-57% from their physical hits'),
-    ('Chandelure', 'Flash Fire', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash', ['Overheat', 'Will-O-Wisp', 'Haze', 'Protect'], 'Second Haze. Overheat OHKOs the Bugs and Bellossom; Will-O-Wisp the physical sweepers'),
-    ('Solrock-Idol', 'Solar Idol', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone', ['Flare Blitz', 'Stone Edge', 'Zen Headbutt', 'Protect'], 'Solar Idol: Fire 1.5x, immune to Earthquake. 130% to all six; Stone Edge Oricorio, Zen Headbutt Quaquaval'),
-    ('Heliolisk', 'Dry Skin', 'Timid', '252 SpA / 252 Spe / 4 HP', 'Focus Sash', ['Thunderbolt', 'Surf', 'Glare', 'Protect'], 'Quaquaval answer (118%, takes 28%): immune to Aqua Step. Glare Scolipede')],
-    plan=['Their whole team sets up: Swords Dance (Scizor, Escavalier, Scolipede + Speed Boost), Quiver Dance (Bellossom), Bulk Up + Aqua Step (Quaquaval, Moxie), Calm Mind = +2/+2 on Beach (Oricorio)',
-          'Oricorio (Dancer) copies every dance either side uses: Swords Dance, Quiver Dance, Aqua Step, Feather Dance, Teeter Dance. Kill it early (Rock Slide / Stone Edge 2x)',
-          'Never let a boost stay: Haze (Crobat, Chandelure) or Roar (Turtonator) the turn after anything boosts',
-          'Turn 1 (vs Scizor + Oricorio): Crobat Tailwind, Arcanine-H Rock Slide (both; Scizor may Detect). Then Flare Blitz Scizor',
-          'Scolipede (Lv 58, Speed Boost, Lum Berry, Earthquake): Glare is cured once by Lum; Crobat / Heliolisk / Solrock (immune to EQ) handle it',
-          'Quaquaval (Lv 58, Moxie, Water Gem Aqua Step): Heliolisk (Dry Skin heals off Aqua Step) or Crobat Brave Bird; keep the Fire types away'])
-CF_PREEVO = {'Arcanine-Hisui': ('Growlithe-Hisui', 'Fire Stone'), 'Roserade': ('Roselia', 'Shiny Stone'), 'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
+COUNTERS['holly'] = dict(title='Holly & Rorim + Manaphy', note='Back to back on the Beach, no team change · Holly: setup team, Oricorio copies dances · Manaphy: Lv 60 boss, Take Heart', six=[
+    ('Crobat', 'Infiltrator', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Sitrus Berry', ['Brave Bird', 'Haze', 'Screech', 'Protect'], 'LEAD both fights. Fastest (199). Holly: Haze the turn anything boosts. Manaphy: Screech turn 1 (Def -2, never restored) then switch'),
+    ('Veluza-Aevian', 'Reckless', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Mystic Water', ['Wave Crash', 'Flare Blitz', 'Head Smash', 'Protect'], 'Holly lead 2: 130% to five of six (Flare Blitz 4x Scizor / Escavalier). Stay out vs Manaphy'),
+    ('Glalie-Aevian', 'Grassy Surge', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry', ['Grassy Glide', 'Rock Slide', 'Wood Hammer', 'Protect'], 'Manaphy bar 1: Wood Hammer 113%, ~2x after Screech = one bar per hit. Holly: Quaquaval 130%'),
+    ('Abomasnow', 'Soundproof', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Sitrus Berry', ['Wood Hammer', 'Ice Punch', 'Icy Wind', 'Protect'], 'Manaphy MVP: resists Water + Energy Ball, takes 27% / 67% (+3 SpA window) / 75% (last bar). Wood Hammer ~164% after Screech'),
+    ('Raichu', 'Lightning Rod', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Magnet', ['Volt Tackle', 'Extreme Speed', 'Trailblaze', 'Protect'], 'Holly: Lightning Rod eats Oricorio\'s Revelation Dance; Volt Tackle 130% Quaquaval. Manaphy last bar: Electric 1.5x on Water Surface'),
+    ('Turtonator', 'Shell Armor', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash', ['Flamethrower', 'Dragon Pulse', 'Roar', 'Protect'], 'Holly: Roar boosted foes out; Flamethrower 4x on the Bug/Steels, takes 25-57%')],
+    plan=['HOLLY (doubles, they lead Scizor + Oricorio): you lead Crobat + Veluza-A. Haze or Roar the turn anything boosts; never let a boost stay',
+          'Kill Oricorio early (it copies every dance). Raichu absorbs its Revelation Dance. Quaquaval: Raichu / Glalie, keep the Fire types away',
+          'MANAPHY (singles, Lv 60): Take Heart only raises SpA / SpD. Nothing restores its Defense or Speed, and shield breaks only cure status',
+          'Turn 1: Crobat Screech (it moves first). Then Wood Hammer every bar: Glalie for bar 1, Abomasnow for bars 2-3',
+          'After the 1st shield break it has +3 SpA for 2 turns and Phione joins: Abomasnow takes it best (resists Water). Do not Haze here (it clears your Screech)',
+          'Last bar: Water Surface (Electric 1.5x, Ground does nothing, no Fire moves). Abomasnow Wood Hammer; Raichu Volt Tackle as backup'])
+CF_PREEVO = {'Arcanine-Hisui': ('Growlithe-Hisui', 'Fire Stone'), 'Raichu': ('Pichu', 'friendship → Pikachu, then Thunder Stone'), 'Roserade': ('Roselia', 'Shiny Stone'), 'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
 CF = COUNTERS.get(FIGHT)
 CF_NAMES = [x[0] for x in CF['six']] if CF else []
 NEXT_LV = max(fo['lvl'] or 0 for p in sorted(fn['plans'], key=lambda p: SX.story_order(os.path.dirname(os.path.dirname(os.path.abspath(F9N)))).get(p['key'], 999))[:3] for fo in p['foes'])
