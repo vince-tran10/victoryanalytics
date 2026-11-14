@@ -631,3 +631,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   loss; general six first, fight checks after; overconfident "best" claims; no community tips; unverified mechanic claims.
   Fix: "Fight protocol" section in CLAUDE.md (brief → win conditions → named answers → boss stat plan → ask for tips →
   evaluator + sanity check → state blind spots → turn/phase plan). TODO: add setup turns to the evaluator.
+- 14 Nov: Phione Crest owned (state crests_owned) → Crest tiers: Phione C (0.26 vs 0.21). Factory (???) built per the fight
+  protocol: brief (Raichu-Alola Sash + Surge Surfer, Orthworm Earth Eater + Shed Tail, Rotom-Mow White Herb, Swampert Rindo
+  + Earthquake flips field to Short-Circuit, Xurkitree Lv64 Beast Boost + Shuca, 2 Max Potions) → scripts/team/fights/
+  factory_team.py (Sash cap, Earth Eater, Shuca/Rindo, no field-flip moves; requires a multi-hit breaker + non-Ground
+  Orthworm answer). Six: Golisopod-A (lead), Glalie-A, Turtonator, Armarouge, Dragalge, Tsareena (from Bounsweet #42).

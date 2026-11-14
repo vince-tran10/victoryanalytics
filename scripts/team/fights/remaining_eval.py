@@ -65,6 +65,6 @@ for c in sorted(C, key=lambda c: -c.get('solo_total', 0)):
                     base_spe=c['base']['Spe']))
 out.sort(key=lambda x: -x['score'])
 json.dump(dict(foes=[(BAT[bi]['key'], f['name'], BAT[bi]['format']) for bi, j, f in FOES], wt=WT.tolist(), rows=out),
-          open('team/remaining_eval.json', 'w'), default=str)
+          open(os.environ.get('EVAL_OUT', 'team/remaining_eval.json'), 'w'), default=str)
 for x in out[:40]:
     print(f"{x['score']:.3f} {x['name'][:24]:24s} {x['ab'][:12]:12s} {'/'.join(x['types']):16s} spe{x['spe']} {x['moves']} {x['where']}#{x['dump']}")
