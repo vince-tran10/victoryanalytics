@@ -14,8 +14,8 @@
   "evolve": "Flaaffy (Level 15); Ampharos (Level 30)",
   "gate": "",
   "types": "Electric",
-  "score": 0.477,
-  "tier": "C",
+  "score": 0.524,
+  "tier": "B",
   "ability": "Static",
   "capsule": false,
   "nature": "Modest",
@@ -27,25 +27,24 @@
   "moves": [
    "Discharge",
    "Power Gem",
-   "Signal Beam",
+   "Dazzling Gleam",
    "Protect"
   ],
   "move_src": {
    "Discharge": "Lv 40",
    "Power Gem": "Lv 35",
-   "Signal Beam": "known",
+   "Dazzling Gleam": "Lv 51",
    "Protect": "TM17"
   },
   "best": [],
   "per": {
-   "jenner": 0.38,
-   "danni": 0.67,
+   "jenner": 0.62,
+   "danni": 0.66,
    "troye": 0.42,
-   "zena": 0.52,
-   "holly": 0.58,
+   "zena": 0.55,
+   "holly": 0.54,
    "manaphy": 0.52,
-   "factory": 0.36,
-   "marcie": 0.59,
+   "marcie": 0.33,
    "amber": 0.5
   }
  },
@@ -64,8 +63,8 @@
   "evolve": "Huntail (TradeItem Deep Sea Tooth)",
   "gate": "TradeItem Deep Sea Tooth",
   "types": "Water",
-  "score": 0.34,
-  "tier": "D",
+  "score": 0.42,
+  "tier": "C",
   "ability": "Water Veil",
   "capsule": false,
   "nature": "Adamant",
@@ -94,7 +93,6 @@
    "zena": 0.59,
    "holly": 0.35,
    "manaphy": 0.08,
-   "factory": 0.05,
    "marcie": 0.08,
    "amber": 0.77
   }
@@ -114,7 +112,7 @@
   "evolve": "Ribombee (Level 25)",
   "gate": "",
   "types": "Bug/Fairy",
-  "score": 0.235,
+  "score": 0.252,
   "tier": "D",
   "ability": "Shield Dust",
   "capsule": false,
@@ -144,7 +142,6 @@
    "zena": 0.41,
    "holly": 0.26,
    "manaphy": 0.17,
-   "factory": 0.17,
    "marcie": 0.85,
    "amber": -0.14
   }
@@ -164,7 +161,7 @@
   "evolve": "",
   "gate": "",
   "types": "Ghost/Fire",
-  "score": 0.606,
+  "score": 0.656,
   "tier": "A",
   "ability": "Flash Fire",
   "capsule": false,
@@ -194,7 +191,6 @@
    "zena": 0.71,
    "holly": 0.84,
    "manaphy": 0.17,
-   "factory": 0.42,
    "marcie": 0.93,
    "amber": 0.6
   }

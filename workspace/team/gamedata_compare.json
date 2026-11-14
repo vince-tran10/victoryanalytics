@@ -84,38 +84,7 @@
   ]
  },
  "factory": {
-  "label": "??? – Factory Field",
-  "game_src": [
-   "??? (UNKNOWN_1 #1)"
-  ],
-  "n_game": 6,
-  "n_guide": 6,
-  "rows": [
-   {
-    "mon": "Raichu",
-    "diff": []
-   },
-   {
-    "mon": "Clawitzer",
-    "diff": []
-   },
-   {
-    "mon": "Orthworm",
-    "diff": []
-   },
-   {
-    "mon": "Rotom",
-    "diff": []
-   },
-   {
-    "mon": "Swampert",
-    "diff": []
-   },
-   {
-    "mon": "Xurkitree",
-    "diff": []
-   }
-  ]
+  "note": "not in engine (beaten or not tracked)"
  },
  "amber": {
   "label": "Amber (Lyric Badge gym) – Club STFU",

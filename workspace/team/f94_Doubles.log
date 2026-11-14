@@ -1,0 +1,14 @@
+Vikavolt | Active 55 | Levitate  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Thunderbolt', 'Bug Buzz', 'Sticky Web', 'Protect'] | Magnet (already holding) | 
+Chandelure | Active 55 | Flash Fire  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Overheat', 'Shadow Ball', 'Will-O-Wisp', 'Protect'] | Sitrus Berry | 
+Ludicolo | Active 55 | Own Tempo  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Fake Out', 'Energy Ball', 'Surf', 'Protect'] | Mystic Water (already holding) | 
+Whiscash | Active 55 | Oblivious  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Earthquake', 'Aqua Tail', 'Zen Headbutt', 'Protect'] | Whiscash Crest (already holding) | 
+Crabominable | Active 55 | Iron Fist  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Close Combat', 'Ice Hammer', 'Crabhammer', 'Protect'] | Black Belt (already holding) | 
+Heliolisk | Active 55 | Dry Skin  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Thunderbolt', 'Surf', 'Glare', 'Protect'] | Sitrus Berry | 
+jenner 1.471 -> 1.331 leads ['Crabominable', 'Chandelure'] swaps [('Clefable', 'Heliolisk', 0.258), ('Sylveon', 'Heliolisk', 0.253), ('Azumarill', 'Heliolisk', 0.25)]
+danni 1.725 -> 1.664 leads ['Chandelure', 'Crabominable'] swaps [('Vivillon', 'Heliolisk', 0.131), ('Arcanine', 'Heliolisk', 0.119), ('Crobat', 'Heliolisk', 0.111)]
+troye 1.44 -> 1.313 leads ['Ludicolo', 'Crabominable'] swaps [('Arcanine', 'Heliolisk', 0.189), ('Annihilape', 'Heliolisk', 0.183), ('Arcanine (Hisuian Form)', 'Heliolisk', 0.155)]
+zena 1.54 -> 1.464 leads ['Ludicolo', 'Crabominable'] swaps [('Meganium', 'Vikavolt', 0.148), ('Golisopod (Aevian Form)', 'Whiscash', 0.124), ('Venusaur', 'Vikavolt', 0.121)]
+holly 1.54 -> 1.388 leads ['Chandelure', 'Vikavolt'] swaps [('Arcanine', 'Whiscash', 0.143), ('Arcanine (Hisuian Form)', 'Whiscash', 0.137), ('Turtonator', 'Crabominable', 0.113)]
+manaphy 1.098 -> 1.148 leads ['Heliolisk', 'Vikavolt'] swaps [('Meganium', 'Whiscash', 0.108), ('Sunflora', 'Whiscash', 0.1), ('Abomasnow', 'Whiscash', 0.095)]
+marcie 1.598 -> 1.433 leads ['Vikavolt', 'Chandelure'] swaps [('Leavanny (Aevian Form)', 'Heliolisk', 0.185), ('Vivillon', 'Heliolisk', 0.153), ('Yanmega', 'Heliolisk', 0.147)]
+amber 1.297 -> 1.322 leads ['Whiscash', 'Ludicolo'] swaps [('Arcanine (Hisuian Form)', 'Vikavolt', 0.153), ('Vaporeon', 'Vikavolt', 0.132), ('Emboar', 'Vikavolt', 0.131)]

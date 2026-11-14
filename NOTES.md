@@ -641,3 +641,6 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 14 Nov: Amber brief (scripts/team/fights/amber_team.py): variable power from game code (Fever Pitch 40/130, Reversal
   200 and Magnitude 150 at Hype 4, rolls min/max); best six Jellicent, Arcanine-H, Rhyperior, Annihilape, Swampert,
   Armarouge (Hype 4 60% / Hype 1 40%). Waiting on Vincent: low-hype plan (finish above Hype 1 for +3 Amber) or high-hype.
+- 14 Nov: Amber lineup (low-hype plan, Vincent: "whichever helps me win"): Swampert (lead, Yawn), Jellicent, Slowking-Galar
+  (Yawn + Eerie Spell to lift hype on the last turn), Veluza-A, Arcanine-H (Flash Fire), Rhyperior (closer; Solid Rock
+  raises hype on entry). Scored at Hype 1 with >= 2 hype-lowering tools required (1.427). Fight mode amber.

@@ -166,6 +166,19 @@ COUNTERS['factory'] = dict(title='??? (Factory)', note='Singles · Lv 60-64 · F
           'Orthworm: Fire only (Earth Eater heals from Ground). If it Shed Tails, hit the substitute with Pin Missile / Bullet Seed or Roar it away',
           'Rotom: Turtonator / Dragalge / Golisopod Pin Missile. Swampert and Clawitzer: Glalie, Tsareena',
           'Their 2 Max Potions: prefer one-hit KOs over chip'])
+COUNTERS['amber'] = dict(title='Amber', note='Gym · singles · Concert Venue · LOW-HYPE plan (Fever Pitch 40 / Magnitude 10 / min rolls at Hype 1), finish above Hype 1 for +3 Amber', six=[
+    ('Swampert', 'Torrent', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand', ['Earthquake', 'Deluge', 'Yawn', 'Protect'], 'LEAD. Turn 1 Yawn (hype -1, Camerupt falls asleep next turn). Water 4x on Camerupt; Earthquake pops the Air Balloons. Takes 13-32% at Hype 1'),
+    ('Jellicent', 'Water Absorb', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Mystic Water', ['Water Spout', 'Surf', 'Shadow Ball', 'Protect'], 'Ghost: immune to Extreme Speed, Reversal, Hyper Voice. Water 130% on Arcanine, Blaziken, Toxtricity; Shadow Ball for Skeledirge (Passho halves its first Water hit)'),
+    ('Slowking-Galar', 'Regenerator', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Sitrus Berry', ['Surf', 'Eerie Spell', 'Yawn', 'Protect'], 'Second hype tool: Yawn (-1). Eerie Spell is a sound move: use it on the LAST turn to lift hype above 1 (+3 Amber)'),
+    ('Veluza-Aevian', 'Reckless', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Mystic Water', ['Wave Crash', 'Liquidation', 'Head Smash', 'Protect'], 'Fast Water: 130% on Arcanine, Blaziken, Toxtricity; 120% Scovillain (Head Smash)'),
+    ('Arcanine-Hisui', 'Flash Fire', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Hard Stone', ['Head Smash', 'Rock Slide', 'Rock Tomb', 'Protect'], 'Flash Fire eats every Fever Pitch / Flare Blitz / Torch Song. Rock 130% on Arcanine, Scovillain, Toxtricity. Out vs Skeledirge'),
+    ('Rhyperior', 'Solid Rock', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Hard Stone', ['Stone Edge', 'Rock Blast', 'Headlong Rush', 'Protect'], 'Closer. Solid Rock raises hype +1 and Defense on switch-in: bring it in late (also lifts the final hype). Takes 13-47% except Scovillain (Giga Drain)')],
+    plan=['Concert Venue (game code): Hype 1 = minimum rolls, Fever Pitch 40, Magnitude 10. Hype 4 = maximum rolls, Fever Pitch 130 (x1.5 sound), Reversal 200, Magnitude 150',
+          'Her side raises hype: Solid Rock (Camerupt) and Punk Rock (Toxtricity) on entry, every Fever Pitch / Torch Song / Hyper Voice, every crit. Lower it with Yawn (Swampert, Slowking-Galar)',
+          'Turn 1 vs Camerupt (Focus Sash): Swampert Yawn, then Deluge twice (Water 4x; the Sash takes the first)',
+          'Arcanine (Extreme Speed, Reversal): Jellicent is immune to both. Blaziken (Speed Boost): kill it before it boosts, Veluza / Jellicent',
+          'Skeledirge (Unaware, Torch Song): Jellicent Shadow Ball, Swampert Earthquake. Toxtricity (Punk Rock): Earthquake after the balloon pops, or Water',
+          'LAST TURN: raise hype before the final KO (Slowking Eerie Spell, or switch Rhyperior in) so the battle ends above Hype 1: +3 Amber, not -2'])
 CF_PREEVO = {'Tsareena': ('Bounsweet', 'level up → Steenee, then level up knowing Stomp'), 'Arcanine-Hisui': ('Growlithe-Hisui', 'Fire Stone'), 'Raichu': ('Pichu', 'friendship → Pikachu, then Thunder Stone'), 'Roserade': ('Roselia', 'Shiny Stone'), 'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
 CF = COUNTERS.get(FIGHT)
 CF_NAMES = [x[0] for x in CF['six']] if CF else []
