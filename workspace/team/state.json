@@ -22,9 +22,10 @@
   "kyogre",
   "geara",
   "giratina",
-  "eli"
+  "eli",
+  "factory"
  ],
- "fight": "factory",
+ "fight": null,
  "team": [
   "Vikavolt",
   "Chandelure",
