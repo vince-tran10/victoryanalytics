@@ -623,3 +623,6 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   break 2 = Water Surface (Electric 1.5x, Ground 0x, Fire blocked, Take Heart +2/+2), Elemental Seed (+1 SpD, Aqua Ring).
   Nothing restores its Def/Spe → Screech plan (Vincent's tip). One six for both: Crobat (Haze + Screech), Veluza-A,
   Glalie-A, Abomasnow, Raichu (from Pichu #256), Turtonator (Roar). Fight mode "holly" now covers both fights.
+- 14 Nov export (13 Nov 17:15): Holly/Manaphy lineup in the party, 5/6 match; Raichu has Volt Switch (special) instead of
+  Volt Tackle. New: built Chandelure (#413 staging → Active), Mareep x2, Clamperl, Cutiefly (Overflow). Fight mode now
+  hides generic Active-box rebuild cards; staging cards for team species follow the team build.

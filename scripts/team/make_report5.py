@@ -608,7 +608,9 @@ for d in cur:
         if d.get('capsule') and d['capsule'][0].replace(' ', '').lower() != (d.get('ability') or '').replace(' ', '').lower():
             _iss.append(f"Ability: {d.get('ability')} → {d['capsule'][0]} (Ability Capsule)")
         if (d.get('level') or 55) < 55: _iss.append(f"Lv {d['level']} → 55")
-        _iss += plan_moves(d['moves'], list(d['attacks'])[:3], _ph, d.get('ability'))
+        _tb = next((t for t in TEAM if t[1] == d['final']), None)   # a team species: its build follows the team set
+        _tgt = [m for m, _ in _tb[7] if m != 'Protect'] if _tb else list(d['attacks'])[:3]
+        _iss += plan_moves(d['moves'], _tgt, _ph, d.get('ability'))
         if _iss: PROFILE.setdefault((d['final'], d['n'], 'Staging → Active'), []).extend(_iss)
     (_to_act if ok else _to_ovf).append(f"{d['species']} (#{d['n']})")
 if _to_act:
@@ -656,6 +658,7 @@ if CF:
         if iss or extra: _cards.append((-1, nm_, f"{CF['title']} lineup · {dd['box']} #{dd['n']}", iss + extra))
 for (sp, n, box), ch in sorted(PROFILE.items(), key=lambda kv: (kv[0][2] != 'Party', kv[0][0])):
     if box == 'Party' and sp not in (CF_NAMES if CF else IDEAL): continue   # leaving the party
+    if CF and box == 'Active': continue   # fight mode: only the lineup and staging verdicts, no generic Active-box rebuilds
     if ch: _cards.append((1 if box == 'Party' else 2, sp, f'{box} #{n}', ch))
 _cards.sort(key=lambda c: (c[0], c[1]))
 todo_html = ''

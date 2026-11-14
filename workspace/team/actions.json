@@ -1,14 +1,6 @@
 {
- "1": "Move out of the party until after Holly & Rorim + Manaphy (back to the Active box)",
- "2": "Move out of the party until after Holly & Rorim + Manaphy (back to the Active box)",
- "3": "Move out of the party until after Holly & Rorim + Manaphy (back to the Active box)",
- "4": "Move out of the party until after Holly & Rorim + Manaphy (back to the Active box)",
- "5": "Move out of the party until after Holly & Rorim + Manaphy (back to the Active box)",
- "6": "Move out of the party until after Holly & Rorim + Manaphy (back to the Active box)",
- "427": "Move into the party (Holly & Rorim + Manaphy lineup)",
- "470": "Move into the party (Holly & Rorim + Manaphy lineup)",
- "439": "Move into the party (Holly & Rorim + Manaphy lineup)",
- "412": "Move into the party (Holly & Rorim + Manaphy lineup)",
- "256": "Move into the party (Holly & Rorim + Manaphy lineup)",
- "468": "Move into the party (Holly & Rorim + Manaphy lineup)"
+ "410": "Move to Overflow",
+ "411": "Move to Overflow",
+ "412": "Move to Overflow",
+ "413": "Move to Active"
 }

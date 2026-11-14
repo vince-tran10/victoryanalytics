@@ -1,0 +1,202 @@
+[
+ {
+  "dump": 410,
+  "owned": "Mareep",
+  "level": 55,
+  "now_ability": "Static",
+  "now_moves": [
+   "Tackle",
+   "Growl",
+   "Thunder Wave",
+   "Magnet Rise"
+  ],
+  "final": "Ampharos",
+  "evolve": "Flaaffy (Level 15); Ampharos (Level 30)",
+  "gate": "",
+  "types": "Electric",
+  "score": 0.477,
+  "tier": "C",
+  "ability": "Static",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Discharge",
+   "Power Gem",
+   "Signal Beam",
+   "Protect"
+  ],
+  "move_src": {
+   "Discharge": "Lv 40",
+   "Power Gem": "Lv 35",
+   "Signal Beam": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.38,
+   "danni": 0.67,
+   "troye": 0.42,
+   "zena": 0.52,
+   "holly": 0.58,
+   "manaphy": 0.52,
+   "factory": 0.36,
+   "marcie": 0.59,
+   "amber": 0.5
+  }
+ },
+ {
+  "dump": 411,
+  "owned": "Clamperl",
+  "level": 55,
+  "now_ability": "Rattled",
+  "now_moves": [
+   "Water Gun",
+   "Whirlpool",
+   "Iron Defense",
+   "Shell Smash"
+  ],
+  "final": "Huntail",
+  "evolve": "Huntail (TradeItem Deep Sea Tooth)",
+  "gate": "TradeItem Deep Sea Tooth",
+  "types": "Water",
+  "score": 0.34,
+  "tier": "D",
+  "ability": "Water Veil",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Aqua Tail",
+   "Sucker Punch",
+   "Dive",
+   "Protect"
+  ],
+  "move_src": {
+   "Aqua Tail": "Lv 39",
+   "Sucker Punch": "Lv 23",
+   "Dive": "Lv 26",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.26,
+   "danni": 0.62,
+   "troye": 0.4,
+   "zena": 0.59,
+   "holly": 0.35,
+   "manaphy": 0.08,
+   "factory": 0.05,
+   "marcie": 0.08,
+   "amber": 0.77
+  }
+ },
+ {
+  "dump": 412,
+  "owned": "Cutiefly",
+  "level": 55,
+  "now_ability": "Shield Dust",
+  "now_moves": [
+   "Draining Kiss",
+   "Struggle Bug",
+   "Covet",
+   "Switcheroo"
+  ],
+  "final": "Ribombee",
+  "evolve": "Ribombee (Level 25)",
+  "gate": "",
+  "types": "Bug/Fairy",
+  "score": 0.235,
+  "tier": "D",
+  "ability": "Shield Dust",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Moonblast",
+   "Pollen Puff",
+   "Signal Beam",
+   "Protect"
+  ],
+  "move_src": {
+   "Moonblast": "Egg",
+   "Pollen Puff": "evolution",
+   "Signal Beam": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.44,
+   "danni": 0.73,
+   "troye": 0.2,
+   "zena": 0.41,
+   "holly": 0.26,
+   "manaphy": 0.17,
+   "factory": 0.17,
+   "marcie": 0.85,
+   "amber": -0.14
+  }
+ },
+ {
+  "dump": 413,
+  "owned": "Chandelure",
+  "level": 55,
+  "now_ability": "Flash Fire",
+  "now_moves": [
+   "Haze",
+   "Overheat",
+   "Will-O-Wisp",
+   "Protect"
+  ],
+  "final": "Chandelure",
+  "evolve": "",
+  "gate": "",
+  "types": "Ghost/Fire",
+  "score": 0.606,
+  "tier": "A",
+  "ability": "Flash Fire",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Overheat",
+   "Shadow Ball",
+   "Flame Burst",
+   "Protect"
+  ],
+  "move_src": {
+   "Overheat": "known",
+   "Shadow Ball": "TM30",
+   "Flame Burst": "known",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.82,
+   "danni": 1.19,
+   "troye": 0.66,
+   "zena": 0.71,
+   "holly": 0.84,
+   "manaphy": 0.17,
+   "factory": 0.42,
+   "marcie": 0.93,
+   "amber": 0.6
+  }
+ }
+]
