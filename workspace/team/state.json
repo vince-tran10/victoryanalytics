@@ -4,9 +4,9 @@
  "export_label": "13 Nov 10:55",
  "active_start": 412,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 66,
- "run": 80,
- "final": 84,
+ "roster": 68,
+ "run": 82,
+ "final": 86,
  "done": [
   "aelita",
   "narcissa1",
@@ -24,7 +24,7 @@
   "giratina",
   "eli"
  ],
- "fight": null,
+ "fight": "holly",
  "team": [
   "Vikavolt",
   "Chandelure",

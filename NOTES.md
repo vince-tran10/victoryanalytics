@@ -613,3 +613,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Identity: block their main attack type (Flash Fire / Dry Skin / Levitate + Ground). Dry Skin counted live (Water
   immunity) in checks/deep_check/CLAUDE.md. update.py needs ALSO_OVF=Heliolisk while it sits in Overflow.
 - 13 Nov: move swaps defended with marginal damage per foe: reverted Vikavolt Mud Barrage → Sticky Web (only gained vs Arcanine) and Chandelure Shock Wave → Will-O-Wisp (only Manaphy bar 3 / Clawitzer). Kept Surf (Ludicolo, Heliolisk), Zen Headbutt, Glare. Rule added to CLAUDE.md.
+- 14 Nov: Vincent getting crushed by Holly & Rorim. Cause: their team is all setup (SD x3, Quiver Dance, Bulk Up +
+  Aqua Step, Calm Mind +2/+2 on Beach) + Oricorio Dancer copies every dance; Lv 55-58. The evaluator only scores the
+  first unboosted hit. Fight mode holly: Arcanine-H, Crobat (Haze/Tailwind), Turtonator (Roar), Chandelure (Haze),
+  Solrock-Idol, Heliolisk = 1.469 vs general six 1.209 on Holly (+21%), plus 3 anti-setup tools. Fix: fight mode
+  no longer looks for a pre-evo when the evolved mon is owned. TODO: model setup turns in the evaluator.
