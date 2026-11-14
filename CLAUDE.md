@@ -92,6 +92,8 @@ damage score and the fight's real win condition was only read after Vincent lost
 - **One answer only:** never "X or Y" for EVs, natures, moves or items. EVs = 252 attacking stat + 252 Spe if base
   Speed ≥ 85, else 252 HP. Nature follows (Jolly/Timid with Speed EVs, Adamant/Modest with HP).
 - Judge physical vs special from the moves the Pokémon actually knows.
+- **Every To do / build card names the best item** (Vincent, 14 Nov): from items he owns, not one already held by a member
+  of the current six (say where to take it from). TODO in make_report5: staging/Active build cards don't add the item yet.
 - Gastrodon (doubles): Earth Power / Muddy Water / Yawn / Protect, Modest 252 HP / 252 SpA, Sitrus.
 - Ceruledge: Active Swords Dance sweeper (Jolly 252 Atk / 252 Spe, Bitter Blade / Shadow Claw / SD / Protect, Sash).
 

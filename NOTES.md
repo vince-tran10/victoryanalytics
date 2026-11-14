@@ -649,3 +649,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 14 Nov export (11:26): 18 new mons; staging #416-429 (override saved). Gallade S 0.766 and Cranidos→Rampardos A → Active;
   12 to Overflow. Amber re-check with Gallade: lineup unchanged (1.427 vs best Gallade swap 1.421). Scolipite / Houndoomite
   noted: Megas not allowed until the Omni Ring (Ch 12). Staging cards no longer shown for mons going to Overflow.
+- 14 Nov: items rule added (every build card names the best owned item; implementation TODO for staging cards). Gallade
+  Sitrus (Black Belt is on Crabominable, in the general six), Rampardos Hard Stone (from Solrock-Idol), Typhlosion full
+  profile in chat (Flash Fire, Timid, Eruption / Flamethrower / Mud Barrage / Protect, Focus Sash). Decidueye B 0.51 →
+  Overflow (Active bar 0.53).
