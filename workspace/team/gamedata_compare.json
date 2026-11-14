@@ -9,79 +9,10 @@
   "note": "not in engine (beaten or not tracked)"
  },
  "holly": {
-  "label": "Holly & Rorim – Beach",
-  "game_src": [
-   "Holly (COMMANDER #0)",
-   "Rorim B. (DISCOTEEN #3)"
-  ],
-  "n_game": 6,
-  "n_guide": 6,
-  "rows": [
-   {
-    "mon": "Scizor",
-    "diff": []
-   },
-   {
-    "mon": "Escavalier",
-    "diff": []
-   },
-   {
-    "mon": "Scolipede",
-    "diff": []
-   },
-   {
-    "mon": "Oricorio",
-    "diff": []
-   },
-   {
-    "mon": "Bellossom",
-    "diff": []
-   },
-   {
-    "mon": "Quaquaval",
-    "diff": []
-   }
-  ]
+  "note": "not in engine (beaten or not tracked)"
  },
  "manaphy": {
-  "label": "Manaphy (boss) – Beach",
-  "game_src": [
-   "boss SEAPRINCE"
-  ],
-  "n_game": 1,
-  "n_guide": 4,
-  "rows": [
-   {
-    "mon": "Manaphy",
-    "diff": [
-     "MISSING in guide data"
-    ]
-   },
-   {
-    "mon": "Manaphy (bar 1)",
-    "diff": [
-     "EXTRA in guide data (not in the game entry)"
-    ]
-   },
-   {
-    "mon": "Manaphy (bar 2)",
-    "diff": [
-     "EXTRA in guide data (not in the game entry)"
-    ]
-   },
-   {
-    "mon": "Manaphy (bar 3)",
-    "diff": [
-     "EXTRA in guide data (not in the game entry)"
-    ]
-   },
-   {
-    "mon": "Phione",
-    "diff": [
-     "EXTRA in guide data (not in the game entry)"
-    ]
-   }
-  ]
+  "note": "not in engine (beaten or not tracked)"
  },
  "factory": {
   "note": "not in engine (beaten or not tracked)"

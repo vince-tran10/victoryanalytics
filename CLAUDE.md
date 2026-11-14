@@ -84,6 +84,10 @@ damage score and the fight's real win condition was only read after Vincent lost
 7. Give the turn-1 plan and the phase plan (early / mid / late, per boss bar) with the lineup.
 8. **The lead only faces their lead.** After that the AI picks its switch-ins, so a late threat (e.g. Xurkitree) can come
    at any point but never turn 1. Never spend the answer to their biggest threat on their lead; keep it healthy in the back.
+9. **One dedicated counter per opponent Pokémon** (Vincent, 14 Nov): the six must pair every foe with a DIFFERENT member
+   that deals >= 90% (or outspeeds and OHKOs) and takes < 70% (scripts/team/fights/counters.py, best one-to-one pairing).
+   Pick the six by that pairing (counters first, then total quality), not by one member covering several. The Fights tab
+   lists each foe and its counter (counters_tab.py).
 
 ## Build rules
 - **Protect is always the 4th move.** Only exception: Lapras-Aevian (No Guard: Rock Slide / Zen Headbutt /

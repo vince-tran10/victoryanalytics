@@ -1,27 +1,20 @@
 {
- "fights": 3,
- "foes": 16,
- "major": [
-  "Fairy",
-  "Ghost",
-  "Grass",
-  "Ground",
-  "Ice",
-  "Normal",
-  "Poison",
-  "Water"
- ],
+ "fights": 1,
+ "foes": 6,
+ "major": [],
  "minor": [
-  "Steel",
-  "Dark",
-  "Bug",
-  "Flying",
   "Fire",
   "Electric",
-  "Rock"
+  "Normal",
+  "Rock",
+  "Grass",
+  "Ghost",
+  "Ground",
+  "Fairy",
+  "Poison"
  ],
  "weak3": [],
  "nores": [],
  "misses": [],
- "n_types": 15
+ "n_types": 9
 }

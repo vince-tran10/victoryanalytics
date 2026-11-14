@@ -659,3 +659,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   cards. Swampert (Amber) → Mystic Water; Gallade → Black Belt; Typhlosion → Charcoal.
 - 14 Nov: Holly and Manaphy beaten (state). Only Amber left in the Chapter 8 hard-fight list; Vincent heading in with the
   Amber lineup.
+- 14 Nov: Vincent's new rule: one dedicated counter per opponent Pokémon (fight protocol #9). scripts/team/fights/
+  counters.py (best one-to-one pairing; counter = deals >= 90% or outspeeds + OHKO, takes < 70%) and counters_tab.py
+  (Fights tab "Counters" section, run by update.py). Amber: current six already 6/6 (66.32 vs best 66.40, which drops
+  Slowking-Galar's hype tools) → kept.
