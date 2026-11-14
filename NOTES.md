@@ -657,3 +657,5 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   has unlimited items (no Leftovers / Life Orb): CLAUDE.md item rule = reusable type booster of the main attack, Sash /
   Sitrus only by job, no gems / Choice / Assault Vest (Protect). make_report5 best_item() adds the item line to staging
   cards. Swampert (Amber) → Mystic Water; Gallade → Black Belt; Typhlosion → Charcoal.
+- 14 Nov: Holly and Manaphy beaten (state). Only Amber left in the Chapter 8 hard-fight list; Vincent heading in with the
+  Amber lineup.
