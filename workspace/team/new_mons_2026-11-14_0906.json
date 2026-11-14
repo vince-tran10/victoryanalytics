@@ -1,0 +1,198 @@
+[
+ {
+  "dump": 411,
+  "owned": "Inkay",
+  "level": 55,
+  "now_ability": "Suction Cups",
+  "now_moves": [
+   "Slash",
+   "Night Slash",
+   "Psycho Cut",
+   "Destiny Bond"
+  ],
+  "final": "Malamar",
+  "evolve": "Malamar (Level 30)",
+  "gate": "",
+  "types": "Dark/Psychic",
+  "score": 0.472,
+  "tier": "C",
+  "ability": "Suction Cups",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Psycho Cut",
+   "Superpower",
+   "Foul Play",
+   "Protect"
+  ],
+  "move_src": {
+   "Psycho Cut": "known",
+   "Superpower": "Lv 47",
+   "Foul Play": "Lv 37",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.55,
+   "danni": 0.77,
+   "troye": 0.6,
+   "zena": 0.72,
+   "holly": 0.36,
+   "manaphy": 0.09,
+   "marcie": 0.55,
+   "amber": 0.5
+  }
+ },
+ {
+  "dump": 412,
+  "owned": "Chansey",
+  "level": 55,
+  "now_ability": "Serene Grace",
+  "now_moves": [
+   "Double-Edge",
+   "Soft-Boiled",
+   "Last Resort",
+   "Healing Wish"
+  ],
+  "final": "Blissey",
+  "evolve": "Blissey (Happiness 0)",
+  "gate": "",
+  "types": "Normal",
+  "score": 0.281,
+  "tier": "D",
+  "ability": "Serene Grace",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Mud Bomb",
+   "Shadow Ball",
+   "Water Pulse",
+   "Protect"
+  ],
+  "move_src": {
+   "Mud Bomb": "Egg",
+   "Shadow Ball": "TM30",
+   "Water Pulse": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.09,
+   "danni": 0.46,
+   "troye": 0.17,
+   "zena": 0.37,
+   "holly": 0.19,
+   "manaphy": 0.25,
+   "marcie": 0.2,
+   "amber": 0.43
+  }
+ },
+ {
+  "dump": 413,
+  "owned": "Magby",
+  "level": 55,
+  "now_ability": "Flame Body",
+  "now_moves": [
+   "Low Kick",
+   "Flamethrower",
+   "Sunny Day",
+   "Cross Chop"
+  ],
+  "final": "Magmortar",
+  "evolve": "Magmar (Level 30); Magmortar (TradeItem Magmarizer)",
+  "gate": "TradeItem Magmarizer",
+  "types": "Fire",
+  "score": 0.481,
+  "tier": "C",
+  "ability": "Flame Body",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Flamethrower",
+   "Flame Burst",
+   "Lava Plume",
+   "Protect"
+  ],
+  "move_src": {
+   "Flamethrower": "known",
+   "Flame Burst": "known",
+   "Lava Plume": "Lv 34",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.63,
+   "danni": 1.09,
+   "troye": 0.61,
+   "zena": 0.55,
+   "holly": 0.81,
+   "manaphy": -0.01,
+   "marcie": 0.86,
+   "amber": 0.26
+  }
+ },
+ {
+  "dump": 474,
+  "owned": "Tsareena",
+  "level": 55,
+  "now_ability": "Queenly Majesty",
+  "now_moves": [
+   "Power Whip",
+   "Trop Kick",
+   "Bullet Seed",
+   "Protect"
+  ],
+  "final": "Tsareena",
+  "evolve": "",
+  "gate": "",
+  "types": "Grass",
+  "score": 0.459,
+  "tier": "C",
+  "ability": "Q. Majesty",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Power Whip",
+   "Trop Kick",
+   "Bounce",
+   "Protect"
+  ],
+  "move_src": {
+   "Power Whip": "known",
+   "Trop Kick": "known",
+   "Bounce": "known",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.41,
+   "danni": 0.54,
+   "troye": 0.57,
+   "zena": 0.84,
+   "holly": 0.24,
+   "manaphy": 0.65,
+   "marcie": 0.74,
+   "amber": 0.11
+  }
+ }
+]

@@ -644,3 +644,5 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 14 Nov: Amber lineup (low-hype plan, Vincent: "whichever helps me win"): Swampert (lead, Yawn), Jellicent, Slowking-Galar
   (Yawn + Eerie Spell to lift hype on the last turn), Veluza-A, Arcanine-H (Flash Fire), Rhyperior (closer; Solid Rock
   raises hype on entry). Scored at Hype 1 with >= 2 hype-lowering tools required (1.427). Fight mode amber.
+- 14 Nov export (09:06): Amber lineup in the party, 5/6 match; Veluza-A holds Focus Sash (Mystic Water: take Clawitzer's).
+  New: Magby (C), Inkay (C), Chansey (D) → Overflow. Fight-mode Team table now shows ability · nature · EVs per member.

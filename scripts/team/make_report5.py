@@ -330,7 +330,7 @@ if CF:
         if not d and d0: ACTIONS[d0['n']] = f"Move into the party ({CF['title']} lineup)"
         if _dd: CF_ISSUES[nm_] = (_dd, [x for x in issues if '→ party' not in x and not x.startswith('Put ')])
         if issues: todo_cf.append((f'{CF["title"]} · {nm_}: ' + '; '.join(issues), 'high'))
-        rows_.append(f'<tr><td><strong>{E(nm_)}</strong></td><td class="legend">{E(item_)}</td><td>{E(" / ".join(mv_))}</td><td>{E(note_)}</td>'
+        rows_.append(f'<tr><td><strong>{E(nm_)}</strong><div class="legend">{E(ab_)} · {E(nat_)} · {E(evs_)}</div></td><td class="legend">{E(item_)}</td><td>{E(" / ".join(mv_))}</td><td>{E(note_)}</td>'
                      f'<td>{"<span class=ok>✓</span>" if not issues else "<span class=chg2>" + E("; ".join(issues)) + "</span>"}</td></tr>')
     for d in cur:
         if d['box'] == 'Party' and d['species'] not in CF_NAMES:
