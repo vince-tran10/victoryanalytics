@@ -1,12 +1,12 @@
 {
  "_doc": "Read/written by scripts/team/update.py. Edit by hand only to change the six or its moves.",
- "export": "party_and_boxes_2026-11-14_1140.txt",
- "export_label": "14 Nov 11:40",
- "active_start": 429,
+ "export": "party_and_boxes_2026-11-14_1235.txt",
+ "export_label": "14 Nov 12:35",
+ "active_start": 425,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 87,
- "run": 101,
- "final": 105,
+ "roster": 88,
+ "run": 102,
+ "final": 106,
  "done": [
   "aelita",
   "narcissa1",

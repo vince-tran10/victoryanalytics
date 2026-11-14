@@ -669,3 +669,5 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   one-counter-per-foe preview per fight (Fights tab "Counters"). Garbodor 0/4 → needs a boss plan later.
   Dark Gardevoir lineup (fight mode): Muk-Alola lead (Knock Off Lum, Clear Smog CM), Glalie-A (Switcheroo Iron Ball),
   Copperajah (bar 1, Iron Head 126%), Klinklang (bar 2), Escavalier, Crobat (Infiltrator vs Reflect/Safeguard).
+- 14 Nov export (12:35): Dark Gardevoir lineup in the party, builds all match except level (all Lv 55 → cap 60). Glalie-A
+  keeps Miracle Seed + Rock Slide until the fight (Vincent); Iron Ball + Switcheroo go on right before Gardevoir.

@@ -1,0 +1,56 @@
+[
+ {
+  "dump": 1,
+  "owned": "Muk-Alola",
+  "level": 60,
+  "now_ability": "Poison Touch",
+  "now_moves": [
+   "Clear Smog",
+   "Knock Off",
+   "Gunk Shot",
+   "Protect"
+  ],
+  "final": "Muk (Alolan Form)",
+  "evolve": "",
+  "gate": "",
+  "types": "Poison/Dark",
+  "score": 0.441,
+  "tier": "C",
+  "ability": "Poison Touch",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Gunk Shot",
+   "Knock Off",
+   "Crunch",
+   "Protect"
+  ],
+  "move_src": {
+   "Gunk Shot": "known",
+   "Knock Off": "known",
+   "Crunch": "Lv 32",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.43,
+   "danni": 0.78,
+   "troye": 0.49,
+   "zena": 0.68,
+   "marcie": 0.74,
+   "darkgardevoir": 0.44,
+   "garbodor": 0.19,
+   "karrina": 0.42,
+   "spector": 0.55,
+   "spector2": 0.36,
+   "jenner9": 0.21,
+   "amanda": 0.43,
+   "erick": 0.6
+  }
+ }
+]
