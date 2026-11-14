@@ -60,6 +60,26 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Lesson: Geara & Zetta (Volcanic Top) was lost with a six picked without eruption damage or tag-battle targeting.
 - Meta / Smogon builds preferred (SV + National Dex data in `workspace/smogon`; doubles data for doubles roles).
 
+## Fight protocol (Vincent, 14 Nov — do this BEFORE recommending any team or lineup)
+Why: Geara, Giratina, Holly and Manaphy each took several losses because the six was picked from a one-hit, +0-stage
+damage score and the fight's real win condition was only read after Vincent lost. The data was in the game files.
+1. **Fight brief from game data** (trainertext / bosstext / fieldtext + game code): every foe's moves, ability, item,
+   level, EVs; boss shields, onBreakEffects (stat changes — index 1 Atk, 2 Def, 3 SpA, 4 SpD, 5 Spe — field/moveset/item
+   changes, status cure), SOS mons, delayed actions; trainer effects and items (crests in the trainer's item list apply);
+   field notes incl. end-of-turn effects; partner team; who controls which slot; fights that run back to back.
+2. **Win-condition list:** for every foe name how it beats us — setup (boost moves, Speed Boost, Moxie, Dancer, Take
+   Heart), screens, hazards, weather/terrain, priority, status, crests, field damage. Each one needs a named answer on the
+   six (Haze / Clear Smog / Roar / Whirlwind, Screech / Scary Face / String Shot on stats it can't restore, Brick Break,
+   Taunt / Encore, Unaware, Intimidate, Fake Out, immunity). No answer → the team is not done.
+3. **Bosses:** list which stats its boosts/heals/breaks touch and plan drops on the others (Take Heart → Def/Spe drops);
+   drops survive shield breaks, status does not; never Haze our own drops away.
+4. **Ask Vincent for the community fight page / tips** before finalizing, and use them as input.
+5. **Score with the evaluator, then sanity-check the result against 1–3.** Status/utility moves score 0 in the evaluator:
+   value them by hand per fight. Verify any mechanic claim in the game code before stating it (Sticky Web never hits a
+   mon already on the field; Hidden Power types; who resists the move).
+6. **Say what the model does not simulate** for that fight in one line. Never call a six "the best" without it.
+7. Give the turn-1 plan and the phase plan (early / mid / late, per boss bar) with the lineup.
+
 ## Build rules
 - **Protect is always the 4th move.** Only exception: Lapras-Aevian (No Guard: Rock Slide / Zen Headbutt /
   Dragon Dance / Sing). Detect etc. count as Protect.

@@ -626,3 +626,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 14 Nov export (13 Nov 17:15): Holly/Manaphy lineup in the party, 5/6 match; Raichu has Volt Switch (special) instead of
   Volt Tackle. New: built Chandelure (#413 staging → Active), Mareep x2, Clamperl, Cutiefly (Overflow). Fight mode now
   hides generic Active-box rebuild cards; staging cards for team species follow the team build.
+- 14 Nov retro (Vincent: why did it take several iterations; why nothing for Take Heart Manaphy at first?). Causes: the
+  evaluator is one-hit at +0 stages (setup threats and utility answers invisible); boss/trainer data read only after a
+  loss; general six first, fight checks after; overconfident "best" claims; no community tips; unverified mechanic claims.
+  Fix: "Fight protocol" section in CLAUDE.md (brief → win conditions → named answers → boss stat plan → ask for tips →
+  evaluator + sanity check → state blind spots → turn/phase plan). TODO: add setup turns to the evaluator.
