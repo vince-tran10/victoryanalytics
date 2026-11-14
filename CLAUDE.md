@@ -32,8 +32,11 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   instantly. NEVER filter or rank by build effort. Pick purely on battle merit.
 - Legal moves: level-up ≤ 55, Move Relearner, egg, Ch1–7 TMs, tutors ≤ 7 badges. Evolution items from Ch1–7 OK.
   No Life Orb, no Megas, no trade evolutions. Chapter 8 pickups wait for the end-of-chapter review.
-- Items owned: type boosters (Black Belt, Metal Coat, Mystic Water ×3, Soft Sand, Hard Stone ×2, Never-Melt Ice ×2,
-  Black Glasses ×3, Poison Barb, Magnet, Fairy Feather, Dragon Fang), Sitrus Berries, Focus Sash ×9, Lum Berry, crests.
+- Items: UNLIMITED (Vincent, 14 Nov) except Leftovers and Life Orb. Prefer reusable items: the type booster of the main
+  attack (Charcoal, Mystic Water, Miracle Seed, Magnet, Never-Melt Ice, Black Belt, Poison Barb, Soft Sand, Sharp Beak,
+  Twisted Spoon, Silver Powder, Hard Stone, Spell Tag, Dragon Fang, Black Glasses, Metal Coat, Fairy Feather, Silk Scarf).
+  Single-use only Focus Sash (frail / fast leads) and Sitrus Berry (bulky support). No gems; no Choice items or Assault
+  Vest (they block Protect, which is always the 4th move). Crests where owned.
 
 ## Team rules (chapter rules)
 - One six for the whole chapter. Swap only for a true hard-counter boss (fight mode), then swap straight back.
@@ -92,8 +95,8 @@ damage score and the fight's real win condition was only read after Vincent lost
 - **One answer only:** never "X or Y" for EVs, natures, moves or items. EVs = 252 attacking stat + 252 Spe if base
   Speed ≥ 85, else 252 HP. Nature follows (Jolly/Timid with Speed EVs, Adamant/Modest with HP).
 - Judge physical vs special from the moves the Pokémon actually knows.
-- **Every To do / build card names the best item** (Vincent, 14 Nov): from items he owns, not one already held by a member
-  of the current six (say where to take it from). TODO in make_report5: staging/Active build cards don't add the item yet.
+- **Every To do / build card names the best item** (Vincent, 14 Nov): the booster of its main attack's type unless the job
+  says Sash / Sitrus (make_report5 BOOSTER).
 - Gastrodon (doubles): Earth Power / Muddy Water / Yawn / Protect, Modest 252 HP / 252 SpA, Sitrus.
 - Ceruledge: Active Swords Dance sweeper (Jolly 252 Atk / 252 Spe, Bitter Blade / Shadow Claw / SD / Protect, Sash).
 

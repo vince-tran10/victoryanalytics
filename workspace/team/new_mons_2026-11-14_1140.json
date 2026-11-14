@@ -1,0 +1,51 @@
+[
+ {
+  "dump": 481,
+  "owned": "Rampardos",
+  "level": 55,
+  "now_ability": "Mold Breaker",
+  "now_moves": [
+   "Thrash",
+   "Zen Headbutt",
+   "Protect",
+   "Head Smash"
+  ],
+  "final": "Rampardos",
+  "evolve": "",
+  "gate": "",
+  "types": "Rock",
+  "score": 0.655,
+  "tier": "A",
+  "ability": "Mold Breaker",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Head Smash",
+   "Zen Headbutt",
+   "Rock Tomb",
+   "Protect"
+  ],
+  "move_src": {
+   "Head Smash": "known",
+   "Zen Headbutt": "known",
+   "Rock Tomb": "TM39",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.63,
+   "danni": 1.03,
+   "troye": 0.64,
+   "zena": 0.72,
+   "holly": 0.6,
+   "manaphy": 0.24,
+   "marcie": 0.6,
+   "amber": 0.9
+  }
+ }
+]

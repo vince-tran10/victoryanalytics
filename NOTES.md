@@ -653,3 +653,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Sitrus (Black Belt is on Crabominable, in the general six), Rampardos Hard Stone (from Solrock-Idol), Typhlosion full
   profile in chat (Flash Fire, Timid, Eruption / Flamethrower / Mud Barrage / Protect, Focus Sash). Decidueye B 0.51 →
   Overflow (Active bar 0.53).
+- 14 Nov export (11:40): Amber lineup 6/6; Gallade, Rampardos, Typhlosion built as told; Decidueye in Overflow. Vincent
+  has unlimited items (no Leftovers / Life Orb): CLAUDE.md item rule = reusable type booster of the main attack, Sash /
+  Sitrus only by job, no gems / Choice / Assault Vest (Protect). make_report5 best_item() adds the item line to staging
+  cards. Swampert (Amber) → Mystic Water; Gallade → Black Belt; Typhlosion → Charcoal.

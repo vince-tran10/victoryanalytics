@@ -1,12 +1,12 @@
 {
  "_doc": "Read/written by scripts/team/update.py. Edit by hand only to change the six or its moves.",
- "export": "party_and_boxes_2026-11-14_1126.txt",
- "export_label": "14 Nov 11:26",
- "active_start": 416,
+ "export": "party_and_boxes_2026-11-14_1140.txt",
+ "export_label": "14 Nov 11:40",
+ "active_start": 429,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 80,
- "run": 94,
- "final": 98,
+ "roster": 82,
+ "run": 96,
+ "final": 100,
  "done": [
   "aelita",
   "narcissa1",
@@ -89,46 +89,46 @@
  },
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
-  "rank": 191,
-  "of": 74544,
-  "gap": 2.82,
+  "rank": 16521,
+  "of": 88025,
+  "gap": 8.1,
   "top": [
    {
-    "score": 1.1752,
-    "pct": 102.8,
+    "score": 1.2484,
+    "pct": 108.1,
     "team": [
+     "Arcanine-Hisui",
      "Glalie-A",
-     "Ludicolo",
-     "Chandelure",
-     "Turtonator",
-     "Musharna-A",
-     "Whiscash"
+     "Tatsugiri",
+     "Crobat",
+     "Swampert",
+     "Heliolisk"
     ],
     "misses": []
    },
    {
-    "score": 1.1718,
-    "pct": 102.5,
+    "score": 1.2476,
+    "pct": 108.0,
     "team": [
+     "Druddigon",
+     "Arcanine-Hisui",
      "Glalie-A",
      "Ludicolo",
-     "Vikavolt",
-     "Chandelure",
-     "Musharna-A",
-     "Whiscash"
+     "Swampert",
+     "Heliolisk"
     ],
     "misses": []
    },
    {
-    "score": 1.1714,
-    "pct": 102.5,
+    "score": 1.2472,
+    "pct": 108.0,
     "team": [
+     "Braviary",
+     "Arcanine-Hisui",
      "Glalie-A",
-     "Ludicolo",
-     "Armarouge",
-     "Turtonator",
-     "Musharna-A",
-     "Whiscash"
+     "Tatsugiri",
+     "Swampert",
+     "Heliolisk"
     ],
     "misses": []
    }

@@ -167,7 +167,7 @@ COUNTERS['factory'] = dict(title='??? (Factory)', note='Singles · Lv 60-64 · F
           'Rotom: Turtonator / Dragalge / Golisopod Pin Missile. Swampert and Clawitzer: Glalie, Tsareena',
           'Their 2 Max Potions: prefer one-hit KOs over chip'])
 COUNTERS['amber'] = dict(title='Amber', note='Gym · singles · Concert Venue · LOW-HYPE plan (Fever Pitch 40 / Magnitude 10 / min rolls at Hype 1), finish above Hype 1 for +3 Amber', six=[
-    ('Swampert', 'Torrent', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand', ['Earthquake', 'Deluge', 'Yawn', 'Protect'], 'LEAD. Turn 1 Yawn (hype -1, Camerupt falls asleep next turn). Water 4x on Camerupt; Earthquake pops the Air Balloons. Takes 13-32% at Hype 1'),
+    ('Swampert', 'Torrent', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Mystic Water', ['Earthquake', 'Deluge', 'Yawn', 'Protect'], 'LEAD. Turn 1 Yawn (hype -1, Camerupt falls asleep next turn). Water 4x on Camerupt; Earthquake pops the Air Balloons. Takes 13-32% at Hype 1'),
     ('Jellicent', 'Water Absorb', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Mystic Water', ['Water Spout', 'Surf', 'Shadow Ball', 'Protect'], 'Ghost: immune to Extreme Speed, Reversal, Hyper Voice. Water 130% on Arcanine, Blaziken, Toxtricity; Shadow Ball for Skeledirge (Passho halves its first Water hit)'),
     ('Slowking-Galar', 'Regenerator', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Sitrus Berry', ['Surf', 'Eerie Spell', 'Yawn', 'Protect'], 'Second hype tool: Yawn (-1). Eerie Spell is a sound move: use it on the LAST turn to lift hype above 1 (+3 Amber)'),
     ('Veluza-Aevian', 'Reckless', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Mystic Water', ['Wave Crash', 'Liquidation', 'Head Smash', 'Protect'], 'Fast Water: 130% on Arcanine, Blaziken, Toxtricity; 120% Scovillain (Head Smash)'),
@@ -377,6 +377,18 @@ def move_value(m, moves, phys, rec, ability):
         if m in RECOVERY and (ability or '').replace(' ', '').upper() == 'REGENERATOR': return 1.5
         return 2 if m in KEEP_STATUS else 0
     return 1 + int(v.get('Strength') or 0) / 1000
+
+BOOSTER = {'FIRE': 'Charcoal', 'WATER': 'Mystic Water', 'GRASS': 'Miracle Seed', 'ELECTRIC': 'Magnet', 'ICE': 'Never-Melt Ice',
+           'FIGHTING': 'Black Belt', 'POISON': 'Poison Barb', 'GROUND': 'Soft Sand', 'FLYING': 'Sharp Beak', 'PSYCHIC': 'Twisted Spoon',
+           'BUG': 'Silver Powder', 'ROCK': 'Hard Stone', 'GHOST': 'Spell Tag', 'DRAGON': 'Dragon Fang', 'DARK': 'Black Glasses',
+           'STEEL': 'Metal Coat', 'FAIRY': 'Fairy Feather', 'NORMAL': 'Silk Scarf'}
+def best_item(attacks, phys):
+    """Unlimited items (Vincent): reusable booster of the main attack's type (first planned attack)."""
+    for m in attacks:
+        v = SX.MV.get(m) or {}
+        if v.get('Category') in ('Physical', 'Special'):
+            return BOOSTER.get((v.get('Type') or '').upper())
+    return 'Sitrus Berry'
 def plan_moves(have, target, phys, ability):
     """target attacks (+Protect) -> list of 'Teach X (replaces Y)' lines; free slots keep the best existing moves."""
     ks = [m for m in have if m in KEEP_STATUS and m not in RECOVERY and m not in target]   # never cut setup / Yawn / Fake Out ...
@@ -636,6 +648,8 @@ for d in cur:
             _iss.append(f"Ability: {d.get('ability')} → {d['capsule'][0]} (Ability Capsule)")
         if (d.get('level') or 55) < 55: _iss.append(f"Lv {d['level']} → 55")
         _tb = next((t for t in TEAM if t[1] == d['final']), None)   # a team species: its build follows the team set
+        _itm = _tb[6] if _tb else best_item([m for m in list(d['attacks'])[:3]], _ph)
+        if _itm and (d.get('item') or '') != _itm: _iss.append(f"Item: {d.get('item') or 'none'} → {_itm}")
         _tgt = [m for m, _ in _tb[7] if m != 'Protect'] if _tb else list(d['attacks'])[:3]
         _iss += plan_moves(d['moves'], _tgt, _ph, d.get('ability'))
         if _iss: PROFILE.setdefault((d['final'], d['n'], 'Staging → Active'), []).extend(_iss)
