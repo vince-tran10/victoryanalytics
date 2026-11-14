@@ -636,3 +636,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   + Earthquake flips field to Short-Circuit, Xurkitree Lv64 Beast Boost + Shuca, 2 Max Potions) → scripts/team/fights/
   factory_team.py (Sash cap, Earth Eater, Shuca/Rindo, no field-flip moves; requires a multi-hit breaker + non-Ground
   Orthworm answer). Six: Golisopod-A (lead), Glalie-A, Turtonator, Armarouge, Dragalge, Tsareena (from Bounsweet #42).
+- 14 Nov: Factory lead → Glalie-A (Wood Hammer into Raichu's Sash, then priority Grassy Glide); Golisopod-A saved for Xurkitree. Vincent: the lead only faces their lead. Rule 8 added to the fight protocol. Walkthrough tip found: "Be very careful of a Xurkitree sweep"; fight is optional (Infinite Potential quest); 8th badge → cap 60 (LEVELCAPS).

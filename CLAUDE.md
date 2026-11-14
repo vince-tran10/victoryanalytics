@@ -79,6 +79,8 @@ damage score and the fight's real win condition was only read after Vincent lost
    mon already on the field; Hidden Power types; who resists the move).
 6. **Say what the model does not simulate** for that fight in one line. Never call a six "the best" without it.
 7. Give the turn-1 plan and the phase plan (early / mid / late, per boss bar) with the lineup.
+8. **The lead only faces their lead.** After that the AI picks its switch-ins, so a late threat (e.g. Xurkitree) can come
+   at any point but never turn 1. Never spend the answer to their biggest threat on their lead; keep it healthy in the back.
 
 ## Build rules
 - **Protect is always the 4th move.** Only exception: Lapras-Aevian (No Guard: Rock Slide / Zen Headbutt /
