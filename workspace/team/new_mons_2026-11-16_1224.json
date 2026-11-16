@@ -1,0 +1,56 @@
+[
+ {
+  "dump": 6,
+  "owned": "Vaporeon",
+  "level": 60,
+  "now_ability": "Water Absorb",
+  "now_moves": [
+   "Haze",
+   "Aurora Beam",
+   "Hydro Pump",
+   "Protect"
+  ],
+  "final": "Vaporeon",
+  "evolve": "",
+  "gate": "",
+  "types": "Water",
+  "score": 0.431,
+  "tier": "C",
+  "ability": "Water Absorb",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Hydro Pump",
+   "Aurora Beam",
+   "Shadow Ball",
+   "Protect"
+  ],
+  "move_src": {
+   "Hydro Pump": "known",
+   "Aurora Beam": "known",
+   "Shadow Ball": "TM30",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.27,
+   "danni": 0.84,
+   "troye": 0.61,
+   "zena": 0.63,
+   "marcie": 0.37,
+   "darkgardevoir": 0.21,
+   "garbodor": 0.02,
+   "karrina": 0.52,
+   "spector": 0.65,
+   "spector2": 0.59,
+   "jenner9": 0.32,
+   "amanda": 0.6,
+   "erick": 0.38
+  }
+ }
+]

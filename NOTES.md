@@ -683,3 +683,5 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 16 Nov lead check (Vincent asked "why Arcanine + Golisopod?"): Golisopod-A survives every Ch9 lead (max 59%, 102% only vs
   Incineroar's Flare Blitz, cut by Intimidate) → slot 1. Arcanine-H takes 110% from Runerigus Body Press (Karrina, singles) →
   slot 2, doubles partner (Intimidate vs Incineroar / Electivire). Per-fight: Gholdengo leads Spector day, Vaporeon Spector night.
+- 16 Nov export (12:24): all six builds match (ability, nature, EVs, item, moves); only levels 55 → 60 left. Party order in the
+  export is Arcanine-H first; guide order is Golisopod-A first (singles lead). Klinklang (old DG specialist) → Overflow.

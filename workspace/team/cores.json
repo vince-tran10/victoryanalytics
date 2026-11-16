@@ -1,12 +1,12 @@
 {
  "balance": [
   {
-   "score": 0.929,
+   "score": 0.94,
    "members": [
     "Arcanine (Hisuian Form)",
     "Gholdengo",
     "Golisopod (Aevian Form)",
-    "Vaporeon"
+    "Azumarill"
    ],
    "cover": 25,
    "swaps": [
@@ -52,15 +52,15 @@
     },
     {
      "moves": [
-      "Hydro Pump",
-      "Shadow Ball",
-      "Aurora Beam",
+      "Play Rough",
+      "Superpower",
+      "Aqua Tail",
       "Protect"
      ],
-     "item": "Mystic Water",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Water Absorb"
+     "item": "Fairy Feather",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Huge Power"
     }
    ],
    "roles": [
@@ -86,7 +86,7 @@
      1
     ],
     "garbodor": [
-     1,
+     2,
      4
     ],
     "karrina": [
@@ -98,7 +98,7 @@
      6
     ],
     "spector2": [
-     5,
+     4,
      6
     ],
     "jenner9": [
@@ -120,27 +120,27 @@
     "erick:Chandelure",
     "garbodor:Garbodor (bar 1)",
     "garbodor:Garbodor (bar 2)",
-    "garbodor:Garbodor (bar 3)",
     "jenner9:Appletun",
     "jenner9:Kommo-o",
     "jenner9:Porygon-Z",
     "jenner9:Stoutland",
-    "spector2:Golisopod"
+    "spector2:Golisopod",
+    "spector2:Typhlosion"
    ],
    "cover6": 30
   },
   {
-   "score": 0.921,
+   "score": 0.935,
    "members": [
     "Arcanine (Hisuian Form)",
     "Annihilape",
     "Golisopod (Aevian Form)",
-    "Gastrodon (West Aevian Form)"
+    "Vaporeon"
    ],
-   "cover": 24,
+   "cover": 25,
    "swaps": [
     "Chandelure",
-    "Sylveon"
+    "Slowking (Galarian Form)"
    ],
    "builds": [
     {
@@ -181,15 +181,15 @@
     },
     {
      "moves": [
-      "Recover",
-      "Strange Steam",
-      "Earth Power",
+      "Hydro Pump",
+      "Aurora Beam",
+      "Shadow Ball",
       "Protect"
      ],
-     "item": "Fairy Feather",
+     "item": "Mystic Water",
      "nature": "Modest",
      "evs": "252 HP / 252 SpA",
-     "ability": "Storm Drain"
+     "ability": "Water Absorb"
     }
    ],
    "roles": [
@@ -215,11 +215,11 @@
      1
     ],
     "garbodor": [
-     1,
+     2,
      4
     ],
     "karrina": [
-     5,
+     4,
      6
     ],
     "spector": [
@@ -227,7 +227,7 @@
      6
     ],
     "spector2": [
-     4,
+     5,
      6
     ],
     "jenner9": [
@@ -247,15 +247,14 @@
     "amanda:Hatterene",
     "darkgardevoir:Gardevoir",
     "erick:Chandelure",
-    "erick:Toxtricity",
     "garbodor:Garbodor (bar 1)",
     "garbodor:Garbodor (bar 2)",
-    "garbodor:Garbodor (bar 3)",
     "jenner9:Appletun",
+    "jenner9:Kommo-o",
     "jenner9:Porygon-Z",
     "jenner9:Stoutland"
    ],
-   "cover6": 31
+   "cover6": 32
   }
  ],
  "tr": [
@@ -270,7 +269,7 @@
    "cover": 22,
    "swaps": [
     "Chandelure",
-    "Klinklang"
+    "Golisopod (Aevian Form)"
    ],
    "builds": [
     {
@@ -374,13 +373,13 @@
     ]
    },
    "open": [
+    "amanda:Druddigon",
+    "amanda:Hatterene",
+    "amanda:Miltank",
     "darkgardevoir:Gardevoir",
     "erick:Chandelure",
-    "erick:Electivire",
     "garbodor:Garbodor (bar 1)",
     "garbodor:Garbodor (bar 2)",
-    "garbodor:Garbodor (bar 3)",
-    "garbodor:Garbodor (bar 4)",
     "jenner9:Porygon-Z",
     "jenner9:Stoutland"
    ],
@@ -390,14 +389,14 @@
    "score": 0.869,
    "members": [
     "Oranguru",
-    "Rhyperior",
-    "Clawitzer",
-    "Escavalier"
+    "Golisopod (Aevian Form)",
+    "Sylveon",
+    "Clawitzer"
    ],
-   "cover": 21,
+   "cover": 25,
    "swaps": [
     "Chandelure",
-    "Glalie (Aevian Form)"
+    "Passimian"
    ],
    "builds": [
     {
@@ -414,15 +413,27 @@
     },
     {
      "moves": [
-      "Roar",
-      "Stone Edge",
-      "Headlong Rush",
+      "Shadow Sneak",
+      "Bone Rush",
+      "Pin Missile",
       "Protect"
      ],
-     "item": "Hard Stone",
+     "item": "Soft Sand",
      "nature": "Brave",
      "evs": "252 HP / 252 Atk · 0 Spe IVs",
-     "ability": "Solid Rock"
+     "ability": "Skill Link"
+    },
+    {
+     "moves": [
+      "Roar",
+      "Moonblast",
+      "Shadow Ball",
+      "Protect"
+     ],
+     "item": "Fairy Feather",
+     "nature": "Quiet",
+     "evs": "252 HP / 252 SpA · 0 Spe IVs",
+     "ability": "Pixilate"
     },
     {
      "moves": [
@@ -435,18 +446,6 @@
      "nature": "Quiet",
      "evs": "252 HP / 252 SpA · 0 Spe IVs",
      "ability": "Mega Launcher"
-    },
-    {
-     "moves": [
-      "Iron Head",
-      "X-Scissor",
-      "Drill Run",
-      "Protect"
-     ],
-     "item": "Metal Coat",
-     "nature": "Brave",
-     "evs": "252 HP / 252 Atk · 0 Spe IVs",
-     "ability": "Overcoat"
     }
    ],
    "roles": [
@@ -458,12 +457,12 @@
    "shared": [],
    "answers": [
     "Haze / phaze",
-    "speed control"
+    "speed control",
+    "priority"
    ],
    "missing": [
     "Taunt / Encore",
     "Fake Out / Intimidate",
-    "priority",
     "screen breaker"
    ],
    "per_fight": {
@@ -472,7 +471,7 @@
      1
     ],
     "garbodor": [
-     1,
+     2,
      4
     ],
     "karrina": [
@@ -484,19 +483,19 @@
      6
     ],
     "spector2": [
-     2,
-     6
-    ],
-    "jenner9": [
-     1,
-     6
-    ],
-    "amanda": [
      4,
      6
     ],
-    "erick": [
+    "jenner9": [
+     2,
+     6
+    ],
+    "amanda": [
      3,
+     6
+    ],
+    "erick": [
+     4,
      6
     ]
    },
@@ -506,25 +505,22 @@
     "erick:Chandelure",
     "garbodor:Garbodor (bar 1)",
     "garbodor:Garbodor (bar 2)",
-    "garbodor:Garbodor (bar 3)",
     "jenner9:Appletun",
-    "jenner9:Kommo-o",
-    "jenner9:Stoutland",
-    "spector2:Typhlosion"
+    "jenner9:Porygon-Z"
    ],
-   "cover6": 31
+   "cover6": 34
   }
  ],
  "setup": [
   {
-   "score": 0.884,
+   "score": 0.9,
    "members": [
     "Clefable",
     "Golisopod (Aevian Form)",
     "Chandelure",
     "Azumarill"
    ],
-   "cover": 23,
+   "cover": 25,
    "swaps": [
     "Annihilape",
     "Sylveon"
@@ -602,7 +598,7 @@
      1
     ],
     "garbodor": [
-     1,
+     2,
      4
     ],
     "karrina": [
@@ -622,7 +618,7 @@
      6
     ],
     "amanda": [
-     1,
+     2,
      6
     ],
     "erick": [
@@ -632,29 +628,27 @@
    },
    "open": [
     "amanda:Hatterene",
-    "amanda:Torkoal",
     "darkgardevoir:Gardevoir",
     "erick:Chandelure",
     "erick:Toxtricity",
     "garbodor:Garbodor (bar 1)",
     "garbodor:Garbodor (bar 2)",
-    "garbodor:Garbodor (bar 3)",
     "jenner9:Appletun",
     "jenner9:Porygon-Z",
     "jenner9:Stoutland",
     "karrina:Nidoking"
    ],
-   "cover6": 29
+   "cover6": 31
   },
   {
-   "score": 0.883,
+   "score": 0.896,
    "members": [
     "Sylveon",
     "Annihilape",
     "Golisopod (Aevian Form)",
     "Empoleon"
    ],
-   "cover": 24,
+   "cover": 26,
    "swaps": [
     "Chandelure",
     "Slowking (Galarian Form)"
@@ -732,7 +726,7 @@
      1
     ],
     "garbodor": [
-     1,
+     2,
      4
     ],
     "karrina": [
@@ -752,7 +746,7 @@
      6
     ],
     "amanda": [
-     3,
+     4,
      6
     ],
     "erick": [
@@ -762,17 +756,15 @@
    },
    "open": [
     "amanda:Hatterene",
-    "amanda:Torkoal",
     "darkgardevoir:Gardevoir",
     "erick:Chandelure",
     "garbodor:Garbodor (bar 1)",
     "garbodor:Garbodor (bar 2)",
-    "garbodor:Garbodor (bar 3)",
     "jenner9:Appletun",
     "jenner9:Porygon-Z",
     "jenner9:Stoutland"
    ],
-   "cover6": 31
+   "cover6": 33
   }
  ],
  "grassy": [
@@ -787,7 +779,7 @@
    "cover": 18,
    "swaps": [
     "Chandelure",
-    "Vikavolt"
+    "Golisopod (Aevian Form)"
    ],
    "builds": [
     {
@@ -901,7 +893,7 @@
     "erick:Toxtricity",
     "garbodor:Garbodor (bar 1)",
     "garbodor:Garbodor (bar 2)",
-    "garbodor:Garbodor (bar 3)",
+    "jenner9:Appletun",
     "jenner9:Kommo-o",
     "jenner9:Stoutland",
     "spector2:Typhlosion"
@@ -919,7 +911,7 @@
    "cover": 13,
    "swaps": [
     "Chandelure",
-    "Rhyperior"
+    "Golisopod (Aevian Form)"
    ],
    "builds": [
     {
@@ -1027,22 +1019,21 @@
    "open": [
     "amanda:Druddigon",
     "amanda:Hatterene",
+    "amanda:Incineroar",
     "amanda:Miltank",
-    "amanda:Torkoal",
     "darkgardevoir:Gardevoir",
     "erick:Chandelure",
     "erick:Toxtricity",
     "garbodor:Garbodor (bar 1)",
     "garbodor:Garbodor (bar 2)",
-    "garbodor:Garbodor (bar 3)",
     "jenner9:Appletun",
     "jenner9:Kommo-o",
+    "jenner9:Noivern",
     "jenner9:Stoutland",
-    "karrina:Musharna",
     "karrina:Runerigus",
     "spector2:Typhlosion"
    ],
-   "cover6": 25
+   "cover6": 26
   }
  ],
  "electric": [
@@ -1169,7 +1160,6 @@
     "erick:Toxtricity",
     "garbodor:Garbodor (bar 1)",
     "garbodor:Garbodor (bar 2)",
-    "garbodor:Garbodor (bar 3)",
     "jenner9:Kommo-o",
     "jenner9:Noivern",
     "jenner9:Porygon-Z",
@@ -1178,7 +1168,7 @@
     "karrina:Runerigus",
     "spector2:Typhlosion"
    ],
-   "cover6": 27
+   "cover6": 28
   },
   {
    "score": 0.708,
@@ -1297,13 +1287,11 @@
    "open": [
     "amanda:Druddigon",
     "amanda:Hatterene",
-    "amanda:Torkoal",
     "darkgardevoir:Gardevoir",
     "erick:Chandelure",
     "erick:Toxtricity",
     "garbodor:Garbodor (bar 1)",
     "garbodor:Garbodor (bar 2)",
-    "garbodor:Garbodor (bar 3)",
     "jenner9:Appletun",
     "jenner9:Kommo-o",
     "jenner9:Noivern",
@@ -1312,7 +1300,7 @@
     "karrina:Runerigus",
     "spector2:Typhlosion"
    ],
-   "cover6": 25
+   "cover6": 27
   }
  ],
  "sun": [
@@ -1327,7 +1315,7 @@
    "cover": 13,
    "swaps": [
     "Gholdengo",
-    "Annihilape"
+    "Golisopod (Aevian Form)"
    ],
    "builds": [
     {
@@ -1432,25 +1420,23 @@
    },
    "open": [
     "amanda:Bronzong",
-    "amanda:Torkoal",
+    "amanda:Druddigon",
+    "amanda:Incineroar",
+    "amanda:Miltank",
     "darkgardevoir:Gardevoir",
     "erick:Chandelure",
-    "erick:Electivire",
     "erick:Toxtricity",
     "garbodor:Garbodor (bar 1)",
     "garbodor:Garbodor (bar 2)",
-    "garbodor:Garbodor (bar 3)",
-    "garbodor:Garbodor (bar 4)",
     "jenner9:Appletun",
     "jenner9:Kommo-o",
     "jenner9:Noivern",
     "jenner9:Porygon-Z",
     "jenner9:Stoutland",
-    "karrina:Musharna",
     "spector2:Golisopod",
     "spector2:Typhlosion"
    ],
-   "cover6": 23
+   "cover6": 25
   },
   {
    "score": 0.762,
@@ -1462,8 +1448,8 @@
    ],
    "cover": 16,
    "swaps": [
-    "Gholdengo",
-    "Golisopod (Aevian Form)"
+    "Golisopod (Aevian Form)",
+    "Chandelure"
    ],
    "builds": [
     {
@@ -1567,29 +1553,26 @@
     ]
    },
    "open": [
-    "amanda:Bronzong",
+    "amanda:Hatterene",
     "amanda:Incineroar",
     "amanda:Miltank",
-    "amanda:Torkoal",
     "darkgardevoir:Gardevoir",
     "erick:Toxtricity",
     "garbodor:Garbodor (bar 1)",
     "garbodor:Garbodor (bar 2)",
-    "garbodor:Garbodor (bar 3)",
     "jenner9:Appletun",
     "jenner9:Kommo-o",
     "jenner9:Noivern",
     "jenner9:Porygon-Z",
     "jenner9:Stoutland",
-    "spector2:Golisopod",
     "spector2:Typhlosion"
    ],
-   "cover6": 25
+   "cover6": 28
   }
  ],
  "snow": [
   {
-   "score": 0.84,
+   "score": 0.841,
    "members": [
     "Ninetales (Alolan Form)",
     "Annihilape",
@@ -1629,8 +1612,8 @@
     {
      "moves": [
       "Hydro Pump",
-      "Shadow Ball",
       "Aurora Beam",
+      "Shadow Ball",
       "Protect"
      ],
      "item": "Mystic Water",
@@ -1709,14 +1692,13 @@
     "erick:Toxtricity",
     "garbodor:Garbodor (bar 1)",
     "garbodor:Garbodor (bar 2)",
-    "garbodor:Garbodor (bar 3)",
     "jenner9:Appletun",
     "jenner9:Noivern",
     "jenner9:Porygon-Z",
     "jenner9:Stoutland",
     "karrina:Nidoking"
    ],
-   "cover6": 29
+   "cover6": 30
   },
   {
    "score": 0.828,
@@ -1835,19 +1817,17 @@
    "open": [
     "amanda:Bronzong",
     "amanda:Druddigon",
-    "amanda:Torkoal",
     "darkgardevoir:Gardevoir",
     "erick:Chandelure",
     "erick:Toxtricity",
     "garbodor:Garbodor (bar 1)",
     "garbodor:Garbodor (bar 2)",
-    "garbodor:Garbodor (bar 3)",
     "jenner9:Appletun",
     "jenner9:Porygon-Z",
     "spector2:Golisopod",
     "spector2:Typhlosion"
    ],
-   "cover6": 28
+   "cover6": 30
   }
  ]
 }
