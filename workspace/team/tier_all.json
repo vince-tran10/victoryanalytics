@@ -5160,7 +5160,7 @@
    "cat": "Physical",
    "attacks": [
     "Hyper Drill",
-    "Thief",
+    "Bite",
     "Drill Run"
    ],
    "legal": [
@@ -18266,7 +18266,7 @@
    "cat": "Physical",
    "attacks": [
     "Surf",
-    "Secret Power",
+    "Facade",
     "Mud Barrage"
    ],
    "legal": [
@@ -20034,7 +20034,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Jaw Lock",
+    "Crunch",
     "Liquidation",
     "Ice Fang"
    ],
@@ -24392,7 +24392,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Jaw Lock",
+    "Crunch",
     "Play Rough",
     "Double-Edge"
    ],
@@ -25497,7 +25497,7 @@
    "cat": "Special",
    "attacks": [
     "Energy Ball",
-    "Terrain Pulse"
+    "Weather Ball"
    ],
    "legal": [
     "ABSORB",
@@ -45518,7 +45518,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Aerial Ace",
+    "Pluck",
     "Slash",
     "Knock Off"
    ],
@@ -46367,7 +46367,7 @@
    "attacks": [
     "Spark",
     "Hyper Fang",
-    "Thief"
+    "Bite"
    ],
    "legal": [
     "ATTRACT",

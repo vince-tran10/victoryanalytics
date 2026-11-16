@@ -680,3 +680,6 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   (rule c: only Dark Pulse resist; Clear Smog vs Calm Mind keeps our boosts; Knock Off Lum). Escavalier was dropped for it. Old DG specialists Glalie-A, Klinklang, Escavalier, Crobat → Active. checks.py now checks the core
   (no 3+ weak) and the fight six vs its own fight's types (core-of-4 model).
   make_report5: real export ability for pre-evo cards (was the engine's evolved guess), status text when team == fight six.
+- 16 Nov lead check (Vincent asked "why Arcanine + Golisopod?"): Golisopod-A survives every Ch9 lead (max 59%, 102% only vs
+  Incineroar's Flare Blitz, cut by Intimidate) → slot 1. Arcanine-H takes 110% from Runerigus Body Press (Karrina, singles) →
+  slot 2, doubles partner (Intimidate vs Incineroar / Electivire). Per-fight: Gholdengo leads Spector day, Vaporeon Spector night.

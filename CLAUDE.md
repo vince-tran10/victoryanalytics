@@ -63,7 +63,8 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   fight six (b)(c) vs its own fight's types. state.json `core` holds the 4.
 - **One structure for singles AND doubles** (most battles are singles): party order = plan. Slot 1 leads singles, slots
   1–2 lead doubles. Leads must survive the opposing leads' hits in every hard fight (checked vs exact game lead order).
-  Current order: Arcanine-Hisui, Golisopod-Aevian, Gholdengo, Vaporeon, Copperajah, Muk-Alola (Copperajah leads vs Gardevoir).
+  Current order: Golisopod-Aevian, Arcanine-Hisui, Gholdengo, Vaporeon, Copperajah, Muk-Alola (Copperajah leads vs Gardevoir;
+  lead check 16 Nov: Golisopod-A survives every Ch9 lead; Arcanine-H takes 110% from Karrina's Runerigus, so it never leads singles).
 - Then rank by battle score (singles count double).
 - **Fields are a core factor (Vincent, 10 Nov): exploit them.** Score every fight with its full field mechanics from the game
   code (boosts, added types, end-of-turn field damage like Volcanic Top eruptions and who is immune, field changes), favour

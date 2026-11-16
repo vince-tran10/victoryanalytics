@@ -54,10 +54,10 @@ def disp(n):
 # ---------------------------------------------------------------- 1) team
 # (role, name, types, ability, nature, evs, item, moves[(move, is_new)], change notes)
 TEAM = [   # Ch9 (16 Nov): Balance core of 4 (Cores tab #1 of 89,985) + 2 Dark Gardevoir swaps. ORDER = PARTY ORDER: slot 1 leads singles, slots 1-2 lead doubles
-    ('Lead', 'Arcanine-Hisui', 'Fire/Rock', 'Intimidate', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Focus Sash',
-     [('Flare Blitz', 0), ('Head Smash', 0), ('Extreme Speed', 0), ('Protect', 0)], []),
     ('Lead', 'Golisopod-Aevian', 'Bug/Ground', 'Skill Link', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand',
      [('Bone Rush', 0), ('Pin Missile', 0), ('Swords Dance', 0), ('Protect', 0)], []),
+    ('Lead', 'Arcanine-Hisui', 'Fire/Rock', 'Intimidate', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Focus Sash',
+     [('Flare Blitz', 0), ('Head Smash', 0), ('Extreme Speed', 0), ('Protect', 0)], []),
     ('Mid', 'Gholdengo', 'Steel/Ghost', 'Good as Gold', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Metal Coat',
      [('Make It Rain', 0), ('Shadow Ball', 0), ('Thunder Wave', 0), ('Protect', 0)], []),
     ('Mid', 'Vaporeon', 'Water', 'Water Absorb', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Mystic Water',
@@ -72,8 +72,9 @@ IDENTITY = ('<b>Identity</b> Balance / tempo core of 4 (stays all Chapter 9): In
             'win condition (Skill Link + Swords Dance), Gholdengo is status-immune with Thunder Wave speed control, Vaporeon is the bulky Haze answer to setup. '
             'No shared weakness. The last 2 slots are swaps per fight: now Copperajah + Muk-Alola for Dark Gardevoir (Muk-Alola resists its Dark Pulse).')
 PLAY = [IDENTITY,
-        '<b>Party order = the plan, same in singles and doubles:</b> 1 Arcanine-Hisui · 2 Golisopod-Aevian · 3 Gholdengo · 4 Vaporeon · 5 Copperajah · 6 Muk-Alola',
-        '<b>Lead</b> Arcanine-Hisui: Intimidate on entry, Extreme Speed picks off low foes. Doubles: Golisopod-A beside it (Intimidate covers its Swords Dance turn)',
+        '<b>Party order = the plan, same in singles and doubles:</b> 1 Golisopod-Aevian · 2 Arcanine-Hisui · 3 Gholdengo · 4 Vaporeon · 5 Copperajah · 6 Muk-Alola',
+        '<b>Lead</b> Golisopod-A leads singles: survives every Ch9 lead (max 59% except Incineroar\'s Flare Blitz). Doubles: Arcanine-Hisui beside it (Intimidate cuts that Flare Blitz and Electivire\'s punches)',
+        '<b>Lead swaps</b> Spector day: Golisopod-A + Gholdengo (Shadow Ball 113% Gothitelle, takes 18%) · Spector night: Golisopod-A + Vaporeon (Hydro Pump 229% Stonjourner) · Karrina: Golisopod-A (takes 22% from Runerigus; Arcanine-Hisui takes 110% Body Press)',
         '<b>Mid</b> Gholdengo Thunder Waves the fastest threat (status moves can\'t touch it); Vaporeon Hazes any setup (Calm Mind, Dragon Dance) and walls Water / Fire / Ice',
         '<b>Close</b> Swap slots: Copperajah (Steel hits Fairy) + Muk-Alola (resists Dark, Clear Smog) for Dark Gardevoir. After it, swap in the next fight\'s counters',
         '<b>Dark Gardevoir</b> move Copperajah to slot 1 for that fight (it leads vs Gardevoir; Fights tab has the plan)']

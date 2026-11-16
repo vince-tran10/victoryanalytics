@@ -4,9 +4,9 @@
  "export_label": "14 Nov 12:35",
  "active_start": 425,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 100,
- "run": 114,
- "final": 118,
+ "roster": 101,
+ "run": 115,
+ "final": 119,
  "done": [
   "aelita",
   "narcissa1",
@@ -30,8 +30,8 @@
  ],
  "fight": "darkgardevoir",
  "team": [
-  "Arcanine (Hisuian Form)",
   "Golisopod (Aevian Form)",
+  "Arcanine (Hisuian Form)",
   "Gholdengo",
   "Vaporeon",
   "Copperajah",
