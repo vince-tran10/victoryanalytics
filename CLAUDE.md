@@ -32,8 +32,9 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Shock Wave were picked over Sticky Web / Will-O-Wisp and added almost nothing. Everyone is levelled to the cap.
 - **Debug mode:** any owned Pokémon can be levelled, re-natured, re-EV'd, ability-capsuled, taught any legal move,
   instantly. NEVER filter or rank by build effort. Pick purely on battle merit.
-- Legal moves: level-up ≤ 55, Move Relearner, egg, Ch1–7 TMs, tutors ≤ 7 badges. Evolution items from Ch1–7 OK.
-  No Life Orb, no Megas, no trade evolutions. Chapter 8 pickups wait for the end-of-chapter review.
+- Legal moves (16 Nov): level-up ≤ cap, Move Relearner, egg, Ch1–8 TMs (allowed_tms.json), tutors ≤ 8 badges (the game has
+  no 8-badge tier, so ≤ 7 in practice). Evolution items from Ch1–8 (adds Razor Claw, Prism Scale, King's Rock, Dragon Scale).
+  No Life Orb, no Megas, no trade evolutions. Trick Room TM not owned: only Oranguru / Porygon-Z learn Trick Room.
 - Items: UNLIMITED (Vincent, 14 Nov) except Leftovers and Life Orb. Prefer reusable items: the type booster of the main
   attack (Charcoal, Mystic Water, Miracle Seed, Magnet, Never-Melt Ice, Black Belt, Poison Barb, Soft Sand, Sharp Beak,
   Twisted Spoon, Silver Powder, Hard Stone, Spell Tag, Dragon Fang, Black Glasses, Metal Coat, Fairy Feather, Silk Scarf).
@@ -41,7 +42,9 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Vest (they block Protect, which is always the 4th move). Crests where owned.
 
 ## Team rules (chapter rules)
-- One six for the whole chapter. Swap only for a true hard-counter boss (fight mode), then swap straight back.
+- **Core of 4 + 2 swaps (Vincent, 16 Nov):** Vincent picks ONE core of 4 with a playstyle identity from the Cores tab
+  (scripts/team/cores.py; Balance/tempo preferred, but strongest wins). It stays all chapter; each fight adds 2 swaps
+  (boss hard counters, one dedicated counter per foe). Until he picks, the Dark Gardevoir fight six stays.
 - Only HARD fights count: bosses and real story fights (gym leaders, executives, named story trainers), never grunt
   fodder. The checked list is `HARD_WHY` / `NOT_HARD` in `scripts/team/sheet_extras.py`.
 - (b) No attack type the hard-fight opponents actually use (move types, after field changes) hits 3+ of the six
@@ -51,7 +54,8 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   enablers and beneficiaries on the team, and NO dead pieces: every conditional ability or move needs its enabler on
   the team (Swift Swim/Rain Dish → rain setter; Dry Skin counts as live for its Water immunity; Chlorophyll/Solar Power → sun; Sand Rush/Force → sand;
   Slush Rush/Ice Body → snow; Surge Surfer → Electric Terrain…). No anti-synergy (e.g. Glare or fast mons under Trick
-  Room). Weather teams aren't realistic yet: no Drizzle/Drought/Sand Stream owned. Checked by checks.py.
+  Room). Owned weather/terrain setters (16 Nov): Drought Ninetales, Snow Warning (Ninetales-Alola, Vanilluxe, Aurorus,
+  Abomasnow), Grassy Surge Glalie-A, Electric Surge Pincurchin. No Drizzle / Sand Stream. Checked by checks.py.
 - Current identity (13 Nov, remaining fights Holly/Manaphy/Factory/Amber): block their main attack type and hit back SE —
   Flash Fire Chandelure (Amber all-Fire), Dry Skin Heliolisk (Manaphy/Beach Water), Levitate Vikavolt + Whiscash (Factory Electric);
   Glare + Fake Out for tempo.
@@ -114,7 +118,9 @@ damage score and the fight's real win condition was only read after Vincent lost
 
 ## Guide page
 - Clean, a guide not an essay: bullets, no paragraphs; explanations go in chat, not on the page.
-- Tabs: Team · Fights · To do · Tier list · Boxes · C&A checks.
+- Tabs: Team · Fights · Cores · To do · Boxes · Tier list · Crest tiers · Aevian tiers · C&A checks.
+- Tier tabs (16 Nov) share ONE blended scale (scripts/team/tier_all.py → tier_tabs.py): 0.6 × Ch9 fight percentile +
+  0.4 × meta (Smogon tier/usage + BST; Aevians by kit OP stars). Cut-offs S .85 / A .76 / B .62 / C .45.
 - **Team tab:** the ideal six with a Status column (Done ✓ per member, always shown) plus the rules panel.
 - **Fights tab:** every remaining hard fight: Singles/Doubles, Boss tag, field, why it's hard, lead.
 - **To do tab = profile fixes only:** one card per Pokémon listing everything it needs (moves with replacements, EVs,

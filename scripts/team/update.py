@@ -123,8 +123,10 @@ def main():
     # crests: every crest-eligible Pokémon re-scored with its crest (game-code effects), then the Crests tab
     sh(['../scripts/team/run.py', WS, f'team/roster{rost}_lv55.json', f'team/rc{run}_native.json'], dict(env, FORCE_FORMAT='native', CRESTS='1'))
     sh(['../scripts/team/crest_tier.py'], dict(env, CR_RUN=f'r{run}', CREST_RUN=f'rc{run}', BASE_RUN=f'r{run}'))
-    sh(['../scripts/team/crest_tab.py', OUT], pe)
-    sh(['../scripts/team/aevian_tab.py', OUT], dict(pe, BASE_RUN=f'r{run}'))
+    # one blended tier scale (Ch9 fights + meta) for Crests / Aevians / all other Pokémon, then the Cores tab (16 Nov)
+    sh(['../scripts/team/tier_all.py'], dict(env, BASE_RUN=f'r{run}', CREST_RUN=f'rc{run}'))
+    sh(['../scripts/team/tier_tabs.py', OUT], pe)
+    sh(['../scripts/team/cores.py', OUT], pe)
     sh(['../scripts/team/counters_tab.py', OUT], pe)
     sh(['../scripts/gamedata/compare.py', 'team/gamedata_compare.json'], pe)
     st['team_check_cache'] = True

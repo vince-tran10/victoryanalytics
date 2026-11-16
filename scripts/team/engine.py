@@ -17,13 +17,16 @@ CAP = 55
 # tutors open to a 7-badge player who has finished chapters 1-7 (Luck's Tent tiers up to 7 badges, Wispy Shop, Kakori/Terajuma Beach)
 # Tutors count only when the wiki lists a badge number and it is <= 7 (Vincent's rule, 11-05).
 # Tutors with no badge number (plain Luck's Tent, Wispy Path Shop, Akuwa Town, ...) are skipped.
+# 16 Nov: rule is now <= 8 badges, but the game has no 8-badge tutor tier (3/5/7/9/11...), so the set is unchanged.
 ALLOWED_TUTORS = {"Luck's Tent, 3 Badges", "Luck's Tent, 5 Badges", "Luck's Tent, 7 Badges", "Terajuma Beach, 5 Badges",
                   "Luck's Tent, 3 Badges, Hiyoshi City", "Luck's Tent, 5 Badges, Hiyoshi City", "Luck's Tent, 7 Badges, Hiyoshi City"}
 # evolution items obtainable in Chapters 1-7 (BIGJRA walkthrough). Not: Peat Block, Razor Claw/Fang, King's Rock,
 # Prism Scale, Protector, Electirizer, Magmarizer, Dubious Disc, Oval Stone, Linking Cord.
 ITEMS_CH1_7 = {'SUNSTONE', 'SHINYSTONE', 'MOONSTONE', 'LEAFSTONE', 'WATERSTONE', 'FIRESTONE', 'THUNDERSTONE', 'ICESTONE',
                'DUSKSTONE', 'DAWNSTONE', 'UPGRADE', 'REAPERCLOTH', 'SACHET', 'WHIPPEDDREAM', 'GALARICACUFF',
-               'GALARICAWREATH', 'SWEETAPPLE', 'TARTAPPLE', 'METALCOAT'}
+               'GALARICAWREATH', 'SWEETAPPLE', 'TARTAPPLE', 'METALCOAT',
+               # Chapter 8 pickups (unlocked 16 Nov, Ch 9 / 8 badges): Razor Claw, Prism Scale, King's Rock, Dragon Scale
+               'RAZORCLAW', 'PRISMSCALE', 'KINGSROCK', 'DRAGONSCALE'}
 STATS = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe']
 NATURES = {
     'Hardy': (None, None), 'Docile': (None, None), 'Serious': (None, None), 'Bashful': (None, None), 'Quirky': (None, None),

@@ -671,3 +671,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Copperajah (bar 1, Iron Head 126%), Klinklang (bar 2), Escavalier, Crobat (Infiltrator vs Reflect/Safeguard).
 - 14 Nov export (12:35): Dark Gardevoir lineup in the party, builds all match except level (all Lv 55 → cap 60). Glalie-A
   keeps Miracle Seed + Rock Slide until the fight (Vincent); Iron Ball + Switcheroo go on right before Gardevoir.
+- 16 Nov: Ch1–8 TMs + Ch8 evo items unlocked (no 8-badge tutor tier exists). New ONE blended tier scale (tier_all.py:
+  0.6 Ch9 fight percentile + 0.4 Smogon meta/BST; Aevians by OP stars) for Crest / Aevian / new "Tier list" tabs (tier_tabs.py,
+  kits.py). New Cores tab (cores.py): 2 cores each for Balance, Trick Room, Setup/HO, Grassy, Electric, Sun, Snow, with role
+  builds, Ch9 coverage, shared weaknesses, answers and best 2 swaps. Vincent will pick a core of 4 + 2 swaps per fight.

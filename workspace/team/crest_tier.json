@@ -1,5 +1,5 @@
 {
- "anchor_low": 0.036,
+ "anchor_low": 0.041,
  "anchor_median": 0.372,
  "team": {
   "Vikavolt": 0.372,
@@ -7,7 +7,7 @@
   "Ludicolo": 0.189,
   "Whiscash": 0.389,
   "Crabominable": 0.275,
-  "Heliolisk": 0.036
+  "Heliolisk": 0.041
  },
  "rows": [
   {
@@ -292,22 +292,6 @@
    "tier": "A"
   },
   {
-   "name": "Cofagrigus",
-   "crest": "Cofagrigus Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 76,
-   "with_crest": 0.272,
-   "without": 0.21,
-   "gain": 0.062,
-   "attacks": [
-    "Shadow Ball",
-    "Irritation"
-   ],
-   "ability": "MUMMY",
-   "tier": "A"
-  },
-  {
    "name": "Luxray",
    "crest": "Luxray Crest",
    "held": false,
@@ -322,6 +306,22 @@
     "Ice Fang"
    ],
    "ability": "INTIMIDATE",
+   "tier": "A"
+  },
+  {
+   "name": "Cofagrigus",
+   "crest": "Cofagrigus Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 76,
+   "with_crest": 0.267,
+   "without": 0.212,
+   "gain": 0.055,
+   "attacks": [
+    "Shadow Ball",
+    "Grass Knot"
+   ],
+   "ability": "MUMMY",
    "tier": "A"
   },
   {
@@ -537,6 +537,39 @@
    "tier": "A"
   },
   {
+   "name": "Zoroark (Hisuian Form)",
+   "crest": "Zoroark Crest",
+   "held": true,
+   "where": "Active",
+   "dump": 499,
+   "with_crest": 0.152,
+   "without": 0.152,
+   "gain": 0.0,
+   "attacks": [
+    "Shadow Ball",
+    "Extrasensory",
+    "Sludge Bomb"
+   ],
+   "ability": "ILLUSION",
+   "tier": "A"
+  },
+  {
+   "name": "Magcargo",
+   "crest": "Magcargo Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 202,
+   "with_crest": 0.144,
+   "without": 0.237,
+   "gain": -0.093,
+   "attacks": [
+    "Overheat",
+    "Earth Power"
+   ],
+   "ability": "WEAKARMOR",
+   "tier": "A"
+  },
+  {
    "name": "Electrode",
    "crest": "Electrode Crest",
    "held": false,
@@ -586,22 +619,6 @@
    "tier": "A"
   },
   {
-   "name": "Zoroark (Hisuian Form)",
-   "crest": "Zoroark Crest",
-   "held": true,
-   "where": "Active",
-   "dump": 499,
-   "with_crest": 0.122,
-   "without": 0.122,
-   "gain": 0.0,
-   "attacks": [
-    "Shadow Ball",
-    "Extrasensory"
-   ],
-   "ability": "ILLUSION",
-   "tier": "A"
-  },
-  {
    "name": "Simipour",
    "crest": "Simipour Crest",
    "held": false,
@@ -619,36 +636,35 @@
    "tier": "A"
   },
   {
+   "name": "Sunflora",
+   "crest": "Sunflora Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 351,
+   "with_crest": 0.116,
+   "without": 0.116,
+   "gain": 0.0,
+   "attacks": [
+    "Leaf Storm",
+    "Sludge Bomb"
+   ],
+   "ability": "SOLARPOWER",
+   "tier": "A"
+  },
+  {
    "name": "Bastiodon",
    "crest": "Bastiodon Crest",
    "held": false,
    "where": "Overflow",
    "dump": 30,
-   "with_crest": 0.099,
-   "without": 0.099,
+   "with_crest": 0.094,
+   "without": 0.094,
    "gain": 0.0,
    "attacks": [
     "Iron Head",
-    "Double-Edge",
-    "Rock Tomb"
+    "Rock Blast"
    ],
    "ability": "SOUNDPROOF",
-   "tier": "A"
-  },
-  {
-   "name": "Magcargo",
-   "crest": "Magcargo Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 202,
-   "with_crest": 0.088,
-   "without": 0.206,
-   "gain": -0.118,
-   "attacks": [
-    "Flamethrower",
-    "Earth Power"
-   ],
-   "ability": "WEAKARMOR",
    "tier": "A"
   },
   {
@@ -682,21 +698,6 @@
     "Sucker Punch"
    ],
    "ability": "SNIPER",
-   "tier": "A"
-  },
-  {
-   "name": "Sunflora",
-   "crest": "Sunflora Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 351,
-   "with_crest": 0.075,
-   "without": 0.075,
-   "gain": 0.0,
-   "attacks": [
-    "Leaf Storm"
-   ],
-   "ability": "SOLARPOWER",
    "tier": "A"
   },
   {
@@ -830,7 +831,7 @@
     "Shadow Ball"
    ],
    "ability": "STAKEOUT",
-   "tier": "B"
+   "tier": "D"
   },
   {
    "name": "Seviper",

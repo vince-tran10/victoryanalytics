@@ -1,0 +1,19 @@
+Vikavolt | Active 60 | Levitate  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Thunderbolt', 'Bug Buzz', 'Sticky Web', 'Protect'] | Magnet (already holding) | 
+Chandelure | Active 60 | Flash Fire  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Overheat', 'Shadow Ball', 'Will-O-Wisp', 'Protect'] | Sitrus Berry | 
+Ludicolo | Active 60 | Own Tempo  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Fake Out', 'Energy Ball', 'Surf', 'Protect'] | Mystic Water (already holding) | 
+Whiscash | Active 60 | Oblivious  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Earthquake', 'Aqua Tail', 'Zen Headbutt', 'Protect'] | Whiscash Crest (already holding) | 
+Crabominable | Active 60 | Iron Fist  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Close Combat', 'Ice Hammer', 'Crabhammer', 'Protect'] | Black Belt (already holding) | 
+Heliolisk | Active 60 | Dry Skin  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Thunderbolt', 'Surf', 'Glare', 'Protect'] | Focus Sash (already holding) | 
+jenner 1.11 -> 1.194 leads ['Chandelure'] swaps [('Annihilape', 'Heliolisk', 0.247), ('Azumarill', 'Heliolisk', 0.224), ('Dachsbun', 'Heliolisk', 0.212)]
+danni 1.524 -> 1.517 leads ['Crabominable'] swaps [('Gholdengo', 'Heliolisk', 0.1), ('Bombirdier', 'Heliolisk', 0.093), ('Arcanine', 'Heliolisk', 0.089)]
+troye 1.093 -> 1.162 leads ['Ludicolo'] swaps [('Arcanine', 'Heliolisk', 0.157), ('Annihilape', 'Heliolisk', 0.15), ('Veluza (Aevian Form)', 'Heliolisk', 0.127)]
+zena 1.352 -> 1.331 leads ['Whiscash'] swaps [('Glalie (Aevian Form)', 'Vikavolt', 0.11), ('Scrafty', 'Vikavolt', 0.099), ('Diggersby', 'Vikavolt', 0.098)]
+marcie 1.457 -> 1.28 leads ['Vikavolt'] swaps [('Leavanny (Aevian Form)', 'Heliolisk', 0.125), ('Glalie (Aevian Form)', 'Heliolisk', 0.121), ('Leavanny', 'Heliolisk', 0.11)]
+darkgardevoir 0.731 -> 0.172 leads ['Crabominable'] swaps [('Copperajah', 'Chandelure', 0.403), ('Glalie (Aevian Form)', 'Chandelure', 0.346), ('Escavalier', 'Chandelure', 0.305)]
+garbodor 0.279 -> 0.222 leads ['Whiscash'] swaps [('Golisopod (Aevian Form)', 'Vikavolt', 0.27), ('Diggersby', 'Vikavolt', 0.116), ('Stunfisk (Galarian Form)', 'Vikavolt', 0.113)]
+karrina 0.845 -> 0.969 leads ['Vikavolt'] swaps [('Gastrodon (West Aevian Form)', 'Heliolisk', 0.157), ('Golisopod (Aevian Form)', 'Heliolisk', 0.151), ('Clefable', 'Heliolisk', 0.147)]
+spector 0.772 -> 1.124 leads ['Heliolisk'] swaps [('Zoroark (Hisuian Form)', 'Ludicolo', 0.314), ('Porygon-Z', 'Ludicolo', 0.244), ('Diggersby', 'Ludicolo', 0.161)]
+spector2 0.714 -> 0.811 leads ['Ludicolo'] swaps [('Golisopod (Aevian Form)', 'Ludicolo', 0.138), ('Porygon-Z', 'Ludicolo', 0.098), ('Glalie (Aevian Form)', 'Ludicolo', 0.083)]
+jenner9 0.583 -> 0.724 leads ['Crabominable'] swaps [('Florges', 'Heliolisk', 0.175), ('Sylveon', 'Heliolisk', 0.167), ('Frosmoth', 'Heliolisk', 0.152)]
+amanda 0.722 -> 0.946 leads ['Whiscash'] swaps [('Annihilape', 'Heliolisk', 0.149), ('Passimian', 'Heliolisk', 0.112), ('Gholdengo', 'Heliolisk', 0.086)]
+erick 0.666 -> 0.905 leads ['Crabominable'] swaps [('Camerupt', 'Ludicolo', 0.115), ('Gallade', 'Ludicolo', 0.112), ('Glalie (Aevian Form)', 'Ludicolo', 0.073)]

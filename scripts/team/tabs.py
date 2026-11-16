@@ -1,8 +1,9 @@
 """Group the report's sections into tabs (runs last, after box_audit.py and highlight.py).
 usage: python3 -I tabs.py report.html"""
 import re, sys
-TABS = [('team', 'Team', ['s1']), ('fights', 'Fights', ['s1f', 'sctr']),
-        ('todo', 'To do', ['s3']), ('boxes', 'Boxes', ['s4']), ('crests', 'Crest tiers', ['s6']), ('aevian', 'Aevian tiers', ['s7']), ('checks', 'C&A checks', ['s5'])]
+TABS = [('team', 'Team', ['s1']), ('fights', 'Fights', ['s1f', 'sctr']), ('cores', 'Cores', ['s9']),
+        ('todo', 'To do', ['s3']), ('boxes', 'Boxes', ['s4']), ('tiers', 'Tier list', ['s8']), ('crests', 'Crest tiers', ['s6']),
+        ('aevian', 'Aevian tiers', ['s7']), ('checks', 'C&A checks', ['s5'])]
 p = sys.argv[1]; page = open(p, encoding='utf-8').read()
 if 'id="tabbar"' in page:
     sys.exit('already tabbed')
