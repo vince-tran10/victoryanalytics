@@ -1,0 +1,19 @@
+Arcanine (Hisuian Form) | Active 60 | Flash Fire  | Adamant {'Atk': 252, 'Spe': 252, 'Def': 4} | ['Flare Blitz', 'Head Smash', 'Extreme Speed', 'Protect'] | Sitrus Berry | 
+Golisopod (Aevian Form) | Active 60 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Bone Rush', 'Pin Missile', 'Swords Dance', 'Protect'] | Focus Sash (already holding) | 
+Gholdengo | Active 60 | Good as Gold  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Make It Rain', 'Shadow Ball', 'Thunder Wave', 'Protect'] | Metal Coat (already holding) | 
+Vaporeon | Overflow 60 | Hydration  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Hydro Pump', 'Aurora Beam', 'Haze', 'Protect'] | Sitrus Berry | Vaporeon (Item Water Stone)
+Copperajah | Party 60 | Sheer Force  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Iron Head', 'Play Rough', 'Double-Edge', 'Protect'] | Metal Coat (already holding) | 
+Escavalier | Party 60 | Overcoat  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Iron Head', 'X-Scissor', 'Swords Dance', 'Protect'] | Metal Coat (already holding) | 
+jenner 1.258 -> 1.438 leads ['Copperajah', 'Golisopod (Aevian Form)'] swaps [('Mr. Mime', 'Vaporeon', 0.122), ('Annihilape', 'Golisopod (Aevian Form)', 0.12), ('Azumarill', 'Vaporeon', 0.119)]
+danni 1.648 -> 1.633 leads ['Arcanine (Hisuian Form)', 'Golisopod (Aevian Form)'] swaps [('Vivillon', 'Vaporeon', 0.103), ('Hitmontop', 'Escavalier', 0.098), ('Chandelure', 'Escavalier', 0.093)]
+troye 1.225 -> 1.292 leads ['Gholdengo', 'Golisopod (Aevian Form)'] swaps [('Annihilape', 'Escavalier', 0.167), ('Hitmontop', 'Escavalier', 0.161), ('Emboar', 'Vaporeon', 0.129)]
+zena 1.512 -> 1.419 leads ['Golisopod (Aevian Form)', 'Copperajah'] swaps [('Meganium', 'Arcanine (Hisuian Form)', 0.208), ('Venusaur', 'Arcanine (Hisuian Form)', 0.182), ('Toedscruel', 'Arcanine (Hisuian Form)', 0.173)]
+marcie 1.579 -> 1.478 leads ['Escavalier', 'Golisopod (Aevian Form)'] swaps [('Leavanny (Aevian Form)', 'Gholdengo', 0.15), ('Hitmontop', 'Gholdengo', 0.126), ('Vivillon', 'Vaporeon', 0.099)]
+darkgardevoir 0.851 -> 0.779 leads ['Copperajah', 'Escavalier'] swaps [('Raichu', 'Gholdengo', 0.118), ('Mr. Mime', 'Gholdengo', 0.118), ('Electivire', 'Gholdengo', 0.118)]
+garbodor 0.399 -> 0.713 leads ['Golisopod (Aevian Form)', 'Arcanine (Hisuian Form)'] swaps [('Palossand (Fiery Aevian Form)', 'Vaporeon', 0.05), ('Chandelure', 'Arcanine (Hisuian Form)', 0.046), ('Raichu', 'Vaporeon', 0.045)]
+karrina 0.973 -> 1.158 leads ['Golisopod (Aevian Form)', 'Escavalier'] swaps [('Reuniclus', 'Arcanine (Hisuian Form)', 0.212), ('Gastrodon (West Aevian Form)', 'Arcanine (Hisuian Form)', 0.203), ('Gothitelle', 'Arcanine (Hisuian Form)', 0.199)]
+spector 0.869 -> 1.286 leads ['Gholdengo', 'Arcanine (Hisuian Form)'] swaps [('Zoroark (Hisuian Form)', 'Escavalier', 0.289), ('Porygon-Z', 'Escavalier', 0.22), ('Drampa', 'Escavalier', 0.201)]
+spector2 0.884 -> 1.013 leads ['Golisopod (Aevian Form)', 'Copperajah'] swaps [('Mabosstiff', 'Gholdengo', 0.098), ('Drampa', 'Gholdengo', 0.064), ('Chandelure', 'Gholdengo', 0.064)]
+jenner9 0.729 -> 0.83 leads ['Golisopod (Aevian Form)', 'Escavalier'] swaps [('Sylveon', 'Escavalier', 0.144), ('Frosmoth', 'Escavalier', 0.135), ('Florges', 'Escavalier', 0.12)]
+amanda 0.826 -> 0.998 leads ['Arcanine (Hisuian Form)', 'Golisopod (Aevian Form)'] swaps [('Annihilape', 'Escavalier', 0.161), ('Passimian', 'Escavalier', 0.145), ('Chandelure', 'Escavalier', 0.144)]
+erick 0.825 -> 0.993 leads ['Golisopod (Aevian Form)', 'Escavalier'] swaps [('Gallade', 'Vaporeon', 0.159), ('Chandelure', 'Gholdengo', 0.151), ('Armarouge', 'Escavalier', 0.123)]

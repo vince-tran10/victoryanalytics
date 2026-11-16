@@ -53,30 +53,35 @@ def disp(n):
 
 # ---------------------------------------------------------------- 1) team
 # (role, name, types, ability, nature, evs, item, moves[(move, is_new)], change notes)
-TEAM = [   # best six for the remaining fights (13 Nov, full-moveset + field re-check). ORDER = PARTY ORDER: slot 1 leads singles, slots 1-2 lead doubles
-    ('Lead', 'Vikavolt', 'Bug/Electric', 'Levitate', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Magnet',
-     [('Thunderbolt', 0), ('Bug Buzz', 0), ('Sticky Web', 0), ('Protect', 0)], []),
-    ('Lead', 'Chandelure', 'Ghost/Fire', 'Flash Fire', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Focus Sash',
-     [('Overheat', 0), ('Shadow Ball', 0), ('Will-O-Wisp', 0), ('Protect', 0)], []),
-    ('Mid', 'Ludicolo', 'Water/Grass', 'Own Tempo', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Mystic Water',
-     [('Fake Out', 0), ('Energy Ball', 0), ('Surf', 0), ('Protect', 0)], []),
-    ('Mid', 'Whiscash', 'Water/Ground', 'Oblivious', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Whiscash Crest',
-     [('Earthquake', 0), ('Aqua Tail', 0), ('Zen Headbutt', 0), ('Protect', 0)], []),
-    ('Mid', 'Crabominable', 'Fighting/Ice', 'Iron Fist', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Black Belt',
-     [('Close Combat', 0), ('Ice Hammer', 0), ('Crabhammer', 0), ('Protect', 0)], []),
-    ('Closer', 'Heliolisk', 'Electric/Normal', 'Dry Skin', 'Timid', '252 SpA / 252 Spe / 4 HP', 'Focus Sash',
-     [('Thunderbolt', 0), ('Surf', 0), ('Glare', 0), ('Protect', 0)], []),
+TEAM = [   # Ch9 (16 Nov): Balance core of 4 (Cores tab #1 of 89,985) + 2 Dark Gardevoir swaps. ORDER = PARTY ORDER: slot 1 leads singles, slots 1-2 lead doubles
+    ('Lead', 'Arcanine-Hisui', 'Fire/Rock', 'Intimidate', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Focus Sash',
+     [('Flare Blitz', 0), ('Head Smash', 0), ('Extreme Speed', 0), ('Protect', 0)], []),
+    ('Lead', 'Golisopod-Aevian', 'Bug/Ground', 'Skill Link', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand',
+     [('Bone Rush', 0), ('Pin Missile', 0), ('Swords Dance', 0), ('Protect', 0)], []),
+    ('Mid', 'Gholdengo', 'Steel/Ghost', 'Good as Gold', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Metal Coat',
+     [('Make It Rain', 0), ('Shadow Ball', 0), ('Thunder Wave', 0), ('Protect', 0)], []),
+    ('Mid', 'Vaporeon', 'Water', 'Water Absorb', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Mystic Water',
+     [('Hydro Pump', 0), ('Aurora Beam', 0), ('Haze', 0), ('Protect', 0)], []),
+    ('Closer', 'Copperajah', 'Steel', 'Sheer Force', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Metal Coat',
+     [('Iron Head', 0), ('Play Rough', 0), ('Double-Edge', 0), ('Protect', 0)], []),
+    ('Closer', 'Muk-Alola', 'Poison/Dark', 'Poison Touch', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Black Sludge',
+     [('Knock Off', 0), ('Clear Smog', 0), ('Gunk Shot', 0), ('Protect', 0)], []),
 ]
 
-IDENTITY = ('<b>Identity</b> Block their main attack, hit back super-effectively: Flash Fire Chandelure vs Amber\'s all-Fire team, '
-            'Dry Skin Heliolisk vs Manaphy / Beach Water, Levitate Vikavolt + Ground Whiscash vs Factory Electric. Speed control: Sticky Web, Glare; Will-O-Wisp vs physical; Fake Out tempo.')
+IDENTITY = ('<b>Identity</b> Balance / tempo core of 4 (stays all Chapter 9): Intimidate Arcanine-Hisui leads, Golisopod-Aevian is the '
+            'win condition (Skill Link + Swords Dance), Gholdengo is status-immune with Thunder Wave speed control, Vaporeon is the bulky Haze answer to setup. '
+            'No shared weakness. The last 2 slots are swaps per fight: now Copperajah + Muk-Alola for Dark Gardevoir (Muk-Alola resists its Dark Pulse).')
 PLAY = [IDENTITY,
-        '<b>Party order = the plan, same in singles and doubles:</b> 1 Vikavolt · 2 Chandelure · 3 Ludicolo · 4 Whiscash · 5 Crabominable · 6 Heliolisk',
-        '<b>Lead</b> Vikavolt: survives Manaphy, Raichu and Camerupt; Thunderbolt ~1 Manaphy bar a hit. Doubles (Holly): Chandelure beside it for the Bug/Steels',
-        '<b>Mid</b> Ludicolo Fake Outs on entry (doubles: Surf hits your partner too, fine next to Heliolisk, whose Dry Skin heals from it; never next to Chandelure); Whiscash takes every Electric hit (never Earthquake at the Factory: it turns the field into Short-Circuit); Crabominable hits Rotom, Oricorio, Bellossom',
-        '<b>Close</b> Heliolisk: fastest member, Glare the Speed Boost users (Scolipede, Blaziken), immune to Water',
-        '<b>Fields</b> Beach: Surf 1.5x, Mud Barrage 2x, Aura Sphere 1.3x · Factory: Electric 1.2x · Concert: hype rolls, sound 1.5x']
+        '<b>Party order = the plan, same in singles and doubles:</b> 1 Arcanine-Hisui · 2 Golisopod-Aevian · 3 Gholdengo · 4 Vaporeon · 5 Copperajah · 6 Muk-Alola',
+        '<b>Lead</b> Arcanine-Hisui: Intimidate on entry, Extreme Speed picks off low foes. Doubles: Golisopod-A beside it (Intimidate covers its Swords Dance turn)',
+        '<b>Mid</b> Gholdengo Thunder Waves the fastest threat (status moves can\'t touch it); Vaporeon Hazes any setup (Calm Mind, Dragon Dance) and walls Water / Fire / Ice',
+        '<b>Close</b> Swap slots: Copperajah (Steel hits Fairy) + Muk-Alola (resists Dark, Clear Smog) for Dark Gardevoir. After it, swap in the next fight\'s counters',
+        '<b>Dark Gardevoir</b> move Copperajah to slot 1 for that fight (it leads vs Gardevoir; Fights tab has the plan)']
 JOB = {'Annihilape': 'Fastest hitter.',
+       'Arcanine-Hisui': 'Intimidate lead: weakens physical foes on entry; Extreme Speed priority finishes them.',
+       'Vaporeon': 'Bulky Water: Haze resets any setup (Calm Mind, Dragon Dance); Water Absorb.',
+       'Copperajah': 'Steel wallbreaker: Iron Head (Sheer Force + Metal Coat) for Fairy bosses.',
+       'Muk-Alola': 'Bulky Poison/Dark: Knock Off removes items, Clear Smog resets one foe\'s boosts (not yours).',
        'Ludicolo': 'Fake Out lead: a free turn for Annihilape. Grass + Water hits the Water/Ground mons.',
        'Armarouge': 'Fire/Psychic special attacker; Calm Mind turns it into a sweeper.',
        'Vikavolt': 'Electric/Bug special hitter (Magnet); Levitate dodges Ground. Sticky Web slows the foe team.',
@@ -183,19 +188,19 @@ COUNTERS['amber'] = dict(title='Amber', note='Gym · singles · Concert Venue ·
           'Skeledirge (Unaware, Torch Song): Jellicent Shadow Ball, Swampert Earthquake. Toxtricity (Punk Rock): Earthquake after the balloon pops, or Water',
           'LAST TURN: raise hype before the final KO (Slowking Eerie Spell, or switch Rhyperior in) so the battle ends above Hype 1: +3 Amber, not -2'])
 COUNTERS['darkgardevoir'] = dict(title='Dark Gardevoir', note='Boss · Lv 60 Dark/Fairy · Speed 199 · Magician + Lum Berry · Calm Mind · 1 shield (break: drops cured, Reflect + Safeguard 5 turns) · Melia partner · Forest', six=[
-    ('Muk-Alola', 'Poison Touch', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Black Sludge', ['Knock Off', 'Clear Smog', 'Gunk Shot', 'Protect'], 'LEAD. Turn 1 Knock Off (removes its Lum Berry). Clear Smog every time it Calm Minds. Psyshock can\'t touch it (Dark); takes 22% Dark Pulse, 51% Moonblast. If Magician steals its Black Sludge, Gardevoir loses 1/8 a turn'),
-    ('Glalie-Aevian', 'Grassy Surge', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Iron Ball', ['Switcheroo', 'Wood Hammer', 'Grassy Glide', 'Protect'], 'Switcheroo hands it the Iron Ball: Speed 199 → 99 for the rest of the fight (shield breaks don\'t change its item). Wood Hammer 119% of a bar'),
-    ('Copperajah', 'Sheer Force', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Metal Coat', ['Iron Head', 'Play Rough', 'Double-Edge', 'Protect'], 'BAR 1 COUNTER: Iron Head (Steel, super-effective) 126% of a bar. Takes 53% max'),
-    ('Klinklang', 'Clear Body', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Metal Coat', ['Gear Grind', 'Shift Gear', 'Screech', 'Protect'], 'BAR 2 COUNTER: Gear Grind 132% (66% under Reflect: two hits). Faster than it once it holds the Iron Ball (155 vs 99)'),
-    ('Escavalier', 'Overcoat', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Metal Coat', ['Iron Head', 'X-Scissor', 'Swords Dance', 'Protect'], 'Backup Steel hitter: Iron Head 102% of a bar, takes 50% max'),
-    ('Crobat', 'Infiltrator', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Poison Barb', ['Cross Poison', 'Brave Bird', 'Haze', 'Protect'], 'Infiltrator ignores its Reflect AND Safeguard after the break: Cross Poison 67% of a bar through Reflect. Haze resets Calm Mind')],
+    ('Copperajah', 'Sheer Force', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Metal Coat', ['Iron Head', 'Play Rough', 'Double-Edge', 'Protect'], 'LEAD · BAR 1 COUNTER (swap): Iron Head 126% of a bar. Takes 53% max (Dark Pulse)'),
+    ('Muk-Alola', 'Poison Touch', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Black Sludge', ['Knock Off', 'Clear Smog', 'Gunk Shot', 'Protect'], 'CALM MIND ANSWER (swap): resists Dark Pulse, immune to Psyshock, takes 51% max. Knock Off its Lum Berry; Clear Smog wipes ITS boosts only'),
+    ('Golisopod-Aevian', 'Skill Link', 'Adamant', '252 HP / 252 Atk / 4 SpD', 'Soft Sand', ['Bone Rush', 'Pin Missile', 'Swords Dance', 'Protect'], 'BAR 2 (core): Swords Dance once, then Pin Missile (~54% a turn through Reflect). Takes 59% max'),
+    ('Vaporeon', 'Water Absorb', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Mystic Water', ['Hydro Pump', 'Aurora Beam', 'Haze', 'Protect'], 'Backup Calm Mind answer (core): Haze (also clears your boosts). Takes 47% Moonblast'),
+    ('Arcanine-Hisui', 'Intimidate', 'Jolly', '252 Atk / 252 Spe / 4 HP', 'Focus Sash', ['Flare Blitz', 'Head Smash', 'Extreme Speed', 'Protect'], 'Back (core): Extreme Speed finishes a low bar. Intimidate does nothing here (it\'s special)'),
+    ('Gholdengo', 'Good as Gold', 'Modest', '252 HP / 252 SpA / 4 SpD', 'Metal Coat', ['Make It Rain', 'Shadow Ball', 'Thunder Wave', 'Protect'], 'Back (core): Dark Pulse one-shots it (102%). Keep it out of this fight')],
     plan=['It is faster (199) and stacks Calm Mind; after the shield break its stat drops are cured and it gets Reflect + Safeguard for 5 turns',
-          'Turn 1: Muk-Alola Knock Off (Lum Berry gone). Clear Smog every time it uses Calm Mind (special: Reflect doesn\'t weaken it)',
-          'Then Glalie-A Switcheroo: it gets the Iron Ball (Speed halved; its item stays through the shield break)',
-          'Bar 1: Copperajah Iron Head (126%) / Klinklang Gear Grind (132%). Bar 2 (Reflect 5 turns): Klinklang twice, or Crobat (Infiltrator ignores Reflect)',
-          'Magician: once its Lum is gone it steals the item of whoever it hits. Muk\'s Black Sludge hurts it 1/8 a turn if stolen',
-          'Melia: Togekiss / Azumarill hit it; Hydreigon and Zoroark are weak to its Moonblast'])
-CF_PREEVO = {'Muk-Alola': ('Grimer-Alola', 'level up once (Lv 38)'), 'Tsareena': ('Bounsweet', 'level up → Steenee, then level up knowing Stomp'), 'Arcanine-Hisui': ('Growlithe-Hisui', 'Fire Stone'), 'Raichu': ('Pichu', 'friendship → Pikachu, then Thunder Stone'), 'Roserade': ('Roselia', 'Shiny Stone'), 'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
+          'Turn 1: Copperajah Iron Head (126% of bar 1). It takes 53% at most',
+          'When it Calm Minds: Muk-Alola Clear Smog (wipes its boosts only). First visit: Knock Off its Lum Berry',
+          'Lum gone → Magician steals the item of whoever it hits; Muk\'s Black Sludge then hurts it 1/8 a turn',
+          'Bar 2 (Reflect 5 turns): Golisopod-A Swords Dance once, then Pin Missile; Copperajah Iron Head ~63% through Reflect',
+          'Melia: Togekiss / Azumarill hit it too. Not simulated: setup turns, Melia\'s targeting'])
+CF_PREEVO = {'Vaporeon': ('Eevee', 'Water Stone'), 'Muk-Alola': ('Grimer-Alola', 'level up once (Lv 38)'), 'Tsareena': ('Bounsweet', 'level up → Steenee, then level up knowing Stomp'), 'Arcanine-Hisui': ('Growlithe-Hisui', 'Fire Stone'), 'Raichu': ('Pichu', 'friendship → Pikachu, then Thunder Stone'), 'Roserade': ('Roselia', 'Shiny Stone'), 'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
 CF = COUNTERS.get(FIGHT)
 CF_NAMES = [x[0] for x in CF['six']] if CF else []
 NEXT_LV = max(fo['lvl'] or 0 for p in sorted(fn['plans'], key=lambda p: SX.story_order(os.path.dirname(os.path.dirname(os.path.abspath(F9N)))).get(p['key'], 999))[:3] for fo in p['foes'])
@@ -203,7 +208,9 @@ ACTIONS = {}   # export entry number -> what to do; read by box_audit.py for the
 REPL = {('Musharna-Aevian', 'Glare'): 'Moonlight: paralysis halves a sweeper\'s Speed, so your slow hitters move first',
         ('Annihilape', 'Sucker Punch'): 'Fire Punch: priority hit on faster foes',
         ('Annihilape', 'Rage Fist'): 'Shadow Punch: Move Relearner, +50 power per hit taken',
-        ('Gholdengo', 'Power Gem'): 'Recover: Move Relearner, hits the Fire types',
+        ('Gholdengo', 'Power Gem'): 'Thunder Wave: speed control for the core (Arcanine-Hisui\'s Head Smash already covers Fire / Flying / Ice / Bug)',
+        ('Arcanine-Hisui', 'Rock Tomb'): 'Flare Blitz: Fire STAB',
+        ('Arcanine-Hisui', 'Rock Slide'): 'Extreme Speed: priority; Rock Slide is a weaker second Rock move next to Head Smash',
         ('Rhyperior', 'Rock Blast'): 'Rock Slide: Move Relearner, until Stone Edge at Lv 54'}
 LATER = {('Rhyperior', 'Stone Edge'): 'Stone Edge comes at Lv 54 on its own (Rhyperior is Lv {lv}); replace Rock Slide then'}
 
@@ -218,6 +225,8 @@ def verify(name, ab, nat, evs, item, moves):
             TEAM_SRC[name] = (d0['species'], d0['n'], d0['box'])
         if d0 and not CF:
             ACTIONS[d0['n']] = f"Move into the party (part of the ideal six)"
+        if CF and name in CF_NAMES:
+            return [f"Into the party: build on the {CF['title']} lineup card (To do tab)"]
         if CF:
             return [f"After {CF['title']}: back into the party"]
         out = [f"Put {name} in the party (now in {d0['box']} #{d0['n']})" if d0 else (EVOLVE_FIRST.get(name) or f'Put {name} in the party')]
@@ -264,7 +273,10 @@ prev = None
 for role, name, types, ab, nat, evs, item, moves, changes in TEAM:
     changes = verify(name, ab, nat, evs, item, moves)
     TEAM_CHANGES[name] = list(changes)
-    if CF and name in CF_NAMES:
+    _same = CF and name in CF_NAMES and next((x for x in CF['six'] if x[0] == name), None)[1:6] == (ab, nat, evs, item, [m for m, _ in moves])
+    if _same:   # identical build in the fight lineup: same to-do, no "after the fight"
+        pass
+    elif CF and name in CF_NAMES:
         changes = [c if c.startswith(('Lv ', 'After ')) else f"After {CF['title']}: {c}" for c in changes]
     team_todo += [(f'{name}: {c}', 'high') for c in changes if not c.startswith('Lv ') and not c.startswith('After ')]
     LEVELS += [(name, c.split()[1]) for c in changes if c.startswith('Lv ')]
@@ -334,10 +346,12 @@ if CF:
             if any(x['species'] == nm_ for x in cur): pre, how = nm_, ''   # already evolved
             d0 = min((x for x in cur if x['species'] == pre), key=lambda x: (x['box'] == 'Overflow', -(x.get('level') or 0)), default=None)
             if d0 and how:
-                d0 = dict(d0, species=nm_, _orig=d0['species'], ability=d0.get('ability'))   # keeps its real moves for 'replaces'
+                import current_box as _cbx
+                _raw = next((x for x in _cbx.parse(NEWX) if x['n'] == d0['n']), {})   # the export's real ability, not the engine's evolved guess
+                d0 = dict(d0, species=nm_, _orig=d0['species'], ability=_raw.get('ability') or d0.get('ability'))   # keeps its real moves for 'replaces'
             issues = ([f"{pre} {d0['box']} #{d0['n']} → party" + (f", evolve ({how})" if how else '')] + verify_mon(d0, ab_, nat_, evs_, item_, [(m, 0) for m in mv_])) if d0 else [f'Put {nm_} in the party']
         if not d and d0 and how:   # pre-evolution: say evolve + the ability it needs (the pre-evo has another ability list)
-            _src = next((x for x in cur if x['n'] == d0['n']), d0)
+            _src = d0
             _add = [f"Evolve into {nm_} ({how})"]
             if (_src.get('ability') or '') != ab_ and not any(x.startswith('Ability:') for x in issues):
                 _add.append(f"Ability: {_src.get('ability')} → {ab_} (Ability Capsule)")
@@ -350,7 +364,8 @@ if CF:
                      f'<td>{"<span class=ok>✓</span>" if not issues else "<span class=chg2>" + E("; ".join(issues)) + "</span>"}</td></tr>')
     for d in cur:
         if d['box'] == 'Party' and d['species'] not in CF_NAMES:
-            ACTIONS[d['n']] = f"Move out of the party until after {CF['title']} (back to the Active box)"
+            ACTIONS[d['n']] = (f"Move out of the party until after {CF['title']} (back to the Active box)" if d['species'] in IDEAL
+                               else 'Move out of the party, back to the Active box')
     _back = [x for x in IDEAL if x not in CF_NAMES]
     team_todo[:0] = todo_cf
     team_todo.append((f"After {CF['title']}: swap back to the main six (" + ', '.join(_back) + ' back in, with their usual items)', 'low'))

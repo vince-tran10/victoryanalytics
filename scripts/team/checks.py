@@ -64,8 +64,18 @@ chk('Synergy: no dead abilities (every conditional ability has its enabler on th
 chk('Synergy: no anti-synergy (Glare / paralysis under Trick Room)', not (_tr and _glare), '')
 chk('Synergy: the team states one identity', 'Identity' in text(team) or 'Identity' in page, '')
 tc = st.get('team_check') or {}
-chk('Team passes the chapter rules', tc.get('rank') is not None, f"#{tc.get('rank')} of {tc.get('of')}")
-chk('Team is within 1% of the best six', (tc.get('gap') or 0) <= 1.0,
+if st.get('core') and st.get('core_check'):   # 16 Nov model: core of 4 for the chapter, + 2 swaps per fight
+    cc = st['core_check']; co = cc['core']
+    chk('Core of 4: no major Ch9 attack type hits 3+ of it', not co['weak3'], f"{co['n']}/4 checked · 3+ weak {co['weak3'] or 'none'}")
+    chk('Core of 4: major types it resists on its own (the rest must come from the 2 swaps)', not co['nores'],
+        f"not resisted by the core: {', '.join(t.title() for t in co['nores']) or 'none'}", blocking=False)
+    if cc.get('fight'):
+        fo = cc['fight']
+        chk(f"Fight six passes the rules vs {fo['key']} (its attack types only)", not fo['weak3'] and not fo['nores'] and fo['n'] == 6,
+            f"{fo['n']}/6 checked · 3+ weak {fo['weak3'] or 'none'}, unresisted {fo['nores'] or 'none'}")
+else:
+    chk('Team passes the chapter rules', tc.get('rank') is not None, f"#{tc.get('rank')} of {tc.get('of')}")
+chk('Team is within 1% of the best six (whole-chapter six search; info only under the core model)', (tc.get('gap') or 0) <= 1.0,
     f"best six is {tc.get('gap'):+.2f}%: {', '.join(tc['top'][0]['team'])}" if tc.get('top') else '', blocking=False)
 
 # ------------------------------------------------------------- static audit content

@@ -4,9 +4,9 @@
  "export_label": "14 Nov 12:35",
  "active_start": 425,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 92,
- "run": 106,
- "final": 110,
+ "roster": 100,
+ "run": 114,
+ "final": 118,
  "done": [
   "aelita",
   "narcissa1",
@@ -30,48 +30,48 @@
  ],
  "fight": "darkgardevoir",
  "team": [
-  "Vikavolt",
-  "Chandelure",
-  "Ludicolo",
-  "Whiscash",
-  "Crabominable",
-  "Heliolisk"
+  "Arcanine (Hisuian Form)",
+  "Golisopod (Aevian Form)",
+  "Gholdengo",
+  "Vaporeon",
+  "Copperajah",
+  "Muk (Alolan Form)"
  ],
  "moves": {
-  "Vikavolt": [
-   "Thunderbolt",
-   "Bug Buzz",
-   "Sticky Web",
+  "Arcanine (Hisuian Form)": [
+   "Flare Blitz",
+   "Head Smash",
+   "Extreme Speed",
    "Protect"
   ],
-  "Chandelure": [
-   "Overheat",
+  "Golisopod (Aevian Form)": [
+   "Bone Rush",
+   "Pin Missile",
+   "Swords Dance",
+   "Protect"
+  ],
+  "Gholdengo": [
+   "Make It Rain",
    "Shadow Ball",
-   "Will-O-Wisp",
+   "Thunder Wave",
    "Protect"
   ],
-  "Ludicolo": [
-   "Fake Out",
-   "Energy Ball",
-   "Surf",
+  "Vaporeon": [
+   "Hydro Pump",
+   "Aurora Beam",
+   "Haze",
    "Protect"
   ],
-  "Whiscash": [
-   "Earthquake",
-   "Aqua Tail",
-   "Zen Headbutt",
+  "Copperajah": [
+   "Iron Head",
+   "Play Rough",
+   "Double-Edge",
    "Protect"
   ],
-  "Crabominable": [
-   "Close Combat",
-   "Ice Hammer",
-   "Crabhammer",
-   "Protect"
-  ],
-  "Heliolisk": [
-   "Thunderbolt",
-   "Surf",
-   "Glare",
+  "Muk (Alolan Form)": [
+   "Knock Off",
+   "Clear Smog",
+   "Gunk Shot",
    "Protect"
   ]
  },
@@ -92,64 +92,90 @@
  },
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
-  "rank": 16521,
-  "of": 88025,
-  "gap": 8.1,
+  "rank": null,
+  "of": 27493,
+  "gap": 10.97,
   "top": [
    {
-    "score": 1.2484,
-    "pct": 108.1,
+    "score": 0.9699,
+    "pct": 111.0,
     "team": [
-     "Arcanine-Hisui",
-     "Glalie-A",
-     "Tatsugiri",
-     "Crobat",
-     "Swampert",
-     "Heliolisk"
+     "Golisopod-A",
+     "Annihilape",
+     "Camerupt",
+     "Copperajah",
+     "Sylveon",
+     "Musharna-A"
     ],
     "misses": []
    },
    {
-    "score": 1.2476,
-    "pct": 108.0,
+    "score": 0.9683,
+    "pct": 110.8,
     "team": [
-     "Druddigon",
-     "Arcanine-Hisui",
-     "Glalie-A",
-     "Ludicolo",
-     "Swampert",
-     "Heliolisk"
+     "Golisopod-A",
+     "Annihilape",
+     "Camerupt",
+     "Copperajah",
+     "Wyrdeer",
+     "Sylveon"
     ],
     "misses": []
    },
    {
-    "score": 1.2472,
-    "pct": 108.0,
+    "score": 0.9677,
+    "pct": 110.7,
     "team": [
+     "Golisopod-A",
      "Braviary",
-     "Arcanine-Hisui",
-     "Glalie-A",
-     "Tatsugiri",
-     "Swampert",
-     "Heliolisk"
+     "Chandelure",
+     "Copperajah",
+     "Whiscash",
+     "Sylveon"
     ],
     "misses": []
    }
   ],
-  "current_misses": []
+  "current_misses": [
+   "Stoutland",
+   "Porygon-Z",
+   "Miltank"
+  ]
  },
  "team_check_cache": true,
  "abilities": {
-  "Vikavolt": "Levitate",
-  "Chandelure": "Flash Fire",
-  "Ludicolo": "Own Tempo",
-  "Whiscash": "Oblivious",
-  "Crabominable": "Iron Fist",
-  "Heliolisk": "Dry Skin"
+  "Arcanine (Hisuian Form)": "Intimidate",
+  "Golisopod (Aevian Form)": "Skill Link",
+  "Gholdengo": "Good as Gold",
+  "Vaporeon": "Water Absorb",
+  "Copperajah": "Sheer Force",
+  "Muk (Alolan Form)": "Poison Touch"
  },
  "crests_owned": [
   "Phione Crest"
  ],
  "cap": 60,
- "chapter": 9
+ "chapter": 9,
+ "core": [
+  "Arcanine (Hisuian Form)",
+  "Golisopod (Aevian Form)",
+  "Gholdengo",
+  "Vaporeon"
+ ],
+ "core_check": {
+  "core": {
+   "n": 4,
+   "weak3": [],
+   "nores": [
+    "DARK",
+    "GHOST"
+   ]
+  },
+  "fight": {
+   "n": 6,
+   "weak3": [],
+   "nores": [],
+   "key": "darkgardevoir"
+  }
+ }
 }

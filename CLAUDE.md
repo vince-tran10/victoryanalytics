@@ -56,12 +56,14 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Slush Rush/Ice Body → snow; Surge Surfer → Electric Terrain…). No anti-synergy (e.g. Glare or fast mons under Trick
   Room). Owned weather/terrain setters (16 Nov): Drought Ninetales, Snow Warning (Ninetales-Alola, Vanilluxe, Aurorus,
   Abomasnow), Grassy Surge Glalie-A, Electric Surge Pincurchin. No Drizzle / Sand Stream. Checked by checks.py.
-- Current identity (13 Nov, remaining fights Holly/Manaphy/Factory/Amber): block their main attack type and hit back SE —
-  Flash Fire Chandelure (Amber all-Fire), Dry Skin Heliolisk (Manaphy/Beach Water), Levitate Vikavolt + Whiscash (Factory Electric);
-  Glare + Fake Out for tempo.
+- **Picked core (16 Nov): Balance / tempo** = Arcanine-Hisui (Intimidate) · Golisopod-Aevian (Skill Link, SD) · Gholdengo
+  (Good as Gold, Thunder Wave) · Vaporeon (Water Absorb, Haze). #1 core score of 89,985 cores from the top 40 across all tier
+  lists; no shared weakness. Swaps now: Copperajah + Muk-Alola (Dark Gardevoir). The core resists no Dark / Ghost:
+  every fight's 2 swaps must bring a Dark/Ghost resist when that fight uses them (Muk-Alola resists both). checks.py: core (b) +
+  fight six (b)(c) vs its own fight's types. state.json `core` holds the 4.
 - **One structure for singles AND doubles** (most battles are singles): party order = plan. Slot 1 leads singles, slots
   1–2 lead doubles. Leads must survive the opposing leads' hits in every hard fight (checked vs exact game lead order).
-  Current order: Vikavolt, Chandelure, Ludicolo, Whiscash, Crabominable, Heliolisk.
+  Current order: Arcanine-Hisui, Golisopod-Aevian, Gholdengo, Vaporeon, Copperajah, Muk-Alola (Copperajah leads vs Gardevoir).
 - Then rank by battle score (singles count double).
 - **Fields are a core factor (Vincent, 10 Nov): exploit them.** Score every fight with its full field mechanics from the game
   code (boosts, added types, end-of-turn field damage like Volcanic Top eruptions and who is immune, field changes), favour

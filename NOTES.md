@@ -675,3 +675,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   0.6 Ch9 fight percentile + 0.4 Smogon meta/BST; Aevians by OP stars) for Crest / Aevian / new "Tier list" tabs (tier_tabs.py,
   kits.py). New Cores tab (cores.py): 2 cores each for Balance, Trick Room, Setup/HO, Grassy, Electric, Sun, Snow, with role
   builds, Ch9 coverage, shared weaknesses, answers and best 2 swaps. Vincent will pick a core of 4 + 2 swaps per fight.
+- 16 Nov: Vincent picked the Balance core: Arcanine-Hisui / Golisopod-A / Gholdengo / Vaporeon (#1 core score of 89,985;
+  top-3 when general-battle power is weighted 50/50). Dark Gardevoir swaps: Copperajah (bar 1, Iron Head 126%) + Muk-Alola
+  (rule c: only Dark Pulse resist; Clear Smog vs Calm Mind keeps our boosts; Knock Off Lum). Escavalier was dropped for it. Old DG specialists Glalie-A, Klinklang, Escavalier, Crobat → Active. checks.py now checks the core
+  (no 3+ weak) and the fight six vs its own fight's types (core-of-4 model).
+  make_report5: real export ability for pre-evo cards (was the engine's evolved guess), status text when team == fight six.

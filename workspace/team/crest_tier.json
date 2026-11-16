@@ -1,13 +1,13 @@
 {
- "anchor_low": 0.041,
- "anchor_median": 0.372,
+ "anchor_low": 0.331,
+ "anchor_median": 0.4,
  "team": {
-  "Vikavolt": 0.372,
-  "Chandelure": 0.405,
-  "Ludicolo": 0.189,
-  "Whiscash": 0.389,
-  "Crabominable": 0.275,
-  "Heliolisk": 0.041
+  "Arcanine (Hisuian Form)": 0.35,
+  "Golisopod (Aevian Form)": 0.504,
+  "Gholdengo": 0.441,
+  "Vaporeon": 0.345,
+  "Copperajah": 0.4,
+  "Muk (Alolan Form)": 0.331
  },
  "rows": [
   {
@@ -73,7 +73,7 @@
     "Shadow Ball"
    ],
    "ability": "OVERCOAT",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Gothitelle",
@@ -90,7 +90,7 @@
     "Signal Beam"
    ],
    "ability": "SHADOWTAG",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Whiscash",
@@ -107,7 +107,7 @@
     "Thrash"
    ],
    "ability": "OBLIVIOUS",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Ampharos (Aevian Form)",
@@ -123,7 +123,7 @@
     "Discharge"
    ],
    "ability": "FILTER",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Silvally",
@@ -189,7 +189,7 @@
     "Mud Shot"
    ],
    "ability": "ICEBODY",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Empoleon",
@@ -206,7 +206,7 @@
     "Signal Beam"
    ],
    "ability": "COMPETITIVE",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Claydol",
@@ -223,7 +223,7 @@
     "Signal Beam"
    ],
    "ability": "LEVITATE",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Beheeyem",
@@ -240,7 +240,7 @@
     "Signal Beam"
    ],
    "ability": "TELEPATHY",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Noctowl",
@@ -257,7 +257,7 @@
     "Air Slash"
    ],
    "ability": "TINTEDLENS",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Typhlosion",
@@ -273,7 +273,7 @@
     "Mud Barrage"
    ],
    "ability": "FLASHFIRE",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Rampardos",
@@ -289,7 +289,7 @@
     "Thrash"
    ],
    "ability": "MOLDBREAKER",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Luxray",
@@ -306,7 +306,7 @@
     "Ice Fang"
    ],
    "ability": "INTIMIDATE",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Cofagrigus",
@@ -322,7 +322,7 @@
     "Grass Knot"
    ],
    "ability": "MUMMY",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Skuntank",
@@ -338,7 +338,7 @@
     "Double-Edge"
    ],
    "ability": "STENCH",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Cinccino",
@@ -354,7 +354,7 @@
     "Rock Blast"
    ],
    "ability": "SKILLLINK",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Hypno",
@@ -371,7 +371,7 @@
     "Ice Punch"
    ],
    "ability": "INSOMNIA",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Cryogonal",
@@ -387,7 +387,7 @@
     "Ancient Power"
    ],
    "ability": "LEVITATE",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Meganium",
@@ -403,7 +403,7 @@
     "Ancient Power"
    ],
    "ability": "LEAFGUARD",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Probopass",
@@ -420,7 +420,7 @@
     "Earth Power"
    ],
    "ability": "SANDFORCE",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Swalot",
@@ -437,7 +437,7 @@
     "Thief"
    ],
    "ability": "GLUTTONY",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Sawsbuck",
@@ -453,7 +453,7 @@
     "Megahorn"
    ],
    "ability": "SAPSIPPER",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Shiinotic",
@@ -469,7 +469,7 @@
     "Giga Drain"
    ],
    "ability": "ILLUMINATE",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Phione",
@@ -482,11 +482,11 @@
    "gain": 0.111,
    "attacks": [
     "Surf",
-    "Facade",
+    "Secret Power",
     "Mud Barrage"
    ],
    "ability": "HYDRATION",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Simisear",
@@ -502,7 +502,7 @@
     "Mud Barrage"
    ],
    "ability": "BLAZE",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Oricorio (Pom-Pom Style)",
@@ -518,7 +518,7 @@
     "Revelation Dance"
    ],
    "ability": "DANCER",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Vespiquen",
@@ -534,7 +534,7 @@
     "Air Slash"
    ],
    "ability": "PRESSURE",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Zoroark (Hisuian Form)",
@@ -551,7 +551,7 @@
     "Sludge Bomb"
    ],
    "ability": "ILLUSION",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Magcargo",
@@ -567,7 +567,7 @@
     "Earth Power"
    ],
    "ability": "WEAKARMOR",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Electrode",
@@ -583,7 +583,7 @@
     "Signal Beam"
    ],
    "ability": "AFTERMATH",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Oricorio",
@@ -599,7 +599,7 @@
     "Revelation Dance"
    ],
    "ability": "DANCER",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Leafeon",
@@ -616,7 +616,7 @@
     "X-Scissor"
    ],
    "ability": "CHLOROPHYLL",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Simipour",
@@ -633,7 +633,7 @@
     "Low Kick"
    ],
    "ability": "TORRENT",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Sunflora",
@@ -649,7 +649,7 @@
     "Sludge Bomb"
    ],
    "ability": "SOLARPOWER",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Bastiodon",
@@ -665,7 +665,7 @@
     "Rock Blast"
    ],
    "ability": "SOUNDPROOF",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Oricorio (Sensu Style)",
@@ -681,7 +681,7 @@
     "Revelation Dance"
    ],
    "ability": "DANCER",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Ariados",
@@ -698,7 +698,7 @@
     "Sucker Punch"
    ],
    "ability": "SNIPER",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Boltund",
@@ -715,7 +715,7 @@
     "Fire Fang"
    ],
    "ability": "STRONGJAW",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Fearow",
@@ -731,7 +731,7 @@
     "Drill Run"
    ],
    "ability": "KEENEYE",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Castform",
@@ -743,12 +743,12 @@
    "without": 0.07,
    "gain": 0.0,
    "attacks": [
-    "Facade",
+    "Headbutt",
     "Shadow Ball",
     "Fire Blast"
    ],
    "ability": "FORECAST",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Oricorio (Pa'u Style)",
@@ -764,7 +764,7 @@
     "Revelation Dance"
    ],
    "ability": "DANCER",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Zangoose",
@@ -781,7 +781,7 @@
     "Close Combat"
    ],
    "ability": "IMMUNITY",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Furret",
@@ -797,7 +797,7 @@
     "Shadow Claw"
    ],
    "ability": "FRISK",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Simisage",
@@ -814,7 +814,7 @@
     "Mud Barrage"
    ],
    "ability": "GLUTTONY",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Thievul",

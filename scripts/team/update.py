@@ -106,6 +106,10 @@ def main():
     stat = json.loads(sh(['../scripts/team/chapter_rules.py', '.', '30', '--status'], env))
     print(f"Chapter rules: {stat['fights']} hard fights; 3+ weak {stat['weak3'] or 'none'}; unresisted {stat['nores'] or 'none'}; "
           f"misses {[x['foe'] + ' (' + x['fight'] + ')' for x in stat['misses']]}")
+    if st.get('core'):   # core-of-4 model: core vs the whole chapter, the six vs the fight it is built for
+        st['core_check'] = json.loads(sh(['../scripts/team/chapter_rules.py', '.', '30', '--sets'],
+                                         dict(env, CORE_NAMES=json.dumps(st['core']), FIGHT_KEY=st.get('fight') or '', ALSO_OVF='|'.join(st['team']), FORCE_POOL='|'.join(st['team']))).strip().splitlines()[-1])
+        print('Core / fight rules:', st['core_check'])
     if not a.quick:
         print('Team search (36-mon pool, ~1-2 min)...')
         tc = json.loads(sh(['../scripts/team/team_check.py', '36'], env).strip().splitlines()[-1])

@@ -136,6 +136,17 @@ def status(names):
     return {'fights': len(HARD), 'foes': len(FOES), 'major': ['/'.join(s).title() for s in MAJOR],
             'minor': ['/'.join(s).title() for s in W if s not in MAJOR], 'weak3': weak3, 'nores': nores, 'misses': ms,
             'n_types': len(W)}
+def check_set(names, only_fight=None):
+    """Rules (b)(c) for a set of names: whole chapter (MAJOR types) or one fight (every type that fight uses)."""
+    ks = [min((k for k in byk if byk[k]['name'] == n), key=lambda k: (byk[k]['src']['where'] != 'Party', -byk[k]['solo_total']))
+          for n in names if any(byk[k]['name'] == n for k in byk)]
+    types = [s for s in W if only_fight in FIGHTS[s]] if only_fight else MAJOR
+    return {'n': len(ks), 'weak3': ['/'.join(s) for s in types if sum(WK[k][s] for k in ks) >= 3],
+            'nores': ['/'.join(s) for s in types if not any(RS[k][s] for k in ks)]}
+if __name__ == '__main__' and '--sets' in sys.argv:   # core of 4 vs the chapter + the fight six vs its fight (16 Nov model)
+    out = {'core': check_set(json.loads(os.environ['CORE_NAMES']))}
+    if os.environ.get('FIGHT_KEY'): out['fight'] = dict(check_set(json.loads(os.environ['TEAM_NAMES']), os.environ['FIGHT_KEY']), key=os.environ['FIGHT_KEY'])
+    print(json.dumps(out)); sys.exit()
 if __name__ == '__main__' and '--status' in sys.argv:
     names = json.loads(os.environ['TEAM_NAMES'])
     json.dump(status(names), open(f'{BASE}/team/chapter_status.json', 'w'), indent=1); print(json.dumps(status(names), indent=1)); sys.exit()
