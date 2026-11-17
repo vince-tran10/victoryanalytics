@@ -47,11 +47,25 @@ if st.get('fight') and st['fight'] in FP:
            f'<b>{E(FIGHT_NAME.get(st["fight"], st["fight"]))}</b><span>{E(p["format"])} · lead {E(" + ".join(disp(x) for x in p["leads"]))}'
            f' · {p["counters"]}/{p["n"]} countered</span><span class="next-go" aria-hidden="true">›</span></a>')
 low = sum(1 for nm in st['team'] if (party.get(disp(nm)) or {}).get('level', CAP) < CAP)
-hero = (f'<div class="hero"><div class="hero-head"><h3>Your party</h3><span class="legend">Core of 4 stays all chapter · 2 swaps per fight'
-        f'{" · " + str(low) + " to level up" if low else ""}</span></div><ol class="party">{slots}</ol>{nxt}</div>')
+hero = f'<div class="hero"><div class="hero-head"><h3>Your party</h3></div><ol class="party">{slots}</ol>{nxt}</div>'
 page = re.sub(r'(<section aria-labelledby="s1">\s*<h2 id="s1">.*?</h2>)', lambda m: m.group(1) + hero, page, count=1, flags=re.S)
 
 page = re.sub(r'<div class="panel pad lvl">.*?</div>\s*', '', page, count=1, flags=re.S)   # the party slots show levels now
+
+# ---------------------------------------------------------------- trim caption text (Vincent, 17 Nov: only what's truly needed)
+page = re.sub(r'(<div class="panel pad cf"><h3>.*?)\s*<span class="legend">.*?</span>(</h3>)', r'\1\2', page, flags=re.S)   # boss caption
+page = re.sub(r'(<h3>Hard fights left)\s*<span class="legend">.*?</span>', r'\1', page)
+page = re.sub(r'\s*<span class="legend">\((?:plan: your core \+ 2 swaps|box preview[^)]*|your lineup)\)</span>', '', page)
+def chip(m):   # lineup notes -> a short role chip ("LEAD · BAR 1 COUNTER (swap): ..." -> "Lead · Bar 1 counter")
+    lab = re.sub(r'\s*\(.*?\)', '', m.group(2).split(':')[0]).strip()
+    lab = ' · '.join(x[:1].upper() + x[1:].lower() for x in lab.split(' · ')).replace('alm mind', 'alm Mind').replace('calm Mind', 'Calm Mind')
+    lab = {'Back': 'In the back', 'Backup Calm Mind answer': 'Backup · Calm Mind answer'}.get(lab, lab)
+    return f'{m.group(1)}<td><span class="role-chip">{html.escape(lab)}</span></td>'
+def cft(m):
+    return re.sub(r'(<td>[^<]*?/ Protect</td>)<td>([^<]*)</td>', chip, m.group(0))
+page = re.sub(r'<table class="cft">.*?</table>', cft, page, flags=re.S)
+page = re.sub(r"(<h3>Fight plans: your core \+ 2 swaps per fight</h3>)(<ul class='legend'>.*?</ul>)",
+              r'\1<details class="how"><summary>How this works</summary>\2</details>', page, flags=re.S)
 
 # ---------------------------------------------------------------- fold scoring explanations ("How this works")
 def fold(m):
@@ -210,6 +224,7 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .next > span:nth-of-type(2) { grid-area: s; font-size: 13.5px; opacity: .92 }
 .next-go { grid-area: go; align-self: center; font: 700 28px var(--display) }
 @media (prefers-reduced-motion: no-preference) { .tabp:not([hidden]) { animation: rise .22s ease-out } @keyframes rise { from { transform: translateY(6px); opacity: .6 } to { transform: none; opacity: 1 } } }
+.role-chip { display: inline-block; background: var(--accent-soft); color: var(--accent); font: 700 11.5px var(--body); letter-spacing: .02em; padding: 3px 10px; border-radius: 99px; white-space: nowrap }
 .tier { width: auto !important; max-width: 44px; flex: none; justify-self: start }
 @media (max-width: 680px) {
   .cft thead, .fplan thead { display: none }

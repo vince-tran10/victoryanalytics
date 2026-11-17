@@ -126,6 +126,8 @@ damage score and the fight's real win condition was only read after Vincent lost
   only reskins: Rotom-Dex red app bar, party slots with level bars + "Next battle" card on Team, bottom tab bar (phone) / side
   rail (desktop) with 6 tabs (Team, Fights, Cores, To do, Boxes, Dex = the 3 tier tabs behind a switcher; C&A checks behind the
   shield icon), scoring legends folded into "How this works". New sections/tables need a phone layout (stacked rows).
+  **No caption text (Vincent, 17 Nov):** only names, builds, key numbers and the turn plan show; descriptive captions are
+  removed or folded (theme.py trims them; lineup notes become short role chips like "Lead · Bar 1 counter").
 - Tier tabs (16 Nov) share ONE blended scale (scripts/team/tier_all.py → tier_tabs.py): 0.6 × Ch9 fight percentile +
   0.4 × meta (Smogon tier/usage + BST; Aevians by kit OP stars). Cut-offs S .85 / A .76 / B .62 / C .45.
 - **Team tab:** the ideal six with a Status column (Done ✓ per member, always shown) plus the rules panel.

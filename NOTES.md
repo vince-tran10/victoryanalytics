@@ -698,3 +698,5 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   bars, Next battle card, 6-tab bottom bar / desktop rail, Dex switcher (Pokémon / Aevian / Crests), checks behind the shield
   icon, legends folded into "How this works", stacked phone layouts for lineup + fight-plan tables. Fonts: Chakra Petch,
   Nunito Sans, IBM Plex Mono. Light + dark.
+- 17 Nov: caption text removed (Vincent: "wouldn't be there in a regular app"): party subtitle, boss caption on the lineup card,
+  "(plan…)/(box preview…)" tags, Hard-fights subtitle; lineup notes → role chips; Fight-plans legend folded. All in theme.py.
