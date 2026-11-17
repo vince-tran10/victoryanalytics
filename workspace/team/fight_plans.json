@@ -60,7 +60,16 @@
     "dealt": 152,
     "taken": 69,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Setup",
+      "answers": [
+       "Haze (Vaporeon)",
+       "Clear Smog (Muk)"
+      ]
+     }
+    ]
    }
   ],
   "weak3": [],
@@ -110,15 +119,14 @@
    },
    {
     "name": "Clodsire",
-    "ab": "WATERABSORB",
+    "ab": "UNAWARE",
     "moves": [
      "Earthquake",
-     "Bulldoze",
      "Poison Jab"
     ],
     "setup": null,
     "where": "Overflow",
-    "dump": 75,
+    "dump": 413,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -141,7 +149,15 @@
     "dealt": 66,
     "taken": 37,
     "ok": true,
-    "setup": "Swords Dance"
+    "setup": "Swords Dance",
+    "wincons": [
+     {
+      "what": "Healing",
+      "answers": [
+       "Gastro Acid (Muk)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Garbodor (bar 2)",
@@ -150,7 +166,15 @@
     "dealt": 45,
     "taken": 105,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Healing",
+      "answers": [
+       "Gastro Acid (Muk)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Garbodor (bar 3)",
@@ -159,7 +183,15 @@
     "dealt": 92,
     "taken": 75,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Healing",
+      "answers": [
+       "Gastro Acid (Muk)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Garbodor (bar 4)",
@@ -168,7 +200,15 @@
     "dealt": 130,
     "taken": 122,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Healing",
+      "answers": [
+       "Gastro Acid (Muk)"
+      ]
+     }
+    ]
    }
   ],
   "weak3": [],
@@ -201,10 +241,10 @@
     "ab": "HUGEPOWER",
     "moves": [
      "Earthquake",
-     "Bulldoze",
-     "Take Down"
+     "Quick Attack",
+     "Bounce"
     ],
-    "setup": "Swords Dance",
+    "setup": null,
     "where": "Overflow",
     "dump": 95,
     "nature": "Adamant",
@@ -220,13 +260,12 @@
    },
    {
     "name": "Clefable",
-    "ab": "CUTECHARM",
+    "ab": "MAGICGUARD",
     "moves": [
      "Moonblast",
-     "Water Pulse",
-     "Signal Beam"
+     "Shadow Ball"
     ],
-    "setup": "Work Up",
+    "setup": null,
     "where": "Overflow",
     "dump": 73,
     "nature": "Modest",
@@ -246,11 +285,12 @@
    {
     "foe": "Runerigus",
     "mon": "Clefable",
-    "ability": "CUTECHARM",
+    "ability": "MAGICGUARD",
     "dealt": 128,
     "taken": 31,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Musharna",
@@ -259,7 +299,15 @@
     "dealt": 130,
     "taken": 36,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Sleep",
+      "answers": [
+       "teach Safeguard (Clefable)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Granbull",
@@ -268,7 +316,8 @@
     "dealt": 109,
     "taken": 203,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Alakazam",
@@ -277,7 +326,8 @@
     "dealt": 111,
     "taken": 57,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Fearow",
@@ -286,7 +336,8 @@
     "dealt": 130,
     "taken": 45,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Nidoking",
@@ -295,7 +346,8 @@
     "dealt": 130,
     "taken": 35,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    }
   ],
   "weak3": [],
@@ -327,9 +379,7 @@
     "name": "Zoroark (Hisuian Form)",
     "ab": "ILLUSION",
     "moves": [
-     "Shadow Ball",
-     "Bitter Malice",
-     "Hidden Power"
+     "Shadow Ball"
     ],
     "setup": "Nasty Plot",
     "where": "Active",
@@ -346,24 +396,24 @@
     ]
    },
    {
-    "name": "Porygon-Z",
-    "ab": "ADAPTABILITY",
+    "name": "Oranguru",
+    "ab": "TELEPATHY",
     "moves": [
-     "Shadow Ball",
-     "Shock Wave",
-     "Tri Attack"
+     "Psychic",
+     "Shadow Ball"
     ],
     "setup": "Nasty Plot",
-    "where": "Active",
-    "dump": 476,
+    "where": "Overflow",
+    "dump": 248,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
-     "Spe": 252,
-     "Def": 4
+     "HP": 252,
+     "SpD": 4
     },
     "types": [
-     "NORMAL"
+     "NORMAL",
+     "PSYCHIC"
     ]
    }
   ],
@@ -377,7 +427,21 @@
     "dealt": 130,
     "taken": 0,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Healing",
+      "answers": [
+       "teach Knock Off (Zoroark)"
+      ]
+     },
+     {
+      "what": "Perish Song",
+      "answers": [
+       "teach Taunt (Zoroark)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Gothitelle",
@@ -386,7 +450,15 @@
     "dealt": 113,
     "taken": 23,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Sleep",
+      "answers": [
+       "teach Safeguard (Oranguru)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Gengar",
@@ -395,7 +467,21 @@
     "dealt": 75,
     "taken": 63,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Sleep",
+      "answers": [
+       "teach Safeguard (Oranguru)"
+      ]
+     },
+     {
+      "what": "Perish Song",
+      "answers": [
+       "teach Taunt (Zoroark)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Houndstone",
@@ -404,7 +490,8 @@
     "dealt": 114,
     "taken": 0,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Ninetales",
@@ -413,16 +500,25 @@
     "dealt": 130,
     "taken": 44,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Sleep",
+      "answers": [
+       "teach Safeguard (Oranguru)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Banette",
-    "mon": "Porygon-Z",
-    "ability": "ADAPTABILITY",
-    "dealt": 130,
+    "mon": "Oranguru",
+    "ability": "TELEPATHY",
+    "dealt": 104,
     "taken": 0,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    }
   ],
   "weak3": [],
@@ -453,14 +549,33 @@
   ],
   "swaps": [
    {
+    "name": "Zoroark (Hisuian Form)",
+    "ab": "ILLUSION",
+    "moves": [
+     "Shadow Ball"
+    ],
+    "setup": "Nasty Plot",
+    "where": "Active",
+    "dump": 500,
+    "nature": "Modest",
+    "evs": {
+     "SpA": 252,
+     "Spe": 252,
+     "Def": 4
+    },
+    "types": [
+     "NORMAL",
+     "GHOST"
+    ]
+   },
+   {
     "name": "Sylveon",
     "ab": "PIXILATE",
     "moves": [
      "Shadow Ball",
-     "Moonblast",
-     "Round"
+     "Draining Kiss"
     ],
-    "setup": "Work Up",
+    "setup": null,
     "where": "Active",
     "dump": 487,
     "nature": "Modest",
@@ -472,30 +587,9 @@
     "types": [
      "FAIRY"
     ]
-   },
-   {
-    "name": "Blissey",
-    "ab": "HEALER",
-    "moves": [
-     "Shadow Ball",
-     "Water Pulse",
-     "Magma Drift"
-    ],
-    "setup": "Work Up",
-    "where": "Overflow",
-    "dump": 42,
-    "nature": "Modest",
-    "evs": {
-     "SpA": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "NORMAL"
-    ]
    }
   ],
-  "counters": 5,
+  "counters": 4,
   "n": 6,
   "pairs": [
    {
@@ -505,7 +599,8 @@
     "dealt": 130,
     "taken": 49,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Sigilyph",
@@ -514,7 +609,8 @@
     "dealt": 101,
     "taken": 59,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Luxray",
@@ -523,7 +619,8 @@
     "dealt": 130,
     "taken": 33,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Golisopod",
@@ -532,38 +629,41 @@
     "dealt": 82,
     "taken": 547,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Typhlosion",
-    "mon": "Blissey",
-    "ability": "HEALER",
-    "dealt": 71,
-    "taken": 48,
-    "ok": true,
-    "setup": "Work Up"
-   },
-   {
-    "foe": "Banette",
     "mon": "Gholdengo",
     "ability": "GOODASGOLD",
     "dealt": 130,
-    "taken": 230,
+    "taken": 247,
+    "ok": false,
+    "setup": false,
+    "wincons": []
+   },
+   {
+    "foe": "Banette",
+    "mon": "Zoroark (Hisuian Form)",
+    "ability": "ILLUSION",
+    "dealt": 130,
+    "taken": 58,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    }
   ],
   "weak3": [],
   "nores": [],
   "leads": [
    "Vaporeon",
-   "Blissey"
+   "Sylveon"
   ],
   "lead_foes": [
    "Stonjourner",
    "Sigilyph"
   ],
-  "lead_taken": 85,
+  "lead_taken": 86,
   "lead_ok": true,
   "note": "",
   "hand": false
@@ -584,11 +684,11 @@
     "name": "Scrafty",
     "ab": "MOXIE",
     "moves": [
+     "Crunch",
      "High Jump Kick",
-     "Brick Break",
-     "Dragon Claw"
+     "Fake Out"
     ],
-    "setup": "Work Up",
+    "setup": null,
     "where": "Active",
     "dump": 482,
     "nature": "Adamant",
@@ -603,16 +703,15 @@
     ]
    },
    {
-    "name": "Turtonator",
-    "ab": "SHELLARMOR",
+    "name": "Heatmor",
+    "ab": "GLUTTONY",
     "moves": [
-     "Dragon Pulse",
      "Overheat",
-     "Magma Drift"
+     "Giga Drain"
     ],
-    "setup": "Shell Smash",
-    "where": "Active",
-    "dump": 492,
+    "setup": null,
+    "where": "Overflow",
+    "dump": 161,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -620,8 +719,7 @@
      "SpD": 4
     },
     "types": [
-     "FIRE",
-     "DRAGON"
+     "FIRE"
     ]
    }
   ],
@@ -635,7 +733,15 @@
     "dealt": 91,
     "taken": 57,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Setup",
+      "answers": [
+       "Haze (Vaporeon)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Appletun",
@@ -644,7 +750,15 @@
     "dealt": 65,
     "taken": 47,
     "ok": true,
-    "setup": "Swords Dance"
+    "setup": "Swords Dance",
+    "wincons": [
+     {
+      "what": "Healing",
+      "answers": [
+       "teach Gastro Acid (Heatmor)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Noivern",
@@ -653,7 +767,15 @@
     "dealt": 120,
     "taken": 60,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Healing",
+      "answers": [
+       "teach Gastro Acid (Heatmor)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Porygon-Z",
@@ -662,7 +784,8 @@
     "dealt": 77,
     "taken": 75,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Kommo-o",
@@ -671,16 +794,25 @@
     "dealt": 30,
     "taken": 72,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Klinklang",
-    "mon": "Turtonator",
-    "ability": "SHELLARMOR",
-    "dealt": 105,
-    "taken": 28,
+    "mon": "Heatmor",
+    "ability": "GLUTTONY",
+    "dealt": 115,
+    "taken": 48,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Setup",
+      "answers": [
+       "Haze (Vaporeon)"
+      ]
+     }
+    ]
    }
   ],
   "weak3": [],
@@ -712,11 +844,11 @@
     "name": "Annihilape",
     "ab": "DEFIANT",
     "moves": [
+     "Rage Fist",
      "Close Combat",
-     "Cross Chop",
-     "Shadow Claw"
+     "Outrage"
     ],
-    "setup": "Work Up",
+    "setup": null,
     "where": "Active",
     "dump": 427,
     "nature": "Adamant",
@@ -734,9 +866,8 @@
     "name": "Crawdaunt",
     "ab": "ADAPTABILITY",
     "moves": [
-     "Crabhammer",
-     "Crunch",
-     "Night Slash"
+     "Knock Off",
+     "Crabhammer"
     ],
     "setup": "Swords Dance",
     "where": "Active",
@@ -763,16 +894,25 @@
     "dealt": 101,
     "taken": 75,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Hatterene",
     "mon": "Crawdaunt",
     "ability": "ADAPTABILITY",
-    "dealt": 59,
+    "dealt": 58,
     "taken": 38,
     "ok": true,
-    "setup": "Swords Dance"
+    "setup": "Swords Dance",
+    "wincons": [
+     {
+      "what": "Trick Room",
+      "answers": [
+       "teach Taunt (Crawdaunt)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Druddigon",
@@ -781,7 +921,15 @@
     "dealt": 79,
     "taken": 46,
     "ok": true,
-    "setup": "Swords Dance"
+    "setup": "Swords Dance",
+    "wincons": [
+     {
+      "what": "Setup",
+      "answers": [
+       "Haze (Vaporeon)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Torkoal",
@@ -790,7 +938,8 @@
     "dealt": 130,
     "taken": 73,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Bronzong",
@@ -799,7 +948,15 @@
     "dealt": 71,
     "taken": 46,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Trick Room",
+      "answers": [
+       "teach Taunt (Crawdaunt)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Miltank",
@@ -808,7 +965,8 @@
     "dealt": 126,
     "taken": 36,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    }
   ],
   "weak3": [],
@@ -842,9 +1000,8 @@
     "name": "Turtonator",
     "ab": "SHELLARMOR",
     "moves": [
-     "Overheat",
-     "Flamethrower",
-     "Magma Drift"
+     "Shell Trap",
+     "Dragon Pulse"
     ],
     "setup": "Shell Smash",
     "where": "Active",
@@ -861,25 +1018,23 @@
     ]
    },
    {
-    "name": "Musharna (Aevian Form)",
-    "ab": "TOUGHCLAWS",
+    "name": "Mabosstiff",
+    "ab": "INTIMIDATE",
     "moves": [
-     "Throat Chop",
-     "Night Slash",
+     "Crunch",
      "Play Rough"
     ],
-    "setup": "Work Up",
+    "setup": null,
     "where": "Active",
-    "dump": 471,
+    "dump": 467,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
-     "HP": 252,
-     "SpD": 4
+     "Spe": 252,
+     "Def": 4
     },
     "types": [
-     "DARK",
-     "FAIRY"
+     "DARK"
     ]
    }
   ],
@@ -893,7 +1048,8 @@
     "dealt": 93,
     "taken": 68,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Raichu",
@@ -902,16 +1058,18 @@
     "dealt": 129,
     "taken": 47,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Magneton",
     "mon": "Turtonator",
     "ability": "SHELLARMOR",
-    "dealt": 97,
+    "dealt": 92,
     "taken": 38,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Togedemaru",
@@ -920,16 +1078,18 @@
     "dealt": 130,
     "taken": 70,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Chandelure",
-    "mon": "Musharna (Aevian Form)",
-    "ability": "TOUGHCLAWS",
+    "mon": "Mabosstiff",
+    "ability": "INTIMIDATE",
     "dealt": 104,
-    "taken": 64,
+    "taken": 108,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Toxtricity",
@@ -938,14 +1098,15 @@
     "dealt": 47,
     "taken": 139,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": []
    }
   ],
   "weak3": [],
   "nores": [],
   "leads": [
-   "Gholdengo",
-   "Musharna (Aevian Form)"
+   "Golisopod (Aevian Form)",
+   "Gholdengo"
   ],
   "lead_foes": [
    "Electivire",

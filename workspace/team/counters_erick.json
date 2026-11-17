@@ -11,7 +11,8 @@
     "dealt": 93,
     "taken": 68,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Raichu",
@@ -20,16 +21,18 @@
     "dealt": 129,
     "taken": 47,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Magneton",
     "mon": "Turtonator",
     "ability": "SHELLARMOR",
-    "dealt": 97,
+    "dealt": 92,
     "taken": 38,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Togedemaru",
@@ -38,16 +41,18 @@
     "dealt": 130,
     "taken": 70,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Chandelure",
-    "mon": "Musharna (Aevian Form)",
-    "ability": "TOUGHCLAWS",
+    "mon": "Mabosstiff",
+    "ability": "INTIMIDATE",
     "dealt": 104,
-    "taken": 64,
+    "taken": 108,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Toxtricity",
@@ -56,7 +61,8 @@
     "dealt": 47,
     "taken": 139,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": []
    }
   ]
  }

@@ -39,9 +39,17 @@ for m0 in roster:
 cands = [v[1] for v in cands.values()]
 print('unique candidates:', len(cands))
 
+try:   # ideal builds (game trainer sets + Smogon, 17 Nov): their attacks are what gets scored
+    IDEAL = json.load(open(os.path.join(sys.argv[1], 'team', 'ideal_builds.json')))
+except Exception:
+    IDEAL = {}
 for me in cands:
     E.evaluate(me)                      # full legal pool, to choose the moveset
     atk = E.pick_moves(me, 3)
+    ib = IDEAL.get(me.get('name')) or {}
+    ids = [E.move_id(x) for x in ib.get('moves', [])]
+    ids = [x for x in ids if x and x in me['legal'] and E.D.moves[x]['Category'] != 'Status' and int(E.D.moves[x].get('Strength') or 0) > 1]
+    if ids: atk = ids[:3]
     me['attacks'] = atk
     E.evaluate(me, moveset=set(atk))    # re-score with only the chosen attacks
 

@@ -713,3 +713,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   no effectClear on its breaks, so Gastro Acid / Heal Block persist; items reset each bar. Plan: Muk-Alola lead (Gastro Acid,
   Knock Off, Clear Smog) + Clodsire (Unaware); Golisopod-A Swords Dance + Bone Rush (non-contact, Rocky Helmet-safe) wins.
   fight_plans: hand plans (plan_swaps/plan_leads), single lead in Melia fights, boss bars may share a member, rule-9 fix.
+- 17 Nov: ideal builds (game trainer sets + Smogon, legal only) now drive engine, fight evals, Dex; win conditions per foe
+  with answers (incl. "teach X" on swaps) weigh into swap picks: Spector day = Zoroark-H (teach Taunt vs Perish Song) +
+  Oranguru (teach Safeguard vs sleep), matching the community tip. Auto next-fight switch + plan_builds (tested with a dry
+  --beat darkgardevoir, then restored). Cap → 65 after Erick. To do and Checks restyled (cards, problems first).

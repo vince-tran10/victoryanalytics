@@ -7,11 +7,12 @@
    {
     "foe": "Runerigus",
     "mon": "Clefable",
-    "ability": "CUTECHARM",
+    "ability": "MAGICGUARD",
     "dealt": 128,
     "taken": 31,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Musharna",
@@ -20,7 +21,15 @@
     "dealt": 130,
     "taken": 36,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Sleep",
+      "answers": [
+       "teach Safeguard (Clefable)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Granbull",
@@ -29,7 +38,8 @@
     "dealt": 109,
     "taken": 203,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Alakazam",
@@ -38,7 +48,8 @@
     "dealt": 111,
     "taken": 57,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Fearow",
@@ -47,7 +58,8 @@
     "dealt": 130,
     "taken": 45,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Nidoking",
@@ -56,7 +68,8 @@
     "dealt": 130,
     "taken": 35,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    }
   ]
  }

@@ -11,16 +11,25 @@
     "dealt": 101,
     "taken": 75,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Hatterene",
     "mon": "Crawdaunt",
     "ability": "ADAPTABILITY",
-    "dealt": 59,
+    "dealt": 58,
     "taken": 38,
     "ok": true,
-    "setup": "Swords Dance"
+    "setup": "Swords Dance",
+    "wincons": [
+     {
+      "what": "Trick Room",
+      "answers": [
+       "teach Taunt (Crawdaunt)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Druddigon",
@@ -29,7 +38,15 @@
     "dealt": 79,
     "taken": 46,
     "ok": true,
-    "setup": "Swords Dance"
+    "setup": "Swords Dance",
+    "wincons": [
+     {
+      "what": "Setup",
+      "answers": [
+       "Haze (Vaporeon)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Torkoal",
@@ -38,7 +55,8 @@
     "dealt": 130,
     "taken": 73,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Bronzong",
@@ -47,7 +65,15 @@
     "dealt": 71,
     "taken": 46,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Trick Room",
+      "answers": [
+       "teach Taunt (Crawdaunt)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Miltank",
@@ -56,7 +82,8 @@
     "dealt": 126,
     "taken": 36,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    }
   ]
  }

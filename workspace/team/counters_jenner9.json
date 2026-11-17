@@ -11,7 +11,15 @@
     "dealt": 91,
     "taken": 57,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Setup",
+      "answers": [
+       "Haze (Vaporeon)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Appletun",
@@ -20,7 +28,15 @@
     "dealt": 65,
     "taken": 47,
     "ok": true,
-    "setup": "Swords Dance"
+    "setup": "Swords Dance",
+    "wincons": [
+     {
+      "what": "Healing",
+      "answers": [
+       "teach Gastro Acid (Heatmor)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Noivern",
@@ -29,7 +45,15 @@
     "dealt": 120,
     "taken": 60,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Healing",
+      "answers": [
+       "teach Gastro Acid (Heatmor)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Porygon-Z",
@@ -38,7 +62,8 @@
     "dealt": 77,
     "taken": 75,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Kommo-o",
@@ -47,16 +72,25 @@
     "dealt": 30,
     "taken": 72,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Klinklang",
-    "mon": "Turtonator",
-    "ability": "SHELLARMOR",
-    "dealt": 105,
-    "taken": 28,
+    "mon": "Heatmor",
+    "ability": "GLUTTONY",
+    "dealt": 115,
+    "taken": 48,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Setup",
+      "answers": [
+       "Haze (Vaporeon)"
+      ]
+     }
+    ]
    }
   ]
  }

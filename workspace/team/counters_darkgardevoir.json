@@ -11,7 +11,16 @@
     "dealt": 152,
     "taken": 69,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Setup",
+      "answers": [
+       "Haze (Vaporeon)",
+       "Clear Smog (Muk)"
+      ]
+     }
+    ]
    }
   ]
  }

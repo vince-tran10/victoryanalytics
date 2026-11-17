@@ -99,6 +99,18 @@ damage score and the fight's real win condition was only read after Vincent lost
    Pick the six by that pairing (counters first, then total quality), not by one member covering several. The Fights tab
    lists each foe and its counter (counters_tab.py).
 
+## Ideal builds (Vincent, 17 Nov)
+- scripts/team/ideal_builds.py → team/ideal_builds.json, run by update.py: every owned Pokémon's ideal build from
+  Rejuvenation's OWN trainer sets (trainertext, same species+form, level-weighted; crested sets weigh more when he holds the
+  crest) + Smogon (singles + doubles), legal moves only. Rules builds win (Lapras-A, Gastrodon, Ceruledge, crested Furret =
+  Follow Me / Super Fang / Baton Pass support), then the party's own builds (state moves). The engine (run.py), fight evals
+  (FIXED / FIXED_AB) and Dex sheets all score these builds.
+- Win conditions per foe (fight_plans.py WINCON: setup, healing, screens, Trick Room, sleep, Perish Song) need a named answer
+  on that fight's six; answers weigh into the swap pick (+5 each); a swap may be TAUGHT the answer (shown "teach X"), which
+  update.py writes into that swap's build when the fight becomes next. Fight cards show green/red answer chips.
+- Auto next fight: after --beat, update.py sets state.fight to the next unbeaten Ch9 fight, team = core + its plan swaps
+  (plan_builds per fight override, e.g. Garbodor Gastro Acid Muk), To do cards follow. Cap rises to 65 once Erick is beaten.
+
 ## Build rules
 - **Protect is always the 4th move.** Only exception: Lapras-Aevian (No Guard: Rock Slide / Zen Headbutt /
   Dragon Dance / Sing). Detect etc. count as Protect.

@@ -2,7 +2,7 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 5,
+  "counters": 4,
   "pairs": [
    {
     "foe": "Stonjourner",
@@ -11,7 +11,8 @@
     "dealt": 130,
     "taken": 49,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Sigilyph",
@@ -20,7 +21,8 @@
     "dealt": 101,
     "taken": 59,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Luxray",
@@ -29,7 +31,8 @@
     "dealt": 130,
     "taken": 33,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Golisopod",
@@ -38,25 +41,28 @@
     "dealt": 82,
     "taken": 547,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": []
    },
    {
     "foe": "Typhlosion",
-    "mon": "Blissey",
-    "ability": "HEALER",
-    "dealt": 71,
-    "taken": 48,
-    "ok": true,
-    "setup": "Work Up"
-   },
-   {
-    "foe": "Banette",
     "mon": "Gholdengo",
     "ability": "GOODASGOLD",
     "dealt": 130,
-    "taken": 230,
+    "taken": 247,
+    "ok": false,
+    "setup": false,
+    "wincons": []
+   },
+   {
+    "foe": "Banette",
+    "mon": "Zoroark (Hisuian Form)",
+    "ability": "ILLUSION",
+    "dealt": 130,
+    "taken": 58,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": []
    }
   ]
  }

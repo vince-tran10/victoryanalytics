@@ -20,7 +20,8 @@ def fw(b): return (2.0 if b['format'] == 'Singles' else 1.0) * (b.get('weight') 
 WT = np.array([fw(BAT[bi]) / len(BAT[bi]['foes']) for bi, j, f in FOES])
 def foe_moves(f):
     m = f['moves']; return [x for x, _ in m] if m and isinstance(m[0], (list, tuple)) else list(m)
-FIXED = json.loads(os.environ.get('FIXED', '{}'))   # {cand name: [move names]}: score these with their REAL build (16 Nov)
+FIXED = json.loads(os.environ.get('FIXED', '{}'))
+FIXED_AB = json.loads(os.environ.get('FIXED_AB', '{}'))   # ideal ability per name: that row is the one scored   # {cand name: [move names]}: score these with their REAL build (16 Nov)
 SETUP = {'SWORDSDANCE': 2, 'NASTYPLOT': 2, 'BELLYDRUM': 4, 'SHELLSMASH': 2, 'FILLETAWAY': 2, 'TIDYUP': 1.5, 'DRAGONDANCE': 1.5,
          'SHIFTGEAR': 1.5, 'QUIVERDANCE': 1.5, 'CALMMIND': 1.5, 'BULKUP': 1.5, 'COIL': 1.5, 'VICTORYDANCE': 1.5, 'WORKUP': 1.5}
 PHYS_SETUP = {'SWORDSDANCE', 'BELLYDRUM', 'SHELLSMASH', 'FILLETAWAY', 'TIDYUP', 'DRAGONDANCE', 'SHIFTGEAR', 'BULKUP', 'COIL', 'VICTORYDANCE', 'WORKUP'}
@@ -62,7 +63,7 @@ def evaluate(c):
     sm = max((x for x in pool if x in SETUP and x in (PHYS_SETUP if cat == 'Physical' else SPEC_SETUP)), key=lambda x: SETUP[x], default=None)
     return best, cov, taken, q, sm
 out, seen = [], set()
-for c in sorted(C, key=lambda c: (c['name'] not in FIXED, -c.get('solo_total', 0))):
+for c in sorted(C, key=lambda c: (c['name'] not in FIXED, FIXED_AB.get(c['name']) not in (None, c['ability']), -c.get('solo_total', 0))):
     if c['gate']: continue
     k = (c['name'], c['ability'])
     if c['name'] in FIXED and any(x['name'] == c['name'] for x in out): continue   # one real build per fixed member
@@ -77,7 +78,7 @@ for c in sorted(C, key=lambda c: (c['name'] not in FIXED, -c.get('solo_total', 0
                     base_spe=c['base']['Spe'], setup=D.moves[sm]['MoveName'] if sm else None, setup_mult=SETUP.get(sm, 1),
                     fixed=c['name'] in FIXED))
 out.sort(key=lambda x: -x['score'])
-json.dump(dict(foes=[(BAT[bi]['key'], f['name'], BAT[bi]['format']) for bi, j, f in FOES], foe_spe=[f['stats']['Spe'] for bi, j, f in FOES], foe_bars=[f.get('hp_mult', 1) for bi, j, f in FOES], foe_ids=[(f.get('sid'), f.get('form', '0')) for bi, j, f in FOES], wt=WT.tolist(), rows=out),
+json.dump(dict(foes=[(BAT[bi]['key'], f['name'], BAT[bi]['format']) for bi, j, f in FOES], foe_spe=[f['stats']['Spe'] for bi, j, f in FOES], foe_bars=[f.get('hp_mult', 1) for bi, j, f in FOES], foe_ids=[(f.get('sid'), f.get('form', '0')) for bi, j, f in FOES], foe_moves=[foe_moves(f) for bi, j, f in FOES], foe_ability=[f.get('ability') for bi, j, f in FOES], foe_item=[(f.get('item') or '') for bi, j, f in FOES], wt=WT.tolist(), rows=out),
           open(os.environ.get('EVAL_OUT', 'team/remaining_eval.json'), 'w'), default=str)
 for x in out[:40]:
     print(f"{x['score']:.3f} {x['name'][:24]:24s} {x['ab'][:12]:12s} {'/'.join(x['types']):16s} spe{x['spe']} {x['moves']} {x['where']}#{x['dump']}")

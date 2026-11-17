@@ -6,7 +6,7 @@ Per fight (team/<key>_eval.json from remaining_eval.py, core scored with its REA
   2. lead = slot 1 (singles) / slots 1-2 (doubles): survives every opening Pokémon (takes < 100%), best matchup quality.
 The fight being prepared (state 'fight') keeps its hand-checked six. Writes team/fight_plans.json + team/counters_<key>.json.
 usage (from workspace/): DONE=... CR_RUN=rNN python3 -I ../scripts/team/fights/fight_plans.py"""
-import itertools, json, os, sys
+import itertools, json, os, re, sys
 import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.argv = ['x', '.', '20']; sys.path.insert(0, os.path.join(HERE, '..'))
@@ -44,6 +44,44 @@ def rule_fail(six, key):
     return weak3, nores
 
 
+# ---- win conditions (fight protocol step 2, 17 Nov): what each foe does to win, and whether the six has a named answer
+SETUP = {'SWORDSDANCE', 'DRAGONDANCE', 'NASTYPLOT', 'CALMMIND', 'QUIVERDANCE', 'BULKUP', 'SHELLSMASH', 'SHIFTGEAR', 'COIL', 'AGILITY',
+         'ROCKPOLISH', 'TAILGLOW', 'GEOMANCY', 'VICTORYDANCE', 'FILLETAWAY', 'WORKUP', 'GROWTH', 'HONECLAWS', 'IRONDEFENSE', 'COTTONGUARD', 'AMNESIA', 'CURSE'}
+HEAL = {'RECOVER', 'ROOST', 'SLACKOFF', 'SOFTBOILED', 'MOONLIGHT', 'SYNTHESIS', 'MORNINGSUN', 'WISH', 'SHOREUP', 'STRENGTHSAP', 'MILKDRINK', 'REST'}
+WINCON = [  # (label, foe trigger moves, foe trigger abilities, foe trigger items, answer moves, answer abilities)
+    ('Setup', SETUP, {'SPEEDBOOST', 'MOXIE', 'BEASTBOOST'}, set(), {'HAZE', 'CLEARSMOG', 'ROAR', 'WHIRLWIND', 'DRAGONTAIL', 'CIRCLETHROW', 'ENCORE'}, {'UNAWARE'}),
+    ('Healing', HEAL, {'POISONHEAL', 'REGENERATOR'}, {'BLACKSLUDGE', 'LEFTOVERS'}, {'HEALBLOCK', 'GASTROACID', 'KNOCKOFF', 'TAUNT'}, set()),
+    ('Screens', {'REFLECT', 'LIGHTSCREEN', 'AURORAVEIL'}, set(), set(), {'BRICKBREAK', 'PSYCHICFANGS', 'DEFOG', 'RAGINGBULL'}, {'INFILTRATOR'}),
+    ('Trick Room', {'TRICKROOM'}, set(), set(), {'TAUNT', 'IMPRISON', 'FAKEOUT'}, set()),
+    ('Sleep', {'HYPNOSIS', 'SPORE', 'SLEEPPOWDER', 'SING', 'LOVELYKISS', 'YAWN', 'DARKVOID', 'GRASSWHISTLE'}, set(), set(), {'SAFEGUARD', 'MISTYTERRAIN', 'ELECTRICTERRAIN'}, {'INSOMNIA', 'VITALSPIRIT', 'SWEETVEIL', 'COMATOSE'}),
+    ('Perish Song', {'PERISHSONG'}, set(), set(), {'TAUNT'}, set()),
+]
+def _id(x): return re.sub(r'[^A-Z]', '', str(x or '').upper())
+def wincons(R, j):
+    mv = {_id(m) for m in (R.get('foe_moves') or [[]] * 99)[j]}; ab = _id((R.get('foe_ability') or [''] * 99)[j]); it = _id((R.get('foe_item') or [''] * 99)[j])
+    return [w for w in WINCON if (mv & w[1]) or ab in w[2] or it in w[3]]
+LEGAL = {r['name']: set(r['legal']) for r in json.load(open('team/tier_all.json'))['rows']} if os.path.exists('team/tier_all.json') else {}
+def answers_for(w, six, swaps=()):
+    out = []
+    for r in six:
+        b = BUILD.get(r['name']) or {}
+        mv = {_id(m) for m in (b.get('moves') or r.get('moves') or [])}; ab = _id(b.get('ability') or r.get('ab'))
+        hit = sorted(mv & w[4]) + ([ab] if ab in w[5] else [])
+        if hit: out.append(f"{NAMES.get(hit[0], hit[0].title())} ({r['name'].split(' (')[0]})")
+    if not out:   # debug mode: a swap can be taught the answer in place of its weakest move
+        for r in six:
+            if r['name'] not in swaps: continue
+            t = sorted(LEGAL.get(r['name'], set()) & w[4])
+            if t: out.append(f"teach {NAMES.get(t[0], t[0].title())} ({r['name'].split(' (')[0]})"); break
+    return out
+
+IB = json.load(open('team/ideal_builds.json')) if os.path.exists('team/ideal_builds.json') else {}
+BUILD = {n: dict(moves=b['moves'], ability=b['ability']) for n, b in IB.items()}
+for n, m in (st.get('moves') or {}).items(): BUILD[n] = dict(moves=m, ability=(st.get('abilities') or {}).get(n, (BUILD.get(n) or {}).get('ability')))
+import sys as _s; _s.path.insert(0, os.path.join(HERE, '..', '..'))
+from dataset import Data as _Data
+NAMES = {k: v['MoveName'] for k, v in _Data('.').moves.items()}
+NAMES.update({'UNAWARE': 'Unaware', 'INFILTRATOR': 'Infiltrator', 'INSOMNIA': 'Insomnia', 'VITALSPIRIT': 'Vital Spirit', 'SWEETVEIL': 'Sweet Veil', 'COMATOSE': 'Comatose'})
 plans = {}
 for key in KEYS:
     R, best = load(key)
@@ -66,6 +104,8 @@ for key in KEYS:
             return float(sum(OK[i, j] * 10 + Q[i, j] for j, i in enumerate(pick))), pick, int(sum(OK[i, j] for j, i in enumerate(pick)))
         key_ = OK[P, ar].sum(1) * 10 + Q[P, ar].sum(1); k = int(key_.argmax())
         return float(key_[k]), [int(x) for x in P[k]], int(OK[P[k], ar].sum())
+    for n_, b_ in ((st.get('plan_builds') or {}).get(key) or {}).items():   # this fight's hand-plan builds (e.g. Gastro Acid Muk)
+        BUILD[n_] = dict(moves=b_.get('moves'), ability=b_.get('ability'))
     HAND = (st.get('plan_swaps') or {}).get(key)   # hand-made plans (fight protocol done in chat), e.g. Garbodor 17 Nov
     if key == FIGHT:   # the fight being prepared keeps its hand-checked six (Fights tab / make_report5 COUNTERS)
         fixed = [x for x in st['team'] if x not in CORE]
@@ -81,7 +121,8 @@ for key in KEYS:
         if pair[0]['name'].split(' (')[0] == pair[1]['name'].split(' (')[0]: continue
         six = core + list(pair)
         sc, pr, nok = pairing(six); w3, nr = rule_fail(six, key)
-        res.append((sc - 30 * (len(w3) + len(nr)) + .01 * sum(r['score'] for r in pair), pair, pr, nok, w3, nr))
+        ans = sum(1 for j in range(n) for w in wincons(R, j) if answers_for(w, six, [x['name'] for x in pair]))   # utility valued per fight (Vincent, 17 Nov)
+        res.append((sc + 5 * ans - 30 * (len(w3) + len(nr)) + .01 * sum(r['score'] for r in pair), pair, pr, nok, w3, nr))
     res.sort(key=lambda x: -x[0])
     _, pair, pr, nok, w3, nr = res[0]
     six = core + list(pair)
@@ -100,11 +141,13 @@ for key in KEYS:
     srow = lambda r: dict(name=r['name'], ab=r['ab'], moves=r['moves'], setup=r.get('setup'), where=r.get('where'), dump=r.get('dump'),
                           nature=r.get('nature'), evs=r.get('evs'), types=r['types'])
     pairs = [dict(foe=FO[j], mon=six[pr[j]]['name'], ability=six[pr[j]]['ab'], dealt=int(six[pr[j]]['cov'][j] * BARS[j]), taken=int(six[pr[j]]['taken'][j]),
-                  ok=bool(M[six[pr[j]]['name']][1][j]), setup=bool(M[six[pr[j]]['name']][2][j]) and six[pr[j]].get('setup')) for j in range(n)]
+                  ok=bool(M[six[pr[j]]['name']][1][j]), setup=bool(M[six[pr[j]]['name']][2][j]) and six[pr[j]].get('setup'),
+                  wincons=[dict(what=w[0], answers=answers_for(w, six, [x['name'] for x in pair])) for w in wincons(R, j)]) for j in range(n)]
     plans[key] = dict(key=key, format=FMT, foes=FO, swaps=[srow(r) for r in pair], counters=nok, n=n, pairs=pairs,
                       weak3=w3, nores=nr, leads=[six[i]['name'] for i in lead], lead_foes=[FO[j] for j in lf], lead_taken=round(float(ltk)),
                       lead_ok=bool(lv[0]), note='' if (key == FIGHT or HAND) else NEED_TIPS.get(key, ''), hand=bool(key == FIGHT or HAND))
     json.dump(dict(preview=False, plan=True, current=dict(counters=nok, pairs=pairs)), open(f'team/counters_{key}.json', 'w'), indent=1)
+    BUILD.update({n: dict(moves=m, ability=(st.get('abilities') or {}).get(n)) for n, m in (st.get('moves') or {}).items()})   # undo per-fight builds
     print(f"{key:13s} {FMT:7s} swaps {[r['name'] for r in pair]} counters {nok}/{n} rules {w3 or ''}{nr or ''} "
           f"lead {[six[i]['name'] for i in lead]} vs {[FO[j] for j in lf]} takes {ltk:.0f}%")
 json.dump(plans, open('team/fight_plans.json', 'w'), indent=1, ensure_ascii=False)

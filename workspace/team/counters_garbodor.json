@@ -11,7 +11,15 @@
     "dealt": 66,
     "taken": 37,
     "ok": true,
-    "setup": "Swords Dance"
+    "setup": "Swords Dance",
+    "wincons": [
+     {
+      "what": "Healing",
+      "answers": [
+       "Gastro Acid (Muk)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Garbodor (bar 2)",
@@ -20,7 +28,15 @@
     "dealt": 45,
     "taken": 105,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Healing",
+      "answers": [
+       "Gastro Acid (Muk)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Garbodor (bar 3)",
@@ -29,7 +45,15 @@
     "dealt": 92,
     "taken": 75,
     "ok": false,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Healing",
+      "answers": [
+       "Gastro Acid (Muk)"
+      ]
+     }
+    ]
    },
    {
     "foe": "Garbodor (bar 4)",
@@ -38,7 +62,15 @@
     "dealt": 130,
     "taken": 122,
     "ok": true,
-    "setup": false
+    "setup": false,
+    "wincons": [
+     {
+      "what": "Healing",
+      "answers": [
+       "Gastro Acid (Muk)"
+      ]
+     }
+    ]
    }
   ]
  }

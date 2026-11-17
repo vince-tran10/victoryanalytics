@@ -4,9 +4,9 @@
  "export_label": "16 Nov 12:24",
  "active_start": 425,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 127,
- "run": 141,
- "final": 145,
+ "roster": 131,
+ "run": 145,
+ "final": 149,
  "done": [
   "aelita",
   "narcissa1",
@@ -191,5 +191,27 @@
   "darkgardevoir": [
    "Copperajah"
   ]
+ },
+ "plan_builds": {
+  "garbodor": {
+   "Muk (Alolan Form)": {
+    "moves": [
+     "Knock Off",
+     "Gastro Acid",
+     "Clear Smog",
+     "Protect"
+    ],
+    "ability": "Poison Touch"
+   },
+   "Clodsire": {
+    "moves": [
+     "Earthquake",
+     "Curse",
+     "Recover",
+     "Protect"
+    ],
+    "ability": "Unaware"
+   }
+  }
  }
 }

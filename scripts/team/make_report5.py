@@ -202,6 +202,30 @@ COUNTERS['darkgardevoir'] = dict(title='Dark Gardevoir', note='Boss · Lv 60 Dar
           'Bar 2 (Reflect 5 turns): Golisopod-A Swords Dance once, then Pin Missile; Copperajah Iron Head ~63% through Reflect',
           'Melia: Togekiss / Azumarill hit it too. Not simulated: setup turns, Melia\'s targeting'])
 CF_PREEVO = {'Vaporeon': ('Eevee', 'Water Stone'), 'Muk-Alola': ('Grimer-Alola', 'level up once (Lv 38)'), 'Tsareena': ('Bounsweet', 'level up → Steenee, then level up knowing Stomp'), 'Arcanine-Hisui': ('Growlithe-Hisui', 'Fire Stone'), 'Raichu': ('Pichu', 'friendship → Pikachu, then Thunder Stone'), 'Roserade': ('Roselia', 'Shiny Stone'), 'Heliolisk': ('Helioptile', 'Sun Stone'), 'Boltund': ('Yamper', 'Lv 25')}
+# 17 Nov: the six follows state.json (auto-switch after each win); members not in TEAM get their ideal build
+import kits as _K
+_TD = os.path.join(os.path.dirname(os.path.abspath(sys.argv[3])))
+_IB = json.load(open(os.path.join(_TD, 'ideal_builds.json'))) if os.path.exists(os.path.join(_TD, 'ideal_builds.json')) else {}
+_TA = {r['name']: r for r in json.load(open(os.path.join(_TD, 'tier_all.json')))['rows']} if os.path.exists(os.path.join(_TD, 'tier_all.json')) else {}
+_AB = json.load(open(os.path.join(os.path.dirname(_TD), 'gamedata', 'abiltext.json'))) if os.path.exists(os.path.join(os.path.dirname(_TD), 'gamedata', 'abiltext.json')) else {}
+def _abn(a): return (_AB.get(re.sub(r'[^A-Z]', '', (a or '').upper())) or {}).get('name', a)
+if _ST.get('team'):
+    _new = []
+    for _i, _n in enumerate(_ST['team']):
+        _d = _K.disp(_n); _old = next((t for t in TEAM if t[1] == _d), None)
+        if _old:   # keep its card, but the moves follow state.json (a fight can change them, e.g. Gastro Acid Muk)
+            _sm = (_ST.get('moves') or {}).get(_n)
+            _new.append(_old[:7] + ([(m, 0) for m in _sm] if _sm else _old[7],) + _old[8:]); continue
+        _b = _IB.get(_n, {}); _mv = (_ST.get('moves') or {}).get(_n) or _b.get('moves', [])
+        _new.append(('Closer', _d, '/'.join(x.title() for x in (_TA.get(_n) or {}).get('types', [])), _abn((_ST.get('abilities') or {}).get(_n) or _b.get('ability')),
+                     _b.get('nature', ''), _b.get('evs', ''), _b.get('item', ''), [(m, 0) for m in _mv], []))
+    TEAM = _new
+_FPF = os.path.join(_TD, 'fight_plans.json')
+if FIGHT and FIGHT not in COUNTERS and os.path.exists(_FPF) and FIGHT in json.load(open(_FPF)):
+    _p = json.load(open(_FPF))[FIGHT]; _lead = {_K.disp(x) for x in _p['leads']}; _sw = {_K.disp(r['name']) for r in _p['swaps']}
+    _six = sorted(TEAM, key=lambda t: (t[1] not in _lead, t[1] not in _sw))
+    COUNTERS[FIGHT] = dict(title=SHORT.get(FIGHT, FIGHT), note='', plan=[],
+                           six=[(t[1], t[3], t[4], t[5], t[6], [m for m, _ in t[7]], ('Lead' if t[1] in _lead else 'Swap' if t[1] in _sw else 'Core')) for t in _six])
 CF = COUNTERS.get(FIGHT)
 CF_NAMES = [x[0] for x in CF['six']] if CF else []
 NEXT_LV = max(fo['lvl'] or 0 for p in sorted(fn['plans'], key=lambda p: SX.story_order(os.path.dirname(os.path.dirname(os.path.abspath(F9N)))).get(p['key'], 999))[:3] for fo in p['foes'])

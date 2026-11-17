@@ -55,6 +55,10 @@ def main():
         st['fight'] = None if a.fight in ('', 'none') else a.fight
     if st.get('fight') in st['done']:
         st['fight'] = None
+    CAP_AFTER = {'erick': 65}   # 9th badge -> cap 65 (SystemConstants LEVELCAPS); only matters for legal level-up moves
+    for k_, cap_ in CAP_AFTER.items():
+        if k_ in st['done'] and st.get('cap', 0) < cap_:
+            st['cap'] = cap_; print(f'Level cap raised to {cap_} ({k_} beaten)')
 
     # 3) box layout
     import current_box as cb
@@ -102,6 +106,45 @@ def main():
         sh(['../scripts/team/finalize.py', WS, f'team/r{run}_{f}.json.pkl', f'team/f{fin}_{f}.json'],
            dict(env, TEAM='|'.join(st['team']), FORCE_FORMAT=f), log=os.path.join(TEAMD, f'f{fin}_{f}.log'))
 
+    # 5b) ideal builds (game trainer sets + Smogon, legal only) -> every fight scored with them -> fight plans -> next fight's six
+    sh(['../scripts/team/ideal_builds.py'], dict(env, RUN=f'r{run}'))
+    IDEAL = json.load(open(os.path.join(TEAMD, 'ideal_builds.json')))
+    FIX = {n: b['moves'] for n, b in IDEAL.items()}; FIX.update(st['moves'])
+    FIXAB = {n: re.sub(r'[^A-Z]', '', (b['ability'] or '').upper()) for n, b in IDEAL.items()}
+    FIXAB.update({n: re.sub(r'[^A-Z]', '', a_.upper()) for n, a_ in (st.get('abilities') or {}).items()})
+    ORDER9 = ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick']
+    def plans():
+        fx = dict(env, MOVE_RULES='relearn', FORCE_FORMAT='native', FIXED=json.dumps(FIX), FIXED_AB=json.dumps(FIXAB))
+        for k in ORDER9:
+            if k not in st['done']:
+                sh(['../scripts/team/fights/remaining_eval.py', k], dict(fx, EVAL_OUT=f'team/{k}_eval.json'))
+        json.dump(dict(st, export=new), open(STATE, 'w'), indent=1, ensure_ascii=False)
+        return sh(['../scripts/team/fights/fight_plans.py'], fx).rstrip()
+    if st.get('core'):
+        out_ = plans()
+        nxt = next((k for k in ORDER9 if k not in st['done']), None)
+        if not st.get('fight') and nxt:   # last fight beaten: the next fight's six becomes the team (core + its 2 swaps)
+            P = json.load(open(os.path.join(TEAMD, 'fight_plans.json')))[nxt]
+            sw = [r['name'] for r in P['swaps']]
+            st['fight'] = nxt; st['team'] = list(st['core']) + sw
+            PB = (st.get('plan_builds') or {}).get(nxt, {})   # hand-plan builds (fight protocol), e.g. Garbodor's Gastro Acid Muk
+            for n in sw:
+                st['moves'][n] = (PB.get(n) or {}).get('moves') or IDEAL.get(n, {}).get('moves') or st['moves'].get(n, [])
+                st.setdefault('abilities', {})[n] = (PB.get(n) or {}).get('ability') or IDEAL.get(n, {}).get('ability') or ''
+            for q in P['pairs']:   # answers the plan says to TEACH go into that swap's build (3rd slot), e.g. Taunt vs Perish Song
+                for w in q.get('wincons') or []:
+                    for a_ in w.get('answers') or []:
+                        mt = re.match(r'teach (.+?) \((.+?)\)$', a_)
+                        if not mt: continue
+                        n = next((x for x in sw if x.split(' (')[0] == mt.group(2)), None)
+                        if n and mt.group(1) not in st['moves'][n]:
+                            mv_ = st['moves'][n]; slot = 2 if len(mv_) >= 3 else len(mv_)
+                            st['moves'][n] = mv_[:slot] + [mt.group(1)] + mv_[slot + 1:]
+            print(f'Next fight: {nxt} -> swaps {sw}')
+            FIX.update(st['moves']); out_ = plans()
+        print(out_)
+        env.update(TEAM_NAMES=json.dumps(st['team']), MOVES=json.dumps(st['moves']))
+
     # 6) team rules + team search
     stat = json.loads(sh(['../scripts/team/chapter_rules.py', '.', '30', '--status'], env))
     print(f"Chapter rules: {stat['fights']} hard fights; 3+ weak {stat['weak3'] or 'none'}; unresisted {stat['nores'] or 'none'}; "
@@ -127,13 +170,6 @@ def main():
     # crests: every crest-eligible Pokémon re-scored with its crest (game-code effects), then the Crests tab
     sh(['../scripts/team/run.py', WS, f'team/roster{rost}_lv55.json', f'team/rc{run}_native.json'], dict(env, FORCE_FORMAT='native', CRESTS='1'))
     sh(['../scripts/team/crest_tier.py'], dict(env, CR_RUN=f'r{run}', CREST_RUN=f'rc{run}', BASE_RUN=f'r{run}'))
-    # fight plans (17 Nov): re-score every remaining Ch9 fight (core with its real builds), then core + best 2 swaps + leads
-    _fx = dict(env, MOVE_RULES='relearn', FORCE_FORMAT='native', FIXED=json.dumps(st['moves']))
-    for k in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick']:
-        if k not in st['done']:
-            sh(['../scripts/team/fights/remaining_eval.py', k], dict(_fx, EVAL_OUT=f'team/{k}_eval.json'))
-    if st.get('core'):
-        print(sh(['../scripts/team/fights/fight_plans.py'], _fx).rstrip())
     # one blended tier scale (Ch9 fights + meta) for Crests / Aevians / all other Pokémon, then the Cores tab (16 Nov)
     sh(['../scripts/team/tier_all.py'], dict(env, BASE_RUN=f'r{run}', CREST_RUN=f'rc{run}'))
     sh(['../scripts/team/tier_tabs.py', OUT], pe)

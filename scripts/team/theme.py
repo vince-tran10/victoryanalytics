@@ -108,6 +108,11 @@ def tchip_s(n):
 def bar(v, cls):
     return '<span class="mbar ' + cls + '"><i style="width:' + str(min(100, v)) + '%"></i></span><b class="mv">' + str(v) + '%</b>'
 BOSSF = SP.boss_forms()
+def wc_html(q):   # the foe's win conditions and your answer to each (fight protocol step 2)
+    w = q.get('wincons') or []
+    if not w: return ''
+    return '<div class="wc">' + ''.join(('<span class="wc-ok">' + E(x['what']) + ' → ' + E(', '.join(x['answers'][:2])) + '</span>') if x['answers']
+                                        else ('<span class="wc-no">' + E(x['what']) + ': no answer</span>') for x in w) + '</div>'
 def fight_cards():
     order = [k for k in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick'] if k in FP]
     out = ''
@@ -131,7 +136,7 @@ def fight_cards():
         foes = ''.join('<li class="' + ('is-ok' if q['ok'] else 'is-weak') + '"><span class="foe">' + _fs.get(q['foe'], '') + E(q['foe']) + '</span><span class="arrow">→</span>'
                        '<span class="ctr-m">' + tname(q['mon']) + '</span><span class="dt"><span class="lab">Deals</span>' + bar(q['dealt'], 'deal')
                        + '<span class="lab">Takes</span>' + bar(q['taken'], 'take') + '</span><span class="st">'
-                       + (('✓ after ' + E(q['setup'])) if q.get('setup') else ('✓' if q['ok'] else 'weak')) + '</span></li>' for q in rows)
+                       + (('✓ after ' + E(q['setup'])) if q.get('setup') else ('✓' if q['ok'] else 'weak')) + '</span>' + wc_html(q) + '</li>' for q in rows)
         out += ('<details class="fc' + (' is-next' if idx == 0 else '') + '"' + (' open' if idx == 0 else '') + '>' + head
                 + '<div class="fbody"><div class="frow"><span class="fk">Bring</span><ul class="mons">' + bring + '</ul></div>'
                 + '<div class="frow"><span class="fk">Lead</span><ul class="mons">' + lead + '</ul></div>'
@@ -206,16 +211,55 @@ page = re.sub(r'<div class="panel pad"><h3>Since last export</h3><div class="chg
 page = re.sub(r'<p class="legend"><span class="actkey in">Green</span>.*?</p>', '', page, flags=re.S)
 page = page.replace('<details class="bx panel" open>', '<details class="bx panel">')
 
+# ---------------------------------------------------------------- To do (17 Nov): cards with sprite, place chip, level chip, clean fix rows (no checkboxes)
+def todo_card(m):
+    name_html, sub, items = m.group(1), m.group(2), m.group(3)
+    nm_ = _txt(name_html); place = _txt(sub).split('·')[-1].strip()
+    lis = re.findall(r'<label[^>]*>(.*?)</label>', items, re.S)
+    lv = next((_txt(x) for x in lis if _txt(x).startswith('Lv ')), '')
+    rows = ''
+    for x in lis:
+        t = _txt(x)
+        if t.startswith('Lv '): continue
+        mt = re.match(r'Teach (.*?) \(replaces (.*?)\)$', t)
+        if mt: rows += f'<li><span class="tk">Teach</span><b>{E(mt.group(1))}</b><span class="tr">replaces {E(mt.group(2))}</span></li>'; continue
+        mk = re.match(r'(Item|Ability|Nature|EVs|Evolve into|Evolve)[: ]\s*(.*)$', t)
+        if mk: rows += f'<li><span class="tk">{E(mk.group(1))}</span><span>{E(mk.group(2))}</span></li>'; continue
+        rows += f'<li><span>{E(t)}</span></li>'
+    done = '' if rows else '<p class="tdone">Build done ✓</p>'
+    return (f'<div class="tcard"><div class="thead">{spr_species(nm_, "m")}<div><b>{E(nm_)}</b><span class="tplace">{E(place)}</span></div>'
+            + (f'<span class="tlv">{E(lv)}</span>' if lv else '') + f'</div>' + (f'<ul class="tfix">{rows}</ul>' if rows else done) + '</div>')
+page = re.sub(r'<div class="tgroup pcard"><h3>(.*?) <span class="legend">(.*?)</span></h3><ul class="todo">(.*?)</ul></div>', todo_card, page, flags=re.S)
+
+# ---------------------------------------------------------------- Checks (17 Nov): summary + problems first; passed checks and reference panels folded
+def checks(m):
+    sec = m.group(0)
+    rows = re.findall(r'<tr><td><span class=(ok|warn|bad)>.*?</span></td><td>(.*?)</td><td class="legend">(.*?)</td></tr>', sec, re.S)
+    if not rows: return sec
+    bad = [r for r in rows if r[0] != 'ok']; good = [r for r in rows if r[0] == 'ok']
+    li = lambda r: f'<li class="ck {r[0]}"><span class="dot"></span><div><b>{r[1]}</b>' + (f'<span>{r[2]}</span>' if r[2].strip() else '') + '</div></li>'
+    top = (f'<div class="ckhead"><b>{len(good)}/{len(rows)}</b><span>checks passed · run on every update</span></div>'
+           + (f'<ul class="cks">{"".join(li(r) for r in bad)}</ul>' if bad else '')
+           + f'<details class="ckmore"><summary>Passed ({len(good)})</summary><ul class="cks">{"".join(li(r) for r in good)}</ul></details>')
+    rest = re.sub(r'<div class="panel pad"><h3>Automatic checks.*?</table></div>\s*</div>', '', sec, count=1, flags=re.S)
+    rest = re.sub(r'<div class="panel pad"><h3>(.*?)</h3>(.*?)</div>(?=\s*(?:<div class="panel|</section>))',
+                  lambda x: f'<details class="panel pad ckref"><summary>{x.group(1)}</summary>{x.group(2)}</details>', rest, flags=re.S)
+    return rest.replace('</h2>', '</h2>' + '<div class="panel pad">' + top + '</div>', 1)
+page = re.sub(r'<section aria-labelledby="s5">.*?</section>', checks, page, count=1, flags=re.S)
+
 # ---------------------------------------------------------------- Dex detail sheet (tap a Pokémon in the Dex tables)
 from kits import abn
 DEX = {}
+IDB = json.load(open('team/ideal_builds.json')) if os.path.exists('team/ideal_builds.json') else {}
 for r in T.values():
     by = {}
     for c in r.get('counters', []):
         k_, f_ = c.split(':', 1); by.setdefault(FIGHT_NAME.get(k_, k_), []).append(f_)
+    ib = IDB.get(r['name']) or {}
     DEX[disp(r['name'])] = dict(t=r['tier'], s=r['blend'], f=r['fight'], m=r['meta_label'], ty=r['types'], b=r['base'],
-                                a=abn(r['ability']), n=r.get('nature', ''), e=' / '.join(f"{v} {k}" for k, v in (r.get('evs') or {}).items() if v >= 100),
-                                mv=r['attacks'], c=by, w=f"{r.get('where')} #{r.get('dump')}", sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])   # without 'sp-': only sprites the tables already use get embedded
+                                a=abn(re.sub(r'[^A-Z]', '', (ib.get('ability') or r['ability']).upper())), n=ib.get('nature') or r.get('nature', ''),
+                                e=ib.get('evs') or ' / '.join(f"{v} {k}" for k, v in (r.get('evs') or {}).items() if v >= 100),
+                                mv=(ib.get('moves') or r['attacks']) + ([ib['item']] if ib.get('item') else []), c=by, w=f"{r.get('where')} #{r.get('dump')}", sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])   # without 'sp-': only sprites the tables already use get embedded
 SHEET = ('<div class="sheet" id="dexsheet" hidden><div class="sheet-bg" data-close></div><div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="ds-name">'
          '<button type="button" class="sheet-x" data-close aria-label="Close">×</button><div id="ds-body"></div></div></div>'
          '<script type="application/json" id="dexdata">' + json.dumps(DEX).replace('</', '<\\/') + '</script>')
@@ -431,6 +475,10 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .mbar i { display: block; height: 100% }
 .mbar.deal i { background: var(--good) } .mbar.take i { background: var(--bad) }
 .mv { font: 600 12px var(--mono); font-variant-numeric: tabular-nums; text-align: right; min-width: 40px }
+.wc { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px }
+.wc span { font: 700 11.5px var(--body); padding: 2px 9px; border-radius: 99px }
+.wc-ok { background: var(--good-soft); color: var(--good) } .wc-no { background: var(--bad-soft); color: var(--bad) }
+@media (max-width: 680px) { .wc { grid-area: auto } .foes li { grid-template-areas: "foe st" "ctr ctr" "dt dt" "wc wc" } .wc { grid-area: wc } }
 .foes .st { font: 700 12px var(--body); color: var(--good); text-align: right }
 .foes li.is-weak .st { color: var(--warn) }
 @media (max-width: 680px) {
@@ -465,6 +513,29 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .ds-stats small { display: block; font: 600 9.5px var(--mono); color: var(--muted); text-transform: uppercase }
 .ds-sec { font: 600 10.5px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 12px 0 6px }
 .ds-c li { margin-bottom: 4px } .ds-c { margin: 0; padding-left: 18px; font-size: 13.5px }
+.todos.pcards { display: grid !important; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) }
+.tcard { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; box-shadow: var(--shadow); display: grid; gap: 8px; align-content: start }
+.thead { display: flex; align-items: center; gap: 4px }
+.thead > div { display: grid; min-width: 0 }
+.thead b { font: 700 16px var(--display) }
+.tplace { font: 600 11px var(--mono); color: var(--muted) }
+.tlv { margin-left: auto; flex: none; font: 700 12px var(--mono); color: var(--warn); background: var(--warn-soft); border-radius: 99px; padding: 3px 9px }
+.tfix { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px }
+.tfix li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; padding: 6px 10px; border-radius: 10px; background: var(--panel-2); font-size: 13.5px }
+.tk { font: 600 10.5px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); min-width: 52px }
+.tr { color: var(--muted); font-size: 12.5px }
+.tdone { margin: 0; color: var(--good); font-weight: 700; font-size: 13.5px }
+.ckhead { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px }
+.ckhead b { font: 700 28px var(--display); color: var(--good) }
+.ckhead span { color: var(--muted); font-size: 13px }
+.cks { list-style: none; margin: 0 0 8px; padding: 0; display: grid; gap: 6px }
+.ck { display: flex; gap: 10px; align-items: flex-start; padding: 8px 10px; border-radius: 12px; background: var(--panel-2); font-size: 13.5px }
+.ck .dot { flex: none; width: 10px; height: 10px; border-radius: 50%; margin-top: 5px; background: var(--good) }
+.ck.warn .dot { background: var(--warn) } .ck.bad .dot { background: var(--bad) }
+.ck.warn { background: var(--warn-soft) } .ck.bad { background: var(--bad-soft) }
+.ck div { display: grid; gap: 2px } .ck div span { color: var(--muted); font-size: 12.5px }
+.ckmore > summary, .ckref > summary { cursor: pointer; font: 700 14px var(--display) }
+details.ckref { display: block }
 .slot-sub { font-size: 12.5px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap }
 .slot-miss { color: var(--warn); font-weight: 700 }
 .next { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "k go" "t go" "s go"; gap: 2px 12px; text-decoration: none; color: var(--on-dex);
@@ -498,7 +569,7 @@ DEXJS = r'''<script id="dex-js">
     body.innerHTML = '<div class="ds-head"><i class="spr sp-'+d.sp+'" aria-hidden="true"></i><div><h3 id="ds-name">'+esc(name)+'</h3>'
       + '<div class="ds-sub"><span class="tier t'+d.t+'">'+d.t+'</span> score '+d.s.toFixed(2)+' · '+d.ty.map(function(t){return t[0]+t.slice(1).toLowerCase();}).join('/')+' · '+esc(d.w)+'</div>'
       + '<div class="ds-sub">'+esc(d.m)+'</div></div></div><div class="ds-stats">'+st+'</div>'
-      + '<div class="ds-sec">Best build</div><div>'+esc(d.a)+(d.n?' · '+esc(d.n):'')+(d.e?' · '+esc(d.e):'')+'</div><div>'+d.mv.map(esc).join(' / ')+'</div>'
+      + '<div class="ds-sec">Ideal build</div><div>'+esc(d.a)+(d.n?' · '+esc(d.n):'')+(d.e?' · '+esc(d.e):'')+'</div><div>'+d.mv.map(esc).join(' / ')+'</div>'
       + '<div class="ds-sec">Counters in Chapter 9</div>'+(ctr ? '<ul class="ds-c">'+ctr+'</ul>' : '<div class="ds-sub">None of the remaining hard-fight Pokémon</div>');
     last = document.activeElement; sheet.hidden = false; sheet.querySelector('.sheet-x').focus();
   }
