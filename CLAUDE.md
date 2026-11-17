@@ -136,8 +136,8 @@ damage score and the fight's real win condition was only read after Vincent lost
 - **Team tab (17 Nov):** only "Your party": one card per member (slot, Core/Swap · role, types, level bar, ability · nature, EVs,
   item, 4 moves, open to-dos) + the Next battle card. The old team table is folded into the cards by theme.py.
 - **Cores tab (17 Nov):** compact grid, one card per style: 4 members with tier chips, key piece marked, alt folded in as
-  "Swap option X ⇄ Y" (same key) or "Other core". No builds there (they live on Team / To do).
-- **Fights tab:** no "Best opener (matchup)" column (17 Nov).
+  "Swap option X ⇄ Y" (same key, 1-2 changes), "Or with <key>" + 3 (same key) or "Other core" with its own key marked. No builds there (they live on Team / To do).
+- **Fights tab:** no "Best opener (matchup)" or "Your six" columns (17 Nov).
 - **Fights tab:** every remaining hard fight: Singles/Doubles, Boss tag, field, why it's hard, lead.
   **Fight plans (17 Nov):** scripts/team/fights/fight_plans.py (run by update.py after remaining_eval.py per fight, core scored
   with its REAL builds via FIXED) picks each fight's best 2 swaps (one-to-one counters incl. one setup turn, rules (b)(c) vs that

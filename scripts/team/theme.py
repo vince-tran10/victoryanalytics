@@ -84,7 +84,8 @@ page = re.sub(r'<table class="cft">.*?</table>', cft, page, flags=re.S)
 page = re.sub(r"(<h3>Fight plans: your core \+ 2 swaps per fight</h3>)(<ul class='legend'>.*?</ul>)",
               r'\1<details class="how"><summary>How this works</summary>\2</details>', page, flags=re.S)
 
-page = page.replace('<th>Best opener (matchup)</th>', '')
+page = page.replace('<th>Best opener (matchup)</th>', '').replace('<th>Your six</th>', '')
+page = re.sub(r'<td class="st[^"]*" data-l="Your six">.*?</td>', '', page, flags=re.S)
 page = re.sub(r'<td data-l="Opener">.*?</td>', '', page, flags=re.S)
 
 # ---------------------------------------------------------------- panels Vincent doesn't need on screen (17 Nov); data stays in team/*.json
@@ -115,7 +116,7 @@ def core_grid():   # Cores: one compact card per style; key piece marked; the al
                 alt = '<div class="cc-alt"><span>Swap option</span>' + ' · '.join(E(disp(x)) + ' ⇄ ' + E(disp(y)) for x, y in zip(o, i_)) + '</div>'
             else:
                 alt = ('<div class="cc-alt"><span>Or with ' + E(disp(key)) + '</span>' + ' · '.join(E(disp(n)) for n in am[1:]) + '</div>') if am[0] == key else \
-                      ('<div class="cc-alt"><span>Other core</span>' + ' · '.join(E(disp(n)) for n in am) + '</div>')
+                      ('<div class="cc-alt"><span>Other core</span><b>' + E(disp(am[0])) + '</b> <small class="k">key</small> · ' + ' · '.join(E(disp(n)) for n in am[1:]) + '</div>')
         out += ('<article class="cc' + (' is-yours' if yours else '') + '"><header><b>' + E(CTITLE.get(k, k)) + '</b>' +
                 ('<span class="yours">your core</span>' if yours else '') + '</header><ul class="cc-m">' + lis + '</ul>' + alt + '</article>')
     return '<div class="cgrid">' + out + '</div>'
@@ -288,6 +289,7 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .cc-m .tier { min-width: 22px; height: 22px; font-size: 12px !important; margin-right: 6px }
 .cc-m small { margin-left: 6px; font: 600 10px var(--mono); text-transform: uppercase; color: var(--accent) }
 .cc-alt { font-size: 12.5px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 8px }
+.cc-alt b { color: var(--ink) } .cc-alt .k { font: 600 10px var(--mono); text-transform: uppercase; color: var(--accent) }
 .cc-alt span { font: 700 10.5px var(--mono); text-transform: uppercase; letter-spacing: .06em; margin-right: 6px; color: var(--ink) }
 .slot-sub { font-size: 12.5px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap }
 .slot-miss { color: var(--warn); font-weight: 700 }
