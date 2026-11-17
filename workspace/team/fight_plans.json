@@ -50,7 +50,6 @@
     ]
    }
   ],
-  "hand": true,
   "counters": 1,
   "n": 1,
   "pairs": [
@@ -67,15 +66,15 @@
   "weak3": [],
   "nores": [],
   "leads": [
-   "Copperajah",
-   "Muk (Alolan Form)"
+   "Copperajah"
   ],
   "lead_foes": [
    "Gardevoir"
   ],
   "lead_taken": 69,
   "lead_ok": true,
-  "note": ""
+  "note": "",
+  "hand": true
  },
  "garbodor": {
   "key": "garbodor",
@@ -88,16 +87,16 @@
   ],
   "swaps": [
    {
-    "name": "Rhyperior",
-    "ab": "SOLIDROCK",
+    "name": "Muk (Alolan Form)",
+    "ab": "POISONTOUCH",
     "moves": [
-     "Headlong Rush",
-     "Drill Run",
-     "Earthquake"
+     "Knock Off",
+     "Clear Smog",
+     "Gunk Shot"
     ],
     "setup": null,
-    "where": "Active",
-    "dump": 480,
+    "where": "Party",
+    "dump": 4,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -105,21 +104,21 @@
      "SpD": 4
     },
     "types": [
-     "GROUND",
-     "ROCK"
+     "POISON",
+     "DARK"
     ]
    },
    {
-    "name": "Hariyama",
-    "ab": "GUTS",
+    "name": "Clodsire",
+    "ab": "WATERABSORB",
     "moves": [
-     "Close Combat",
+     "Earthquake",
      "Bulldoze",
-     "Cross Chop"
+     "Poison Jab"
     ],
-    "setup": "Belly Drum",
-    "where": "Active",
-    "dump": 458,
+    "setup": null,
+    "where": "Overflow",
+    "dump": 75,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -127,22 +126,22 @@
      "SpD": 4
     },
     "types": [
-     "FIGHTING"
+     "POISON",
+     "GROUND"
     ]
    }
   ],
-  "hand": false,
-  "counters": 1,
+  "counters": 2,
   "n": 4,
   "pairs": [
    {
     "foe": "Garbodor (bar 1)",
-    "mon": "Hariyama",
-    "ability": "GUTS",
-    "dealt": 34,
-    "taken": 40,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 66,
+    "taken": 37,
     "ok": true,
-    "setup": "Belly Drum"
+    "setup": "Swords Dance"
    },
    {
     "foe": "Garbodor (bar 2)",
@@ -164,27 +163,26 @@
    },
    {
     "foe": "Garbodor (bar 4)",
-    "mon": "Rhyperior",
-    "ability": "SOLIDROCK",
-    "dealt": 105,
-    "taken": 351,
-    "ok": false,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 130,
+    "taken": 122,
+    "ok": true,
     "setup": false
    }
   ],
   "weak3": [],
   "nores": [],
   "leads": [
-   "Golisopod (Aevian Form)",
-   "Gholdengo"
+   "Muk (Alolan Form)"
   ],
   "lead_foes": [
-   "Garbodor (bar 1)",
-   "Garbodor (bar 2)"
+   "Garbodor (bar 1)"
   ],
-  "lead_taken": 82,
+  "lead_taken": 28,
   "lead_ok": true,
-  "note": "boss: ask Vincent for the community fight page before locking this in (fight protocol 4)"
+  "note": "",
+  "hand": true
  },
  "karrina": {
   "key": "karrina",
@@ -242,8 +240,7 @@
     ]
    }
   ],
-  "hand": false,
-  "counters": 5,
+  "counters": 6,
   "n": 6,
   "pairs": [
    {
@@ -270,7 +267,7 @@
     "ability": "INTIMIDATE",
     "dealt": 109,
     "taken": 203,
-    "ok": false,
+    "ok": true,
     "setup": false
    },
    {
@@ -311,7 +308,8 @@
   ],
   "lead_taken": 31,
   "lead_ok": true,
-  "note": ""
+  "note": "",
+  "hand": false
  },
  "spector": {
   "key": "spector",
@@ -369,7 +367,6 @@
     ]
    }
   ],
-  "hand": false,
   "counters": 5,
   "n": 6,
   "pairs": [
@@ -440,7 +437,8 @@
   ],
   "lead_taken": 58,
   "lead_ok": true,
-  "note": ""
+  "note": "",
+  "hand": false
  },
  "spector2": {
   "key": "spector2",
@@ -455,34 +453,12 @@
   ],
   "swaps": [
    {
-    "name": "Zoroark (Hisuian Form)",
-    "ab": "ILLUSION",
-    "moves": [
-     "Shadow Ball",
-     "Bitter Malice",
-     "Hex"
-    ],
-    "setup": "Nasty Plot",
-    "where": "Active",
-    "dump": 500,
-    "nature": "Modest",
-    "evs": {
-     "SpA": 252,
-     "Spe": 252,
-     "Def": 4
-    },
-    "types": [
-     "NORMAL",
-     "GHOST"
-    ]
-   },
-   {
     "name": "Sylveon",
     "ab": "PIXILATE",
     "moves": [
      "Shadow Ball",
      "Moonblast",
-     "Hidden Power"
+     "Round"
     ],
     "setup": "Work Up",
     "where": "Active",
@@ -496,10 +472,30 @@
     "types": [
      "FAIRY"
     ]
+   },
+   {
+    "name": "Blissey",
+    "ab": "HEALER",
+    "moves": [
+     "Shadow Ball",
+     "Water Pulse",
+     "Magma Drift"
+    ],
+    "setup": "Work Up",
+    "where": "Overflow",
+    "dump": 42,
+    "nature": "Modest",
+    "evs": {
+     "SpA": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "NORMAL"
+    ]
    }
   ],
-  "hand": false,
-  "counters": 4,
+  "counters": 5,
   "n": 6,
   "pairs": [
    {
@@ -540,19 +536,19 @@
    },
    {
     "foe": "Typhlosion",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
-    "dealt": 130,
-    "taken": 247,
-    "ok": false,
-    "setup": false
+    "mon": "Blissey",
+    "ability": "HEALER",
+    "dealt": 71,
+    "taken": 48,
+    "ok": true,
+    "setup": "Work Up"
    },
    {
     "foe": "Banette",
-    "mon": "Zoroark (Hisuian Form)",
-    "ability": "ILLUSION",
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
     "dealt": 130,
-    "taken": 58,
+    "taken": 230,
     "ok": true,
     "setup": false
    }
@@ -561,15 +557,16 @@
   "nores": [],
   "leads": [
    "Vaporeon",
-   "Sylveon"
+   "Blissey"
   ],
   "lead_foes": [
    "Stonjourner",
    "Sigilyph"
   ],
-  "lead_taken": 86,
+  "lead_taken": 85,
   "lead_ok": true,
-  "note": ""
+  "note": "",
+  "hand": false
  },
  "jenner9": {
   "key": "jenner9",
@@ -611,7 +608,7 @@
     "moves": [
      "Dragon Pulse",
      "Overheat",
-     "Flamethrower"
+     "Magma Drift"
     ],
     "setup": "Shell Smash",
     "where": "Active",
@@ -628,7 +625,6 @@
     ]
    }
   ],
-  "hand": false,
   "counters": 4,
   "n": 6,
   "pairs": [
@@ -697,7 +693,8 @@
   ],
   "lead_taken": 49,
   "lead_ok": true,
-  "note": ""
+  "note": "",
+  "hand": false
  },
  "amanda": {
   "key": "amanda",
@@ -756,8 +753,7 @@
     ]
    }
   ],
-  "hand": false,
-  "counters": 3,
+  "counters": 5,
   "n": 6,
   "pairs": [
    {
@@ -766,7 +762,7 @@
     "ability": "INTIMIDATE",
     "dealt": 101,
     "taken": 75,
-    "ok": false,
+    "ok": true,
     "setup": false
    },
    {
@@ -793,7 +789,7 @@
     "ability": "WATERABSORB",
     "dealt": 130,
     "taken": 73,
-    "ok": false,
+    "ok": true,
     "setup": false
    },
    {
@@ -827,7 +823,8 @@
   ],
   "lead_taken": 98,
   "lead_ok": true,
-  "note": ""
+  "note": "",
+  "hand": false
  },
  "erick": {
   "key": "erick",
@@ -886,7 +883,6 @@
     ]
    }
   ],
-  "hand": false,
   "counters": 4,
   "n": 6,
   "pairs": [
@@ -957,6 +953,7 @@
   ],
   "lead_taken": 82,
   "lead_ok": true,
-  "note": ""
+  "note": "",
+  "hand": false
  }
 }

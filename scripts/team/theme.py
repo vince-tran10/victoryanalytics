@@ -123,7 +123,7 @@ def fight_cards():
         bring = ''.join('<li>' + tname(r['name']) + '</li>' for r in p['swaps'])
         lead = ''.join('<li>' + tname(x) + '</li>' for x in p['leads'])
         fb = FBX.get(name, '') or FBX.get(hf.get('name', ''), '')
-        rows = sorted(p['pairs'], key=lambda q: q['ok'])
+        rows = p['pairs'] if all('(bar ' in q['foe'] for q in p['pairs']) else sorted(p['pairs'], key=lambda q: q['ok'])   # boss bars stay in order
         try: _ids = json.load(open(f'team/{k}_eval.json')).get('foe_ids') or []
         except Exception: _ids = []
         _bf = BOSSF.get(k)
@@ -179,6 +179,47 @@ def core_grid():   # Cores: one compact card per style; key piece marked; the al
     return '<div class="cgrid">' + out + '</div>'
 page = re.sub(r'(<section aria-labelledby="s9">\s*<h2 id="s9">.*?</h2>\s*(?:<details class="how">.*?</details>)?).*?(</section>)',
               lambda m: m.group(1) + core_grid() + m.group(2), page, count=1, flags=re.S)
+
+# ---------------------------------------------------------------- Boxes (17 Nov): two to-do lists in box-number order; full rosters folded below
+SPN = {disp(r['name']): (r.get('sid'), r.get('form', '0')) for r in T.values()}
+def spr_species(sp_, size='s'):
+    if sp_ in SPN: return SP.tag(*SPN[sp_], size=size)
+    return SP.tag(re.sub(r'[^A-Za-z]', '', sp_.split('-')[0]).upper(), '0', size=size)
+try: ACT = json.load(open('team/actions.json'))
+except Exception: ACT = {}
+ENT = {d['n']: d for d in cb.parse(st['export'])}
+def dest(a):
+    a = a.lower()
+    return 'Party' if 'into the party' in a else 'Overflow' if 'overflow' in a else 'Active'
+gin, gout = [], []
+for n_, a in sorted(ACT.items(), key=lambda kv: int(kv[0])):
+    d = ENT.get(int(n_)) or {}
+    row = ('<li><span class="bxn">#' + n_ + '</span>' + spr_species(d.get('species', '')) + '<b>' + E(d.get('species', '?')) + '</b>'
+           + '<span class="blv">Lv ' + str(d.get('level', '?')) + '</span><span class="to">→ ' + dest(a) + '</span></li>')
+    (gin if a.startswith(('Move to Active', 'Move into')) else gout).append(row)
+def blist(title, rows, cls):
+    return ('<div class="bxl ' + cls + '"><h3>' + title + ' <span class="bxc">' + str(len(rows)) + '</span></h3>'
+            + ('<ul>' + ''.join(rows) + '</ul>' if rows else '<p class="none">Nothing to move</p>') + '</div>')
+BOXMOVES = '<div class="bxmoves">' + blist('Move in', gin, 'in') + blist('Move out', gout, 'out') + '</div>'
+page = re.sub(r'(<section aria-labelledby="s4">\s*<h2 id="s4">.*?</h2>)', lambda m: m.group(1) + BOXMOVES, page, count=1, flags=re.S)
+page = re.sub(r'<div class="panel pad"><h3>Since last export</h3><div class="chgcols"><p>No changes\.</p></div></div>', '', page)
+page = re.sub(r'<p class="legend"><span class="actkey in">Green</span>.*?</p>', '', page, flags=re.S)
+page = page.replace('<details class="bx panel" open>', '<details class="bx panel">')
+
+# ---------------------------------------------------------------- Dex detail sheet (tap a Pokémon in the Dex tables)
+from kits import abn
+DEX = {}
+for r in T.values():
+    by = {}
+    for c in r.get('counters', []):
+        k_, f_ = c.split(':', 1); by.setdefault(FIGHT_NAME.get(k_, k_), []).append(f_)
+    DEX[disp(r['name'])] = dict(t=r['tier'], s=r['blend'], f=r['fight'], m=r['meta_label'], ty=r['types'], b=r['base'],
+                                a=abn(r['ability']), n=r.get('nature', ''), e=' / '.join(f"{v} {k}" for k, v in (r.get('evs') or {}).items() if v >= 100),
+                                mv=r['attacks'], c=by, w=f"{r.get('where')} #{r.get('dump')}", sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])   # without 'sp-': only sprites the tables already use get embedded
+SHEET = ('<div class="sheet" id="dexsheet" hidden><div class="sheet-bg" data-close></div><div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="ds-name">'
+         '<button type="button" class="sheet-x" data-close aria-label="Close">×</button><div id="ds-body"></div></div></div>'
+         '<script type="application/json" id="dexdata">' + json.dumps(DEX).replace('</', '<\\/') + '</script>')
+page = page.replace('</body>', SHEET + '</body>') if '</body>' in page else page + SHEET
 
 # ---------------------------------------------------------------- fold scoring explanations ("How this works")
 def fold(m):
@@ -397,6 +438,33 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
   .foe { grid-area: foe } .arrow { display: none } .ctr-m { grid-area: ctr } .dt { grid-area: dt } .foes .st { grid-area: st }
   .fc > summary { flex-wrap: wrap }
 }
+.bxmoves { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) }
+.bxl { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; box-shadow: var(--shadow); border-top: 4px solid var(--good) }
+.bxl.out { border-top-color: var(--bad) }
+.bxl h3 { display: flex; align-items: center; gap: 8px; margin-bottom: 8px }
+.bxc { font: 700 12px var(--mono); background: var(--panel-2); border-radius: 99px; padding: 1px 8px }
+.bxl ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px }
+.bxl li { display: flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 12px; background: var(--panel-2) }
+.bxn { font: 700 12px var(--mono); color: var(--muted); min-width: 40px }
+.bxl .blv { font: 600 12px var(--mono); color: var(--muted) }
+.bxl .to { margin-left: auto; font: 700 12.5px var(--body); color: var(--good) }
+.bxl.out .to { color: var(--bad) }
+.bxl .none { margin: 0; color: var(--muted); font-size: 13.5px }
+.tlx tbody tr { cursor: pointer }
+.sheet { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center } .sheet[hidden] { display: none }
+.sheet-bg { position: absolute; inset: 0; background: rgba(10,14,20,.5) }
+.sheet-card { position: relative; width: min(520px, calc(100% - 24px)); max-height: 86vh; overflow: auto; background: var(--panel); border-radius: 20px; padding: 18px 20px 20px; box-shadow: 0 20px 60px rgba(0,0,0,.35) }
+@media (max-width: 680px) { .sheet { place-items: end center } .sheet-card { width: 100%; border-radius: 20px 20px 0 0; padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px)) } }
+.sheet-x { position: absolute; right: 12px; top: 10px; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: var(--panel-2); color: var(--ink); font-size: 20px; cursor: pointer }
+.ds-head { display: flex; align-items: center; gap: 12px; margin-bottom: 10px }
+.ds-head .spr { width: 96px; height: 96px; margin: 0 }
+.ds-head h3 { font-size: 21px }
+.ds-sub { color: var(--muted); font-size: 13px }
+.ds-stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; margin: 8px 0 12px }
+.ds-stats div { background: var(--panel-2); border-radius: 10px; text-align: center; padding: 4px 0; font: 700 14px var(--mono) }
+.ds-stats small { display: block; font: 600 9.5px var(--mono); color: var(--muted); text-transform: uppercase }
+.ds-sec { font: 600 10.5px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 12px 0 6px }
+.ds-c li { margin-bottom: 4px } .ds-c { margin: 0; padding-left: 18px; font-size: 13.5px }
 .slot-sub { font-size: 12.5px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap }
 .slot-miss { color: var(--warn); font-weight: 700 }
 .next { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "k go" "t go" "s go"; gap: 2px 12px; text-decoration: none; color: var(--on-dex);
@@ -417,6 +485,33 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 }
 footer { max-width: 1120px; margin: 0 auto; padding: 0 max(16px, env(safe-area-inset-right, 0px)) 0 max(16px, env(safe-area-inset-left, 0px)) }
 </style>'''
+DEXJS = r'''<script id="dex-js">
+(function(){
+  var el = document.getElementById('dexdata'); if (!el) return;
+  var D = {}; try { D = JSON.parse(el.textContent); } catch (e) { return; }
+  var sheet = document.getElementById('dexsheet'), body = document.getElementById('ds-body'), last = null;
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function open(name){
+    var d = D[name]; if (!d) return;
+    var st = ['HP','Atk','Def','SpA','SpD','Spe'].map(function(k){ return '<div><small>'+k+'</small>'+d.b[k]+'</div>'; }).join('');
+    var ctr = Object.keys(d.c).map(function(f){ return '<li><b>'+esc(f)+'</b>: '+d.c[f].map(esc).join(', ')+'</li>'; }).join('');
+    body.innerHTML = '<div class="ds-head"><i class="spr sp-'+d.sp+'" aria-hidden="true"></i><div><h3 id="ds-name">'+esc(name)+'</h3>'
+      + '<div class="ds-sub"><span class="tier t'+d.t+'">'+d.t+'</span> score '+d.s.toFixed(2)+' · '+d.ty.map(function(t){return t[0]+t.slice(1).toLowerCase();}).join('/')+' · '+esc(d.w)+'</div>'
+      + '<div class="ds-sub">'+esc(d.m)+'</div></div></div><div class="ds-stats">'+st+'</div>'
+      + '<div class="ds-sec">Best build</div><div>'+esc(d.a)+(d.n?' · '+esc(d.n):'')+(d.e?' · '+esc(d.e):'')+'</div><div>'+d.mv.map(esc).join(' / ')+'</div>'
+      + '<div class="ds-sec">Counters in Chapter 9</div>'+(ctr ? '<ul class="ds-c">'+ctr+'</ul>' : '<div class="ds-sub">None of the remaining hard-fight Pokémon</div>');
+    last = document.activeElement; sheet.hidden = false; sheet.querySelector('.sheet-x').focus();
+  }
+  function close(){ sheet.hidden = true; if (last) last.focus(); }
+  document.addEventListener('click', function(e){
+    if (e.target.closest('[data-close]')) { close(); return; }
+    var tr = e.target.closest('.tlx tbody tr'); if (!tr) return;
+    var b = tr.querySelector('b'); if (b) open(b.textContent.trim());
+  });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !sheet.hidden) close(); });
+})();
+</script>
+'''
 JS = r'''<script id="app-theme-js">
 (function(){
   var NAMES = {team:'Team', fights:'Fights', cores:'Cores', todo:'To do', boxes:'Boxes', tiers:'Dex · Pokémon', aevian:'Dex · Aevian', crests:'Dex · Crests', checks:'Checks & data'};
@@ -448,6 +543,7 @@ JS = r'''<script id="app-theme-js">
 _i = page.rfind('</style>') + len('</style>')   # after every generated style block, so the theme wins the cascade
 page = page[:_i] + '\n' + CSS + page[_i:]
 page = page.replace('</body>', JS + '\n</body>') if '</body>' in page else page + '\n' + JS
+page = page.replace('</body>', DEXJS + '</body>') if '</body>' in page else page + DEXJS
 _sp = SP.css_for(page)
 page = page.replace('</style>', '</style>\n<style id="sprites">.spr{display:inline-block;flex:none;background:center/contain no-repeat;image-rendering:pixelated}'
                     '.spr-s{width:28px;height:28px;margin-right:4px}.spr-m{width:44px;height:44px;margin-right:8px}.spr-l{width:88px;height:88px}'

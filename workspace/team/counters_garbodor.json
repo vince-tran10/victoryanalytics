@@ -2,16 +2,16 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 1,
+  "counters": 2,
   "pairs": [
    {
     "foe": "Garbodor (bar 1)",
-    "mon": "Hariyama",
-    "ability": "GUTS",
-    "dealt": 34,
-    "taken": 40,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 66,
+    "taken": 37,
     "ok": true,
-    "setup": "Belly Drum"
+    "setup": "Swords Dance"
    },
    {
     "foe": "Garbodor (bar 2)",
@@ -33,11 +33,11 @@
    },
    {
     "foe": "Garbodor (bar 4)",
-    "mon": "Rhyperior",
-    "ability": "SOLIDROCK",
-    "dealt": 105,
-    "taken": 351,
-    "ok": false,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 130,
+    "taken": 122,
+    "ok": true,
     "setup": false
    }
   ]

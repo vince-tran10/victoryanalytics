@@ -31,7 +31,7 @@ def mats(r, spe):
     cov, tk = np.array(r['cov'], float) * np.array(BARS), np.array(r['taken'], float)   # boss: % of ONE health bar
     fast = np.array([r['spe'] > s for s in spe])
     sm = r.get('setup_mult') or 1
-    plain = ((cov >= 90) | (fast & (cov >= 100))) & (tk < 70)
+    plain = ((cov >= 90) & (tk < 70)) | (fast & (cov >= 100))   # rule 9: an outspeeding one-shot never gets hit
     setup = (sm > 1) & (cov * sm >= 90) & (tk < 50) & ~plain
     q = np.minimum(np.maximum(cov, np.where(tk < 50, cov * sm * .8, 0)), 120) / 100 * np.where(fast, 1.15, 1) * (1 - np.minimum(tk, 100) / 200)
     return q, plain | setup, setup
@@ -58,15 +58,24 @@ for key in KEYS:
     pool = list({r['name']: r for r in pool}.values())
     M = {r['name']: mats(r, SPE) for r in core + pool}
     P = np.array(list(itertools.permutations(range(6), n))); ar = np.arange(n)
+    BOSS = n > 1 and all('(bar ' in f for f in FO)   # one boss over several bars: the same member may take several bars
     def pairing(six):
         Q = np.array([M[r['name']][0] for r in six]); OK = np.array([M[r['name']][1] for r in six])
+        if BOSS:
+            pick = [int((OK[:, j] * 10 + Q[:, j]).argmax()) for j in range(n)]
+            return float(sum(OK[i, j] * 10 + Q[i, j] for j, i in enumerate(pick))), pick, int(sum(OK[i, j] for j, i in enumerate(pick)))
         key_ = OK[P, ar].sum(1) * 10 + Q[P, ar].sum(1); k = int(key_.argmax())
         return float(key_[k]), [int(x) for x in P[k]], int(OK[P[k], ar].sum())
+    HAND = (st.get('plan_swaps') or {}).get(key)   # hand-made plans (fight protocol done in chat), e.g. Garbodor 17 Nov
     if key == FIGHT:   # the fight being prepared keeps its hand-checked six (Fights tab / make_report5 COUNTERS)
         fixed = [x for x in st['team'] if x not in CORE]
         cands = [tuple(best[x] for x in fixed)]
+    elif HAND:
+        cands = [tuple(best[x] for x in HAND)]
     else:
         cands = list(itertools.combinations(pool, 2))
+    for pr_ in cands:
+        for r in pr_: M.setdefault(r['name'], mats(r, SPE))
     res = []
     for pair in cands:
         if pair[0]['name'].split(' (')[0] == pair[1]['name'].split(' (')[0]: continue
@@ -77,21 +86,24 @@ for key in KEYS:
     _, pair, pr, nok, w3, nr = res[0]
     six = core + list(pair)
     # leads: survive every opening Pokémon (taken < 100), then best quality vs them
-    nl = 1 if FMT == 'Singles' else 2; lf = list(range(min(nl, n)))
+    PARTNER = {'darkgardevoir', 'garbodor'}   # Melia controls the other slot: you send ONE Pokémon at a time
+    nl = 1 if FMT == 'Singles' or key in PARTNER else 2; lf = list(range(min(nl, n)))
     def lead_val(ix):
         tk = max(six[i]['taken'][j] for i in ix for j in lf)
         q = max(sum(M[six[i]['name']][0][j] for i, j in zip(ix, perm)) for perm in itertools.permutations(lf, len(lf))) if len(ix) == len(lf) else \
             sum(M[six[i]['name']][0][j] for i in ix for j in lf)
         return (tk < 100, q), tk
     lead = max(itertools.combinations(range(6), nl), key=lambda ix: lead_val(ix)[0])
+    LEADS = (st.get('plan_leads') or {}).get(key)   # hand-picked lead (a utility lead the evaluator can't score)
+    if LEADS: lead = tuple(i for i, r in enumerate(six) if r['name'] in LEADS)
     lv, ltk = lead_val(lead)
     srow = lambda r: dict(name=r['name'], ab=r['ab'], moves=r['moves'], setup=r.get('setup'), where=r.get('where'), dump=r.get('dump'),
                           nature=r.get('nature'), evs=r.get('evs'), types=r['types'])
     pairs = [dict(foe=FO[j], mon=six[pr[j]]['name'], ability=six[pr[j]]['ab'], dealt=int(six[pr[j]]['cov'][j] * BARS[j]), taken=int(six[pr[j]]['taken'][j]),
                   ok=bool(M[six[pr[j]]['name']][1][j]), setup=bool(M[six[pr[j]]['name']][2][j]) and six[pr[j]].get('setup')) for j in range(n)]
-    plans[key] = dict(key=key, format=FMT, foes=FO, swaps=[srow(r) for r in pair], hand=key == FIGHT, counters=nok, n=n, pairs=pairs,
+    plans[key] = dict(key=key, format=FMT, foes=FO, swaps=[srow(r) for r in pair], counters=nok, n=n, pairs=pairs,
                       weak3=w3, nores=nr, leads=[six[i]['name'] for i in lead], lead_foes=[FO[j] for j in lf], lead_taken=round(float(ltk)),
-                      lead_ok=bool(lv[0]), note=NEED_TIPS.get(key, ''))
+                      lead_ok=bool(lv[0]), note='' if (key == FIGHT or HAND) else NEED_TIPS.get(key, ''), hand=bool(key == FIGHT or HAND))
     json.dump(dict(preview=False, plan=True, current=dict(counters=nok, pairs=pairs)), open(f'team/counters_{key}.json', 'w'), indent=1)
     print(f"{key:13s} {FMT:7s} swaps {[r['name'] for r in pair]} counters {nok}/{n} rules {w3 or ''}{nr or ''} "
           f"lead {[six[i]['name'] for i in lead]} vs {[FO[j] for j in lf]} takes {ltk:.0f}%")

@@ -64,6 +64,7 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
 - **One structure for singles AND doubles** (most battles are singles): party order = plan. Slot 1 leads singles, slots
   1–2 lead doubles. Leads must survive the opposing leads' hits in every hard fight (checked vs exact game lead order).
   Current order: Golisopod-Aevian, Arcanine-Hisui, Gholdengo, Vaporeon, Copperajah, Muk-Alola (Copperajah leads vs Gardevoir;
+  Garbodor plan 17 Nov: swaps Muk-Alola (Gastro Acid lead) + Clodsire (Unaware, Curse, Recover, EQ);
   lead check 16 Nov: Golisopod-A survives every Ch9 lead; Arcanine-H takes 110% from Karrina's Runerigus, so it never leads singles).
 - Then rank by battle score (singles count double).
 - **Fields are a core factor (Vincent, 10 Nov): exploit them.** Score every fight with its full field mechanics from the game
@@ -130,7 +131,13 @@ damage score and the fight's real win condition was only read after Vincent lost
   removed or folded (theme.py trims them; lineup notes become short role chips like "Lead · Bar 1 counter").
   Hidden from the page (17 Nov, data kept in team/*.json and given in chat when asked): the fight lineup card + turn plan, the
   Team rules panel, "How to play it", the Fight plans table, the fight cards' description line + threat notes, and on Cores cards the score / identity text / role line / bullets.
-  KEEP the Counters tables (Vincent likes them). Explain plans in chat, not on the page.
+  Explain plans in chat, not on the page.
+- **Sprites (17 Nov):** Vincent's Graphics/Battlers (2x2 sheets: front normal/shiny, back normal/shiny) live in
+  workspace/gamedata/Battlers (out of git; ask for Battlers.zip again in a fresh session). scripts/team/sprites.py: tag()
+  emits a CSS class; theme.py embeds each used sprite ONCE. Shown on party cards (shiny if his mon is), Cores, Fights
+  (foes + counters; boss forms from bosstext), Dex rows. Empty-cell sheets fall back to the other cell.
+- **Boxes tab (17 Nov):** "Move in" (green) / "Move out" (red) lists in box-number order from team/actions.json; full
+  rosters folded below. **Dex (17 Nov):** tap a row → detail sheet (stats, best build, Ch9 foes it counters).
 - Tier tabs (16 Nov) share ONE blended scale (scripts/team/tier_all.py → tier_tabs.py): 0.6 × Ch9 fight percentile +
   0.4 × meta (Smogon tier/usage + BST; Aevians by kit OP stars). Cut-offs S .85 / A .76 / B .62 / C .45.
 - **Team tab (17 Nov):** only "Your party": one card per member (slot, Core/Swap · role, types, level bar, ability · nature, EVs,
@@ -141,11 +148,14 @@ damage score and the fight's real win condition was only read after Vincent lost
   source; the old hard-fights table, opener cards and counter tables are replaced). Header: number, name, format/boss/field
   chips, countered x/n (green if ≥ n-1), "Needs a plan" badge. Body: Bring (2 swaps), Lead, Field boosts, then each foe →
   counter with deals/takes bars, weak rows first in amber. Only the next fight is open.
-- **Fights tab:** every remaining hard fight: Singles/Doubles, Boss tag, field, why it's hard, lead.
   **Fight plans (17 Nov):** scripts/team/fights/fight_plans.py (run by update.py after remaining_eval.py per fight, core scored
   with its REAL builds via FIXED) picks each fight's best 2 swaps (one-to-one counters incl. one setup turn, rules (b)(c) vs that
   fight's types) and its lead(s) (must survive the opening Pokémon). Boss damage is per health bar. The fight in `state.fight`
   keeps its hand-checked six. checks.py: lead check is blocking; rules and counters per plan are warnings.
+  Hand plans: state.json `plan_swaps` {fight: [2 names]} and `plan_leads` {fight: [lead]} override the search (used when the
+  fight protocol was done in chat, e.g. Garbodor). Melia partner fights (darkgardevoir, garbodor): ONE lead (she has the other
+  slot). Boss fights (bars of one boss): the same member may take several bars. Rule 9 as written: an outspeeding one-shot
+  counts whatever it would take.
 - **To do tab = profile fixes only:** one card per Pokémon listing everything it needs (moves with replacements, EVs,
   nature, ability, item, level). Never two places for the same Pokémon. No box moves.
 - **Boxes tab = all box moves:** GREEN = move into Active / the party, RED = move out. A Pokémon moving into Active also

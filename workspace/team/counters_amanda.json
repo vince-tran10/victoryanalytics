@@ -2,7 +2,7 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 3,
+  "counters": 5,
   "pairs": [
    {
     "foe": "Incineroar",
@@ -10,7 +10,7 @@
     "ability": "INTIMIDATE",
     "dealt": 101,
     "taken": 75,
-    "ok": false,
+    "ok": true,
     "setup": false
    },
    {
@@ -37,7 +37,7 @@
     "ability": "WATERABSORB",
     "dealt": 130,
     "taken": 73,
-    "ok": false,
+    "ok": true,
     "setup": false
    },
    {

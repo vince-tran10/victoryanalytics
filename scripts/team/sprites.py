@@ -25,6 +25,8 @@ def _png(species, form, shiny):
     im = Image.open(f).convert('RGBA')
     w, h = im.size; cw = w // 2 if w >= 2 * h // 2 and w > 200 else w; ch = h // 2 if h > 200 else h
     cell = im.crop((cw if shiny else 0, 0, (2 * cw) if shiny else cw, ch))
+    if not cell.getbbox():   # some sheets only have one cell drawn (e.g. shiny-only bosses like Rift Garbodor)
+        cell = im.crop((0 if shiny else cw, 0, cw if shiny else 2 * cw, ch))
     bb = cell.getbbox()
     if bb: cell = cell.crop(bb)
     cell.thumbnail((96, 96), Image.NEAREST)

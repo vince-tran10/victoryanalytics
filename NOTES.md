@@ -707,3 +707,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 17 Nov: Fights 'Your six' column dropped; Cores 'Other core' lines mark their own key (only Setup: Braviary vs Kangaskhan).
 - 17 Nov: Cores swap options now inline: grey '⇄ tier name' to the right of the member they replace.
 - 17 Nov: Fights rebuilt as one collapsible card per fight from fight_plans.json (Bring / Lead / Field + foe→counter bars, weak first, next fight open). Fixes the opener mismatch between old fight cards and the counter tables. Cores: more space around ⇄.
+- 17 Nov: sprites from Vincent's Battlers.zip (sprites.py, embedded once per sprite; page ~0.95 MB); Boxes = Move in / Move
+  out lists by box #; Dex rows open a detail sheet. Rift Garbodor fight protocol (game code verified): Corrupted Cave poisons
+  grounded non-Poison/Steel mons each turn; Garbodor heals 1/8 Poison Heal (no status needed here) + 1/8 Black Sludge (doubled);
+  no effectClear on its breaks, so Gastro Acid / Heal Block persist; items reset each bar. Plan: Muk-Alola lead (Gastro Acid,
+  Knock Off, Clear Smog) + Clodsire (Unaware); Golisopod-A Swords Dance + Bone Rush (non-contact, Rocky Helmet-safe) wins.
+  fight_plans: hand plans (plan_swaps/plan_leads), single lead in Melia fights, boss bars may share a member, rule-9 fix.
