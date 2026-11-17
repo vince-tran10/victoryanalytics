@@ -700,3 +700,5 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Nunito Sans, IBM Plex Mono. Light + dark.
 - 17 Nov: caption text removed (Vincent: "wouldn't be there in a regular app"): party subtitle, boss caption on the lineup card,
   "(plan…)/(box preview…)" tags, Hard-fights subtitle; lineup notes → role chips; Fight-plans legend folded. All in theme.py.
+- 17 Nov: removed from the page (data kept): fight lineup card + turn plan, Team rules panel, How to play it, Fight plans
+  table, Cores card score/identity/role/bullets. Counters tables kept. Plans now go in chat.

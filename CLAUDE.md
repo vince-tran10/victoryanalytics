@@ -128,6 +128,9 @@ damage score and the fight's real win condition was only read after Vincent lost
   shield icon), scoring legends folded into "How this works". New sections/tables need a phone layout (stacked rows).
   **No caption text (Vincent, 17 Nov):** only names, builds, key numbers and the turn plan show; descriptive captions are
   removed or folded (theme.py trims them; lineup notes become short role chips like "Lead · Bar 1 counter").
+  Hidden from the page (17 Nov, data kept in team/*.json and given in chat when asked): the fight lineup card + turn plan, the
+  Team rules panel, "How to play it", the Fight plans table, and on Cores cards the score / identity text / role line / bullets.
+  KEEP the Counters tables (Vincent likes them). Explain plans in chat, not on the page.
 - Tier tabs (16 Nov) share ONE blended scale (scripts/team/tier_all.py → tier_tabs.py): 0.6 × Ch9 fight percentile +
   0.4 × meta (Smogon tier/usage + BST; Aevians by kit OP stars). Cut-offs S .85 / A .76 / B .62 / C .45.
 - **Team tab:** the ideal six with a Status column (Done ✓ per member, always shown) plus the rules panel.

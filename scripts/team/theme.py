@@ -67,6 +67,20 @@ page = re.sub(r'<table class="cft">.*?</table>', cft, page, flags=re.S)
 page = re.sub(r"(<h3>Fight plans: your core \+ 2 swaps per fight</h3>)(<ul class='legend'>.*?</ul>)",
               r'\1<details class="how"><summary>How this works</summary>\2</details>', page, flags=re.S)
 
+# ---------------------------------------------------------------- panels Vincent doesn't need on screen (17 Nov); data stays in team/*.json
+page = re.sub(r'<div class="panel pad cf">.*?</ol></div>\s*', '', page, flags=re.S)                       # fight lineup + turn plan
+page = re.sub(r'<div class="panel pad"><h3>Team rules \(core of 4 \+ 2 swaps\)</h3>.*?</ul></div>\s*', '', page, flags=re.S)
+page = re.sub(r'<div class="panel pad"><h3>How to play it</h3>.*?</ul>\s*</div>\s*', '', page, flags=re.S)
+page = re.sub(r"<div class='panel pad'><h3>Fight plans: your core.*?</table></div></div>", '', page, flags=re.S)
+def core_card(m):   # Cores: keep the title + members (name, tier, build); drop score, identity text, role line and the bullet list
+    c = m.group(0)
+    c = re.sub(r"\s*<span class='legend'>core score [\d.]+</span>", '', c)
+    c = re.sub(r"<p class='legend'>.*?</p>", '', c, flags=re.S)
+    c = re.sub(r"<div class='legend'>[^<]*· base Spe \d+</div>", '', c)
+    c = re.sub(r"<ul>.*?</ul></div>$", '</div>', c, flags=re.S)
+    return c
+page = re.sub(r"<div class='panel pad core'>.*?</ul></div>", core_card, page, flags=re.S)
+
 # ---------------------------------------------------------------- fold scoring explanations ("How this works")
 def fold(m):
     return f'{m.group(1)}<details class="how"><summary>How this works</summary>{m.group(2)}</details>'
