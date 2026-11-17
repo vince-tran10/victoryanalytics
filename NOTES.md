@@ -694,3 +694,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   the moves their builds run; (6) cores penalised per major Ch9 type nobody resists; (7) header + dead scripts removed;
   (8) tier list "as X" glitch fixed, core / swap / plan-swap badges; (9) "Level up first" banner on the Team tab.
   With (6), Arcanine/Gholdengo/Golisopod/Azumarill now edges the picked core (0.93 vs 0.905: Azumarill resists Dark).
+- 17 Nov: app redesign (theme.py, last build step, data untouched): Rotom-Dex app bar with Poké Ball, party slots with level
+  bars, Next battle card, 6-tab bottom bar / desktop rail, Dex switcher (Pokémon / Aevian / Crests), checks behind the shield
+  icon, legends folded into "How this works", stacked phone layouts for lineup + fight-plan tables. Fonts: Chakra Petch,
+  Nunito Sans, IBM Plex Mono. Light + dark.

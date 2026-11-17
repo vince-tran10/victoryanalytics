@@ -146,6 +146,7 @@ def main():
     print('C&A checks:'); print('  ' + r.stdout.strip().replace('\n', '\n  '))
     blocked = r.returncode != 0
     sh(['../scripts/team/tabs.py', OUT], pe)
+    sh(['../scripts/team/theme.py', OUT], pe)   # app look (17 Nov): runs last, data untouched
 
     # 8) summary
     acts = json.load(open(os.path.join(TEAMD, 'actions.json')))

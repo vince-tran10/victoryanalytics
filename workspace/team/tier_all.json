@@ -20213,7 +20213,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Crunch",
+    "Jaw Lock",
     "Liquidation",
     "Ice Fang"
    ],
@@ -24622,7 +24622,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Crunch",
+    "Jaw Lock",
     "Play Rough",
     "Double-Edge"
    ],
@@ -26837,7 +26837,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Wake-Up Slap",
+    "Vital Throw",
     "Knock Off",
     "Strength"
    ],
@@ -28639,7 +28639,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Facade",
+    "Dizzy Punch",
     "Jump Kick",
     "Brutal Swing"
    ],
@@ -35137,7 +35137,7 @@
    "cat": "Physical",
    "attacks": [
     "Sucker Punch",
-    "Retaliate"
+    "Headbutt"
    ],
    "legal": [
     "ATTRACT",
@@ -45839,7 +45839,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Aerial Ace",
+    "Pluck",
     "Slash",
     "Knock Off"
    ],
@@ -46690,7 +46690,7 @@
    "attacks": [
     "Spark",
     "Hyper Fang",
-    "Bite"
+    "Thief"
    ],
    "legal": [
     "ATTRACT",
