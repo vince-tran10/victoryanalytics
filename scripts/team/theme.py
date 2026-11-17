@@ -72,6 +72,8 @@ page = re.sub(r'<div class="panel pad cf">.*?</ol></div>\s*', '', page, flags=re
 page = re.sub(r'<div class="panel pad"><h3>Team rules \(core of 4 \+ 2 swaps\)</h3>.*?</ul></div>\s*', '', page, flags=re.S)
 page = re.sub(r'<div class="panel pad"><h3>How to play it</h3>.*?</ul>\s*</div>\s*', '', page, flags=re.S)
 page = re.sub(r"<div class='panel pad'><h3>Fight plans: your core.*?</table></div></div>", '', page, flags=re.S)
+page = re.sub(r'<div class="legend nfn">.*?</div>\s*', '', page, flags=re.S)                 # fight cards: description line
+page = re.sub(r'(<div class="panel pad nf">.*?)<ul class="plain">.*?</ul>(</div>)', r'\1\2', page, flags=re.S)   # fight cards: threat notes
 def core_card(m):   # Cores: keep the title + members (name, tier, build); drop score, identity text, role line and the bullet list
     c = m.group(0)
     c = re.sub(r"\s*<span class='legend'>core score [\d.]+</span>", '', c)

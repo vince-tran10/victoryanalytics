@@ -859,7 +859,7 @@
      ],
      "spe": 109,
      "answer": "Arcanine (Hisuian Form)",
-     "answer_move": "Flare Blitz",
+     "answer_move": "Head Smash",
      "answer_dmg": 104,
      "answer_faster": true,
      "threat_to": "Vaporeon",
@@ -1012,7 +1012,7 @@
      ],
      "spe": 96,
      "answer": "Arcanine (Hisuian Form)",
-     "answer_move": "Flare Blitz",
+     "answer_move": "Head Smash",
      "answer_dmg": 375,
      "answer_faster": true,
      "threat_to": "Vaporeon",
@@ -2787,7 +2787,7 @@
      ],
      "spe": 111,
      "answer": "Arcanine (Hisuian Form)",
-     "answer_move": "Flare Blitz",
+     "answer_move": "Head Smash",
      "answer_dmg": 73,
      "answer_faster": true,
      "threat_to": "Vaporeon",
@@ -5285,7 +5285,7 @@
    "types": "Fighting/Ice",
    "bst": 478,
    "attacks": [
-    "Close Combat",
+    "Superpower",
     "Ice Hammer",
     "Crabhammer"
    ],
@@ -6458,7 +6458,7 @@
    "types": "Dark",
    "bst": 505,
    "attacks": [
-    "Crunch",
+    "Jaw Lock",
     "Play Rough",
     "Double-Edge"
    ],
@@ -8984,7 +8984,7 @@
    "types": "Dark",
    "bst": 505,
    "attacks": [
-    "Crunch",
+    "Jaw Lock",
     "Play Rough",
     "Double-Edge"
    ],
@@ -9410,7 +9410,7 @@
    "types": "Fighting",
    "bst": 505,
    "attacks": [
-    "Vital Throw",
+    "Wake-Up Slap",
     "Knock Off",
     "Strength"
    ],
@@ -13360,7 +13360,7 @@
    "types": "Water/Rock",
    "bst": 485,
    "attacks": [
-    "Crunch",
+    "Jaw Lock",
     "Liquidation",
     "Ice Fang"
    ],
@@ -16425,7 +16425,7 @@
    "attacks": [
     "Liquidation",
     "Rock Blast",
-    "Crunch"
+    "Jaw Lock"
    ],
    "solo": {
     "jenner": 0.413,
@@ -17742,7 +17742,7 @@
    "bst": 472,
    "attacks": [
     "Sucker Punch",
-    "Retaliate"
+    "Headbutt"
    ],
    "solo": {
     "jenner": 0.352,
