@@ -5214,7 +5214,7 @@
    "cat": "Physical",
    "attacks": [
     "Hyper Drill",
-    "Thief",
+    "Bite",
     "Drill Run"
    ],
    "legal": [
@@ -20213,7 +20213,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Crunch",
+    "Jaw Lock",
     "Liquidation",
     "Ice Fang"
    ],
@@ -20617,7 +20617,7 @@
    "attacks": [
     "Deluge",
     "Wake-Up Slap",
-    "Secret Power"
+    "Facade"
    ],
    "legal": [
     "AQUAJET",
@@ -24622,7 +24622,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Crunch",
+    "Jaw Lock",
     "Play Rough",
     "Double-Edge"
    ],
@@ -28639,7 +28639,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Dizzy Punch",
+    "Facade",
     "Jump Kick",
     "Brutal Swing"
    ],
@@ -36182,7 +36182,7 @@
    "cat": "Physical",
    "attacks": [
     "Surf",
-    "Secret Power",
+    "Facade",
     "Mud Barrage"
    ],
    "legal": [
@@ -36769,7 +36769,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "X-Scissor",
+    "Lunge",
     "Leaf Blade",
     "Shadow Claw"
    ],
@@ -38661,7 +38661,7 @@
    "attacks": [
     "Dual Wingbeat",
     "Night Slash",
-    "Secret Power"
+    "Facade"
    ],
    "legal": [
     "AIRCUTTER",
@@ -39653,7 +39653,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Secret Power",
+    "Facade",
     "Shadow Ball",
     "Fire Blast"
    ],
@@ -44865,7 +44865,7 @@
    "attacks": [
     "Drill Peck",
     "Drill Run",
-    "Secret Power"
+    "Facade"
    ],
    "legal": [
     "AERIALACE",
@@ -46690,7 +46690,7 @@
    "attacks": [
     "Spark",
     "Hyper Fang",
-    "Thief"
+    "Bite"
    ],
    "legal": [
     "ATTRACT",

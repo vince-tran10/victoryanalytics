@@ -5869,7 +5869,7 @@
    "types": "Fighting/Ice",
    "bst": 478,
    "attacks": [
-    "Superpower",
+    "Close Combat",
     "Ice Hammer",
     "Crabhammer"
    ],
@@ -5906,7 +5906,7 @@
    "bst": 520,
    "attacks": [
     "Hyper Drill",
-    "Bite",
+    "Thief",
     "Drill Run"
    ],
    "solo": {
@@ -5942,7 +5942,7 @@
    "bst": 520,
    "attacks": [
     "Hyper Drill",
-    "Bite",
+    "Thief",
     "Drill Run"
    ],
    "solo": {
@@ -7077,7 +7077,7 @@
    "bst": 455,
    "attacks": [
     "High Jump Kick",
-    "Thief",
+    "Brutal Swing",
     "Bulldoze"
    ],
    "solo": {
@@ -8889,7 +8889,7 @@
    "types": "Dark",
    "bst": 505,
    "attacks": [
-    "Jaw Lock",
+    "Crunch",
     "Play Rough",
     "Double-Edge"
    ],
@@ -9987,7 +9987,7 @@
    "types": "Dark",
    "bst": 505,
    "attacks": [
-    "Jaw Lock",
+    "Crunch",
     "Play Rough",
     "Double-Edge"
    ],
@@ -10557,7 +10557,7 @@
    "types": "Water/Rock",
    "bst": 485,
    "attacks": [
-    "Jaw Lock",
+    "Crunch",
     "Liquidation",
     "Ice Fang"
    ],
@@ -10986,7 +10986,7 @@
    "types": "Fighting",
    "bst": 505,
    "attacks": [
-    "Vital Throw",
+    "Wake-Up Slap",
     "Knock Off",
     "Strength"
    ],
@@ -13236,7 +13236,7 @@
    "bst": 510,
    "attacks": [
     "Energy Ball",
-    "Weather Ball"
+    "Terrain Pulse"
    ],
    "solo": {
     "jenner": 0.4,
@@ -14226,7 +14226,7 @@
    "attacks": [
     "Liquidation",
     "Rock Blast",
-    "Jaw Lock"
+    "Crunch"
    ],
    "solo": {
     "jenner": 0.383,
@@ -18788,7 +18788,7 @@
    "types": "Bug/Grass",
    "bst": 500,
    "attacks": [
-    "Lunge",
+    "X-Scissor",
     "Leaf Blade",
     "Shadow Claw"
    ],
@@ -18824,7 +18824,7 @@
    "types": "Normal",
    "bst": 480,
    "attacks": [
-    "Secret Power",
+    "Headbutt",
     "Jump Kick",
     "Brutal Swing"
    ],
@@ -18860,7 +18860,7 @@
    "types": "Normal",
    "bst": 480,
    "attacks": [
-    "Secret Power",
+    "Headbutt",
     "Jump Kick",
     "Brutal Swing"
    ],
@@ -18896,7 +18896,7 @@
    "types": "Normal",
    "bst": 480,
    "attacks": [
-    "Secret Power",
+    "Headbutt",
     "Jump Kick",
     "Brutal Swing"
    ],
@@ -19004,7 +19004,7 @@
    "bst": 500,
    "attacks": [
     "Leaf Blade",
-    "Lunge",
+    "X-Scissor",
     "Shadow Claw"
    ],
    "solo": {
@@ -19040,7 +19040,7 @@
    "bst": 500,
    "attacks": [
     "Leaf Blade",
-    "Lunge",
+    "X-Scissor",
     "Shadow Claw"
    ],
    "solo": {
@@ -20423,7 +20423,7 @@
    "types": "Normal",
    "bst": 420,
    "attacks": [
-    "Secret Power",
+    "Headbutt",
     "Shadow Ball",
     "Fire Blast"
    ],
@@ -22880,7 +22880,7 @@
    "attacks": [
     "Spark",
     "Hyper Fang",
-    "Bite"
+    "Thief"
    ],
    "solo": {
     "jenner": 0.197,
@@ -22916,7 +22916,7 @@
    "attacks": [
     "Spark",
     "Hyper Fang",
-    "Bite"
+    "Thief"
    ],
    "solo": {
     "jenner": 0.197,

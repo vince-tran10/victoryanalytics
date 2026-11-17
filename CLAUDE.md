@@ -133,7 +133,11 @@ damage score and the fight's real win condition was only read after Vincent lost
   KEEP the Counters tables (Vincent likes them). Explain plans in chat, not on the page.
 - Tier tabs (16 Nov) share ONE blended scale (scripts/team/tier_all.py → tier_tabs.py): 0.6 × Ch9 fight percentile +
   0.4 × meta (Smogon tier/usage + BST; Aevians by kit OP stars). Cut-offs S .85 / A .76 / B .62 / C .45.
-- **Team tab:** the ideal six with a Status column (Done ✓ per member, always shown) plus the rules panel.
+- **Team tab (17 Nov):** only "Your party": one card per member (slot, Core/Swap · role, types, level bar, ability · nature, EVs,
+  item, 4 moves, open to-dos) + the Next battle card. The old team table is folded into the cards by theme.py.
+- **Cores tab (17 Nov):** compact grid, one card per style: 4 members with tier chips, key piece marked, alt folded in as
+  "Swap option X ⇄ Y" (same key) or "Other core". No builds there (they live on Team / To do).
+- **Fights tab:** no "Best opener (matchup)" column (17 Nov).
 - **Fights tab:** every remaining hard fight: Singles/Doubles, Boss tag, field, why it's hard, lead.
   **Fight plans (17 Nov):** scripts/team/fights/fight_plans.py (run by update.py after remaining_eval.py per fight, core scored
   with its REAL builds via FIXED) picks each fight's best 2 swaps (one-to-one counters incl. one setup turn, rules (b)(c) vs that

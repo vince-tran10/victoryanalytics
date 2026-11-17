@@ -858,7 +858,7 @@
      ],
      "spe": 109,
      "answer": "Arcanine (Hisuian Form)",
-     "answer_move": "Head Smash",
+     "answer_move": "Flare Blitz",
      "answer_dmg": 104,
      "answer_faster": true,
      "threat_to": "Vaporeon",
@@ -1011,7 +1011,7 @@
      ],
      "spe": 96,
      "answer": "Arcanine (Hisuian Form)",
-     "answer_move": "Head Smash",
+     "answer_move": "Flare Blitz",
      "answer_dmg": 375,
      "answer_faster": true,
      "threat_to": "Vaporeon",
@@ -2783,7 +2783,7 @@
      ],
      "spe": 111,
      "answer": "Arcanine (Hisuian Form)",
-     "answer_move": "Head Smash",
+     "answer_move": "Flare Blitz",
      "answer_dmg": 73,
      "answer_faster": true,
      "threat_to": "Vaporeon",
@@ -5313,7 +5313,7 @@
    "bst": 520,
    "attacks": [
     "Hyper Drill",
-    "Thief",
+    "Bite",
     "Drill Run"
    ],
    "solo": {
@@ -5349,7 +5349,7 @@
    "bst": 520,
    "attacks": [
     "Hyper Drill",
-    "Thief",
+    "Bite",
     "Drill Run"
    ],
    "solo": {
@@ -7161,7 +7161,7 @@
    "types": "Dark",
    "bst": 505,
    "attacks": [
-    "Crunch",
+    "Jaw Lock",
     "Play Rough",
     "Double-Edge"
    ],
@@ -9330,7 +9330,7 @@
    "types": "Dark",
    "bst": 505,
    "attacks": [
-    "Crunch",
+    "Jaw Lock",
     "Play Rough",
     "Double-Edge"
    ],
@@ -9899,7 +9899,7 @@
    "types": "Fighting",
    "bst": 505,
    "attacks": [
-    "Low Kick",
+    "Vital Throw",
     "Knock Off",
     "Strength"
    ],
@@ -11893,7 +11893,7 @@
    "types": "Water/Rock",
    "bst": 485,
    "attacks": [
-    "Crunch",
+    "Jaw Lock",
     "Liquidation",
     "Ice Fang"
    ],
@@ -15564,7 +15564,7 @@
    "attacks": [
     "Liquidation",
     "Rock Blast",
-    "Crunch"
+    "Jaw Lock"
    ],
    "solo": {
     "jenner": 0.383,
@@ -17811,7 +17811,7 @@
    "bst": 472,
    "attacks": [
     "Sucker Punch",
-    "Headbutt"
+    "Retaliate"
    ],
    "solo": {
     "jenner": 0.292,
@@ -18451,7 +18451,7 @@
    "types": "Normal",
    "bst": 480,
    "attacks": [
-    "Dizzy Punch",
+    "Facade",
     "Jump Kick",
     "Brutal Swing"
    ],
@@ -18487,7 +18487,7 @@
    "types": "Normal",
    "bst": 480,
    "attacks": [
-    "Dizzy Punch",
+    "Facade",
     "Jump Kick",
     "Brutal Swing"
    ],
@@ -18523,7 +18523,7 @@
    "types": "Normal",
    "bst": 480,
    "attacks": [
-    "Dizzy Punch",
+    "Facade",
     "Jump Kick",
     "Brutal Swing"
    ],
@@ -18596,7 +18596,7 @@
    "attacks": [
     "Dual Wingbeat",
     "Night Slash",
-    "Secret Power"
+    "Facade"
    ],
    "solo": {
     "jenner": 0.58,
@@ -19344,7 +19344,7 @@
    "attacks": [
     "Dual Wingbeat",
     "Night Slash",
-    "Secret Power"
+    "Facade"
    ],
    "solo": {
     "jenner": 0.563,
@@ -19559,7 +19559,7 @@
    "attacks": [
     "Deluge",
     "Wake-Up Slap",
-    "Secret Power"
+    "Facade"
    ],
    "solo": {
     "jenner": 0.27,
@@ -21050,7 +21050,7 @@
    "types": "Normal",
    "bst": 420,
    "attacks": [
-    "Secret Power",
+    "Facade",
     "Shadow Ball",
     "Fire Blast"
    ],
@@ -21231,7 +21231,7 @@
    "bst": 480,
    "attacks": [
     "Surf",
-    "Secret Power",
+    "Facade",
     "Mud Barrage"
    ],
    "solo": {
@@ -21373,7 +21373,7 @@
    "types": "Normal/Flying",
    "bst": 488,
    "attacks": [
-    "Secret Power",
+    "Facade",
     "Night Slash",
     "Air Slash"
    ],
@@ -21624,7 +21624,7 @@
    "attacks": [
     "Drill Peck",
     "Drill Run",
-    "Secret Power"
+    "Facade"
    ],
    "solo": {
     "jenner": 0.53,
@@ -22726,7 +22726,7 @@
    "attacks": [
     "Spark",
     "Hyper Fang",
-    "Thief"
+    "Bite"
    ],
    "solo": {
     "jenner": 0.197,
@@ -22762,7 +22762,7 @@
    "attacks": [
     "Spark",
     "Hyper Fang",
-    "Thief"
+    "Bite"
    ],
    "solo": {
     "jenner": 0.197,

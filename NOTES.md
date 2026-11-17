@@ -703,3 +703,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 17 Nov: removed from the page (data kept): fight lineup card + turn plan, Team rules panel, How to play it, Fight plans
   table, Cores card score/identity/role/bullets. Counters tables kept. Plans now go in chat.
 - 17 Nov: fight cards lose the boss description line and the threat notes under Field boosts (Vincent); Opener + Field boosts stay.
+- 17 Nov: Team tab = party cards only (build table merged into them); Fights: Best opener column dropped; Cores: compact grid (tier chips, key piece, alt as swap option). Fixed an old .tier grid rule that clipped tier letters (Dex too).

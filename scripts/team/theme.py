@@ -26,6 +26,23 @@ FIGHT_NAME = {'darkgardevoir': 'Dark Gardevoir', 'garbodor': 'Rift Garbodor', 'k
 # ---------------------------------------------------------------- party slots (Team tab hero)
 party = {d['species']: d for d in cb.parse(st['export'])[:6]}
 core = set(st.get('core') or [])
+BUILD = {}   # the team table's build per Pokémon (ability, nature, EVs, item, moves, open to-dos); the table itself is removed
+def _t(x): return re.sub(r'<[^>]+>', '', x).strip()
+for row in re.findall(r'<td class="tm-name">(.*?)</tr>', page, re.S):
+    cell = lambda k, row=row: (re.search(r'<td data-l="' + k + r'">(.*?)</td>', row, re.S) or [None, ''])[1]
+    ab = cell('Ability'); nat = re.search(r'<div class="legend">(.*?)</div>', ab)
+    BUILD[_t(re.search(r'<strong>(.*?)</strong>', row, re.S).group(1))] = dict(
+        ability=_t(re.sub(r'<div.*', '', ab, flags=re.S)), nature=nat.group(1) if nat else '',
+        evs=' / '.join(_t(x) for x in re.findall(r'<li>(.*?)</li>', cell('EVs'))), item=_t(cell('Item')),
+        moves=[_t(x) for x in re.findall(r'<li[^>]*>(.*?)</li>', cell('Moves'))],
+        todo=[_t(x) for x in re.findall(r'<li>(.*?)</li>', cell('Status')) if not _t(x).startswith('Lv ')])
+page = re.sub(r'<div class="panel tablewrap"><table class="team">.*?</table></div>\s*', '', page, count=1, flags=re.S)
+def build_html(b, p, here):
+    if not b: return '<div class="slot-sub">' + E(p.get('item') or 'no item') + here + '</div>'
+    todo = ''.join('<li>' + E(t) + '</li>' for t in b['todo'])
+    return ('<dl class="sb"><dt>Ability</dt><dd>' + E(b['ability']) + ' · ' + E(b['nature']) + '</dd><dt>EVs</dt><dd>' + E(b['evs']) +
+            '</dd><dt>Item</dt><dd>' + E(b['item']) + '</dd></dl><ul class="mvs">' + ''.join('<li>' + E(m) + '</li>' for m in b['moves']) + '</ul>'
+            + ('<ul class="todo-mini">' + todo + '</ul>' if todo else '') + ('<div class="slot-sub">' + here + '</div>' if here else ''))
 slots = ''
 for i, nm in enumerate(st['team']):
     d = disp(nm); r = T.get(nm, {}); p = party.get(d) or {}
@@ -39,7 +56,7 @@ for i, nm in enumerate(st['team']):
               f'<b class="slot-name">{E(d)}</b><div class="slot-types">{types}</div>'
               f'<div class="slot-lv"><span>Lv {lv or "?"}</span><span class="lv-bar" role="img" aria-label="Level {lv} of {CAP}">'
               f'<i style="width:{min(100, round(100 * lv / CAP)) if lv else 0}%"></i></span><span class="lv-cap">{CAP}</span></div>'
-              f'<div class="slot-sub">{E(p.get("item") or "no item")}{here}</div></li>')
+              + build_html(BUILD.get(d), p, here) + '</li>')
 nxt = ''
 if st.get('fight') and st['fight'] in FP:
     p = FP[st['fight']]
@@ -67,6 +84,9 @@ page = re.sub(r'<table class="cft">.*?</table>', cft, page, flags=re.S)
 page = re.sub(r"(<h3>Fight plans: your core \+ 2 swaps per fight</h3>)(<ul class='legend'>.*?</ul>)",
               r'\1<details class="how"><summary>How this works</summary>\2</details>', page, flags=re.S)
 
+page = page.replace('<th>Best opener (matchup)</th>', '')
+page = re.sub(r'<td data-l="Opener">.*?</td>', '', page, flags=re.S)
+
 # ---------------------------------------------------------------- panels Vincent doesn't need on screen (17 Nov); data stays in team/*.json
 page = re.sub(r'<div class="panel pad cf">.*?</ol></div>\s*', '', page, flags=re.S)                       # fight lineup + turn plan
 page = re.sub(r'<div class="panel pad"><h3>Team rules \(core of 4 \+ 2 swaps\)</h3>.*?</ul></div>\s*', '', page, flags=re.S)
@@ -74,14 +94,33 @@ page = re.sub(r'<div class="panel pad"><h3>How to play it</h3>.*?</ul>\s*</div>\
 page = re.sub(r"<div class='panel pad'><h3>Fight plans: your core.*?</table></div></div>", '', page, flags=re.S)
 page = re.sub(r'<div class="legend nfn">.*?</div>\s*', '', page, flags=re.S)                 # fight cards: description line
 page = re.sub(r'(<div class="panel pad nf">.*?)<ul class="plain">.*?</ul>(</div>)', r'\1\2', page, flags=re.S)   # fight cards: threat notes
-def core_card(m):   # Cores: keep the title + members (name, tier, build); drop score, identity text, role line and the bullet list
-    c = m.group(0)
-    c = re.sub(r"\s*<span class='legend'>core score [\d.]+</span>", '', c)
-    c = re.sub(r"<p class='legend'>.*?</p>", '', c, flags=re.S)
-    c = re.sub(r"<div class='legend'>[^<]*· base Spe \d+</div>", '', c)
-    c = re.sub(r"<ul>.*?</ul></div>$", '</div>', c, flags=re.S)
-    return c
-page = re.sub(r"<div class='panel pad core'>.*?</ul></div>", core_card, page, flags=re.S)
+CTITLE = {'balance': 'Balance / tempo', 'tr': 'Trick Room', 'setup': 'Setup / hyper offense', 'grassy': 'Grassy Terrain',
+          'electric': 'Electric Terrain', 'sun': 'Sun', 'snow': 'Snow'}
+def tchip(n):
+    t = (T.get(n) or {}).get('tier', '?')
+    return '<span class="tier t' + t + '">' + t + '</span>'
+def core_grid():   # Cores: one compact card per style; key piece marked; the alt folded in as a swap option
+    C = json.load(open('team/cores.json')) if os.path.exists('team/cores.json') else {}
+    mine = sorted(st.get('core') or [])
+    out = ''
+    for k, v in C.items():
+        if not v: continue
+        main = v[0]['members']; key = main[0]; yours = sorted(main) == mine
+        lis = ''.join('<li' + (' class="key"' if n == key else '') + '>' + tchip(n) + '<span>' + E(disp(n)) + '</span>' +
+                      ('<small>key</small>' if n == key else '') + '</li>' for n in main)
+        alt = ''
+        if len(v) > 1:
+            am = v[1]['members']; o = [n for n in main if n not in am]; i_ = [n for n in am if n not in main]
+            if am[0] == key and len(o) <= 2:
+                alt = '<div class="cc-alt"><span>Swap option</span>' + ' · '.join(E(disp(x)) + ' ⇄ ' + E(disp(y)) for x, y in zip(o, i_)) + '</div>'
+            else:
+                alt = ('<div class="cc-alt"><span>Or with ' + E(disp(key)) + '</span>' + ' · '.join(E(disp(n)) for n in am[1:]) + '</div>') if am[0] == key else \
+                      ('<div class="cc-alt"><span>Other core</span>' + ' · '.join(E(disp(n)) for n in am) + '</div>')
+        out += ('<article class="cc' + (' is-yours' if yours else '') + '"><header><b>' + E(CTITLE.get(k, k)) + '</b>' +
+                ('<span class="yours">your core</span>' if yours else '') + '</header><ul class="cc-m">' + lis + '</ul>' + alt + '</article>')
+    return '<div class="cgrid">' + out + '</div>'
+page = re.sub(r'(<section aria-labelledby="s9">\s*<h2 id="s9">.*?</h2>\s*(?:<details class="how">.*?</details>)?).*?(</section>)',
+              lambda m: m.group(1) + core_grid() + m.group(2), page, count=1, flags=re.S)
 
 # ---------------------------------------------------------------- fold scoring explanations ("How this works")
 def fold(m):
@@ -231,6 +270,25 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .lv-bar { height: 7px; border-radius: 99px; background: var(--panel-2); border: 1px solid var(--line); overflow: hidden }
 .lv-bar i { display: block; height: 100%; background: var(--lv); border-radius: 99px }
 .lv-cap { color: var(--muted) }
+.sb { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; margin: 2px 0 0; font-size: 13px; position: relative; z-index: 1 }
+.sb dt { font: 600 10.5px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding-top: 2px }
+.sb dd { margin: 0; min-width: 0 }
+.mvs { list-style: none; margin: 2px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px }
+.mvs li { background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; padding: 3px 8px; font: 600 12.5px var(--body); white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.todo-mini { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; font-size: 12.5px; color: var(--warn); font-weight: 700 }
+.cgrid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) }
+.cc { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; box-shadow: var(--shadow); display: grid; gap: 10px; align-content: start }
+.cc.is-yours { border: 2px solid var(--accent) }
+.cc header { display: flex; align-items: center; justify-content: space-between; gap: 8px }
+.cc header b { font: 700 16px var(--display) }
+.cc .yours { background: var(--accent); color: #fff; font: 700 10.5px var(--mono); letter-spacing: .06em; text-transform: uppercase; padding: 2px 8px; border-radius: 99px }
+.cc-m { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 6px }
+.cc-m li { display: flex; align-items: center; font: 700 13.5px var(--body); min-width: 0 }
+.cc-m li span:not(.tier) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.cc-m .tier { min-width: 22px; height: 22px; font-size: 12px !important; margin-right: 6px }
+.cc-m small { margin-left: 6px; font: 600 10px var(--mono); text-transform: uppercase; color: var(--accent) }
+.cc-alt { font-size: 12.5px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 8px }
+.cc-alt span { font: 700 10.5px var(--mono); text-transform: uppercase; letter-spacing: .06em; margin-right: 6px; color: var(--ink) }
 .slot-sub { font-size: 12.5px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap }
 .slot-miss { color: var(--warn); font-weight: 700 }
 .next { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "k go" "t go" "s go"; gap: 2px 12px; text-decoration: none; color: var(--on-dex);
@@ -241,7 +299,7 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .next-go { grid-area: go; align-self: center; font: 700 28px var(--display) }
 @media (prefers-reduced-motion: no-preference) { .tabp:not([hidden]) { animation: rise .22s ease-out } @keyframes rise { from { transform: translateY(6px); opacity: .6 } to { transform: none; opacity: 1 } } }
 .role-chip { display: inline-block; background: var(--accent-soft); color: var(--accent); font: 700 11.5px var(--body); letter-spacing: .02em; padding: 3px 10px; border-radius: 99px; white-space: nowrap }
-.tier { width: auto !important; max-width: 44px; flex: none; justify-self: start }
+.tier { width: auto !important; max-width: 44px; flex: none; justify-self: start; grid-template-columns: auto !important; border: 0 !important; overflow: visible !important; background-clip: padding-box }
 @media (max-width: 680px) {
   .cft thead, .fplan thead { display: none }
   .cft, .cft tbody, .cft tr, .cft td, .fplan, .fplan tbody, .fplan tr, .fplan td { display: block; width: 100% }

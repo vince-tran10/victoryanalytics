@@ -153,7 +153,8 @@ def main():
     html = open(OUT).read()
     todo = re.search(r'<section aria-labelledby="s3">.*?</section>', html, re.S).group(0)
     cards = re.findall(r'<div class="tgroup pcard"><h3>(.*?) <span', todo)
-    team_tab = re.search(r'<section aria-labelledby="s1">.*?Team rules', html, re.S).group(0)
+    _tt = re.search(r'<section aria-labelledby="s1">.*?</section>', html, re.S)
+    team_tab = _tt.group(0) if _tt else ''
     print(f"Page: party Done ✓ {team_tab.count('Done ✓')}/6 · To do cards {len(cards)} {cards} · "
           f"box moves: green {sum(1 for v in acts.values() if v.startswith(('Move to Active', 'Move into')))}, "
           f"red {sum(1 for v in acts.values() if not v.startswith(('Move to Active', 'Move into')))}")

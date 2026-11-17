@@ -6458,7 +6458,7 @@
    "types": "Dark",
    "bst": 505,
    "attacks": [
-    "Jaw Lock",
+    "Crunch",
     "Play Rough",
     "Double-Edge"
    ],
@@ -8984,7 +8984,7 @@
    "types": "Dark",
    "bst": 505,
    "attacks": [
-    "Jaw Lock",
+    "Crunch",
     "Play Rough",
     "Double-Edge"
    ],
@@ -9410,7 +9410,7 @@
    "types": "Fighting",
    "bst": 505,
    "attacks": [
-    "Wake-Up Slap",
+    "Vital Throw",
     "Knock Off",
     "Strength"
    ],
@@ -13360,7 +13360,7 @@
    "types": "Water/Rock",
    "bst": 485,
    "attacks": [
-    "Jaw Lock",
+    "Crunch",
     "Liquidation",
     "Ice Fang"
    ],
@@ -15069,7 +15069,7 @@
    "bst": 510,
    "attacks": [
     "Energy Ball",
-    "Terrain Pulse"
+    "Weather Ball"
    ],
    "solo": {
     "jenner": 0.43,
@@ -16425,7 +16425,7 @@
    "attacks": [
     "Liquidation",
     "Rock Blast",
-    "Jaw Lock"
+    "Crunch"
    ],
    "solo": {
     "jenner": 0.413,
@@ -17029,7 +17029,7 @@
    "types": "Normal",
    "bst": 480,
    "attacks": [
-    "Facade",
+    "Dizzy Punch",
     "Jump Kick",
     "Assurance"
    ],
@@ -17065,7 +17065,7 @@
    "types": "Normal",
    "bst": 480,
    "attacks": [
-    "Facade",
+    "Dizzy Punch",
     "Jump Kick",
     "Assurance"
    ],
@@ -17101,7 +17101,7 @@
    "types": "Normal",
    "bst": 480,
    "attacks": [
-    "Facade",
+    "Dizzy Punch",
     "Jump Kick",
     "Assurance"
    ],
@@ -21157,7 +21157,7 @@
    "types": "Normal",
    "bst": 420,
    "attacks": [
-    "Facade",
+    "Headbutt",
     "Shadow Ball",
     "Fire Blast"
    ],
@@ -22052,7 +22052,7 @@
    "types": "Normal/Flying",
    "bst": 377,
    "attacks": [
-    "Aerial Ace",
+    "Pluck",
     "Slash",
     "Knock Off"
    ],
@@ -22301,7 +22301,7 @@
    "types": "Normal/Flying",
    "bst": 377,
    "attacks": [
-    "Aerial Ace",
+    "Pluck",
     "Slash",
     "Knock Off"
    ],
