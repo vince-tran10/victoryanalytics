@@ -137,7 +137,10 @@ damage score and the fight's real win condition was only read after Vincent lost
   item, 4 moves, open to-dos) + the Next battle card. The old team table is folded into the cards by theme.py.
 - **Cores tab (17 Nov):** compact grid, one card per style: 4 members with tier chips, key piece marked; the alt core's
   replacements sit greyed on the right of the member they replace (⇄ + tier chip). Kept members have nothing on the right. No builds there (they live on Team / To do).
-- **Fights tab:** no "Best opener (matchup)" or "Your six" columns (17 Nov).
+- **Fights tab (17 Nov):** one collapsible card per remaining fight, built by theme.py from team/fight_plans.json (single
+  source; the old hard-fights table, opener cards and counter tables are replaced). Header: number, name, format/boss/field
+  chips, countered x/n (green if ≥ n-1), "Needs a plan" badge. Body: Bring (2 swaps), Lead, Field boosts, then each foe →
+  counter with deals/takes bars, weak rows first in amber. Only the next fight is open.
 - **Fights tab:** every remaining hard fight: Singles/Doubles, Boss tag, field, why it's hard, lead.
   **Fight plans (17 Nov):** scripts/team/fights/fight_plans.py (run by update.py after remaining_eval.py per fight, core scored
   with its REAL builds via FIXED) picks each fight's best 2 swaps (one-to-one counters incl. one setup turn, rules (b)(c) vs that

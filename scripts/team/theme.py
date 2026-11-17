@@ -84,6 +84,55 @@ page = re.sub(r'<table class="cft">.*?</table>', cft, page, flags=re.S)
 page = re.sub(r"(<h3>Fight plans: your core \+ 2 swaps per fight</h3>)(<ul class='legend'>.*?</ul>)",
               r'\1<details class="how"><summary>How this works</summary>\2</details>', page, flags=re.S)
 
+# ---------------------------------------------------------------- Fights tab (17 Nov): one card per fight, single source = fight_plans.json
+def _txt(x): return re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', x)).strip()
+HF = []   # (name, format, boss, field) from the "Hard fights left" table, story order
+for r in re.findall(r'<tr><td class="c hn">\d+</td>(.*?)</tr>', page, re.S):
+    nm_ = _txt(re.search(r'<td class="hf"><b>(.*?)</b> <span', r, re.S).group(1))
+    HF.append(dict(name=nm_, boss='bossb' in r, field=_txt((re.search(r'<td data-l="Field">(.*?)</td>', r, re.S) or [0, ''])[1])))
+FB = [_txt(m) for m in re.findall(r'<div><b>Field boosts:</b>(.*?)</div>', page, re.S)]
+FBX = {}
+_cards = re.findall(r'<div class="panel pad nf"><h4>(.*?)</h4>(.*?)</div>(?=<div class="panel pad nf">|</div>)', page, re.S)
+for h4, body in _cards:
+    m_ = re.search(r'<b>Field boosts:</b>(.*?)</div>', body, re.S)
+    FBX[_txt(re.sub(r'<span class="legend">.*', '', h4, flags=re.S))] = _txt(m_.group(1)) if m_ else ''
+def tname(n):
+    return tchip_s(n) + '<span>' + E(disp(n)) + '</span>'
+def tchip_s(n):
+    t = (T.get(n) or {}).get('tier', '?')
+    return '<span class="tier t' + t + '">' + t + '</span>'
+def bar(v, cls):
+    return '<span class="mbar ' + cls + '"><i style="width:' + str(min(100, v)) + '%"></i></span><b class="mv">' + str(v) + '%</b>'
+def fight_cards():
+    order = [k for k in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick'] if k in FP]
+    out = ''
+    for idx, k in enumerate(order):
+        p = FP[k]; hf = HF[idx] if idx < len(HF) else {}
+        name = FIGHT_NAME.get(k, k); nb = sum(1 for q in p['pairs'] if q['ok'])
+        good = nb >= p['n'] - 1
+        head = ('<summary><span class="fn">' + str(idx + 1) + '</span><span class="ft"><b>' + E(name) + '</b><span class="fchips">'
+                + '<span class="fchip">' + E(p['format']) + '</span>' + ('<span class="fchip boss">Boss</span>' if hf.get('boss') else '')
+                + ('<span class="fchip">' + E(hf.get('field', '')) + '</span>' if hf.get('field') else '') + '</span></span>'
+                + ('<span class="needs">Needs a plan</span>' if p.get('note') else '')
+                + '<span class="cnt ' + ('ok' if good else 'warn') + '">' + str(nb) + '/' + str(p['n']) + '</span></summary>')
+        bring = ''.join('<li>' + tname(r['name']) + '</li>' for r in p['swaps'])
+        lead = ''.join('<li>' + tname(x) + '</li>' for x in p['leads'])
+        fb = FBX.get(name, '') or FBX.get(hf.get('name', ''), '')
+        rows = sorted(p['pairs'], key=lambda q: q['ok'])
+        foes = ''.join('<li class="' + ('is-ok' if q['ok'] else 'is-weak') + '"><span class="foe">' + E(q['foe']) + '</span><span class="arrow">→</span>'
+                       '<span class="ctr-m">' + tname(q['mon']) + '</span><span class="dt"><span class="lab">Deals</span>' + bar(q['dealt'], 'deal')
+                       + '<span class="lab">Takes</span>' + bar(q['taken'], 'take') + '</span><span class="st">'
+                       + (('✓ after ' + E(q['setup'])) if q.get('setup') else ('✓' if q['ok'] else 'weak')) + '</span></li>' for q in rows)
+        out += ('<details class="fc' + (' is-next' if idx == 0 else '') + '"' + (' open' if idx == 0 else '') + '>' + head
+                + '<div class="fbody"><div class="frow"><span class="fk">Bring</span><ul class="mons">' + bring + '</ul></div>'
+                + '<div class="frow"><span class="fk">Lead</span><ul class="mons">' + lead + '</ul></div>'
+                + ('<div class="frow"><span class="fk">Field</span><span class="fbo">' + E(fb) + '</span></div>' if fb and 'No field boost' not in fb else '')
+                + '<ul class="foes">' + foes + '</ul></div></details>')
+    return '<div class="fcards">' + out + '</div>'
+if FP:
+    page = re.sub(r'(<section aria-labelledby="s1f">\s*<h2 id="s1f">.*?</h2>).*?</section>', lambda m: m.group(1) + fight_cards() + '</section>', page, count=1, flags=re.S)
+    page = re.sub(r'<section aria-labelledby="sctr">.*?</section>\s*', '', page, count=1, flags=re.S)
+
 page = page.replace('<th>Best opener (matchup)</th>', '').replace('<th>Your six</th>', '')
 page = re.sub(r'<td class="st[^"]*" data-l="Your six">.*?</td>', '', page, flags=re.S)
 page = re.sub(r'<td data-l="Opener">.*?</td>', '', page, flags=re.S)
@@ -113,7 +162,7 @@ def core_grid():   # Cores: one compact card per style; key piece marked; the al
             sw = dict(zip(o, i_))
         lis = ''.join('<li' + (' class="key"' if n == key else '') + '><span class="cm">' + tchip(n) + '<span class="nm">' + E(disp(n)) + '</span>' +
                       ('<small>key</small>' if n == key else '') + '</span>' +
-                      ('<span class="alt" title="swap option">⇄ ' + tchip(sw[n]) + '<span class="nm">' + E(disp(sw[n])) + '</span></span>' if n in sw else '') +
+                      ('<span class="alt" title="swap option"><span class="swp">⇄</span>' + tchip(sw[n]) + '<span class="nm">' + E(disp(sw[n])) + '</span></span>' if n in sw else '') +
                       '</li>' for n in main)
         alt = ''
         out += ('<article class="cc' + (' is-yours' if yours else '') + '"><header><b>' + E(CTITLE.get(k, k)) + '</b>' +
@@ -287,13 +336,56 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .cc-m .cm, .cc-m .alt { display: flex; align-items: center; min-width: 0 }
 .cc-m .nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
 .cc-m .alt { color: var(--muted); font-weight: 600; opacity: .8 }
-.cc-m .alt .tier { filter: grayscale(.6); opacity: .85 }
+.cc-m .alt .tier { filter: grayscale(.6); opacity: .85 } .cc-m .swp { margin: 0 10px 0 2px; font-size: 15px }
 .cc-m li span:not(.tier) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
 .cc-m .tier { min-width: 22px; height: 22px; font-size: 12px !important; margin-right: 6px }
 .cc-m small { margin-left: 6px; font: 600 10px var(--mono); text-transform: uppercase; color: var(--accent) }
 .cc-alt { font-size: 12.5px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 8px }
 .cc-alt b { color: var(--ink) } .cc-alt .k { font: 600 10px var(--mono); text-transform: uppercase; color: var(--accent) }
 .cc-alt span { font: 700 10.5px var(--mono); text-transform: uppercase; letter-spacing: .06em; margin-right: 6px; color: var(--ink) }
+.fcards { display: grid; gap: 12px }
+.fc { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden }
+.fc.is-next { border: 2px solid var(--accent) }
+.fc > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 14px 16px }
+.fc > summary::-webkit-details-marker { display: none }
+.fn { flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: var(--panel); font: 700 13px var(--mono) }
+.is-next .fn { background: var(--accent); color: #fff }
+.ft { display: grid; gap: 4px; min-width: 0; flex: 1 }
+.ft b { font: 700 17px/1.15 var(--display) }
+.fchips { display: flex; flex-wrap: wrap; gap: 4px }
+.fchip { font: 600 11px var(--mono); color: var(--muted); background: var(--panel-2); border: 1px solid var(--line); border-radius: 99px; padding: 1px 8px }
+.fchip.boss { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 40%, var(--line)) }
+.needs { flex: none; font: 700 11px var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--warn); background: var(--warn-soft); border-radius: 99px; padding: 3px 9px }
+.cnt { flex: none; font: 700 14px var(--mono); padding: 4px 10px; border-radius: 10px }
+.cnt.ok { background: var(--good-soft); color: var(--good) } .cnt.warn { background: var(--warn-soft); color: var(--warn) }
+.fc > summary::after { content: "›"; font: 700 22px var(--display); color: var(--muted); transition: transform .15s }
+.fc[open] > summary::after { transform: rotate(90deg) }
+.fbody { display: grid; gap: 10px; padding: 0 16px 16px; border-top: 1px solid var(--line); padding-top: 12px }
+.frow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap }
+.fk { font: 600 10.5px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); min-width: 48px }
+.mons { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px }
+.mons li { display: flex; align-items: center; background: var(--panel-2); border: 1px solid var(--line); border-radius: 99px; padding: 3px 12px 3px 4px; font: 700 13.5px var(--body) }
+.mons .tier, .foes .tier { min-width: 22px; height: 22px; font-size: 12px !important; margin-right: 6px }
+.fbo { font-size: 13px; color: var(--muted) }
+.foes { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 6px }
+.foes li { display: grid; grid-template-columns: minmax(90px, 1fr) auto minmax(120px, 1.2fr) minmax(170px, 1.4fr) 92px; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: 12px; background: var(--panel-2); font-size: 13.5px }
+.foes li.is-weak { background: var(--warn-soft) }
+.foe { font-weight: 800 } .arrow { color: var(--muted) }
+.ctr-m { display: flex; align-items: center; font-weight: 700; min-width: 0 }
+.dt { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 3px 8px }
+.lab { font: 600 10px var(--mono); text-transform: uppercase; color: var(--muted) }
+.mbar { height: 6px; border-radius: 99px; background: var(--line); overflow: hidden; min-width: 50px }
+.mbar i { display: block; height: 100% }
+.mbar.deal i { background: var(--good) } .mbar.take i { background: var(--bad) }
+.mv { font: 600 12px var(--mono); font-variant-numeric: tabular-nums; text-align: right; min-width: 40px }
+.foes .st { font: 700 12px var(--body); color: var(--good); text-align: right }
+.foes li.is-weak .st { color: var(--warn) }
+@media (max-width: 680px) {
+  .foes li { grid-template-columns: 1fr auto; grid-template-areas: "foe st" "ctr ctr" "dt dt" }
+  .foe { grid-area: foe } .arrow { display: none } .ctr-m { grid-area: ctr } .dt { grid-area: dt } .foes .st { grid-area: st }
+  .fc > summary { flex-wrap: wrap }
+}
 .slot-sub { font-size: 12.5px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap }
 .slot-miss { color: var(--warn); font-weight: 700 }
 .next { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "k go" "t go" "s go"; gap: 2px 12px; text-decoration: none; color: var(--on-dex);
