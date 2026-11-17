@@ -1,6 +1,134 @@
 {
  "balance": [
   {
+   "score": 0.935,
+   "members": [
+    "Arcanine (Hisuian Form)",
+    "Golisopod (Aevian Form)",
+    "Gholdengo",
+    "Vaporeon"
+   ],
+   "cover": 26,
+   "swaps": [
+    "Slowking (Galarian Form)",
+    "Annihilape"
+   ],
+   "builds": [
+    {
+     "moves": [
+      "Flare Blitz",
+      "Head Smash",
+      "Extreme Speed",
+      "Protect"
+     ],
+     "item": "Focus Sash",
+     "nature": "Jolly",
+     "evs": "252 Atk / 252 Spe",
+     "ability": "Intimidate"
+    },
+    {
+     "moves": [
+      "Bone Rush",
+      "Pin Missile",
+      "Swords Dance",
+      "Protect"
+     ],
+     "item": "Soft Sand",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Skill Link"
+    },
+    {
+     "moves": [
+      "Make It Rain",
+      "Shadow Ball",
+      "Thunder Wave",
+      "Protect"
+     ],
+     "item": "Metal Coat",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Good as Gold"
+    },
+    {
+     "moves": [
+      "Hydro Pump",
+      "Aurora Beam",
+      "Haze",
+      "Protect"
+     ],
+     "item": "Mystic Water",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Water Absorb"
+    }
+   ],
+   "roles": [
+    "tempo lead",
+    "attacker",
+    "attacker",
+    "attacker"
+   ],
+   "shared": [],
+   "answers": [
+    "Haze / phaze",
+    "Fake Out / Intimidate",
+    "speed control",
+    "priority"
+   ],
+   "missing": [
+    "Taunt / Encore",
+    "screen breaker"
+   ],
+   "per_fight": {
+    "darkgardevoir": [
+     0,
+     1
+    ],
+    "garbodor": [
+     2,
+     4
+    ],
+    "karrina": [
+     4,
+     6
+    ],
+    "spector": [
+     6,
+     6
+    ],
+    "spector2": [
+     5,
+     6
+    ],
+    "jenner9": [
+     2,
+     6
+    ],
+    "amanda": [
+     3,
+     6
+    ],
+    "erick": [
+     4,
+     6
+    ]
+   },
+   "open": [
+    "amanda:Bronzong",
+    "darkgardevoir:Gardevoir",
+    "erick:Chandelure",
+    "garbodor:Garbodor (bar 1)",
+    "garbodor:Garbodor (bar 2)",
+    "jenner9:Appletun",
+    "jenner9:Kommo-o",
+    "jenner9:Porygon-Z",
+    "jenner9:Stoutland",
+    "spector2:Golisopod"
+   ],
+   "cover6": 31
+  },
+  {
    "score": 0.94,
    "members": [
     "Arcanine (Hisuian Form)",
@@ -128,133 +256,6 @@
     "spector2:Typhlosion"
    ],
    "cover6": 30
-  },
-  {
-   "score": 0.935,
-   "members": [
-    "Arcanine (Hisuian Form)",
-    "Annihilape",
-    "Golisopod (Aevian Form)",
-    "Vaporeon"
-   ],
-   "cover": 25,
-   "swaps": [
-    "Chandelure",
-    "Slowking (Galarian Form)"
-   ],
-   "builds": [
-    {
-     "moves": [
-      "Roar",
-      "Flare Blitz",
-      "Head Smash",
-      "Protect"
-     ],
-     "item": "Focus Sash",
-     "nature": "Jolly",
-     "evs": "252 Atk / 252 Spe",
-     "ability": "Intimidate"
-    },
-    {
-     "moves": [
-      "Close Combat",
-      "Shadow Claw",
-      "Outrage",
-      "Protect"
-     ],
-     "item": "Black Belt",
-     "nature": "Jolly",
-     "evs": "252 Atk / 252 Spe",
-     "ability": "Defiant"
-    },
-    {
-     "moves": [
-      "Electroweb",
-      "Bone Rush",
-      "Pin Missile",
-      "Protect"
-     ],
-     "item": "Soft Sand",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Skill Link"
-    },
-    {
-     "moves": [
-      "Hydro Pump",
-      "Aurora Beam",
-      "Shadow Ball",
-      "Protect"
-     ],
-     "item": "Mystic Water",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Water Absorb"
-    }
-   ],
-   "roles": [
-    "tempo lead",
-    "attacker",
-    "attacker",
-    "attacker"
-   ],
-   "shared": [],
-   "answers": [
-    "Haze / phaze",
-    "Fake Out / Intimidate",
-    "speed control"
-   ],
-   "missing": [
-    "Taunt / Encore",
-    "priority",
-    "screen breaker"
-   ],
-   "per_fight": {
-    "darkgardevoir": [
-     0,
-     1
-    ],
-    "garbodor": [
-     2,
-     4
-    ],
-    "karrina": [
-     4,
-     6
-    ],
-    "spector": [
-     4,
-     6
-    ],
-    "spector2": [
-     5,
-     6
-    ],
-    "jenner9": [
-     2,
-     6
-    ],
-    "amanda": [
-     4,
-     6
-    ],
-    "erick": [
-     4,
-     6
-    ]
-   },
-   "open": [
-    "amanda:Hatterene",
-    "darkgardevoir:Gardevoir",
-    "erick:Chandelure",
-    "garbodor:Garbodor (bar 1)",
-    "garbodor:Garbodor (bar 2)",
-    "jenner9:Appletun",
-    "jenner9:Kommo-o",
-    "jenner9:Porygon-Z",
-    "jenner9:Stoutland"
-   ],
-   "cover6": 32
   }
  ],
  "tr": [

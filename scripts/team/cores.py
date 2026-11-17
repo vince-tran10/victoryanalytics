@@ -12,6 +12,7 @@ from kits import disp, abn, SHORT
 E = html.escape
 D = C.D
 T = json.load(open('team/tier_all.json'))
+ST = json.load(open('team/state.json'))
 TYPES = ['NORMAL', 'FIRE', 'WATER', 'ELECTRIC', 'GRASS', 'ICE', 'FIGHTING', 'POISON', 'GROUND', 'FLYING', 'PSYCHIC', 'BUG', 'ROCK',
          'GHOST', 'DRAGON', 'DARK', 'STEEL', 'FAIRY']
 FOES = sorted({f"{b['key']}:{f['name']}" for b in T['fights'] for f in b['foes']})
@@ -198,6 +199,10 @@ for key, title, idt, en_f, mem_f, id_f in ARCH:
         if all(len({m.name for m in ms} & {m.name for m in p}) <= 2 for _, p in picked):
             picked.append((sc, ms))
         if len(picked) == 2: break
+    mine = [ALL[n] for n in (ST.get('core') or []) if n in ALL]
+    if key == 'balance' and len(mine) == 4:   # Vincent's picked core is always the first card of its style
+        mine = tuple(mine)
+        picked = [(core_score(mine, id_f(mine)), mine)] + [(sc, ms) for sc, ms in picked if sorted(m.name for m in ms) != sorted(m.name for m in mine)][:1]
     results[key] = picked
     print(key, [(round(s, 3), round(id_f(ms), 2), [disp(m.name) for m in ms]) for s, ms in picked])
 
@@ -318,16 +323,23 @@ for key, title, idt, en_f, mem_f, id_f in ARCH:
         sw, cov6 = best_swaps(ms)
         uncovered = sorted(set(FOES) - cov6)
         roles = [role_of(m, key, ms, enabler) for m in ms]
-        def covered(bds):
-            ids = {mv_by_name.get(x) for bd in bds for x in bd['moves']}
-            fl = {g for g, mvs in G.items() if mvs & ids}
-            if any(bd['ability'] == 'Intimidate' for bd in bds): fl.add('intimidate')
-            return [n for n, f in ANS if f & fl]
+        def covered(bds, who=False):
+            hits = {}
+            for m, bd in zip(ms, bds):
+                for x in bd['moves']:
+                    for n, fl in ANS:
+                        if fl & {g for g, mvs in G.items() if mv_by_name.get(x) in mvs}: hits.setdefault(n, []).append(f"{disp(m.name)} ({x})")
+                if bd['ability'] == 'Intimidate': hits.setdefault('Fake Out / Intimidate', []).append(f"{disp(m.name)} (Intimidate)")
+            return hits if who else [n for n, _ in ANS if n in hits]
         have = {w for w, ab in (('sun', 'DROUGHT'), ('snow', 'SNOWWARNING'), ('eterrain', 'ELECTRICSURGE')) if key in (w, 'electric' if w == 'eterrain' else w) and any(ab in m.r['abilities'] for m in ms)}
         bds = [build(m, key, rl, [], have) for m, rl in zip(ms, roles)]
         need = [n for n, _ in ANS if n not in covered(bds)]
         bds = [build(m, key, rl, need, have) for m, rl in zip(ms, roles)]
-        got = covered(bds); miss = [n for n, _ in ANS if n not in got]
+        if sorted(m.name for m in ms) == sorted(ST.get('core') or []):   # the core Vincent plays: show his real builds
+            for j, m in enumerate(ms):
+                if m.name in ST['moves']:
+                    bds[j] = dict(bds[j], moves=ST['moves'][m.name], ability=ST['abilities'].get(m.name, bds[j]['ability']))
+        got = covered(bds); miss = [n for n, _ in ANS if n not in got]; whom = covered(bds, True)
         mem = ''
         for m, role, bd in zip(ms, roles, bds):
             mem += (f"<tr><td><b>{E(disp(m.name))}</b> <span class='tier t{m.r['tier']}'>{m.r['tier']}</span>"
@@ -336,12 +348,12 @@ for key, title, idt, en_f, mem_f, id_f in ARCH:
                     f"<td>{E(' / '.join(bd['moves']))}</td></tr>")
         fl = ' · '.join(f"{SHORT[k]} {a}/{n}" for k, (a, n) in per.items())
         cards.append(
-            f"<div class='panel pad core'><h3>{E(title)}{' (alt)' if i else ''} <span class='legend'>core score {sc:.2f}</span></h3>"
+            f"<div class='panel pad core'><h3>{E(title)}{' (alt)' if i else (' · your core' if sorted(m.name for m in ms) == sorted(ST.get('core') or []) else '')} <span class='legend'>core score {sc:.2f}</span></h3>"
             f"<p class='legend'>{E(idt)}</p>"
             f"<div class='tablewrap'><table class='tlx'><thead><tr><th>Member</th><th>Ability · nature · EVs / item</th><th>Moves</th></tr></thead><tbody>{mem}</tbody></table></div>"
             f"<ul><li><b>Ch9 foes it counters:</b> {len(cov)}/{len(FOES)} <span class='legend'>({E(fl)})</span></li>"
             f"<li><b>Shared weaknesses:</b> {E(', '.join(t.title() for t in shared) or 'none')}</li>"
-            f"<li><b>Answers:</b> {E(', '.join(got) or 'none')}{' · <b>missing:</b> ' + E(', '.join(miss)) if miss else ''}</li>"
+            f"<li><b>Answers:</b> {E(' · '.join(n + ': ' + ', '.join(whom[n]) for n in got) or 'none')}{' · <b>missing:</b> ' + E(', '.join(miss)) if miss else ''}</li>"
             f"<li><b>Best 2 swaps for Ch9:</b> {E(disp(sw[0].name))} + {E(disp(sw[1].name))} → {len(cov6)}/{len(FOES)} foes"
             f"{' · still open: ' + E(', '.join(u.split(':')[1] + ' (' + SHORT[u.split(':')[0]] + ')' for u in uncovered[:8])) if uncovered else ''}</li></ul></div>")
         results[key][i] = dict(score=round(sc, 3), members=[m.name for m in ms], cover=len(cov), swaps=[x.name for x in sw], builds=bds, roles=roles, shared=shared, answers=got, missing=miss, per_fight=per, open=uncovered, cover6=len(cov6))

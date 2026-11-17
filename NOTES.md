@@ -685,3 +685,6 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   slot 2, doubles partner (Intimidate vs Incineroar / Electivire). Per-fight: Gholdengo leads Spector day, Vaporeon Spector night.
 - 16 Nov export (12:24): all six builds match (ability, nature, EVs, item, moves); only levels 55 → 60 left. Party order in the
   export is Arcanine-H first; guide order is Golisopod-A first (singles lead). Klinklang (old DG specialist) → Overflow.
+- 17 Nov: Cores "Answers" now names who covers each (e.g. "Haze: Vaporeon (Haze)"). Vincent's picked core is pinned as the
+  first Balance card with his real builds (the generator had shown Roar / Shadow Sneak he doesn't run). Re-score put
+  Azumarill over Vaporeon by 0.005 (noise); kept Vaporeon: +1 Ch9 foe countered and the core's only real Haze.
