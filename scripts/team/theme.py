@@ -6,6 +6,7 @@ usage (from workspace/): python3 -I ../scripts/team/theme.py <report.html>"""
 import html, json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from kits import disp
+import sprites as SP
 import current_box as cb
 E = html.escape
 OUT = sys.argv[1]
@@ -26,6 +27,9 @@ FIGHT_NAME = {'darkgardevoir': 'Dark Gardevoir', 'garbodor': 'Rift Garbodor', 'k
 # ---------------------------------------------------------------- party slots (Team tab hero)
 party = {d['species']: d for d in cb.parse(st['export'])[:6]}
 core = set(st.get('core') or [])
+def spr(n, size='s', shiny=False):
+    r = T.get(n) or {}
+    return SP.tag(r.get('sid'), r.get('form', '0'), shiny, size) if r.get('sid') else ''
 BUILD = {}   # the team table's build per Pokémon (ability, nature, EVs, item, moves, open to-dos); the table itself is removed
 def _t(x): return re.sub(r'<[^>]+>', '', x).strip()
 for row in re.findall(r'<td class="tm-name">(.*?)</tr>', page, re.S):
@@ -51,7 +55,7 @@ for i, nm in enumerate(st['team']):
     tag = 'Core' if nm in core else 'Swap'
     role = (ROLES.get(d) or '').title()
     here = '' if p else '<span class="slot-miss">not in party</span>'
-    slots += (f'<li class="slot{" is-core" if nm in core else ""}"><div class="slot-top"><span class="slot-n">{i + 1}</span>'
+    slots += (f'<li class="slot{" is-core" if nm in core else ""}">' + spr(nm, 'l', bool(p.get('shiny'))) + f'<div class="slot-top"><span class="slot-n">{i + 1}</span>'
               f'<span class="slot-tag">{tag}{" · " + E(role) if role else ""}</span></div>'
               f'<b class="slot-name">{E(d)}</b><div class="slot-types">{types}</div>'
               f'<div class="slot-lv"><span>Lv {lv or "?"}</span><span class="lv-bar" role="img" aria-label="Level {lv} of {CAP}">'
@@ -97,12 +101,13 @@ for h4, body in _cards:
     m_ = re.search(r'<b>Field boosts:</b>(.*?)</div>', body, re.S)
     FBX[_txt(re.sub(r'<span class="legend">.*', '', h4, flags=re.S))] = _txt(m_.group(1)) if m_ else ''
 def tname(n):
-    return tchip_s(n) + '<span>' + E(disp(n)) + '</span>'
+    return tchip_s(n) + spr(n) + '<span>' + E(disp(n)) + '</span>'
 def tchip_s(n):
     t = (T.get(n) or {}).get('tier', '?')
     return '<span class="tier t' + t + '">' + t + '</span>'
 def bar(v, cls):
     return '<span class="mbar ' + cls + '"><i style="width:' + str(min(100, v)) + '%"></i></span><b class="mv">' + str(v) + '%</b>'
+BOSSF = SP.boss_forms()
 def fight_cards():
     order = [k for k in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick'] if k in FP]
     out = ''
@@ -119,7 +124,11 @@ def fight_cards():
         lead = ''.join('<li>' + tname(x) + '</li>' for x in p['leads'])
         fb = FBX.get(name, '') or FBX.get(hf.get('name', ''), '')
         rows = sorted(p['pairs'], key=lambda q: q['ok'])
-        foes = ''.join('<li class="' + ('is-ok' if q['ok'] else 'is-weak') + '"><span class="foe">' + E(q['foe']) + '</span><span class="arrow">→</span>'
+        try: _ids = json.load(open(f'team/{k}_eval.json')).get('foe_ids') or []
+        except Exception: _ids = []
+        _bf = BOSSF.get(k)
+        _fs = {q['foe']: (SP.tag(*(_bf or _ids[j]), size='m') if (_bf or j < len(_ids)) else '') for j, q in enumerate(p['pairs'])}
+        foes = ''.join('<li class="' + ('is-ok' if q['ok'] else 'is-weak') + '"><span class="foe">' + _fs.get(q['foe'], '') + E(q['foe']) + '</span><span class="arrow">→</span>'
                        '<span class="ctr-m">' + tname(q['mon']) + '</span><span class="dt"><span class="lab">Deals</span>' + bar(q['dealt'], 'deal')
                        + '<span class="lab">Takes</span>' + bar(q['taken'], 'take') + '</span><span class="st">'
                        + (('✓ after ' + E(q['setup'])) if q.get('setup') else ('✓' if q['ok'] else 'weak')) + '</span></li>' for q in rows)
@@ -160,9 +169,9 @@ def core_grid():   # Cores: one compact card per style; key piece marked; the al
         if len(v) > 1:   # the alternative: each swapped member gets its replacement in grey on the same row
             am = v[1]['members']; o = [n for n in main if n not in am]; i_ = [n for n in am if n not in main]
             sw = dict(zip(o, i_))
-        lis = ''.join('<li' + (' class="key"' if n == key else '') + '><span class="cm">' + tchip(n) + '<span class="nm">' + E(disp(n)) + '</span>' +
+        lis = ''.join('<li' + (' class="key"' if n == key else '') + '><span class="cm">' + tchip(n) + spr(n) + '<span class="nm">' + E(disp(n)) + '</span>' +
                       ('<small>key</small>' if n == key else '') + '</span>' +
-                      ('<span class="alt" title="swap option"><span class="swp">⇄</span>' + tchip(sw[n]) + '<span class="nm">' + E(disp(sw[n])) + '</span></span>' if n in sw else '') +
+                      ('<span class="alt" title="swap option"><span class="swp">⇄</span>' + tchip(sw[n]) + spr(sw[n]) + '<span class="nm">' + E(disp(sw[n])) + '</span></span>' if n in sw else '') +
                       '</li>' for n in main)
         alt = ''
         out += ('<article class="cc' + (' is-yours' if yours else '') + '"><header><b>' + E(CTITLE.get(k, k)) + '</b>' +
@@ -306,7 +315,8 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .party { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(3, minmax(0, 1fr)) }
 @media (max-width: 860px) { .party { grid-template-columns: repeat(2, minmax(0, 1fr)) } }
 .slot { position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px 12px; display: grid; gap: 6px; box-shadow: var(--shadow); min-width: 0; overflow: hidden }
-.slot::after { content: ""; position: absolute; right: -26px; top: -26px; width: 84px; height: 84px; border-radius: 50%; border: 10px solid var(--line); opacity: .55 }
+.slot > .spr-l { position: absolute; right: 8px; top: 6px; z-index: 0; filter: drop-shadow(0 2px 2px rgba(0,0,0,.18)) }
+.slot::after { display: none; content: ""; position: absolute; right: -26px; top: -26px; width: 84px; height: 84px; border-radius: 50%; border: 10px solid var(--line); opacity: .55 }
 .slot.is-core { border-color: color-mix(in srgb, var(--accent) 40%, var(--line)) }
 .slot-top { display: flex; align-items: center; gap: 8px; position: relative; z-index: 1 }
 .slot-n { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--ink); color: var(--panel); font: 700 12px var(--mono) }
@@ -325,7 +335,7 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .mvs { list-style: none; margin: 2px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px }
 .mvs li { background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; padding: 3px 8px; font: 600 12.5px var(--body); white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
 .todo-mini { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; font-size: 12.5px; color: var(--warn); font-weight: 700 }
-.cgrid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)) }
+.cgrid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)) }
 .cc { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; box-shadow: var(--shadow); display: grid; gap: 10px; align-content: start }
 .cc.is-yours { border: 2px solid var(--accent) }
 .cc header { display: flex; align-items: center; justify-content: space-between; gap: 8px }
@@ -371,7 +381,8 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .foes li { display: grid; grid-template-columns: minmax(90px, 1fr) auto minmax(120px, 1.2fr) minmax(170px, 1.4fr) 92px; align-items: center; gap: 10px;
   padding: 8px 10px; border-radius: 12px; background: var(--panel-2); font-size: 13.5px }
 .foes li.is-weak { background: var(--warn-soft) }
-.foe { font-weight: 800 } .arrow { color: var(--muted) }
+.foe { font-weight: 800; display: flex; align-items: center; min-width: 0 }
+.dexname { display: flex; align-items: center; gap: 4px } .arrow { color: var(--muted) }
 .ctr-m { display: flex; align-items: center; font-weight: 700; min-width: 0 }
 .dt { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 3px 8px }
 .lab { font: 600 10px var(--mono); text-transform: uppercase; color: var(--muted) }
@@ -437,5 +448,9 @@ JS = r'''<script id="app-theme-js">
 _i = page.rfind('</style>') + len('</style>')   # after every generated style block, so the theme wins the cascade
 page = page[:_i] + '\n' + CSS + page[_i:]
 page = page.replace('</body>', JS + '\n</body>') if '</body>' in page else page + '\n' + JS
+_sp = SP.css_for(page)
+page = page.replace('</style>', '</style>\n<style id="sprites">.spr{display:inline-block;flex:none;background:center/contain no-repeat;image-rendering:pixelated}'
+                    '.spr-s{width:28px;height:28px;margin-right:4px}.spr-m{width:44px;height:44px;margin-right:8px}.spr-l{width:88px;height:88px}'
+                    + _sp + '</style>', 1) if _sp else page
 open(OUT, 'w', encoding='utf-8').write(page)
 print('theme: party slots', len(st['team']), '· nav', [k for k, _ in NAV])

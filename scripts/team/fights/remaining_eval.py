@@ -77,7 +77,7 @@ for c in sorted(C, key=lambda c: (c['name'] not in FIXED, -c.get('solo_total', 0
                     base_spe=c['base']['Spe'], setup=D.moves[sm]['MoveName'] if sm else None, setup_mult=SETUP.get(sm, 1),
                     fixed=c['name'] in FIXED))
 out.sort(key=lambda x: -x['score'])
-json.dump(dict(foes=[(BAT[bi]['key'], f['name'], BAT[bi]['format']) for bi, j, f in FOES], foe_spe=[f['stats']['Spe'] for bi, j, f in FOES], foe_bars=[f.get('hp_mult', 1) for bi, j, f in FOES], wt=WT.tolist(), rows=out),
+json.dump(dict(foes=[(BAT[bi]['key'], f['name'], BAT[bi]['format']) for bi, j, f in FOES], foe_spe=[f['stats']['Spe'] for bi, j, f in FOES], foe_bars=[f.get('hp_mult', 1) for bi, j, f in FOES], foe_ids=[(f.get('sid'), f.get('form', '0')) for bi, j, f in FOES], wt=WT.tolist(), rows=out),
           open(os.environ.get('EVAL_OUT', 'team/remaining_eval.json'), 'w'), default=str)
 for x in out[:40]:
     print(f"{x['score']:.3f} {x['name'][:24]:24s} {x['ab'][:12]:12s} {'/'.join(x['types']):16s} spe{x['spe']} {x['moves']} {x['where']}#{x['dump']}")

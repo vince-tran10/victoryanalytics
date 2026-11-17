@@ -4,6 +4,7 @@ usage (from workspace/): python3 -I ../scripts/team/tier_tabs.py <report.html>""
 import html, json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from kits import KIT, SHORT, disp, abn
+from sprites import tag as sprite
 E = html.escape
 OUT = sys.argv[1]
 T = json.load(open('team/tier_all.json'))
@@ -29,7 +30,7 @@ def row(r, extra):
     where = f"{r['where']} #{r['dump']}" + ('' if same else f" · now {oa} (evolve)")
     party = (' <span class="ok">core</span>' if r['name'] in ST_CORE else ' <span class="ok">swap now</span>' if r['name'] in ST_TEAM
              else ' <span class="legend">plan swap</span>' if r['name'] in PLAN_SWAPS else '')
-    return (f"<tr><td><b>{E(disp(r['name']))}</b>{party}<div class='legend'>{E(types)} · {b['HP']}/{b['Atk']}/{b['Def']}/{b['SpA']}/{b['SpD']}/{b['Spe']} · {E(where)}</div></td>"
+    return (f"<tr><td><div class='dexname'>{sprite(r['sid'], r.get('form', '0'), size='m')}<div><b>{E(disp(r['name']))}</b>{party}<div class='legend'>{E(types)} · {b['HP']}/{b['Atk']}/{b['Def']}/{b['SpA']}/{b['SpD']}/{b['Spe']} · {E(where)}</div></div></div></td>"
             f"<td class='c' data-l='score'><b>{r['blend']:.2f}</b><div class='legend'>fights {r['fight']:.2f}<br>meta {r['general']:.2f}</div></td>"
             f"<td>{extra}</td>"
             f"<td>{E(abn(r['ability']))} · {E(', '.join(r['attacks']))}<div class='legend'>counters {len(r['counters'])} Ch9 foes · {E(fights_line(r))}</div></td></tr>")

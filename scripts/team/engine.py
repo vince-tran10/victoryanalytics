@@ -171,7 +171,8 @@ class Engine:
         hp_mult = (int(m['bars']) if m.get('bars') else 1 + (int(m['shields']) if str(m.get('shields') or '').isdigit() else 0)) if m.get('boss') else 1
         disp_name = name + (m.get('phase_label') or '')
         return dict(name=disp_name, sid=sid, types=types, stats=st, level=lvl, moves=moves, ability=ability,
-                    item=m.get('heldItem', ''), hp_mult=hp_mult, raw=m, field_override=m.get('field_override'))
+                    item=m.get('heldItem', ''), hp_mult=hp_mult, raw=m, field_override=m.get('field_override'),
+                    form=str(m.get('form') if m.get('form') not in (None, '') else form))
 
     # ------------------------------------------------------------ damage
     def damage_pct(self, att, dfn, mid, mv, battle, att_is_me):

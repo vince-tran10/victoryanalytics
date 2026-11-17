@@ -216,6 +216,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GHOLDENGO",
+   "form": "0",
    "types": [
     "STEEL",
     "GHOST"
@@ -324,6 +325,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ANNIHILAPE",
+   "form": "0",
    "types": [
     "FIGHTING",
     "GHOST"
@@ -471,6 +473,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ARCANINE",
+   "form": "1",
    "types": [
     "FIRE",
     "ROCK"
@@ -602,6 +605,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "GOLISOPOD",
+   "form": "1",
    "types": [
     "BUG",
     "GROUND"
@@ -758,6 +762,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SLOWKING",
+   "form": "1",
    "types": [
     "POISON",
     "PSYCHIC"
@@ -916,6 +921,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ARMAROUGE",
+   "form": "0",
    "types": [
     "FIRE",
     "PSYCHIC"
@@ -1039,6 +1045,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "RHYPERIOR",
+   "form": "0",
    "types": [
     "GROUND",
     "ROCK"
@@ -1186,6 +1193,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CHANDELURE",
+   "form": "0",
    "types": [
     "GHOST",
     "FIRE"
@@ -1316,6 +1324,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CLEFABLE",
+   "form": "0",
    "types": [
     "FAIRY"
    ],
@@ -1473,6 +1482,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MAMOSWINE",
+   "form": "0",
    "types": [
     "ICE",
     "GROUND"
@@ -1602,6 +1612,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SLOWKING",
+   "form": "0",
    "types": [
     "WATER",
     "PSYCHIC"
@@ -1755,6 +1766,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GOTHITELLE",
+   "form": "0",
    "types": [
     "PSYCHIC"
    ],
@@ -1895,6 +1907,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "REUNICLUS",
+   "form": "0",
    "types": [
     "PSYCHIC"
    ],
@@ -2029,6 +2042,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "VAPOREON",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -2174,6 +2188,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SWAMPERT",
+   "form": "0",
    "types": [
     "WATER",
     "GROUND"
@@ -2318,6 +2333,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "AZUMARILL",
+   "form": "0",
    "types": [
     "WATER",
     "FAIRY"
@@ -2466,6 +2482,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "GLALIE",
+   "form": "1",
    "types": [
     "GRASS",
     "ROCK"
@@ -2608,6 +2625,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GALLADE",
+   "form": "0",
    "types": [
     "PSYCHIC",
     "FIGHTING"
@@ -2785,6 +2803,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GOLURK",
+   "form": "0",
    "types": [
     "GROUND",
     "GHOST"
@@ -2917,6 +2936,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "KANGASKHAN",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -3062,6 +3082,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "EMPOLEON",
+   "form": "0",
    "types": [
     "WATER",
     "STEEL"
@@ -3203,6 +3224,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "COPPERAJAH",
+   "form": "0",
    "types": [
     "STEEL"
    ],
@@ -3321,6 +3343,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BRAVIARY",
+   "form": "0",
    "types": [
     "NORMAL",
     "FLYING"
@@ -3437,6 +3460,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SYLVEON",
+   "form": "0",
    "types": [
     "FAIRY"
    ],
@@ -3580,6 +3604,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CETITAN",
+   "form": "0",
    "types": [
     "ICE"
    ],
@@ -3703,6 +3728,7 @@
    "kind": "crest",
    "crest": "Whiscash Crest",
    "sid": "WHISCASH",
+   "form": "0",
    "types": [
     "WATER",
     "GROUND"
@@ -3828,6 +3854,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MUK",
+   "form": "1",
    "types": [
     "POISON",
     "DARK"
@@ -3973,6 +4000,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MUDSDALE",
+   "form": "0",
    "types": [
     "GROUND"
    ],
@@ -4100,6 +4128,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "FLORGES",
+   "form": "0",
    "types": [
     "FAIRY"
    ],
@@ -4219,6 +4248,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "REVAVROOM",
+   "form": "0",
    "types": [
     "STEEL",
     "POISON"
@@ -4340,6 +4370,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "VENUSAUR",
+   "form": "0",
    "types": [
     "GRASS",
     "POISON"
@@ -4472,6 +4503,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DONPHAN",
+   "form": "0",
    "types": [
     "GROUND"
    ],
@@ -4611,6 +4643,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SLOWBRO",
+   "form": "0",
    "types": [
     "WATER",
     "PSYCHIC"
@@ -4755,6 +4788,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "MUSHARNA",
+   "form": "1",
    "types": [
     "DARK",
     "FAIRY"
@@ -4901,6 +4935,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "GASTRODON",
+   "form": "1",
    "types": [
     "GROUND",
     "FAIRY"
@@ -5043,6 +5078,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "LAPRAS",
+   "form": "1",
    "types": [
     "ROCK",
     "PSYCHIC"
@@ -5181,6 +5217,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DUDUNSPARCE",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -5214,7 +5251,7 @@
    "cat": "Physical",
    "attacks": [
     "Hyper Drill",
-    "Thief",
+    "Bite",
     "Drill Run"
    ],
    "legal": [
@@ -5321,6 +5358,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "AMPHAROS",
+   "form": "1",
    "types": [
     "ICE",
     "ELECTRIC"
@@ -5467,6 +5505,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ARCANINE",
+   "form": "0",
    "types": [
     "FIRE"
    ],
@@ -5596,6 +5635,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SOLROCK",
+   "form": "1",
    "types": [
     "ROCK",
     "PSYCHIC"
@@ -5720,6 +5760,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CLODSIRE",
+   "form": "0",
    "types": [
     "POISON",
     "GROUND"
@@ -5857,6 +5898,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "LICKILICKY",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -5987,6 +6029,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "FERALIGATR",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -6122,6 +6165,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "PALOSSAND",
+   "form": "2",
    "types": [
     "GHOST",
     "FIRE"
@@ -6250,6 +6294,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "VIKAVOLT",
+   "form": "0",
    "types": [
     "BUG",
     "ELECTRIC"
@@ -6372,6 +6417,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "UMBREON",
+   "form": "0",
    "types": [
     "DARK"
    ],
@@ -6516,6 +6562,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DRAGALGE",
+   "form": "0",
    "types": [
     "POISON",
     "DRAGON"
@@ -6635,6 +6682,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CERULEDGE",
+   "form": "0",
    "types": [
     "FIRE",
     "GHOST"
@@ -6759,6 +6807,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "WYRDEER",
+   "form": "0",
    "types": [
     "NORMAL",
     "PSYCHIC"
@@ -6898,6 +6947,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "LAPRAS",
+   "form": "0",
    "types": [
     "WATER",
     "ICE"
@@ -7029,6 +7079,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CLAWITZER",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -7155,6 +7206,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GASTRODON",
+   "form": "0",
    "types": [
     "WATER",
     "GROUND"
@@ -7294,6 +7346,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ESCAVALIER",
+   "form": "0",
    "types": [
     "BUG",
     "STEEL"
@@ -7435,6 +7488,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CAMERUPT",
+   "form": "0",
    "types": [
     "FIRE",
     "GROUND"
@@ -7579,6 +7633,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MUSHARNA",
+   "form": "0",
    "types": [
     "PSYCHIC"
    ],
@@ -7714,6 +7769,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "JELLICENT",
+   "form": "0",
    "types": [
     "WATER",
     "GHOST"
@@ -7837,6 +7893,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "LUNATONE",
+   "form": "1",
    "types": [
     "ROCK",
     "PSYCHIC"
@@ -7955,6 +8012,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PALOSSAND",
+   "form": "0",
    "types": [
     "GHOST",
     "GROUND"
@@ -8085,6 +8143,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GOLISOPOD",
+   "form": "0",
    "types": [
     "BUG",
     "WATER"
@@ -8217,6 +8276,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BELLIBOLT",
+   "form": "0",
    "types": [
     "ELECTRIC"
    ],
@@ -8329,6 +8389,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ORANGURU",
+   "form": "0",
    "types": [
     "NORMAL",
     "PSYCHIC"
@@ -8473,6 +8534,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "WALREIN",
+   "form": "0",
    "types": [
     "ICE",
     "WATER"
@@ -8598,6 +8660,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PORYGONZ",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -8724,6 +8787,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "AVALUGG",
+   "form": "0",
    "types": [
     "ICE"
    ],
@@ -8851,6 +8915,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SILVALLY",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -8977,6 +9042,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "PALOSSAND",
+   "form": "3",
    "types": [
     "GHOST",
     "ICE"
@@ -9107,6 +9173,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "FLAREON",
+   "form": "0",
    "types": [
     "FIRE"
    ],
@@ -9247,6 +9314,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GLACEON",
+   "form": "0",
    "types": [
     "ICE"
    ],
@@ -9393,6 +9461,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "NINETALES",
+   "form": "1",
    "types": [
     "ICE",
     "FAIRY"
@@ -9524,6 +9593,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DUSKNOIR",
+   "form": "0",
    "types": [
     "GHOST"
    ],
@@ -9663,6 +9733,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BEARTIC",
+   "form": "0",
    "types": [
     "ICE"
    ],
@@ -9802,6 +9873,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "OVERQWIL",
+   "form": "0",
    "types": [
     "DARK",
     "POISON"
@@ -9927,6 +9999,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "AROMATISSE",
+   "form": "0",
    "types": [
     "FAIRY"
    ],
@@ -10044,6 +10117,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "FROSMOTH",
+   "form": "0",
    "types": [
     "ICE",
     "BUG"
@@ -10165,6 +10239,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CENTISKORCH",
+   "form": "0",
    "types": [
     "FIRE",
     "BUG"
@@ -10280,6 +10355,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ARMALDO",
+   "form": "0",
    "types": [
     "ROCK",
     "BUG"
@@ -10403,6 +10479,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "TURTONATOR",
+   "form": "0",
    "types": [
     "FIRE",
     "DRAGON"
@@ -10534,6 +10611,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "TYPHLOSION",
+   "form": "0",
    "types": [
     "FIRE"
    ],
@@ -10669,6 +10747,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "VILEPLUME",
+   "form": "0",
    "types": [
     "GRASS",
     "POISON"
@@ -10799,6 +10878,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "EMBOAR",
+   "form": "0",
    "types": [
     "FIRE",
     "FIGHTING"
@@ -10935,6 +11015,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DIGGERSBY",
+   "form": "0",
    "types": [
     "NORMAL",
     "GROUND"
@@ -11073,6 +11154,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "STUNFISK",
+   "form": "1",
    "types": [
     "GROUND",
     "STEEL"
@@ -11199,6 +11281,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "VELUZA",
+   "form": "1",
    "types": [
     "WATER",
     "FIRE"
@@ -11323,6 +11406,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "EELEKTROSS",
+   "form": "0",
    "types": [
     "ELECTRIC"
    ],
@@ -11446,6 +11530,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "TOUCANNON",
+   "form": "0",
    "types": [
     "NORMAL",
     "FLYING"
@@ -11563,6 +11648,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "FORRETRESS",
+   "form": "0",
    "types": [
     "BUG",
     "STEEL"
@@ -11696,6 +11782,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "OINKOLOGNE",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -11814,6 +11901,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DRUDDIGON",
+   "form": "0",
    "types": [
     "DRAGON"
    ],
@@ -11950,6 +12038,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "NINETALES",
+   "form": "0",
    "types": [
     "FIRE"
    ],
@@ -12080,6 +12169,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PASSIMIAN",
+   "form": "0",
    "types": [
     "FIGHTING"
    ],
@@ -12217,6 +12307,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "KLINKLANG",
+   "form": "0",
    "types": [
     "STEEL"
    ],
@@ -12330,6 +12421,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "HARIYAMA",
+   "form": "0",
    "types": [
     "FIGHTING"
    ],
@@ -12483,6 +12575,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GRUMPIG",
+   "form": "0",
    "types": [
     "PSYCHIC"
    ],
@@ -12627,6 +12720,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PERRSERKER",
+   "form": "0",
    "types": [
     "STEEL"
    ],
@@ -12760,6 +12854,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "RAMPARDOS",
+   "form": "0",
    "types": [
     "ROCK"
    ],
@@ -12890,6 +12985,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MANDIBUZZ",
+   "form": "0",
    "types": [
     "DARK",
     "FLYING"
@@ -13013,6 +13109,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "YANMEGA",
+   "form": "0",
    "types": [
     "BUG",
     "FLYING"
@@ -13141,6 +13238,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DECIDUEYE",
+   "form": "0",
    "types": [
     "GRASS",
     "GHOST"
@@ -13272,6 +13370,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "NIDOQUEEN",
+   "form": "0",
    "types": [
     "POISON",
     "GROUND"
@@ -13420,6 +13519,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "VANILLUXE",
+   "form": "0",
    "types": [
     "ICE"
    ],
@@ -13537,6 +13637,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "STEELIX",
+   "form": "0",
    "types": [
     "STEEL",
     "GROUND"
@@ -13670,6 +13771,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "DRAPION",
+   "form": "1",
    "types": [
     "ICE",
     "POISON"
@@ -13814,6 +13916,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "STOUTLAND",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -13937,6 +14040,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "COALOSSAL",
+   "form": "0",
    "types": [
     "ROCK",
     "FIRE"
@@ -14049,6 +14153,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CRABOMINABLE",
+   "form": "0",
    "types": [
     "FIGHTING",
     "ICE"
@@ -14180,6 +14285,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "QUAGSIRE",
+   "form": "0",
    "types": [
     "WATER",
     "GROUND"
@@ -14317,6 +14423,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "TAUROS",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -14436,6 +14543,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "RUNERIGUS",
+   "form": "0",
    "types": [
     "GROUND",
     "GHOST"
@@ -14561,6 +14669,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MUK",
+   "form": "0",
    "types": [
     "POISON"
    ],
@@ -14700,6 +14809,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "EXEGGUTOR",
+   "form": "0",
    "types": [
     "GRASS",
     "PSYCHIC"
@@ -14835,6 +14945,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "AMPHAROS",
+   "form": "0",
    "types": [
     "ELECTRIC"
    ],
@@ -14965,6 +15076,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BEHEEYEM",
+   "form": "0",
    "types": [
     "PSYCHIC"
    ],
@@ -15101,6 +15213,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CRUSTLE",
+   "form": "0",
    "types": [
     "BUG",
     "ROCK"
@@ -15226,6 +15339,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BELLOSSOM",
+   "form": "0",
    "types": [
     "GRASS"
    ],
@@ -15357,6 +15471,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MAWILE",
+   "form": "0",
    "types": [
     "STEEL",
     "FAIRY"
@@ -15495,6 +15610,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ESPEON",
+   "form": "0",
    "types": [
     "PSYCHIC"
    ],
@@ -15641,6 +15757,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MANTINE",
+   "form": "0",
    "types": [
     "WATER",
     "FLYING"
@@ -15769,6 +15886,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "TANGROWTH",
+   "form": "0",
    "types": [
     "GRASS"
    ],
@@ -15902,6 +16020,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "AURORUS",
+   "form": "0",
    "types": [
     "ROCK",
     "ICE"
@@ -16026,6 +16145,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SANDACONDA",
+   "form": "0",
    "types": [
     "GROUND"
    ],
@@ -16143,6 +16263,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "PALOSSAND",
+   "form": "1",
    "types": [
     "GHOST",
     "ROCK"
@@ -16270,6 +16391,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CURSOLA",
+   "form": "0",
    "types": [
     "GHOST"
    ],
@@ -16397,6 +16519,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DRAMPA",
+   "form": "0",
    "types": [
     "NORMAL",
     "DRAGON"
@@ -16523,6 +16646,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "HOUNDOOM",
+   "form": "0",
    "types": [
     "DARK",
     "FIRE"
@@ -16664,6 +16788,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "AMOONGUSS",
+   "form": "0",
    "types": [
     "GRASS",
     "POISON"
@@ -16783,6 +16908,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "HEATMOR",
+   "form": "0",
    "types": [
     "FIRE"
    ],
@@ -16911,6 +17037,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ALCREMIE",
+   "form": "0",
    "types": [
     "FAIRY"
    ],
@@ -17019,6 +17146,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SHUCKLE",
+   "form": "0",
    "types": [
     "BUG",
     "ROCK"
@@ -17144,6 +17272,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "TSAREENA",
+   "form": "0",
    "types": [
     "GRASS"
    ],
@@ -17266,6 +17395,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SCRAFTY",
+   "form": "0",
    "types": [
     "DARK",
     "FIGHTING"
@@ -17401,6 +17531,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ARCTOVISH",
+   "form": "0",
    "types": [
     "WATER",
     "ICE"
@@ -17504,6 +17635,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "TROPIUS",
+   "form": "0",
    "types": [
     "GRASS",
     "FLYING"
@@ -17634,6 +17766,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "TATSUGIRI",
+   "form": "0",
    "types": [
     "DRAGON",
     "WATER"
@@ -17751,6 +17884,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "TALONFLAME",
+   "form": "0",
    "types": [
     "FIRE",
     "FLYING"
@@ -17865,6 +17999,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BARBARACLE",
+   "form": "0",
    "types": [
     "ROCK",
     "WATER"
@@ -18016,6 +18151,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "LUDICOLO",
+   "form": "0",
    "types": [
     "WATER",
     "GRASS"
@@ -18147,6 +18283,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ZOROARK",
+   "form": "1",
    "types": [
     "NORMAL",
     "GHOST"
@@ -18273,6 +18410,7 @@
    "kind": "crest",
    "crest": "Zoroark Crest",
    "sid": "ZOROARK",
+   "form": "1",
    "types": [
     "NORMAL",
     "GHOST"
@@ -18399,6 +18537,7 @@
    "kind": "crest",
    "crest": "Phione Crest",
    "sid": "PHIONE",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -18504,6 +18643,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GUMSHOOS",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -18634,6 +18774,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SANDSLASH",
+   "form": "1",
    "types": [
     "ICE",
     "STEEL"
@@ -18774,6 +18915,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ARCTOZOLT",
+   "form": "0",
    "types": [
     "ELECTRIC",
     "ICE"
@@ -18876,6 +19018,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CHIMECHO",
+   "form": "0",
    "types": [
     "PSYCHIC"
    ],
@@ -19005,6 +19148,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GOLEM",
+   "form": "0",
    "types": [
     "ROCK",
     "GROUND"
@@ -19138,6 +19282,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "STUNFISK",
+   "form": "0",
    "types": [
     "GROUND",
     "ELECTRIC"
@@ -19271,6 +19416,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "EXPLOUD",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -19396,6 +19542,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PYROAR",
+   "form": "0",
    "types": [
     "FIRE",
     "NORMAL"
@@ -19520,6 +19667,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ORBEETLE",
+   "form": "0",
    "types": [
     "BUG",
     "PSYCHIC"
@@ -19647,6 +19795,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CRAWDAUNT",
+   "form": "0",
    "types": [
     "WATER",
     "DARK"
@@ -19789,6 +19938,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "HITMONTOP",
+   "form": "0",
    "types": [
     "FIGHTING"
    ],
@@ -19919,6 +20069,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "VELUZA",
+   "form": "0",
    "types": [
     "WATER",
     "PSYCHIC"
@@ -20028,6 +20179,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MRMIME",
+   "form": "0",
    "types": [
     "PSYCHIC",
     "FAIRY"
@@ -20180,6 +20332,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DREDNAW",
+   "form": "0",
    "types": [
     "WATER",
     "ROCK"
@@ -20213,7 +20366,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Crunch",
+    "Jaw Lock",
     "Liquidation",
     "Ice Fang"
    ],
@@ -20307,6 +20460,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SLAKING",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -20447,6 +20601,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MAGCARGO",
+   "form": "0",
    "types": [
     "FIRE",
     "ROCK"
@@ -20583,6 +20738,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ALOMOMOLA",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -20699,6 +20855,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MEGANIUM",
+   "form": "0",
    "types": [
     "GRASS"
    ],
@@ -20826,6 +20983,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SLOWBRO",
+   "form": "1",
    "types": [
     "POISON",
     "PSYCHIC"
@@ -20948,6 +21106,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "LUCARIO",
+   "form": "0",
    "types": [
     "FIGHTING",
     "STEEL"
@@ -21098,6 +21257,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "HERACROSS",
+   "form": "0",
    "types": [
     "BUG",
     "FIGHTING"
@@ -21236,6 +21396,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PROBOPASS",
+   "form": "0",
    "types": [
     "ROCK",
     "STEEL"
@@ -21362,6 +21523,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "COFAGRIGUS",
+   "form": "0",
    "types": [
     "GHOST"
    ],
@@ -21483,6 +21645,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "THROH",
+   "form": "0",
    "types": [
     "FIGHTING"
    ],
@@ -21609,6 +21772,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DUBWOOL",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -21714,6 +21878,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MAROWAK",
+   "form": "0",
    "types": [
     "GROUND"
    ],
@@ -21846,6 +22011,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "LUXRAY",
+   "form": "0",
    "types": [
     "ELECTRIC"
    ],
@@ -21963,6 +22129,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BLISSEY",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -22113,6 +22280,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SKUNTANK",
+   "form": "0",
    "types": [
     "POISON",
     "DARK"
@@ -22251,6 +22419,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "NOIVERN",
+   "form": "0",
    "types": [
     "FLYING",
     "DRAGON"
@@ -22373,6 +22542,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "HYPNO",
+   "form": "0",
    "types": [
     "PSYCHIC"
    ],
@@ -22515,6 +22685,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SEAKING",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -22628,6 +22799,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GOGOAT",
+   "form": "0",
    "types": [
     "GRASS"
    ],
@@ -22750,6 +22922,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GREEDENT",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -22884,6 +23057,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DEWGONG",
+   "form": "0",
    "types": [
     "WATER",
     "ICE"
@@ -23017,6 +23191,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "RIBOMBEE",
+   "form": "0",
    "types": [
     "BUG",
     "FAIRY"
@@ -23145,6 +23320,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "OCTILLERY",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -23275,6 +23451,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PANGORO",
+   "form": "0",
    "types": [
     "FIGHTING",
     "DARK"
@@ -23425,6 +23602,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DRIFBLIM",
+   "form": "0",
    "types": [
     "GHOST",
     "FLYING"
@@ -23558,6 +23736,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DRAPION",
+   "form": "0",
    "types": [
     "POISON",
     "DARK"
@@ -23696,6 +23875,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "JOLTEON",
+   "form": "0",
    "types": [
     "ELECTRIC"
    ],
@@ -23838,6 +24018,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "OMASTAR",
+   "form": "0",
    "types": [
     "ROCK",
     "WATER"
@@ -23962,6 +24143,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MAROWAK",
+   "form": "1",
    "types": [
     "FIRE",
     "GHOST"
@@ -24090,6 +24272,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SEISMITOAD",
+   "form": "0",
    "types": [
     "WATER",
     "GROUND"
@@ -24217,6 +24400,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "FLAMIGO",
+   "form": "0",
    "types": [
     "FLYING",
     "FIGHTING"
@@ -24334,6 +24518,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "NOCTOWL",
+   "form": "0",
    "types": [
     "NORMAL",
     "FLYING"
@@ -24464,6 +24649,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GRAPPLOCT",
+   "form": "0",
    "types": [
     "FIGHTING"
    ],
@@ -24590,6 +24776,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MABOSSTIFF",
+   "form": "0",
    "types": [
     "DARK"
    ],
@@ -24622,7 +24809,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Crunch",
+    "Jaw Lock",
     "Play Rough",
     "Double-Edge"
    ],
@@ -24708,6 +24895,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "UNFEZANT",
+   "form": "1",
    "types": [
     "ROCK",
     "FIGHTING"
@@ -24834,6 +25022,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CROBAT",
+   "form": "0",
    "types": [
     "POISON",
     "FLYING"
@@ -24959,6 +25148,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SWALOT",
+   "form": "0",
    "types": [
     "POISON"
    ],
@@ -25090,6 +25280,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CLAYDOL",
+   "form": "0",
    "types": [
     "GROUND",
     "PSYCHIC"
@@ -25215,6 +25406,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CRADILY",
+   "form": "0",
    "types": [
     "ROCK",
     "GRASS"
@@ -25339,6 +25531,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "EISCUE",
+   "form": "0",
    "types": [
     "ICE"
    ],
@@ -25454,6 +25647,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "WAILORD",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -25575,6 +25769,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SIRFETCHD",
+   "form": "0",
    "types": [
     "FIGHTING"
    ],
@@ -25705,6 +25900,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ARBOLIVA",
+   "form": "0",
    "types": [
     "GRASS",
     "NORMAL"
@@ -25816,6 +26012,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GARBODOR",
+   "form": "0",
    "types": [
     "POISON"
    ],
@@ -25939,6 +26136,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "AUDINO",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -26067,6 +26265,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PINCURCHIN",
+   "form": "0",
    "types": [
     "ELECTRIC"
    ],
@@ -26181,6 +26380,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SCOVILLAIN",
+   "form": "0",
    "types": [
     "GRASS",
     "FIRE"
@@ -26300,6 +26500,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "LURANTIS",
+   "form": "0",
    "types": [
     "GRASS"
    ],
@@ -26422,6 +26623,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MALAMAR",
+   "form": "0",
    "types": [
     "DARK",
     "PSYCHIC"
@@ -26555,6 +26757,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MASQUERAIN",
+   "form": "0",
    "types": [
     "BUG",
     "FLYING"
@@ -26695,6 +26898,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CARBINK",
+   "form": "0",
    "types": [
     "ROCK",
     "FAIRY"
@@ -26805,6 +27009,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MACHAMP",
+   "form": "0",
    "types": [
     "FIGHTING"
    ],
@@ -26837,7 +27042,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Low Kick",
+    "Vital Throw",
     "Knock Off",
     "Strength"
    ],
@@ -26938,6 +27143,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MEOWSCARADA",
+   "form": "0",
    "types": [
     "GRASS",
     "DARK"
@@ -27061,6 +27267,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "AVALUGG",
+   "form": "1",
    "types": [
     "ICE",
     "ROCK"
@@ -27187,6 +27394,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SLURPUFF",
+   "form": "0",
    "types": [
     "FAIRY"
    ],
@@ -27300,6 +27508,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "KILOWATTREL",
+   "form": "0",
    "types": [
     "ELECTRIC",
     "FLYING"
@@ -27412,6 +27621,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "NIDOKING",
+   "form": "0",
    "types": [
     "POISON",
     "GROUND"
@@ -27558,6 +27768,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "HITMONCHAN",
+   "form": "0",
    "types": [
     "FIGHTING"
    ],
@@ -27689,6 +27900,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "WIGGLYTUFF",
+   "form": "0",
    "types": [
     "NORMAL",
     "FAIRY"
@@ -27839,6 +28051,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ABOMASNOW",
+   "form": "0",
    "types": [
     "GRASS",
     "ICE"
@@ -27972,6 +28185,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MEDICHAM",
+   "form": "0",
    "types": [
     "FIGHTING",
     "PSYCHIC"
@@ -28115,6 +28329,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BOMBIRDIER",
+   "form": "0",
    "types": [
     "FLYING",
     "DARK"
@@ -28226,6 +28441,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PINSIR",
+   "form": "0",
    "types": [
     "BUG"
    ],
@@ -28352,6 +28568,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "VESPIQUEN",
+   "form": "0",
    "types": [
     "BUG",
     "FLYING"
@@ -28483,6 +28700,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "TOEDSCRUEL",
+   "form": "0",
    "types": [
     "GROUND",
     "GRASS"
@@ -28607,6 +28825,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "LOPUNNY",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -28639,7 +28858,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Dizzy Punch",
+    "Secret Power",
     "Jump Kick",
     "Brutal Swing"
    ],
@@ -28746,6 +28965,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DODRIO",
+   "form": "0",
    "types": [
     "NORMAL",
     "FLYING"
@@ -28881,6 +29101,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CRYOGONAL",
+   "form": "0",
    "types": [
     "ICE"
    ],
@@ -28992,6 +29213,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "COMFEY",
+   "form": "0",
    "types": [
     "FAIRY"
    ],
@@ -29113,6 +29335,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "ROSERADE",
+   "form": "1",
    "types": [
     "GROUND",
     "FIGHTING"
@@ -29259,6 +29482,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "APPLETUN",
+   "form": "0",
    "types": [
     "GRASS",
     "DRAGON"
@@ -29375,6 +29599,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SANDSLASH",
+   "form": "0",
    "types": [
     "GROUND"
    ],
@@ -29507,6 +29732,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "KINGLER",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -29641,6 +29867,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MINIOR",
+   "form": "0",
    "types": [
     "ROCK",
     "FLYING"
@@ -29750,6 +29977,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SALAZZLE",
+   "form": "0",
    "types": [
     "POISON",
     "FIRE"
@@ -29889,6 +30117,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SHIINOTIC",
+   "form": "0",
    "types": [
     "GRASS",
     "FAIRY"
@@ -30009,6 +30238,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BARRASKEWDA",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -30123,6 +30353,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "KABUTOPS",
+   "form": "0",
    "types": [
     "ROCK",
     "WATER"
@@ -30250,6 +30481,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "WORMADAM",
+   "form": "1",
    "types": [
     "BUG",
     "GROUND"
@@ -30367,6 +30599,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PAWMOT",
+   "form": "0",
    "types": [
     "ELECTRIC",
     "FIGHTING"
@@ -30495,6 +30728,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MEOWSTIC",
+   "form": "0",
    "types": [
     "PSYCHIC"
    ],
@@ -30633,6 +30867,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "AMBIPOM",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -30776,6 +31011,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ELDEGOSS",
+   "form": "0",
    "types": [
     "GRASS"
    ],
@@ -30886,6 +31122,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BASTIODON",
+   "form": "0",
    "types": [
     "ROCK",
     "STEEL"
@@ -31004,6 +31241,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "LEAVANNY",
+   "form": "1",
    "types": [
     "BUG",
     "DRAGON"
@@ -31139,6 +31377,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BRUXISH",
+   "form": "0",
    "types": [
     "WATER",
     "PSYCHIC"
@@ -31266,6 +31505,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SIMISEAR",
+   "form": "0",
    "types": [
     "FIRE"
    ],
@@ -31399,6 +31639,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "RATICATE",
+   "form": "1",
    "types": [
     "DARK",
     "NORMAL"
@@ -31528,6 +31769,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ROSERADE",
+   "form": "0",
    "types": [
     "GRASS",
     "POISON"
@@ -31656,6 +31898,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GLALIE",
+   "form": "0",
    "types": [
     "ICE"
    ],
@@ -31779,6 +32022,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "TENTACRUEL",
+   "form": "0",
    "types": [
     "WATER",
     "POISON"
@@ -31912,6 +32156,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "KECLEON",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -32044,6 +32289,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ALTARIA",
+   "form": "0",
    "types": [
     "DRAGON",
     "FLYING"
@@ -32171,6 +32417,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "TYRANTRUM",
+   "form": "0",
    "types": [
     "ROCK",
     "DRAGON"
@@ -32286,6 +32533,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MISMAGIUS",
+   "form": "0",
    "types": [
     "GHOST"
    ],
@@ -32423,6 +32671,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DACHSBUN",
+   "form": "0",
    "types": [
     "FAIRY"
    ],
@@ -32541,6 +32790,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "OBSTAGOON",
+   "form": "0",
    "types": [
     "DARK",
     "NORMAL"
@@ -32683,6 +32933,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BRELOOM",
+   "form": "0",
    "types": [
     "GRASS",
     "FIGHTING"
@@ -32820,6 +33071,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "STARMIE",
+   "form": "0",
    "types": [
     "WATER",
     "PSYCHIC"
@@ -32939,6 +33191,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "WORMADAM",
+   "form": "2",
    "types": [
     "BUG",
     "STEEL"
@@ -33058,6 +33311,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "WEEZING",
+   "form": "0",
    "types": [
     "POISON"
    ],
@@ -33180,6 +33434,7 @@
    "kind": "crest",
    "crest": "Ariados Crest",
    "sid": "ARIADOS",
+   "form": "0",
    "types": [
     "BUG",
     "POISON"
@@ -33315,6 +33570,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ORICORIO",
+   "form": "1",
    "types": [
     "ELECTRIC",
     "FLYING"
@@ -33422,6 +33678,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PIDGEOT",
+   "form": "0",
    "types": [
     "NORMAL",
     "FLYING"
@@ -33529,6 +33786,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "TAUROS",
+   "form": "1",
    "types": [
     "FIGHTING"
    ],
@@ -33635,6 +33893,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "TOGEDEMARU",
+   "form": "0",
    "types": [
     "ELECTRIC",
     "STEEL"
@@ -33759,6 +34018,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CORSOLA",
+   "form": "0",
    "types": [
     "WATER",
     "ROCK"
@@ -33888,6 +34148,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "WORMADAM",
+   "form": "0",
    "types": [
     "BUG",
     "GRASS"
@@ -34009,6 +34270,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "FROSLASS",
+   "form": "1",
    "types": [
     "GRASS",
     "WATER"
@@ -34149,6 +34411,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SUDOWOODO",
+   "form": "0",
    "types": [
     "ROCK"
    ],
@@ -34279,6 +34542,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SUNFLORA",
+   "form": "0",
    "types": [
     "GRASS"
    ],
@@ -34403,6 +34667,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CINCCINO",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -34530,6 +34795,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PURUGLY",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -34665,6 +34931,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "LEAFEON",
+   "form": "0",
    "types": [
     "GRASS"
    ],
@@ -34804,6 +35071,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "TOXICROAK",
+   "form": "0",
    "types": [
     "POISON",
     "FIGHTING"
@@ -34960,6 +35228,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GOLDUCK",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -35106,6 +35375,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "FURFROU",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -35137,7 +35407,7 @@
    "cat": "Physical",
    "attacks": [
     "Sucker Punch",
-    "Headbutt"
+    "Retaliate"
    ],
    "legal": [
     "ATTRACT",
@@ -35219,6 +35489,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "PARASECT",
+   "form": "1",
    "types": [
     "BUG",
     "POISON"
@@ -35356,6 +35627,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BANETTE",
+   "form": "0",
    "types": [
     "GHOST"
    ],
@@ -35485,6 +35757,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "JYNX",
+   "form": "0",
    "types": [
     "ICE",
     "PSYCHIC"
@@ -35625,6 +35898,7 @@
    "kind": "crest",
    "crest": "Furret Crest",
    "sid": "FURRET",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -35762,6 +36036,7 @@
    "kind": "crest",
    "crest": "Zoroark Crest",
    "sid": "ZOROARK",
+   "form": "0",
    "types": [
     "DARK"
    ],
@@ -35898,6 +36173,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ELECTIVIRE",
+   "form": "0",
    "types": [
     "ELECTRIC"
    ],
@@ -36032,6 +36308,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "RAPIDASH",
+   "form": "0",
    "types": [
     "FIRE"
    ],
@@ -36151,6 +36428,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PHIONE",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -36256,6 +36534,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "KLAWF",
+   "form": "0",
    "types": [
     "ROCK"
    ],
@@ -36374,6 +36653,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SPIDOPS",
+   "form": "0",
    "types": [
     "BUG"
    ],
@@ -36493,6 +36773,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ARBOK",
+   "form": "0",
    "types": [
     "POISON"
    ],
@@ -36623,6 +36904,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ORICORIO",
+   "form": "0",
    "types": [
     "FIRE",
     "FLYING"
@@ -36736,6 +37018,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "LEAVANNY",
+   "form": "0",
    "types": [
     "BUG",
     "GRASS"
@@ -36868,6 +37151,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "XATU",
+   "form": "0",
    "types": [
     "PSYCHIC",
     "FLYING"
@@ -36999,6 +37283,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ELECTRODE",
+   "form": "1",
    "types": [
     "ELECTRIC",
     "GRASS"
@@ -37111,6 +37396,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CRAMORANT",
+   "form": "0",
    "types": [
     "FLYING",
     "WATER"
@@ -37220,6 +37506,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SHIFTRY",
+   "form": "0",
    "types": [
     "GRASS",
     "DARK"
@@ -37367,6 +37654,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "VICTREEBEL",
+   "form": "0",
    "types": [
     "GRASS",
     "POISON"
@@ -37496,6 +37784,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "VENOMOTH",
+   "form": "0",
    "types": [
     "BUG",
     "POISON"
@@ -37627,6 +37916,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SQUAWKABILLY",
+   "form": "3",
    "types": [
     "NORMAL",
     "FLYING"
@@ -37734,6 +38024,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SAWSBUCK",
+   "form": "0",
    "types": [
     "NORMAL",
     "GRASS"
@@ -37866,6 +38157,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DITTO",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -37935,6 +38227,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ZANGOOSE",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -38080,6 +38373,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "WATCHOG",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -38209,6 +38503,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ABSOL",
+   "form": "0",
    "types": [
     "DARK"
    ],
@@ -38343,6 +38638,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SPINDA",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -38479,6 +38775,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "RAICHU",
+   "form": "0",
    "types": [
     "ELECTRIC"
    ],
@@ -38626,6 +38923,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "UNFEZANT",
+   "form": "0",
    "types": [
     "NORMAL",
     "FLYING"
@@ -38736,6 +39034,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SCEPTILE",
+   "form": "0",
    "types": [
     "GRASS"
    ],
@@ -38881,6 +39180,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BEEDRILL",
+   "form": "0",
    "types": [
     "BUG",
     "POISON"
@@ -38998,6 +39298,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BUTTERFREE",
+   "form": "0",
    "types": [
     "BUG",
     "FLYING"
@@ -39119,6 +39420,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BIBAREL",
+   "form": "0",
    "types": [
     "NORMAL",
     "WATER"
@@ -39257,6 +39559,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "HELIOLISK",
+   "form": "0",
    "types": [
     "ELECTRIC",
     "NORMAL"
@@ -39381,6 +39684,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ARIADOS",
+   "form": "0",
    "types": [
     "BUG",
     "POISON"
@@ -39516,6 +39820,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "STONJOURNER",
+   "form": "0",
    "types": [
     "ROCK"
    ],
@@ -39623,6 +39928,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CASTFORM",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -39653,7 +39959,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Headbutt",
+    "Secret Power",
     "Shadow Ball",
     "Fire Blast"
    ],
@@ -39738,6 +40044,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ELECTRODE",
+   "form": "0",
    "types": [
     "ELECTRIC"
    ],
@@ -39854,6 +40161,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MANECTRIC",
+   "form": "0",
    "types": [
     "ELECTRIC"
    ],
@@ -39971,6 +40279,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SCOLIPEDE",
+   "form": "0",
    "types": [
     "BUG",
     "POISON"
@@ -40094,6 +40403,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SWANNA",
+   "form": "0",
    "types": [
     "WATER",
     "FLYING"
@@ -40212,6 +40522,7 @@
    "kind": "aevian",
    "crest": "",
    "sid": "MISMAGIUS",
+   "form": "1",
    "types": [
     "GRASS",
     "GHOST"
@@ -40353,6 +40664,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ILLUMISE",
+   "form": "0",
    "types": [
     "BUG"
    ],
@@ -40479,6 +40791,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BRAMBLEGHAST",
+   "form": "0",
    "types": [
     "GRASS",
     "GHOST"
@@ -40591,6 +40904,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "QWILFISH",
+   "form": "0",
    "types": [
     "WATER",
     "POISON"
@@ -40725,6 +41039,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ZEBSTRIKA",
+   "form": "0",
    "types": [
     "ELECTRIC"
    ],
@@ -40849,6 +41164,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CARNIVINE",
+   "form": "0",
    "types": [
     "GRASS"
    ],
@@ -40973,6 +41289,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "THIEVUL",
+   "form": "0",
    "types": [
     "DARK"
    ],
@@ -41094,6 +41411,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MIGHTYENA",
+   "form": "0",
    "types": [
     "DARK"
    ],
@@ -41220,6 +41538,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DUGTRIO",
+   "form": "1",
    "types": [
     "GROUND",
     "STEEL"
@@ -41346,6 +41665,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "FURRET",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -41483,6 +41803,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ZOROARK",
+   "form": "0",
    "types": [
     "DARK"
    ],
@@ -41619,6 +41940,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ORICORIO",
+   "form": "3",
    "types": [
     "GHOST",
     "FLYING"
@@ -41726,6 +42048,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "HITMONLEE",
+   "form": "0",
    "types": [
     "FIGHTING"
    ],
@@ -41863,6 +42186,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "GRAFAIAI",
+   "form": "0",
    "types": [
     "POISON",
     "NORMAL"
@@ -41988,6 +42312,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BASCULIN",
+   "form": "1",
    "types": [
     "WATER"
    ],
@@ -42103,6 +42428,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CACTURNE",
+   "form": "0",
    "types": [
     "GRASS",
     "DARK"
@@ -42251,6 +42577,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MARACTUS",
+   "form": "0",
    "types": [
     "GRASS"
    ],
@@ -42372,6 +42699,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SEVIPER",
+   "form": "0",
    "types": [
     "POISON"
    ],
@@ -42504,6 +42832,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "LINOONE",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -42643,6 +42972,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "ORICORIO",
+   "form": "2",
    "types": [
     "PSYCHIC",
     "FLYING"
@@ -42750,6 +43080,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "FLOATZEL",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -42889,6 +43220,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BOLTUND",
+   "form": "0",
    "types": [
     "ELECTRIC"
    ],
@@ -42999,6 +43331,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CHATOT",
+   "form": "0",
    "types": [
     "NORMAL",
     "FLYING"
@@ -43112,6 +43445,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PARASECT",
+   "form": "0",
    "types": [
     "BUG",
     "GRASS"
@@ -43242,6 +43576,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "VOLBEAT",
+   "form": "0",
    "types": [
     "BUG"
    ],
@@ -43367,6 +43702,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SIMIPOUR",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -43499,6 +43835,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SWOOBAT",
+   "form": "0",
    "types": [
     "PSYCHIC",
     "FLYING"
@@ -43626,6 +43963,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PYUKUMUKU",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -43726,6 +44064,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SHARPEDO",
+   "form": "0",
    "types": [
     "WATER",
     "DARK"
@@ -43851,6 +44190,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PERSIAN",
+   "form": "1",
    "types": [
     "DARK"
    ],
@@ -43993,6 +44333,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "JUMPLUFF",
+   "form": "0",
    "types": [
     "GRASS",
     "FLYING"
@@ -44121,6 +44462,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SIMISAGE",
+   "form": "0",
    "types": [
     "GRASS"
    ],
@@ -44254,6 +44596,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "RATICATE",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -44382,6 +44725,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SWELLOW",
+   "form": "0",
    "types": [
     "NORMAL",
     "FLYING"
@@ -44489,6 +44833,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "BEAUTIFLY",
+   "form": "0",
    "types": [
     "BUG",
     "FLYING"
@@ -44601,6 +44946,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SHEDINJA",
+   "form": "0",
    "types": [
     "BUG",
     "GHOST"
@@ -44715,6 +45061,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "LUMINEON",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -44831,6 +45178,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "FEAROW",
+   "form": "0",
    "types": [
     "NORMAL",
     "FLYING"
@@ -44945,6 +45293,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PERSIAN",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -45085,6 +45434,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DELCATTY",
+   "form": "0",
    "types": [
     "NORMAL"
    ],
@@ -45213,6 +45563,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "VIVILLON",
+   "form": "0",
    "types": [
     "BUG",
     "FLYING"
@@ -45330,6 +45681,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MINUN",
+   "form": "0",
    "types": [
     "ELECTRIC"
    ],
@@ -45457,6 +45809,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DUSTOX",
+   "form": "0",
    "types": [
     "BUG",
     "POISON"
@@ -45570,6 +45923,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "LIEPARD",
+   "form": "0",
    "types": [
     "DARK"
    ],
@@ -45692,6 +46046,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "CHERRIM",
+   "form": "0",
    "types": [
     "GRASS"
    ],
@@ -45806,6 +46161,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "FARFETCHD",
+   "form": "0",
    "types": [
     "NORMAL",
     "FLYING"
@@ -45839,7 +46195,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Aerial Ace",
+    "Pluck",
     "Slash",
     "Knock Off"
    ],
@@ -45934,6 +46290,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "MOTHIM",
+   "form": "0",
    "types": [
     "BUG",
     "FLYING"
@@ -46047,6 +46404,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "EMOLGA",
+   "form": "0",
    "types": [
     "ELECTRIC",
     "FLYING"
@@ -46161,6 +46519,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DEDENNE",
+   "form": "0",
    "types": [
     "ELECTRIC",
     "FAIRY"
@@ -46278,6 +46637,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DUGTRIO",
+   "form": "0",
    "types": [
     "GROUND"
    ],
@@ -46406,6 +46766,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "KRICKETUNE",
+   "form": "0",
    "types": [
     "BUG"
    ],
@@ -46529,6 +46890,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PLUSLE",
+   "form": "0",
    "types": [
     "ELECTRIC"
    ],
@@ -46656,6 +47018,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "PACHIRISU",
+   "form": "0",
    "types": [
     "ELECTRIC"
    ],
@@ -46690,7 +47053,7 @@
    "attacks": [
     "Spark",
     "Hyper Fang",
-    "Thief"
+    "Bite"
    ],
    "legal": [
     "ATTRACT",
@@ -46790,6 +47153,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "WUGTRIO",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -46899,6 +47263,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "LEDIAN",
+   "form": "0",
    "types": [
     "BUG",
     "FLYING"
@@ -47019,6 +47384,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "SALANDIT",
+   "form": "0",
    "types": [
     "POISON",
     "FIRE"
@@ -47147,6 +47513,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "DELIBIRD",
+   "form": "0",
    "types": [
     "ICE",
     "FLYING"
@@ -47269,6 +47636,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "LUVDISC",
+   "form": "0",
    "types": [
     "WATER"
    ],
@@ -47383,6 +47751,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "UNOWN",
+   "form": "0",
    "types": [
     "PSYCHIC"
    ],
@@ -47451,6 +47820,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "COMBEE",
+   "form": "0",
    "types": [
     "BUG",
     "FLYING"
@@ -47526,6 +47896,7 @@
    "kind": "regular",
    "crest": "",
    "sid": "WISHIWASHI",
+   "form": "0",
    "types": [
     "WATER"
    ],

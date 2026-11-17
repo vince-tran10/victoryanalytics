@@ -111,7 +111,7 @@ def row(name, s, c, kind, crest=''):
     fp = min(1.0, pct(s))
     blend = .6 * fp + .4 * general
     src = c['src'] if isinstance(c['src'], dict) else {}
-    rows.append(dict(name=name, kind=kind, crest=crest, sid=c['sid'], types=c['types'], base=c['base'], bst=bst,
+    rows.append(dict(name=name, kind=kind, crest=crest, sid=c['sid'], form=str(c.get('form', '0')), types=c['types'], base=c['base'], bst=bst,
                      fight=round(s, 3), fight_pct=round(fp, 3), meta=round(meta, 3), meta_label=lab, general=round(general, 3),
                      blend=round(blend, 3), ability=c['ability'], abilities=c['abilities'], nature=c['nature'], evs=c['evs'],
                      cat=c['cat'], attacks=[C.D.moves[m]['MoveName'] for m in c['attacks']], legal=sorted(c['legal']),
