@@ -124,6 +124,12 @@ for key in KEYS:
         ans = sum(1 for j in range(n) for w in wincons(R, j) if answers_for(w, six, [x['name'] for x in pair]))   # utility valued per fight (Vincent, 17 Nov)
         res.append((sc + 5 * ans - 30 * (len(w3) + len(nr)) + .01 * sum(r['score'] for r in pair), pair, pr, nok, w3, nr))
     res.sort(key=lambda x: -x[0])
+    if os.environ.get('DEBUG_TOP') == key:   # inspection: the best pairs and why
+        for sc_, pr_, prr_, nok_, w3_, nr_ in res[:8]:
+            six_ = core + list(pr_)
+            print('TOP', round(sc_, 2), [r['name'] for r in pr_], 'counters', nok_, 'rules', w3_ + nr_,
+                  [(FO[j], six_[prr_[j]]['name'], int(six_[prr_[j]]['cov'][j] * BARS[j]), int(six_[prr_[j]]['taken'][j])) for j in range(n)],
+                  [(w[0], answers_for(w, six_, [x['name'] for x in pr_])) for j in range(n) for w in wincons(R, j)])
     _, pair, pr, nok, w3, nr = res[0]
     six = core + list(pair)
     # leads: survive every opening Pokémon (taken < 100), then best quality vs them
