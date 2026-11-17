@@ -331,7 +331,7 @@
     "moves": [
      "Shadow Ball",
      "Bitter Malice",
-     "Hidden Power"
+     "Round"
     ],
     "setup": "Nasty Plot",
     "where": "Active",
@@ -482,7 +482,7 @@
     "moves": [
      "Shadow Ball",
      "Moonblast",
-     "Hidden Power"
+     "Round"
     ],
     "setup": "Work Up",
     "where": "Active",
@@ -611,7 +611,7 @@
     "moves": [
      "Dragon Pulse",
      "Overheat",
-     "Flamethrower"
+     "Magma Drift"
     ],
     "setup": "Shell Smash",
     "where": "Active",

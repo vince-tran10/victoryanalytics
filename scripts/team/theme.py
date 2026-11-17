@@ -107,16 +107,15 @@ def core_grid():   # Cores: one compact card per style; key piece marked; the al
     for k, v in C.items():
         if not v: continue
         main = v[0]['members']; key = main[0]; yours = sorted(main) == mine
-        lis = ''.join('<li' + (' class="key"' if n == key else '') + '>' + tchip(n) + '<span>' + E(disp(n)) + '</span>' +
-                      ('<small>key</small>' if n == key else '') + '</li>' for n in main)
-        alt = ''
-        if len(v) > 1:
+        sw = {}
+        if len(v) > 1:   # the alternative: each swapped member gets its replacement in grey on the same row
             am = v[1]['members']; o = [n for n in main if n not in am]; i_ = [n for n in am if n not in main]
-            if am[0] == key and len(o) <= 2:
-                alt = '<div class="cc-alt"><span>Swap option</span>' + ' · '.join(E(disp(x)) + ' ⇄ ' + E(disp(y)) for x, y in zip(o, i_)) + '</div>'
-            else:
-                alt = ('<div class="cc-alt"><span>Or with ' + E(disp(key)) + '</span>' + ' · '.join(E(disp(n)) for n in am[1:]) + '</div>') if am[0] == key else \
-                      ('<div class="cc-alt"><span>Other core</span><b>' + E(disp(am[0])) + '</b> <small class="k">key</small> · ' + ' · '.join(E(disp(n)) for n in am[1:]) + '</div>')
+            sw = dict(zip(o, i_))
+        lis = ''.join('<li' + (' class="key"' if n == key else '') + '><span class="cm">' + tchip(n) + '<span class="nm">' + E(disp(n)) + '</span>' +
+                      ('<small>key</small>' if n == key else '') + '</span>' +
+                      ('<span class="alt" title="swap option">⇄ ' + tchip(sw[n]) + '<span class="nm">' + E(disp(sw[n])) + '</span></span>' if n in sw else '') +
+                      '</li>' for n in main)
+        alt = ''
         out += ('<article class="cc' + (' is-yours' if yours else '') + '"><header><b>' + E(CTITLE.get(k, k)) + '</b>' +
                 ('<span class="yours">your core</span>' if yours else '') + '</header><ul class="cc-m">' + lis + '</ul>' + alt + '</article>')
     return '<div class="cgrid">' + out + '</div>'
@@ -277,14 +276,18 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .mvs { list-style: none; margin: 2px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px }
 .mvs li { background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; padding: 3px 8px; font: 600 12.5px var(--body); white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
 .todo-mini { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; font-size: 12.5px; color: var(--warn); font-weight: 700 }
-.cgrid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) }
+.cgrid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)) }
 .cc { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; box-shadow: var(--shadow); display: grid; gap: 10px; align-content: start }
 .cc.is-yours { border: 2px solid var(--accent) }
 .cc header { display: flex; align-items: center; justify-content: space-between; gap: 8px }
 .cc header b { font: 700 16px var(--display) }
 .cc .yours { background: var(--accent); color: #fff; font: 700 10.5px var(--mono); letter-spacing: .06em; text-transform: uppercase; padding: 2px 8px; border-radius: 99px }
 .cc-m { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 6px }
-.cc-m li { display: flex; align-items: center; font: 700 13.5px var(--body); min-width: 0 }
+.cc-m li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 8px; font: 700 13.5px var(--body); min-width: 0 }
+.cc-m .cm, .cc-m .alt { display: flex; align-items: center; min-width: 0 }
+.cc-m .nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.cc-m .alt { color: var(--muted); font-weight: 600; opacity: .8 }
+.cc-m .alt .tier { filter: grayscale(.6); opacity: .85 }
 .cc-m li span:not(.tier) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
 .cc-m .tier { min-width: 22px; height: 22px; font-size: 12px !important; margin-right: 6px }
 .cc-m small { margin-left: 6px; font: 600 10px var(--mono); text-transform: uppercase; color: var(--accent) }
