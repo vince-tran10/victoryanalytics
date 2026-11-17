@@ -715,18 +715,28 @@
     "erick": 0.468
    },
    "counters": [
+    "amanda:Druddigon",
+    "amanda:Miltank",
     "amanda:Torkoal",
     "erick:Electivire",
     "erick:Raichu",
+    "erick:Togedemaru",
+    "garbodor:Garbodor (bar 1)",
     "garbodor:Garbodor (bar 3)",
     "garbodor:Garbodor (bar 4)",
+    "jenner9:Appletun",
+    "jenner9:Stoutland",
     "karrina:Alakazam",
     "karrina:Granbull",
     "karrina:Musharna",
+    "spector2:Golisopod",
     "spector2:Luxray",
     "spector2:Sigilyph",
     "spector2:Stonjourner",
     "spector:Gengar",
+    "spector:Gothitelle",
+    "spector:Houndstone",
+    "spector:Murkrow",
     "spector:Ninetales"
    ],
    "stats": {
@@ -873,11 +883,18 @@
     "erick": 0.466
    },
    "counters": [
+    "amanda:Miltank",
+    "amanda:Torkoal",
+    "erick:Electivire",
     "erick:Raichu",
     "erick:Toxtricity",
+    "jenner9:Appletun",
+    "karrina:Musharna",
     "karrina:Nidoking",
     "karrina:Runerigus",
-    "spector2:Stonjourner"
+    "spector2:Stonjourner",
+    "spector:Gothitelle",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 221,
@@ -992,10 +1009,15 @@
    },
    "counters": [
     "amanda:Bronzong",
+    "amanda:Miltank",
     "erick:Magneton",
+    "erick:Raichu",
     "erick:Togedemaru",
     "jenner9:Klinklang",
-    "spector2:Golisopod"
+    "karrina:Musharna",
+    "karrina:Runerigus",
+    "spector2:Golisopod",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 210,
@@ -1705,9 +1727,13 @@
     "erick": 0.276
    },
    "counters": [
+    "amanda:Miltank",
+    "karrina:Alakazam",
     "karrina:Fearow",
     "karrina:Runerigus",
-    "spector2:Stonjourner"
+    "spector2:Stonjourner",
+    "spector:Gothitelle",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 221,
@@ -2410,8 +2436,13 @@
     "erick": 0.411
    },
    "counters": [
+    "amanda:Incineroar",
+    "amanda:Miltank",
     "erick:Electivire",
     "karrina:Fearow",
+    "karrina:Runerigus",
+    "spector2:Stonjourner",
+    "spector:Gothitelle",
     "spector:Murkrow",
     "spector:Ninetales"
    ],
@@ -2720,14 +2751,19 @@
    "counters": [
     "amanda:Incineroar",
     "amanda:Miltank",
+    "amanda:Torkoal",
     "erick:Electivire",
     "erick:Magneton",
     "erick:Raichu",
     "erick:Togedemaru",
     "karrina:Nidoking",
+    "karrina:Runerigus",
     "spector2:Banette",
     "spector2:Stonjourner",
-    "spector:Banette"
+    "spector:Banette",
+    "spector:Gothitelle",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 191,
@@ -3636,10 +3672,16 @@
    },
    "counters": [
     "amanda:Druddigon",
+    "amanda:Miltank",
     "erick:Raichu",
+    "jenner9:Appletun",
     "karrina:Alakazam",
     "karrina:Fearow",
-    "spector:Murkrow"
+    "karrina:Musharna",
+    "spector2:Luxray",
+    "spector:Gothitelle",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 303,
@@ -4271,9 +4313,14 @@
     "erick": 0.335
    },
    "counters": [
+    "amanda:Druddigon",
     "amanda:Hatterene",
+    "amanda:Miltank",
     "erick:Electivire",
-    "erick:Raichu"
+    "erick:Raichu",
+    "karrina:Musharna",
+    "spector2:Stonjourner",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 170,
@@ -5106,7 +5153,12 @@
     "erick": 0.398
    },
    "counters": [
-    "spector:Murkrow"
+    "erick:Electivire",
+    "erick:Raichu",
+    "jenner9:Noivern",
+    "karrina:Alakazam",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 265,
@@ -5162,7 +5214,7 @@
    "cat": "Physical",
    "attacks": [
     "Hyper Drill",
-    "Bite",
+    "Thief",
     "Drill Run"
    ],
    "legal": [
@@ -5243,7 +5295,11 @@
    "counters": [
     "erick:Raichu",
     "karrina:Fearow",
-    "karrina:Nidoking"
+    "karrina:Musharna",
+    "karrina:Nidoking",
+    "spector2:Luxray",
+    "spector:Gengar",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 254,
@@ -6675,10 +6731,13 @@
     "erick": 0.606
    },
    "counters": [
+    "erick:Electivire",
     "erick:Raichu",
     "erick:Togedemaru",
     "spector2:Banette",
-    "spector:Banette"
+    "spector:Banette",
+    "spector:Gothitelle",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 164,
@@ -7344,10 +7403,18 @@
     "erick": 0.302
    },
    "counters": [
+    "amanda:Druddigon",
+    "darkgardevoir:Gardevoir",
     "erick:Raichu",
+    "jenner9:Appletun",
+    "jenner9:Noivern",
+    "jenner9:Stoutland",
     "karrina:Alakazam",
+    "karrina:Fearow",
     "karrina:Musharna",
-    "spector:Gengar"
+    "spector:Gengar",
+    "spector:Gothitelle",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 193,
@@ -7616,10 +7683,16 @@
     "erick": 0.403
    },
    "counters": [
+    "amanda:Druddigon",
+    "erick:Raichu",
     "erick:Toxtricity",
+    "karrina:Alakazam",
+    "karrina:Fearow",
     "karrina:Nidoking",
     "karrina:Runerigus",
-    "spector2:Stonjourner"
+    "spector2:Stonjourner",
+    "spector:Gothitelle",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 244,
@@ -8115,10 +8188,14 @@
     "erick": 0.277
    },
    "counters": [
+    "amanda:Incineroar",
     "erick:Electivire",
     "karrina:Fearow",
     "karrina:Musharna",
+    "spector2:Golisopod",
     "spector:Gengar",
+    "spector:Gothitelle",
+    "spector:Murkrow",
     "spector:Ninetales"
    ],
    "stats": {
@@ -8360,12 +8437,22 @@
     "erick": 0.372
    },
    "counters": [
+    "amanda:Hatterene",
+    "amanda:Torkoal",
+    "erick:Chandelure",
+    "erick:Raichu",
     "erick:Toxtricity",
+    "karrina:Alakazam",
+    "karrina:Fearow",
     "karrina:Nidoking",
     "karrina:Runerigus",
+    "spector2:Banette",
+    "spector2:Sigilyph",
     "spector2:Stonjourner",
     "spector:Banette",
-    "spector:Gengar"
+    "spector:Gengar",
+    "spector:Gothitelle",
+    "spector:Houndstone"
    ],
    "stats": {
     "HP": 215,
@@ -8614,7 +8701,10 @@
     "spector2:Banette",
     "spector2:Stonjourner",
     "spector:Banette",
-    "spector:Gengar"
+    "spector:Gengar",
+    "spector:Houndstone",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 175,
@@ -9406,6 +9496,7 @@
     "erick": 0.061
    },
    "counters": [
+    "jenner9:Appletun",
     "jenner9:Kommo-o",
     "karrina:Fearow",
     "karrina:Runerigus",
@@ -9928,6 +10019,8 @@
     "erick": 0.232
    },
    "counters": [
+    "erick:Raichu",
+    "jenner9:Appletun",
     "karrina:Fearow",
     "karrina:Runerigus",
     "spector2:Stonjourner",
@@ -10047,7 +10140,9 @@
     "erick:Raichu",
     "jenner9:Appletun",
     "jenner9:Noivern",
-    "karrina:Musharna"
+    "karrina:Musharna",
+    "spector:Gothitelle",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 193,
@@ -10162,8 +10257,11 @@
     "erick": 0.612
    },
    "counters": [
+    "erick:Electivire",
+    "erick:Magneton",
     "erick:Raichu",
     "erick:Togedemaru",
+    "jenner9:Klinklang",
     "karrina:Musharna"
    ],
    "stats": {
@@ -10406,10 +10504,16 @@
     "erick": 0.561
    },
    "counters": [
+    "amanda:Bronzong",
+    "amanda:Miltank",
     "erick:Magneton",
     "erick:Togedemaru",
     "jenner9:Klinklang",
-    "spector2:Stonjourner"
+    "karrina:Musharna",
+    "karrina:Runerigus",
+    "spector2:Luxray",
+    "spector2:Stonjourner",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 182,
@@ -10943,8 +11047,12 @@
     "karrina:Fearow",
     "karrina:Granbull",
     "karrina:Nidoking",
+    "spector2:Banette",
     "spector2:Luxray",
+    "spector2:Stonjourner",
+    "spector:Banette",
     "spector:Gengar",
+    "spector:Murkrow",
     "spector:Ninetales"
    ],
    "stats": {
@@ -11189,12 +11297,14 @@
     "erick": 0.381
    },
    "counters": [
+    "amanda:Bronzong",
     "amanda:Incineroar",
     "erick:Electivire",
     "erick:Magneton",
     "erick:Togedemaru",
     "karrina:Granbull",
     "karrina:Musharna",
+    "spector:Murkrow",
     "spector:Ninetales"
    ],
    "stats": {
@@ -11314,6 +11424,8 @@
    },
    "counters": [
     "erick:Raichu",
+    "karrina:Fearow",
+    "karrina:Musharna",
     "spector:Murkrow"
    ],
    "stats": {
@@ -11944,7 +12056,9 @@
    "counters": [
     "erick:Magneton",
     "erick:Togedemaru",
-    "jenner9:Klinklang"
+    "jenner9:Klinklang",
+    "spector:Gothitelle",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 162,
@@ -12072,12 +12186,17 @@
     "erick": 0.465
    },
    "counters": [
+    "amanda:Druddigon",
     "amanda:Incineroar",
     "amanda:Miltank",
+    "erick:Electivire",
     "erick:Magneton",
     "erick:Togedemaru",
     "jenner9:Klinklang",
-    "jenner9:Stoutland"
+    "jenner9:Stoutland",
+    "spector2:Stonjourner",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 226,
@@ -12190,7 +12309,8 @@
     "amanda:Druddigon",
     "amanda:Hatterene",
     "amanda:Miltank",
-    "karrina:Alakazam"
+    "karrina:Alakazam",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 148,
@@ -12329,9 +12449,18 @@
     "erick": 0.575
    },
    "counters": [
+    "amanda:Druddigon",
     "amanda:Incineroar",
+    "amanda:Miltank",
+    "amanda:Torkoal",
+    "erick:Electivire",
     "erick:Magneton",
-    "erick:Togedemaru"
+    "erick:Togedemaru",
+    "garbodor:Garbodor (bar 1)",
+    "karrina:Nidoking",
+    "spector2:Stonjourner",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 275,
@@ -14946,8 +15075,13 @@
     "erick": 0.311
    },
    "counters": [
+    "erick:Raichu",
+    "karrina:Fearow",
+    "karrina:Musharna",
     "karrina:Nidoking",
-    "spector2:Stonjourner"
+    "karrina:Runerigus",
+    "spector2:Stonjourner",
+    "spector:Gothitelle"
    ],
    "stats": {
     "HP": 199,
@@ -15065,8 +15199,13 @@
     "erick": 0.31
    },
    "counters": [
+    "erick:Electivire",
     "erick:Raichu",
-    "karrina:Musharna"
+    "karrina:Musharna",
+    "spector2:Luxray",
+    "spector:Gothitelle",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 193,
@@ -15194,7 +15333,10 @@
     "erick": 0.241
    },
    "counters": [
-    "spector2:Stonjourner"
+    "erick:Raichu",
+    "spector2:Luxray",
+    "spector2:Stonjourner",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 199,
@@ -15978,7 +16120,10 @@
     "erick": 0.227
    },
    "counters": [
-    "karrina:Nidoking"
+    "erick:Togedemaru",
+    "karrina:Nidoking",
+    "spector2:Luxray",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 195,
@@ -16491,9 +16636,14 @@
     "erick": 0.455
    },
    "counters": [
+    "amanda:Hatterene",
     "erick:Magneton",
+    "karrina:Musharna",
     "spector2:Banette",
-    "spector:Banette"
+    "spector:Banette",
+    "spector:Gengar",
+    "spector:Gothitelle",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 164,
@@ -17575,9 +17725,13 @@
    },
    "counters": [
     "amanda:Torkoal",
+    "erick:Magneton",
+    "erick:Raichu",
     "karrina:Fearow",
     "karrina:Granbull",
-    "spector2:Stonjourner"
+    "spector2:Stonjourner",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 191,
@@ -17832,9 +17986,15 @@
     "erick": 0.292
    },
    "counters": [
+    "amanda:Druddigon",
+    "amanda:Incineroar",
+    "amanda:Miltank",
     "erick:Electivire",
     "erick:Togedemaru",
+    "jenner9:Stoutland",
     "karrina:Fearow",
+    "spector2:Stonjourner",
+    "spector:Murkrow",
     "spector:Ninetales"
    ],
    "stats": {
@@ -18091,7 +18251,8 @@
     "spector:Banette",
     "spector:Gengar",
     "spector:Gothitelle",
-    "spector:Houndstone"
+    "spector:Houndstone",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 142,
@@ -18216,7 +18377,8 @@
     "spector:Banette",
     "spector:Gengar",
     "spector:Gothitelle",
-    "spector:Houndstone"
+    "spector:Houndstone",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 142,
@@ -18268,7 +18430,7 @@
    "cat": "Physical",
    "attacks": [
     "Surf",
-    "Facade",
+    "Secret Power",
     "Mud Barrage"
    ],
    "legal": [
@@ -18585,8 +18747,13 @@
     "erick": 0.089
    },
    "counters": [
+    "amanda:Druddigon",
     "jenner9:Noivern",
-    "karrina:Fearow"
+    "karrina:Alakazam",
+    "karrina:Fearow",
+    "karrina:Musharna",
+    "spector2:Luxray",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 199,
@@ -19454,7 +19621,10 @@
     "erick": 0.31
    },
    "counters": [
-    "erick:Raichu"
+    "erick:Raichu",
+    "karrina:Musharna",
+    "karrina:Runerigus",
+    "spector:Gothitelle"
    ],
    "stats": {
     "HP": 148,
@@ -19587,6 +19757,8 @@
     "erick": 0.28
    },
    "counters": [
+    "amanda:Bronzong",
+    "amanda:Hatterene",
     "amanda:Incineroar",
     "erick:Togedemaru",
     "karrina:Fearow",
@@ -19595,6 +19767,8 @@
     "spector2:Stonjourner",
     "spector:Banette",
     "spector:Gengar",
+    "spector:Gothitelle",
+    "spector:Murkrow",
     "spector:Ninetales"
    ],
    "stats": {
@@ -19833,6 +20007,9 @@
    "counters": [
     "erick:Electivire",
     "karrina:Fearow",
+    "karrina:Runerigus",
+    "spector2:Stonjourner",
+    "spector:Murkrow",
     "spector:Ninetales"
    ],
    "stats": {
@@ -20036,7 +20213,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Jaw Lock",
+    "Crunch",
     "Liquidation",
     "Ice Fang"
    ],
@@ -20102,8 +20279,14 @@
     "erick": 0.195
    },
    "counters": [
+    "amanda:Druddigon",
+    "amanda:Incineroar",
     "erick:Electivire",
+    "erick:Togedemaru",
     "jenner9:Noivern",
+    "spector2:Stonjourner",
+    "spector:Gothitelle",
+    "spector:Murkrow",
     "spector:Ninetales"
    ],
    "stats": {
@@ -20371,10 +20554,15 @@
     "erick": 0.51
    },
    "counters": [
+    "amanda:Miltank",
     "erick:Magneton",
     "erick:Togedemaru",
     "jenner9:Klinklang",
-    "spector2:Stonjourner"
+    "jenner9:Stoutland",
+    "karrina:Musharna",
+    "spector2:Luxray",
+    "spector2:Stonjourner",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 182,
@@ -20884,6 +21072,7 @@
     "erick": 0.337
    },
    "counters": [
+    "amanda:Druddigon",
     "erick:Togedemaru",
     "spector2:Stonjourner",
     "spector:Banette"
@@ -21025,7 +21214,8 @@
    },
    "counters": [
     "erick:Togedemaru",
-    "karrina:Musharna"
+    "karrina:Musharna",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 170,
@@ -21390,8 +21580,14 @@
    "counters": [
     "amanda:Incineroar",
     "amanda:Miltank",
+    "erick:Electivire",
+    "erick:Magneton",
     "erick:Togedemaru",
-    "jenner9:Stoutland"
+    "jenner9:Stoutland",
+    "karrina:Nidoking",
+    "spector2:Luxray",
+    "spector2:Stonjourner",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 248,
@@ -21621,8 +21817,15 @@
     "erick": 0.168
    },
    "counters": [
+    "amanda:Druddigon",
+    "amanda:Miltank",
+    "erick:Togedemaru",
+    "karrina:Fearow",
     "karrina:Nidoking",
     "spector2:Luxray",
+    "spector2:Stonjourner",
+    "spector:Gothitelle",
+    "spector:Murkrow",
     "spector:Ninetales"
    ],
    "stats": {
@@ -22525,7 +22728,9 @@
     "amanda": 0.149,
     "erick": 0.263
    },
-   "counters": [],
+   "counters": [
+    "erick:Raichu"
+   ],
    "stats": {
     "HP": 252,
     "Atk": 182,
@@ -22642,7 +22847,25 @@
     "amanda": 0.225,
     "erick": 0.366
    },
-   "counters": [],
+   "counters": [
+    "amanda:Druddigon",
+    "amanda:Miltank",
+    "amanda:Torkoal",
+    "erick:Magneton",
+    "erick:Togedemaru",
+    "karrina:Fearow",
+    "karrina:Musharna",
+    "karrina:Nidoking",
+    "spector2:Banette",
+    "spector2:Luxray",
+    "spector2:Sigilyph",
+    "spector2:Stonjourner",
+    "spector:Banette",
+    "spector:Gengar",
+    "spector:Gothitelle",
+    "spector:Murkrow",
+    "spector:Ninetales"
+   ],
    "stats": {
     "HP": 248,
     "Atk": 177,
@@ -24340,9 +24563,14 @@
    },
    "counters": [
     "amanda:Incineroar",
+    "amanda:Miltank",
+    "erick:Electivire",
     "erick:Magneton",
     "erick:Togedemaru",
-    "jenner9:Klinklang"
+    "jenner9:Klinklang",
+    "spector2:Stonjourner",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 204,
@@ -24394,7 +24622,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Jaw Lock",
+    "Crunch",
     "Play Rough",
     "Double-Edge"
    ],
@@ -25199,7 +25427,13 @@
     "erick": 0.188
    },
    "counters": [
-    "karrina:Fearow"
+    "amanda:Druddigon",
+    "amanda:Miltank",
+    "karrina:Fearow",
+    "karrina:Musharna",
+    "spector2:Luxray",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 199,
@@ -25445,7 +25679,12 @@
     "erick": 0.447
    },
    "counters": [
-    "erick:Togedemaru"
+    "amanda:Miltank",
+    "erick:Electivire",
+    "erick:Togedemaru",
+    "spector2:Stonjourner",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 184,
@@ -26432,7 +26671,9 @@
     "erick": 0.067
    },
    "counters": [
-    "karrina:Musharna"
+    "karrina:Musharna",
+    "karrina:Runerigus",
+    "spector:Gothitelle"
    ],
    "stats": {
     "HP": 193,
@@ -26596,7 +26837,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Vital Throw",
+    "Wake-Up Slap",
     "Knock Off",
     "Strength"
    ],
@@ -28089,7 +28330,8 @@
    },
    "counters": [
     "erick:Togedemaru",
-    "karrina:Musharna"
+    "karrina:Musharna",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 153,
@@ -28615,7 +28857,10 @@
    },
    "counters": [
     "erick:Togedemaru",
-    "spector:Gengar"
+    "spector:Banette",
+    "spector:Gengar",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 148,
@@ -29239,7 +29484,10 @@
    },
    "counters": [
     "erick:Raichu",
-    "karrina:Nidoking"
+    "karrina:Nidoking",
+    "spector2:Luxray",
+    "spector2:Stonjourner",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 199,
@@ -29365,9 +29613,13 @@
     "erick": 0.282
    },
    "counters": [
+    "amanda:Incineroar",
+    "amanda:Miltank",
     "erick:Electivire",
     "erick:Togedemaru",
     "karrina:Fearow",
+    "spector2:Stonjourner",
+    "spector:Murkrow",
     "spector:Ninetales"
    ],
    "stats": {
@@ -29475,7 +29727,11 @@
     "amanda": 0.139,
     "erick": 0.003
    },
-   "counters": [],
+   "counters": [
+    "karrina:Fearow",
+    "spector:Murkrow",
+    "spector:Ninetales"
+   ],
    "stats": {
     "HP": 182,
     "Atk": 134,
@@ -29606,10 +29862,12 @@
    },
    "counters": [
     "amanda:Bronzong",
+    "erick:Electivire",
     "erick:Magneton",
     "erick:Togedemaru",
     "jenner9:Klinklang",
-    "karrina:Granbull"
+    "karrina:Granbull",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 156,
@@ -30857,7 +31115,9 @@
    },
    "counters": [
     "erick:Raichu",
-    "karrina:Musharna"
+    "karrina:Musharna",
+    "karrina:Nidoking",
+    "spector2:Luxray"
    ],
    "stats": {
     "HP": 164,
@@ -31243,8 +31503,12 @@
     "erick": 0.29
    },
    "counters": [
+    "amanda:Hatterene",
     "karrina:Fearow",
-    "spector:Gengar"
+    "spector:Banette",
+    "spector:Gengar",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 199,
@@ -32137,7 +32401,8 @@
     "spector2:Stonjourner",
     "spector:Banette",
     "spector:Gothitelle",
-    "spector:Houndstone"
+    "spector:Houndstone",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 148,
@@ -33028,7 +33293,8 @@
     "erick": 0.252
    },
    "counters": [
-    "karrina:Musharna"
+    "karrina:Musharna",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 193,
@@ -33721,7 +33987,9 @@
     "erick": 0.077
    },
    "counters": [
-    "erick:Raichu"
+    "erick:Raichu",
+    "jenner9:Appletun",
+    "karrina:Musharna"
    ],
    "stats": {
     "HP": 182,
@@ -34238,7 +34506,10 @@
     "amanda": 0.067,
     "erick": 0.203
    },
-   "counters": [],
+   "counters": [
+    "spector:Murkrow",
+    "spector:Ninetales"
+   ],
    "stats": {
     "HP": 164,
     "Atk": 177,
@@ -34369,7 +34640,10 @@
     "erick": 0.143
    },
    "counters": [
-    "karrina:Fearow"
+    "karrina:Fearow",
+    "spector:Gengar",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 160,
@@ -34508,7 +34782,9 @@
     "amanda": 0.028,
     "erick": 0.15
    },
-   "counters": [],
+   "counters": [
+    "spector2:Luxray"
+   ],
    "stats": {
     "HP": 153,
     "Atk": 194,
@@ -34861,7 +35137,7 @@
    "cat": "Physical",
    "attacks": [
     "Sucker Punch",
-    "Headbutt"
+    "Retaliate"
    ],
    "legal": [
     "ATTRACT",
@@ -35600,7 +35876,8 @@
     "spector2:Banette",
     "spector2:Stonjourner",
     "spector:Banette",
-    "spector:Gengar"
+    "spector:Gengar",
+    "spector:Gothitelle"
    ],
    "stats": {
     "HP": 148,
@@ -36072,7 +36349,12 @@
     "amanda": 0.144,
     "erick": 0.088
    },
-   "counters": [],
+   "counters": [
+    "amanda:Incineroar",
+    "spector2:Luxray",
+    "spector:Murkrow",
+    "spector:Ninetales"
+   ],
    "stats": {
     "HP": 193,
     "Atk": 182,
@@ -36433,7 +36715,9 @@
     "amanda": 0.227,
     "erick": -0.077
    },
-   "counters": [],
+   "counters": [
+    "karrina:Runerigus"
+   ],
    "stats": {
     "HP": 164,
     "Atk": 89,
@@ -36562,7 +36846,8 @@
    },
    "counters": [
     "erick:Raichu",
-    "karrina:Musharna"
+    "karrina:Musharna",
+    "spector2:Luxray"
    ],
    "stats": {
     "HP": 164,
@@ -37320,6 +37605,7 @@
    },
    "counters": [
     "karrina:Granbull",
+    "karrina:Runerigus",
     "spector2:Stonjourner"
    ],
    "stats": {
@@ -37769,7 +38055,10 @@
     "erick": 0.303
    },
    "counters": [
-    "spector:Gengar"
+    "spector:Banette",
+    "spector:Gengar",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 162,
@@ -38031,7 +38320,10 @@
     "erick": 0.275
    },
    "counters": [
-    "spector:Gengar"
+    "spector:Gengar",
+    "spector:Gothitelle",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 188,
@@ -38803,7 +39095,9 @@
     "erick": 0.033
    },
    "counters": [
-    "jenner9:Appletun"
+    "jenner9:Appletun",
+    "karrina:Runerigus",
+    "spector:Gothitelle"
    ],
    "stats": {
     "HP": 182,
@@ -38938,7 +39232,11 @@
    },
    "counters": [
     "erick:Togedemaru",
-    "karrina:Fearow"
+    "karrina:Fearow",
+    "spector2:Stonjourner",
+    "spector:Gengar",
+    "spector:Murkrow",
+    "spector:Ninetales"
    ],
    "stats": {
     "HP": 203,
@@ -39196,7 +39494,8 @@
     "erick": 0.252
    },
    "counters": [
-    "karrina:Musharna"
+    "karrina:Musharna",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 193,
@@ -40768,12 +41067,14 @@
     "erick": 0.286
    },
    "counters": [
+    "amanda:Hatterene",
     "erick:Raichu",
     "karrina:Nidoking",
     "spector2:Banette",
     "spector2:Stonjourner",
     "spector:Banette",
-    "spector:Gengar"
+    "spector:Gengar",
+    "spector:Gothitelle"
    ],
    "stats": {
     "HP": 159,
@@ -41296,7 +41597,8 @@
     "spector2:Banette",
     "spector2:Stonjourner",
     "spector:Banette",
-    "spector:Gengar"
+    "spector:Gengar",
+    "spector:Gothitelle"
    ],
    "stats": {
     "HP": 148,
@@ -42180,7 +42482,9 @@
     "amanda": 0.109,
     "erick": 0.229
    },
-   "counters": [],
+   "counters": [
+    "erick:Electivire"
+   ],
    "stats": {
     "HP": 197,
     "Atk": 182,
@@ -42314,7 +42618,12 @@
     "amanda": 0.032,
     "erick": 0.169
    },
-   "counters": [],
+   "counters": [
+    "spector:Banette",
+    "spector:Gengar",
+    "spector:Murkrow",
+    "spector:Ninetales"
+   ],
    "stats": {
     "HP": 167,
     "Atk": 146,
@@ -43656,7 +43965,12 @@
     "erick": 0.09
    },
    "counters": [
-    "spector:Banette"
+    "spector2:Banette",
+    "spector2:Stonjourner",
+    "spector:Banette",
+    "spector:Gothitelle",
+    "spector:Houndstone",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 153,
@@ -44045,7 +44359,11 @@
     "amanda": -0.019,
     "erick": 0.183
    },
-   "counters": [],
+   "counters": [
+    "spector:Gengar",
+    "spector:Murkrow",
+    "spector:Ninetales"
+   ],
    "stats": {
     "HP": 142,
     "Atk": 159,
@@ -44988,6 +45306,7 @@
     "erick": -0.085
    },
    "counters": [
+    "karrina:Runerigus",
     "spector2:Stonjourner"
    ],
    "stats": {
@@ -45520,7 +45839,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Pluck",
+    "Aerial Ace",
     "Slash",
     "Knock Off"
    ],
@@ -45594,7 +45913,9 @@
     "amanda": 0.056,
     "erick": -0.082
    },
-   "counters": [],
+   "counters": [
+    "spector:Gengar"
+   ],
    "stats": {
     "HP": 173,
     "Atk": 170,
@@ -46803,7 +47124,8 @@
     "erick": 0.194
    },
    "counters": [
-    "erick:Togedemaru"
+    "erick:Togedemaru",
+    "spector:Murkrow"
    ],
    "stats": {
     "HP": 169,

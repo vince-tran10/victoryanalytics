@@ -1,39 +1,44 @@
 {
- "preview": true,
+ "preview": false,
+ "plan": true,
  "current": {
-  "counters": 5,
+  "counters": 4,
   "pairs": [
    {
     "foe": "Electivire",
-    "mon": "Kingler",
-    "ability": "HYPERCUTTER",
-    "dealt": 113,
-    "taken": 48,
-    "ok": true
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 93,
+    "taken": 68,
+    "ok": true,
+    "setup": false
    },
    {
     "foe": "Raichu",
-    "mon": "Shedinja",
-    "ability": "WONDERGUARD",
-    "dealt": 130,
-    "taken": 0,
-    "ok": true
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 129,
+    "taken": 47,
+    "ok": true,
+    "setup": false
    },
    {
     "foe": "Magneton",
-    "mon": "Gallade",
-    "ability": "SHARPNESS",
-    "dealt": 111,
-    "taken": 57,
-    "ok": true
+    "mon": "Turtonator",
+    "ability": "SHELLARMOR",
+    "dealt": 97,
+    "taken": 38,
+    "ok": true,
+    "setup": false
    },
    {
     "foe": "Togedemaru",
-    "mon": "Salazzle",
-    "ability": "OBLIVIOUS",
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
     "dealt": 130,
-    "taken": 51,
-    "ok": true
+    "taken": 70,
+    "ok": false,
+    "setup": false
    },
    {
     "foe": "Chandelure",
@@ -41,15 +46,17 @@
     "ability": "TOUGHCLAWS",
     "dealt": 104,
     "taken": 64,
-    "ok": true
+    "ok": true,
+    "setup": false
    },
    {
     "foe": "Toxtricity",
-    "mon": "Bruxish",
-    "ability": "STRONGJAW",
-    "dealt": 130,
-    "taken": 295,
-    "ok": false
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 47,
+    "taken": 139,
+    "ok": false,
+    "setup": false
    }
   ]
  }

@@ -20,10 +20,18 @@ def fw(b): return (2.0 if b['format'] == 'Singles' else 1.0) * (b.get('weight') 
 WT = np.array([fw(BAT[bi]) / len(BAT[bi]['foes']) for bi, j, f in FOES])
 def foe_moves(f):
     m = f['moves']; return [x for x, _ in m] if m and isinstance(m[0], (list, tuple)) else list(m)
+FIXED = json.loads(os.environ.get('FIXED', '{}'))   # {cand name: [move names]}: score these with their REAL build (16 Nov)
+SETUP = {'SWORDSDANCE': 2, 'NASTYPLOT': 2, 'BELLYDRUM': 4, 'SHELLSMASH': 2, 'FILLETAWAY': 2, 'TIDYUP': 1.5, 'DRAGONDANCE': 1.5,
+         'SHIFTGEAR': 1.5, 'QUIVERDANCE': 1.5, 'CALMMIND': 1.5, 'BULKUP': 1.5, 'COIL': 1.5, 'VICTORYDANCE': 1.5, 'WORKUP': 1.5}
+PHYS_SETUP = {'SWORDSDANCE', 'BELLYDRUM', 'SHELLSMASH', 'FILLETAWAY', 'TIDYUP', 'DRAGONDANCE', 'SHIFTGEAR', 'BULKUP', 'COIL', 'VICTORYDANCE', 'WORKUP'}
+SPEC_SETUP = {'NASTYPLOT', 'SHELLSMASH', 'FILLETAWAY', 'QUIVERDANCE', 'CALMMIND', 'WORKUP'}
 def evaluate(c):
-    cat = 'Physical' if c['stats']['Atk'] >= c['stats']['SpA'] else 'Special'
-    L = [m for m in E.legal_moves(c['sid'], c['form'], c['src'].get('moves', [])) if m not in SKIP
-         and D.moves[m]['Category'] == cat and int(D.moves[m].get('Strength') or 0) > 1]
+    fixed = [E.move_id(x) for x in FIXED.get(c['name'], [])]
+    fixed = [m for m in fixed if m and D.moves[m]['Category'] != 'Status' and int(D.moves[m].get('Strength') or 0) > 1]
+    cat = (D.moves[fixed[0]]['Category'] if fixed else
+           'Physical' if c['stats']['Atk'] >= c['stats']['SpA'] else 'Special')
+    legal = E.legal_moves(c['sid'], c['form'], c['src'].get('moves', []))
+    L = fixed or [m for m in legal if m not in SKIP and D.moves[m]['Category'] == cat and int(D.moves[m].get('Strength') or 0) > 1]
     if not L: return None
     tab = {}
     for m in L:
@@ -34,7 +42,7 @@ def evaluate(c):
             row.append(min(d, 130))
         tab[m] = np.array(row)
     top = sorted(tab, key=lambda m: -(tab[m] * WT).sum())[:10]
-    best = max(itertools.combinations(top, min(3, len(top))), key=lambda ms: (np.max([tab[m] for m in ms], axis=0) * WT).sum())
+    best = tuple(fixed) if fixed else max(itertools.combinations(top, min(3, len(top))), key=lambda ms: (np.max([tab[m] for m in ms], axis=0) * WT).sum())
     cov = np.max([tab[m] for m in best], axis=0)
     taken = []
     for bi, j, f in FOES:
@@ -49,22 +57,27 @@ def evaluate(c):
     fast = np.array([c['stats']['Spe'] > f['stats']['Spe'] for bi, j, f in FOES])
     q = np.minimum(cov, 120) / 100 * np.where(fast, 1.15, 1) * (1 - np.minimum(taken, 100) / 200)
     q = np.where((taken >= 100) & ~(fast & (cov >= 100)), q * .5, q)
-    return best, cov, taken, q
+    # one setup turn (16 Nov): the build's setup move, or the best legal one for its category; the model scored setup as 0 before
+    pool = [x for x in (E.move_id(y) for y in FIXED[c['name']]) if x] if c['name'] in FIXED else legal
+    sm = max((x for x in pool if x in SETUP and x in (PHYS_SETUP if cat == 'Physical' else SPEC_SETUP)), key=lambda x: SETUP[x], default=None)
+    return best, cov, taken, q, sm
 out, seen = [], set()
-for c in sorted(C, key=lambda c: -c.get('solo_total', 0)):
+for c in sorted(C, key=lambda c: (c['name'] not in FIXED, -c.get('solo_total', 0))):
     if c['gate']: continue
     k = (c['name'], c['ability'])
+    if c['name'] in FIXED and any(x['name'] == c['name'] for x in out): continue   # one real build per fixed member
     if k in seen: continue
     seen.add(k)
     r = evaluate(c)
     if not r: continue
-    best, cov, taken, q = r
+    best, cov, taken, q, sm = r
     out.append(dict(name=c['name'], ab=c['ability'], types=c['types'], moves=[D.moves[m]['MoveName'] for m in best], mids=list(best),
                     cov=cov.round().tolist(), taken=taken.round().tolist(), q=q.tolist(), score=float((q * WT).sum() / WT.sum()),
                     where=c['src']['where'], dump=c['src'].get('dump'), spe=c['stats']['Spe'], nature=c['nature'], evs=c['evs'], item=c['item'],
-                    base_spe=c['base']['Spe']))
+                    base_spe=c['base']['Spe'], setup=D.moves[sm]['MoveName'] if sm else None, setup_mult=SETUP.get(sm, 1),
+                    fixed=c['name'] in FIXED))
 out.sort(key=lambda x: -x['score'])
-json.dump(dict(foes=[(BAT[bi]['key'], f['name'], BAT[bi]['format']) for bi, j, f in FOES], foe_spe=[f['stats']['Spe'] for bi, j, f in FOES], wt=WT.tolist(), rows=out),
+json.dump(dict(foes=[(BAT[bi]['key'], f['name'], BAT[bi]['format']) for bi, j, f in FOES], foe_spe=[f['stats']['Spe'] for bi, j, f in FOES], foe_bars=[f.get('hp_mult', 1) for bi, j, f in FOES], wt=WT.tolist(), rows=out),
           open(os.environ.get('EVAL_OUT', 'team/remaining_eval.json'), 'w'), default=str)
 for x in out[:40]:
     print(f"{x['score']:.3f} {x['name'][:24]:24s} {x['ab'][:12]:12s} {'/'.join(x['types']):16s} spe{x['spe']} {x['moves']} {x['where']}#{x['dump']}")

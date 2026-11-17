@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 os.environ.setdefault('CR_RUN', os.environ.get('BASE_RUN', 'r103'))
 import chapter_rules as C, crests, smogon_meta as SM
 
-# Aevian kits have no Smogon data: OP stars (aevian_tab.KIT) stand in for the meta tier
+# Aevian kits have no Smogon data: OP stars (kits.KIT) stand in for the meta tier
 AEV_OP = {'Golisopod': 3, 'Veluza': 3, 'Glalie': 2, 'Lapras': 2, 'Musharna': 2, 'Drapion': 2, 'Froslass': 2, 'Parasect': 2}   # Parasect-A: Resuscitation = second life as Zombie Ghost (130 Atk / 105 Spe)
 TIER_W = {'gen9ubers': 1.0, 'gen9nationaldexubers': 1.0, 'gen9ou': .9, 'gen9nationaldex': .85, 'gen9doublesou': .9,
           'gen9nationaldexdoubles': .8, 'gen9uu': .72, 'gen9nationaldexuu': .68, 'gen9ru': .58, 'gen9nu': .45}
@@ -32,11 +32,19 @@ def per_fight(c):
     return {b['key']: round(solo(c, [b]), 3) for b in C.HARD}
 
 
+SETUP_X = {'SWORDSDANCE': 2, 'NASTYPLOT': 2, 'BELLYDRUM': 4, 'SHELLSMASH': 2, 'FILLETAWAY': 2, 'DRAGONDANCE': 1.5, 'SHIFTGEAR': 1.5,
+           'QUIVERDANCE': 1.5, 'CALMMIND': 1.5, 'BULKUP': 1.5, 'COIL': 1.5, 'VICTORYDANCE': 1.5, 'TIDYUP': 1.5}
+PHYS = {'SWORDSDANCE', 'BELLYDRUM', 'SHELLSMASH', 'FILLETAWAY', 'DRAGONDANCE', 'SHIFTGEAR', 'BULKUP', 'COIL', 'VICTORYDANCE', 'TIDYUP'}
+SPEC = {'NASTYPLOT', 'SHELLSMASH', 'FILLETAWAY', 'QUIVERDANCE', 'CALMMIND'}
+
+
 def counters(c):
+    # 17 Nov: a setup move counts too: deals >= 90% after ONE setup turn while taking < 50% (survives the setup turn + the hit)
+    sx = max((SETUP_X[m] for m in c['legal'] if m in SETUP_X and m in (PHYS if c['cat'] == 'Physical' else SPEC)), default=1)
     out = []
     for b in C.HARD:
         for r in c['matchups'][b['key']]:
-            if (r['off'] >= 90 and r['deff'] < 70) or (r.get('faster') and r['off'] >= 100):
+            if (r['off'] >= 90 and r['deff'] < 70) or (r.get('faster') and r['off'] >= 100) or (sx > 1 and r['off'] * sx >= 90 and r['deff'] < 50):
                 out.append(f"{b['key']}:{r['foe']}")
     return sorted(set(out))
 

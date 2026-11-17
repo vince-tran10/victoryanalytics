@@ -1,15 +1,17 @@
 {
- "preview": true,
+ "preview": false,
+ "plan": true,
  "current": {
   "counters": 4,
   "pairs": [
    {
     "foe": "Stonjourner",
-    "mon": "Gastrodon",
-    "ability": "SANDFORCE",
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
     "dealt": 130,
-    "taken": 24,
-    "ok": true
+    "taken": 49,
+    "ok": true,
+    "setup": false
    },
    {
     "foe": "Sigilyph",
@@ -17,31 +19,35 @@
     "ability": "PIXILATE",
     "dealt": 101,
     "taken": 59,
-    "ok": true
+    "ok": true,
+    "setup": false
    },
    {
     "foe": "Luxray",
-    "mon": "Rhyperior",
-    "ability": "SOLIDROCK",
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
     "dealt": 130,
-    "taken": 27,
-    "ok": true
+    "taken": 33,
+    "ok": true,
+    "setup": false
    },
    {
     "foe": "Golisopod",
-    "mon": "Chandelure",
-    "ability": "FLASHFIRE",
-    "dealt": 118,
-    "taken": 256,
-    "ok": false
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 82,
+    "taken": 547,
+    "ok": false,
+    "setup": false
    },
    {
     "foe": "Typhlosion",
-    "mon": "Meowscarada",
-    "ability": "PROTEAN",
-    "dealt": 129,
-    "taken": 392,
-    "ok": false
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 130,
+    "taken": 247,
+    "ok": false,
+    "setup": false
    },
    {
     "foe": "Banette",
@@ -49,7 +55,8 @@
     "ability": "ILLUSION",
     "dealt": 130,
     "taken": 58,
-    "ok": true
+    "ok": true,
+    "setup": false
    }
   ]
  }

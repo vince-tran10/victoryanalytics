@@ -1,47 +1,53 @@
 {
- "preview": true,
+ "preview": false,
+ "plan": true,
  "current": {
-  "counters": 5,
+  "counters": 3,
   "pairs": [
    {
     "foe": "Incineroar",
-    "mon": "Unfezant (Aevian Form Male)",
-    "ability": "DEFIANT",
-    "dealt": 130,
-    "taken": 55,
-    "ok": true
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 101,
+    "taken": 75,
+    "ok": false,
+    "setup": false
    },
    {
     "foe": "Hatterene",
-    "mon": "Muk (Alolan Form)",
-    "ability": "POISONTOUCH",
-    "dealt": 82,
-    "taken": 36,
-    "ok": false
+    "mon": "Crawdaunt",
+    "ability": "ADAPTABILITY",
+    "dealt": 59,
+    "taken": 38,
+    "ok": true,
+    "setup": "Swords Dance"
    },
    {
     "foe": "Druddigon",
-    "mon": "Klinklang",
-    "ability": "CLEARBODY",
-    "dealt": 127,
-    "taken": 40,
-    "ok": true
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 79,
+    "taken": 46,
+    "ok": true,
+    "setup": "Swords Dance"
    },
    {
     "foe": "Torkoal",
-    "mon": "Ludicolo",
-    "ability": "OWNTEMPO",
-    "dealt": 118,
-    "taken": 62,
-    "ok": true
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 130,
+    "taken": 73,
+    "ok": false,
+    "setup": false
    },
    {
     "foe": "Bronzong",
-    "mon": "Chandelure",
-    "ability": "FLASHFIRE",
-    "dealt": 110,
-    "taken": 56,
-    "ok": true
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 71,
+    "taken": 46,
+    "ok": false,
+    "setup": false
    },
    {
     "foe": "Miltank",
@@ -49,7 +55,8 @@
     "ability": "DEFIANT",
     "dealt": 126,
     "taken": 36,
-    "ok": true
+    "ok": true,
+    "setup": false
    }
   ]
  }

@@ -127,6 +127,13 @@ def main():
     # crests: every crest-eligible Pokémon re-scored with its crest (game-code effects), then the Crests tab
     sh(['../scripts/team/run.py', WS, f'team/roster{rost}_lv55.json', f'team/rc{run}_native.json'], dict(env, FORCE_FORMAT='native', CRESTS='1'))
     sh(['../scripts/team/crest_tier.py'], dict(env, CR_RUN=f'r{run}', CREST_RUN=f'rc{run}', BASE_RUN=f'r{run}'))
+    # fight plans (17 Nov): re-score every remaining Ch9 fight (core with its real builds), then core + best 2 swaps + leads
+    _fx = dict(env, MOVE_RULES='relearn', FORCE_FORMAT='native', FIXED=json.dumps(st['moves']))
+    for k in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick']:
+        if k not in st['done']:
+            sh(['../scripts/team/fights/remaining_eval.py', k], dict(_fx, EVAL_OUT=f'team/{k}_eval.json'))
+    if st.get('core'):
+        print(sh(['../scripts/team/fights/fight_plans.py'], _fx).rstrip())
     # one blended tier scale (Ch9 fights + meta) for Crests / Aevians / all other Pokémon, then the Cores tab (16 Nov)
     sh(['../scripts/team/tier_all.py'], dict(env, BASE_RUN=f'r{run}', CREST_RUN=f'rc{run}'))
     sh(['../scripts/team/tier_tabs.py', OUT], pe)

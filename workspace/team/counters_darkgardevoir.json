@@ -1,22 +1,17 @@
 {
+ "preview": false,
+ "plan": true,
  "current": {
   "counters": 1,
   "pairs": [
    {
-    "foe": "Gardevoir (bar 1)",
+    "foe": "Gardevoir",
     "mon": "Copperajah",
     "ability": "SHEERFORCE",
-    "dealt": 126,
-    "taken": 53,
-    "ok": true
-   },
-   {
-    "foe": "Gardevoir (bar 2, Reflect up)",
-    "mon": "Klinklang",
-    "ability": "CLEARBODY",
-    "dealt": 66,
-    "taken": 77,
-    "ok": false
+    "dealt": 152,
+    "taken": 69,
+    "ok": true,
+    "setup": false
    }
   ]
  }

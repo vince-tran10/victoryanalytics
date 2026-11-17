@@ -75,8 +75,18 @@ if st.get('core') and st.get('core_check'):   # 16 Nov model: core of 4 for the 
             f"{fo['n']}/6 checked · 3+ weak {fo['weak3'] or 'none'}, unresisted {fo['nores'] or 'none'}")
 else:
     chk('Team passes the chapter rules', tc.get('rank') is not None, f"#{tc.get('rank')} of {tc.get('of')}")
-chk('Team is within 1% of the best six (whole-chapter six search; info only under the core model)', (tc.get('gap') or 0) <= 1.0,
-    f"best six is {tc.get('gap'):+.2f}%: {', '.join(tc['top'][0]['team'])}" if tc.get('top') else '', blocking=False)
+if st.get('core') and os.path.exists('team/fight_plans.json'):   # 17 Nov: core model replaces the whole-chapter six search
+    FP = {k: v for k, v in json.load(open('team/fight_plans.json')).items() if k not in set(st.get('done') or [])}
+    bad = [f"{k}: {' + '.join(v['leads'])} takes {v['lead_taken']}% vs {' + '.join(v['lead_foes'])}" for k, v in FP.items() if not v['lead_ok']]
+    chk('Every fight plan: the lead survives the opening Pokémon (slot 1 singles, slots 1-2 doubles)', not bad,
+        '; '.join(bad) or ', '.join(f"{k} {' + '.join(v['leads'])} ({v['lead_taken']}%)" for k, v in FP.items()))
+    rb = [f"{k}: {', '.join(v['weak3'] + v['nores'])}" for k, v in FP.items() if v['weak3'] or v['nores']]
+    chk('Every fight plan passes rules (b)(c) vs its own attack types', not rb, '; '.join(rb) or 'all pass', blocking=False)
+    chk('Fight plans: counters per fight (one dedicated counter per foe)', all(v['counters'] >= v['n'] - 2 for v in FP.values()),
+        ' · '.join(f"{k} {v['counters']}/{v['n']}" for k, v in FP.items()), blocking=False)
+else:
+    chk('Team is within 1% of the best six', (tc.get('gap') or 0) <= 1.0,
+        f"best six is {tc.get('gap'):+.2f}%: {', '.join(tc['top'][0]['team'])}" if tc.get('top') else '', blocking=False)
 
 # ------------------------------------------------------------- static audit content
 SOURCES = [('Eli & Sharon', 'trainertext · MISFORTUNATEDUO #10', '10'), ('Geara & Zetta', 'trainertext · XENEXECUTIVE_3 #2 + XENEXECUTIVE_1 #8', '6 + 6'),

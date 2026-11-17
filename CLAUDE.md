@@ -126,6 +126,10 @@ damage score and the fight's real win condition was only read after Vincent lost
   0.4 × meta (Smogon tier/usage + BST; Aevians by kit OP stars). Cut-offs S .85 / A .76 / B .62 / C .45.
 - **Team tab:** the ideal six with a Status column (Done ✓ per member, always shown) plus the rules panel.
 - **Fights tab:** every remaining hard fight: Singles/Doubles, Boss tag, field, why it's hard, lead.
+  **Fight plans (17 Nov):** scripts/team/fights/fight_plans.py (run by update.py after remaining_eval.py per fight, core scored
+  with its REAL builds via FIXED) picks each fight's best 2 swaps (one-to-one counters incl. one setup turn, rules (b)(c) vs that
+  fight's types) and its lead(s) (must survive the opening Pokémon). Boss damage is per health bar. The fight in `state.fight`
+  keeps its hand-checked six. checks.py: lead check is blocking; rules and counters per plan are warnings.
 - **To do tab = profile fixes only:** one card per Pokémon listing everything it needs (moves with replacements, EVs,
   nature, ability, item, level). Never two places for the same Pokémon. No box moves.
 - **Boxes tab = all box moves:** GREEN = move into Active / the party, RED = move out. A Pokémon moving into Active also

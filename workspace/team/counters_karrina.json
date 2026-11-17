@@ -1,55 +1,62 @@
 {
- "preview": true,
+ "preview": false,
+ "plan": true,
  "current": {
-  "counters": 6,
+  "counters": 5,
   "pairs": [
    {
     "foe": "Runerigus",
-    "mon": "Ribombee",
-    "ability": "SHIELDDUST",
+    "mon": "Clefable",
+    "ability": "CUTECHARM",
     "dealt": 128,
-    "taken": 27,
-    "ok": true
+    "taken": 31,
+    "ok": true,
+    "setup": false
    },
    {
     "foe": "Musharna",
-    "mon": "Shedinja",
-    "ability": "WONDERGUARD",
-    "dealt": 101,
-    "taken": 0,
-    "ok": true
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 130,
+    "taken": 36,
+    "ok": true,
+    "setup": false
    },
    {
     "foe": "Granbull",
-    "mon": "Rhyperior",
-    "ability": "SOLIDROCK",
-    "dealt": 124,
-    "taken": 48,
-    "ok": true
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 109,
+    "taken": 203,
+    "ok": false,
+    "setup": false
    },
    {
     "foe": "Alakazam",
-    "mon": "Klinklang",
-    "ability": "CLEARBODY",
-    "dealt": 129,
-    "taken": 43,
-    "ok": true
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 111,
+    "taken": 57,
+    "ok": true,
+    "setup": false
    },
    {
     "foe": "Fearow",
-    "mon": "Avalugg",
-    "ability": "OWNTEMPO",
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
     "dealt": 130,
-    "taken": 21,
-    "ok": true
+    "taken": 45,
+    "ok": true,
+    "setup": false
    },
    {
     "foe": "Nidoking",
-    "mon": "Swampert",
-    "ability": "TORRENT",
+    "mon": "Diggersby",
+    "ability": "HUGEPOWER",
     "dealt": 130,
-    "taken": 29,
-    "ok": true
+    "taken": 35,
+    "ok": true,
+    "setup": false
    }
   ]
  }

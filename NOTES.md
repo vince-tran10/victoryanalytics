@@ -688,3 +688,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 17 Nov: Cores "Answers" now names who covers each (e.g. "Haze: Vaporeon (Haze)"). Vincent's picked core is pinned as the
   first Balance card with his real builds (the generator had shown Roar / Shadow Sneak he doesn't run). Re-score put
   Azumarill over Vaporeon by 0.005 (noise); kept Vaporeon: +1 Ch9 foe countered and the core's only real Haze.
+- 17 Nov guide upgrade (all 9 suggestions): (1) automatic lead check per fight plan (blocking); (2) Fight plans table: core +
+  best 2 swaps + lead for every Ch9 fight (fight_plans.py; Garbodor 1/4 flagged: needs community tips); (3) whole-chapter-six
+  warning replaced by plan checks; (4) setup counted (one setup turn, survive it) in evals/tier counters; (5) cores ranked by
+  the moves their builds run; (6) cores penalised per major Ch9 type nobody resists; (7) header + dead scripts removed;
+  (8) tier list "as X" glitch fixed, core / swap / plan-swap badges; (9) "Level up first" banner on the Team tab.
+  With (6), Arcanine/Gholdengo/Golisopod/Azumarill now edges the picked core (0.93 vs 0.905: Azumarill resists Dark).

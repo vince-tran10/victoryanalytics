@@ -1,0 +1,962 @@
+{
+ "darkgardevoir": {
+  "key": "darkgardevoir",
+  "format": "Doubles",
+  "foes": [
+   "Gardevoir"
+  ],
+  "swaps": [
+   {
+    "name": "Copperajah",
+    "ab": "SHEERFORCE",
+    "moves": [
+     "Iron Head",
+     "Play Rough",
+     "Double-Edge"
+    ],
+    "setup": null,
+    "where": "Party",
+    "dump": 3,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "STEEL"
+    ]
+   },
+   {
+    "name": "Muk (Alolan Form)",
+    "ab": "POISONTOUCH",
+    "moves": [
+     "Knock Off",
+     "Clear Smog",
+     "Gunk Shot"
+    ],
+    "setup": null,
+    "where": "Party",
+    "dump": 4,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "POISON",
+     "DARK"
+    ]
+   }
+  ],
+  "hand": true,
+  "counters": 1,
+  "n": 1,
+  "pairs": [
+   {
+    "foe": "Gardevoir",
+    "mon": "Copperajah",
+    "ability": "SHEERFORCE",
+    "dealt": 152,
+    "taken": 69,
+    "ok": true,
+    "setup": false
+   }
+  ],
+  "weak3": [],
+  "nores": [],
+  "leads": [
+   "Copperajah",
+   "Muk (Alolan Form)"
+  ],
+  "lead_foes": [
+   "Gardevoir"
+  ],
+  "lead_taken": 69,
+  "lead_ok": true,
+  "note": ""
+ },
+ "garbodor": {
+  "key": "garbodor",
+  "format": "Doubles",
+  "foes": [
+   "Garbodor (bar 1)",
+   "Garbodor (bar 2)",
+   "Garbodor (bar 3)",
+   "Garbodor (bar 4)"
+  ],
+  "swaps": [
+   {
+    "name": "Rhyperior",
+    "ab": "SOLIDROCK",
+    "moves": [
+     "Headlong Rush",
+     "Drill Run",
+     "Earthquake"
+    ],
+    "setup": null,
+    "where": "Active",
+    "dump": 480,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "GROUND",
+     "ROCK"
+    ]
+   },
+   {
+    "name": "Hariyama",
+    "ab": "GUTS",
+    "moves": [
+     "Close Combat",
+     "Bulldoze",
+     "Cross Chop"
+    ],
+    "setup": "Belly Drum",
+    "where": "Active",
+    "dump": 458,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "FIGHTING"
+    ]
+   }
+  ],
+  "hand": false,
+  "counters": 1,
+  "n": 4,
+  "pairs": [
+   {
+    "foe": "Garbodor (bar 1)",
+    "mon": "Hariyama",
+    "ability": "GUTS",
+    "dealt": 34,
+    "taken": 40,
+    "ok": true,
+    "setup": "Belly Drum"
+   },
+   {
+    "foe": "Garbodor (bar 2)",
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 45,
+    "taken": 105,
+    "ok": false,
+    "setup": false
+   },
+   {
+    "foe": "Garbodor (bar 3)",
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 92,
+    "taken": 75,
+    "ok": false,
+    "setup": false
+   },
+   {
+    "foe": "Garbodor (bar 4)",
+    "mon": "Rhyperior",
+    "ability": "SOLIDROCK",
+    "dealt": 105,
+    "taken": 351,
+    "ok": false,
+    "setup": false
+   }
+  ],
+  "weak3": [],
+  "nores": [],
+  "leads": [
+   "Golisopod (Aevian Form)",
+   "Gholdengo"
+  ],
+  "lead_foes": [
+   "Garbodor (bar 1)",
+   "Garbodor (bar 2)"
+  ],
+  "lead_taken": 82,
+  "lead_ok": true,
+  "note": "boss: ask Vincent for the community fight page before locking this in (fight protocol 4)"
+ },
+ "karrina": {
+  "key": "karrina",
+  "format": "Singles",
+  "foes": [
+   "Runerigus",
+   "Musharna",
+   "Granbull",
+   "Alakazam",
+   "Fearow",
+   "Nidoking"
+  ],
+  "swaps": [
+   {
+    "name": "Diggersby",
+    "ab": "HUGEPOWER",
+    "moves": [
+     "Earthquake",
+     "Bulldoze",
+     "Take Down"
+    ],
+    "setup": "Swords Dance",
+    "where": "Overflow",
+    "dump": 95,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "NORMAL",
+     "GROUND"
+    ]
+   },
+   {
+    "name": "Clefable",
+    "ab": "CUTECHARM",
+    "moves": [
+     "Moonblast",
+     "Water Pulse",
+     "Signal Beam"
+    ],
+    "setup": "Work Up",
+    "where": "Overflow",
+    "dump": 73,
+    "nature": "Modest",
+    "evs": {
+     "SpA": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "FAIRY"
+    ]
+   }
+  ],
+  "hand": false,
+  "counters": 5,
+  "n": 6,
+  "pairs": [
+   {
+    "foe": "Runerigus",
+    "mon": "Clefable",
+    "ability": "CUTECHARM",
+    "dealt": 128,
+    "taken": 31,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Musharna",
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 130,
+    "taken": 36,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Granbull",
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 109,
+    "taken": 203,
+    "ok": false,
+    "setup": false
+   },
+   {
+    "foe": "Alakazam",
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 111,
+    "taken": 57,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Fearow",
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 130,
+    "taken": 45,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Nidoking",
+    "mon": "Diggersby",
+    "ability": "HUGEPOWER",
+    "dealt": 130,
+    "taken": 35,
+    "ok": true,
+    "setup": false
+   }
+  ],
+  "weak3": [],
+  "nores": [],
+  "leads": [
+   "Clefable"
+  ],
+  "lead_foes": [
+   "Runerigus"
+  ],
+  "lead_taken": 31,
+  "lead_ok": true,
+  "note": ""
+ },
+ "spector": {
+  "key": "spector",
+  "format": "Doubles",
+  "foes": [
+   "Murkrow",
+   "Gothitelle",
+   "Gengar",
+   "Houndstone",
+   "Ninetales",
+   "Banette"
+  ],
+  "swaps": [
+   {
+    "name": "Zoroark (Hisuian Form)",
+    "ab": "ILLUSION",
+    "moves": [
+     "Shadow Ball",
+     "Bitter Malice",
+     "Round"
+    ],
+    "setup": "Nasty Plot",
+    "where": "Active",
+    "dump": 500,
+    "nature": "Modest",
+    "evs": {
+     "SpA": 252,
+     "Spe": 252,
+     "Def": 4
+    },
+    "types": [
+     "NORMAL",
+     "GHOST"
+    ]
+   },
+   {
+    "name": "Porygon-Z",
+    "ab": "ADAPTABILITY",
+    "moves": [
+     "Shadow Ball",
+     "Shock Wave",
+     "Tri Attack"
+    ],
+    "setup": "Nasty Plot",
+    "where": "Active",
+    "dump": 476,
+    "nature": "Modest",
+    "evs": {
+     "SpA": 252,
+     "Spe": 252,
+     "Def": 4
+    },
+    "types": [
+     "NORMAL"
+    ]
+   }
+  ],
+  "hand": false,
+  "counters": 5,
+  "n": 6,
+  "pairs": [
+   {
+    "foe": "Murkrow",
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 130,
+    "taken": 0,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Gothitelle",
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 113,
+    "taken": 23,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Gengar",
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 75,
+    "taken": 63,
+    "ok": false,
+    "setup": false
+   },
+   {
+    "foe": "Houndstone",
+    "mon": "Zoroark (Hisuian Form)",
+    "ability": "ILLUSION",
+    "dealt": 114,
+    "taken": 0,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Ninetales",
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 130,
+    "taken": 44,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Banette",
+    "mon": "Porygon-Z",
+    "ability": "ADAPTABILITY",
+    "dealt": 130,
+    "taken": 0,
+    "ok": true,
+    "setup": false
+   }
+  ],
+  "weak3": [],
+  "nores": [],
+  "leads": [
+   "Arcanine (Hisuian Form)",
+   "Gholdengo"
+  ],
+  "lead_foes": [
+   "Murkrow",
+   "Gothitelle"
+  ],
+  "lead_taken": 58,
+  "lead_ok": true,
+  "note": ""
+ },
+ "spector2": {
+  "key": "spector2",
+  "format": "Doubles",
+  "foes": [
+   "Stonjourner",
+   "Sigilyph",
+   "Luxray",
+   "Golisopod",
+   "Typhlosion",
+   "Banette"
+  ],
+  "swaps": [
+   {
+    "name": "Zoroark (Hisuian Form)",
+    "ab": "ILLUSION",
+    "moves": [
+     "Shadow Ball",
+     "Bitter Malice",
+     "Hex"
+    ],
+    "setup": "Nasty Plot",
+    "where": "Active",
+    "dump": 500,
+    "nature": "Modest",
+    "evs": {
+     "SpA": 252,
+     "Spe": 252,
+     "Def": 4
+    },
+    "types": [
+     "NORMAL",
+     "GHOST"
+    ]
+   },
+   {
+    "name": "Sylveon",
+    "ab": "PIXILATE",
+    "moves": [
+     "Shadow Ball",
+     "Moonblast",
+     "Round"
+    ],
+    "setup": "Work Up",
+    "where": "Active",
+    "dump": 487,
+    "nature": "Modest",
+    "evs": {
+     "SpA": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "FAIRY"
+    ]
+   }
+  ],
+  "hand": false,
+  "counters": 4,
+  "n": 6,
+  "pairs": [
+   {
+    "foe": "Stonjourner",
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 130,
+    "taken": 49,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Sigilyph",
+    "mon": "Sylveon",
+    "ability": "PIXILATE",
+    "dealt": 101,
+    "taken": 59,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Luxray",
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 130,
+    "taken": 33,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Golisopod",
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 82,
+    "taken": 547,
+    "ok": false,
+    "setup": false
+   },
+   {
+    "foe": "Typhlosion",
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 130,
+    "taken": 247,
+    "ok": false,
+    "setup": false
+   },
+   {
+    "foe": "Banette",
+    "mon": "Zoroark (Hisuian Form)",
+    "ability": "ILLUSION",
+    "dealt": 130,
+    "taken": 58,
+    "ok": true,
+    "setup": false
+   }
+  ],
+  "weak3": [],
+  "nores": [],
+  "leads": [
+   "Vaporeon",
+   "Sylveon"
+  ],
+  "lead_foes": [
+   "Stonjourner",
+   "Sigilyph"
+  ],
+  "lead_taken": 86,
+  "lead_ok": true,
+  "note": ""
+ },
+ "jenner9": {
+  "key": "jenner9",
+  "format": "Singles",
+  "foes": [
+   "Stoutland",
+   "Appletun",
+   "Noivern",
+   "Porygon-Z",
+   "Kommo-o",
+   "Klinklang"
+  ],
+  "swaps": [
+   {
+    "name": "Scrafty",
+    "ab": "MOXIE",
+    "moves": [
+     "High Jump Kick",
+     "Brick Break",
+     "Dragon Claw"
+    ],
+    "setup": "Work Up",
+    "where": "Active",
+    "dump": 482,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "DARK",
+     "FIGHTING"
+    ]
+   },
+   {
+    "name": "Turtonator",
+    "ab": "SHELLARMOR",
+    "moves": [
+     "Dragon Pulse",
+     "Overheat",
+     "Flamethrower"
+    ],
+    "setup": "Shell Smash",
+    "where": "Active",
+    "dump": 492,
+    "nature": "Modest",
+    "evs": {
+     "SpA": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "FIRE",
+     "DRAGON"
+    ]
+   }
+  ],
+  "hand": false,
+  "counters": 4,
+  "n": 6,
+  "pairs": [
+   {
+    "foe": "Stoutland",
+    "mon": "Scrafty",
+    "ability": "MOXIE",
+    "dealt": 91,
+    "taken": 57,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Appletun",
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 65,
+    "taken": 47,
+    "ok": true,
+    "setup": "Swords Dance"
+   },
+   {
+    "foe": "Noivern",
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 120,
+    "taken": 60,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Porygon-Z",
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 77,
+    "taken": 75,
+    "ok": false,
+    "setup": false
+   },
+   {
+    "foe": "Kommo-o",
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 30,
+    "taken": 72,
+    "ok": false,
+    "setup": false
+   },
+   {
+    "foe": "Klinklang",
+    "mon": "Turtonator",
+    "ability": "SHELLARMOR",
+    "dealt": 105,
+    "taken": 28,
+    "ok": true,
+    "setup": false
+   }
+  ],
+  "weak3": [],
+  "nores": [],
+  "leads": [
+   "Golisopod (Aevian Form)"
+  ],
+  "lead_foes": [
+   "Stoutland"
+  ],
+  "lead_taken": 49,
+  "lead_ok": true,
+  "note": ""
+ },
+ "amanda": {
+  "key": "amanda",
+  "format": "Doubles",
+  "foes": [
+   "Incineroar",
+   "Hatterene",
+   "Druddigon",
+   "Torkoal",
+   "Bronzong",
+   "Miltank"
+  ],
+  "swaps": [
+   {
+    "name": "Annihilape",
+    "ab": "DEFIANT",
+    "moves": [
+     "Close Combat",
+     "Cross Chop",
+     "Shadow Claw"
+    ],
+    "setup": "Work Up",
+    "where": "Active",
+    "dump": 427,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "Spe": 252,
+     "Def": 4
+    },
+    "types": [
+     "FIGHTING",
+     "GHOST"
+    ]
+   },
+   {
+    "name": "Crawdaunt",
+    "ab": "ADAPTABILITY",
+    "moves": [
+     "Crabhammer",
+     "Crunch",
+     "Night Slash"
+    ],
+    "setup": "Swords Dance",
+    "where": "Active",
+    "dump": 439,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "WATER",
+     "DARK"
+    ]
+   }
+  ],
+  "hand": false,
+  "counters": 3,
+  "n": 6,
+  "pairs": [
+   {
+    "foe": "Incineroar",
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 101,
+    "taken": 75,
+    "ok": false,
+    "setup": false
+   },
+   {
+    "foe": "Hatterene",
+    "mon": "Crawdaunt",
+    "ability": "ADAPTABILITY",
+    "dealt": 59,
+    "taken": 38,
+    "ok": true,
+    "setup": "Swords Dance"
+   },
+   {
+    "foe": "Druddigon",
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 79,
+    "taken": 46,
+    "ok": true,
+    "setup": "Swords Dance"
+   },
+   {
+    "foe": "Torkoal",
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 130,
+    "taken": 73,
+    "ok": false,
+    "setup": false
+   },
+   {
+    "foe": "Bronzong",
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 71,
+    "taken": 46,
+    "ok": false,
+    "setup": false
+   },
+   {
+    "foe": "Miltank",
+    "mon": "Annihilape",
+    "ability": "DEFIANT",
+    "dealt": 126,
+    "taken": 36,
+    "ok": true,
+    "setup": false
+   }
+  ],
+  "weak3": [],
+  "nores": [],
+  "leads": [
+   "Arcanine (Hisuian Form)",
+   "Crawdaunt"
+  ],
+  "lead_foes": [
+   "Incineroar",
+   "Hatterene"
+  ],
+  "lead_taken": 98,
+  "lead_ok": true,
+  "note": ""
+ },
+ "erick": {
+  "key": "erick",
+  "format": "Doubles",
+  "foes": [
+   "Electivire",
+   "Raichu",
+   "Magneton",
+   "Togedemaru",
+   "Chandelure",
+   "Toxtricity"
+  ],
+  "swaps": [
+   {
+    "name": "Turtonator",
+    "ab": "SHELLARMOR",
+    "moves": [
+     "Overheat",
+     "Flamethrower",
+     "Magma Drift"
+    ],
+    "setup": "Shell Smash",
+    "where": "Active",
+    "dump": 492,
+    "nature": "Modest",
+    "evs": {
+     "SpA": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "FIRE",
+     "DRAGON"
+    ]
+   },
+   {
+    "name": "Musharna (Aevian Form)",
+    "ab": "TOUGHCLAWS",
+    "moves": [
+     "Throat Chop",
+     "Night Slash",
+     "Play Rough"
+    ],
+    "setup": "Work Up",
+    "where": "Active",
+    "dump": 471,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "DARK",
+     "FAIRY"
+    ]
+   }
+  ],
+  "hand": false,
+  "counters": 4,
+  "n": 6,
+  "pairs": [
+   {
+    "foe": "Electivire",
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 93,
+    "taken": 68,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Raichu",
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 129,
+    "taken": 47,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Magneton",
+    "mon": "Turtonator",
+    "ability": "SHELLARMOR",
+    "dealt": 97,
+    "taken": 38,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Togedemaru",
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 130,
+    "taken": 70,
+    "ok": false,
+    "setup": false
+   },
+   {
+    "foe": "Chandelure",
+    "mon": "Musharna (Aevian Form)",
+    "ability": "TOUGHCLAWS",
+    "dealt": 104,
+    "taken": 64,
+    "ok": true,
+    "setup": false
+   },
+   {
+    "foe": "Toxtricity",
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 47,
+    "taken": 139,
+    "ok": false,
+    "setup": false
+   }
+  ],
+  "weak3": [],
+  "nores": [],
+  "leads": [
+   "Gholdengo",
+   "Musharna (Aevian Form)"
+  ],
+  "lead_foes": [
+   "Electivire",
+   "Raichu"
+  ],
+  "lead_taken": 82,
+  "lead_ok": true,
+  "note": ""
+ }
+}

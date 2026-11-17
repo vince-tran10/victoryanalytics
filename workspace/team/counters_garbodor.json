@@ -1,7 +1,8 @@
 {
- "preview": true,
+ "preview": false,
+ "plan": true,
  "current": {
-  "counters": 0,
+  "counters": 1,
   "pairs": [
    {
     "foe": "Garbodor (bar 1)",
@@ -9,23 +10,26 @@
     "ability": "GUTS",
     "dealt": 34,
     "taken": 40,
-    "ok": false
+    "ok": true,
+    "setup": "Belly Drum"
    },
    {
     "foe": "Garbodor (bar 2)",
-    "mon": "Chandelure",
-    "ability": "FLASHFIRE",
-    "dealt": 47,
-    "taken": 89,
-    "ok": false
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 45,
+    "taken": 105,
+    "ok": false,
+    "setup": false
    },
    {
     "foe": "Garbodor (bar 3)",
     "mon": "Golisopod (Aevian Form)",
     "ability": "SKILLLINK",
-    "dealt": 76,
+    "dealt": 92,
     "taken": 75,
-    "ok": false
+    "ok": false,
+    "setup": false
    },
    {
     "foe": "Garbodor (bar 4)",
@@ -33,7 +37,8 @@
     "ability": "SOLIDROCK",
     "dealt": 105,
     "taken": 351,
-    "ok": false
+    "ok": false,
+    "setup": false
    }
   ]
  }

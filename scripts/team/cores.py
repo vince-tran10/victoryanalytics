@@ -102,13 +102,19 @@ def meta_bonus(ms):
     return min(b, .03)
 
 
-def core_score(ms, ident):
+def core_score(ms, ident, ans=None):
     q = sum(m.r['blend'] for m in ms) / 4
     cov = len(set().union(*(m.counters for m in ms))) / len(FOES)
     dfn, _ = defence(ms)
+    gaps = [s for s in C.MAJOR if not any(C.eff(s, m.r['types'], m.ab) < 1 for m in ms)]   # 17 Nov: major Ch9 types nobody resists
+    dfn = max(0, dfn - .1 * len(gaps))
     off = len(set().union(*(m.se for m in ms))) / len(TYPES)
-    ans, _, _ = answers(ms)
+    if ans is None: ans, _, _ = answers(ms)
     return .30 * q + .20 * min(1, cov * 1.6) + .15 * dfn + .10 * off + .10 * ans + .15 * ident + meta_bonus(ms)
+
+
+def gaps_of(ms):
+    return ['/'.join(s).title() for s in C.MAJOR if not any(C.eff(s, m.r['types'], m.ab) < 1 for m in ms)]
 
 
 # ---------------- archetypes: (id, title, identity text, enabler filter, member filter, identity strength fn, roles fn)
@@ -175,7 +181,7 @@ ARCH = [
 ]
 
 TOP = sorted(POOL, key=lambda m: -m.r['blend'])[:42]
-results = {}
+results, CAND = {}, {}
 for key, title, idt, en_f, mem_f, id_f in ARCH:
     ens = [m for m in ALL.values() if en_f(m)]
     ens = sorted(ens, key=lambda m: -m.r['blend'])[:8]
@@ -194,17 +200,7 @@ for key, title, idt, en_f, mem_f, id_f in ARCH:
             if key != 'balance' and idv < .6: continue          # must actually play its style
             cand.append((core_score(ms, idv), ms))
     cand.sort(key=lambda x: -x[0])
-    picked = []
-    for sc, ms in cand:
-        if all(len({m.name for m in ms} & {m.name for m in p}) <= 2 for _, p in picked):
-            picked.append((sc, ms))
-        if len(picked) == 2: break
-    mine = [ALL[n] for n in (ST.get('core') or []) if n in ALL]
-    if key == 'balance' and len(mine) == 4:   # Vincent's picked core is always the first card of its style
-        mine = tuple(mine)
-        picked = [(core_score(mine, id_f(mine)), mine)] + [(sc, ms) for sc, ms in picked if sorted(m.name for m in ms) != sorted(m.name for m in mine)][:1]
-    results[key] = picked
-    print(key, [(round(s, 3), round(id_f(ms), 2), [disp(m.name) for m in ms]) for s, ms in picked])
+    CAND[key] = (cand[:250], id_f)
 
 
 # ---------------- builds per member, role-aware
@@ -312,6 +308,45 @@ def best_swaps(ms):
     return out, got
 
 
+def covered_of(ms, bds, who=False):
+    hits = {}
+    for m, bd in zip(ms, bds):
+        for x in bd['moves']:
+            for n, fl in ANS:
+                if fl & {g for g, mvs in G.items() if mv_by_name.get(x) in mvs}: hits.setdefault(n, []).append(f"{disp(m.name)} ({x})")
+        if bd['ability'] == 'Intimidate': hits.setdefault('Fake Out / Intimidate', []).append(f"{disp(m.name)} (Intimidate)")
+    return hits if who else [n for n, _ in ANS if n in hits]
+
+
+def real_builds(ms, key):
+    roles = [role_of(m, key, ms, ms[0]) for m in ms]
+    have = {w for w, ab in (('sun', 'DROUGHT'), ('snow', 'SNOWWARNING'), ('eterrain', 'ELECTRICSURGE')) if key in (w, 'electric' if w == 'eterrain' else w) and any(ab in m.r['abilities'] for m in ms)}
+    bds = [build(m, key, rl, [], have) for m, rl in zip(ms, roles)]
+    need = [n for n, _ in ANS if n not in covered_of(ms, bds)]
+    return roles, [build(m, key, rl, need, have) for m, rl in zip(ms, roles)]
+
+
+# 17 Nov: rank by the answers the shown builds actually run (not everything each member could learn)
+for key, (cand, id_f) in CAND.items():
+    rescored = []
+    for sc, ms in cand:
+        _, bds = real_builds(ms, key)
+        rescored.append((core_score(ms, id_f(ms) if key in ('balance', 'tr', 'setup') else id_f(ms[1:]), len(covered_of(ms, bds)) / len(ANS)), ms))
+    rescored.sort(key=lambda x: -x[0])
+    picked = []
+    for sc, ms in rescored:
+        if all(len({m.name for m in ms} & {m.name for m in p}) <= 2 for _, p in picked):
+            picked.append((sc, ms))
+        if len(picked) == 2: break
+    mine = [ALL[n] for n in (ST.get('core') or []) if n in ALL]
+    if key == 'balance' and len(mine) == 4:   # Vincent's picked core is always the first card of its style
+        mine = tuple(mine)
+        bds = [dict(moves=ST['moves'].get(m.name, []), ability=ST['abilities'].get(m.name, '')) for m in mine]
+        picked = [(core_score(mine, id_f(mine), len(covered_of(mine, bds)) / len(ANS)), mine)] + \
+                 [(sc, ms) for sc, ms in picked if sorted(m.name for m in ms) != sorted(m.name for m in mine)][:1]
+    results[key] = picked
+    print(key, [(round(s_, 3), [disp(m.name) for m in ms]) for s_, ms in picked])
+
 cards = []
 NOT_VIABLE = [t for k, t, *_ in ARCH if not results.get(k)]
 for key, title, idt, en_f, mem_f, id_f in ARCH:
@@ -352,7 +387,7 @@ for key, title, idt, en_f, mem_f, id_f in ARCH:
             f"<p class='legend'>{E(idt)}</p>"
             f"<div class='tablewrap'><table class='tlx'><thead><tr><th>Member</th><th>Ability · nature · EVs / item</th><th>Moves</th></tr></thead><tbody>{mem}</tbody></table></div>"
             f"<ul><li><b>Ch9 foes it counters:</b> {len(cov)}/{len(FOES)} <span class='legend'>({E(fl)})</span></li>"
-            f"<li><b>Shared weaknesses:</b> {E(', '.join(t.title() for t in shared) or 'none')}</li>"
+            f"<li><b>Shared weaknesses:</b> {E(', '.join(t.title() for t in shared) or 'none')} · <b>major Ch9 types nobody resists:</b> {E(', '.join(gaps_of(ms)) or 'none')} (the 2 swaps must cover these)</li>"
             f"<li><b>Answers:</b> {E(' · '.join(n + ': ' + ', '.join(whom[n]) for n in got) or 'none')}{' · <b>missing:</b> ' + E(', '.join(miss)) if miss else ''}</li>"
             f"<li><b>Best 2 swaps for Ch9:</b> {E(disp(sw[0].name))} + {E(disp(sw[1].name))} → {len(cov6)}/{len(FOES)} foes"
             f"{' · still open: ' + E(', '.join(u.split(':')[1] + ' (' + SHORT[u.split(':')[0]] + ')' for u in uncovered[:8])) if uncovered else ''}</li></ul></div>")

@@ -7,6 +7,8 @@ from kits import KIT, SHORT, disp, abn
 E = html.escape
 OUT = sys.argv[1]
 T = json.load(open('team/tier_all.json'))
+_st = json.load(open('team/state.json')); ST_CORE = set(_st.get('core') or []); ST_TEAM = set(_st.get('team') or [])
+PLAN_SWAPS = {r['name'] for p in (json.load(open('team/fight_plans.json')).values() if os.path.exists('team/fight_plans.json') else []) for r in p['swaps']}
 I = json.load(open('gamedata/itemtext.json'))
 CDESC = {v.get('name'): (v.get('desc') or '') for k, v in I.items() if k.endswith('CREST')}
 CT = {r['name']: r for r in json.load(open('team/crest_tier.json'))['rows']} if os.path.exists('team/crest_tier.json') else {}
@@ -22,8 +24,11 @@ def fights_line(r):
 
 def row(r, extra):
     b = r['base']; types = '/'.join(t.title() for t in r['types'])
-    where = f"{r['where']} #{r['dump']}" + (f" · as {r['owned_as']}" if r.get('owned_as') and r['owned_as'] not in r['name'] else '')
-    party = ' <span class="ok">party</span>' if r['where'] == 'Party' else ''
+    oa = r.get('owned_as') or ''
+    same = not oa or oa in r['name'] or oa == disp(r['name']) or oa.split('-')[0] == r['name'].split(' (')[0] and r['sid'].lower().startswith(oa.split('-')[0].lower())
+    where = f"{r['where']} #{r['dump']}" + ('' if same else f" · now {oa} (evolve)")
+    party = (' <span class="ok">core</span>' if r['name'] in ST_CORE else ' <span class="ok">swap now</span>' if r['name'] in ST_TEAM
+             else ' <span class="legend">plan swap</span>' if r['name'] in PLAN_SWAPS else '')
     return (f"<tr><td><b>{E(disp(r['name']))}</b>{party}<div class='legend'>{E(types)} · {b['HP']}/{b['Atk']}/{b['Def']}/{b['SpA']}/{b['SpD']}/{b['Spe']} · {E(where)}</div></td>"
             f"<td class='c' data-l='score'><b>{r['blend']:.2f}</b><div class='legend'>fights {r['fight']:.2f}<br>meta {r['general']:.2f}</div></td>"
             f"<td>{extra}</td>"

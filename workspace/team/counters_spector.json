@@ -1,15 +1,17 @@
 {
- "preview": true,
+ "preview": false,
+ "plan": true,
  "current": {
-  "counters": 6,
+  "counters": 5,
   "pairs": [
    {
     "foe": "Murkrow",
-    "mon": "Raichu",
-    "ability": "LIGHTNINGROD",
-    "dealt": 115,
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 130,
     "taken": 0,
-    "ok": true
+    "ok": true,
+    "setup": false
    },
    {
     "foe": "Gothitelle",
@@ -17,15 +19,17 @@
     "ability": "GOODASGOLD",
     "dealt": 113,
     "taken": 23,
-    "ok": true
+    "ok": true,
+    "setup": false
    },
    {
     "foe": "Gengar",
-    "mon": "Drampa",
-    "ability": "SAPSIPPER",
-    "dealt": 130,
-    "taken": 0,
-    "ok": true
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 75,
+    "taken": 63,
+    "ok": false,
+    "setup": false
    },
    {
     "foe": "Houndstone",
@@ -33,15 +37,17 @@
     "ability": "ILLUSION",
     "dealt": 114,
     "taken": 0,
-    "ok": true
+    "ok": true,
+    "setup": false
    },
    {
     "foe": "Ninetales",
-    "mon": "Crawdaunt",
-    "ability": "ADAPTABILITY",
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
     "dealt": 130,
-    "taken": 23,
-    "ok": true
+    "taken": 44,
+    "ok": true,
+    "setup": false
    },
    {
     "foe": "Banette",
@@ -49,7 +55,8 @@
     "ability": "ADAPTABILITY",
     "dealt": 130,
     "taken": 0,
-    "ok": true
+    "ok": true,
+    "setup": false
    }
   ]
  }

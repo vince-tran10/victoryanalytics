@@ -74,7 +74,7 @@ IDENTITY = ('<b>Identity</b> Balance / tempo core of 4 (stays all Chapter 9): In
 PLAY = [IDENTITY,
         '<b>Party order = the plan, same in singles and doubles:</b> 1 Golisopod-Aevian · 2 Arcanine-Hisui · 3 Gholdengo · 4 Vaporeon · 5 Copperajah · 6 Muk-Alola',
         '<b>Lead</b> Golisopod-A leads singles: survives every Ch9 lead (max 59% except Incineroar\'s Flare Blitz). Doubles: Arcanine-Hisui beside it (Intimidate cuts that Flare Blitz and Electivire\'s punches)',
-        '<b>Lead swaps</b> Spector day: Golisopod-A + Gholdengo (Shadow Ball 113% Gothitelle, takes 18%) · Spector night: Golisopod-A + Vaporeon (Hydro Pump 229% Stonjourner) · Karrina: Golisopod-A (takes 22% from Runerigus; Arcanine-Hisui takes 110% Body Press)',
+        '<b>Per fight</b> each fight\'s 2 swaps and its lead are on the Fights tab (Fight plans). General battles: Golisopod-A leads singles, Arcanine-Hisui + Golisopod-A lead doubles',
         '<b>Mid</b> Gholdengo Thunder Waves the fastest threat (status moves can\'t touch it); Vaporeon Hazes any setup (Calm Mind, Dragon Dance) and walls Water / Fire / Ice',
         '<b>Close</b> Swap slots: Copperajah (Steel hits Fairy) + Muk-Alola (resists Dark, Clear Smog) for Dark Gardevoir. After it, swap in the next fight\'s counters',
         '<b>Dark Gardevoir</b> move Copperajah to slot 1 for that fight (it leads vs Gardevoir; Fights tab has the plan)']
@@ -312,12 +312,27 @@ def readiness():
 ready_rows, R_TOT, R_KO, R_FAST, R_RISK = readiness()
 
 
+_low = [(nm_, d_.get('level')) for nm_, d_ in party.items() if (d_.get('level') or CAP) < CAP]
+LEVEL_HTML = (f'<div class="panel pad lvl"><b>Level up first:</b> ' + ', '.join(f'{E(n)} Lv {lv}' for n, lv in _low) +
+              f' → <b>Lv {CAP}</b> (the cap). Every score on this page assumes Lv {CAP}.</div>') if _low else ''
 if LEVELS:
     team_todo.append((f'Level the six to {CAP} (the cap; the next bosses are Lv ' + str(NEXT_LV) + '+): ' + ', '.join(f'{n} {lv}' for n, lv in LEVELS), 'mid'))
 IDEAL = [t[1] for t in TEAM]
 TEAM_X = [(t[1], t[2], t[3], t[6], [m for m, _ in t[7]]) for t in TEAM]
 _CS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(F9N))), 'team', 'chapter_status.json')
 RULES_HTML = SX.rules_panel(TEAM_X, json.load(open(_CS)) if os.path.exists(_CS) else None, disp)
+if _ST.get('core'):   # 17 Nov core model: the core vs the whole chapter, each fight's six vs its own fight (Fights tab plans)
+    _cc = (_ST.get('core_check') or {}).get('core') or {}
+    _FPF = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(F9N))), 'team', 'fight_plans.json')
+    _fp = {k: v for k, v in (json.load(open(_FPF)) if os.path.exists(_FPF) else {}).items() if k not in set(_ST.get('done') or [])}
+    _ok = lambda b: '<span class="ok">✓</span>' if b else '<span class="bad">✗ fail</span>'
+    RULES_HTML = ('<div class="panel pad"><h3>Team rules (core of 4 + 2 swaps)</h3><ul>'
+                  f"<li>{_ok(not _cc.get('weak3'))} Core: no major Ch9 attack type hits 3+ of the four — {E(', '.join(_cc.get('weak3') or []) or 'none')}</li>"
+                  f"<li>Core resists every major type except <b>{E(', '.join(t.title() for t in _cc.get('nores') or []) or 'none')}</b>: each fight's 2 swaps cover these</li>"
+                  f"<li>{_ok(all(not v['weak3'] and not v['nores'] for v in _fp.values()))} Every fight's six passes rules (b)(c) vs that fight's attack types</li>"
+                  f"<li>{_ok(all(v['lead_ok'] for v in _fp.values()))} Every fight's lead survives the opening Pokémon</li>"
+                  f"<li>One dedicated counter per foe: " + ' · '.join(f"{E(SHORT.get(k, k))} {v['counters']}/{v['n']}" for k, v in _fp.items()) +
+                  ' (Fights tab → Fight plans)</li></ul></div>')
 NEXT_HTML = SX.hard_fights(fn['plans'], TEAM_X, os.path.dirname(os.path.dirname(os.path.abspath(F9N))), SHORT, disp)
 
 def _leads_html():
@@ -832,7 +847,7 @@ tbody tr:last-child td {{ border-bottom: 0 }}
   .team ul.mv {{ display: flex; flex-wrap: wrap; gap: 2px 10px }}
 }}
 .role {{ font: 700 13px var(--display); letter-spacing: .06em; text-transform: uppercase; border-right: 1px solid var(--line); width: 74px }}
-.role-lead {{ color: var(--accent) }} .role-mid {{ color: var(--warn) }} .role-closer {{ color: var(--good) }}
+.lvl {{ border-left: 4px solid var(--warn) }} .role-lead {{ color: var(--accent) }} .role-mid {{ color: var(--warn) }} .role-closer {{ color: var(--good) }}
 .job {{ color: var(--muted); font-size: 12.5px; margin-top: 4px; max-width: 30ch }}
 .evs {{ font-family: var(--mono); font-size: 12px; white-space: nowrap }}
 .evl {{ list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; white-space: nowrap; font-size: 13px }}
@@ -889,13 +904,14 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 
 <div class="wrap">
 <header class="mast">
-  <span class="eyebrow">Pokémon Rejuvenation · Chapter 8 · Classic teams</span>
+  <span class="eyebrow">Pokémon Rejuvenation V14 · Chapter {CHAPTER} · Classic · core of 4 + 2 swaps</span>
   <h1>Chapter {CHAPTER} Guide</h1>
   <div class="facts"><span>Export <b>{E(os.environ.get('EXPORT_LABEL', '5 Nov'))}</b></span><span>Hard fights left <b>{sum(1 for p in fn['plans'] if SX.is_hard(p))}</b></span><span>Level cap <b>{CAP}</b></span></div>
 </header>
 
 <section aria-labelledby="s1">
   <h2 id="s1">Team</h2>
+  {LEVEL_HTML}
   {CF_HTML}
   <div class="panel tablewrap"><table class="team">
     <thead><tr><th>Role</th><th>Pokémon</th><th>Ability / nature</th><th>EVs</th><th>Item</th><th>Moves</th><th>Status</th></tr></thead>
