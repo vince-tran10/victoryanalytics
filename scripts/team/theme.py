@@ -399,6 +399,8 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .hero-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px }
 .party { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(3, minmax(0, 1fr)) }
 @media (max-width: 860px) { .party { grid-template-columns: repeat(2, minmax(0, 1fr)) } }
+@media (max-width: 640px) { .party { grid-template-columns: 1fr } }
+.slot-top, .slot-name, .slot-types, .slot-lv { margin-right: 92px; position: relative; z-index: 1 }
 .slot { position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px 12px; display: grid; gap: 6px; box-shadow: var(--shadow); min-width: 0; overflow: hidden }
 .slot > .spr-l { position: absolute; right: 8px; top: 6px; z-index: 0; filter: drop-shadow(0 2px 2px rgba(0,0,0,.18)) }
 .slot::after { display: none; content: ""; position: absolute; right: -26px; top: -26px; width: 84px; height: 84px; border-radius: 50%; border: 10px solid var(--line); opacity: .55 }

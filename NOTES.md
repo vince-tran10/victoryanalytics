@@ -717,3 +717,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   with answers (incl. "teach X" on swaps) weigh into swap picks: Spector day = Zoroark-H (teach Taunt vs Perish Song) +
   Oranguru (teach Safeguard vs sleep), matching the community tip. Auto next-fight switch + plan_builds (tested with a dry
   --beat darkgardevoir, then restored). Cap → 65 after Erick. To do and Checks restyled (cards, problems first).
+- 18 Nov: phone fix: party cards 1 per row under 640px; name/types/level keep clear of the sprite (no overlap).
