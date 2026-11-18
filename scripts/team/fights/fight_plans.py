@@ -11,6 +11,7 @@ import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.argv = ['x', '.', '20']; sys.path.insert(0, os.path.join(HERE, '..'))
 import chapter_rules as C
+sys.path.insert(0, HERE)
 st = json.load(open('team/state.json'))
 CORE = st['core']; FIGHT = st.get('fight')
 KEYS = [k for k in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick'] if k not in set(st['done'])]
@@ -124,6 +125,31 @@ for key in KEYS:
         ans = sum(1 for j in range(n) for w in wincons(R, j) if answers_for(w, six, [x['name'] for x in pair]))   # utility valued per fight (Vincent, 17 Nov)
         res.append((sc + 5 * ans - 30 * (len(w3) + len(nr)) + .01 * sum(r['score'] for r in pair), pair, pr, nok, w3, nr))
     res.sort(key=lambda x: -x[0])
+    SIM = None
+    if BOSS or n == 1 and R.get('foe_bars', [1])[0] > 1:   # boss fight: play it turn by turn (18 Nov), solo and with the partner
+        import boss_sim as BS
+        bl = dict(BUILD)
+        def sim_pair(pr_, lead_):
+            six_ = core + list(pr_)
+            a = BS.simulate(R, six_, bl, key, with_partner=True, lead=lead_); b = BS.simulate(R, six_, bl, key, with_partner=False, lead=lead_)
+            left = lambda r_: sum(max(0, t['hp']) for t in r_['team'])
+            return (2 * b['ok'] + a['ok'], left(b) + left(a)), a, b
+        LEAD0 = ((st.get('plan_leads') or {}).get(key) or [None])[0]
+        pool_ = [x[1] for x in res[:30]] if not HAND and key != FIGHT else \
+            [res[0][1]] + list(itertools.combinations(sorted(pool, key=lambda r: -r['score'])[:18], 2))[:60]   # hand plan + 60 alternatives
+        scored = []
+        for pr_ in pool_:
+            if pr_[0]['name'].split(' (')[0] == pr_[1]['name'].split(' (')[0]: continue
+            for r in pr_: M.setdefault(r['name'], mats(r, SPE))
+            k_, a, b = sim_pair(pr_, LEAD0 if LEAD0 in [x['name'] for x in core + list(pr_)] else None)
+            scored.append((k_, pr_, a, b))
+        scored.sort(key=lambda x: x[0], reverse=True)
+        chosen = res[0][1]
+        k0, a0, b0 = sim_pair(chosen, LEAD0)
+        SIM = dict(plan=dict(melia=BS.summary(a0), solo=BS.summary(b0), log=a0['log'][:40]),
+                   best=[dict(swaps=[r['name'] for r in pr_], melia=BS.summary(a), solo=BS.summary(b)) for k_, pr_, a, b in scored[:3]])
+        if not HAND and key != FIGHT and scored and scored[0][0] > k0:   # no hand plan: the simulator decides between near-equal pairs
+            res.insert(0, next(x for x in res if x[1] == scored[0][1]) if any(x[1] == scored[0][1] for x in res) else res[0])
     if os.environ.get('DEBUG_TOP') == key:   # inspection: the best pairs and why
         for sc_, pr_, prr_, nok_, w3_, nr_ in res[:8]:
             six_ = core + list(pr_)
@@ -151,7 +177,7 @@ for key in KEYS:
                   wincons=[dict(what=w[0], answers=answers_for(w, six, [x['name'] for x in pair])) for w in wincons(R, j)]) for j in range(n)]
     plans[key] = dict(key=key, format=FMT, foes=FO, swaps=[srow(r) for r in pair], counters=nok, n=n, pairs=pairs,
                       weak3=w3, nores=nr, leads=[six[i]['name'] for i in lead], lead_foes=[FO[j] for j in lf], lead_taken=round(float(ltk)),
-                      lead_ok=bool(lv[0]), note='' if (key == FIGHT or HAND) else NEED_TIPS.get(key, ''), hand=bool(key == FIGHT or HAND))
+                      sim=SIM, lead_ok=bool(lv[0]), note='' if (key == FIGHT or HAND) else NEED_TIPS.get(key, ''), hand=bool(key == FIGHT or HAND))
     json.dump(dict(preview=False, plan=True, current=dict(counters=nok, pairs=pairs)), open(f'team/counters_{key}.json', 'w'), indent=1)
     BUILD.update({n: dict(moves=m, ability=(st.get('abilities') or {}).get(n)) for n, m in (st.get('moves') or {}).items()})   # undo per-fight builds
     print(f"{key:13s} {FMT:7s} swaps {[r['name'] for r in pair]} counters {nok}/{n} rules {w3 or ''}{nr or ''} "

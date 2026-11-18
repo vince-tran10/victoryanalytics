@@ -1,7 +1,7 @@
 """Rejuvenation crest effects, taken from the game code (Rejuv/Battle/Battler.rb crestStats, Battle_Move.rb crest
 damage multipliers / irregularTypeMods / finalmult / STAB). Used by engine.py when me['crest'] is set (env CRESTS).
 Modelled: stat crests, damage crests, type/defence crests below. Not modelled (situational / gimmick): Castform,
-Cherrim, Luvdisc, Zoroark, Furret, Swalot, Zangoose, Thievul, Vespiquen, Plusle/Minun, Sunflora, Ledian, Delcatty,
+Cherrim, Luvdisc, Swalot, Zangoose, Thievul, Vespiquen, Plusle/Minun, Sunflora, Ledian, Delcatty,
 Probopass, Gothitelle type swap, Shiinotic drain, Druddigon sun heal, Reuniclus form swap, Silvally memory abilities."""
 import json, os
 
@@ -85,6 +85,8 @@ def atk_mult(att, dfn, mid, mv, mtype, base_power):
 
 
 def extra_stab(att, mtype):
+    if att.get('crest') == 'ZOROARK':   # Zoroark Crest: STAB on the types of the last party member (Battle_Move.rb typecrest)
+        return mtype in (att.get('zoro_types') or [])
     return EXTRA_TYPE.get(att.get('crest')) == mtype
 
 

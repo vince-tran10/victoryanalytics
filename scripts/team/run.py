@@ -50,6 +50,22 @@ for me in cands:
     ids = [E.move_id(x) for x in ib.get('moves', [])]
     ids = [x for x in ids if x and x in me['legal'] and E.D.moves[x]['Category'] != 'Status' and int(E.D.moves[x].get('Strength') or 0) > 1]
     if ids: atk = ids[:3]
+    if me.get('crest') == 'ZOROARK':   # Zoroark Crest: best possible last party slot (its ability + STAB on its types)
+        pool_ = {}
+        for c in cands:
+            if c is me or c['ability'] in ('ILLUSION', 'MULTITYPE', 'RKSSYSTEM', 'WONDERGUARD', 'TRACE', 'IMPOSTER'): continue
+            pool_.setdefault((c['ability'], tuple(c['types'])), c)
+        best_ = None
+        base_ab = me['ability']
+        for (ab_, ty_), c in pool_.items():
+            me['ability'], me['zoro_types'] = ab_, list(ty_)
+            E.evaluate(me); a_ = E.pick_moves(me, 3); E.evaluate(me, moveset=set(a_))
+            sc_ = sum(r['q'] for rows in me['matchups'].values() for r in rows)
+            if best_ is None or sc_ > best_[0]: best_ = (sc_, ab_, list(ty_), a_, c['name'])
+        if best_:
+            me['ability'], me['zoro_types'], atk, me['zoro_partner'] = best_[1], best_[2], best_[3], best_[4]
+        else:
+            me['ability'] = base_ab
     me['attacks'] = atk
     E.evaluate(me, moveset=set(atk))    # re-score with only the chosen attacks
 

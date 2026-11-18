@@ -561,6 +561,8 @@ class Engine:
                         d *= 0.8
                     if d > taken:
                         taken, takenmv = d, mv['MoveName']
+                if me.get('crest') == 'FURRET' and taken > 0:   # Furret Crest: a Substitute on entry (1/4 HP) eats the first hit
+                    taken = 100 / (math.ceil(75 / taken) + 1)
                 my_spe = me['stats']['Spe']
                 foe_spe = foe['stats']['Spe'] * (1.5 if foe['item'] == 'Choice Scarf' else 1)
                 if foe.get('ability') == 'SPEEDBOOST':

@@ -437,6 +437,8 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .cc-m li span:not(.tier) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
 .cc-m .tier { min-width: 22px; height: 22px; font-size: 12px !important; margin-right: 6px }
 .cc-m small { margin-left: 6px; font: 600 10px var(--mono); text-transform: uppercase; color: var(--accent) }
+@media (max-width: 520px) { .cc-m li { grid-template-columns: 1fr; gap: 2px } .cc-m .alt { padding-left: 30px; font-size: 12.5px } .cc-m .alt .spr { width: 22px; height: 22px } .cgrid { grid-template-columns: 1fr } }
+@media (max-width: 680px) { .tlx td.c br { display: none } .tlx td.c .legend { display: inline; margin-left: 6px } }
 .cc-alt { font-size: 12.5px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 8px }
 .cc-alt b { color: var(--ink) } .cc-alt .k { font: 600 10px var(--mono); text-transform: uppercase; color: var(--accent) }
 .cc-alt span { font: 700 10.5px var(--mono); text-transform: uppercase; letter-spacing: .06em; margin-right: 6px; color: var(--ink) }

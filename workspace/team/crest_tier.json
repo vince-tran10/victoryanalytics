@@ -93,6 +93,22 @@
    "tier": "A"
   },
   {
+   "name": "Furret",
+   "crest": "Furret Crest",
+   "held": true,
+   "where": "Overflow",
+   "dump": 133,
+   "with_crest": 0.346,
+   "without": 0.055,
+   "gain": 0.29,
+   "attacks": [
+    "Double-Edge",
+    "Shadow Claw"
+   ],
+   "ability": "FRISK",
+   "tier": "A"
+  },
+  {
    "name": "Reuniclus",
    "crest": "Reuniclus Crest",
    "held": false,
@@ -157,6 +173,23 @@
     "Bounce"
    ],
    "ability": "OBLIVIOUS",
+   "tier": "B"
+  },
+  {
+   "name": "Zoroark (Hisuian Form)",
+   "crest": "Zoroark Crest",
+   "held": true,
+   "where": "Active",
+   "dump": 500,
+   "with_crest": 0.284,
+   "without": 0.058,
+   "gain": 0.226,
+   "attacks": [
+    "Shadow Ball",
+    "Sludge Bomb",
+    "Extrasensory"
+   ],
+   "ability": "SHEERFORCE",
    "tier": "B"
   },
   {
@@ -515,6 +548,23 @@
    "tier": "C"
   },
   {
+   "name": "Zoroark",
+   "crest": "Zoroark Crest",
+   "held": true,
+   "where": "Active",
+   "dump": 499,
+   "with_crest": 0.146,
+   "without": -0.013,
+   "gain": 0.159,
+   "attacks": [
+    "Night Daze",
+    "Sludge Bomb",
+    "Extrasensory"
+   ],
+   "ability": "SHEERFORCE",
+   "tier": "C"
+  },
+  {
    "name": "Probopass",
    "crest": "Probopass Crest",
    "held": false,
@@ -711,37 +761,6 @@
    "tier": "D"
   },
   {
-   "name": "Zoroark (Hisuian Form)",
-   "crest": "Zoroark Crest",
-   "held": true,
-   "where": "Active",
-   "dump": 500,
-   "with_crest": 0.058,
-   "without": 0.058,
-   "gain": 0.0,
-   "attacks": [
-    "Shadow Ball"
-   ],
-   "ability": "ILLUSION",
-   "tier": "D"
-  },
-  {
-   "name": "Furret",
-   "crest": "Furret Crest",
-   "held": true,
-   "where": "Overflow",
-   "dump": 133,
-   "with_crest": 0.055,
-   "without": 0.055,
-   "gain": 0.0,
-   "attacks": [
-    "Double-Edge",
-    "Shadow Claw"
-   ],
-   "ability": "FRISK",
-   "tier": "D"
-  },
-  {
    "name": "Zangoose",
    "crest": "Zangoose Crest",
    "held": false,
@@ -805,22 +824,6 @@
     "Ice Fang"
    ],
    "ability": "INFILTRATOR",
-   "tier": "D"
-  },
-  {
-   "name": "Zoroark",
-   "crest": "Zoroark Crest",
-   "held": true,
-   "where": "Active",
-   "dump": 499,
-   "with_crest": -0.013,
-   "without": -0.013,
-   "gain": 0.0,
-   "attacks": [
-    "Sludge Bomb",
-    "Night Daze"
-   ],
-   "ability": "ILLUSION",
    "tier": "D"
   },
   {

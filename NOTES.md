@@ -718,3 +718,8 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Oranguru (teach Safeguard vs sleep), matching the community tip. Auto next-fight switch + plan_builds (tested with a dry
   --beat darkgardevoir, then restored). Cap → 65 after Erick. To do and Checks restyled (cards, problems first).
 - 18 Nov: phone fix: party cards 1 per row under 640px; name/types/level keep clear of the sprite (no overlap).
+- 18 Nov: core re-check (ideal builds + answers + gaps): yours #12 of 300 (0.907); top = Gholdengo/Golisopod-A/Clefable/
+  Vaporeon 0.936 (+3%, Clefable for Arcanine-H). Vincent decides. Boss simulator added (boss_sim.py): Dark Gardevoir WIN solo
+  and with Melia; Rift Garbodor WIN with Melia only (no pair of 60 wins solo; hand plan Muk-A + Clodsire is best). Crests:
+  Zoroark-H crest A tier (best last slot Nidoqueen, Sheer Force + Poison STAB), Furret crest B (sub counted). Phone pass on all
+  tabs: no overflow; Cores swap line drops under the name on phones, Dex score on one line.

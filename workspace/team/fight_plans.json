@@ -81,6 +81,43 @@
    "Gardevoir"
   ],
   "lead_taken": 69,
+  "sim": {
+   "plan": {
+    "melia": "WIN · turns per bar [1, 2] · damaged: Copperajah 20%",
+    "solo": "WIN · turns per bar [1, 2] · damaged: Copperajah 20%",
+    "log": [
+     "bar 1 t1: Copperajah attack, bar 0% left, Copperajah 100% HP",
+     "bar 2 t1: Copperajah attack, bar 2% left, Copperajah 100% HP",
+     "bar 2 t2: Copperajah attack, bar 0% left, Copperajah 20% HP"
+    ]
+   },
+   "best": [
+    {
+     "swaps": [
+      "Copperajah",
+      "Muk (Alolan Form)"
+     ],
+     "melia": "WIN · turns per bar [1, 2] · damaged: Copperajah 20%",
+     "solo": "WIN · turns per bar [1, 2] · damaged: Copperajah 20%"
+    },
+    {
+     "swaps": [
+      "Copperajah",
+      "Glalie (Aevian Form)"
+     ],
+     "melia": "WIN · turns per bar [1, 2] · damaged: Copperajah 20%",
+     "solo": "WIN · turns per bar [1, 2] · damaged: Copperajah 20%"
+    },
+    {
+     "swaps": [
+      "Copperajah",
+      "Escavalier"
+     ],
+     "melia": "WIN · turns per bar [1, 2] · damaged: Copperajah 20%",
+     "solo": "WIN · turns per bar [1, 2] · damaged: Copperajah 20%"
+    }
+   ]
+  },
   "lead_ok": true,
   "note": "",
   "hand": true
@@ -220,6 +257,53 @@
    "Garbodor (bar 1)"
   ],
   "lead_taken": 28,
+  "sim": {
+   "plan": {
+    "melia": "WIN · turns per bar [4, 3, 4, 2] · damaged: Arcanine 0%, Golisopod 0%, Muk 57%, Clodsire 0%",
+    "solo": "LOSS (your side fainted) · turns per bar [5, 3, 8] · damaged: Arcanine 0%, Golisopod 0%, Gholdengo 0%, Vaporeon 0%, Muk 0%, Clodsire 0%",
+    "log": [
+     "bar 1 t1: Muk Gastro Acid, bar 95% left, Muk 78% HP",
+     "bar 1 t2: Muk Knock Off, bar 71% left, Muk 57% HP",
+     "bar 1 t3: Golisopod switch, bar 55% left, Golisopod 59% HP",
+     "bar 1 t4: Golisopod attack, bar 0% left, Golisopod 47% HP",
+     "bar 2 t1: Golisopod attack, bar 85% left, Golisopod 0% HP",
+     "bar 2 t2: Arcanine attack, bar 36% left, Arcanine 7% HP",
+     "bar 2 t3: Arcanine attack, bar 0% left, Arcanine 0% HP",
+     "bar 3 t1: Clodsire switch, bar 90% left, Clodsire 18% HP",
+     "bar 3 t2: Clodsire attack, bar 48% left, Clodsire 0% HP",
+     "bar 3 t3: Gholdengo attack, bar 9% left, Gholdengo 100% HP",
+     "bar 3 t4: Gholdengo attack, bar 0% left, Gholdengo 100% HP",
+     "bar 4 t1: Gholdengo attack, bar 58% left, Gholdengo 100% HP",
+     "bar 4 t2: Gholdengo attack, bar 0% left, Gholdengo 100% HP"
+    ]
+   },
+   "best": [
+    {
+     "swaps": [
+      "Copperajah",
+      "Escavalier"
+     ],
+     "melia": "WIN · turns per bar [2, 5, 5, 4] · damaged: Golisopod 0%, Copperajah 25%",
+     "solo": "LOSS (your side fainted) · turns per bar [2, 13] · damaged: Arcanine 0%, Golisopod 0%, Gholdengo 0%, Vaporeon 0%, Copperajah 0%, Escavalier 0%"
+    },
+    {
+     "swaps": [
+      "Escavalier",
+      "Stunfisk (Galarian Form)"
+     ],
+     "melia": "WIN · turns per bar [2, 5, 5, 5] · damaged: Golisopod 0%, Gholdengo 0%",
+     "solo": "LOSS (your side fainted) · turns per bar [2, 13] · damaged: Arcanine 0%, Golisopod 0%, Gholdengo 0%, Vaporeon 0%, Escavalier 0%, Stunfisk 0%"
+    },
+    {
+     "swaps": [
+      "Escavalier",
+      "Nidoqueen"
+     ],
+     "melia": "WIN · turns per bar [2, 5, 5, 5] · damaged: Golisopod 0%, Gholdengo 0%",
+     "solo": "LOSS (your side fainted) · turns per bar [2, 13] · damaged: Arcanine 0%, Golisopod 0%, Gholdengo 0%, Vaporeon 0%, Escavalier 0%, Nidoqueen 0%"
+    }
+   ]
+  },
   "lead_ok": true,
   "note": "",
   "hand": true
@@ -359,6 +443,7 @@
    "Runerigus"
   ],
   "lead_taken": 31,
+  "sim": null,
   "lead_ok": true,
   "note": "",
   "hand": false
@@ -532,6 +617,7 @@
    "Gothitelle"
   ],
   "lead_taken": 58,
+  "sim": null,
   "lead_ok": true,
   "note": "",
   "hand": false
@@ -664,6 +750,7 @@
    "Sigilyph"
   ],
   "lead_taken": 86,
+  "sim": null,
   "lead_ok": true,
   "note": "",
   "hand": false
@@ -824,6 +911,7 @@
    "Stoutland"
   ],
   "lead_taken": 49,
+  "sim": null,
   "lead_ok": true,
   "note": "",
   "hand": false
@@ -980,6 +1068,7 @@
    "Hatterene"
   ],
   "lead_taken": 98,
+  "sim": null,
   "lead_ok": true,
   "note": "",
   "hand": false
@@ -1113,6 +1202,7 @@
    "Raichu"
   ],
   "lead_taken": 82,
+  "sim": null,
   "lead_ok": true,
   "note": "",
   "hand": false

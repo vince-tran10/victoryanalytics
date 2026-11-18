@@ -64,7 +64,8 @@ def crest_extra(r):
     ct = CT.get(r['name'], {})
     g = ct.get('gain')
     gain = f" <span class='legend'>gain {g:+.2f}</span>" if g is not None else ''
-    return f"{E(r['crest'])}{gain}<div class='legend'>{E(CDESC.get(r['crest'], '')[:150])}</div>"
+    zp = f"<div class='ok'>Best last slot: {E(disp(r['zoro_partner']))}</div>" if r.get('zoro_partner') else ''
+    return f"{E(r['crest'])}{gain}{zp}<div class='legend'>{E(CDESC.get(r['crest'], '')[:150])}</div>"
 crest_rows = [r for r in rows if r['kind'] == 'crest']
 s6 = (f'<section aria-labelledby="s6">\n  <h2 id="s6">Crests</h2>\n  <ul class="legend">{LEG}<li>Only crests you hold. '
       f'Gain = fight score with vs without the crest. Zoroark / Furret crest effects are situational (not in the damage model).</li></ul>\n'

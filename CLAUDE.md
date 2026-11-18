@@ -111,6 +111,15 @@ damage score and the fight's real win condition was only read after Vincent lost
 - Auto next fight: after --beat, update.py sets state.fight to the next unbeaten Ch9 fight, team = core + its plan swaps
   (plan_builds per fight override, e.g. Garbodor Gastro Acid Muk), To do cards follow. Cap rises to 65 once Erick is beaten.
 
+- **Boss simulator (18 Nov):** scripts/team/fights/boss_sim.py plays every boss fight turn by turn (one active Pokémon in
+  Melia fights, Melia's team as a simple partner from gamedata.PARTNER, boss healing: Poison Heal / Black Sludge (x2 on
+  Corrupted Cave) / Sitrus / drains, field poison, Gastro Acid / Heal Block / Knock Off / Clear Smog / Unaware / one setup turn,
+  boss setup move, Reflect after a break, overflow lost at breaks). fight_plans.py runs it solo AND with the partner for
+  boss fights: it decides near-equal pairs when there is no hand plan; results go in fight_plans.json `sim` and in CHAT only.
+- **Crests (18 Nov, game code):** Zoroark Crest = ability + STAB types of the last party member → scored with the BEST
+  possible slot-6 partner (run.py, `zoro_partner`, shown on the Crest tab); Furret Crest = Substitute on entry for 1/4 HP
+  (engine: survives one extra hit).
+
 ## Build rules
 - **Protect is always the 4th move.** Only exception: Lapras-Aevian (No Guard: Rock Slide / Zen Headbutt /
   Dragon Dance / Sing). Detect etc. count as Protect.

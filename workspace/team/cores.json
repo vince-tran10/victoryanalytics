@@ -1126,16 +1126,16 @@
    "cover6": 31
   },
   {
-   "score": 0.617,
+   "score": 0.618,
    "members": [
     "Pincurchin",
-    "Golisopod (Aevian Form)",
-    "Donphan",
+    "Zoroark (Hisuian Form)",
+    "Vikavolt",
     "Ampharos"
    ],
-   "cover": 24,
+   "cover": 17,
    "swaps": [
-    "Oranguru",
+    "Golisopod (Aevian Form)",
     "Arcanine (Hisuian Form)"
    ],
    "builds": [
@@ -1153,27 +1153,27 @@
     },
     {
      "moves": [
-      "Swords Dance",
-      "Bone Rush",
-      "Pin Missile",
+      "Shadow Ball",
+      "Sludge Bomb",
+      "Extrasensory",
       "Protect"
      ],
-     "item": "Soft Sand",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Skill Link"
+     "item": "Spell Tag",
+     "nature": "Timid",
+     "evs": "252 SpA / 252 Spe",
+     "ability": "Illusion"
     },
     {
      "moves": [
-      "Earthquake",
-      "Thunder Fang",
-      "Ice Shard",
+      "Bug Buzz",
+      "Thunderbolt",
+      "Mud Shot",
       "Protect"
      ],
-     "item": "Soft Sand",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Sturdy"
+     "item": "Silver Powder",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Levitate"
     },
     {
      "moves": [
@@ -1194,10 +1194,7 @@
     "attacker",
     "attacker"
    ],
-   "shared": [
-    "WATER",
-    "ICE"
-   ],
+   "shared": [],
    "answers": [
     "speed control",
     "priority"
@@ -1214,23 +1211,23 @@
      1
     ],
     "garbodor": [
-     3,
+     0,
      4
     ],
     "karrina": [
-     4,
+     2,
      6
     ],
     "spector": [
-     5,
+     6,
      6
     ],
     "spector2": [
-     4,
+     3,
      6
     ],
     "jenner9": [
-     2,
+     1,
      6
     ],
     "amanda": [
@@ -1238,19 +1235,23 @@
      6
     ],
     "erick": [
-     3,
+     2,
      6
     ]
    },
    "open": [
     "amanda:Bronzong",
     "darkgardevoir:Gardevoir",
+    "erick:Toxtricity",
     "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
     "jenner9:Porygon-Z",
+    "karrina:Fearow",
+    "karrina:Nidoking",
+    "karrina:Runerigus",
     "spector2:Typhlosion"
    ],
-   "cover6": 35
+   "cover6": 31
   }
  ],
  "sun": [

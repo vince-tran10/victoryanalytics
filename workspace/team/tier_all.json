@@ -215,6 +215,7 @@
    "name": "Gholdengo",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GHOLDENGO",
    "form": "0",
    "types": [
@@ -324,6 +325,7 @@
    "name": "Arcanine (Hisuian Form)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ARCANINE",
    "form": "1",
    "types": [
@@ -457,6 +459,7 @@
    "name": "Annihilape",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ANNIHILAPE",
    "form": "0",
    "types": [
@@ -603,6 +606,7 @@
    "name": "Golisopod (Aevian Form)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GOLISOPOD",
    "form": "1",
    "types": [
@@ -760,6 +764,7 @@
    "name": "Slowking (Galarian Form)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SLOWKING",
    "form": "1",
    "types": [
@@ -917,6 +922,7 @@
    "name": "Armarouge",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ARMAROUGE",
    "form": "0",
    "types": [
@@ -1041,6 +1047,7 @@
    "name": "Mamoswine",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MAMOSWINE",
    "form": "0",
    "types": [
@@ -1171,6 +1178,7 @@
    "name": "Clefable",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CLEFABLE",
    "form": "0",
    "types": [
@@ -1329,6 +1337,7 @@
    "name": "Slowking",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SLOWKING",
    "form": "0",
    "types": [
@@ -1481,6 +1490,7 @@
    "name": "Gothitelle",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GOTHITELLE",
    "form": "0",
    "types": [
@@ -1621,6 +1631,7 @@
    "name": "Chandelure",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CHANDELURE",
    "form": "0",
    "types": [
@@ -1752,6 +1763,7 @@
    "name": "Vaporeon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "VAPOREON",
    "form": "0",
    "types": [
@@ -1895,6 +1907,7 @@
    "name": "Rhyperior",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "RHYPERIOR",
    "form": "0",
    "types": [
@@ -2040,6 +2053,7 @@
    "name": "Swampert",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SWAMPERT",
    "form": "0",
    "types": [
@@ -2185,6 +2199,7 @@
    "name": "Glalie (Aevian Form)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GLALIE",
    "form": "1",
    "types": [
@@ -2328,6 +2343,7 @@
    "name": "Reuniclus",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "REUNICLUS",
    "form": "0",
    "types": [
@@ -2461,6 +2477,7 @@
    "name": "Gallade",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GALLADE",
    "form": "0",
    "types": [
@@ -2636,6 +2653,7 @@
    "name": "Muk (Alolan Form)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MUK",
    "form": "1",
    "types": [
@@ -2783,6 +2801,7 @@
    "name": "Copperajah",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "COPPERAJAH",
    "form": "0",
    "types": [
@@ -2904,6 +2923,7 @@
    "name": "Revavroom",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "REVAVROOM",
    "form": "0",
    "types": [
@@ -3026,6 +3046,7 @@
    "name": "Slowbro",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SLOWBRO",
    "form": "0",
    "types": [
@@ -3171,6 +3192,7 @@
    "name": "Golurk",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GOLURK",
    "form": "0",
    "types": [
@@ -3301,6 +3323,7 @@
    "name": "Florges",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "FLORGES",
    "form": "0",
    "types": [
@@ -3419,9 +3442,144 @@
    "tier": "A"
   },
   {
+   "name": "Zoroark (Hisuian Form)",
+   "kind": "crest",
+   "crest": "Zoroark Crest",
+   "zoro_partner": "Nidoqueen",
+   "sid": "ZOROARK",
+   "form": "1",
+   "types": [
+    "NORMAL",
+    "GHOST"
+   ],
+   "base": {
+    "HP": 55,
+    "Atk": 100,
+    "Def": 60,
+    "SpA": 125,
+    "SpD": 60,
+    "Spe": 110
+   },
+   "bst": 510,
+   "fight": 0.284,
+   "fight_pct": 0.882,
+   "meta": 0.74,
+   "meta_label": "Zoroark Crest (Rejuvenation-only)",
+   "general": 0.688,
+   "blend": 0.804,
+   "ability": "SHEERFORCE",
+   "abilities": [
+    "ILLUSION"
+   ],
+   "nature": "Modest",
+   "evs": {
+    "SpA": 252,
+    "Spe": 252,
+    "Def": 4
+   },
+   "cat": "Special",
+   "attacks": [
+    "Shadow Ball",
+    "Sludge Bomb",
+    "Extrasensory"
+   ],
+   "legal": [
+    "AGILITY",
+    "ATTRACT",
+    "BITTERMALICE",
+    "COMEUPPANCE",
+    "CONFIDE",
+    "CURSE",
+    "DETECT",
+    "DIG",
+    "DOUBLETEAM",
+    "EXTRASENSORY",
+    "FACADE",
+    "FALSESWIPE",
+    "FLING",
+    "GRASSKNOT",
+    "HELPINGHAND",
+    "HEX",
+    "HIDDENPOWER",
+    "HONECLAWS",
+    "IMPRISON",
+    "IRRITATION",
+    "KNOCKOFF",
+    "LEER",
+    "LOWSWEEP",
+    "MEMENTO",
+    "NASTYPLOT",
+    "NIGHTSHADE",
+    "PROTECT",
+    "REST",
+    "ROAR",
+    "ROUND",
+    "SCARYFACE",
+    "SCRATCH",
+    "SECRETPOWER",
+    "SHADOWBALL",
+    "SHADOWCLAW",
+    "SHADOWSNEAK",
+    "SLEEPTALK",
+    "SLUDGEBOMB",
+    "SNORE",
+    "SPITE",
+    "SWAGGER",
+    "TAKEDOWN",
+    "TAUNT",
+    "THIEF",
+    "TORMENT",
+    "TRICK",
+    "UTURN"
+   ],
+   "where": "Active",
+   "dump": 500,
+   "owned_as": "Zoroark-Hisui",
+   "evo": "",
+   "per_fight": {
+    "darkgardevoir": -0.113,
+    "garbodor": -0.225,
+    "karrina": 0.48,
+    "spector": 1.069,
+    "spector2": 0.462,
+    "jenner9": 0.179,
+    "amanda": 0.194,
+    "erick": 0.438
+   },
+   "counters": [
+    "amanda:Hatterene",
+    "amanda:Miltank",
+    "erick:Chandelure",
+    "karrina:Granbull",
+    "spector2:Banette",
+    "spector2:Luxray",
+    "spector2:Stonjourner",
+    "spector:Banette",
+    "spector:Gengar",
+    "spector:Gothitelle",
+    "spector:Houndstone",
+    "spector:Murkrow",
+    "spector:Ninetales"
+   ],
+   "stats": {
+    "HP": 142,
+    "Atk": 118,
+    "Def": 88,
+    "SpA": 213,
+    "SpD": 88,
+    "Spe": 177
+   },
+   "tags": [
+    "helping",
+    "speed"
+   ],
+   "tier": "A"
+  },
+  {
    "name": "Braviary",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BRAVIARY",
    "form": "0",
    "types": [
@@ -3539,6 +3697,7 @@
    "name": "Azumarill",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "AZUMARILL",
    "form": "0",
    "types": [
@@ -3687,6 +3846,7 @@
    "name": "Umbreon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "UMBREON",
    "form": "0",
    "types": [
@@ -3832,6 +3992,7 @@
    "name": "Lapras (Aevian Form)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LAPRAS",
    "form": "1",
    "types": [
@@ -3970,6 +4131,7 @@
    "name": "Empoleon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "EMPOLEON",
    "form": "0",
    "types": [
@@ -4110,6 +4272,7 @@
    "name": "Dudunsparce",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DUDUNSPARCE",
    "form": "0",
    "types": [
@@ -4250,6 +4413,7 @@
    "name": "Clodsire",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CLODSIRE",
    "form": "0",
    "types": [
@@ -4387,6 +4551,7 @@
    "name": "Gastrodon (West Aevian Form)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GASTRODON",
    "form": "1",
    "types": [
@@ -4531,6 +4696,7 @@
    "name": "Arcanine",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ARCANINE",
    "form": "0",
    "types": [
@@ -4661,6 +4827,7 @@
    "name": "Musharna (Aevian Form)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MUSHARNA",
    "form": "1",
    "types": [
@@ -4807,6 +4974,7 @@
    "name": "Donphan",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DONPHAN",
    "form": "0",
    "types": [
@@ -4944,9 +5112,152 @@
    "tier": "B"
   },
   {
+   "name": "Furret",
+   "kind": "crest",
+   "crest": "Furret Crest",
+   "zoro_partner": null,
+   "sid": "FURRET",
+   "form": "0",
+   "types": [
+    "NORMAL"
+   ],
+   "base": {
+    "HP": 85,
+    "Atk": 76,
+    "Def": 64,
+    "SpA": 45,
+    "SpD": 55,
+    "Spe": 90
+   },
+   "bst": 415,
+   "fight": 0.346,
+   "fight_pct": 0.964,
+   "meta": 0.6,
+   "meta_label": "Furret Crest (Rejuvenation-only)",
+   "general": 0.446,
+   "blend": 0.757,
+   "ability": "FRISK",
+   "abilities": [
+    "RUNAWAY",
+    "KEENEYE",
+    "FRISK"
+   ],
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "Def": 4
+   },
+   "cat": "Physical",
+   "attacks": [
+    "Double-Edge",
+    "Shadow Claw"
+   ],
+   "legal": [
+    "AGILITY",
+    "AMNESIA",
+    "ASSIST",
+    "ATTRACT",
+    "BABYDOLLEYES",
+    "BATONPASS",
+    "BRUTALSWING",
+    "CAPTIVATE",
+    "CHARGEBEAM",
+    "CHILLINGWATER",
+    "COIL",
+    "CONFIDE",
+    "CUT",
+    "DEFENSECURL",
+    "DIG",
+    "DOUBLEEDGE",
+    "DOUBLETEAM",
+    "ECHOEDVOICE",
+    "FACADE",
+    "FALSESWIPE",
+    "FLING",
+    "FOCUSENERGY",
+    "FOLLOWME",
+    "FORESIGHT",
+    "FURYSWIPES",
+    "GRASSKNOT",
+    "GROWL",
+    "HELPINGHAND",
+    "HIDDENPOWER",
+    "LASTRESORT",
+    "MEFIRST",
+    "MUDBARRAGE",
+    "NATURALGIFT",
+    "POISONSWEEP",
+    "POWERUPPUNCH",
+    "PROTECT",
+    "PURSUIT",
+    "QUICKATTACK",
+    "REST",
+    "REVERSAL",
+    "ROCKSMASH",
+    "ROUND",
+    "SCRATCH",
+    "SECRETPOWER",
+    "SHADOWBALL",
+    "SHADOWCLAW",
+    "SHOCKWAVE",
+    "SLAM",
+    "SLASH",
+    "SLEEPTALK",
+    "SNORE",
+    "STACKINGSHOT",
+    "SUCKERPUNCH",
+    "SUPERFANG",
+    "SURF",
+    "SWAGGER",
+    "TAKEDOWN",
+    "THIEF",
+    "TIDYUP",
+    "TRAILBLAZE",
+    "TRICK",
+    "UPROAR",
+    "WATERPULSE",
+    "WORKUP"
+   ],
+   "where": "Overflow",
+   "dump": 133,
+   "owned_as": "Furret",
+   "evo": "",
+   "per_fight": {
+    "darkgardevoir": 0.193,
+    "garbodor": 0.107,
+    "karrina": 0.48,
+    "spector": 0.531,
+    "spector2": 0.426,
+    "jenner9": 0.266,
+    "amanda": 0.309,
+    "erick": 0.424
+   },
+   "counters": [
+    "erick:Raichu",
+    "karrina:Fearow",
+    "spector2:Banette",
+    "spector:Gengar"
+   ],
+   "stats": {
+    "HP": 175,
+    "Atk": 154,
+    "Def": 93,
+    "SpA": 63,
+    "SpD": 82,
+    "Spe": 155
+   },
+   "tags": [
+    "helping",
+    "redirect"
+   ],
+   "tier": "B"
+  },
+  {
    "name": "Palossand",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PALOSSAND",
    "form": "0",
    "types": [
@@ -5079,6 +5390,7 @@
    "name": "Palossand (Fiery Aevian Form)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PALOSSAND",
    "form": "2",
    "types": [
@@ -5208,6 +5520,7 @@
    "name": "Ceruledge",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CERULEDGE",
    "form": "0",
    "types": [
@@ -5332,6 +5645,7 @@
    "name": "Porygon-Z",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PORYGONZ",
    "form": "0",
    "types": [
@@ -5459,6 +5773,7 @@
    "name": "Solrock (Solrock Dominant Fusion)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SOLROCK",
    "form": "1",
    "types": [
@@ -5584,6 +5899,7 @@
    "name": "Cetitan",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CETITAN",
    "form": "0",
    "types": [
@@ -5706,6 +6022,7 @@
    "name": "Dragalge",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DRAGALGE",
    "form": "0",
    "types": [
@@ -5827,6 +6144,7 @@
    "name": "Vikavolt",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "VIKAVOLT",
    "form": "0",
    "types": [
@@ -5951,6 +6269,7 @@
    "name": "Lickilicky",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LICKILICKY",
    "form": "0",
    "types": [
@@ -6082,6 +6401,7 @@
    "name": "Whiscash",
    "kind": "crest",
    "crest": "Whiscash Crest",
+   "zoro_partner": null,
    "sid": "WHISCASH",
    "form": "0",
    "types": [
@@ -6206,6 +6526,7 @@
    "name": "Veluza (Aevian Form)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "VELUZA",
    "form": "1",
    "types": [
@@ -6332,6 +6653,7 @@
    "name": "Ampharos (Aevian Form)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "AMPHAROS",
    "form": "1",
    "types": [
@@ -6475,6 +6797,7 @@
    "name": "Gastrodon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GASTRODON",
    "form": "0",
    "types": [
@@ -6614,6 +6937,7 @@
    "name": "Venusaur",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "VENUSAUR",
    "form": "0",
    "types": [
@@ -6747,6 +7071,7 @@
    "name": "Overqwil",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "OVERQWIL",
    "form": "0",
    "types": [
@@ -6873,6 +7198,7 @@
    "name": "Feraligatr",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "FERALIGATR",
    "form": "0",
    "types": [
@@ -7009,6 +7335,7 @@
    "name": "Lunatone (Lunatone Dominant Fusion)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LUNATONE",
    "form": "1",
    "types": [
@@ -7128,6 +7455,7 @@
    "name": "Walrein",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "WALREIN",
    "form": "0",
    "types": [
@@ -7254,6 +7582,7 @@
    "name": "Clawitzer",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CLAWITZER",
    "form": "0",
    "types": [
@@ -7381,6 +7710,7 @@
    "name": "Wyrdeer",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "WYRDEER",
    "form": "0",
    "types": [
@@ -7519,6 +7849,7 @@
    "name": "Musharna",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MUSHARNA",
    "form": "0",
    "types": [
@@ -7651,6 +7982,7 @@
    "name": "Oranguru",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ORANGURU",
    "form": "0",
    "types": [
@@ -7795,6 +8127,7 @@
    "name": "Silvally",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SILVALLY",
    "form": "0",
    "types": [
@@ -7921,6 +8254,7 @@
    "name": "Ninetales (Alolan Form)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "NINETALES",
    "form": "1",
    "types": [
@@ -8053,6 +8387,7 @@
    "name": "Centiskorch",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CENTISKORCH",
    "form": "0",
    "types": [
@@ -8171,6 +8506,7 @@
    "name": "Escavalier",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ESCAVALIER",
    "form": "0",
    "types": [
@@ -8310,6 +8646,7 @@
    "name": "Mudsdale",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MUDSDALE",
    "form": "0",
    "types": [
@@ -8431,6 +8768,7 @@
    "name": "Palossand (Icy Aevian Form)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PALOSSAND",
    "form": "3",
    "types": [
@@ -8562,6 +8900,7 @@
    "name": "Aromatisse",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "AROMATISSE",
    "form": "0",
    "types": [
@@ -8680,6 +9019,7 @@
    "name": "Flareon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "FLAREON",
    "form": "0",
    "types": [
@@ -8822,6 +9162,7 @@
    "name": "Emboar",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "EMBOAR",
    "form": "0",
    "types": [
@@ -8960,6 +9301,7 @@
    "name": "Typhlosion",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "TYPHLOSION",
    "form": "0",
    "types": [
@@ -9095,6 +9437,7 @@
    "name": "Decidueye",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DECIDUEYE",
    "form": "0",
    "types": [
@@ -9227,6 +9570,7 @@
    "name": "Quagsire",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "QUAGSIRE",
    "form": "0",
    "types": [
@@ -9365,6 +9709,7 @@
    "name": "Klinklang",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "KLINKLANG",
    "form": "0",
    "types": [
@@ -9479,6 +9824,7 @@
    "name": "Sylveon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SYLVEON",
    "form": "0",
    "types": [
@@ -9618,6 +9964,7 @@
    "name": "Oinkologne",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "OINKOLOGNE",
    "form": "0",
    "types": [
@@ -9737,6 +10084,7 @@
    "name": "Jellicent",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "JELLICENT",
    "form": "0",
    "types": [
@@ -9859,6 +10207,7 @@
    "name": "Beartic",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BEARTIC",
    "form": "0",
    "types": [
@@ -9996,6 +10345,7 @@
    "name": "Crabominable",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CRABOMINABLE",
    "form": "0",
    "types": [
@@ -10129,6 +10479,7 @@
    "name": "Rampardos",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "RAMPARDOS",
    "form": "0",
    "types": [
@@ -10260,6 +10611,7 @@
    "name": "Glaceon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GLACEON",
    "form": "0",
    "types": [
@@ -10404,6 +10756,7 @@
    "name": "Mawile",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MAWILE",
    "form": "0",
    "types": [
@@ -10543,6 +10896,7 @@
    "name": "Yanmega",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "YANMEGA",
    "form": "0",
    "types": [
@@ -10672,6 +11026,7 @@
    "name": "Camerupt",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CAMERUPT",
    "form": "0",
    "types": [
@@ -10814,6 +11169,7 @@
    "name": "Runerigus",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "RUNERIGUS",
    "form": "0",
    "types": [
@@ -10940,6 +11296,7 @@
    "name": "Aurorus",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "AURORUS",
    "form": "0",
    "types": [
@@ -11065,6 +11422,7 @@
    "name": "Hariyama",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "HARIYAMA",
    "form": "0",
    "types": [
@@ -11218,6 +11576,7 @@
    "name": "Palossand (Rocky Aevian Form)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PALOSSAND",
    "form": "1",
    "types": [
@@ -11346,6 +11705,7 @@
    "name": "Tsareena",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "TSAREENA",
    "form": "0",
    "types": [
@@ -11470,6 +11830,7 @@
    "name": "Bellibolt",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BELLIBOLT",
    "form": "0",
    "types": [
@@ -11582,6 +11943,7 @@
    "name": "Mantine",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MANTINE",
    "form": "0",
    "types": [
@@ -11711,6 +12073,7 @@
    "name": "Alcremie",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ALCREMIE",
    "form": "0",
    "types": [
@@ -11820,6 +12183,7 @@
    "name": "Scrafty",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SCRAFTY",
    "form": "0",
    "types": [
@@ -11957,6 +12321,7 @@
    "name": "Grumpig",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GRUMPIG",
    "form": "0",
    "types": [
@@ -12100,6 +12465,7 @@
    "name": "Mandibuzz",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MANDIBUZZ",
    "form": "0",
    "types": [
@@ -12222,6 +12588,7 @@
    "name": "Phione",
    "kind": "crest",
    "crest": "Phione Crest",
+   "zoro_partner": null,
    "sid": "PHIONE",
    "form": "0",
    "types": [
@@ -12328,6 +12695,7 @@
    "name": "Arctovish",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ARCTOVISH",
    "form": "0",
    "types": [
@@ -12432,6 +12800,7 @@
    "name": "Ampharos",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "AMPHAROS",
    "form": "0",
    "types": [
@@ -12563,6 +12932,7 @@
    "name": "Tangrowth",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "TANGROWTH",
    "form": "0",
    "types": [
@@ -12696,6 +13066,7 @@
    "name": "Heatmor",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "HEATMOR",
    "form": "0",
    "types": [
@@ -12825,6 +13196,7 @@
    "name": "Crustle",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CRUSTLE",
    "form": "0",
    "types": [
@@ -12950,6 +13322,7 @@
    "name": "Ludicolo",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LUDICOLO",
    "form": "0",
    "types": [
@@ -13082,6 +13455,7 @@
    "name": "Shuckle",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SHUCKLE",
    "form": "0",
    "types": [
@@ -13207,6 +13581,7 @@
    "name": "Talonflame",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "TALONFLAME",
    "form": "0",
    "types": [
@@ -13322,6 +13697,7 @@
    "name": "Diggersby",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DIGGERSBY",
    "form": "0",
    "types": [
@@ -13460,6 +13836,7 @@
    "name": "Espeon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ESPEON",
    "form": "0",
    "types": [
@@ -13606,6 +13983,7 @@
    "name": "Nidoqueen",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "NIDOQUEEN",
    "form": "0",
    "types": [
@@ -13753,6 +14131,7 @@
    "name": "Muk",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MUK",
    "form": "0",
    "types": [
@@ -13891,6 +14270,7 @@
    "name": "Arctozolt",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ARCTOZOLT",
    "form": "0",
    "types": [
@@ -13994,6 +14374,7 @@
    "name": "Sandaconda",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SANDACONDA",
    "form": "0",
    "types": [
@@ -14111,6 +14492,7 @@
    "name": "Veluza",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "VELUZA",
    "form": "0",
    "types": [
@@ -14221,6 +14603,7 @@
    "name": "Stunfisk (Galarian Form)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "STUNFISK",
    "form": "1",
    "types": [
@@ -14346,6 +14729,7 @@
    "name": "Tatsugiri",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "TATSUGIRI",
    "form": "0",
    "types": [
@@ -14462,6 +14846,7 @@
    "name": "Lapras",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LAPRAS",
    "form": "0",
    "types": [
@@ -14589,6 +14974,7 @@
    "name": "Drampa",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DRAMPA",
    "form": "0",
    "types": [
@@ -14715,6 +15101,7 @@
    "name": "Stoutland",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "STOUTLAND",
    "form": "0",
    "types": [
@@ -14838,6 +15225,7 @@
    "name": "Orbeetle",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ORBEETLE",
    "form": "0",
    "types": [
@@ -14966,6 +15354,7 @@
    "name": "Avalugg",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "AVALUGG",
    "form": "0",
    "types": [
@@ -15093,6 +15482,7 @@
    "name": "Crawdaunt",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CRAWDAUNT",
    "form": "0",
    "types": [
@@ -15236,6 +15626,7 @@
    "name": "Perrserker",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PERRSERKER",
    "form": "0",
    "types": [
@@ -15370,6 +15761,7 @@
    "name": "Amoonguss",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "AMOONGUSS",
    "form": "0",
    "types": [
@@ -15489,6 +15881,7 @@
    "name": "Drednaw",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DREDNAW",
    "form": "0",
    "types": [
@@ -15617,6 +16010,7 @@
    "name": "Eelektross",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "EELEKTROSS",
    "form": "0",
    "types": [
@@ -15740,6 +16134,7 @@
    "name": "Armaldo",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ARMALDO",
    "form": "0",
    "types": [
@@ -15863,6 +16258,7 @@
    "name": "Marowak",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MAROWAK",
    "form": "0",
    "types": [
@@ -15996,6 +16392,7 @@
    "name": "Throh",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "THROH",
    "form": "0",
    "types": [
@@ -16124,6 +16521,7 @@
    "name": "Frosmoth",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "FROSMOTH",
    "form": "0",
    "types": [
@@ -16244,6 +16642,7 @@
    "name": "Dubwool",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DUBWOOL",
    "form": "0",
    "types": [
@@ -16351,6 +16750,7 @@
    "name": "Vanilluxe",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "VANILLUXE",
    "form": "0",
    "types": [
@@ -16468,6 +16868,7 @@
    "name": "Skuntank",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SKUNTANK",
    "form": "0",
    "types": [
@@ -16607,6 +17008,7 @@
    "name": "Dusknoir",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DUSKNOIR",
    "form": "0",
    "types": [
@@ -16742,6 +17144,7 @@
    "name": "Cursola",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CURSOLA",
    "form": "0",
    "types": [
@@ -16865,9 +17268,155 @@
    "tier": "C"
   },
   {
+   "name": "Zoroark",
+   "kind": "crest",
+   "crest": "Zoroark Crest",
+   "zoro_partner": "Nidoqueen",
+   "sid": "ZOROARK",
+   "form": "0",
+   "types": [
+    "DARK"
+   ],
+   "base": {
+    "HP": 60,
+    "Atk": 105,
+    "Def": 60,
+    "SpA": 120,
+    "SpD": 60,
+    "Spe": 105
+   },
+   "bst": 510,
+   "fight": 0.146,
+   "fight_pct": 0.551,
+   "meta": 0.6,
+   "meta_label": "Zoroark Crest (Rejuvenation-only)",
+   "general": 0.597,
+   "blend": 0.569,
+   "ability": "SHEERFORCE",
+   "abilities": [
+    "ILLUSION"
+   ],
+   "nature": "Modest",
+   "evs": {
+    "SpA": 252,
+    "Spe": 252,
+    "Def": 4
+   },
+   "cat": "Special",
+   "attacks": [
+    "Night Daze",
+    "Sludge Bomb",
+    "Extrasensory"
+   ],
+   "legal": [
+    "AGILITY",
+    "ASSURANCE",
+    "ATTRACT",
+    "BOUNCE",
+    "CAPTIVATE",
+    "CONFIDE",
+    "COPYCAT",
+    "COUNTER",
+    "CUT",
+    "DETECT",
+    "DIG",
+    "DOUBLETEAM",
+    "EMBARGO",
+    "EXTRASENSORY",
+    "FACADE",
+    "FAKETEARS",
+    "FALSESWIPE",
+    "FEINTATTACK",
+    "FLING",
+    "FURYSWIPES",
+    "GRASSKNOT",
+    "HELPINGHAND",
+    "HEX",
+    "HIDDENPOWER",
+    "HONECLAWS",
+    "IMPRISON",
+    "INCINERATE",
+    "KNOCKOFF",
+    "LEER",
+    "LOWSWEEP",
+    "MEMENTO",
+    "NASTYPLOT",
+    "NIGHTDAZE",
+    "NIGHTSHADE",
+    "NIGHTSLASH",
+    "PAYBACK",
+    "PROTECT",
+    "PUNISHMENT",
+    "PURSUIT",
+    "REST",
+    "ROAR",
+    "ROCKSMASH",
+    "ROUND",
+    "SCARYFACE",
+    "SCRATCH",
+    "SECRETPOWER",
+    "SHADOWBALL",
+    "SHADOWCLAW",
+    "SLEEPTALK",
+    "SLUDGEBOMB",
+    "SNATCH",
+    "SNORE",
+    "SUCKERPUNCH",
+    "SWAGGER",
+    "TAKEDOWN",
+    "TAUNT",
+    "THIEF",
+    "TORMENT",
+    "TRICK",
+    "UPROAR",
+    "UTURN"
+   ],
+   "where": "Active",
+   "dump": 499,
+   "owned_as": "Zoroark",
+   "evo": "",
+   "per_fight": {
+    "darkgardevoir": -0.118,
+    "garbodor": -0.228,
+    "karrina": 0.302,
+    "spector": 0.793,
+    "spector2": 0.329,
+    "jenner9": -0.013,
+    "amanda": 0.318,
+    "erick": 0.207
+   },
+   "counters": [
+    "amanda:Hatterene",
+    "erick:Chandelure",
+    "karrina:Granbull",
+    "spector2:Banette",
+    "spector2:Stonjourner",
+    "spector:Banette",
+    "spector:Gengar",
+    "spector:Gothitelle",
+    "spector:Houndstone",
+    "spector:Murkrow",
+    "spector:Ninetales"
+   ],
+   "stats": {
+    "HP": 148,
+    "Atk": 123,
+    "Def": 88,
+    "SpA": 206,
+    "SpD": 88,
+    "Spe": 172
+   },
+   "tags": [
+    "helping",
+    "speed"
+   ],
+   "tier": "C"
+  },
+  {
    "name": "Exeggutor",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "EXEGGUTOR",
    "form": "0",
    "types": [
@@ -17004,6 +17553,7 @@
    "name": "Drapion (Aevian Form)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DRAPION",
    "form": "1",
    "types": [
@@ -17147,6 +17697,7 @@
    "name": "Omastar",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "OMASTAR",
    "form": "0",
    "types": [
@@ -17272,6 +17823,7 @@
    "name": "Sandslash (Alolan Form)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SANDSLASH",
    "form": "1",
    "types": [
@@ -17411,6 +17963,7 @@
    "name": "Ribombee",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "RIBOMBEE",
    "form": "0",
    "types": [
@@ -17540,6 +18093,7 @@
    "name": "Cofagrigus",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "COFAGRIGUS",
    "form": "0",
    "types": [
@@ -17662,6 +18216,7 @@
    "name": "Slowbro (Galarian Form)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SLOWBRO",
    "form": "1",
    "types": [
@@ -17784,6 +18339,7 @@
    "name": "Chimecho",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CHIMECHO",
    "form": "0",
    "types": [
@@ -17913,6 +18469,7 @@
    "name": "Slaking",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SLAKING",
    "form": "0",
    "types": [
@@ -18054,6 +18611,7 @@
    "name": "Forretress",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "FORRETRESS",
    "form": "0",
    "types": [
@@ -18186,6 +18744,7 @@
    "name": "Ninetales",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "NINETALES",
    "form": "0",
    "types": [
@@ -18311,6 +18870,7 @@
    "name": "Barbaracle",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BARBARACLE",
    "form": "0",
    "types": [
@@ -18458,6 +19018,7 @@
    "name": "Greedent",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GREEDENT",
    "form": "0",
    "types": [
@@ -18589,6 +19150,7 @@
    "name": "Grapploct",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GRAPPLOCT",
    "form": "0",
    "types": [
@@ -18716,6 +19278,7 @@
    "name": "Vileplume",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "VILEPLUME",
    "form": "0",
    "types": [
@@ -18845,6 +19408,7 @@
    "name": "Hypno",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "HYPNO",
    "form": "0",
    "types": [
@@ -18987,6 +19551,7 @@
    "name": "Bellossom",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BELLOSSOM",
    "form": "0",
    "types": [
@@ -19116,6 +19681,7 @@
    "name": "Blissey",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BLISSEY",
    "form": "0",
    "types": [
@@ -19266,6 +19832,7 @@
    "name": "Lucario",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LUCARIO",
    "form": "0",
    "types": [
@@ -19415,6 +19982,7 @@
    "name": "Eiscue",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "EISCUE",
    "form": "0",
    "types": [
@@ -19531,6 +20099,7 @@
    "name": "Crobat",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CROBAT",
    "form": "0",
    "types": [
@@ -19657,6 +20226,7 @@
    "name": "Audino",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "AUDINO",
    "form": "0",
    "types": [
@@ -19786,6 +20356,7 @@
    "name": "Arboliva",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ARBOLIVA",
    "form": "0",
    "types": [
@@ -19898,6 +20469,7 @@
    "name": "Marowak (Alolan Form)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MAROWAK",
    "form": "1",
    "types": [
@@ -20027,6 +20599,7 @@
    "name": "Exploud",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "EXPLOUD",
    "form": "0",
    "types": [
@@ -20154,6 +20727,7 @@
    "name": "Noivern",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "NOIVERN",
    "form": "0",
    "types": [
@@ -20275,6 +20849,7 @@
    "name": "Seaking",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SEAKING",
    "form": "0",
    "types": [
@@ -20388,6 +20963,7 @@
    "name": "Houndoom",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "HOUNDOOM",
    "form": "0",
    "types": [
@@ -20525,6 +21101,7 @@
    "name": "Pyroar",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PYROAR",
    "form": "0",
    "types": [
@@ -20648,6 +21225,7 @@
    "name": "Alomomola",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ALOMOMOLA",
    "form": "0",
    "types": [
@@ -20764,6 +21342,7 @@
    "name": "Carbink",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CARBINK",
    "form": "0",
    "types": [
@@ -20875,6 +21454,7 @@
    "name": "Malamar",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MALAMAR",
    "form": "0",
    "types": [
@@ -21009,6 +21589,7 @@
    "name": "Garbodor",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GARBODOR",
    "form": "0",
    "types": [
@@ -21132,6 +21713,7 @@
    "name": "Pangoro",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PANGORO",
    "form": "0",
    "types": [
@@ -21282,6 +21864,7 @@
    "name": "Swalot",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SWALOT",
    "form": "0",
    "types": [
@@ -21413,6 +21996,7 @@
    "name": "Cradily",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CRADILY",
    "form": "0",
    "types": [
@@ -21537,6 +22121,7 @@
    "name": "Tropius",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "TROPIUS",
    "form": "0",
    "types": [
@@ -21668,6 +22253,7 @@
    "name": "Scovillain",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SCOVILLAIN",
    "form": "0",
    "types": [
@@ -21787,6 +22373,7 @@
    "name": "Steelix",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "STEELIX",
    "form": "0",
    "types": [
@@ -21920,6 +22507,7 @@
    "name": "Passimian",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PASSIMIAN",
    "form": "0",
    "types": [
@@ -22056,6 +22644,7 @@
    "name": "Drifblim",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DRIFBLIM",
    "form": "0",
    "types": [
@@ -22188,6 +22777,7 @@
    "name": "Kangaskhan",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "KANGASKHAN",
    "form": "0",
    "types": [
@@ -22330,6 +22920,7 @@
    "name": "Jolteon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "JOLTEON",
    "form": "0",
    "types": [
@@ -22471,6 +23062,7 @@
    "name": "Hitmonchan",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "HITMONCHAN",
    "form": "0",
    "types": [
@@ -22604,6 +23196,7 @@
    "name": "Luxray",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LUXRAY",
    "form": "0",
    "types": [
@@ -22720,6 +23313,7 @@
    "name": "Slurpuff",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SLURPUFF",
    "form": "0",
    "types": [
@@ -22834,6 +23428,7 @@
    "name": "Flamigo",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "FLAMIGO",
    "form": "0",
    "types": [
@@ -22951,6 +23546,7 @@
    "name": "Claydol",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CLAYDOL",
    "form": "0",
    "types": [
@@ -23077,6 +23673,7 @@
    "name": "Golem",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GOLEM",
    "form": "0",
    "types": [
@@ -23208,6 +23805,7 @@
    "name": "Medicham",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MEDICHAM",
    "form": "0",
    "types": [
@@ -23352,6 +23950,7 @@
    "name": "Coalossal",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "COALOSSAL",
    "form": "0",
    "types": [
@@ -23462,6 +24061,7 @@
    "name": "Zoroark (Hisuian Form)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ZOROARK",
    "form": "1",
    "types": [
@@ -23584,134 +24184,10 @@
    "tier": "C"
   },
   {
-   "name": "Zoroark (Hisuian Form)",
-   "kind": "crest",
-   "crest": "Zoroark Crest",
-   "sid": "ZOROARK",
-   "form": "1",
-   "types": [
-    "NORMAL",
-    "GHOST"
-   ],
-   "base": {
-    "HP": 55,
-    "Atk": 100,
-    "Def": 60,
-    "SpA": 125,
-    "SpD": 60,
-    "Spe": 110
-   },
-   "bst": 510,
-   "fight": 0.058,
-   "fight_pct": 0.342,
-   "meta": 0.74,
-   "meta_label": "Zoroark Crest (Rejuvenation-only)",
-   "general": 0.688,
-   "blend": 0.481,
-   "ability": "ILLUSION",
-   "abilities": [
-    "ILLUSION"
-   ],
-   "nature": "Modest",
-   "evs": {
-    "SpA": 252,
-    "Spe": 252,
-    "Def": 4
-   },
-   "cat": "Special",
-   "attacks": [
-    "Shadow Ball"
-   ],
-   "legal": [
-    "AGILITY",
-    "ATTRACT",
-    "BITTERMALICE",
-    "COMEUPPANCE",
-    "CONFIDE",
-    "CURSE",
-    "DETECT",
-    "DIG",
-    "DOUBLETEAM",
-    "EXTRASENSORY",
-    "FACADE",
-    "FALSESWIPE",
-    "FLING",
-    "GRASSKNOT",
-    "HELPINGHAND",
-    "HEX",
-    "HIDDENPOWER",
-    "HONECLAWS",
-    "IMPRISON",
-    "IRRITATION",
-    "KNOCKOFF",
-    "LEER",
-    "LOWSWEEP",
-    "MEMENTO",
-    "NASTYPLOT",
-    "NIGHTSHADE",
-    "PROTECT",
-    "REST",
-    "ROAR",
-    "ROUND",
-    "SCARYFACE",
-    "SCRATCH",
-    "SECRETPOWER",
-    "SHADOWBALL",
-    "SHADOWCLAW",
-    "SHADOWSNEAK",
-    "SLEEPTALK",
-    "SLUDGEBOMB",
-    "SNORE",
-    "SPITE",
-    "SWAGGER",
-    "TAKEDOWN",
-    "TAUNT",
-    "THIEF",
-    "TORMENT",
-    "TRICK",
-    "UTURN"
-   ],
-   "where": "Active",
-   "dump": 500,
-   "owned_as": "Zoroark-Hisui",
-   "evo": "",
-   "per_fight": {
-    "darkgardevoir": -0.309,
-    "garbodor": -0.282,
-    "karrina": 0.145,
-    "spector": 0.943,
-    "spector2": 0.424,
-    "jenner9": -0.042,
-    "amanda": -0.034,
-    "erick": 0.289
-   },
-   "counters": [
-    "spector2:Banette",
-    "spector2:Stonjourner",
-    "spector:Banette",
-    "spector:Gengar",
-    "spector:Gothitelle",
-    "spector:Houndstone",
-    "spector:Ninetales"
-   ],
-   "stats": {
-    "HP": 142,
-    "Atk": 118,
-    "Def": 88,
-    "SpA": 213,
-    "SpD": 88,
-    "Spe": 177
-   },
-   "tags": [
-    "helping",
-    "speed"
-   ],
-   "tier": "C"
-  },
-  {
    "name": "Drapion",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DRAPION",
    "form": "0",
    "types": [
@@ -23851,6 +24327,7 @@
    "name": "Nidoking",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "NIDOKING",
    "form": "0",
    "types": [
@@ -23998,6 +24475,7 @@
    "name": "Meganium",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MEGANIUM",
    "form": "0",
    "types": [
@@ -24126,6 +24604,7 @@
    "name": "Vespiquen",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "VESPIQUEN",
    "form": "0",
    "types": [
@@ -24258,6 +24737,7 @@
    "name": "Probopass",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PROBOPASS",
    "form": "0",
    "types": [
@@ -24382,6 +24862,7 @@
    "name": "Golisopod",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GOLISOPOD",
    "form": "0",
    "types": [
@@ -24509,6 +24990,7 @@
    "name": "Pincurchin",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PINCURCHIN",
    "form": "0",
    "types": [
@@ -24623,6 +25105,7 @@
    "name": "Mabosstiff",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MABOSSTIFF",
    "form": "0",
    "types": [
@@ -24741,6 +25224,7 @@
    "name": "Seismitoad",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SEISMITOAD",
    "form": "0",
    "types": [
@@ -24867,6 +25351,7 @@
    "name": "Beheeyem",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BEHEEYEM",
    "form": "0",
    "types": [
@@ -25000,6 +25485,7 @@
    "name": "Wigglytuff",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "WIGGLYTUFF",
    "form": "0",
    "types": [
@@ -25150,6 +25636,7 @@
    "name": "Stunfisk",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "STUNFISK",
    "form": "0",
    "types": [
@@ -25280,6 +25767,7 @@
    "name": "Shiinotic",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SHIINOTIC",
    "form": "0",
    "types": [
@@ -25401,6 +25889,7 @@
    "name": "Noctowl",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "NOCTOWL",
    "form": "0",
    "types": [
@@ -25526,6 +26015,7 @@
    "name": "Minior",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MINIOR",
    "form": "0",
    "types": [
@@ -25636,6 +26126,7 @@
    "name": "Kingler",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "KINGLER",
    "form": "0",
    "types": [
@@ -25771,6 +26262,7 @@
    "name": "Machamp",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MACHAMP",
    "form": "0",
    "types": [
@@ -25905,6 +26397,7 @@
    "name": "Appletun",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "APPLETUN",
    "form": "0",
    "types": [
@@ -26022,6 +26515,7 @@
    "name": "Turtonator",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "TURTONATOR",
    "form": "0",
    "types": [
@@ -26144,6 +26638,7 @@
    "name": "Magcargo",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MAGCARGO",
    "form": "0",
    "types": [
@@ -26276,6 +26771,7 @@
    "name": "Raticate (Alolan Form)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "RATICATE",
    "form": "1",
    "types": [
@@ -26406,6 +26902,7 @@
    "name": "Toedscruel",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "TOEDSCRUEL",
    "form": "0",
    "types": [
@@ -26530,6 +27027,7 @@
    "name": "Bruxish",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BRUXISH",
    "form": "0",
    "types": [
@@ -26658,6 +27156,7 @@
    "name": "Tauros",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "TAUROS",
    "form": "0",
    "types": [
@@ -26775,6 +27274,7 @@
    "name": "Mr. Mime",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MRMIME",
    "form": "0",
    "types": [
@@ -26925,6 +27425,7 @@
    "name": "Hitmontop",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "HITMONTOP",
    "form": "0",
    "types": [
@@ -27054,6 +27555,7 @@
    "name": "Barraskewda",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BARRASKEWDA",
    "form": "0",
    "types": [
@@ -27169,6 +27671,7 @@
    "name": "Lurantis",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LURANTIS",
    "form": "0",
    "types": [
@@ -27292,6 +27795,7 @@
    "name": "Tyrantrum",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "TYRANTRUM",
    "form": "0",
    "types": [
@@ -27409,6 +27913,7 @@
    "name": "Cryogonal",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CRYOGONAL",
    "form": "0",
    "types": [
@@ -27520,6 +28025,7 @@
    "name": "Mismagius",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MISMAGIUS",
    "form": "0",
    "types": [
@@ -27658,6 +28164,7 @@
    "name": "Starmie",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "STARMIE",
    "form": "0",
    "types": [
@@ -27778,6 +28285,7 @@
    "name": "Bombirdier",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BOMBIRDIER",
    "form": "0",
    "types": [
@@ -27889,6 +28397,7 @@
    "name": "Kilowattrel",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "KILOWATTREL",
    "form": "0",
    "types": [
@@ -27999,6 +28508,7 @@
    "name": "Comfey",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "COMFEY",
    "form": "0",
    "types": [
@@ -28121,6 +28631,7 @@
    "name": "Altaria",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ALTARIA",
    "form": "0",
    "types": [
@@ -28248,6 +28759,7 @@
    "name": "Simisear",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SIMISEAR",
    "form": "0",
    "types": [
@@ -28383,6 +28895,7 @@
    "name": "Dachsbun",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DACHSBUN",
    "form": "0",
    "types": [
@@ -28501,6 +29014,7 @@
    "name": "Meowscarada",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MEOWSCARADA",
    "form": "0",
    "types": [
@@ -28626,6 +29140,7 @@
    "name": "Leavanny (Aevian Form)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LEAVANNY",
    "form": "1",
    "types": [
@@ -28760,6 +29275,7 @@
    "name": "Wormadam (Trash Cloak)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "WORMADAM",
    "form": "2",
    "types": [
@@ -28880,6 +29396,7 @@
    "name": "Kecleon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "KECLEON",
    "form": "0",
    "types": [
@@ -29013,6 +29530,7 @@
    "name": "Abomasnow",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ABOMASNOW",
    "form": "0",
    "types": [
@@ -29147,6 +29665,7 @@
    "name": "Bastiodon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BASTIODON",
    "form": "0",
    "types": [
@@ -29265,6 +29784,7 @@
    "name": "Gogoat",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GOGOAT",
    "form": "0",
    "types": [
@@ -29387,6 +29907,7 @@
    "name": "Ariados",
    "kind": "crest",
    "crest": "Ariados Crest",
+   "zoro_partner": null,
    "sid": "ARIADOS",
    "form": "0",
    "types": [
@@ -29523,6 +30044,7 @@
    "name": "Heracross",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "HERACROSS",
    "form": "0",
    "types": [
@@ -29661,6 +30183,7 @@
    "name": "Pidgeot",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PIDGEOT",
    "form": "0",
    "types": [
@@ -29769,6 +30292,7 @@
    "name": "Druddigon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DRUDDIGON",
    "form": "0",
    "types": [
@@ -29901,6 +30425,7 @@
    "name": "Wormadam (Sandy Cloak)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "WORMADAM",
    "form": "1",
    "types": [
@@ -30017,6 +30542,7 @@
    "name": "Weezing",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "WEEZING",
    "form": "0",
    "types": [
@@ -30139,6 +30665,7 @@
    "name": "Electrode (Hisuian Form)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ELECTRODE",
    "form": "1",
    "types": [
@@ -30250,6 +30777,7 @@
    "name": "Oricorio (Pom-Pom Style)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ORICORIO",
    "form": "1",
    "types": [
@@ -30358,6 +30886,7 @@
    "name": "Sunflora",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SUNFLORA",
    "form": "0",
    "types": [
@@ -30483,6 +31012,7 @@
    "name": "Froslass (Aevian Form)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "FROSLASS",
    "form": "1",
    "types": [
@@ -30624,6 +31154,7 @@
    "name": "Cinccino",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CINCCINO",
    "form": "0",
    "types": [
@@ -30753,6 +31284,7 @@
    "name": "Furfrou",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "FURFROU",
    "form": "0",
    "types": [
@@ -30867,6 +31399,7 @@
    "name": "Gumshoos",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GUMSHOOS",
    "form": "0",
    "types": [
@@ -30992,147 +31525,10 @@
    "tier": "D"
   },
   {
-   "name": "Furret",
-   "kind": "crest",
-   "crest": "Furret Crest",
-   "sid": "FURRET",
-   "form": "0",
-   "types": [
-    "NORMAL"
-   ],
-   "base": {
-    "HP": 85,
-    "Atk": 76,
-    "Def": 64,
-    "SpA": 45,
-    "SpD": 55,
-    "Spe": 90
-   },
-   "bst": 415,
-   "fight": 0.055,
-   "fight_pct": 0.334,
-   "meta": 0.6,
-   "meta_label": "Furret Crest (Rejuvenation-only)",
-   "general": 0.446,
-   "blend": 0.379,
-   "ability": "FRISK",
-   "abilities": [
-    "RUNAWAY",
-    "KEENEYE",
-    "FRISK"
-   ],
-   "nature": "Adamant",
-   "evs": {
-    "Atk": 252,
-    "Spe": 252,
-    "Def": 4
-   },
-   "cat": "Physical",
-   "attacks": [
-    "Double-Edge",
-    "Shadow Claw"
-   ],
-   "legal": [
-    "AGILITY",
-    "AMNESIA",
-    "ASSIST",
-    "ATTRACT",
-    "BABYDOLLEYES",
-    "BATONPASS",
-    "BRUTALSWING",
-    "CAPTIVATE",
-    "CHARGEBEAM",
-    "CHILLINGWATER",
-    "COIL",
-    "CONFIDE",
-    "CUT",
-    "DEFENSECURL",
-    "DIG",
-    "DOUBLEEDGE",
-    "DOUBLETEAM",
-    "ECHOEDVOICE",
-    "FACADE",
-    "FALSESWIPE",
-    "FLING",
-    "FOCUSENERGY",
-    "FOLLOWME",
-    "FORESIGHT",
-    "FURYSWIPES",
-    "GRASSKNOT",
-    "GROWL",
-    "HELPINGHAND",
-    "HIDDENPOWER",
-    "LASTRESORT",
-    "MEFIRST",
-    "MUDBARRAGE",
-    "NATURALGIFT",
-    "POISONSWEEP",
-    "POWERUPPUNCH",
-    "PROTECT",
-    "PURSUIT",
-    "QUICKATTACK",
-    "REST",
-    "REVERSAL",
-    "ROCKSMASH",
-    "ROUND",
-    "SCRATCH",
-    "SECRETPOWER",
-    "SHADOWBALL",
-    "SHADOWCLAW",
-    "SHOCKWAVE",
-    "SLAM",
-    "SLASH",
-    "SLEEPTALK",
-    "SNORE",
-    "STACKINGSHOT",
-    "SUCKERPUNCH",
-    "SUPERFANG",
-    "SURF",
-    "SWAGGER",
-    "TAKEDOWN",
-    "THIEF",
-    "TIDYUP",
-    "TRAILBLAZE",
-    "TRICK",
-    "UPROAR",
-    "WATERPULSE",
-    "WORKUP"
-   ],
-   "where": "Overflow",
-   "dump": 133,
-   "owned_as": "Furret",
-   "evo": "",
-   "per_fight": {
-    "darkgardevoir": -0.221,
-    "garbodor": -0.189,
-    "karrina": 0.187,
-    "spector": 0.52,
-    "spector2": 0.201,
-    "jenner9": -0.052,
-    "amanda": 0.047,
-    "erick": 0.183
-   },
-   "counters": [
-    "spector:Gengar"
-   ],
-   "stats": {
-    "HP": 175,
-    "Atk": 154,
-    "Def": 93,
-    "SpA": 63,
-    "SpD": 82,
-    "Spe": 155
-   },
-   "tags": [
-    "helping",
-    "redirect"
-   ],
-   "tier": "D"
-  },
-  {
    "name": "Octillery",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "OCTILLERY",
    "form": "0",
    "types": [
@@ -31261,6 +31657,7 @@
    "name": "Toxicroak",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "TOXICROAK",
    "form": "0",
    "types": [
@@ -31418,6 +31815,7 @@
    "name": "Pawmot",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PAWMOT",
    "form": "0",
    "types": [
@@ -31546,6 +31944,7 @@
    "name": "Eldegoss",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ELDEGOSS",
    "form": "0",
    "types": [
@@ -31657,6 +32056,7 @@
    "name": "Dodrio",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DODRIO",
    "form": "0",
    "types": [
@@ -31792,6 +32192,7 @@
    "name": "Meowstic",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MEOWSTIC",
    "form": "0",
    "types": [
@@ -31930,6 +32331,7 @@
    "name": "Tentacruel",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "TENTACRUEL",
    "form": "0",
    "types": [
@@ -32061,6 +32463,7 @@
    "name": "Pinsir",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PINSIR",
    "form": "0",
    "types": [
@@ -32187,6 +32590,7 @@
    "name": "Oricorio",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ORICORIO",
    "form": "0",
    "types": [
@@ -32301,6 +32705,7 @@
    "name": "Phione",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PHIONE",
    "form": "0",
    "types": [
@@ -32407,6 +32812,7 @@
    "name": "Sudowoodo",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SUDOWOODO",
    "form": "0",
    "types": [
@@ -32538,6 +32944,7 @@
    "name": "Wormadam",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "WORMADAM",
    "form": "0",
    "types": [
@@ -32659,6 +33066,7 @@
    "name": "Toucannon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "TOUCANNON",
    "form": "0",
    "types": [
@@ -32774,6 +33182,7 @@
    "name": "Kabutops",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "KABUTOPS",
    "form": "0",
    "types": [
@@ -32902,6 +33311,7 @@
    "name": "Golduck",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GOLDUCK",
    "form": "0",
    "types": [
@@ -33048,6 +33458,7 @@
    "name": "Obstagoon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "OBSTAGOON",
    "form": "0",
    "types": [
@@ -33187,146 +33598,10 @@
    "tier": "D"
   },
   {
-   "name": "Zoroark",
-   "kind": "crest",
-   "crest": "Zoroark Crest",
-   "sid": "ZOROARK",
-   "form": "0",
-   "types": [
-    "DARK"
-   ],
-   "base": {
-    "HP": 60,
-    "Atk": 105,
-    "Def": 60,
-    "SpA": 120,
-    "SpD": 60,
-    "Spe": 105
-   },
-   "bst": 510,
-   "fight": -0.013,
-   "fight_pct": 0.167,
-   "meta": 0.6,
-   "meta_label": "Zoroark Crest (Rejuvenation-only)",
-   "general": 0.597,
-   "blend": 0.339,
-   "ability": "ILLUSION",
-   "abilities": [
-    "ILLUSION"
-   ],
-   "nature": "Modest",
-   "evs": {
-    "SpA": 252,
-    "Spe": 252,
-    "Def": 4
-   },
-   "cat": "Special",
-   "attacks": [
-    "Sludge Bomb",
-    "Night Daze"
-   ],
-   "legal": [
-    "AGILITY",
-    "ASSURANCE",
-    "ATTRACT",
-    "BOUNCE",
-    "CAPTIVATE",
-    "CONFIDE",
-    "COPYCAT",
-    "COUNTER",
-    "CUT",
-    "DETECT",
-    "DIG",
-    "DOUBLETEAM",
-    "EMBARGO",
-    "EXTRASENSORY",
-    "FACADE",
-    "FAKETEARS",
-    "FALSESWIPE",
-    "FEINTATTACK",
-    "FLING",
-    "FURYSWIPES",
-    "GRASSKNOT",
-    "HELPINGHAND",
-    "HEX",
-    "HIDDENPOWER",
-    "HONECLAWS",
-    "IMPRISON",
-    "INCINERATE",
-    "KNOCKOFF",
-    "LEER",
-    "LOWSWEEP",
-    "MEMENTO",
-    "NASTYPLOT",
-    "NIGHTDAZE",
-    "NIGHTSHADE",
-    "NIGHTSLASH",
-    "PAYBACK",
-    "PROTECT",
-    "PUNISHMENT",
-    "PURSUIT",
-    "REST",
-    "ROAR",
-    "ROCKSMASH",
-    "ROUND",
-    "SCARYFACE",
-    "SCRATCH",
-    "SECRETPOWER",
-    "SHADOWBALL",
-    "SHADOWCLAW",
-    "SLEEPTALK",
-    "SLUDGEBOMB",
-    "SNATCH",
-    "SNORE",
-    "SUCKERPUNCH",
-    "SWAGGER",
-    "TAKEDOWN",
-    "TAUNT",
-    "THIEF",
-    "TORMENT",
-    "TRICK",
-    "UPROAR",
-    "UTURN"
-   ],
-   "where": "Active",
-   "dump": 499,
-   "owned_as": "Zoroark",
-   "evo": "",
-   "per_fight": {
-    "darkgardevoir": -0.231,
-    "garbodor": -0.279,
-    "karrina": 0.05,
-    "spector": 0.632,
-    "spector2": 0.256,
-    "jenner9": -0.135,
-    "amanda": 0.147,
-    "erick": 0.086
-   },
-   "counters": [
-    "spector2:Banette",
-    "spector2:Stonjourner",
-    "spector:Banette",
-    "spector:Gengar",
-    "spector:Gothitelle"
-   ],
-   "stats": {
-    "HP": 148,
-    "Atk": 123,
-    "Def": 88,
-    "SpA": 206,
-    "SpD": 88,
-    "Spe": 172
-   },
-   "tags": [
-    "helping",
-    "speed"
-   ],
-   "tier": "D"
-  },
-  {
    "name": "Corsola",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CORSOLA",
    "form": "0",
    "types": [
@@ -33456,6 +33731,7 @@
    "name": "Leafeon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LEAFEON",
    "form": "0",
    "types": [
@@ -33595,6 +33871,7 @@
    "name": "Parasect (Aevian Form)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PARASECT",
    "form": "1",
    "types": [
@@ -33732,6 +34009,7 @@
    "name": "Squawkabilly (White Plumage)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SQUAWKABILLY",
    "form": "3",
    "types": [
@@ -33840,6 +34118,7 @@
    "name": "Arbok",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ARBOK",
    "form": "0",
    "types": [
@@ -33970,6 +34249,7 @@
    "name": "Leavanny",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LEAVANNY",
    "form": "0",
    "types": [
@@ -34102,6 +34382,7 @@
    "name": "Electivire",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ELECTIVIRE",
    "form": "0",
    "types": [
@@ -34236,6 +34517,7 @@
    "name": "Avalugg (Hisuian Form)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "AVALUGG",
    "form": "1",
    "types": [
@@ -34357,6 +34639,7 @@
    "name": "Roserade",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ROSERADE",
    "form": "0",
    "types": [
@@ -34485,6 +34768,7 @@
    "name": "Sirfetch'd",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SIRFETCHD",
    "form": "0",
    "types": [
@@ -34612,6 +34896,7 @@
    "name": "Tauros (Paldean Combat Breed)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "TAUROS",
    "form": "1",
    "types": [
@@ -34717,6 +35002,7 @@
    "name": "Xatu",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "XATU",
    "form": "0",
    "types": [
@@ -34847,6 +35133,7 @@
    "name": "Lopunny",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LOPUNNY",
    "form": "0",
    "types": [
@@ -34986,6 +35273,7 @@
    "name": "Ariados",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ARIADOS",
    "form": "0",
    "types": [
@@ -35122,6 +35410,7 @@
    "name": "Victreebel",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "VICTREEBEL",
    "form": "0",
    "types": [
@@ -35251,6 +35540,7 @@
    "name": "Klawf",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "KLAWF",
    "form": "0",
    "types": [
@@ -35369,6 +35659,7 @@
    "name": "Unfezant (Aevian Form Male)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "UNFEZANT",
    "form": "1",
    "types": [
@@ -35491,6 +35782,7 @@
    "name": "Sandslash",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SANDSLASH",
    "form": "0",
    "types": [
@@ -35620,6 +35912,7 @@
    "name": "Rapidash",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "RAPIDASH",
    "form": "0",
    "types": [
@@ -35740,6 +36033,7 @@
    "name": "Zangoose",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ZANGOOSE",
    "form": "0",
    "types": [
@@ -35886,6 +36180,7 @@
    "name": "Castform",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CASTFORM",
    "form": "0",
    "types": [
@@ -36001,6 +36296,7 @@
    "name": "Scolipede",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SCOLIPEDE",
    "form": "0",
    "types": [
@@ -36125,6 +36421,7 @@
    "name": "Breloom",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BRELOOM",
    "form": "0",
    "types": [
@@ -36262,6 +36559,7 @@
    "name": "Venomoth",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "VENOMOTH",
    "form": "0",
    "types": [
@@ -36392,6 +36690,7 @@
    "name": "Swanna",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SWANNA",
    "form": "0",
    "types": [
@@ -36511,6 +36810,7 @@
    "name": "Carnivine",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CARNIVINE",
    "form": "0",
    "types": [
@@ -36636,6 +36936,7 @@
    "name": "Furret",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "FURRET",
    "form": "0",
    "types": [
@@ -36774,6 +37075,7 @@
    "name": "Roserade (Aevian Form)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ROSERADE",
    "form": "1",
    "types": [
@@ -36917,6 +37219,7 @@
    "name": "Mightyena",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MIGHTYENA",
    "form": "0",
    "types": [
@@ -37044,6 +37347,7 @@
    "name": "Butterfree",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BUTTERFREE",
    "form": "0",
    "types": [
@@ -37165,6 +37469,7 @@
    "name": "Sceptile",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SCEPTILE",
    "form": "0",
    "types": [
@@ -37312,6 +37617,7 @@
    "name": "Glalie",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GLALIE",
    "form": "0",
    "types": [
@@ -37434,6 +37740,7 @@
    "name": "Dugtrio (Alolan Form)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DUGTRIO",
    "form": "1",
    "types": [
@@ -37561,6 +37868,7 @@
    "name": "Cramorant",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CRAMORANT",
    "form": "0",
    "types": [
@@ -37671,6 +37979,7 @@
    "name": "Jynx",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "JYNX",
    "form": "0",
    "types": [
@@ -37810,6 +38119,7 @@
    "name": "Raichu",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "RAICHU",
    "form": "0",
    "types": [
@@ -37959,6 +38269,7 @@
    "name": "Spidops",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SPIDOPS",
    "form": "0",
    "types": [
@@ -38077,6 +38388,7 @@
    "name": "Oricorio (Sensu Style)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ORICORIO",
    "form": "3",
    "types": [
@@ -38185,6 +38497,7 @@
    "name": "Salazzle",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SALAZZLE",
    "form": "0",
    "types": [
@@ -38321,6 +38634,7 @@
    "name": "Qwilfish",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "QWILFISH",
    "form": "0",
    "types": [
@@ -38456,6 +38770,7 @@
    "name": "Heliolisk",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "HELIOLISK",
    "form": "0",
    "types": [
@@ -38581,6 +38896,7 @@
    "name": "Mismagius (Aevian Form)",
    "kind": "aevian",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MISMAGIUS",
    "form": "1",
    "types": [
@@ -38723,6 +39039,7 @@
    "name": "Ditto",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DITTO",
    "form": "0",
    "types": [
@@ -38793,6 +39110,7 @@
    "name": "Basculin (Blue-Striped)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BASCULIN",
    "form": "1",
    "types": [
@@ -38909,6 +39227,7 @@
    "name": "Beedrill",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BEEDRILL",
    "form": "0",
    "types": [
@@ -39027,6 +39346,7 @@
    "name": "Zoroark",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ZOROARK",
    "form": "0",
    "types": [
@@ -39164,6 +39484,7 @@
    "name": "Shiftry",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SHIFTRY",
    "form": "0",
    "types": [
@@ -39309,6 +39630,7 @@
    "name": "Maractus",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MARACTUS",
    "form": "0",
    "types": [
@@ -39430,6 +39752,7 @@
    "name": "Brambleghast",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BRAMBLEGHAST",
    "form": "0",
    "types": [
@@ -39544,6 +39867,7 @@
    "name": "Dewgong",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DEWGONG",
    "form": "0",
    "types": [
@@ -39674,6 +39998,7 @@
    "name": "Seviper",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SEVIPER",
    "form": "0",
    "types": [
@@ -39807,6 +40132,7 @@
    "name": "Linoone",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LINOONE",
    "form": "0",
    "types": [
@@ -39947,6 +40273,7 @@
    "name": "Chatot",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CHATOT",
    "form": "0",
    "types": [
@@ -40062,6 +40389,7 @@
    "name": "Boltund",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BOLTUND",
    "form": "0",
    "types": [
@@ -40173,6 +40501,7 @@
    "name": "Ambipom",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "AMBIPOM",
    "form": "0",
    "types": [
@@ -40313,6 +40642,7 @@
    "name": "Parasect",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PARASECT",
    "form": "0",
    "types": [
@@ -40444,6 +40774,7 @@
    "name": "Grafaiai",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "GRAFAIAI",
    "form": "0",
    "types": [
@@ -40569,6 +40900,7 @@
    "name": "Manectric",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MANECTRIC",
    "form": "0",
    "types": [
@@ -40686,6 +41018,7 @@
    "name": "Hitmonlee",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "HITMONLEE",
    "form": "0",
    "types": [
@@ -40824,6 +41157,7 @@
    "name": "Volbeat",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "VOLBEAT",
    "form": "0",
    "types": [
@@ -40950,6 +41284,7 @@
    "name": "Unfezant",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "UNFEZANT",
    "form": "0",
    "types": [
@@ -41060,6 +41395,7 @@
    "name": "Absol",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ABSOL",
    "form": "0",
    "types": [
@@ -41193,6 +41529,7 @@
    "name": "Sawsbuck",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SAWSBUCK",
    "form": "0",
    "types": [
@@ -41326,6 +41663,7 @@
    "name": "Persian (Alolan Form)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PERSIAN",
    "form": "1",
    "types": [
@@ -41469,6 +41807,7 @@
    "name": "Raticate",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "RATICATE",
    "form": "0",
    "types": [
@@ -41600,6 +41939,7 @@
    "name": "Pyukumuku",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PYUKUMUKU",
    "form": "0",
    "types": [
@@ -41701,6 +42041,7 @@
    "name": "Zebstrika",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ZEBSTRIKA",
    "form": "0",
    "types": [
@@ -41825,6 +42166,7 @@
    "name": "Swellow",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SWELLOW",
    "form": "0",
    "types": [
@@ -41934,6 +42276,7 @@
    "name": "Stonjourner",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "STONJOURNER",
    "form": "0",
    "types": [
@@ -42040,6 +42383,7 @@
    "name": "Wailord",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "WAILORD",
    "form": "0",
    "types": [
@@ -42157,6 +42501,7 @@
    "name": "Watchog",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "WATCHOG",
    "form": "0",
    "types": [
@@ -42285,6 +42630,7 @@
    "name": "Floatzel",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "FLOATZEL",
    "form": "0",
    "types": [
@@ -42425,6 +42771,7 @@
    "name": "Banette",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BANETTE",
    "form": "0",
    "types": [
@@ -42555,6 +42902,7 @@
    "name": "Shedinja",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SHEDINJA",
    "form": "0",
    "types": [
@@ -42671,6 +43019,7 @@
    "name": "Thievul",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "THIEVUL",
    "form": "0",
    "types": [
@@ -42787,6 +43136,7 @@
    "name": "Swoobat",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SWOOBAT",
    "form": "0",
    "types": [
@@ -42914,6 +43264,7 @@
    "name": "Masquerain",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MASQUERAIN",
    "form": "0",
    "types": [
@@ -43050,6 +43401,7 @@
    "name": "Cacturne",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CACTURNE",
    "form": "0",
    "types": [
@@ -43196,6 +43548,7 @@
    "name": "Oricorio (Pa'u Style)",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ORICORIO",
    "form": "2",
    "types": [
@@ -43304,6 +43657,7 @@
    "name": "Simipour",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SIMIPOUR",
    "form": "0",
    "types": [
@@ -43437,6 +43791,7 @@
    "name": "Electrode",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ELECTRODE",
    "form": "0",
    "types": [
@@ -43551,6 +43906,7 @@
    "name": "Vivillon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "VIVILLON",
    "form": "0",
    "types": [
@@ -43669,6 +44025,7 @@
    "name": "Lumineon",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LUMINEON",
    "form": "0",
    "types": [
@@ -43786,6 +44143,7 @@
    "name": "Dustox",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DUSTOX",
    "form": "0",
    "types": [
@@ -43900,6 +44258,7 @@
    "name": "Jumpluff",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "JUMPLUFF",
    "form": "0",
    "types": [
@@ -44028,6 +44387,7 @@
    "name": "Spinda",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SPINDA",
    "form": "0",
    "types": [
@@ -44162,6 +44522,7 @@
    "name": "Minun",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MINUN",
    "form": "0",
    "types": [
@@ -44290,6 +44651,7 @@
    "name": "Fearow",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "FEAROW",
    "form": "0",
    "types": [
@@ -44405,6 +44767,7 @@
    "name": "Sharpedo",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SHARPEDO",
    "form": "0",
    "types": [
@@ -44529,6 +44892,7 @@
    "name": "Simisage",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SIMISAGE",
    "form": "0",
    "types": [
@@ -44661,6 +45025,7 @@
    "name": "Mothim",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "MOTHIM",
    "form": "0",
    "types": [
@@ -44775,6 +45140,7 @@
    "name": "Liepard",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LIEPARD",
    "form": "0",
    "types": [
@@ -44898,6 +45264,7 @@
    "name": "Bibarel",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BIBAREL",
    "form": "0",
    "types": [
@@ -45032,6 +45399,7 @@
    "name": "Illumise",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "ILLUMISE",
    "form": "0",
    "types": [
@@ -45156,6 +45524,7 @@
    "name": "Togedemaru",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "TOGEDEMARU",
    "form": "0",
    "types": [
@@ -45278,6 +45647,7 @@
    "name": "Purugly",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PURUGLY",
    "form": "0",
    "types": [
@@ -45405,6 +45775,7 @@
    "name": "Cherrim",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "CHERRIM",
    "form": "0",
    "types": [
@@ -45520,6 +45891,7 @@
    "name": "Beautifly",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "BEAUTIFLY",
    "form": "0",
    "types": [
@@ -45632,6 +46004,7 @@
    "name": "Emolga",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "EMOLGA",
    "form": "0",
    "types": [
@@ -45747,6 +46120,7 @@
    "name": "Kricketune",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "KRICKETUNE",
    "form": "0",
    "types": [
@@ -45871,6 +46245,7 @@
    "name": "Ledian",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LEDIAN",
    "form": "0",
    "types": [
@@ -45992,6 +46367,7 @@
    "name": "Plusle",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PLUSLE",
    "form": "0",
    "types": [
@@ -46120,6 +46496,7 @@
    "name": "Persian",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PERSIAN",
    "form": "0",
    "types": [
@@ -46260,6 +46637,7 @@
    "name": "Farfetch'd",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "FARFETCHD",
    "form": "0",
    "types": [
@@ -46389,6 +46767,7 @@
    "name": "Dedenne",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DEDENNE",
    "form": "0",
    "types": [
@@ -46506,6 +46885,7 @@
    "name": "Wugtrio",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "WUGTRIO",
    "form": "0",
    "types": [
@@ -46616,6 +46996,7 @@
    "name": "Dugtrio",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DUGTRIO",
    "form": "0",
    "types": [
@@ -46743,6 +47124,7 @@
    "name": "Delcatty",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DELCATTY",
    "form": "0",
    "types": [
@@ -46871,6 +47253,7 @@
    "name": "Pachirisu",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "PACHIRISU",
    "form": "0",
    "types": [
@@ -47005,6 +47388,7 @@
    "name": "Delibird",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "DELIBIRD",
    "form": "0",
    "types": [
@@ -47128,6 +47512,7 @@
    "name": "Salandit",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "SALANDIT",
    "form": "0",
    "types": [
@@ -47255,6 +47640,7 @@
    "name": "Luvdisc",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "LUVDISC",
    "form": "0",
    "types": [
@@ -47369,6 +47755,7 @@
    "name": "Unown",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "UNOWN",
    "form": "0",
    "types": [
@@ -47438,6 +47825,7 @@
    "name": "Combee",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "COMBEE",
    "form": "0",
    "types": [
@@ -47514,6 +47902,7 @@
    "name": "Wishiwashi",
    "kind": "regular",
    "crest": "",
+   "zoro_partner": null,
    "sid": "WISHIWASHI",
    "form": "0",
    "types": [
