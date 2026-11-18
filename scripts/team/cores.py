@@ -308,6 +308,16 @@ def best_swaps(ms):
     return out, got
 
 
+RANK = {'S': 4, 'A': 3, 'B': 2, 'C': 1, 'D': 0}
+def swap_pairs(main, alt):
+    out = sorted([m for m in main if m.name not in {x.name for x in alt}], key=lambda m: -RANK[m.r['tier']])
+    inn = sorted([m for m in alt if m.name not in {x.name for x in main}], key=lambda m: -RANK[m.r['tier']])
+    return list(zip(out, inn))
+def tier_ok(main, alt):
+    pr = swap_pairs(main, alt)
+    return bool(pr) and all(RANK[i.r['tier']] >= RANK[o.r['tier']] for o, i in pr)
+
+
 def covered_of(ms, bds, who=False):
     hits = {}
     for m, bd in zip(ms, bds):
@@ -333,17 +343,17 @@ for key, (cand, id_f) in CAND.items():
         _, bds = real_builds(ms, key)
         rescored.append((core_score(ms, id_f(ms) if key in ('balance', 'tr', 'setup') else id_f(ms[1:]), len(covered_of(ms, bds)) / len(ANS)), ms))
     rescored.sort(key=lambda x: -x[0])
-    picked = []
-    for sc, ms in rescored:
-        if all(len({m.name for m in ms} & {m.name for m in p}) <= 2 for _, p in picked):
-            picked.append((sc, ms))
-        if len(picked) == 2: break
+    main = rescored[0] if rescored else None
     mine = [ALL[n] for n in (ST.get('core') or []) if n in ALL]
     if key == 'balance' and len(mine) == 4:   # Vincent's picked core is always the first card of its style
         mine = tuple(mine)
         bds = [dict(moves=ST['moves'].get(m.name, []), ability=ST['abilities'].get(m.name, '')) for m in mine]
-        picked = [(core_score(mine, id_f(mine), len(covered_of(mine, bds)) / len(ANS)), mine)] + \
-                 [(sc, ms) for sc, ms in picked if sorted(m.name for m in ms) != sorted(m.name for m in mine)][:1]
+        main = (core_score(mine, id_f(mine), len(covered_of(mine, bds)) / len(ANS)), mine)
+    picked = [main] if main else []
+    if main:   # 18 Nov (Vincent): a swap option must keep the tier: every replacement at least as high a tier as who it replaces
+        for sc, ms in rescored:
+            if sorted(m.name for m in ms) == sorted(m.name for m in main[1]): continue
+            if tier_ok(main[1], ms): picked.append((sc, ms)); break
     results[key] = picked
     print(key, [(round(s_, 3), [disp(m.name) for m in ms]) for s_, ms in picked])
 

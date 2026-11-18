@@ -123,24 +123,24 @@
    "cover6": 37
   },
   {
-   "score": 0.924,
+   "score": 0.899,
    "members": [
-    "Overqwil",
+    "Arcanine (Hisuian Form)",
     "Gholdengo",
     "Golisopod (Aevian Form)",
-    "Vaporeon"
+    "Clefable"
    ],
-   "cover": 28,
+   "cover": 32,
    "swaps": [
-    "Arcanine (Hisuian Form)",
-    "Oranguru"
+    "Oranguru",
+    "Armarouge"
    ],
    "builds": [
     {
      "moves": [
-      "Haze",
-      "Crunch",
-      "Barb Barrage",
+      "Flare Blitz",
+      "Head Smash",
+      "Extreme Speed",
       "Protect"
      ],
      "item": "Focus Sash",
@@ -162,7 +162,7 @@
     },
     {
      "moves": [
-      "Shadow Sneak",
+      "Swords Dance",
       "Bone Rush",
       "Pin Missile",
       "Protect"
@@ -174,15 +174,15 @@
     },
     {
      "moves": [
-      "Helping Hand",
-      "Hydro Pump",
-      "Aurora Beam",
+      "Encore",
+      "Moonblast",
+      "Shadow Ball",
       "Protect"
      ],
-     "item": "Mystic Water",
+     "item": "Fairy Feather",
      "nature": "Modest",
      "evs": "252 HP / 252 SpA",
-     "ability": "Water Absorb"
+     "ability": "Magic Guard"
     }
    ],
    "roles": [
@@ -191,15 +191,17 @@
     "attacker",
     "attacker"
    ],
-   "shared": [],
+   "shared": [
+    "WATER"
+   ],
    "answers": [
-    "Haze / phaze",
+    "Taunt / Encore",
     "Fake Out / Intimidate",
     "speed control",
     "priority"
    ],
    "missing": [
-    "Taunt / Encore",
+    "Haze / phaze",
     "screen breaker"
    ],
    "per_fight": {
@@ -212,7 +214,7 @@
      4
     ],
     "karrina": [
-     4,
+     5,
      6
     ],
     "spector": [
@@ -220,28 +222,28 @@
      6
     ],
     "spector2": [
-     6,
+     5,
      6
     ],
     "jenner9": [
-     2,
-     6
-    ],
-    "amanda": [
      4,
      6
     ],
+    "amanda": [
+     5,
+     6
+    ],
     "erick": [
-     3,
+     4,
      6
     ]
    },
    "open": [
-    "amanda:Bronzong",
     "darkgardevoir:Gardevoir",
     "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
-    "jenner9:Porygon-Z"
+    "jenner9:Porygon-Z",
+    "spector2:Typhlosion"
    ],
    "cover6": 36
   }
@@ -874,14 +876,14 @@
    "score": 0.751,
    "members": [
     "Glalie (Aevian Form)",
-    "Golisopod (Aevian Form)",
-    "Florges",
-    "Flareon"
+    "Chandelure",
+    "Gallade",
+    "Florges"
    ],
-   "cover": 30,
+   "cover": 27,
    "swaps": [
-    "Oranguru",
-    "Veluza (Aevian Form)"
+    "Golisopod (Aevian Form)",
+    "Oranguru"
    ],
    "builds": [
     {
@@ -898,15 +900,27 @@
     },
     {
      "moves": [
-      "Electroweb",
-      "Bone Rush",
-      "Pin Missile",
+      "Clear Smog",
+      "Shadow Ball",
+      "Overheat",
       "Protect"
      ],
-     "item": "Soft Sand",
+     "item": "Spell Tag",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Flash Fire"
+    },
+    {
+     "moves": [
+      "Psycho Cut",
+      "Sacred Sword",
+      "Leaf Blade",
+      "Protect"
+     ],
+     "item": "Twisted Spoon",
      "nature": "Adamant",
      "evs": "252 HP / 252 Atk",
-     "ability": "Skill Link"
+     "ability": "Sharpness"
     },
     {
      "moves": [
@@ -919,37 +933,25 @@
      "nature": "Modest",
      "evs": "252 HP / 252 SpA",
      "ability": "Flower Veil"
-    },
-    {
-     "moves": [
-      "Quick Attack",
-      "Flare Blitz",
-      "Trailblaze",
-      "Protect"
-     ],
-     "item": "Silk Scarf",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Flash Fire"
     }
    ],
    "roles": [
     "terrain setter",
     "attacker",
-    "bulky answer",
-    "attacker"
+    "attacker",
+    "bulky answer"
    ],
    "shared": [
-    "WATER"
+    "GHOST"
    ],
    "answers": [
-    "speed control",
+    "Haze / phaze",
     "priority"
    ],
    "missing": [
-    "Haze / phaze",
     "Taunt / Encore",
     "Fake Out / Intimidate",
+    "speed control",
     "screen breaker"
    ],
    "per_fight": {
@@ -958,11 +960,11 @@
      1
     ],
     "garbodor": [
-     3,
+     0,
      4
     ],
     "karrina": [
-     5,
+     4,
      6
     ],
     "spector": [
@@ -970,15 +972,15 @@
      6
     ],
     "spector2": [
-     4,
+     5,
      6
     ],
     "jenner9": [
-     6,
+     4,
      6
     ],
     "amanda": [
-     3,
+     5,
      6
     ],
     "erick": [
@@ -1126,17 +1128,17 @@
    "cover6": 31
   },
   {
-   "score": 0.618,
+   "score": 0.649,
    "members": [
     "Pincurchin",
-    "Zoroark (Hisuian Form)",
-    "Vikavolt",
-    "Ampharos"
+    "Chandelure",
+    "Donphan",
+    "Vikavolt"
    ],
    "cover": 17,
    "swaps": [
     "Golisopod (Aevian Form)",
-    "Arcanine (Hisuian Form)"
+    "Oranguru"
    ],
    "builds": [
     {
@@ -1153,15 +1155,27 @@
     },
     {
      "moves": [
+      "Clear Smog",
       "Shadow Ball",
-      "Sludge Bomb",
-      "Extrasensory",
+      "Overheat",
       "Protect"
      ],
      "item": "Spell Tag",
-     "nature": "Timid",
-     "evs": "252 SpA / 252 Spe",
-     "ability": "Illusion"
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Flash Fire"
+    },
+    {
+     "moves": [
+      "Earthquake",
+      "Thunder Fang",
+      "Ice Shard",
+      "Protect"
+     ],
+     "item": "Soft Sand",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Sturdy"
     },
     {
      "moves": [
@@ -1174,18 +1188,6 @@
      "nature": "Modest",
      "evs": "252 HP / 252 SpA",
      "ability": "Levitate"
-    },
-    {
-     "moves": [
-      "Dragon Pulse",
-      "Power Gem",
-      "Discharge",
-      "Protect"
-     ],
-     "item": "Dragon Fang",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Static"
     }
    ],
    "roles": [
@@ -1194,13 +1196,15 @@
     "attacker",
     "attacker"
    ],
-   "shared": [],
+   "shared": [
+    "WATER"
+   ],
    "answers": [
+    "Haze / phaze",
     "speed control",
     "priority"
    ],
    "missing": [
-    "Haze / phaze",
     "Taunt / Encore",
     "Fake Out / Intimidate",
     "screen breaker"
@@ -1215,11 +1219,11 @@
      4
     ],
     "karrina": [
-     2,
+     3,
      6
     ],
     "spector": [
-     6,
+     4,
      6
     ],
     "spector2": [
@@ -1227,31 +1231,28 @@
      6
     ],
     "jenner9": [
-     1,
+     2,
      6
     ],
     "amanda": [
-     3,
+     2,
      6
     ],
     "erick": [
-     2,
+     3,
      6
     ]
    },
    "open": [
-    "amanda:Bronzong",
+    "amanda:Incineroar",
     "darkgardevoir:Gardevoir",
-    "erick:Toxtricity",
     "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
+    "jenner9:Noivern",
     "jenner9:Porygon-Z",
-    "karrina:Fearow",
-    "karrina:Nidoking",
-    "karrina:Runerigus",
     "spector2:Typhlosion"
    ],
-   "cover6": 31
+   "cover6": 34
   }
  ],
  "sun": [
@@ -1633,17 +1634,17 @@
    "cover6": 36
   },
   {
-   "score": 0.766,
+   "score": 0.78,
    "members": [
     "Ninetales (Alolan Form)",
+    "Gholdengo",
     "Golisopod (Aevian Form)",
-    "Empoleon",
     "Walrein"
    ],
-   "cover": 27,
+   "cover": 30,
    "swaps": [
-    "Oranguru",
-    "Arcanine (Hisuian Form)"
+    "Arcanine (Hisuian Form)",
+    "Oranguru"
    ],
    "builds": [
     {
@@ -1660,6 +1661,18 @@
     },
     {
      "moves": [
+      "Thunder Wave",
+      "Make It Rain",
+      "Shadow Ball",
+      "Protect"
+     ],
+     "item": "Metal Coat",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Good as Gold"
+    },
+    {
+     "moves": [
       "Shadow Sneak",
       "Bone Rush",
       "Pin Missile",
@@ -1672,19 +1685,7 @@
     },
     {
      "moves": [
-      "Haze",
-      "Icy Wind",
-      "Surf",
-      "Protect"
-     ],
-     "item": "Mystic Water",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Competitive"
-    },
-    {
-     "moves": [
-      "Encore",
+      "Roar",
       "Surf",
       "Frost Breath",
       "Protect"
@@ -1706,11 +1707,11 @@
    ],
    "answers": [
     "Haze / phaze",
-    "Taunt / Encore",
     "speed control",
     "priority"
    ],
    "missing": [
+    "Taunt / Encore",
     "Fake Out / Intimidate",
     "screen breaker"
    ],
@@ -1728,11 +1729,11 @@
      6
     ],
     "spector": [
-     5,
+     6,
      6
     ],
     "spector2": [
-     4,
+     5,
      6
     ],
     "jenner9": [
@@ -1740,7 +1741,7 @@
      6
     ],
     "amanda": [
-     3,
+     4,
      6
     ],
     "erick": [

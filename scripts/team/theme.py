@@ -172,7 +172,8 @@ def core_grid():   # Cores: one compact card per style; key piece marked; the al
         main = v[0]['members']; key = main[0]; yours = sorted(main) == mine
         sw = {}
         if len(v) > 1:   # the alternative: each swapped member gets its replacement in grey on the same row
-            am = v[1]['members']; o = [n for n in main if n not in am]; i_ = [n for n in am if n not in main]
+            am = v[1]['members']; RK = {'S': 4, 'A': 3, 'B': 2, 'C': 1, 'D': 0}; tr_ = lambda n: -RK.get((T.get(n) or {}).get('tier', 'D'), 0)
+            o = sorted([n for n in main if n not in am], key=tr_); i_ = sorted([n for n in am if n not in main], key=tr_)   # same pairing as cores.py
             sw = dict(zip(o, i_))
         lis = ''.join('<li' + (' class="key"' if n == key else '') + '><span class="cm">' + tchip(n) + spr(n) + '<span class="nm">' + E(disp(n)) + '</span>' +
                       ('<small>key</small>' if n == key else '') + '</span>' +
