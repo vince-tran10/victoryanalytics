@@ -1,12 +1,12 @@
 {
  "_doc": "Read/written by scripts/team/update.py. Edit by hand only to change the six or its moves.",
- "export": "party_and_boxes_2026-11-16_1224.txt",
- "export_label": "16 Nov 12:24",
- "active_start": 425,
+ "export": "party_and_boxes_2026-11-20_1352.txt",
+ "export_label": "20 Nov 13:52",
+ "active_start": 426,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 138,
- "run": 152,
- "final": 156,
+ "roster": 139,
+ "run": 153,
+ "final": 157,
  "done": [
   "aelita",
   "narcissa1",
@@ -100,45 +100,45 @@
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
   "rank": null,
-  "of": 27493,
-  "gap": 10.97,
+  "of": 16265,
+  "gap": 6.05,
   "top": [
    {
-    "score": 0.9699,
-    "pct": 111.0,
+    "score": 1.0006,
+    "pct": 106.0,
     "team": [
      "Golisopod-A",
-     "Annihilape",
-     "Camerupt",
-     "Copperajah",
-     "Sylveon",
-     "Musharna-A"
-    ],
-    "misses": []
-   },
-   {
-    "score": 0.9683,
-    "pct": 110.8,
-    "team": [
-     "Golisopod-A",
-     "Annihilape",
-     "Camerupt",
-     "Copperajah",
-     "Wyrdeer",
-     "Sylveon"
-    ],
-    "misses": []
-   },
-   {
-    "score": 0.9677,
-    "pct": 110.7,
-    "team": [
-     "Golisopod-A",
-     "Braviary",
      "Chandelure",
-     "Copperajah",
-     "Whiscash",
-     "Sylveon"
+     "Lunatone (Lunatone Dominant Fusion)",
+     "Musharna-A",
+     "Vaporeon",
+     "Passimian"
+    ],
+    "misses": []
+   },
+   {
+    "score": 0.9989,
+    "pct": 105.9,
+    "team": [
+     "Golisopod-A",
+     "Chandelure",
+     "Lunatone (Lunatone Dominant Fusion)",
+     "Musharna-A",
+     "Throh",
+     "Vaporeon"
+    ],
+    "misses": []
+   },
+   {
+    "score": 0.9979,
+    "pct": 105.8,
+    "team": [
+     "Golisopod-A",
+     "Chandelure",
+     "Lunatone (Lunatone Dominant Fusion)",
+     "Hariyama",
+     "Musharna-A",
+     "Vaporeon"
     ],
     "misses": []
    }

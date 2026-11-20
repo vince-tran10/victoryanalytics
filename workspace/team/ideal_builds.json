@@ -702,25 +702,6 @@
   "role": "attacker",
   "source": "your rules"
  },
- "Muk (Alolan Form)": {
-  "ability": "Poison Touch",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
-  "moves": [
-   "Knock Off",
-   "Gastro Acid",
-   "Clear Smog",
-   "Protect"
-  ],
-  "move_ids": [
-   "CRUNCH",
-   "GUNKSHOT",
-   "CURSE"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Mamoswine": {
   "ability": "THICKFAT",
   "nature": "Adamant",
@@ -1568,25 +1549,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Clodsire": {
-  "ability": "Unaware",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Soft Sand",
-  "moves": [
-   "Earthquake",
-   "Curse",
-   "Recover",
-   "Protect"
-  ],
-  "move_ids": [
-   "EARTHQUAKE",
-   "RECOVER",
-   "POISONJAB"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Cetitan": {
   "ability": "SLUSHRUSH",
   "nature": "Adamant",
@@ -1850,6 +1812,25 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Clodsire": {
+  "ability": "Unaware",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Sitrus Berry",
+  "moves": [
+   "Earthquake",
+   "Curse",
+   "Recover",
+   "Protect"
+  ],
+  "move_ids": [
+   "EARTHQUAKE",
+   "RECOVER",
+   "TOXIC"
+  ],
+  "role": "support",
+  "source": "your team"
  },
  "Overqwil": {
   "ability": "INTIMIDATE",
@@ -2306,6 +2287,25 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Muk (Alolan Form)": {
+  "ability": "Poison Touch",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
+  "moves": [
+   "Knock Off",
+   "Gastro Acid",
+   "Clear Smog",
+   "Protect"
+  ],
+  "move_ids": [
+   "CRUNCH",
+   "GUNKSHOT",
+   "CURSE"
+  ],
+  "role": "attacker",
+  "source": "your team"
  },
  "Nidoking": {
   "ability": "SHEERFORCE",
@@ -3456,25 +3456,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Garbodor": {
-  "ability": "STENCH",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Poison Barb",
-  "moves": [
-   "Gunk Shot",
-   "Body Slam",
-   "Toxic",
-   "Protect"
-  ],
-  "move_ids": [
-   "GUNKSHOT",
-   "BODYSLAM",
-   "TOXIC"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Turtonator": {
   "ability": "SHELLARMOR",
   "nature": "Modest",
@@ -3757,6 +3738,25 @@
   ],
   "role": "attacker",
   "source": "engine"
+ },
+ "Garbodor": {
+  "ability": "STENCH",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Poison Barb",
+  "moves": [
+   "Gunk Shot",
+   "Body Slam",
+   "Toxic",
+   "Protect"
+  ],
+  "move_ids": [
+   "GUNKSHOT",
+   "BODYSLAM",
+   "TOXIC"
+  ],
+  "role": "attacker",
+  "source": "game"
  },
  "Toedscruel": {
   "ability": "MYCELIUMMIGHT",

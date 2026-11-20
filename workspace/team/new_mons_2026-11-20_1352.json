@@ -1,0 +1,264 @@
+[
+ {
+  "dump": 426,
+  "owned": "Forretress",
+  "level": 60,
+  "now_ability": "Sturdy",
+  "now_moves": [
+   "Explosion",
+   "Iron Defense",
+   "Gyro Ball",
+   "Double-Edge"
+  ],
+  "final": "Forretress",
+  "evolve": "",
+  "gate": "",
+  "types": "Bug/Steel",
+  "score": 0.304,
+  "tier": "D",
+  "ability": "Sturdy",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Lunge",
+   "Drill Run",
+   "Gyro Ball",
+   "Protect"
+  ],
+  "move_src": {
+   "Lunge": "known",
+   "Drill Run": "known",
+   "Gyro Ball": "known",
+   "Protect": "Lv 1"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.23,
+   "danni": 0.67,
+   "troye": 0.39,
+   "zena": 0.34,
+   "marcie": 0.88,
+   "garbodor": 0.26,
+   "karrina": 0.31,
+   "spector": 0.34,
+   "spector2": 0.21,
+   "jenner9": 0.14,
+   "amanda": 0.2,
+   "erick": 0.28
+  }
+ },
+ {
+  "dump": 427,
+  "owned": "Cascoon",
+  "level": 60,
+  "now_ability": "Shed Skin",
+  "now_moves": [
+   "Harden"
+  ],
+  "final": "Dustox",
+  "evolve": "Dustox (Level 10)",
+  "gate": "",
+  "types": "Bug/Poison",
+  "score": 0.117,
+  "tier": "D",
+  "ability": "Shield Dust",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Leech Life",
+   "Sludge Bomb",
+   "Electroweb",
+   "Protect"
+  ],
+  "move_src": {
+   "Leech Life": "Lv 25",
+   "Sludge Bomb": "TM36",
+   "Electroweb": "known",
+   "Protect": "Lv 37"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.09,
+   "danni": 0.44,
+   "troye": 0.23,
+   "zena": 0.36,
+   "marcie": 0.62,
+   "garbodor": -0.07,
+   "karrina": -0.05,
+   "spector": 0.21,
+   "spector2": 0.06,
+   "jenner9": -0.01,
+   "amanda": -0.04,
+   "erick": 0.26
+  }
+ },
+ {
+  "dump": 428,
+  "owned": "Dubwool",
+  "level": 60,
+  "now_ability": "Bulletproof",
+  "now_moves": [
+   "Guard Swap",
+   "Reversal",
+   "Cotton Guard",
+   "Double-Edge"
+  ],
+  "final": "Dubwool",
+  "evolve": "",
+  "gate": "",
+  "types": "Normal",
+  "score": 0.343,
+  "tier": "D",
+  "ability": "Fluffy",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Double-Edge",
+   "Payback",
+   "Take Down",
+   "Protect"
+  ],
+  "move_src": {
+   "Double-Edge": "known",
+   "Payback": "TM66",
+   "Take Down": "Lv 27",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.48,
+   "danni": 0.89,
+   "troye": 0.4,
+   "zena": 0.69,
+   "marcie": 0.54,
+   "garbodor": -0.15,
+   "karrina": 0.44,
+   "spector": 0.4,
+   "spector2": 0.14,
+   "jenner9": 0.05,
+   "amanda": 0.33,
+   "erick": 0.35
+  }
+ },
+ {
+  "dump": 429,
+  "owned": "Exploud",
+  "level": 60,
+  "now_ability": "Scrappy",
+  "now_moves": [
+   "Roar",
+   "Supersonic",
+   "Uproar",
+   "Screech"
+  ],
+  "final": "Exploud",
+  "evolve": "",
+  "gate": "",
+  "types": "Normal",
+  "score": 0.322,
+  "tier": "D",
+  "ability": "Scrappy",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Rock Climb",
+   "Crunch",
+   "Hammer Arm",
+   "Protect"
+  ],
+  "move_src": {
+   "Rock Climb": "TM101",
+   "Crunch": "evolution",
+   "Hammer Arm": "Egg",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.47,
+   "danni": 0.65,
+   "troye": 0.34,
+   "zena": 0.62,
+   "marcie": 0.4,
+   "garbodor": -0.16,
+   "karrina": 0.33,
+   "spector": 0.43,
+   "spector2": 0.18,
+   "jenner9": 0.15,
+   "amanda": 0.31,
+   "erick": 0.45
+  }
+ },
+ {
+  "dump": 430,
+  "owned": "Liepard",
+  "level": 60,
+  "now_ability": "Limber",
+  "now_moves": [
+   "Sucker Punch",
+   "Nasty Plot",
+   "Night Slash",
+   "Play Rough"
+  ],
+  "final": "Liepard",
+  "evolve": "",
+  "gate": "",
+  "types": "Dark",
+  "score": 0.113,
+  "tier": "D",
+  "ability": "Limber",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Sucker Punch",
+   "Play Rough",
+   "Night Slash",
+   "Protect"
+  ],
+  "move_src": {
+   "Sucker Punch": "known",
+   "Play Rough": "known",
+   "Night Slash": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.29,
+   "danni": 0.53,
+   "troye": 0.17,
+   "zena": 0.58,
+   "marcie": 0.24,
+   "garbodor": -0.21,
+   "karrina": -0.01,
+   "spector": 0.51,
+   "spector2": 0.1,
+   "jenner9": -0.16,
+   "amanda": 0.03,
+   "erick": 0.1
+  }
+ }
+]

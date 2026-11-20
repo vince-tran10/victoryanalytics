@@ -121,7 +121,7 @@ for c in changes:
         if f(c):
             nm = c.split(':')[0]
             if t == 'Evolved':
-                nm = c.split(':')[0].replace(' evolved into ', ' → ') + ' (' + c.split(': ')[1] + ')'
+                _p = c.split(': ', 1); nm = _p[0].replace(' evolved into ', ' → ') + (' (' + _p[1] + ')' if len(_p) > 1 else '')
             buckets[t].append(nm); break
 chg = ''.join(f'<div class="chgcol"><h4>{esc(t)} <span class="num">{len(v)}</span></h4><ul class="plain">' + ''.join(f'<li>{esc(x)}</li>' for x in v) + '</ul></div>'
               for t, v in buckets.items() if v) or '<p>No changes.</p>'
