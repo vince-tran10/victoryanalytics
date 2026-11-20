@@ -24,20 +24,7 @@
   "note": "not in engine (beaten or not tracked)"
  },
  "darkgardevoir": {
-  "label": "Dark Gardevoir (boss) – Forest",
-  "game_src": [
-   "boss DARKGARDEVOIR"
-  ],
-  "n_game": 1,
-  "n_guide": 1,
-  "rows": [
-   {
-    "mon": "Gardevoir",
-    "diff": [
-     "BOSS 1 shields (guide HP x2); phases: at 1 shield(s): "
-    ]
-   }
-  ]
+  "note": "not in engine (beaten or not tracked)"
  },
  "garbodor": {
   "label": "Rift Garbodor (boss) – Corrupted Cave",

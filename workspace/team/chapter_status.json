@@ -1,6 +1,6 @@
 {
- "fights": 8,
- "foes": 41,
+ "fights": 7,
+ "foes": 40,
  "major": [
   "Bug",
   "Dark",
@@ -25,7 +25,6 @@
   "Ice"
  ],
  "weak3": [
-  "FIRE",
   "GROUND"
  ],
  "nores": [],

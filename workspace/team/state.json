@@ -4,9 +4,9 @@
  "export_label": "16 Nov 12:24",
  "active_start": 425,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 136,
- "run": 150,
- "final": 154,
+ "roster": 137,
+ "run": 151,
+ "final": 155,
  "done": [
   "aelita",
   "narcissa1",
@@ -26,16 +26,17 @@
   "factory",
   "holly",
   "manaphy",
-  "amber"
+  "amber",
+  "darkgardevoir"
  ],
- "fight": "darkgardevoir",
+ "fight": "garbodor",
  "team": [
-  "Golisopod (Aevian Form)",
   "Arcanine (Hisuian Form)",
+  "Golisopod (Aevian Form)",
   "Gholdengo",
   "Vaporeon",
-  "Copperajah",
-  "Muk (Alolan Form)"
+  "Muk (Alolan Form)",
+  "Clodsire"
  ],
  "moves": {
   "Arcanine (Hisuian Form)": [
@@ -70,8 +71,14 @@
   ],
   "Muk (Alolan Form)": [
    "Knock Off",
+   "Gastro Acid",
    "Clear Smog",
-   "Gunk Shot",
+   "Protect"
+  ],
+  "Clodsire": [
+   "Earthquake",
+   "Curse",
+   "Recover",
    "Protect"
   ]
  },
@@ -149,7 +156,8 @@
   "Gholdengo": "Good as Gold",
   "Vaporeon": "Water Absorb",
   "Copperajah": "Sheer Force",
-  "Muk (Alolan Form)": "Poison Touch"
+  "Muk (Alolan Form)": "Poison Touch",
+  "Clodsire": "Unaware"
  },
  "crests_owned": [
   "Phione Crest"
@@ -175,7 +183,7 @@
    "n": 6,
    "weak3": [],
    "nores": [],
-   "key": "darkgardevoir"
+   "key": "garbodor"
   }
  },
  "plan_swaps": {

@@ -1,7 +1,7 @@
 {
  "balance": [
   {
-   "score": 0.907,
+   "score": 0.906,
    "members": [
     "Arcanine (Hisuian Form)",
     "Golisopod (Aevian Form)",
@@ -81,10 +81,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "darkgardevoir": [
-     0,
-     1
-    ],
     "garbodor": [
      3,
      4
@@ -115,7 +111,6 @@
     ]
    },
    "open": [
-    "darkgardevoir:Gardevoir",
     "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
     "jenner9:Porygon-Z"
@@ -123,12 +118,12 @@
    "cover6": 37
   },
   {
-   "score": 0.899,
+   "score": 0.904,
    "members": [
     "Arcanine (Hisuian Form)",
     "Gholdengo",
     "Golisopod (Aevian Form)",
-    "Clefable"
+    "Azumarill"
    ],
    "cover": 32,
    "swaps": [
@@ -174,15 +169,15 @@
     },
     {
      "moves": [
-      "Encore",
-      "Moonblast",
-      "Shadow Ball",
+      "Helping Hand",
+      "Play Rough",
+      "Aqua Jet",
       "Protect"
      ],
      "item": "Fairy Feather",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Magic Guard"
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Huge Power"
     }
    ],
    "roles": [
@@ -191,24 +186,18 @@
     "attacker",
     "attacker"
    ],
-   "shared": [
-    "WATER"
-   ],
+   "shared": [],
    "answers": [
-    "Taunt / Encore",
     "Fake Out / Intimidate",
     "speed control",
     "priority"
    ],
    "missing": [
     "Haze / phaze",
+    "Taunt / Encore",
     "screen breaker"
    ],
    "per_fight": {
-    "darkgardevoir": [
-     0,
-     1
-    ],
     "garbodor": [
      3,
      4
@@ -239,7 +228,6 @@
     ]
    },
    "open": [
-    "darkgardevoir:Gardevoir",
     "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
     "jenner9:Porygon-Z",
@@ -250,7 +238,7 @@
  ],
  "tr": [
   {
-   "score": 0.864,
+   "score": 0.863,
    "members": [
     "Oranguru",
     "Golisopod (Aevian Form)",
@@ -330,10 +318,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "darkgardevoir": [
-     0,
-     1
-    ],
     "garbodor": [
      3,
      4
@@ -364,7 +348,6 @@
     ]
    },
    "open": [
-    "darkgardevoir:Gardevoir",
     "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
     "jenner9:Porygon-Z",
@@ -373,7 +356,7 @@
    "cover6": 36
   },
   {
-   "score": 0.853,
+   "score": 0.851,
    "members": [
     "Porygon-Z",
     "Golisopod (Aevian Form)",
@@ -453,10 +436,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "darkgardevoir": [
-     0,
-     1
-    ],
     "garbodor": [
      3,
      4
@@ -488,7 +467,6 @@
    },
    "open": [
     "amanda:Bronzong",
-    "darkgardevoir:Gardevoir",
     "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
     "jenner9:Porygon-Z",
@@ -499,7 +477,7 @@
  ],
  "setup": [
   {
-   "score": 0.883,
+   "score": 0.881,
    "members": [
     "Braviary",
     "Arcanine (Hisuian Form)",
@@ -579,10 +557,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "darkgardevoir": [
-     0,
-     1
-    ],
     "garbodor": [
      3,
      4
@@ -613,7 +587,6 @@
     ]
    },
    "open": [
-    "darkgardevoir:Gardevoir",
     "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
     "jenner9:Porygon-Z",
@@ -622,7 +595,7 @@
    "cover6": 36
   },
   {
-   "score": 0.883,
+   "score": 0.881,
    "members": [
     "Braviary",
     "Gholdengo",
@@ -702,10 +675,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "darkgardevoir": [
-     0,
-     1
-    ],
     "garbodor": [
      3,
      4
@@ -737,7 +706,6 @@
    },
    "open": [
     "amanda:Bronzong",
-    "darkgardevoir:Gardevoir",
     "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
     "jenner9:Porygon-Z",
@@ -748,7 +716,7 @@
  ],
  "grassy": [
   {
-   "score": 0.779,
+   "score": 0.784,
    "members": [
     "Glalie (Aevian Form)",
     "Gholdengo",
@@ -830,10 +798,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "darkgardevoir": [
-     0,
-     1
-    ],
     "garbodor": [
      0,
      4
@@ -864,7 +828,6 @@
     ]
    },
    "open": [
-    "darkgardevoir:Gardevoir",
     "erick:Chandelure",
     "erick:Toxtricity",
     "garbodor:Garbodor (bar 2)",
@@ -873,17 +836,17 @@
    "cover6": 36
   },
   {
-   "score": 0.751,
+   "score": 0.759,
    "members": [
     "Glalie (Aevian Form)",
-    "Chandelure",
-    "Gallade",
-    "Florges"
+    "Gholdengo",
+    "Florges",
+    "Palossand"
    ],
-   "cover": 27,
+   "cover": 21,
    "swaps": [
     "Golisopod (Aevian Form)",
-    "Oranguru"
+    "Arcanine (Hisuian Form)"
    ],
    "builds": [
     {
@@ -900,27 +863,15 @@
     },
     {
      "moves": [
-      "Clear Smog",
+      "Thunder Wave",
+      "Make It Rain",
       "Shadow Ball",
-      "Overheat",
       "Protect"
      ],
-     "item": "Spell Tag",
+     "item": "Metal Coat",
      "nature": "Modest",
      "evs": "252 HP / 252 SpA",
-     "ability": "Flash Fire"
-    },
-    {
-     "moves": [
-      "Psycho Cut",
-      "Sacred Sword",
-      "Leaf Blade",
-      "Protect"
-     ],
-     "item": "Twisted Spoon",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Sharpness"
+     "ability": "Good as Gold"
     },
     {
      "moves": [
@@ -933,72 +884,82 @@
      "nature": "Modest",
      "evs": "252 HP / 252 SpA",
      "ability": "Flower Veil"
+    },
+    {
+     "moves": [
+      "Shadow Ball",
+      "Earth Power",
+      "Giga Drain",
+      "Protect"
+     ],
+     "item": "Spell Tag",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "W. Compaction"
     }
    ],
    "roles": [
     "terrain setter",
     "attacker",
-    "attacker",
-    "bulky answer"
+    "bulky answer",
+    "attacker"
    ],
    "shared": [
     "GHOST"
    ],
    "answers": [
-    "Haze / phaze",
+    "speed control",
     "priority"
    ],
    "missing": [
+    "Haze / phaze",
     "Taunt / Encore",
     "Fake Out / Intimidate",
-    "speed control",
     "screen breaker"
    ],
    "per_fight": {
-    "darkgardevoir": [
-     0,
-     1
-    ],
     "garbodor": [
      0,
      4
     ],
     "karrina": [
-     4,
+     5,
      6
     ],
     "spector": [
-     5,
+     4,
      6
     ],
     "spector2": [
-     5,
+     4,
      6
     ],
     "jenner9": [
-     4,
+     3,
      6
     ],
     "amanda": [
-     5,
+     3,
      6
     ],
     "erick": [
-     4,
+     2,
      6
     ]
    },
    "open": [
-    "darkgardevoir:Gardevoir",
+    "amanda:Bronzong",
+    "erick:Chandelure",
+    "erick:Toxtricity",
     "garbodor:Garbodor (bar 2)",
     "spector2:Typhlosion"
    ],
-   "cover6": 38
+   "cover6": 35
   }
  ],
  "electric": [
   {
-   "score": 0.65,
+   "score": 0.651,
    "members": [
     "Pincurchin",
     "Gholdengo",
@@ -1080,10 +1041,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "darkgardevoir": [
-     0,
-     1
-    ],
     "garbodor": [
      0,
      4
@@ -1115,7 +1072,6 @@
    },
    "open": [
     "amanda:Bronzong",
-    "darkgardevoir:Gardevoir",
     "erick:Chandelure",
     "erick:Toxtricity",
     "garbodor:Garbodor (bar 2)",
@@ -1128,7 +1084,7 @@
    "cover6": 31
   },
   {
-   "score": 0.649,
+   "score": 0.651,
    "members": [
     "Pincurchin",
     "Chandelure",
@@ -1210,10 +1166,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "darkgardevoir": [
-     0,
-     1
-    ],
     "garbodor": [
      0,
      4
@@ -1245,7 +1197,6 @@
    },
    "open": [
     "amanda:Incineroar",
-    "darkgardevoir:Gardevoir",
     "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
     "jenner9:Noivern",
@@ -1257,131 +1208,7 @@
  ],
  "sun": [
   {
-   "score": 0.717,
-   "members": [
-    "Ninetales",
-    "Arcanine (Hisuian Form)",
-    "Gastrodon (West Aevian Form)",
-    "Tangrowth"
-   ],
-   "cover": 15,
-   "swaps": [
-    "Golisopod (Aevian Form)",
-    "Oranguru"
-   ],
-   "builds": [
-    {
-     "moves": [
-      "Roar",
-      "Hex",
-      "Heat Wave",
-      "Protect"
-     ],
-     "item": "Sitrus Berry",
-     "nature": "Timid",
-     "evs": "252 SpA / 252 Spe",
-     "ability": "Drought"
-    },
-    {
-     "moves": [
-      "Flare Blitz",
-      "Head Smash",
-      "Extreme Speed",
-      "Protect"
-     ],
-     "item": "Charcoal",
-     "nature": "Jolly",
-     "evs": "252 Atk / 252 Spe",
-     "ability": "Intimidate"
-    },
-    {
-     "moves": [
-      "Strange Steam",
-      "Sludge Bomb",
-      "Earth Power",
-      "Protect"
-     ],
-     "item": "Fairy Feather",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Storm Drain"
-    },
-    {
-     "moves": [
-      "Rock Tomb",
-      "Giga Drain",
-      "Sludge Bomb",
-      "Protect"
-     ],
-     "item": "Miracle Seed",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Chlorophyll"
-    }
-   ],
-   "roles": [
-    "sun setter",
-    "tempo / pivot",
-    "attacker",
-    "attacker"
-   ],
-   "shared": [],
-   "answers": [
-    "Haze / phaze",
-    "Fake Out / Intimidate",
-    "speed control",
-    "priority"
-   ],
-   "missing": [
-    "Taunt / Encore",
-    "screen breaker"
-   ],
-   "per_fight": {
-    "darkgardevoir": [
-     0,
-     1
-    ],
-    "garbodor": [
-     0,
-     4
-    ],
-    "karrina": [
-     3,
-     6
-    ],
-    "spector": [
-     3,
-     6
-    ],
-    "spector2": [
-     2,
-     6
-    ],
-    "jenner9": [
-     2,
-     6
-    ],
-    "amanda": [
-     2,
-     6
-    ],
-    "erick": [
-     3,
-     6
-    ]
-   },
-   "open": [
-    "amanda:Bronzong",
-    "darkgardevoir:Gardevoir",
-    "garbodor:Garbodor (bar 2)",
-    "jenner9:Kommo-o",
-    "jenner9:Porygon-Z",
-    "spector2:Typhlosion"
-   ],
-   "cover6": 35
-  },
-  {
-   "score": 0.703,
+   "score": 0.701,
    "members": [
     "Ninetales",
     "Arcanine (Hisuian Form)",
@@ -1464,10 +1291,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "darkgardevoir": [
-     0,
-     1
-    ],
     "garbodor": [
      3,
      4
@@ -1498,18 +1321,138 @@
     ]
    },
    "open": [
-    "darkgardevoir:Gardevoir",
     "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
     "jenner9:Porygon-Z",
     "spector2:Typhlosion"
    ],
    "cover6": 36
+  },
+  {
+   "score": 0.677,
+   "members": [
+    "Ninetales",
+    "Gholdengo",
+    "Arcanine (Hisuian Form)",
+    "Venusaur"
+   ],
+   "cover": 16,
+   "swaps": [
+    "Golisopod (Aevian Form)",
+    "Oranguru"
+   ],
+   "builds": [
+    {
+     "moves": [
+      "Roar",
+      "Hex",
+      "Heat Wave",
+      "Protect"
+     ],
+     "item": "Sitrus Berry",
+     "nature": "Timid",
+     "evs": "252 SpA / 252 Spe",
+     "ability": "Drought"
+    },
+    {
+     "moves": [
+      "Thunder Wave",
+      "Make It Rain",
+      "Shadow Ball",
+      "Protect"
+     ],
+     "item": "Metal Coat",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Good as Gold"
+    },
+    {
+     "moves": [
+      "Flare Blitz",
+      "Head Smash",
+      "Extreme Speed",
+      "Protect"
+     ],
+     "item": "Charcoal",
+     "nature": "Jolly",
+     "evs": "252 Atk / 252 Spe",
+     "ability": "Intimidate"
+    },
+    {
+     "moves": [
+      "Helping Hand",
+      "Giga Drain",
+      "Sludge Bomb",
+      "Protect"
+     ],
+     "item": "Miracle Seed",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Chlorophyll"
+    }
+   ],
+   "roles": [
+    "sun setter",
+    "attacker",
+    "tempo / pivot",
+    "attacker"
+   ],
+   "shared": [
+    "GROUND"
+   ],
+   "answers": [
+    "Haze / phaze",
+    "Fake Out / Intimidate",
+    "speed control",
+    "priority"
+   ],
+   "missing": [
+    "Taunt / Encore",
+    "screen breaker"
+   ],
+   "per_fight": {
+    "garbodor": [
+     0,
+     4
+    ],
+    "karrina": [
+     2,
+     6
+    ],
+    "spector": [
+     5,
+     6
+    ],
+    "spector2": [
+     2,
+     6
+    ],
+    "jenner9": [
+     2,
+     6
+    ],
+    "amanda": [
+     2,
+     6
+    ],
+    "erick": [
+     3,
+     6
+    ]
+   },
+   "open": [
+    "amanda:Bronzong",
+    "garbodor:Garbodor (bar 2)",
+    "jenner9:Kommo-o",
+    "jenner9:Porygon-Z",
+    "spector2:Typhlosion"
+   ],
+   "cover6": 35
   }
  ],
  "snow": [
   {
-   "score": 0.791,
+   "score": 0.789,
    "members": [
     "Ninetales (Alolan Form)",
     "Gholdengo",
@@ -1591,10 +1534,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "darkgardevoir": [
-     0,
-     1
-    ],
     "garbodor": [
      3,
      4
@@ -1626,7 +1565,6 @@
    },
    "open": [
     "amanda:Bronzong",
-    "darkgardevoir:Gardevoir",
     "garbodor:Garbodor (bar 2)",
     "jenner9:Porygon-Z",
     "spector2:Typhlosion"
@@ -1634,7 +1572,7 @@
    "cover6": 36
   },
   {
-   "score": 0.78,
+   "score": 0.779,
    "members": [
     "Ninetales (Alolan Form)",
     "Gholdengo",
@@ -1716,10 +1654,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "darkgardevoir": [
-     0,
-     1
-    ],
     "garbodor": [
      3,
      4
@@ -1751,7 +1685,6 @@
    },
    "open": [
     "amanda:Bronzong",
-    "darkgardevoir:Gardevoir",
     "garbodor:Garbodor (bar 2)",
     "jenner9:Porygon-Z",
     "spector2:Typhlosion"
