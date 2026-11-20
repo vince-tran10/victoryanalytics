@@ -3,9 +3,9 @@
   {
    "score": 0.906,
    "members": [
+    "Gholdengo",
     "Arcanine (Hisuian Form)",
     "Golisopod (Aevian Form)",
-    "Gholdengo",
     "Vaporeon"
    ],
    "cover": 32,
@@ -16,12 +16,24 @@
    "builds": [
     {
      "moves": [
+      "Make It Rain",
+      "Shadow Ball",
+      "Thunder Wave",
+      "Protect"
+     ],
+     "item": "Metal Coat",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Good as Gold"
+    },
+    {
+     "moves": [
       "Flare Blitz",
       "Head Smash",
       "Extreme Speed",
       "Protect"
      ],
-     "item": "Focus Sash",
+     "item": "Charcoal",
      "nature": "Jolly",
      "evs": "252 Atk / 252 Spe",
      "ability": "Intimidate"
@@ -40,18 +52,6 @@
     },
     {
      "moves": [
-      "Make It Rain",
-      "Shadow Ball",
-      "Thunder Wave",
-      "Protect"
-     ],
-     "item": "Metal Coat",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Good as Gold"
-    },
-    {
-     "moves": [
       "Hydro Pump",
       "Aurora Beam",
       "Haze",
@@ -65,7 +65,7 @@
    ],
    "roles": [
     "tempo lead",
-    "attacker",
+    "tempo / pivot",
     "attacker",
     "attacker"
    ],

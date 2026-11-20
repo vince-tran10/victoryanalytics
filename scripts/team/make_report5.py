@@ -215,9 +215,9 @@ if _ST.get('team'):
         _d = _K.disp(_n); _old = next((t for t in TEAM if t[1] == _d), None)
         if _old:   # keep its card, but the moves follow state.json (a fight can change them, e.g. Gastro Acid Muk)
             _sm = (_ST.get('moves') or {}).get(_n)
-            _new.append(_old[:7] + ([(m, 0) for m in _sm] if _sm else _old[7],) + _old[8:]); continue
+            _new.append((('Lead', 'Lead', 'Mid', 'Mid', 'Closer', 'Closer')[min(_i, 5)],) + _old[1:7] + ([(m, 0) for m in _sm] if _sm else _old[7],) + _old[8:]); continue
         _b = _IB.get(_n, {}); _mv = (_ST.get('moves') or {}).get(_n) or _b.get('moves', [])
-        _new.append(('Closer', _d, '/'.join(x.title() for x in (_TA.get(_n) or {}).get('types', [])), _abn((_ST.get('abilities') or {}).get(_n) or _b.get('ability')),
+        _new.append((('Lead', 'Lead', 'Mid', 'Mid', 'Closer', 'Closer')[min(_i, 5)], _d, '/'.join(x.title() for x in (_TA.get(_n) or {}).get('types', [])), _abn((_ST.get('abilities') or {}).get(_n) or _b.get('ability')),
                      _b.get('nature', ''), _b.get('evs', ''), _b.get('item', ''), [(m, 0) for m in _mv], []))
     TEAM = _new
 _FPF = os.path.join(_TD, 'fight_plans.json')

@@ -4,9 +4,9 @@
  "export_label": "16 Nov 12:24",
  "active_start": 425,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 137,
- "run": 151,
- "final": 155,
+ "roster": 138,
+ "run": 152,
+ "final": 156,
  "done": [
   "aelita",
   "narcissa1",
@@ -31,9 +31,9 @@
  ],
  "fight": "garbodor",
  "team": [
+  "Gholdengo",
   "Arcanine (Hisuian Form)",
   "Golisopod (Aevian Form)",
-  "Gholdengo",
   "Vaporeon",
   "Muk (Alolan Form)",
   "Clodsire"
@@ -165,9 +165,9 @@
  "cap": 60,
  "chapter": 9,
  "core": [
+  "Gholdengo",
   "Arcanine (Hisuian Form)",
   "Golisopod (Aevian Form)",
-  "Gholdengo",
   "Vaporeon"
  ],
  "core_check": {

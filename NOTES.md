@@ -726,3 +726,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 18 Nov: Cores swap options must keep the tier (replacement ≥ replaced, paired by tier). Balance swap now Vaporeon ⇄ Clefable (S⇄S).
 - 20 Nov: Vincent: legal EV spreads only (510 total / 252 per stat), no debug over-legal EVs. Icy Wind for Vaporeon is a Luck's Tent 11-badge tutor, so not legal yet.
 - 20 Nov: Dark Gardevoir beaten (--beat darkgardevoir, old 16 Nov export). Next: Rift Garbodor, six = core + Muk-A (Gastro Acid) + Clodsire. Sash question: no blanket Sash on boss counters (overflow lost at breaks, Corrupted Cave poison chip, bar-4 Rock Blast); Arcanine-H keeps its Sash for bar 2.
+- 20 Nov: Team tab = general play order (Vincent): Gholdengo · Arcanine-H · Golisopod-A · Vaporeon · 2 swaps; roles by slot. Hard-fight leads only on the Fights tab.

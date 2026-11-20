@@ -709,8 +709,8 @@
   "item": "Black Glasses",
   "moves": [
    "Knock Off",
+   "Gastro Acid",
    "Clear Smog",
-   "Gunk Shot",
    "Protect"
   ],
   "move_ids": [
@@ -1569,14 +1569,14 @@
   "source": "game"
  },
  "Clodsire": {
-  "ability": "UNAWARE",
+  "ability": "Unaware",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
   "item": "Soft Sand",
   "moves": [
    "Earthquake",
+   "Curse",
    "Recover",
-   "Poison Jab",
    "Protect"
   ],
   "move_ids": [
@@ -1585,7 +1585,7 @@
    "POISONJAB"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "your team"
  },
  "Cetitan": {
   "ability": "SLUSHRUSH",

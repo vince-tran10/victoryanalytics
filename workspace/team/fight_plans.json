@@ -135,7 +135,7 @@
   "sim": {
    "plan": {
     "melia": "WIN · turns per bar [4, 3, 4, 2] · damaged: Arcanine 0%, Golisopod 0%, Muk 57%",
-    "solo": "LOSS (your side fainted) · turns per bar [5, 3, 8] · damaged: Arcanine 0%, Golisopod 0%, Gholdengo 0%, Vaporeon 0%, Muk 0%, Clodsire 0%",
+    "solo": "LOSS (your side fainted) · turns per bar [5, 3, 8] · damaged: Gholdengo 0%, Arcanine 0%, Golisopod 0%, Vaporeon 0%, Muk 0%, Clodsire 0%",
     "log": [
      "bar 1 t1: Muk Gastro Acid, bar 95% left, Muk 78% HP",
      "bar 1 t2: Muk Knock Off, bar 75% left, Muk 57% HP",
@@ -159,23 +159,23 @@
       "Escavalier"
      ],
      "melia": "WIN · turns per bar [2, 5, 5, 4] · damaged: Golisopod 0%, Copperajah 25%",
-     "solo": "LOSS (your side fainted) · turns per bar [2, 13] · damaged: Arcanine 0%, Golisopod 0%, Gholdengo 0%, Vaporeon 0%, Copperajah 0%, Escavalier 0%"
+     "solo": "LOSS (your side fainted) · turns per bar [2, 13] · damaged: Gholdengo 0%, Arcanine 0%, Golisopod 0%, Vaporeon 0%, Copperajah 0%, Escavalier 0%"
     },
     {
      "swaps": [
       "Escavalier",
       "Stunfisk (Galarian Form)"
      ],
-     "melia": "WIN · turns per bar [2, 5, 5, 5] · damaged: Golisopod 0%, Gholdengo 0%",
-     "solo": "LOSS (your side fainted) · turns per bar [2, 13] · damaged: Arcanine 0%, Golisopod 0%, Gholdengo 0%, Vaporeon 0%, Escavalier 0%, Stunfisk 0%"
+     "melia": "WIN · turns per bar [2, 5, 5, 5] · damaged: Gholdengo 0%, Golisopod 0%",
+     "solo": "LOSS (your side fainted) · turns per bar [2, 13] · damaged: Gholdengo 0%, Arcanine 0%, Golisopod 0%, Vaporeon 0%, Escavalier 0%, Stunfisk 0%"
     },
     {
      "swaps": [
       "Escavalier",
       "Nidoqueen"
      ],
-     "melia": "WIN · turns per bar [2, 5, 5, 5] · damaged: Golisopod 0%, Gholdengo 0%",
-     "solo": "LOSS (your side fainted) · turns per bar [2, 13] · damaged: Arcanine 0%, Golisopod 0%, Gholdengo 0%, Vaporeon 0%, Escavalier 0%, Nidoqueen 0%"
+     "melia": "WIN · turns per bar [2, 5, 5, 5] · damaged: Gholdengo 0%, Golisopod 0%",
+     "solo": "LOSS (your side fainted) · turns per bar [2, 13] · damaged: Gholdengo 0%, Arcanine 0%, Golisopod 0%, Vaporeon 0%, Escavalier 0%, Nidoqueen 0%"
     }
    ]
   },
@@ -484,8 +484,8 @@
   "weak3": [],
   "nores": [],
   "leads": [
-   "Arcanine (Hisuian Form)",
-   "Gholdengo"
+   "Gholdengo",
+   "Arcanine (Hisuian Form)"
   ],
   "lead_foes": [
    "Murkrow",
@@ -1069,8 +1069,8 @@
   "weak3": [],
   "nores": [],
   "leads": [
-   "Golisopod (Aevian Form)",
-   "Gholdengo"
+   "Gholdengo",
+   "Golisopod (Aevian Form)"
   ],
   "lead_foes": [
    "Electivire",
