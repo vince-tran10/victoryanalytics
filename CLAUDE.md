@@ -171,6 +171,13 @@ damage score and the fight's real win condition was only read after Vincent lost
   source; the old hard-fights table, opener cards and counter tables are replaced). Header: number, name, format/boss/field
   chips, countered x/n (green if ≥ n-1), "Needs a plan" badge. Body: Bring (2 swaps), Lead, Field boosts, then each foe →
   counter with deals/takes bars, weak rows first in amber. Only the next fight is open.
+  **Boss bar plan (Vincent, 20 Nov):** for the NEXT boss fight the foe→counter list is replaced by a bar-by-bar plan of the
+  real six (scripts/team/fights/bar_plan.py → team/bar_plan_<fight>.json, run by update.py): each bar shows the boss's
+  types / item / stat stages / new moves, then who is in and what they click (moves named, our boost stage), with Hit (+0) /
+  Takes bars. It searches the switch-in order turn by turn: speed, Unaware, Swords Dance / Curse / Recover, Gastro Acid /
+  Knock Off vs healing, Sitrus, drains, field chip, recoil vs Sash, Rocky Helmet, overflow lost, free switch after a faint,
+  Melia's chip; worst case = the boss always hits OUR mon. Rows: Field (the field's real multipliers + chip), Boosted
+  (our moves the field boosts), Speed, Key (the carrier + backup). Header shows "Plan ✓" instead of x/n.
   **Fight plans (17 Nov):** scripts/team/fights/fight_plans.py (run by update.py after remaining_eval.py per fight, core scored
   with its REAL builds via FIXED) picks each fight's best 2 swaps (one-to-one counters incl. one setup turn, rules (b)(c) vs that
   fight's types) and its lead(s) (must survive the opening Pokémon). Boss damage is per health bar. The fight in `state.fight`

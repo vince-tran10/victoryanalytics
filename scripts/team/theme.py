@@ -113,6 +113,65 @@ def wc_html(q):   # the foe's win conditions and your answer to each (fight prot
     if not w: return ''
     return '<div class="wc">' + ''.join(('<span class="wc-ok">' + E(x['what']) + ' → ' + E(', '.join(x['answers'][:2])) + '</span>') if x['answers']
                                         else ('<span class="wc-no">' + E(x['what']) + ': no answer</span>') for x in w) + '</div>'
+
+FT = json.load(open('gamedata/fieldtext.json')) if os.path.exists('gamedata/fieldtext.json') else {}
+TN = {'Atk': 'atk', 'Def': 'def', 'SpA': 'spa', 'SpD': 'spd'}
+def _t(x): return x.title() if x else ''
+def field_line(fname):   # the field's real effects (fieldtext typeBoosts) + end-of-turn chip
+    fv = next((v for v in FT.values() if v.get('name') == fname), None)
+    if not fv: return ''
+    parts = [' · '.join(', '.join(_t(t) for t in ts) + ' ×' + m.rstrip('0').rstrip('.') for m, ts in sorted((fv.get('typeBoosts') or {}).items(), key=lambda kv: -float(kv[0])))]
+    if fname == 'Corrupted Cave': parts.append('your grounded non-Poison/Steel Pokémon lose 1/8 HP a turn')
+    return ' · '.join(p for p in parts if p)
+MVN = {}
+try: MVN = {k: v.get('name', k) for k, v in json.load(open('gamedata/movetext.json')).items()}
+except Exception: pass
+ITN = {}
+try: ITN = {k: v.get('name', k) for k, v in json.load(open('gamedata/itemtext.json')).items()}
+except Exception: pass
+def bar_plan_html(k, bsprite):
+    fp = f'team/bar_plan_{k}.json'
+    if not os.path.exists(fp) or k != st.get('fight'): return None
+    bp = json.load(open(fp)); pl = bp.get('melia') or bp.get('solo')
+    if not pl: return None
+    out = '<div class="frow"><span class="fk">Speed</span><span class="fbo">Boss Speed ' + str(bp['boss_spe']) + ' → ' + (
+        'all six move first' if all(m['spe'] > bp['boss_spe'] for m in bp['mons'].values()) else
+        'slower than it: ' + ', '.join(disp(n) for n, m in bp['mons'].items() if m['spe'] <= bp['boss_spe'])) + '</span></div>'
+    out += '<ol class="bars">'
+    prev = None
+    for j, B in enumerate(bp['bars']):
+        st_ = {a: v for a, v in B['stg'].items() if v}
+        chips = []
+        if B.get('types'): chips.append('/'.join(_t(t) for t in B['types']))
+        if B.get('item'): chips.append(ITN.get(B['item'], _t(B['item'])))
+        if st_: chips.append(' '.join(('+' if v > 0 else '') + str(v) + ' ' + {'atk': 'Atk', 'def': 'Def', 'spa': 'SpA', 'spd': 'SpD'}[a] for a, v in st_.items()))
+        new = [MVN.get(m, m) for m in B['moves'] if prev and m not in prev['moves']]
+        if new: chips.append('new: ' + ', '.join(new))
+        prev = B
+        steps, cur = [], None
+        for l in [l for l in pl['log'] if l['bar'] == j]:
+            a = 'switch in' if l['act'] == 'switch' else ((bp.get('move', {}).get(l['mon'], [''] * 9)[j] or 'attack') + (f" (+{l['stage']})" if l.get('stage') else '') if l['act'] == 'attack' else l['act'])
+            if cur and cur[0] == l['mon']: cur[1].append(a)
+            else: cur = [l['mon'], [a]]; steps.append(cur)
+        def comp(acts):
+            o = []
+            for a in acts:
+                if o and o[-1][0] == a: o[-1][1] += 1
+                else: o.append([a, 1])
+            return ' → '.join(a + (' ×' + str(c) if c > 1 else '') for a, c in o)
+        rows = ''
+        for n, acts in steps:
+            m = bp['mons'][n]
+            rows += ('<li><span class="ctr-m">' + tname(n) + '</span><span class="acts">' + E(comp(acts)) + '</span><span class="dt"><span class="lab">Hit +0</span>'
+                     + bar(m['d'][j], 'deal') + '<span class="lab">Takes</span>' + bar(m['t'][j], 'take') + '</span></li>')
+        out += ('<li class="barc"><div class="barh">' + bsprite + '<b>Bar ' + str(j + 1) + '</b><span class="fchips">'
+                + ''.join('<span class="fchip">' + E(c) + '</span>' for c in chips) + '</span></div><ul class="steps">' + rows + '</ul></li>')
+    out += '</ol>'
+    car = bp.get('carrier'); bk = bp.get('backup')
+    if car:
+        out += ('<div class="frow"><span class="fk">Key</span><span class="fbo">' + E(disp(car)) + ' carries it. ' +
+                ('If it falls: ' + ' → '.join(disp(x) for x in bk['order'][1:]) if bk else 'No sure win without it: Recover early') + '</span></div>')
+    return out
 def fight_cards():
     order = [k for k in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick'] if k in FP]
     out = ''
@@ -124,7 +183,8 @@ def fight_cards():
                 + '<span class="fchip">' + E(p['format']) + '</span>' + ('<span class="fchip boss">Boss</span>' if hf.get('boss') else '')
                 + ('<span class="fchip">' + E(hf.get('field', '')) + '</span>' if hf.get('field') else '') + '</span></span>'
                 + ('<span class="needs">Needs a plan</span>' if p.get('note') else '')
-                + '<span class="cnt ' + ('ok' if good else 'warn') + '">' + str(nb) + '/' + str(p['n']) + '</span></summary>')
+                + (('<span class="cnt ok">Plan ✓</span>' if os.path.exists(f'team/bar_plan_{k}.json') and k == st.get('fight') and hf.get('boss') else
+                    '<span class="cnt ' + ('ok' if good else 'warn') + '">' + str(nb) + '/' + str(p['n']) + '</span>')) + '</summary>')
         bring = ''.join('<li>' + tname(r['name']) + '</li>' for r in p['swaps'])
         lead = ''.join('<li>' + tname(x) + '</li>' for x in p['leads'])
         fb = FBX.get(name, '') or FBX.get(hf.get('name', ''), '')
@@ -137,11 +197,13 @@ def fight_cards():
                        '<span class="ctr-m">' + tname(q['mon']) + '</span><span class="dt"><span class="lab">Deals</span>' + bar(q['dealt'], 'deal')
                        + '<span class="lab">Takes</span>' + bar(q['taken'], 'take') + '</span><span class="st">'
                        + (('✓ after ' + E(q['setup'])) if q.get('setup') else ('✓' if q['ok'] else 'weak')) + '</span>' + wc_html(q) + '</li>' for q in rows)
+        _bp = bar_plan_html(k, SP.tag(*(_bf or _ids[0]), size='m') if (_bf or _ids) else '') if hf.get('boss') else None
         out += ('<details class="fc' + (' is-next' if idx == 0 else '') + '"' + (' open' if idx == 0 else '') + '>' + head
                 + '<div class="fbody"><div class="frow"><span class="fk">Bring</span><ul class="mons">' + bring + '</ul></div>'
                 + '<div class="frow"><span class="fk">Lead</span><ul class="mons">' + lead + '</ul></div>'
-                + ('<div class="frow"><span class="fk">Field</span><span class="fbo">' + E(fb) + '</span></div>' if fb and 'No field boost' not in fb else '')
-                + '<ul class="foes">' + foes + '</ul></div></details>')
+                + ('<div class="frow"><span class="fk">Field</span><span class="fbo">' + E(hf.get('field', '') + ': ' + field_line(hf.get('field', ''))) + '</span></div>' if field_line(hf.get('field', '')) else '')
+                + ('<div class="frow"><span class="fk">Boosted</span><span class="fbo">' + E(fb) + '</span></div>' if fb and 'No field boost' not in fb else '')
+                + (_bp if _bp else '<ul class="foes">' + foes + '</ul>') + '</div></details>')
     return '<div class="fcards">' + out + '</div>'
 if FP:
     page = re.sub(r'(<section aria-labelledby="s1f">\s*<h2 id="s1f">.*?</h2>).*?</section>', lambda m: m.group(1) + fight_cards() + '</section>', page, count=1, flags=re.S)
@@ -467,6 +529,13 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .mons li { display: flex; align-items: center; background: var(--panel-2); border: 1px solid var(--line); border-radius: 99px; padding: 3px 12px 3px 4px; font: 700 13.5px var(--body) }
 .mons .tier, .foes .tier { min-width: 22px; height: 22px; font-size: 12px !important; margin-right: 6px }
 .fbo { font-size: 13px; color: var(--muted) }
+.bars { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 8px }
+.barc { background: var(--card-2, rgba(127,127,127,.06)); border-radius: 12px; padding: 10px 12px }
+.barh { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px }
+.steps li { display: grid; grid-template-columns: minmax(150px, 1fr) minmax(150px, 1.4fr) minmax(170px, 1.4fr); align-items: center; gap: 10px }
+.steps .acts { font-size: 13px }
+@media (max-width: 680px) { .steps li { grid-template-columns: 1fr; gap: 4px; padding-bottom: 6px; border-bottom: 1px solid var(--line) } .steps li:last-child { border: 0 } .steps .ctr-m, .steps .dt, .steps .acts { grid-area: auto } }
 .foes { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 6px }
 .foes li { display: grid; grid-template-columns: minmax(90px, 1fr) auto minmax(120px, 1.2fr) minmax(170px, 1.4fr) 92px; align-items: center; gap: 10px;
   padding: 8px 10px; border-radius: 12px; background: var(--panel-2); font-size: 13.5px }

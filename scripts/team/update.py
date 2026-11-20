@@ -119,7 +119,10 @@ def main():
             if k not in st['done']:
                 sh(['../scripts/team/fights/remaining_eval.py', k], dict(fx, EVAL_OUT=f'team/{k}_eval.json'))
         json.dump(dict(st, export=new), open(STATE, 'w'), indent=1, ensure_ascii=False)
-        return sh(['../scripts/team/fights/fight_plans.py'], fx).rstrip()
+        fp_out = sh(['../scripts/team/fights/fight_plans.py'], fx).rstrip()
+        if st.get('fight') in ('darkgardevoir', 'garbodor') and st['fight'] not in st['done']:   # boss bar plan (20 Nov), Fights card
+            sh(['../scripts/team/fights/bar_plan.py', st['fight']], fx)
+        return fp_out
     if st.get('core'):
         out_ = plans()
         nxt = next((k for k in ORDER9 if k not in st['done']), None)

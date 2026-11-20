@@ -38,7 +38,7 @@
     ],
     "setup": null,
     "where": "Overflow",
-    "dump": 413,
+    "dump": 414,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -343,7 +343,7 @@
     ],
     "setup": "Nasty Plot",
     "where": "Active",
-    "dump": 500,
+    "dump": 505,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -364,7 +364,7 @@
     ],
     "setup": "Nasty Plot",
     "where": "Overflow",
-    "dump": 248,
+    "dump": 249,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -517,7 +517,7 @@
     ],
     "setup": "Nasty Plot",
     "where": "Active",
-    "dump": 500,
+    "dump": 505,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -538,7 +538,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 487,
+    "dump": 492,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -652,7 +652,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 482,
+    "dump": 487,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -813,7 +813,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 427,
+    "dump": 433,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -834,7 +834,7 @@
     ],
     "setup": "Swords Dance",
     "where": "Active",
-    "dump": 439,
+    "dump": 445,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -969,7 +969,7 @@
     ],
     "setup": "Shell Smash",
     "where": "Active",
-    "dump": 492,
+    "dump": 497,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -990,7 +990,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 467,
+    "dump": 472,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,

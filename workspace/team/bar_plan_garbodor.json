@@ -1,0 +1,1108 @@
+{
+ "melia": {
+  "order": [
+   "Muk (Alolan Form)",
+   "Clodsire",
+   "Golisopod (Aevian Form)",
+   "Gholdengo",
+   "Arcanine (Hisuian Form)",
+   "Vaporeon"
+  ],
+  "alive": 6,
+  "left": 396,
+  "turns": 16,
+  "log": [
+   {
+    "stage": 0,
+    "bar": 0,
+    "t": 1,
+    "mon": "Muk (Alolan Form)",
+    "act": "Gastro Acid",
+    "dealt": 0,
+    "took": 22,
+    "left": 100,
+    "hp": 78,
+    "partner": "Snorlax"
+   },
+   {
+    "stage": 0,
+    "bar": 0,
+    "t": 2,
+    "mon": "Muk (Alolan Form)",
+    "act": "Knock Off",
+    "dealt": 4,
+    "took": 22,
+    "left": 86,
+    "hp": 69,
+    "partner": "Snorlax"
+   },
+   {
+    "stage": 0,
+    "bar": 0,
+    "t": 3,
+    "mon": "Clodsire",
+    "act": "switch",
+    "dealt": 0,
+    "took": 32,
+    "left": 72,
+    "hp": 68,
+    "partner": "Snorlax"
+   },
+   {
+    "stage": 1,
+    "bar": 0,
+    "t": 4,
+    "mon": "Clodsire",
+    "act": "Curse",
+    "dealt": 0,
+    "took": 32,
+    "left": 58,
+    "hp": 35,
+    "partner": "Snorlax"
+   },
+   {
+    "stage": 1,
+    "bar": 0,
+    "t": 5,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 44,
+    "hp": 53,
+    "partner": "Snorlax"
+   },
+   {
+    "stage": 1,
+    "bar": 0,
+    "t": 6,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 22,
+    "took": 0,
+    "left": 0,
+    "hp": 53,
+    "partner": "Snorlax"
+   },
+   {
+    "stage": 2,
+    "bar": 1,
+    "t": 1,
+    "mon": "Clodsire",
+    "act": "Curse",
+    "dealt": 0,
+    "took": 32,
+    "left": 100,
+    "hp": 21,
+    "partner": "Snorlax"
+   },
+   {
+    "stage": 2,
+    "bar": 1,
+    "t": 2,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 89,
+    "hp": 38,
+    "partner": "Snorlax"
+   },
+   {
+    "stage": 2,
+    "bar": 1,
+    "t": 3,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 14,
+    "took": 32,
+    "left": 56,
+    "hp": 6,
+    "partner": "Snorlax"
+   },
+   {
+    "stage": 2,
+    "bar": 1,
+    "t": 4,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 71,
+    "hp": 24,
+    "partner": "Snorlax"
+   },
+   {
+    "stage": 2,
+    "bar": 1,
+    "t": 5,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 60,
+    "hp": 42,
+    "partner": "Snorlax"
+   },
+   {
+    "stage": 2,
+    "bar": 1,
+    "t": 6,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 14,
+    "took": 32,
+    "left": 27,
+    "hp": 9,
+    "partner": "Snorlax"
+   },
+   {
+    "stage": 2,
+    "bar": 1,
+    "t": 7,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 9,
+    "took": 0,
+    "left": 0,
+    "hp": 9,
+    "partner": "Snorlax"
+   },
+   {
+    "stage": 0,
+    "bar": 2,
+    "t": 1,
+    "mon": "Golisopod (Aevian Form)",
+    "act": "switch",
+    "dealt": 0,
+    "took": 58,
+    "left": 100,
+    "hp": 42,
+    "partner": "Snorlax"
+   },
+   {
+    "stage": 0,
+    "bar": 2,
+    "t": 2,
+    "mon": "Golisopod (Aevian Form)",
+    "act": "attack",
+    "dealt": 70,
+    "took": 0,
+    "left": 0,
+    "hp": 30,
+    "partner": "Snorlax"
+   },
+   {
+    "stage": 0,
+    "bar": 3,
+    "t": 1,
+    "mon": "Golisopod (Aevian Form)",
+    "act": "attack",
+    "dealt": 100,
+    "took": 0,
+    "left": 0,
+    "hp": 17,
+    "partner": "Snorlax"
+   }
+  ],
+  "n_wins": 87
+ },
+ "solo": {
+  "order": [
+   "Muk (Alolan Form)",
+   "Golisopod (Aevian Form)",
+   "Arcanine (Hisuian Form)",
+   "Clodsire",
+   "Gholdengo",
+   "Vaporeon"
+  ],
+  "alive": 5,
+  "left": 301,
+  "turns": 56,
+  "log": [
+   {
+    "stage": 0,
+    "bar": 0,
+    "t": 1,
+    "mon": "Muk (Alolan Form)",
+    "act": "Gastro Acid",
+    "dealt": 0,
+    "took": 22,
+    "left": 100,
+    "hp": 78,
+    "partner": ""
+   },
+   {
+    "stage": 0,
+    "bar": 0,
+    "t": 2,
+    "mon": "Muk (Alolan Form)",
+    "act": "Knock Off",
+    "dealt": 4,
+    "took": 22,
+    "left": 96,
+    "hp": 69,
+    "partner": ""
+   },
+   {
+    "stage": 0,
+    "bar": 0,
+    "t": 3,
+    "mon": "Golisopod (Aevian Form)",
+    "act": "switch",
+    "dealt": 0,
+    "took": 28,
+    "left": 100,
+    "hp": 72,
+    "partner": ""
+   },
+   {
+    "stage": 2,
+    "bar": 0,
+    "t": 4,
+    "mon": "Golisopod (Aevian Form)",
+    "act": "Swords Dance",
+    "dealt": 0,
+    "took": 28,
+    "left": 100,
+    "hp": 31,
+    "partner": ""
+   },
+   {
+    "stage": 2,
+    "bar": 0,
+    "t": 5,
+    "mon": "Golisopod (Aevian Form)",
+    "act": "attack",
+    "dealt": 100,
+    "took": 0,
+    "left": 0,
+    "hp": 18,
+    "partner": ""
+   },
+   {
+    "stage": 0,
+    "bar": 1,
+    "t": 1,
+    "mon": "Arcanine (Hisuian Form)",
+    "act": "switch",
+    "dealt": 0,
+    "took": 81,
+    "left": 100,
+    "hp": 19,
+    "partner": ""
+   },
+   {
+    "stage": 0,
+    "bar": 1,
+    "t": 2,
+    "mon": "Arcanine (Hisuian Form)",
+    "act": "attack",
+    "dealt": 45,
+    "took": 22,
+    "left": 55,
+    "hp": 0,
+    "partner": ""
+   },
+   {
+    "stage": 1,
+    "bar": 1,
+    "t": 3,
+    "mon": "Clodsire",
+    "act": "Curse",
+    "dealt": 0,
+    "took": 32,
+    "left": 63,
+    "hp": 68,
+    "partner": ""
+   },
+   {
+    "stage": 2,
+    "bar": 1,
+    "t": 4,
+    "mon": "Clodsire",
+    "act": "Curse",
+    "dealt": 0,
+    "took": 32,
+    "left": 70,
+    "hp": 35,
+    "partner": ""
+   },
+   {
+    "stage": 2,
+    "bar": 1,
+    "t": 5,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 78,
+    "hp": 53,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 6,
+    "mon": "Clodsire",
+    "act": "Curse",
+    "dealt": 0,
+    "took": 32,
+    "left": 86,
+    "hp": 21,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 7,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 94,
+    "hp": 38,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 8,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 20,
+    "took": 32,
+    "left": 74,
+    "hp": 6,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 9,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 82,
+    "hp": 24,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 10,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 89,
+    "hp": 42,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 11,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 20,
+    "took": 32,
+    "left": 70,
+    "hp": 9,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 12,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 77,
+    "hp": 27,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 13,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 85,
+    "hp": 45,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 14,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 20,
+    "took": 32,
+    "left": 65,
+    "hp": 12,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 15,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 73,
+    "hp": 30,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 16,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 81,
+    "hp": 48,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 17,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 20,
+    "took": 32,
+    "left": 61,
+    "hp": 15,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 18,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 69,
+    "hp": 33,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 19,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 77,
+    "hp": 51,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 20,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 20,
+    "took": 32,
+    "left": 57,
+    "hp": 18,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 21,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 65,
+    "hp": 36,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 22,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 72,
+    "hp": 54,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 23,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 20,
+    "took": 32,
+    "left": 53,
+    "hp": 22,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 24,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 60,
+    "hp": 39,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 25,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 20,
+    "took": 32,
+    "left": 41,
+    "hp": 7,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 26,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 73,
+    "hp": 25,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 27,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 81,
+    "hp": 42,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 28,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 20,
+    "took": 32,
+    "left": 61,
+    "hp": 10,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 29,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 69,
+    "hp": 28,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 30,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 77,
+    "hp": 45,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 31,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 20,
+    "took": 32,
+    "left": 57,
+    "hp": 13,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 32,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 65,
+    "hp": 31,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 33,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 73,
+    "hp": 48,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 34,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 20,
+    "took": 32,
+    "left": 53,
+    "hp": 16,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 35,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 61,
+    "hp": 34,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 36,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 68,
+    "hp": 52,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 37,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 20,
+    "took": 32,
+    "left": 49,
+    "hp": 19,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 38,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 56,
+    "hp": 37,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 39,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 64,
+    "hp": 55,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 40,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 20,
+    "took": 32,
+    "left": 44,
+    "hp": 22,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 41,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 52,
+    "hp": 40,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 42,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 20,
+    "took": 32,
+    "left": 32,
+    "hp": 8,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 43,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 40,
+    "hp": 25,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 44,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 48,
+    "hp": 43,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 45,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 20,
+    "took": 32,
+    "left": 28,
+    "hp": 11,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 46,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 36,
+    "hp": 28,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 47,
+    "mon": "Clodsire",
+    "act": "Recover",
+    "dealt": 0,
+    "took": 0,
+    "left": 44,
+    "hp": 46,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 48,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 20,
+    "took": 32,
+    "left": 24,
+    "hp": 14,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 1,
+    "t": 49,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 24,
+    "took": 0,
+    "left": 0,
+    "hp": 14,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 2,
+    "t": 1,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 100,
+    "took": 0,
+    "left": 0,
+    "hp": 14,
+    "partner": ""
+   },
+   {
+    "stage": 3,
+    "bar": 3,
+    "t": 1,
+    "mon": "Clodsire",
+    "act": "attack",
+    "dealt": 100,
+    "took": 0,
+    "left": 0,
+    "hp": 14,
+    "partner": ""
+   }
+  ],
+  "n_wins": 35
+ },
+ "carrier": "Clodsire",
+ "move": {
+  "Gholdengo": [
+   "Make It Rain",
+   "Make It Rain",
+   "Shadow Ball",
+   "Make It Rain"
+  ],
+  "Arcanine (Hisuian Form)": [
+   "Head Smash",
+   "Flare Blitz",
+   "Flare Blitz",
+   "Head Smash"
+  ],
+  "Golisopod (Aevian Form)": [
+   "Bone Rush",
+   "Bone Rush",
+   "Bone Rush",
+   "Bone Rush"
+  ],
+  "Vaporeon": [
+   "Hydro Pump",
+   "Aurora Beam",
+   "Hydro Pump",
+   "Hydro Pump"
+  ],
+  "Muk (Alolan Form)": [
+   "Knock Off",
+   "Knock Off",
+   "Knock Off",
+   "Knock Off"
+  ],
+  "Clodsire": [
+   "Earthquake",
+   "Earthquake",
+   "Earthquake",
+   "Earthquake"
+  ]
+ },
+ "mons": {
+  "Gholdengo": {
+   "d": [
+    20,
+    20,
+    11,
+    40
+   ],
+   "t": [
+    56,
+    56,
+    35,
+    35
+   ],
+   "spe": 114
+  },
+  "Arcanine (Hisuian Form)": {
+   "d": [
+    27,
+    45,
+    31,
+    27
+   ],
+   "t": [
+    64,
+    81,
+    92,
+    177
+   ],
+   "spe": 155
+  },
+  "Golisopod (Aevian Form)": {
+   "d": [
+    66,
+    33,
+    92,
+    130
+   ],
+   "t": [
+    28,
+    63,
+    58,
+    94
+   ],
+   "spe": 77
+  },
+  "Vaporeon": {
+   "d": [
+    18,
+    15,
+    12,
+    36
+   ],
+   "t": [
+    45,
+    100,
+    90,
+    149
+   ],
+   "spe": 93
+  },
+  "Muk (Alolan Form)": {
+   "d": [
+    6,
+    12,
+    8,
+    12
+   ],
+   "t": [
+    22,
+    48,
+    78,
+    80
+   ],
+   "spe": 77
+  },
+  "Clodsire": {
+   "d": [
+    22,
+    11,
+    46,
+    45
+   ],
+   "t": [
+    32,
+    32,
+    55,
+    30
+   ],
+   "spe": 44
+  }
+ },
+ "bars": [
+  {
+   "types": [
+    "POISON",
+    "DARK"
+   ],
+   "item": "BLACKSLUDGE",
+   "moves": [
+    "DRAINPUNCH",
+    "GIGADRAIN",
+    "DARKESTLARIAT",
+    "SLUDGEWAVE"
+   ],
+   "stg": {
+    "atk": 0,
+    "def": 0,
+    "spa": 0,
+    "spd": 0
+   }
+  },
+  {
+   "types": [
+    "POISON",
+    "GRASS"
+   ],
+   "item": "SITRUSBERRY",
+   "moves": [
+    "DRAINPUNCH",
+    "GIGADRAIN",
+    "DARKESTLARIAT",
+    "BELCH"
+   ],
+   "stg": {
+    "atk": 1,
+    "def": 0,
+    "spa": 1,
+    "spd": 0
+   }
+  },
+  {
+   "types": [
+    "POISON",
+    "STEEL"
+   ],
+   "item": "METALCOAT",
+   "moves": [
+    "DRAINPUNCH",
+    "GIGADRAIN",
+    "GYROBALL",
+    "BELCH"
+   ],
+   "stg": {
+    "atk": 1,
+    "def": 1,
+    "spa": 1,
+    "spd": 1
+   }
+  },
+  {
+   "types": [
+    "POISON",
+    "ROCK"
+   ],
+   "item": "ROCKYHELMET",
+   "moves": [
+    "ROCKBLAST",
+    "GIGADRAIN",
+    "GYROBALL",
+    "BELCH"
+   ],
+   "stg": {
+    "atk": 3,
+    "def": 0,
+    "spa": 3,
+    "spd": 0
+   }
+  }
+ ],
+ "boss_spe": 31
+}
