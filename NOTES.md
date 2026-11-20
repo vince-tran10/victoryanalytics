@@ -724,3 +724,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   Zoroark-H crest A tier (best last slot Nidoqueen, Sheer Force + Poison STAB), Furret crest B (sub counted). Phone pass on all
   tabs: no overflow; Cores swap line drops under the name on phones, Dex score on one line.
 - 18 Nov: Cores swap options must keep the tier (replacement ≥ replaced, paired by tier). Balance swap now Vaporeon ⇄ Clefable (S⇄S).
+- 20 Nov: Vincent: legal EV spreads only (510 total / 252 per stat), no debug over-legal EVs. Icy Wind for Vaporeon is a Luck's Tent 11-badge tutor, so not legal yet.

@@ -32,6 +32,7 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Shock Wave were picked over Sticky Web / Will-O-Wisp and added almost nothing. Everyone is levelled to the cap.
 - **Debug mode:** any owned Pokémon can be levelled, re-natured, re-EV'd, ability-capsuled, taught any legal move,
   instantly. NEVER filter or rank by build effort. Pick purely on battle merit.
+  EVs stay LEGAL (Vincent, 20 Nov): 510 total, 252 max per stat; no over-legal spreads even though debug allows it.
 - Legal moves (16 Nov): level-up ≤ cap, Move Relearner, egg, Ch1–8 TMs (allowed_tms.json), tutors ≤ 8 badges (the game has
   no 8-badge tier, so ≤ 7 in practice). Evolution items from Ch1–8 (adds Razor Claw, Prism Scale, King's Rock, Dragon Scale).
   No Life Orb, no Megas, no trade evolutions. Trick Room TM not owned: only Oranguru / Porygon-Z learn Trick Room.
