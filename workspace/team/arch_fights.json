@@ -1,0 +1,170 @@
+{
+ "balance": {
+  "title": "Balance / tempo",
+  "score": 22.24,
+  "cover": 20.5,
+  "per": {
+   "karrina": "6/6",
+   "spector": "6/6",
+   "spector2": "5/6",
+   "jenner9": "5/6",
+   "erick": "4/6"
+  },
+  "core": [
+   "Gothitelle",
+   "Chandelure",
+   "Florges",
+   "Golisopod (Aevian Form)"
+  ],
+  "tiers": [
+   "S",
+   "S",
+   "A",
+   "S"
+  ]
+ },
+ "tr": {
+  "title": "Trick Room",
+  "score": 23.2,
+  "cover": 21.5,
+  "per": {
+   "karrina": "6/6",
+   "spector": "6/6",
+   "spector2": "5/6",
+   "jenner9": "4/6",
+   "erick": "6/6"
+  },
+  "core": [
+   "Oranguru",
+   "Palossand (Fiery Aevian Form)",
+   "Walrein",
+   "Golisopod (Aevian Form)"
+  ],
+  "tiers": [
+   "B",
+   "B",
+   "B",
+   "S"
+  ]
+ },
+ "setup": {
+  "title": "Setup / hyper offense",
+  "score": 22.24,
+  "cover": 20.5,
+  "per": {
+   "karrina": "6/6",
+   "spector": "6/6",
+   "spector2": "5/6",
+   "jenner9": "5/6",
+   "erick": "4/6"
+  },
+  "core": [
+   "Reuniclus",
+   "Chandelure",
+   "Florges",
+   "Golisopod (Aevian Form)"
+  ],
+  "tiers": [
+   "A",
+   "S",
+   "A",
+   "S"
+  ]
+ },
+ "grassy": {
+  "title": "Grassy Terrain",
+  "score": 21.23,
+  "cover": 19.5,
+  "per": {
+   "karrina": "6/6",
+   "spector": "5/6",
+   "spector2": "4/6",
+   "jenner9": "5/6",
+   "erick": "4/6"
+  },
+  "core": [
+   "Gallade",
+   "Glalie (Aevian Form)",
+   "Florges",
+   "Golisopod (Aevian Form)"
+  ],
+  "tiers": [
+   "A",
+   "A",
+   "A",
+   "S"
+  ]
+ },
+ "electric": {
+  "title": "Electric Terrain",
+  "score": 14.95,
+  "cover": 13.5,
+  "per": {
+   "karrina": "4/6",
+   "spector": "5/6",
+   "spector2": "4/6",
+   "jenner9": "2/6",
+   "erick": "3/6"
+  },
+  "core": [
+   "Arctozolt",
+   "Pincurchin",
+   "Donphan",
+   "Golisopod (Aevian Form)"
+  ],
+  "tiers": [
+   "B",
+   "C",
+   "B",
+   "S"
+  ]
+ },
+ "sun": {
+  "title": "Sun (Drought)",
+  "score": 19.1,
+  "cover": 17.5,
+  "per": {
+   "karrina": "5/6",
+   "spector": "6/6",
+   "spector2": "5/6",
+   "jenner9": "3/6",
+   "erick": "4/6"
+  },
+  "core": [
+   "Grumpig",
+   "Ninetales",
+   "Chandelure",
+   "Golisopod (Aevian Form)"
+  ],
+  "tiers": [
+   "B",
+   "C",
+   "S",
+   "S"
+  ]
+ },
+ "snow": {
+  "title": "Snow (Snow Warning)",
+  "score": 19.1,
+  "cover": 17.5,
+  "per": {
+   "karrina": "5/6",
+   "spector": "6/6",
+   "spector2": "5/6",
+   "jenner9": "4/6",
+   "erick": "3/6"
+  },
+  "core": [
+   "Zoroark (Hisuian Form)",
+   "Ninetales (Alolan Form)",
+   "Walrein",
+   "Golisopod (Aevian Form)"
+  ],
+  "tiers": [
+   "A",
+   "B",
+   "B",
+   "S"
+  ]
+ }
+}
