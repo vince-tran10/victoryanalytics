@@ -4,9 +4,9 @@
  "export_label": "20 Nov 13:52",
  "active_start": 426,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 147,
- "run": 161,
- "final": 165,
+ "roster": 148,
+ "run": 162,
+ "final": 166,
  "done": [
   "aelita",
   "narcissa1",
@@ -37,8 +37,8 @@
   "Arcanine (Hisuian Form)",
   "Golisopod (Aevian Form)",
   "Vaporeon",
-  "Florges",
-  "Scrafty"
+  "Diggersby",
+  "Clefable"
  ],
  "moves": {
   "Arcanine (Hisuian Form)": [
@@ -230,34 +230,16 @@
    "key": "karrina"
   }
  },
- "plan_swaps": {
-  "karrina": [
-   "Florges",
-   "Scrafty"
-  ],
-  "spector": [
-   "Florges",
-   "Scrafty"
-  ],
-  "spector2": [
-   "Florges",
-   "Scrafty"
-  ],
-  "jenner9": [
-   "Florges",
-   "Scrafty"
-  ],
-  "erick": [
-   "Florges",
-   "Scrafty"
-  ]
- },
+ "plan_swaps": {},
  "plan_leads": {
   "garbodor": [
    "Muk (Alolan Form)"
   ],
   "darkgardevoir": [
    "Copperajah"
+  ],
+  "karrina": [
+   "Clefable"
   ]
  },
  "plan_builds": {
@@ -282,6 +264,15 @@
    }
   }
  },
- "plan_pairs": {},
- "one_six": true
+ "plan_pairs": {
+  "karrina": {
+   "Runerigus": "Clefable",
+   "Musharna": "Arcanine (Hisuian Form)",
+   "Granbull": "Vaporeon",
+   "Alakazam": "Golisopod (Aevian Form)",
+   "Fearow": "Gholdengo",
+   "Nidoking": "Diggersby"
+  }
+ },
+ "one_six": false
 }

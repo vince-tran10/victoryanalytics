@@ -2,7 +2,7 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 3,
+  "counters": 4,
   "pairs": [
    {
     "foe": "Electivire",
@@ -26,31 +26,31 @@
    },
    {
     "foe": "Magneton",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
+    "mon": "Turtonator",
+    "ability": "SHELLARMOR",
     "dealt": 92,
-    "taken": 78,
-    "ok": false,
-    "setup": false,
-    "wincons": []
-   },
-   {
-    "foe": "Togedemaru",
-    "mon": "Scrafty",
-    "ability": "MOXIE",
-    "dealt": 130,
-    "taken": 52,
+    "taken": 38,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
-    "foe": "Chandelure",
-    "mon": "Florges",
-    "ability": "SYMBIOSIS",
-    "dealt": 49,
-    "taken": 48,
+    "foe": "Togedemaru",
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 130,
+    "taken": 70,
     "ok": false,
+    "setup": false,
+    "wincons": []
+   },
+   {
+    "foe": "Chandelure",
+    "mon": "Mabosstiff",
+    "ability": "INTIMIDATE",
+    "dealt": 104,
+    "taken": 108,
+    "ok": true,
     "setup": false,
     "wincons": []
    },

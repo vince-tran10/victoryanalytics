@@ -12,15 +12,36 @@
   ],
   "swaps": [
    {
-    "name": "Florges",
-    "ab": "SYMBIOSIS",
+    "name": "Diggersby",
+    "ab": "HUGEPOWER",
     "moves": [
-     "Moonblast",
-     "Giga Drain"
+     "Earthquake",
+     "Quick Attack",
+     "Bounce"
     ],
     "setup": null,
     "where": "Overflow",
-    "dump": 125,
+    "dump": 95,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "NORMAL",
+     "GROUND"
+    ]
+   },
+   {
+    "name": "Clefable",
+    "ab": "MAGICGUARD",
+    "moves": [
+     "Moonblast"
+    ],
+    "setup": null,
+    "where": "Overflow",
+    "dump": 73,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -30,97 +51,75 @@
     "types": [
      "FAIRY"
     ]
-   },
-   {
-    "name": "Scrafty",
-    "ab": "MOXIE",
-    "moves": [
-     "Crunch",
-     "High Jump Kick",
-     "Fake Out"
-    ],
-    "setup": null,
-    "where": "Active",
-    "dump": 487,
-    "nature": "Adamant",
-    "evs": {
-     "Atk": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "DARK",
-     "FIGHTING"
-    ]
    }
   ],
-  "counters": 5,
+  "counters": 4,
   "n": 6,
   "pairs": [
    {
     "foe": "Runerigus",
-    "mon": "Florges",
-    "ability": "SYMBIOSIS",
-    "dealt": 130,
-    "taken": 36,
+    "mon": "Clefable",
+    "ability": "MAGICGUARD",
+    "dealt": 128,
+    "taken": 31,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Musharna",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 130,
-    "taken": 36,
-    "ok": true,
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 89,
+    "taken": 49,
+    "ok": false,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "teach Misty Terrain (Florges)"
+       "Safeguard (Clefable)"
       ]
      }
     ]
    },
    {
     "foe": "Granbull",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
-    "dealt": 109,
-    "taken": 203,
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 129,
+    "taken": 84,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Alakazam",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
-    "dealt": 111,
-    "taken": 57,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 130,
+    "taken": 56,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Fearow",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 130,
-    "taken": 45,
-    "ok": true,
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 121,
+    "taken": 73,
+    "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Nidoking",
-    "mon": "Scrafty",
-    "ability": "MOXIE",
-    "dealt": 24,
-    "taken": 42,
-    "ok": false,
+    "mon": "Diggersby",
+    "ability": "HUGEPOWER",
+    "dealt": 130,
+    "taken": 35,
+    "ok": true,
     "setup": false,
     "wincons": []
    }
@@ -128,12 +127,12 @@
   "weak3": [],
   "nores": [],
   "leads": [
-   "Florges"
+   "Clefable"
   ],
   "lead_foes": [
    "Runerigus"
   ],
-  "lead_taken": 36,
+  "lead_taken": 31,
   "sim": null,
   "lead_ok": true,
   "note": "",
@@ -152,15 +151,35 @@
   ],
   "swaps": [
    {
-    "name": "Florges",
-    "ab": "SYMBIOSIS",
+    "name": "Zoroark (Hisuian Form)",
+    "ab": "ILLUSION",
     "moves": [
-     "Moonblast",
-     "Giga Drain"
+     "Shadow Ball"
     ],
-    "setup": null,
+    "setup": "Nasty Plot",
+    "where": "Active",
+    "dump": 505,
+    "nature": "Modest",
+    "evs": {
+     "SpA": 252,
+     "Spe": 252,
+     "Def": 4
+    },
+    "types": [
+     "NORMAL",
+     "GHOST"
+    ]
+   },
+   {
+    "name": "Oranguru",
+    "ab": "TELEPATHY",
+    "moves": [
+     "Psychic",
+     "Shadow Ball"
+    ],
+    "setup": "Nasty Plot",
     "where": "Overflow",
-    "dump": 125,
+    "dump": 249,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -168,29 +187,8 @@
      "SpD": 4
     },
     "types": [
-     "FAIRY"
-    ]
-   },
-   {
-    "name": "Scrafty",
-    "ab": "MOXIE",
-    "moves": [
-     "Crunch",
-     "High Jump Kick",
-     "Fake Out"
-    ],
-    "setup": null,
-    "where": "Active",
-    "dump": 487,
-    "nature": "Adamant",
-    "evs": {
-     "Atk": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "DARK",
-     "FIGHTING"
+     "NORMAL",
+     "PSYCHIC"
     ]
    }
   ],
@@ -199,95 +197,101 @@
   "pairs": [
    {
     "foe": "Murkrow",
-    "mon": "Florges",
-    "ability": "SYMBIOSIS",
-    "dealt": 115,
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 130,
     "taken": 0,
     "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Healing",
-      "answers": []
+      "answers": [
+       "teach Knock Off (Zoroark)"
+      ]
      },
      {
       "what": "Perish Song",
-      "answers": []
+      "answers": [
+       "teach Taunt (Zoroark)"
+      ]
      }
     ]
    },
    {
     "foe": "Gothitelle",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 88,
-    "taken": 45,
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 113,
+    "taken": 23,
     "ok": true,
-    "setup": "Swords Dance",
+    "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "teach Misty Terrain (Florges)"
+       "teach Safeguard (Oranguru)"
       ]
      }
     ]
    },
    {
     "foe": "Gengar",
-    "mon": "Scrafty",
-    "ability": "MOXIE",
-    "dealt": 117,
-    "taken": 37,
-    "ok": true,
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 75,
+    "taken": 63,
+    "ok": false,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "teach Misty Terrain (Florges)"
+       "teach Safeguard (Oranguru)"
       ]
      },
      {
       "what": "Perish Song",
-      "answers": []
+      "answers": [
+       "teach Taunt (Zoroark)"
+      ]
      }
     ]
    },
    {
     "foe": "Houndstone",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
-    "dealt": 119,
-    "taken": 157,
+    "mon": "Zoroark (Hisuian Form)",
+    "ability": "ILLUSION",
+    "dealt": 114,
+    "taken": 0,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Ninetales",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
-    "dealt": 126,
-    "taken": 36,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 130,
+    "taken": 44,
     "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "teach Misty Terrain (Florges)"
+       "teach Safeguard (Oranguru)"
       ]
      }
     ]
    },
    {
     "foe": "Banette",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 78,
-    "taken": 134,
-    "ok": false,
+    "mon": "Oranguru",
+    "ability": "TELEPATHY",
+    "dealt": 104,
+    "taken": 0,
+    "ok": true,
     "setup": false,
     "wincons": []
    }
@@ -306,7 +310,7 @@
   "sim": null,
   "lead_ok": true,
   "note": "",
-  "hand": true
+  "hand": false
  },
  "spector2": {
   "key": "spector2",
@@ -321,15 +325,35 @@
   ],
   "swaps": [
    {
-    "name": "Florges",
-    "ab": "SYMBIOSIS",
+    "name": "Zoroark (Hisuian Form)",
+    "ab": "ILLUSION",
     "moves": [
-     "Moonblast",
-     "Giga Drain"
+     "Shadow Ball"
+    ],
+    "setup": "Nasty Plot",
+    "where": "Active",
+    "dump": 505,
+    "nature": "Modest",
+    "evs": {
+     "SpA": 252,
+     "Spe": 252,
+     "Def": 4
+    },
+    "types": [
+     "NORMAL",
+     "GHOST"
+    ]
+   },
+   {
+    "name": "Sylveon",
+    "ab": "PIXILATE",
+    "moves": [
+     "Shadow Ball",
+     "Draining Kiss"
     ],
     "setup": null,
-    "where": "Overflow",
-    "dump": 125,
+    "where": "Active",
+    "dump": 492,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -339,31 +363,9 @@
     "types": [
      "FAIRY"
     ]
-   },
-   {
-    "name": "Scrafty",
-    "ab": "MOXIE",
-    "moves": [
-     "Crunch",
-     "High Jump Kick",
-     "Fake Out"
-    ],
-    "setup": null,
-    "where": "Active",
-    "dump": 487,
-    "nature": "Adamant",
-    "evs": {
-     "Atk": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "DARK",
-     "FIGHTING"
-    ]
    }
   ],
-  "counters": 3,
+  "counters": 4,
   "n": 6,
   "pairs": [
    {
@@ -378,11 +380,11 @@
    },
    {
     "foe": "Sigilyph",
-    "mon": "Florges",
-    "ability": "SYMBIOSIS",
-    "dealt": 61,
-    "taken": 56,
-    "ok": false,
+    "mon": "Sylveon",
+    "ability": "PIXILATE",
+    "dealt": 101,
+    "taken": 59,
+    "ok": true,
     "setup": false,
     "wincons": []
    },
@@ -408,20 +410,20 @@
    },
    {
     "foe": "Typhlosion",
-    "mon": "Scrafty",
-    "ability": "MOXIE",
-    "dealt": 86,
-    "taken": 115,
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 130,
+    "taken": 247,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Banette",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
+    "mon": "Zoroark (Hisuian Form)",
+    "ability": "ILLUSION",
     "dealt": 130,
-    "taken": 230,
+    "taken": 58,
     "ok": true,
     "setup": false,
     "wincons": []
@@ -430,18 +432,18 @@
   "weak3": [],
   "nores": [],
   "leads": [
-   "Golisopod (Aevian Form)",
-   "Vaporeon"
+   "Vaporeon",
+   "Sylveon"
   ],
   "lead_foes": [
    "Stonjourner",
    "Sigilyph"
   ],
-  "lead_taken": 82,
+  "lead_taken": 86,
   "sim": null,
   "lead_ok": true,
   "note": "",
-  "hand": true
+  "hand": false
  },
  "jenner9": {
   "key": "jenner9",
@@ -455,26 +457,6 @@
    "Klinklang"
   ],
   "swaps": [
-   {
-    "name": "Florges",
-    "ab": "SYMBIOSIS",
-    "moves": [
-     "Moonblast",
-     "Giga Drain"
-    ],
-    "setup": null,
-    "where": "Overflow",
-    "dump": 125,
-    "nature": "Modest",
-    "evs": {
-     "SpA": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "FAIRY"
-    ]
-   },
    {
     "name": "Scrafty",
     "ab": "MOXIE",
@@ -495,6 +477,26 @@
     "types": [
      "DARK",
      "FIGHTING"
+    ]
+   },
+   {
+    "name": "Heatmor",
+    "ab": "GLUTTONY",
+    "moves": [
+     "Overheat",
+     "Giga Drain"
+    ],
+    "setup": null,
+    "where": "Overflow",
+    "dump": 161,
+    "nature": "Modest",
+    "evs": {
+     "SpA": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "FIRE"
     ]
    }
   ],
@@ -529,7 +531,9 @@
     "wincons": [
      {
       "what": "Healing",
-      "answers": []
+      "answers": [
+       "teach Gastro Acid (Heatmor)"
+      ]
      }
     ]
    },
@@ -544,7 +548,9 @@
     "wincons": [
      {
       "what": "Healing",
-      "answers": []
+      "answers": [
+       "teach Gastro Acid (Heatmor)"
+      ]
      }
     ]
    },
@@ -560,21 +566,21 @@
    },
    {
     "foe": "Kommo-o",
-    "mon": "Florges",
-    "ability": "SYMBIOSIS",
-    "dealt": 130,
-    "taken": 52,
-    "ok": true,
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 30,
+    "taken": 72,
+    "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Klinklang",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 53,
-    "taken": 83,
-    "ok": false,
+    "mon": "Heatmor",
+    "ability": "GLUTTONY",
+    "dealt": 115,
+    "taken": 48,
+    "ok": true,
     "setup": false,
     "wincons": [
      {
@@ -598,7 +604,7 @@
   "sim": null,
   "lead_ok": true,
   "note": "",
-  "hand": true
+  "hand": false
  },
  "erick": {
   "key": "erick",
@@ -613,15 +619,15 @@
   ],
   "swaps": [
    {
-    "name": "Florges",
-    "ab": "SYMBIOSIS",
+    "name": "Turtonator",
+    "ab": "SHELLARMOR",
     "moves": [
-     "Moonblast",
-     "Giga Drain"
+     "Shell Trap",
+     "Dragon Pulse"
     ],
-    "setup": null,
-    "where": "Overflow",
-    "dump": 125,
+    "setup": "Shell Smash",
+    "where": "Active",
+    "dump": 497,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -629,33 +635,32 @@
      "SpD": 4
     },
     "types": [
-     "FAIRY"
+     "FIRE",
+     "DRAGON"
     ]
    },
    {
-    "name": "Scrafty",
-    "ab": "MOXIE",
+    "name": "Mabosstiff",
+    "ab": "INTIMIDATE",
     "moves": [
      "Crunch",
-     "High Jump Kick",
-     "Fake Out"
+     "Play Rough"
     ],
     "setup": null,
     "where": "Active",
-    "dump": 487,
+    "dump": 472,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
-     "HP": 252,
-     "SpD": 4
+     "Spe": 252,
+     "Def": 4
     },
     "types": [
-     "DARK",
-     "FIGHTING"
+     "DARK"
     ]
    }
   ],
-  "counters": 3,
+  "counters": 4,
   "n": 6,
   "pairs": [
    {
@@ -680,31 +685,31 @@
    },
    {
     "foe": "Magneton",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
+    "mon": "Turtonator",
+    "ability": "SHELLARMOR",
     "dealt": 92,
-    "taken": 78,
-    "ok": false,
-    "setup": false,
-    "wincons": []
-   },
-   {
-    "foe": "Togedemaru",
-    "mon": "Scrafty",
-    "ability": "MOXIE",
-    "dealt": 130,
-    "taken": 52,
+    "taken": 38,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
-    "foe": "Chandelure",
-    "mon": "Florges",
-    "ability": "SYMBIOSIS",
-    "dealt": 49,
-    "taken": 48,
+    "foe": "Togedemaru",
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 130,
+    "taken": 70,
     "ok": false,
+    "setup": false,
+    "wincons": []
+   },
+   {
+    "foe": "Chandelure",
+    "mon": "Mabosstiff",
+    "ability": "INTIMIDATE",
+    "dealt": 104,
+    "taken": 108,
+    "ok": true,
     "setup": false,
     "wincons": []
    },
@@ -733,6 +738,6 @@
   "sim": null,
   "lead_ok": true,
   "note": "",
-  "hand": true
+  "hand": false
  }
 }

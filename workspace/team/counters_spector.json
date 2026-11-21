@@ -6,95 +6,101 @@
   "pairs": [
    {
     "foe": "Murkrow",
-    "mon": "Florges",
-    "ability": "SYMBIOSIS",
-    "dealt": 115,
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 130,
     "taken": 0,
     "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Healing",
-      "answers": []
+      "answers": [
+       "teach Knock Off (Zoroark)"
+      ]
      },
      {
       "what": "Perish Song",
-      "answers": []
+      "answers": [
+       "teach Taunt (Zoroark)"
+      ]
      }
     ]
    },
    {
     "foe": "Gothitelle",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 88,
-    "taken": 45,
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 113,
+    "taken": 23,
     "ok": true,
-    "setup": "Swords Dance",
+    "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "teach Misty Terrain (Florges)"
+       "teach Safeguard (Oranguru)"
       ]
      }
     ]
    },
    {
     "foe": "Gengar",
-    "mon": "Scrafty",
-    "ability": "MOXIE",
-    "dealt": 117,
-    "taken": 37,
-    "ok": true,
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 75,
+    "taken": 63,
+    "ok": false,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "teach Misty Terrain (Florges)"
+       "teach Safeguard (Oranguru)"
       ]
      },
      {
       "what": "Perish Song",
-      "answers": []
+      "answers": [
+       "teach Taunt (Zoroark)"
+      ]
      }
     ]
    },
    {
     "foe": "Houndstone",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
-    "dealt": 119,
-    "taken": 157,
+    "mon": "Zoroark (Hisuian Form)",
+    "ability": "ILLUSION",
+    "dealt": 114,
+    "taken": 0,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Ninetales",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
-    "dealt": 126,
-    "taken": 36,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 130,
+    "taken": 44,
     "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "teach Misty Terrain (Florges)"
+       "teach Safeguard (Oranguru)"
       ]
      }
     ]
    },
    {
     "foe": "Banette",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 78,
-    "taken": 134,
-    "ok": false,
+    "mon": "Oranguru",
+    "ability": "TELEPATHY",
+    "dealt": 104,
+    "taken": 0,
+    "ok": true,
     "setup": false,
     "wincons": []
    }

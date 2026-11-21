@@ -1,13 +1,13 @@
 {
- "anchor_low": 0.237,
- "anchor_median": 0.413,
+ "anchor_low": 0.304,
+ "anchor_median": 0.407,
  "team": {
   "Gholdengo": 0.526,
   "Arcanine (Hisuian Form)": 0.371,
   "Golisopod (Aevian Form)": 0.543,
   "Vaporeon": 0.407,
-  "Florges": 0.413,
-  "Scrafty": 0.237
+  "Diggersby": 0.304,
+  "Clefable": 0.38
  },
  "rows": [
   {
@@ -271,7 +271,7 @@
     "Double-Edge"
    ],
    "ability": "STENCH",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Rampardos",
@@ -287,7 +287,7 @@
     "Double-Edge"
    ],
    "ability": "MOLDBREAKER",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Noctowl",
@@ -303,7 +303,7 @@
     "Confusion"
    ],
    "ability": "TINTEDLENS",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Cryogonal",
@@ -319,7 +319,7 @@
     "Ancient Power"
    ],
    "ability": "LEVITATE",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Shiinotic",
@@ -335,7 +335,7 @@
     "Giga Drain"
    ],
    "ability": "ILLUMINATE",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Empoleon",
@@ -350,7 +350,7 @@
     "Surf"
    ],
    "ability": "COMPETITIVE",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Hypno",
@@ -366,7 +366,7 @@
     "Zen Headbutt"
    ],
    "ability": "INSOMNIA",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Druddigon",
@@ -382,7 +382,7 @@
     "Sucker Punch"
    ],
    "ability": "SHEERFORCE",
-   "tier": "B"
+   "tier": "C"
   },
   {
    "name": "Beheeyem",
@@ -398,7 +398,7 @@
     "Signal Beam"
    ],
    "ability": "TELEPATHY",
-   "tier": "B"
+   "tier": "D"
   },
   {
    "name": "Meganium",
@@ -414,7 +414,7 @@
     "Ancient Power"
    ],
    "ability": "LEAFGUARD",
-   "tier": "B"
+   "tier": "C"
   },
   {
    "name": "Phione",
@@ -431,7 +431,7 @@
     "Mud Barrage"
    ],
    "ability": "HYDRATION",
-   "tier": "B"
+   "tier": "C"
   },
   {
    "name": "Oricorio (Pom-Pom Style)",
@@ -447,7 +447,7 @@
     "Air Slash"
    ],
    "ability": "DANCER",
-   "tier": "B"
+   "tier": "C"
   },
   {
    "name": "Luxray",
@@ -464,7 +464,7 @@
     "Fire Fang"
    ],
    "ability": "INTIMIDATE",
-   "tier": "B"
+   "tier": "D"
   },
   {
    "name": "Vespiquen",
