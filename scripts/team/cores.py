@@ -395,7 +395,10 @@ for key, (cand, id_f, lreq) in CAND.items():
     rescored.sort(key=lambda x: -x[0])
     main = rescored[0] if rescored else None
     mine = [ALL[n] for n in (ST.get('core') or []) if n in ALL]
-    if key == 'balance' and len(mine) == 4:   # Vincent's picked core is always the first card of its style (state core order = roles)
+    if os.environ.get('CORES_FREE'):   # inspection: the open search, Vincent's core not forced
+        for sc_, ms_ in rescored[:5]: print('FREE', key, round(sc_, 3), [disp(m.name) for m in ms_], [m.r['tier'] for m in ms_], len(set().union(*(m.counters for m in ms_))))
+        if [m.name for m in mine] in [[m.name for m in ms_] for _, ms_ in rescored]: print('FREE', key, 'yours rank', [[m.name for m in ms_] for _, ms_ in rescored].index([m.name for m in mine]) + 1, 'of', len(rescored))
+    if key == 'balance' and len(mine) == 4 and not os.environ.get('CORES_FREE'):   # Vincent's picked core is always the first card of its style (state core order = roles)
         mine = tuple(mine)
         bds = [dict(moves=ST['moves'].get(m.name, []), ability=ST['abilities'].get(m.name, '')) for m in mine]
         fit = sum(f(m) for f, m in zip(SFN, mine)) / 4
