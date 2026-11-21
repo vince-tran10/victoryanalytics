@@ -4,9 +4,9 @@
  "export_label": "20 Nov 13:52",
  "active_start": 426,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 142,
- "run": 156,
- "final": 160,
+ "roster": 144,
+ "run": 158,
+ "final": 162,
  "done": [
   "aelita",
   "narcissa1",
@@ -27,16 +27,17 @@
   "holly",
   "manaphy",
   "amber",
-  "darkgardevoir"
+  "darkgardevoir",
+  "garbodor"
  ],
- "fight": "garbodor",
+ "fight": "karrina",
  "team": [
   "Gholdengo",
   "Arcanine (Hisuian Form)",
   "Golisopod (Aevian Form)",
   "Vaporeon",
-  "Muk (Alolan Form)",
-  "Clodsire"
+  "Diggersby",
+  "Clefable"
  ],
  "moves": {
   "Arcanine (Hisuian Form)": [
@@ -79,6 +80,18 @@
    "Earthquake",
    "Curse",
    "Recover",
+   "Protect"
+  ],
+  "Diggersby": [
+   "Earthquake",
+   "Quick Attack",
+   "Bounce",
+   "Protect"
+  ],
+  "Clefable": [
+   "Moonblast",
+   "Thunder Wave",
+   "Safeguard",
    "Protect"
   ]
  },
@@ -157,7 +170,9 @@
   "Vaporeon": "Water Absorb",
   "Copperajah": "Sheer Force",
   "Muk (Alolan Form)": "Poison Touch",
-  "Clodsire": "Unaware"
+  "Clodsire": "Unaware",
+  "Diggersby": "HUGEPOWER",
+  "Clefable": "MAGICGUARD"
  },
  "crests_owned": [
   "Phione Crest"
@@ -183,7 +198,7 @@
    "n": 6,
    "weak3": [],
    "nores": [],
-   "key": "garbodor"
+   "key": "karrina"
   }
  },
  "plan_swaps": {
@@ -220,6 +235,16 @@
     ],
     "ability": "Unaware"
    }
+  }
+ },
+ "plan_pairs": {
+  "karrina": {
+   "Runerigus": "Clefable",
+   "Musharna": "Arcanine (Hisuian Form)",
+   "Granbull": "Vaporeon",
+   "Alakazam": "Golisopod (Aevian Form)",
+   "Fearow": "Gholdengo",
+   "Nidoking": "Diggersby"
   }
  }
 }

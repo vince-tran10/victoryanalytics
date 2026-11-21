@@ -1,14 +1,14 @@
 {
  "balance": [
   {
-   "score": 0.906,
+   "score": 0.905,
    "members": [
     "Gholdengo",
     "Arcanine (Hisuian Form)",
     "Golisopod (Aevian Form)",
     "Vaporeon"
    ],
-   "cover": 32,
+   "cover": 29,
    "swaps": [
     "Oranguru",
     "Armarouge"
@@ -81,10 +81,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "garbodor": [
-     3,
-     4
-    ],
     "karrina": [
      4,
      6
@@ -111,21 +107,20 @@
     ]
    },
    "open": [
-    "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
     "jenner9:Porygon-Z"
    ],
-   "cover6": 37
+   "cover6": 34
   },
   {
-   "score": 0.905,
+   "score": 0.898,
    "members": [
     "Arcanine (Hisuian Form)",
     "Gholdengo",
     "Golisopod (Aevian Form)",
-    "Azumarill"
+    "Clefable"
    ],
-   "cover": 32,
+   "cover": 29,
    "swaps": [
     "Oranguru",
     "Armarouge"
@@ -169,15 +164,15 @@
     },
     {
      "moves": [
-      "Helping Hand",
-      "Play Rough",
-      "Aqua Jet",
+      "Encore",
+      "Moonblast",
+      "Shadow Ball",
       "Protect"
      ],
      "item": "Fairy Feather",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Huge Power"
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Magic Guard"
     }
    ],
    "roles": [
@@ -186,22 +181,20 @@
     "attacker",
     "attacker"
    ],
-   "shared": [],
+   "shared": [
+    "WATER"
+   ],
    "answers": [
+    "Taunt / Encore",
     "Fake Out / Intimidate",
     "speed control",
     "priority"
    ],
    "missing": [
     "Haze / phaze",
-    "Taunt / Encore",
     "screen breaker"
    ],
    "per_fight": {
-    "garbodor": [
-     3,
-     4
-    ],
     "karrina": [
      5,
      6
@@ -228,27 +221,26 @@
     ]
    },
    "open": [
-    "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
     "jenner9:Porygon-Z",
     "spector2:Typhlosion"
    ],
-   "cover6": 36
+   "cover6": 33
   }
  ],
  "tr": [
   {
-   "score": 0.863,
+   "score": 0.887,
    "members": [
     "Oranguru",
-    "Golisopod (Aevian Form)",
-    "Swampert",
-    "Copperajah"
+    "Empoleon",
+    "Vikavolt",
+    "Hariyama"
    ],
-   "cover": 31,
+   "cover": 27,
    "swaps": [
-    "Arcanine (Hisuian Form)",
-    "Armarouge"
+    "Armarouge",
+    "Golisopod (Aevian Form)"
    ],
    "builds": [
     {
@@ -265,39 +257,39 @@
     },
     {
      "moves": [
-      "Shadow Sneak",
-      "Bone Rush",
-      "Pin Missile",
+      "Haze",
+      "Aqua Jet",
+      "Surf",
       "Protect"
      ],
-     "item": "Soft Sand",
-     "nature": "Brave",
-     "evs": "252 HP / 252 Atk · 0 Spe IVs",
-     "ability": "Skill Link"
+     "item": "Mystic Water",
+     "nature": "Quiet",
+     "evs": "252 HP / 252 SpA · 0 Spe IVs",
+     "ability": "Competitive"
     },
     {
      "moves": [
-      "Earthquake",
-      "Rock Slide",
-      "Hammer Arm",
+      "Bug Buzz",
+      "Thunderbolt",
+      "Mud Shot",
       "Protect"
      ],
-     "item": "Soft Sand",
-     "nature": "Brave",
-     "evs": "252 HP / 252 Atk · 0 Spe IVs",
-     "ability": "Torrent"
+     "item": "Silver Powder",
+     "nature": "Quiet",
+     "evs": "252 HP / 252 SpA · 0 Spe IVs",
+     "ability": "Levitate"
     },
     {
      "moves": [
-      "Iron Head",
-      "Play Rough",
-      "Double-Edge",
+      "Fake Out",
+      "Knock Off",
+      "Close Combat",
       "Protect"
      ],
-     "item": "Metal Coat",
+     "item": "Black Glasses",
      "nature": "Brave",
      "evs": "252 HP / 252 Atk · 0 Spe IVs",
-     "ability": "Sheer Force"
+     "ability": "Guts"
     }
    ],
    "roles": [
@@ -308,20 +300,16 @@
    ],
    "shared": [],
    "answers": [
+    "Haze / phaze",
+    "Fake Out / Intimidate",
     "speed control",
     "priority"
    ],
    "missing": [
-    "Haze / phaze",
     "Taunt / Encore",
-    "Fake Out / Intimidate",
     "screen breaker"
    ],
    "per_fight": {
-    "garbodor": [
-     3,
-     4
-    ],
     "karrina": [
      6,
      6
@@ -331,67 +319,55 @@
      6
     ],
     "spector2": [
-     5,
+     3,
      6
     ],
     "jenner9": [
-     2,
+     1,
      6
     ],
     "amanda": [
-     4,
+     5,
      6
     ],
     "erick": [
-     5,
+     6,
      6
     ]
    },
    "open": [
-    "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
+    "jenner9:Noivern",
     "jenner9:Porygon-Z",
     "spector2:Typhlosion"
    ],
-   "cover6": 36
+   "cover6": 32
   },
   {
-   "score": 0.851,
+   "score": 0.867,
    "members": [
-    "Porygon-Z",
-    "Golisopod (Aevian Form)",
+    "Oranguru",
     "Clefable",
-    "Empoleon"
+    "Rhyperior",
+    "Vikavolt"
    ],
-   "cover": 28,
+   "cover": 23,
    "swaps": [
-    "Arcanine (Hisuian Form)",
-    "Oranguru"
+    "Armarouge",
+    "Golisopod (Aevian Form)"
    ],
    "builds": [
     {
      "moves": [
       "Trick Room",
-      "Tri Attack",
+      "Psychic",
       "Shadow Ball",
       "Protect"
      ],
      "item": "Sitrus Berry",
-     "nature": "Timid",
-     "evs": "252 SpA / 252 Spe",
-     "ability": "Adaptability"
-    },
-    {
-     "moves": [
-      "Shadow Sneak",
-      "Bone Rush",
-      "Pin Missile",
-      "Protect"
-     ],
-     "item": "Soft Sand",
-     "nature": "Brave",
-     "evs": "252 HP / 252 Atk · 0 Spe IVs",
-     "ability": "Skill Link"
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Inner Focus"
     },
     {
      "moves": [
@@ -407,15 +383,27 @@
     },
     {
      "moves": [
-      "Haze",
-      "Helping Hand",
-      "Surf",
+      "Roar",
+      "Earthquake",
+      "Stone Edge",
       "Protect"
      ],
-     "item": "Mystic Water",
+     "item": "Soft Sand",
+     "nature": "Brave",
+     "evs": "252 HP / 252 Atk · 0 Spe IVs",
+     "ability": "Solid Rock"
+    },
+    {
+     "moves": [
+      "Bug Buzz",
+      "Thunderbolt",
+      "Mud Shot",
+      "Protect"
+     ],
+     "item": "Silver Powder",
      "nature": "Quiet",
      "evs": "252 HP / 252 SpA · 0 Spe IVs",
-     "ability": "Competitive"
+     "ability": "Levitate"
     }
    ],
    "roles": [
@@ -428,18 +416,14 @@
    "answers": [
     "Haze / phaze",
     "Taunt / Encore",
-    "speed control",
-    "priority"
+    "speed control"
    ],
    "missing": [
     "Fake Out / Intimidate",
+    "priority",
     "screen breaker"
    ],
    "per_fight": {
-    "garbodor": [
-     3,
-     4
-    ],
     "karrina": [
      6,
      6
@@ -449,7 +433,7 @@
      6
     ],
     "spector2": [
-     5,
+     4,
      6
     ],
     "jenner9": [
@@ -457,7 +441,7 @@
      6
     ],
     "amanda": [
-     3,
+     2,
      6
     ],
     "erick": [
@@ -466,143 +450,24 @@
     ]
    },
    "open": [
-    "amanda:Bronzong",
-    "garbodor:Garbodor (bar 2)",
+    "amanda:Incineroar",
     "jenner9:Kommo-o",
     "jenner9:Porygon-Z",
     "spector2:Typhlosion"
    ],
-   "cover6": 35
+   "cover6": 32
   }
  ],
  "setup": [
   {
-   "score": 0.882,
-   "members": [
-    "Braviary",
-    "Arcanine (Hisuian Form)",
-    "Golisopod (Aevian Form)",
-    "Empoleon"
-   ],
-   "cover": 28,
-   "swaps": [
-    "Oranguru",
-    "Armarouge"
-   ],
-   "builds": [
-    {
-     "moves": [
-      "Tailwind",
-      "Crush Claw",
-      "Shadow Claw",
-      "Protect"
-     ],
-     "item": "Sitrus Berry",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Sheer Force"
-    },
-    {
-     "moves": [
-      "Flare Blitz",
-      "Head Smash",
-      "Extreme Speed",
-      "Protect"
-     ],
-     "item": "Charcoal",
-     "nature": "Jolly",
-     "evs": "252 Atk / 252 Spe",
-     "ability": "Intimidate"
-    },
-    {
-     "moves": [
-      "Swords Dance",
-      "Bone Rush",
-      "Pin Missile",
-      "Protect"
-     ],
-     "item": "Soft Sand",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Skill Link"
-    },
-    {
-     "moves": [
-      "Haze",
-      "Icy Wind",
-      "Surf",
-      "Protect"
-     ],
-     "item": "Mystic Water",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Competitive"
-    }
-   ],
-   "roles": [
-    "support lead",
-    "tempo / pivot",
-    "setup sweeper",
-    "attacker"
-   ],
-   "shared": [],
-   "answers": [
-    "Haze / phaze",
-    "Fake Out / Intimidate",
-    "speed control",
-    "priority"
-   ],
-   "missing": [
-    "Taunt / Encore",
-    "screen breaker"
-   ],
-   "per_fight": {
-    "garbodor": [
-     3,
-     4
-    ],
-    "karrina": [
-     4,
-     6
-    ],
-    "spector": [
-     5,
-     6
-    ],
-    "spector2": [
-     4,
-     6
-    ],
-    "jenner9": [
-     4,
-     6
-    ],
-    "amanda": [
-     4,
-     6
-    ],
-    "erick": [
-     4,
-     6
-    ]
-   },
-   "open": [
-    "garbodor:Garbodor (bar 2)",
-    "jenner9:Kommo-o",
-    "jenner9:Porygon-Z",
-    "spector2:Typhlosion"
-   ],
-   "cover6": 36
-  },
-  {
-   "score": 0.881,
+   "score": 0.883,
    "members": [
     "Braviary",
     "Gholdengo",
     "Golisopod (Aevian Form)",
     "Azumarill"
    ],
-   "cover": 29,
+   "cover": 26,
    "swaps": [
     "Arcanine (Hisuian Form)",
     "Oranguru"
@@ -675,10 +540,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "garbodor": [
-     3,
-     4
-    ],
     "karrina": [
      5,
      6
@@ -706,15 +567,243 @@
    },
    "open": [
     "amanda:Bronzong",
-    "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
     "jenner9:Porygon-Z",
     "spector2:Typhlosion"
    ],
-   "cover6": 35
+   "cover6": 32
+  },
+  {
+   "score": 0.878,
+   "members": [
+    "Clefable",
+    "Gholdengo",
+    "Golisopod (Aevian Form)",
+    "Azumarill"
+   ],
+   "cover": 26,
+   "swaps": [
+    "Arcanine (Hisuian Form)",
+    "Oranguru"
+   ],
+   "builds": [
+    {
+     "moves": [
+      "Follow Me",
+      "Moonblast",
+      "Shadow Ball",
+      "Protect"
+     ],
+     "item": "Sitrus Berry",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Magic Guard"
+    },
+    {
+     "moves": [
+      "Thunder Wave",
+      "Make It Rain",
+      "Shadow Ball",
+      "Protect"
+     ],
+     "item": "Metal Coat",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Good as Gold"
+    },
+    {
+     "moves": [
+      "Swords Dance",
+      "Bone Rush",
+      "Pin Missile",
+      "Protect"
+     ],
+     "item": "Soft Sand",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Skill Link"
+    },
+    {
+     "moves": [
+      "Belly Drum",
+      "Play Rough",
+      "Aqua Jet",
+      "Protect"
+     ],
+     "item": "Fairy Feather",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Huge Power"
+    }
+   ],
+   "roles": [
+    "support lead",
+    "attacker",
+    "setup sweeper",
+    "setup sweeper"
+   ],
+   "shared": [],
+   "answers": [
+    "speed control",
+    "priority"
+   ],
+   "missing": [
+    "Haze / phaze",
+    "Taunt / Encore",
+    "Fake Out / Intimidate",
+    "screen breaker"
+   ],
+   "per_fight": {
+    "karrina": [
+     5,
+     6
+    ],
+    "spector": [
+     6,
+     6
+    ],
+    "spector2": [
+     5,
+     6
+    ],
+    "jenner9": [
+     2,
+     6
+    ],
+    "amanda": [
+     5,
+     6
+    ],
+    "erick": [
+     3,
+     6
+    ]
+   },
+   "open": [
+    "amanda:Bronzong",
+    "jenner9:Kommo-o",
+    "jenner9:Porygon-Z",
+    "spector2:Typhlosion"
+   ],
+   "cover6": 32
   }
  ],
  "grassy": [
+  {
+   "score": 0.785,
+   "members": [
+    "Glalie (Aevian Form)",
+    "Gholdengo",
+    "Gallade",
+    "Lickilicky"
+   ],
+   "cover": 22,
+   "swaps": [
+    "Golisopod (Aevian Form)",
+    "Arcanine (Hisuian Form)"
+   ],
+   "builds": [
+    {
+     "moves": [
+      "Grassy Glide",
+      "Rock Slide",
+      "Wood Hammer",
+      "Protect"
+     ],
+     "item": "Miracle Seed",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Grassy Surge"
+    },
+    {
+     "moves": [
+      "Thunder Wave",
+      "Make It Rain",
+      "Shadow Ball",
+      "Protect"
+     ],
+     "item": "Metal Coat",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Good as Gold"
+    },
+    {
+     "moves": [
+      "Psycho Cut",
+      "Sacred Sword",
+      "Leaf Blade",
+      "Protect"
+     ],
+     "item": "Twisted Spoon",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Sharpness"
+    },
+    {
+     "moves": [
+      "Power Whip",
+      "Knock Off",
+      "Thrash",
+      "Protect"
+     ],
+     "item": "Miracle Seed",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Cloud Nine"
+    }
+   ],
+   "roles": [
+    "terrain setter",
+    "attacker",
+    "attacker",
+    "attacker"
+   ],
+   "shared": [],
+   "answers": [
+    "speed control",
+    "priority"
+   ],
+   "missing": [
+    "Haze / phaze",
+    "Taunt / Encore",
+    "Fake Out / Intimidate",
+    "screen breaker"
+   ],
+   "per_fight": {
+    "karrina": [
+     4,
+     6
+    ],
+    "spector": [
+     5,
+     6
+    ],
+    "spector2": [
+     4,
+     6
+    ],
+    "jenner9": [
+     1,
+     6
+    ],
+    "amanda": [
+     4,
+     6
+    ],
+    "erick": [
+     4,
+     6
+    ]
+   },
+   "open": [
+    "amanda:Bronzong",
+    "erick:Chandelure",
+    "erick:Toxtricity",
+    "jenner9:Kommo-o",
+    "spector2:Typhlosion"
+   ],
+   "cover6": 31
+  },
   {
    "score": 0.784,
    "members": [
@@ -798,10 +887,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "garbodor": [
-     0,
-     4
-    ],
     "karrina": [
      4,
      6
@@ -830,143 +915,21 @@
    "open": [
     "erick:Chandelure",
     "erick:Toxtricity",
-    "garbodor:Garbodor (bar 2)",
     "spector2:Typhlosion"
    ],
-   "cover6": 36
-  },
-  {
-   "score": 0.759,
-   "members": [
-    "Glalie (Aevian Form)",
-    "Gholdengo",
-    "Florges",
-    "Palossand"
-   ],
-   "cover": 21,
-   "swaps": [
-    "Golisopod (Aevian Form)",
-    "Arcanine (Hisuian Form)"
-   ],
-   "builds": [
-    {
-     "moves": [
-      "Grassy Glide",
-      "Rock Slide",
-      "Wood Hammer",
-      "Protect"
-     ],
-     "item": "Miracle Seed",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Grassy Surge"
-    },
-    {
-     "moves": [
-      "Thunder Wave",
-      "Make It Rain",
-      "Shadow Ball",
-      "Protect"
-     ],
-     "item": "Metal Coat",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Good as Gold"
-    },
-    {
-     "moves": [
-      "Helping Hand",
-      "Moonblast",
-      "Giga Drain",
-      "Protect"
-     ],
-     "item": "Fairy Feather",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Flower Veil"
-    },
-    {
-     "moves": [
-      "Shadow Ball",
-      "Earth Power",
-      "Giga Drain",
-      "Protect"
-     ],
-     "item": "Spell Tag",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "W. Compaction"
-    }
-   ],
-   "roles": [
-    "terrain setter",
-    "attacker",
-    "bulky answer",
-    "attacker"
-   ],
-   "shared": [
-    "GHOST"
-   ],
-   "answers": [
-    "speed control",
-    "priority"
-   ],
-   "missing": [
-    "Haze / phaze",
-    "Taunt / Encore",
-    "Fake Out / Intimidate",
-    "screen breaker"
-   ],
-   "per_fight": {
-    "garbodor": [
-     0,
-     4
-    ],
-    "karrina": [
-     5,
-     6
-    ],
-    "spector": [
-     4,
-     6
-    ],
-    "spector2": [
-     4,
-     6
-    ],
-    "jenner9": [
-     3,
-     6
-    ],
-    "amanda": [
-     3,
-     6
-    ],
-    "erick": [
-     2,
-     6
-    ]
-   },
-   "open": [
-    "amanda:Bronzong",
-    "erick:Chandelure",
-    "erick:Toxtricity",
-    "garbodor:Garbodor (bar 2)",
-    "spector2:Typhlosion"
-   ],
-   "cover6": 35
+   "cover6": 33
   }
  ],
  "electric": [
   {
-   "score": 0.651,
+   "score": 0.665,
    "members": [
     "Pincurchin",
-    "Gholdengo",
+    "Zoroark (Hisuian Form)",
     "Donphan",
     "Vikavolt"
    ],
-   "cover": 15,
+   "cover": 18,
    "swaps": [
     "Golisopod (Aevian Form)",
     "Arcanine (Hisuian Form)"
@@ -986,15 +949,15 @@
     },
     {
      "moves": [
-      "Thunder Wave",
-      "Make It Rain",
       "Shadow Ball",
+      "Sludge Bomb",
+      "Extrasensory",
       "Protect"
      ],
-     "item": "Metal Coat",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Good as Gold"
+     "item": "Spell Tag",
+     "nature": "Timid",
+     "evs": "252 SpA / 252 Spe",
+     "ability": "Illusion"
     },
     {
      "moves": [
@@ -1027,9 +990,7 @@
     "attacker",
     "attacker"
    ],
-   "shared": [
-    "FIRE"
-   ],
+   "shared": [],
    "answers": [
     "speed control",
     "priority"
@@ -1041,16 +1002,12 @@
     "screen breaker"
    ],
    "per_fight": {
-    "garbodor": [
-     0,
-     4
-    ],
     "karrina": [
-     4,
+     3,
      6
     ],
     "spector": [
-     4,
+     6,
      6
     ],
     "spector2": [
@@ -1062,29 +1019,27 @@
      6
     ],
     "amanda": [
-     2,
+     3,
      6
     ],
     "erick": [
-     1,
+     2,
      6
     ]
    },
    "open": [
     "amanda:Bronzong",
-    "erick:Chandelure",
     "erick:Toxtricity",
-    "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
     "jenner9:Porygon-Z",
     "karrina:Fearow",
     "karrina:Runerigus",
     "spector2:Typhlosion"
    ],
-   "cover6": 31
+   "cover6": 29
   },
   {
-   "score": 0.651,
+   "score": 0.665,
    "members": [
     "Pincurchin",
     "Chandelure",
@@ -1166,10 +1121,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "garbodor": [
-     0,
-     4
-    ],
     "karrina": [
      3,
      6
@@ -1197,146 +1148,24 @@
    },
    "open": [
     "amanda:Incineroar",
-    "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
     "jenner9:Noivern",
     "jenner9:Porygon-Z",
     "spector2:Typhlosion"
    ],
-   "cover6": 34
+   "cover6": 31
   }
  ],
  "sun": [
   {
-   "score": 0.701,
+   "score": 0.757,
    "members": [
     "Ninetales",
     "Arcanine (Hisuian Form)",
-    "Golisopod (Aevian Form)",
-    "Venusaur"
+    "Gastrodon (West Aevian Form)",
+    "Exeggutor"
    ],
-   "cover": 27,
-   "swaps": [
-    "Oranguru",
-    "Armarouge"
-   ],
-   "builds": [
-    {
-     "moves": [
-      "Roar",
-      "Hex",
-      "Heat Wave",
-      "Protect"
-     ],
-     "item": "Sitrus Berry",
-     "nature": "Timid",
-     "evs": "252 SpA / 252 Spe",
-     "ability": "Drought"
-    },
-    {
-     "moves": [
-      "Flare Blitz",
-      "Head Smash",
-      "Extreme Speed",
-      "Protect"
-     ],
-     "item": "Charcoal",
-     "nature": "Jolly",
-     "evs": "252 Atk / 252 Spe",
-     "ability": "Intimidate"
-    },
-    {
-     "moves": [
-      "Electroweb",
-      "Bone Rush",
-      "Pin Missile",
-      "Protect"
-     ],
-     "item": "Soft Sand",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Skill Link"
-    },
-    {
-     "moves": [
-      "Helping Hand",
-      "Giga Drain",
-      "Sludge Bomb",
-      "Protect"
-     ],
-     "item": "Miracle Seed",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Chlorophyll"
-    }
-   ],
-   "roles": [
-    "sun setter",
-    "tempo / pivot",
-    "attacker",
-    "attacker"
-   ],
-   "shared": [
-    "WATER",
-    "ROCK"
-   ],
-   "answers": [
-    "Haze / phaze",
-    "Fake Out / Intimidate",
-    "speed control",
-    "priority"
-   ],
-   "missing": [
-    "Taunt / Encore",
-    "screen breaker"
-   ],
-   "per_fight": {
-    "garbodor": [
-     3,
-     4
-    ],
-    "karrina": [
-     3,
-     6
-    ],
-    "spector": [
-     5,
-     6
-    ],
-    "spector2": [
-     4,
-     6
-    ],
-    "jenner9": [
-     4,
-     6
-    ],
-    "amanda": [
-     4,
-     6
-    ],
-    "erick": [
-     4,
-     6
-    ]
-   },
-   "open": [
-    "garbodor:Garbodor (bar 2)",
-    "jenner9:Kommo-o",
-    "jenner9:Porygon-Z",
-    "spector2:Typhlosion"
-   ],
-   "cover6": 36
-  },
-  {
-   "score": 0.677,
-   "members": [
-    "Ninetales",
-    "Gholdengo",
-    "Arcanine (Hisuian Form)",
-    "Venusaur"
-   ],
-   "cover": 16,
+   "cover": 15,
    "swaps": [
     "Golisopod (Aevian Form)",
     "Oranguru"
@@ -1356,18 +1185,6 @@
     },
     {
      "moves": [
-      "Thunder Wave",
-      "Make It Rain",
-      "Shadow Ball",
-      "Protect"
-     ],
-     "item": "Metal Coat",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Good as Gold"
-    },
-    {
-     "moves": [
       "Flare Blitz",
       "Head Smash",
       "Extreme Speed",
@@ -1380,9 +1197,21 @@
     },
     {
      "moves": [
-      "Helping Hand",
-      "Giga Drain",
+      "Strange Steam",
       "Sludge Bomb",
+      "Earth Power",
+      "Protect"
+     ],
+     "item": "Fairy Feather",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Storm Drain"
+    },
+    {
+     "moves": [
+      "Bulldoze",
+      "Giga Drain",
+      "Extrasensory",
       "Protect"
      ],
      "item": "Miracle Seed",
@@ -1393,13 +1222,11 @@
    ],
    "roles": [
     "sun setter",
-    "attacker",
     "tempo / pivot",
+    "attacker",
     "attacker"
    ],
-   "shared": [
-    "GROUND"
-   ],
+   "shared": [],
    "answers": [
     "Haze / phaze",
     "Fake Out / Intimidate",
@@ -1411,16 +1238,12 @@
     "screen breaker"
    ],
    "per_fight": {
-    "garbodor": [
-     0,
-     4
-    ],
     "karrina": [
-     2,
+     3,
      6
     ],
     "spector": [
-     5,
+     3,
      6
     ],
     "spector2": [
@@ -1442,24 +1265,139 @@
    },
    "open": [
     "amanda:Bronzong",
-    "garbodor:Garbodor (bar 2)",
     "jenner9:Kommo-o",
     "jenner9:Porygon-Z",
     "spector2:Typhlosion"
    ],
-   "cover6": 35
+   "cover6": 32
+  },
+  {
+   "score": 0.75,
+   "members": [
+    "Ninetales",
+    "Arcanine (Hisuian Form)",
+    "Musharna (Aevian Form)",
+    "Exeggutor"
+   ],
+   "cover": 15,
+   "swaps": [
+    "Golisopod (Aevian Form)",
+    "Oranguru"
+   ],
+   "builds": [
+    {
+     "moves": [
+      "Roar",
+      "Hex",
+      "Heat Wave",
+      "Protect"
+     ],
+     "item": "Sitrus Berry",
+     "nature": "Timid",
+     "evs": "252 SpA / 252 Spe",
+     "ability": "Drought"
+    },
+    {
+     "moves": [
+      "Flare Blitz",
+      "Head Smash",
+      "Extreme Speed",
+      "Protect"
+     ],
+     "item": "Charcoal",
+     "nature": "Jolly",
+     "evs": "252 Atk / 252 Spe",
+     "ability": "Intimidate"
+    },
+    {
+     "moves": [
+      "Encore",
+      "Shadow Claw",
+      "Play Rough",
+      "Protect"
+     ],
+     "item": "Spell Tag",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Tough Claws"
+    },
+    {
+     "moves": [
+      "Bulldoze",
+      "Giga Drain",
+      "Extrasensory",
+      "Protect"
+     ],
+     "item": "Miracle Seed",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Chlorophyll"
+    }
+   ],
+   "roles": [
+    "sun setter",
+    "tempo / pivot",
+    "attacker",
+    "attacker"
+   ],
+   "shared": [
+    "ROCK"
+   ],
+   "answers": [
+    "Haze / phaze",
+    "Taunt / Encore",
+    "Fake Out / Intimidate",
+    "speed control",
+    "priority"
+   ],
+   "missing": [
+    "screen breaker"
+   ],
+   "per_fight": {
+    "karrina": [
+     3,
+     6
+    ],
+    "spector": [
+     4,
+     6
+    ],
+    "spector2": [
+     1,
+     6
+    ],
+    "jenner9": [
+     2,
+     6
+    ],
+    "amanda": [
+     2,
+     6
+    ],
+    "erick": [
+     3,
+     6
+    ]
+   },
+   "open": [
+    "amanda:Bronzong",
+    "jenner9:Kommo-o",
+    "jenner9:Porygon-Z",
+    "spector2:Typhlosion"
+   ],
+   "cover6": 32
   }
  ],
  "snow": [
   {
-   "score": 0.79,
+   "score": 0.792,
    "members": [
     "Ninetales (Alolan Form)",
     "Gholdengo",
     "Golisopod (Aevian Form)",
     "Glaceon"
    ],
-   "cover": 29,
+   "cover": 26,
    "swaps": [
     "Arcanine (Hisuian Form)",
     "Oranguru"
@@ -1534,10 +1472,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "garbodor": [
-     3,
-     4
-    ],
     "karrina": [
      5,
      6
@@ -1565,21 +1499,20 @@
    },
    "open": [
     "amanda:Bronzong",
-    "garbodor:Garbodor (bar 2)",
     "jenner9:Porygon-Z",
     "spector2:Typhlosion"
    ],
-   "cover6": 36
+   "cover6": 33
   },
   {
-   "score": 0.779,
+   "score": 0.781,
    "members": [
     "Ninetales (Alolan Form)",
     "Gholdengo",
     "Golisopod (Aevian Form)",
     "Walrein"
    ],
-   "cover": 30,
+   "cover": 27,
    "swaps": [
     "Arcanine (Hisuian Form)",
     "Oranguru"
@@ -1654,10 +1587,6 @@
     "screen breaker"
    ],
    "per_fight": {
-    "garbodor": [
-     3,
-     4
-    ],
     "karrina": [
      5,
      6
@@ -1685,11 +1614,10 @@
    },
    "open": [
     "amanda:Bronzong",
-    "garbodor:Garbodor (bar 2)",
     "jenner9:Porygon-Z",
     "spector2:Typhlosion"
    ],
-   "cover6": 36
+   "cover6": 33
   }
  ]
 }

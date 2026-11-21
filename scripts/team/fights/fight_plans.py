@@ -170,6 +170,10 @@ for key in KEYS:
     LEADS = (st.get('plan_leads') or {}).get(key)   # hand-picked lead (a utility lead the evaluator can't score)
     if LEADS: lead = tuple(i for i, r in enumerate(six) if r['name'] in LEADS)
     lv, ltk = lead_val(lead)
+    PP = (st.get('plan_pairs') or {}).get(key)   # hand pairing (fight protocol in chat): {foe: our mon}
+    if PP:
+        pr = [next((i for i, r in enumerate(six) if r['name'] == PP.get(FO[j])), pr[j]) for j in range(n)]
+        nok = sum(bool(M[six[pr[j]]['name']][1][j]) for j in range(n))
     srow = lambda r: dict(name=r['name'], ab=r['ab'], moves=r['moves'], setup=r.get('setup'), where=r.get('where'), dump=r.get('dump'),
                           nature=r.get('nature'), evs=r.get('evs'), types=r['types'])
     pairs = [dict(foe=FO[j], mon=six[pr[j]]['name'], ability=six[pr[j]]['ab'], dealt=int(six[pr[j]]['cov'][j] * BARS[j]), taken=int(six[pr[j]]['taken'][j]),

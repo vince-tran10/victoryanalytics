@@ -27,20 +27,7 @@
   "note": "not in engine (beaten or not tracked)"
  },
  "garbodor": {
-  "label": "Rift Garbodor (boss) – Corrupted Cave",
-  "game_src": [
-   "boss RIFTGARBODOR"
-  ],
-  "n_game": 1,
-  "n_guide": 4,
-  "rows": [
-   {
-    "mon": "Garbodor",
-    "diff": [
-     "BOSS 3 shields (guide HP x1); phases: at 3 shield(s): Garbodor gorged itself on rotten berries!, moves → Drain Punch/Giga Drain/Darkest Lariat/Belch, boss stats {'Atk': 1, 'SpA': 1}; at 2 shield(s): Garbodor gorged itself on scrap metal!, moves → Drain Punch/Giga Drain/Gyro Ball/Belch, boss stats {'Def': 1, 'SpD': 1}; at 1 shield(s): Garbodor desperately gorged itself on nearby rocks!, moves → Rock Blast/Giga Drain/Gyro Ball/Belch, boss stats {'Atk': 2, 'Def': -1, 'SpA': 2, 'SpD': -1}"
-    ]
-   }
-  ]
+  "note": "not in engine (beaten or not tracked)"
  },
  "karrina": {
   "label": "Gang Leader Karrina – Blessed Field",

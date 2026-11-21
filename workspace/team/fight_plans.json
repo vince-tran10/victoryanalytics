@@ -1,188 +1,4 @@
 {
- "garbodor": {
-  "key": "garbodor",
-  "format": "Doubles",
-  "foes": [
-   "Garbodor (bar 1)",
-   "Garbodor (bar 2)",
-   "Garbodor (bar 3)",
-   "Garbodor (bar 4)"
-  ],
-  "swaps": [
-   {
-    "name": "Muk (Alolan Form)",
-    "ab": "POISONTOUCH",
-    "moves": [
-     "Knock Off",
-     "Clear Smog"
-    ],
-    "setup": null,
-    "where": "Party",
-    "dump": 4,
-    "nature": "Adamant",
-    "evs": {
-     "Atk": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "POISON",
-     "DARK"
-    ]
-   },
-   {
-    "name": "Clodsire",
-    "ab": "UNAWARE",
-    "moves": [
-     "Earthquake"
-    ],
-    "setup": null,
-    "where": "Overflow",
-    "dump": 414,
-    "nature": "Adamant",
-    "evs": {
-     "Atk": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "POISON",
-     "GROUND"
-    ]
-   }
-  ],
-  "counters": 2,
-  "n": 4,
-  "pairs": [
-   {
-    "foe": "Garbodor (bar 1)",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 66,
-    "taken": 37,
-    "ok": true,
-    "setup": "Swords Dance",
-    "wincons": [
-     {
-      "what": "Healing",
-      "answers": [
-       "Gastro Acid (Muk)"
-      ]
-     }
-    ]
-   },
-   {
-    "foe": "Garbodor (bar 2)",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
-    "dealt": 45,
-    "taken": 105,
-    "ok": false,
-    "setup": false,
-    "wincons": [
-     {
-      "what": "Healing",
-      "answers": [
-       "Gastro Acid (Muk)"
-      ]
-     }
-    ]
-   },
-   {
-    "foe": "Garbodor (bar 3)",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 92,
-    "taken": 75,
-    "ok": false,
-    "setup": false,
-    "wincons": [
-     {
-      "what": "Healing",
-      "answers": [
-       "Gastro Acid (Muk)"
-      ]
-     }
-    ]
-   },
-   {
-    "foe": "Garbodor (bar 4)",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 130,
-    "taken": 122,
-    "ok": true,
-    "setup": false,
-    "wincons": [
-     {
-      "what": "Healing",
-      "answers": [
-       "Gastro Acid (Muk)"
-      ]
-     }
-    ]
-   }
-  ],
-  "weak3": [],
-  "nores": [],
-  "leads": [
-   "Muk (Alolan Form)"
-  ],
-  "lead_foes": [
-   "Garbodor (bar 1)"
-  ],
-  "lead_taken": 28,
-  "sim": {
-   "plan": {
-    "melia": "WIN · turns per bar [4, 3, 4, 2] · damaged: Arcanine 0%, Golisopod 0%, Muk 57%",
-    "solo": "LOSS (your side fainted) · turns per bar [5, 3, 8] · damaged: Gholdengo 0%, Arcanine 0%, Golisopod 0%, Vaporeon 0%, Muk 0%, Clodsire 0%",
-    "log": [
-     "bar 1 t1: Muk Gastro Acid, bar 95% left, Muk 78% HP",
-     "bar 1 t2: Muk Knock Off, bar 75% left, Muk 57% HP",
-     "bar 1 t3: Golisopod switch, bar 58% left, Golisopod 59% HP",
-     "bar 1 t4: Golisopod attack, bar 0% left, Golisopod 47% HP",
-     "bar 2 t1: Golisopod attack, bar 85% left, Golisopod 0% HP",
-     "bar 2 t2: Arcanine attack, bar 36% left, Arcanine 7% HP",
-     "bar 2 t3: Arcanine attack, bar 0% left, Arcanine 0% HP",
-     "bar 3 t1: Gholdengo attack, bar 61% left, Gholdengo 100% HP",
-     "bar 3 t2: Gholdengo attack, bar 20% left, Gholdengo 100% HP",
-     "bar 3 t3: Gholdengo attack, bar 7% left, Gholdengo 100% HP",
-     "bar 3 t4: Gholdengo attack, bar 0% left, Gholdengo 100% HP",
-     "bar 4 t1: Gholdengo attack, bar 39% left, Gholdengo 100% HP",
-     "bar 4 t2: Gholdengo attack, bar 0% left, Gholdengo 100% HP"
-    ]
-   },
-   "best": [
-    {
-     "swaps": [
-      "Copperajah",
-      "Escavalier"
-     ],
-     "melia": "WIN · turns per bar [2, 5, 5, 4] · damaged: Golisopod 0%, Copperajah 25%",
-     "solo": "LOSS (your side fainted) · turns per bar [2, 13] · damaged: Gholdengo 0%, Arcanine 0%, Golisopod 0%, Vaporeon 0%, Copperajah 0%, Escavalier 0%"
-    },
-    {
-     "swaps": [
-      "Escavalier",
-      "Stunfisk (Galarian Form)"
-     ],
-     "melia": "WIN · turns per bar [2, 5, 5, 5] · damaged: Gholdengo 0%, Golisopod 0%",
-     "solo": "LOSS (your side fainted) · turns per bar [2, 13] · damaged: Gholdengo 0%, Arcanine 0%, Golisopod 0%, Vaporeon 0%, Escavalier 0%, Stunfisk 0%"
-    },
-    {
-     "swaps": [
-      "Escavalier",
-      "Nidoqueen"
-     ],
-     "melia": "WIN · turns per bar [2, 5, 5, 5] · damaged: Gholdengo 0%, Golisopod 0%",
-     "solo": "LOSS (your side fainted) · turns per bar [2, 13] · damaged: Gholdengo 0%, Arcanine 0%, Golisopod 0%, Vaporeon 0%, Escavalier 0%, Nidoqueen 0%"
-    }
-   ]
-  },
-  "lead_ok": true,
-  "note": "",
-  "hand": true
- },
  "karrina": {
   "key": "karrina",
   "format": "Singles",
@@ -221,8 +37,7 @@
     "name": "Clefable",
     "ab": "MAGICGUARD",
     "moves": [
-     "Moonblast",
-     "Shadow Ball"
+     "Moonblast"
     ],
     "setup": null,
     "where": "Overflow",
@@ -238,7 +53,7 @@
     ]
    }
   ],
-  "counters": 6,
+  "counters": 4,
   "n": 6,
   "pairs": [
    {
@@ -253,48 +68,48 @@
    },
    {
     "foe": "Musharna",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 130,
-    "taken": 36,
-    "ok": true,
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 89,
+    "taken": 49,
+    "ok": false,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "teach Safeguard (Clefable)"
+       "Safeguard (Clefable)"
       ]
      }
     ]
    },
    {
     "foe": "Granbull",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
-    "dealt": 109,
-    "taken": 203,
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 129,
+    "taken": 84,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Alakazam",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
-    "dealt": 111,
-    "taken": 57,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 130,
+    "taken": 56,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Fearow",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 130,
-    "taken": 45,
-    "ok": true,
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 121,
+    "taken": 73,
+    "ok": false,
     "setup": false,
     "wincons": []
    },
@@ -321,7 +136,7 @@
   "sim": null,
   "lead_ok": true,
   "note": "",
-  "hand": false
+  "hand": true
  },
  "spector": {
   "key": "spector",

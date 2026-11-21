@@ -1,6 +1,6 @@
 {
- "fights": 7,
- "foes": 40,
+ "fights": 6,
+ "foes": 36,
  "major": [
   "Bug",
   "Dark",
@@ -15,7 +15,6 @@
   "Ground",
   "Normal",
   "Poison",
-  "Poison/Rock",
   "Psychic",
   "Rock",
   "Steel"
@@ -24,10 +23,11 @@
   "Fire/Ghost",
   "Ice"
  ],
- "weak3": [
-  "GROUND"
+ "weak3": [],
+ "nores": [
+  "DARK",
+  "GHOST"
  ],
- "nores": [],
  "misses": [
   {
    "foe": "Stoutland",
@@ -48,5 +48,5 @@
    "dmg": 65
   }
  ],
- "n_types": 19
+ "n_types": 18
 }
