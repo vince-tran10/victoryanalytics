@@ -412,9 +412,9 @@ def core_grid():   # Cores: one compact card per style; key piece marked; the al
         main = v[0]['members']; key = v[0].get('enabler') if k != 'balance' else None; yours = sorted(main) == mine
         slots_ = v[0].get('slots') or ['Lead', 'Doubles lead', 'Flex', 'Closer']
         sw = {}
-        if len(v) > 1:   # 21 Nov: the alt replaces members role by role (same slot), same tier or higher
-            am = v[1]['members']
-            sw = {o: i_ for o, i_ in zip(main, am) if o != i_}
+        for alt_ in v[1:]:   # 21 Nov: notable swaps, one role each (same slot), same tier or higher
+            for o, i_ in zip(main, alt_['members']):
+                if o != i_ and o not in sw: sw[o] = i_
         lis = ''.join('<li' + (' class="key"' if n == key else '') + '><span class="cm"><span class="role-l">' + E(slots_[j] if j < len(slots_) else '') + '</span>' + tchip(n) + spr(n) + '<span class="nm">' + E(disp(n)) + '</span>' +
                       ('<small>key</small>' if n == key else '') + '</span>' +
                       ('<span class="alt" title="swap option"><span class="swp">⇄</span>' + tchip(sw[n]) + spr(sw[n]) + '<span class="nm">' + E(disp(sw[n])) + '</span></span>' if n in sw else '') +

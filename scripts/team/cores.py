@@ -393,21 +393,17 @@ for key, (cand, id_f, lreq) in CAND.items():
         fit = sum(f(m) for f, m in zip(SFN, ms)) / 4
         rescored.append((core_score(ms, idv, len(covered_of(ms, bds)) / len(ANS)) + .15 * fit - (.05 if not has_setup(ms[3]) else 0), ms))
     rescored.sort(key=lambda x: -x[0])
-    main = rescored[0] if rescored else None
-    mine = [ALL[n] for n in (ST.get('core') or []) if n in ALL]
-    if os.environ.get('CORES_FREE'):   # inspection: the open search, Vincent's core not forced
+    main = rescored[0] if rescored else None   # 21 Nov (Vincent): every style = its best 4, same method for all (no core forced)
+    if os.environ.get('CORES_FREE'):
         for sc_, ms_ in rescored[:5]: print('FREE', key, round(sc_, 3), [disp(m.name) for m in ms_], [m.r['tier'] for m in ms_], len(set().union(*(m.counters for m in ms_))))
-        if [m.name for m in mine] in [[m.name for m in ms_] for _, ms_ in rescored]: print('FREE', key, 'yours rank', [[m.name for m in ms_] for _, ms_ in rescored].index([m.name for m in mine]) + 1, 'of', len(rescored))
-    if key == 'balance' and len(mine) == 4 and not os.environ.get('CORES_FREE'):   # Vincent's picked core is always the first card of its style (state core order = roles)
-        mine = tuple(mine)
-        bds = [dict(moves=ST['moves'].get(m.name, []), ability=ST['abilities'].get(m.name, '')) for m in mine]
-        fit = sum(f(m) for f, m in zip(SFN, mine)) / 4
-        main = (core_score(mine, id_f(mine), len(covered_of(mine, bds)) / len(ANS)) + .15 * fit, mine)
     picked = [main] if main else []
-    if main:   # 18 + 21 Nov (Vincent): a swap replaces a member IN THE SAME ROLE, at the same tier or higher
-        for sc, ms in rescored:
-            if [m.name for m in ms] == [m.name for m in main[1]]: continue
-            if slot_ok(main[1], ms): picked.append((sc, ms)); break
+    if main:   # notable swaps only: ONE role changes, same tier or higher, core score within 0.01 of the best; one per role
+        seen_slot = set()
+        for sc, ms in rescored[1:]:
+            if sc < main[0] - .01: break
+            d = [i for i, (o, n) in enumerate(zip(main[1], ms)) if o.name != n.name]
+            if len(d) != 1 or d[0] in seen_slot or not slot_ok(main[1], ms): continue
+            seen_slot.add(d[0]); picked.append((sc, ms))
     results[key] = picked
     print(key, [(round(s_, 3), [disp(m.name) for m in ms]) for s_, ms in picked])
 
