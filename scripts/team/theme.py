@@ -73,7 +73,7 @@ nxt = ''
 if st.get('fight') and st['fight'] in FP:
     p = FP[st['fight']]
     nxt = (f'<a class="next" href="#fights" data-go="fights"><span class="next-k">Next battle</span>'
-           f'<b>{E(FIGHT_NAME.get(st["fight"], st["fight"]))}</b><span>{E(p["format"])} · lead {E(" + ".join(disp(x) for x in p["leads"]))}'
+           f'<b>{E(FIGHT_NAME.get(st["fight"], st["fight"]))}</b><span>{E(p["format"])} · bring {E(" + ".join(disp(r["name"]) for r in p["swaps"]))}'
            f' · {p["counters"]}/{p["n"]} countered</span><span class="next-go" aria-hidden="true">›</span></a>')
 low = sum(1 for nm in st['team'] if (party.get(disp(nm)) or {}).get('level', CAP) < CAP)
 hero = f'<div class="hero"><div class="hero-head"><h3>Your party</h3></div><ol class="party">{slots}</ol>{nxt}</div>'
@@ -233,7 +233,6 @@ def fight_cards():
         _bp = bar_plan_html(k, SP.tag(*(_bf or _ids[0]), size='m') if (_bf or _ids) else '') if hf.get('boss') else None
         out += ('<details class="fc' + (' is-next' if idx == 0 else '') + '"' + (' open' if idx == 0 else '') + '>' + head
                 + '<div class="fbody"><div class="frow"><span class="fk">Bring</span><ul class="mons">' + bring + '</ul></div>'
-                + '<div class="frow"><span class="fk">Lead</span><ul class="mons">' + lead + '</ul></div>'
                 + ('<div class="frow"><span class="fk">Field</span><span class="fbo">' + E(hf.get('field', '') + ': ' + field_line(hf.get('field', ''))) + '</span></div>' if field_line(hf.get('field', '')) else '')
                 + (('<div class="frow"><span class="fk">Boosted</span><span class="fbo">' + E(_bl) + '</span></div>') if (_bl := boosted_line(hf.get('field', ''), (list(st.get('core') or []) + [r['name'] for r in p['swaps']]))) else '')
                 + (_bp if _bp else '<ul class="foes">' + foes + '</ul>') + '</div></details>')

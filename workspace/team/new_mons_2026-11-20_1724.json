@@ -1,0 +1,767 @@
+[
+ {
+  "dump": 48,
+  "owned": "Bronzong",
+  "level": 60,
+  "now_ability": "Heavy Metal",
+  "now_moves": [
+   "Heavy Slam",
+   "Iron Defense",
+   "Metal Sound",
+   "Future Sight"
+  ],
+  "final": "Bronzong",
+  "evolve": "",
+  "gate": "",
+  "types": "Steel/Psychic",
+  "score": 0.363,
+  "tier": "D",
+  "ability": "Levitate",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Gyro Ball",
+   "Extrasensory",
+   "Feint Attack",
+   "Protect"
+  ],
+  "move_src": {
+   "Gyro Ball": "Lv 16",
+   "Extrasensory": "Lv 28",
+   "Feint Attack": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.33,
+   "danni": 0.78,
+   "troye": 0.43,
+   "zena": 0.62,
+   "marcie": 0.44,
+   "karrina": 0.38,
+   "spector": 0.16,
+   "spector2": 0.18,
+   "jenner9": 0.22,
+   "erick": 0.23
+  }
+ },
+ {
+  "dump": 183,
+  "owned": "Klang",
+  "level": 60,
+  "now_ability": "Clear Body",
+  "now_moves": [
+   "Gear Grind",
+   "Lock-On",
+   "Shift Gear",
+   "Zap Cannon"
+  ],
+  "final": "Klinklang",
+  "evolve": "Klinklang (Level 49)",
+  "gate": "",
+  "types": "Steel",
+  "score": 0.359,
+  "tier": "D",
+  "ability": "Clear Body",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Gear Grind",
+   "Assurance",
+   "Shift Gear",
+   "Protect"
+  ],
+  "move_src": {
+   "Gear Grind": "known",
+   "Assurance": "TM136",
+   "Shift Gear": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.48,
+   "danni": 0.9,
+   "troye": 0.43,
+   "zena": 0.71,
+   "marcie": 0.51,
+   "karrina": 0.2,
+   "spector": 0.3,
+   "spector2": 0.2,
+   "jenner9": 0.19,
+   "erick": 0.16
+  }
+ },
+ {
+  "dump": 196,
+  "owned": "Lokix",
+  "level": 60,
+  "now_ability": "Swarm",
+  "now_moves": [
+   "Sucker Punch",
+   "First Impression",
+   "Bounce",
+   "Axe Kick"
+  ],
+  "final": "Lokix",
+  "evolve": "",
+  "gate": "",
+  "types": "Bug/Dark",
+  "score": 0.282,
+  "tier": "D",
+  "ability": "Swarm",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Sucker Punch",
+   "Axe Kick",
+   "X-Scissor",
+   "Protect"
+  ],
+  "move_src": {
+   "Sucker Punch": "known",
+   "Axe Kick": "known",
+   "X-Scissor": "TM81",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.26,
+   "danni": 0.74,
+   "troye": 0.49,
+   "zena": 0.55,
+   "marcie": 0.88,
+   "karrina": -0.02,
+   "spector": 0.5,
+   "spector2": 0.12,
+   "jenner9": 0.07,
+   "erick": 0.31
+  }
+ },
+ {
+  "dump": 209,
+  "owned": "Magnemite",
+  "level": 60,
+  "now_ability": "Sturdy",
+  "now_moves": [
+   "Gyro Ball",
+   "Spark",
+   "Screech",
+   "Magnet Rise"
+  ],
+  "final": "Magnezone",
+  "evolve": "Magneton (Level 30); Magnezone (Item Thunder Stone)",
+  "gate": "",
+  "types": "Electric/Steel",
+  "score": 0.43,
+  "tier": "C",
+  "ability": "Sturdy",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Flash Cannon",
+   "Signal Beam",
+   "Discharge",
+   "Protect"
+  ],
+  "move_src": {
+   "Flash Cannon": "Lv 34",
+   "Signal Beam": "known",
+   "Discharge": "Lv 40",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.5,
+   "danni": 0.83,
+   "troye": 0.59,
+   "zena": 0.59,
+   "marcie": 0.78,
+   "karrina": 0.19,
+   "spector": 0.51,
+   "spector2": 0.42,
+   "jenner9": 0.32,
+   "erick": 0.33
+  }
+ },
+ {
+  "dump": 210,
+  "owned": "Magneton",
+  "level": 60,
+  "now_ability": "Magnet Pull",
+  "now_moves": [
+   "Magnet Rise",
+   "Flash Cannon",
+   "Discharge",
+   "Metal Sound"
+  ],
+  "final": "Magnezone",
+  "evolve": "Magnezone (Item Thunder Stone)",
+  "gate": "",
+  "types": "Electric/Steel",
+  "score": 0.43,
+  "tier": "C",
+  "ability": "Magnet Pull",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Flash Cannon",
+   "Signal Beam",
+   "Discharge",
+   "Protect"
+  ],
+  "move_src": {
+   "Flash Cannon": "known",
+   "Signal Beam": "known",
+   "Discharge": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.5,
+   "danni": 0.83,
+   "troye": 0.59,
+   "zena": 0.59,
+   "marcie": 0.78,
+   "karrina": 0.19,
+   "spector": 0.51,
+   "spector2": 0.42,
+   "jenner9": 0.32,
+   "erick": 0.33
+  }
+ },
+ {
+  "dump": 238,
+  "owned": "Morpeko",
+  "level": 60,
+  "now_ability": "Hunger Switch",
+  "now_moves": [
+   "Agility",
+   "Bullet Seed",
+   "Crunch",
+   "Aura Wheel"
+  ],
+  "final": "Morpeko",
+  "evolve": "",
+  "gate": "",
+  "types": "Electric/Dark",
+  "score": 0.226,
+  "tier": "D",
+  "ability": "Hunger Switch",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Aura Wheel",
+   "Crunch",
+   "Fake Out",
+   "Protect"
+  ],
+  "move_src": {
+   "Aura Wheel": "known",
+   "Crunch": "known",
+   "Fake Out": "Egg",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.33,
+   "danni": 0.67,
+   "troye": 0.32,
+   "zena": 0.71,
+   "marcie": 0.33,
+   "karrina": -0.06,
+   "spector": 0.65,
+   "spector2": 0.23,
+   "jenner9": -0.07,
+   "erick": 0.18
+  }
+ },
+ {
+  "dump": 241,
+  "owned": "Muk",
+  "level": 60,
+  "now_ability": "Stench",
+  "now_moves": [
+   "Screech",
+   "Gunk Shot",
+   "Acid Armor",
+   "Belch"
+  ],
+  "final": "Muk",
+  "evolve": "",
+  "gate": "",
+  "types": "Poison",
+  "score": 0.39,
+  "tier": "D",
+  "ability": "Stench",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Gunk Shot",
+   "Shadow Punch",
+   "Lunge",
+   "Protect"
+  ],
+  "move_src": {
+   "Gunk Shot": "known",
+   "Shadow Punch": "Egg",
+   "Lunge": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.4,
+   "danni": 0.68,
+   "troye": 0.42,
+   "zena": 0.6,
+   "marcie": 0.74,
+   "karrina": 0.24,
+   "spector": 0.46,
+   "spector2": 0.33,
+   "jenner9": 0.19,
+   "erick": 0.49
+  }
+ },
+ {
+  "dump": 242,
+  "owned": "Muk",
+  "level": 60,
+  "now_ability": "Stench",
+  "now_moves": [
+   "Screech",
+   "Gunk Shot",
+   "Acid Armor",
+   "Belch"
+  ],
+  "final": "Muk",
+  "evolve": "",
+  "gate": "",
+  "types": "Poison",
+  "score": 0.39,
+  "tier": "D",
+  "ability": "Stench",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Gunk Shot",
+   "Shadow Punch",
+   "Lunge",
+   "Protect"
+  ],
+  "move_src": {
+   "Gunk Shot": "known",
+   "Shadow Punch": "Egg",
+   "Lunge": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.4,
+   "danni": 0.68,
+   "troye": 0.42,
+   "zena": 0.6,
+   "marcie": 0.74,
+   "karrina": 0.24,
+   "spector": 0.46,
+   "spector2": 0.33,
+   "jenner9": 0.19,
+   "erick": 0.49
+  }
+ },
+ {
+  "dump": 243,
+  "owned": "Muk",
+  "level": 60,
+  "now_ability": "Sticky Hold",
+  "now_moves": [
+   "Screech",
+   "Gunk Shot",
+   "Acid Armor",
+   "Belch"
+  ],
+  "final": "Muk",
+  "evolve": "",
+  "gate": "",
+  "types": "Poison",
+  "score": 0.39,
+  "tier": "D",
+  "ability": "Sticky Hold",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Gunk Shot",
+   "Shadow Punch",
+   "Lunge",
+   "Protect"
+  ],
+  "move_src": {
+   "Gunk Shot": "known",
+   "Shadow Punch": "Egg",
+   "Lunge": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.4,
+   "danni": 0.68,
+   "troye": 0.42,
+   "zena": 0.6,
+   "marcie": 0.74,
+   "karrina": 0.24,
+   "spector": 0.46,
+   "spector2": 0.33,
+   "jenner9": 0.19,
+   "erick": 0.49
+  }
+ },
+ {
+  "dump": 272,
+  "owned": "Parasect",
+  "level": 60,
+  "now_ability": "Effect Spore",
+  "now_moves": [
+   "Slash",
+   "Growth",
+   "Giga Drain",
+   "Aromatherapy"
+  ],
+  "final": "Parasect",
+  "evolve": "",
+  "gate": "",
+  "types": "Bug/Grass",
+  "score": 0.201,
+  "tier": "D",
+  "ability": "Effect Spore",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "X-Scissor",
+   "Bullet Seed",
+   "Wide Guard",
+   "Protect"
+  ],
+  "move_src": {
+   "X-Scissor": "Lv 66",
+   "Bullet Seed": "TM131",
+   "Wide Guard": "Egg",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.07,
+   "danni": 0.55,
+   "troye": 0.23,
+   "zena": 0.58,
+   "marcie": 0.86,
+   "karrina": 0.13,
+   "spector": 0.23,
+   "spector2": -0.02,
+   "jenner9": -0.03,
+   "erick": 0.11
+  }
+ },
+ {
+  "dump": 294,
+  "owned": "Purugly",
+  "level": 60,
+  "now_ability": "Defiant",
+  "now_moves": [
+   "Retaliate",
+   "Slash",
+   "Body Slam",
+   "Attract"
+  ],
+  "final": "Purugly",
+  "evolve": "",
+  "gate": "",
+  "types": "Normal",
+  "score": 0.294,
+  "tier": "D",
+  "ability": "Defiant",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Body Slam",
+   "Shadow Claw",
+   "Play Rough",
+   "Protect"
+  ],
+  "move_src": {
+   "Body Slam": "known",
+   "Shadow Claw": "TM65",
+   "Play Rough": "Lv 1",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.57,
+   "danni": 0.66,
+   "troye": 0.2,
+   "zena": 0.64,
+   "marcie": 0.3,
+   "karrina": 0.27,
+   "spector": 0.61,
+   "spector2": 0.27,
+   "jenner9": -0.11,
+   "erick": 0.16
+  }
+ },
+ {
+  "dump": 295,
+  "owned": "Purugly",
+  "level": 60,
+  "now_ability": "Own Tempo",
+  "now_moves": [
+   "Thrash",
+   "Swords Dance",
+   "Earthquake",
+   "Sucker Punch"
+  ],
+  "final": "Purugly",
+  "evolve": "",
+  "gate": "",
+  "types": "Normal",
+  "score": 0.343,
+  "tier": "D",
+  "ability": "Own Tempo",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Thrash",
+   "Sucker Punch",
+   "Swords Dance",
+   "Protect"
+  ],
+  "move_src": {
+   "Thrash": "known",
+   "Sucker Punch": "known",
+   "Swords Dance": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.55,
+   "danni": 0.82,
+   "troye": 0.28,
+   "zena": 0.67,
+   "marcie": 0.43,
+   "karrina": 0.3,
+   "spector": 0.54,
+   "spector2": 0.22,
+   "jenner9": 0.0,
+   "erick": 0.23
+  }
+ },
+ {
+  "dump": 401,
+  "owned": "Unfezant",
+  "level": 60,
+  "now_ability": "Big Pecks",
+  "now_moves": [
+   "Feather Dance",
+   "Detect",
+   "Air Slash",
+   "Roost"
+  ],
+  "final": "Unfezant",
+  "evolve": "",
+  "gate": "",
+  "types": "Normal/Flying",
+  "score": 0.243,
+  "tier": "D",
+  "ability": "Super Luck",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Secret Power",
+   "Night Slash",
+   "Air Slash",
+   "Protect"
+  ],
+  "move_src": {
+   "Secret Power": "TM19",
+   "Night Slash": "Egg",
+   "Air Slash": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.39,
+   "danni": 0.76,
+   "troye": 0.37,
+   "zena": 0.45,
+   "marcie": 0.38,
+   "karrina": 0.17,
+   "spector": 0.48,
+   "spector2": 0.16,
+   "jenner9": -0.08,
+   "erick": 0.09
+  }
+ },
+ {
+  "dump": 402,
+  "owned": "Unfezant",
+  "level": 60,
+  "now_ability": "Super Luck",
+  "now_moves": [
+   "Swagger",
+   "Feather Dance",
+   "Detect",
+   "Air Slash"
+  ],
+  "final": "Unfezant",
+  "evolve": "",
+  "gate": "",
+  "types": "Normal/Flying",
+  "score": 0.243,
+  "tier": "D",
+  "ability": "Super Luck",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Secret Power",
+   "Night Slash",
+   "Air Slash",
+   "Protect"
+  ],
+  "move_src": {
+   "Secret Power": "TM19",
+   "Night Slash": "Egg",
+   "Air Slash": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.39,
+   "danni": 0.76,
+   "troye": 0.37,
+   "zena": 0.45,
+   "marcie": 0.38,
+   "karrina": 0.17,
+   "spector": 0.48,
+   "spector2": 0.16,
+   "jenner9": -0.08,
+   "erick": 0.09
+  }
+ },
+ {
+  "dump": 420,
+  "owned": "Watchog",
+  "level": 60,
+  "now_ability": "Analytic",
+  "now_moves": [
+   "Nasty Plot",
+   "Mean Look",
+   "Baton Pass",
+   "Slam"
+  ],
+  "final": "Watchog",
+  "evolve": "",
+  "gate": "",
+  "types": "Normal",
+  "score": 0.288,
+  "tier": "D",
+  "ability": "Analytic",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Crunch",
+   "Hyper Fang",
+   "Low Kick",
+   "Protect"
+  ],
+  "move_src": {
+   "Crunch": "Lv 16",
+   "Hyper Fang": "Lv 36",
+   "Low Kick": "Lv 1",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.33,
+   "danni": 0.68,
+   "troye": 0.34,
+   "zena": 0.64,
+   "marcie": 0.32,
+   "karrina": 0.18,
+   "spector": 0.5,
+   "spector2": 0.22,
+   "jenner9": -0.01,
+   "erick": 0.33
+  }
+ }
+]

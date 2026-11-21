@@ -18,8 +18,11 @@ OUT = os.path.join(ROOT, 'output', 'chapter8_report.html')
 sys.path.insert(0, SCR)
 
 
+TIMES = []
 def sh(args, env, quiet=True, log=None):
+    import time as _tm; _t0 = _tm.time()
     r = subprocess.run([sys.executable, '-I'] + args, cwd=WS, env=env, capture_output=True, text=True)
+    TIMES.append((round(_tm.time() - _t0, 1), os.path.basename(args[0]) + ' ' + ' '.join(os.path.basename(x) for x in args[1:2])))
     if log: open(log, 'w').write(r.stdout + r.stderr)
     if r.returncode != 0:
         print(r.stdout[-2000:], r.stderr[-3000:]); sys.exit(f'FAILED: {args[0]}')
@@ -94,10 +97,16 @@ def main():
     R = json.load(open(os.path.join(TEAMD, f'roster{rost}.json')))
     for x in R: x['level'] = st.get('cap', 55)
     json.dump(R, open(os.path.join(TEAMD, f'roster{rost}_lv55.json'), 'w'))
-    print('Scoring (4 engine runs)...')
-    for f in ('native', 'Singles', 'Doubles'):
-        sh(['../scripts/team/run.py', WS, f'team/roster{rost}_lv55.json', f'team/r{run}_{f}.json'], dict(env, FORCE_FORMAT=f))
-    sh(['../scripts/team/run.py', WS, f'team/roster{rost}_lv55.json', f'team/r{run}n_native.json'], dict(env, FORCE_FORMAT='native', NOFIELD='1'))
+    print('Scoring (5 engine runs, in parallel)...')   # 21 Nov: independent runs -> ~45s instead of ~110s
+    import time as _tm; _t0 = _tm.time()
+    jobs = [(['../scripts/team/run.py', WS, f'team/roster{rost}_lv55.json', f'team/r{run}_{f}.json'], dict(env, FORCE_FORMAT=f)) for f in ('native', 'Singles', 'Doubles')]
+    jobs.append((['../scripts/team/run.py', WS, f'team/roster{rost}_lv55.json', f'team/r{run}n_native.json'], dict(env, FORCE_FORMAT='native', NOFIELD='1')))
+    jobs.append((['../scripts/team/run.py', WS, f'team/roster{rost}_lv55.json', f'team/rc{run}_native.json'], dict(env, FORCE_FORMAT='native', CRESTS='1')))
+    procs = [(a_, subprocess.Popen([sys.executable, '-I'] + a_, cwd=WS, env=e_, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)) for a_, e_ in jobs]
+    for a_, p_ in procs:
+        o_, e_ = p_.communicate()
+        if p_.returncode != 0: print(o_[-2000:], e_[-3000:]); sys.exit(f'FAILED: {a_[0]} {a_[-1]}')
+    TIMES.append((round(_tm.time() - _t0, 1), 'engine runs x5 (parallel)'))
     if pick:
         out = sh(['../scripts/team/new_mons.py', WS, f"team/roster{st['roster']}.json", f'team/roster{rost}_lv55.json',
                   f'team/new_mons_{stamp}.json'], dict(env, PICK=','.join(map(str, pick))))
@@ -178,7 +187,6 @@ def main():
     sh(['../scripts/team/box_audit.py', OUT, new, st['export'], str(st['active_start']), st['promote'], ''], pe)
     sh(['../scripts/team/highlight.py', OUT], pe)
     # crests: every crest-eligible Pokémon re-scored with its crest (game-code effects), then the Crests tab
-    sh(['../scripts/team/run.py', WS, f'team/roster{rost}_lv55.json', f'team/rc{run}_native.json'], dict(env, FORCE_FORMAT='native', CRESTS='1'))
     sh(['../scripts/team/crest_tier.py'], dict(env, CR_RUN=f'r{run}', CREST_RUN=f'rc{run}', BASE_RUN=f'r{run}'))
     # one blended tier scale (Ch9 fights + meta) for Crests / Aevians / all other Pokémon, then the Cores tab (16 Nov)
     sh(['../scripts/team/tier_all.py'], dict(env, BASE_RUN=f'r{run}', CREST_RUN=f'rc{run}'))
@@ -209,6 +217,9 @@ def main():
 
     st.update(export=new, export_label=label, active_start=stg[0] if stg else act, run=run, final=fin, roster=rost)
     json.dump(st, open(STATE, 'w'), indent=1, ensure_ascii=False)
+    if os.environ.get('TIMING'):
+        for t_, n_ in sorted(TIMES, reverse=True)[:15]: print(f'  {t_:6.1f}s  {n_}')
+        print(f'  total {sum(t for t, _ in TIMES):.0f}s')
     if blocked:
         print('!! A blocking C&A check FAILED: fix it before publishing.')
     else:

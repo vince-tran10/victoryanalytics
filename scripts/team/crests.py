@@ -81,6 +81,8 @@ def atk_mult(att, dfn, mid, mv, mtype, base_power):
     if c == 'SAWSBUCK' and mv['Type'] == 'NORMAL': m *= 1.2
     if c == 'CINCCINO' and mv.get('Target') in ('SingleNonUser', 'RandomOpposing', 'SingleOpposing'):
         m *= 2.0 if att.get('ability') == 'SKILLLINK' else 1.24   # every single-target move hits 2-5 times at 0.4x
+    if c == 'TYPHLOSION' and 'Contact' in (mv.get('DataFlags') or []) and mv.get('Target') in ('SingleNonUser', 'RandomOpposing', 'SingleOpposing'):
+        m *= 1.3   # Typhlosion Crest (Battler.rb pbNumHits / Battle_Move.rb bondmult): contact moves hit twice, 2nd hit at 0.3x
     return m
 
 

@@ -3,7 +3,7 @@
 Read this first, every session. It holds the rules Vincent has set; `NOTES.md` is the history log (long, append-only).
 Live guide: https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS (publish `output/chapter8_report.html` to that URL).
 
-## Workflow: one command per export
+## Workflow: one command per export (~80s: the 5 engine runs run in parallel; TIMING=1 prints the slowest steps)
 1. Copy the uploaded export, then run from the repo root:
    `python3 scripts/team/update.py <export.txt> [--beat <fight,...>] [--fight <boss>|none] [--staging A-B --active N] [--quick]`
 2. Check the printed box layout ("around Active start"). If it's wrong, re-run with `--staging/--active` (saved in state).
@@ -125,7 +125,9 @@ damage score and the fight's real win condition was only read after Vincent lost
   boss fights: it decides near-equal pairs when there is no hand plan; results go in fight_plans.json `sim` and in CHAT only.
 - **Crests (18 Nov, game code):** Zoroark Crest = ability + STAB types of the last party member → scored with the BEST
   possible slot-6 partner (run.py, `zoro_partner`, shown on the Crest tab); Furret Crest = Substitute on entry for 1/4 HP
-  (engine: survives one extra hit).
+  (engine: survives one extra hit); Typhlosion Crest (form 0) = Atk equals SpA + contact moves hit twice, 2nd at 0.3x
+  (Battler.rb pbNumHits / Battle_Move.rb bondmult) → crests.py x1.3 on single-target contact moves. Crested mons pick their own
+  attacks in the crest run (ideal builds don't override them).
 
 ## Build rules
 - **Protect is always the 4th move.** Only exception: Lapras-Aevian (No Guard: Rock Slide / Zen Headbutt /
@@ -175,7 +177,7 @@ damage score and the fight's real win condition was only read after Vincent lost
   replacement is the SAME tier or higher than the member it replaces (paired by tier); no such alt → no swap shown. Kept members have nothing on the right. No builds there (they live on Team / To do).
 - **Fights tab (17 Nov):** one collapsible card per remaining fight, built by theme.py from team/fight_plans.json (single
   source; the old hard-fights table, opener cards and counter tables are replaced). Header: number, name, format/boss/field
-  chips, countered x/n (green if ≥ n-1), "Needs a plan" badge. Body: Bring (2 swaps), Lead, Field boosts, then each foe →
+  chips, countered x/n (green if ≥ n-1), "Needs a plan" badge. Body: Bring (2 swaps; NO Lead row, Vincent 21 Nov: let it flow), Field, Boosted, then each foe →
   counter with deals/takes bars, weak rows first in amber. Only the next fight is open.
   **Boss bar plan (Vincent, 20 Nov):** for the NEXT boss fight the foe→counter list is replaced by a bar-by-bar plan of the
   real six (scripts/team/fights/bar_plan.py → team/bar_plan_<fight>.json, run by update.py): each bar shows the boss's

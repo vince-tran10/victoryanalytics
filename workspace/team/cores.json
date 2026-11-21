@@ -108,7 +108,7 @@
    "cover6": 29
   },
   {
-   "score": 0.913,
+   "score": 0.914,
    "members": [
     "Arcanine (Hisuian Form)",
     "Gholdengo",
@@ -219,7 +219,7 @@
  ],
  "tr": [
   {
-   "score": 0.867,
+   "score": 0.869,
    "members": [
     "Oranguru",
     "Clefable",
@@ -228,8 +228,8 @@
    ],
    "cover": 21,
    "swaps": [
-    "Armarouge",
-    "Golisopod (Aevian Form)"
+    "Golisopod (Aevian Form)",
+    "Arcanine (Hisuian Form)"
    ],
    "builds": [
     {
@@ -328,7 +328,7 @@
    "cover6": 27
   },
   {
-   "score": 0.864,
+   "score": 0.865,
    "members": [
     "Oranguru",
     "Clefable",
@@ -439,7 +439,7 @@
  ],
  "setup": [
   {
-   "score": 0.895,
+   "score": 0.897,
    "members": [
     "Clefable",
     "Gholdengo",
@@ -548,7 +548,7 @@
    "cover6": 27
   },
   {
-   "score": 0.859,
+   "score": 0.861,
    "members": [
     "Clefable",
     "Gholdengo",
@@ -879,6 +879,118 @@
  ],
  "electric": [
   {
+   "score": 0.69,
+   "members": [
+    "Pincurchin",
+    "Golisopod (Aevian Form)",
+    "Donphan",
+    "Magnezone"
+   ],
+   "cover": 18,
+   "swaps": [
+    "Oranguru",
+    "Arcanine (Hisuian Form)"
+   ],
+   "builds": [
+    {
+     "moves": [
+      "Thunder Wave",
+      "Zing Zap",
+      "Sucker Punch",
+      "Protect"
+     ],
+     "item": "Magnet",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Electric Surge"
+    },
+    {
+     "moves": [
+      "Swords Dance",
+      "Bone Rush",
+      "Pin Missile",
+      "Protect"
+     ],
+     "item": "Soft Sand",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Skill Link"
+    },
+    {
+     "moves": [
+      "Earthquake",
+      "Thunder Fang",
+      "Ice Shard",
+      "Protect"
+     ],
+     "item": "Soft Sand",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Sturdy"
+    },
+    {
+     "moves": [
+      "Flash Cannon",
+      "Discharge",
+      "Tri Attack",
+      "Protect"
+     ],
+     "item": "Metal Coat",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Sturdy"
+    }
+   ],
+   "roles": [
+    "terrain setter",
+    "attacker",
+    "attacker",
+    "attacker"
+   ],
+   "shared": [
+    "FIRE",
+    "WATER"
+   ],
+   "answers": [
+    "speed control",
+    "priority"
+   ],
+   "missing": [
+    "Haze / phaze",
+    "Taunt / Encore",
+    "Fake Out / Intimidate",
+    "screen breaker"
+   ],
+   "per_fight": {
+    "karrina": [
+     4,
+     6
+    ],
+    "spector": [
+     5,
+     6
+    ],
+    "spector2": [
+     4,
+     6
+    ],
+    "jenner9": [
+     2,
+     6
+    ],
+    "erick": [
+     3,
+     6
+    ]
+   },
+   "open": [
+    "jenner9:Kommo-o",
+    "jenner9:Porygon-Z",
+    "spector2:Typhlosion"
+   ],
+   "cover6": 27
+  },
+  {
    "score": 0.688,
    "members": [
     "Pincurchin",
@@ -989,125 +1101,11 @@
     "spector2:Typhlosion"
    ],
    "cover6": 26
-  },
-  {
-   "score": 0.668,
-   "members": [
-    "Pincurchin",
-    "Gholdengo",
-    "Vikavolt",
-    "Donphan"
-   ],
-   "cover": 13,
-   "swaps": [
-    "Golisopod (Aevian Form)",
-    "Florges"
-   ],
-   "builds": [
-    {
-     "moves": [
-      "Thunder Wave",
-      "Zing Zap",
-      "Sucker Punch",
-      "Protect"
-     ],
-     "item": "Magnet",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Electric Surge"
-    },
-    {
-     "moves": [
-      "Thunder Wave",
-      "Make It Rain",
-      "Shadow Ball",
-      "Protect"
-     ],
-     "item": "Metal Coat",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Good as Gold"
-    },
-    {
-     "moves": [
-      "Bug Buzz",
-      "Thunderbolt",
-      "Mud Shot",
-      "Protect"
-     ],
-     "item": "Silver Powder",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Levitate"
-    },
-    {
-     "moves": [
-      "Earthquake",
-      "Thunder Fang",
-      "Ice Shard",
-      "Protect"
-     ],
-     "item": "Soft Sand",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Sturdy"
-    }
-   ],
-   "roles": [
-    "terrain setter",
-    "attacker",
-    "attacker",
-    "attacker"
-   ],
-   "shared": [
-    "FIRE"
-   ],
-   "answers": [
-    "speed control",
-    "priority"
-   ],
-   "missing": [
-    "Haze / phaze",
-    "Taunt / Encore",
-    "Fake Out / Intimidate",
-    "screen breaker"
-   ],
-   "per_fight": {
-    "karrina": [
-     4,
-     6
-    ],
-    "spector": [
-     4,
-     6
-    ],
-    "spector2": [
-     3,
-     6
-    ],
-    "jenner9": [
-     1,
-     6
-    ],
-    "erick": [
-     1,
-     6
-    ]
-   },
-   "open": [
-    "erick:Chandelure",
-    "erick:Magneton",
-    "erick:Toxtricity",
-    "jenner9:Klinklang",
-    "jenner9:Porygon-Z",
-    "spector2:Typhlosion"
-   ],
-   "cover6": 24
   }
  ],
  "sun": [
   {
-   "score": 0.771,
+   "score": 0.772,
    "members": [
     "Ninetales",
     "Arcanine (Hisuian Form)",

@@ -49,7 +49,7 @@ for me in cands:
     ib = IDEAL.get(me.get('name')) or {}
     ids = [E.move_id(x) for x in ib.get('moves', [])]
     ids = [x for x in ids if x and x in me['legal'] and E.D.moves[x]['Category'] != 'Status' and int(E.D.moves[x].get('Strength') or 0) > 1]
-    if ids: atk = ids[:3]
+    if ids and not (me.get('crest') and me.get('crest') not in ('ZOROARK',)): atk = ids[:3]   # a crest changes the best set (e.g. Typhlosion: Atk = SpA, contact x1.3): crested mons pick their own
     if me.get('crest') == 'ZOROARK':   # Zoroark Crest: best possible last party slot (its ability + STAB on its types)
         pool_ = {}
         for c in cands:
