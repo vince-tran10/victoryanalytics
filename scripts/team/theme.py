@@ -299,7 +299,11 @@ def fight_cards():
         p = FP[k]; hf = HF[idx] if idx < len(HF) else {}
         name = FIGHT_NAME.get(k, k); nb = sum(1 for q in p['pairs'] if q['ok'])
         good = nb >= p['n'] - 1
-        head = ('<summary><span class="fn">' + str(idx + 1) + '</span><span class="ft"><b>' + E(name) + '</b><span class="fchips">'
+        try: _ids0 = json.load(open(f'team/{k}_eval.json')).get('foe_ids') or []
+        except Exception: _ids0 = []
+        _ace = (BOSSF.get(k) or (_ids0[-1] if _ids0 else None))   # 21 Nov: the fight's ace (last Pokémon) / the boss as its icon
+        _ic = ('<span class="fn fn-ace">' + SP.tag(*_ace, size='m') + '</span>') if _ace else ('<span class="fn">' + str(idx + 1) + '</span>')
+        head = ('<summary>' + _ic + '<span class="ft"><b>' + E(name) + '</b><span class="fchips">'
                 + '<span class="fchip">' + E(p['format']) + '</span>' + ('<span class="fchip boss">Boss</span>' if hf.get('boss') else '')
                 + ('<span class="fchip">' + E(hf.get('field', '')) + '</span>' if hf.get('field') else '') + '</span></span>'
                 + ('<span class="needs">Needs a plan</span>' if p.get('note') else '')
@@ -658,6 +662,7 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .fx.up .fx-ar { color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent) }
 .fx.down .fx-ar { color: var(--bad); background: color-mix(in srgb, var(--bad) 14%, transparent) }
 .fx-note { color: var(--muted); font-size: 12px }
+.fn.fn-ace { background: transparent !important; box-shadow: none !important; width: 48px; height: 48px; display: grid; place-items: center; overflow: visible }
 .later > summary { cursor: pointer; font: 600 12px var(--mono); text-transform: uppercase; color: var(--muted); padding: 10px 4px; list-style: none }
 .later > summary::before { content: '▸ ' } .later[open] > summary::before { content: '▾ ' }
 .fx .pt { font-size: 11px }
