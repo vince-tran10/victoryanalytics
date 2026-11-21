@@ -5,8 +5,8 @@
    "members": [
     "Gholdengo",
     "Arcanine (Hisuian Form)",
-    "Golisopod (Aevian Form)",
-    "Vaporeon"
+    "Vaporeon",
+    "Golisopod (Aevian Form)"
    ],
    "cover": 24,
    "swaps": [
@@ -40,18 +40,6 @@
     },
     {
      "moves": [
-      "Bone Rush",
-      "Pin Missile",
-      "Swords Dance",
-      "Protect"
-     ],
-     "item": "Soft Sand",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Skill Link"
-    },
-    {
-     "moves": [
       "Hydro Pump",
       "Aurora Beam",
       "Haze",
@@ -61,6 +49,18 @@
      "nature": "Modest",
      "evs": "252 HP / 252 SpA",
      "ability": "Water Absorb"
+    },
+    {
+     "moves": [
+      "Bone Rush",
+      "Pin Missile",
+      "Swords Dance",
+      "Protect"
+     ],
+     "item": "Soft Sand",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Skill Link"
     }
    ],
    "roles": [

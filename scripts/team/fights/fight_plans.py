@@ -124,7 +124,7 @@ if st.get('one_six') and KEYS:
     for sc, pr_, det, cnt, wst, fl_ in tot[:8]: print('ONE-SIX', cnt, round(sc, 1), pr_, det)
     pick = list(tot[0][1])
     st['plan_swaps'] = {k: pick for k in KEYS}
-    st['team'] = list(CORE) + pick
+    st['team'] = list(CORE[:3]) + pick + list(CORE[3:])
     for k in KEYS: (st.get('plan_pairs') or {}).pop(k, None)
     json.dump(st, open('team/state.json', 'w'), indent=1, ensure_ascii=False)
     json.dump(dict(pick=pick, top=[dict(score=round(sc, 1), counters=c_, swaps=list(p), per_fight=d) for sc, p, d, c_, w_, f_ in tot[:8]]), open('team/one_six.json', 'w'), indent=1)

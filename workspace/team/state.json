@@ -4,9 +4,9 @@
  "export_label": "20 Nov 13:52",
  "active_start": 426,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 148,
- "run": 162,
- "final": 166,
+ "roster": 151,
+ "run": 165,
+ "final": 169,
  "done": [
   "aelita",
   "narcissa1",
@@ -35,10 +35,10 @@
  "team": [
   "Gholdengo",
   "Arcanine (Hisuian Form)",
-  "Golisopod (Aevian Form)",
   "Vaporeon",
   "Diggersby",
-  "Clefable"
+  "Clefable",
+  "Golisopod (Aevian Form)"
  ],
  "moves": {
   "Arcanine (Hisuian Form)": [
@@ -211,8 +211,8 @@
  "core": [
   "Gholdengo",
   "Arcanine (Hisuian Form)",
-  "Golisopod (Aevian Form)",
-  "Vaporeon"
+  "Vaporeon",
+  "Golisopod (Aevian Form)"
  ],
  "core_check": {
   "core": {

@@ -62,11 +62,12 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   lists; no shared weakness. Swaps now: Copperajah + Muk-Alola (Dark Gardevoir). The core resists no Dark / Ghost:
   every fight's 2 swaps must bring a Dark/Ghost resist when that fight uses them (Muk-Alola resists both). checks.py: core (b) +
   fight six (b)(c) vs its own fight's types. state.json `core` holds the 4.
-- **Team tab = GENERAL play order (Vincent, 20 Nov):** slot 1 leads singles, slots 1–2 lead doubles in normal (non-hard)
-  fights: Gholdengo · Arcanine-Hisui · Golisopod-Aevian · Vaporeon · swap · swap (state.json `core` order; roles by slot:
-  Lead/Lead/Mid/Mid/Closer/Closer). Hard-fight leads and matchups live ONLY on the Fights tab (fight_plans `leads`, which
-  must survive the opening Pokémon, checked vs exact game lead order); a core member leads there when it is better than a swap.
-  Garbodor plan 17 Nov: swaps Muk-Alola (Gastro Acid lead) + Clodsire (Unaware, Curse, Recover, EQ).
+- **Team tab = party order (Vincent, 21 Nov):** 1 Gholdengo (Core 1 · Lead: leads singles + left slot in doubles), 2 Arcanine-Hisui
+  (Core 2 · Lead partner), 3 Vaporeon (Core 3 · Mid game), 4–5 the fight's 2 swaps (Flex 1 / Flex 2 · Battle start | Mid game |
+  Closer: Battle start = that fight's planned lead, Closer = has a setup move), 6 Golisopod-Aevian (Core 4 · Closer, always last).
+  state.json `core` order = [lead, lead partner, mid, closer]; team = core[:3] + swaps + core[3:]. Flexes are ALWAYS a
+  battle-start swap-in, a mid-game piece or a secondary closer. Hard-fight leads and matchups live on the Fights tab
+  (fight_plans `leads`, must survive the opening Pokémon); a core member leads there when it is better than a swap.
 - **Core roles (Vincent, 21 Nov):** core = 2 leads (slot 1 leads singles AND the left slot in doubles: Gholdengo; slot 2 =
   Arcanine-Hisui), 1 mid-game piece (Vaporeon), 1 dedicated closer (Golisopod-Aevian, SD: beats more remaining foes than any
   speed-boosting closer incl. DD Crawdaunt). The 2 swaps per fight are mid-game counters / immediate switch-ins or a

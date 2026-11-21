@@ -52,8 +52,16 @@ for i, nm in enumerate(st['team']):
     d = disp(nm); r = T.get(nm, {}); p = party.get(d) or {}
     lv = p.get('level') or 0
     types = ''.join(f'<span class="pt" style="--tc:{TYPE.get(t, "#888")}">{E(t.title())}</span>' for t in r.get('types', []))
-    tag = 'Core' if nm in core else 'Swap'
-    role = (ROLES.get(d) or '').title()
+    # 21 Nov (Vincent): Core 1 lead · Core 2 lead partner · Core 3 mid game · Flex 1-2 (battle start / mid game / closer) · Core 4 closer
+    _core = list(st.get('core') or [])
+    if nm in _core:
+        _ci = _core.index(nm); tag = f'Core {_ci + 1}'; role = ('Lead', 'Lead partner', 'Mid game', 'Closer')[min(_ci, 3)]
+    else:
+        _fl = [x for x in st['team'] if x not in _core]; tag = f'Flex {_fl.index(nm) + 1}'
+        _mv = {re.sub(r'[^A-Z]', '', m.upper()) for m in (st.get('moves') or {}).get(nm, [])}
+        _ld = (FP.get(st.get('fight')) or {}).get('leads') or []
+        role = ('Battle start' if nm in _ld else 'Closer' if _mv & {'SWORDSDANCE', 'DRAGONDANCE', 'NASTYPLOT', 'CALMMIND', 'SHELLSMASH', 'SHIFTGEAR',
+                'QUIVERDANCE', 'BULKUP', 'CURSE', 'FILLETAWAY', 'TIDYUP', 'VICTORYDANCE'} else 'Mid game')
     here = '' if p else '<span class="slot-miss">not in party</span>'
     slots += (f'<li class="slot{" is-core" if nm in core else ""}">' + spr(nm, 'l', bool(p.get('shiny'))) + f'<div class="slot-top"><span class="slot-n">{i + 1}</span>'
               f'<span class="slot-tag">{tag}{" · " + E(role) if role else ""}</span></div>'
@@ -120,7 +128,9 @@ def _t(x): return x.title() if x else ''
 def field_line(fname):   # the field's real effects (fieldtext typeBoosts) + end-of-turn chip
     fv = next((v for v in FT.values() if v.get('name') == fname), None)
     if not fv: return ''
-    parts = [' · '.join(', '.join(_t(t) for t in ts) + ' ×' + m.rstrip('0').rstrip('.') for m, ts in sorted((fv.get('typeBoosts') or {}).items(), key=lambda kv: -float(kv[0])))]
+    tc = fv.get('typeCondition') or {}
+    lab = lambda t: _t(t) + (' (special)' if 'Special' in str(tc.get(t, '')) else ' (physical)' if 'Physical' in str(tc.get(t, '')) else '')
+    parts = [' · '.join(', '.join(lab(t) for t in ts) + ' ×' + m.rstrip('0').rstrip('.') for m, ts in sorted((fv.get('typeBoosts') or {}).items(), key=lambda kv: -float(kv[0])))]
     if fname == 'Corrupted Cave': parts.append('your grounded non-Poison/Steel Pokémon lose 1/8 HP a turn')
     return ' · '.join(p for p in parts if p)
 MVN = {}
@@ -172,6 +182,29 @@ def bar_plan_html(k, bsprite):
         out += ('<div class="frow"><span class="fk">Key</span><span class="fbo">' + E(disp(car)) + ' carries it. ' +
                 ('If it falls: ' + ' → '.join(disp(x) for x in bk['order'][1:]) if bk else 'No sure win without it: Recover early') + '</span></div>')
     return out
+
+def boosted_line(fname, names):   # our six's moves the field really boosts (typeBoosts + typeCondition, damageMods)
+    fv = next((v for v in FT.values() if v.get('name') == fname), None)
+    if not fv: return ''
+    MT = MTX; tc = fv.get('typeCondition') or {}
+    tb = {t: float(m) for m, ts in (fv.get('typeBoosts') or {}).items() for t in ts}
+    dm = {mv: float(m) for m, ms in (fv.get('damageMods') or {}).items() for mv in ms}
+    out = []
+    for n in names:
+        for m in (st.get('moves') or {}).get(n, []):
+            k = re.sub(r'[^A-Z]', '', m.upper()); d = MT.get(k) or {}
+            if d.get('category') not in ('physical', 'special'): continue
+            x = dm.get(k, 1.0)
+            t = (d.get('type') or '').upper()
+            if t in tb:
+                cond = str(tc.get(t, ''))
+                ok = not cond or ('Special' in cond and d['category'] == 'special') or ('Physical' in cond and d['category'] == 'physical')
+                if ok: x *= tb[t]
+            if x > 1: out.append(f"{disp(n)} ({d.get('name', m)} ×{x:g})")
+    return ', '.join(out)
+MTX = {}
+try: MTX = json.load(open('gamedata/movetext.json'))
+except Exception: pass
 def fight_cards():
     order = [k for k in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick'] if k in FP]
     out = ''
@@ -202,7 +235,7 @@ def fight_cards():
                 + '<div class="fbody"><div class="frow"><span class="fk">Bring</span><ul class="mons">' + bring + '</ul></div>'
                 + '<div class="frow"><span class="fk">Lead</span><ul class="mons">' + lead + '</ul></div>'
                 + ('<div class="frow"><span class="fk">Field</span><span class="fbo">' + E(hf.get('field', '') + ': ' + field_line(hf.get('field', ''))) + '</span></div>' if field_line(hf.get('field', '')) else '')
-                + ('<div class="frow"><span class="fk">Boosted</span><span class="fbo">' + E(fb) + '</span></div>' if fb and 'No field boost' not in fb else '')
+                + (('<div class="frow"><span class="fk">Boosted</span><span class="fbo">' + E(_bl) + '</span></div>') if (_bl := boosted_line(hf.get('field', ''), (list(st.get('core') or []) + [r['name'] for r in p['swaps']]))) else '')
                 + (_bp if _bp else '<ul class="foes">' + foes + '</ul>') + '</div></details>')
     return '<div class="fcards">' + out + '</div>'
 if FP:
@@ -473,7 +506,7 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .slot-tag { font: 600 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted) }
 .is-core .slot-tag { color: var(--accent) }
 .slot-name { font: 700 17px/1.15 var(--display); overflow-wrap: anywhere; position: relative; z-index: 1 }
-.slot-types { display: flex; gap: 4px; flex-wrap: wrap }
+.slot-types { display: flex; gap: 4px; flex-wrap: wrap; align-items: flex-start; align-content: flex-start } .slot-types .pt { line-height: 1.4 }
 .pt { background: var(--tc); color: #fff; font: 700 10.5px var(--body); letter-spacing: .04em; text-transform: uppercase; padding: 1px 8px; border-radius: 99px; text-shadow: 0 1px 0 rgba(0,0,0,.25) }
 .slot-lv { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 8px; font: 600 12px var(--mono); font-variant-numeric: tabular-nums }
 .lv-bar { height: 7px; border-radius: 99px; background: var(--panel-2); border: 1px solid var(--line); overflow: hidden }

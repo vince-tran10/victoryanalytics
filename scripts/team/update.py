@@ -136,7 +136,7 @@ def main():
         if not st.get('fight') and nxt:   # last fight beaten: the next fight's six becomes the team (core + its 2 swaps)
             P = json.load(open(os.path.join(TEAMD, 'fight_plans.json')))[nxt]
             sw = [r['name'] for r in P['swaps']]
-            st['fight'] = nxt; st['team'] = list(st['core']) + sw
+            st['fight'] = nxt; st['team'] = list(st['core'][:3]) + sw + list(st['core'][3:])   # closer last (21 Nov)
             PB = (st.get('plan_builds') or {}).get(nxt, {})   # hand-plan builds (fight protocol), e.g. Garbodor's Gastro Acid Muk
             for n in sw:
                 st['moves'][n] = (PB.get(n) or {}).get('moves') or IDEAL.get(n, {}).get('moves') or st['moves'].get(n, [])
