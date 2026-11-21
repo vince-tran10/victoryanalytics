@@ -135,7 +135,7 @@ def field_line(fname):   # the field's real effects (fieldtext typeBoosts) + end
     for m, ms in (fv.get('damageMods') or {}).items(): mvb.setdefault(float(m), []).extend(ms)
     for m, ms in sorted(mvb.items(), key=lambda kv: -kv[0]):
         rows += ('<div class="fx ' + ('up' if m > 1 else 'down') + '"><span class="fx-ar">' + (f'▲ ×{m:g}' if m > 1 else '✕ fails' if m == 0 else f'▼ ×{m:g}') + '</span>'
-                 + f'<span class="fx-note">{len(ms)} specific moves (any category) · yours listed below</span></div>')
+                 + f'<span class="fx-note">{len(ms)} named moves</span></div>')
     if fname == 'Corrupted Cave': parts.append('your grounded non-Poison/Steel Pokémon lose 1/8 HP a turn')
     return ' · '.join(p for p in parts if p)
 MVN = {}
@@ -280,7 +280,7 @@ def field_html(fname, names):   # 21 Nov (Vincent): type pills with green ▲ / 
     for m, ms in (fv.get('damageMods') or {}).items(): mvb.setdefault(float(m), []).extend(ms)
     for m, ms in sorted(mvb.items(), key=lambda kv: -kv[0]):
         rows += ('<div class="fx ' + ('up' if m > 1 else 'down') + '"><span class="fx-ar">' + (f'▲ ×{m:g}' if m > 1 else '✕ fails' if m == 0 else f'▼ ×{m:g}') + '</span>'
-                 + f'<span class="fx-note">{len(ms)} specific moves (any category) · yours listed below</span></div>')
+                 + f'<span class="fx-note">{len(ms)} named moves</span></div>')
     if fname == 'Corrupted Cave':
         rows += '<div class="fx down"><span class="fx-ar">▼ 1/8 HP</span><span class="fx-note">a turn for your grounded non-Poison / non-Steel Pokémon</span></div>'
     mine = boosted_line(fname, names, rows=True)
@@ -321,6 +321,11 @@ def fight_cards():
                 + '<div class="fbody"><div class="frow"><span class="fk">Bring</span><ul class="mons">' + bring + '</ul></div>'
                 + (('<div class="frow ftop"><span class="fk">Field</span>' + _fh + '</div>') if (_fh := field_html(hf.get('field', ''), list(st.get('core') or []) + [r['name'] for r in p['swaps']])) else '')
                 + (_bp or '') + '</div></details>')   # 21 Nov (Vincent): foe -> counter list removed; boss fights keep the bar plan
+    # 21 Nov (Vincent): only the upcoming fight shows; the rest fold away (fights can come out of order)
+    cards_ = re.findall(r'<details class="fc.*?</details>', out, re.S)
+    if len(cards_) > 1:
+        out = cards_[0] + ('<details class="later"><summary>Later fights · ' + str(len(cards_) - 1) + '</summary><div class="fcards">'
+                           + ''.join(cards_[1:]) + '</div></details>')
     return '<div class="fcards">' + out + '</div>'
 if FP:
     page = re.sub(r'(<section aria-labelledby="s1f">\s*<h2 id="s1f">.*?</h2>).*?</section>', lambda m: m.group(1) + fight_cards() + '</section>', page, count=1, flags=re.S)
@@ -653,6 +658,8 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .fx.up .fx-ar { color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent) }
 .fx.down .fx-ar { color: var(--bad); background: color-mix(in srgb, var(--bad) 14%, transparent) }
 .fx-note { color: var(--muted); font-size: 12px }
+.later > summary { cursor: pointer; font: 600 12px var(--mono); text-transform: uppercase; color: var(--muted); padding: 10px 4px; list-style: none }
+.later > summary::before { content: '▸ ' } .later[open] > summary::before { content: '▾ ' }
 .fx .pt { font-size: 11px }
 .fx-h { font: 600 10px var(--mono); text-transform: uppercase; color: var(--muted); margin-top: 6px }
 .fx.mv { display: grid; grid-template-columns: auto auto 1fr; align-items: center; gap: 8px; flex-wrap: nowrap }
