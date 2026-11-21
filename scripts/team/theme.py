@@ -183,9 +183,9 @@ def bar_plan_html(k, bsprite):
                 ('If it falls: ' + ' → '.join(disp(x) for x in bk['order'][1:]) if bk else 'No sure win without it: Recover early') + '</span></div>')
     return out
 
-def boosted_line(fname, names):   # our six's moves the field really boosts (typeBoosts + typeCondition, damageMods)
+def boosted_line(fname, names, rows=False):   # our six's moves the field changes (typeBoosts + typeCondition, damageMods)
     fv = next((v for v in FT.values() if v.get('name') == fname), None)
-    if not fv: return ''
+    if not fv: return [] if rows else ''
     MT = MTX; tc = fv.get('typeCondition') or {}
     tb = {t: float(m) for m, ts in (fv.get('typeBoosts') or {}).items() for t in ts}
     dm = {mv: float(m) for m, ms in (fv.get('damageMods') or {}).items() for mv in ms}
@@ -194,14 +194,16 @@ def boosted_line(fname, names):   # our six's moves the field really boosts (typ
         for m in (st.get('moves') or {}).get(n, []):
             k = re.sub(r'[^A-Z]', '', m.upper()); d = MT.get(k) or {}
             if d.get('category') not in ('physical', 'special'): continue
-            x = dm.get(k, 1.0)
+            x = 1.0; why = []
+            if k in dm: x *= dm[k]; why.append('field bonus')
             t = (d.get('type') or '').upper()
             if t in tb:
                 cond = str(tc.get(t, ''))
-                ok = not cond or ('Special' in cond and d['category'] == 'special') or ('Physical' in cond and d['category'] == 'physical')
-                if ok: x *= tb[t]
-            if x > 1: out.append(f"{disp(n)} ({d.get('name', m)} ×{x:g})")
-    return ', '.join(out)
+                if not cond or ('Special' in cond and d['category'] == 'special') or ('Physical' in cond and d['category'] == 'physical'):
+                    x *= tb[t]; why.append(t)
+            if x != 1: out.append((n, d.get('name', m), x, why))
+    if rows: return out
+    return ', '.join(f"{disp(n)} ({mv} ×{x:g})" for n, mv, x, _ in out if x > 1)
 MTX = {}
 try: MTX = json.load(open('gamedata/movetext.json'))
 except Exception: pass
@@ -223,9 +225,14 @@ def field_html(fname, names):   # 21 Nov (Vincent): type pills with green ▲ / 
                  + (f'<span class="fx-note">{E(note)}</span>' if note else '') + '</div>')
     if fname == 'Corrupted Cave':
         rows += '<div class="fx down"><span class="fx-ar">▼ 1/8 HP</span><span class="fx-note">a turn for your grounded non-Poison / non-Steel Pokémon</span></div>'
-    bl = boosted_line(fname, names)
-    if bl:
-        rows += '<div class="fx up mine"><span class="fx-ar">▲ Yours</span><span class="fx-note">' + E(bl) + '</span></div>'
+    mine = boosted_line(fname, names, rows=True)
+    if mine:
+        rows += '<div class="fx-h">Your moves here</div>'
+        for n, mv, x, why in sorted(mine, key=lambda r: -r[2]):
+            up = x > 1
+            tag = ''.join(f'<span class="pt" style="--tc:{TYPE.get(w, "#888")}">{E(w.title())}</span>' if w in TYPE else f'<span class="fx-note">{E(w)}</span>' for w in why)
+            rows += ('<div class="fx mv ' + ('up' if up else 'down') + '"><span class="fx-ar">' + ('▲' if up else '▼') + f' ×{x:g}</span>'
+                     + spr(n) + f'<div class="mvc"><b>{E(disp(n))}</b><div class="mvl"><span>{E(mv)}</span>' + tag + '</div></div></div>')
     return '<div class="fxs">' + rows + '</div>'
 def fight_cards():
     order = [k for k in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick'] if k in FP]
@@ -589,6 +596,9 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .fx.down .fx-ar { color: var(--bad); background: color-mix(in srgb, var(--bad) 14%, transparent) }
 .fx-note { color: var(--muted); font-size: 12px }
 .fx .pt { font-size: 11px }
+.fx-h { font: 600 10px var(--mono); text-transform: uppercase; color: var(--muted); margin-top: 6px }
+.fx.mv { display: grid; grid-template-columns: auto auto 1fr; align-items: center; gap: 8px; flex-wrap: nowrap }
+.mvc { min-width: 0; display: grid; gap: 2px; text-align: left; justify-items: start } .mvc b { font-size: 13px } .mvl { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: 12.5px }
 .bars { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 8px }
 .barc { background: var(--card-2, rgba(127,127,127,.06)); border-radius: 12px; padding: 10px 12px }
 .barh { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px }
