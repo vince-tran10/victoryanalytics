@@ -176,7 +176,12 @@ damage score and the fight's real win condition was only read after Vincent lost
   1 Lead (singles + left slot in doubles) · 2 Doubles lead · 3 Flex · 4 Closer (cores.py order_roles: role-fit scores
   s_lead / s_partner / s_flex / s_closer, +0.15 × fit in the core score; the closer must have a setup move or boosting ability,
   else −0.05; weather / terrain / Trick Room setters must take slot 1 or 2). Swaps replace a member IN THE SAME ROLE at the
-  same tier or higher (slot_ok). Consistency (Vincent, 21 Nov): every style shows ITS BEST 4 by the same score; Vincent's
+  same tier or higher (slot_ok). **Cores = OVERALL strength + synergy as a self-sufficient 4 (Vincent, 21 Nov, VGC bring-4 logic),
+  NOT Ch9 matchups** (those are the 2 flexes' job, so key pieces don't churn): core score = 0.30 strength (the tier score: legal
+  builds + meta) + 0.20 defence (no shared weakness, every one of 18 types resisted) + 0.10 offensive coverage + 0.10 answers
+  + 0.15 identity + 0.15 role fit (role scores use strength; the closer is rated by setup size: +2 moves > DD-type > Bulk Up /
+  Curse). No Ch9 counter term, no Ch9-type gap penalty. Fight-specific core checks: scripts/team/arch_fights.py (chat only).
+  Consistency (Vincent, 21 Nov): every style shows ITS BEST 4 by the same score; Vincent's
   core is NOT forced onto the Balance card ("your core" badge only when a card matches it). Swaps shown only when notable:
   ONE role changes, same tier or higher, core score within 0.01 of that style's best, one per role. Each row shows its role label; members with tier chips, key piece (the setter) marked; the alt core's
   replacements sit greyed on the right of the member they replace (⇄ + tier chip). Swap rule (Vincent, 18 Nov): every

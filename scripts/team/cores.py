@@ -1,7 +1,7 @@
 """Cores tab (section s9): cores of 4 with one playstyle identity each, built from the blended tier list (team/tier_all.json).
 Vincent (16 Nov): play a core of 4 (like a VGC bring-4) + swap in 2 for each fight. Every core must stand on its own
 (general soundness) AND cover as many Ch9 foes as possible, so the 2 swaps stay small.
-Core score = 0.30 tier quality + 0.20 Ch9 foes countered + 0.15 defence (no shared weakness) + 0.10 offensive coverage
+Core score (21 Nov, overall strength, NOT Ch9) = 0.30 strength (½ tier score + ½ meta) + 0.20 defence + 0.10 offensive coverage
            + 0.10 answers to win conditions + 0.15 identity strength (+ small Smogon teammate bonus).
 usage (from workspace/): DONE=... CR_RUN=r103 python3 -I ../scripts/team/cores.py <report.html>"""
 import html, itertools, json, os, re, sys, collections
@@ -102,15 +102,24 @@ def meta_bonus(ms):
     return min(b, .03)
 
 
+def strength(m):   # 21 Nov (Vincent): OVERALL strength = the tier score (your legal builds + meta); STRENGTH=mix adds raw meta
+    return .5 * m.r['blend'] + .5 * m.r['general'] if os.environ.get('STRENGTH') == 'mix' else m.r['blend']   # tier score = your legal builds + 40% meta
+
+
+def type_gaps(ms):   # attacking types (all 18) that no member resists
+    return [a for a in TYPES if not any(m.mult[a] < 1 for m in ms)]
+
+
 def core_score(ms, ident, ans=None):
-    q = sum(m.r['blend'] for m in ms) / 4
-    cov = len(set().union(*(m.counters for m in ms))) / len(FOES)
+    """21 Nov (Vincent): a core is judged as a self-sufficient 4 (VGC bring-4), on overall strength + synergy only.
+    Ch9 matchups are the 2 flexes' job. 0.30 strength + 0.20 defence (no shared weakness, every type resisted)
+    + 0.10 offensive coverage + 0.10 answers + 0.15 identity (+ 0.15 role fit, added by the caller) + Smogon teammates."""
+    q = sum(strength(m) for m in ms) / 4
     dfn, _ = defence(ms)
-    gaps = [s for s in C.MAJOR if not any(C.eff(s, m.r['types'], m.ab) < 1 for m in ms)]   # 17 Nov: major Ch9 types nobody resists
-    dfn = max(0, dfn - .1 * len(gaps))
+    dfn = max(0, dfn - .05 * len(type_gaps(ms)))
     off = len(set().union(*(m.se for m in ms))) / len(TYPES)
     if ans is None: ans, _, _ = answers(ms)
-    return .30 * q + .20 * min(1, cov * 1.6) + .15 * dfn + .10 * off + .10 * ans + .15 * ident + meta_bonus(ms)
+    return .30 * q + .20 * dfn + .10 * off + .10 * ans + .15 * ident + meta_bonus(ms)
 
 
 def gaps_of(ms):
@@ -191,14 +200,22 @@ def has_setup(m):
     return bool(m.legal & (PHYS_SET if m.r['cat'] == 'Physical' else SPEC_SET)) or bool(set(m.r['abilities']) & {'SPEEDBOOST', 'MOXIE', 'BEASTBOOST'})
 def s_lead(m):     # singles lead + left slot in doubles: fast or bulky, turn-1 utility, status-proof helps
     u = .2 * bool(m.flags & {'fakeout', 'intimidate'}) + .15 * bool(m.flags & {'speedctl', 'taunt', 'tr', 'tailwind', 'screens'})
-    return .4 * m.r['blend'] + .2 * min(1, m.spe / 130) + u + .1 * min(1, m.bulk / 330) + (.05 if 'GOODASGOLD' in m.r['abilities'] or 'MAGICGUARD' in m.r['abilities'] else 0)
+    return .4 * strength(m) + .2 * min(1, m.spe / 130) + u + .1 * min(1, m.bulk / 330) + (.05 if 'GOODASGOLD' in m.r['abilities'] or 'MAGICGUARD' in m.r['abilities'] else 0)
 def s_partner(m):  # doubles lead partner: Intimidate / Fake Out / redirection / Tailwind, spread damage
     u = .25 * bool(m.flags & {'fakeout', 'intimidate', 'redirect'}) + .1 * bool(m.flags & {'tailwind', 'speedctl', 'screens', 'tr'}) + .1 * bool(m.legal & SPREAD)
-    return .4 * m.r['blend'] + .15 * min(1, m.spe / 130) + u
+    return .4 * strength(m) + .15 * min(1, m.spe / 130) + u
 def s_flex(m):     # flex / mid game: bulky pivot with an answer (Haze, recovery, pivot moves)
-    return .5 * m.r['blend'] + .25 * min(1, m.bulk / 330) + .15 * bool(m.flags & {'haze', 'recover', 'pivot'}) + .1 * bool(m.flags & {'taunt', 'speedctl'})
-def s_closer(m):   # closer: one setup move (or a boosting ability), then clean up; counters what's left
-    return (.5 * m.r['blend'] + .3 * min(1, len(m.counters) / 15) + .2) if has_setup(m) else .3 * m.r['blend']
+    return .5 * strength(m) + .25 * min(1, m.bulk / 330) + .15 * bool(m.flags & {'haze', 'recover', 'pivot'}) + .1 * bool(m.flags & {'taunt', 'speedctl'})
+SETUP_VAL = {'SWORDSDANCE': 1, 'NASTYPLOT': 1, 'SHELLSMASH': 1, 'BELLYDRUM': 1, 'FILLETAWAY': 1, 'TAILGLOW': 1, 'GEOMANCY': 1,
+             'DRAGONDANCE': .9, 'QUIVERDANCE': .9, 'SHIFTGEAR': .9, 'TIDYUP': .9, 'VICTORYDANCE': .9,
+             'CALMMIND': .6, 'BULKUP': .6, 'CURSE': .55, 'COIL': .6}
+def setup_val(m):
+    L = m.legal & (PHYS_SET if m.r['cat'] == 'Physical' else SPEC_SET)
+    v = max((SETUP_VAL.get(x, .5) for x in L), default=0)
+    if set(m.r['abilities']) & {'SPEEDBOOST', 'MOXIE', 'BEASTBOOST'}: v = max(v, .7)
+    return v
+def s_closer(m):   # closer (21 Nov): overall strength + how big its one setup turn is + speed or bulk to get it off (no Ch9 numbers)
+    return (.5 * strength(m) + .3 * setup_val(m) + .2 * max(min(1, m.spe / 130), min(1, m.bulk / 330))) if has_setup(m) else .3 * strength(m)
 SFN = [s_lead, s_partner, s_flex, s_closer]
 def order_roles(ms, lead_req=None):
     best = None
@@ -207,11 +224,11 @@ def order_roles(ms, lead_req=None):
         fit = sum(f(m) for f, m in zip(SFN, p)) / 4
         if best is None or fit > best[0]: best = (fit, p)
     return best if best else (0.0, tuple(ms))
-TOP = sorted(POOL, key=lambda m: -m.r['blend'])[:42]
+TOP = sorted(POOL, key=lambda m: -strength(m))[:42]
 results, CAND = {}, {}
 for key, title, idt, en_f, mem_f, id_f in ARCH:
     ens = [m for m in ALL.values() if en_f(m)]
-    ens = sorted(ens, key=lambda m: -m.r['blend'])[:8]
+    ens = sorted(ens, key=lambda m: -strength(m))[:8]
     others = [m for m in TOP if mem_f(m)]
     if key in ('electric', 'sun', 'snow', 'grassy'):   # beneficiaries may sit lower in the list
         others += [m for m in POOL if m not in others and (id_f((m,)) >= .3)][:15]
@@ -396,6 +413,9 @@ for key, (cand, id_f, lreq) in CAND.items():
     main = rescored[0] if rescored else None   # 21 Nov (Vincent): every style = its best 4, same method for all (no core forced)
     if os.environ.get('CORES_FREE'):
         for sc_, ms_ in rescored[:5]: print('FREE', key, round(sc_, 3), [disp(m.name) for m in ms_], [m.r['tier'] for m in ms_], len(set().union(*(m.counters for m in ms_))))
+        _mine = sorted(ST.get('core') or [])
+        _rk = next((j + 1 for j, (sc_, ms_) in enumerate(rescored) if sorted(m.name for m in ms_) == _mine), None)
+        if _rk: print('FREE', key, 'yours: rank', _rk, 'of', len(rescored), round(rescored[_rk - 1][0], 3))
     picked = [main] if main else []
     if main:   # notable swaps only: ONE role changes, same tier or higher, core score within 0.01 of the best; one per role
         seen_slot = set()
@@ -457,8 +477,9 @@ sec = f'''<section aria-labelledby="s9">
   <h2 id="s9">Cores</h2>
   <ul class="legend">
     <li>Pick ONE core of 4 for your playstyle; it stays all chapter. Add 2 swaps per fight (boss hard counters) from the Fights tab.</li>
-    <li>Core score = 0.30 tier quality + 0.20 Ch9 foes countered + 0.15 no shared weakness + 0.10 type coverage + 0.10 answers
-      (Haze, Taunt, Fake Out / Intimidate, speed control, priority, screen breaker) + 0.15 how well it plays its identity.</li>
+    <li>Cores are judged as a self-sufficient 4 (like a VGC bring-4): overall strength + synergy, NOT the Ch9 fights. The 2 flexes per fight (Fights tab) handle Ch9 matchups.</li>
+    <li>Core score = 0.30 strength (tier score: your legal builds + meta) + 0.20 defence (no shared weakness, every type resisted) + 0.10 type coverage + 0.10 answers
+      (Haze, Taunt, Fake Out / Intimidate, speed control, priority, screen breaker) + 0.15 how well it plays its identity + 0.15 role fit (Lead · Doubles lead · Flex · Closer).</li>
     <li>Members come from S/A/B of the three tier tabs; enablers (setters) may come from lower tiers. Builds use Ch1–8 TMs. Protect is always the 4th move.</li>
     <li>Not modelled: turns of setup, Trick Room turn count, terrain / weather duration. Trick Room TM is not owned yet: only Oranguru and Porygon-Z learn it now.</li>
   </ul>
