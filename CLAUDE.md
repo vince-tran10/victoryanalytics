@@ -183,6 +183,10 @@ damage score and the fight's real win condition was only read after Vincent lost
   damageMods, e.g. Haunted Field bone moves). Game rule (Battle_Move.rb / Battle_Field.rb, verified 21 Nov): damage x move bonus
   (damageMods, any category) x max(flag bonus [sound / slicing...], type bonus [only if its typeCondition holds]); x0 = the move
   FAILS (isMoveValidOnField?), shown "✕ fails" (Murkwater Surface: Ground moves). Classic mode = full field strength (Story halves). NO Lead row and NO foe → counter list (data stays in fight_plans.json, plans go in chat).
+  TRIAL rows (Vincent, 21 Nov, may be removed), upcoming fight only: "Faster" = foes faster than every member of the six
+  (sprite + Speed, plus your fastest); "Watch" = each foe's trick → your answer (fight_plans win conditions, hazards with who
+  is immune, Focus Energy). Team tab trial: party cards show a red line for moves the next fight's field weakens or blocks.
+  Swap roles are NOT forced (Vincent, 21 Nov: he plays the 2 swaps by ear).
   Fight icon = the fight's ace (last Pokémon) or the boss sprite (21 Nov; trainer portraits need Vincent's Graphics/Trainers).
   Boss fights also keep the bar plan. Only the next fight shows (Vincent, 21 Nov); the rest fold under "Later fights".
   **Boss bar plan (Vincent, 20 Nov):** for the NEXT boss fight the foe→counter list is replaced by a bar-by-bar plan of the

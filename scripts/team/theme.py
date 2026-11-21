@@ -68,13 +68,13 @@ for i, nm in enumerate(st['team']):
               f'<b class="slot-name">{E(d)}</b><div class="slot-types">{types}</div>'
               f'<div class="slot-lv"><span>Lv {lv or "?"}</span><span class="lv-bar" role="img" aria-label="Level {lv} of {CAP}">'
               f'<i style="width:{min(100, round(100 * lv / CAP)) if lv else 0}%"></i></span><span class="lv-cap">{CAP}</span></div>'
-              + build_html(BUILD.get(d), p, here) + '</li>')
+              + build_html(BUILD.get(d), p, here) + f'<!--MW:{nm}--></li>')
 nxt = ''
 if st.get('fight') and st['fight'] in FP:
     p = FP[st['fight']]
     nxt = (f'<a class="next" href="#fights" data-go="fights"><span class="next-k">Next battle</span>'
            f'<b>{E(FIGHT_NAME.get(st["fight"], st["fight"]))}</b><span>{E(p["format"])} · bring {E(" + ".join(disp(r["name"]) for r in p["swaps"]))}'
-           f' · {p["counters"]}/{p["n"]} countered</span><span class="next-go" aria-hidden="true">›</span></a>')
+           f'</span><span class="next-go" aria-hidden="true">›</span></a>')
 low = sum(1 for nm in st['team'] if (party.get(disp(nm)) or {}).get('level', CAP) < CAP)
 hero = f'<div class="hero"><div class="hero-head"><h3>Your party</h3></div><ol class="party">{slots}</ol>{nxt}</div>'
 page = re.sub(r'(<section aria-labelledby="s1">\s*<h2 id="s1">.*?</h2>)', lambda m: m.group(1) + hero, page, count=1, flags=re.S)
@@ -292,6 +292,47 @@ def field_html(fname, names):   # 21 Nov (Vincent): type pills with green ▲ / 
             rows += ('<div class="fx mv ' + ('up' if up else 'down') + '"><span class="fx-ar">' + (f'▲ ×{x:g}' if up else '✕ fails' if x == 0 else f'▼ ×{x:g}') + '</span>'
                      + spr(n) + f'<div class="mvc"><b>{E(disp(n))}</b><div class="mvl"><span>{E(mv)}</span>' + tag + '</div></div></div>')
     return '<div class="fxs">' + rows + '</div>'
+
+def _six_rows(k, names):
+    try: R = json.load(open(f'team/{k}_eval.json'))
+    except Exception: return None, {}
+    rows = {}
+    for y in R['rows']:
+        if y['name'] in names and (y['name'] not in rows or y.get('fixed')): rows[y['name']] = y
+    return R, rows
+def speed_html(k, names):   # 21 Nov: foes faster than every member of your six
+    R, rows = _six_rows(k, names)
+    if not R or not rows: return ''
+    fast_n, fast_s = max(((n, y['spe']) for n, y in rows.items()), key=lambda x: x[1])
+    ids = R.get('foe_ids') or []
+    out = [(R['foes'][j][1], s_, ids[j] if j < len(ids) else None) for j, s_ in enumerate(R['foe_spe']) if s_ > fast_s]
+    if not out: return '<span class="fx-note">None: your ' + E(disp(fast_n)) + ' (' + str(fast_s) + ') outspeeds all of them</span>'
+    return ('<div class="spd">' + ''.join('<span class="spc">' + (SP.tag(*i_, size='s') if i_ else '') + E(n_.split(' (')[0]) + ' <b>' + str(s_) + '</b></span>'
+                                          for n_, s_, i_ in sorted(out, key=lambda x: -x[1]))
+            + '<span class="fx-note">your fastest: ' + E(disp(fast_n)) + ' ' + str(fast_s) + '</span></div>')
+HAZ = {'TOXICSPIKES': 'Toxic Spikes', 'STEALTHROCK': 'Stealth Rock', 'SPIKES': 'Spikes', 'STICKYWEB': 'Sticky Web'}
+def watch_html(k, p, names):   # 21 Nov: each foe's trick -> your answer (win conditions + hazards + crit setup)
+    R, rows = _six_rows(k, names)
+    ids = (R or {}).get('foe_ids') or []
+    items = []
+    for j, q in enumerate(p['pairs']):
+        for w in q.get('wincons') or []:
+            items.append((j, q['foe'], w['what'], ', '.join(w['answers'][:2]) if w['answers'] else ''))
+    for j, mv in enumerate((R or {}).get('foe_moves') or []):
+        foe = R['foes'][j][1]; mv = {re.sub(r'[^A-Z]', '', m.upper()) for m in mv}
+        for h in sorted(mv & set(HAZ)):
+            imm = []
+            for n, y in rows.items():
+                ty = set(y['types']); ab = re.sub(r'[^A-Z]', '', str(y.get('ab') or ''))
+                air = 'FLYING' in ty or ab == 'LEVITATE'
+                if ab == 'MAGICGUARD' or (h == 'TOXICSPIKES' and (ty & {'POISON', 'STEEL'} or air)) or (h in ('SPIKES', 'STICKYWEB') and air):
+                    imm.append(disp(n))
+            items.append((j, foe, HAZ[h], ('immune: ' + ', '.join(imm)) if imm else ''))
+        if 'FOCUSENERGY' in mv: items.append((j, foe, 'Focus Energy (then every hit crits)', 'hit it before it sets up'))
+    if not items: return ''
+    return '<div class="wl">' + ''.join('<div class="wi ' + ('w-ok' if a else 'w-no') + '">' + (SP.tag(*ids[j], size='s') if j < len(ids) else '')
+                                        + '<b>' + E(foe.split(' (')[0]) + '</b><span>' + E(what) + '</span><span class="wa">' + ('→ ' + E(a) if a else 'no answer') + '</span></div>'
+                                        for j, foe, what, a in items) + '</div>'
 def fight_cards():
     order = [k for k in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick'] if k in FP]
     out = ''
@@ -324,6 +365,8 @@ def fight_cards():
         out += ('<details class="fc' + (' is-next' if idx == 0 else '') + '"' + (' open' if idx == 0 else '') + '>' + head
                 + '<div class="fbody"><div class="frow"><span class="fk">Bring</span><ul class="mons">' + bring + '</ul></div>'
                 + (('<div class="frow ftop"><span class="fk">Field</span>' + _fh + '</div>') if (_fh := field_html(hf.get('field', ''), list(st.get('core') or []) + [r['name'] for r in p['swaps']])) else '')
+                + ((('<div class="frow ftop"><span class="fk">Faster</span>' + _sp + '</div>') if (_sp := speed_html(k, list(st.get('core') or []) + [r['name'] for r in p['swaps']])) else '') if idx == 0 and not hf.get('boss') else '')
+                + ((('<div class="frow ftop"><span class="fk">Watch</span>' + _wh + '</div>') if (_wh := watch_html(k, p, list(st.get('core') or []) + [r['name'] for r in p['swaps']])) else '') if idx == 0 else '')
                 + (_bp or '') + '</div></details>')   # 21 Nov (Vincent): foe -> counter list removed; boss fights keep the bar plan
     # 21 Nov (Vincent): only the upcoming fight shows; the rest fold away (fights can come out of order)
     cards_ = re.findall(r'<details class="fc.*?</details>', out, re.S)
@@ -331,6 +374,13 @@ def fight_cards():
         out = cards_[0] + ('<details class="later"><summary>Later fights · ' + str(len(cards_) - 1) + '</summary><div class="fcards">'
                            + ''.join(cards_[1:]) + '</div></details>')
     return '<div class="fcards">' + out + '</div>'
+if FP and st.get('fight') in FP:   # 21 Nov (Vincent, trial): party cards warn about moves the next fight's field weakens / blocks
+    _ord = [k_ for k_ in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick'] if k_ in FP]
+    _fld = (HF[_ord.index(st['fight'])] if _ord.index(st['fight']) < len(HF) else {}).get('field', '')
+    for n_, mv_, x_, why_ in boosted_line(_fld, st['team'], rows=True):
+        if x_ < 1:
+            page = page.replace(f'<!--MW:{n_}-->', f'<div class="mw">{E(mv_)} ' + ('fails' if x_ == 0 else f'×{x_:g}') + f' on {E(_fld)}</div><!--MW:{n_}-->', 1)
+page = re.sub(r'<!--MW:[^>]*-->', '', page)
 if FP:
     page = re.sub(r'(<section aria-labelledby="s1f">\s*<h2 id="s1f">.*?</h2>).*?</section>', lambda m: m.group(1) + fight_cards() + '</section>', page, count=1, flags=re.S)
     page = re.sub(r'<section aria-labelledby="sctr">.*?</section>\s*', '', page, count=1, flags=re.S)
@@ -662,6 +712,13 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .fx.up .fx-ar { color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent) }
 .fx.down .fx-ar { color: var(--bad); background: color-mix(in srgb, var(--bad) 14%, transparent) }
 .fx-note { color: var(--muted); font-size: 12px }
+.spd { display: flex; flex-wrap: wrap; gap: 6px; align-items: center }
+.spc { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; padding: 2px 8px 2px 2px; border-radius: 99px; background: color-mix(in srgb, var(--bad) 10%, transparent) }
+.spc b { font-family: var(--mono) }
+.wl { display: grid; gap: 4px; flex: 1; min-width: 0 }
+.wi { display: grid; grid-template-columns: auto auto 1fr; align-items: center; gap: 2px 8px; font-size: 13px }
+.wi { color: var(--ink, inherit) } .wi .wa { grid-column: 2 / -1; color: var(--good); font-size: 12.5px } .wi.w-no .wa { color: var(--bad) }
+.mw { margin-top: 6px; font-size: 12px; color: var(--bad); font-weight: 600 }
 .fn.fn-ace { background: transparent !important; box-shadow: none !important; width: 48px; height: 48px; display: grid; place-items: center; overflow: visible }
 .later > summary { cursor: pointer; font: 600 12px var(--mono); text-transform: uppercase; color: var(--muted); padding: 10px 4px; list-style: none }
 .later > summary::before { content: '▸ ' } .later[open] > summary::before { content: '▾ ' }
