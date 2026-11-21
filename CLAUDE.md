@@ -180,7 +180,9 @@ damage score and the fight's real win condition was only read after Vincent lost
   chips, "Needs a plan" badge (no x/n count). Body (Vincent, 21 Nov): Bring (the 2 swaps) and Field only: type pills (Team-tab
   colours) per multiplier, green ▲ ×1.5 / red ▼ ×0.5, notes like "special moves only", field chip, then "Your moves here": one
   line per move of the six the field changes (▲/▼ ×N, sprite, name, move, why: type pill or "field bonus" = the field's
-  damageMods, e.g. Haunted Field bone moves). NO Lead row and NO foe → counter list (data stays in fight_plans.json, plans go in chat).
+  damageMods, e.g. Haunted Field bone moves). Game rule (Battle_Move.rb / Battle_Field.rb, verified 21 Nov): damage x move bonus
+  (damageMods, any category) x max(flag bonus [sound / slicing...], type bonus [only if its typeCondition holds]); x0 = the move
+  FAILS (isMoveValidOnField?), shown "✕ fails" (Murkwater Surface: Ground moves). Classic mode = full field strength (Story halves). NO Lead row and NO foe → counter list (data stays in fight_plans.json, plans go in chat).
   Boss fights also keep the bar plan. Only the next fight is open.
   **Boss bar plan (Vincent, 20 Nov):** for the NEXT boss fight the foe→counter list is replaced by a bar-by-bar plan of the
   real six (scripts/team/fights/bar_plan.py → team/bar_plan_<fight>.json, run by update.py): each bar shows the boss's

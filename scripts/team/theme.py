@@ -131,6 +131,11 @@ def field_line(fname):   # the field's real effects (fieldtext typeBoosts) + end
     tc = fv.get('typeCondition') or {}
     lab = lambda t: _t(t) + (' (special)' if 'Special' in str(tc.get(t, '')) else ' (physical)' if 'Physical' in str(tc.get(t, '')) else '')
     parts = [' · '.join(', '.join(lab(t) for t in ts) + ' ×' + m.rstrip('0').rstrip('.') for m, ts in sorted((fv.get('typeBoosts') or {}).items(), key=lambda kv: -float(kv[0])))]
+    mvb = {}
+    for m, ms in (fv.get('damageMods') or {}).items(): mvb.setdefault(float(m), []).extend(ms)
+    for m, ms in sorted(mvb.items(), key=lambda kv: -kv[0]):
+        rows += ('<div class="fx ' + ('up' if m > 1 else 'down') + '"><span class="fx-ar">' + (f'▲ ×{m:g}' if m > 1 else '✕ fails' if m == 0 else f'▼ ×{m:g}') + '</span>'
+                 + f'<span class="fx-note">{len(ms)} specific moves (any category) · yours listed below</span></div>')
     if fname == 'Corrupted Cave': parts.append('your grounded non-Poison/Steel Pokémon lose 1/8 HP a turn')
     return ' · '.join(p for p in parts if p)
 MVN = {}
@@ -183,27 +188,76 @@ def bar_plan_html(k, bsprite):
                 ('If it falls: ' + ' → '.join(disp(x) for x in bk['order'][1:]) if bk else 'No sure win without it: Recover early') + '</span></div>')
     return out
 
-def boosted_line(fname, names, rows=False):   # our six's moves the field changes (typeBoosts + typeCondition, damageMods)
+FLAGK = {'soundmove': ('Soundmove', 'Sound moves'), 'sharpmove': ('Sharpmove', 'Slicing moves'), 'windmove': ('Windmove', 'Wind moves'),
+         'punchmove': ('Punchmove', 'Punch moves'), 'beammove': ('Beammove', 'Beam moves'), 'bitingmove': ('Bitingmove', 'Biting moves')}
+def cond_note(c):   # Battle_Field.rb typeCondition (eval'd Ruby) -> plain words
+    c = str(c or '')
+    if not c or 'YVELTAL' in c: return ''
+    if 'pbIsSpecial' in c: return 'special moves only'
+    if 'pbIsPhysical' in c: return 'physical moves only'
+    if 'makesContact' in c: return 'non-contact moves only'
+    if 'SCALD' in c and 'attacker.isAirborne' in c: return 'grounded user only, not Scald / Steam moves'
+    if 'SCALD' in c: return 'not Scald / Steam moves'
+    if 'attacker.isAirborne' in c: return 'grounded user only'
+    if 'opponent.isAirborne' in c: return 'vs grounded targets only'
+    if 'hasType?(:GROUND)' in c: return 'not vs Ground types'
+    if 'WATER' in c and 'STEEL' in c: return 'vs Water / Steel targets only'
+    if 'totalhp' in c: return 'vs targets at half HP or less'
+    return 'conditional'
+def cond_ok(c, d, flags, n):   # True / False for conditions on our move or user; None = depends on the target
+    c = str(c or '')
+    if not c or 'YVELTAL' in c: return True
+    if 'pbIsSpecial' in c: return d.get('category') == 'special'
+    if 'pbIsPhysical' in c: return d.get('category') == 'physical'
+    if 'makesContact' in c: return 'Contact' not in flags
+    mid = re.sub(r'[^A-Z]', '', (d.get('name') or '').upper())
+    if 'SCALD' in c and mid in ('SCALD', 'HYDROSTEAM', 'STEAMERUPTION'): return False
+    if 'attacker.isAirborne' in c:
+        r = T.get(n) or {}
+        return 'FLYING' not in (r.get('types') or []) and re.sub(r'[^A-Z]', '', str((st.get('abilities') or {}).get(n, r.get('ability', ''))).upper()) != 'LEVITATE'
+    return None
+def boosted_line(fname, names, rows=False):   # our six's moves the field changes, exactly as Battle_Move.rb: move bonus x max(flag bonus, type bonus)
     fv = next((v for v in FT.values() if v.get('name') == fname), None)
     if not fv: return [] if rows else ''
     MT = MTX; tc = fv.get('typeCondition') or {}
     tb = {t: float(m) for m, ts in (fv.get('typeBoosts') or {}).items() for t in ts}
     dm = {mv: float(m) for m, ms in (fv.get('damageMods') or {}).items() for mv in ms}
+    DBM = DBMOVES
     out = []
     for n in names:
-        for m in (st.get('moves') or {}).get(n, []):
+        for m in ((st.get('moves') or {}).get(n) or (IBX.get(n) or {}).get('moves') or []):
             k = re.sub(r'[^A-Z]', '', m.upper()); d = MT.get(k) or {}
             if d.get('category') not in ('physical', 'special'): continue
-            x = 1.0; why = []
-            if k in dm: x *= dm[k]; why.append('field bonus')
+            flags = set((DBM.get(k) or {}).get('DataFlags') or [])
+            why = []; dep = []
+            mb = dm.get(k, 1.0)
+            if mb != 1: why.append('field bonus')
+            cands = []   # flag boosts and the type boost: the game takes the largest (typeFieldBoost)
+            for key, mult in tb.items():
+                if key in FLAGK and FLAGK[key][0] in flags:
+                    ok = cond_ok(tc.get(key), d, flags, n)
+                    if ok is not False: cands.append((mult, FLAGK[key][1], ok))
             t = (d.get('type') or '').upper()
             if t in tb:
-                cond = str(tc.get(t, ''))
-                if not cond or ('Special' in cond and d['category'] == 'special') or ('Physical' in cond and d['category'] == 'physical'):
-                    x *= tb[t]; why.append(t)
-            if x != 1: out.append((n, d.get('name', m), x, why))
+                ok = cond_ok(tc.get(t), d, flags, n)
+                if ok is not False: cands.append((tb[t], t, ok))
+            tbm = 1.0
+            if cands:
+                if any(x[0] == 0 for x in cands): tbm = 0.0; best = min(cands)
+                else: best = max(cands); tbm = best[0]
+                if tbm != 1:
+                    why.append(best[1])
+                    if best[2] is None: dep.append(cond_note(tc.get(best[1] if best[1] in tb else t)))
+            x = mb * tbm
+            if x != 1: out.append((n, d.get('name', m), x, why + [f'({q})' for q in dep if q]))
     if rows: return out
     return ', '.join(f"{disp(n)} ({mv} ×{x:g})" for n, mv, x, _ in out if x > 1)
+IBX = {}
+try: IBX = json.load(open('team/ideal_builds.json'))
+except Exception: pass
+DBMOVES = {}
+try: DBMOVES = json.load(open('data/Database_Moves.json'))
+except Exception: pass
 MTX = {}
 try: MTX = json.load(open('gamedata/movetext.json'))
 except Exception: pass
@@ -215,14 +269,18 @@ def field_html(fname, names):   # 21 Nov (Vincent): type pills with green ▲ / 
     groups = {}
     for m, ts in (fv.get('typeBoosts') or {}).items():
         for t in ts:
-            c = str(tc.get(t, '')); note = 'special moves only' if 'Special' in c else 'physical moves only' if 'Physical' in c else ''
-            groups.setdefault((float(m), note), []).append(t)
+            groups.setdefault((float(m), cond_note(tc.get(t))), []).append(t)
     rows = ''
     for (m, note), ts in sorted(groups.items(), key=lambda kv: (-kv[0][0], kv[0][1])):
         up = m > 1
-        rows += ('<div class="fx ' + ('up' if up else 'down') + '"><span class="fx-ar">' + ('▲' if up else '▼') + ' ×' + f'{m:g}' + '</span>'
-                 + ''.join(f'<span class="pt" style="--tc:{TYPE.get(t, "#888")}">{E(t.title())}</span>' for t in ts)
+        rows += ('<div class="fx ' + ('up' if up else 'down') + '"><span class="fx-ar">' + (('▲ ×' + f'{m:g}') if up else ('✕ fails' if m == 0 else '▼ ×' + f'{m:g}')) + '</span>'
+                 + ''.join(f'<span class="pt" style="--tc:{TYPE.get(t, "#888")}">{E(FLAGK[t][1] if t in FLAGK else t.title())}</span>' for t in ts)
                  + (f'<span class="fx-note">{E(note)}</span>' if note else '') + '</div>')
+    mvb = {}
+    for m, ms in (fv.get('damageMods') or {}).items(): mvb.setdefault(float(m), []).extend(ms)
+    for m, ms in sorted(mvb.items(), key=lambda kv: -kv[0]):
+        rows += ('<div class="fx ' + ('up' if m > 1 else 'down') + '"><span class="fx-ar">' + (f'▲ ×{m:g}' if m > 1 else '✕ fails' if m == 0 else f'▼ ×{m:g}') + '</span>'
+                 + f'<span class="fx-note">{len(ms)} specific moves (any category) · yours listed below</span></div>')
     if fname == 'Corrupted Cave':
         rows += '<div class="fx down"><span class="fx-ar">▼ 1/8 HP</span><span class="fx-note">a turn for your grounded non-Poison / non-Steel Pokémon</span></div>'
     mine = boosted_line(fname, names, rows=True)
@@ -231,7 +289,7 @@ def field_html(fname, names):   # 21 Nov (Vincent): type pills with green ▲ / 
         for n, mv, x, why in sorted(mine, key=lambda r: -r[2]):
             up = x > 1
             tag = ''.join(f'<span class="pt" style="--tc:{TYPE.get(w, "#888")}">{E(w.title())}</span>' if w in TYPE else f'<span class="fx-note">{E(w)}</span>' for w in why)
-            rows += ('<div class="fx mv ' + ('up' if up else 'down') + '"><span class="fx-ar">' + ('▲' if up else '▼') + f' ×{x:g}</span>'
+            rows += ('<div class="fx mv ' + ('up' if up else 'down') + '"><span class="fx-ar">' + (f'▲ ×{x:g}' if up else '✕ fails' if x == 0 else f'▼ ×{x:g}') + '</span>'
                      + spr(n) + f'<div class="mvc"><b>{E(disp(n))}</b><div class="mvl"><span>{E(mv)}</span>' + tag + '</div></div></div>')
     return '<div class="fxs">' + rows + '</div>'
 def fight_cards():
