@@ -177,8 +177,10 @@ damage score and the fight's real win condition was only read after Vincent lost
   replacement is the SAME tier or higher than the member it replaces (paired by tier); no such alt → no swap shown. Kept members have nothing on the right. No builds there (they live on Team / To do).
 - **Fights tab (17 Nov):** one collapsible card per remaining fight, built by theme.py from team/fight_plans.json (single
   source; the old hard-fights table, opener cards and counter tables are replaced). Header: number, name, format/boss/field
-  chips, countered x/n (green if ≥ n-1), "Needs a plan" badge. Body: Bring (2 swaps; NO Lead row, Vincent 21 Nov: let it flow), Field, Boosted, then each foe →
-  counter with deals/takes bars, weak rows first in amber. Only the next fight is open.
+  chips, "Needs a plan" badge (no x/n count). Body (Vincent, 21 Nov): Bring (the 2 swaps) and Field only: type pills (Team-tab
+  colours) per multiplier, green ▲ ×1.5 / red ▼ ×0.5, notes like "special moves only", field chip, and "▲ Yours" (your six's
+  moves the field boosts). NO Lead row and NO foe → counter list (data stays in fight_plans.json, plans go in chat).
+  Boss fights also keep the bar plan. Only the next fight is open.
   **Boss bar plan (Vincent, 20 Nov):** for the NEXT boss fight the foe→counter list is replaced by a bar-by-bar plan of the
   real six (scripts/team/fights/bar_plan.py → team/bar_plan_<fight>.json, run by update.py): each bar shows the boss's
   types / item / stat stages / new moves, then who is in and what they click (moves named, our boost stage), with Hit (+0) /

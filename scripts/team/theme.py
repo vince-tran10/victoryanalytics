@@ -205,6 +205,28 @@ def boosted_line(fname, names):   # our six's moves the field really boosts (typ
 MTX = {}
 try: MTX = json.load(open('gamedata/movetext.json'))
 except Exception: pass
+
+def field_html(fname, names):   # 21 Nov (Vincent): type pills with green ▲ / red ▼ multipliers + your boosted moves
+    fv = next((v for v in FT.values() if v.get('name') == fname), None)
+    if not fv: return ''
+    tc = fv.get('typeCondition') or {}
+    groups = {}
+    for m, ts in (fv.get('typeBoosts') or {}).items():
+        for t in ts:
+            c = str(tc.get(t, '')); note = 'special moves only' if 'Special' in c else 'physical moves only' if 'Physical' in c else ''
+            groups.setdefault((float(m), note), []).append(t)
+    rows = ''
+    for (m, note), ts in sorted(groups.items(), key=lambda kv: (-kv[0][0], kv[0][1])):
+        up = m > 1
+        rows += ('<div class="fx ' + ('up' if up else 'down') + '"><span class="fx-ar">' + ('▲' if up else '▼') + ' ×' + f'{m:g}' + '</span>'
+                 + ''.join(f'<span class="pt" style="--tc:{TYPE.get(t, "#888")}">{E(t.title())}</span>' for t in ts)
+                 + (f'<span class="fx-note">{E(note)}</span>' if note else '') + '</div>')
+    if fname == 'Corrupted Cave':
+        rows += '<div class="fx down"><span class="fx-ar">▼ 1/8 HP</span><span class="fx-note">a turn for your grounded non-Poison / non-Steel Pokémon</span></div>'
+    bl = boosted_line(fname, names)
+    if bl:
+        rows += '<div class="fx up mine"><span class="fx-ar">▲ Yours</span><span class="fx-note">' + E(bl) + '</span></div>'
+    return '<div class="fxs">' + rows + '</div>'
 def fight_cards():
     order = [k for k in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick'] if k in FP]
     out = ''
@@ -216,8 +238,7 @@ def fight_cards():
                 + '<span class="fchip">' + E(p['format']) + '</span>' + ('<span class="fchip boss">Boss</span>' if hf.get('boss') else '')
                 + ('<span class="fchip">' + E(hf.get('field', '')) + '</span>' if hf.get('field') else '') + '</span></span>'
                 + ('<span class="needs">Needs a plan</span>' if p.get('note') else '')
-                + (('<span class="cnt ok">Plan ✓</span>' if os.path.exists(f'team/bar_plan_{k}.json') and k == st.get('fight') and hf.get('boss') else
-                    '<span class="cnt ' + ('ok' if good else 'warn') + '">' + str(nb) + '/' + str(p['n']) + '</span>')) + '</summary>')
+                + ('<span class="cnt ok">Plan ✓</span>' if os.path.exists(f'team/bar_plan_{k}.json') and k == st.get('fight') and hf.get('boss') else '') + '</summary>')
         bring = ''.join('<li>' + tname(r['name']) + '</li>' for r in p['swaps'])
         lead = ''.join('<li>' + tname(x) + '</li>' for x in p['leads'])
         fb = FBX.get(name, '') or FBX.get(hf.get('name', ''), '')
@@ -233,9 +254,8 @@ def fight_cards():
         _bp = bar_plan_html(k, SP.tag(*(_bf or _ids[0]), size='m') if (_bf or _ids) else '') if hf.get('boss') else None
         out += ('<details class="fc' + (' is-next' if idx == 0 else '') + '"' + (' open' if idx == 0 else '') + '>' + head
                 + '<div class="fbody"><div class="frow"><span class="fk">Bring</span><ul class="mons">' + bring + '</ul></div>'
-                + ('<div class="frow"><span class="fk">Field</span><span class="fbo">' + E(hf.get('field', '') + ': ' + field_line(hf.get('field', ''))) + '</span></div>' if field_line(hf.get('field', '')) else '')
-                + (('<div class="frow"><span class="fk">Boosted</span><span class="fbo">' + E(_bl) + '</span></div>') if (_bl := boosted_line(hf.get('field', ''), (list(st.get('core') or []) + [r['name'] for r in p['swaps']]))) else '')
-                + (_bp if _bp else '<ul class="foes">' + foes + '</ul>') + '</div></details>')
+                + (('<div class="frow ftop"><span class="fk">Field</span>' + _fh + '</div>') if (_fh := field_html(hf.get('field', ''), list(st.get('core') or []) + [r['name'] for r in p['swaps']])) else '')
+                + (_bp or '') + '</div></details>')   # 21 Nov (Vincent): foe -> counter list removed; boss fights keep the bar plan
     return '<div class="fcards">' + out + '</div>'
 if FP:
     page = re.sub(r'(<section aria-labelledby="s1f">\s*<h2 id="s1f">.*?</h2>).*?</section>', lambda m: m.group(1) + fight_cards() + '</section>', page, count=1, flags=re.S)
@@ -561,6 +581,14 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .mons li { display: flex; align-items: center; background: var(--panel-2); border: 1px solid var(--line); border-radius: 99px; padding: 3px 12px 3px 4px; font: 700 13.5px var(--body) }
 .mons .tier, .foes .tier { min-width: 22px; height: 22px; font-size: 12px !important; margin-right: 6px }
 .fbo { font-size: 13px; color: var(--muted) }
+.frow.ftop { align-items: flex-start }
+.fxs { display: grid; gap: 6px; flex: 1; min-width: 0 }
+.fx { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: 13px }
+.fx-ar { font: 700 12px var(--mono); min-width: 64px; padding: 2px 8px; border-radius: 99px; text-align: center }
+.fx.up .fx-ar { color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent) }
+.fx.down .fx-ar { color: var(--bad); background: color-mix(in srgb, var(--bad) 14%, transparent) }
+.fx-note { color: var(--muted); font-size: 12px }
+.fx .pt { font-size: 11px }
 .bars { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 8px }
 .barc { background: var(--card-2, rgba(127,127,127,.06)); border-radius: 12px; padding: 10px 12px }
 .barh { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px }
