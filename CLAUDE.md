@@ -172,7 +172,11 @@ damage score and the fight's real win condition was only read after Vincent lost
   0.4 × meta (Smogon tier/usage + BST; Aevians by kit OP stars). Cut-offs S .85 / A .76 / B .62 / C .45.
 - **Team tab (17 Nov):** only "Your party": one card per member (slot, Core/Swap · role, types, level bar, ability · nature, EVs,
   item, 4 moves, open to-dos) + the Next battle card. The old team table is folded into the cards by theme.py.
-- **Cores tab (17 Nov):** compact grid, one card per style: 4 members with tier chips, key piece marked; the alt core's
+- **Cores tab (17 Nov):** compact grid, one card per style. **Role order (Vincent, 21 Nov):** every core is built and shown as
+  1 Lead (singles + left slot in doubles) · 2 Doubles lead · 3 Flex · 4 Closer (cores.py order_roles: role-fit scores
+  s_lead / s_partner / s_flex / s_closer, +0.15 × fit in the core score; the closer must have a setup move or boosting ability,
+  else −0.05; weather / terrain / Trick Room setters must take slot 1 or 2). Swaps replace a member IN THE SAME ROLE at the
+  same tier or higher (slot_ok). Each row shows its role label; members with tier chips, key piece (the setter) marked; the alt core's
   replacements sit greyed on the right of the member they replace (⇄ + tier chip). Swap rule (Vincent, 18 Nov): every
   replacement is the SAME tier or higher than the member it replaces (paired by tier); no such alt → no swap shown. Kept members have nothing on the right. No builds there (they live on Team / To do).
 - **Fights tab (17 Nov):** one collapsible card per remaining fight, built by theme.py from team/fight_plans.json (single

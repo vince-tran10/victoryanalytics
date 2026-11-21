@@ -15,7 +15,9 @@ if 'id="app-theme"' in page:
     sys.exit('already themed')
 st = json.load(open('team/state.json'))
 CAP, CH = st.get('cap', 60), st.get('chapter', 9)
-T = {r['name']: r for r in json.load(open('team/tier_all.json'))['rows']} if os.path.exists('team/tier_all.json') else {}
+T = {}
+for _r in (json.load(open('team/tier_all.json'))['rows'] if os.path.exists('team/tier_all.json') else []):   # rows are sorted by blend: keep the best (e.g. crested) row per name
+    T.setdefault(_r['name'], _r)
 FP = json.load(open('team/fight_plans.json')) if os.path.exists('team/fight_plans.json') else {}
 ROLES = json.load(open('team/team_roles.json')) if os.path.exists('team/team_roles.json') else {}
 TYPE = {'NORMAL': '#9a9a7a', 'FIRE': '#e2703a', 'WATER': '#4a86d8', 'ELECTRIC': '#e8bf2a', 'GRASS': '#5aa24a', 'ICE': '#6cc4c4',
@@ -407,16 +409,16 @@ def core_grid():   # Cores: one compact card per style; key piece marked; the al
     out = ''
     for k, v in C.items():
         if not v: continue
-        main = v[0]['members']; key = main[0]; yours = sorted(main) == mine
+        main = v[0]['members']; key = v[0].get('enabler') if k != 'balance' else None; yours = sorted(main) == mine
+        slots_ = v[0].get('slots') or ['Lead', 'Doubles lead', 'Flex', 'Closer']
         sw = {}
-        if len(v) > 1:   # the alternative: each swapped member gets its replacement in grey on the same row
-            am = v[1]['members']; RK = {'S': 4, 'A': 3, 'B': 2, 'C': 1, 'D': 0}; tr_ = lambda n: -RK.get((T.get(n) or {}).get('tier', 'D'), 0)
-            o = sorted([n for n in main if n not in am], key=tr_); i_ = sorted([n for n in am if n not in main], key=tr_)   # same pairing as cores.py
-            sw = dict(zip(o, i_))
-        lis = ''.join('<li' + (' class="key"' if n == key else '') + '><span class="cm">' + tchip(n) + spr(n) + '<span class="nm">' + E(disp(n)) + '</span>' +
+        if len(v) > 1:   # 21 Nov: the alt replaces members role by role (same slot), same tier or higher
+            am = v[1]['members']
+            sw = {o: i_ for o, i_ in zip(main, am) if o != i_}
+        lis = ''.join('<li' + (' class="key"' if n == key else '') + '><span class="cm"><span class="role-l">' + E(slots_[j] if j < len(slots_) else '') + '</span>' + tchip(n) + spr(n) + '<span class="nm">' + E(disp(n)) + '</span>' +
                       ('<small>key</small>' if n == key else '') + '</span>' +
                       ('<span class="alt" title="swap option"><span class="swp">⇄</span>' + tchip(sw[n]) + spr(sw[n]) + '<span class="nm">' + E(disp(sw[n])) + '</span></span>' if n in sw else '') +
-                      '</li>' for n in main)
+                      '</li>' for j, n in enumerate(main))
         alt = ''
         out += ('<article class="cc' + (' is-yours' if yours else '') + '"><header><b>' + E(CTITLE.get(k, k)) + '</b>' +
                 ('<span class="yours">your core</span>' if yours else '') + '</header><ul class="cc-m">' + lis + '</ul>' + alt + '</article>')
@@ -712,6 +714,7 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .fx.up .fx-ar { color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent) }
 .fx.down .fx-ar { color: var(--bad); background: color-mix(in srgb, var(--bad) 14%, transparent) }
 .fx-note { color: var(--muted); font-size: 12px }
+.role-l { font: 600 9.5px var(--mono); text-transform: uppercase; color: var(--muted); min-width: 78px; display: inline-block }
 .spd { display: flex; flex-wrap: wrap; gap: 6px; align-items: center }
 .spc { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; padding: 2px 8px 2px 2px; border-radius: 99px; background: color-mix(in srgb, var(--bad) 10%, transparent) }
 .spc b { font-family: var(--mono) }

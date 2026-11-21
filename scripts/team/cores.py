@@ -180,6 +180,33 @@ ARCH = [
      lambda m: 'SNOWWARNING' in m.r['abilities'], lambda m: True, id_snow),
 ]
 
+
+# ---- 21 Nov (Vincent): every core = [1 lead (singles + left slot in doubles), 2 doubles lead partner, 3 flex, 4 closer]
+SLOT = ['Lead', 'Doubles lead', 'Flex', 'Closer']
+PHYS_SET = {'SWORDSDANCE', 'DRAGONDANCE', 'SHIFTGEAR', 'BULKUP', 'COIL', 'VICTORYDANCE', 'TIDYUP', 'BELLYDRUM', 'CURSE', 'SHELLSMASH', 'FILLETAWAY'}
+SPEC_SET = {'NASTYPLOT', 'CALMMIND', 'QUIVERDANCE', 'SHELLSMASH', 'FILLETAWAY', 'TAILGLOW', 'GEOMANCY'}
+SPREAD = {'EARTHQUAKE', 'ROCKSLIDE', 'HEATWAVE', 'MAKEITRAIN', 'MUDDYWATER', 'DAZZLINGGLEAM', 'HYPERVOICE', 'ICYWIND', 'BLIZZARD',
+          'DISCHARGE', 'SURF', 'BULLDOZE', 'ERUPTION', 'WATERSPOUT', 'SLUDGEWAVE', 'BOOMBURST', 'SNARL', 'ELECTROWEB', 'BREAKINGSWIPE', 'LAVAPLUME'}
+def has_setup(m):
+    return bool(m.legal & (PHYS_SET if m.r['cat'] == 'Physical' else SPEC_SET)) or bool(set(m.r['abilities']) & {'SPEEDBOOST', 'MOXIE', 'BEASTBOOST'})
+def s_lead(m):     # singles lead + left slot in doubles: fast or bulky, turn-1 utility, status-proof helps
+    u = .2 * bool(m.flags & {'fakeout', 'intimidate'}) + .15 * bool(m.flags & {'speedctl', 'taunt', 'tr', 'tailwind', 'screens'})
+    return .4 * m.r['blend'] + .2 * min(1, m.spe / 130) + u + .1 * min(1, m.bulk / 330) + (.05 if 'GOODASGOLD' in m.r['abilities'] or 'MAGICGUARD' in m.r['abilities'] else 0)
+def s_partner(m):  # doubles lead partner: Intimidate / Fake Out / redirection / Tailwind, spread damage
+    u = .25 * bool(m.flags & {'fakeout', 'intimidate', 'redirect'}) + .1 * bool(m.flags & {'tailwind', 'speedctl', 'screens', 'tr'}) + .1 * bool(m.legal & SPREAD)
+    return .4 * m.r['blend'] + .15 * min(1, m.spe / 130) + u
+def s_flex(m):     # flex / mid game: bulky pivot with an answer (Haze, recovery, pivot moves)
+    return .5 * m.r['blend'] + .25 * min(1, m.bulk / 330) + .15 * bool(m.flags & {'haze', 'recover', 'pivot'}) + .1 * bool(m.flags & {'taunt', 'speedctl'})
+def s_closer(m):   # closer: one setup move (or a boosting ability), then clean up; counters what's left
+    return (.5 * m.r['blend'] + .3 * min(1, len(m.counters) / 15) + .2) if has_setup(m) else .3 * m.r['blend']
+SFN = [s_lead, s_partner, s_flex, s_closer]
+def order_roles(ms, lead_req=None):
+    best = None
+    for p in itertools.permutations(ms):
+        if lead_req and not (lead_req(p[0]) or lead_req(p[1])): continue   # a setter must lead (slot 1 or 2)
+        fit = sum(f(m) for f, m in zip(SFN, p)) / 4
+        if best is None or fit > best[0]: best = (fit, p)
+    return best if best else (0.0, tuple(ms))
 TOP = sorted(POOL, key=lambda m: -m.r['blend'])[:42]
 results, CAND = {}, {}
 for key, title, idt, en_f, mem_f, id_f in ARCH:
@@ -200,7 +227,10 @@ for key, title, idt, en_f, mem_f, id_f in ARCH:
             if key != 'balance' and idv < .6: continue          # must actually play its style
             cand.append((core_score(ms, idv), ms))
     cand.sort(key=lambda x: -x[0])
-    CAND[key] = (cand[:250], id_f)
+    lreq = None if key in ('balance', 'setup') else en_f
+    cand = [(sc + .15 * fit - (.05 if not has_setup(o[3]) else 0), o) for sc, ms in cand[:250] for fit, o in [order_roles(ms, lreq)]]
+    cand.sort(key=lambda x: -x[0])
+    CAND[key] = (cand, id_f, lreq)
 
 
 # ---------------- builds per member, role-aware
@@ -318,6 +348,17 @@ def tier_ok(main, alt):
     return bool(pr) and all(RANK[i.r['tier']] >= RANK[o.r['tier']] for o, i in pr)
 
 
+def enabler_of(ms, key):
+    en_f = next(a[3] for a in ARCH if a[0] == key)
+    return next((m for m in ms if en_f(m)), ms[0])
+def slot_ok(main, alt):   # alt differs only in whole slots: the new member sits in the replaced member's role, same tier or higher
+    names_m = {m.name for m in main}; names_a = {m.name for m in alt}; diff = 0
+    for o, i in zip(main, alt):
+        if o.name == i.name: continue
+        if i.name in names_m or o.name in names_a: return False
+        if RANK[i.r['tier']] < RANK[o.r['tier']]: return False
+        diff += 1
+    return diff > 0
 def covered_of(ms, bds, who=False):
     hits = {}
     for m, bd in zip(ms, bds):
@@ -328,8 +369,14 @@ def covered_of(ms, bds, who=False):
     return hits if who else [n for n, _ in ANS if n in hits]
 
 
+def slot_role(m, i, key, ms):   # build role from the slot (21 Nov): setters keep their setter role
+    en = enabler_of(ms, key)
+    if m is en and key not in ('balance',): return role_of(m, key, ms, en)
+    if i == 3: return 'setup sweeper' if has_setup(m) else 'attacker'
+    if i in (0, 1): return 'tempo lead' if m.flags & {'fakeout', 'intimidate'} or key == 'balance' else role_of(m, key, ms, None)
+    return role_of(m, key, ms, None)
 def real_builds(ms, key):
-    roles = [role_of(m, key, ms, ms[0]) for m in ms]
+    roles = [slot_role(m, i, key, ms) for i, m in enumerate(ms)]
     have = {w for w, ab in (('sun', 'DROUGHT'), ('snow', 'SNOWWARNING'), ('eterrain', 'ELECTRICSURGE')) if key in (w, 'electric' if w == 'eterrain' else w) and any(ab in m.r['abilities'] for m in ms)}
     bds = [build(m, key, rl, [], have) for m, rl in zip(ms, roles)]
     need = [n for n, _ in ANS if n not in covered_of(ms, bds)]
@@ -337,23 +384,27 @@ def real_builds(ms, key):
 
 
 # 17 Nov: rank by the answers the shown builds actually run (not everything each member could learn)
-for key, (cand, id_f) in CAND.items():
+for key, (cand, id_f, lreq) in CAND.items():
     rescored = []
     for sc, ms in cand:
         _, bds = real_builds(ms, key)
-        rescored.append((core_score(ms, id_f(ms) if key in ('balance', 'tr', 'setup') else id_f(ms[1:]), len(covered_of(ms, bds)) / len(ANS)), ms))
+        en = enabler_of(ms, key)
+        idv = id_f(ms) if key in ('balance', 'tr', 'setup') else id_f(tuple(m for m in ms if m is not en))
+        fit = sum(f(m) for f, m in zip(SFN, ms)) / 4
+        rescored.append((core_score(ms, idv, len(covered_of(ms, bds)) / len(ANS)) + .15 * fit - (.05 if not has_setup(ms[3]) else 0), ms))
     rescored.sort(key=lambda x: -x[0])
     main = rescored[0] if rescored else None
     mine = [ALL[n] for n in (ST.get('core') or []) if n in ALL]
-    if key == 'balance' and len(mine) == 4:   # Vincent's picked core is always the first card of its style
+    if key == 'balance' and len(mine) == 4:   # Vincent's picked core is always the first card of its style (state core order = roles)
         mine = tuple(mine)
         bds = [dict(moves=ST['moves'].get(m.name, []), ability=ST['abilities'].get(m.name, '')) for m in mine]
-        main = (core_score(mine, id_f(mine), len(covered_of(mine, bds)) / len(ANS)), mine)
+        fit = sum(f(m) for f, m in zip(SFN, mine)) / 4
+        main = (core_score(mine, id_f(mine), len(covered_of(mine, bds)) / len(ANS)) + .15 * fit, mine)
     picked = [main] if main else []
-    if main:   # 18 Nov (Vincent): a swap option must keep the tier: every replacement at least as high a tier as who it replaces
+    if main:   # 18 + 21 Nov (Vincent): a swap replaces a member IN THE SAME ROLE, at the same tier or higher
         for sc, ms in rescored:
-            if sorted(m.name for m in ms) == sorted(m.name for m in main[1]): continue
-            if tier_ok(main[1], ms): picked.append((sc, ms)); break
+            if [m.name for m in ms] == [m.name for m in main[1]]: continue
+            if slot_ok(main[1], ms): picked.append((sc, ms)); break
     results[key] = picked
     print(key, [(round(s_, 3), [disp(m.name) for m in ms]) for s_, ms in picked])
 
@@ -361,13 +412,13 @@ cards = []
 NOT_VIABLE = [t for k, t, *_ in ARCH if not results.get(k)]
 for key, title, idt, en_f, mem_f, id_f in ARCH:
     for i, (sc, ms) in enumerate(results.get(key, [])):
-        enabler = ms[0]
+        enabler = enabler_of(ms, key)
         dfn, shared = defence(ms)
         cov = set().union(*(m.counters for m in ms))
         per = {b['key']: (len({f for f in cov if f.startswith(b['key'] + ':')}), len(b['foes'])) for b in T['fights']}
         sw, cov6 = best_swaps(ms)
         uncovered = sorted(set(FOES) - cov6)
-        roles = [role_of(m, key, ms, enabler) for m in ms]
+        roles = [slot_role(m, i, key, ms) for i, m in enumerate(ms)]
         def covered(bds, who=False):
             hits = {}
             for m, bd in zip(ms, bds):
@@ -401,7 +452,7 @@ for key, title, idt, en_f, mem_f, id_f in ARCH:
             f"<li><b>Answers:</b> {E(' · '.join(n + ': ' + ', '.join(whom[n]) for n in got) or 'none')}{' · <b>missing:</b> ' + E(', '.join(miss)) if miss else ''}</li>"
             f"<li><b>Best 2 swaps for Ch9:</b> {E(disp(sw[0].name))} + {E(disp(sw[1].name))} → {len(cov6)}/{len(FOES)} foes"
             f"{' · still open: ' + E(', '.join(u.split(':')[1] + ' (' + SHORT[u.split(':')[0]] + ')' for u in uncovered[:8])) if uncovered else ''}</li></ul></div>")
-        results[key][i] = dict(score=round(sc, 3), members=[m.name for m in ms], cover=len(cov), swaps=[x.name for x in sw], builds=bds, roles=roles, shared=shared, answers=got, missing=miss, per_fight=per, open=uncovered, cover6=len(cov6))
+        results[key][i] = dict(score=round(sc, 3), slots=SLOT, enabler=enabler.name, members=[m.name for m in ms], cover=len(cov), swaps=[x.name for x in sw], builds=bds, roles=roles, shared=shared, answers=got, missing=miss, per_fight=per, open=uncovered, cover6=len(cov6))
 
 sec = f'''<section aria-labelledby="s9">
   <h2 id="s9">Cores</h2>

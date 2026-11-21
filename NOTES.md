@@ -740,3 +740,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 21 Nov: Fights tab shows only the upcoming fight; later fights folded ('Later fights · n'). Field move-bonus rows shortened ('N named moves').
 - 21 Nov: fight cards show the ace's sprite (Karrina Nidoking, Spector Banette, Jenner Klinklang, Erick Toxtricity) instead of a number.
 - 21 Nov (trial): Fights upcoming card gets 'Faster' (foes faster than all six: Alakazam 228, Fearow 205, Nidoking 188 vs Arcanine-H 155) and 'Watch' (Musharna Sleep → Safeguard; Runerigus Toxic Spikes → Clefable/Gholdengo immune; Fearow Focus Energy). Team cards: red line for weakened/blocked moves next fight (Gholdengo Shadow Ball ×0.5 on Blessed). Next battle card: no x/n.
+- 21 Nov: Cores rebuilt by role (Vincent): Lead / Doubles lead / Flex / Closer per core, closer needs a setup move, setters lead, swaps by role + tier. theme T keeps the best row per name (crested Zoroark-H = A).

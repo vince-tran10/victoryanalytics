@@ -1,7 +1,14 @@
 {
  "balance": [
   {
-   "score": 0.904,
+   "score": 1.034,
+   "slots": [
+    "Lead",
+    "Doubles lead",
+    "Flex",
+    "Closer"
+   ],
+   "enabler": "Arcanine (Hisuian Form)",
    "members": [
     "Gholdengo",
     "Arcanine (Hisuian Form)",
@@ -33,7 +40,7 @@
       "Extreme Speed",
       "Protect"
      ],
-     "item": "Charcoal",
+     "item": "Focus Sash",
      "nature": "Jolly",
      "evs": "252 Atk / 252 Spe",
      "ability": "Intimidate"
@@ -65,9 +72,9 @@
    ],
    "roles": [
     "tempo lead",
-    "tempo / pivot",
+    "tempo lead",
     "attacker",
-    "attacker"
+    "setup sweeper"
    ],
    "shared": [],
    "answers": [
@@ -108,31 +115,26 @@
    "cover6": 29
   },
   {
-   "score": 0.914,
-   "members": [
-    "Arcanine (Hisuian Form)",
-    "Gholdengo",
-    "Clefable",
-    "Braviary"
+   "score": 1.029,
+   "slots": [
+    "Lead",
+    "Doubles lead",
+    "Flex",
+    "Closer"
    ],
-   "cover": 19,
+   "enabler": "Arcanine (Hisuian Form)",
+   "members": [
+    "Gholdengo",
+    "Arcanine (Hisuian Form)",
+    "Musharna (Aevian Form)",
+    "Golisopod (Aevian Form)"
+   ],
+   "cover": 23,
    "swaps": [
-    "Golisopod (Aevian Form)",
-    "Oranguru"
+    "Oranguru",
+    "Vaporeon"
    ],
    "builds": [
-    {
-     "moves": [
-      "Flare Blitz",
-      "Head Smash",
-      "Extreme Speed",
-      "Protect"
-     ],
-     "item": "Focus Sash",
-     "nature": "Jolly",
-     "evs": "252 Atk / 252 Spe",
-     "ability": "Intimidate"
-    },
     {
      "moves": [
       "Thunder Wave",
@@ -147,36 +149,50 @@
     },
     {
      "moves": [
-      "Encore",
-      "Thunder Wave",
-      "Moonblast",
+      "Flare Blitz",
+      "Head Smash",
+      "Extreme Speed",
       "Protect"
      ],
-     "item": "Fairy Feather",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Magic Guard"
+     "item": "Focus Sash",
+     "nature": "Jolly",
+     "evs": "252 Atk / 252 Spe",
+     "ability": "Intimidate"
     },
     {
      "moves": [
-      "Crush Claw",
+      "Encore",
       "Shadow Claw",
-      "Brave Bird",
+      "Play Rough",
       "Protect"
      ],
-     "item": "Silk Scarf",
+     "item": "Spell Tag",
      "nature": "Adamant",
      "evs": "252 HP / 252 Atk",
-     "ability": "Sheer Force"
+     "ability": "Tough Claws"
+    },
+    {
+     "moves": [
+      "Swords Dance",
+      "Bone Rush",
+      "Pin Missile",
+      "Protect"
+     ],
+     "item": "Soft Sand",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Skill Link"
     }
    ],
    "roles": [
     "tempo lead",
+    "tempo lead",
     "attacker",
-    "attacker",
-    "attacker"
+    "setup sweeper"
    ],
-   "shared": [],
+   "shared": [
+    "WATER"
+   ],
    "answers": [
     "Taunt / Encore",
     "Fake Out / Intimidate",
@@ -189,7 +205,7 @@
    ],
    "per_fight": {
     "karrina": [
-     5,
+     4,
      6
     ],
     "spector": [
@@ -197,39 +213,45 @@
      6
     ],
     "spector2": [
-     3,
+     5,
      6
     ],
     "jenner9": [
-     2,
+     4,
      6
     ],
     "erick": [
-     3,
+     4,
      6
     ]
    },
    "open": [
     "jenner9:Kommo-o",
-    "jenner9:Porygon-Z",
-    "spector2:Typhlosion"
+    "jenner9:Porygon-Z"
    ],
-   "cover6": 27
+   "cover6": 28
   }
  ],
  "tr": [
   {
-   "score": 0.869,
+   "score": 0.976,
+   "slots": [
+    "Lead",
+    "Doubles lead",
+    "Flex",
+    "Closer"
+   ],
+   "enabler": "Oranguru",
    "members": [
     "Oranguru",
     "Clefable",
-    "Rhyperior",
-    "Vikavolt"
+    "Swampert",
+    "Slowking (Galarian Form)"
    ],
-   "cover": 21,
+   "cover": 19,
    "swaps": [
-    "Golisopod (Aevian Form)",
-    "Arcanine (Hisuian Form)"
+    "Arcanine (Hisuian Form)",
+    "Golisopod (Aevian Form)"
    ],
    "builds": [
     {
@@ -258,65 +280,65 @@
     },
     {
      "moves": [
-      "Roar",
       "Earthquake",
-      "Stone Edge",
+      "Rock Slide",
+      "Hammer Arm",
       "Protect"
      ],
      "item": "Soft Sand",
      "nature": "Brave",
      "evs": "252 HP / 252 Atk · 0 Spe IVs",
-     "ability": "Solid Rock"
+     "ability": "Torrent"
     },
     {
      "moves": [
-      "Bug Buzz",
-      "Thunderbolt",
-      "Mud Shot",
+      "Nasty Plot",
+      "Sludge Bomb",
+      "Psychic",
       "Protect"
      ],
-     "item": "Silver Powder",
+     "item": "Poison Barb",
      "nature": "Quiet",
      "evs": "252 HP / 252 SpA · 0 Spe IVs",
-     "ability": "Levitate"
+     "ability": "Regenerator"
     }
    ],
    "roles": [
     "Trick Room setter",
     "Trick Room attacker",
     "Trick Room attacker",
-    "Trick Room attacker"
+    "setup sweeper"
    ],
    "shared": [],
    "answers": [
-    "Haze / phaze",
     "Taunt / Encore",
     "speed control"
    ],
    "missing": [
+    "Haze / phaze",
     "Fake Out / Intimidate",
     "priority",
     "screen breaker"
    ],
    "per_fight": {
     "karrina": [
-     6,
+     5,
      6
     ],
     "spector": [
-     6,
+     5,
      6
     ],
     "spector2": [
-     4,
+     3,
      6
     ],
     "jenner9": [
-     2,
+     1,
      6
     ],
     "erick": [
-     3,
+     5,
      6
     ]
    },
@@ -328,14 +350,21 @@
    "cover6": 27
   },
   {
-   "score": 0.865,
-   "members": [
-    "Oranguru",
-    "Clefable",
-    "Lapras (Aevian Form)",
-    "Vikavolt"
+   "score": 0.956,
+   "slots": [
+    "Lead",
+    "Doubles lead",
+    "Flex",
+    "Closer"
    ],
-   "cover": 19,
+   "enabler": "Porygon-Z",
+   "members": [
+    "Porygon-Z",
+    "Clefable",
+    "Swampert",
+    "Slowking (Galarian Form)"
+   ],
+   "cover": 18,
    "swaps": [
     "Golisopod (Aevian Form)",
     "Arcanine (Hisuian Form)"
@@ -344,14 +373,14 @@
     {
      "moves": [
       "Trick Room",
-      "Psychic",
+      "Tri Attack",
       "Shadow Ball",
       "Protect"
      ],
      "item": "Sitrus Berry",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Inner Focus"
+     "nature": "Timid",
+     "evs": "252 SpA / 252 Spe",
+     "ability": "Adaptability"
     },
     {
      "moves": [
@@ -367,84 +396,92 @@
     },
     {
      "moves": [
-      "Roar",
+      "Earthquake",
       "Rock Slide",
-      "Zen Headbutt",
+      "Hammer Arm",
       "Protect"
      ],
-     "item": "Hard Stone",
+     "item": "Soft Sand",
      "nature": "Brave",
      "evs": "252 HP / 252 Atk · 0 Spe IVs",
-     "ability": "No Guard"
+     "ability": "Torrent"
     },
     {
      "moves": [
-      "Bug Buzz",
-      "Thunderbolt",
-      "Mud Shot",
+      "Nasty Plot",
+      "Sludge Bomb",
+      "Psychic",
       "Protect"
      ],
-     "item": "Silver Powder",
+     "item": "Poison Barb",
      "nature": "Quiet",
      "evs": "252 HP / 252 SpA · 0 Spe IVs",
-     "ability": "Levitate"
+     "ability": "Regenerator"
     }
    ],
    "roles": [
     "Trick Room setter",
     "Trick Room attacker",
     "Trick Room attacker",
-    "Trick Room attacker"
+    "setup sweeper"
    ],
    "shared": [],
    "answers": [
-    "Haze / phaze",
     "Taunt / Encore",
     "speed control"
    ],
    "missing": [
+    "Haze / phaze",
     "Fake Out / Intimidate",
     "priority",
     "screen breaker"
    ],
    "per_fight": {
     "karrina": [
-     5,
-     6
-    ],
-    "spector": [
      6,
      6
     ],
-    "spector2": [
-     3,
+    "spector": [
+     5,
      6
     ],
-    "jenner9": [
+    "spector2": [
      2,
      6
     ],
+    "jenner9": [
+     1,
+     6
+    ],
     "erick": [
-     3,
+     4,
      6
     ]
    },
    "open": [
+    "erick:Chandelure",
     "jenner9:Kommo-o",
     "jenner9:Porygon-Z",
     "spector2:Typhlosion"
    ],
-   "cover6": 27
+   "cover6": 26
   }
  ],
  "setup": [
   {
-   "score": 0.897,
+   "score": 1.02,
+   "slots": [
+    "Lead",
+    "Doubles lead",
+    "Flex",
+    "Closer"
+   ],
+   "enabler": "Clefable",
    "members": [
+    "Azumarill",
     "Clefable",
     "Gholdengo",
-    "Golisopod (Aevian Form)",
-    "Azumarill"
+    "Golisopod (Aevian Form)"
    ],
    "cover": 21,
    "swaps": [
@@ -452,6 +489,18 @@
     "Oranguru"
    ],
    "builds": [
+    {
+     "moves": [
+      "Belly Drum",
+      "Play Rough",
+      "Aqua Jet",
+      "Protect"
+     ],
+     "item": "Fairy Feather",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Huge Power"
+    },
     {
      "moves": [
       "Follow Me",
@@ -487,24 +536,12 @@
      "nature": "Adamant",
      "evs": "252 HP / 252 Atk",
      "ability": "Skill Link"
-    },
-    {
-     "moves": [
-      "Belly Drum",
-      "Play Rough",
-      "Aqua Jet",
-      "Protect"
-     ],
-     "item": "Fairy Feather",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Huge Power"
     }
    ],
    "roles": [
+    "setup sweeper",
     "support lead",
     "attacker",
-    "setup sweeper",
     "setup sweeper"
    ],
    "shared": [],
@@ -548,19 +585,38 @@
    "cover6": 27
   },
   {
-   "score": 0.861,
+   "score": 0.974,
+   "slots": [
+    "Lead",
+    "Doubles lead",
+    "Flex",
+    "Closer"
+   ],
+   "enabler": "Clefable",
    "members": [
+    "Arcanine (Hisuian Form)",
     "Clefable",
     "Gholdengo",
-    "Golisopod (Aevian Form)",
+    "Golisopod (Aevian Form)"
+   ],
+   "cover": 24,
+   "swaps": [
+    "Oranguru",
     "Vaporeon"
    ],
-   "cover": 22,
-   "swaps": [
-    "Arcanine (Hisuian Form)",
-    "Oranguru"
-   ],
    "builds": [
+    {
+     "moves": [
+      "Flare Blitz",
+      "Head Smash",
+      "Extreme Speed",
+      "Protect"
+     ],
+     "item": "Focus Sash",
+     "nature": "Jolly",
+     "evs": "252 Atk / 252 Spe",
+     "ability": "Intimidate"
+    },
     {
      "moves": [
       "Follow Me",
@@ -596,35 +652,25 @@
      "nature": "Adamant",
      "evs": "252 HP / 252 Atk",
      "ability": "Skill Link"
-    },
-    {
-     "moves": [
-      "Haze",
-      "Hydro Pump",
-      "Aurora Beam",
-      "Protect"
-     ],
-     "item": "Mystic Water",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Water Absorb"
     }
    ],
    "roles": [
+    "tempo lead",
     "support lead",
     "attacker",
-    "setup sweeper",
-    "attacker"
+    "setup sweeper"
    ],
-   "shared": [],
+   "shared": [
+    "WATER"
+   ],
    "answers": [
-    "Haze / phaze",
     "Taunt / Encore",
-    "speed control"
+    "Fake Out / Intimidate",
+    "speed control",
+    "priority"
    ],
    "missing": [
-    "Fake Out / Intimidate",
-    "priority",
+    "Haze / phaze",
     "screen breaker"
    ],
    "per_fight": {
@@ -637,15 +683,15 @@
      6
     ],
     "spector2": [
-     6,
+     5,
      6
     ],
     "jenner9": [
-     2,
+     4,
      6
     ],
     "erick": [
-     3,
+     4,
      6
     ]
    },
@@ -658,12 +704,19 @@
  ],
  "grassy": [
   {
-   "score": 0.785,
+   "score": 0.897,
+   "slots": [
+    "Lead",
+    "Doubles lead",
+    "Flex",
+    "Closer"
+   ],
+   "enabler": "Glalie (Aevian Form)",
    "members": [
-    "Glalie (Aevian Form)",
     "Gholdengo",
-    "Gallade",
-    "Florges"
+    "Glalie (Aevian Form)",
+    "Florges",
+    "Gallade"
    ],
    "cover": 20,
    "swaps": [
@@ -671,18 +724,6 @@
     "Oranguru"
    ],
    "builds": [
-    {
-     "moves": [
-      "Grassy Glide",
-      "Rock Slide",
-      "Wood Hammer",
-      "Protect"
-     ],
-     "item": "Miracle Seed",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Grassy Surge"
-    },
     {
      "moves": [
       "Thunder Wave",
@@ -697,15 +738,15 @@
     },
     {
      "moves": [
-      "Psycho Cut",
-      "Sacred Sword",
-      "Leaf Blade",
+      "Grassy Glide",
+      "Rock Slide",
+      "Wood Hammer",
       "Protect"
      ],
-     "item": "Twisted Spoon",
+     "item": "Miracle Seed",
      "nature": "Adamant",
      "evs": "252 HP / 252 Atk",
-     "ability": "Sharpness"
+     "ability": "Grassy Surge"
     },
     {
      "moves": [
@@ -718,13 +759,25 @@
      "nature": "Modest",
      "evs": "252 HP / 252 SpA",
      "ability": "Flower Veil"
+    },
+    {
+     "moves": [
+      "Swords Dance",
+      "Psycho Cut",
+      "Sacred Sword",
+      "Protect"
+     ],
+     "item": "Twisted Spoon",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Sharpness"
     }
    ],
    "roles": [
+    "attacker",
     "terrain setter",
-    "attacker",
-    "attacker",
-    "bulky answer"
+    "bulky answer",
+    "setup sweeper"
    ],
    "shared": [
     "GHOST"
@@ -768,12 +821,19 @@
    "cover6": 28
   },
   {
-   "score": 0.752,
+   "score": 0.854,
+   "slots": [
+    "Lead",
+    "Doubles lead",
+    "Flex",
+    "Closer"
+   ],
+   "enabler": "Glalie (Aevian Form)",
    "members": [
-    "Glalie (Aevian Form)",
     "Chandelure",
-    "Gallade",
-    "Florges"
+    "Glalie (Aevian Form)",
+    "Florges",
+    "Gallade"
    ],
    "cover": 22,
    "swaps": [
@@ -781,18 +841,6 @@
     "Oranguru"
    ],
    "builds": [
-    {
-     "moves": [
-      "Grassy Glide",
-      "Rock Slide",
-      "Wood Hammer",
-      "Protect"
-     ],
-     "item": "Miracle Seed",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Grassy Surge"
-    },
     {
      "moves": [
       "Clear Smog",
@@ -807,15 +855,15 @@
     },
     {
      "moves": [
-      "Psycho Cut",
-      "Sacred Sword",
-      "Leaf Blade",
+      "Grassy Glide",
+      "Rock Slide",
+      "Wood Hammer",
       "Protect"
      ],
-     "item": "Twisted Spoon",
+     "item": "Miracle Seed",
      "nature": "Adamant",
      "evs": "252 HP / 252 Atk",
-     "ability": "Sharpness"
+     "ability": "Grassy Surge"
     },
     {
      "moves": [
@@ -828,13 +876,25 @@
      "nature": "Modest",
      "evs": "252 HP / 252 SpA",
      "ability": "Flower Veil"
+    },
+    {
+     "moves": [
+      "Swords Dance",
+      "Psycho Cut",
+      "Sacred Sword",
+      "Protect"
+     ],
+     "item": "Twisted Spoon",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Sharpness"
     }
    ],
    "roles": [
+    "attacker",
     "terrain setter",
-    "attacker",
-    "attacker",
-    "bulky answer"
+    "bulky answer",
+    "setup sweeper"
    ],
    "shared": [
     "GHOST"
@@ -879,12 +939,19 @@
  ],
  "electric": [
   {
-   "score": 0.69,
+   "score": 0.795,
+   "slots": [
+    "Lead",
+    "Doubles lead",
+    "Flex",
+    "Closer"
+   ],
+   "enabler": "Pincurchin",
    "members": [
+    "Magnezone",
     "Pincurchin",
-    "Golisopod (Aevian Form)",
     "Donphan",
-    "Magnezone"
+    "Golisopod (Aevian Form)"
    ],
    "cover": 18,
    "swaps": [
@@ -892,6 +959,18 @@
     "Arcanine (Hisuian Form)"
    ],
    "builds": [
+    {
+     "moves": [
+      "Flash Cannon",
+      "Discharge",
+      "Tri Attack",
+      "Protect"
+     ],
+     "item": "Metal Coat",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Sturdy"
+    },
     {
      "moves": [
       "Thunder Wave",
@@ -903,18 +982,6 @@
      "nature": "Adamant",
      "evs": "252 HP / 252 Atk",
      "ability": "Electric Surge"
-    },
-    {
-     "moves": [
-      "Swords Dance",
-      "Bone Rush",
-      "Pin Missile",
-      "Protect"
-     ],
-     "item": "Soft Sand",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Skill Link"
     },
     {
      "moves": [
@@ -930,22 +997,22 @@
     },
     {
      "moves": [
-      "Flash Cannon",
-      "Discharge",
-      "Tri Attack",
+      "Swords Dance",
+      "Bone Rush",
+      "Pin Missile",
       "Protect"
      ],
-     "item": "Metal Coat",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Sturdy"
+     "item": "Soft Sand",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Skill Link"
     }
    ],
    "roles": [
+    "attacker",
     "terrain setter",
     "attacker",
-    "attacker",
-    "attacker"
+    "setup sweeper"
    ],
    "shared": [
     "FIRE",
@@ -991,19 +1058,38 @@
    "cover6": 27
   },
   {
-   "score": 0.688,
-   "members": [
-    "Pincurchin",
-    "Chandelure",
-    "Vikavolt",
-    "Donphan"
+   "score": 0.757,
+   "slots": [
+    "Lead",
+    "Doubles lead",
+    "Flex",
+    "Closer"
    ],
-   "cover": 15,
-   "swaps": [
-    "Oranguru",
+   "enabler": "Pincurchin",
+   "members": [
+    "Magnezone",
+    "Pincurchin",
+    "Vikavolt",
     "Golisopod (Aevian Form)"
    ],
+   "cover": 17,
+   "swaps": [
+    "Oranguru",
+    "Arcanine (Hisuian Form)"
+   ],
    "builds": [
+    {
+     "moves": [
+      "Flash Cannon",
+      "Discharge",
+      "Tri Attack",
+      "Protect"
+     ],
+     "item": "Metal Coat",
+     "nature": "Modest",
+     "evs": "252 HP / 252 SpA",
+     "ability": "Sturdy"
+    },
     {
      "moves": [
       "Thunder Wave",
@@ -1015,18 +1101,6 @@
      "nature": "Adamant",
      "evs": "252 HP / 252 Atk",
      "ability": "Electric Surge"
-    },
-    {
-     "moves": [
-      "Clear Smog",
-      "Shadow Ball",
-      "Overheat",
-      "Protect"
-     ],
-     "item": "Spell Tag",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Flash Fire"
     },
     {
      "moves": [
@@ -1042,32 +1116,32 @@
     },
     {
      "moves": [
-      "Earthquake",
-      "Thunder Fang",
-      "Ice Shard",
+      "Swords Dance",
+      "Bone Rush",
+      "Pin Missile",
       "Protect"
      ],
      "item": "Soft Sand",
      "nature": "Adamant",
      "evs": "252 HP / 252 Atk",
-     "ability": "Sturdy"
+     "ability": "Skill Link"
     }
    ],
    "roles": [
+    "attacker",
     "terrain setter",
     "attacker",
-    "attacker",
-    "attacker"
+    "setup sweeper"
    ],
    "shared": [
-    "WATER"
+    "FIRE"
    ],
    "answers": [
-    "Haze / phaze",
     "speed control",
     "priority"
    ],
    "missing": [
+    "Haze / phaze",
     "Taunt / Encore",
     "Fake Out / Intimidate",
     "screen breaker"
@@ -1078,11 +1152,11 @@
      6
     ],
     "spector": [
-     4,
+     5,
      6
     ],
     "spector2": [
-     3,
+     4,
      6
     ],
     "jenner9": [
@@ -1096,21 +1170,27 @@
    },
    "open": [
     "jenner9:Kommo-o",
-    "jenner9:Noivern",
     "jenner9:Porygon-Z",
     "spector2:Typhlosion"
    ],
-   "cover6": 26
+   "cover6": 27
   }
  ],
  "sun": [
   {
-   "score": 0.772,
+   "score": 0.878,
+   "slots": [
+    "Lead",
+    "Doubles lead",
+    "Flex",
+    "Closer"
+   ],
+   "enabler": "Ninetales",
    "members": [
     "Ninetales",
     "Arcanine (Hisuian Form)",
-    "Musharna (Aevian Form)",
-    "Exeggutor"
+    "Exeggutor",
+    "Musharna (Aevian Form)"
    ],
    "cover": 13,
    "swaps": [
@@ -1137,22 +1217,10 @@
       "Extreme Speed",
       "Protect"
      ],
-     "item": "Charcoal",
+     "item": "Focus Sash",
      "nature": "Jolly",
      "evs": "252 Atk / 252 Spe",
      "ability": "Intimidate"
-    },
-    {
-     "moves": [
-      "Encore",
-      "Shadow Claw",
-      "Play Rough",
-      "Protect"
-     ],
-     "item": "Spell Tag",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Tough Claws"
     },
     {
      "moves": [
@@ -1165,13 +1233,25 @@
      "nature": "Modest",
      "evs": "252 HP / 252 SpA",
      "ability": "Chlorophyll"
+    },
+    {
+     "moves": [
+      "Encore",
+      "Shadow Claw",
+      "Play Rough",
+      "Protect"
+     ],
+     "item": "Spell Tag",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Tough Claws"
     }
    ],
    "roles": [
     "sun setter",
-    "tempo / pivot",
+    "tempo lead",
     "attacker",
-    "attacker"
+    "setup sweeper"
    ],
    "shared": [
     "ROCK"
@@ -1216,14 +1296,21 @@
    "cover6": 27
   },
   {
-   "score": 0.762,
+   "score": 0.867,
+   "slots": [
+    "Lead",
+    "Doubles lead",
+    "Flex",
+    "Closer"
+   ],
+   "enabler": "Ninetales",
    "members": [
     "Ninetales",
     "Arcanine (Hisuian Form)",
-    "Gastrodon (West Aevian Form)",
-    "Exeggutor"
+    "Exeggutor",
+    "Zoroark (Hisuian Form)"
    ],
-   "cover": 13,
+   "cover": 17,
    "swaps": [
     "Golisopod (Aevian Form)",
     "Oranguru"
@@ -1248,22 +1335,10 @@
       "Extreme Speed",
       "Protect"
      ],
-     "item": "Charcoal",
+     "item": "Focus Sash",
      "nature": "Jolly",
      "evs": "252 Atk / 252 Spe",
      "ability": "Intimidate"
-    },
-    {
-     "moves": [
-      "Strange Steam",
-      "Sludge Bomb",
-      "Earth Power",
-      "Protect"
-     ],
-     "item": "Fairy Feather",
-     "nature": "Modest",
-     "evs": "252 HP / 252 SpA",
-     "ability": "Storm Drain"
     },
     {
      "moves": [
@@ -1276,15 +1351,30 @@
      "nature": "Modest",
      "evs": "252 HP / 252 SpA",
      "ability": "Chlorophyll"
+    },
+    {
+     "moves": [
+      "Nasty Plot",
+      "Shadow Ball",
+      "Sludge Bomb",
+      "Protect"
+     ],
+     "item": "Spell Tag",
+     "nature": "Timid",
+     "evs": "252 SpA / 252 Spe",
+     "ability": "Illusion"
     }
    ],
    "roles": [
     "sun setter",
-    "tempo / pivot",
+    "tempo lead",
     "attacker",
-    "attacker"
+    "setup sweeper"
    ],
-   "shared": [],
+   "shared": [
+    "ROCK",
+    "DARK"
+   ],
    "answers": [
     "Haze / phaze",
     "Fake Out / Intimidate",
@@ -1297,15 +1387,15 @@
    ],
    "per_fight": {
     "karrina": [
-     3,
+     2,
      6
     ],
     "spector": [
-     3,
+     6,
      6
     ],
     "spector2": [
-     2,
+     3,
      6
     ],
     "jenner9": [
@@ -1313,7 +1403,7 @@
      6
     ],
     "erick": [
-     3,
+     4,
      6
     ]
    },
@@ -1327,12 +1417,19 @@
  ],
  "snow": [
   {
-   "score": 0.8,
+   "score": 0.911,
+   "slots": [
+    "Lead",
+    "Doubles lead",
+    "Flex",
+    "Closer"
+   ],
+   "enabler": "Ninetales (Alolan Form)",
    "members": [
-    "Ninetales (Alolan Form)",
     "Gholdengo",
-    "Swampert",
-    "Walrein"
+    "Ninetales (Alolan Form)",
+    "Walrein",
+    "Swampert"
    ],
    "cover": 17,
    "swaps": [
@@ -1340,18 +1437,6 @@
     "Arcanine (Hisuian Form)"
    ],
    "builds": [
-    {
-     "moves": [
-      "Aurora Veil",
-      "Moonblast",
-      "Blizzard",
-      "Protect"
-     ],
-     "item": "Fairy Feather",
-     "nature": "Timid",
-     "evs": "252 SpA / 252 Spe",
-     "ability": "Snow Warning"
-    },
     {
      "moves": [
       "Thunder Wave",
@@ -1366,15 +1451,15 @@
     },
     {
      "moves": [
-      "Earthquake",
-      "Rock Slide",
-      "Hammer Arm",
+      "Aurora Veil",
+      "Moonblast",
+      "Blizzard",
       "Protect"
      ],
-     "item": "Soft Sand",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Torrent"
+     "item": "Fairy Feather",
+     "nature": "Timid",
+     "evs": "252 SpA / 252 Spe",
+     "ability": "Snow Warning"
     },
     {
      "moves": [
@@ -1387,13 +1472,25 @@
      "nature": "Modest",
      "evs": "252 HP / 252 SpA",
      "ability": "Ice Body"
+    },
+    {
+     "moves": [
+      "Earthquake",
+      "Rock Slide",
+      "Hammer Arm",
+      "Protect"
+     ],
+     "item": "Soft Sand",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Torrent"
     }
    ],
    "roles": [
+    "attacker",
     "snow setter",
     "attacker",
-    "attacker",
-    "attacker"
+    "setup sweeper"
    ],
    "shared": [],
    "answers": [
@@ -1437,12 +1534,19 @@
    "cover6": 26
   },
   {
-   "score": 0.796,
+   "score": 0.899,
+   "slots": [
+    "Lead",
+    "Doubles lead",
+    "Flex",
+    "Closer"
+   ],
+   "enabler": "Ninetales (Alolan Form)",
    "members": [
-    "Ninetales (Alolan Form)",
     "Gholdengo",
-    "Golisopod (Aevian Form)",
-    "Glaceon"
+    "Ninetales (Alolan Form)",
+    "Glaceon",
+    "Golisopod (Aevian Form)"
    ],
    "cover": 22,
    "swaps": [
@@ -1450,18 +1554,6 @@
     "Oranguru"
    ],
    "builds": [
-    {
-     "moves": [
-      "Aurora Veil",
-      "Moonblast",
-      "Blizzard",
-      "Protect"
-     ],
-     "item": "Fairy Feather",
-     "nature": "Timid",
-     "evs": "252 SpA / 252 Spe",
-     "ability": "Snow Warning"
-    },
     {
      "moves": [
       "Thunder Wave",
@@ -1476,15 +1568,15 @@
     },
     {
      "moves": [
-      "Shadow Sneak",
-      "Bone Rush",
-      "Pin Missile",
+      "Aurora Veil",
+      "Moonblast",
+      "Blizzard",
       "Protect"
      ],
-     "item": "Soft Sand",
-     "nature": "Adamant",
-     "evs": "252 HP / 252 Atk",
-     "ability": "Skill Link"
+     "item": "Fairy Feather",
+     "nature": "Timid",
+     "evs": "252 SpA / 252 Spe",
+     "ability": "Snow Warning"
     },
     {
      "moves": [
@@ -1497,25 +1589,37 @@
      "nature": "Modest",
      "evs": "252 HP / 252 SpA",
      "ability": "Ice Body"
+    },
+    {
+     "moves": [
+      "Swords Dance",
+      "Bone Rush",
+      "Pin Missile",
+      "Protect"
+     ],
+     "item": "Soft Sand",
+     "nature": "Adamant",
+     "evs": "252 HP / 252 Atk",
+     "ability": "Skill Link"
     }
    ],
    "roles": [
+    "attacker",
     "snow setter",
     "attacker",
-    "attacker",
-    "attacker"
+    "setup sweeper"
    ],
    "shared": [
     "FIRE"
    ],
    "answers": [
     "Haze / phaze",
-    "speed control",
-    "priority"
+    "speed control"
    ],
    "missing": [
     "Taunt / Encore",
     "Fake Out / Intimidate",
+    "priority",
     "screen breaker"
    ],
    "per_fight": {
