@@ -1,10 +1,9 @@
 {
- "fights": 6,
- "foes": 36,
+ "fights": 5,
+ "foes": 30,
  "major": [
   "Bug",
   "Dark",
-  "Dragon",
   "Electric",
   "Fairy",
   "Fighting",
@@ -16,37 +15,16 @@
   "Normal",
   "Poison",
   "Psychic",
-  "Rock",
   "Steel"
  ],
  "minor": [
   "Fire/Ghost",
+  "Rock",
+  "Dragon",
   "Ice"
  ],
  "weak3": [],
- "nores": [
-  "DARK",
-  "GHOST"
- ],
- "misses": [
-  {
-   "foe": "Stoutland",
-   "fight": "jenner9",
-   "best": "Golisopod (Aevian Form)",
-   "dmg": 79
-  },
-  {
-   "foe": "Porygon-Z",
-   "fight": "jenner9",
-   "best": "Golisopod (Aevian Form)",
-   "dmg": 94
-  },
-  {
-   "foe": "Miltank",
-   "fight": "amanda",
-   "best": "Gholdengo",
-   "dmg": 65
-  }
- ],
+ "nores": [],
+ "misses": [],
  "n_types": 18
 }

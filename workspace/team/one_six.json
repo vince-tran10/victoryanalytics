@@ -1,0 +1,128 @@
+{
+ "pick": [
+  "Florges",
+  "Scrafty"
+ ],
+ "top": [
+  {
+   "score": 313.5,
+   "counters": 16.0,
+   "swaps": [
+    "Florges",
+    "Scrafty"
+   ],
+   "per_fight": {
+    "karrina": "5/6",
+    "spector": "5/6",
+    "spector2": "3/6",
+    "jenner9": "4/6",
+    "erick": "3/6"
+   }
+  },
+  {
+   "score": 307.7,
+   "counters": 15.5,
+   "swaps": [
+    "Alcremie",
+    "Scrafty"
+   ],
+   "per_fight": {
+    "karrina": "5/6",
+    "spector": "4/6",
+    "spector2": "3/6",
+    "jenner9": "4/6",
+    "erick": "3/6"
+   }
+  },
+  {
+   "score": 320.9,
+   "counters": 15.0,
+   "swaps": [
+    "Florges",
+    "Pangoro"
+   ],
+   "per_fight": {
+    "karrina": "5/6",
+    "spector": "5/6",
+    "spector2": "3/6",
+    "jenner9": "3/6",
+    "erick": "3/6"
+   }
+  },
+  {
+   "score": 320.8,
+   "counters": 15.0,
+   "swaps": [
+    "Crawdaunt",
+    "Florges"
+   ],
+   "per_fight": {
+    "karrina": "5/6",
+    "spector": "5/6",
+    "spector2": "3/6",
+    "jenner9": "3/6",
+    "erick": "3/6"
+   }
+  },
+  {
+   "score": 320.0,
+   "counters": 15.0,
+   "swaps": [
+    "Oranguru",
+    "Passimian"
+   ],
+   "per_fight": {
+    "karrina": "5/6",
+    "spector": "5/6",
+    "spector2": "3/6",
+    "jenner9": "3/6",
+    "erick": "3/6"
+   }
+  },
+  {
+   "score": 319.8,
+   "counters": 15.0,
+   "swaps": [
+    "Oranguru",
+    "Scrafty"
+   ],
+   "per_fight": {
+    "karrina": "5/6",
+    "spector": "5/6",
+    "spector2": "3/6",
+    "jenner9": "3/6",
+    "erick": "3/6"
+   }
+  },
+  {
+   "score": 315.2,
+   "counters": 15.0,
+   "swaps": [
+    "Gastrodon (West Aevian Form)",
+    "Scrafty"
+   ],
+   "per_fight": {
+    "karrina": "5/6",
+    "spector": "5/6",
+    "spector2": "3/6",
+    "jenner9": "3/6",
+    "erick": "3/6"
+   }
+  },
+  {
+   "score": 296.7,
+   "counters": 15.0,
+   "swaps": [
+    "Diggersby",
+    "Passimian"
+   ],
+   "per_fight": {
+    "karrina": "5/6",
+    "spector": "5/6",
+    "spector2": "3/6",
+    "jenner9": "3/6",
+    "erick": "3/6"
+   }
+  }
+ ]
+}

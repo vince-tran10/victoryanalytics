@@ -6,101 +6,95 @@
   "pairs": [
    {
     "foe": "Murkrow",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
-    "dealt": 130,
+    "mon": "Florges",
+    "ability": "SYMBIOSIS",
+    "dealt": 115,
     "taken": 0,
     "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Healing",
-      "answers": [
-       "teach Knock Off (Zoroark)"
-      ]
+      "answers": []
      },
      {
       "what": "Perish Song",
-      "answers": [
-       "teach Taunt (Zoroark)"
-      ]
+      "answers": []
      }
     ]
    },
    {
     "foe": "Gothitelle",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
-    "dealt": 113,
-    "taken": 23,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 88,
+    "taken": 45,
     "ok": true,
-    "setup": false,
+    "setup": "Swords Dance",
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "teach Safeguard (Oranguru)"
+       "teach Misty Terrain (Florges)"
       ]
      }
     ]
    },
    {
     "foe": "Gengar",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 75,
-    "taken": 63,
-    "ok": false,
+    "mon": "Scrafty",
+    "ability": "MOXIE",
+    "dealt": 117,
+    "taken": 37,
+    "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "teach Safeguard (Oranguru)"
+       "teach Misty Terrain (Florges)"
       ]
      },
      {
       "what": "Perish Song",
-      "answers": [
-       "teach Taunt (Zoroark)"
-      ]
+      "answers": []
      }
     ]
    },
    {
     "foe": "Houndstone",
-    "mon": "Zoroark (Hisuian Form)",
-    "ability": "ILLUSION",
-    "dealt": 114,
-    "taken": 0,
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 119,
+    "taken": 157,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Ninetales",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 130,
-    "taken": 44,
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 126,
+    "taken": 36,
     "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "teach Safeguard (Oranguru)"
+       "teach Misty Terrain (Florges)"
       ]
      }
     ]
    },
    {
     "foe": "Banette",
-    "mon": "Oranguru",
-    "ability": "TELEPATHY",
-    "dealt": 104,
-    "taken": 0,
-    "ok": true,
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 78,
+    "taken": 134,
+    "ok": false,
     "setup": false,
     "wincons": []
    }

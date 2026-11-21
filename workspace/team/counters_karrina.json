@@ -2,72 +2,72 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 4,
+  "counters": 5,
   "pairs": [
    {
     "foe": "Runerigus",
-    "mon": "Clefable",
-    "ability": "MAGICGUARD",
-    "dealt": 128,
-    "taken": 31,
+    "mon": "Florges",
+    "ability": "SYMBIOSIS",
+    "dealt": 130,
+    "taken": 36,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Musharna",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
-    "dealt": 89,
-    "taken": 49,
-    "ok": false,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 130,
+    "taken": 36,
+    "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "Safeguard (Clefable)"
+       "teach Misty Terrain (Florges)"
       ]
      }
     ]
    },
    {
     "foe": "Granbull",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 129,
-    "taken": 84,
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 109,
+    "taken": 203,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Alakazam",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 130,
-    "taken": 56,
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
+    "dealt": 111,
+    "taken": 57,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Fearow",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
-    "dealt": 121,
-    "taken": 73,
-    "ok": false,
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 130,
+    "taken": 45,
+    "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Nidoking",
-    "mon": "Diggersby",
-    "ability": "HUGEPOWER",
-    "dealt": 130,
-    "taken": 35,
-    "ok": true,
+    "mon": "Scrafty",
+    "ability": "MOXIE",
+    "dealt": 24,
+    "taken": 42,
+    "ok": false,
     "setup": false,
     "wincons": []
    }

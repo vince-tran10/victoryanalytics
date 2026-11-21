@@ -2,7 +2,7 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 4,
+  "counters": 3,
   "pairs": [
    {
     "foe": "Stonjourner",
@@ -16,11 +16,11 @@
    },
    {
     "foe": "Sigilyph",
-    "mon": "Sylveon",
-    "ability": "PIXILATE",
-    "dealt": 101,
-    "taken": 59,
-    "ok": true,
+    "mon": "Florges",
+    "ability": "SYMBIOSIS",
+    "dealt": 61,
+    "taken": 56,
+    "ok": false,
     "setup": false,
     "wincons": []
    },
@@ -46,20 +46,20 @@
    },
    {
     "foe": "Typhlosion",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
-    "dealt": 130,
-    "taken": 247,
+    "mon": "Scrafty",
+    "ability": "MOXIE",
+    "dealt": 86,
+    "taken": 115,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Banette",
-    "mon": "Zoroark (Hisuian Form)",
-    "ability": "ILLUSION",
+    "mon": "Gholdengo",
+    "ability": "GOODASGOLD",
     "dealt": 130,
-    "taken": 58,
+    "taken": 230,
     "ok": true,
     "setup": false,
     "wincons": []

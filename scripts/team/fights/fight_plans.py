@@ -83,6 +83,51 @@ import sys as _s; _s.path.insert(0, os.path.join(HERE, '..', '..'))
 from dataset import Data as _Data
 NAMES = {k: v['MoveName'] for k, v in _Data('.').moves.items()}
 NAMES.update({'UNAWARE': 'Unaware', 'INFILTRATOR': 'Infiltrator', 'INSOMNIA': 'Insomnia', 'VITALSPIRIT': 'Vital Spirit', 'SWEETVEIL': 'Sweet Veil', 'COMATOSE': 'Comatose'})
+
+# ---- ONE six for every remaining fight (Vincent, 21 Nov: fights can come out of order) -------------------------------
+if st.get('one_six') and KEYS:
+    FW = {'spector': .5, 'spector2': .5}   # day OR night: one of the two
+    DATA = {}
+    for key in KEYS:
+        R, best = load(key); SPE = R['foe_spe']; n = len(R['foes'])
+        BARS[:] = R.get('foe_bars') or [1] * n
+        core = [best[c] for c in CORE]
+        others = {r['name']: r for r in best.values() if r['name'] not in CORE and r['name'].split(' (')[0] not in {c.split(' (')[0] for c in CORE}}
+        top = sorted(others.values(), key=lambda r: -r['score'])[:40]
+        for j in range(n):
+            top += sorted(others.values(), key=lambda r: -(mats(r, SPE)[1][j] * 10 + mats(r, SPE)[0][j]))[:5]
+        DATA[key] = (R, best, core, others, {r['name'] for r in top}, list(BARS))
+    union = set.union(*[d[4] for d in DATA.values()]) & set.intersection(*[set(d[3]) for d in DATA.values()])
+    union = sorted(union)
+    def fight_score(key, names):
+        R, best, core, others, _, bars = DATA[key]; BARS[:] = bars
+        n = len(R['foes']); SPE = R['foe_spe']; six = core + [others[x] for x in names]
+        Q = np.array([mats(r, SPE)[0] for r in six]); OK = np.array([mats(r, SPE)[1] for r in six])
+        P = np.array(list(itertools.permutations(range(6), n))); ar = np.arange(n)
+        kk = OK[P, ar].sum(1) * 10 + Q[P, ar].sum(1); k = int(kk.argmax())
+        w3, nr = rule_fail(six, key)
+        ans = sum(1 for j in range(n) for w in wincons(R, j) if answers_for(w, six, names))
+        return float(kk[k]) + 5 * ans - 30 * (len(w3) + len(nr)), int(OK[P[k], ar].sum()), n, len(w3) + len(nr)
+    MC = {}
+    for key in KEYS:   # cache mats per fight
+        pass
+    tot = []
+    for a, b in itertools.combinations(union, 2):
+        if a.split(' (')[0] == b.split(' (')[0]: continue
+        sc = cnt = fails = 0; det = {}; worst = 9
+        for key in KEYS:
+            R = DATA[key][0]; w = FW.get(key, 1) * (2 if R['foes'][0][2] == 'Singles' else 1)
+            v, c, n, fl = fight_score(key, (a, b)); sc += w * v; det[key] = f'{c}/{n}'; cnt += FW.get(key, 1) * c; fails += fl
+            if key not in FW: worst = min(worst, c)
+        tot.append((sc, (a, b), det, cnt, worst, fails))
+    tot.sort(key=lambda x: (x[5], -x[3], -x[4], -x[0]))   # rules (b)(c) are hard: pass them first   # rule 9: counters first (Spector day/night count half each), then the weakest fight, then quality
+    for sc, pr_, det, cnt, wst, fl_ in tot[:8]: print('ONE-SIX', cnt, round(sc, 1), pr_, det)
+    pick = list(tot[0][1])
+    st['plan_swaps'] = {k: pick for k in KEYS}
+    st['team'] = list(CORE) + pick
+    for k in KEYS: (st.get('plan_pairs') or {}).pop(k, None)
+    json.dump(st, open('team/state.json', 'w'), indent=1, ensure_ascii=False)
+    json.dump(dict(pick=pick, top=[dict(score=round(sc, 1), counters=c_, swaps=list(p), per_fight=d) for sc, p, d, c_, w_, f_ in tot[:8]]), open('team/one_six.json', 'w'), indent=1)
 plans = {}
 for key in KEYS:
     R, best = load(key)

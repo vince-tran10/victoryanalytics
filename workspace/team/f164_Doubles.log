@@ -1,0 +1,16 @@
+Gholdengo | Party 60 | Good as Gold  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Make It Rain', 'Shadow Ball', 'Thunder Wave', 'Protect'] | Metal Coat (already holding) | 
+Arcanine (Hisuian Form) | Party 60 | Intimidate  | Adamant {'Atk': 252, 'Spe': 252, 'Def': 4} | ['Flare Blitz', 'Head Smash', 'Extreme Speed', 'Protect'] | Focus Sash (already holding) | 
+Golisopod (Aevian Form) | Party 60 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Bone Rush', 'Pin Missile', 'Swords Dance', 'Protect'] | Soft Sand (already holding) | 
+Vaporeon | Party 60 | Water Absorb  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Hydro Pump', 'Aurora Beam', 'Haze', 'Protect'] | Mystic Water (already holding) | 
+Florges | Overflow 60 | Symbiosis  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Moonblast', 'Synthesis', 'Giga Drain', 'Protect'] | Sitrus Berry | Floette (Level 19); Florges (Item Shiny Stone)
+Oranguru | Overflow 60 | Telepathy  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Nasty Plot', 'Psychic', 'Shadow Ball', 'Protect'] | Sitrus Berry | 
+jenner 1.405 -> 1.57 leads ['Golisopod (Aevian Form)', 'Florges'] swaps [('Annihilape', 'Vaporeon', 0.103), ('Pawmot', 'Vaporeon', 0.067), ('Clefable', 'Vaporeon', 0.062)]
+danni 1.713 -> 1.725 leads ['Arcanine (Hisuian Form)', 'Golisopod (Aevian Form)'] swaps [('Vivillon', 'Vaporeon', 0.082), ('Bombirdier', 'Vaporeon', 0.067), ('Chandelure', 'Vaporeon', 0.066)]
+troye 1.443 -> 1.439 leads ['Golisopod (Aevian Form)', 'Gholdengo'] swaps [('Annihilape', 'Vaporeon', 0.12), ('Veluza (Aevian Form)', 'Vaporeon', 0.083), ('Pawmot', 'Vaporeon', 0.082)]
+zena 1.505 -> 1.506 leads ['Golisopod (Aevian Form)', 'Florges'] swaps [('Meganium', 'Vaporeon', 0.132), ('Venusaur', 'Vaporeon', 0.111), ('Roserade', 'Vaporeon', 0.1)]
+marcie 1.419 -> 1.419 leads ['Arcanine (Hisuian Form)', 'Golisopod (Aevian Form)'] swaps [('Leavanny (Aevian Form)', 'Vaporeon', 0.193), ('Vivillon', 'Vaporeon', 0.159), ('Yanmega', 'Vaporeon', 0.154)]
+karrina 1.232 -> 1.361 leads ['Golisopod (Aevian Form)', 'Florges'] swaps [('Leavanny (Aevian Form)', 'Arcanine (Hisuian Form)', 0.053), ('Clefable', 'Gholdengo', 0.049), ('Gothitelle', 'Gholdengo', 0.042)]
+spector 1.338 -> 1.441 leads ['Gholdengo', 'Arcanine (Hisuian Form)'] swaps [('Zoroark (Hisuian Form)', 'Vaporeon', 0.224), ('Porygon-Z', 'Vaporeon', 0.156), ('Mr. Mime', 'Vaporeon', 0.08)]
+spector2 1.091 -> 1.09 leads ['Golisopod (Aevian Form)', 'Oranguru'] swaps [('Mabosstiff', 'Gholdengo', 0.071), ('Raichu', 'Gholdengo', 0.066), ('Electivire', 'Gholdengo', 0.066)]
+jenner9 0.852 -> 0.983 leads ['Golisopod (Aevian Form)', 'Florges'] swaps [('Chandelure', 'Oranguru', 0.102), ('Armarouge', 'Oranguru', 0.1), ('Palossand (Fiery Aevian Form)', 'Oranguru', 0.1)]
+erick 1.057 -> 1.053 leads ['Golisopod (Aevian Form)', 'Arcanine (Hisuian Form)'] swaps [('Chandelure', 'Florges', 0.148), ('Gallade', 'Florges', 0.145), ('Armarouge', 'Florges', 0.114)]

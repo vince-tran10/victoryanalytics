@@ -125,6 +125,13 @@ def main():
         return fp_out
     if st.get('core'):
         out_ = plans()
+        if st.get('one_six'):   # fight_plans picked ONE six for every remaining fight (21 Nov): take its team + swaps
+            _s2 = json.load(open(STATE)); st['team'] = _s2['team']; st['plan_swaps'] = _s2.get('plan_swaps'); st['plan_pairs'] = _s2.get('plan_pairs')
+            for n in st['team']:
+                if n not in st['moves'] or n not in (st.get('abilities') or {}):
+                    st['moves'][n] = st['moves'].get(n) or IDEAL.get(n, {}).get('moves') or []
+                    st.setdefault('abilities', {})[n] = (st.get('abilities') or {}).get(n) or IDEAL.get(n, {}).get('ability') or ''
+            print([l for l in open(os.path.join(TEAMD, 'one_six.json')).read().splitlines()][:1] and 'ONE SIX: ' + ', '.join(st['team']))
         nxt = next((k for k in ORDER9 if k not in st['done']), None)
         if not st.get('fight') and nxt:   # last fight beaten: the next fight's six becomes the team (core + its 2 swaps)
             P = json.load(open(os.path.join(TEAMD, 'fight_plans.json')))[nxt]

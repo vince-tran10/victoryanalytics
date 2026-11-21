@@ -67,6 +67,11 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Lead/Lead/Mid/Mid/Closer/Closer). Hard-fight leads and matchups live ONLY on the Fights tab (fight_plans `leads`, which
   must survive the opening Pokémon, checked vs exact game lead order); a core member leads there when it is better than a swap.
   Garbodor plan 17 Nov: swaps Muk-Alola (Gastro Acid lead) + Clodsire (Unaware, Curse, Recover, EQ).
+- **ONE six for every remaining fight (Vincent, 21 Nov; state.json `one_six`: true):** fights can come out of order, so the
+  core + ONE pair of swaps must handle every remaining hard fight. fight_plans.py prepass scores every swap pair over all
+  remaining fights: rules (b)(c) must pass first (hard), then total one-to-one counters (Spector day / night count half
+  each), then the weakest fight, then quality → state plan_swaps for every fight + team (team/one_six.json lists the top 8).
+  Per-fight leads still come from each fight's plan (Fights tab). Hand pairings: state `plan_pairs` {fight: {foe: mon}}.
 - Then rank by battle score (singles count double).
 - **Fields are a core factor (Vincent, 10 Nov): exploit them.** Score every fight with its full field mechanics from the game
   code (boosts, added types, end-of-turn field damage like Volcanic Top eruptions and who is immune, field changes), favour

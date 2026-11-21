@@ -32,9 +32,7 @@
     "wincons": [
      {
       "what": "Healing",
-      "answers": [
-       "teach Gastro Acid (Heatmor)"
-      ]
+      "answers": []
      }
     ]
    },
@@ -49,9 +47,7 @@
     "wincons": [
      {
       "what": "Healing",
-      "answers": [
-       "teach Gastro Acid (Heatmor)"
-      ]
+      "answers": []
      }
     ]
    },
@@ -67,21 +63,21 @@
    },
    {
     "foe": "Kommo-o",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 30,
-    "taken": 72,
-    "ok": false,
+    "mon": "Florges",
+    "ability": "SYMBIOSIS",
+    "dealt": 130,
+    "taken": 52,
+    "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Klinklang",
-    "mon": "Heatmor",
-    "ability": "GLUTTONY",
-    "dealt": 115,
-    "taken": 48,
-    "ok": true,
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 53,
+    "taken": 83,
+    "ok": false,
     "setup": false,
     "wincons": [
      {

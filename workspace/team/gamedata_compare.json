@@ -166,38 +166,7 @@
   ]
  },
  "amanda": {
-  "label": "League Scout Amanda – Factory",
-  "game_src": [
-   "Amanda (TRAINER_AMANDA #2)"
-  ],
-  "n_game": 6,
-  "n_guide": 6,
-  "rows": [
-   {
-    "mon": "Incineroar",
-    "diff": []
-   },
-   {
-    "mon": "Hatterene",
-    "diff": []
-   },
-   {
-    "mon": "Druddigon",
-    "diff": []
-   },
-   {
-    "mon": "Torkoal",
-    "diff": []
-   },
-   {
-    "mon": "Bronzong",
-    "diff": []
-   },
-   {
-    "mon": "Miltank",
-    "diff": []
-   }
-  ]
+  "note": "not in engine (beaten or not tracked)"
  },
  "erick": {
   "label": "Erick (Pulse Badge gym) – Murkwater Surface",

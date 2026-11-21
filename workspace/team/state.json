@@ -4,9 +4,9 @@
  "export_label": "20 Nov 13:52",
  "active_start": 426,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 144,
- "run": 158,
- "final": 162,
+ "roster": 147,
+ "run": 161,
+ "final": 165,
  "done": [
   "aelita",
   "narcissa1",
@@ -28,7 +28,8 @@
   "manaphy",
   "amber",
   "darkgardevoir",
-  "garbodor"
+  "garbodor",
+  "amanda"
  ],
  "fight": "karrina",
  "team": [
@@ -36,8 +37,8 @@
   "Arcanine (Hisuian Form)",
   "Golisopod (Aevian Form)",
   "Vaporeon",
-  "Diggersby",
-  "Clefable"
+  "Florges",
+  "Scrafty"
  ],
  "moves": {
   "Arcanine (Hisuian Form)": [
@@ -92,6 +93,30 @@
    "Moonblast",
    "Thunder Wave",
    "Safeguard",
+   "Protect"
+  ],
+  "Florges": [
+   "Moonblast",
+   "Synthesis",
+   "Giga Drain",
+   "Protect"
+  ],
+  "Oranguru": [
+   "Nasty Plot",
+   "Psychic",
+   "Shadow Ball",
+   "Protect"
+  ],
+  "Armarouge": [
+   "Calm Mind",
+   "Psyshock",
+   "Overheat",
+   "Protect"
+  ],
+  "Scrafty": [
+   "Crunch",
+   "High Jump Kick",
+   "Fake Out",
    "Protect"
   ]
  },
@@ -172,7 +197,11 @@
   "Muk (Alolan Form)": "Poison Touch",
   "Clodsire": "Unaware",
   "Diggersby": "HUGEPOWER",
-  "Clefable": "MAGICGUARD"
+  "Clefable": "MAGICGUARD",
+  "Florges": "FLOWERVEIL",
+  "Oranguru": "TELEPATHY",
+  "Armarouge": "WEAKARMOR",
+  "Scrafty": "MOXIE"
  },
  "crests_owned": [
   "Phione Crest"
@@ -202,9 +231,25 @@
   }
  },
  "plan_swaps": {
-  "garbodor": [
-   "Muk (Alolan Form)",
-   "Clodsire"
+  "karrina": [
+   "Florges",
+   "Scrafty"
+  ],
+  "spector": [
+   "Florges",
+   "Scrafty"
+  ],
+  "spector2": [
+   "Florges",
+   "Scrafty"
+  ],
+  "jenner9": [
+   "Florges",
+   "Scrafty"
+  ],
+  "erick": [
+   "Florges",
+   "Scrafty"
   ]
  },
  "plan_leads": {
@@ -237,14 +282,6 @@
    }
   }
  },
- "plan_pairs": {
-  "karrina": {
-   "Runerigus": "Clefable",
-   "Musharna": "Arcanine (Hisuian Form)",
-   "Granbull": "Vaporeon",
-   "Alakazam": "Golisopod (Aevian Form)",
-   "Fearow": "Gholdengo",
-   "Nidoking": "Diggersby"
-  }
- }
+ "plan_pairs": {},
+ "one_six": true
 }
