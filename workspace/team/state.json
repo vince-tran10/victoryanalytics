@@ -4,9 +4,9 @@
  "export_label": "22 Nov 11:33",
  "active_start": 445,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 220,
- "run": 234,
- "final": 238,
+ "roster": 221,
+ "run": 235,
+ "final": 239,
  "done": [
   "aelita",
   "narcissa1",
@@ -332,7 +332,7 @@
     "slot": 1,
     "gain": 0.0,
     "replacement": "Golisopod (Aevian Form)",
-    "cost": 0.08,
+    "cost": -0.02,
     "ok": false
    },
    {
@@ -340,7 +340,7 @@
     "slot": 2,
     "gain": 0.1,
     "replacement": "Golisopod (Aevian Form)",
-    "cost": -0.22,
+    "cost": -0.29,
     "ok": false
    }
   ],

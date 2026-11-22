@@ -1230,6 +1230,25 @@
   "role": "attacker",
   "source": "game"
  },
+ "Whiscash": {
+  "ability": "OBLIVIOUS",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Whiscash Crest",
+  "moves": [
+   "Earthquake",
+   "Zen Headbutt",
+   "Bounce",
+   "Protect"
+  ],
+  "move_ids": [
+   "EARTHQUAKE",
+   "ZENHEADBUTT",
+   "BOUNCE"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Rhydon": {
   "ability": "LIGHTNINGROD",
   "nature": "Adamant",
@@ -3659,25 +3678,6 @@
    "CRUNCH",
    "POWERWHIP",
    "SLEEPPOWDER"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Whiscash": {
-  "ability": "OBLIVIOUS",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Whiscash Crest",
-  "moves": [
-   "Earthquake",
-   "Zen Headbutt",
-   "Bounce",
-   "Protect"
-  ],
-  "move_ids": [
-   "EARTHQUAKE",
-   "ZENHEADBUTT",
-   "BOUNCE"
   ],
   "role": "attacker",
   "source": "game"

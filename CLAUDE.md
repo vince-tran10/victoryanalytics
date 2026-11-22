@@ -233,7 +233,7 @@ damage score and the fight's real win condition was only read after Vincent lost
   UU .62 … NU .3; best of singles / doubles + 0.25 × the other); banned to Ubers (Ubers set, no OU usage) = .95; Aevians by kit OP
   stars (REPLACED 22 Nov: Aevians + crests use COMMUNITY ratings, scripts/team/community.py: Reborn Evolved forum threads 2021-24
   + rejuvenation.wiki.gg Crests, quotes shown in the Dex 'Why' lines; 'Kit rating' when no posts exist; crests from a later chapter
-  (CREST_CH from the wiki) don't count, held ones get a To do 'remove' card, e.g. Whiscash Crest = Ch14); usage that needs a partner he doesn't own is ignored (COMBO_DEP: Tatsugiri = Commander + Dondozo). Cut-offs S .72 /
+  (CREST_CH = EARLIEST instance of wiki vs BIGJRA walkthrough, Vincent 22 Nov: e.g. Whiscash Crest = Ch7 Griselda Treasure 3, not the wiki Ch14) do not count; held ones get a To do "remove" card); usage that needs a partner he doesn't own is ignored (COMBO_DEP: Tatsugiri = Commander + Dondozo). Cut-offs S .72 /
   A .58 / B .41 / C .27. Dex sheet "Why X tier" = meta dominance /100 + each usage line + in-game rank only (no stats / ability /
   moves: they don't make a tier).
 - **Team tab (17 Nov):** only "Your party": one card per member (slot, Core/Swap · role, types, level bar, ability · nature, EVs,

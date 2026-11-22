@@ -263,25 +263,6 @@
      "rec": true
     },
     {
-     "name": "Lapras (Aevian Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 7 types"
-     ],
-     "tools": [
-      "Roar",
-      "Teleport",
-      "Spread: Rock Slide",
-      "Status: Sing",
-      "Setup: Dragon Dance"
-     ],
-     "sid": "LAPRAS",
-     "form": "1",
-     "pick": false,
-     "rec": false
-    },
-    {
      "name": "Muk (Alolan Form)",
      "tier": "S",
      "stats": [
@@ -295,6 +276,25 @@
       "Disrupt: Knock Off"
      ],
      "sid": "MUK",
+     "form": "1",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Lapras (Aevian Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 7 types"
+     ],
+     "tools": [
+      "Roar",
+      "Teleport",
+      "Spread: Rock Slide",
+      "Status: Sing",
+      "Setup: Dragon Dance"
+     ],
+     "sid": "LAPRAS",
      "form": "1",
      "pick": false,
      "rec": false
@@ -395,23 +395,6 @@
      "rec": false
     },
     {
-     "name": "Lapras (Aevian Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 7 types"
-     ],
-     "tools": [
-      "Dragon Dance (+1/+1)",
-      "Spread: Rock Slide",
-      "Status: Sing"
-     ],
-     "sid": "LAPRAS",
-     "form": "1",
-     "pick": false,
-     "rec": false
-    },
-    {
      "name": "Muk (Alolan Form)",
      "tier": "S",
      "stats": [
@@ -459,6 +442,23 @@
      ],
      "sid": "ZOROARK",
      "form": "0",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Ninetales (Alolan Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 4 types"
+     ],
+     "tools": [
+      "Nasty Plot (+2)",
+      "Spread: Blizzard",
+      "Screens: Aurora Veil"
+     ],
+     "sid": "NINETALES",
+     "form": "1",
      "pick": false,
      "rec": false
     }

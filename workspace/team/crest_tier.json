@@ -498,6 +498,23 @@
    "tier": "A"
   },
   {
+   "name": "Whiscash",
+   "crest": "Whiscash Crest",
+   "held": true,
+   "where": "Active",
+   "dump": 516,
+   "with_crest": 0.17,
+   "without": null,
+   "gain": null,
+   "attacks": [
+    "Earthquake",
+    "Zen Headbutt",
+    "Bounce"
+   ],
+   "ability": "OBLIVIOUS",
+   "tier": "A"
+  },
+  {
    "name": "Phione",
    "crest": "Phione Crest",
    "held": true,
@@ -508,7 +525,7 @@
    "gain": 0.159,
    "attacks": [
     "Surf",
-    "Facade",
+    "Secret Power",
     "Deluge"
    ],
    "ability": "HYDRATION",
@@ -679,23 +696,6 @@
    "tier": "A"
   },
   {
-   "name": "Whiscash",
-   "crest": "Whiscash Crest",
-   "held": true,
-   "where": "Active",
-   "dump": 516,
-   "with_crest": 0.081,
-   "without": null,
-   "gain": null,
-   "attacks": [
-    "Earthquake",
-    "Zen Headbutt",
-    "Bounce"
-   ],
-   "ability": "OBLIVIOUS",
-   "tier": "A"
-  },
-  {
    "name": "Leafeon",
    "crest": "Leafeon Crest",
    "held": false,
@@ -739,7 +739,7 @@
    "without": 0.021,
    "gain": 0.018,
    "attacks": [
-    "Facade",
+    "Headbutt",
     "Shadow Ball",
     "Fire Blast"
    ],
