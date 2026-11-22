@@ -81,21 +81,11 @@ _zn = st.get('zoro_note')
 zoro_box = ''
 if _zn:   # 22 Nov (Vincent): always call out who Zoroark copies and whether the order changed for it
     _ab = abn(_zn['ability']) if _zn.get('ability') else ''
-    _lo = _zn.get('lead_options') or []
-    _why = ''
-    if _zn.get('kind') == 'lead':
-        _why = ('<span>Moved lead ' + E(disp(_zn['copies'])) + ' to slot 6 and ' + E(disp(_zn['replacement'])) + ' up to lead: the copy makes Zoroark strong enough to be worth it.</span>')
-    elif _zn.get('kind') == 'back':
-        _why = '<span>Moved ' + E(disp(_zn['copies'])) + ' to slot 6 so Zoroark copies it. Leads unchanged.</span>'
-    else:
-        _why = '<span>No copy is worth moving anyone, so the standard order stays.</span>'
-    for o in _lo:
-        if not o['ok']:
-            _why += ('<span class="zl">Considered: ' + E(disp(o['lead'])) + ' (lead) last → copy worth +' + f"{o['gain']:.2f}"
-                     + (' (not enough to make Zoroark OP)' if o['gain'] < .3 else ', but losing it at lead costs more') + '. Kept as lead.</span>')
-    zoro_box = ('<div class="zbox' + (' moved' if _zn['moved'] else '') + '"><b>' + ('⚠ Party order changed for Zoroark' if _zn['moved'] else 'Zoroark Crest') + '</b>'
-                + '<span>' + E(disp(_zn['zoroark'])) + ' copies <b>' + E(disp(_zn['copies'])) + '</b> (last slot): ' + E(_ab or '—') + ' + '
-                + E('/'.join(t.title() for t in _zn['types'])) + ' STAB.</span>' + _why + '</div>')
+    _lo = [o for o in (_zn.get('lead_options') or []) if not o['ok']]
+    _st = ('⚠ order changed' if _zn['moved'] else 'order unchanged')
+    _cons = (' · considered ' + ', '.join(disp(o['lead']) for o in _lo) + ': not worth moving a lead') if _lo and not _zn['moved'] else ''
+    zoro_box = ('<div class="zbox' + (' moved' if _zn['moved'] else '') + '">Zoroark Crest → copies <b>' + E(disp(_zn['copies'])) + '</b> ('
+                + E(_ab or '—') + ') · ' + _st + E(_cons) + '</div>')
 hero = f'<div class="hero"><div class="hero-head"><h3>Your party</h3></div>{zoro_box}<ol class="party">{slots}</ol>{nxt}</div>'
 page = re.sub(r'(<section aria-labelledby="s1">\s*<h2 id="s1">.*?</h2>)', lambda m: m.group(1) + hero, page, count=1, flags=re.S)
 
@@ -412,10 +402,8 @@ def foes_html(k, names):   # 22 Nov (Vincent): their team in order, one note per
         types = [t.upper() for t in re.split(r'[/ ]', (w.get('types') or '')) if t]
         tp = ''.join(f'<span class="pt" style="--tc:{TYPE.get(t, "#888")}">{E(t.title())}</span>' for t in types)
         lead = (j < (2 if dbl else 1))
-        out += ('<li class="ofoe"><span class="on">' + ('Lead' if lead else str(j + 1)) + '</span>' + (SP.tag(*ids[j], size='m') if j < len(ids) else '')
-                + '<div class="oc"><div class="oh"><b>' + E(foe.split(' (')[0]) + '</b>' + tp
-                + f'<span class="osp{" fast" if spe > fast_s else ""}">Spe {spe}</span></div>'
-                + '<ul class="onote">' + (''.join('<li>' + E(b_) + '</li>' for b_ in bits) or '<li>No tricks: plain attacker</li>') + '</ul></div></li>')
+        out += ('<li class="ofoe' + (' lead' if lead else '') + '"><span class="on">' + str(j + 1) + '</span>' + (SP.tag(*ids[j], size='s') if j < len(ids) else '')
+                + '<b>' + E(foe.split(' (')[0]) + '</b></li>')
     return '<ol class="ofoes">' + out + '</ol>'
 def fight_cards():
     order = [k for k in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick'] if k in FP]
@@ -796,11 +784,11 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .fx.up .fx-ar { color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent) }
 .fx.down .fx-ar { color: var(--bad); background: color-mix(in srgb, var(--bad) 14%, transparent) }
 .fx-note { color: var(--muted); font-size: 12px }
-.zbox { display: grid; gap: 2px; margin: 0 0 10px; padding: 10px 12px; border-radius: 12px; font-size: 13px; background: color-mix(in srgb, var(--accent, #c81e3a) 8%, transparent); border: 1px solid color-mix(in srgb, var(--accent, #c81e3a) 25%, transparent) }
+.zbox { margin: 0 0 8px; padding: 5px 10px; border-radius: 8px; font-size: 11.5px; color: var(--muted); background: color-mix(in srgb, var(--accent, #c81e3a) 8%, transparent); border: 1px solid color-mix(in srgb, var(--accent, #c81e3a) 25%, transparent) }
 .zbox.moved { background: color-mix(in srgb, #d97706 14%, transparent); border-color: #d97706 }
-.ofoes { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; flex: 1; min-width: 0 }
-.ofoe { display: grid; grid-template-columns: 38px auto 1fr; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 10px; background: var(--card-2, rgba(127,127,127,.06)) }
-.ofoe .on { font: 700 10px var(--mono); text-transform: uppercase; color: var(--muted); text-align: center }
+.ofoes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; flex: 1 1 100%; min-width: 0 }
+.ofoe { display: flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 10px; background: var(--card-2, rgba(127,127,127,.06)); min-width: 0 } .ofoe b { font-size: 13px; line-height: 1.2; overflow-wrap: anywhere } .ofoe.lead { box-shadow: inset 0 0 0 1.5px var(--accent, #c81e3a) }
+.ofoe .on { font: 700 11px var(--mono); color: var(--muted); min-width: 12px }
 .oc { min-width: 0; display: grid; gap: 3px } .oh { display: flex; align-items: center; gap: 6px; flex-wrap: wrap } .oh b { font-size: 14px }
 .osp { font: 600 11px var(--mono); color: var(--muted) } .osp.fast { color: var(--bad) }
 .onote { font-size: 12.5px; margin: 2px 0 0; padding-left: 16px; display: grid; gap: 1px } .onote li { list-style: disc }

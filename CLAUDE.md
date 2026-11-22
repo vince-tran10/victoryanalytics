@@ -66,12 +66,10 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   the six may the order change. update.py order_team(): (a) a slot 3-6 member moves to slot 6 if its copy beats the standard
   last member by > 0.05; (b) a LEAD (slot 1-2) moves to slot 6 only if its copy makes Zoroark OP (gain >= 0.30, ZORO_AB values)
   AND the gain beats the lead-quality loss (lead_q: tier + speed + Intimidate / Fake Out + status immunity) of promoting the best
-  slot 3-6 replacement. The Team tab ALWAYS shows a callout: who Zoroark copies, what it gets, the leads considered and why they
-  stayed / moved (amber "⚠ Party order changed for Zoroark" when moved). state.zoro_note holds the result.
-- **Fights tab "Their team" (Vincent, 22 Nov):** every opposing Pokémon in party order (Lead tag on slot 1, or 1-2 in doubles),
-  sprite, types after trainer effects, Speed (red if faster than your whole six), then BULLETS (one point per line, up to 5) of
-  what makes it strong: faster than your team, Mega / crest, key ability (explained), threat moves named (Perish Song, Destiny Bond,
-  sleep, traps, setup, Focus Energy, Last Respects, heals...), key item (explained). NO "can KO" lines.
+  slot 3-6 replacement. The Team tab shows ONE small line: who Zoroark copies (ability), order changed / unchanged, leads
+  considered. The full analysis stays in state.zoro_note and in chat (Vincent, 22 Nov: keep the page small).
+- **Fights tab "Their team" (Vincent, 22 Nov, final):** a 2-column grid of their 6 in party order (1 top-left, 2 top-right, 3
+  middle-left…), number + small sprite + name only, their lead(s) outlined. No notes on the page (threat notes go in chat).
 - **Flex order (Vincent, 22 Nov):** slot 4 = mid-game flex, slot 5 = closer flex (has a setup move), labels Mid game / Closer only
   (no 'Battle start': he plays the flexes by ear). update.py order_team() enforces it every run.
 - **Team tab = party order (Vincent, 21 Nov):** 1 Gholdengo (Core 1 · Lead: leads singles + left slot in doubles), 2 Arcanine-Hisui
