@@ -77,22 +77,6 @@
    "tier": "S"
   },
   {
-   "name": "Dusknoir",
-   "crest": "Dusknoir Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 105,
-   "with_crest": 0.407,
-   "without": 0.184,
-   "gain": 0.223,
-   "attacks": [
-    "Shadow Punch",
-    "Stacking Shot"
-   ],
-   "ability": "FRISK",
-   "tier": "S"
-  },
-  {
    "name": "Silvally",
    "crest": "Silvally Crest",
    "held": false,
@@ -541,7 +525,7 @@
    "gain": 0.159,
    "attacks": [
     "Surf",
-    "Secret Power",
+    "Facade",
     "Deluge"
    ],
    "ability": "HYDRATION",
@@ -755,7 +739,7 @@
    "without": 0.021,
    "gain": 0.018,
    "attacks": [
-    "Secret Power",
+    "Facade",
     "Shadow Ball",
     "Fire Blast"
    ],

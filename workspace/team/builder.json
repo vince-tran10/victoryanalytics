@@ -302,6 +302,16 @@
      "pick": false
     },
     {
+     "name": "Ursaring",
+     "tier": "B",
+     "tools": [
+      "Belly Drum (+6)"
+     ],
+     "sid": "URSARING",
+     "form": "0",
+     "pick": false
+    },
+    {
      "name": "Hariyama",
      "tier": "B",
      "tools": [
@@ -319,16 +329,6 @@
      ],
      "sid": "ZOROARK",
      "form": "1",
-     "pick": false
-    },
-    {
-     "name": "Gallade",
-     "tier": "B",
-     "tools": [
-      "Swords Dance (+2)"
-     ],
-     "sid": "GALLADE",
-     "form": "0",
      "pick": false
     }
    ]

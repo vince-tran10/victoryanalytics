@@ -68,9 +68,9 @@ def judge(step, sid, form, name=''):
     if method.startswith('Trade'):   # Rejuvenation: Link Heart (Ch2 shop $25,000, Oceana Pier Ch5, hidden ones) = trade evolution
         if method == 'TradeItem' and str(p).upper() not in ITEMS_CH1_7 | EXTRA_OK:
             return f'needs {itn(str(p))}, not obtainable yet'
-        # Vincent 22 Nov: Link Hearts are limited; he allows ONE, for A tier or higher (state link_hearts = ['Slowking'])
+        # Vincent 22 Nov: he has 4 Link Hearts; only S / A tier evolved forms get one (state link_hearts = ['Slowking'])
         if name.split(' (')[0] in st.get('link_hearts', []): return None
-        return 'trade evolution, and your one Link Heart went to ' + ', '.join(st.get('link_hearts', []) or ['none'])
+        return 'trade evolution: your Link Hearts go to S / A tier only (' + ', '.join(st.get('link_hearts', []) or ['none']) + ')'
     if method == 'CollectItem':
         return f'needs {p[0]} {itn(p[1])}'
     if method in ('UseMove', 'HasMove'):
@@ -94,8 +94,10 @@ for m in mons:
     if not sid: continue
     loc = 'Party' if m['dump'] <= 6 else f"#{m['dump']}"
     first_bad = None
-    for stp in prevo_steps(sid, form):
-        why = judge(stp, sid, form, m['name'])
+    _steps = prevo_steps(sid, form)
+    _tg = [D.nm(x[0]) for x in _steps[1:]] + [D.nm(sid)]   # the species each step evolves INTO (Link Hearts are per evolved species)
+    for stp, tgt in zip(_steps, _tg):
+        why = judge(stp, sid, form, tgt)
         if why:
             evo_flags.append(dict(name=m['name'], where=loc, level=m.get('level'), step=f"{D.nm(stp[0])} -> {m['name']}", why=why))
             if first_bad is None: first_bad = (stp, why)

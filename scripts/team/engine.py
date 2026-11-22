@@ -430,14 +430,21 @@ class Engine:
         paths = self.evo_paths(sid, form, gender)
         path = paths[min(branch, len(paths) - 1)] if paths else []
         cur, cf, txt = sid, form, []
+        _ok_items = ITEMS_CH1_7 | {'NIGHTMAREFUEL', 'ELECTIRIZER', 'GALARICACUFF', 'GALARICAWREATH', 'DUSKSTONE', 'DAWNSTONE', 'SHINYSTONE', 'ICESTONE'}
+        _lh = set(json.loads(os.environ.get('LINK_HEARTS', '[]')))   # 22 Nov: Link Heart (= trade) only for these evolved species
         for nxt, nform, method, param in path:
+            # 22 Nov legality: stop at the last stage he can reach now (score it there) instead of gating the whole line
+            if method.startswith('Trade'):
+                ok = self.D.nm(nxt) in _lh and (method != 'TradeItem' or str(param).upper() in _ok_items)
+            elif 'Item' in method:
+                ok = str(param).upper() in _ok_items
+            elif method == 'CollectItem' or (method == 'UseMove' and 'RAGEFIST' in str(param).upper()):
+                ok = False
+            else:
+                ok = True
+            if not ok:
+                break
             txt.append(f'{self.D.nm(nxt)} ({method} {self.D.nm(param) if param and not param.isdigit() else param})'.replace(' )', ')'))
-            if 'Item' in method and str(param).upper() in ITEMS_CH1_7:
-                pass   # evolution item obtainable in Chapters 1-7: evolve right away
-            elif method in ('CollectItem',) or (method == 'UseMove' and 'RAGEFIST' in str(param).upper()):   # 22 Nov legality audit
-                self._gate = self._gate or f'{method} {param}'
-            elif 'Item' in method or method.startswith('Trade'):
-                self._gate = self._gate or f'{method} {self.D.nm(param) if param else ""}'.strip()
             cur, cf = nxt, nform
         return cur, cf, '; '.join(txt)
 

@@ -1488,6 +1488,114 @@
   "Unown": {
    "blend": 0.095,
    "tier": "D"
+  },
+  "Porygon2": {
+   "blend": 0.528,
+   "tier": "B"
+  },
+  "Ursaring": {
+   "blend": 0.429,
+   "tier": "B"
+  },
+  "Rhydon": {
+   "blend": 0.415,
+   "tier": "B"
+  },
+  "Golem (Alolan Form)": {
+   "blend": 0.347,
+   "tier": "C"
+  },
+  "Alakazam": {
+   "blend": 0.324,
+   "tier": "C"
+  },
+  "Primeape": {
+   "blend": 0.323,
+   "tier": "C"
+  },
+  "Magmar": {
+   "blend": 0.323,
+   "tier": "C"
+  },
+  "Paras (Aevian Form)": {
+   "blend": 0.302,
+   "tier": "C"
+  },
+  "Boldore": {
+   "blend": 0.184,
+   "tier": "D"
+  },
+  "Spritzee": {
+   "blend": 0.177,
+   "tier": "D"
+  },
+  "Floette": {
+   "blend": 0.173,
+   "tier": "D"
+  },
+  "Phantump": {
+   "blend": 0.151,
+   "tier": "D"
+  },
+  "Onix": {
+   "blend": 0.147,
+   "tier": "D"
+  },
+  "Clamperl": {
+   "blend": 0.143,
+   "tier": "D"
+  },
+  "Gimmighoul": {
+   "blend": 0.133,
+   "tier": "D"
+  },
+  "Swirlix": {
+   "blend": 0.131,
+   "tier": "D"
+  },
+  "Pumpkaboo": {
+   "blend": 0.121,
+   "tier": "D"
+  },
+  "Shelmet": {
+   "blend": 0.106,
+   "tier": "D"
+  },
+  "Charcadet": {
+   "blend": 0.098,
+   "tier": "D"
+  },
+  "Dusclops": {
+   "blend": 0.333,
+   "tier": "C"
+  },
+  "Electabuzz": {
+   "blend": 0.287,
+   "tier": "C"
+  },
+  "Graveler": {
+   "blend": 0.253,
+   "tier": "D"
+  },
+  "Machoke": {
+   "blend": 0.244,
+   "tier": "D"
+  },
+  "Porygon": {
+   "blend": 0.231,
+   "tier": "D"
+  },
+  "Graveler (Alolan Form)": {
+   "blend": 0.176,
+   "tier": "D"
+  },
+  "Kadabra": {
+   "blend": 0.141,
+   "tier": "D"
+  },
+  "Karrablast": {
+   "blend": 0.116,
+   "tier": "D"
   }
  }
 }

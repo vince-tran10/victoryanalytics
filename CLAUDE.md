@@ -41,8 +41,9 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   (make_report5, one card per species). Out now: Gholdengo (999 coins), Annihilape (Rage Fist = 15 badges), Ceruledge / Armarouge
   (Armors) and Porygon-Z (Dubious Disc) = Shayda shop later, Rhyperior (Protector Ch10), Parasect-Aevian (Xen Waste Ch12).
   Electirizer OK (Ch9 / held). Anything the Route 2 trailer sells counts as obtainable (legality.py ROUTE2_TRAILER: Ice / Dusk /
-  Dawn / Shiny Stone, Galarica Cuff / Wreath; its stock may grow later in the story), e.g. Slowbro-Galar via the Cuff. Link Heart (= a trade for every trade method, Evolution.rb) is LIMITED: he allows ONE, for A tier+
-  (state `link_hearts` = ['Slowking'], regular Slowking); every other trade evolution de-evolves. engine.final_form gates
+  Dawn / Shiny Stone, Galarica Cuff / Wreath; its stock may grow later in the story), e.g. Slowbro-Galar via the Cuff. Link Heart (= a trade for every trade method, Evolution.rb) is LIMITED: he has 4, used only on S / A tier evolved forms
+  (state `link_hearts` = ['Slowking'], regular Slowking; 22 Nov tiers: Porygon2 / Escavalier B, Electivire / Golem / Machamp /
+  Alakazam / Dusknoir C); every other trade evolution de-evolves. Engine (LINK_HEARTS env) stops evolving at the last reachable stage. engine.final_form gates
   CollectItem and Rage Fist evolutions. Trick Room TM not owned: only Oranguru / Porygon-Z learn Trick Room.
 - Items: UNLIMITED (Vincent, 14 Nov) except Leftovers and Life Orb. Prefer reusable items: the type booster of the main
   attack (Charcoal, Mystic Water, Miracle Seed, Magnet, Never-Melt Ice, Black Belt, Poison Barb, Soft Sand, Sharp Beak,

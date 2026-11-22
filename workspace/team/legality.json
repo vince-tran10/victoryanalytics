@@ -5,7 +5,7 @@
    "where": "Party",
    "level": 55,
    "step": "Kadabra -> Alakazam",
-   "why": "trade evolution, and your one Link Heart went to Slowking"
+   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   },
   {
    "name": "Annihilape",
@@ -19,28 +19,28 @@
    "where": "#105",
    "level": 30,
    "step": "Dusclops -> Dusknoir",
-   "why": "trade evolution, and your one Link Heart went to Slowking"
+   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   },
   {
    "name": "Electivire",
    "where": "#112",
    "level": 55,
    "step": "Electabuzz -> Electivire",
-   "why": "trade evolution, and your one Link Heart went to Slowking"
+   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   },
   {
    "name": "Golem",
    "where": "#144",
    "level": 45,
    "step": "Graveler -> Golem",
-   "why": "trade evolution, and your one Link Heart went to Slowking"
+   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   },
   {
    "name": "Machamp",
    "where": "#201",
    "level": 55,
    "step": "Machoke -> Machamp",
-   "why": "trade evolution, and your one Link Heart went to Slowking"
+   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   },
   {
    "name": "Parasect-Aevian",
@@ -68,21 +68,21 @@
    "where": "#464",
    "level": 55,
    "step": "Karrablast -> Escavalier",
-   "why": "trade evolution, and your one Link Heart went to Slowking"
+   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   },
   {
    "name": "Golem",
    "where": "#472",
    "level": 50,
    "step": "Graveler -> Golem",
-   "why": "trade evolution, and your one Link Heart went to Slowking"
+   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   },
   {
    "name": "Porygon-Z",
    "where": "#493",
    "level": 45,
    "step": "Porygon -> Porygon-Z",
-   "why": "trade evolution, and your one Link Heart went to Slowking"
+   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   },
   {
    "name": "Porygon-Z",
@@ -443,7 +443,7 @@
    "to_sid": "KADABRA",
    "to_form": "0",
    "to_name": "Kadabra",
-   "why": "trade evolution, and your one Link Heart went to Slowking"
+   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   },
   {
    "dump": 10,
@@ -459,7 +459,7 @@
    "to_sid": "DUSCLOPS",
    "to_form": "0",
    "to_name": "Dusclops",
-   "why": "trade evolution, and your one Link Heart went to Slowking"
+   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   },
   {
    "dump": 112,
@@ -467,7 +467,7 @@
    "to_sid": "ELECTABUZZ",
    "to_form": "0",
    "to_name": "Electabuzz",
-   "why": "trade evolution, and your one Link Heart went to Slowking"
+   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   },
   {
    "dump": 144,
@@ -475,7 +475,7 @@
    "to_sid": "GRAVELER",
    "to_form": "0",
    "to_name": "Graveler",
-   "why": "trade evolution, and your one Link Heart went to Slowking"
+   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   },
   {
    "dump": 201,
@@ -483,7 +483,7 @@
    "to_sid": "MACHOKE",
    "to_form": "0",
    "to_name": "Machoke",
-   "why": "trade evolution, and your one Link Heart went to Slowking"
+   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   },
   {
    "dump": 268,
@@ -515,7 +515,7 @@
    "to_sid": "KARRABLAST",
    "to_form": "0",
    "to_name": "Karrablast",
-   "why": "trade evolution, and your one Link Heart went to Slowking"
+   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   },
   {
    "dump": 472,
@@ -523,7 +523,7 @@
    "to_sid": "GRAVELER",
    "to_form": "0",
    "to_name": "Graveler",
-   "why": "trade evolution, and your one Link Heart went to Slowking"
+   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   },
   {
    "dump": 493,
@@ -531,7 +531,7 @@
    "to_sid": "PORYGON",
    "to_form": "0",
    "to_name": "Porygon",
-   "why": "trade evolution, and your one Link Heart went to Slowking"
+   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   },
   {
    "dump": 497,
