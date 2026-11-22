@@ -64,6 +64,17 @@ class Mon:
 
 
 rows = T['rows']
+# 22 Nov (Vincent): the Cores tab must not churn as fights get beaten. Tier scores are partly measured on the REMAINING fights,
+# so cores use a strength snapshot frozen for the chapter (team/core_strength.json): first value seen per name, never overwritten.
+_CSF = 'team/core_strength.json'
+_CS = json.load(open(_CSF)) if os.path.exists(_CSF) else {}
+if _CS.get('chapter') != ST.get('chapter', 9): _CS = {'chapter': ST.get('chapter', 9), 'strength': {}}
+_snap = _CS.setdefault('strength', {})
+for _r in rows:
+    if _r['name'] not in _snap: _snap[_r['name']] = {'blend': _r['blend'], 'tier': _r['tier']}
+json.dump(_CS, open(_CSF, 'w'), indent=1, ensure_ascii=False)
+rows = [dict(_r, blend=_snap[_r['name']]['blend'], tier=_snap[_r['name']]['tier']) if _r['name'] in _snap else _r for _r in rows]
+rows.sort(key=lambda _r: -_r['blend'])
 seen, POOL = set(), []
 for r in rows:
     if r['tier'] in 'SAB' and r['name'] not in seen:

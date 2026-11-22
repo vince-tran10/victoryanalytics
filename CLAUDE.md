@@ -181,7 +181,9 @@ damage score and the fight's real win condition was only read after Vincent lost
   NOT Ch9 matchups** (those are the 2 flexes' job, so key pieces don't churn): core score = 0.30 strength (the tier score: legal
   builds + meta) + 0.20 defence (no shared weakness, every one of 18 types resisted) + 0.10 offensive coverage + 0.10 answers
   + 0.15 identity + 0.15 role fit (role scores use strength; the closer is rated by setup size: +2 moves > DD-type > Bulk Up /
-  Curse). No Ch9 counter term, no Ch9-type gap penalty. Fight-specific core checks: scripts/team/arch_fights.py (chat only).
+  Curse). No Ch9 counter term, no Ch9-type gap penalty. **Strength is FROZEN per chapter (Vincent, 22 Nov):** tier scores move as
+  fights are beaten (60% = remaining-fight percentile), so cores.py + the Cores tier chips use team/core_strength.json (first value
+  seen per name this chapter, never overwritten; reset when state chapter changes). Seeded from the 21 Nov tiers. Fight-specific core checks: scripts/team/arch_fights.py (chat only).
   Consistency (Vincent, 21 Nov): every style shows ITS BEST 4 by the same score; Vincent's
   core is NOT forced onto the Balance card ("your core" badge only when a card matches it). Swaps shown only when notable:
   ONE role changes, same tier or higher, core score within 0.01 of that style's best, one per role. Each row shows its role label; members with tier chips, key piece (the setter) marked; the alt core's

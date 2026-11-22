@@ -18,8 +18,8 @@
      "Bitter Malice"
     ],
     "setup": "Nasty Plot",
-    "where": "Active",
-    "dump": 518,
+    "where": "Party",
+    "dump": 3,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -38,8 +38,8 @@
      "Psychic"
     ],
     "setup": null,
-    "where": "Overflow",
-    "dump": 260,
+    "where": "Party",
+    "dump": 4,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -191,8 +191,8 @@
      "Bitter Malice"
     ],
     "setup": "Nasty Plot",
-    "where": "Active",
-    "dump": 518,
+    "where": "Party",
+    "dump": 3,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -213,7 +213,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 505,
+    "dump": 508,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -327,7 +327,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 500,
+    "dump": 503,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -487,7 +487,7 @@
     ],
     "setup": "Shell Smash",
     "where": "Active",
-    "dump": 510,
+    "dump": 513,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -508,7 +508,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 484,
+    "dump": 487,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,

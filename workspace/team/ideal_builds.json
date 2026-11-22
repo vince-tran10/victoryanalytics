@@ -1437,25 +1437,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Toxtricity": {
-  "ability": "PUNKROCK",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Magnet",
-  "moves": [
-   "Overdrive",
-   "Boomburst",
-   "Sludge Bomb",
-   "Protect"
-  ],
-  "move_ids": [
-   "OVERDRIVE",
-   "BOOMBURST",
-   "SLUDGEBOMB"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
  "Orbeetle": {
   "ability": "SWARM",
   "nature": "Timid",
@@ -2038,6 +2019,25 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Toxtricity": {
+  "ability": "PUNKROCK",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Magnet",
+  "moves": [
+   "Overdrive",
+   "Boomburst",
+   "Sludge Bomb",
+   "Protect"
+  ],
+  "move_ids": [
+   "OVERDRIVE",
+   "BOOMBURST",
+   "SLUDGEBOMB"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
  },
  "Ampharos": {
   "ability": "STATIC",

@@ -400,8 +400,9 @@ page = re.sub(r'<div class="legend nfn">.*?</div>\s*', '', page, flags=re.S)    
 page = re.sub(r'(<div class="panel pad nf">.*?)<ul class="plain">.*?</ul>(</div>)', r'\1\2', page, flags=re.S)   # fight cards: threat notes
 CTITLE = {'balance': 'Balance / tempo', 'tr': 'Trick Room', 'setup': 'Setup / hyper offense', 'grassy': 'Grassy Terrain',
           'electric': 'Electric Terrain', 'sun': 'Sun', 'snow': 'Snow'}
-def tchip(n):
-    t = (T.get(n) or {}).get('tier', '?')
+CSNAP = (json.load(open('team/core_strength.json')).get('strength') or {}) if os.path.exists('team/core_strength.json') else {}
+def tchip(n):   # Cores tab: the chapter-frozen tier the cores were built from (22 Nov)
+    t = (CSNAP.get(n) or {}).get('tier') or (T.get(n) or {}).get('tier', '?')
     return '<span class="tier t' + t + '">' + t + '</span>'
 def core_grid():   # Cores: one compact card per style; key piece marked; the alt folded in as a swap option
     C = json.load(open('team/cores.json')) if os.path.exists('team/cores.json') else {}
