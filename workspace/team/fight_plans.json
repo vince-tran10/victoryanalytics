@@ -15,7 +15,7 @@
     "name": "Zoroark (Hisuian Form)",
     "ab": "ILLUSION",
     "moves": [
-     "Shadow Ball"
+     "Bitter Malice"
     ],
     "setup": "Nasty Plot",
     "where": "Active",
@@ -33,11 +33,11 @@
    },
    {
     "name": "Oranguru",
-    "ab": "TELEPATHY",
+    "ab": "INNERFOCUS",
     "moves": [
      "Psychic"
     ],
-    "setup": "Nasty Plot",
+    "setup": null,
     "where": "Overflow",
     "dump": 260,
     "nature": "Modest",
@@ -98,7 +98,7 @@
    {
     "foe": "Gengar",
     "mon": "Oranguru",
-    "ability": "TELEPATHY",
+    "ability": "INNERFOCUS",
     "dealt": 111,
     "taken": 0,
     "ok": true,
@@ -122,7 +122,7 @@
     "foe": "Houndstone",
     "mon": "Zoroark (Hisuian Form)",
     "ability": "ILLUSION",
-    "dealt": 114,
+    "dealt": 108,
     "taken": 0,
     "ok": true,
     "setup": false,
@@ -188,7 +188,7 @@
     "name": "Zoroark (Hisuian Form)",
     "ab": "ILLUSION",
     "moves": [
-     "Shadow Ball"
+     "Bitter Malice"
     ],
     "setup": "Nasty Plot",
     "where": "Active",

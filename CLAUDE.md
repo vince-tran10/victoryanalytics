@@ -198,6 +198,10 @@ damage score and the fight's real win condition was only read after Vincent lost
   (sprite + Speed, plus your fastest); "Watch" = each foe's trick → your answer (fight_plans win conditions, hazards with who
   is immune, Focus Energy). Team tab trial: party cards show a red line for moves the next fight's field weakens or blocks.
   Swap roles are NOT forced (Vincent, 21 Nov: he plays the 2 swaps by ear).
+  Spector day hand builds (22 Nov, state plan_builds + items): Oranguru = Trick Room / Psychic / Safeguard / Protect, Inner
+  Focus (Fake Out can't stop TR), Sitrus; Zoroark-H = Bitter Malice / Nasty Plot / Taunt / Protect (Bitter Malice over Shadow
+  Ball: -5 power, 100% Atk drop on physical Houndstone / Mega Banette). state `items` {name: item} overrides the build item.
+  Trick Room on a FLEX = situational tool: checks.py anti-synergy is a warning (no Thunder Wave while TR is up); blocking only in the core.
   Fight icon = the fight's ace (last Pokémon) or the boss sprite (21 Nov; trainer portraits need Vincent's Graphics/Trainers).
   Boss fights also keep the bar plan. Only the next fight shows (Vincent, 21 Nov); the rest fold under "Later fights".
   **Boss bar plan (Vincent, 20 Nov):** for the NEXT boss fight the foe→counter list is replaced by a bar-by-bar plan of the

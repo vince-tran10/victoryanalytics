@@ -1230,25 +1230,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Oranguru": {
-  "ability": "TELEPATHY",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Twisted Spoon",
-  "moves": [
-   "Nasty Plot",
-   "Psychic",
-   "Safeguard",
-   "Protect"
-  ],
-  "move_ids": [
-   "NASTYPLOT",
-   "PSYCHIC",
-   "SHADOWBALL"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Flamigo": {
   "ability": "SCRAPPY",
   "nature": "Jolly",
@@ -2038,6 +2019,25 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Oranguru": {
+  "ability": "INNERFOCUS",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Twisted Spoon",
+  "moves": [
+   "Trick Room",
+   "Psychic",
+   "Safeguard",
+   "Protect"
+  ],
+  "move_ids": [
+   "NASTYPLOT",
+   "PSYCHIC",
+   "TRICKROOM"
+  ],
+  "role": "attacker",
+  "source": "your team"
  },
  "Sunflora": {
   "ability": "CHLOROPHYLL",
@@ -4307,25 +4307,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Zoroark (Hisuian Form)": {
-  "ability": "ILLUSION",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
-  "item": "Zoroark Crest",
-  "moves": [
-   "Shadow Ball",
-   "Nasty Plot",
-   "Taunt",
-   "Protect"
-  ],
-  "move_ids": [
-   "SHADOWBALL",
-   "NASTYPLOT",
-   "GRASSKNOT"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Grafaiai": {
   "ability": "PRANKSTER",
   "nature": "Jolly",
@@ -4910,6 +4891,25 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
+ },
+ "Zoroark (Hisuian Form)": {
+  "ability": "ILLUSION",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe",
+  "item": "Zoroark Crest",
+  "moves": [
+   "Bitter Malice",
+   "Nasty Plot",
+   "Taunt",
+   "Protect"
+  ],
+  "move_ids": [
+   "SHADOWBALL",
+   "NASTYPLOT",
+   "GRASSKNOT"
+  ],
+  "role": "attacker",
+  "source": "your team"
  },
  "Zoroark": {
   "ability": "ILLUSION",

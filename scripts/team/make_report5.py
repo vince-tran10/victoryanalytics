@@ -218,7 +218,7 @@ if _ST.get('team'):
             _new.append((('Lead', 'Lead', 'Mid', 'Mid', 'Closer', 'Closer')[min(_i, 5)],) + _old[1:7] + ([(m, 0) for m in _sm] if _sm else _old[7],) + _old[8:]); continue
         _b = _IB.get(_n, {}); _mv = (_ST.get('moves') or {}).get(_n) or _b.get('moves', [])
         _new.append((('Lead', 'Lead', 'Mid', 'Mid', 'Closer', 'Closer')[min(_i, 5)], _d, '/'.join(x.title() for x in (_TA.get(_n) or {}).get('types', [])), _abn((_ST.get('abilities') or {}).get(_n) or _b.get('ability')),
-                     _b.get('nature', ''), _b.get('evs', ''), _b.get('item', ''), [(m, 0) for m in _mv], []))
+                     _b.get('nature', ''), _b.get('evs', ''), (_ST.get('items') or {}).get(_n) or _b.get('item', ''), [(m, 0) for m in _mv], []))
     TEAM = _new
 _FPF = os.path.join(_TD, 'fight_plans.json')
 if FIGHT and FIGHT not in COUNTERS and os.path.exists(_FPF) and FIGHT in json.load(open(_FPF)):

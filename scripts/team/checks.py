@@ -59,9 +59,11 @@ GIVES = {'Drizzle': 'rain', 'Rain Dance': 'rain', 'Drought': 'sun', 'Sunny Day':
 _ab = st.get('abilities') or {}; _mv = st.get('moves') or {}
 _have = {GIVES[x] for x in list(_ab.values()) + [m for ms in _mv.values() for m in ms] if x in GIVES}
 _dead = [f"{n}: {a} (needs {NEEDS[a]})" for n, a in _ab.items() if a in NEEDS and NEEDS[a] not in _have]
-_tr = any('Trick Room' in ms for ms in _mv.values()); _glare = any('Glare' in ms or 'Thunder Wave' in ms for ms in _mv.values())
+_six = st.get('team') or list(_mv)
+_tr = any('Trick Room' in _mv.get(n, []) for n in _six); _glare = any('Glare' in _mv.get(n, []) or 'Thunder Wave' in _mv.get(n, []) for n in _six)
+_tr_core = any('Trick Room' in _mv.get(n, []) for n in (st.get('core') or []))   # 22 Nov: TR on a flex is a situational tool -> warning only
 chk('Synergy: no dead abilities (every conditional ability has its enabler on the team)', not _dead, '; '.join(_dead) or 'none dead')
-chk('Synergy: no anti-synergy (Glare / paralysis under Trick Room)', not (_tr and _glare), '')
+chk('Synergy: no anti-synergy (Glare / paralysis under Trick Room)', not (_tr and _glare), 'Trick Room is a flex tool: no Thunder Wave while it is up' if _tr and _glare and not _tr_core else '', blocking=_tr_core)
 chk('Synergy: the team states one identity', 'Identity' in text(team) or 'Identity' in page, '')
 tc = st.get('team_check') or {}
 if st.get('core') and st.get('core_check'):   # 16 Nov model: core of 4 for the chapter, + 2 swaps per fight

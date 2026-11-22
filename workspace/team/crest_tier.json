@@ -1,12 +1,12 @@
 {
- "anchor_low": 0.134,
+ "anchor_low": 0.122,
  "anchor_median": 0.419,
  "team": {
   "Gholdengo": 0.478,
   "Arcanine (Hisuian Form)": 0.452,
   "Vaporeon": 0.333,
-  "Zoroark (Hisuian Form)": 0.134,
-  "Oranguru": 0.274,
+  "Zoroark (Hisuian Form)": 0.122,
+  "Oranguru": 0.229,
   "Golisopod (Aevian Form)": 0.419
  },
  "rows": [
@@ -87,7 +87,7 @@
    "gain": 0.223,
    "attacks": [
     "Shadow Punch",
-    "Rock Smash"
+    "Power-Up Punch"
    ],
    "ability": "FRISK",
    "tier": "A"
@@ -229,8 +229,8 @@
    "where": "Active",
    "dump": 518,
    "with_crest": 0.311,
-   "without": 0.134,
-   "gain": 0.177,
+   "without": 0.122,
+   "gain": 0.189,
    "attacks": [
     "Shadow Ball",
     "Sludge Bomb"
@@ -541,7 +541,7 @@
    "gain": 0.159,
    "attacks": [
     "Surf",
-    "Secret Power",
+    "Facade",
     "Deluge"
    ],
    "ability": "HYDRATION",
@@ -658,7 +658,7 @@
     "Sludge Bomb"
    ],
    "ability": "SHEERFORCE",
-   "tier": "C"
+   "tier": "B"
   },
   {
    "name": "Zangoose",
@@ -755,7 +755,7 @@
    "without": 0.021,
    "gain": 0.018,
    "attacks": [
-    "Secret Power",
+    "Facade",
     "Shadow Ball",
     "Fire Blast"
    ],

@@ -4,9 +4,9 @@
  "export_label": "20 Nov 17:24",
  "active_start": 441,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 172,
- "run": 186,
- "final": 190,
+ "roster": 174,
+ "run": 188,
+ "final": 192,
  "done": [
   "aelita",
   "narcissa1",
@@ -103,7 +103,7 @@
    "Protect"
   ],
   "Oranguru": [
-   "Nasty Plot",
+   "Trick Room",
    "Psychic",
    "Safeguard",
    "Protect"
@@ -121,7 +121,7 @@
    "Protect"
   ],
   "Zoroark (Hisuian Form)": [
-   "Shadow Ball",
+   "Bitter Malice",
    "Nasty Plot",
    "Taunt",
    "Protect"
@@ -206,7 +206,7 @@
   "Diggersby": "HUGEPOWER",
   "Clefable": "MAGICGUARD",
   "Florges": "FLOWERVEIL",
-  "Oranguru": "TELEPATHY",
+  "Oranguru": "INNERFOCUS",
   "Armarouge": "WEAKARMOR",
   "Scrafty": "MOXIE",
   "Zoroark (Hisuian Form)": "ILLUSION"
@@ -270,6 +270,26 @@
     ],
     "ability": "Unaware"
    }
+  },
+  "spector": {
+   "Oranguru": {
+    "moves": [
+     "Trick Room",
+     "Psychic",
+     "Safeguard",
+     "Protect"
+    ],
+    "ability": "INNERFOCUS"
+   },
+   "Zoroark (Hisuian Form)": {
+    "moves": [
+     "Bitter Malice",
+     "Nasty Plot",
+     "Taunt",
+     "Protect"
+    ],
+    "ability": "ILLUSION"
+   }
   }
  },
  "plan_pairs": {
@@ -282,5 +302,8 @@
    "Nidoking": "Diggersby"
   }
  },
- "one_six": false
+ "one_six": false,
+ "items": {
+  "Oranguru": "Sitrus Berry"
+ }
 }

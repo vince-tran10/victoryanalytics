@@ -47,7 +47,7 @@
    {
     "foe": "Gengar",
     "mon": "Oranguru",
-    "ability": "TELEPATHY",
+    "ability": "INNERFOCUS",
     "dealt": 111,
     "taken": 0,
     "ok": true,
@@ -71,7 +71,7 @@
     "foe": "Houndstone",
     "mon": "Zoroark (Hisuian Form)",
     "ability": "ILLUSION",
-    "dealt": 114,
+    "dealt": 108,
     "taken": 0,
     "ok": true,
     "setup": false,
