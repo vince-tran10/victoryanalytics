@@ -4,9 +4,9 @@
  "export_label": "21 Nov 21:58",
  "active_start": 442,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 177,
- "run": 191,
- "final": 195,
+ "roster": 180,
+ "run": 194,
+ "final": 198,
  "done": [
   "aelita",
   "narcissa1",
@@ -305,5 +305,21 @@
  "one_six": false,
  "items": {
   "Oranguru": "Sitrus Berry"
+ },
+ "zoro_note": {
+  "zoroark": "Zoroark (Hisuian Form)",
+  "copies": "Golisopod (Aevian Form)",
+  "ability": "SKILLLINK",
+  "types": [
+   "BUG",
+   "GROUND"
+  ],
+  "gain": 0.0,
+  "moved": false,
+  "options": {
+   "Vaporeon": 0.0,
+   "Oranguru": 0.0,
+   "Golisopod (Aevian Form)": 0.0
+  }
  }
 }

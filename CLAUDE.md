@@ -62,6 +62,15 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   lists; no shared weakness. Swaps now: Copperajah + Muk-Alola (Dark Gardevoir). The core resists no Dark / Ghost:
   every fight's 2 swaps must bring a Dark/Ghost resist when that fight uses them (Muk-Alola resists both). checks.py: core (b) +
   fight six (b)(c) vs its own fight's types. state.json `core` holds the 4.
+- **Zoroark exception (Vincent, 22 Nov) — the ONLY time slots 3-6 may move:** when a crested Zoroark is in the six, update.py
+  order_team() picks the slot 3-6 member whose copy (ability + its types' STAB on Zoroark's attacks) makes Zoroark strongest
+  (ZORO_AB values) and moves it to slot 6 only if it beats the standard last member by > 0.05. Slots 1-2 (leads) NEVER move.
+  The Team tab ALWAYS shows a callout box: who Zoroark copies, what it gets, and whether the order changed (amber "⚠ Party order
+  changed for Zoroark" when it did). state.zoro_note holds the result.
+- **Fights tab "Their team" (Vincent, 22 Nov):** replaces the Faster / Watch trial rows: every opposing Pokémon in party order
+  (Lead tag on slot 1, or slots 1-2 in doubles), sprite, types after trainer effects, Speed (red if faster than your whole six),
+  and ONE note of up to 3 items: Mega / crest, key ability, the top move threats (Perish Song, Destiny Bond, sleep, traps,
+  setup, Focus Energy, Last Respects...), key item, and which of your six it can KO.
 - **Flex order (Vincent, 22 Nov):** slot 4 = mid-game flex, slot 5 = closer flex (has a setup move), labels Mid game / Closer only
   (no 'Battle start': he plays the flexes by ear). update.py order_team() enforces it every run.
 - **Team tab = party order (Vincent, 21 Nov):** 1 Gholdengo (Core 1 · Lead: leads singles + left slot in doubles), 2 Arcanine-Hisui
@@ -206,9 +215,7 @@ damage score and the fight's real win condition was only read after Vincent lost
   damageMods, e.g. Haunted Field bone moves). Game rule (Battle_Move.rb / Battle_Field.rb, verified 21 Nov): damage x move bonus
   (damageMods, any category) x max(flag bonus [sound / slicing...], type bonus [only if its typeCondition holds]); x0 = the move
   FAILS (isMoveValidOnField?), shown "✕ fails" (Murkwater Surface: Ground moves). Classic mode = full field strength (Story halves). NO Lead row and NO foe → counter list (data stays in fight_plans.json, plans go in chat).
-  TRIAL rows (Vincent, 21 Nov, may be removed), upcoming fight only: "Faster" = foes faster than every member of the six
-  (sprite + Speed, plus your fastest); "Watch" = each foe's trick → your answer (fight_plans win conditions, hazards with who
-  is immune, Focus Energy). Team tab trial: party cards show a red line for moves the next fight's field weakens or blocks.
+  (Faster / Watch trial rows replaced on 22 Nov by "Their team", see Team rules.) Team tab trial: party cards show a red line for moves the next fight's field weakens or blocks.
   Swap roles are NOT forced (Vincent, 21 Nov: he plays the 2 swaps by ear).
   Spector day hand builds (22 Nov, state plan_builds + items): Oranguru = Trick Room / Psychic / Safeguard / Protect, Inner
   Focus (Fake Out can't stop TR), Sitrus; Zoroark-H = Bitter Malice / Nasty Plot / Taunt / Protect (Bitter Malice over Shadow

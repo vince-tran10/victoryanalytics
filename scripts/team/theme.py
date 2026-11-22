@@ -5,7 +5,7 @@ shield icon in the app bar), and the scoring explanations folded into "How this 
 usage (from workspace/): python3 -I ../scripts/team/theme.py <report.html>"""
 import html, json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from kits import disp
+from kits import disp, abn
 import sprites as SP
 import current_box as cb
 E = html.escape
@@ -77,7 +77,17 @@ if st.get('fight') and st['fight'] in FP:
            f'<b>{E(FIGHT_NAME.get(st["fight"], st["fight"]))}</b><span>{E(p["format"])} · bring {E(" + ".join(disp(r["name"]) for r in p["swaps"]))}'
            f'</span><span class="next-go" aria-hidden="true">›</span></a>')
 low = sum(1 for nm in st['team'] if (party.get(disp(nm)) or {}).get('level', CAP) < CAP)
-hero = f'<div class="hero"><div class="hero-head"><h3>Your party</h3></div><ol class="party">{slots}</ol>{nxt}</div>'
+_zn = st.get('zoro_note')
+zoro_box = ''
+if _zn:   # 22 Nov (Vincent): always call out who Zoroark copies and whether the order changed for it
+    _ab = abn(_zn['ability']) if _zn.get('ability') else ''
+    zoro_box = ('<div class="zbox' + (' moved' if _zn['moved'] else '') + '"><b>' + ('⚠ Party order changed for Zoroark' if _zn['moved'] else 'Zoroark Crest') + '</b>'
+                + '<span>' + E(disp(_zn['zoroark'])) + ' copies <b>' + E(disp(_zn['copies'])) + '</b> (last slot): ' + E(_ab or '—') + ' + '
+                + E('/'.join(t.title() for t in _zn['types'])) + ' STAB.</span>'
+                + ('<span>Moved ' + E(disp(_zn['copies'])) + ' to slot 6 so Zoroark copies it. Leads (slots 1–2) unchanged.</span>' if _zn['moved'] else
+                   '<span>' + ('No better copy in slots 3–6, so the standard order stays. Leads never move.' if _zn['gain'] < .05 else 'Already the best copy in slots 3–6. Leads never move.') + '</span>')
+                + '</div>')
+hero = f'<div class="hero"><div class="hero-head"><h3>Your party</h3></div>{zoro_box}<ol class="party">{slots}</ol>{nxt}</div>'
 page = re.sub(r'(<section aria-labelledby="s1">\s*<h2 id="s1">.*?</h2>)', lambda m: m.group(1) + hero, page, count=1, flags=re.S)
 
 page = re.sub(r'<div class="panel pad lvl">.*?</div>\s*', '', page, count=1, flags=re.S)   # the party slots show levels now
@@ -334,6 +344,69 @@ def watch_html(k, p, names):   # 21 Nov: each foe's trick -> your answer (win co
     return '<div class="wl">' + ''.join('<div class="wi ' + ('w-ok' if a else 'w-no') + '">' + (SP.tag(*ids[j], size='s') if j < len(ids) else '')
                                         + '<b>' + E(foe.split(' (')[0]) + '</b><span>' + E(what) + '</span><span class="wa">' + ('→ ' + E(a) if a else 'no answer') + '</span></div>'
                                         for j, foe, what, a in items) + '</div>'
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'gamedata'))
+try:
+    import gamedata as GD
+except Exception:
+    GD = None
+NOTE_MV = [   # (move ids, note) in priority order: the first 2 that apply become the note
+    ({'PERISHSONG'}, 'Perish Song: switch out within 3 turns'), ({'DESTINYBOND'}, 'Destiny Bond: don’t KO it with a key piece the turn it uses it'),
+    ({'HYPNOSIS', 'SPORE', 'SLEEPPOWDER', 'SING', 'LOVELYKISS', 'DARKVOID', 'YAWN', 'GRASSWHISTLE'}, 'sleep'),
+    ({'MEANLOOK', 'BLOCK', 'SPIRITSHACKLE', 'ANCHORSHOT', 'JAWLOCK', 'FIRESPIN', 'WHIRLPOOL', 'INFESTATION', 'SANDTOMB', 'MAGMASTORM'}, 'traps'),
+    ({'SWORDSDANCE', 'NASTYPLOT', 'DRAGONDANCE', 'CALMMIND', 'QUIVERDANCE', 'SHELLSMASH', 'BULKUP', 'SHIFTGEAR', 'COIL', 'BELLYDRUM', 'VICTORYDANCE', 'TAILGLOW'}, 'sets up: Haze it or KO it fast'),
+    ({'FOCUSENERGY'}, 'Focus Energy: then every hit crits'), ({'LASTRESPECTS'}, 'Last Respects: stronger for every fainted ally'),
+    ({'TRICKROOM'}, 'Trick Room'), ({'TAILWIND'}, 'Tailwind'), ({'FAKEOUT'}, 'Fake Out turn 1'),
+    ({'SUBSTITUTE'}, 'Substitute: multi-hit / sound moves break it'), ({'TOXICSPIKES', 'STEALTHROCK', 'SPIKES', 'STICKYWEB'}, 'hazards'),
+    ({'THUNDERWAVE', 'GLARE', 'NUZZLE'}, 'paralysis'), ({'WILLOWISP'}, 'burns'), ({'TOXIC'}, 'Toxic'),
+    ({'ROOST', 'RECOVER', 'SLACKOFF', 'MOONLIGHT', 'SYNTHESIS', 'SOFTBOILED', 'WISH', 'STRENGTHSAP', 'SHOREUP'}, 'heals'),
+    ({'REFLECT', 'LIGHTSCREEN', 'AURORAVEIL'}, 'screens'), ({'TAUNT', 'ENCORE'}, 'Taunt / Encore'),
+]
+NOTE_AB = {'SHADOWTAG': 'Shadow Tag: traps everything', 'PRANKSTER': 'Prankster: status moves first', 'INTIMIDATE': 'Intimidate',
+           'MAGICGUARD': 'Magic Guard', 'SPEEDBOOST': 'Speed Boost', 'MOXIE': 'Moxie', 'SNIPER': 'Sniper crits', 'SHEERFORCE': 'Sheer Force',
+           'HUGEPOWER': 'Huge Power', 'ADAPTABILITY': 'Adaptability', 'REGENERATOR': 'Regenerator', 'UNAWARE': 'Unaware', 'FLUFFY': 'Fluffy',
+           'STURDY': 'Sturdy', 'MULTISCALE': 'Multiscale', 'DROUGHT': 'sets sun', 'DRIZZLE': 'sets rain', 'SANDSTREAM': 'sets sand', 'SNOWWARNING': 'sets snow'}
+NOTE_IT = {'FOCUSSASH': 'Focus Sash', 'REDCARD': 'Red Card', 'EVIOLITE': 'Eviolite', 'EXPERTBELT': 'Expert Belt', 'CHOICESCARF': 'Choice Scarf',
+           'CHOICESPECS': 'Choice Specs', 'CHOICEBAND': 'Choice Band', 'LIFEORB': 'Life Orb', 'ASSAULTVEST': 'Assault Vest', 'WEAKNESSPOLICY': 'Weakness Policy'}
+def _id_(x): return re.sub(r'[^A-Z]', '', str(x or '').upper())
+IDESC = {}
+try: IDESC = {v.get('name'): (v.get('desc') or '') for v in json.load(open('gamedata/itemtext.json')).values()}
+except Exception: pass
+def foes_html(k, names):   # 22 Nov (Vincent): their team in order, one note per Pokémon (what to look out for most)
+    try: R = json.load(open(f'team/{k}_eval.json'))
+    except Exception: return ''
+    walk = []
+    try: walk = GD.walk_mons(k) if GD else []
+    except Exception: walk = []
+    rows = {}
+    for y in R['rows']:
+        if y['name'] in names and (y['name'] not in rows or y.get('fixed')): rows[y['name']] = y
+    ids = R.get('foe_ids') or []; dbl = R['foes'][0][2] == 'Doubles'
+    fast_s = max((y['spe'] for y in rows.values()), default=0)
+    out = ''
+    for j, (_, foe, _) in enumerate(R['foes']):
+        w = walk[j] if j < len(walk) else {}
+        mv = {_id_(m) for m in (R.get('foe_moves') or [[]] * 99)[j]}
+        ab = _id_((R.get('foe_ability') or [''] * 99)[j]); it = (R.get('foe_item') or [''] * 99)[j] or ''
+        bits = []
+        if 'Mega Stone' in (IDESC.get(it) or ''): bits.append('Mega Evolves')
+        if _id_(it).endswith('CREST'): bits.append(it)
+        if ab in NOTE_AB: bits.append(NOTE_AB[ab])
+        for ms, note in NOTE_MV:
+            if mv & ms: bits.append(note)
+        if _id_(it) in NOTE_IT and len(bits) < 3: bits.append(NOTE_IT[_id_(it)])
+        kos = [disp(n) for n, y in rows.items() if (y['taken'][j] / (1.3 if dbl else 1)) >= 100]
+        if kos: bits.append('can KO ' + ', '.join(kos))
+        bits = list(dict.fromkeys(bits))[:3]
+        spe = R['foe_spe'][j]
+        types = [t.upper() for t in re.split(r'[/ ]', (w.get('types') or '')) if t]
+        tp = ''.join(f'<span class="pt" style="--tc:{TYPE.get(t, "#888")}">{E(t.title())}</span>' for t in types)
+        lead = (j < (2 if dbl else 1))
+        out += ('<li class="ofoe"><span class="on">' + ('Lead' if lead else str(j + 1)) + '</span>' + (SP.tag(*ids[j], size='m') if j < len(ids) else '')
+                + '<div class="oc"><div class="oh"><b>' + E(foe.split(' (')[0]) + '</b>' + tp
+                + f'<span class="osp{" fast" if spe > fast_s else ""}">Spe {spe}</span></div>'
+                + '<div class="onote">' + E(' · '.join(bits) or 'no tricks: plain attacker') + '</div></div></li>')
+    return '<ol class="ofoes">' + out + '</ol>'
 def fight_cards():
     order = [k for k in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick'] if k in FP]
     out = ''
@@ -366,8 +439,7 @@ def fight_cards():
         out += ('<details class="fc' + (' is-next' if idx == 0 else '') + '"' + (' open' if idx == 0 else '') + '>' + head
                 + '<div class="fbody"><div class="frow"><span class="fk">Bring</span><ul class="mons">' + bring + '</ul></div>'
                 + (('<div class="frow ftop"><span class="fk">Field</span>' + _fh + '</div>') if (_fh := field_html(hf.get('field', ''), list(st.get('core') or []) + [r['name'] for r in p['swaps']])) else '')
-                + ((('<div class="frow ftop"><span class="fk">Faster</span>' + _sp + '</div>') if (_sp := speed_html(k, list(st.get('core') or []) + [r['name'] for r in p['swaps']])) else '') if idx == 0 and not hf.get('boss') else '')
-                + ((('<div class="frow ftop"><span class="fk">Watch</span>' + _wh + '</div>') if (_wh := watch_html(k, p, list(st.get('core') or []) + [r['name'] for r in p['swaps']])) else '') if idx == 0 else '')
+                + ((('<div class="frow ftop"><span class="fk">Their team</span>' + _fo + '</div>') if (_fo := foes_html(k, list(st.get('core') or []) + [r['name'] for r in p['swaps']])) else '') if not hf.get('boss') else '')
                 + (_bp or '') + '</div></details>')   # 21 Nov (Vincent): foe -> counter list removed; boss fights keep the bar plan
     # 21 Nov (Vincent): only the upcoming fight shows; the rest fold away (fights can come out of order)
     cards_ = re.findall(r'<details class="fc.*?</details>', out, re.S)
@@ -714,6 +786,14 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .fx.up .fx-ar { color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent) }
 .fx.down .fx-ar { color: var(--bad); background: color-mix(in srgb, var(--bad) 14%, transparent) }
 .fx-note { color: var(--muted); font-size: 12px }
+.zbox { display: grid; gap: 2px; margin: 0 0 10px; padding: 10px 12px; border-radius: 12px; font-size: 13px; background: color-mix(in srgb, var(--accent, #c81e3a) 8%, transparent); border: 1px solid color-mix(in srgb, var(--accent, #c81e3a) 25%, transparent) }
+.zbox.moved { background: color-mix(in srgb, #d97706 14%, transparent); border-color: #d97706 }
+.ofoes { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; flex: 1; min-width: 0 }
+.ofoe { display: grid; grid-template-columns: 38px auto 1fr; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 10px; background: var(--card-2, rgba(127,127,127,.06)) }
+.ofoe .on { font: 700 10px var(--mono); text-transform: uppercase; color: var(--muted); text-align: center }
+.oc { min-width: 0; display: grid; gap: 3px } .oh { display: flex; align-items: center; gap: 6px; flex-wrap: wrap } .oh b { font-size: 14px }
+.osp { font: 600 11px var(--mono); color: var(--muted) } .osp.fast { color: var(--bad) }
+.onote { font-size: 12.5px; color: var(--ink, inherit) }
 .role-l { font: 600 9.5px var(--mono); text-transform: uppercase; color: var(--muted); min-width: 78px; display: inline-block }
 .spd { display: flex; flex-wrap: wrap; gap: 6px; align-items: center }
 .spc { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; padding: 2px 8px 2px 2px; border-radius: 99px; background: color-mix(in srgb, var(--bad) 10%, transparent) }

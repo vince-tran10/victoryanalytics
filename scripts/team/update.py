@@ -33,10 +33,39 @@ def sh(args, env, quiet=True, log=None):
 
 SETUP_MV = {'Swords Dance', 'Dragon Dance', 'Nasty Plot', 'Calm Mind', 'Shell Smash', 'Shift Gear', 'Quiver Dance', 'Bulk Up', 'Curse',
             'Fillet Away', 'Tidy Up', 'Victory Dance', 'Coil', 'Belly Drum'}
+ZORO_AB = {'ADAPTABILITY': .33, 'SHEERFORCE': .3, 'PROTEAN': .3, 'LIBERO': .3, 'SPEEDBOOST': .3, 'GOODASGOLD': .25, 'TINTEDLENS': .2,
+           'BEASTBOOST': .2, 'INTIMIDATE': .15, 'MAGICGUARD': .15, 'REGENERATOR': .1, 'MULTISCALE': .1, 'UNAWARE': .1, 'LEVITATE': .05}
 def order_team(st):   # 22 Nov (Vincent): 1-3 core lead / lead partner / mid, 4 = mid-game flex, 5 = closer flex (has a setup move), 6 = core closer
     core = list(st.get('core') or []); sw = [n for n in st['team'] if n not in core]
     sw.sort(key=lambda n: bool(set((st.get('moves') or {}).get(n) or []) & SETUP_MV))
     st['team'] = core[:3] + sw + core[3:]
+    st.pop('zoro_note', None)
+    zo = next((n for n in st['team'] if n.startswith('Zoroark')), None)
+    if not zo: return
+    # 22 Nov (Vincent): Zoroark Crest copies the LAST living party member (ability + its types' STAB). ONLY then may slots 3-6 move;
+    # slots 1-2 (the leads) never move. Pick the copy that makes Zoroark strongest; keep the standard order unless it gains.
+    import re as _re
+    T = {}
+    for r in json.load(open(os.path.join(TEAMD, 'tier_all.json')))['rows']: T.setdefault(r['name'], r)
+    IB = json.load(open(os.path.join(TEAMD, 'ideal_builds.json'))) if os.path.exists(os.path.join(TEAMD, 'ideal_builds.json')) else {}
+    D = json.load(open(os.path.join(WS, 'data', 'Database_Moves.json')))
+    zt = set((T.get(zo) or {}).get('types') or [])
+    zatk = [D.get(_re.sub(r'[^A-Z]', '', m.upper()), {}) for m in (st.get('moves') or {}).get(zo, [])]
+    zatk = [m for m in zatk if m.get('Category') in ('Physical', 'Special')]
+    def val(n):
+        ab = _re.sub(r'[^A-Z]', '', ((st.get('abilities') or {}).get(n) or (IB.get(n) or {}).get('ability') or (T.get(n) or {}).get('ability') or '').upper())
+        tys = set((T.get(n) or {}).get('types') or [])
+        stab = sum(.5 for m in zatk if m.get('Type') in tys and m.get('Type') not in zt) / max(1, len(zatk))
+        return ZORO_AB.get(ab, 0) + stab, ab, sorted(tys)
+    cand = [n for n in st['team'][2:] if n != zo]
+    last = st['team'][-1]
+    best = max(cand, key=lambda n: (val(n)[0], n == last))
+    moved = best != last and val(best)[0] > val(last)[0] + .05
+    if moved:
+        st['team'] = [n for n in st['team'] if n != best] + [best]
+    tgt = st['team'][-1]; v, ab, tys = val(tgt)
+    st['zoro_note'] = dict(zoroark=zo, copies=tgt, ability=ab, types=tys, gain=round(v, 2), moved=moved,
+                           options={n: round(val(n)[0], 2) for n in cand})
 
 
 def main():

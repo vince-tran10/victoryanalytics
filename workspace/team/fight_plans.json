@@ -12,26 +12,6 @@
   ],
   "swaps": [
    {
-    "name": "Zoroark (Hisuian Form)",
-    "ab": "ILLUSION",
-    "moves": [
-     "Bitter Malice"
-    ],
-    "setup": "Nasty Plot",
-    "where": "Party",
-    "dump": 3,
-    "nature": "Modest",
-    "evs": {
-     "SpA": 252,
-     "Spe": 252,
-     "Def": 4
-    },
-    "types": [
-     "NORMAL",
-     "GHOST"
-    ]
-   },
-   {
     "name": "Oranguru",
     "ab": "INNERFOCUS",
     "moves": [
@@ -49,6 +29,26 @@
     "types": [
      "NORMAL",
      "PSYCHIC"
+    ]
+   },
+   {
+    "name": "Zoroark (Hisuian Form)",
+    "ab": "ILLUSION",
+    "moves": [
+     "Bitter Malice"
+    ],
+    "setup": "Nasty Plot",
+    "where": "Party",
+    "dump": 3,
+    "nature": "Modest",
+    "evs": {
+     "SpA": 252,
+     "Spe": 252,
+     "Def": 4
+    },
+    "types": [
+     "NORMAL",
+     "GHOST"
     ]
    }
   ],
