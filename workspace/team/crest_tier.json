@@ -87,7 +87,7 @@
    "gain": 0.223,
    "attacks": [
     "Shadow Punch",
-    "Stacking Shot"
+    "Rock Smash"
    ],
    "ability": "FRISK",
    "tier": "A"
@@ -755,7 +755,7 @@
    "without": 0.021,
    "gain": 0.018,
    "attacks": [
-    "Headbutt",
+    "Facade",
     "Shadow Ball",
     "Fire Blast"
    ],

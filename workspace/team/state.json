@@ -4,9 +4,9 @@
  "export_label": "21 Nov 21:58",
  "active_start": 442,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 180,
- "run": 194,
- "final": 198,
+ "roster": 183,
+ "run": 197,
+ "final": 201,
  "done": [
   "aelita",
   "narcissa1",
@@ -316,7 +316,29 @@
   ],
   "gain": 0.0,
   "moved": false,
+  "kind": "keep",
+  "replacement": null,
+  "lead_options": [
+   {
+    "lead": "Gholdengo",
+    "slot": 1,
+    "gain": 0.25,
+    "replacement": "Golisopod (Aevian Form)",
+    "cost": 0.16,
+    "ok": false
+   },
+   {
+    "lead": "Arcanine (Hisuian Form)",
+    "slot": 2,
+    "gain": 0.15,
+    "replacement": "Golisopod (Aevian Form)",
+    "cost": 0.31,
+    "ok": false
+   }
+  ],
   "options": {
+   "Gholdengo": 0.25,
+   "Arcanine (Hisuian Form)": 0.15,
    "Vaporeon": 0.0,
    "Oranguru": 0.0,
    "Golisopod (Aevian Form)": 0.0

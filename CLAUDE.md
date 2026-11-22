@@ -62,15 +62,16 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   lists; no shared weakness. Swaps now: Copperajah + Muk-Alola (Dark Gardevoir). The core resists no Dark / Ghost:
   every fight's 2 swaps must bring a Dark/Ghost resist when that fight uses them (Muk-Alola resists both). checks.py: core (b) +
   fight six (b)(c) vs its own fight's types. state.json `core` holds the 4.
-- **Zoroark exception (Vincent, 22 Nov) — the ONLY time slots 3-6 may move:** when a crested Zoroark is in the six, update.py
-  order_team() picks the slot 3-6 member whose copy (ability + its types' STAB on Zoroark's attacks) makes Zoroark strongest
-  (ZORO_AB values) and moves it to slot 6 only if it beats the standard last member by > 0.05. Slots 1-2 (leads) NEVER move.
-  The Team tab ALWAYS shows a callout box: who Zoroark copies, what it gets, and whether the order changed (amber "⚠ Party order
-  changed for Zoroark" when it did). state.zoro_note holds the result.
-- **Fights tab "Their team" (Vincent, 22 Nov):** replaces the Faster / Watch trial rows: every opposing Pokémon in party order
-  (Lead tag on slot 1, or slots 1-2 in doubles), sprite, types after trainer effects, Speed (red if faster than your whole six),
-  and ONE note of up to 3 items: Mega / crest, key ability, the top move threats (Perish Song, Destiny Bond, sleep, traps,
-  setup, Focus Energy, Last Respects...), key item, and which of your six it can KO.
+- **Zoroark exception (Vincent, 22 Nov, clarified): a deliberate trade, never a blanket rule.** Only when a crested Zoroark is in
+  the six may the order change. update.py order_team(): (a) a slot 3-6 member moves to slot 6 if its copy beats the standard
+  last member by > 0.05; (b) a LEAD (slot 1-2) moves to slot 6 only if its copy makes Zoroark OP (gain >= 0.30, ZORO_AB values)
+  AND the gain beats the lead-quality loss (lead_q: tier + speed + Intimidate / Fake Out + status immunity) of promoting the best
+  slot 3-6 replacement. The Team tab ALWAYS shows a callout: who Zoroark copies, what it gets, the leads considered and why they
+  stayed / moved (amber "⚠ Party order changed for Zoroark" when moved). state.zoro_note holds the result.
+- **Fights tab "Their team" (Vincent, 22 Nov):** every opposing Pokémon in party order (Lead tag on slot 1, or 1-2 in doubles),
+  sprite, types after trainer effects, Speed (red if faster than your whole six), then BULLETS (one point per line, up to 5) of
+  what makes it strong: faster than your team, Mega / crest, key ability (explained), threat moves named (Perish Song, Destiny Bond,
+  sleep, traps, setup, Focus Energy, Last Respects, heals...), key item (explained). NO "can KO" lines.
 - **Flex order (Vincent, 22 Nov):** slot 4 = mid-game flex, slot 5 = closer flex (has a setup move), labels Mid game / Closer only
   (no 'Battle start': he plays the flexes by ear). update.py order_team() enforces it every run.
 - **Team tab = party order (Vincent, 21 Nov):** 1 Gholdengo (Core 1 · Lead: leads singles + left slot in doubles), 2 Arcanine-Hisui

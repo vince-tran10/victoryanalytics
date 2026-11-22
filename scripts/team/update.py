@@ -57,15 +57,39 @@ def order_team(st):   # 22 Nov (Vincent): 1-3 core lead / lead partner / mid, 4 
         tys = set((T.get(n) or {}).get('types') or [])
         stab = sum(.5 for m in zatk if m.get('Type') in tys and m.get('Type') not in zt) / max(1, len(zatk))
         return ZORO_AB.get(ab, 0) + stab, ab, sorted(tys)
-    cand = [n for n in st['team'][2:] if n != zo]
-    last = st['team'][-1]
-    best = max(cand, key=lambda n: (val(n)[0], n == last))
-    moved = best != last and val(best)[0] > val(last)[0] + .05
-    if moved:
-        st['team'] = [n for n in st['team'] if n != best] + [best]
+    # 22 Nov (Vincent, clarified): leads CAN move, but only as a deliberate trade: a lead goes to slot 6 only if the copy makes
+    # Zoroark OP (gain >= ZORO_OP) AND that gain beats what the team loses at lead. Slots 3-6 move for any real gain (> .05).
+    ZORO_OP = .3
+    def lead_q(n):
+        r = T.get(n) or {}; ab = _re.sub(r'[^A-Z]', '', ((st.get('abilities') or {}).get(n) or r.get('ability') or '').upper())
+        mv = {_re.sub(r'[^A-Z]', '', m.upper()) for m in (st.get('moves') or {}).get(n, [])}
+        return (r.get('blend', 0) + .2 * min(1, (r.get('stats') or {}).get('Spe', 0) / 160) + .15 * (ab == 'INTIMIDATE' or 'FAKEOUT' in mv)
+                + .05 * (ab in ('GOODASGOLD', 'MAGICGUARD')))
+    team0 = list(st['team']); last = team0[-1]; base = val(last)[0]
+    best_back = max([n for n in team0[2:] if n != zo], key=lambda n: (val(n)[0], n == last))
+    plan = dict(kind='keep', target=last)
+    if best_back != last and val(best_back)[0] > base + .05:
+        plan = dict(kind='back', target=best_back)
+    lead_opts = []
+    for i, ld in enumerate(team0[:2]):
+        if ld == zo: continue
+        g = val(ld)[0]
+        repl = max([n for n in team0[2:] if n not in (zo,)], key=lead_q)
+        cost = lead_q(ld) - lead_q(repl)
+        lead_opts.append(dict(lead=ld, slot=i + 1, gain=round(g, 2), replacement=repl, cost=round(cost, 2), ok=bool(g >= ZORO_OP and g - base > cost)))
+    okl = [o for o in lead_opts if o['ok']]
+    if okl:
+        o = max(okl, key=lambda o: o['gain'] - o['cost'])
+        t = [n for n in team0 if n not in (o['lead'], o['replacement'])]
+        t.insert(o['slot'] - 1, o['replacement']) if o['slot'] == 1 else t.insert(1, o['replacement'])
+        st['team'] = t[:5] + [o['lead']] if len(t) >= 5 else t + [o['lead']]
+        plan = dict(kind='lead', target=o['lead'], replacement=o['replacement'])
+    elif plan['kind'] == 'back':
+        st['team'] = [n for n in team0 if n != plan['target']] + [plan['target']]
     tgt = st['team'][-1]; v, ab, tys = val(tgt)
-    st['zoro_note'] = dict(zoroark=zo, copies=tgt, ability=ab, types=tys, gain=round(v, 2), moved=moved,
-                           options={n: round(val(n)[0], 2) for n in cand})
+    st['zoro_note'] = dict(zoroark=zo, copies=tgt, ability=ab, types=tys, gain=round(v, 2), moved=plan['kind'] != 'keep', kind=plan['kind'],
+                           replacement=plan.get('replacement'), lead_options=lead_opts,
+                           options={n: round(val(n)[0], 2) for n in team0 if n != zo})
 
 
 def main():
