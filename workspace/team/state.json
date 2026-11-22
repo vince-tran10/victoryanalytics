@@ -4,9 +4,9 @@
  "export_label": "22 Nov 11:33",
  "active_start": 445,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 233,
- "run": 247,
- "final": 251,
+ "roster": 235,
+ "run": 249,
+ "final": 253,
  "done": [
   "aelita",
   "narcissa1",
@@ -145,8 +145,8 @@
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
   "rank": null,
-  "of": 434008,
-  "gap": 42.65,
+  "of": 434779,
+  "gap": 42.6,
   "top": [
    {
     "score": 1.0433,

@@ -647,7 +647,7 @@ for r in T.values():
     # 22 Nov (Vincent): the sheet always shows the IDEAL build (team members: the build I recommend for their role);
     # for a party member each line that differs from what he runs today gets "yours: X" so he can set it up
     nm_ = r['name']
-    ab_ = (st.get('abilities') or {}).get(nm_) or abn(re.sub(r'[^A-Z]', '', (ib.get('ability') or r['ability']).upper()))
+    ab_ = abn(re.sub(r'[^A-Z]', '', ((st.get('abilities') or {}).get(nm_) or ib.get('ability') or r['ability']).upper()))   # always the display name
     nat_ = ib.get('nature') or r.get('nature', '')
     evs_ = ib.get('evs') or ' / '.join(f"{v} {k}" for k, v in (r.get('evs') or {}).items() if v >= 100)
     it_ = (st.get('items') or {}).get(nm_) or ib.get('item') or ''

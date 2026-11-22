@@ -144,6 +144,11 @@ for c in sorted(cands, key=lambda c: c['gate'] != ''):
         f['moves'] = [m for m in f['moves'] if mid(m) in set(c['legal']) or m == 'Protect'] or b['moves']; b.update(f); b['source'] = 'your rules'
     if c['name'] in st.get('moves', {}):   # the six as it is built now
         b.update(moves=st['moves'][c['name']], ability=(st.get('abilities') or {}).get(c['name'], b['ability']), source='your team')
+        # 22 Nov audit: the item follows the moves it actually runs (Golisopod-A was left with Silver Powder for a dropped Pin Missile lead)
+        _atk = [mid(m) for m in b['moves'] if mid(m) in D.moves and D.moves[mid(m)]['Category'] != 'Status']
+        if not (b.get('item') or '').endswith('Crest') and b.get('item') not in ('Sitrus Berry', 'Focus Sash') and _atk:
+            b['item'] = BOOSTER.get(D.moves[_atk[0]]['Type'], b['item'])
+    if (st.get('items') or {}).get(c['name']): b['item'] = st['items'][c['name']]
     out[c['name']] = b
 json.dump(out, open('team/ideal_builds.json', 'w'), indent=1, ensure_ascii=False)
 for n in ['Golisopod (Aevian Form)', 'Furret', 'Veluza (Aevian Form)', 'Glalie (Aevian Form)', 'Gholdengo', 'Clodsire', 'Musharna (Aevian Form)',

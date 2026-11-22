@@ -3,7 +3,7 @@
   "ability": "Skill Link",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Silver Powder",
+  "item": "Soft Sand",
   "moves": [
    "Bone Rush",
    "Pin Missile",
@@ -1420,6 +1420,25 @@
   "role": "attacker",
   "source": "game"
  },
+ "Slowking": {
+  "ability": "REGENERATOR",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Mystic Water",
+  "moves": [
+   "Surf",
+   "Psychic",
+   "Shadow Ball",
+   "Protect"
+  ],
+  "move_ids": [
+   "CHILLYRECEPTION",
+   "PSYCHIC",
+   "SURF"
+  ],
+  "role": "attacker",
+  "source": "your rules"
+ },
  "Scovillain": {
   "ability": "CHLOROPHYLL",
   "nature": "Adamant",
@@ -1718,25 +1737,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Slowking": {
-  "ability": "REGENERATOR",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Mystic Water",
-  "moves": [
-   "Surf",
-   "Psychic",
-   "Shadow Ball",
-   "Protect"
-  ],
-  "move_ids": [
-   "CHILLYRECEPTION",
-   "PSYCHIC",
-   "SURF"
-  ],
-  "role": "attacker",
-  "source": "your rules"
- },
  "Drifblim": {
   "ability": "UNBURDEN",
   "nature": "Modest",
@@ -1969,7 +1969,7 @@
   "ability": "INNERFOCUS",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Twisted Spoon",
+  "item": "Sitrus Berry",
   "moves": [
    "Trick Room",
    "Psychic",
