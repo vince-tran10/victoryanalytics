@@ -125,7 +125,8 @@ damage score and the fight's real win condition was only read after Vincent lost
   boss fights: it decides near-equal pairs when there is no hand plan; results go in fight_plans.json `sim` and in CHAT only.
 - **Crests (18 Nov, game code):** Zoroark Crest = ability + STAB types of the last party member → scored with the BEST
   possible slot-6 partner (run.py, `zoro_partner`, shown on the Crest tab); Furret Crest = Substitute on entry for 1/4 HP
-  (engine: survives one extra hit); Typhlosion Crest (form 0) = Atk equals SpA + contact moves hit twice, 2nd at 0.3x
+  (engine: survives one extra hit). Zoroark Crest copy target (game code, Battle.rb illusionChoice): the LAST LIVING mon in the
+  current party order, re-checked on every switch-in (a faint moves it up); ability copied unless in PBStuff ABILITYBLACKLIST; Typhlosion Crest (form 0) = Atk equals SpA + contact moves hit twice, 2nd at 0.3x
   (Battler.rb pbNumHits / Battle_Move.rb bondmult) → crests.py x1.3 on single-target contact moves. Crested mons pick their own
   attacks in the crest run (ideal builds don't override them).
 

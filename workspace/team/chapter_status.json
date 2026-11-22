@@ -23,10 +23,11 @@
   "Flying",
   "Ice"
  ],
- "weak3": [],
+ "weak3": [
+  "DARK"
+ ],
  "nores": [
-  "DARK",
-  "GHOST"
+  "DARK"
  ],
  "misses": [
   {

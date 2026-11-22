@@ -1,0 +1,102 @@
+[
+ {
+  "dump": 246,
+  "owned": "Nickit",
+  "level": 60,
+  "now_ability": "Stakeout",
+  "now_moves": [
+   "Snarl",
+   "Assurance",
+   "Nasty Plot",
+   "Sucker Punch"
+  ],
+  "final": "Thievul",
+  "evolve": "Thievul (Level 18)",
+  "gate": "",
+  "types": "Dark",
+  "score": 0.279,
+  "tier": "D",
+  "ability": "Stakeout",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Foul Play",
+   "Mud Barrage",
+   "Shadow Ball",
+   "Protect"
+  ],
+  "move_src": {
+   "Foul Play": "Lv 46",
+   "Mud Barrage": "TM108",
+   "Shadow Ball": "TM30",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.29,
+   "danni": 0.59,
+   "troye": 0.31,
+   "zena": 0.67,
+   "marcie": 0.29,
+   "spector": 0.58,
+   "spector2": 0.32,
+   "jenner9": -0.14,
+   "erick": 0.32
+  }
+ },
+ {
+  "dump": 391,
+  "owned": "Toxel",
+  "level": 60,
+  "now_ability": "Klutz",
+  "now_moves": [
+   "Nuzzle",
+   "Growl",
+   "Flail",
+   "Acid"
+  ],
+  "final": "Toxtricity",
+  "evolve": "Toxtricity (Level 30)",
+  "gate": "",
+  "types": "Electric/Poison",
+  "score": 0.496,
+  "tier": "C",
+  "ability": "Punk Rock",
+  "capsule": true,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Boomburst",
+   "Hex",
+   "Overdrive",
+   "Protect"
+  ],
+  "move_src": {
+   "Boomburst": "Lv 48",
+   "Hex": "TM145",
+   "Overdrive": "Lv 44",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.51,
+   "danni": 0.81,
+   "troye": 0.53,
+   "zena": 0.64,
+   "marcie": 0.55,
+   "spector": 0.54,
+   "spector2": 0.35,
+   "jenner9": 0.41,
+   "erick": 0.31
+  }
+ }
+]
