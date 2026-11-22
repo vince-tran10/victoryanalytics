@@ -190,6 +190,10 @@ damage score and the fight's real win condition was only read after Vincent lost
   rosters folded below. **Dex (17 Nov):** tap a row → detail sheet (stats, best build, Ch9 foes it counters).
   **Dex = real tier list (Vincent, 22 Nov):** headers just "S Tier" / "A Tier"… (+ count), then a tight grid of tiles (sprite +
   name only, ~4 per row on a phone); tap a tile → detail sheet (one fact per line). Bottom nav = 5 tabs (Cores removed).
+  Detail sheet (Vincent, 22 Nov): no box location; meta = ONLY the best Smogon tier (META_W; usage / unranked hidden); base stats
+  colour-scaled red→green by percentile in HIS box (+ %); nature shown with +/− stats; party members show YOUR build (real item,
+  e.g. Arcanine-H Focus Sash), others the ideal build; no counters list; ONE unique 'why it belongs' line (why_line: crest >
+  best user of an ability ≤ 20 users > rare typing ≤ 3 > strongest of a type > near-signature move ≤ 8 > best stat + ability + move).
 - Tier tabs (16 Nov) share ONE blended scale (scripts/team/tier_all.py → tier_tabs.py): 0.6 × Ch9 fight percentile +
   0.4 × meta (Smogon tier/usage + BST; Aevians by kit OP stars). Cut-offs S .85 / A .76 / B .62 / C .45.
 - **Team tab (17 Nov):** only "Your party": one card per member (slot, Core/Swap · role, types, level bar, ability · nature, EVs,

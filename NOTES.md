@@ -756,3 +756,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 22 Nov: Zoroark callout shrunk to one small line; Fights 'Their team' = 2-column grid (1|2 / 3|4 / 5|6) of sprite + name, leads outlined, no notes.
 - 22 Nov: rule ONE THOUGHT PER LINE (page + chat). Zoroark box = 3 lines; Next battle card = format line + Bring line.
 - 22 Nov: bottom nav fixed to 5 columns; Dex rebuilt as icon tier list (S Tier... tiles, sprite + name), detail sheet one fact per line.
+- 22 Nov: Dex sheet: no location, best Smogon tier only, stat colour scale vs box, nature +/−, party = real build, unique 'why' line (7 dupes / 372) instead of counters.

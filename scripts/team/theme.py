@@ -563,15 +563,80 @@ page = re.sub(r'<section aria-labelledby="s5">.*?</section>', checks, page, coun
 from kits import abn
 DEX = {}
 IDB = json.load(open('team/ideal_builds.json')) if os.path.exists('team/ideal_builds.json') else {}
+NAT = {'Lonely': ('Atk', 'Def'), 'Brave': ('Atk', 'Spe'), 'Adamant': ('Atk', 'SpA'), 'Naughty': ('Atk', 'SpD'), 'Bold': ('Def', 'Atk'), 'Relaxed': ('Def', 'Spe'),
+       'Impish': ('Def', 'SpA'), 'Lax': ('Def', 'SpD'), 'Timid': ('Spe', 'Atk'), 'Hasty': ('Spe', 'Def'), 'Jolly': ('Spe', 'SpA'), 'Naive': ('Spe', 'SpD'),
+       'Modest': ('SpA', 'Atk'), 'Mild': ('SpA', 'Def'), 'Quiet': ('SpA', 'Spe'), 'Rash': ('SpA', 'SpD'), 'Calm': ('SpD', 'Atk'), 'Gentle': ('SpD', 'Def'),
+       'Sassy': ('SpD', 'Spe'), 'Careful': ('SpD', 'SpA')}
+def nat_txt(n):
+    pm = NAT.get((n or '').strip().title())
+    return f"{n} (+{pm[0]}, −{pm[1]})" if pm else (n or '')
+META_W = {'Ubers': 10, 'NatDex Ubers': 9, 'OU': 8, 'Doubles OU': 7.5, 'NatDex OU': 7, 'NatDex Doubles': 6, 'UU': 5, 'NatDex UU': 4.5, 'RU': 4, 'NU': 3}
+def meta_top(lab):   # 22 Nov (Vincent): only the best tier
+    parts = [x.strip() for x in (lab or '').split('·')]
+    ranked = [x for x in parts if x in META_W]
+    if ranked: return max(ranked, key=lambda x: META_W[x])
+    keep = [x for x in parts if x and not x.startswith(('usage', 'unranked', 'no meta'))]
+    return keep[0] if keep else ''
+_rowsall = list(T.values())
+_STATS = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe']
+_SV = {k: sorted(r['base'][k] for r in _rowsall) for k in _STATS}
+import bisect as _bs
+def _pct(k, v): return round(100 * _bs.bisect_left(_SV[k], v) / max(1, len(_SV[k]) - 1))
+_ABT = json.load(open('gamedata/abiltext.json')) if os.path.exists('gamedata/abiltext.json') else {}
+_ABC = {}
+for r in _rowsall:
+    for ab_ in set(r.get('abilities') or []): _ABC[ab_] = _ABC.get(ab_, 0) + 1
+_TYC = {}
+for r in _rowsall: _TYC[tuple(sorted(r['types']))] = _TYC.get(tuple(sorted(r['types'])), 0) + 1
+_MVC = {}
+for r in _rowsall:
+    for m_ in set(r.get('legal') or []): _MVC[m_] = _MVC.get(m_, 0) + 1
+_MVN2 = {}
+try: _MVN2 = {k: v.get('name', k) for k, v in json.load(open('gamedata/movetext.json')).items()}
+except Exception: pass
+_GAB, _GTY, _GMV = {}, {}, {}
+for r in _rowsall:
+    for ab_ in set(r.get('abilities') or []): _GAB.setdefault(ab_, []).append(r)
+    for t_ in r['types']: _GTY.setdefault(t_, []).append(r)
+    for m_ in set(r.get('legal') or []): _GMV.setdefault(m_, []).append(r)
+_IDS2 = {}
+try: _IDS2 = {v.get('name'): (v.get('desc') or '') for v in json.load(open('gamedata/itemtext.json')).values()}
+except Exception: pass
+def why_line(r, ab_id, moves):   # one objective, unique line (22 Nov): the most distinctive trait in YOUR box, in priority order
+    if r.get('kind') == 'crest' and r.get('crest'):   # 0) a crest IS what sets it apart
+        return r['crest'] + ': ' + (_IDS2.get(r['crest']) or '').rstrip('.')
+    def top_of(group): return bool(group) and max(group, key=lambda x: x['blend'])['name'] == r['name']
+    nm_ = (_ABT.get(ab_id) or {}).get('name', ab_id.title()) if ab_id else ''
+    d_ = ((_ABT.get(ab_id) or {}).get('desc', '') or '').rstrip('.')
+    ga = _GAB.get(ab_id) or []
+    if ab_id and len(ga) <= 20 and top_of(ga):   # 1) a rare-ish ability, and it is the best user of it
+        return (f"Only {nm_} user in your box" if len(ga) == 1 else f"Best of your {len(ga)} {nm_} users") + (f": {d_[0].lower() + d_[1:]}" if d_ else '')
+    tyk = tuple(sorted(r['types'])); tyg = [x for x in _rowsall if tuple(sorted(x['types'])) == tyk]
+    tyn = '/'.join(t.title() for t in r['types'])
+    if len(tyg) <= 3 and top_of(tyg):   # 2) a rare typing
+        return f"Only {tyn} type in your box" if len(tyg) == 1 else f"Best {tyn} of your {len(tyg)}"
+    best_t = [t_ for t_ in r['types'] if top_of(_GTY[t_])]
+    if best_t:   # 3) best of a whole type
+        t_ = max(best_t, key=lambda t: len(_GTY[t])); return f"Strongest {t_.title()} type in your box (of {len(_GTY[t_])})"
+    sig = [(len(_GMV[re.sub(r'[^A-Z]', '', m.upper())]), m) for m in moves if re.sub(r'[^A-Z]', '', m.upper()) in _GMV and re.sub(r'[^A-Z]', '', m.upper()) not in ('PROTECT', 'DETECT')]
+    sig = [x for x in sig if x[0] <= 8 and top_of(_GMV[re.sub(r'[^A-Z]', '', x[1].upper())])]
+    if sig:   # 4) a near-signature move it uses best
+        g, m = min(sig); return f"Only one in your box with {m}" if g == 1 else f"Best of your {g} {m} users"
+    st_ = r['base']; k_best = max(_STATS, key=lambda k: _pct(k, st_[k]))   # 5) its best stat + ability (unique combo)
+    rare_m = min(((len(_GMV.get(re.sub(r'[^A-Z]', '', m.upper()), [])) or 99, m) for m in moves if m not in ('Protect', 'Detect')), default=(99, ''))[1]
+    return f"Top {max(1, 100 - _pct(k_best, st_[k_best]))}% {k_best} in your box ({st_[k_best]})" + (f" with {nm_}" if nm_ else '') + (f" and {rare_m}" if rare_m else '')
 for r in T.values():
-    by = {}
-    for c in r.get('counters', []):
-        k_, f_ = c.split(':', 1); by.setdefault(FIGHT_NAME.get(k_, k_), []).append(f_)
-    ib = IDB.get(r['name']) or {}
-    DEX[disp(r['name'])] = dict(t=r['tier'], s=r['blend'], f=r['fight'], m=r['meta_label'], ty=r['types'], b=r['base'],
-                                a=abn(re.sub(r'[^A-Z]', '', (ib.get('ability') or r['ability']).upper())), n=ib.get('nature') or r.get('nature', ''),
-                                e=ib.get('evs') or ' / '.join(f"{v} {k}" for k, v in (r.get('evs') or {}).items() if v >= 100),
-                                mv=(ib.get('moves') or r['attacks']), it=ib.get('item') or '', c=by, w=f"{r.get('where')} #{r.get('dump')}", sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])   # without 'sp-': only sprites the tables already use get embedded
+    d_ = disp(r['name']); ib = IDB.get(r['name']) or {}; pty = party.get(d_)
+    if pty:   # in your party: show YOUR build (the item etc. can differ by team role, e.g. Arcanine-H's Focus Sash)
+        ab_ = pty.get('ability') or ''; nat_ = pty.get('nature') or ''; evs_ = ' / '.join(f"{v} {k}" for k, v in (pty.get('evs') or {}).items() if v >= 100)
+        it_ = pty.get('item') or ''; mv_ = pty.get('moves') or []; src_ = 'Your build'
+    else:
+        ab_ = abn(re.sub(r'[^A-Z]', '', (ib.get('ability') or r['ability']).upper())); nat_ = ib.get('nature') or r.get('nature', '')
+        evs_ = ib.get('evs') or ' / '.join(f"{v} {k}" for k, v in (r.get('evs') or {}).items() if v >= 100)
+        it_ = ib.get('item') or ''; mv_ = ib.get('moves') or r['attacks']; src_ = 'Ideal build'
+    ab_id = re.sub(r'[^A-Z]', '', ab_.upper())
+    DEX[d_] = dict(t=r['tier'], s=r['blend'], m=meta_top(r['meta_label']), ty=r['types'], b=r['base'], bp=[_pct(k, r['base'][k]) for k in _STATS],
+                   a=ab_, n=nat_txt(nat_), e=evs_, mv=mv_, it=it_, src=src_, why=why_line(r, ab_id, mv_), sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])
 SHEET = ('<div class="sheet" id="dexsheet" hidden><div class="sheet-bg" data-close></div><div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="ds-name">'
          '<button type="button" class="sheet-x" data-close aria-label="Close">×</button><div id="ds-body"></div></div></div>'
          '<script type="application/json" id="dexdata">' + json.dumps(DEX).replace('</', '<\\/') + '</script>')
@@ -886,7 +951,8 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .ds-sub { color: var(--muted); font-size: 13px } .ds-b { margin: 0; padding-left: 16px; display: grid; gap: 2px; font-size: 13.5px }
 .ds-stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; margin: 8px 0 12px }
 .ds-stats div { background: var(--panel-2); border-radius: 10px; text-align: center; padding: 4px 0; font: 700 14px var(--mono) }
-.ds-stats small { display: block; font: 600 9.5px var(--mono); color: var(--muted); text-transform: uppercase }
+.ds-stats small { display: block; font: 600 9.5px var(--mono); color: var(--muted); text-transform: uppercase } .ds-stats em { display: block; font: 600 9px var(--mono); font-style: normal; color: var(--muted) }
+.ds-why { margin: 0 0 10px; padding: 8px 10px; border-radius: 10px; background: var(--accent-soft, rgba(200,30,58,.08)); font-size: 13.5px; font-weight: 600 }
 .ds-sec { font: 600 10.5px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 12px 0 6px }
 .ds-c li { margin-bottom: 4px } .ds-c { margin: 0; padding-left: 18px; font-size: 13.5px }
 .todos.pcards { display: grid !important; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) }
@@ -940,16 +1006,16 @@ DEXJS = r'''<script id="dex-js">
   function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
   function open(name){
     var d = D[name]; if (!d) return;
-    var st = ['HP','Atk','Def','SpA','SpD','Spe'].map(function(k){ return '<div><small>'+k+'</small>'+d.b[k]+'</div>'; }).join('');
-    var ctr = Object.keys(d.c).map(function(f){ return '<li><b>'+esc(f)+'</b>: '+d.c[f].map(esc).join(', ')+'</li>'; }).join('');
+    var st = ['HP','Atk','Def','SpA','SpD','Spe'].map(function(k, i){   // colour = how this stat ranks in YOUR box (red low -> green high)
+      var p = d.bp[i], h = Math.round(p * 1.3);
+      return '<div style="background:hsl('+h+' 65% 45% / .22);box-shadow:inset 0 -3px 0 hsl('+h+' 70% 45%)" title="better than '+p+'% of your box"><small>'+k+'</small>'+d.b[k]+'<em>'+p+'%</em></div>'; }).join('');
     body.innerHTML = '<div class="ds-head"><i class="spr sp-'+d.sp+'" aria-hidden="true"></i><div><h3 id="ds-name">'+esc(name)+'</h3>'
       + '<div class="ds-sub"><span class="tier t'+d.t+'">'+d.t+'</span> score '+d.s.toFixed(2)+'</div>'
       + '<div class="ds-sub">'+d.ty.map(function(t){return t[0]+t.slice(1).toLowerCase();}).join('/')+'</div>'
-      + '<div class="ds-sub">'+esc(d.w)+'</div>'
-      + '<div class="ds-sub">'+esc(d.m)+'</div></div></div><div class="ds-stats">'+st+'</div>'
-      + '<div class="ds-sec">Ideal build</div><ul class="ds-b"><li>Ability: '+esc(d.a)+'</li>'+(d.n?'<li>Nature: '+esc(d.n)+'</li>':'')+(d.e?'<li>EVs: '+esc(d.e)+'</li>':'')+(d.it?'<li>Item: '+esc(d.it)+'</li>':'')
-      + '<li>Moves: '+d.mv.map(esc).join(' / ')+'</li></ul>'
-      + '<div class="ds-sec">Counters in Chapter 9</div>'+(ctr ? '<ul class="ds-c">'+ctr+'</ul>' : '<div class="ds-sub">None of the remaining hard-fight Pokémon</div>');
+      + (d.m ? '<div class="ds-sub">'+esc(d.m)+'</div>' : '') + '</div></div><div class="ds-stats">'+st+'</div>'
+      + '<div class="ds-why">'+esc(d.why)+'</div>'
+      + '<div class="ds-sec">'+esc(d.src)+'</div><ul class="ds-b"><li>Ability: '+esc(d.a)+'</li>'+(d.n?'<li>Nature: '+esc(d.n)+'</li>':'')+(d.e?'<li>EVs: '+esc(d.e)+'</li>':'')+(d.it?'<li>Item: '+esc(d.it)+'</li>':'')
+      + '<li>Moves: '+d.mv.map(esc).join(' / ')+'</li></ul>';
     last = document.activeElement; sheet.hidden = false; sheet.querySelector('.sheet-x').focus();
   }
   function close(){ sheet.hidden = true; if (last) last.focus(); }
