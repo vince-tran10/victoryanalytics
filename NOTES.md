@@ -755,3 +755,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 22 Nov: Zoroark rule clarified: leads may move only as a deliberate trade (copy gain >= .30 'OP' and > lead loss); callout lists considered leads. Spector day: Gholdengo copy (Good as Gold) +.25 < .30 → kept. Fights foe notes: bullets, explained abilities / items, move names, no 'can KO'.
 - 22 Nov: Zoroark callout shrunk to one small line; Fights 'Their team' = 2-column grid (1|2 / 3|4 / 5|6) of sprite + name, leads outlined, no notes.
 - 22 Nov: rule ONE THOUGHT PER LINE (page + chat). Zoroark box = 3 lines; Next battle card = format line + Bring line.
+- 22 Nov: bottom nav fixed to 5 columns; Dex rebuilt as icon tier list (S Tier... tiles, sprite + name), detail sheet one fact per line.

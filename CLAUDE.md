@@ -188,6 +188,8 @@ damage score and the fight's real win condition was only read after Vincent lost
   (foes + counters; boss forms from bosstext), Dex rows. Empty-cell sheets fall back to the other cell.
 - **Boxes tab (17 Nov):** "Move in" (green) / "Move out" (red) lists in box-number order from team/actions.json; full
   rosters folded below. **Dex (17 Nov):** tap a row → detail sheet (stats, best build, Ch9 foes it counters).
+  **Dex = real tier list (Vincent, 22 Nov):** headers just "S Tier" / "A Tier"… (+ count), then a tight grid of tiles (sprite +
+  name only, ~4 per row on a phone); tap a tile → detail sheet (one fact per line). Bottom nav = 5 tabs (Cores removed).
 - Tier tabs (16 Nov) share ONE blended scale (scripts/team/tier_all.py → tier_tabs.py): 0.6 × Ch9 fight percentile +
   0.4 × meta (Smogon tier/usage + BST; Aevians by kit OP stars). Cut-offs S .85 / A .76 / B .62 / C .45.
 - **Team tab (17 Nov):** only "Your party": one card per member (slot, Core/Swap · role, types, level bar, ability · nature, EVs,

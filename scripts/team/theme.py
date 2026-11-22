@@ -571,11 +571,28 @@ for r in T.values():
     DEX[disp(r['name'])] = dict(t=r['tier'], s=r['blend'], f=r['fight'], m=r['meta_label'], ty=r['types'], b=r['base'],
                                 a=abn(re.sub(r'[^A-Z]', '', (ib.get('ability') or r['ability']).upper())), n=ib.get('nature') or r.get('nature', ''),
                                 e=ib.get('evs') or ' / '.join(f"{v} {k}" for k, v in (r.get('evs') or {}).items() if v >= 100),
-                                mv=(ib.get('moves') or r['attacks']) + ([ib['item']] if ib.get('item') else []), c=by, w=f"{r.get('where')} #{r.get('dump')}", sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])   # without 'sp-': only sprites the tables already use get embedded
+                                mv=(ib.get('moves') or r['attacks']), it=ib.get('item') or '', c=by, w=f"{r.get('where')} #{r.get('dump')}", sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])   # without 'sp-': only sprites the tables already use get embedded
 SHEET = ('<div class="sheet" id="dexsheet" hidden><div class="sheet-bg" data-close></div><div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="ds-name">'
          '<button type="button" class="sheet-x" data-close aria-label="Close">×</button><div id="ds-body"></div></div></div>'
          '<script type="application/json" id="dexdata">' + json.dumps(DEX).replace('</', '<\\/') + '</script>')
 page = page.replace('</body>', SHEET + '</body>') if '</body>' in page else page + SHEET
+
+# ---------------------------------------------------------------- Dex as a real tier list (Vincent, 22 Nov): "S Tier" etc., icon + name tiles
+def dex_tiles(kind):
+    rows_ = [r for r in json.load(open('team/tier_all.json'))['rows'] if r['kind'] == kind]
+    seen_, out_ = set(), ''
+    for t_ in 'SABCD':
+        tr_ = [r for r in rows_ if r['tier'] == t_ and r['name'] not in seen_]
+        if not tr_: continue
+        seen_.update(r['name'] for r in tr_)
+        tiles = ''.join('<button type="button" class="dtile" data-dn="' + E(disp(r['name'])) + '">' + SP.tag(r.get('sid'), r.get('form', '0'), size='m')
+                        + '<span>' + E(disp(r['name'])) + '</span></button>' for r in tr_)
+        out_ += ('<div class="dtier"><h3 class="dth"><span class="tier t' + t_ + '">' + t_ + '</span> ' + t_ + ' Tier <span class="dcount">' + str(len(tr_)) + '</span></h3>'
+                 '<div class="dgrid">' + tiles + '</div></div>')
+    return out_
+for _sec, _kind in (('s6', 'crest'), ('s7', 'aevian'), ('s8', 'regular')):
+    page = re.sub(rf'(<section aria-labelledby="{_sec}">\s*<h2 id="{_sec}">.*?</h2>\s*(?:<ul class="legend">.*?</ul>)?).*?(</section>)',
+                  lambda m_, k_=_kind: m_.group(1) + dex_tiles(k_) + m_.group(2), page, count=1, flags=re.S)
 
 # ---------------------------------------------------------------- fold scoring explanations ("How this works")
 def fold(m):
@@ -670,7 +687,7 @@ a { color: var(--link) }
 .viewtitle { max-width: 1120px; margin: 0 auto; font: 700 24px/1.1 var(--display); padding-block: 2px 12px; letter-spacing: .01em }
 @media (max-width: 720px) { .appbar-chips { display: none } .viewtitle { font-size: 21px } }
 /* navigation: bottom bar (phone), side rail (desktop) */
-.appnav { position: fixed; z-index: 25; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(6, 1fr);
+.appnav { position: fixed; z-index: 25; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(5, 1fr);
   background: var(--panel); border-top: 1px solid var(--line); box-shadow: 0 -4px 16px rgba(0,0,0,.06);
   padding: 6px max(6px, env(safe-area-inset-right, 0px)) calc(6px + env(safe-area-inset-bottom, 0px)) max(6px, env(safe-area-inset-left, 0px)) }
 .appnav button { display: grid; justify-items: center; gap: 2px; border: 0; background: none; color: var(--muted); font: 700 11px var(--body); padding: 6px 0; border-radius: 12px; cursor: pointer }
@@ -785,6 +802,11 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .fx.up .fx-ar { color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent) }
 .fx.down .fx-ar { color: var(--bad); background: color-mix(in srgb, var(--bad) 14%, transparent) }
 .fx-note { color: var(--muted); font-size: 12px }
+.dtier { margin: 0 0 14px } .dth { display: flex; align-items: center; gap: 6px; margin: 0 0 6px; font-size: 16px } .dcount { font: 600 12px var(--mono); color: var(--muted) }
+.dgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 5px }
+.dtile { display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 2px; border-radius: 10px; border: 1px solid var(--line);
+  background: var(--card, transparent); color: inherit; font: 600 10.5px var(--body); text-align: center; cursor: pointer; line-height: 1.15 }
+.dtile:hover { border-color: var(--accent, #c81e3a) }
 .zbox { list-style: none; display: grid; gap: 1px; margin: 0 0 8px; padding: 5px 10px; border-radius: 8px; font-size: 11.5px; color: var(--muted); background: color-mix(in srgb, var(--accent, #c81e3a) 8%, transparent); border: 1px solid color-mix(in srgb, var(--accent, #c81e3a) 25%, transparent) }
 .zbox.moved { background: color-mix(in srgb, #d97706 14%, transparent); border-color: #d97706 }
 .ofoes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; flex: 1 1 100%; min-width: 0 }
@@ -861,7 +883,7 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .ds-head { display: flex; align-items: center; gap: 12px; margin-bottom: 10px }
 .ds-head .spr { width: 96px; height: 96px; margin: 0 }
 .ds-head h3 { font-size: 21px }
-.ds-sub { color: var(--muted); font-size: 13px }
+.ds-sub { color: var(--muted); font-size: 13px } .ds-b { margin: 0; padding-left: 16px; display: grid; gap: 2px; font-size: 13.5px }
 .ds-stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; margin: 8px 0 12px }
 .ds-stats div { background: var(--panel-2); border-radius: 10px; text-align: center; padding: 4px 0; font: 700 14px var(--mono) }
 .ds-stats small { display: block; font: 600 9.5px var(--mono); color: var(--muted); text-transform: uppercase }
@@ -921,15 +943,19 @@ DEXJS = r'''<script id="dex-js">
     var st = ['HP','Atk','Def','SpA','SpD','Spe'].map(function(k){ return '<div><small>'+k+'</small>'+d.b[k]+'</div>'; }).join('');
     var ctr = Object.keys(d.c).map(function(f){ return '<li><b>'+esc(f)+'</b>: '+d.c[f].map(esc).join(', ')+'</li>'; }).join('');
     body.innerHTML = '<div class="ds-head"><i class="spr sp-'+d.sp+'" aria-hidden="true"></i><div><h3 id="ds-name">'+esc(name)+'</h3>'
-      + '<div class="ds-sub"><span class="tier t'+d.t+'">'+d.t+'</span> score '+d.s.toFixed(2)+' · '+d.ty.map(function(t){return t[0]+t.slice(1).toLowerCase();}).join('/')+' · '+esc(d.w)+'</div>'
+      + '<div class="ds-sub"><span class="tier t'+d.t+'">'+d.t+'</span> score '+d.s.toFixed(2)+'</div>'
+      + '<div class="ds-sub">'+d.ty.map(function(t){return t[0]+t.slice(1).toLowerCase();}).join('/')+'</div>'
+      + '<div class="ds-sub">'+esc(d.w)+'</div>'
       + '<div class="ds-sub">'+esc(d.m)+'</div></div></div><div class="ds-stats">'+st+'</div>'
-      + '<div class="ds-sec">Ideal build</div><div>'+esc(d.a)+(d.n?' · '+esc(d.n):'')+(d.e?' · '+esc(d.e):'')+'</div><div>'+d.mv.map(esc).join(' / ')+'</div>'
+      + '<div class="ds-sec">Ideal build</div><ul class="ds-b"><li>Ability: '+esc(d.a)+'</li>'+(d.n?'<li>Nature: '+esc(d.n)+'</li>':'')+(d.e?'<li>EVs: '+esc(d.e)+'</li>':'')+(d.it?'<li>Item: '+esc(d.it)+'</li>':'')
+      + '<li>Moves: '+d.mv.map(esc).join(' / ')+'</li></ul>'
       + '<div class="ds-sec">Counters in Chapter 9</div>'+(ctr ? '<ul class="ds-c">'+ctr+'</ul>' : '<div class="ds-sub">None of the remaining hard-fight Pokémon</div>');
     last = document.activeElement; sheet.hidden = false; sheet.querySelector('.sheet-x').focus();
   }
   function close(){ sheet.hidden = true; if (last) last.focus(); }
   document.addEventListener('click', function(e){
     if (e.target.closest('[data-close]')) { close(); return; }
+    var tile = e.target.closest('.dtile'); if (tile) { open(tile.dataset.dn); return; }
     var tr = e.target.closest('.tlx tbody tr'); if (!tr) return;
     var b = tr.querySelector('b'); if (b) open(b.textContent.trim());
   });
