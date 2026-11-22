@@ -138,25 +138,8 @@
    "slot": 2,
    "title": "Core 2 · Doubles lead",
    "pick": "Amoonguss",
-   "rec": "Scrafty",
-   "why": [
-    {
-     "name": "Amoonguss",
-     "tier": "A",
-     "lines": [
-      "Role tools: Intimidate, Fake Out vs Rage Powder",
-      "Weak to 3 types vs 4",
-      "Shares fewer weaknesses with the core: 1 vs 3 (Fire, Ice, Flying)"
-     ]
-    },
-    {
-     "name": "Clefable",
-     "tier": "A",
-     "lines": [
-      "Role tools: Intimidate, Fake Out vs Follow Me"
-     ]
-    }
-   ],
+   "rec": "Amoonguss",
+   "why": [],
    "cands": [
     {
      "name": "Amoonguss",
@@ -174,7 +157,7 @@
      "sid": "AMOONGUSS",
      "form": "0",
      "pick": true,
-     "rec": false,
+     "rec": true,
      "teach": []
     },
     {
@@ -251,7 +234,7 @@
      "sid": "SCRAFTY",
      "form": "0",
      "pick": false,
-     "rec": true,
+     "rec": false,
      "teach": []
     },
     {

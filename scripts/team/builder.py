@@ -199,7 +199,9 @@ if len(core) == 4:
             f_ = min(x[1], 2) if slot == 4 else len([y for y in t if not y.startswith('spread')])
             cover = sum(1 for a in TYPES if m.mult[a] < 1 and any(o.mult[a] > 1 for o in others) and not any(o.mult[a] < 1 for o in others))
             # 22 Nov: + covering the other three's weaknesses that nobody else resists (the type-matrix gaps)
-            return RK.get(m.r['tier'], 0) + f_ + .1 * (sum(m.mult[a] < 1 for a in TYPES) - sum(m.mult[a] > 1 for a in TYPES)) + .2 * cover
+            # 22 Nov fix: tier counts double and tools cap at 2, so tool count / coverage can't lift a lower tier over a higher one
+            # by itself (Scrafty B was suggested over Amoonguss A on Intimidate + Fake Out)
+            return 2 * RK.get(m.r['tier'], 0) + min(f_, 2) + .1 * (sum(m.mult[a] < 1 for a in TYPES) - sum(m.mult[a] > 1 for a in TYPES)) + .2 * min(cover, 3)
         _pool = [x for x in res if x[3].name not in USED] or res
         _best = max(_pool, key=_fit) if _pool else None
         _mine = next((x for x in _pool if x[3].name == (base[i].name if base[i] else None)), None)
