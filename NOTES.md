@@ -757,3 +757,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 22 Nov: rule ONE THOUGHT PER LINE (page + chat). Zoroark box = 3 lines; Next battle card = format line + Bring line.
 - 22 Nov: bottom nav fixed to 5 columns; Dex rebuilt as icon tier list (S Tier... tiles, sprite + name), detail sheet one fact per line.
 - 22 Nov: Dex sheet: no location, best Smogon tier only, stat colour scale vs box, nature +/−, party = real build, unique 'why' line (7 dupes / 372) instead of counters.
+- 22 Nov: Dex sheet 'Why <tier> tier' bullets (fights rank, foes beaten, best fights, meta, top stats, ability effect, strongest move) replace the unique-trait line.

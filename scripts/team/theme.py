@@ -625,6 +625,34 @@ def why_line(r, ab_id, moves):   # one objective, unique line (22 Nov): the most
     st_ = r['base']; k_best = max(_STATS, key=lambda k: _pct(k, st_[k]))   # 5) its best stat + ability (unique combo)
     rare_m = min(((len(_GMV.get(re.sub(r'[^A-Z]', '', m.upper()), [])) or 99, m) for m in moves if m not in ('Protect', 'Detect')), default=(99, ''))[1]
     return f"Top {max(1, 100 - _pct(k_best, st_[k_best]))}% {k_best} in your box ({st_[k_best]})" + (f" with {nm_}" if nm_ else '') + (f" and {rare_m}" if rare_m else '')
+_MVT = {}
+try: _MVT = json.load(open('gamedata/movetext.json'))
+except Exception: pass
+MULTI5 = {'BONERUSH', 'PINMISSILE', 'ROCKBLAST', 'BULLETSEED', 'ICICLESPEAR', 'TAILSLAP', 'ARMTHRUST', 'FURYATTACK', 'SCALESHOT', 'WATERSHURIKEN', 'DOUBLESLAP', 'COMETPUNCH', 'SPIKECANNON', 'BARRAGE', 'FURYSWIPES'}
+def why_tier(r, ab_id, moves):   # 22 Nov (Vincent): WHY it sits in its tier: the score's drivers + what makes it strong (one thought per line)
+    out = []
+    fp = r.get('fight_pct', 0); ncnt = len(r.get('counters') or [])
+    pf = sorted((r.get('per_fight') or {}).items(), key=lambda kv: -kv[1])[:2]
+    best_f = ', '.join(FIGHT_NAME.get(k, k) for k, v in pf if v > 0)
+    out.append(f"Fights: top {max(1, round(100 * (1 - fp)))}% of your box in the remaining Ch9 fights")
+    if ncnt: out.append(f"Beats {ncnt} of their Pokémon")
+    if best_f: out.append(f"Best vs {best_f}")
+    ml = meta_top(r.get('meta_label'))
+    if ml: out.append(f"Meta: {ml}" + (' level in competitive play' if ml in META_W else ''))
+    st_ = r['base']; good = sorted([k for k in _STATS if _pct(k, st_[k]) >= 70], key=lambda k: -_pct(k, st_[k]))[:2]
+    bits = [f"{k} {st_[k]}: top {max(1, 100 - _pct(k, st_[k]))}% of your box" for k in good]
+    nm_ = (_ABT.get(ab_id) or {}).get('name', ''); d_ = ((_ABT.get(ab_id) or {}).get('desc', '') or '').rstrip('.')
+    if nm_: bits.append(f"{nm_}: {d_[0].lower() + d_[1:]}" if d_ else nm_)
+    bestm, bestp = None, 0
+    for m in moves:
+        k = re.sub(r'[^A-Z]', '', m.upper()); md = _MVT.get(k) or {}
+        bp = md.get('basedamage') or 0
+        if bp <= 1 or md.get('category') == 'status': continue
+        p = bp * (5 if (ab_id == 'SKILLLINK' and k in MULTI5) else 1) * (1.5 if (md.get('type') or '').upper() in r['types'] else 1)
+        if p > bestp: bestm, bestp = m, p
+    if bestm: bits.append(f"{bestm}: {int(bestp)} effective power")
+    out += bits
+    return out
 for r in T.values():
     d_ = disp(r['name']); ib = IDB.get(r['name']) or {}; pty = party.get(d_)
     if pty:   # in your party: show YOUR build (the item etc. can differ by team role, e.g. Arcanine-H's Focus Sash)
@@ -635,8 +663,9 @@ for r in T.values():
         evs_ = ib.get('evs') or ' / '.join(f"{v} {k}" for k, v in (r.get('evs') or {}).items() if v >= 100)
         it_ = ib.get('item') or ''; mv_ = ib.get('moves') or r['attacks']; src_ = 'Ideal build'
     ab_id = re.sub(r'[^A-Z]', '', ab_.upper())
+    _why = why_tier(r, ab_id, mv_)
     DEX[d_] = dict(t=r['tier'], s=r['blend'], m=meta_top(r['meta_label']), ty=r['types'], b=r['base'], bp=[_pct(k, r['base'][k]) for k in _STATS],
-                   a=ab_, n=nat_txt(nat_), e=evs_, mv=mv_, it=it_, src=src_, why=why_line(r, ab_id, mv_), sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])
+                   a=ab_, n=nat_txt(nat_), e=evs_, mv=mv_, it=it_, src=src_, why=_why, sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])
 SHEET = ('<div class="sheet" id="dexsheet" hidden><div class="sheet-bg" data-close></div><div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="ds-name">'
          '<button type="button" class="sheet-x" data-close aria-label="Close">×</button><div id="ds-body"></div></div></div>'
          '<script type="application/json" id="dexdata">' + json.dumps(DEX).replace('</', '<\\/') + '</script>')
@@ -952,7 +981,7 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .ds-stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; margin: 8px 0 12px }
 .ds-stats div { background: var(--panel-2); border-radius: 10px; text-align: center; padding: 4px 0; font: 700 14px var(--mono) }
 .ds-stats small { display: block; font: 600 9.5px var(--mono); color: var(--muted); text-transform: uppercase } .ds-stats em { display: block; font: 600 9px var(--mono); font-style: normal; color: var(--muted) }
-.ds-why { margin: 0 0 10px; padding: 8px 10px; border-radius: 10px; background: var(--accent-soft, rgba(200,30,58,.08)); font-size: 13.5px; font-weight: 600 }
+.ds-why { margin: 0 0 6px; padding: 8px 10px 8px 26px; border-radius: 10px; background: var(--accent-soft, rgba(200,30,58,.08)) }
 .ds-sec { font: 600 10.5px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 12px 0 6px }
 .ds-c li { margin-bottom: 4px } .ds-c { margin: 0; padding-left: 18px; font-size: 13.5px }
 .todos.pcards { display: grid !important; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) }
@@ -1013,7 +1042,7 @@ DEXJS = r'''<script id="dex-js">
       + '<div class="ds-sub"><span class="tier t'+d.t+'">'+d.t+'</span> score '+d.s.toFixed(2)+'</div>'
       + '<div class="ds-sub">'+d.ty.map(function(t){return t[0]+t.slice(1).toLowerCase();}).join('/')+'</div>'
       + (d.m ? '<div class="ds-sub">'+esc(d.m)+'</div>' : '') + '</div></div><div class="ds-stats">'+st+'</div>'
-      + '<div class="ds-why">'+esc(d.why)+'</div>'
+      + '<div class="ds-sec">Why '+d.t+' tier</div><ul class="ds-b ds-why">'+d.why.map(function(w){ return '<li>'+esc(w)+'</li>'; }).join('')+'</ul>'
       + '<div class="ds-sec">'+esc(d.src)+'</div><ul class="ds-b"><li>Ability: '+esc(d.a)+'</li>'+(d.n?'<li>Nature: '+esc(d.n)+'</li>':'')+(d.e?'<li>EVs: '+esc(d.e)+'</li>':'')+(d.it?'<li>Item: '+esc(d.it)+'</li>':'')
       + '<li>Moves: '+d.mv.map(esc).join(' / ')+'</li></ul>';
     last = document.activeElement; sheet.hidden = false; sheet.querySelector('.sheet-x').focus();
