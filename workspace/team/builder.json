@@ -5,7 +5,6 @@
   "Vaporeon",
   "Golisopod (Aevian Form)"
  ],
- "score": 0.836,
  "slots": [
   {
    "slot": 1,
@@ -13,19 +12,34 @@
    "needs": [
     "Leads singles",
     "Left slot in doubles",
-    "Fast or bulky enough to act on turn 1",
+    "Fast (80+ base Speed) or bulky",
     "Turn-1 tools: Intimidate, Fake Out, speed control, Taunt",
-    "Ideally immune or resistant to status"
+    "Status-proof is a plus"
    ],
    "pick": "Gholdengo",
-   "rank": 1,
-   "of": 93,
+   "rank": 2,
+   "of": 144,
+   "meets": true,
    "cands": [
+    {
+     "name": "Annihilape",
+     "tier": "S",
+     "tools": [
+      "Scary Face",
+      "Encore",
+      "status-proof"
+     ],
+     "sid": "ANNIHILAPE",
+     "form": "0",
+     "pick": false
+    },
     {
      "name": "Gholdengo",
      "tier": "S",
-     "score": 0.836,
-     "fit": 0.804,
+     "tools": [
+      "Thunder Wave",
+      "status-proof"
+     ],
      "sid": "GHOLDENGO",
      "form": "0",
      "pick": true
@@ -33,36 +47,41 @@
     {
      "name": "Musharna (Aevian Form)",
      "tier": "S",
-     "score": 0.799,
-     "fit": 0.575,
+     "tools": [
+      "Glare",
+      "Encore"
+     ],
      "sid": "MUSHARNA",
+     "form": "1",
+     "pick": false
+    },
+    {
+     "name": "Slowking (Galarian Form)",
+     "tier": "S",
+     "tools": [
+      "Thunder Wave"
+     ],
+     "sid": "SLOWKING",
+     "form": "1",
+     "pick": false
+    },
+    {
+     "name": "Glalie (Aevian Form)",
+     "tier": "S",
+     "tools": [
+      "Scary Face"
+     ],
+     "sid": "GLALIE",
      "form": "1",
      "pick": false
     },
     {
      "name": "Muk (Alolan Form)",
      "tier": "S",
-     "score": 0.799,
-     "fit": 0.6,
+     "tools": [
+      "Scary Face"
+     ],
      "sid": "MUK",
-     "form": "1",
-     "pick": false
-    },
-    {
-     "name": "Clefable",
-     "tier": "A",
-     "score": 0.797,
-     "fit": 0.636,
-     "sid": "CLEFABLE",
-     "form": "0",
-     "pick": false
-    },
-    {
-     "name": "Slowking (Galarian Form)",
-     "tier": "S",
-     "score": 0.78,
-     "fit": 0.624,
-     "sid": "SLOWKING",
      "form": "1",
      "pick": false
     }
@@ -73,45 +92,65 @@
    "title": "Core 2 · Doubles lead",
    "needs": [
     "Right slot in doubles",
-    "Supports slot 1 on turn 1: Intimidate, Fake Out, redirection, Tailwind",
-    "Spread moves that hit both foes"
+    "Must bring Intimidate, Fake Out, Follow Me / Rage Powder or Tailwind",
+    "A spread move is a plus"
    ],
    "pick": "Arcanine (Hisuian Form)",
-   "rank": 2,
-   "of": 94,
+   "rank": 1,
+   "of": 57,
+   "meets": true,
    "cands": [
-    {
-     "name": "Clefable",
-     "tier": "A",
-     "score": 0.844,
-     "fit": 0.685,
-     "sid": "CLEFABLE",
-     "form": "0",
-     "pick": false
-    },
     {
      "name": "Arcanine (Hisuian Form)",
      "tier": "A",
-     "score": 0.836,
-     "fit": 0.822,
+     "tools": [
+      "Intimidate",
+      "spread: Rock Slide"
+     ],
      "sid": "ARCANINE",
      "form": "1",
      "pick": true
     },
     {
-     "name": "Musharna (Aevian Form)",
-     "tier": "S",
-     "score": 0.83,
-     "fit": 0.427,
-     "sid": "MUSHARNA",
+     "name": "Clefable",
+     "tier": "A",
+     "tools": [
+      "Follow Me"
+     ],
+     "sid": "CLEFABLE",
+     "form": "0",
+     "pick": false
+    },
+    {
+     "name": "Leavanny (Aevian Form)",
+     "tier": "B",
+     "tools": [
+      "Intimidate",
+      "Rage Powder",
+      "spread: Electroweb"
+     ],
+     "sid": "LEAVANNY",
      "form": "1",
+     "pick": false
+    },
+    {
+     "name": "Furret",
+     "tier": "B",
+     "tools": [
+      "Follow Me",
+      "spread: Surf"
+     ],
+     "sid": "FURRET",
+     "form": "0",
      "pick": false
     },
     {
      "name": "Arcanine",
      "tier": "B",
-     "score": 0.825,
-     "fit": 0.752,
+     "tools": [
+      "Intimidate",
+      "spread: Bulldoze"
+     ],
      "sid": "ARCANINE",
      "form": "0",
      "pick": false
@@ -119,8 +158,10 @@
     {
      "name": "Scrafty",
      "tier": "B",
-     "score": 0.825,
-     "fit": 0.599,
+     "tools": [
+      "Intimidate",
+      "Fake Out"
+     ],
      "sid": "SCRAFTY",
      "form": "0",
      "pick": false
@@ -131,58 +172,77 @@
    "slot": 3,
    "title": "Core 3 · Mid game",
    "needs": [
-    "Bulky pivot that comes in on hits aimed at the others",
-    "Covers the core's shared weaknesses",
-    "Brings an answer: Haze, recovery, pivoting"
+    "Bulky pivot (HP + Def + SpD 270+)",
+    "Must bring an answer: Haze / phazing, recovery, Regenerator or a pivot move"
    ],
    "pick": "Vaporeon",
-   "rank": 3,
-   "of": 93,
+   "rank": 8,
+   "of": 31,
+   "meets": true,
    "cands": [
+    {
+     "name": "Glalie (Aevian Form)",
+     "tier": "S",
+     "tools": [
+      "Synthesis"
+     ],
+     "sid": "GLALIE",
+     "form": "1",
+     "pick": false
+    },
+    {
+     "name": "Musharna (Aevian Form)",
+     "tier": "S",
+     "tools": [
+      "Moonlight"
+     ],
+     "sid": "MUSHARNA",
+     "form": "1",
+     "pick": false
+    },
     {
      "name": "Alomomola",
      "tier": "A",
-     "score": 0.837,
-     "fit": 0.711,
+     "tools": [
+      "Wish",
+      "Regenerator"
+     ],
      "sid": "ALOMOMOLA",
      "form": "0",
      "pick": false
     },
     {
-     "name": "Azumarill",
-     "tier": "B",
-     "score": 0.837,
-     "fit": 0.57,
-     "sid": "AZUMARILL",
+     "name": "Slowbro",
+     "tier": "A",
+     "tools": [
+      "Slack Off",
+      "Regenerator"
+     ],
+     "sid": "SLOWBRO",
+     "form": "0",
+     "pick": false
+    },
+    {
+     "name": "Slowking",
+     "tier": "A",
+     "tools": [
+      "Slack Off",
+      "Regenerator"
+     ],
+     "sid": "SLOWKING",
      "form": "0",
      "pick": false
     },
     {
      "name": "Vaporeon",
      "tier": "B",
-     "score": 0.836,
-     "fit": 0.616,
+     "tools": [
+      "Haze",
+      "Wish"
+     ],
      "sid": "VAPOREON",
      "form": "0",
      "pick": true
-    },
-    {
-     "name": "Crawdaunt",
-     "tier": "B",
-     "score": 0.835,
-     "fit": 0.494,
-     "sid": "CRAWDAUNT",
-     "form": "0",
-     "pick": false
-    },
-    {
-     "name": "Gastrodon (West Aevian Form)",
-     "tier": "A",
-     "score": 0.832,
-     "fit": 0.753,
-     "sid": "GASTRODON",
-     "form": "1",
-     "pick": false
     }
    ]
   },
@@ -190,57 +250,72 @@
    "slot": 4,
    "title": "Core 4 · Closer",
    "needs": [
-    "One setup move, then sweeps (+2 beats +1)",
-    "Speed or bulk to survive the setup turn",
-    "Hits hard once boosted"
+    "Must have a setup move (or a boosting ability)",
+    "Bigger boosts rank higher (+2 beats +1)"
    ],
    "pick": "Golisopod (Aevian Form)",
    "rank": 1,
-   "of": 93,
+   "of": 95,
+   "meets": true,
    "cands": [
     {
      "name": "Golisopod (Aevian Form)",
      "tier": "S",
-     "score": 0.836,
-     "fit": 0.926,
+     "tools": [
+      "Swords Dance (+2)"
+     ],
      "sid": "GOLISOPOD",
      "form": "1",
      "pick": true
     },
     {
+     "name": "Annihilape",
+     "tier": "S",
+     "tools": [
+      "Curse (+1)"
+     ],
+     "sid": "ANNIHILAPE",
+     "form": "0",
+     "pick": false
+    },
+    {
      "name": "Musharna (Aevian Form)",
      "tier": "S",
-     "score": 0.795,
-     "fit": 0.705,
+     "tools": [
+      "Curse (+1)"
+     ],
      "sid": "MUSHARNA",
      "form": "1",
      "pick": false
     },
     {
-     "name": "Leavanny (Aevian Form)",
-     "tier": "B",
-     "score": 0.784,
-     "fit": 0.678,
-     "sid": "LEAVANNY",
-     "form": "1",
-     "pick": false
-    },
-    {
-     "name": "Swampert",
+     "name": "Slowking",
      "tier": "A",
-     "score": 0.779,
-     "fit": 0.649,
-     "sid": "SWAMPERT",
+     "tools": [
+      "Nasty Plot (+2)"
+     ],
+     "sid": "SLOWKING",
      "form": "0",
      "pick": false
     },
     {
      "name": "Ninetales (Alolan Form)",
      "tier": "A",
-     "score": 0.77,
-     "fit": 0.766,
+     "tools": [
+      "Nasty Plot (+2)"
+     ],
      "sid": "NINETALES",
      "form": "1",
+     "pick": false
+    },
+    {
+     "name": "Swampert",
+     "tier": "A",
+     "tools": [
+      "Curse (+1)"
+     ],
+     "sid": "SWAMPERT",
+     "form": "0",
      "pick": false
     }
    ]

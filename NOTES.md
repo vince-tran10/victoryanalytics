@@ -760,3 +760,6 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 22 Nov: Dex sheet 'Why <tier> tier' bullets (fights rank, foes beaten, best fights, meta, top stats, ability effect, strongest move) replace the unique-trait line.
 - 22 Nov: tiers rebuilt general + meta-first (Vincent): 70% meta dominance (usage x format weight, Ubers-banned .95, Tatsugiri combo ignored without Dondozo) + 30% in-game over all 32 fights (new all-fight engine run). Cut-offs S .72/A .58/B .41/C .27. S: Gholdengo, Annihilape, Slowking-G, Amoonguss, Ceruledge, Muk-A + Golisopod-A/Veluza-A (Aevian). Vaporeon → B (NU usage). Core check: Vincent's core .836 vs best .850 (Gholdengo/Overqwil/Alomomola/Golisopod-A, needs B-tier Overqwil); 4th-slot alternatives within .005.
 - 22 Nov: Team Builder tab (builder.py): per core slot, needs + top 5 with the other three kept. Gholdengo #1 lead, Golisopod-A #1 closer; slot 2 Clefable .844 > Arcanine-H .836; slot 3 Alomomola / Azumarill .837 ≈ Vaporeon .836.
+
+- 22 Nov: Team Builder rebuilt: every owned Pokémon checked per slot against the role's real tools (legal moves/ability), ranked by tier then tools (closer: boost size), chips instead of numbers.
+  Ranks: Gholdengo #2 lead (Annihilape #1), Arcanine-H #1 doubles lead, Vaporeon #8 mid (B tier; Glalie-A / Musharna-A / Alomomola above), Golisopod-A #1 closer.

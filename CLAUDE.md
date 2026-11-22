@@ -172,8 +172,11 @@ damage score and the fight's real win condition was only read after Vincent lost
   thought is its own bullet / line (e.g. Zoroark line, Next battle card). Same in chat replies.
 - Tabs: Team · Builder · Fights · To do · Boxes · Dex (tier lists) · C&A checks. **Team Builder tab (Vincent, 22 Nov):**
   scripts/team/builder.py (runs after tier_tabs, before tabs.py) → team/builder.json + section 'sbuild': one card per CORE slot
-  (1 Lead · 2 Doubles lead · 3 Mid game · 4 Closer): the role's needs (bullets), top 5 candidates for THAT slot with the other
-  three kept (cores.py core score), your pick outlined, and its rank. Flex / chapter swaps come later. **Cores tab REMOVED (Vincent, 22 Nov)**: he plays the team
+  (1 Lead · 2 Doubles lead · 3 Mid game · 4 Closer): the role's needs (bullets), then EVERY owned Pokémon checked against that
+  slot's real requirements (legal moves / ability): 1 = 80+ Spe or bulky + a turn-1 tool (speed control, Taunt/Encore, Intimidate,
+  Fake Out); 2 = must bring Intimidate / Fake Out / Follow Me / Rage Powder / Tailwind (spread move a plus); 3 = bulk 270+ and Haze /
+  phazing / recovery / Regenerator / pivot; 4 = setup move or boosting ability. Weak-3 cores excluded. Top 6 by tier, then tool
+  count (closer: boost size), tool chips shown, NO numeric score (Vincent, 22 Nov: the tier is enough); your pick outlined + rank. Flex / chapter swaps come later. **Cores tab REMOVED (Vincent, 22 Nov)**: he plays the team
   I recommend; cores.py only runs with CORES=1 (chat analysis). Team check for the remaining fights: scripts/team/team_fights.py
   (core + best 2 flexes per fight, full-six one-to-one counters).
 - **App look (Vincent, 17 Nov): it must look like an app, Pokémon themed.** scripts/team/theme.py runs LAST (after tabs.py) and
