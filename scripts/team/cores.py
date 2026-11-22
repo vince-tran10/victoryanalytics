@@ -423,6 +423,8 @@ for key, (cand, id_f, lreq) in CAND.items():
     rescored.sort(key=lambda x: -x[0])
     main = rescored[0] if rescored else None   # 21 Nov (Vincent): every style = its best 4, same method for all (no core forced)
     if os.environ.get('CORES_FREE'):
+        _cf = json.load(open('team/cores_free.json')) if os.path.exists('team/cores_free.json') else {}
+        _cf[key] = [[m.name for m in ms_] for _, ms_ in rescored[:8]]; json.dump(_cf, open('team/cores_free.json', 'w'), indent=1)
         for sc_, ms_ in rescored[:5]: print('FREE', key, round(sc_, 3), [disp(m.name) for m in ms_], [m.r['tier'] for m in ms_], len(set().union(*(m.counters for m in ms_))))
         _mine = sorted(ST.get('core') or [])
         _rk = next((j + 1 for j, (sc_, ms_) in enumerate(rescored) if sorted(m.name for m in ms_) == _mine), None)

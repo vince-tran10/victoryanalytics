@@ -70,6 +70,11 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   state.json `core` order = [lead, lead partner, mid, closer]; team = core[:3] + swaps + core[3:]. Flexes are ALWAYS a
   battle-start swap-in, a mid-game piece or a secondary closer. Hard-fight leads and matchups live on the Fights tab
   (fight_plans `leads`, must survive the opening Pokémon); a core member leads there when it is better than a swap.
+- **The core four is FIXED and must be the best VGC-style four in the box (Vincent, 22 Nov):** never benched per fight; only the
+  2 flexes change per fight (boss / trainer / threat). Never suggest a six that drops a core member. The core is judged in BOTH
+  formats: scripts/team/core_formats.py (each member's strength with every remaining hard fight forced to Singles and to Doubles,
+  plus the four's doubles kit). 22 Nov result: Vincent's core is #1 in singles (.972) and doubles (.969). Doubles kit gap: no Fake
+  Out / redirection (flexes can bring it).
 - **Core roles (Vincent, 21 Nov):** core = 2 leads (slot 1 leads singles AND the left slot in doubles: Gholdengo; slot 2 =
   Arcanine-Hisui), 1 mid-game piece (Vaporeon), 1 dedicated closer (Golisopod-Aevian, SD: beats more remaining foes than any
   speed-boosting closer incl. DD Crawdaunt). The 2 swaps per fight are mid-game counters / immediate switch-ins or a

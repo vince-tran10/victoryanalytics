@@ -1,0 +1,352 @@
+{
+ "balance": [
+  [
+   "Gholdengo",
+   "Arcanine (Hisuian Form)",
+   "Vaporeon",
+   "Golisopod (Aevian Form)"
+  ],
+  [
+   "Wyrdeer",
+   "Clefable",
+   "Gholdengo",
+   "Swampert"
+  ],
+  [
+   "Azumarill",
+   "Arcanine (Hisuian Form)",
+   "Gholdengo",
+   "Golisopod (Aevian Form)"
+  ],
+  [
+   "Wyrdeer",
+   "Clefable",
+   "Gholdengo",
+   "Azumarill"
+  ],
+  [
+   "Vikavolt",
+   "Arcanine (Hisuian Form)",
+   "Gholdengo",
+   "Azumarill"
+  ],
+  [
+   "Azumarill",
+   "Overqwil",
+   "Gholdengo",
+   "Golisopod (Aevian Form)"
+  ],
+  [
+   "Gholdengo",
+   "Arcanine",
+   "Vaporeon",
+   "Golisopod (Aevian Form)"
+  ],
+  [
+   "Vikavolt",
+   "Arcanine (Hisuian Form)",
+   "Gholdengo",
+   "Musharna (Aevian Form)"
+  ]
+ ],
+ "tr": [
+  [
+   "Porygon-Z",
+   "Clefable",
+   "Empoleon",
+   "Swampert"
+  ],
+  [
+   "Oranguru",
+   "Clefable",
+   "Empoleon",
+   "Swampert"
+  ],
+  [
+   "Porygon-Z",
+   "Clefable",
+   "Empoleon",
+   "Golisopod (Aevian Form)"
+  ],
+  [
+   "Oranguru",
+   "Vikavolt",
+   "Empoleon",
+   "Swampert"
+  ],
+  [
+   "Oranguru",
+   "Empoleon",
+   "Swampert",
+   "Golisopod (Aevian Form)"
+  ],
+  [
+   "Oranguru",
+   "Clefable",
+   "Empoleon",
+   "Golisopod (Aevian Form)"
+  ],
+  [
+   "Oranguru",
+   "Vikavolt",
+   "Empoleon",
+   "Musharna (Aevian Form)"
+  ],
+  [
+   "Porygon-Z",
+   "Clefable",
+   "Swampert",
+   "Slowking (Galarian Form)"
+  ]
+ ],
+ "setup": [
+  [
+   "Azumarill",
+   "Clefable",
+   "Gholdengo",
+   "Golisopod (Aevian Form)"
+  ],
+  [
+   "Gholdengo",
+   "Azumarill",
+   "Braviary",
+   "Golisopod (Aevian Form)"
+  ],
+  [
+   "Azumarill",
+   "Furret",
+   "Gholdengo",
+   "Golisopod (Aevian Form)"
+  ],
+  [
+   "Gholdengo",
+   "Furret",
+   "Mamoswine",
+   "Azumarill"
+  ],
+  [
+   "Gholdengo",
+   "Ninetales (Alolan Form)",
+   "Swampert",
+   "Azumarill"
+  ],
+  [
+   "Zoroark (Hisuian Form)",
+   "Clefable",
+   "Gholdengo",
+   "Azumarill"
+  ],
+  [
+   "Gholdengo",
+   "Furret",
+   "Swampert",
+   "Azumarill"
+  ],
+  [
+   "Gholdengo",
+   "Clefable",
+   "Vaporeon",
+   "Golisopod (Aevian Form)"
+  ]
+ ],
+ "grassy": [
+  [
+   "Lickilicky",
+   "Glalie (Aevian Form)",
+   "Gholdengo",
+   "Gallade"
+  ],
+  [
+   "Gholdengo",
+   "Glalie (Aevian Form)",
+   "Florges",
+   "Lickilicky"
+  ],
+  [
+   "Heatmor",
+   "Glalie (Aevian Form)",
+   "Florges",
+   "Decidueye"
+  ],
+  [
+   "Glalie (Aevian Form)",
+   "Clefable",
+   "Decidueye",
+   "Flareon"
+  ],
+  [
+   "Gholdengo",
+   "Glalie (Aevian Form)",
+   "Florges",
+   "Gallade"
+  ],
+  [
+   "Glalie (Aevian Form)",
+   "Arcanine (Hisuian Form)",
+   "Tangrowth",
+   "Gallade"
+  ],
+  [
+   "Heatmor",
+   "Glalie (Aevian Form)",
+   "Musharna (Aevian Form)",
+   "Gallade"
+  ],
+  [
+   "Venusaur",
+   "Glalie (Aevian Form)",
+   "Florges",
+   "Ceruledge"
+  ]
+ ],
+ "electric": [
+  [
+   "Magnezone",
+   "Pincurchin",
+   "Vikavolt",
+   "Azumarill"
+  ],
+  [
+   "Magnezone",
+   "Pincurchin",
+   "Vikavolt",
+   "Slowking"
+  ],
+  [
+   "Magnezone",
+   "Pincurchin",
+   "Vikavolt",
+   "Swampert"
+  ],
+  [
+   "Magnezone",
+   "Pincurchin",
+   "Donphan",
+   "Azumarill"
+  ],
+  [
+   "Vikavolt",
+   "Pincurchin",
+   "Donphan",
+   "Azumarill"
+  ],
+  [
+   "Magnezone",
+   "Pincurchin",
+   "Donphan",
+   "Slowking"
+  ],
+  [
+   "Magnezone",
+   "Pincurchin",
+   "Donphan",
+   "Musharna (Aevian Form)"
+  ],
+  [
+   "Magnezone",
+   "Pincurchin",
+   "Vikavolt",
+   "Musharna (Aevian Form)"
+  ]
+ ],
+ "sun": [
+  [
+   "Ninetales",
+   "Arcanine (Hisuian Form)",
+   "Exeggutor",
+   "Musharna (Aevian Form)"
+  ],
+  [
+   "Ninetales",
+   "Arcanine (Hisuian Form)",
+   "Exeggutor",
+   "Swampert"
+  ],
+  [
+   "Ninetales",
+   "Arcanine (Hisuian Form)",
+   "Tangrowth",
+   "Annihilape"
+  ],
+  [
+   "Ninetales",
+   "Arcanine (Hisuian Form)",
+   "Exeggutor",
+   "Annihilape"
+  ],
+  [
+   "Ninetales",
+   "Arcanine (Hisuian Form)",
+   "Tangrowth",
+   "Musharna (Aevian Form)"
+  ],
+  [
+   "Ninetales",
+   "Arcanine (Hisuian Form)",
+   "Tangrowth",
+   "Gallade"
+  ],
+  [
+   "Exeggutor",
+   "Ninetales",
+   "Solrock (Solrock Dominant Fusion)",
+   "Musharna (Aevian Form)"
+  ],
+  [
+   "Ninetales",
+   "Arcanine",
+   "Exeggutor",
+   "Swampert"
+  ]
+ ],
+ "snow": [
+  [
+   "Ninetales (Alolan Form)",
+   "Arctovish",
+   "Gholdengo",
+   "Swampert"
+  ],
+  [
+   "Gholdengo",
+   "Ninetales (Alolan Form)",
+   "Walrein",
+   "Swampert"
+  ],
+  [
+   "Ninetales (Alolan Form)",
+   "Arctovish",
+   "Gholdengo",
+   "Rhyperior"
+  ],
+  [
+   "Ninetales (Alolan Form)",
+   "Arctozolt",
+   "Vaporeon",
+   "Annihilape"
+  ],
+  [
+   "Ninetales (Alolan Form)",
+   "Glaceon",
+   "Swampert",
+   "Slowking (Galarian Form)"
+  ],
+  [
+   "Ninetales (Alolan Form)",
+   "Arctovish",
+   "Donphan",
+   "Slowking (Galarian Form)"
+  ],
+  [
+   "Gholdengo",
+   "Ninetales (Alolan Form)",
+   "Walrein",
+   "Rhyperior"
+  ],
+  [
+   "Gholdengo",
+   "Ninetales (Alolan Form)",
+   "Walrein",
+   "Mamoswine"
+  ]
+ ]
+}
