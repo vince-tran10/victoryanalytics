@@ -23,13 +23,20 @@
   "Flying",
   "Ice"
  ],
- "weak3": [
-  "DARK"
- ],
+ "weak3": [],
  "nores": [
-  "DARK"
+  "DARK",
+  "GHOST",
+  "GRASS",
+  "PSYCHIC"
  ],
  "misses": [
+  {
+   "foe": "Houndstone",
+   "fight": "spector",
+   "best": "Golisopod (Aevian Form)",
+   "dmg": 82
+  },
   {
    "foe": "Stoutland",
    "fight": "jenner9",
@@ -41,6 +48,18 @@
    "fight": "jenner9",
    "best": "Golisopod (Aevian Form)",
    "dmg": 94
+  },
+  {
+   "foe": "Kommo-o",
+   "fight": "jenner9",
+   "best": "Golisopod (Aevian Form)",
+   "dmg": 53
+  },
+  {
+   "foe": "Chandelure",
+   "fight": "erick",
+   "best": "Veluza (Aevian Form)",
+   "dmg": 70
   }
  ],
  "n_types": 18

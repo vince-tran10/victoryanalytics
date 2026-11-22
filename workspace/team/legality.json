@@ -1,74 +1,102 @@
 {
  "evo": [
   {
+   "name": "Alakazam",
+   "where": "Party",
+   "level": 55,
+   "step": "Kadabra -> Alakazam",
+   "why": "trade evolution, and your one Link Heart went to Slowking"
+  },
+  {
    "name": "Annihilape",
    "where": "#10",
    "level": 50,
    "step": "Primeape -> Annihilape",
-   "why": "use Rage Fist x20 (Rage Fist not learnable yet)"
+   "why": "uses Rage Fist x20, not learnable yet"
+  },
+  {
+   "name": "Dusknoir",
+   "where": "#105",
+   "level": 30,
+   "step": "Dusclops -> Dusknoir",
+   "why": "trade evolution, and your one Link Heart went to Slowking"
   },
   {
    "name": "Electivire",
    "where": "#112",
    "level": 55,
    "step": "Electabuzz -> Electivire",
-   "why": "needs Electirizer (not obtainable by Ch9) + Link Heart"
+   "why": "trade evolution, and your one Link Heart went to Slowking"
+  },
+  {
+   "name": "Golem",
+   "where": "#144",
+   "level": 45,
+   "step": "Graveler -> Golem",
+   "why": "trade evolution, and your one Link Heart went to Slowking"
+  },
+  {
+   "name": "Machamp",
+   "where": "#201",
+   "level": 55,
+   "step": "Machoke -> Machamp",
+   "why": "trade evolution, and your one Link Heart went to Slowking"
   },
   {
    "name": "Parasect-Aevian",
    "where": "#268",
    "level": 55,
    "step": "Paras -> Parasect-Aevian",
-   "why": "needs Xen Waste (not obtainable by Ch9)"
-  },
-  {
-   "name": "Runerigus",
-   "where": "#304",
-   "level": 55,
-   "step": "Yamask -> Runerigus",
-   "why": "special method Runerigus  (check by hand)"
-  },
-  {
-   "name": "Runerigus",
-   "where": "#305",
-   "level": 45,
-   "step": "Yamask -> Runerigus",
-   "why": "special method Runerigus  (check by hand)"
+   "why": "needs Xen Waste, not obtainable yet"
   },
   {
    "name": "Armarouge",
    "where": "#441",
    "level": 55,
    "step": "Charcadet -> Armarouge",
-   "why": "needs Auspicious Armor (not obtainable by Ch9)"
+   "why": "needs Auspicious Armor, not obtainable yet"
   },
   {
    "name": "Ceruledge",
    "where": "#446",
    "level": 55,
    "step": "Charcadet -> Ceruledge",
-   "why": "needs Malicious Armor (not obtainable by Ch9)"
+   "why": "needs Malicious Armor, not obtainable yet"
   },
   {
-   "name": "Pangoro",
-   "where": "#490",
+   "name": "Escavalier",
+   "where": "#464",
+   "level": 55,
+   "step": "Karrablast -> Escavalier",
+   "why": "trade evolution, and your one Link Heart went to Slowking"
+  },
+  {
+   "name": "Golem",
+   "where": "#472",
    "level": 50,
-   "step": "Pancham -> Pangoro",
-   "why": "special method BadInfluence 32 (check by hand)"
+   "step": "Graveler -> Golem",
+   "why": "trade evolution, and your one Link Heart went to Slowking"
+  },
+  {
+   "name": "Porygon-Z",
+   "where": "#493",
+   "level": 45,
+   "step": "Porygon -> Porygon-Z",
+   "why": "trade evolution, and your one Link Heart went to Slowking"
   },
   {
    "name": "Porygon-Z",
    "where": "#493",
    "level": 45,
    "step": "Porygon2 -> Porygon-Z",
-   "why": "needs Dubious Disc (not obtainable by Ch9) + Link Heart"
+   "why": "needs Dubious Disc, not obtainable yet"
   },
   {
    "name": "Rhyperior",
    "where": "#497",
    "level": 55,
    "step": "Rhydon -> Rhyperior",
-   "why": "needs Protector (not obtainable by Ch9) + Link Heart"
+   "why": "needs Protector, not obtainable yet"
   }
  ],
  "moves": [
@@ -406,6 +434,112 @@
    "name": "Tatsugiri Droopy Form",
    "where": "#506",
    "move": "Searing Shot"
+  }
+ ],
+ "devolve": [
+  {
+   "dump": 5,
+   "name": "Alakazam",
+   "to_sid": "KADABRA",
+   "to_form": "0",
+   "to_name": "Kadabra",
+   "why": "trade evolution, and your one Link Heart went to Slowking"
+  },
+  {
+   "dump": 10,
+   "name": "Annihilape",
+   "to_sid": "PRIMEAPE",
+   "to_form": "0",
+   "to_name": "Primeape",
+   "why": "uses Rage Fist x20, not learnable yet"
+  },
+  {
+   "dump": 105,
+   "name": "Dusknoir",
+   "to_sid": "DUSCLOPS",
+   "to_form": "0",
+   "to_name": "Dusclops",
+   "why": "trade evolution, and your one Link Heart went to Slowking"
+  },
+  {
+   "dump": 112,
+   "name": "Electivire",
+   "to_sid": "ELECTABUZZ",
+   "to_form": "0",
+   "to_name": "Electabuzz",
+   "why": "trade evolution, and your one Link Heart went to Slowking"
+  },
+  {
+   "dump": 144,
+   "name": "Golem",
+   "to_sid": "GRAVELER",
+   "to_form": "0",
+   "to_name": "Graveler",
+   "why": "trade evolution, and your one Link Heart went to Slowking"
+  },
+  {
+   "dump": 201,
+   "name": "Machamp",
+   "to_sid": "MACHOKE",
+   "to_form": "0",
+   "to_name": "Machoke",
+   "why": "trade evolution, and your one Link Heart went to Slowking"
+  },
+  {
+   "dump": 268,
+   "name": "Parasect-Aevian",
+   "to_sid": "PARAS",
+   "to_form": "1",
+   "to_name": "Paras (Aevian Form)",
+   "why": "needs Xen Waste, not obtainable yet"
+  },
+  {
+   "dump": 441,
+   "name": "Armarouge",
+   "to_sid": "CHARCADET",
+   "to_form": "0",
+   "to_name": "Charcadet",
+   "why": "needs Auspicious Armor, not obtainable yet"
+  },
+  {
+   "dump": 446,
+   "name": "Ceruledge",
+   "to_sid": "CHARCADET",
+   "to_form": "0",
+   "to_name": "Charcadet",
+   "why": "needs Malicious Armor, not obtainable yet"
+  },
+  {
+   "dump": 464,
+   "name": "Escavalier",
+   "to_sid": "KARRABLAST",
+   "to_form": "0",
+   "to_name": "Karrablast",
+   "why": "trade evolution, and your one Link Heart went to Slowking"
+  },
+  {
+   "dump": 472,
+   "name": "Golem",
+   "to_sid": "GRAVELER",
+   "to_form": "0",
+   "to_name": "Graveler",
+   "why": "trade evolution, and your one Link Heart went to Slowking"
+  },
+  {
+   "dump": 493,
+   "name": "Porygon-Z",
+   "to_sid": "PORYGON",
+   "to_form": "0",
+   "to_name": "Porygon",
+   "why": "trade evolution, and your one Link Heart went to Slowking"
+  },
+  {
+   "dump": 497,
+   "name": "Rhyperior",
+   "to_sid": "RHYDON",
+   "to_form": "0",
+   "to_name": "Rhydon",
+   "why": "needs Protector, not obtainable yet"
   }
  ]
 }

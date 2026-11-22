@@ -1,6 +1,6 @@
 {
  "core": [
-  "Gholdengo",
+  "Veluza (Aevian Form)",
   "Arcanine (Hisuian Form)",
   "Vaporeon",
   "Golisopod (Aevian Form)"
@@ -9,27 +9,9 @@
   {
    "slot": 1,
    "title": "Core 1 · Lead",
-   "pick": "Gholdengo",
-   "rec": "Annihilape",
+   "pick": "Veluza (Aevian Form)",
+   "rec": null,
    "cands": [
-    {
-     "name": "Annihilape",
-     "tier": "S",
-     "stats": [
-      "Outspeeds 75%",
-      "Takes 2 hits to KO",
-      "Resists 5 types",
-      "Weak to 4 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Priority: Sucker Punch"
-     ],
-     "sid": "ANNIHILAPE",
-     "form": "0",
-     "pick": false,
-     "rec": true
-    },
     {
      "name": "Veluza (Aevian Form)",
      "tier": "S",
@@ -45,41 +27,7 @@
      ],
      "sid": "VELUZA",
      "form": "1",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Gholdengo",
-     "tier": "S",
-     "stats": [
-      "Outspeeds 52%",
-      "Takes 3 hits to KO",
-      "Resists 12 types",
-      "Weak to 4 types"
-     ],
-     "tools": [
-      "Spread: Make It Rain",
-      "Blocks status moves"
-     ],
-     "sid": "GHOLDENGO",
-     "form": "0",
      "pick": true,
-     "rec": false
-    },
-    {
-     "name": "Porygon-Z",
-     "tier": "B",
-     "stats": [
-      "Outspeeds 75%",
-      "Takes 2 hits to KO",
-      "Resists 1 type",
-      "Weak to 1 type",
-      "Single target only"
-     ],
-     "tools": [],
-     "sid": "PORYGONZ",
-     "form": "0",
-     "pick": false,
      "rec": false
     },
     {
@@ -115,6 +63,60 @@
      "form": "0",
      "pick": false,
      "rec": false
+    },
+    {
+     "name": "Crobat",
+     "tier": "C",
+     "stats": [
+      "Outspeeds 92%",
+      "Takes 2 hits to KO",
+      "Resists 6 types",
+      "Weak to 4 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Priority: Quick Attack"
+     ],
+     "sid": "CROBAT",
+     "form": "0",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Espeon",
+     "tier": "C",
+     "stats": [
+      "Outspeeds 85%",
+      "Takes 2 hits to KO",
+      "Resists 2 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Priority: Quick Attack"
+     ],
+     "sid": "ESPEON",
+     "form": "0",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Mabosstiff",
+     "tier": "C",
+     "stats": [
+      "Outspeeds 74%",
+      "Takes 2 hits to KO",
+      "Resists 3 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Intimidate"
+     ],
+     "sid": "MABOSSTIFF",
+     "form": "0",
+     "pick": false,
+     "rec": false
     }
    ]
   },
@@ -124,6 +126,16 @@
    "pick": "Arcanine (Hisuian Form)",
    "rec": null,
    "cands": [
+    {
+     "name": "Amoonguss",
+     "tier": "S",
+     "tools": [
+      "Rage Powder"
+     ],
+     "sid": "AMOONGUSS",
+     "form": "0",
+     "pick": false
+    },
     {
      "name": "Arcanine (Hisuian Form)",
      "tier": "A",
@@ -176,17 +188,6 @@
       "spread: Bulldoze"
      ],
      "sid": "ARCANINE",
-     "form": "0",
-     "pick": false
-    },
-    {
-     "name": "Scrafty",
-     "tier": "B",
-     "tools": [
-      "Intimidate",
-      "Fake Out"
-     ],
-     "sid": "SCRAFTY",
      "form": "0",
      "pick": false
     }
@@ -281,16 +282,6 @@
      "pick": true
     },
     {
-     "name": "Annihilape",
-     "tier": "S",
-     "tools": [
-      "Curse (+1)"
-     ],
-     "sid": "ANNIHILAPE",
-     "form": "0",
-     "pick": false
-    },
-    {
      "name": "Musharna (Aevian Form)",
      "tier": "S",
      "tools": [
@@ -301,32 +292,42 @@
      "pick": false
     },
     {
-     "name": "Slowking",
-     "tier": "A",
-     "tools": [
-      "Nasty Plot (+2)"
-     ],
-     "sid": "SLOWKING",
-     "form": "0",
-     "pick": false
-    },
-    {
-     "name": "Ninetales (Alolan Form)",
-     "tier": "A",
-     "tools": [
-      "Nasty Plot (+2)"
-     ],
-     "sid": "NINETALES",
-     "form": "1",
-     "pick": false
-    },
-    {
      "name": "Swampert",
      "tier": "A",
      "tools": [
       "Curse (+1)"
      ],
      "sid": "SWAMPERT",
+     "form": "0",
+     "pick": false
+    },
+    {
+     "name": "Hariyama",
+     "tier": "B",
+     "tools": [
+      "Belly Drum (+6)"
+     ],
+     "sid": "HARIYAMA",
+     "form": "0",
+     "pick": false
+    },
+    {
+     "name": "Zoroark (Hisuian Form)",
+     "tier": "B",
+     "tools": [
+      "Nasty Plot (+2)"
+     ],
+     "sid": "ZOROARK",
+     "form": "1",
+     "pick": false
+    },
+    {
+     "name": "Gallade",
+     "tier": "B",
+     "tools": [
+      "Swords Dance (+2)"
+     ],
+     "sid": "GALLADE",
      "form": "0",
      "pick": false
     }

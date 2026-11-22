@@ -157,6 +157,12 @@ def main():
                SINGLES_W='2', MOVES=json.dumps(st['moves']), CR_RUN=f'r{run}', TEAM_NAMES=json.dumps(st['team']))
     sh(['../scripts/team/roster.py', WS, new, f'team/roster{rost}.json'], env)
     R = json.load(open(os.path.join(TEAMD, f'roster{rost}.json')))
+    # 22 Nov legality: score every Pokémon he can't have yet as its prior stage (To do card: de-evolve)
+    sh(['../scripts/team/legality.py', new], env)
+    _dev = {d['dump']: d for d in json.load(open(os.path.join(TEAMD, 'legality.json'))).get('devolve', [])}
+    for x in R:
+        d_ = _dev.get(x['dump'])
+        if d_: x.update(sid=d_['to_sid'], form=d_['to_form'], devolved_from=x['name'], name=d_['to_name'].replace(' (Aevian Form)', '-Aevian'))
     for x in R: x['level'] = st.get('cap', 55)
     json.dump(R, open(os.path.join(TEAMD, f'roster{rost}_lv55.json'), 'w'))
     print('Scoring (6 engine runs, in parallel)...')   # 21 Nov: independent runs -> ~45s instead of ~110s

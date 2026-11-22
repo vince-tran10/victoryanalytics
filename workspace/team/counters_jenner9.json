@@ -2,16 +2,16 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 4,
+  "counters": 3,
   "pairs": [
    {
     "foe": "Stoutland",
-    "mon": "Scrafty",
-    "ability": "MOXIE",
-    "dealt": 91,
-    "taken": 57,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 79,
+    "taken": 49,
     "ok": true,
-    "setup": false,
+    "setup": "Swords Dance",
     "wincons": [
      {
       "what": "Setup",
@@ -23,17 +23,17 @@
    },
    {
     "foe": "Appletun",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 65,
-    "taken": 47,
+    "mon": "Frosmoth",
+    "ability": "ICESCALES",
+    "dealt": 103,
+    "taken": 40,
     "ok": true,
-    "setup": "Swords Dance",
+    "setup": false,
     "wincons": [
      {
       "what": "Healing",
       "answers": [
-       "teach Gastro Acid (Heatmor)"
+       "teach Gastro Acid (Musharna)"
       ]
      }
     ]
@@ -50,38 +50,38 @@
      {
       "what": "Healing",
       "answers": [
-       "teach Gastro Acid (Heatmor)"
+       "teach Gastro Acid (Musharna)"
       ]
      }
     ]
    },
    {
     "foe": "Porygon-Z",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
-    "dealt": 77,
-    "taken": 75,
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 52,
+    "taken": 99,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Kommo-o",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 30,
-    "taken": 72,
+    "mon": "Musharna (Aevian Form)",
+    "ability": "TOUGHCLAWS",
+    "dealt": 125,
+    "taken": 70,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Klinklang",
-    "mon": "Heatmor",
-    "ability": "GLUTTONY",
-    "dealt": 115,
-    "taken": 48,
-    "ok": true,
+    "mon": "Veluza (Aevian Form)",
+    "ability": "RECKLESS",
+    "dealt": 107,
+    "taken": 118,
+    "ok": false,
     "setup": false,
     "wincons": [
      {

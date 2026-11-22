@@ -35,7 +35,14 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   EVs stay LEGAL (Vincent, 20 Nov): 510 total, 252 max per stat; no over-legal spreads even though debug allows it.
 - Legal moves (16 Nov): level-up ≤ cap, Move Relearner, egg, Ch1–8 TMs (allowed_tms.json), tutors ≤ 8 badges (the game has
   no 8-badge tier, so ≤ 7 in practice). Evolution items from Ch1–8 (adds Razor Claw, Prism Scale, King's Rock, Dragon Scale).
-  No Life Orb, no Megas, no trade evolutions. Trick Room TM not owned: only Oranguru / Porygon-Z learn Trick Room.
+  No Life Orb, no Megas, no trade evolutions.
+- **Legality at his story point (Vincent, 22 Nov):** scripts/team/legality.py (run by update.py before scoring) walks each owned
+  mon's evolution chain in montext; anything he can't have yet is scored as its PRIOR stage and gets a To do "De-evolve" card
+  (make_report5, one card per species). Out now: Gholdengo (999 coins), Annihilape (Rage Fist = 15 badges), Ceruledge / Armarouge
+  (Armors) and Porygon-Z (Dubious Disc) = Shayda shop later, Rhyperior (Protector Ch10), Parasect-Aevian (Xen Waste Ch12).
+  Electirizer OK (Ch9 / held). Link Heart (= a trade for every trade method, Evolution.rb) is LIMITED: he allows ONE, for A tier+
+  (state `link_hearts` = ['Slowking'], regular Slowking); every other trade evolution de-evolves. engine.final_form gates
+  CollectItem and Rage Fist evolutions. Trick Room TM not owned: only Oranguru / Porygon-Z learn Trick Room.
 - Items: UNLIMITED (Vincent, 14 Nov) except Leftovers and Life Orb. Prefer reusable items: the type booster of the main
   attack (Charcoal, Mystic Water, Miracle Seed, Magnet, Never-Melt Ice, Black Belt, Poison Barb, Soft Sand, Sharp Beak,
   Twisted Spoon, Silver Powder, Hard Stone, Spell Tag, Dragon Fang, Black Glasses, Metal Coat, Fairy Feather, Silk Scarf).
@@ -57,7 +64,8 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Slush Rush/Ice Body → snow; Surge Surfer → Electric Terrain…). No anti-synergy (e.g. Glare or fast mons under Trick
   Room). Owned weather/terrain setters (16 Nov): Drought Ninetales, Snow Warning (Ninetales-Alola, Vanilluxe, Aurorus,
   Abomasnow), Grassy Surge Glalie-A, Electric Surge Pincurchin. No Drizzle / Sand Stream. Checked by checks.py.
-- **Picked core (16 Nov): Balance / tempo** = Arcanine-Hisui (Intimidate) · Golisopod-Aevian (Skill Link, SD) · Gholdengo
+- **Core slot 1 (22 Nov): Gholdengo is illegal at Ch9 → Veluza-Aevian stands in** (best legal lead in the Builder; Vincent
+  confirms slot by slot). **Picked core (16 Nov): Balance / tempo** = Arcanine-Hisui (Intimidate) · Golisopod-Aevian (Skill Link, SD) · Gholdengo
   (Good as Gold, Thunder Wave) · Vaporeon (Water Absorb, Haze). #1 core score of 89,985 cores from the top 40 across all tier
   lists; no shared weakness. Swaps now: Copperajah + Muk-Alola (Dark Gardevoir). The core resists no Dark / Ghost:
   every fight's 2 swaps must bring a Dark/Ghost resist when that fight uses them (Muk-Alola resists both). checks.py: core (b) +
@@ -163,7 +171,7 @@ damage score and the fight's real win condition was only read after Vincent lost
 ## Boxes
 - Export order: Party (6), Overflow A–Z, an optional unsorted staging box, Active A–Z.
 - Active bar: A tier (score ≥ 0.53) and species not already in Party/Active. Boss specialists stay in Active only
-  while their fight is still ahead. Meowscarada (starter) and Ceruledge always stay.
+  while their fight is still ahead. Meowscarada (starter) always stays (Ceruledge rule dropped 22 Nov: not obtainable yet).
 - Every staging Pokémon gets a verdict: Active or Overflow.
 
 ## Guide page

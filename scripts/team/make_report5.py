@@ -696,7 +696,7 @@ _DONE = set(filter(None, os.environ.get('DONE', '').split(',')))
 SPECIALISTS = {k: v.title() for k, v in _SPEC_ALL.items() if v not in _DONE}
 SPECIALISTS = {k: 'boss specialist: ' + v for k, v in SPECIALISTS.items()}
 SPECIALISTS['Meowscarada'] = 'your starter'
-SPECIALISTS['Ceruledge'] = 'Swords Dance sweeper: +2 one-shots 50 of 69 boss mons'
+# 22 Nov: Ceruledge removed (Malicious Armor not obtainable at Ch9: de-evolve to Charcadet)
 # staging box: every mon gets a verdict (Active needs A tier on its own and a species not already in Party/Active)
 _have = {d['final'] for d in cur if d['box'] in ('Party', 'Active')}
 _to_act, _to_ovf = [], []
@@ -773,6 +773,17 @@ for (sp, n, box), ch in sorted(PROFILE.items(), key=lambda kv: (kv[0][2] != 'Par
     if CF and box == 'Active': continue   # fight mode: only the lineup and staging verdicts, no generic Active-box rebuilds
     if str(ACTIONS.get(n, '')).startswith('Move to Overflow'): continue   # no build card for a mon going to Overflow
     if ch: _cards.append((1 if box == 'Party' else 2, sp, f'{box} #{n}', ch))
+# 22 Nov (Vincent): Pokémon he can't have yet at his story point -> de-evolve card (scripts/team/legality.py)
+_LEG = json.load(open('team/legality.json')).get('devolve', []) if os.path.exists('team/legality.json') else []
+_devn = {d['dump'] for d in _LEG}
+_cards = [c for c in _cards if not any(('#' + str(n)) == c[2].split(' ')[-1] for n in _devn)]
+_dv = {}
+for d in _LEG:   # one card per species (two Golem -> one card, both box numbers)
+    bx = next((x['box'] for x in cur if x['n'] == d['dump']), '')
+    _dv.setdefault(d['name'], [d, []])[1].append(f"{bx} #{d['dump']}")
+for nm_, (d, locs) in _dv.items():
+    to = d['to_name'].replace(' (Aevian Form)', '-Aevian')
+    _cards.append((-2, nm_, ', '.join(locs), [f"De-evolve: into {to}" + (f" (all {len(locs)})" if len(locs) > 1 else ''), f"Why: {d['why']}"]))
 _cards.sort(key=lambda c: (c[0], c[1]))
 todo_html = ''
 for _, name, where, ch in _cards:

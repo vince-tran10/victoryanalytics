@@ -16,20 +16,20 @@
    },
    {
     "foe": "Raichu",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
-    "dealt": 129,
-    "taken": 47,
+    "mon": "Shedinja",
+    "ability": "WONDERGUARD",
+    "dealt": 130,
+    "taken": 0,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Magneton",
-    "mon": "Turtonator",
-    "ability": "SHELLARMOR",
-    "dealt": 92,
-    "taken": 38,
+    "mon": "Veluza (Aevian Form)",
+    "ability": "RECKLESS",
+    "dealt": 102,
+    "taken": 194,
     "ok": true,
     "setup": false,
     "wincons": []

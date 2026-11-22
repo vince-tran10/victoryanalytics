@@ -434,6 +434,8 @@ class Engine:
             txt.append(f'{self.D.nm(nxt)} ({method} {self.D.nm(param) if param and not param.isdigit() else param})'.replace(' )', ')'))
             if 'Item' in method and str(param).upper() in ITEMS_CH1_7:
                 pass   # evolution item obtainable in Chapters 1-7: evolve right away
+            elif method in ('CollectItem',) or (method == 'UseMove' and 'RAGEFIST' in str(param).upper()):   # 22 Nov legality audit
+                self._gate = self._gate or f'{method} {param}'
             elif 'Item' in method or method.startswith('Trade'):
                 self._gate = self._gate or f'{method} {self.D.nm(param) if param else ""}'.strip()
             cur, cf = nxt, nform

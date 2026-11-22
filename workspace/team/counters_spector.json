@@ -6,9 +6,9 @@
   "pairs": [
    {
     "foe": "Murkrow",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
-    "dealt": 130,
+    "mon": "Veluza (Aevian Form)",
+    "ability": "RECKLESS",
+    "dealt": 100,
     "taken": 0,
     "ok": true,
     "setup": false,
@@ -29,12 +29,12 @@
    },
    {
     "foe": "Gothitelle",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
-    "dealt": 113,
-    "taken": 23,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 88,
+    "taken": 45,
     "ok": true,
-    "setup": false,
+    "setup": "Swords Dance",
     "wincons": [
      {
       "what": "Sleep",
@@ -79,10 +79,10 @@
    },
    {
     "foe": "Ninetales",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 130,
-    "taken": 44,
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 126,
+    "taken": 36,
     "ok": true,
     "setup": false,
     "wincons": [

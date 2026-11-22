@@ -1,12 +1,12 @@
 {
  "_doc": "Read/written by scripts/team/update.py. Edit by hand only to change the six or its moves.",
- "export": "party_and_boxes_2026-11-21_2158.txt",
- "export_label": "21 Nov 21:58",
- "active_start": 442,
+ "export": "party_and_boxes_2026-11-22_0933.txt",
+ "export_label": "22 Nov 09:33",
+ "active_start": 437,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 205,
- "run": 219,
- "final": 223,
+ "roster": 207,
+ "run": 221,
+ "final": 225,
  "done": [
   "aelita",
   "narcissa1",
@@ -34,7 +34,7 @@
  ],
  "fight": "spector",
  "team": [
-  "Gholdengo",
+  "Veluza (Aevian Form)",
   "Arcanine (Hisuian Form)",
   "Vaporeon",
   "Oranguru",
@@ -52,12 +52,6 @@
    "Bone Rush",
    "Pin Missile",
    "Swords Dance",
-   "Protect"
-  ],
-  "Gholdengo": [
-   "Make It Rain",
-   "Shadow Ball",
-   "Thunder Wave",
    "Protect"
   ],
   "Vaporeon": [
@@ -145,60 +139,61 @@
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
   "rank": null,
-  "of": 16265,
-  "gap": 6.05,
+  "of": 485955,
+  "gap": 34.68,
   "top": [
    {
-    "score": 1.0006,
-    "pct": 106.0,
+    "score": 1.0433,
+    "pct": 134.7,
     "team": [
      "Golisopod-A",
+     "Scrafty",
      "Chandelure",
-     "Lunatone (Lunatone Dominant Fusion)",
-     "Musharna-A",
-     "Vaporeon",
-     "Passimian"
-    ],
-    "misses": []
-   },
-   {
-    "score": 0.9989,
-    "pct": 105.9,
-    "team": [
-     "Golisopod-A",
-     "Chandelure",
-     "Lunatone (Lunatone Dominant Fusion)",
-     "Musharna-A",
-     "Throh",
-     "Vaporeon"
-    ],
-    "misses": []
-   },
-   {
-    "score": 0.9979,
-    "pct": 105.8,
-    "team": [
-     "Golisopod-A",
-     "Chandelure",
-     "Lunatone (Lunatone Dominant Fusion)",
      "Hariyama",
      "Musharna-A",
-     "Vaporeon"
+     "Florges"
+    ],
+    "misses": []
+   },
+   {
+    "score": 1.0423,
+    "pct": 134.5,
+    "team": [
+     "Golisopod-A",
+     "Scrafty",
+     "Chandelure",
+     "Glalie-A",
+     "Florges",
+     "Azumarill"
+    ],
+    "misses": []
+   },
+   {
+    "score": 1.0423,
+    "pct": 134.5,
+    "team": [
+     "Golisopod-A",
+     "Scrafty",
+     "Chandelure",
+     "Hariyama",
+     "Florges",
+     "Clefable"
     ],
     "misses": []
    }
   ],
   "current_misses": [
+   "Houndstone",
    "Stoutland",
    "Porygon-Z",
-   "Miltank"
+   "Kommo-o",
+   "Chandelure"
   ]
  },
  "team_check_cache": true,
  "abilities": {
   "Arcanine (Hisuian Form)": "Intimidate",
   "Golisopod (Aevian Form)": "Skill Link",
-  "Gholdengo": "Good as Gold",
   "Vaporeon": "Water Absorb",
   "Copperajah": "Sheer Force",
   "Muk (Alolan Form)": "Poison Touch",
@@ -217,7 +212,7 @@
  "cap": 60,
  "chapter": 9,
  "core": [
-  "Gholdengo",
+  "Veluza (Aevian Form)",
   "Arcanine (Hisuian Form)",
   "Vaporeon",
   "Golisopod (Aevian Form)"
@@ -228,7 +223,9 @@
    "weak3": [],
    "nores": [
     "DARK",
-    "GHOST"
+    "GHOST",
+    "GRASS",
+    "PSYCHIC"
    ]
   },
   "fight": {
@@ -306,6 +303,9 @@
  "items": {
   "Oranguru": "Sitrus Berry"
  },
+ "link_hearts": [
+  "Slowking"
+ ],
  "zoro_note": {
   "zoroark": "Zoroark (Hisuian Form)",
   "copies": "Golisopod (Aevian Form)",
@@ -320,11 +320,11 @@
   "replacement": null,
   "lead_options": [
    {
-    "lead": "Gholdengo",
+    "lead": "Veluza (Aevian Form)",
     "slot": 1,
-    "gain": 0.25,
+    "gain": 0.0,
     "replacement": "Golisopod (Aevian Form)",
-    "cost": 0.19,
+    "cost": 0.08,
     "ok": false
    },
    {
@@ -337,7 +337,7 @@
    }
   ],
   "options": {
-   "Gholdengo": 0.25,
+   "Veluza (Aevian Form)": 0.0,
    "Arcanine (Hisuian Form)": 0.15,
    "Vaporeon": 0.0,
    "Oranguru": 0.0,

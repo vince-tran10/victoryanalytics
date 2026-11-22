@@ -1,23 +1,4 @@
 {
- "Annihilape": {
-  "ability": "DEFIANT",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Spell Tag",
-  "moves": [
-   "Rage Fist",
-   "Close Combat",
-   "Outrage",
-   "Protect"
-  ],
-  "move_ids": [
-   "RAGEFIST",
-   "CLOSECOMBAT",
-   "OUTRAGE"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
  "Golisopod (Aevian Form)": {
   "ability": "Skill Link",
   "nature": "Adamant",
@@ -151,25 +132,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Gholdengo": {
-  "ability": "Good as Gold",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Spell Tag",
-  "moves": [
-   "Make It Rain",
-   "Shadow Ball",
-   "Thunder Wave",
-   "Protect"
-  ],
-  "move_ids": [
-   "SHADOWBALL",
-   "MAKEITRAIN",
-   "RECOVER"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Hariyama": {
   "ability": "GUTS",
   "nature": "Adamant",
@@ -207,25 +169,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Armarouge": {
-  "ability": "WEAKARMOR",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Twisted Spoon",
-  "moves": [
-   "Calm Mind",
-   "Psyshock",
-   "Overheat",
-   "Protect"
-  ],
-  "move_ids": [
-   "CALMMIND",
-   "PSYSHOCK",
-   "OVERHEAT"
-  ],
-  "role": "attacker",
-  "source": "your team"
  },
  "Emboar": {
   "ability": "RECKLESS",
@@ -435,25 +378,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Ceruledge": {
-  "ability": "FLASHFIRE",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Focus Sash",
-  "moves": [
-   "Bitter Blade",
-   "Shadow Claw",
-   "Swords Dance",
-   "Protect"
-  ],
-  "move_ids": [
-   "BITTERBLADE",
-   "SHADOWSNEAK",
-   "SWORDSDANCE"
-  ],
-  "role": "attacker",
-  "source": "your rules"
  },
  "Vikavolt": {
   "ability": "LEVITATE",
@@ -682,25 +606,6 @@
   ],
   "role": "attacker",
   "source": "your team"
- },
- "Rhyperior": {
-  "ability": "SOLIDROCK",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Soft Sand",
-  "moves": [
-   "Earthquake",
-   "Stone Edge",
-   "Rock Polish",
-   "Protect"
-  ],
-  "move_ids": [
-   "EARTHQUAKE",
-   "STONEEDGE",
-   "ROCKPOLISH"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
  },
  "Lickilicky": {
   "ability": "OWNTEMPO",
@@ -1116,25 +1021,6 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Porygon-Z": {
-  "ability": "ADAPTABILITY",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
-  "item": "Silk Scarf",
-  "moves": [
-   "Tri Attack",
-   "Conversion",
-   "Shadow Ball",
-   "Protect"
-  ],
-  "move_ids": [
-   "TRIATTACK",
-   "CONVERSION",
-   "SHADOWBALL"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
  "Drampa": {
   "ability": "BERSERK",
   "nature": "Modest",
@@ -1399,25 +1285,6 @@
   "role": "attacker",
   "source": "your rules"
  },
- "Escavalier": {
-  "ability": "OVERCOAT",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Metal Coat",
-  "moves": [
-   "Iron Head",
-   "Knock Off",
-   "Drill Run",
-   "Protect"
-  ],
-  "move_ids": [
-   "IRONHEAD",
-   "KNOCKOFF",
-   "DRILLRUN"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Appletun": {
   "ability": "THICKFAT",
   "nature": "Modest",
@@ -1655,25 +1522,6 @@
    "PLAYROUGH",
    "CRUNCH",
    "WORKUP"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Machamp": {
-  "ability": "NOGUARD",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Belt",
-  "moves": [
-   "Dynamic Punch",
-   "Dual Chop",
-   "Strength",
-   "Protect"
-  ],
-  "move_ids": [
-   "DYNAMICPUNCH",
-   "DUALCHOP",
-   "STRENGTH"
   ],
   "role": "attacker",
   "source": "game"
@@ -2793,25 +2641,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Electivire": {
-  "ability": "MOTORDRIVE",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Black Belt",
-  "moves": [
-   "Cross Chop",
-   "Thunder Wave",
-   "Thunder Punch",
-   "Protect"
-  ],
-  "move_ids": [
-   "CROSSCHOP",
-   "THUNDERWAVE",
-   "THUNDERPUNCH"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Espeon": {
   "ability": "MAGICBOUNCE",
   "nature": "Timid",
@@ -3203,25 +3032,6 @@
    "SHADOWSNEAK",
    "ROCKTOMB",
    "FIREPUNCH"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Golem": {
-  "ability": "STURDY",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Soft Sand",
-  "moves": [
-   "Earthquake",
-   "Steamroller",
-   "Rock Polish",
-   "Protect"
-  ],
-  "move_ids": [
-   "EARTHQUAKE",
-   "STEAMROLLER",
-   "ROCKPOLISH"
   ],
   "role": "attacker",
   "source": "game"
@@ -5401,25 +5211,6 @@
    "DISCHARGE",
    "THUNDERWAVE",
    "FROSTBREATH"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Parasect (Aevian Form)": {
-  "ability": "RESUSCITATION",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Spell Tag",
-  "moves": [
-   "Sleep Powder",
-   "Phantom Force",
-   "X-Scissor",
-   "Protect"
-  ],
-  "move_ids": [
-   "SLEEPPOWDER",
-   "PHANTOMFORCE",
-   "XSCISSOR"
   ],
   "role": "attacker",
   "source": "game"

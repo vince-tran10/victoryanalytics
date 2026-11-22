@@ -18,8 +18,8 @@
      "Psychic"
     ],
     "setup": null,
-    "where": "Party",
-    "dump": 4,
+    "where": "Active",
+    "dump": 488,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -38,8 +38,8 @@
      "Bitter Malice"
     ],
     "setup": "Nasty Plot",
-    "where": "Party",
-    "dump": 3,
+    "where": "Active",
+    "dump": 518,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -57,9 +57,9 @@
   "pairs": [
    {
     "foe": "Murkrow",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
-    "dealt": 130,
+    "mon": "Veluza (Aevian Form)",
+    "ability": "RECKLESS",
+    "dealt": 100,
     "taken": 0,
     "ok": true,
     "setup": false,
@@ -80,12 +80,12 @@
    },
    {
     "foe": "Gothitelle",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
-    "dealt": 113,
-    "taken": 23,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 88,
+    "taken": 45,
     "ok": true,
-    "setup": false,
+    "setup": "Swords Dance",
     "wincons": [
      {
       "what": "Sleep",
@@ -130,10 +130,10 @@
    },
    {
     "foe": "Ninetales",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 130,
-    "taken": 44,
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 126,
+    "taken": 36,
     "ok": true,
     "setup": false,
     "wincons": [
@@ -159,8 +159,8 @@
   "weak3": [],
   "nores": [],
   "leads": [
-   "Gholdengo",
-   "Arcanine (Hisuian Form)"
+   "Arcanine (Hisuian Form)",
+   "Golisopod (Aevian Form)"
   ],
   "lead_foes": [
    "Murkrow",
@@ -185,26 +185,6 @@
   ],
   "swaps": [
    {
-    "name": "Zoroark (Hisuian Form)",
-    "ab": "ILLUSION",
-    "moves": [
-     "Bitter Malice"
-    ],
-    "setup": "Nasty Plot",
-    "where": "Party",
-    "dump": 3,
-    "nature": "Modest",
-    "evs": {
-     "SpA": 252,
-     "Spe": 252,
-     "Def": 4
-    },
-    "types": [
-     "NORMAL",
-     "GHOST"
-    ]
-   },
-   {
     "name": "Sylveon",
     "ab": "PIXILATE",
     "moves": [
@@ -213,7 +193,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 508,
+    "dump": 504,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -222,6 +202,28 @@
     },
     "types": [
      "FAIRY"
+    ]
+   },
+   {
+    "name": "Scrafty",
+    "ab": "MOXIE",
+    "moves": [
+     "Crunch",
+     "High Jump Kick",
+     "Fake Out"
+    ],
+    "setup": null,
+    "where": "Active",
+    "dump": 499,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "DARK",
+     "FIGHTING"
     ]
    }
   ],
@@ -260,30 +262,30 @@
    },
    {
     "foe": "Golisopod",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
-    "dealt": 82,
-    "taken": 547,
+    "mon": "Veluza (Aevian Form)",
+    "ability": "RECKLESS",
+    "dealt": 91,
+    "taken": 353,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Typhlosion",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
     "dealt": 130,
-    "taken": 247,
+    "taken": 156,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Banette",
-    "mon": "Zoroark (Hisuian Form)",
-    "ability": "ILLUSION",
-    "dealt": 130,
-    "taken": 58,
+    "mon": "Scrafty",
+    "ability": "MOXIE",
+    "dealt": 99,
+    "taken": 55,
     "ok": true,
     "setup": false,
     "wincons": []
@@ -318,16 +320,15 @@
   ],
   "swaps": [
    {
-    "name": "Scrafty",
-    "ab": "MOXIE",
+    "name": "Musharna (Aevian Form)",
+    "ab": "TOUGHCLAWS",
     "moves": [
-     "Crunch",
-     "High Jump Kick",
-     "Fake Out"
+     "Shadow Claw",
+     "Play Rough"
     ],
     "setup": null,
     "where": "Active",
-    "dump": 503,
+    "dump": 487,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -336,19 +337,19 @@
     },
     "types": [
      "DARK",
-     "FIGHTING"
+     "FAIRY"
     ]
    },
    {
-    "name": "Heatmor",
-    "ab": "GLUTTONY",
+    "name": "Frosmoth",
+    "ab": "ICESCALES",
     "moves": [
-     "Overheat",
+     "Bug Buzz",
      "Giga Drain"
     ],
-    "setup": null,
+    "setup": "Quiver Dance",
     "where": "Overflow",
-    "dump": 163,
+    "dump": 128,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -356,21 +357,22 @@
      "SpD": 4
     },
     "types": [
-     "FIRE"
+     "ICE",
+     "BUG"
     ]
    }
   ],
-  "counters": 4,
+  "counters": 3,
   "n": 6,
   "pairs": [
    {
     "foe": "Stoutland",
-    "mon": "Scrafty",
-    "ability": "MOXIE",
-    "dealt": 91,
-    "taken": 57,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 79,
+    "taken": 49,
     "ok": true,
-    "setup": false,
+    "setup": "Swords Dance",
     "wincons": [
      {
       "what": "Setup",
@@ -382,17 +384,17 @@
    },
    {
     "foe": "Appletun",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 65,
-    "taken": 47,
+    "mon": "Frosmoth",
+    "ability": "ICESCALES",
+    "dealt": 103,
+    "taken": 40,
     "ok": true,
-    "setup": "Swords Dance",
+    "setup": false,
     "wincons": [
      {
       "what": "Healing",
       "answers": [
-       "teach Gastro Acid (Heatmor)"
+       "teach Gastro Acid (Musharna)"
       ]
      }
     ]
@@ -409,38 +411,38 @@
      {
       "what": "Healing",
       "answers": [
-       "teach Gastro Acid (Heatmor)"
+       "teach Gastro Acid (Musharna)"
       ]
      }
     ]
    },
    {
     "foe": "Porygon-Z",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
-    "dealt": 77,
-    "taken": 75,
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 52,
+    "taken": 99,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Kommo-o",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 30,
-    "taken": 72,
+    "mon": "Musharna (Aevian Form)",
+    "ability": "TOUGHCLAWS",
+    "dealt": 125,
+    "taken": 70,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Klinklang",
-    "mon": "Heatmor",
-    "ability": "GLUTTONY",
-    "dealt": 115,
-    "taken": 48,
-    "ok": true,
+    "mon": "Veluza (Aevian Form)",
+    "ability": "RECKLESS",
+    "dealt": 107,
+    "taken": 118,
+    "ok": false,
     "setup": false,
     "wincons": [
      {
@@ -479,24 +481,24 @@
   ],
   "swaps": [
    {
-    "name": "Turtonator",
-    "ab": "SHELLARMOR",
+    "name": "Shedinja",
+    "ab": "WONDERGUARD",
     "moves": [
-     "Shell Trap",
-     "Dragon Pulse"
+     "Shadow Sneak",
+     "X-Scissor",
+     "Shadow Claw"
     ],
-    "setup": "Shell Smash",
-    "where": "Active",
-    "dump": 513,
-    "nature": "Modest",
+    "setup": null,
+    "where": "Overflow",
+    "dump": 323,
+    "nature": "Adamant",
     "evs": {
-     "SpA": 252,
-     "HP": 252,
-     "SpD": 4
+     "Atk": 252,
+     "Spe": 252
     },
     "types": [
-     "FIRE",
-     "DRAGON"
+     "BUG",
+     "GHOST"
     ]
    },
    {
@@ -508,7 +510,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 487,
+    "dump": 483,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -535,20 +537,20 @@
    },
    {
     "foe": "Raichu",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
-    "dealt": 129,
-    "taken": 47,
+    "mon": "Shedinja",
+    "ability": "WONDERGUARD",
+    "dealt": 130,
+    "taken": 0,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Magneton",
-    "mon": "Turtonator",
-    "ability": "SHELLARMOR",
-    "dealt": 92,
-    "taken": 38,
+    "mon": "Veluza (Aevian Form)",
+    "ability": "RECKLESS",
+    "dealt": 102,
+    "taken": 194,
     "ok": true,
     "setup": false,
     "wincons": []
@@ -587,14 +589,14 @@
   "weak3": [],
   "nores": [],
   "leads": [
-   "Gholdengo",
+   "Vaporeon",
    "Golisopod (Aevian Form)"
   ],
   "lead_foes": [
    "Electivire",
    "Raichu"
   ],
-  "lead_taken": 82,
+  "lead_taken": 75,
   "sim": null,
   "lead_ok": true,
   "note": "",

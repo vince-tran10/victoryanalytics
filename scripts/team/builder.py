@@ -22,7 +22,7 @@ def mname(k): return (MT.get(k) or {}).get('name', k.title())
 ALLM = {}
 for r in rows_all:
     if r['name'] not in ALLM: ALLM[r['name']] = Mon(r)
-core = [n for n in st['core'] if n in ALLM]
+core = [n if n in ALLM else None for n in st['core']]   # 22 Nov: a member he no longer owns leaves its slot empty
 SPREAD = ['MAKEITRAIN', 'HEATWAVE', 'EARTHQUAKE', 'ROCKSLIDE', 'MUDDYWATER', 'DAZZLINGGLEAM', 'HYPERVOICE', 'ICYWIND', 'BLIZZARD', 'DISCHARGE',
           'SURF', 'SLUDGEWAVE', 'ERUPTION', 'WATERSPOUT', 'SNARL', 'BREAKINGSWIPE', 'LAVAPLUME', 'BULLDOZE', 'ELECTROWEB', 'BOOMBURST', 'EXPANDINGFORCE']
 # Slot 1 = singles lead (Vincent, 22 Nov): faster > bulky, takes one hit, KOs in 1-2 hits. Measured vs EVERY trainer in the game data
@@ -117,9 +117,9 @@ def weak3(ms):
     return any(sum(m.mult[a] > 1 for m in ms) >= 3 for a in TYPES)
 out = []
 if len(core) == 4:
-    base = [ALLM[n] for n in core]
+    base = [ALLM[n] if n else None for n in core]
     for i, (title, needs) in enumerate(ROLES):
-        slot = i + 1; others = [m for j, m in enumerate(base) if j != i]
+        slot = i + 1; others = [m for j, m in enumerate(base) if j != i and m]
         res = []
         if slot == 1 and LEAD:
             res = []
@@ -129,9 +129,9 @@ if len(core) == 4:
                 if v['fast'] < .70 or v['ko'] < .65 or v['surv'] < .60 or weak3(others + [m]): continue
                 res.append((RK.get(m.r['tier'], 0), v['win'], v['fast'], m, lead_chips(m)))
             res.sort(key=lambda x: (-x[0], -x[1], -x[2]))
-            mine = base[i].name; pv = LEAD.get(mine, dict(win=0, fast=0))
+            mine = base[i].name if base[i] else None; pv = LEAD.get(mine, dict(win=0, fast=0))
             # yellow = a real alternative: same tier or higher, not in the core, fits the other three, clearly better lead (win +.05)
-            rec = next((x[3].name for x in sorted(res, key=lambda x: -x[1]) if x[3].name != mine and x[0] >= RK.get(base[i].r['tier'], 0)
+            rec = next((x[3].name for x in sorted(res, key=lambda x: -x[1]) if x[3].name != mine and x[0] >= (RK.get(base[i].r['tier'], 0) if base[i] else 0)
                         and x[1] >= pv['win'] + .05), None)
             top = [x for x in res if x[3].name not in (rec, mine)][:6 - len({rec, mine} - {None})]
             for want in (rec, mine):
@@ -153,7 +153,7 @@ if len(core) == 4:
         res.sort(key=lambda x: (-x[0], -x[1], -x[2]))
         names = [x[3].name for x in res]
         top = res[:6]
-        mine = base[i].name
+        mine = base[i].name if base[i] else None
         if mine not in [x[3].name for x in top]:
             hit = next((x for x in res if x[3].name == mine), None)
             if hit: top = top[:5] + [hit]
@@ -168,9 +168,10 @@ for s_ in out:
     rows = ''
     for c in s_['cands']:
         rows += ('<li class="bc' + (' pick' if c['pick'] else '') + (' rec' if c.get('rec') else '') + '"><div class="bct"><span class="tier t' + c['tier'] + '">' + c['tier'] + '</span>' + SP.tag(c['sid'], c['form'], size='s')
-                 + '<b>' + E(disp(c['name'])) + '</b>' + ('<span class="bpick">Your pick</span>' if c['pick'] else '') + ('<span class="brec">Also strong</span>' if c.get('rec') else '') + '</div>'
+                 + '<b>' + E(disp(c['name'])) + '</b>' + ('<span class="bpick">Your pick</span>' if c['pick'] else '') + ('<span class="brec">' + ('Recommended' if not s_['pick'] else 'Also strong') + '</span>' if c.get('rec') else '') + '</div>'
                  + '<div class="btools">' + ''.join('<span class="bstat">' + E(x) + '</span>' for x in c.get('stats', [])) + ''.join('<span class="btool">' + E(x) + '</span>' for x in c['tools']) + '</div></li>')
-    cards += ('<article class="bslot"><header><span class="bn">' + str(s_['slot']) + '</span><b>' + E(s_['title']) + '</b></header>'
+    cards += ('<article class="bslot"><header><span class="bn">' + str(s_['slot']) + '</span><b>' + E(s_['title']) + '</b>'
+              + ('<span class="bempty">Empty</span>' if not s_['pick'] else '') + '</header>'
               + '<ol class="bcands">' + rows + '</ol></article>')
 sec = ('<section aria-labelledby="sbuild">\n  <h2 id="sbuild">Team Builder</h2>\n'
        '  <div class="bgrid">' + cards + '</div>\n</section>\n')
@@ -179,4 +180,4 @@ page = re.sub(r'<section aria-labelledby="sbuild">.*?</section>\s*', '', page, f
 anchor = page.find('<section aria-labelledby="s1f">')
 page = page[:anchor] + sec + page[anchor:] if anchor >= 0 else page.replace('</main>', sec + '</main>')
 open(OUT, 'w', encoding='utf-8').write(page)
-print('builder:', [(s_['title'], disp(s_['pick']), s_.get('rec')) for s_ in out])
+print('builder:', [(s_['title'], s_['pick'], s_.get('rec')) for s_ in out])
