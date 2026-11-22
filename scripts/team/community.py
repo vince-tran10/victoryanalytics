@@ -10,14 +10,14 @@ rating 0-1 replaces the Smogon meta dominance (same scale: .95 = top meta, .7 = 
 'kit' = not discussed by the community: my rating from the kit vs real-meta analogs (said so on the page)."""
 AEVIAN = {
  'Golisopod': (.95, 'community', ['F1: "Best Bug type ever made"', 'F1: "tank like a champ and hit like a truck"', 'F3: "Especially strong against shielded foes"']),
- 'Veluza':    (.78, 'kit', ['Not discussed by the community', 'Kit: Fillet Away +2 Atk / SpA / Spe with Reckless Wave Crash + Flare Blitz', 'Kit: frail (60 / 60 defences)']),
+ 'Veluza':    (.78, 'kit', ['Not discussed by the community', 'Kit: Reckless Wave Crash + Flare Blitz (x1.2)', 'Kit: Head Smash covers Water and Dragon', 'Kit: frail (60 / 60 defences)', 'Fillet Away left out: it halves HP on that frame']),
  'Glalie':    (.74, 'community', ['F1: "Do not sleep on Grassy Glide Grassy Terrain Glalie"', 'F1: Rock Head Head Smash under Trick Room "smashes"']),
  'Musharna':  (.50, 'community', ['F2: "Much better Dark/Fairy typing"', 'F2: "nonexistent speed: mostly a Trick Room Pokemon. It is alright"']),
  'Lapras':    (.70, 'community', ['F2: "utilise No Guard to use very powerful moves like Sing, Zap Cannon, Blizzard"', 'F1: "can utilize No Guard really well"', 'F2: "stat spread is still garbage"']),
  'Drapion':   (.60, 'kit', ['Not discussed by the community', 'Kit: Fur Coat halves physical damage', 'Kit: Merciless crits on poisoned foes']),
- 'Froslass':  (.74, 'community', ['F1: "basically carried me" with Muddy Water', 'F3: Adaptability Water Spout "can do her job even in late game"']),
+ 'Froslass':  (.74, 'community', ['F1: "basically carried me" with Muddy Water', 'F3: Adaptability Muddy Water / Water Spout "can do her job even in late game"', 'Water Spout is not legal yet: Hydro Pump instead']),
  'Gastrodon': (.40, 'community', ['F1: the form posters are "more conflicted" about']),
- 'Toxtricity':(.66, 'community', ['F1: "Galvanize boosted Boombursts are ridiculous"', 'F2: "a special attacker. That is kinda it"']),
+ 'Toxtricity':(.66, 'community', ['F1: "Galvanize boosted Boombursts are ridiculous"', 'F2: "a special attacker. That is kinda it"', 'Build: Punk Rock Boomburst (x1.3) scored higher than Galvanize']),
  'Palossand': (.30, 'community', ['F2: "would not even bother with them"', 'F1: "there are better choices"']),
  'Ampharos':  (.50, 'community', ['F1: "Trick Room god" with its Crest (not owned)', 'F2: "kinda bad normally"']),
  'Roserade':  (.75, 'community', ['F1: "ridiculously strong priority Vacuum Wave"', 'F2: "pretty strong overall"']),

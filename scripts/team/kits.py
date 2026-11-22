@@ -3,7 +3,7 @@ import json, os, re
 KIT = {
  'Golisopod': (3, 'Skill Link: Bone Rush (Lv 41) always hits 5× = 125 BP Ground STAB; Pin Missile (Lv 21) 125 BP Bug. Swords Dance Lv 16, Headlong Rush Lv 48',
                'Skill Link Cloyster / Cinccino: multi-hits break Sash, Sturdy, Substitute', '125 Atk / 130 Def, but base 50 Speed'),
- 'Veluza': (3, 'Fillet Away (Lv 30): +2 Atk / SpA / Speed for half its HP. Reckless Wave Crash (Lv 45) + Flare Blitz (Lv 40) ×1.2, Extreme Speed Lv 50',
+ 'Veluza': (3, 'Reckless Wave Crash (Lv 45) + Flare Blitz (Lv 40) ×1.2, Head Smash coverage; Fillet Away (Lv 30) left out: halves HP on 60 / 60 defences',
             'Shell Smash / Belly Drum sweepers (Cloyster, Azumarill) with Water + Fire STAB', '60 / 60 defences: needs a free turn, recoil adds up'),
  'Glalie': (2, 'Grassy Surge on entry: Grass moves ×1.3 + heal every turn. Grassy Glide (Move Relearner) = priority in terrain; Wood Hammer Lv 48',
             'Rillaboom (Grassy Surge + Grassy Glide, OU / VGC staple)', 'Weak to Bug, Fighting, Ice, Poison, Steel; base 50 Speed'),

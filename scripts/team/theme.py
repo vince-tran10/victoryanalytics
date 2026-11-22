@@ -668,10 +668,11 @@ for r in T.values():
     _why = why_tier(r, ab_id, mv_)
     DEX[d_] = dict(t=r['tier'], s=r['blend'], m=meta_top(r['meta_label']), ty=r['types'], b=r['base'], bp=[_pct(k, r['base'][k]) for k in _STATS],
                    a=ab_, n=nat_txt(nat_), e=evs_, mv=mv_, it=it_, src=src_, why=_why, y=yours, sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])
+TMJS = '\n<script>\n(function(){   /* 22 Nov (Vincent): Builder type matrix: ticked Pokémon x attacking types */\n  var el = document.getElementById(\'tmdata\'), tb = document.getElementById(\'tmx\'); if (!el || !tb) return;\n  var D = JSON.parse(el.textContent), KEY = \'tm-sel\', sel = null;\n  try { sel = JSON.parse(localStorage.getItem(KEY) || \'null\'); } catch (e) {}\n  var boxes = function(){ return Array.prototype.slice.call(document.querySelectorAll(\'input[data-tm]\')); };\n  if (sel) boxes().forEach(function(b){ b.checked = sel.indexOf(b.dataset.tm) >= 0; });\n  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {\'&\':\'&amp;\',\'<\':\'&lt;\',\'>\':\'&gt;\',\'"\':\'&quot;\'}[c]; }); }\n  function fmt(m){ return m === 0 ? \'0\' : m === 0.25 ? \'¼\' : m === 0.5 ? \'½\' : m === 1 ? \'\' : m + \'×\'; }\n  function cls(m){ return m === 0 ? \'im\' : m < 1 ? \'rs\' : m > 2 ? \'w4\' : m > 1 ? \'wk\' : \'\'; }\n  function draw(){\n    var names = []; boxes().forEach(function(b){ if (b.checked && names.indexOf(b.dataset.tm) < 0 && D.mons[b.dataset.tm]) names.push(b.dataset.tm); });\n    try { localStorage.setItem(KEY, JSON.stringify(names)); } catch (e) {}\n    boxes().forEach(function(b){ b.checked = names.indexOf(b.dataset.tm) >= 0; });\n    if (!names.length) { tb.innerHTML = \'<tr><td class="tmx-empty">No Pokémon ticked</td></tr>\'; return; }\n    var h = \'<thead><tr><th>Type</th>\' + names.map(function(n){ return \'<th title="\' + esc(n) + \'"><i class="spr sp-\' + D.mons[n].sp + \'" aria-hidden="true"></i><span>\' + esc(n) + \'</span></th>\'; }).join(\'\') + \'<th>Weak</th><th>Resist</th></tr></thead><tbody>\';\n    D.types.forEach(function(t){\n      var w = 0, r = 0, cells = names.map(function(n){ var m = D.mons[n].m[t]; if (m > 1) w++; if (m < 1) r++; return \'<td class="\' + cls(m) + \'">\' + fmt(m) + \'</td>\'; }).join(\'\');\n      h += \'<tr><th class="tp ty-\' + t.toLowerCase() + \'">\' + t + \'</th>\' + cells + \'<td class="cnt\' + (w >= 3 ? \' bad\' : w >= 2 ? \' meh\' : \'\') + \'">\' + (w || \'\') + \'</td><td class="cnt\' + (r === 0 && w ? \' bad\' : r ? \' ok\' : \'\') + \'">\' + (r || \'\') + \'</td></tr>\';\n    });\n    tb.innerHTML = h + \'</tbody>\';\n  }\n  document.addEventListener(\'change\', function(e){ if (e.target.matches(\'input[data-tm]\')) { var on = e.target.checked, n = e.target.dataset.tm; boxes().forEach(function(b){ if (b.dataset.tm === n) b.checked = on; }); draw(); } });\n  draw();\n})();\n</script>'
 SHEET = ('<div class="sheet" id="dexsheet" hidden><div class="sheet-bg" data-close></div><div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="ds-name">'
          '<button type="button" class="sheet-x" data-close aria-label="Close">×</button><div id="ds-body"></div></div></div>'
          '<script type="application/json" id="dexdata">' + json.dumps(DEX).replace('</', '<\\/') + '</script>')
-page = page.replace('</body>', SHEET + '</body>') if '</body>' in page else page + SHEET
+page = page.replace('</body>', SHEET + TMJS + '</body>') if '</body>' in page else page + SHEET + TMJS
 
 # ---------------------------------------------------------------- Dex as a real tier list (Vincent, 22 Nov): "S Tier" etc., icon + name tiles
 def dex_tiles(kind):
@@ -909,6 +910,17 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .bc { display: grid; gap: 3px; padding: 5px 8px; border-radius: 10px; background: var(--panel-2); font-size: 13px } .bct { display: flex; align-items: center; gap: 6px }
 .bempty { margin-left: auto; font: 700 10px var(--body); text-transform: uppercase; letter-spacing: .04em; color: var(--bad, #b91c1c) }
 .bwhy { padding-left: 30px; font-size: 12px; margin-top: 2px } .bwhy b { font: 700 11px var(--body); color: var(--warn) } .bwhy ul { margin: 2px 0 0; padding-left: 16px }
+.bc[data-dn] { cursor: pointer } .bc[data-dn]:hover { filter: brightness(1.04) }
+.bteach { font: 600 10.5px var(--body); padding: 0 6px; border-radius: 99px; border: 1px dashed var(--muted); color: var(--muted) }
+.bchk { display: grid; place-items: center; width: 20px } .bchk input { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer }
+.tmx { min-width: 0; max-width: 100%; overflow: hidden; margin-top: 16px; background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; box-shadow: var(--shadow) }
+.tmx h3 { margin: 0 0 8px; font: 700 16px var(--display) } .tmx-wrap { overflow-x: auto; max-width: 100% }
+.tmx-t { border-collapse: collapse; font: 600 12px var(--body); min-width: 100% } .tmx-t th, .tmx-t td { padding: 3px 5px; text-align: center; border-bottom: 1px solid var(--line) }
+.tmx-t thead th { font-size: 10.5px; vertical-align: bottom; max-width: 64px } .tmx-t thead th span { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.tmx-t th.tp { text-align: left; white-space: nowrap; font-size: 11px; color: #fff; border-radius: 6px; text-shadow: 0 1px 1px rgba(0,0,0,.35) }
+.tmx-t td.wk { background: var(--bad-soft); color: var(--bad) } .tmx-t td.w4 { background: var(--bad); color: var(--panel) }
+.tmx-t td.rs { background: var(--good-soft); color: var(--good) } .tmx-t td.im { background: var(--good); color: var(--panel) }
+.tmx-t td.cnt.bad { color: var(--bad); font-weight: 800 } .tmx-t td.cnt.meh { color: var(--warn) } .tmx-t td.cnt.ok { color: var(--good) } .tmx-empty { color: var(--muted) }
 .ds-diff { color: var(--bad, #b91c1c); font-weight: 700 }
 .bc.pick.rec { outline: 2px solid #eab308; outline-offset: 2px } .bc.rec { outline: 2px solid #eab308; background: var(--warn-soft) } .brec { margin-left: auto; font: 700 10px var(--body); letter-spacing: .04em; text-transform: uppercase; color: var(--warn) }
 .bstat { font: 600 10.5px var(--body); padding: 1px 7px; border-radius: 99px; background: rgba(127,127,127,.16); color: var(--ink) }
@@ -1047,6 +1059,7 @@ details.ckref { display: block }
 }
 footer { max-width: 1120px; margin: 0 auto; padding: 0 max(16px, env(safe-area-inset-right, 0px)) 0 max(16px, env(safe-area-inset-left, 0px)) }
 </style>'''
+CSS = CSS.replace('</style>', ''.join(f'.tmx-t th.ty-{k.lower()} {{ background: {v} }} ' for k, v in TYPE.items()) + '</style>', 1)
 DEXJS = r'''<script id="dex-js">
 (function(){
   var el = document.getElementById('dexdata'); if (!el) return;
@@ -1073,6 +1086,8 @@ DEXJS = r'''<script id="dex-js">
   document.addEventListener('click', function(e){
     if (e.target.closest('[data-close]')) { close(); return; }
     var tile = e.target.closest('.dtile'); if (tile) { open(tile.dataset.dn); return; }
+    if (e.target.closest('.bchk')) return;   // the type-matrix checkbox, not the card
+    var bcard = e.target.closest('.bc[data-dn]'); if (bcard) { open(bcard.dataset.dn); return; }
     var tr = e.target.closest('.tlx tbody tr'); if (!tr) return;
     var b = tr.querySelector('b'); if (b) open(b.textContent.trim());
   });

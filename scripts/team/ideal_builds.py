@@ -30,6 +30,10 @@ FIXED = {'Lapras (Aevian Form)': dict(ability='NOGUARD', moves=['Rock Slide', 'Z
          # Alomomola = mid-game Wish / Regenerator support (no Flip Turn / Liquidation legal: Aqua Jet STAB + Wake-Up Slap)
          'Amoonguss': dict(ability='REGENERATOR', moves=['Spore', 'Rage Powder', 'Sludge Bomb', 'Protect'], item='Sitrus Berry', nature='Modest', evs='252 HP / 252 SpA', role='support'),
          'Alomomola': dict(ability='REGENERATOR', moves=['Wish', 'Aqua Jet', 'Wake-Up Slap', 'Protect'], item='Sitrus Berry', nature='Adamant', evs='252 HP / 252 Atk', role='support'),
+         # 22 Nov: Aevian builds = the community's best use of the kit (community.py), so the rating and the build match
+         'Glalie (Aevian Form)': dict(ability='GRASSYSURGE', moves=['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'], item='Miracle Seed', nature='Adamant', evs='252 HP / 252 Atk'),
+         'Froslass (Aevian Form)': dict(ability='ADAPTABILITY', moves=['Hydro Pump', 'Muddy Water', 'Giga Drain', 'Protect'], item='Mystic Water', nature='Timid', evs='252 SpA / 252 Spe'),
+         'Unfezant (Aevian Form Male)': dict(ability='ROCKHEAD', moves=['Head Smash', 'Brick Break', 'Rock Slide', 'Protect'], item='Hard Stone', nature='Jolly', evs='252 Atk / 252 Spe'),
          'Ceruledge': dict(ability=None, moves=['Bitter Blade', 'Shadow Claw', 'Swords Dance', 'Protect'], item='Focus Sash', nature='Jolly', evs='252 Atk / 252 Spe')}
 NO = {'PROTECT', 'DETECT', 'TRICK', 'SWITCHEROO', 'FLING', 'LASTRESORT', 'FRUSTRATION', 'RETURN', 'HIDDENPOWER', 'NATUREPOWER',
       'SECRETPOWER', 'SOLARBEAM', 'SKYATTACK', 'FOCUSPUNCH', 'EXPLOSION', 'SELFDESTRUCT', 'FINALGAMBIT', 'MEMENTO', 'HEALINGWISH',

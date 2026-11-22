@@ -94,6 +94,14 @@ def kit(m):
     x = next((mname(y) for y in bm if y in PRIO), None)
     if x: out_.append(f'Priority: {x}')
     return out_
+ABIL_CHIPS = ('Intimidate', 'Regenerator', 'Blocks status moves', 'Speed Boost', 'Moxie', 'Beast Boost', 'status-proof')
+def teach_split(m, chips):   # 22 Nov (Vincent): chips must match the build: move chips not in its build become "Teach: X"
+    bm = set(build_moves(m.name)); have, teach = [], []
+    for x in chips:
+        mv = x.split(': ')[-1].split(' (')[0]
+        if x in ABIL_CHIPS or x.startswith(('Spread:',)) or _id(mv) in bm or not any(_id(mv) == k for k in MT): have.append(x)
+        else: teach.append(mv)
+    return have, teach
 def merge(a, b):   # role tools first, then kit chips naming a move not already shown
     seen = {x.split(': ')[-1].split(' (')[0] for x in a}
     return a + [x for x in b if x.split(': ')[-1] not in seen]
@@ -169,6 +177,7 @@ if len(core) == 4:
             out.append(dict(slot=slot, title=title, pick=mine, rec=rec,
                             cands=[dict(name=m.name, tier=m.r['tier'], stats=ch[0], tools=ch[1], sid=m.r.get('sid'), form=str(m.r.get('form', '0')),
                                         pick=m.name == mine, rec=m.name == rec) for _, _, _, m, ch in top]))
+            for c in out[-1]['cands']: c['tools'], c['teach'] = teach_split(ALLM[c['name']], c['tools'])
             continue
         for m in ALLM.values():
             if m.sp in {o.sp for o in others}: continue
@@ -233,6 +242,7 @@ if len(core) == 4:
                         cands=[dict(name=m.name, tier=m.r['tier'], stats=_st(m)[0], tools=merge([x for x in t if not x.startswith('spread')] + _st(m)[1], kit(m)),
                                     sid=m.r.get('sid'), form=str(m.r.get('form', '0')), pick=m.name == mine, rec=m.name == rec)
                                for _, _, _, m, t in top]))
+        for c in out[-1]['cands']: c['tools'], c['teach'] = teach_split(ALLM[c['name']], c['tools'])
 json.dump(dict(core=core, slots=out), open('team/builder.json', 'w'), indent=1, ensure_ascii=False)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sprites as SP
@@ -240,16 +250,27 @@ cards = ''
 for s_ in out:
     rows = ''
     for c in s_['cands']:
-        rows += ('<li class="bc' + (' pick' if c['pick'] else '') + (' rec' if c.get('rec') else '') + '"><div class="bct"><span class="tier t' + c['tier'] + '">' + c['tier'] + '</span>' + SP.tag(c['sid'], c['form'], size='s')
+        rows += ('<li class="bc' + (' pick' if c['pick'] else '') + (' rec' if c.get('rec') else '') + '" data-dn="' + E(disp(c['name'])) + '" tabindex="0" role="button"><div class="bct">'
+                 + '<label class="bchk" title="Add to the type matrix"><input type="checkbox" data-tm="' + E(disp(c['name'])) + '"' + (' checked' if c['pick'] else '') + '></label>'
+                 + '<span class="tier t' + c['tier'] + '">' + c['tier'] + '</span>' + SP.tag(c['sid'], c['form'], size='s')
                  + '<b>' + E(disp(c['name'])) + '</b>' + ('<span class="bpick">Your pick</span>' if c['pick'] else '') + ('<span class="brec">Suggested</span>' if c.get('rec') else '') + '</div>'
-                 + '<div class="btools">' + ''.join('<span class="bstat">' + E(x) + '</span>' for x in c.get('stats', [])) + ''.join('<span class="btool">' + E(x) + '</span>' for x in c['tools']) + '</div>'
+                 + '<div class="btools">' + ''.join('<span class="bstat">' + E(x) + '</span>' for x in c.get('stats', [])) + ''.join('<span class="btool">' + E(x) + '</span>' for x in c['tools']) + ''.join('<span class="bteach">Teach: ' + E(x) + '</span>' for x in c.get('teach', [])) + '</div>'
                  + (''.join('<div class="bwhy"><b>Why not ' + E(w['name']) + ' (' + w['tier'] + ')</b><ul>' + ''.join('<li>' + E(l) + '</li>' for l in w['lines']) + '</ul></div>'
                             for w in s_.get('why') or [] if w['lines']) if c.get('rec') else '') + '</li>')
     cards += ('<article class="bslot"><header><span class="bn">' + str(s_['slot']) + '</span><b>' + E(s_['title']) + '</b>'
               + ('<span class="bempty">Empty</span>' if not s_['pick'] else '') + '</header>'
               + '<ol class="bcands">' + rows + '</ol></article>')
+# 22 Nov (Vincent): type matrix at the bottom; tick a Pokémon's box to add it (your 4 picks start ticked)
+_tm = {}
+for s_ in out:
+    for c in s_['cands']:
+        m = ALLM.get(c['name'])
+        if m: _tm[disp(c['name'])] = dict(t=[x.title() for x in m.r['types']], m={a.title(): m.mult[a] for a in TYPES}, sp=SP.cls(c['sid'], c['form'])[3:])
+TM = ('<div class="tmx"><h3>Type matrix</h3>'
+      '<div class="tmx-wrap"><table class="tmx-t" id="tmx"></table></div></div>'
+      '<script type="application/json" id="tmdata">' + json.dumps(dict(types=[a.title() for a in TYPES], mons=_tm)).replace('</', '<\\/') + '</script>')
 sec = ('<section aria-labelledby="sbuild">\n  <h2 id="sbuild">Team Builder</h2>\n'
-       '  <div class="bgrid">' + cards + '</div>\n</section>\n')
+       '  <div class="bgrid">' + cards + '</div>\n' + TM + '\n</section>\n')
 page = open(OUT, encoding='utf-8').read()
 page = re.sub(r'<section aria-labelledby="sbuild">.*?</section>\s*', '', page, flags=re.S)
 anchor = page.find('<section aria-labelledby="s1f">')

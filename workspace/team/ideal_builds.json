@@ -117,11 +117,11 @@
   "ability": "GRASSYSURGE",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Hard Stone",
+  "item": "Miracle Seed",
   "moves": [
-   "Rock Slide",
+   "Grassy Glide",
    "Wood Hammer",
-   "Helping Hand",
+   "Rock Slide",
    "Protect"
   ],
   "move_ids": [
@@ -130,7 +130,7 @@
    "HELPINGHAND"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "your rules"
  },
  "Hariyama": {
   "ability": "GUTS",
@@ -1305,6 +1305,25 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Unfezant (Aevian Form Male)": {
+  "ability": "ROCKHEAD",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Hard Stone",
+  "moves": [
+   "Head Smash",
+   "Brick Break",
+   "Rock Slide",
+   "Protect"
+  ],
+  "move_ids": [
+   "ROCKSLIDE",
+   "STEALTHROCK",
+   "BRICKBREAK"
+  ],
+  "role": "attacker",
+  "source": "your rules"
  },
  "Vaporeon": {
   "ability": "WATERABSORB",
@@ -4062,25 +4081,6 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Unfezant (Aevian Form Male)": {
-  "ability": "STURDY",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Hard Stone",
-  "moves": [
-   "Rock Slide",
-   "Stealth Rock",
-   "Brick Break",
-   "Protect"
-  ],
-  "move_ids": [
-   "ROCKSLIDE",
-   "STEALTHROCK",
-   "BRICKBREAK"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Sirfetch'd": {
   "ability": "STEADFAST",
   "nature": "Adamant",
@@ -4420,25 +4420,6 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
- },
- "Froslass (Aevian Form)": {
-  "ability": "ADAPTABILITY",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Miracle Seed",
-  "moves": [
-   "Soak",
-   "Bullet Seed",
-   "Hydro Pump",
-   "Protect"
-  ],
-  "move_ids": [
-   "SOAK",
-   "BULLETSEED",
-   "HYDROPUMP"
-  ],
-  "role": "attacker",
-  "source": "game"
  },
  "Coalossal": {
   "ability": "STEAMENGINE",
@@ -5778,6 +5759,25 @@
   ],
   "role": "support",
   "source": "your team"
+ },
+ "Froslass (Aevian Form)": {
+  "ability": "ADAPTABILITY",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe",
+  "item": "Mystic Water",
+  "moves": [
+   "Hydro Pump",
+   "Muddy Water",
+   "Giga Drain",
+   "Protect"
+  ],
+  "move_ids": [
+   "SOAK",
+   "HYDROPUMP",
+   "GIGADRAIN"
+  ],
+  "role": "attacker",
+  "source": "your rules"
  },
  "Parasect": {
   "ability": "DRYSKIN",

@@ -22,13 +22,14 @@
       "Weak to 3 types",
       "Single target only"
      ],
-     "tools": [
-      "Priority: Extreme Speed"
-     ],
+     "tools": [],
      "sid": "VELUZA",
      "form": "1",
      "pick": true,
-     "rec": true
+     "rec": true,
+     "teach": [
+      "Extreme Speed"
+     ]
     },
     {
      "name": "Toxtricity (Aevian Form)",
@@ -40,13 +41,15 @@
       "Weak to 4 types"
      ],
      "tools": [
-      "Spread: Boomburst",
-      "Taunt"
+      "Spread: Boomburst"
      ],
      "sid": "TOXTRICITY",
      "form": "2",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": [
+      "Taunt"
+     ]
     },
     {
      "name": "Arcanine (Hisuian Form)",
@@ -65,7 +68,8 @@
      "sid": "ARCANINE",
      "form": "1",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": []
     },
     {
      "name": "Arcanine",
@@ -84,7 +88,8 @@
      "sid": "ARCANINE",
      "form": "0",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": []
     },
     {
      "name": "Typhlosion",
@@ -96,13 +101,15 @@
       "Weak to 3 types"
      ],
      "tools": [
-      "Spread: Eruption",
-      "Priority: Quick Attack"
+      "Spread: Eruption"
      ],
      "sid": "TYPHLOSION",
      "form": "0",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": [
+      "Quick Attack"
+     ]
     },
     {
      "name": "Espeon",
@@ -115,13 +122,15 @@
       "Single target only"
      ],
      "tools": [
-      "Priority: Quick Attack",
       "Recovery: Morning Sun"
      ],
      "sid": "ESPEON",
      "form": "0",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": [
+      "Quick Attack"
+     ]
     }
    ]
   },
@@ -147,7 +156,8 @@
      "sid": "ARCANINE",
      "form": "1",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": []
     },
     {
      "name": "Amoonguss",
@@ -164,7 +174,8 @@
      "sid": "AMOONGUSS",
      "form": "0",
      "pick": true,
-     "rec": true
+     "rec": true,
+     "teach": []
     },
     {
      "name": "Clefable",
@@ -175,13 +186,15 @@
       "Single target only"
      ],
      "tools": [
-      "Follow Me",
       "Status: Thunder Wave"
      ],
      "sid": "CLEFABLE",
      "form": "0",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": [
+      "Follow Me"
+     ]
     },
     {
      "name": "Leavanny (Aevian Form)",
@@ -193,13 +206,15 @@
      ],
      "tools": [
       "Intimidate",
-      "Rage Powder",
       "Setup: Swords Dance"
      ],
      "sid": "LEAVANNY",
      "form": "1",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": [
+      "Rage Powder"
+     ]
     },
     {
      "name": "Arcanine",
@@ -216,7 +231,8 @@
      "sid": "ARCANINE",
      "form": "0",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": []
     },
     {
      "name": "Scrafty",
@@ -233,7 +249,8 @@
      "sid": "SCRAFTY",
      "form": "0",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": []
     }
    ]
   },
@@ -253,14 +270,16 @@
       "Single target only"
      ],
      "tools": [
-      "Slack Off",
       "Regenerator",
       "Pivot: Chilly Reception"
      ],
      "sid": "SLOWKING",
      "form": "1",
      "pick": false,
-     "rec": true
+     "rec": true,
+     "teach": [
+      "Slack Off"
+     ]
     },
     {
      "name": "Muk (Alolan Form)",
@@ -271,14 +290,16 @@
       "Single target only"
      ],
      "tools": [
-      "Haze",
       "Stat reset: Clear Smog",
       "Disrupt: Knock Off"
      ],
      "sid": "MUK",
      "form": "1",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": [
+      "Haze"
+     ]
     },
     {
      "name": "Lapras (Aevian Form)",
@@ -288,8 +309,6 @@
       "Weak to 7 types"
      ],
      "tools": [
-      "Roar",
-      "Teleport",
       "Spread: Rock Slide",
       "Status: Sing",
       "Setup: Dragon Dance"
@@ -297,7 +316,11 @@
      "sid": "LAPRAS",
      "form": "1",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": [
+      "Roar",
+      "Teleport"
+     ]
     },
     {
      "name": "Alomomola",
@@ -315,7 +338,8 @@
      "sid": "ALOMOMOLA",
      "form": "0",
      "pick": true,
-     "rec": false
+     "rec": false,
+     "teach": []
     },
     {
      "name": "Slowbro",
@@ -332,7 +356,8 @@
      "sid": "SLOWBRO",
      "form": "0",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": []
     },
     {
      "name": "Slowking",
@@ -342,7 +367,6 @@
       "Weak to 5 types"
      ],
      "tools": [
-      "Slack Off",
       "Regenerator",
       "Spread: Surf",
       "Pivot: Chilly Reception"
@@ -350,7 +374,10 @@
      "sid": "SLOWKING",
      "form": "0",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": [
+      "Slack Off"
+     ]
     }
    ]
   },
@@ -375,7 +402,8 @@
      "sid": "GOLISOPOD",
      "form": "1",
      "pick": true,
-     "rec": true
+     "rec": true,
+     "teach": []
     },
     {
      "name": "Slowking (Galarian Form)",
@@ -386,13 +414,15 @@
       "Single target only"
      ],
      "tools": [
-      "Nasty Plot (+2)",
       "Pivot: Chilly Reception"
      ],
      "sid": "SLOWKING",
      "form": "1",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": [
+      "Nasty Plot"
+     ]
     },
     {
      "name": "Muk (Alolan Form)",
@@ -403,14 +433,16 @@
       "Single target only"
      ],
      "tools": [
-      "Curse (+1)",
       "Stat reset: Clear Smog",
       "Disrupt: Knock Off"
      ],
      "sid": "MUK",
      "form": "1",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": [
+      "Curse"
+     ]
     },
     {
      "name": "Zoroark (Hisuian Form)",
@@ -427,7 +459,8 @@
      "sid": "ZOROARK",
      "form": "1",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": []
     },
     {
      "name": "Zoroark",
@@ -437,13 +470,14 @@
       "Weak to 3 types",
       "Single target only"
      ],
-     "tools": [
-      "Nasty Plot (+2)"
-     ],
+     "tools": [],
      "sid": "ZOROARK",
      "form": "0",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": [
+      "Nasty Plot"
+     ]
     },
     {
      "name": "Ninetales (Alolan Form)",
@@ -453,14 +487,16 @@
       "Weak to 4 types"
      ],
      "tools": [
-      "Nasty Plot (+2)",
       "Spread: Blizzard",
       "Screens: Aurora Veil"
      ],
      "sid": "NINETALES",
      "form": "1",
      "pick": false,
-     "rec": false
+     "rec": false,
+     "teach": [
+      "Nasty Plot"
+     ]
     }
    ]
   }

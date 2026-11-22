@@ -198,6 +198,11 @@ damage score and the fight's real win condition was only read after Vincent lost
   tier in that slot, its card lists 'Why not X (tier)' lines (role tools, weaknesses, resists, shared weaknesses, phys/spec balance).
   Dex sheet (22 Nov) ALWAYS shows the ideal build (team members: the role build), one line per move; party lines that differ show
   '(yours: X)' + 'Replace yours: ...'. Dark mode: Builder uses --panel / --panel-2 / --warn tokens.
+  Builder cards (22 Nov): tap = the SAME Dex sheet (ideal build); green chips = what the BUILD runs, dashed 'Teach: X' = a role
+  tool it can learn but its build lacks (builder.teach_split). Checkbox per card -> TYPE MATRIX at the bottom (18 attacking types x
+  ticked Pokémon, weak / resist counts; his 4 picks ticked by default; selection kept in localStorage). Build and rating text must
+  agree: Aevian community best-use builds are FIXED in ideal_builds.py (Glalie-A Grassy Glide, Froslass-A Muddy Water, Unfezant-A
+  Rock Head Head Smash); Veluza-A text says Fillet Away is left out.
   RED outline = his pick. YELLOW 'Suggested' = MY pick for EVERY slot (Vincent 22 Nov): tier rank + role fit (slot 1 lead win;
   2/3 role tool count; 4 boost size capped at +2) + 0.1 x (resists - weaknesses); both outlines when they agree.
   Key-detail chips on every slot (22 Nov): grey = resists / weak / 'Single target only'; green = role tools + what its build RUNS
