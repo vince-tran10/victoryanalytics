@@ -4,7 +4,7 @@
   blend   = 0.6 fight + 0.4 general -> tiers S/A/B/C/D by fixed cut-offs.
 Also stores per-fight scores and the Ch9 foes each Pokémon counters (>= 90% dealt, < 70% taken) for the Cores tab.
 usage (from workspace/): BASE_RUN=r103 CREST_RUN=rc103 DONE=... python3 -I ../scripts/team/tier_all.py  -> team/tier_all.json"""
-import json, os, pickle, sys
+import json, os, pickle, re, sys
 sys.argv = ['x', '.', '20']
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 os.environ.setdefault('CR_RUN', os.environ.get('BASE_RUN', 'r103'))
@@ -49,21 +49,50 @@ def counters(c):
     return sorted(set(out))
 
 
+FW = {'gen9ou-1695': 1.0, 'gen9nationaldex-1630': .95, 'gen9uu-1630': .62, 'gen9nationaldexuu-1630': .58, 'gen9ru-1630': .42, 'gen9nu-1630': .3,
+      'gen9doublesou-1695': 1.0, 'gen9vgc2024regg-1630': 1.0, 'gen9nationaldexdoubles-1500': .9}
+FLAB = {'gen9ou-1695': 'OU', 'gen9nationaldex-1630': 'NatDex OU', 'gen9uu-1630': 'UU', 'gen9nationaldexuu-1630': 'NatDex UU', 'gen9ru-1630': 'RU',
+        'gen9nu-1630': 'NU', 'gen9doublesou-1695': 'Doubles OU', 'gen9vgc2024regg-1630': 'VGC', 'gen9nationaldexdoubles-1500': 'NatDex Doubles'}
+SING = ['gen9ou-1695', 'gen9nationaldex-1630', 'gen9uu-1630', 'gen9nationaldexuu-1630', 'gen9ru-1630', 'gen9nu-1630']
+DOUB = ['gen9doublesou-1695', 'gen9vgc2024regg-1630', 'gen9nationaldexdoubles-1500']
+
+
+COMBO_DEP = {'Tatsugiri': 'DONDOZO'}
+try:
+    import current_box as _cb
+    OWNED_SP = {re.sub(r'[^A-Z]', '', d_['species'].split('-')[0].upper()) for d_ in _cb.parse(json.load(open('team/state.json'))['export'])}
+except Exception:
+    OWNED_SP = set()
+
+
 def meta_of(name, sp, op):
+    """22 Nov (Vincent): META DOMINANCE = Smogon usage weighted by how high the format is (OU / VGC 1.0 ... NU .3), singles and
+    doubles (best + 0.25 x the other); banned to Ubers (Ubers set, no OU usage) counts .95; Aevians by their kit's OP stars."""
     if 'Aevian' in name:
         stars = AEV_OP.get(sp, 1)
         return {3: .85, 2: .68, 1: .45}[stars], f"Aevian kit {'★' * stars}"
-    sd = SM.sd_name(name.replace(' (Hisuian Form)', '-Hisui').replace(' (Paldean Form)', '-Paldea'))
-    if not sd: return .3, 'no meta data'
-    m = SM.meta(sd); best, lab = 0, []
-    for f, w in TIER_W.items():
-        if sd in SM.SETS.get(f, {}):
-            if w > best: best = w
-            lab.append(LABEL[f])
-    use = max((m['singles_usage'] or {}).get('usage', 0), (m['doubles_usage'] or {}).get('usage', 0))
-    if not best:
-        return (.25 + min(.15, use / 20)), (f'usage {use:.1f}%' if use else 'unranked')
-    return min(1.0, best + min(.1, use / 100)), ' · '.join(dict.fromkeys(lab[:3]))
+    sd = SM.sd_name(name.replace(' (Hisuian Form)', '-Hisui').replace(' (Paldean Form)', '-Paldea').replace(' (Alolan Form)', '-Alola').replace(' (Galarian Form)', '-Galar'))
+    if not sd: return .15, 'no competitive data'
+    def best(fs):
+        b, lab = 0, ''
+        for f in fs:
+            u = SM.usage(sd, f)
+            if u and u.get('usage'):
+                v = FW[f] * min(1, (u['usage'] / 20) ** .5)
+                if v > b: b, lab = v, f"{FLAB[f]} {u['usage']:.1f}%"
+        return b, lab
+    s, ls = best(SING); d, ld = best(DOUB)
+    need = COMBO_DEP.get(sd)   # usage that only exists with a partner you don't own doesn't count (Tatsugiri = Commander + Dondozo)
+    if need and need not in OWNED_SP:
+        d, ld = 0, ''
+        if s < .3: s, ls = s, (ls + f' (doubles usage needs {need.title()}, not owned)').strip()
+    ou_use = (SM.usage(sd, 'gen9ou-1695') or {}).get('usage')
+    if sd in SM.SETS.get('gen9ubers', {}) and not ou_use: s, ls = max(s, .95), 'Ubers (banned from OU)'
+    elif sd in SM.SETS.get('gen9nationaldexubers', {}) and not ou_use and s < .6: s, ls = max(s, .6), 'NatDex Ubers'
+    v = min(1.0, max(s, d) + .25 * min(s, d))
+    labs = [x for x in (ls, ld) if x]
+    labs.sort(key=lambda x: 0 if (x == (ls if s >= d else ld)) else 1)
+    return max(v, .15), ' | '.join(labs) or 'unranked'
 
 
 def bst_of(c):
@@ -97,6 +126,23 @@ for c in crest_c:
     if c['name'] not in crest_best or s > crest_best[c['name']][0]: crest_best[c['name']] = (s, c, cname)
 
 fights_sorted = sorted(s for s, _ in best.values())
+# 22 Nov (Vincent): in-game part = EVERY hard fight in the game (engine run with nothing marked done: ALL_RUN), not just Ch9
+ALLS = {}
+if os.environ.get('ALL_RUN') and os.path.exists(f"team/{os.environ['ALL_RUN']}_native.json.pkl"):
+    for c in pickle.load(open(f"team/{os.environ['ALL_RUN']}_native.json.pkl", 'rb'))['cands']:
+        if c['gate']: continue
+        tot = tw = 0
+        for k_, rows_ in c['matchups'].items():
+            if not rows_: continue
+            n_ = len(rows_); tot += sum(r_['q'] for r_ in rows_) / n_ - .35 * sum(r_['deff'] >= 100 for r_ in rows_) / n_; tw += 1
+        v_ = tot / tw if tw else 0
+        if c['name'] not in ALLS or v_ > ALLS[c['name']]: ALLS[c['name']] = v_
+ALL_SORTED = sorted(ALLS.values())
+N_ALL = len(next(iter(pickle.load(open(f"team/{os.environ['ALL_RUN']}_native.json.pkl", 'rb'))['cands']))['matchups']) if ALLS else 0
+def allpct(name):
+    import bisect
+    if name not in ALLS: return None
+    return bisect.bisect_left(ALL_SORTED, ALLS[name]) / max(1, len(ALL_SORTED) - 1)
 def pct(s):
     import bisect
     return bisect.bisect_left(fights_sorted, s) / max(1, len(fights_sorted) - 1)
@@ -107,13 +153,15 @@ def row(name, s, c, kind, crest=''):
     meta, lab = meta_of(name, sp, None)
     if crest: meta, lab = max(meta, .6), f'{crest} (Rejuvenation-only)'
     bst = bst_of(c)
-    general = .65 * meta + .35 * max(0, min(1, (bst - 380) / 220))
+    general = .9 * meta + .1 * max(0, min(1, (bst - 380) / 220))   # meta dominance (+ a small base-stat tiebreak)
     fp = min(1.0, pct(s))
-    blend = .6 * fp + .4 * general
+    ap = allpct(name)
+    gp = ap if ap is not None else fp
+    blend = .7 * general + .3 * gp   # 22 Nov (Vincent): 70% meta dominance + 30% in-game across every hard fight
     src = c['src'] if isinstance(c['src'], dict) else {}
     rows.append(dict(name=name, kind=kind, crest=crest, zoro_partner=c.get('zoro_partner'), sid=c['sid'], form=str(c.get('form', '0')), types=c['types'], base=c['base'], bst=bst,
                      fight=round(s, 3), fight_pct=round(fp, 3), meta=round(meta, 3), meta_label=lab, general=round(general, 3),
-                     blend=round(blend, 3), ability=c['ability'], abilities=c['abilities'], nature=c['nature'], evs=c['evs'],
+                     blend=round(blend, 3), game_pct=round(gp, 3), n_all=N_ALL, ability=c['ability'], abilities=c['abilities'], nature=c['nature'], evs=c['evs'],
                      cat=c['cat'], attacks=[C.D.moves[m]['MoveName'] for m in c['attacks']], legal=sorted(c['legal']),
                      where=src.get('where'), dump=src.get('dump'), owned_as=c.get('owned_as'), evo=c.get('evo'),
                      per_fight=per_fight(c), counters=counters(c), stats=c['stats'], tags=sorted(c.get('tags') or [])))
@@ -122,7 +170,7 @@ for n, (s, c) in best.items():
 for n, (s, c, cname) in crest_best.items():
     row(n, s, c, 'crest', cname)
 
-CUT = [('S', .85), ('A', .76), ('B', .62), ('C', .45), ('D', -9)]
+CUT = [('S', .72), ('A', .58), ('B', .41), ('C', .27), ('D', -9)]   # 22 Nov: recalibrated for 70% meta dominance + 30% all-fight in-game
 for r in rows:
     r['tier'] = next(t for t, v in CUT if r['blend'] >= v)
 rows.sort(key=lambda r: -r['blend'])

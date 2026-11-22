@@ -572,7 +572,9 @@ def nat_txt(n):
     return f"{n} (+{pm[0]}, −{pm[1]})" if pm else (n or '')
 META_W = {'Ubers': 10, 'NatDex Ubers': 9, 'OU': 8, 'Doubles OU': 7.5, 'NatDex OU': 7, 'NatDex Doubles': 6, 'UU': 5, 'NatDex UU': 4.5, 'RU': 4, 'NU': 3}
 def meta_top(lab):   # 22 Nov (Vincent): only the best tier
-    parts = [x.strip() for x in (lab or '').split('·')]
+    parts = [x.strip() for x in re.split(r'[·|]', lab or '')]
+    parts = [re.sub(r'\s+[\d.]+%$', '', x) for x in parts]
+    if '|' in (lab or ''): return parts[0]   # 22 Nov: labels come strongest-first from tier_all
     ranked = [x for x in parts if x in META_W]
     if ranked: return max(ranked, key=lambda x: META_W[x])
     keep = [x for x in parts if x and not x.startswith(('usage', 'unranked', 'no meta'))]
@@ -629,29 +631,15 @@ _MVT = {}
 try: _MVT = json.load(open('gamedata/movetext.json'))
 except Exception: pass
 MULTI5 = {'BONERUSH', 'PINMISSILE', 'ROCKBLAST', 'BULLETSEED', 'ICICLESPEAR', 'TAILSLAP', 'ARMTHRUST', 'FURYATTACK', 'SCALESHOT', 'WATERSHURIKEN', 'DOUBLESLAP', 'COMETPUNCH', 'SPIKECANNON', 'BARRAGE', 'FURYSWIPES'}
-def why_tier(r, ab_id, moves):   # 22 Nov (Vincent): WHY it sits in its tier: the score's drivers + what makes it strong (one thought per line)
+def why_tier(r, ab_id, moves):   # 22 Nov (Vincent): the tier = 70% META DOMINANCE + 30% in-game across EVERY hard fight; say exactly that
     out = []
-    fp = r.get('fight_pct', 0); ncnt = len(r.get('counters') or [])
-    pf = sorted((r.get('per_fight') or {}).items(), key=lambda kv: -kv[1])[:2]
-    best_f = ', '.join(FIGHT_NAME.get(k, k) for k, v in pf if v > 0)
-    out.append(f"Fights: top {max(1, round(100 * (1 - fp)))}% of your box in the remaining Ch9 fights")
-    if ncnt: out.append(f"Beats {ncnt} of their Pokémon")
-    if best_f: out.append(f"Best vs {best_f}")
-    ml = meta_top(r.get('meta_label'))
-    if ml: out.append(f"Meta: {ml}" + (' level in competitive play' if ml in META_W else ''))
-    st_ = r['base']; good = sorted([k for k in _STATS if _pct(k, st_[k]) >= 70], key=lambda k: -_pct(k, st_[k]))[:2]
-    bits = [f"{k} {st_[k]}: top {max(1, 100 - _pct(k, st_[k]))}% of your box" for k in good]
-    nm_ = (_ABT.get(ab_id) or {}).get('name', ''); d_ = ((_ABT.get(ab_id) or {}).get('desc', '') or '').rstrip('.')
-    if nm_: bits.append(f"{nm_}: {d_[0].lower() + d_[1:]}" if d_ else nm_)
-    bestm, bestp = None, 0
-    for m in moves:
-        k = re.sub(r'[^A-Z]', '', m.upper()); md = _MVT.get(k) or {}
-        bp = md.get('basedamage') or 0
-        if bp <= 1 or md.get('category') == 'status': continue
-        p = bp * (5 if (ab_id == 'SKILLLINK' and k in MULTI5) else 1) * (1.5 if (md.get('type') or '').upper() in r['types'] else 1)
-        if p > bestp: bestm, bestp = m, p
-    if bestm: bits.append(f"{bestm}: {int(bestp)} effective power")
-    out += bits
+    labs = [x.strip() for x in (r.get('meta_label') or '').split('|') if x.strip()]
+    if labs:
+        out.append(f"Meta dominance {round(100 * r.get('meta', 0))}/100")
+        for x in labs: out.append(x + (' usage' if x.endswith('%') else ''))
+    gp = r.get('game_pct'); n_all = r.get('n_all') or 0
+    if gp is not None:
+        out.append(f"In-game: top {max(1, round(100 * (1 - gp)))}% of your box" + (f" across all {n_all} fights in the game" if n_all else ''))
     return out
 for r in T.values():
     d_ = disp(r['name']); ib = IDB.get(r['name']) or {}; pty = party.get(d_)

@@ -196,8 +196,13 @@ damage score and the fight's real win condition was only read after Vincent lost
   explain the tier score's drivers, one per line: fights rank (top X% in remaining Ch9), beats N of their Pokémon, best vs
   which fights, meta level, its top stats (≥ 70th pct of the box), ability + effect, strongest move (effective power incl. STAB /
   Skill Link). (why_tier in theme.py; the old 'unique trait' line was replaced: it didn't say why it's strong.)
-- Tier tabs (16 Nov) share ONE blended scale (scripts/team/tier_all.py → tier_tabs.py): 0.6 × Ch9 fight percentile +
-  0.4 × meta (Smogon tier/usage + BST; Aevians by kit OP stars). Cut-offs S .85 / A .76 / B .62 / C .45.
+- **Tiers are GENERAL, meta-first (Vincent, 22 Nov)** — they pick the core four; Ch9 matchups are the flexes' job. tier_all.py:
+  score = 0.7 × (0.9 × META DOMINANCE + 0.1 × BST) + 0.3 × in-game percentile across EVERY fight in the game data (6th engine run,
+  DONE='' → r<run>all, ~60s, parallel). Meta dominance = Smogon usage weighted by format (OU / VGC / Doubles OU 1.0, NatDex OU .95,
+  UU .62 … NU .3; best of singles / doubles + 0.25 × the other); banned to Ubers (Ubers set, no OU usage) = .95; Aevians by kit OP
+  stars; usage that needs a partner he doesn't own is ignored (COMBO_DEP: Tatsugiri = Commander + Dondozo). Cut-offs S .72 /
+  A .58 / B .41 / C .27. Dex sheet "Why X tier" = meta dominance /100 + each usage line + in-game rank only (no stats / ability /
+  moves: they don't make a tier).
 - **Team tab (17 Nov):** only "Your party": one card per member (slot, Core/Swap · role, types, level bar, ability · nature, EVs,
   item, 4 moves, open to-dos) + the Next battle card. The old team table is folded into the cards by theme.py.
 - **Cores tab (17 Nov):** compact grid, one card per style. **Role order (Vincent, 21 Nov):** every core is built and shown as

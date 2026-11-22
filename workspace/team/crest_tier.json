@@ -87,7 +87,7 @@
    "gain": 0.223,
    "attacks": [
     "Shadow Punch",
-    "Power-Up Punch"
+    "Rock Smash"
    ],
    "ability": "FRISK",
    "tier": "A"
@@ -755,7 +755,7 @@
    "without": 0.021,
    "gain": 0.018,
    "attacks": [
-    "Secret Power",
+    "Headbutt",
     "Shadow Ball",
     "Fire Blast"
    ],

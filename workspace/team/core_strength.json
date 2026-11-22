@@ -1,1494 +1,1493 @@
 {
  "chapter": 9,
- "note": "Cores strength frozen per chapter (Vincent 22 Nov): seeded from the 21 Nov tiers; new names are added once, never overwritten",
  "strength": {
   "Gholdengo": {
-   "blend": 0.967,
+   "blend": 0.98,
    "tier": "S"
   },
   "Annihilape": {
-   "blend": 0.949,
-   "tier": "S"
-  },
-  "Arcanine (Hisuian Form)": {
-   "blend": 0.929,
+   "blend": 0.976,
    "tier": "S"
   },
   "Golisopod (Aevian Form)": {
-   "blend": 0.916,
-   "tier": "S"
-  },
-  "Armarouge": {
-   "blend": 0.916,
-   "tier": "S"
-  },
-  "Clefable": {
-   "blend": 0.905,
-   "tier": "S"
-  },
-  "Slowking (Galarian Form)": {
-   "blend": 0.896,
-   "tier": "S"
-  },
-  "Mamoswine": {
    "blend": 0.883,
    "tier": "S"
   },
-  "Slowking": {
-   "blend": 0.881,
+  "Veluza (Aevian Form)": {
+   "blend": 0.858,
    "tier": "S"
   },
-  "Gothitelle": {
-   "blend": 0.878,
+  "Slowking (Galarian Form)": {
+   "blend": 0.854,
    "tier": "S"
   },
-  "Chandelure": {
-   "blend": 0.861,
+  "Amoonguss": {
+   "blend": 0.776,
    "tier": "S"
+  },
+  "Glalie (Aevian Form)": {
+   "blend": 0.759,
+   "tier": "S"
+  },
+  "Ceruledge": {
+   "blend": 0.738,
+   "tier": "S"
+  },
+  "Musharna (Aevian Form)": {
+   "blend": 0.734,
+   "tier": "S"
+  },
+  "Muk (Alolan Form)": {
+   "blend": 0.721,
+   "tier": "S"
+  },
+  "Lapras (Aevian Form)": {
+   "blend": 0.7,
+   "tier": "A"
+  },
+  "Whiscash": {
+   "blend": 0.684,
+   "tier": "A"
+  },
+  "Alomomola": {
+   "blend": 0.683,
+   "tier": "A"
+  },
+  "Arcanine (Hisuian Form)": {
+   "blend": 0.671,
+   "tier": "A"
+  },
+  "Clefable": {
+   "blend": 0.664,
+   "tier": "A"
+  },
+  "Drapion (Aevian Form)": {
+   "blend": 0.649,
+   "tier": "A"
   },
   "Slowbro": {
-   "blend": 0.844,
+   "blend": 0.635,
    "tier": "A"
   },
   "Swampert": {
-   "blend": 0.843,
+   "blend": 0.629,
    "tier": "A"
   },
-  "Reuniclus": {
-   "blend": 0.843,
+  "Froslass (Aevian Form)": {
+   "blend": 0.621,
    "tier": "A"
   },
-  "Vaporeon": {
-   "blend": 0.841,
-   "tier": "A"
-  },
-  "Zoroark (Hisuian Form)": {
-   "blend": 0.841,
-   "tier": "A"
-  },
-  "Rhyperior": {
-   "blend": 0.84,
-   "tier": "A"
-  },
-  "Gallade": {
-   "blend": 0.83,
-   "tier": "A"
-  },
-  "Glalie (Aevian Form)": {
-   "blend": 0.824,
-   "tier": "A"
-  },
-  "Golurk": {
-   "blend": 0.823,
-   "tier": "A"
-  },
-  "Florges": {
-   "blend": 0.822,
-   "tier": "A"
-  },
-  "Braviary": {
-   "blend": 0.803,
-   "tier": "A"
-  },
-  "Copperajah": {
-   "blend": 0.798,
-   "tier": "A"
-  },
-  "Musharna (Aevian Form)": {
-   "blend": 0.798,
-   "tier": "A"
-  },
-  "Azumarill": {
-   "blend": 0.796,
-   "tier": "A"
-  },
-  "Lapras (Aevian Form)": {
-   "blend": 0.792,
-   "tier": "A"
-  },
-  "Umbreon": {
-   "blend": 0.775,
-   "tier": "A"
-  },
-  "Cetitan": {
-   "blend": 0.768,
-   "tier": "A"
-  },
-  "Dudunsparce": {
-   "blend": 0.767,
+  "Slowking": {
+   "blend": 0.616,
    "tier": "A"
   },
   "Gastrodon (West Aevian Form)": {
-   "blend": 0.762,
+   "blend": 0.6,
    "tier": "A"
   },
-  "Palossand": {
-   "blend": 0.759,
-   "tier": "B"
-  },
   "Ninetales (Alolan Form)": {
-   "blend": 0.758,
-   "tier": "B"
+   "blend": 0.597,
+   "tier": "A"
   },
-  "Palossand (Fiery Aevian Form)": {
-   "blend": 0.755,
-   "tier": "B"
-  },
-  "Arcanine": {
-   "blend": 0.752,
-   "tier": "B"
-  },
-  "Ceruledge": {
-   "blend": 0.751,
-   "tier": "B"
-  },
-  "Solrock (Solrock Dominant Fusion)": {
-   "blend": 0.75,
-   "tier": "B"
-  },
-  "Ampharos (Aevian Form)": {
-   "blend": 0.749,
-   "tier": "B"
-  },
-  "Revavroom": {
-   "blend": 0.748,
-   "tier": "B"
-  },
-  "Furret": {
-   "blend": 0.746,
-   "tier": "B"
-  },
-  "Vikavolt": {
-   "blend": 0.742,
-   "tier": "B"
-  },
-  "Lunatone (Lunatone Dominant Fusion)": {
-   "blend": 0.742,
-   "tier": "B"
+  "Toxtricity (Aevian Form)": {
+   "blend": 0.592,
+   "tier": "A"
   },
   "Donphan": {
-   "blend": 0.742,
+   "blend": 0.591,
+   "tier": "A"
+  },
+  "Palossand (Fiery Aevian Form)": {
+   "blend": 0.589,
+   "tier": "A"
+  },
+  "Armarouge": {
+   "blend": 0.584,
+   "tier": "A"
+  },
+  "Mandibuzz": {
+   "blend": 0.575,
    "tier": "B"
   },
-  "Empoleon": {
-   "blend": 0.74,
-   "tier": "B"
-  },
-  "Lickilicky": {
-   "blend": 0.739,
-   "tier": "B"
-  },
-  "Wyrdeer": {
-   "blend": 0.738,
-   "tier": "B"
-  },
-  "Porygon-Z": {
-   "blend": 0.738,
-   "tier": "B"
-  },
-  "Feraligatr": {
-   "blend": 0.736,
-   "tier": "B"
-  },
-  "Gastrodon": {
-   "blend": 0.735,
-   "tier": "B"
-  },
-  "Dragalge": {
-   "blend": 0.731,
-   "tier": "B"
-  },
-  "Yanmega": {
-   "blend": 0.728,
-   "tier": "B"
-  },
-  "Walrein": {
-   "blend": 0.726,
-   "tier": "B"
-  },
-  "Whiscash": {
-   "blend": 0.723,
-   "tier": "B"
-  },
-  "Oranguru": {
-   "blend": 0.721,
-   "tier": "B"
-  },
-  "Venusaur": {
-   "blend": 0.719,
-   "tier": "B"
-  },
-  "Magnezone": {
-   "blend": 0.712,
-   "tier": "B"
-  },
-  "Palossand (Icy Aevian Form)": {
-   "blend": 0.711,
-   "tier": "B"
-  },
-  "Silvally": {
-   "blend": 0.707,
-   "tier": "B"
-  },
-  "Clawitzer": {
-   "blend": 0.706,
-   "tier": "B"
-  },
-  "Musharna": {
-   "blend": 0.706,
-   "tier": "B"
-  },
-  "Centiskorch": {
-   "blend": 0.703,
-   "tier": "B"
-  },
-  "Espeon": {
-   "blend": 0.696,
-   "tier": "B"
-  },
-  "Aromatisse": {
-   "blend": 0.689,
-   "tier": "B"
-  },
-  "Beartic": {
-   "blend": 0.685,
-   "tier": "B"
-  },
-  "Sylveon": {
-   "blend": 0.685,
-   "tier": "B"
-  },
-  "Decidueye": {
-   "blend": 0.684,
-   "tier": "B"
-  },
-  "Veluza (Aevian Form)": {
-   "blend": 0.682,
-   "tier": "B"
-  },
-  "Glaceon": {
-   "blend": 0.68,
-   "tier": "B"
-  },
-  "Mudsdale": {
-   "blend": 0.679,
-   "tier": "B"
-  },
-  "Overqwil": {
-   "blend": 0.679,
-   "tier": "B"
-  },
-  "Typhlosion": {
-   "blend": 0.677,
+  "Zoroark (Hisuian Form)": {
+   "blend": 0.567,
    "tier": "B"
   },
   "Palossand (Rocky Aevian Form)": {
-   "blend": 0.677,
+   "blend": 0.566,
    "tier": "B"
   },
-  "Crabominable": {
-   "blend": 0.676,
+  "Gallade": {
+   "blend": 0.561,
    "tier": "B"
   },
-  "Scrafty": {
-   "blend": 0.675,
+  "Gastrodon": {
+   "blend": 0.552,
    "tier": "B"
   },
-  "Hariyama": {
-   "blend": 0.67,
+  "Azumarill": {
+   "blend": 0.546,
    "tier": "B"
   },
-  "Runerigus": {
-   "blend": 0.67,
+  "Magnezone": {
+   "blend": 0.541,
    "tier": "B"
   },
-  "Emboar": {
-   "blend": 0.668,
+  "Ampharos (Aevian Form)": {
+   "blend": 0.541,
    "tier": "B"
   },
-  "Jellicent": {
-   "blend": 0.667,
+  "Gothitelle": {
+   "blend": 0.538,
    "tier": "B"
   },
-  "Quagsire": {
-   "blend": 0.667,
+  "Palossand (Icy Aevian Form)": {
+   "blend": 0.53,
    "tier": "B"
   },
-  "Orbeetle": {
-   "blend": 0.663,
+  "Furret": {
+   "blend": 0.53,
    "tier": "B"
   },
-  "Flareon": {
-   "blend": 0.662,
+  "Mamoswine": {
+   "blend": 0.529,
    "tier": "B"
   },
-  "Oinkologne": {
-   "blend": 0.658,
+  "Zoroark": {
+   "blend": 0.529,
    "tier": "B"
   },
-  "Escavalier": {
-   "blend": 0.656,
+  "Chandelure": {
+   "blend": 0.519,
    "tier": "B"
   },
-  "Aurorus": {
-   "blend": 0.653,
+  "Flamigo": {
+   "blend": 0.519,
    "tier": "B"
   },
-  "Grumpig": {
-   "blend": 0.648,
+  "Revavroom": {
+   "blend": 0.51,
    "tier": "B"
   },
-  "Mandibuzz": {
-   "blend": 0.648,
+  "Lokix": {
+   "blend": 0.507,
+   "tier": "B"
+  },
+  "Venusaur": {
+   "blend": 0.503,
+   "tier": "B"
+  },
+  "Talonflame": {
+   "blend": 0.502,
+   "tier": "B"
+  },
+  "Vaporeon": {
+   "blend": 0.5,
+   "tier": "B"
+  },
+  "Porygon-Z": {
+   "blend": 0.494,
+   "tier": "B"
+  },
+  "Phione": {
+   "blend": 0.49,
    "tier": "B"
   },
   "Tsareena": {
-   "blend": 0.647,
+   "blend": 0.489,
    "tier": "B"
   },
-  "Muk (Alolan Form)": {
-   "blend": 0.647,
+  "Clodsire": {
+   "blend": 0.488,
    "tier": "B"
   },
-  "Alcremie": {
-   "blend": 0.646,
+  "Braviary": {
+   "blend": 0.485,
    "tier": "B"
   },
-  "Bellibolt": {
-   "blend": 0.646,
+  "Shuckle": {
+   "blend": 0.483,
    "tier": "B"
   },
-  "Arctozolt": {
-   "blend": 0.645,
+  "Arcanine": {
+   "blend": 0.481,
    "tier": "B"
   },
-  "Arctovish": {
-   "blend": 0.639,
+  "Crawdaunt": {
+   "blend": 0.481,
    "tier": "B"
   },
-  "Tatsugiri": {
-   "blend": 0.638,
+  "Parasect (Aevian Form)": {
+   "blend": 0.479,
    "tier": "B"
   },
-  "Exeggutor": {
-   "blend": 0.637,
+  "Ariados": {
+   "blend": 0.479,
    "tier": "B"
   },
-  "Drampa": {
-   "blend": 0.636,
+  "Noivern": {
+   "blend": 0.478,
    "tier": "B"
   },
-  "Ribombee": {
-   "blend": 0.634,
+  "Roserade (Aevian Form)": {
+   "blend": 0.477,
    "tier": "B"
   },
-  "Tangrowth": {
-   "blend": 0.632,
+  "Copperajah": {
+   "blend": 0.474,
+   "tier": "B"
+  },
+  "Meowscarada": {
+   "blend": 0.473,
+   "tier": "B"
+  },
+  "Empoleon": {
+   "blend": 0.464,
+   "tier": "B"
+  },
+  "Sylveon": {
+   "blend": 0.458,
+   "tier": "B"
+  },
+  "Leavanny (Aevian Form)": {
+   "blend": 0.458,
+   "tier": "B"
+  },
+  "Rhyperior": {
+   "blend": 0.456,
+   "tier": "B"
+  },
+  "Scrafty": {
+   "blend": 0.454,
+   "tier": "B"
+  },
+  "Ninetales": {
+   "blend": 0.454,
+   "tier": "B"
+  },
+  "Quagsire": {
+   "blend": 0.451,
+   "tier": "B"
+  },
+  "Vikavolt": {
+   "blend": 0.45,
+   "tier": "B"
+  },
+  "Dudunsparce": {
+   "blend": 0.45,
+   "tier": "B"
+  },
+  "Golurk": {
+   "blend": 0.45,
+   "tier": "B"
+  },
+  "Nidoking": {
+   "blend": 0.448,
+   "tier": "B"
+  },
+  "Malamar": {
+   "blend": 0.437,
+   "tier": "B"
+  },
+  "Mismagius (Aevian Form)": {
+   "blend": 0.435,
    "tier": "B"
   },
   "Rampardos": {
-   "blend": 0.628,
-   "tier": "B"
-  },
-  "Veluza": {
-   "blend": 0.627,
-   "tier": "B"
-  },
-  "Chimecho": {
-   "blend": 0.626,
-   "tier": "B"
-  },
-  "Vanilluxe": {
-   "blend": 0.625,
-   "tier": "B"
-  },
-  "Avalugg": {
-   "blend": 0.625,
-   "tier": "B"
-  },
-  "Heatmor": {
-   "blend": 0.624,
-   "tier": "B"
-  },
-  "Camerupt": {
-   "blend": 0.619,
-   "tier": "C"
-  },
-  "Ampharos": {
-   "blend": 0.618,
-   "tier": "C"
-  },
-  "Mawile": {
-   "blend": 0.613,
-   "tier": "C"
-  },
-  "Diggersby": {
-   "blend": 0.611,
-   "tier": "C"
-  },
-  "Crustle": {
-   "blend": 0.611,
-   "tier": "C"
-  },
-  "Phione": {
-   "blend": 0.61,
-   "tier": "C"
-  },
-  "Shuckle": {
-   "blend": 0.608,
-   "tier": "C"
-  },
-  "Throh": {
-   "blend": 0.607,
-   "tier": "C"
-  },
-  "Stoutland": {
-   "blend": 0.607,
-   "tier": "C"
-  },
-  "Clodsire": {
-   "blend": 0.606,
-   "tier": "C"
-  },
-  "Mantine": {
-   "blend": 0.604,
-   "tier": "C"
-  },
-  "Zoroark": {
-   "blend": 0.6,
-   "tier": "C"
-  },
-  "Frosmoth": {
-   "blend": 0.598,
-   "tier": "C"
-  },
-  "Drednaw": {
-   "blend": 0.598,
-   "tier": "C"
-  },
-  "Lapras": {
-   "blend": 0.595,
-   "tier": "C"
-  },
-  "Ludicolo": {
-   "blend": 0.593,
-   "tier": "C"
-  },
-  "Talonflame": {
-   "blend": 0.592,
-   "tier": "C"
-  },
-  "Amoonguss": {
-   "blend": 0.59,
-   "tier": "C"
-  },
-  "Crawdaunt": {
-   "blend": 0.587,
-   "tier": "C"
-  },
-  "Eiscue": {
-   "blend": 0.587,
-   "tier": "C"
-  },
-  "Dubwool": {
-   "blend": 0.585,
-   "tier": "C"
-  },
-  "Cursola": {
-   "blend": 0.585,
-   "tier": "C"
-  },
-  "Slowbro (Galarian Form)": {
-   "blend": 0.584,
-   "tier": "C"
-  },
-  "Omastar": {
-   "blend": 0.583,
-   "tier": "C"
-  },
-  "Eelektross": {
-   "blend": 0.58,
-   "tier": "C"
-  },
-  "Cofagrigus": {
-   "blend": 0.58,
-   "tier": "C"
-  },
-  "Noivern": {
-   "blend": 0.575,
-   "tier": "C"
-  },
-  "Grapploct": {
-   "blend": 0.574,
-   "tier": "C"
-  },
-  "Armaldo": {
-   "blend": 0.57,
-   "tier": "C"
-  },
-  "Sandaconda": {
-   "blend": 0.568,
-   "tier": "C"
-  },
-  "Bellossom": {
-   "blend": 0.567,
-   "tier": "C"
-  },
-  "Vileplume": {
-   "blend": 0.566,
-   "tier": "C"
-  },
-  "Marowak": {
-   "blend": 0.566,
-   "tier": "C"
-  },
-  "Greedent": {
-   "blend": 0.564,
-   "tier": "C"
-  },
-  "Stunfisk (Galarian Form)": {
-   "blend": 0.562,
-   "tier": "C"
-  },
-  "Slaking": {
-   "blend": 0.559,
-   "tier": "C"
-  },
-  "Nidoqueen": {
-   "blend": 0.557,
-   "tier": "C"
-  },
-  "Malamar": {
-   "blend": 0.556,
-   "tier": "C"
-  },
-  "Marowak (Alolan Form)": {
-   "blend": 0.555,
-   "tier": "C"
-  },
-  "Ninetales": {
-   "blend": 0.554,
-   "tier": "C"
-  },
-  "Skuntank": {
-   "blend": 0.552,
-   "tier": "C"
-  },
-  "Hypno": {
-   "blend": 0.55,
-   "tier": "C"
-  },
-  "Barbaracle": {
-   "blend": 0.544,
-   "tier": "C"
-  },
-  "Exploud": {
-   "blend": 0.544,
-   "tier": "C"
-  },
-  "Drapion (Aevian Form)": {
-   "blend": 0.543,
-   "tier": "C"
-  },
-  "Muk": {
-   "blend": 0.539,
-   "tier": "C"
-  },
-  "Dusknoir": {
-   "blend": 0.538,
-   "tier": "C"
-  },
-  "Perrserker": {
-   "blend": 0.537,
-   "tier": "C"
-  },
-  "Audino": {
-   "blend": 0.535,
-   "tier": "C"
-  },
-  "Forretress": {
-   "blend": 0.534,
-   "tier": "C"
-  },
-  "Tropius": {
-   "blend": 0.53,
-   "tier": "C"
-  },
-  "Drifblim": {
-   "blend": 0.53,
-   "tier": "C"
-  },
-  "Blissey": {
-   "blend": 0.529,
-   "tier": "C"
-  },
-  "Hitmonchan": {
-   "blend": 0.524,
-   "tier": "C"
-  },
-  "Arboliva": {
-   "blend": 0.524,
-   "tier": "C"
-  },
-  "Sandslash (Alolan Form)": {
-   "blend": 0.523,
-   "tier": "C"
-  },
-  "Beheeyem": {
-   "blend": 0.522,
-   "tier": "C"
-  },
-  "Carbink": {
-   "blend": 0.519,
-   "tier": "C"
-  },
-  "Klinklang": {
-   "blend": 0.516,
-   "tier": "C"
-  },
-  "Slurpuff": {
-   "blend": 0.512,
-   "tier": "C"
-  },
-  "Pyroar": {
-   "blend": 0.511,
-   "tier": "C"
-  },
-  "Seaking": {
-   "blend": 0.51,
-   "tier": "C"
-  },
-  "Pangoro": {
-   "blend": 0.509,
-   "tier": "C"
-  },
-  "Flamigo": {
-   "blend": 0.502,
-   "tier": "C"
-  },
-  "Luxray": {
-   "blend": 0.5,
-   "tier": "C"
-  },
-  "Cradily": {
-   "blend": 0.498,
-   "tier": "C"
-  },
-  "Crobat": {
-   "blend": 0.497,
-   "tier": "C"
-  },
-  "Machamp": {
-   "blend": 0.496,
-   "tier": "C"
-  },
-  "Medicham": {
-   "blend": 0.495,
-   "tier": "C"
-  },
-  "Alomomola": {
-   "blend": 0.495,
-   "tier": "C"
-  },
-  "Shiinotic": {
-   "blend": 0.493,
-   "tier": "C"
-  },
-  "Houndoom": {
-   "blend": 0.493,
-   "tier": "C"
-  },
-  "Passimian": {
-   "blend": 0.492,
-   "tier": "C"
-  },
-  "Kingler": {
-   "blend": 0.492,
-   "tier": "C"
-  },
-  "Appletun": {
-   "blend": 0.492,
-   "tier": "C"
-  },
-  "Wigglytuff": {
-   "blend": 0.49,
-   "tier": "C"
-  },
-  "Golisopod": {
-   "blend": 0.489,
-   "tier": "C"
-  },
-  "Kangaskhan": {
-   "blend": 0.489,
-   "tier": "C"
-  },
-  "Mabosstiff": {
-   "blend": 0.488,
-   "tier": "C"
-  },
-  "Vespiquen": {
-   "blend": 0.488,
-   "tier": "C"
-  },
-  "Meganium": {
-   "blend": 0.487,
-   "tier": "C"
-  },
-  "Seismitoad": {
-   "blend": 0.487,
-   "tier": "C"
-  },
-  "Lucario": {
-   "blend": 0.486,
-   "tier": "C"
-  },
-  "Scovillain": {
-   "blend": 0.484,
-   "tier": "C"
-  },
-  "Golem": {
-   "blend": 0.479,
-   "tier": "C"
-  },
-  "Mismagius": {
-   "blend": 0.479,
-   "tier": "C"
-  },
-  "Mr. Mime": {
-   "blend": 0.477,
-   "tier": "C"
-  },
-  "Raticate (Alolan Form)": {
-   "blend": 0.47,
-   "tier": "C"
-  },
-  "Jolteon": {
-   "blend": 0.469,
-   "tier": "C"
-  },
-  "Hitmontop": {
-   "blend": 0.467,
-   "tier": "C"
-  },
-  "Claydol": {
-   "blend": 0.462,
-   "tier": "C"
-  },
-  "Kilowattrel": {
-   "blend": 0.461,
-   "tier": "C"
-  },
-  "Turtonator": {
-   "blend": 0.458,
-   "tier": "C"
-  },
-  "Bruxish": {
-   "blend": 0.457,
-   "tier": "C"
-  },
-  "Noctowl": {
-   "blend": 0.457,
-   "tier": "C"
-  },
-  "Stunfisk": {
-   "blend": 0.457,
-   "tier": "C"
-  },
-  "Bombirdier": {
-   "blend": 0.456,
-   "tier": "C"
-  },
-  "Starmie": {
-   "blend": 0.456,
-   "tier": "C"
-  },
-  "Steelix": {
-   "blend": 0.455,
-   "tier": "C"
-  },
-  "Pincurchin": {
-   "blend": 0.453,
-   "tier": "C"
-  },
-  "Barraskewda": {
-   "blend": 0.453,
-   "tier": "C"
-  },
-  "Swalot": {
-   "blend": 0.452,
-   "tier": "C"
-  },
-  "Altaria": {
-   "blend": 0.448,
-   "tier": "D"
-  },
-  "Garbodor": {
-   "blend": 0.447,
-   "tier": "D"
-  },
-  "Meowscarada": {
-   "blend": 0.446,
-   "tier": "D"
-  },
-  "Lurantis": {
-   "blend": 0.445,
-   "tier": "D"
-  },
-  "Minior": {
-   "blend": 0.442,
-   "tier": "D"
-  },
-  "Tyrantrum": {
-   "blend": 0.437,
-   "tier": "D"
-  },
-  "Drapion": {
-   "blend": 0.437,
-   "tier": "D"
-  },
-  "Bronzong": {
-   "blend": 0.435,
-   "tier": "D"
-  },
-  "Meowstic": {
-   "blend": 0.434,
-   "tier": "D"
-  },
-  "Druddigon": {
    "blend": 0.432,
-   "tier": "D"
+   "tier": "B"
   },
-  "Leavanny (Aevian Form)": {
-   "blend": 0.432,
-   "tier": "D"
-  },
-  "Coalossal": {
+  "Clawitzer": {
    "blend": 0.431,
-   "tier": "D"
+   "tier": "B"
   },
-  "Lokix": {
+  "Yanmega": {
+   "blend": 0.431,
+   "tier": "B"
+  },
+  "Decidueye": {
    "blend": 0.43,
-   "tier": "D"
+   "tier": "B"
   },
-  "Heracross": {
-   "blend": 0.428,
-   "tier": "D"
-  },
-  "Cryogonal": {
-   "blend": 0.425,
-   "tier": "D"
-  },
-  "Tauros": {
-   "blend": 0.423,
-   "tier": "D"
-  },
-  "Dodrio": {
-   "blend": 0.415,
-   "tier": "D"
-  },
-  "Probopass": {
-   "blend": 0.414,
-   "tier": "D"
-  },
-  "Cinccino": {
-   "blend": 0.41,
-   "tier": "D"
-  },
-  "Nidoking": {
-   "blend": 0.408,
-   "tier": "D"
-  },
-  "Magcargo": {
-   "blend": 0.408,
-   "tier": "D"
-  },
-  "Dachsbun": {
-   "blend": 0.403,
-   "tier": "D"
-  },
-  "Abomasnow": {
-   "blend": 0.403,
-   "tier": "D"
-  },
-  "Comfey": {
-   "blend": 0.402,
-   "tier": "D"
-  },
-  "Toedscruel": {
-   "blend": 0.401,
-   "tier": "D"
-  },
-  "Kecleon": {
-   "blend": 0.401,
-   "tier": "D"
-  },
-  "Pidgeot": {
-   "blend": 0.395,
-   "tier": "D"
-  },
-  "Pinsir": {
-   "blend": 0.394,
-   "tier": "D"
-  },
-  "Electrode (Hisuian Form)": {
-   "blend": 0.393,
-   "tier": "D"
-  },
-  "Wormadam (Sandy Cloak)": {
-   "blend": 0.391,
-   "tier": "D"
-  },
-  "Oricorio (Pom-Pom Style)": {
-   "blend": 0.39,
-   "tier": "D"
-  },
-  "Gogoat": {
-   "blend": 0.389,
-   "tier": "D"
-  },
-  "Simisear": {
-   "blend": 0.387,
-   "tier": "D"
-  },
-  "Sunflora": {
-   "blend": 0.38,
-   "tier": "D"
-  },
-  "Gumshoos": {
-   "blend": 0.377,
-   "tier": "D"
-  },
-  "Wormadam (Trash Cloak)": {
-   "blend": 0.376,
-   "tier": "D"
-  },
-  "Furfrou": {
-   "blend": 0.368,
-   "tier": "D"
-  },
-  "Squawkabilly (White Plumage)": {
-   "blend": 0.367,
-   "tier": "D"
-  },
-  "Leafeon": {
-   "blend": 0.367,
-   "tier": "D"
-  },
-  "Avalugg (Hisuian Form)": {
-   "blend": 0.367,
-   "tier": "D"
-  },
-  "Wormadam": {
-   "blend": 0.365,
-   "tier": "D"
-  },
-  "Pawmot": {
-   "blend": 0.364,
-   "tier": "D"
-  },
-  "Obstagoon": {
-   "blend": 0.361,
-   "tier": "D"
-  },
-  "Ariados": {
-   "blend": 0.361,
-   "tier": "D"
-  },
-  "Eldegoss": {
-   "blend": 0.359,
-   "tier": "D"
-  },
-  "Xatu": {
-   "blend": 0.359,
-   "tier": "D"
-  },
-  "Oricorio": {
-   "blend": 0.353,
-   "tier": "D"
-  },
-  "Weezing": {
-   "blend": 0.35,
-   "tier": "D"
-  },
-  "Froslass (Aevian Form)": {
-   "blend": 0.349,
-   "tier": "D"
-  },
-  "Toxicroak": {
-   "blend": 0.347,
-   "tier": "D"
-  },
-  "Bastiodon": {
-   "blend": 0.346,
-   "tier": "D"
-  },
-  "Octillery": {
-   "blend": 0.338,
-   "tier": "D"
-  },
-  "Sirfetch'd": {
-   "blend": 0.335,
-   "tier": "D"
-  },
-  "Leavanny": {
-   "blend": 0.335,
-   "tier": "D"
-  },
-  "Jynx": {
-   "blend": 0.334,
-   "tier": "D"
-  },
-  "Tentacruel": {
-   "blend": 0.334,
-   "tier": "D"
-  },
-  "Toucannon": {
-   "blend": 0.331,
-   "tier": "D"
-  },
-  "Sudowoodo": {
-   "blend": 0.33,
-   "tier": "D"
-  },
-  "Roserade": {
-   "blend": 0.33,
-   "tier": "D"
-  },
-  "Unfezant (Aevian Form Male)": {
-   "blend": 0.329,
-   "tier": "D"
-  },
-  "Kabutops": {
-   "blend": 0.329,
-   "tier": "D"
-  },
-  "Tauros (Paldean Combat Breed)": {
-   "blend": 0.328,
-   "tier": "D"
-  },
-  "Zangoose": {
-   "blend": 0.327,
-   "tier": "D"
-  },
-  "Corsola": {
-   "blend": 0.322,
-   "tier": "D"
-  },
-  "Mightyena": {
-   "blend": 0.307,
-   "tier": "D"
-  },
-  "Breloom": {
-   "blend": 0.307,
-   "tier": "D"
-  },
-  "Mismagius (Aevian Form)": {
-   "blend": 0.304,
-   "tier": "D"
-  },
-  "Venomoth": {
-   "blend": 0.304,
-   "tier": "D"
-  },
-  "Lopunny": {
-   "blend": 0.301,
-   "tier": "D"
-  },
-  "Swanna": {
-   "blend": 0.3,
-   "tier": "D"
-  },
-  "Arbok": {
-   "blend": 0.299,
-   "tier": "D"
-  },
-  "Glalie": {
-   "blend": 0.298,
-   "tier": "D"
-  },
-  "Golduck": {
-   "blend": 0.295,
-   "tier": "D"
-  },
-  "Dugtrio (Alolan Form)": {
-   "blend": 0.291,
-   "tier": "D"
-  },
-  "Chatot": {
-   "blend": 0.29,
-   "tier": "D"
-  },
-  "Oricorio (Sensu Style)": {
-   "blend": 0.289,
-   "tier": "D"
-  },
-  "Sandslash": {
-   "blend": 0.286,
-   "tier": "D"
-  },
-  "Victreebel": {
-   "blend": 0.283,
-   "tier": "D"
-  },
-  "Roserade (Aevian Form)": {
-   "blend": 0.281,
-   "tier": "D"
-  },
-  "Klawf": {
-   "blend": 0.281,
-   "tier": "D"
-  },
-  "Spidops": {
-   "blend": 0.281,
-   "tier": "D"
-  },
-  "Butterfree": {
-   "blend": 0.279,
-   "tier": "D"
-  },
-  "Scolipede": {
-   "blend": 0.279,
-   "tier": "D"
-  },
-  "Parasect (Aevian Form)": {
-   "blend": 0.279,
-   "tier": "D"
-  },
-  "Castform": {
-   "blend": 0.279,
-   "tier": "D"
-  },
-  "Sceptile": {
-   "blend": 0.278,
-   "tier": "D"
-  },
-  "Electivire": {
-   "blend": 0.272,
-   "tier": "D"
-  },
-  "Carnivine": {
-   "blend": 0.27,
-   "tier": "D"
-  },
-  "Linoone": {
-   "blend": 0.27,
-   "tier": "D"
-  },
-  "Qwilfish": {
-   "blend": 0.27,
-   "tier": "D"
-  },
-  "Basculin (Blue-Striped)": {
-   "blend": 0.267,
-   "tier": "D"
-  },
-  "Rapidash": {
-   "blend": 0.265,
-   "tier": "D"
-  },
-  "Shiftry": {
-   "blend": 0.263,
-   "tier": "D"
-  },
-  "Ditto": {
-   "blend": 0.263,
-   "tier": "D"
-  },
-  "Brambleghast": {
-   "blend": 0.26,
-   "tier": "D"
-  },
-  "Salazzle": {
-   "blend": 0.259,
-   "tier": "D"
-  },
-  "Manectric": {
-   "blend": 0.259,
-   "tier": "D"
-  },
-  "Beedrill": {
-   "blend": 0.258,
-   "tier": "D"
-  },
-  "Boltund": {
-   "blend": 0.256,
-   "tier": "D"
-  },
-  "Maractus": {
-   "blend": 0.255,
-   "tier": "D"
-  },
-  "Unfezant": {
-   "blend": 0.25,
-   "tier": "D"
-  },
-  "Stonjourner": {
-   "blend": 0.25,
-   "tier": "D"
-  },
-  "Swellow": {
-   "blend": 0.248,
-   "tier": "D"
-  },
-  "Swoobat": {
-   "blend": 0.247,
-   "tier": "D"
-  },
-  "Banette": {
-   "blend": 0.244,
-   "tier": "D"
-  },
-  "Seviper": {
-   "blend": 0.243,
-   "tier": "D"
-  },
-  "Hitmonlee": {
-   "blend": 0.242,
-   "tier": "D"
-  },
-  "Raticate": {
-   "blend": 0.242,
-   "tier": "D"
-  },
-  "Cramorant": {
-   "blend": 0.242,
-   "tier": "D"
-  },
-  "Ambipom": {
-   "blend": 0.239,
-   "tier": "D"
-  },
-  "Shedinja": {
-   "blend": 0.235,
-   "tier": "D"
-  },
-  "Vivillon": {
-   "blend": 0.232,
-   "tier": "D"
-  },
-  "Parasect": {
-   "blend": 0.232,
-   "tier": "D"
-  },
-  "Dewgong": {
-   "blend": 0.226,
-   "tier": "D"
-  },
-  "Oricorio (Pa'u Style)": {
-   "blend": 0.224,
-   "tier": "D"
-  },
-  "Absol": {
-   "blend": 0.22,
-   "tier": "D"
-  },
-  "Volbeat": {
-   "blend": 0.22,
-   "tier": "D"
-  },
-  "Grafaiai": {
-   "blend": 0.217,
-   "tier": "D"
-  },
-  "Heliolisk": {
-   "blend": 0.216,
-   "tier": "D"
-  },
-  "Persian (Alolan Form)": {
-   "blend": 0.212,
-   "tier": "D"
-  },
-  "Raichu": {
-   "blend": 0.211,
-   "tier": "D"
-  },
-  "Sawsbuck": {
-   "blend": 0.211,
-   "tier": "D"
-  },
-  "Thievul": {
-   "blend": 0.209,
-   "tier": "D"
-  },
-  "Pyukumuku": {
-   "blend": 0.208,
-   "tier": "D"
-  },
-  "Floatzel": {
-   "blend": 0.207,
-   "tier": "D"
-  },
-  "Zebstrika": {
-   "blend": 0.205,
-   "tier": "D"
-  },
-  "Cacturne": {
-   "blend": 0.2,
-   "tier": "D"
-  },
-  "Wailord": {
-   "blend": 0.198,
-   "tier": "D"
-  },
-  "Fearow": {
-   "blend": 0.197,
-   "tier": "D"
-  },
-  "Masquerain": {
-   "blend": 0.196,
-   "tier": "D"
-  },
-  "Watchog": {
-   "blend": 0.195,
-   "tier": "D"
-  },
-  "Simipour": {
-   "blend": 0.192,
-   "tier": "D"
-  },
-  "Jumpluff": {
-   "blend": 0.171,
-   "tier": "D"
-  },
-  "Sharpedo": {
-   "blend": 0.168,
-   "tier": "D"
-  },
-  "Electrode": {
-   "blend": 0.166,
-   "tier": "D"
-  },
-  "Lumineon": {
-   "blend": 0.165,
-   "tier": "D"
-  },
-  "Mothim": {
-   "blend": 0.161,
-   "tier": "D"
-  },
-  "Dustox": {
-   "blend": 0.159,
-   "tier": "D"
-  },
-  "Simisage": {
-   "blend": 0.155,
-   "tier": "D"
-  },
-  "Liepard": {
-   "blend": 0.154,
-   "tier": "D"
-  },
-  "Beautifly": {
-   "blend": 0.151,
-   "tier": "D"
-  },
-  "Spinda": {
-   "blend": 0.147,
-   "tier": "D"
-  },
-  "Minun": {
-   "blend": 0.141,
-   "tier": "D"
-  },
-  "Emolga": {
-   "blend": 0.139,
-   "tier": "D"
-  },
-  "Illumise": {
-   "blend": 0.138,
-   "tier": "D"
-  },
-  "Purugly": {
-   "blend": 0.137,
-   "tier": "D"
-  },
-  "Cherrim": {
-   "blend": 0.13,
-   "tier": "D"
-  },
-  "Ledian": {
-   "blend": 0.13,
-   "tier": "D"
-  },
-  "Morpeko": {
-   "blend": 0.126,
-   "tier": "D"
-  },
-  "Plusle": {
-   "blend": 0.125,
-   "tier": "D"
-  },
-  "Kricketune": {
-   "blend": 0.124,
-   "tier": "D"
-  },
-  "Bibarel": {
-   "blend": 0.122,
-   "tier": "D"
-  },
-  "Dedenne": {
-   "blend": 0.118,
-   "tier": "D"
-  },
-  "Togedemaru": {
-   "blend": 0.116,
-   "tier": "D"
-  },
-  "Persian": {
-   "blend": 0.115,
-   "tier": "D"
-  },
-  "Wugtrio": {
-   "blend": 0.115,
-   "tier": "D"
-  },
-  "Delcatty": {
-   "blend": 0.106,
-   "tier": "D"
-  },
-  "Dugtrio": {
-   "blend": 0.103,
-   "tier": "D"
-  },
-  "Delibird": {
-   "blend": 0.1,
-   "tier": "D"
-  },
-  "Farfetch'd": {
-   "blend": 0.098,
-   "tier": "D"
-  },
-  "Pachirisu": {
-   "blend": 0.093,
-   "tier": "D"
-  },
-  "Salandit": {
-   "blend": 0.088,
-   "tier": "D"
-  },
-  "Luvdisc": {
-   "blend": 0.072,
-   "tier": "D"
-  },
-  "Unown": {
-   "blend": 0.07,
-   "tier": "D"
-  },
-  "Combee": {
-   "blend": 0.067,
-   "tier": "D"
-  },
-  "Wishiwashi": {
-   "blend": 0.067,
-   "tier": "D"
-  },
-  "Toxtricity (Aevian Form)": {
-   "blend": 0.74,
+  "Reuniclus": {
+   "blend": 0.43,
    "tier": "B"
   },
   "Toxtricity": {
-   "blend": 0.687,
+   "blend": 0.43,
    "tier": "B"
+  },
+  "Dragalge": {
+   "blend": 0.427,
+   "tier": "B"
+  },
+  "Overqwil": {
+   "blend": 0.427,
+   "tier": "B"
+  },
+  "Hariyama": {
+   "blend": 0.425,
+   "tier": "B"
+  },
+  "Typhlosion": {
+   "blend": 0.425,
+   "tier": "B"
+  },
+  "Florges": {
+   "blend": 0.425,
+   "tier": "B"
+  },
+  "Solrock (Solrock Dominant Fusion)": {
+   "blend": 0.424,
+   "tier": "B"
+  },
+  "Ludicolo": {
+   "blend": 0.421,
+   "tier": "B"
+  },
+  "Unfezant (Aevian Form Male)": {
+   "blend": 0.421,
+   "tier": "B"
+  },
+  "Crabominable": {
+   "blend": 0.418,
+   "tier": "B"
+  },
+  "Oranguru": {
+   "blend": 0.418,
+   "tier": "B"
+  },
+  "Pangoro": {
+   "blend": 0.414,
+   "tier": "B"
+  },
+  "Palossand": {
+   "blend": 0.414,
+   "tier": "B"
+  },
+  "Escavalier": {
+   "blend": 0.414,
+   "tier": "B"
+  },
+  "Flareon": {
+   "blend": 0.413,
+   "tier": "B"
+  },
+  "Crobat": {
+   "blend": 0.409,
+   "tier": "C"
+  },
+  "Emboar": {
+   "blend": 0.408,
+   "tier": "C"
+  },
+  "Silvally": {
+   "blend": 0.408,
+   "tier": "C"
+  },
+  "Lickilicky": {
+   "blend": 0.404,
+   "tier": "C"
+  },
+  "Lunatone (Lunatone Dominant Fusion)": {
+   "blend": 0.403,
+   "tier": "C"
+  },
+  "Wyrdeer": {
+   "blend": 0.402,
+   "tier": "C"
+  },
+  "Drednaw": {
+   "blend": 0.402,
+   "tier": "C"
+  },
+  "Mabosstiff": {
+   "blend": 0.4,
+   "tier": "C"
+  },
+  "Bellibolt": {
+   "blend": 0.4,
+   "tier": "C"
+  },
+  "Diggersby": {
+   "blend": 0.394,
+   "tier": "C"
+  },
+  "Kingler": {
+   "blend": 0.393,
+   "tier": "C"
+  },
+  "Nidoqueen": {
+   "blend": 0.393,
+   "tier": "C"
+  },
+  "Grapploct": {
+   "blend": 0.391,
+   "tier": "C"
+  },
+  "Walrein": {
+   "blend": 0.391,
+   "tier": "C"
+  },
+  "Tatsugiri": {
+   "blend": 0.39,
+   "tier": "C"
+  },
+  "Eelektross": {
+   "blend": 0.386,
+   "tier": "C"
+  },
+  "Runerigus": {
+   "blend": 0.385,
+   "tier": "C"
+  },
+  "Heatmor": {
+   "blend": 0.382,
+   "tier": "C"
+  },
+  "Camerupt": {
+   "blend": 0.382,
+   "tier": "C"
+  },
+  "Mantine": {
+   "blend": 0.382,
+   "tier": "C"
+  },
+  "Musharna": {
+   "blend": 0.381,
+   "tier": "C"
+  },
+  "Barbaracle": {
+   "blend": 0.378,
+   "tier": "C"
+  },
+  "Blissey": {
+   "blend": 0.378,
+   "tier": "C"
+  },
+  "Beartic": {
+   "blend": 0.377,
+   "tier": "C"
+  },
+  "Tangrowth": {
+   "blend": 0.376,
+   "tier": "C"
+  },
+  "Toxicroak": {
+   "blend": 0.375,
+   "tier": "C"
+  },
+  "Tyrantrum": {
+   "blend": 0.375,
+   "tier": "C"
+  },
+  "Kilowattrel": {
+   "blend": 0.371,
+   "tier": "C"
+  },
+  "Cradily": {
+   "blend": 0.37,
+   "tier": "C"
+  },
+  "Veluza": {
+   "blend": 0.369,
+   "tier": "C"
+  },
+  "Jellicent": {
+   "blend": 0.369,
+   "tier": "C"
+  },
+  "Arctozolt": {
+   "blend": 0.367,
+   "tier": "C"
+  },
+  "Ribombee": {
+   "blend": 0.367,
+   "tier": "C"
+  },
+  "Centiskorch": {
+   "blend": 0.366,
+   "tier": "C"
+  },
+  "Sandaconda": {
+   "blend": 0.366,
+   "tier": "C"
+  },
+  "Electivire": {
+   "blend": 0.365,
+   "tier": "C"
+  },
+  "Omastar": {
+   "blend": 0.363,
+   "tier": "C"
+  },
+  "Throh": {
+   "blend": 0.361,
+   "tier": "C"
+  },
+  "Cursola": {
+   "blend": 0.361,
+   "tier": "C"
+  },
+  "Hitmonchan": {
+   "blend": 0.359,
+   "tier": "C"
+  },
+  "Ampharos": {
+   "blend": 0.359,
+   "tier": "C"
+  },
+  "Umbreon": {
+   "blend": 0.359,
+   "tier": "C"
+  },
+  "Oinkologne": {
+   "blend": 0.358,
+   "tier": "C"
+  },
+  "Espeon": {
+   "blend": 0.357,
+   "tier": "C"
+  },
+  "Drampa": {
+   "blend": 0.354,
+   "tier": "C"
+  },
+  "Dodrio": {
+   "blend": 0.354,
+   "tier": "C"
+  },
+  "Mudsdale": {
+   "blend": 0.354,
+   "tier": "C"
+  },
+  "Jolteon": {
+   "blend": 0.353,
+   "tier": "C"
+  },
+  "Cetitan": {
+   "blend": 0.352,
+   "tier": "C"
+  },
+  "Cofagrigus": {
+   "blend": 0.352,
+   "tier": "C"
+  },
+  "Marowak (Alolan Form)": {
+   "blend": 0.35,
+   "tier": "C"
+  },
+  "Aromatisse": {
+   "blend": 0.348,
+   "tier": "C"
+  },
+  "Passimian": {
+   "blend": 0.347,
+   "tier": "C"
+  },
+  "Appletun": {
+   "blend": 0.347,
+   "tier": "C"
+  },
+  "Feraligatr": {
+   "blend": 0.347,
+   "tier": "C"
+  },
+  "Bruxish": {
+   "blend": 0.347,
+   "tier": "C"
+  },
+  "Pyroar": {
+   "blend": 0.344,
+   "tier": "C"
+  },
+  "Glaceon": {
+   "blend": 0.344,
+   "tier": "C"
+  },
+  "Pidgeot": {
+   "blend": 0.344,
+   "tier": "C"
+  },
+  "Hitmontop": {
+   "blend": 0.343,
+   "tier": "C"
+  },
+  "Arboliva": {
+   "blend": 0.343,
+   "tier": "C"
+  },
+  "Exeggutor": {
+   "blend": 0.342,
+   "tier": "C"
+  },
+  "Scovillain": {
+   "blend": 0.339,
+   "tier": "C"
+  },
+  "Breloom": {
+   "blend": 0.335,
+   "tier": "C"
+  },
+  "Squawkabilly (White Plumage)": {
+   "blend": 0.334,
+   "tier": "C"
+  },
+  "Grumpig": {
+   "blend": 0.334,
+   "tier": "C"
+  },
+  "Klinklang": {
+   "blend": 0.332,
+   "tier": "C"
+  },
+  "Dubwool": {
+   "blend": 0.332,
+   "tier": "C"
+  },
+  "Comfey": {
+   "blend": 0.331,
+   "tier": "C"
+  },
+  "Simisear": {
+   "blend": 0.33,
+   "tier": "C"
+  },
+  "Boltund": {
+   "blend": 0.33,
+   "tier": "C"
+  },
+  "Barraskewda": {
+   "blend": 0.329,
+   "tier": "C"
+  },
+  "Drapion": {
+   "blend": 0.328,
+   "tier": "C"
+  },
+  "Crustle": {
+   "blend": 0.327,
+   "tier": "C"
+  },
+  "Raichu": {
+   "blend": 0.327,
+   "tier": "C"
+  },
+  "Stoutland": {
+   "blend": 0.325,
+   "tier": "C"
+  },
+  "Bombirdier": {
+   "blend": 0.324,
+   "tier": "C"
+  },
+  "Slaking": {
+   "blend": 0.324,
+   "tier": "C"
+  },
+  "Mismagius": {
+   "blend": 0.323,
+   "tier": "C"
+  },
+  "Marowak": {
+   "blend": 0.323,
+   "tier": "C"
+  },
+  "Perrserker": {
+   "blend": 0.319,
+   "tier": "C"
+  },
+  "Sunflora": {
+   "blend": 0.317,
+   "tier": "C"
+  },
+  "Toedscruel": {
+   "blend": 0.317,
+   "tier": "C"
+  },
+  "Starmie": {
+   "blend": 0.316,
+   "tier": "C"
+  },
+  "Lucario": {
+   "blend": 0.315,
+   "tier": "C"
+  },
+  "Arctovish": {
+   "blend": 0.315,
+   "tier": "C"
+  },
+  "Seaking": {
+   "blend": 0.312,
+   "tier": "C"
+  },
+  "Skuntank": {
+   "blend": 0.311,
+   "tier": "C"
+  },
+  "Druddigon": {
+   "blend": 0.311,
+   "tier": "C"
+  },
+  "Golem": {
+   "blend": 0.311,
+   "tier": "C"
+  },
+  "Meganium": {
+   "blend": 0.31,
+   "tier": "C"
+  },
+  "Aurorus": {
+   "blend": 0.31,
+   "tier": "C"
+  },
+  "Basculin (Blue-Striped)": {
+   "blend": 0.309,
+   "tier": "C"
+  },
+  "Drifblim": {
+   "blend": 0.308,
+   "tier": "C"
+  },
+  "Tropius": {
+   "blend": 0.308,
+   "tier": "C"
+  },
+  "Vileplume": {
+   "blend": 0.308,
+   "tier": "C"
+  },
+  "Roserade": {
+   "blend": 0.307,
+   "tier": "C"
+  },
+  "Golduck": {
+   "blend": 0.307,
+   "tier": "C"
+  },
+  "Muk": {
+   "blend": 0.306,
+   "tier": "C"
+  },
+  "Chimecho": {
+   "blend": 0.306,
+   "tier": "C"
+  },
+  "Cinccino": {
+   "blend": 0.303,
+   "tier": "C"
+  },
+  "Orbeetle": {
+   "blend": 0.301,
+   "tier": "C"
+  },
+  "Stunfisk (Galarian Form)": {
+   "blend": 0.301,
+   "tier": "C"
+  },
+  "Sudowoodo": {
+   "blend": 0.301,
+   "tier": "C"
+  },
+  "Pawmot": {
+   "blend": 0.3,
+   "tier": "C"
+  },
+  "Swanna": {
+   "blend": 0.3,
+   "tier": "C"
+  },
+  "Alcremie": {
+   "blend": 0.299,
+   "tier": "C"
+  },
+  "Heliolisk": {
+   "blend": 0.299,
+   "tier": "C"
+  },
+  "Magcargo": {
+   "blend": 0.295,
+   "tier": "C"
+  },
+  "Pincurchin": {
+   "blend": 0.294,
+   "tier": "C"
+  },
+  "Machamp": {
+   "blend": 0.293,
+   "tier": "C"
+  },
+  "Electrode (Hisuian Form)": {
+   "blend": 0.293,
+   "tier": "C"
+  },
+  "Zebstrika": {
+   "blend": 0.293,
+   "tier": "C"
+  },
+  "Seismitoad": {
+   "blend": 0.293,
+   "tier": "C"
+  },
+  "Tentacruel": {
+   "blend": 0.291,
+   "tier": "C"
+  },
+  "Lurantis": {
+   "blend": 0.29,
+   "tier": "C"
+  },
+  "Dusknoir": {
+   "blend": 0.289,
+   "tier": "C"
+  },
+  "Vanilluxe": {
+   "blend": 0.289,
+   "tier": "C"
+  },
+  "Abomasnow": {
+   "blend": 0.284,
+   "tier": "C"
+  },
+  "Bellossom": {
+   "blend": 0.282,
+   "tier": "C"
+  },
+  "Probopass": {
+   "blend": 0.282,
+   "tier": "C"
+  },
+  "Hitmonlee": {
+   "blend": 0.281,
+   "tier": "C"
+  },
+  "Slurpuff": {
+   "blend": 0.281,
+   "tier": "C"
+  },
+  "Raticate (Alolan Form)": {
+   "blend": 0.279,
+   "tier": "C"
+  },
+  "Brambleghast": {
+   "blend": 0.279,
+   "tier": "C"
+  },
+  "Golisopod": {
+   "blend": 0.278,
+   "tier": "C"
+  },
+  "Slowbro (Galarian Form)": {
+   "blend": 0.277,
+   "tier": "C"
+  },
+  "Carnivine": {
+   "blend": 0.275,
+   "tier": "C"
+  },
+  "Bronzong": {
+   "blend": 0.272,
+   "tier": "C"
+  },
+  "Greedent": {
+   "blend": 0.271,
+   "tier": "C"
+  },
+  "Leafeon": {
+   "blend": 0.269,
+   "tier": "D"
+  },
+  "Lapras": {
+   "blend": 0.269,
+   "tier": "D"
+  },
+  "Stunfisk": {
+   "blend": 0.267,
+   "tier": "D"
+  },
+  "Victreebel": {
+   "blend": 0.265,
+   "tier": "D"
+  },
+  "Gogoat": {
+   "blend": 0.265,
+   "tier": "D"
+  },
+  "Sirfetch'd": {
+   "blend": 0.261,
+   "tier": "D"
+  },
+  "Klawf": {
+   "blend": 0.261,
+   "tier": "D"
+  },
+  "Audino": {
+   "blend": 0.257,
+   "tier": "D"
+  },
+  "Forretress": {
+   "blend": 0.256,
+   "tier": "D"
+  },
+  "Garbodor": {
+   "blend": 0.255,
+   "tier": "D"
+  },
+  "Frosmoth": {
+   "blend": 0.254,
+   "tier": "D"
+  },
+  "Zangoose": {
+   "blend": 0.254,
+   "tier": "D"
+  },
+  "Octillery": {
+   "blend": 0.254,
+   "tier": "D"
+  },
+  "Heracross": {
+   "blend": 0.253,
+   "tier": "D"
+  },
+  "Swellow": {
+   "blend": 0.253,
+   "tier": "D"
+  },
+  "Dachsbun": {
+   "blend": 0.252,
+   "tier": "D"
+  },
+  "Steelix": {
+   "blend": 0.252,
+   "tier": "D"
+  },
+  "Houndoom": {
+   "blend": 0.251,
+   "tier": "D"
+  },
+  "Medicham": {
+   "blend": 0.25,
+   "tier": "D"
+  },
+  "Tauros": {
+   "blend": 0.25,
+   "tier": "D"
+  },
+  "Oricorio (Pom-Pom Style)": {
+   "blend": 0.25,
+   "tier": "D"
+  },
+  "Claydol": {
+   "blend": 0.245,
+   "tier": "D"
+  },
+  "Meowstic": {
+   "blend": 0.243,
+   "tier": "D"
+  },
+  "Floatzel": {
+   "blend": 0.243,
+   "tier": "D"
+  },
+  "Turtonator": {
+   "blend": 0.241,
+   "tier": "D"
+  },
+  "Armaldo": {
+   "blend": 0.238,
+   "tier": "D"
+  },
+  "Shiinotic": {
+   "blend": 0.235,
+   "tier": "D"
+  },
+  "Tauros (Paldean Combat Breed)": {
+   "blend": 0.235,
+   "tier": "D"
+  },
+  "Beheeyem": {
+   "blend": 0.235,
+   "tier": "D"
+  },
+  "Mawile": {
+   "blend": 0.234,
+   "tier": "D"
+  },
+  "Wigglytuff": {
+   "blend": 0.233,
+   "tier": "D"
+  },
+  "Mr. Mime": {
+   "blend": 0.232,
+   "tier": "D"
+  },
+  "Eiscue": {
+   "blend": 0.232,
+   "tier": "D"
+  },
+  "Hypno": {
+   "blend": 0.232,
+   "tier": "D"
+  },
+  "Qwilfish": {
+   "blend": 0.231,
+   "tier": "D"
+  },
+  "Toucannon": {
+   "blend": 0.231,
+   "tier": "D"
+  },
+  "Exploud": {
+   "blend": 0.229,
+   "tier": "D"
+  },
+  "Avalugg (Hisuian Form)": {
+   "blend": 0.229,
+   "tier": "D"
+  },
+  "Fearow": {
+   "blend": 0.228,
+   "tier": "D"
+  },
+  "Grafaiai": {
+   "blend": 0.227,
+   "tier": "D"
+  },
+  "Ambipom": {
+   "blend": 0.226,
+   "tier": "D"
+  },
+  "Coalossal": {
+   "blend": 0.223,
+   "tier": "D"
+  },
+  "Pinsir": {
+   "blend": 0.222,
+   "tier": "D"
+  },
+  "Swalot": {
+   "blend": 0.222,
+   "tier": "D"
+  },
+  "Manectric": {
+   "blend": 0.22,
+   "tier": "D"
+  },
+  "Sandslash (Alolan Form)": {
+   "blend": 0.219,
+   "tier": "D"
+  },
+  "Sceptile": {
+   "blend": 0.217,
+   "tier": "D"
+  },
+  "Carbink": {
+   "blend": 0.217,
+   "tier": "D"
+  },
+  "Altaria": {
+   "blend": 0.216,
+   "tier": "D"
+  },
+  "Venomoth": {
+   "blend": 0.215,
+   "tier": "D"
+  },
+  "Corsola": {
+   "blend": 0.215,
+   "tier": "D"
+  },
+  "Luxray": {
+   "blend": 0.214,
+   "tier": "D"
+  },
+  "Scolipede": {
+   "blend": 0.214,
+   "tier": "D"
+  },
+  "Jumpluff": {
+   "blend": 0.214,
+   "tier": "D"
+  },
+  "Oricorio": {
+   "blend": 0.211,
+   "tier": "D"
+  },
+  "Simipour": {
+   "blend": 0.211,
+   "tier": "D"
+  },
+  "Absol": {
+   "blend": 0.21,
+   "tier": "D"
+  },
+  "Rapidash": {
+   "blend": 0.21,
+   "tier": "D"
+  },
+  "Wormadam (Sandy Cloak)": {
+   "blend": 0.21,
+   "tier": "D"
+  },
+  "Furfrou": {
+   "blend": 0.209,
+   "tier": "D"
+  },
+  "Cryogonal": {
+   "blend": 0.209,
+   "tier": "D"
+  },
+  "Sandslash": {
+   "blend": 0.208,
+   "tier": "D"
+  },
+  "Avalugg": {
+   "blend": 0.207,
+   "tier": "D"
+  },
+  "Obstagoon": {
+   "blend": 0.205,
+   "tier": "D"
+  },
+  "Leavanny": {
+   "blend": 0.205,
+   "tier": "D"
+  },
+  "Xatu": {
+   "blend": 0.204,
+   "tier": "D"
+  },
+  "Seviper": {
+   "blend": 0.201,
+   "tier": "D"
+  },
+  "Bastiodon": {
+   "blend": 0.201,
+   "tier": "D"
+  },
+  "Sawsbuck": {
+   "blend": 0.2,
+   "tier": "D"
+  },
+  "Eldegoss": {
+   "blend": 0.198,
+   "tier": "D"
+  },
+  "Shiftry": {
+   "blend": 0.198,
+   "tier": "D"
+  },
+  "Persian (Alolan Form)": {
+   "blend": 0.196,
+   "tier": "D"
+  },
+  "Minun": {
+   "blend": 0.196,
+   "tier": "D"
+  },
+  "Volbeat": {
+   "blend": 0.195,
+   "tier": "D"
+  },
+  "Weezing": {
+   "blend": 0.194,
+   "tier": "D"
+  },
+  "Noctowl": {
+   "blend": 0.193,
+   "tier": "D"
+  },
+  "Cramorant": {
+   "blend": 0.193,
+   "tier": "D"
+  },
+  "Linoone": {
+   "blend": 0.191,
+   "tier": "D"
+  },
+  "Kangaskhan": {
+   "blend": 0.191,
+   "tier": "D"
+  },
+  "Lumineon": {
+   "blend": 0.188,
+   "tier": "D"
+  },
+  "Oricorio (Sensu Style)": {
+   "blend": 0.187,
+   "tier": "D"
+  },
+  "Thievul": {
+   "blend": 0.185,
+   "tier": "D"
+  },
+  "Mightyena": {
+   "blend": 0.184,
+   "tier": "D"
+  },
+  "Vespiquen": {
+   "blend": 0.184,
+   "tier": "D"
+  },
+  "Kabutops": {
+   "blend": 0.184,
+   "tier": "D"
+  },
+  "Kecleon": {
+   "blend": 0.177,
+   "tier": "D"
+  },
+  "Maractus": {
+   "blend": 0.177,
+   "tier": "D"
+  },
+  "Minior": {
+   "blend": 0.176,
+   "tier": "D"
+  },
+  "Arbok": {
+   "blend": 0.174,
+   "tier": "D"
+  },
+  "Jynx": {
+   "blend": 0.174,
+   "tier": "D"
+  },
+  "Dugtrio (Alolan Form)": {
+   "blend": 0.173,
+   "tier": "D"
+  },
+  "Stonjourner": {
+   "blend": 0.173,
+   "tier": "D"
+  },
+  "Butterfree": {
+   "blend": 0.172,
+   "tier": "D"
+  },
+  "Gumshoos": {
+   "blend": 0.171,
+   "tier": "D"
+  },
+  "Plusle": {
+   "blend": 0.168,
+   "tier": "D"
+  },
+  "Salazzle": {
+   "blend": 0.164,
+   "tier": "D"
+  },
+  "Unfezant": {
+   "blend": 0.164,
+   "tier": "D"
+  },
+  "Wormadam": {
+   "blend": 0.163,
+   "tier": "D"
+  },
+  "Electrode": {
+   "blend": 0.163,
+   "tier": "D"
+  },
+  "Chatot": {
+   "blend": 0.162,
+   "tier": "D"
+  },
+  "Wormadam (Trash Cloak)": {
+   "blend": 0.16,
+   "tier": "D"
+  },
+  "Morpeko": {
+   "blend": 0.16,
+   "tier": "D"
+  },
+  "Sharpedo": {
+   "blend": 0.159,
+   "tier": "D"
+  },
+  "Ditto": {
+   "blend": 0.159,
+   "tier": "D"
+  },
+  "Raticate": {
+   "blend": 0.158,
+   "tier": "D"
+  },
+  "Simisage": {
+   "blend": 0.157,
+   "tier": "D"
+  },
+  "Glalie": {
+   "blend": 0.152,
+   "tier": "D"
+  },
+  "Watchog": {
+   "blend": 0.151,
+   "tier": "D"
+  },
+  "Castform": {
+   "blend": 0.148,
+   "tier": "D"
+  },
+  "Vivillon": {
+   "blend": 0.146,
+   "tier": "D"
+  },
+  "Bibarel": {
+   "blend": 0.146,
+   "tier": "D"
+  },
+  "Swoobat": {
+   "blend": 0.145,
+   "tier": "D"
+  },
+  "Cacturne": {
+   "blend": 0.144,
+   "tier": "D"
+  },
+  "Cherrim": {
+   "blend": 0.144,
+   "tier": "D"
+  },
+  "Beedrill": {
+   "blend": 0.144,
+   "tier": "D"
+  },
+  "Oricorio (Pa'u Style)": {
+   "blend": 0.144,
+   "tier": "D"
+  },
+  "Banette": {
+   "blend": 0.143,
+   "tier": "D"
+  },
+  "Liepard": {
+   "blend": 0.142,
+   "tier": "D"
+  },
+  "Illumise": {
+   "blend": 0.142,
+   "tier": "D"
+  },
+  "Wailord": {
+   "blend": 0.142,
+   "tier": "D"
+  },
+  "Parasect": {
+   "blend": 0.14,
+   "tier": "D"
+  },
+  "Dewgong": {
+   "blend": 0.139,
+   "tier": "D"
+  },
+  "Masquerain": {
+   "blend": 0.139,
+   "tier": "D"
+  },
+  "Wugtrio": {
+   "blend": 0.137,
+   "tier": "D"
+  },
+  "Spidops": {
+   "blend": 0.134,
+   "tier": "D"
+  },
+  "Purugly": {
+   "blend": 0.13,
+   "tier": "D"
+  },
+  "Lopunny": {
+   "blend": 0.13,
+   "tier": "D"
+  },
+  "Kricketune": {
+   "blend": 0.126,
+   "tier": "D"
+  },
+  "Mothim": {
+   "blend": 0.126,
+   "tier": "D"
+  },
+  "Emolga": {
+   "blend": 0.125,
+   "tier": "D"
+  },
+  "Dedenne": {
+   "blend": 0.124,
+   "tier": "D"
+  },
+  "Farfetch'd": {
+   "blend": 0.124,
+   "tier": "D"
+  },
+  "Persian": {
+   "blend": 0.12,
+   "tier": "D"
+  },
+  "Dugtrio": {
+   "blend": 0.119,
+   "tier": "D"
+  },
+  "Shedinja": {
+   "blend": 0.117,
+   "tier": "D"
+  },
+  "Dustox": {
+   "blend": 0.116,
+   "tier": "D"
+  },
+  "Spinda": {
+   "blend": 0.116,
+   "tier": "D"
+  },
+  "Beautifly": {
+   "blend": 0.115,
+   "tier": "D"
+  },
+  "Togedemaru": {
+   "blend": 0.115,
+   "tier": "D"
+  },
+  "Salandit": {
+   "blend": 0.111,
+   "tier": "D"
+  },
+  "Ledian": {
+   "blend": 0.109,
+   "tier": "D"
+  },
+  "Pyukumuku": {
+   "blend": 0.109,
+   "tier": "D"
+  },
+  "Delcatty": {
+   "blend": 0.108,
+   "tier": "D"
+  },
+  "Pachirisu": {
+   "blend": 0.108,
+   "tier": "D"
+  },
+  "Delibird": {
+   "blend": 0.103,
+   "tier": "D"
+  },
+  "Luvdisc": {
+   "blend": 0.103,
+   "tier": "D"
+  },
+  "Wishiwashi": {
+   "blend": 0.097,
+   "tier": "D"
+  },
+  "Combee": {
+   "blend": 0.095,
+   "tier": "D"
+  },
+  "Unown": {
+   "blend": 0.095,
+   "tier": "D"
   }
  }
 }

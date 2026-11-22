@@ -159,11 +159,12 @@ def main():
     R = json.load(open(os.path.join(TEAMD, f'roster{rost}.json')))
     for x in R: x['level'] = st.get('cap', 55)
     json.dump(R, open(os.path.join(TEAMD, f'roster{rost}_lv55.json'), 'w'))
-    print('Scoring (5 engine runs, in parallel)...')   # 21 Nov: independent runs -> ~45s instead of ~110s
+    print('Scoring (6 engine runs, in parallel)...')   # 21 Nov: independent runs -> ~45s instead of ~110s
     import time as _tm; _t0 = _tm.time()
     jobs = [(['../scripts/team/run.py', WS, f'team/roster{rost}_lv55.json', f'team/r{run}_{f}.json'], dict(env, FORCE_FORMAT=f)) for f in ('native', 'Singles', 'Doubles')]
     jobs.append((['../scripts/team/run.py', WS, f'team/roster{rost}_lv55.json', f'team/r{run}n_native.json'], dict(env, FORCE_FORMAT='native', NOFIELD='1')))
     jobs.append((['../scripts/team/run.py', WS, f'team/roster{rost}_lv55.json', f'team/rc{run}_native.json'], dict(env, FORCE_FORMAT='native', CRESTS='1')))
+    jobs.append((['../scripts/team/run.py', WS, f'team/roster{rost}_lv55.json', f'team/r{run}all_native.json'], dict(env, FORCE_FORMAT='native', DONE='')))   # 22 Nov: every hard fight in the game, for the general tiers
     procs = [(a_, subprocess.Popen([sys.executable, '-I'] + a_, cwd=WS, env=e_, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)) for a_, e_ in jobs]
     for a_, p_ in procs:
         o_, e_ = p_.communicate()
@@ -252,7 +253,7 @@ def main():
     # crests: every crest-eligible Pokémon re-scored with its crest (game-code effects), then the Crests tab
     sh(['../scripts/team/crest_tier.py'], dict(env, CR_RUN=f'r{run}', CREST_RUN=f'rc{run}', BASE_RUN=f'r{run}'))
     # one blended tier scale (Ch9 fights + meta) for Crests / Aevians / all other Pokémon, then the Cores tab (16 Nov)
-    sh(['../scripts/team/tier_all.py'], dict(env, BASE_RUN=f'r{run}', CREST_RUN=f'rc{run}'))
+    sh(['../scripts/team/tier_all.py'], dict(env, BASE_RUN=f'r{run}', CREST_RUN=f'rc{run}', ALL_RUN=f'r{run}all'))
     sh(['../scripts/team/tier_tabs.py', OUT], pe)
     # 22 Nov (Vincent): Cores tab removed; cores.py no longer runs (CORES=1 to run it for chat)
     if os.environ.get('CORES'): sh(['../scripts/team/cores.py', OUT], pe)
