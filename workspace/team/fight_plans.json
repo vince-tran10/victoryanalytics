@@ -149,7 +149,7 @@
     "foe": "Banette",
     "mon": "Amoonguss",
     "ability": "REGENERATOR",
-    "dealt": 18,
+    "dealt": 10,
     "taken": 127,
     "ok": false,
     "setup": false,
@@ -243,7 +243,7 @@
     "foe": "Sigilyph",
     "mon": "Amoonguss",
     "ability": "REGENERATOR",
-    "dealt": 31,
+    "dealt": 17,
     "taken": 79,
     "ok": false,
     "setup": false,
@@ -293,14 +293,14 @@
   "weak3": [],
   "nores": [],
   "leads": [
-   "Amoonguss",
+   "Alomomola",
    "Golisopod (Aevian Form)"
   ],
   "lead_foes": [
    "Stonjourner",
    "Sigilyph"
   ],
-  "lead_taken": 82,
+  "lead_taken": 98,
   "sim": null,
   "lead_ok": true,
   "note": "",
@@ -376,7 +376,7 @@
      {
       "what": "Setup",
       "answers": [
-       "teach Encore (Musharna)"
+       "Clear Smog (Amoonguss)"
       ]
      }
     ]
@@ -385,7 +385,7 @@
     "foe": "Appletun",
     "mon": "Amoonguss",
     "ability": "REGENERATOR",
-    "dealt": 34,
+    "dealt": 20,
     "taken": 47,
     "ok": false,
     "setup": false,
@@ -447,7 +447,7 @@
      {
       "what": "Setup",
       "answers": [
-       "teach Encore (Musharna)"
+       "Clear Smog (Amoonguss)"
       ]
      }
     ]
@@ -578,7 +578,7 @@
     "foe": "Toxtricity",
     "mon": "Amoonguss",
     "ability": "REGENERATOR",
-    "dealt": 22,
+    "dealt": 12,
     "taken": 100,
     "ok": false,
     "setup": false,

@@ -66,7 +66,7 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Slush Rush/Ice Body → snow; Surge Surfer → Electric Terrain…). No anti-synergy (e.g. Glare or fast mons under Trick
   Room). Owned weather/terrain setters (16 Nov): Drought Ninetales, Snow Warning (Ninetales-Alola, Vanilluxe, Aurorus,
   Abomasnow), Grassy Surge Glalie-A, Electric Surge Pincurchin. No Drizzle / Sand Stream. Checked by checks.py.
-- **Core now (22 Nov 11:33 export, Vincent took the Builder suggestions): Veluza-Aevian · Amoonguss (Rage Powder support) ·
+- **Core now (22 Nov 11:33 export, Vincent took the Builder suggestions): Veluza-Aevian (confirmed slot 1, 22 Nov) · Amoonguss (confirmed slot 2: Spore / Rage Powder / Clear Smog / Protect, Modest 252 HP / SpA, Sitrus; Clear Smog over Sludge Bomb = the core's only stat reset; Pollen Puff not legal) ·
   Alomomola (Wish / Regenerator) · Golisopod-Aevian.** Gholdengo is illegal at Ch9. Older history below. **Picked core (16 Nov): Balance / tempo** = Arcanine-Hisui (Intimidate) · Golisopod-Aevian (Skill Link, SD) · Gholdengo
   (Good as Gold, Thunder Wave) · Vaporeon (Water Absorb, Haze). #1 core score of 89,985 cores from the top 40 across all tier
   lists; no shared weakness. Swaps now: Copperajah + Muk-Alola (Dark Gardevoir). The core resists no Dark / Ghost:

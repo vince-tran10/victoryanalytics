@@ -16,7 +16,7 @@
      {
       "what": "Setup",
       "answers": [
-       "teach Encore (Musharna)"
+       "Clear Smog (Amoonguss)"
       ]
      }
     ]
@@ -25,7 +25,7 @@
     "foe": "Appletun",
     "mon": "Amoonguss",
     "ability": "REGENERATOR",
-    "dealt": 34,
+    "dealt": 20,
     "taken": 47,
     "ok": false,
     "setup": false,
@@ -87,7 +87,7 @@
      {
       "what": "Setup",
       "answers": [
-       "teach Encore (Musharna)"
+       "Clear Smog (Amoonguss)"
       ]
      }
     ]
