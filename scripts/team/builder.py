@@ -23,6 +23,8 @@ ALLM = {}
 for r in rows_all:
     if r['name'] not in ALLM: ALLM[r['name']] = Mon(r)
 core = [n for n in st['core'] if n in ALLM]
+SPREAD = ['MAKEITRAIN', 'HEATWAVE', 'EARTHQUAKE', 'ROCKSLIDE', 'MUDDYWATER', 'DAZZLINGGLEAM', 'HYPERVOICE', 'ICYWIND', 'BLIZZARD', 'DISCHARGE',
+          'SURF', 'SLUDGEWAVE', 'ERUPTION', 'WATERSPOUT', 'SNARL', 'BREAKINGSWIPE', 'LAVAPLUME', 'BULLDOZE', 'ELECTROWEB', 'BOOMBURST', 'EXPANDINGFORCE']
 # Slot 1 = singles lead (Vincent, 22 Nov): faster > bulky, takes one hit, KOs in 1-2 hits. Measured vs EVERY trainer in the game data
 # (all-fights engine run r<run>all): per foe faster / hits to KO (hko) / hits to die (hdie). Lead win = KOs in <= 2 hits before it dies.
 import pickle
@@ -34,24 +36,39 @@ if os.path.exists(_pk):
         rr = [x for v in c['matchups'].values() for x in v]
         if not rr: continue
         n = len(rr)
-        v = dict(fast=sum(x['faster'] for x in rr) / n, ko=sum(x['hko'] <= 2 for x in rr) / n, surv=sum(x['hdie'] >= 2 for x in rr) / n,
+        hd = sorted(x['hdie'] for x in rr)
+        v = dict(hits=hd[n // 2], fast=sum(x['faster'] for x in rr) / n, ko=sum(x['hko'] <= 2 for x in rr) / n, surv=sum(x['hdie'] >= 2 for x in rr) / n,
                  win=sum(x['hko'] <= 2 and (x['hdie'] >= x['hko'] if x['faster'] else x['hdie'] > x['hko']) for x in rr) / n)
         if c['name'] not in LEAD or (v['win'], v['fast']) > (LEAD[c['name']]['win'], LEAD[c['name']]['fast']): LEAD[c['name']] = v
 PRIO = ['EXTREMESPEED', 'SUCKERPUNCH', 'AQUAJET', 'JETPUNCH', 'BULLETPUNCH', 'MACHPUNCH', 'ICESHARD', 'SHADOWSNEAK', 'ACCELEROCK',
         'VACUUMWAVE', 'FIRSTIMPRESSION', 'GRASSYGLIDE', 'QUICKATTACK']
+SPREAD_ALL = set(SPREAD) | {'SURGINGSTRIKES', 'PRECIPICEBLADES', 'ORIGINPULSE', 'GLACIATE', 'PETALBLIZZARD', 'SWIFT', 'PARABOLICCHARGE', 
+                            'POWDERSNOW', 'RAZORLEAF', 'AIRCUTTER', 'TWISTER', 'STRUGGLEBUG', 'MORTALSPIN', 'MATCHAGOTCHA', 'BLEAKWINDSTORM',
+                            'SANDSEARSTORM', 'SPRINGTIDESTORM', 'WILDBOLTSTORM', 'OVERDRIVE', 'SPARKLINGARIA',
+                            'DIAMONDSTORM', 'HYPERSPACEFURY', 'SELFDESTRUCT', 'EXPLOSION', 'MINDBLOWN', 'SURF', 'MAGNITUDE'}
+IB = json.load(open('team/ideal_builds.json')) if os.path.exists('team/ideal_builds.json') else {}
+def _id(x): return ''.join(ch for ch in x.upper() if ch.isalpha())
+def build_moves(n):   # what it actually runs: his party moves, else its ideal build
+    return [_id(x) for x in ((st.get('moves') or {}).get(n) or (IB.get(n) or {}).get('moves') or [])]
+def common_chips(m):   # shared by every slot (Vincent, 22 Nov): bulk as resistances / weaknesses, spread vs single target
+    res_ = sum(m.mult[a] < 1 for a in TYPES); wk = sum(m.mult[a] > 1 for a in TYPES)
+    sp = next((mname(x) for x in build_moves(m.name) if x in SPREAD_ALL), None)
+    can = None if sp else first(m.legal, [x for x in SPREAD if x in m.legal])
+    pl = lambda k: f"{k} type" + ('' if k == 1 else 's')
+    return [f'Resists {pl(res_)}', f'Weak to {pl(wk)}'], ([f'Spread: {sp}'] if sp else [])
 def lead_chips(m):
     v = LEAD[m.name]
-    st_ = [f"Outspeeds {v['fast']:.0%}", f"KOs in 1-2 hits {v['ko']:.0%}", f"Takes a hit {v['surv']:.0%}"]
+    cs, ct = common_chips(m)
+    st_ = [f"Outspeeds {v['fast']:.0%}", f"Takes {v['hits']} hits to KO"] + cs
+    if not ct: st_.append('Single target only')
     L, ab = m.legal, set(m.r.get('abilities') or [])
-    t = []
+    t = list(ct)
     if 'INTIMIDATE' in ab: t.append('Intimidate')
     if 'FAKEOUT' in L: t.append('Fake Out')
     x = first(L, PRIO); t += [f'Priority: {x}'] if x else []
     if 'TAUNT' in L: t.append('Taunt')
     if 'GOODASGOLD' in ab: t.append('Blocks status moves')
     return st_, t
-SPREAD = ['MAKEITRAIN', 'HEATWAVE', 'EARTHQUAKE', 'ROCKSLIDE', 'MUDDYWATER', 'DAZZLINGGLEAM', 'HYPERVOICE', 'ICYWIND', 'BLIZZARD', 'DISCHARGE',
-          'SURF', 'SLUDGEWAVE', 'ERUPTION', 'WATERSPOUT', 'SNARL', 'BREAKINGSWIPE', 'LAVAPLUME', 'BULLDOZE', 'ELECTROWEB', 'BOOMBURST', 'EXPANDINGFORCE']
 def first(L, ids): return next((mname(x) for x in ids if x in L), None)
 def tools(m, slot):   # the role's tools this Pokémon can legally run (moves) or has (ability)
     L, ab = m.legal, set(m.r.get('abilities') or [])
@@ -116,11 +133,12 @@ if len(core) == 4:
             # yellow = a real alternative: same tier or higher, not in the core, fits the other three, clearly better lead (win +.05)
             rec = next((x[3].name for x in sorted(res, key=lambda x: -x[1]) if x[3].name != mine and x[0] >= RK.get(base[i].r['tier'], 0)
                         and x[1] >= pv['win'] + .05), None)
-            top = res[:6]
+            top = [x for x in res if x[3].name not in (rec, mine)][:6 - len({rec, mine} - {None})]
             for want in (rec, mine):
                 if want and want not in [x[3].name for x in top]:
-                    hit = next((x for x in res if x[3].name == want), None) or (RK.get(ALLM[want].r['tier'], 0), 0, 0, ALLM[want], lead_chips(ALLM[want]) if want in LEAD else ([], []))
-                    top = top[:5] + [hit] if len(top) >= 6 else top + [hit]
+                    v_ = LEAD.get(want, dict(win=0, fast=0))
+                    top.append(next((x for x in res if x[3].name == want), None) or (RK.get(ALLM[want].r['tier'], 0), v_['win'], v_['fast'], ALLM[want], lead_chips(ALLM[want]) if want in LEAD else ([], [])))
+            top.sort(key=lambda x: (-x[0], -x[1], -x[2]))   # tier, then lead preference (pick included in order)
             out.append(dict(slot=slot, title=title, pick=mine, rec=rec,
                             cands=[dict(name=m.name, tier=m.r['tier'], stats=ch[0], tools=ch[1], sid=m.r.get('sid'), form=str(m.r.get('form', '0')),
                                         pick=m.name == mine, rec=m.name == rec) for _, _, _, m, ch in top]))

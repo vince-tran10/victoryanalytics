@@ -17,8 +17,10 @@
      "tier": "S",
      "stats": [
       "Outspeeds 75%",
-      "KOs in 1-2 hits 86%",
-      "Takes a hit 85%"
+      "Takes 2 hits to KO",
+      "Resists 5 types",
+      "Weak to 4 types",
+      "Single target only"
      ],
      "tools": [
       "Priority: Sucker Punch"
@@ -33,8 +35,10 @@
      "tier": "S",
      "stats": [
       "Outspeeds 84%",
-      "KOs in 1-2 hits 86%",
-      "Takes a hit 65%"
+      "Takes 2 hits to KO",
+      "Resists 5 types",
+      "Weak to 3 types",
+      "Single target only"
      ],
      "tools": [
       "Priority: Extreme Speed"
@@ -45,12 +49,32 @@
      "rec": false
     },
     {
+     "name": "Gholdengo",
+     "tier": "S",
+     "stats": [
+      "Outspeeds 52%",
+      "Takes 3 hits to KO",
+      "Resists 12 types",
+      "Weak to 4 types"
+     ],
+     "tools": [
+      "Spread: Make It Rain",
+      "Blocks status moves"
+     ],
+     "sid": "GHOLDENGO",
+     "form": "0",
+     "pick": true,
+     "rec": false
+    },
+    {
      "name": "Porygon-Z",
      "tier": "B",
      "stats": [
       "Outspeeds 75%",
-      "KOs in 1-2 hits 74%",
-      "Takes a hit 77%"
+      "Takes 2 hits to KO",
+      "Resists 1 type",
+      "Weak to 1 type",
+      "Single target only"
      ],
      "tools": [],
      "sid": "PORYGONZ",
@@ -63,8 +87,10 @@
      "tier": "B",
      "stats": [
       "Outspeeds 75%",
-      "KOs in 1-2 hits 70%",
-      "Takes a hit 79%"
+      "Takes 2 hits to KO",
+      "Resists 10 types",
+      "Weak to 2 types",
+      "Single target only"
      ],
      "tools": [
       "Taunt"
@@ -79,29 +105,15 @@
      "tier": "B",
      "stats": [
       "Outspeeds 75%",
-      "KOs in 1-2 hits 72%",
-      "Takes a hit 65%"
+      "Takes 2 hits to KO",
+      "Resists 5 types",
+      "Weak to 5 types",
+      "Single target only"
      ],
      "tools": [],
      "sid": "FLAMIGO",
      "form": "0",
      "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Gholdengo",
-     "tier": "S",
-     "stats": [
-      "Outspeeds 52%",
-      "KOs in 1-2 hits 80%",
-      "Takes a hit 85%"
-     ],
-     "tools": [
-      "Blocks status moves"
-     ],
-     "sid": "GHOLDENGO",
-     "form": "0",
-     "pick": true,
      "rec": false
     }
    ]

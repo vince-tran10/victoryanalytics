@@ -764,3 +764,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 22 Nov: Team Builder rebuilt: every owned Pokémon checked per slot against the role's real tools (legal moves/ability), ranked by tier then tools (closer: boost size), chips instead of numbers.
   Ranks: Gholdengo #2 lead (Annihilape #1), Arcanine-H #1 doubles lead, Vaporeon #8 mid (B tier; Glalie-A / Musharna-A / Alomomola above), Golisopod-A #1 closer.
 - 22 Nov: Builder slot 1 = singles lead by speed / 1-2 hit KOs / takes a hit vs all game trainers; chips reworked (no 'status-proof'); needs + rank text removed; yellow 'Also strong' = Annihilape (lead win 70% vs Gholdengo 62%; outspeeds 75% vs 52%).
+- 22 Nov: Builder slot 1 chips: Outspeeds / Takes N hits to KO / Resists / Weak to / spread or single target; KOs chip dropped; pick sorted in tier+preference order (Gholdengo now 3rd of the S tier).

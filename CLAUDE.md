@@ -179,7 +179,10 @@ damage score and the fight's real win condition was only read after Vincent lost
   count (closer: boost size), tool chips shown, NO numeric score (Vincent, 22 Nov: the tier is enough); no needs list, no rank line.
   Slot 1 (singles lead, Vincent 22 Nov: faster > bulky, takes one hit, KOs in 1-2): measured vs EVERY trainer in the game (r<run>all):
   gate outspeeds >= 70%, KOs in 1-2 hits >= 65%, takes a hit >= 60%; ranked tier, then lead win rate (KOs in <= 2 before it dies);
-  grey chips = those 3 numbers, green = turn-1 tools that matter (Intimidate, Fake Out, priority, Taunt, Good as Gold).
+  List sorted tier, then lead preference (lead win rate), the pick placed IN that order (never appended). Grey chips: Outspeeds %,
+  Takes N hits to KO (median vs all foes), Resists N types, Weak to N types, 'Single target only'; green: Spread: <move it runs>
+  (party moves / ideal build), Intimidate, Fake Out, priority, Taunt, Good as Gold. common_chips() (resists / weak / spread) is
+  meant for slots 2-4 too when Vincent redoes them.
   RED outline = his pick. YELLOW 'Also strong' = a real alternative (same tier or higher, not in the core, no weak-3 with the other
   three, lead win >= pick + .05). Re-evaluated every run (new mons, story, team): expect it rarely, never default to his pick. Flex / chapter swaps come later. **Cores tab REMOVED (Vincent, 22 Nov)**: he plays the team
   I recommend; cores.py only runs with CORES=1 (chat analysis). Team check for the remaining fights: scripts/team/team_fights.py
