@@ -68,8 +68,31 @@ def lead_chips(m):
     x = first(L, PRIO); t += [f'Priority: {x}'] if x else []
     if 'TAUNT' in L: t.append('Taunt')
     if 'GOODASGOLD' in ab: t.append('Blocks status moves')
-    return st_, t
+    return st_, merge(t, kit(m))
 def first(L, ids): return next((mname(x) for x in ids if x in L), None)
+# 22 Nov (Vincent): key details per Pokémon = what its build actually RUNS, by what roles care about
+KIT = [('Redirection', ['FOLLOWME', 'RAGEPOWDER']),
+       ('Status', ['SPORE', 'SLEEPPOWDER', 'YAWN', 'WILLOWISP', 'THUNDERWAVE', 'GLARE', 'NUZZLE', 'TOXIC', 'HYPNOSIS', 'STUNSPORE', 'SING']),
+       ('Speed control', ['TAILWIND', 'TRICKROOM', 'ICYWIND', 'ELECTROWEB', 'SCARYFACE', 'BULLDOZE', 'STRINGSHOT']),
+       ('Setup', ['SWORDSDANCE', 'NASTYPLOT', 'SHELLSMASH', 'BELLYDRUM', 'DRAGONDANCE', 'QUIVERDANCE', 'CALMMIND', 'BULKUP', 'CURSE',
+                  'SHIFTGEAR', 'COIL', 'TIDYUP', 'VICTORYDANCE', 'FILLETAWAY', 'TAILGLOW', 'GEOMANCY', 'IRONDEFENSE', 'COSMICPOWER']),
+       ('Pivot', ['UTURN', 'VOLTSWITCH', 'FLIPTURN', 'PARTINGSHOT', 'TELEPORT', 'CHILLYRECEPTION']),
+       ('Recovery', ['RECOVER', 'ROOST', 'SLACKOFF', 'MOONLIGHT', 'SYNTHESIS', 'SOFTBOILED', 'WISH', 'SHOREUP', 'STRENGTHSAP', 'MILKDRINK', 'MORNINGSUN']),
+       ('Stat reset', ['HAZE', 'CLEARSMOG', 'ROAR', 'WHIRLWIND', 'DRAGONTAIL', 'CIRCLETHROW']),
+       ('Disrupt', ['FAKEOUT', 'TAUNT', 'ENCORE', 'KNOCKOFF', 'TRICK']),
+       ('Screens', ['REFLECT', 'LIGHTSCREEN', 'AURORAVEIL']),
+       ('Support', ['HELPINGHAND', 'WIDEGUARD', 'QUICKGUARD', 'POLLENPUFF', 'LIFEDEW'])]
+def kit(m):
+    bm = build_moves(m.name); out_ = []
+    for lab, ids in KIT:
+        hit = [mname(x) for x in bm if x in ids]
+        if hit: out_.append(f'{lab}: {hit[0]}')
+    x = next((mname(y) for y in bm if y in PRIO), None)
+    if x: out_.append(f'Priority: {x}')
+    return out_
+def merge(a, b):   # role tools first, then kit chips naming a move not already shown
+    seen = {x.split(': ')[-1].split(' (')[0] for x in a}
+    return a + [x for x in b if x.split(': ')[-1] not in seen]
 def tools(m, slot):   # the role's tools this Pokémon can legally run (moves) or has (ability)
     L, ab = m.legal, set(m.r.get('abilities') or [])
     t = []
@@ -131,8 +154,7 @@ if len(core) == 4:
             res.sort(key=lambda x: (-x[0], -x[1], -x[2]))
             mine = base[i].name if base[i] else None; pv = LEAD.get(mine, dict(win=0, fast=0))
             # yellow = a real alternative: same tier or higher, not in the core, fits the other three, clearly better lead (win +.05)
-            rec = next((x[3].name for x in sorted(res, key=lambda x: -x[1]) if x[3].name != mine and x[0] >= (RK.get(base[i].r['tier'], 0) if base[i] else 0)
-                        and x[1] >= pv['win'] + .05), None)
+            rec = res[0][3].name if res else None   # 22 Nov: my suggestion = the top of this ranking (tier, then role preference)
             top = [x for x in res if x[3].name not in (rec, mine)][:6 - len({rec, mine} - {None})]
             for want in (rec, mine):
                 if want and want not in [x[3].name for x in top]:
@@ -157,8 +179,20 @@ if len(core) == 4:
         if mine not in [x[3].name for x in top]:
             hit = next((x for x in res if x[3].name == mine), None)
             if hit: top = top[:5] + [hit]
-        out.append(dict(slot=slot, title=title, pick=mine, rec=None,
-                        cands=[dict(name=m.name, tier=m.r['tier'], tools=t, sid=m.r.get('sid'), form=str(m.r.get('form', '0')), pick=m.name == mine)
+        # suggestion (Vincent 22 Nov: highlight MY pick per slot): tier + role fit + type matchups, not just the list order
+        def _fit(x):
+            m, t = x[3], x[4]
+            f_ = min(x[1], 2) if slot == 4 else len([y for y in t if not y.startswith('spread')])
+            return RK.get(m.r['tier'], 0) + f_ + .1 * (sum(m.mult[a] < 1 for a in TYPES) - sum(m.mult[a] > 1 for a in TYPES))
+        rec = max(res, key=_fit)[3].name if res else None
+        if rec and rec not in [x[3].name for x in top]: top = top[:5] + [next(x for x in res if x[3].name == rec)]
+        top.sort(key=lambda x: (-x[0], -x[1], -x[2]))
+        def _st(m):
+            cs, ct = common_chips(m)
+            return cs + ([] if ct else ['Single target only']), ct
+        out.append(dict(slot=slot, title=title, pick=mine, rec=rec,
+                        cands=[dict(name=m.name, tier=m.r['tier'], stats=_st(m)[0], tools=merge([x for x in t if not x.startswith('spread')] + _st(m)[1], kit(m)),
+                                    sid=m.r.get('sid'), form=str(m.r.get('form', '0')), pick=m.name == mine, rec=m.name == rec)
                                for _, _, _, m, t in top]))
 json.dump(dict(core=core, slots=out), open('team/builder.json', 'w'), indent=1, ensure_ascii=False)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -168,7 +202,7 @@ for s_ in out:
     rows = ''
     for c in s_['cands']:
         rows += ('<li class="bc' + (' pick' if c['pick'] else '') + (' rec' if c.get('rec') else '') + '"><div class="bct"><span class="tier t' + c['tier'] + '">' + c['tier'] + '</span>' + SP.tag(c['sid'], c['form'], size='s')
-                 + '<b>' + E(disp(c['name'])) + '</b>' + ('<span class="bpick">Your pick</span>' if c['pick'] else '') + ('<span class="brec">' + ('Recommended' if not s_['pick'] else 'Also strong') + '</span>' if c.get('rec') else '') + '</div>'
+                 + '<b>' + E(disp(c['name'])) + '</b>' + ('<span class="bpick">Your pick</span>' if c['pick'] else '') + ('<span class="brec">Suggested</span>' if c.get('rec') else '') + '</div>'
                  + '<div class="btools">' + ''.join('<span class="bstat">' + E(x) + '</span>' for x in c.get('stats', [])) + ''.join('<span class="btool">' + E(x) + '</span>' for x in c['tools']) + '</div></li>')
     cards += ('<article class="bslot"><header><span class="bn">' + str(s_['slot']) + '</span><b>' + E(s_['title']) + '</b>'
               + ('<span class="bempty">Empty</span>' if not s_['pick'] else '') + '</header>'

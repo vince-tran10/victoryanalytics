@@ -193,8 +193,10 @@ damage score and the fight's real win condition was only read after Vincent lost
   Takes N hits to KO (median vs all foes), Resists N types, Weak to N types, 'Single target only'; green: Spread: <move it runs>
   (party moves / ideal build), Intimidate, Fake Out, priority, Taunt, Good as Gold. common_chips() (resists / weak / spread) is
   meant for slots 2-4 too when Vincent redoes them.
-  RED outline = his pick. YELLOW 'Also strong' = a real alternative (same tier or higher, not in the core, no weak-3 with the other
-  three, lead win >= pick + .05). Re-evaluated every run (new mons, story, team): expect it rarely, never default to his pick. Flex / chapter swaps come later. **Cores tab REMOVED (Vincent, 22 Nov)**: he plays the team
+  RED outline = his pick. YELLOW 'Suggested' = MY pick for EVERY slot (Vincent 22 Nov): tier rank + role fit (slot 1 lead win;
+  2/3 role tool count; 4 boost size capped at +2) + 0.1 x (resists - weaknesses); both outlines when they agree.
+  Key-detail chips on every slot (22 Nov): grey = resists / weak / 'Single target only'; green = role tools + what its build RUNS
+  (KIT in builder.py: Redirection, Status, Speed control, Setup, Pivot, Recovery, Stat reset, Disrupt, Screens, Support, Priority, Spread). Re-evaluated every run (new mons, story, team): expect it rarely, never default to his pick. Flex / chapter swaps come later. **Cores tab REMOVED (Vincent, 22 Nov)**: he plays the team
   I recommend; cores.py only runs with CORES=1 (chat analysis). Team check for the remaining fights: scripts/team/team_fights.py
   (core + best 2 flexes per fight, full-six one-to-one counters).
 - **App look (Vincent, 17 Nov): it must look like an app, Pokémon themed.** scripts/team/theme.py runs LAST (after tabs.py) and
