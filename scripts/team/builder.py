@@ -286,7 +286,7 @@ for s_ in out:
                  + '<label class="bchk" title="Add to the type matrix"><input type="checkbox" data-tm="' + E(disp(c['name'])) + '"' + (' checked' if c['pick'] else '') + '></label>'
                  + '<span class="tier t' + c['tier'] + '">' + c['tier'] + '</span>' + SP.tag(c['sid'], c['form'], size='s')
                  + '<b>' + E(disp(c['name'])) + '</b>' + ('<span class="bpick">Your pick</span>' if c['pick'] else '') + ('<span class="brec">Suggested</span>' if c.get('rec') else '') + '</div>'
-                 + '<div class="btools">' + ''.join('<span class="bstat">' + E(x) + '</span>' for x in c.get('stats', [])) + ''.join('<span class="btool">' + E(x) + '</span>' for x in c['tools']) + ''.join('<span class="bteach">Teach: ' + E(x) + '</span>' for x in c.get('teach', [])) + '</div>'
+                 + '<div class="btools">' + ''.join('<span class="bstat">' + E(x) + '</span>' for x in c.get('stats', [])) + ''.join('<span class="btool">' + E(x) + '</span>' for x in c['tools']) + '</div>'
                  + (''.join('<div class="bwhy"><b>Why not ' + E(w['name']) + ' (' + w['tier'] + ')</b><ul>' + ''.join('<li>' + E(l) + '</li>' for l in w['lines']) + '</ul></div>'
                             for w in s_.get('why') or [] if w['lines']) if c.get('rec') else '') + '</li>')
     cards += ('<article class="bslot' + (' bflex' if s_.get('flex') else '') + '"><header><span class="bn">' + (('F' + str(s_['slot'] - 4)) if s_.get('flex') else str(s_['slot'])) + '</span><b>' + E(s_['title']) + '</b>'

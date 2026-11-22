@@ -269,12 +269,11 @@
      "tier": "S",
      "stats": [
       "Resists 4 types",
-      "Weak to 3 types",
-      "Single target only"
+      "Weak to 3 types"
      ],
      "tools": [
       "Regenerator",
-      "Pivot: Chilly Reception"
+      "Spread: Surf"
      ],
      "sid": "SLOWKING",
      "form": "1",
@@ -371,8 +370,7 @@
      ],
      "tools": [
       "Regenerator",
-      "Spread: Surf",
-      "Pivot: Chilly Reception"
+      "Spread: Surf"
      ],
      "sid": "SLOWKING",
      "form": "0",

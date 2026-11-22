@@ -67,7 +67,8 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Room). Owned weather/terrain setters (16 Nov): Drought Ninetales, Snow Warning (Ninetales-Alola, Vanilluxe, Aurorus,
   Abomasnow), Grassy Surge Glalie-A, Electric Surge Pincurchin. No Drizzle / Sand Stream. Checked by checks.py.
 - **Core now (22 Nov 11:33 export, Vincent took the Builder suggestions): Veluza-Aevian (confirmed slot 1, 22 Nov) · Amoonguss (confirmed slot 2: Spore / Rage Powder / Clear Smog / Protect, Modest 252 HP / SpA, Sitrus; Clear Smog over Sludge Bomb = the core's only stat reset; Pollen Puff not legal) ·
-  Slowking-Galar (confirmed slot 3, 22 Nov: Sludge Bomb / Psychic / Chilly Reception / Protect, Regenerator, Modest 252 HP / SpA,
+  Slowking-Galar (confirmed slot 3, 22 Nov: Sludge Bomb / Psychic / Surf / Protect (Surf replaced Chilly Reception: Rejuv's Chilly
+  Reception sets SNOW, Battle_MoveEffects 0x516, which helps no one on his team; Surf covers Steel / Tyranitar / Groudon / Krookodile), Regenerator, Modest 252 HP / SpA,
   Poison Barb; replaced Alomomola) · Golisopod-Aevian (confirmed slot 4).** Rules (b)(c) per fight are HARD only for types in 2+
   hard fights or on a boss; one-off types (e.g. Spector Ninetales Fire/Ghost) are a tiebreak (chapter_rules.check_set 'minor'). Gholdengo is illegal at Ch9. Older history below. **Picked core (16 Nov): Balance / tempo** = Arcanine-Hisui (Intimidate) · Golisopod-Aevian (Skill Link, SD) · Gholdengo
   (Good as Gold, Thunder Wave) · Vaporeon (Water Absorb, Haze). #1 core score of 89,985 cores from the top 40 across all tier
@@ -208,6 +209,7 @@ damage score and the fight's real win condition was only read after Vincent lost
   ALWAYS VERIFY (Vincent, 22 Nov): before saying what the page shows, read it back from output/chapter8_report.html / builder.json
   AFTER the final run (checks.py prints 'Builder: my suggestion matches your core'). Fit = 2 x tier rank + role tools (max 2)
   + 0.1 x (resists - weak) + 0.2 x covered gaps (max 3): a lower tier can't win on tool count alone.
+  No 'Teach: X' chips (Vincent, 22 Nov: never show something that will never happen); chips = what the build runs.
   FLEX cards (22 Nov): Builder ends with 'F1 Flex 1 · Mid game · <next fight>' and 'F2 Flex 2 · Closer · <next fight>': the plan's
   2 swaps (state.team) + the best alternatives from fight_plans.json 'alts' (full pair search, also for the hand-planned next fight),
   split by role (closer = has a setup move), 'Counters: <foe>' chips from the plan's pairs. Only the NEXT fight; Ch9-specific.
