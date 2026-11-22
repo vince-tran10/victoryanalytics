@@ -23,7 +23,11 @@ OK_METHODS = {'Level', 'LevelDay', 'LevelNight', 'LevelFemale', 'LevelMale', 'Ha
               'Silcoon', 'Cascoon', 'Ninjask', 'Shedinja', 'AttackGreater', 'DefenseGreater', 'AtkDefEqual', 'LevelRain', 'LevelDusk',
               'WalkSteps', 'Affection', 'LevelBattle', 'HasInParty'}
 
-EXTRA_OK = {'NIGHTMAREFUEL', 'OVALSTONE', 'ELECTIRIZER'}   # Vincent 22 Nov: Electirizer = Ch9 / held by wild Electabuzz. Protector = Ch10, Xen Waste = Ch12, Armors / Dubious Disc = later (Shayda shop)
+# Route 2 trailer (Ch2 walkthrough): random daily set of 8; evo items Ice / Dusk / Dawn / Shiny Stone, Galarica Cuff / Wreath, Link Heart.
+# Vincent 22 Nov: anything this shop sells counts as obtainable (its stock may grow later in the story: add items here when he says).
+# Link Heart stays limited to state link_hearts (his rule: one, A tier+).
+ROUTE2_TRAILER = {'ICESTONE', 'DUSKSTONE', 'DAWNSTONE', 'SHINYSTONE', 'GALARICACUFF', 'GALARICAWREATH'}
+EXTRA_OK = ROUTE2_TRAILER | {'NIGHTMAREFUEL', 'OVALSTONE', 'ELECTIRIZER'}   # Vincent 22 Nov: Electirizer = Ch9 / held by wild Electabuzz. Protector = Ch10, Xen Waste = Ch12, Armors / Dubious Disc = later (Shayda shop)
 def mt_form(sid, form):
     fs = MT.get(sid) or {}
     names = list(fs)
