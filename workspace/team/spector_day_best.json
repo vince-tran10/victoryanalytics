@@ -1,0 +1,178 @@
+[
+ {
+  "score": 67.63,
+  "counters": 6,
+  "core": [
+   "Zoroark (Hisuian Form)",
+   "Diggersby",
+   "Gholdengo",
+   "Raichu"
+  ],
+  "flex": [
+   "Porygon-Z",
+   "Braviary"
+  ],
+  "pairs": {
+   "Murkrow": "Raichu",
+   "Gothitelle": "Gholdengo",
+   "Gengar": "Braviary",
+   "Houndstone": "Zoroark (Hisuian Form)",
+   "Ninetales": "Diggersby",
+   "Banette": "Porygon-Z"
+  }
+ },
+ {
+  "score": 67.63,
+  "counters": 6,
+  "core": [
+   "Zoroark (Hisuian Form)",
+   "Diggersby",
+   "Gholdengo",
+   "Dodrio"
+  ],
+  "flex": [
+   "Porygon-Z",
+   "Raichu"
+  ],
+  "pairs": {
+   "Murkrow": "Raichu",
+   "Gothitelle": "Gholdengo",
+   "Gengar": "Dodrio",
+   "Houndstone": "Zoroark (Hisuian Form)",
+   "Ninetales": "Diggersby",
+   "Banette": "Porygon-Z"
+  }
+ },
+ {
+  "score": 67.55,
+  "counters": 6,
+  "core": [
+   "Zoroark (Hisuian Form)",
+   "Diggersby",
+   "Gholdengo",
+   "Heliolisk"
+  ],
+  "flex": [
+   "Porygon-Z",
+   "Braviary"
+  ],
+  "pairs": {
+   "Murkrow": "Heliolisk",
+   "Gothitelle": "Gholdengo",
+   "Gengar": "Braviary",
+   "Houndstone": "Zoroark (Hisuian Form)",
+   "Ninetales": "Diggersby",
+   "Banette": "Porygon-Z"
+  }
+ },
+ {
+  "score": 67.51,
+  "counters": 6,
+  "core": [
+   "Zoroark (Hisuian Form)",
+   "Diggersby",
+   "Gholdengo",
+   "Arcanine (Hisuian Form)"
+  ],
+  "flex": [
+   "Porygon-Z",
+   "Braviary"
+  ],
+  "pairs": {
+   "Murkrow": "Arcanine (Hisuian Form)",
+   "Gothitelle": "Gholdengo",
+   "Gengar": "Braviary",
+   "Houndstone": "Zoroark (Hisuian Form)",
+   "Ninetales": "Diggersby",
+   "Banette": "Porygon-Z"
+  }
+ },
+ {
+  "score": 67.51,
+  "counters": 6,
+  "core": [
+   "Zoroark (Hisuian Form)",
+   "Diggersby",
+   "Gholdengo",
+   "Ceruledge"
+  ],
+  "flex": [
+   "Porygon-Z",
+   "Braviary"
+  ],
+  "pairs": {
+   "Murkrow": "Ceruledge",
+   "Gothitelle": "Gholdengo",
+   "Gengar": "Braviary",
+   "Houndstone": "Zoroark (Hisuian Form)",
+   "Ninetales": "Diggersby",
+   "Banette": "Porygon-Z"
+  }
+ },
+ {
+  "score": 67.51,
+  "counters": 6,
+  "core": [
+   "Zoroark (Hisuian Form)",
+   "Diggersby",
+   "Gholdengo",
+   "Azumarill"
+  ],
+  "flex": [
+   "Porygon-Z",
+   "Braviary"
+  ],
+  "pairs": {
+   "Murkrow": "Azumarill",
+   "Gothitelle": "Gholdengo",
+   "Gengar": "Braviary",
+   "Houndstone": "Zoroark (Hisuian Form)",
+   "Ninetales": "Diggersby",
+   "Banette": "Porygon-Z"
+  }
+ },
+ {
+  "score": 67.51,
+  "counters": 6,
+  "core": [
+   "Zoroark (Hisuian Form)",
+   "Diggersby",
+   "Gholdengo",
+   "Solrock (Solrock Dominant Fusion)"
+  ],
+  "flex": [
+   "Porygon-Z",
+   "Braviary"
+  ],
+  "pairs": {
+   "Murkrow": "Solrock (Solrock Dominant Fusion)",
+   "Gothitelle": "Gholdengo",
+   "Gengar": "Braviary",
+   "Houndstone": "Zoroark (Hisuian Form)",
+   "Ninetales": "Diggersby",
+   "Banette": "Porygon-Z"
+  }
+ },
+ {
+  "score": 67.51,
+  "counters": 6,
+  "core": [
+   "Zoroark (Hisuian Form)",
+   "Diggersby",
+   "Gholdengo",
+   "Vikavolt"
+  ],
+  "flex": [
+   "Porygon-Z",
+   "Braviary"
+  ],
+  "pairs": {
+   "Murkrow": "Vikavolt",
+   "Gothitelle": "Gholdengo",
+   "Gengar": "Braviary",
+   "Houndstone": "Zoroark (Hisuian Form)",
+   "Ninetales": "Diggersby",
+   "Banette": "Porygon-Z"
+  }
+ }
+]
