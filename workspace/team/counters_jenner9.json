@@ -23,10 +23,10 @@
    },
    {
     "foe": "Appletun",
-    "mon": "Amoonguss",
+    "mon": "Slowking (Galarian Form)",
     "ability": "REGENERATOR",
-    "dealt": 20,
-    "taken": 47,
+    "dealt": 62,
+    "taken": 40,
     "ok": false,
     "setup": false,
     "wincons": [
@@ -57,10 +57,10 @@
    },
    {
     "foe": "Porygon-Z",
-    "mon": "Alomomola",
+    "mon": "Amoonguss",
     "ability": "REGENERATOR",
-    "dealt": 39,
-    "taken": 151,
+    "dealt": 14,
+    "taken": 122,
     "ok": false,
     "setup": false,
     "wincons": []

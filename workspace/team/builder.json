@@ -2,7 +2,7 @@
  "core": [
   "Veluza (Aevian Form)",
   "Amoonguss",
-  "Alomomola",
+  "Slowking (Galarian Form)",
   "Golisopod (Aevian Form)"
  ],
  "slots": [
@@ -138,27 +138,26 @@
    "slot": 2,
    "title": "Core 2 · Doubles lead",
    "pick": "Amoonguss",
-   "rec": "Amoonguss",
-   "why": [],
-   "cands": [
+   "rec": "Scrafty",
+   "why": [
     {
-     "name": "Arcanine (Hisuian Form)",
+     "name": "Amoonguss",
      "tier": "A",
-     "stats": [
-      "Resists 7 types",
-      "Weak to 4 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Intimidate",
-      "Priority: Extreme Speed"
-     ],
-     "sid": "ARCANINE",
-     "form": "1",
-     "pick": false,
-     "rec": false,
-     "teach": []
+     "lines": [
+      "Role tools: Intimidate, Fake Out vs Rage Powder",
+      "Weak to 3 types vs 4",
+      "Shares fewer weaknesses with the core: 1 vs 3 (Fire, Ice, Flying)"
+     ]
     },
+    {
+     "name": "Clefable",
+     "tier": "A",
+     "lines": [
+      "Role tools: Intimidate, Fake Out vs Follow Me"
+     ]
+    }
+   ],
+   "cands": [
     {
      "name": "Amoonguss",
      "tier": "A",
@@ -175,7 +174,7 @@
      "sid": "AMOONGUSS",
      "form": "0",
      "pick": true,
-     "rec": true,
+     "rec": false,
      "teach": []
     },
     {
@@ -195,6 +194,26 @@
      "rec": false,
      "teach": [
       "Follow Me"
+     ]
+    },
+    {
+     "name": "Mandibuzz",
+     "tier": "A",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 4 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Recovery: Roost",
+      "Disrupt: Knock Off"
+     ],
+     "sid": "MANDIBUZZ",
+     "form": "0",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Tailwind"
      ]
     },
     {
@@ -218,24 +237,6 @@
      ]
     },
     {
-     "name": "Arcanine",
-     "tier": "B",
-     "stats": [
-      "Resists 6 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Intimidate",
-      "Priority: Extreme Speed"
-     ],
-     "sid": "ARCANINE",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": []
-    },
-    {
      "name": "Scrafty",
      "tier": "B",
      "stats": [
@@ -250,6 +251,23 @@
      "sid": "SCRAFTY",
      "form": "0",
      "pick": false,
+     "rec": true,
+     "teach": []
+    },
+    {
+     "name": "Furret",
+     "tier": "B",
+     "stats": [
+      "Resists 1 type",
+      "Weak to 1 type",
+      "Single target only"
+     ],
+     "tools": [
+      "Follow Me"
+     ],
+     "sid": "FURRET",
+     "form": "0",
+     "pick": false,
      "rec": false,
      "teach": []
     }
@@ -258,7 +276,7 @@
   {
    "slot": 3,
    "title": "Core 3 · Mid game",
-   "pick": "Alomomola",
+   "pick": "Slowking (Galarian Form)",
    "rec": "Slowking (Galarian Form)",
    "why": [],
    "cands": [
@@ -276,7 +294,7 @@
      ],
      "sid": "SLOWKING",
      "form": "1",
-     "pick": false,
+     "pick": true,
      "rec": true,
      "teach": [
       "Slack Off"
@@ -338,7 +356,7 @@
      ],
      "sid": "ALOMOMOLA",
      "form": "0",
-     "pick": true,
+     "pick": false,
      "rec": false,
      "teach": []
     },
@@ -407,45 +425,6 @@
      "teach": []
     },
     {
-     "name": "Slowking (Galarian Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Pivot: Chilly Reception"
-     ],
-     "sid": "SLOWKING",
-     "form": "1",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Nasty Plot"
-     ]
-    },
-    {
-     "name": "Muk (Alolan Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 1 type",
-      "Single target only"
-     ],
-     "tools": [
-      "Stat reset: Clear Smog",
-      "Disrupt: Knock Off"
-     ],
-     "sid": "MUK",
-     "form": "1",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Curse"
-     ]
-    },
-    {
      "name": "Zoroark (Hisuian Form)",
      "tier": "A",
      "stats": [
@@ -497,6 +476,41 @@
      "rec": false,
      "teach": [
       "Nasty Plot"
+     ]
+    },
+    {
+     "name": "Swampert",
+     "tier": "A",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 1 type"
+     ],
+     "tools": [
+      "Spread: Earthquake"
+     ],
+     "sid": "SWAMPERT",
+     "form": "0",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Curse"
+     ]
+    },
+    {
+     "name": "Mismagius (Aevian Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 6 types",
+      "Weak to 5 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "sid": "MISMAGIUS",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Curse"
      ]
     }
    ]

@@ -946,14 +946,14 @@
   "source": "game+smogon"
  },
  "Slowking (Galarian Form)": {
-  "ability": "REGENERATOR",
+  "ability": "Regenerator",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
   "item": "Poison Barb",
   "moves": [
    "Sludge Bomb",
-   "Chilly Reception",
    "Psychic",
+   "Chilly Reception",
    "Protect"
   ],
   "move_ids": [
@@ -962,7 +962,7 @@
    "PSYCHIC"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "your team"
  },
  "Camerupt": {
   "ability": "SOLIDROCK",
@@ -5932,7 +5932,7 @@
   "source": "game"
  },
  "Alomomola": {
-  "ability": "Regenerator",
+  "ability": "REGENERATOR",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
   "item": "Sitrus Berry",
@@ -5948,7 +5948,7 @@
    "WAKEUPSLAP"
   ],
   "role": "support",
-  "source": "your team"
+  "source": "your rules"
  },
  "Weezing": {
   "ability": "LEVITATE",

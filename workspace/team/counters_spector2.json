@@ -6,10 +6,10 @@
   "pairs": [
    {
     "foe": "Stonjourner",
-    "mon": "Roserade (Aevian Form)",
-    "ability": "SANDVEIL",
-    "dealt": 130,
-    "taken": 64,
+    "mon": "Slowking (Galarian Form)",
+    "ability": "REGENERATOR",
+    "dealt": 117,
+    "taken": 47,
     "ok": true,
     "setup": false,
     "wincons": []
@@ -46,10 +46,10 @@
    },
    {
     "foe": "Typhlosion",
-    "mon": "Alomomola",
-    "ability": "REGENERATOR",
-    "dealt": 40,
-    "taken": 130,
+    "mon": "Pangoro",
+    "ability": "SCRAPPY",
+    "dealt": 106,
+    "taken": 145,
     "ok": false,
     "setup": false,
     "wincons": []

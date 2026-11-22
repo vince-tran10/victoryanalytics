@@ -79,10 +79,10 @@
    },
    {
     "foe": "Ninetales",
-    "mon": "Alomomola",
+    "mon": "Amoonguss",
     "ability": "REGENERATOR",
-    "dealt": 33,
-    "taken": 33,
+    "dealt": 11,
+    "taken": 42,
     "ok": false,
     "setup": false,
     "wincons": [
@@ -96,10 +96,10 @@
    },
    {
     "foe": "Banette",
-    "mon": "Amoonguss",
+    "mon": "Slowking (Galarian Form)",
     "ability": "REGENERATOR",
-    "dealt": 10,
-    "taken": 127,
+    "dealt": 67,
+    "taken": 252,
     "ok": false,
     "setup": false,
     "wincons": []

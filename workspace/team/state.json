@@ -4,9 +4,9 @@
  "export_label": "22 Nov 11:33",
  "active_start": 445,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 225,
- "run": 239,
- "final": 243,
+ "roster": 227,
+ "run": 241,
+ "final": 245,
  "done": [
   "aelita",
   "narcissa1",
@@ -39,7 +39,7 @@
   "Oranguru",
   "Zoroark (Hisuian Form)",
   "Golisopod (Aevian Form)",
-  "Alomomola"
+  "Slowking (Galarian Form)"
  ],
  "moves": {
   "Golisopod (Aevian Form)": [
@@ -114,16 +114,16 @@
    "Clear Smog",
    "Protect"
   ],
-  "Alomomola": [
-   "Wish",
-   "Aqua Jet",
-   "Wake-Up Slap",
-   "Protect"
-  ],
   "Veluza (Aevian Form)": [
    "Wave Crash",
    "Flare Blitz",
    "Head Smash",
+   "Protect"
+  ],
+  "Slowking (Galarian Form)": [
+   "Sludge Bomb",
+   "Psychic",
+   "Chilly Reception",
    "Protect"
   ]
  },
@@ -146,11 +146,11 @@
  "team_check": {
   "rank": null,
   "of": 434008,
-  "gap": 32.86,
+  "gap": 42.65,
   "top": [
    {
     "score": 1.0433,
-    "pct": 132.9,
+    "pct": 142.6,
     "team": [
      "Golisopod-A",
      "Scrafty",
@@ -163,7 +163,7 @@
    },
    {
     "score": 1.0423,
-    "pct": 132.7,
+    "pct": 142.5,
     "team": [
      "Golisopod-A",
      "Scrafty",
@@ -176,7 +176,7 @@
    },
    {
     "score": 1.0423,
-    "pct": 132.7,
+    "pct": 142.5,
     "team": [
      "Golisopod-A",
      "Scrafty",
@@ -192,7 +192,6 @@
    "Houndstone",
    "Stoutland",
    "Porygon-Z",
-   "Kommo-o",
    "Chandelure"
   ]
  },
@@ -210,8 +209,8 @@
   "Scrafty": "MOXIE",
   "Zoroark (Hisuian Form)": "ILLUSION",
   "Amoonguss": "Regenerator",
-  "Alomomola": "Regenerator",
-  "Veluza (Aevian Form)": "Reckless"
+  "Veluza (Aevian Form)": "Reckless",
+  "Slowking (Galarian Form)": "Regenerator"
  },
  "crests_owned": [
   "Phione Crest"
@@ -221,7 +220,7 @@
  "core": [
   "Veluza (Aevian Form)",
   "Amoonguss",
-  "Alomomola",
+  "Slowking (Galarian Form)",
   "Golisopod (Aevian Form)"
  ],
  "core_check": {
@@ -233,12 +232,16 @@
     "GHOST",
     "NORMAL",
     "PSYCHIC"
-   ]
+   ],
+   "minor": []
   },
   "fight": {
    "n": 6,
    "weak3": [],
    "nores": [],
+   "minor": [
+    "FIRE/GHOST"
+   ],
    "key": "spector"
   }
  },
@@ -310,17 +313,18 @@
  "items": {
   "Oranguru": "Sitrus Berry",
   "Amoonguss": "Sitrus Berry",
-  "Alomomola": "Sitrus Berry"
+  "Slowking (Galarian Form)": "Poison Barb"
  },
  "link_hearts": [
   "Slowking"
  ],
  "zoro_note": {
   "zoroark": "Zoroark (Hisuian Form)",
-  "copies": "Alomomola",
+  "copies": "Slowking (Galarian Form)",
   "ability": "REGENERATOR",
   "types": [
-   "WATER"
+   "POISON",
+   "PSYCHIC"
   ],
   "gain": 0.1,
   "moved": true,
@@ -340,14 +344,14 @@
     "slot": 2,
     "gain": 0.1,
     "replacement": "Golisopod (Aevian Form)",
-    "cost": -0.29,
+    "cost": -0.3,
     "ok": false
    }
   ],
   "options": {
    "Veluza (Aevian Form)": 0.0,
    "Amoonguss": 0.1,
-   "Alomomola": 0.1,
+   "Slowking (Galarian Form)": 0.1,
    "Oranguru": 0.0,
    "Golisopod (Aevian Form)": 0.0
   }

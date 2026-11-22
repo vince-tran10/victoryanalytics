@@ -2,24 +2,24 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 4,
+  "counters": 5,
   "pairs": [
    {
     "foe": "Electivire",
-    "mon": "Alomomola",
-    "ability": "REGENERATOR",
-    "dealt": 35,
-    "taken": 36,
-    "ok": false,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 93,
+    "taken": 68,
+    "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Raichu",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 130,
-    "taken": 53,
+    "mon": "Slowking (Galarian Form)",
+    "ability": "REGENERATOR",
+    "dealt": 95,
+    "taken": 45,
     "ok": true,
     "setup": false,
     "wincons": []

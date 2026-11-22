@@ -141,8 +141,10 @@ def check_set(names, only_fight=None):
     ks = [min((k for k in byk if byk[k]['name'] == n), key=lambda k: (byk[k]['src']['where'] != 'Party', -byk[k]['solo_total']))
           for n in names if any(byk[k]['name'] == n for k in byk)]
     types = [s for s in W if only_fight in FIGHTS[s]] if only_fight else MAJOR
-    return {'n': len(ks), 'weak3': ['/'.join(s) for s in types if sum(WK[k][s] for k in ks) >= 3],
-            'nores': ['/'.join(s) for s in types if not any(RS[k][s] for k in ks)]}
+    w3 = [s for s in types if sum(WK[k][s] for k in ks) >= 3]; nr = [s for s in types if not any(RS[k][s] for k in ks)]
+    # 22 Nov: rules (b)(c) are HARD only for types used in 2+ hard fights or by a boss (MAJOR); one-offs are a tiebreak
+    return {'n': len(ks), 'weak3': ['/'.join(s) for s in w3 if s in MAJOR], 'nores': ['/'.join(s) for s in nr if s in MAJOR],
+            'minor': ['/'.join(s) for s in w3 + nr if s not in MAJOR]}
 if __name__ == '__main__' and '--sets' in sys.argv:   # core of 4 vs the chapter + the fight six vs its fight (16 Nov model)
     out = {'core': check_set(json.loads(os.environ['CORE_NAMES']))}
     if os.environ.get('FIGHT_KEY'): out['fight'] = dict(check_set(json.loads(os.environ['TEAM_NAMES']), os.environ['FIGHT_KEY']), key=os.environ['FIGHT_KEY'])

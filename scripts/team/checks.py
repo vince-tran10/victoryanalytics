@@ -74,7 +74,8 @@ if st.get('core') and st.get('core_check'):   # 16 Nov model: core of 4 for the 
     if cc.get('fight'):
         fo = cc['fight']
         chk(f"Fight six passes the rules vs {fo['key']} (its attack types only)", not fo['weak3'] and not fo['nores'] and fo['n'] == 6,
-            f"{fo['n']}/6 checked · 3+ weak {fo['weak3'] or 'none'}, unresisted {fo['nores'] or 'none'}")
+            f"{fo['n']}/6 checked · 3+ weak {fo['weak3'] or 'none'}, unresisted {fo['nores'] or 'none'}"
+            + (f" · one-off types (tiebreak only): {', '.join(fo.get('minor') or [])}" if fo.get('minor') else ''))
 else:
     chk('Team passes the chapter rules', tc.get('rank') is not None, f"#{tc.get('rank')} of {tc.get('of')}")
 if st.get('core') and os.path.exists('team/fight_plans.json'):   # 17 Nov: core model replaces the whole-chapter six search
