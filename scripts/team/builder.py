@@ -23,6 +23,33 @@ ALLM = {}
 for r in rows_all:
     if r['name'] not in ALLM: ALLM[r['name']] = Mon(r)
 core = [n for n in st['core'] if n in ALLM]
+# Slot 1 = singles lead (Vincent, 22 Nov): faster > bulky, takes one hit, KOs in 1-2 hits. Measured vs EVERY trainer in the game data
+# (all-fights engine run r<run>all): per foe faster / hits to KO (hko) / hits to die (hdie). Lead win = KOs in <= 2 hits before it dies.
+import pickle
+LEAD = {}
+_pk = f"team/r{st['run']}all_native.json.pkl"
+if os.path.exists(_pk):
+    for c in pickle.load(open(_pk, 'rb'))['cands']:
+        if c['gate']: continue
+        rr = [x for v in c['matchups'].values() for x in v]
+        if not rr: continue
+        n = len(rr)
+        v = dict(fast=sum(x['faster'] for x in rr) / n, ko=sum(x['hko'] <= 2 for x in rr) / n, surv=sum(x['hdie'] >= 2 for x in rr) / n,
+                 win=sum(x['hko'] <= 2 and (x['hdie'] >= x['hko'] if x['faster'] else x['hdie'] > x['hko']) for x in rr) / n)
+        if c['name'] not in LEAD or (v['win'], v['fast']) > (LEAD[c['name']]['win'], LEAD[c['name']]['fast']): LEAD[c['name']] = v
+PRIO = ['EXTREMESPEED', 'SUCKERPUNCH', 'AQUAJET', 'JETPUNCH', 'BULLETPUNCH', 'MACHPUNCH', 'ICESHARD', 'SHADOWSNEAK', 'ACCELEROCK',
+        'VACUUMWAVE', 'FIRSTIMPRESSION', 'GRASSYGLIDE', 'QUICKATTACK']
+def lead_chips(m):
+    v = LEAD[m.name]
+    st_ = [f"Outspeeds {v['fast']:.0%}", f"KOs in 1-2 hits {v['ko']:.0%}", f"Takes a hit {v['surv']:.0%}"]
+    L, ab = m.legal, set(m.r.get('abilities') or [])
+    t = []
+    if 'INTIMIDATE' in ab: t.append('Intimidate')
+    if 'FAKEOUT' in L: t.append('Fake Out')
+    x = first(L, PRIO); t += [f'Priority: {x}'] if x else []
+    if 'TAUNT' in L: t.append('Taunt')
+    if 'GOODASGOLD' in ab: t.append('Blocks status moves')
+    return st_, t
 SPREAD = ['MAKEITRAIN', 'HEATWAVE', 'EARTHQUAKE', 'ROCKSLIDE', 'MUDDYWATER', 'DAZZLINGGLEAM', 'HYPERVOICE', 'ICYWIND', 'BLIZZARD', 'DISCHARGE',
           'SURF', 'SLUDGEWAVE', 'ERUPTION', 'WATERSPOUT', 'SNARL', 'BREAKINGSWIPE', 'LAVAPLUME', 'BULLDOZE', 'ELECTROWEB', 'BOOMBURST', 'EXPANDINGFORCE']
 def first(L, ids): return next((mname(x) for x in ids if x in L), None)
@@ -77,6 +104,27 @@ if len(core) == 4:
     for i, (title, needs) in enumerate(ROLES):
         slot = i + 1; others = [m for j, m in enumerate(base) if j != i]
         res = []
+        if slot == 1 and LEAD:
+            res = []
+            for m in ALLM.values():
+                v = LEAD.get(m.name)
+                if not v or m.sp in {o.sp for o in others}: continue
+                if v['fast'] < .70 or v['ko'] < .65 or v['surv'] < .60 or weak3(others + [m]): continue
+                res.append((RK.get(m.r['tier'], 0), v['win'], v['fast'], m, lead_chips(m)))
+            res.sort(key=lambda x: (-x[0], -x[1], -x[2]))
+            mine = base[i].name; pv = LEAD.get(mine, dict(win=0, fast=0))
+            # yellow = a real alternative: same tier or higher, not in the core, fits the other three, clearly better lead (win +.05)
+            rec = next((x[3].name for x in sorted(res, key=lambda x: -x[1]) if x[3].name != mine and x[0] >= RK.get(base[i].r['tier'], 0)
+                        and x[1] >= pv['win'] + .05), None)
+            top = res[:6]
+            for want in (rec, mine):
+                if want and want not in [x[3].name for x in top]:
+                    hit = next((x for x in res if x[3].name == want), None) or (RK.get(ALLM[want].r['tier'], 0), 0, 0, ALLM[want], lead_chips(ALLM[want]) if want in LEAD else ([], []))
+                    top = top[:5] + [hit] if len(top) >= 6 else top + [hit]
+            out.append(dict(slot=slot, title=title, pick=mine, rec=rec,
+                            cands=[dict(name=m.name, tier=m.r['tier'], stats=ch[0], tools=ch[1], sid=m.r.get('sid'), form=str(m.r.get('form', '0')),
+                                        pick=m.name == mine, rec=m.name == rec) for _, _, _, m, ch in top]))
+            continue
         for m in ALLM.values():
             if m.sp in {o.sp for o in others}: continue
             t = tools(m, slot)
@@ -91,8 +139,7 @@ if len(core) == 4:
         if mine not in [x[3].name for x in top]:
             hit = next((x for x in res if x[3].name == mine), None)
             if hit: top = top[:5] + [hit]
-        out.append(dict(slot=slot, title=title, needs=needs, pick=mine, rank=(names.index(mine) + 1) if mine in names else None, of=len(res),
-                        meets=mine in names,
+        out.append(dict(slot=slot, title=title, pick=mine, rec=None,
                         cands=[dict(name=m.name, tier=m.r['tier'], tools=t, sid=m.r.get('sid'), form=str(m.r.get('form', '0')), pick=m.name == mine)
                                for _, _, _, m, t in top]))
 json.dump(dict(core=core, slots=out), open('team/builder.json', 'w'), indent=1, ensure_ascii=False)
@@ -102,21 +149,16 @@ cards = ''
 for s_ in out:
     rows = ''
     for c in s_['cands']:
-        rows += ('<li class="bc' + (' pick' if c['pick'] else '') + '"><div class="bct"><span class="tier t' + c['tier'] + '">' + c['tier'] + '</span>' + SP.tag(c['sid'], c['form'], size='s')
-                 + '<b>' + E(disp(c['name'])) + '</b>' + ('<span class="bpick">Your pick</span>' if c['pick'] else '') + '</div>'
-                 + '<div class="btools">' + ''.join('<span class="btool">' + E(x) + '</span>' for x in c['tools']) + '</div></li>')
-    rank = ('Your pick ranks #' + str(s_['rank']) + ' of ' + str(s_['of']) + ' that fit this role') if s_['meets'] else ('Your pick doesn’t meet this role’s requirements')
+        rows += ('<li class="bc' + (' pick' if c['pick'] else '') + (' rec' if c.get('rec') else '') + '"><div class="bct"><span class="tier t' + c['tier'] + '">' + c['tier'] + '</span>' + SP.tag(c['sid'], c['form'], size='s')
+                 + '<b>' + E(disp(c['name'])) + '</b>' + ('<span class="bpick">Your pick</span>' if c['pick'] else '') + ('<span class="brec">Also strong</span>' if c.get('rec') else '') + '</div>'
+                 + '<div class="btools">' + ''.join('<span class="bstat">' + E(x) + '</span>' for x in c.get('stats', [])) + ''.join('<span class="btool">' + E(x) + '</span>' for x in c['tools']) + '</div></li>')
     cards += ('<article class="bslot"><header><span class="bn">' + str(s_['slot']) + '</span><b>' + E(s_['title']) + '</b></header>'
-              + '<ul class="bneeds">' + ''.join('<li>' + E(x) + '</li>' for x in s_['needs']) + '</ul>'
-              + '<div class="bhead">Best for this role</div><ol class="bcands">' + rows + '</ol>'
-              + '<div class="brank">' + E(rank) + '</div></article>')
-sec = ('<section aria-labelledby="sbuild">\n  <h2 id="sbuild">Team Builder</h2>\n  <ul class="legend"><li>Every Pokémon you own is checked against each slot’s requirements (moves it can legally learn).</li>'
-       '<li>Only those that meet them are listed, ranked by tier, then by how many of the role’s tools they bring.</li>'
-       '<li>Pokémon that would give the core a weakness shared by 3 members are left out.</li></ul>\n'
+              + '<ol class="bcands">' + rows + '</ol></article>')
+sec = ('<section aria-labelledby="sbuild">\n  <h2 id="sbuild">Team Builder</h2>\n'
        '  <div class="bgrid">' + cards + '</div>\n</section>\n')
 page = open(OUT, encoding='utf-8').read()
 page = re.sub(r'<section aria-labelledby="sbuild">.*?</section>\s*', '', page, flags=re.S)
 anchor = page.find('<section aria-labelledby="s1f">')
 page = page[:anchor] + sec + page[anchor:] if anchor >= 0 else page.replace('</main>', sec + '</main>')
 open(OUT, 'w', encoding='utf-8').write(page)
-print('builder:', [(s_['title'], disp(s_['pick']), s_['rank']) for s_ in out])
+print('builder:', [(s_['title'], disp(s_['pick']), s_.get('rec')) for s_ in out])

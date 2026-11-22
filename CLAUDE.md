@@ -176,7 +176,12 @@ damage score and the fight's real win condition was only read after Vincent lost
   slot's real requirements (legal moves / ability): 1 = 80+ Spe or bulky + a turn-1 tool (speed control, Taunt/Encore, Intimidate,
   Fake Out); 2 = must bring Intimidate / Fake Out / Follow Me / Rage Powder / Tailwind (spread move a plus); 3 = bulk 270+ and Haze /
   phazing / recovery / Regenerator / pivot; 4 = setup move or boosting ability. Weak-3 cores excluded. Top 6 by tier, then tool
-  count (closer: boost size), tool chips shown, NO numeric score (Vincent, 22 Nov: the tier is enough); your pick outlined + rank. Flex / chapter swaps come later. **Cores tab REMOVED (Vincent, 22 Nov)**: he plays the team
+  count (closer: boost size), tool chips shown, NO numeric score (Vincent, 22 Nov: the tier is enough); no needs list, no rank line.
+  Slot 1 (singles lead, Vincent 22 Nov: faster > bulky, takes one hit, KOs in 1-2): measured vs EVERY trainer in the game (r<run>all):
+  gate outspeeds >= 70%, KOs in 1-2 hits >= 65%, takes a hit >= 60%; ranked tier, then lead win rate (KOs in <= 2 before it dies);
+  grey chips = those 3 numbers, green = turn-1 tools that matter (Intimidate, Fake Out, priority, Taunt, Good as Gold).
+  RED outline = his pick. YELLOW 'Also strong' = a real alternative (same tier or higher, not in the core, no weak-3 with the other
+  three, lead win >= pick + .05). Re-evaluated every run (new mons, story, team): expect it rarely, never default to his pick. Flex / chapter swaps come later. **Cores tab REMOVED (Vincent, 22 Nov)**: he plays the team
   I recommend; cores.py only runs with CORES=1 (chat analysis). Team check for the remaining fights: scripts/team/team_fights.py
   (core + best 2 flexes per fight, full-six one-to-one counters).
 - **App look (Vincent, 17 Nov): it must look like an app, Pokémon themed.** scripts/team/theme.py runs LAST (after tabs.py) and

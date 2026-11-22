@@ -893,6 +893,8 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .bhead { font: 600 10.5px var(--mono); text-transform: uppercase; color: var(--muted) } .bhead small { text-transform: none }
 .bcands { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px }
 .bc { display: grid; gap: 3px; padding: 5px 8px; border-radius: 10px; background: var(--card-2, rgba(127,127,127,.06)); font-size: 13px } .bct { display: flex; align-items: center; gap: 6px }
+.bc.rec { outline: 2px solid #eab308; background: color-mix(in srgb, #eab308 10%, transparent) } .brec { margin-left: auto; font: 700 10px var(--body); letter-spacing: .04em; text-transform: uppercase; color: #a16207 }
+.bstat { font: 600 10.5px var(--body); padding: 1px 7px; border-radius: 99px; background: rgba(127,127,127,.12) }
 .btools { display: flex; flex-wrap: wrap; gap: 4px; padding-left: 30px } .btool { font: 600 10.5px var(--body); padding: 1px 7px; border-radius: 99px; background: color-mix(in srgb, var(--good, #16a34a) 14%, transparent); color: var(--good, #15803d) }
 .bc b { flex: 1; min-width: 0 } .bc.pick { box-shadow: inset 0 0 0 2px var(--accent, #c81e3a) }
 .bpick { font: 700 10px var(--mono); text-transform: uppercase; color: var(--accent, #c81e3a) } .bsc { font: 600 11.5px var(--mono); color: var(--muted) }
