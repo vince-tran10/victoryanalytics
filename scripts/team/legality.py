@@ -23,7 +23,7 @@ OK_METHODS = {'Level', 'LevelDay', 'LevelNight', 'LevelFemale', 'LevelMale', 'Ha
               'Silcoon', 'Cascoon', 'Ninjask', 'Shedinja', 'AttackGreater', 'DefenseGreater', 'AtkDefEqual', 'LevelRain', 'LevelDusk',
               'WalkSteps', 'Affection', 'LevelBattle', 'HasInParty'}
 
-EXTRA_OK = {'NIGHTMAREFUEL', 'OVALSTONE'}   # walkthrough: Nightmare Fuel = River's End gift (Ch6); Chansey = Ch8 gift (Oval Stone step moot)
+EXTRA_OK = {'NIGHTMAREFUEL', 'OVALSTONE', 'ELECTIRIZER'}   # Vincent 22 Nov: Electirizer = Ch9 / held by wild Electabuzz. Protector = Ch10, Xen Waste = Ch12, Armors / Dubious Disc = later (Shayda shop)
 def mt_form(sid, form):
     fs = MT.get(sid) or {}
     names = list(fs)
