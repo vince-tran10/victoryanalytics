@@ -1,9 +1,9 @@
 {
- "anchor_low": 0.048,
+ "anchor_low": 0.031,
  "anchor_median": 0.206,
  "team": {
   "Veluza (Aevian Form)": 0.206,
-  "Amoonguss": 0.086,
+  "Amoonguss": 0.031,
   "Oranguru": 0.229,
   "Zoroark (Hisuian Form)": 0.122,
   "Golisopod (Aevian Form)": 0.419,
@@ -525,7 +525,7 @@
    "gain": 0.159,
    "attacks": [
     "Surf",
-    "Facade",
+    "Secret Power",
     "Deluge"
    ],
    "ability": "HYDRATION",
@@ -739,12 +739,12 @@
    "without": 0.021,
    "gain": 0.018,
    "attacks": [
-    "Facade",
+    "Secret Power",
     "Shadow Ball",
     "Fire Blast"
    ],
    "ability": "FORECAST",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Seviper",
@@ -761,7 +761,7 @@
     "Fire Fang"
    ],
    "ability": "INFILTRATOR",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Thievul",
@@ -778,7 +778,7 @@
     "Shadow Ball"
    ],
    "ability": "STAKEOUT",
-   "tier": "C"
+   "tier": "B"
   },
   {
    "name": "Oricorio",
