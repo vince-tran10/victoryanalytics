@@ -168,6 +168,8 @@ damage score and the fight's real win condition was only read after Vincent lost
 
 ## Guide page
 - Clean, a guide not an essay: bullets, no paragraphs; explanations go in chat, not on the page.
+  **ONE THOUGHT PER LINE (Vincent, 22 Nov, ANYTIME):** never join separate thoughts with " · " or commas on the page; each
+  thought is its own bullet / line (e.g. Zoroark line, Next battle card). Same in chat replies.
 - Tabs: Team · Fights · To do · Boxes · Dex (tier lists) · C&A checks. **Cores tab REMOVED (Vincent, 22 Nov)**: he plays the team
   I recommend; cores.py only runs with CORES=1 (chat analysis). Team check for the remaining fights: scripts/team/team_fights.py
   (core + best 2 flexes per fight, full-six one-to-one counters).

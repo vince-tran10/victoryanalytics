@@ -754,3 +754,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 22 Nov: Zoroark exception in order_team (only slots 3-6, leads fixed; moves the best copy to slot 6 if gain > .05) + Team tab callout. Spector day: copies Golisopod-A (Skill Link + Bug/Ground), no better option → order unchanged. Fights 'Their team' list: each foe in order, types, Speed, one note.
 - 22 Nov: Zoroark rule clarified: leads may move only as a deliberate trade (copy gain >= .30 'OP' and > lead loss); callout lists considered leads. Spector day: Gholdengo copy (Good as Gold) +.25 < .30 → kept. Fights foe notes: bullets, explained abilities / items, move names, no 'can KO'.
 - 22 Nov: Zoroark callout shrunk to one small line; Fights 'Their team' = 2-column grid (1|2 / 3|4 / 5|6) of sprite + name, leads outlined, no notes.
+- 22 Nov: rule ONE THOUGHT PER LINE (page + chat). Zoroark box = 3 lines; Next battle card = format line + Bring line.

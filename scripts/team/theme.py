@@ -74,7 +74,7 @@ nxt = ''
 if st.get('fight') and st['fight'] in FP:
     p = FP[st['fight']]
     nxt = (f'<a class="next" href="#fights" data-go="fights"><span class="next-k">Next battle</span>'
-           f'<b>{E(FIGHT_NAME.get(st["fight"], st["fight"]))}</b><span>{E(p["format"])} · bring {E(" + ".join(disp(r["name"]) for r in p["swaps"]))}'
+           f'<b>{E(FIGHT_NAME.get(st["fight"], st["fight"]))}</b><span>{E(p["format"])}</span><span>Bring {E(" + ".join(disp(r["name"]) for r in p["swaps"]))}'
            f'</span><span class="next-go" aria-hidden="true">›</span></a>')
 low = sum(1 for nm in st['team'] if (party.get(disp(nm)) or {}).get('level', CAP) < CAP)
 _zn = st.get('zoro_note')
@@ -84,8 +84,9 @@ if _zn:   # 22 Nov (Vincent): always call out who Zoroark copies and whether the
     _lo = [o for o in (_zn.get('lead_options') or []) if not o['ok']]
     _st = ('⚠ order changed' if _zn['moved'] else 'order unchanged')
     _cons = (' · considered ' + ', '.join(disp(o['lead']) for o in _lo) + ': not worth moving a lead') if _lo and not _zn['moved'] else ''
-    zoro_box = ('<div class="zbox' + (' moved' if _zn['moved'] else '') + '">Zoroark Crest → copies <b>' + E(disp(_zn['copies'])) + '</b> ('
-                + E(_ab or '—') + ') · ' + _st + E(_cons) + '</div>')
+    _lines = ['Zoroark Crest → copies <b>' + E(disp(_zn['copies'])) + '</b> (' + E(_ab or '—') + ')', ('⚠ Party order changed' if _zn['moved'] else 'Order unchanged')]
+    if _lo and not _zn['moved']: _lines.append('Considered ' + E(', '.join(disp(o['lead']) for o in _lo)) + ': not worth moving a lead')
+    zoro_box = '<ul class="zbox' + (' moved' if _zn['moved'] else '') + '">' + ''.join('<li>' + l + '</li>' for l in _lines) + '</ul>'
 hero = f'<div class="hero"><div class="hero-head"><h3>Your party</h3></div>{zoro_box}<ol class="party">{slots}</ol>{nxt}</div>'
 page = re.sub(r'(<section aria-labelledby="s1">\s*<h2 id="s1">.*?</h2>)', lambda m: m.group(1) + hero, page, count=1, flags=re.S)
 
@@ -784,7 +785,7 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .fx.up .fx-ar { color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent) }
 .fx.down .fx-ar { color: var(--bad); background: color-mix(in srgb, var(--bad) 14%, transparent) }
 .fx-note { color: var(--muted); font-size: 12px }
-.zbox { margin: 0 0 8px; padding: 5px 10px; border-radius: 8px; font-size: 11.5px; color: var(--muted); background: color-mix(in srgb, var(--accent, #c81e3a) 8%, transparent); border: 1px solid color-mix(in srgb, var(--accent, #c81e3a) 25%, transparent) }
+.zbox { list-style: none; display: grid; gap: 1px; margin: 0 0 8px; padding: 5px 10px; border-radius: 8px; font-size: 11.5px; color: var(--muted); background: color-mix(in srgb, var(--accent, #c81e3a) 8%, transparent); border: 1px solid color-mix(in srgb, var(--accent, #c81e3a) 25%, transparent) }
 .zbox.moved { background: color-mix(in srgb, #d97706 14%, transparent); border-color: #d97706 }
 .ofoes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; flex: 1 1 100%; min-width: 0 }
 .ofoe { display: flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 10px; background: var(--card-2, rgba(127,127,127,.06)); min-width: 0 } .ofoe b { font-size: 13px; line-height: 1.2; overflow-wrap: anywhere } .ofoe.lead { box-shadow: inset 0 0 0 1.5px var(--accent, #c81e3a) }
@@ -891,11 +892,11 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 details.ckref { display: block }
 .slot-sub { font-size: 12.5px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap }
 .slot-miss { color: var(--warn); font-weight: 700 }
-.next { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "k go" "t go" "s go"; gap: 2px 12px; text-decoration: none; color: var(--on-dex);
+.next { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "k go" "t go" "s go" "b go"; gap: 2px 12px; text-decoration: none; color: var(--on-dex);
   background: linear-gradient(120deg, var(--dex-deep), var(--dex)); border-radius: 16px; padding: 14px 18px; box-shadow: var(--shadow) }
 .next-k { grid-area: k; font: 600 11px var(--mono); letter-spacing: .1em; text-transform: uppercase; opacity: .85 }
 .next b { grid-area: t; font: 700 20px var(--display) }
-.next > span:nth-of-type(2) { grid-area: s; font-size: 13.5px; opacity: .92 }
+.next > span:nth-of-type(2) { grid-area: s; font-size: 13.5px; opacity: .92 } .next > span:nth-of-type(3) { grid-area: b; font-size: 13.5px; opacity: .92 }
 .next-go { grid-area: go; align-self: center; font: 700 28px var(--display) }
 @media (prefers-reduced-motion: no-preference) { .tabp:not([hidden]) { animation: rise .22s ease-out } @keyframes rise { from { transform: translateY(6px); opacity: .6 } to { transform: none; opacity: 1 } } }
 .role-chip { display: inline-block; background: var(--accent-soft); color: var(--accent); font: 700 11.5px var(--body); letter-spacing: .02em; padding: 3px 10px; border-radius: 99px; white-space: nowrap }
