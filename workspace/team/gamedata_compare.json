@@ -30,38 +30,7 @@
   "note": "not in engine (beaten or not tracked)"
  },
  "karrina": {
-  "label": "Gang Leader Karrina – Blessed Field",
-  "game_src": [
-   "Karrina (GANGLEADER #2)"
-  ],
-  "n_game": 6,
-  "n_guide": 6,
-  "rows": [
-   {
-    "mon": "Runerigus",
-    "diff": []
-   },
-   {
-    "mon": "Musharna",
-    "diff": []
-   },
-   {
-    "mon": "Granbull",
-    "diff": []
-   },
-   {
-    "mon": "Alakazam",
-    "diff": []
-   },
-   {
-    "mon": "Fearow",
-    "diff": []
-   },
-   {
-    "mon": "Nidoking",
-    "diff": []
-   }
-  ]
+  "note": "not in engine (beaten or not tracked)"
  },
  "spector": {
   "label": "Spector (day) – Haunted Field",

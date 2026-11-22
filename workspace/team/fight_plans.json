@@ -1,143 +1,4 @@
 {
- "karrina": {
-  "key": "karrina",
-  "format": "Singles",
-  "foes": [
-   "Runerigus",
-   "Musharna",
-   "Granbull",
-   "Alakazam",
-   "Fearow",
-   "Nidoking"
-  ],
-  "swaps": [
-   {
-    "name": "Diggersby",
-    "ab": "HUGEPOWER",
-    "moves": [
-     "Earthquake",
-     "Quick Attack",
-     "Bounce"
-    ],
-    "setup": null,
-    "where": "Party",
-    "dump": 4,
-    "nature": "Adamant",
-    "evs": {
-     "Atk": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "NORMAL",
-     "GROUND"
-    ]
-   },
-   {
-    "name": "Clefable",
-    "ab": "MAGICGUARD",
-    "moves": [
-     "Moonblast"
-    ],
-    "setup": null,
-    "where": "Party",
-    "dump": 3,
-    "nature": "Modest",
-    "evs": {
-     "SpA": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "FAIRY"
-    ]
-   }
-  ],
-  "counters": 4,
-  "n": 6,
-  "pairs": [
-   {
-    "foe": "Runerigus",
-    "mon": "Clefable",
-    "ability": "MAGICGUARD",
-    "dealt": 130,
-    "taken": 31,
-    "ok": true,
-    "setup": false,
-    "wincons": []
-   },
-   {
-    "foe": "Musharna",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
-    "dealt": 89,
-    "taken": 49,
-    "ok": false,
-    "setup": false,
-    "wincons": [
-     {
-      "what": "Sleep",
-      "answers": [
-       "Safeguard (Clefable)"
-      ]
-     }
-    ]
-   },
-   {
-    "foe": "Granbull",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 129,
-    "taken": 84,
-    "ok": true,
-    "setup": false,
-    "wincons": []
-   },
-   {
-    "foe": "Alakazam",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 130,
-    "taken": 56,
-    "ok": true,
-    "setup": false,
-    "wincons": []
-   },
-   {
-    "foe": "Fearow",
-    "mon": "Gholdengo",
-    "ability": "GOODASGOLD",
-    "dealt": 121,
-    "taken": 73,
-    "ok": false,
-    "setup": false,
-    "wincons": []
-   },
-   {
-    "foe": "Nidoking",
-    "mon": "Diggersby",
-    "ability": "HUGEPOWER",
-    "dealt": 130,
-    "taken": 35,
-    "ok": true,
-    "setup": false,
-    "wincons": []
-   }
-  ],
-  "weak3": [],
-  "nores": [],
-  "leads": [
-   "Clefable"
-  ],
-  "lead_foes": [
-   "Runerigus"
-  ],
-  "lead_taken": 31,
-  "sim": null,
-  "lead_ok": true,
-  "note": "",
-  "hand": true
- },
  "spector": {
   "key": "spector",
   "format": "Doubles",
@@ -174,8 +35,7 @@
     "name": "Oranguru",
     "ab": "TELEPATHY",
     "moves": [
-     "Psychic",
-     "Shadow Ball"
+     "Psychic"
     ],
     "setup": "Nasty Plot",
     "where": "Overflow",
@@ -207,13 +67,13 @@
      {
       "what": "Healing",
       "answers": [
-       "teach Knock Off (Zoroark)"
+       "Taunt (Zoroark)"
       ]
      },
      {
       "what": "Perish Song",
       "answers": [
-       "teach Taunt (Zoroark)"
+       "Taunt (Zoroark)"
       ]
      }
     ]
@@ -230,30 +90,30 @@
      {
       "what": "Sleep",
       "answers": [
-       "teach Safeguard (Oranguru)"
+       "Safeguard (Oranguru)"
       ]
      }
     ]
    },
    {
     "foe": "Gengar",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 75,
-    "taken": 63,
-    "ok": false,
+    "mon": "Oranguru",
+    "ability": "TELEPATHY",
+    "dealt": 111,
+    "taken": 0,
+    "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "teach Safeguard (Oranguru)"
+       "Safeguard (Oranguru)"
       ]
      },
      {
       "what": "Perish Song",
       "answers": [
-       "teach Taunt (Zoroark)"
+       "Taunt (Zoroark)"
       ]
      }
     ]
@@ -280,18 +140,18 @@
      {
       "what": "Sleep",
       "answers": [
-       "teach Safeguard (Oranguru)"
+       "Safeguard (Oranguru)"
       ]
      }
     ]
    },
    {
     "foe": "Banette",
-    "mon": "Oranguru",
-    "ability": "TELEPATHY",
-    "dealt": 104,
-    "taken": 0,
-    "ok": true,
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 78,
+    "taken": 134,
+    "ok": false,
     "setup": false,
     "wincons": []
    }
@@ -310,7 +170,7 @@
   "sim": null,
   "lead_ok": true,
   "note": "",
-  "hand": false
+  "hand": true
  },
  "spector2": {
   "key": "spector2",

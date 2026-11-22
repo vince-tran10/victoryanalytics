@@ -16,13 +16,13 @@
      {
       "what": "Healing",
       "answers": [
-       "teach Knock Off (Zoroark)"
+       "Taunt (Zoroark)"
       ]
      },
      {
       "what": "Perish Song",
       "answers": [
-       "teach Taunt (Zoroark)"
+       "Taunt (Zoroark)"
       ]
      }
     ]
@@ -39,30 +39,30 @@
      {
       "what": "Sleep",
       "answers": [
-       "teach Safeguard (Oranguru)"
+       "Safeguard (Oranguru)"
       ]
      }
     ]
    },
    {
     "foe": "Gengar",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 75,
-    "taken": 63,
-    "ok": false,
+    "mon": "Oranguru",
+    "ability": "TELEPATHY",
+    "dealt": 111,
+    "taken": 0,
+    "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "teach Safeguard (Oranguru)"
+       "Safeguard (Oranguru)"
       ]
      },
      {
       "what": "Perish Song",
       "answers": [
-       "teach Taunt (Zoroark)"
+       "Taunt (Zoroark)"
       ]
      }
     ]
@@ -89,18 +89,18 @@
      {
       "what": "Sleep",
       "answers": [
-       "teach Safeguard (Oranguru)"
+       "Safeguard (Oranguru)"
       ]
      }
     ]
    },
    {
     "foe": "Banette",
-    "mon": "Oranguru",
-    "ability": "TELEPATHY",
-    "dealt": 104,
-    "taken": 0,
-    "ok": true,
+    "mon": "Vaporeon",
+    "ability": "WATERABSORB",
+    "dealt": 78,
+    "taken": 134,
+    "ok": false,
     "setup": false,
     "wincons": []
    }

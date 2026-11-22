@@ -4,9 +4,9 @@
  "export_label": "20 Nov 17:24",
  "active_start": 441,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 170,
- "run": 184,
- "final": 188,
+ "roster": 172,
+ "run": 186,
+ "final": 190,
  "done": [
   "aelita",
   "narcissa1",
@@ -29,15 +29,16 @@
   "amber",
   "darkgardevoir",
   "garbodor",
-  "amanda"
+  "amanda",
+  "karrina"
  ],
- "fight": "karrina",
+ "fight": "spector",
  "team": [
   "Gholdengo",
   "Arcanine (Hisuian Form)",
   "Vaporeon",
-  "Diggersby",
-  "Clefable",
+  "Zoroark (Hisuian Form)",
+  "Oranguru",
   "Golisopod (Aevian Form)"
  ],
  "moves": {
@@ -104,7 +105,7 @@
   "Oranguru": [
    "Nasty Plot",
    "Psychic",
-   "Shadow Ball",
+   "Safeguard",
    "Protect"
   ],
   "Armarouge": [
@@ -117,6 +118,12 @@
    "Crunch",
    "High Jump Kick",
    "Fake Out",
+   "Protect"
+  ],
+  "Zoroark (Hisuian Form)": [
+   "Shadow Ball",
+   "Nasty Plot",
+   "Taunt",
    "Protect"
   ]
  },
@@ -201,7 +208,8 @@
   "Florges": "FLOWERVEIL",
   "Oranguru": "TELEPATHY",
   "Armarouge": "WEAKARMOR",
-  "Scrafty": "MOXIE"
+  "Scrafty": "MOXIE",
+  "Zoroark (Hisuian Form)": "ILLUSION"
  },
  "crests_owned": [
   "Phione Crest"
@@ -227,7 +235,7 @@
    "n": 6,
    "weak3": [],
    "nores": [],
-   "key": "karrina"
+   "key": "spector"
   }
  },
  "plan_swaps": {},

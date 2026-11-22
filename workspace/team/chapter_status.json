@@ -1,17 +1,14 @@
 {
- "fights": 5,
- "foes": 30,
+ "fights": 4,
+ "foes": 24,
  "major": [
   "Bug",
   "Dark",
   "Electric",
-  "Fairy",
   "Fighting",
   "Fire",
-  "Flying",
   "Ghost",
   "Grass",
-  "Ground",
   "Normal",
   "Poison",
   "Psychic",
@@ -20,11 +17,17 @@
  "minor": [
   "Fire/Ghost",
   "Rock",
+  "Fairy",
+  "Ground",
   "Dragon",
+  "Flying",
   "Ice"
  ],
  "weak3": [],
- "nores": [],
+ "nores": [
+  "DARK",
+  "GHOST"
+ ],
  "misses": [
   {
    "foe": "Stoutland",

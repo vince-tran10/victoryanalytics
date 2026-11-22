@@ -281,7 +281,7 @@ def verify_mon(d, ab, nat, evs, item, moves):
     for m in _target:
         if m not in d['moves']:
             rep = _gone.pop(0) if _gone else None
-            out.append(LATER.get((name, m), f'Teach {m}' + (f' (replaces {rep})' if rep else '')).format(lv=d['level']))
+            out.append(LATER.get((name, m), f'Teach {m}' + (f' (replaces {rep})' if rep else ' (replaces an empty slot)')).format(lv=d['level']))
     return out
 
 
@@ -468,7 +468,7 @@ def plan_moves(have, target, phys, ability):
     while len(keep) < 4 and rest:
         keep.append(rest.pop(0))
     drop = sorted((m for m in have if m not in keep), key=lambda m: move_value(m, have, phys, set(target), ability))
-    return [f'Teach {m}' + (f' (replaces {drop.pop(0)})' if drop else '') for m in keep if m not in have]
+    return [f'Teach {m}' + (f' (replaces {drop.pop(0)})' if drop else ' (replaces an empty slot)') for m in keep if m not in have]
 
 # ---------------------------------------------------------------- 1b) relearner upgrades
 UP = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'upgrades_relearn.json')))
@@ -507,7 +507,7 @@ for d in sorted((d for d in cur if d['box'] != 'Overflow' and d['species'] in UP
     status = '<span class="ok">Done ✓</span>' if done else ('<span class="b big">big upgrade</span>' if u.get('big') else '<span class="b small">upgrade</span>')
     role = {t[1]: t[0].lower() for t in TEAM}.get(d['species'], '')
     up_names.add(d['species'])
-    _fx = [f"Teach {m}" + (f" (replaces {o})" if o else '') for m, o in zip(gaps, gone + [None] * len(gaps))]
+    _fx = [f"Teach {m}" + (f" (replaces {o})" if o else ' (replaces an empty slot)') for m, o in zip(gaps, gone + [None] * len(gaps))]
     if natg: _fx.append(f"Nature: {d.get('nature')} → {u['nature']} (mint)")
     if abg: _fx.append(f"Ability: {d.get('ability')} → {u['ability']} (Ability Capsule)")
     if u.get('later'): _fx.append('Later: ' + u['later'])
@@ -558,7 +558,7 @@ for d in sorted((d for d in cur if d['box'] == 'Active' and d.get('score') is no
                 return 2 if m in KEEP else 0
             return 1 + int(v.get('Strength') or 0) / 1000
         drop = min(d['moves'], key=_val) if d['moves'] else None
-        fx.append(f'Teach Protect (replaces {drop})' if drop and len(d['moves']) >= 4 else 'Teach Protect')
+        fx.append(f'Teach Protect (replaces {drop})' if drop and len(d['moves']) >= 4 else 'Teach Protect (replaces an empty slot)')
     if fx:
         PROFILE.setdefault((d['species'], d['n'], d['box']), []).extend(fx)
         fix_cards.append(f'<li class="mon up"><div class="mtop"><strong>{E(d["species"])}</strong><span class="legend">Active #{d["n"]}</span></div>'
