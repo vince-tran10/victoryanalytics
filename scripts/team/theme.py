@@ -635,7 +635,8 @@ def why_tier(r, ab_id, moves):   # 22 Nov (Vincent): the tier = 70% META DOMINAN
     out = []
     labs = [x.strip() for x in (r.get('meta_label') or '').split('|') if x.strip()]
     if labs:
-        out.append(f"Meta dominance {round(100 * r.get('meta', 0))}/100")
+        out.append((labs[0] if labs[0].startswith(('Community', 'Kit rating')) else 'Meta dominance') + f" {round(100 * r.get('meta', 0))}/100")
+        if labs[0].startswith(('Community', 'Kit rating')): labs = labs[1:]
         for x in labs: out.append(x + (' usage' if x.endswith('%') else ''))
     gp = r.get('game_pct'); n_all = r.get('n_all') or 0
     if gp is not None:

@@ -498,23 +498,6 @@
    "tier": "A"
   },
   {
-   "name": "Whiscash",
-   "crest": "Whiscash Crest",
-   "held": true,
-   "where": "Active",
-   "dump": 516,
-   "with_crest": 0.17,
-   "without": null,
-   "gain": null,
-   "attacks": [
-    "Earthquake",
-    "Zen Headbutt",
-    "Bounce"
-   ],
-   "ability": "OBLIVIOUS",
-   "tier": "A"
-  },
-  {
    "name": "Phione",
    "crest": "Phione Crest",
    "held": true,
@@ -693,6 +676,23 @@
     "Poison Jab"
    ],
    "ability": "SNIPER",
+   "tier": "A"
+  },
+  {
+   "name": "Whiscash",
+   "crest": "Whiscash Crest",
+   "held": true,
+   "where": "Active",
+   "dump": 516,
+   "with_crest": 0.081,
+   "without": null,
+   "gain": null,
+   "attacks": [
+    "Earthquake",
+    "Zen Headbutt",
+    "Bounce"
+   ],
+   "ability": "OBLIVIOUS",
    "tier": "A"
   },
   {

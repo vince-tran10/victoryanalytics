@@ -68,9 +68,10 @@ except Exception:
 def meta_of(name, sp, op):
     """22 Nov (Vincent): META DOMINANCE = Smogon usage weighted by how high the format is (OU / VGC 1.0 ... NU .3), singles and
     doubles (best + 0.25 x the other); banned to Ubers (Ubers set, no OU usage) counts .95; Aevians by their kit's OP stars."""
-    if 'Aevian' in name:
-        stars = AEV_OP.get(sp, 1)
-        return {3: .85, 2: .68, 1: .45}[stars], f"Aevian kit {'★' * stars}"
+    if 'Aevian' in name:   # 22 Nov (Vincent): Aevians have no Smogon / VGC data -> community opinion of the kit (community.py)
+        import community as CM
+        v, kind, lines = CM.AEVIAN.get(sp, (.45, 'kit', ['Not discussed by the community']))
+        return v, ' | '.join([('Community rating' if kind == 'community' else 'Kit rating (no community posts)')] + lines)
     sd = SM.sd_name(name.replace(' (Hisuian Form)', '-Hisui').replace(' (Paldean Form)', '-Paldea').replace(' (Alolan Form)', '-Alola').replace(' (Galarian Form)', '-Galar'))
     if not sd: return .15, 'no competitive data'
     def best(fs):
@@ -110,6 +111,8 @@ st = json.load(open('team/state.json'))
 import current_box as cb
 held = {d['item'] for d in cb.parse(st['export']) if d.get('item') and 'Crest' in d['item']}
 owned_crests = set(st.get('crests_owned') or []) | held
+import community as _CM   # 22 Nov: a crest from a later chapter does not count yet (wiki chapter list)
+owned_crests = {c_ for c_ in owned_crests if _CM.CREST_CH.get(c_, 0) <= st.get('chapter', 9)}
 I = json.load(open('gamedata/itemtext.json'))
 
 best = {}
@@ -151,7 +154,10 @@ rows = []
 def row(name, s, c, kind, crest=''):
     sp = name.split(' (')[0]
     meta, lab = meta_of(name, sp, None)
-    if crest: meta, lab = max(meta, .6), f'{crest} (Rejuvenation-only)'
+    if crest:   # 22 Nov: crests rated by the community / wiki (community.py), not a flat .6 floor
+        import community as CM
+        cv, lines = CM.CREST.get(crest, (.5, ['Not discussed by the community']))
+        meta, lab = max(meta, cv), ' | '.join([f'Community rating ({crest})'] + lines)
     bst = bst_of(c)
     general = .9 * meta + .1 * max(0, min(1, (bst - 380) / 220))   # meta dominance (+ a small base-stat tiebreak)
     fp = min(1.0, pct(s))
@@ -166,7 +172,9 @@ def row(name, s, c, kind, crest=''):
                      where=src.get('where'), dump=src.get('dump'), owned_as=c.get('owned_as'), evo=c.get('evo'),
                      per_fight=per_fight(c), counters=counters(c), stats=c['stats'], tags=sorted(c.get('tags') or [])))
 for n, (s, c) in best.items():
-    row(n, s, c, kind_of(c), 'Whiscash Crest' if kind_of(c) == 'crest' else '')
+    _k = kind_of(c)
+    if _k == 'crest' and 'Whiscash Crest' not in owned_crests: _k = 'regular'   # held but not obtainable yet
+    row(n, s, c, _k, 'Whiscash Crest' if _k == 'crest' else '')
 for n, (s, c, cname) in crest_best.items():
     row(n, s, c, 'crest', cname)
 

@@ -409,5 +409,13 @@
    "to_name": "Electabuzz",
    "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
   }
+ ],
+ "bad_items": [
+  {
+   "dump": 516,
+   "name": "Whiscash",
+   "item": "Whiscash Crest",
+   "why": "Whiscash Crest is a Chapter 14 crest"
+  }
  ]
 }

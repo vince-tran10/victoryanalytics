@@ -154,7 +154,7 @@ def main():
     run, fin, rost = st['run'] + 1, st['final'] + 1, st['roster'] + 1
     env = env_overrides(); env.update(os.environ)
     env.update(MOVE_RULES='relearn', PARTY_N='6', ACTIVE_START=str(stg[0] if stg else act), DONE=','.join(st['done']),
-               SINGLES_W='2', LINK_HEARTS=json.dumps(st.get('link_hearts', [])), MOVES=json.dumps(st['moves']), CR_RUN=f'r{run}', TEAM_NAMES=json.dumps(st['team']))
+               SINGLES_W='2', CHAPTER=str(st.get('chapter', 9)), LINK_HEARTS=json.dumps(st.get('link_hearts', [])), MOVES=json.dumps(st['moves']), CR_RUN=f'r{run}', TEAM_NAMES=json.dumps(st['team']))
     sh(['../scripts/team/roster.py', WS, new, f'team/roster{rost}.json'], env)
     R = json.load(open(os.path.join(TEAMD, f'roster{rost}.json')))
     # 22 Nov legality: score every Pokémon he can't have yet as its prior stage (To do card: de-evolve)

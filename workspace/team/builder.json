@@ -31,6 +31,24 @@
      "rec": true
     },
     {
+     "name": "Toxtricity (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Outspeeds 80%",
+      "Takes 2 hits to KO",
+      "Resists 8 types",
+      "Weak to 4 types"
+     ],
+     "tools": [
+      "Spread: Boomburst",
+      "Taunt"
+     ],
+     "sid": "TOXTRICITY",
+     "form": "2",
+     "pick": false,
+     "rec": false
+    },
+    {
      "name": "Arcanine (Hisuian Form)",
      "tier": "A",
      "stats": [
@@ -46,24 +64,6 @@
      ],
      "sid": "ARCANINE",
      "form": "1",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Toxtricity (Aevian Form)",
-     "tier": "A",
-     "stats": [
-      "Outspeeds 80%",
-      "Takes 2 hits to KO",
-      "Resists 8 types",
-      "Weak to 4 types"
-     ],
-     "tools": [
-      "Spread: Boomburst",
-      "Taunt"
-     ],
-     "sid": "TOXTRICITY",
-     "form": "2",
      "pick": false,
      "rec": false
     },
@@ -202,34 +202,35 @@
      "rec": false
     },
     {
-     "name": "Furret",
+     "name": "Arcanine",
      "tier": "B",
      "stats": [
-      "Resists 1 type",
-      "Weak to 1 type",
+      "Resists 6 types",
+      "Weak to 3 types",
       "Single target only"
      ],
      "tools": [
-      "Follow Me"
+      "Intimidate",
+      "Priority: Extreme Speed"
      ],
-     "sid": "FURRET",
+     "sid": "ARCANINE",
      "form": "0",
      "pick": false,
      "rec": false
     },
     {
-     "name": "Ariados",
+     "name": "Scrafty",
      "tier": "B",
      "stats": [
-      "Resists 5 types",
-      "Weak to 4 types",
+      "Resists 4 types",
+      "Weak to 3 types",
       "Single target only"
      ],
      "tools": [
-      "Rage Powder",
-      "Priority: Sucker Punch"
+      "Intimidate",
+      "Fake Out"
      ],
-     "sid": "ARIADOS",
+     "sid": "SCRAFTY",
      "form": "0",
      "pick": false,
      "rec": false
@@ -262,17 +263,20 @@
      "rec": true
     },
     {
-     "name": "Musharna (Aevian Form)",
+     "name": "Lapras (Aevian Form)",
      "tier": "S",
      "stats": [
-      "Resists 4 types",
-      "Weak to 3 types",
-      "Single target only"
+      "Resists 5 types",
+      "Weak to 7 types"
      ],
      "tools": [
-      "Moonlight"
+      "Roar",
+      "Teleport",
+      "Spread: Rock Slide",
+      "Status: Sing",
+      "Setup: Dragon Dance"
      ],
-     "sid": "MUSHARNA",
+     "sid": "LAPRAS",
      "form": "1",
      "pick": false,
      "rec": false
@@ -291,25 +295,6 @@
       "Disrupt: Knock Off"
      ],
      "sid": "MUK",
-     "form": "1",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Lapras (Aevian Form)",
-     "tier": "A",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 7 types"
-     ],
-     "tools": [
-      "Roar",
-      "Teleport",
-      "Spread: Rock Slide",
-      "Status: Sing",
-      "Setup: Dragon Dance"
-     ],
-     "sid": "LAPRAS",
      "form": "1",
      "pick": false,
      "rec": false
@@ -345,6 +330,24 @@
       "Spread: Surf"
      ],
      "sid": "SLOWBRO",
+     "form": "0",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Slowking",
+     "tier": "A",
+     "stats": [
+      "Resists 6 types",
+      "Weak to 5 types"
+     ],
+     "tools": [
+      "Slack Off",
+      "Regenerator",
+      "Spread: Surf",
+      "Pivot: Chilly Reception"
+     ],
+     "sid": "SLOWKING",
      "form": "0",
      "pick": false,
      "rec": false
@@ -392,17 +395,18 @@
      "rec": false
     },
     {
-     "name": "Musharna (Aevian Form)",
+     "name": "Lapras (Aevian Form)",
      "tier": "S",
      "stats": [
-      "Resists 4 types",
-      "Weak to 3 types",
-      "Single target only"
+      "Resists 5 types",
+      "Weak to 7 types"
      ],
      "tools": [
-      "Curse (+1)"
+      "Dragon Dance (+1/+1)",
+      "Spread: Rock Slide",
+      "Status: Sing"
      ],
-     "sid": "MUSHARNA",
+     "sid": "LAPRAS",
      "form": "1",
      "pick": false,
      "rec": false
@@ -426,36 +430,35 @@
      "rec": false
     },
     {
-     "name": "Ninetales (Alolan Form)",
+     "name": "Zoroark (Hisuian Form)",
      "tier": "A",
      "stats": [
-      "Resists 4 types",
-      "Weak to 4 types"
+      "Resists 5 types",
+      "Weak to 1 type",
+      "Single target only"
      ],
      "tools": [
       "Nasty Plot (+2)",
-      "Spread: Blizzard",
-      "Screens: Aurora Veil"
+      "Disrupt: Taunt"
      ],
-     "sid": "NINETALES",
+     "sid": "ZOROARK",
      "form": "1",
      "pick": false,
      "rec": false
     },
     {
-     "name": "Lapras (Aevian Form)",
+     "name": "Zoroark",
      "tier": "A",
      "stats": [
-      "Resists 5 types",
-      "Weak to 7 types"
+      "Resists 3 types",
+      "Weak to 3 types",
+      "Single target only"
      ],
      "tools": [
-      "Dragon Dance (+1/+1)",
-      "Spread: Rock Slide",
-      "Status: Sing"
+      "Nasty Plot (+2)"
      ],
-     "sid": "LAPRAS",
-     "form": "1",
+     "sid": "ZOROARK",
+     "form": "0",
      "pick": false,
      "rec": false
     }

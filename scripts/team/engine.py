@@ -14,6 +14,13 @@ import crests
 from bosses import load_battles, load_battles_walk, FIELD, HIGH_STRIKER
 
 CAP = 55
+def _legal_item(it):   # 22 Nov legality: a crest from a later chapter (wiki list in community.py) is ignored for his mons
+    try:
+        import community as _CM
+        if it and it.endswith('Crest') and _CM.CREST_CH.get(it, 0) > int(os.environ.get('CHAPTER', '9')): return ''
+    except Exception:
+        pass
+    return it
 # tutors open to a 7-badge player who has finished chapters 1-7 (Luck's Tent tiers up to 7 badges, Wispy Shop, Kakori/Terajuma Beach)
 # Tutors count only when the wiki lists a badge number and it is <= 7 (Vincent's rule, 11-05).
 # Tutors with no badge number (plain Luck's Tent, Wispy Path Shop, Akuwa Town, ...) are skipped.
@@ -478,7 +485,7 @@ class Engine:
         final_name = self.D.nm(sid) + ('' if form == '0' else f" ({f.get('FormName')})")
         _crest = sid if crests.enabled(sid, form, f.get('FormName')) else None
         return dict(name=final_name, owned_as=mon['name'], sid=sid, form=form, formname=f.get('FormName'), types=types, base=bs, crest=_crest,
-                    abilities=abil_list, ability=ab, legal=legal, item=mon.get('item', ''), weight=weight,
+                    abilities=abil_list, ability=ab, legal=legal, item=_legal_item(mon.get('item', '')), weight=weight,
                     evo=evo_text, gate=gate, level=CAP, src=mon)
 
     def spread_for(self, me):

@@ -784,6 +784,9 @@ for d in _LEG:   # one card per species (two Golem -> one card, both box numbers
 for nm_, (d, locs) in _dv.items():
     to = d['to_name'].replace(' (Aevian Form)', '-Aevian')
     _cards.append((-2, nm_, ', '.join(locs), [f"De-evolve: into {to}" + (f" (all {len(locs)})" if len(locs) > 1 else ''), f"Why: {d['why']}"]))
+for d in (json.load(open('team/legality.json')).get('bad_items', []) if os.path.exists('team/legality.json') else []):
+    bx = next((x['box'] for x in cur if x['n'] == d['dump']), '')
+    _cards.append((-2, d['name'], f"{bx} #{d['dump']}", [f"Item: remove {d['item']}", f"Why: {d['why']}, not obtainable yet"]))
 _cards.sort(key=lambda c: (c[0], c[1]))
 todo_html = ''
 for _, name, where, ch in _cards:

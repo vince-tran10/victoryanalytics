@@ -109,7 +109,10 @@ for m in mons:
         mid = E.move_id(mv)
         if mid and mid not in leg:
             move_flags.append(dict(name=m['name'], where=loc, move=mv))
-json.dump(dict(evo=evo_flags, moves=move_flags, devolve=devolve), open('team/legality.json', 'w'), indent=1, ensure_ascii=False)
+import community as _CM   # held crests from a later chapter (wiki list) -> To do: take it off
+bad_items = [dict(dump=m['dump'], name=m['name'], item=m['item'], why=f"{m['item']} is a Chapter {_CM.CREST_CH[m['item']]} crest")
+             for m in mons if (m.get('item') or '').endswith('Crest') and _CM.CREST_CH.get(m['item'], 0) > st.get('chapter', 9)]
+json.dump(dict(evo=evo_flags, moves=move_flags, devolve=devolve, bad_items=bad_items), open('team/legality.json', 'w'), indent=1, ensure_ascii=False)
 if __name__ == '__main__':
     import collections
     print('EVOLUTIONS not reachable at Ch9:')
