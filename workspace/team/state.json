@@ -4,9 +4,9 @@
  "export_label": "21 Nov 21:58",
  "active_start": 442,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 176,
- "run": 190,
- "final": 194,
+ "roster": 177,
+ "run": 191,
+ "final": 195,
  "done": [
   "aelita",
   "narcissa1",
@@ -37,8 +37,8 @@
   "Gholdengo",
   "Arcanine (Hisuian Form)",
   "Vaporeon",
-  "Zoroark (Hisuian Form)",
   "Oranguru",
+  "Zoroark (Hisuian Form)",
   "Golisopod (Aevian Form)"
  ],
  "moves": {

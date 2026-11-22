@@ -5,8 +5,8 @@
   "Gholdengo": 0.478,
   "Arcanine (Hisuian Form)": 0.452,
   "Vaporeon": 0.333,
-  "Zoroark (Hisuian Form)": 0.122,
   "Oranguru": 0.229,
+  "Zoroark (Hisuian Form)": 0.122,
   "Golisopod (Aevian Form)": 0.419
  },
  "rows": [
@@ -87,7 +87,7 @@
    "gain": 0.223,
    "attacks": [
     "Shadow Punch",
-    "Rock Smash"
+    "Stacking Shot"
    ],
    "ability": "FRISK",
    "tier": "A"

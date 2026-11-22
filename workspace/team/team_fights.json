@@ -1,0 +1,866 @@
+{
+ "yours": {
+  "core": [
+   "Gholdengo",
+   "Arcanine (Hisuian Form)",
+   "Vaporeon",
+   "Golisopod (Aevian Form)"
+  ],
+  "score": 144.32,
+  "counters": 13.0,
+  "per": {
+   "spector": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Porygon-Z"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Murkrow": "Arcanine (Hisuian Form)",
+     "Gothitelle": "Gholdengo",
+     "Gengar": "Vaporeon",
+     "Houndstone": "Zoroark (Hisuian Form)",
+     "Ninetales": "Golisopod (Aevian Form)",
+     "Banette": "Porygon-Z"
+    }
+   },
+   "spector2": {
+    "flex": [
+     "Chandelure",
+     "Sylveon"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stonjourner": "Vaporeon",
+     "Sigilyph": "Sylveon",
+     "Luxray": "Golisopod (Aevian Form)",
+     "Golisopod": "Chandelure",
+     "Typhlosion": "Arcanine (Hisuian Form)",
+     "Banette": "Gholdengo"
+    }
+   },
+   "jenner9": {
+    "flex": [
+     "Frosmoth",
+     "Turtonator"
+    ],
+    "counters": "4/6",
+    "pairs": {
+     "Stoutland": "Golisopod (Aevian Form)",
+     "Appletun": "Frosmoth",
+     "Noivern": "Arcanine (Hisuian Form)",
+     "Porygon-Z": "Gholdengo",
+     "Kommo-o": "Vaporeon",
+     "Klinklang": "Turtonator"
+    }
+   },
+   "erick": {
+    "flex": [
+     "Palossand (Fiery Aevian Form)",
+     "Turtonator"
+    ],
+    "counters": "4/6",
+    "pairs": {
+     "Electivire": "Golisopod (Aevian Form)",
+     "Raichu": "Gholdengo",
+     "Magneton": "Turtonator",
+     "Togedemaru": "Palossand (Fiery Aevian Form)",
+     "Chandelure": "Arcanine (Hisuian Form)",
+     "Toxtricity": "Vaporeon"
+    }
+   }
+  }
+ },
+ "arch balance": {
+  "core": [
+   "Gothitelle",
+   "Chandelure",
+   "Florges",
+   "Golisopod (Aevian Form)"
+  ],
+  "score": 155.32,
+  "counters": 14.0,
+  "per": {
+   "spector": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Porygon-Z"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Murkrow": "Florges",
+     "Gothitelle": "Chandelure",
+     "Gengar": "Gothitelle",
+     "Houndstone": "Zoroark (Hisuian Form)",
+     "Ninetales": "Golisopod (Aevian Form)",
+     "Banette": "Porygon-Z"
+    }
+   },
+   "spector2": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Barraskewda"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stonjourner": "Gothitelle",
+     "Sigilyph": "Florges",
+     "Luxray": "Golisopod (Aevian Form)",
+     "Golisopod": "Chandelure",
+     "Typhlosion": "Barraskewda",
+     "Banette": "Zoroark (Hisuian Form)"
+    }
+   },
+   "jenner9": {
+    "flex": [
+     "Frosmoth",
+     "Aurorus"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stoutland": "Golisopod (Aevian Form)",
+     "Appletun": "Frosmoth",
+     "Noivern": "Aurorus",
+     "Porygon-Z": "Gothitelle",
+     "Kommo-o": "Florges",
+     "Klinklang": "Chandelure"
+    }
+   },
+   "erick": {
+    "flex": [
+     "Ceruledge",
+     "Turtonator"
+    ],
+    "counters": "4/6",
+    "pairs": {
+     "Electivire": "Ceruledge",
+     "Raichu": "Golisopod (Aevian Form)",
+     "Magneton": "Turtonator",
+     "Togedemaru": "Chandelure",
+     "Chandelure": "Florges",
+     "Toxtricity": "Gothitelle"
+    }
+   }
+  }
+ },
+ "arch tr": {
+  "core": [
+   "Oranguru",
+   "Palossand (Fiery Aevian Form)",
+   "Walrein",
+   "Golisopod (Aevian Form)"
+  ],
+  "score": 154.79,
+  "counters": 14.0,
+  "per": {
+   "spector": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Porygon-Z"
+    ],
+    "counters": "6/6",
+    "pairs": {
+     "Murkrow": "Walrein",
+     "Gothitelle": "Palossand (Fiery Aevian Form)",
+     "Gengar": "Oranguru",
+     "Houndstone": "Zoroark (Hisuian Form)",
+     "Ninetales": "Golisopod (Aevian Form)",
+     "Banette": "Porygon-Z"
+    }
+   },
+   "spector2": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Sylveon"
+    ],
+    "counters": "4/6",
+    "pairs": {
+     "Stonjourner": "Oranguru",
+     "Sigilyph": "Sylveon",
+     "Luxray": "Golisopod (Aevian Form)",
+     "Golisopod": "Walrein",
+     "Typhlosion": "Palossand (Fiery Aevian Form)",
+     "Banette": "Zoroark (Hisuian Form)"
+    }
+   },
+   "jenner9": {
+    "flex": [
+     "Florges",
+     "Frosmoth"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stoutland": "Golisopod (Aevian Form)",
+     "Appletun": "Frosmoth",
+     "Noivern": "Walrein",
+     "Porygon-Z": "Oranguru",
+     "Kommo-o": "Florges",
+     "Klinklang": "Palossand (Fiery Aevian Form)"
+    }
+   },
+   "erick": {
+    "flex": [
+     "Ceruledge",
+     "Turtonator"
+    ],
+    "counters": "4/6",
+    "pairs": {
+     "Electivire": "Ceruledge",
+     "Raichu": "Golisopod (Aevian Form)",
+     "Magneton": "Turtonator",
+     "Togedemaru": "Palossand (Fiery Aevian Form)",
+     "Chandelure": "Walrein",
+     "Toxtricity": "Oranguru"
+    }
+   }
+  }
+ },
+ "arch setup": {
+  "core": [
+   "Reuniclus",
+   "Chandelure",
+   "Florges",
+   "Golisopod (Aevian Form)"
+  ],
+  "score": 155.42,
+  "counters": 14.0,
+  "per": {
+   "spector": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Porygon-Z"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Murkrow": "Florges",
+     "Gothitelle": "Chandelure",
+     "Gengar": "Reuniclus",
+     "Houndstone": "Zoroark (Hisuian Form)",
+     "Ninetales": "Golisopod (Aevian Form)",
+     "Banette": "Porygon-Z"
+    }
+   },
+   "spector2": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Barraskewda"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stonjourner": "Reuniclus",
+     "Sigilyph": "Florges",
+     "Luxray": "Golisopod (Aevian Form)",
+     "Golisopod": "Chandelure",
+     "Typhlosion": "Barraskewda",
+     "Banette": "Zoroark (Hisuian Form)"
+    }
+   },
+   "jenner9": {
+    "flex": [
+     "Frosmoth",
+     "Aurorus"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stoutland": "Golisopod (Aevian Form)",
+     "Appletun": "Frosmoth",
+     "Noivern": "Aurorus",
+     "Porygon-Z": "Reuniclus",
+     "Kommo-o": "Florges",
+     "Klinklang": "Chandelure"
+    }
+   },
+   "erick": {
+    "flex": [
+     "Ceruledge",
+     "Turtonator"
+    ],
+    "counters": "4/6",
+    "pairs": {
+     "Electivire": "Ceruledge",
+     "Raichu": "Golisopod (Aevian Form)",
+     "Magneton": "Turtonator",
+     "Togedemaru": "Chandelure",
+     "Chandelure": "Florges",
+     "Toxtricity": "Reuniclus"
+    }
+   }
+  }
+ },
+ "arch grassy": {
+  "core": [
+   "Gallade",
+   "Glalie (Aevian Form)",
+   "Florges",
+   "Golisopod (Aevian Form)"
+  ],
+  "score": 154.79,
+  "counters": 14.0,
+  "per": {
+   "spector": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Porygon-Z"
+    ],
+    "counters": "4/6",
+    "pairs": {
+     "Murkrow": "Florges",
+     "Gothitelle": "Glalie (Aevian Form)",
+     "Gengar": "Gallade",
+     "Houndstone": "Zoroark (Hisuian Form)",
+     "Ninetales": "Golisopod (Aevian Form)",
+     "Banette": "Porygon-Z"
+    }
+   },
+   "spector2": {
+    "flex": [
+     "Chandelure",
+     "Zoroark (Hisuian Form)"
+    ],
+    "counters": "4/6",
+    "pairs": {
+     "Stonjourner": "Gallade",
+     "Sigilyph": "Florges",
+     "Luxray": "Glalie (Aevian Form)",
+     "Golisopod": "Chandelure",
+     "Typhlosion": "Golisopod (Aevian Form)",
+     "Banette": "Zoroark (Hisuian Form)"
+    }
+   },
+   "jenner9": {
+    "flex": [
+     "Frosmoth",
+     "Aurorus"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stoutland": "Golisopod (Aevian Form)",
+     "Appletun": "Frosmoth",
+     "Noivern": "Aurorus",
+     "Porygon-Z": "Glalie (Aevian Form)",
+     "Kommo-o": "Florges",
+     "Klinklang": "Gallade"
+    }
+   },
+   "erick": {
+    "flex": [
+     "Palossand (Fiery Aevian Form)",
+     "Bruxish"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Electivire": "Golisopod (Aevian Form)",
+     "Raichu": "Glalie (Aevian Form)",
+     "Magneton": "Gallade",
+     "Togedemaru": "Palossand (Fiery Aevian Form)",
+     "Chandelure": "Florges",
+     "Toxtricity": "Bruxish"
+    }
+   }
+  }
+ },
+ "arch electric": {
+  "core": [
+   "Arctozolt",
+   "Pincurchin",
+   "Donphan",
+   "Golisopod (Aevian Form)"
+  ],
+  "score": 107.37,
+  "counters": 9.5,
+  "per": {
+   "spector": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Porygon-Z"
+    ],
+    "counters": "3/6",
+    "pairs": {
+     "Murkrow": "Arctozolt",
+     "Gothitelle": "Golisopod (Aevian Form)",
+     "Gengar": "Pincurchin",
+     "Houndstone": "Zoroark (Hisuian Form)",
+     "Ninetales": "Donphan",
+     "Banette": "Porygon-Z"
+    }
+   },
+   "spector2": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Sylveon"
+    ],
+    "counters": "4/6",
+    "pairs": {
+     "Stonjourner": "Golisopod (Aevian Form)",
+     "Sigilyph": "Sylveon",
+     "Luxray": "Donphan",
+     "Golisopod": "Arctozolt",
+     "Typhlosion": "Pincurchin",
+     "Banette": "Zoroark (Hisuian Form)"
+    }
+   },
+   "jenner9": {
+    "flex": [
+     "Florges",
+     "Frosmoth"
+    ],
+    "counters": "3/6",
+    "pairs": {
+     "Stoutland": "Golisopod (Aevian Form)",
+     "Appletun": "Frosmoth",
+     "Noivern": "Arctozolt",
+     "Porygon-Z": "Donphan",
+     "Kommo-o": "Florges",
+     "Klinklang": "Pincurchin"
+    }
+   },
+   "erick": {
+    "flex": [
+     "Palossand (Fiery Aevian Form)",
+     "Turtonator"
+    ],
+    "counters": "3/6",
+    "pairs": {
+     "Electivire": "Golisopod (Aevian Form)",
+     "Raichu": "Pincurchin",
+     "Magneton": "Turtonator",
+     "Togedemaru": "Palossand (Fiery Aevian Form)",
+     "Chandelure": "Arctozolt",
+     "Toxtricity": "Donphan"
+    }
+   }
+  }
+ },
+ "arch sun": {
+  "core": [
+   "Grumpig",
+   "Ninetales",
+   "Chandelure",
+   "Golisopod (Aevian Form)"
+  ],
+  "score": 139.02,
+  "counters": 12.5,
+  "per": {
+   "spector": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Diggersby"
+    ],
+    "counters": "4/6",
+    "pairs": {
+     "Murkrow": "Golisopod (Aevian Form)",
+     "Gothitelle": "Chandelure",
+     "Gengar": "Grumpig",
+     "Houndstone": "Zoroark (Hisuian Form)",
+     "Ninetales": "Diggersby",
+     "Banette": "Ninetales"
+    }
+   },
+   "spector2": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Sylveon"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stonjourner": "Grumpig",
+     "Sigilyph": "Sylveon",
+     "Luxray": "Golisopod (Aevian Form)",
+     "Golisopod": "Chandelure",
+     "Typhlosion": "Ninetales",
+     "Banette": "Zoroark (Hisuian Form)"
+    }
+   },
+   "jenner9": {
+    "flex": [
+     "Frosmoth",
+     "Aurorus"
+    ],
+    "counters": "4/6",
+    "pairs": {
+     "Stoutland": "Golisopod (Aevian Form)",
+     "Appletun": "Frosmoth",
+     "Noivern": "Aurorus",
+     "Porygon-Z": "Ninetales",
+     "Kommo-o": "Grumpig",
+     "Klinklang": "Chandelure"
+    }
+   },
+   "erick": {
+    "flex": [
+     "Ceruledge",
+     "Turtonator"
+    ],
+    "counters": "4/6",
+    "pairs": {
+     "Electivire": "Ceruledge",
+     "Raichu": "Golisopod (Aevian Form)",
+     "Magneton": "Turtonator",
+     "Togedemaru": "Chandelure",
+     "Chandelure": "Ninetales",
+     "Toxtricity": "Grumpig"
+    }
+   }
+  }
+ },
+ "arch snow": {
+  "core": [
+   "Zoroark (Hisuian Form)",
+   "Ninetales (Alolan Form)",
+   "Walrein",
+   "Golisopod (Aevian Form)"
+  ],
+  "score": 143.65,
+  "counters": 13.0,
+  "per": {
+   "spector": {
+    "flex": [
+     "Porygon-Z",
+     "Diggersby"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Murkrow": "Ninetales (Alolan Form)",
+     "Gothitelle": "Golisopod (Aevian Form)",
+     "Gengar": "Diggersby",
+     "Houndstone": "Zoroark (Hisuian Form)",
+     "Ninetales": "Walrein",
+     "Banette": "Porygon-Z"
+    }
+   },
+   "spector2": {
+    "flex": [
+     "Chandelure",
+     "Sylveon"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stonjourner": "Ninetales (Alolan Form)",
+     "Sigilyph": "Sylveon",
+     "Luxray": "Golisopod (Aevian Form)",
+     "Golisopod": "Chandelure",
+     "Typhlosion": "Walrein",
+     "Banette": "Zoroark (Hisuian Form)"
+    }
+   },
+   "jenner9": {
+    "flex": [
+     "Frosmoth",
+     "Turtonator"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stoutland": "Golisopod (Aevian Form)",
+     "Appletun": "Frosmoth",
+     "Noivern": "Walrein",
+     "Porygon-Z": "Zoroark (Hisuian Form)",
+     "Kommo-o": "Ninetales (Alolan Form)",
+     "Klinklang": "Turtonator"
+    }
+   },
+   "erick": {
+    "flex": [
+     "Palossand (Fiery Aevian Form)",
+     "Turtonator"
+    ],
+    "counters": "3/6",
+    "pairs": {
+     "Electivire": "Ninetales (Alolan Form)",
+     "Raichu": "Golisopod (Aevian Form)",
+     "Magneton": "Turtonator",
+     "Togedemaru": "Palossand (Fiery Aevian Form)",
+     "Chandelure": "Zoroark (Hisuian Form)",
+     "Toxtricity": "Walrein"
+    }
+   }
+  }
+ },
+ "free #1": {
+  "core": [
+   "Golisopod (Aevian Form)",
+   "Slowking (Galarian Form)",
+   "Chandelure",
+   "Florges"
+  ],
+  "score": 165.11,
+  "counters": 15.0,
+  "per": {
+   "spector": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Porygon-Z"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Murkrow": "Florges",
+     "Gothitelle": "Chandelure",
+     "Gengar": "Slowking (Galarian Form)",
+     "Houndstone": "Zoroark (Hisuian Form)",
+     "Ninetales": "Golisopod (Aevian Form)",
+     "Banette": "Porygon-Z"
+    }
+   },
+   "spector2": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Barraskewda"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stonjourner": "Slowking (Galarian Form)",
+     "Sigilyph": "Florges",
+     "Luxray": "Golisopod (Aevian Form)",
+     "Golisopod": "Chandelure",
+     "Typhlosion": "Barraskewda",
+     "Banette": "Zoroark (Hisuian Form)"
+    }
+   },
+   "jenner9": {
+    "flex": [
+     "Frosmoth",
+     "Aurorus"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stoutland": "Golisopod (Aevian Form)",
+     "Appletun": "Frosmoth",
+     "Noivern": "Aurorus",
+     "Porygon-Z": "Slowking (Galarian Form)",
+     "Kommo-o": "Florges",
+     "Klinklang": "Chandelure"
+    }
+   },
+   "erick": {
+    "flex": [
+     "Turtonator",
+     "Bruxish"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Electivire": "Golisopod (Aevian Form)",
+     "Raichu": "Slowking (Galarian Form)",
+     "Magneton": "Turtonator",
+     "Togedemaru": "Chandelure",
+     "Chandelure": "Florges",
+     "Toxtricity": "Bruxish"
+    }
+   }
+  }
+ },
+ "free #2": {
+  "core": [
+   "Golisopod (Aevian Form)",
+   "Chandelure",
+   "Gallade",
+   "Florges"
+  ],
+  "score": 165.82,
+  "counters": 15.0,
+  "per": {
+   "spector": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Porygon-Z"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Murkrow": "Florges",
+     "Gothitelle": "Chandelure",
+     "Gengar": "Gallade",
+     "Houndstone": "Zoroark (Hisuian Form)",
+     "Ninetales": "Golisopod (Aevian Form)",
+     "Banette": "Porygon-Z"
+    }
+   },
+   "spector2": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Barraskewda"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stonjourner": "Gallade",
+     "Sigilyph": "Florges",
+     "Luxray": "Golisopod (Aevian Form)",
+     "Golisopod": "Chandelure",
+     "Typhlosion": "Barraskewda",
+     "Banette": "Zoroark (Hisuian Form)"
+    }
+   },
+   "jenner9": {
+    "flex": [
+     "Frosmoth",
+     "Aurorus"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stoutland": "Golisopod (Aevian Form)",
+     "Appletun": "Frosmoth",
+     "Noivern": "Aurorus",
+     "Porygon-Z": "Gallade",
+     "Kommo-o": "Florges",
+     "Klinklang": "Chandelure"
+    }
+   },
+   "erick": {
+    "flex": [
+     "Ceruledge",
+     "Bruxish"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Electivire": "Ceruledge",
+     "Raichu": "Golisopod (Aevian Form)",
+     "Magneton": "Gallade",
+     "Togedemaru": "Chandelure",
+     "Chandelure": "Florges",
+     "Toxtricity": "Bruxish"
+    }
+   }
+  }
+ },
+ "free #3": {
+  "core": [
+   "Golisopod (Aevian Form)",
+   "Chandelure",
+   "Glalie (Aevian Form)",
+   "Florges"
+  ],
+  "score": 175.46,
+  "counters": 16.0,
+  "per": {
+   "spector": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Porygon-Z"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Murkrow": "Florges",
+     "Gothitelle": "Chandelure",
+     "Gengar": "Glalie (Aevian Form)",
+     "Houndstone": "Zoroark (Hisuian Form)",
+     "Ninetales": "Golisopod (Aevian Form)",
+     "Banette": "Porygon-Z"
+    }
+   },
+   "spector2": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Barraskewda"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stonjourner": "Glalie (Aevian Form)",
+     "Sigilyph": "Florges",
+     "Luxray": "Golisopod (Aevian Form)",
+     "Golisopod": "Chandelure",
+     "Typhlosion": "Barraskewda",
+     "Banette": "Zoroark (Hisuian Form)"
+    }
+   },
+   "jenner9": {
+    "flex": [
+     "Frosmoth",
+     "Aurorus"
+    ],
+    "counters": "6/6",
+    "pairs": {
+     "Stoutland": "Golisopod (Aevian Form)",
+     "Appletun": "Frosmoth",
+     "Noivern": "Aurorus",
+     "Porygon-Z": "Glalie (Aevian Form)",
+     "Kommo-o": "Florges",
+     "Klinklang": "Chandelure"
+    }
+   },
+   "erick": {
+    "flex": [
+     "Turtonator",
+     "Bruxish"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Electivire": "Golisopod (Aevian Form)",
+     "Raichu": "Glalie (Aevian Form)",
+     "Magneton": "Turtonator",
+     "Togedemaru": "Chandelure",
+     "Chandelure": "Florges",
+     "Toxtricity": "Bruxish"
+    }
+   }
+  }
+ },
+ "free #4": {
+  "core": [
+   "Golisopod (Aevian Form)",
+   "Chandelure",
+   "Reuniclus",
+   "Florges"
+  ],
+  "score": 155.42,
+  "counters": 14.0,
+  "per": {
+   "spector": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Porygon-Z"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Murkrow": "Florges",
+     "Gothitelle": "Chandelure",
+     "Gengar": "Reuniclus",
+     "Houndstone": "Zoroark (Hisuian Form)",
+     "Ninetales": "Golisopod (Aevian Form)",
+     "Banette": "Porygon-Z"
+    }
+   },
+   "spector2": {
+    "flex": [
+     "Zoroark (Hisuian Form)",
+     "Barraskewda"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stonjourner": "Reuniclus",
+     "Sigilyph": "Florges",
+     "Luxray": "Golisopod (Aevian Form)",
+     "Golisopod": "Chandelure",
+     "Typhlosion": "Barraskewda",
+     "Banette": "Zoroark (Hisuian Form)"
+    }
+   },
+   "jenner9": {
+    "flex": [
+     "Frosmoth",
+     "Aurorus"
+    ],
+    "counters": "5/6",
+    "pairs": {
+     "Stoutland": "Golisopod (Aevian Form)",
+     "Appletun": "Frosmoth",
+     "Noivern": "Aurorus",
+     "Porygon-Z": "Reuniclus",
+     "Kommo-o": "Florges",
+     "Klinklang": "Chandelure"
+    }
+   },
+   "erick": {
+    "flex": [
+     "Ceruledge",
+     "Turtonator"
+    ],
+    "counters": "4/6",
+    "pairs": {
+     "Electivire": "Ceruledge",
+     "Raichu": "Golisopod (Aevian Form)",
+     "Magneton": "Turtonator",
+     "Togedemaru": "Chandelure",
+     "Chandelure": "Florges",
+     "Toxtricity": "Reuniclus"
+    }
+   }
+  }
+ }
+}

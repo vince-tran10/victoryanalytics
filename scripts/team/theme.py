@@ -61,8 +61,7 @@ for i, nm in enumerate(st['team']):
     else:
         _fl = [x for x in st['team'] if x not in _core]; tag = f'Flex {_fl.index(nm) + 1}'
         _mv = {re.sub(r'[^A-Z]', '', m.upper()) for m in (st.get('moves') or {}).get(nm, [])}
-        _ld = (FP.get(st.get('fight')) or {}).get('leads') or []
-        role = ('Battle start' if nm in _ld else 'Closer' if _mv & {'SWORDSDANCE', 'DRAGONDANCE', 'NASTYPLOT', 'CALMMIND', 'SHELLSMASH', 'SHIFTGEAR',
+        role = ('Closer' if _mv & {'SWORDSDANCE', 'DRAGONDANCE', 'NASTYPLOT', 'CALMMIND', 'SHELLSMASH', 'SHIFTGEAR',
                 'QUIVERDANCE', 'BULKUP', 'CURSE', 'FILLETAWAY', 'TIDYUP', 'VICTORYDANCE'} else 'Mid game')
     here = '' if p else '<span class="slot-miss">not in party</span>'
     slots += (f'<li class="slot{" is-core" if nm in core else ""}">' + spr(nm, 'l', bool(p.get('shiny'))) + f'<div class="slot-top"><span class="slot-n">{i + 1}</span>'
@@ -536,7 +535,7 @@ IC = {
  'todo': '<path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1.5 1.5L7.5 5M3.5 12l1.5 1.5L7.5 11M3.5 18l1.5 1.5L7.5 17"/>',
  'boxes': '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M9 5v14M15 5v14"/>',
  'dex': '<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="3"/><path d="M8.5 15h7M8.5 18h4"/>'}
-NAV = [('team', 'Team'), ('fights', 'Fights'), ('cores', 'Cores'), ('todo', 'To do'), ('boxes', 'Boxes'), ('dex', 'Dex')]
+NAV = [('team', 'Team'), ('fights', 'Fights'), ('todo', 'To do'), ('boxes', 'Boxes'), ('dex', 'Dex')]   # 22 Nov: Cores tab removed (Vincent)
 nav = '<nav class="appnav" aria-label="Guide">' + ''.join(
     f'<button type="button" data-go="{k}"><svg viewBox="0 0 24 24" aria-hidden="true">{IC[k]}</svg><span>{t}</span></button>' for k, t in NAV) + '</nav>'
 seg = ('<div class="seg" role="group" aria-label="Dex lists"><button type="button" data-go="tiers">Pokémon</button>'

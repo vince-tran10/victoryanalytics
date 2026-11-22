@@ -30,6 +30,15 @@ def sh(args, env, quiet=True, log=None):
     return r.stdout
 
 
+
+SETUP_MV = {'Swords Dance', 'Dragon Dance', 'Nasty Plot', 'Calm Mind', 'Shell Smash', 'Shift Gear', 'Quiver Dance', 'Bulk Up', 'Curse',
+            'Fillet Away', 'Tidy Up', 'Victory Dance', 'Coil', 'Belly Drum'}
+def order_team(st):   # 22 Nov (Vincent): 1-3 core lead / lead partner / mid, 4 = mid-game flex, 5 = closer flex (has a setup move), 6 = core closer
+    core = list(st.get('core') or []); sw = [n for n in st['team'] if n not in core]
+    sw.sort(key=lambda n: bool(set((st.get('moves') or {}).get(n) or []) & SETUP_MV))
+    st['team'] = core[:3] + sw + core[3:]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('export'); ap.add_argument('--beat', default=''); ap.add_argument('--fight')
@@ -145,7 +154,7 @@ def main():
         if not st.get('fight') and nxt:   # last fight beaten: the next fight's six becomes the team (core + its 2 swaps)
             P = json.load(open(os.path.join(TEAMD, 'fight_plans.json')))[nxt]
             sw = [r['name'] for r in P['swaps']]
-            st['fight'] = nxt; st['team'] = list(st['core'][:3]) + sw + list(st['core'][3:])   # closer last (21 Nov)
+            st['fight'] = nxt; st['team'] = list(st['core'][:3]) + sw + list(st['core'][3:]); order_team(st)   # closer last (21 Nov)
             PB = (st.get('plan_builds') or {}).get(nxt, {})   # hand-plan builds (fight protocol), e.g. Garbodor's Gastro Acid Muk
             for n in sw:
                 st['moves'][n] = (PB.get(n) or {}).get('moves') or IDEAL.get(n, {}).get('moves') or st['moves'].get(n, [])
@@ -179,6 +188,7 @@ def main():
               f"({', '.join(tc['top'][0]['team'])})" if tc['top'] else '  no six passes')
         st['team_check'] = tc
 
+    order_team(st); json.dump(dict(st, export=new), open(STATE, 'w'), indent=1, ensure_ascii=False)   # flex order before the page
     # 7) page
     pe = dict(env, EXPORT_LABEL=label)
     if st.get('fight'): pe['FIGHT'] = st['fight']
@@ -191,7 +201,8 @@ def main():
     # one blended tier scale (Ch9 fights + meta) for Crests / Aevians / all other Pokémon, then the Cores tab (16 Nov)
     sh(['../scripts/team/tier_all.py'], dict(env, BASE_RUN=f'r{run}', CREST_RUN=f'rc{run}'))
     sh(['../scripts/team/tier_tabs.py', OUT], pe)
-    sh(['../scripts/team/cores.py', OUT], pe)
+    # 22 Nov (Vincent): Cores tab removed; cores.py no longer runs (CORES=1 to run it for chat)
+    if os.environ.get('CORES'): sh(['../scripts/team/cores.py', OUT], pe)
     sh(['../scripts/team/counters_tab.py', OUT], pe)
     sh(['../scripts/gamedata/compare.py', 'team/gamedata_compare.json'], pe)
     st['team_check_cache'] = True

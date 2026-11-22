@@ -62,6 +62,8 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   lists; no shared weakness. Swaps now: Copperajah + Muk-Alola (Dark Gardevoir). The core resists no Dark / Ghost:
   every fight's 2 swaps must bring a Dark/Ghost resist when that fight uses them (Muk-Alola resists both). checks.py: core (b) +
   fight six (b)(c) vs its own fight's types. state.json `core` holds the 4.
+- **Flex order (Vincent, 22 Nov):** slot 4 = mid-game flex, slot 5 = closer flex (has a setup move), labels Mid game / Closer only
+  (no 'Battle start': he plays the flexes by ear). update.py order_team() enforces it every run.
 - **Team tab = party order (Vincent, 21 Nov):** 1 Gholdengo (Core 1 · Lead: leads singles + left slot in doubles), 2 Arcanine-Hisui
   (Core 2 · Lead partner), 3 Vaporeon (Core 3 · Mid game), 4–5 the fight's 2 swaps (Flex 1 / Flex 2 · Battle start | Mid game |
   Closer: Battle start = that fight's planned lead, Closer = has a setup move), 6 Golisopod-Aevian (Core 4 · Closer, always last).
@@ -153,7 +155,9 @@ damage score and the fight's real win condition was only read after Vincent lost
 
 ## Guide page
 - Clean, a guide not an essay: bullets, no paragraphs; explanations go in chat, not on the page.
-- Tabs: Team · Fights · Cores · To do · Boxes · Tier list · Crest tiers · Aevian tiers · C&A checks.
+- Tabs: Team · Fights · To do · Boxes · Dex (tier lists) · C&A checks. **Cores tab REMOVED (Vincent, 22 Nov)**: he plays the team
+  I recommend; cores.py only runs with CORES=1 (chat analysis). Team check for the remaining fights: scripts/team/team_fights.py
+  (core + best 2 flexes per fight, full-six one-to-one counters).
 - **App look (Vincent, 17 Nov): it must look like an app, Pokémon themed.** scripts/team/theme.py runs LAST (after tabs.py) and
   only reskins: Rotom-Dex red app bar, party slots with level bars + "Next battle" card on Team, bottom tab bar (phone) / side
   rail (desktop) with 6 tabs (Team, Fights, Cores, To do, Boxes, Dex = the 3 tier tabs behind a switcher; C&A checks behind the
