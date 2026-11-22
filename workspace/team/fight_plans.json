@@ -19,7 +19,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 488,
+    "dump": 492,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -39,7 +39,7 @@
     ],
     "setup": "Nasty Plot",
     "where": "Active",
-    "dump": 518,
+    "dump": 519,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -52,7 +52,7 @@
     ]
    }
   ],
-  "counters": 5,
+  "counters": 4,
   "n": 6,
   "pairs": [
    {
@@ -130,11 +130,11 @@
    },
    {
     "foe": "Ninetales",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
-    "dealt": 126,
-    "taken": 36,
-    "ok": true,
+    "mon": "Alomomola",
+    "ability": "REGENERATOR",
+    "dealt": 33,
+    "taken": 33,
+    "ok": false,
     "setup": false,
     "wincons": [
      {
@@ -147,10 +147,10 @@
    },
    {
     "foe": "Banette",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 78,
-    "taken": 134,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 18,
+    "taken": 127,
     "ok": false,
     "setup": false,
     "wincons": []
@@ -159,14 +159,14 @@
   "weak3": [],
   "nores": [],
   "leads": [
-   "Arcanine (Hisuian Form)",
+   "Veluza (Aevian Form)",
    "Golisopod (Aevian Form)"
   ],
   "lead_foes": [
    "Murkrow",
    "Gothitelle"
   ],
-  "lead_taken": 58,
+  "lead_taken": 75,
   "sim": null,
   "lead_ok": true,
   "note": "",
@@ -185,44 +185,43 @@
   ],
   "swaps": [
    {
-    "name": "Sylveon",
-    "ab": "PIXILATE",
+    "name": "Zoroark (Hisuian Form)",
+    "ab": "ILLUSION",
     "moves": [
-     "Shadow Ball",
-     "Draining Kiss"
+     "Bitter Malice"
     ],
-    "setup": null,
+    "setup": "Nasty Plot",
     "where": "Active",
-    "dump": 504,
+    "dump": 519,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
-     "HP": 252,
-     "SpD": 4
+     "Spe": 252,
+     "Def": 4
     },
     "types": [
-     "FAIRY"
+     "NORMAL",
+     "GHOST"
     ]
    },
    {
-    "name": "Scrafty",
-    "ab": "MOXIE",
+    "name": "Roserade (Aevian Form)",
+    "ab": "SANDVEIL",
     "moves": [
-     "Crunch",
-     "High Jump Kick",
-     "Fake Out"
+     "Mud Barrage",
+     "Vacuum Wave"
     ],
     "setup": null,
-    "where": "Active",
-    "dump": 499,
-    "nature": "Adamant",
+    "where": "Overflow",
+    "dump": 310,
+    "nature": "Modest",
     "evs": {
-     "Atk": 252,
-     "HP": 252,
-     "SpD": 4
+     "SpA": 252,
+     "Spe": 252,
+     "Def": 4
     },
     "types": [
-     "DARK",
+     "GROUND",
      "FIGHTING"
     ]
    }
@@ -232,21 +231,21 @@
   "pairs": [
    {
     "foe": "Stonjourner",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
+    "mon": "Roserade (Aevian Form)",
+    "ability": "SANDVEIL",
     "dealt": 130,
-    "taken": 49,
+    "taken": 64,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Sigilyph",
-    "mon": "Sylveon",
-    "ability": "PIXILATE",
-    "dealt": 101,
-    "taken": 59,
-    "ok": true,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 31,
+    "taken": 79,
+    "ok": false,
     "setup": false,
     "wincons": []
    },
@@ -264,28 +263,28 @@
     "foe": "Golisopod",
     "mon": "Veluza (Aevian Form)",
     "ability": "RECKLESS",
-    "dealt": 91,
+    "dealt": 109,
     "taken": 353,
-    "ok": false,
+    "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Typhlosion",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
-    "dealt": 130,
-    "taken": 156,
+    "mon": "Alomomola",
+    "ability": "REGENERATOR",
+    "dealt": 40,
+    "taken": 130,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Banette",
-    "mon": "Scrafty",
-    "ability": "MOXIE",
-    "dealt": 99,
-    "taken": 55,
+    "mon": "Zoroark (Hisuian Form)",
+    "ability": "ILLUSION",
+    "dealt": 130,
+    "taken": 58,
     "ok": true,
     "setup": false,
     "wincons": []
@@ -294,14 +293,14 @@
   "weak3": [],
   "nores": [],
   "leads": [
-   "Vaporeon",
-   "Sylveon"
+   "Amoonguss",
+   "Golisopod (Aevian Form)"
   ],
   "lead_foes": [
    "Stonjourner",
    "Sigilyph"
   ],
-  "lead_taken": 86,
+  "lead_taken": 82,
   "sim": null,
   "lead_ok": true,
   "note": "",
@@ -328,7 +327,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 487,
+    "dump": 491,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -341,15 +340,15 @@
     ]
    },
    {
-    "name": "Frosmoth",
-    "ab": "ICESCALES",
+    "name": "Aurorus",
+    "ab": "SNOWWARNING",
     "moves": [
-     "Bug Buzz",
-     "Giga Drain"
+     "Ice Beam",
+     "Ancient Power"
     ],
-    "setup": "Quiver Dance",
+    "setup": null,
     "where": "Overflow",
-    "dump": 128,
+    "dump": 19,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -357,12 +356,12 @@
      "SpD": 4
     },
     "types": [
-     "ICE",
-     "BUG"
+     "ROCK",
+     "ICE"
     ]
    }
   ],
-  "counters": 3,
+  "counters": 2,
   "n": 6,
   "pairs": [
    {
@@ -377,18 +376,18 @@
      {
       "what": "Setup",
       "answers": [
-       "Haze (Vaporeon)"
+       "teach Encore (Musharna)"
       ]
      }
     ]
    },
    {
     "foe": "Appletun",
-    "mon": "Frosmoth",
-    "ability": "ICESCALES",
-    "dealt": 103,
-    "taken": 40,
-    "ok": true,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 34,
+    "taken": 47,
+    "ok": false,
     "setup": false,
     "wincons": [
      {
@@ -401,10 +400,10 @@
    },
    {
     "foe": "Noivern",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
-    "dealt": 120,
-    "taken": 60,
+    "mon": "Aurorus",
+    "ability": "SNOWWARNING",
+    "dealt": 130,
+    "taken": 39,
     "ok": true,
     "setup": false,
     "wincons": [
@@ -418,10 +417,10 @@
    },
    {
     "foe": "Porygon-Z",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 52,
-    "taken": 99,
+    "mon": "Alomomola",
+    "ability": "REGENERATOR",
+    "dealt": 39,
+    "taken": 151,
     "ok": false,
     "setup": false,
     "wincons": []
@@ -448,7 +447,7 @@
      {
       "what": "Setup",
       "answers": [
-       "Haze (Vaporeon)"
+       "teach Encore (Musharna)"
       ]
      }
     ]
@@ -481,24 +480,24 @@
   ],
   "swaps": [
    {
-    "name": "Shedinja",
-    "ab": "WONDERGUARD",
+    "name": "Palossand (Fiery Aevian Form)",
+    "ab": "STEAMENGINE",
     "moves": [
-     "Shadow Sneak",
-     "X-Scissor",
-     "Shadow Claw"
+     "Shadow Ball",
+     "Overheat"
     ],
     "setup": null,
     "where": "Overflow",
-    "dump": 323,
-    "nature": "Adamant",
+    "dump": 320,
+    "nature": "Modest",
     "evs": {
-     "Atk": 252,
-     "Spe": 252
+     "SpA": 252,
+     "HP": 252,
+     "SpD": 4
     },
     "types": [
-     "BUG",
-     "GHOST"
+     "GHOST",
+     "FIRE"
     ]
    },
    {
@@ -510,7 +509,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 483,
+    "dump": 486,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -527,20 +526,20 @@
   "pairs": [
    {
     "foe": "Electivire",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 93,
-    "taken": 68,
-    "ok": true,
+    "mon": "Alomomola",
+    "ability": "REGENERATOR",
+    "dealt": 35,
+    "taken": 36,
+    "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Raichu",
-    "mon": "Shedinja",
-    "ability": "WONDERGUARD",
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
     "dealt": 130,
-    "taken": 0,
+    "taken": 53,
     "ok": true,
     "setup": false,
     "wincons": []
@@ -557,11 +556,11 @@
    },
    {
     "foe": "Togedemaru",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
+    "mon": "Palossand (Fiery Aevian Form)",
+    "ability": "STEAMENGINE",
     "dealt": 130,
-    "taken": 70,
-    "ok": false,
+    "taken": 24,
+    "ok": true,
     "setup": false,
     "wincons": []
    },
@@ -577,10 +576,10 @@
    },
    {
     "foe": "Toxtricity",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 47,
-    "taken": 139,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 22,
+    "taken": 100,
     "ok": false,
     "setup": false,
     "wincons": []
@@ -589,14 +588,14 @@
   "weak3": [],
   "nores": [],
   "leads": [
-   "Vaporeon",
-   "Golisopod (Aevian Form)"
+   "Golisopod (Aevian Form)",
+   "Palossand (Fiery Aevian Form)"
   ],
   "lead_foes": [
    "Electivire",
    "Raichu"
   ],
-  "lead_taken": 75,
+  "lead_taken": 68,
   "sim": null,
   "lead_ok": true,
   "note": "",

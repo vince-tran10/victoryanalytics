@@ -19,6 +19,10 @@ E = html.escape
 st = json.load(open('team/state.json'))
 MT = json.load(open('gamedata/movetext.json')) if os.path.exists('gamedata/movetext.json') else {}
 def mname(k): return (MT.get(k) or {}).get('name', k.title())
+# 22 Nov: the Builder shows the SAME tier as the Dex (live tier_all), not the chapter-frozen core snapshot
+_LIVE = {}
+for _r in json.load(open('team/tier_all.json'))['rows']: _LIVE.setdefault(_r['name'], _r)
+rows_all = [dict(r, tier=_LIVE[r['name']]['tier'], blend=_LIVE[r['name']]['blend']) if r['name'] in _LIVE else r for r in rows_all]
 ALLM = {}
 for r in rows_all:
     if r['name'] not in ALLM: ALLM[r['name']] = Mon(r)
@@ -139,6 +143,7 @@ ROLES = [
 def weak3(ms):
     return any(sum(m.mult[a] > 1 for m in ms) >= 3 for a in TYPES)
 out = []
+USED = set()   # one suggestion per Pokémon across the 4 slots
 if len(core) == 4:
     base = [ALLM[n] if n else None for n in core]
     for i, (title, needs) in enumerate(ROLES):
@@ -154,7 +159,7 @@ if len(core) == 4:
             res.sort(key=lambda x: (-x[0], -x[1], -x[2]))
             mine = base[i].name if base[i] else None; pv = LEAD.get(mine, dict(win=0, fast=0))
             # yellow = a real alternative: same tier or higher, not in the core, fits the other three, clearly better lead (win +.05)
-            rec = res[0][3].name if res else None   # 22 Nov: my suggestion = the top of this ranking (tier, then role preference)
+            rec = res[0][3].name if res else None; USED.add(rec)   # 22 Nov: my suggestion = the top of this ranking (tier, then role preference)
             top = [x for x in res if x[3].name not in (rec, mine)][:6 - len({rec, mine} - {None})]
             for want in (rec, mine):
                 if want and want not in [x[3].name for x in top]:
@@ -184,13 +189,47 @@ if len(core) == 4:
             m, t = x[3], x[4]
             f_ = min(x[1], 2) if slot == 4 else len([y for y in t if not y.startswith('spread')])
             return RK.get(m.r['tier'], 0) + f_ + .1 * (sum(m.mult[a] < 1 for a in TYPES) - sum(m.mult[a] > 1 for a in TYPES))
-        rec = max(res, key=_fit)[3].name if res else None
+        _pool = [x for x in res if x[3].name not in USED] or res
+        _best = max(_pool, key=_fit) if _pool else None
+        _mine = next((x for x in _pool if x[3].name == (base[i].name if base[i] else None)), None)
+        # stability (22 Nov): his pick stays my suggestion when it is the same tier and within 0.3 role fit of the best (no flip-flops)
+        if _best and _mine and _mine[0] == _best[0] and _fit(_mine) >= _fit(_best) - .3: _best = _mine
+        rec = _best[3].name if _best else None
+        USED.add(rec)
         if rec and rec not in [x[3].name for x in top]: top = top[:5] + [next(x for x in res if x[3].name == rec)]
         top.sort(key=lambda x: (-x[0], -x[1], -x[2]))
         def _st(m):
             cs, ct = common_chips(m)
             return cs + ([] if ct else ['Single target only']), ct
-        out.append(dict(slot=slot, title=title, pick=mine, rec=rec,
+        # 22 Nov (Vincent): when my suggestion is not the highest tier, defend it vs each higher-tier option (one reason per line)
+        def why_not(rm, rt, cm, ct):
+            out_ = []
+            rt_ = [y for y in rt if not y.startswith('spread')]; ct_ = [y for y in ct if not y.startswith('spread')]
+            if slot == 4:
+                if x_rec[1] > next(x for x in res if x[3].name == cm.name)[1]: out_.append(f"Bigger boost: {rt_[0]} vs {ct_[0] if ct_ else 'none'}")
+            elif len(rt_) > len(ct_):
+                out_.append(f"Role tools: {', '.join(rt_)} vs {', '.join(ct_) or 'none'}")
+            rw = sum(rm.mult[a] > 1 for a in TYPES); cw = sum(cm.mult[a] > 1 for a in TYPES)
+            rr = sum(rm.mult[a] < 1 for a in TYPES); cr = sum(cm.mult[a] < 1 for a in TYPES)
+            if rw < cw: out_.append(f"Weak to {rw} types vs {cw}")
+            if rr > cr: out_.append(f"Resists {rr} types vs {cr}")
+            stack = lambda mm: [a.title() for a in TYPES if mm.mult[a] > 1 and any(o.mult[a] > 1 for o in others)]
+            rs, cs = stack(rm), stack(cm)
+            if len(rs) < len(cs): out_.append(f"Shares fewer weaknesses with the core: {len(rs)} vs {len(cs)} ({', '.join(cs)})")
+            cat = lambda mm: mm.r.get('cat') or ''
+            phys = sum(cat(o) == 'Physical' for o in others); spec = sum(cat(o) == 'Special' for o in others)
+            if cat(rm) != cat(cm) and ((cat(rm) == 'Special' and phys > spec) or (cat(rm) == 'Physical' and spec > phys)):
+                out_.append(f"Balances the core: {cat(rm).lower()} next to {max(phys, spec)} {('physical' if phys > spec else 'special')} attackers")
+            if (rm.r.get('abilities') and 'REGENERATOR' in rm.r['abilities']) and not (cm.r.get('abilities') and 'REGENERATOR' in cm.r['abilities']) and slot == 3:
+                out_.append('Regenerator: heals on every switch-out')
+            return out_
+        x_rec = next((x for x in res if x[3].name == rec), None)
+        WHY = []
+        if x_rec:
+            for x in sorted(res, key=lambda x: (-x[0], -x[2])):
+                if x[0] > x_rec[0] and len(WHY) < 2:
+                    WHY.append(dict(name=disp(x[3].name), tier=x[3].r['tier'], lines=why_not(x_rec[3], x_rec[4], x[3], x[4])))
+        out.append(dict(slot=slot, title=title, pick=mine, rec=rec, why=WHY,
                         cands=[dict(name=m.name, tier=m.r['tier'], stats=_st(m)[0], tools=merge([x for x in t if not x.startswith('spread')] + _st(m)[1], kit(m)),
                                     sid=m.r.get('sid'), form=str(m.r.get('form', '0')), pick=m.name == mine, rec=m.name == rec)
                                for _, _, _, m, t in top]))
@@ -203,7 +242,9 @@ for s_ in out:
     for c in s_['cands']:
         rows += ('<li class="bc' + (' pick' if c['pick'] else '') + (' rec' if c.get('rec') else '') + '"><div class="bct"><span class="tier t' + c['tier'] + '">' + c['tier'] + '</span>' + SP.tag(c['sid'], c['form'], size='s')
                  + '<b>' + E(disp(c['name'])) + '</b>' + ('<span class="bpick">Your pick</span>' if c['pick'] else '') + ('<span class="brec">Suggested</span>' if c.get('rec') else '') + '</div>'
-                 + '<div class="btools">' + ''.join('<span class="bstat">' + E(x) + '</span>' for x in c.get('stats', [])) + ''.join('<span class="btool">' + E(x) + '</span>' for x in c['tools']) + '</div></li>')
+                 + '<div class="btools">' + ''.join('<span class="bstat">' + E(x) + '</span>' for x in c.get('stats', [])) + ''.join('<span class="btool">' + E(x) + '</span>' for x in c['tools']) + '</div>'
+                 + (''.join('<div class="bwhy"><b>Why not ' + E(w['name']) + ' (' + w['tier'] + ')</b><ul>' + ''.join('<li>' + E(l) + '</li>' for l in w['lines']) + '</ul></div>'
+                            for w in s_.get('why') or [] if w['lines']) if c.get('rec') else '') + '</li>')
     cards += ('<article class="bslot"><header><span class="bn">' + str(s_['slot']) + '</span><b>' + E(s_['title']) + '</b>'
               + ('<span class="bempty">Empty</span>' if not s_['pick'] else '') + '</header>'
               + '<ol class="bcands">' + rows + '</ol></article>')

@@ -38,14 +38,14 @@
   "source": "game+smogon"
  },
  "Arcanine (Hisuian Form)": {
-  "ability": "Intimidate",
+  "ability": "ROCKHEAD",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
   "item": "Charcoal",
   "moves": [
    "Flare Blitz",
-   "Head Smash",
    "Extreme Speed",
+   "Head Smash",
    "Protect"
   ],
   "move_ids": [
@@ -54,7 +54,7 @@
    "HEADSMASH"
   ],
   "role": "attacker",
-  "source": "your team"
+  "source": "game+smogon"
  },
  "Crabominable": {
   "ability": "IRONFIST",
@@ -702,6 +702,25 @@
   "role": "attacker",
   "source": "game"
  },
+ "Veluza (Aevian Form)": {
+  "ability": "Reckless",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Mystic Water",
+  "moves": [
+   "Wave Crash",
+   "Flare Blitz",
+   "Head Smash",
+   "Protect"
+  ],
+  "move_ids": [
+   "WAVECRASH",
+   "FLAREBLITZ",
+   "HEADSMASH"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
  "Heatmor": {
   "ability": "GLUTTONY",
   "nature": "Modest",
@@ -867,25 +886,6 @@
    "MULTIATTACK",
    "THUNDERWAVE",
    "CRUNCH"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Veluza (Aevian Form)": {
-  "ability": "RECKLESS",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Mystic Water",
-  "moves": [
-   "Wave Crash",
-   "Flare Blitz",
-   "Head Smash",
-   "Protect"
-  ],
-  "move_ids": [
-   "WAVECRASH",
-   "FLAREBLITZ",
-   "HEADSMASH"
   ],
   "role": "attacker",
   "source": "game"
@@ -1306,6 +1306,25 @@
   "role": "attacker",
   "source": "game"
  },
+ "Vaporeon": {
+  "ability": "WATERABSORB",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Spell Tag",
+  "moves": [
+   "Wish",
+   "Shadow Ball",
+   "Hydro Pump",
+   "Protect"
+  ],
+  "move_ids": [
+   "WISH",
+   "SHADOWBALL",
+   "HYDROPUMP"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
+ },
  "Lapras (Aevian Form)": {
   "ability": "NOGUARD",
   "nature": "Adamant",
@@ -1512,25 +1531,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Vaporeon": {
-  "ability": "Water Absorb",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Spell Tag",
-  "moves": [
-   "Hydro Pump",
-   "Aurora Beam",
-   "Haze",
-   "Protect"
-  ],
-  "move_ids": [
-   "WISH",
-   "SHADOWBALL",
-   "HYDROPUMP"
-  ],
-  "role": "attacker",
-  "source": "your team"
  },
  "Squawkabilly (White Plumage)": {
   "ability": "HUSTLE",
@@ -3378,25 +3378,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Amoonguss": {
-  "ability": "REGENERATOR",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Miracle Seed",
-  "moves": [
-   "Spore",
-   "Bullet Seed",
-   "Sludge Bomb",
-   "Protect"
-  ],
-  "move_ids": [
-   "SPORE",
-   "BULLETSEED",
-   "SLUDGEBOMB"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
  "Empoleon": {
   "ability": "TORRENT",
   "nature": "Modest",
@@ -3796,6 +3777,25 @@
   "role": "attacker",
   "source": "game"
  },
+ "Garbodor": {
+  "ability": "STENCH",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Poison Barb",
+  "moves": [
+   "Gunk Shot",
+   "Body Slam",
+   "Toxic",
+   "Protect"
+  ],
+  "move_ids": [
+   "GUNKSHOT",
+   "BODYSLAM",
+   "TOXIC"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Turtonator": {
   "ability": "SHELLARMOR",
   "nature": "Modest",
@@ -4023,25 +4023,6 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
- },
- "Garbodor": {
-  "ability": "STENCH",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Poison Barb",
-  "moves": [
-   "Gunk Shot",
-   "Body Slam",
-   "Toxic",
-   "Protect"
-  ],
-  "move_ids": [
-   "GUNKSHOT",
-   "BODYSLAM",
-   "TOXIC"
-  ],
-  "role": "attacker",
-  "source": "game"
  },
  "Roserade (Aevian Form)": {
   "ability": "TECHNICIAN",
@@ -5779,6 +5760,25 @@
   "role": "attacker",
   "source": "game"
  },
+ "Amoonguss": {
+  "ability": "Regenerator",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Sitrus Berry",
+  "moves": [
+   "Spore",
+   "Rage Powder",
+   "Sludge Bomb",
+   "Protect"
+  ],
+  "move_ids": [
+   "SPORE",
+   "SYNTHESIS",
+   "SLUDGEBOMB"
+  ],
+  "role": "support",
+  "source": "your team"
+ },
  "Parasect": {
   "ability": "DRYSKIN",
   "nature": "Adamant",
@@ -5951,10 +5951,10 @@
   "source": "game"
  },
  "Alomomola": {
-  "ability": "REGENERATOR",
+  "ability": "Regenerator",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Mystic Water",
+  "item": "Sitrus Berry",
   "moves": [
    "Wish",
    "Aqua Jet",
@@ -5966,8 +5966,8 @@
    "AQUAJET",
    "WAKEUPSLAP"
   ],
-  "role": "attacker",
-  "source": "game+smogon"
+  "role": "support",
+  "source": "your team"
  },
  "Weezing": {
   "ability": "LEVITATE",
@@ -6911,25 +6911,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Karrablast": {
-  "ability": "SWARM",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Silver Powder",
-  "moves": [
-   "X-Scissor",
-   "Iron Head",
-   "Knock Off",
-   "Protect"
-  ],
-  "move_ids": [
-   "XSCISSOR",
-   "IRONHEAD",
-   "KNOCKOFF"
-  ],
-  "role": "attacker",
-  "source": "engine"
- },
  "Lopunny": {
   "ability": "LIMBER",
   "nature": "Jolly",
@@ -6948,6 +6929,25 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
+ },
+ "Karrablast": {
+  "ability": "NOGUARD",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Silver Powder",
+  "moves": [
+   "X-Scissor",
+   "Iron Head",
+   "Knock Off",
+   "Protect"
+  ],
+  "move_ids": [
+   "XSCISSOR",
+   "IRONHEAD",
+   "KNOCKOFF"
+  ],
+  "role": "attacker",
+  "source": "engine"
  },
  "Pachirisu": {
   "ability": "VOLTABSORB",

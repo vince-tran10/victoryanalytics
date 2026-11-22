@@ -1,13 +1,6 @@
 {
  "evo": [
   {
-   "name": "Alakazam",
-   "where": "Party",
-   "level": 55,
-   "step": "Kadabra -> Alakazam",
-   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  },
-  {
    "name": "Annihilape",
    "where": "#10",
    "level": 50,
@@ -15,88 +8,11 @@
    "why": "uses Rage Fist x20, not learnable yet"
   },
   {
-   "name": "Dusknoir",
-   "where": "#105",
-   "level": 30,
-   "step": "Dusclops -> Dusknoir",
-   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  },
-  {
    "name": "Electivire",
-   "where": "#112",
+   "where": "#114",
    "level": 55,
    "step": "Electabuzz -> Electivire",
    "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  },
-  {
-   "name": "Golem",
-   "where": "#144",
-   "level": 45,
-   "step": "Graveler -> Golem",
-   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  },
-  {
-   "name": "Machamp",
-   "where": "#201",
-   "level": 55,
-   "step": "Machoke -> Machamp",
-   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  },
-  {
-   "name": "Parasect-Aevian",
-   "where": "#268",
-   "level": 55,
-   "step": "Paras -> Parasect-Aevian",
-   "why": "needs Xen Waste, not obtainable yet"
-  },
-  {
-   "name": "Armarouge",
-   "where": "#441",
-   "level": 55,
-   "step": "Charcadet -> Armarouge",
-   "why": "needs Auspicious Armor, not obtainable yet"
-  },
-  {
-   "name": "Ceruledge",
-   "where": "#446",
-   "level": 55,
-   "step": "Charcadet -> Ceruledge",
-   "why": "needs Malicious Armor, not obtainable yet"
-  },
-  {
-   "name": "Escavalier",
-   "where": "#464",
-   "level": 55,
-   "step": "Karrablast -> Escavalier",
-   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  },
-  {
-   "name": "Golem",
-   "where": "#472",
-   "level": 50,
-   "step": "Graveler -> Golem",
-   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  },
-  {
-   "name": "Porygon-Z",
-   "where": "#493",
-   "level": 45,
-   "step": "Porygon -> Porygon-Z",
-   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  },
-  {
-   "name": "Porygon-Z",
-   "where": "#493",
-   "level": 45,
-   "step": "Porygon2 -> Porygon-Z",
-   "why": "needs Dubious Disc, not obtainable yet"
-  },
-  {
-   "name": "Rhyperior",
-   "where": "#497",
-   "level": 55,
-   "step": "Rhydon -> Rhyperior",
-   "why": "needs Protector, not obtainable yet"
   }
  ],
  "moves": [
@@ -151,300 +67,332 @@
    "move": "Obstruct"
   },
   {
+   "name": "Charcadet",
+   "where": "#60",
+   "move": "Flamethrower"
+  },
+  {
+   "name": "Charcadet",
+   "where": "#60",
+   "move": "Psyshock"
+  },
+  {
+   "name": "Charcadet",
+   "where": "#60",
+   "move": "Calm Mind"
+  },
+  {
+   "name": "Charcadet",
+   "where": "#61",
+   "move": "Swords Dance"
+  },
+  {
+   "name": "Charcadet",
+   "where": "#61",
+   "move": "Shadow Claw"
+  },
+  {
+   "name": "Charcadet",
+   "where": "#61",
+   "move": "Bitter Blade"
+  },
+  {
    "name": "Claydol",
-   "where": "#69",
+   "where": "#71",
    "move": "Steel Beam"
   },
   {
    "name": "Claydol",
-   "where": "#69",
+   "where": "#71",
    "move": "Flamethrower"
   },
   {
    "name": "Claydol",
-   "where": "#69",
+   "where": "#71",
    "move": "Rock Blast"
   },
   {
    "name": "Corsola",
-   "where": "#75",
+   "where": "#77",
    "move": "Throat Chop"
   },
   {
    "name": "Drifblim",
-   "where": "#98",
+   "where": "#100",
    "move": "Mystical Fire"
   },
   {
    "name": "Drifblim",
-   "where": "#98",
+   "where": "#100",
    "move": "Hurricane"
   },
   {
    "name": "Drifloon",
-   "where": "#100",
+   "where": "#101",
    "move": "Tail Whip"
   },
   {
    "name": "Drifloon",
-   "where": "#100",
+   "where": "#101",
    "move": "Nuzzle"
   },
   {
    "name": "Drifloon",
-   "where": "#100",
+   "where": "#101",
    "move": "Tackle"
   },
   {
    "name": "Empoleon",
-   "where": "#116",
+   "where": "#118",
    "move": "Icy Wind"
   },
   {
    "name": "Flamigo",
-   "where": "#123",
+   "where": "#125",
    "move": "U-turn"
   },
   {
    "name": "Glalie",
-   "where": "#140",
+   "where": "#142",
    "move": "Stealth Rock"
   },
   {
    "name": "Golisopod",
-   "where": "#147",
+   "where": "#148",
    "move": "Spikes"
   },
   {
    "name": "Houndoom",
-   "where": "#163",
+   "where": "#166",
    "move": "Snarl"
   },
   {
    "name": "Jynx",
-   "where": "#172",
+   "where": "#175",
    "move": "Nasty Plot"
   },
   {
+   "name": "Karrablast",
+   "where": "#179",
+   "move": "Iron Head"
+  },
+  {
    "name": "Lumineon",
-   "where": "#196",
+   "where": "#201",
    "move": "Quiver Dance"
   },
   {
    "name": "Lumineon",
-   "where": "#196",
+   "where": "#201",
    "move": "Headbutt"
   },
   {
    "name": "Manectric",
-   "where": "#209",
+   "where": "#213",
    "move": "Mat Block"
   },
   {
    "name": "Manectric",
-   "where": "#209",
+   "where": "#213",
    "move": "Frost Breath"
   },
   {
    "name": "Manectric",
-   "where": "#209",
+   "where": "#213",
    "move": "Volt Switch"
   },
   {
    "name": "Maractus",
-   "where": "#213",
+   "where": "#218",
    "move": "Spikes"
   },
   {
    "name": "Masquerain",
-   "where": "#217",
+   "where": "#222",
    "move": "Discharge"
   },
   {
    "name": "Masquerain",
-   "where": "#217",
+   "where": "#222",
    "move": "Aqua Ring"
   },
   {
    "name": "Masquerain",
-   "where": "#217",
+   "where": "#222",
    "move": "Ice Beam"
   },
   {
    "name": "Mismagius",
-   "where": "#230",
+   "where": "#235",
    "move": "Confuse Ray"
   },
   {
    "name": "Mismagius",
-   "where": "#230",
+   "where": "#235",
    "move": "Nasty Plot"
   },
   {
    "name": "Mismagius-Aevian",
-   "where": "#231",
+   "where": "#236",
    "move": "Confuse Ray"
   },
   {
    "name": "Nidoran-M",
-   "where": "#243",
+   "where": "#248",
    "move": "Morning Sun"
   },
   {
    "name": "Persian",
-   "where": "#271",
+   "where": "#276",
    "move": "Tail Slap"
   },
   {
    "name": "Persian",
-   "where": "#271",
+   "where": "#276",
    "move": "Destiny Bond"
   },
   {
    "name": "Persian",
-   "where": "#271",
+   "where": "#276",
    "move": "Glare"
   },
   {
    "name": "Pidove",
-   "where": "#277",
+   "where": "#283",
    "move": "Hone Claws"
   },
   {
    "name": "Pidove",
-   "where": "#277",
+   "where": "#283",
    "move": "Dual Wingbeat"
   },
   {
+   "name": "Porygon",
+   "where": "#292",
+   "move": "Nasty Plot"
+  },
+  {
    "name": "Purugly",
-   "where": "#289",
+   "where": "#297",
    "move": "Thrash"
   },
   {
    "name": "Purugly",
-   "where": "#289",
+   "where": "#297",
    "move": "Swords Dance"
   },
   {
    "name": "Purugly",
-   "where": "#289",
+   "where": "#297",
    "move": "Earthquake"
   },
   {
    "name": "Pyukumuku",
-   "where": "#291",
+   "where": "#298",
    "move": "Block"
   },
   {
    "name": "Pyukumuku",
-   "where": "#292",
+   "where": "#299",
    "move": "Block"
   },
   {
    "name": "Quagsire",
-   "where": "#293",
+   "where": "#300",
    "move": "Lava Plume"
   },
   {
    "name": "Rapidash",
-   "where": "#295",
+   "where": "#302",
    "move": "Fell Stinger"
   },
   {
    "name": "Rapidash",
-   "where": "#295",
+   "where": "#302",
    "move": "High Horsepower"
   },
   {
+   "name": "Rhydon",
+   "where": "#307",
+   "move": "Headlong Rush"
+  },
+  {
    "name": "Stunfisk-Galar",
-   "where": "#357",
+   "where": "#365",
    "move": "Gyro Ball"
   },
   {
    "name": "Stunfisk-Galar",
-   "where": "#357",
+   "where": "#365",
    "move": "Nature Power"
   },
   {
    "name": "Stunfisk-Galar",
-   "where": "#357",
+   "where": "#365",
    "move": "Earthquake"
   },
   {
    "name": "Throh",
-   "where": "#383",
+   "where": "#391",
    "move": "Knock Off"
   },
   {
    "name": "Vivillon Butterfly of Fate",
-   "where": "#408",
+   "where": "#416",
    "move": "Roost"
   },
   {
    "name": "Vivillon Butterfly of Fate",
-   "where": "#408",
+   "where": "#416",
    "move": "Magic Powder"
   },
   {
    "name": "Vivillon Butterfly of Fate",
-   "where": "#408",
+   "where": "#416",
    "move": "Psychic"
   },
   {
    "name": "Vivillon Butterfly of Fate",
-   "where": "#408",
+   "where": "#416",
    "move": "Destiny Bond"
   },
   {
    "name": "Vulpix",
-   "where": "#412",
+   "where": "#420",
    "move": "Heat Wave"
   },
   {
    "name": "Wiglett",
-   "where": "#420",
+   "where": "#428",
    "move": "Endure"
   },
   {
    "name": "Wooper-Paldea",
-   "where": "#425",
+   "where": "#433",
    "move": "Earth Power"
   },
   {
    "name": "Arcanine",
-   "where": "#439",
+   "where": "#447",
    "move": "Close Combat"
   },
   {
    "name": "Crabominable",
-   "where": "#452",
+   "where": "#458",
    "move": "Crabhammer"
   },
   {
    "name": "Crawdaunt",
-   "where": "#453",
+   "where": "#459",
    "move": "Dragon Dance"
   },
   {
-   "name": "Rhyperior",
-   "where": "#497",
-   "move": "Headlong Rush"
-  },
-  {
    "name": "Tatsugiri Droopy Form",
-   "where": "#506",
+   "where": "#508",
    "move": "Searing Shot"
   }
  ],
  "devolve": [
-  {
-   "dump": 5,
-   "name": "Alakazam",
-   "to_sid": "KADABRA",
-   "to_form": "0",
-   "to_name": "Kadabra",
-   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  },
   {
    "dump": 10,
    "name": "Annihilape",
@@ -454,92 +402,12 @@
    "why": "uses Rage Fist x20, not learnable yet"
   },
   {
-   "dump": 105,
-   "name": "Dusknoir",
-   "to_sid": "DUSCLOPS",
-   "to_form": "0",
-   "to_name": "Dusclops",
-   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  },
-  {
-   "dump": 112,
+   "dump": 114,
    "name": "Electivire",
    "to_sid": "ELECTABUZZ",
    "to_form": "0",
    "to_name": "Electabuzz",
    "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  },
-  {
-   "dump": 144,
-   "name": "Golem",
-   "to_sid": "GRAVELER",
-   "to_form": "0",
-   "to_name": "Graveler",
-   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  },
-  {
-   "dump": 201,
-   "name": "Machamp",
-   "to_sid": "MACHOKE",
-   "to_form": "0",
-   "to_name": "Machoke",
-   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  },
-  {
-   "dump": 268,
-   "name": "Parasect-Aevian",
-   "to_sid": "PARAS",
-   "to_form": "1",
-   "to_name": "Paras (Aevian Form)",
-   "why": "needs Xen Waste, not obtainable yet"
-  },
-  {
-   "dump": 441,
-   "name": "Armarouge",
-   "to_sid": "CHARCADET",
-   "to_form": "0",
-   "to_name": "Charcadet",
-   "why": "needs Auspicious Armor, not obtainable yet"
-  },
-  {
-   "dump": 446,
-   "name": "Ceruledge",
-   "to_sid": "CHARCADET",
-   "to_form": "0",
-   "to_name": "Charcadet",
-   "why": "needs Malicious Armor, not obtainable yet"
-  },
-  {
-   "dump": 464,
-   "name": "Escavalier",
-   "to_sid": "KARRABLAST",
-   "to_form": "0",
-   "to_name": "Karrablast",
-   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  },
-  {
-   "dump": 472,
-   "name": "Golem",
-   "to_sid": "GRAVELER",
-   "to_form": "0",
-   "to_name": "Graveler",
-   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  },
-  {
-   "dump": 493,
-   "name": "Porygon-Z",
-   "to_sid": "PORYGON",
-   "to_form": "0",
-   "to_name": "Porygon",
-   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  },
-  {
-   "dump": 497,
-   "name": "Rhyperior",
-   "to_sid": "RHYDON",
-   "to_form": "0",
-   "to_name": "Rhydon",
-   "why": "needs Protector, not obtainable yet"
   }
  ]
 }

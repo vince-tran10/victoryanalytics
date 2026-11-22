@@ -1,12 +1,12 @@
 {
  "_doc": "Read/written by scripts/team/update.py. Edit by hand only to change the six or its moves.",
- "export": "party_and_boxes_2026-11-22_0933.txt",
- "export_label": "22 Nov 09:33",
- "active_start": 437,
+ "export": "party_and_boxes_2026-11-22_1133.txt",
+ "export_label": "22 Nov 11:33",
+ "active_start": 445,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 212,
- "run": 226,
- "final": 230,
+ "roster": 219,
+ "run": 233,
+ "final": 237,
  "done": [
   "aelita",
   "narcissa1",
@@ -35,29 +35,17 @@
  "fight": "spector",
  "team": [
   "Veluza (Aevian Form)",
-  "Arcanine (Hisuian Form)",
-  "Vaporeon",
+  "Amoonguss",
   "Oranguru",
   "Zoroark (Hisuian Form)",
-  "Golisopod (Aevian Form)"
+  "Golisopod (Aevian Form)",
+  "Alomomola"
  ],
  "moves": {
-  "Arcanine (Hisuian Form)": [
-   "Flare Blitz",
-   "Head Smash",
-   "Extreme Speed",
-   "Protect"
-  ],
   "Golisopod (Aevian Form)": [
    "Bone Rush",
    "Pin Missile",
    "Swords Dance",
-   "Protect"
-  ],
-  "Vaporeon": [
-   "Hydro Pump",
-   "Aurora Beam",
-   "Haze",
    "Protect"
   ],
   "Copperajah": [
@@ -119,6 +107,24 @@
    "Nasty Plot",
    "Taunt",
    "Protect"
+  ],
+  "Amoonguss": [
+   "Spore",
+   "Rage Powder",
+   "Sludge Bomb",
+   "Protect"
+  ],
+  "Alomomola": [
+   "Wish",
+   "Aqua Jet",
+   "Wake-Up Slap",
+   "Protect"
+  ],
+  "Veluza (Aevian Form)": [
+   "Wave Crash",
+   "Flare Blitz",
+   "Head Smash",
+   "Protect"
   ]
  },
  "promote": "team/promote_1108.json",
@@ -139,12 +145,12 @@
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
   "rank": null,
-  "of": 485955,
-  "gap": 34.68,
+  "of": 434008,
+  "gap": 32.86,
   "top": [
    {
     "score": 1.0433,
-    "pct": 134.7,
+    "pct": 132.9,
     "team": [
      "Golisopod-A",
      "Scrafty",
@@ -157,7 +163,7 @@
    },
    {
     "score": 1.0423,
-    "pct": 134.5,
+    "pct": 132.7,
     "team": [
      "Golisopod-A",
      "Scrafty",
@@ -170,7 +176,7 @@
    },
    {
     "score": 1.0423,
-    "pct": 134.5,
+    "pct": 132.7,
     "team": [
      "Golisopod-A",
      "Scrafty",
@@ -192,9 +198,7 @@
  },
  "team_check_cache": true,
  "abilities": {
-  "Arcanine (Hisuian Form)": "Intimidate",
   "Golisopod (Aevian Form)": "Skill Link",
-  "Vaporeon": "Water Absorb",
   "Copperajah": "Sheer Force",
   "Muk (Alolan Form)": "Poison Touch",
   "Clodsire": "Unaware",
@@ -204,7 +208,10 @@
   "Oranguru": "INNERFOCUS",
   "Armarouge": "WEAKARMOR",
   "Scrafty": "MOXIE",
-  "Zoroark (Hisuian Form)": "ILLUSION"
+  "Zoroark (Hisuian Form)": "ILLUSION",
+  "Amoonguss": "Regenerator",
+  "Alomomola": "Regenerator",
+  "Veluza (Aevian Form)": "Reckless"
  },
  "crests_owned": [
   "Phione Crest"
@@ -213,8 +220,8 @@
  "chapter": 9,
  "core": [
   "Veluza (Aevian Form)",
-  "Arcanine (Hisuian Form)",
-  "Vaporeon",
+  "Amoonguss",
+  "Alomomola",
   "Golisopod (Aevian Form)"
  ],
  "core_check": {
@@ -224,7 +231,7 @@
    "nores": [
     "DARK",
     "GHOST",
-    "GRASS",
+    "NORMAL",
     "PSYCHIC"
    ]
   },
@@ -301,22 +308,23 @@
  },
  "one_six": false,
  "items": {
-  "Oranguru": "Sitrus Berry"
+  "Oranguru": "Sitrus Berry",
+  "Amoonguss": "Sitrus Berry",
+  "Alomomola": "Sitrus Berry"
  },
  "link_hearts": [
   "Slowking"
  ],
  "zoro_note": {
   "zoroark": "Zoroark (Hisuian Form)",
-  "copies": "Golisopod (Aevian Form)",
-  "ability": "SKILLLINK",
+  "copies": "Alomomola",
+  "ability": "REGENERATOR",
   "types": [
-   "BUG",
-   "GROUND"
+   "WATER"
   ],
-  "gain": 0.0,
-  "moved": false,
-  "kind": "keep",
+  "gain": 0.1,
+  "moved": true,
+  "kind": "back",
   "replacement": null,
   "lead_options": [
    {
@@ -328,18 +336,18 @@
     "ok": false
    },
    {
-    "lead": "Arcanine (Hisuian Form)",
+    "lead": "Amoonguss",
     "slot": 2,
-    "gain": 0.15,
+    "gain": 0.1,
     "replacement": "Golisopod (Aevian Form)",
-    "cost": 0.04,
+    "cost": -0.22,
     "ok": false
    }
   ],
   "options": {
    "Veluza (Aevian Form)": 0.0,
-   "Arcanine (Hisuian Form)": 0.15,
-   "Vaporeon": 0.0,
+   "Amoonguss": 0.1,
+   "Alomomola": 0.1,
    "Oranguru": 0.0,
    "Golisopod (Aevian Form)": 0.0
   }

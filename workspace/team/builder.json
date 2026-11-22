@@ -1,8 +1,8 @@
 {
  "core": [
   "Veluza (Aevian Form)",
-  "Arcanine (Hisuian Form)",
-  "Vaporeon",
+  "Amoonguss",
+  "Alomomola",
   "Golisopod (Aevian Form)"
  ],
  "slots": [
@@ -31,58 +31,75 @@
      "rec": true
     },
     {
-     "name": "Revavroom",
-     "tier": "B",
+     "name": "Arcanine (Hisuian Form)",
+     "tier": "A",
      "stats": [
       "Outspeeds 75%",
       "Takes 2 hits to KO",
-      "Resists 10 types",
-      "Weak to 2 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Taunt",
-      "Setup: Shift Gear"
-     ],
-     "sid": "REVAVROOM",
-     "form": "0",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Flamigo",
-     "tier": "B",
-     "stats": [
-      "Outspeeds 75%",
-      "Takes 2 hits to KO",
-      "Resists 5 types",
-      "Weak to 5 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Pivot: U-turn",
-      "Recovery: Roost"
-     ],
-     "sid": "FLAMIGO",
-     "form": "0",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Crobat",
-     "tier": "C",
-     "stats": [
-      "Outspeeds 92%",
-      "Takes 2 hits to KO",
-      "Resists 6 types",
+      "Resists 7 types",
       "Weak to 4 types",
       "Single target only"
      ],
      "tools": [
-      "Priority: Quick Attack",
-      "Speed control: Tailwind"
+      "Intimidate",
+      "Priority: Extreme Speed"
      ],
-     "sid": "CROBAT",
+     "sid": "ARCANINE",
+     "form": "1",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Toxtricity (Aevian Form)",
+     "tier": "A",
+     "stats": [
+      "Outspeeds 80%",
+      "Takes 2 hits to KO",
+      "Resists 8 types",
+      "Weak to 4 types"
+     ],
+     "tools": [
+      "Spread: Boomburst",
+      "Taunt"
+     ],
+     "sid": "TOXTRICITY",
+     "form": "2",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Arcanine",
+     "tier": "B",
+     "stats": [
+      "Outspeeds 79%",
+      "Takes 2 hits to KO",
+      "Resists 6 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Intimidate",
+      "Priority: Extreme Speed"
+     ],
+     "sid": "ARCANINE",
+     "form": "0",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Typhlosion",
+     "tier": "B",
+     "stats": [
+      "Outspeeds 81%",
+      "Takes 2 hits to KO",
+      "Resists 6 types",
+      "Weak to 3 types"
+     ],
+     "tools": [
+      "Spread: Eruption",
+      "Priority: Quick Attack"
+     ],
+     "sid": "TYPHLOSION",
      "form": "0",
      "pick": false,
      "rec": false
@@ -105,50 +122,16 @@
      "form": "0",
      "pick": false,
      "rec": false
-    },
-    {
-     "name": "Mabosstiff",
-     "tier": "C",
-     "stats": [
-      "Outspeeds 74%",
-      "Takes 2 hits to KO",
-      "Resists 3 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Intimidate"
-     ],
-     "sid": "MABOSSTIFF",
-     "form": "0",
-     "pick": false,
-     "rec": false
     }
    ]
   },
   {
    "slot": 2,
    "title": "Core 2 · Doubles lead",
-   "pick": "Arcanine (Hisuian Form)",
+   "pick": "Amoonguss",
    "rec": "Amoonguss",
+   "why": [],
    "cands": [
-    {
-     "name": "Amoonguss",
-     "tier": "S",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 4 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Rage Powder",
-      "Status: Spore"
-     ],
-     "sid": "AMOONGUSS",
-     "form": "0",
-     "pick": false,
-     "rec": true
-    },
     {
      "name": "Arcanine (Hisuian Form)",
      "tier": "A",
@@ -163,8 +146,25 @@
      ],
      "sid": "ARCANINE",
      "form": "1",
-     "pick": true,
+     "pick": false,
      "rec": false
+    },
+    {
+     "name": "Amoonguss",
+     "tier": "A",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 4 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Rage Powder",
+      "Status: Spore"
+     ],
+     "sid": "AMOONGUSS",
+     "form": "0",
+     "pick": true,
+     "rec": true
     },
     {
      "name": "Clefable",
@@ -218,18 +218,18 @@
      "rec": false
     },
     {
-     "name": "Arcanine",
+     "name": "Ariados",
      "tier": "B",
      "stats": [
-      "Resists 6 types",
-      "Weak to 3 types",
+      "Resists 5 types",
+      "Weak to 4 types",
       "Single target only"
      ],
      "tools": [
-      "Intimidate",
-      "Priority: Extreme Speed"
+      "Rage Powder",
+      "Priority: Sucker Punch"
      ],
-     "sid": "ARCANINE",
+     "sid": "ARIADOS",
      "form": "0",
      "pick": false,
      "rec": false
@@ -239,25 +239,27 @@
   {
    "slot": 3,
    "title": "Core 3 · Mid game",
-   "pick": "Vaporeon",
-   "rec": "Alomomola",
+   "pick": "Alomomola",
+   "rec": "Slowking (Galarian Form)",
+   "why": [],
    "cands": [
     {
-     "name": "Glalie (Aevian Form)",
+     "name": "Slowking (Galarian Form)",
      "tier": "S",
      "stats": [
-      "Resists 2 types",
-      "Weak to 4 types"
+      "Resists 4 types",
+      "Weak to 3 types",
+      "Single target only"
      ],
      "tools": [
-      "Synthesis",
-      "Spread: Rock Slide",
-      "Support: Helping Hand"
+      "Slack Off",
+      "Regenerator",
+      "Pivot: Chilly Reception"
      ],
-     "sid": "GLALIE",
+     "sid": "SLOWKING",
      "form": "1",
      "pick": false,
-     "rec": false
+     "rec": true
     },
     {
      "name": "Musharna (Aevian Form)",
@@ -271,6 +273,43 @@
       "Moonlight"
      ],
      "sid": "MUSHARNA",
+     "form": "1",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Muk (Alolan Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 1 type",
+      "Single target only"
+     ],
+     "tools": [
+      "Haze",
+      "Stat reset: Clear Smog",
+      "Disrupt: Knock Off"
+     ],
+     "sid": "MUK",
+     "form": "1",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Lapras (Aevian Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 7 types"
+     ],
+     "tools": [
+      "Roar",
+      "Teleport",
+      "Spread: Rock Slide",
+      "Status: Sing",
+      "Setup: Dragon Dance"
+     ],
+     "sid": "LAPRAS",
      "form": "1",
      "pick": false,
      "rec": false
@@ -290,8 +329,8 @@
      ],
      "sid": "ALOMOMOLA",
      "form": "0",
-     "pick": false,
-     "rec": true
+     "pick": true,
+     "rec": false
     },
     {
      "name": "Slowbro",
@@ -309,41 +348,6 @@
      "form": "0",
      "pick": false,
      "rec": false
-    },
-    {
-     "name": "Slowking",
-     "tier": "A",
-     "stats": [
-      "Resists 6 types",
-      "Weak to 5 types"
-     ],
-     "tools": [
-      "Slack Off",
-      "Regenerator",
-      "Spread: Surf",
-      "Pivot: Chilly Reception"
-     ],
-     "sid": "SLOWKING",
-     "form": "0",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Vaporeon",
-     "tier": "B",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 2 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Haze",
-      "Wish"
-     ],
-     "sid": "VAPOREON",
-     "form": "0",
-     "pick": true,
-     "rec": false
     }
    ]
   },
@@ -352,6 +356,7 @@
    "title": "Core 4 · Closer",
    "pick": "Golisopod (Aevian Form)",
    "rec": "Golisopod (Aevian Form)",
+   "why": [],
    "cands": [
     {
      "name": "Golisopod (Aevian Form)",
@@ -370,6 +375,23 @@
      "rec": true
     },
     {
+     "name": "Slowking (Galarian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Nasty Plot (+2)",
+      "Pivot: Chilly Reception"
+     ],
+     "sid": "SLOWKING",
+     "form": "1",
+     "pick": false,
+     "rec": false
+    },
+    {
      "name": "Musharna (Aevian Form)",
      "tier": "S",
      "stats": [
@@ -386,67 +408,53 @@
      "rec": false
     },
     {
-     "name": "Swampert",
-     "tier": "A",
+     "name": "Muk (Alolan Form)",
+     "tier": "S",
      "stats": [
       "Resists 5 types",
-      "Weak to 1 type"
+      "Weak to 1 type",
+      "Single target only"
      ],
      "tools": [
       "Curse (+1)",
-      "Spread: Earthquake"
-     ],
-     "sid": "SWAMPERT",
-     "form": "0",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Ursaring",
-     "tier": "B",
-     "stats": [
-      "Resists 1 type",
-      "Weak to 1 type",
-      "Single target only"
-     ],
-     "tools": [
-      "Belly Drum (+6)"
-     ],
-     "sid": "URSARING",
-     "form": "0",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Hariyama",
-     "tier": "B",
-     "stats": [
-      "Resists 3 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Belly Drum (+6)",
+      "Stat reset: Clear Smog",
       "Disrupt: Knock Off"
      ],
-     "sid": "HARIYAMA",
-     "form": "0",
+     "sid": "MUK",
+     "form": "1",
      "pick": false,
      "rec": false
     },
     {
-     "name": "Zoroark (Hisuian Form)",
-     "tier": "B",
+     "name": "Ninetales (Alolan Form)",
+     "tier": "A",
      "stats": [
-      "Resists 5 types",
-      "Weak to 1 type",
-      "Single target only"
+      "Resists 4 types",
+      "Weak to 4 types"
      ],
      "tools": [
       "Nasty Plot (+2)",
-      "Disrupt: Taunt"
+      "Spread: Blizzard",
+      "Screens: Aurora Veil"
      ],
-     "sid": "ZOROARK",
+     "sid": "NINETALES",
+     "form": "1",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Lapras (Aevian Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 7 types"
+     ],
+     "tools": [
+      "Dragon Dance (+1/+1)",
+      "Spread: Rock Slide",
+      "Status: Sing"
+     ],
+     "sid": "LAPRAS",
      "form": "1",
      "pick": false,
      "rec": false

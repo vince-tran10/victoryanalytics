@@ -2,7 +2,7 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 5,
+  "counters": 4,
   "pairs": [
    {
     "foe": "Murkrow",
@@ -79,11 +79,11 @@
    },
    {
     "foe": "Ninetales",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
-    "dealt": 126,
-    "taken": 36,
-    "ok": true,
+    "mon": "Alomomola",
+    "ability": "REGENERATOR",
+    "dealt": 33,
+    "taken": 33,
+    "ok": false,
     "setup": false,
     "wincons": [
      {
@@ -96,10 +96,10 @@
    },
    {
     "foe": "Banette",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 78,
-    "taken": 134,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 18,
+    "taken": 127,
     "ok": false,
     "setup": false,
     "wincons": []

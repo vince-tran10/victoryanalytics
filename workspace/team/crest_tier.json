@@ -1,13 +1,13 @@
 {
- "anchor_low": 0.122,
- "anchor_median": 0.333,
+ "anchor_low": 0.048,
+ "anchor_median": 0.206,
  "team": {
-  "Veluza (Aevian Form)": 0.178,
-  "Arcanine (Hisuian Form)": 0.452,
-  "Vaporeon": 0.333,
+  "Veluza (Aevian Form)": 0.206,
+  "Amoonguss": 0.086,
   "Oranguru": 0.229,
   "Zoroark (Hisuian Form)": 0.122,
-  "Golisopod (Aevian Form)": 0.419
+  "Golisopod (Aevian Form)": 0.419,
+  "Alomomola": 0.048
  },
  "rows": [
   {
@@ -15,7 +15,7 @@
    "crest": "Crabom. Crest",
    "held": false,
    "where": "Active",
-   "dump": 452,
+   "dump": 458,
    "with_crest": 0.591,
    "without": 0.418,
    "gain": 0.173,
@@ -31,7 +31,7 @@
    "crest": "Stantler Crest",
    "held": false,
    "where": "Active",
-   "dump": 516,
+   "dump": 517,
    "with_crest": 0.548,
    "without": 0.299,
    "gain": 0.249,
@@ -48,7 +48,7 @@
    "crest": "Druddigon Crest",
    "held": false,
    "where": "Active",
-   "dump": 461,
+   "dump": 467,
    "with_crest": 0.45,
    "without": 0.124,
    "gain": 0.326,
@@ -64,7 +64,7 @@
    "crest": "A. Ampharos Crest",
    "held": false,
    "where": "Active",
-   "dump": 438,
+   "dump": 446,
    "with_crest": 0.418,
    "without": 0.28,
    "gain": 0.138,
@@ -81,7 +81,7 @@
    "crest": "Silvally Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 332,
+   "dump": 340,
    "with_crest": 0.344,
    "without": 0.257,
    "gain": 0.087,
@@ -98,7 +98,7 @@
    "crest": "Feraligatr Crest",
    "held": false,
    "where": "Active",
-   "dump": 466,
+   "dump": 471,
    "with_crest": 0.335,
    "without": 0.226,
    "gain": 0.109,
@@ -114,7 +114,7 @@
    "crest": "Reuniclus Crest",
    "held": false,
    "where": "Active",
-   "dump": 496,
+   "dump": 499,
    "with_crest": 0.329,
    "without": 0.228,
    "gain": 0.102,
@@ -123,14 +123,14 @@
     "Shadow Ball"
    ],
    "ability": "OVERCOAT",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Rampardos",
    "crest": "Rampardos Crest",
    "held": false,
    "where": "Active",
-   "dump": 495,
+   "dump": 498,
    "with_crest": 0.327,
    "without": 0.298,
    "gain": 0.029,
@@ -140,14 +140,14 @@
     "Dragon Claw"
    ],
    "ability": "MOLDBREAKER",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Furret",
    "crest": "Furret Crest",
    "held": true,
    "where": "Overflow",
-   "dump": 130,
+   "dump": 132,
    "with_crest": 0.327,
    "without": 0.056,
    "gain": 0.272,
@@ -156,14 +156,14 @@
     "Shadow Claw"
    ],
    "ability": "FRISK",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Empoleon",
    "crest": "Empoleon Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 116,
+   "dump": 118,
    "with_crest": 0.326,
    "without": 0.202,
    "gain": 0.124,
@@ -173,14 +173,14 @@
     "Grass Knot"
    ],
    "ability": "COMPETITIVE",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Glaceon",
    "crest": "Glaceon Crest",
    "held": false,
    "where": "Active",
-   "dump": 470,
+   "dump": 475,
    "with_crest": 0.321,
    "without": 0.297,
    "gain": 0.024,
@@ -189,14 +189,14 @@
     "Shadow Ball"
    ],
    "ability": "ICEBODY",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Cryogonal",
    "crest": "Cryogonal Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 82,
+   "dump": 84,
    "with_crest": 0.314,
    "without": 0.107,
    "gain": 0.207,
@@ -204,14 +204,14 @@
     "Ice Beam"
    ],
    "ability": "LEVITATE",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Zoroark (Hisuian Form)",
    "crest": "Zoroark Crest",
    "held": true,
    "where": "Active",
-   "dump": 518,
+   "dump": 519,
    "with_crest": 0.311,
    "without": 0.122,
    "gain": 0.189,
@@ -220,14 +220,14 @@
     "Sludge Bomb"
    ],
    "ability": "SHEERFORCE",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Cofagrigus",
    "crest": "Cofagrigus Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 71,
+   "dump": 73,
    "with_crest": 0.308,
    "without": 0.228,
    "gain": 0.08,
@@ -236,14 +236,14 @@
     "Grass Knot"
    ],
    "ability": "MUMMY",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Noctowl",
    "crest": "Noctowl Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 161,
+   "dump": 164,
    "with_crest": 0.3,
    "without": 0.17,
    "gain": 0.13,
@@ -253,14 +253,14 @@
     "Air Slash"
    ],
    "ability": "TINTEDLENS",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Typhlosion",
    "crest": "Typhlosion Crest",
    "held": false,
    "where": "Active",
-   "dump": 510,
+   "dump": 512,
    "with_crest": 0.289,
    "without": 0.264,
    "gain": 0.025,
@@ -269,14 +269,14 @@
     "Shadow Claw"
    ],
    "ability": "FLASHFIRE",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Probopass",
    "crest": "Probopass Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 247,
+   "dump": 252,
    "with_crest": 0.279,
    "without": 0.204,
    "gain": 0.075,
@@ -285,14 +285,14 @@
     "Body Press"
    ],
    "ability": "SANDFORCE",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Gothitelle",
    "crest": "Gothitelle Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 150,
+   "dump": 151,
    "with_crest": 0.276,
    "without": 0.21,
    "gain": 0.066,
@@ -301,14 +301,14 @@
     "Shadow Ball"
    ],
    "ability": "SHADOWTAG",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Cinccino",
    "crest": "Cinccino Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 67,
+   "dump": 69,
    "with_crest": 0.259,
    "without": 0.039,
    "gain": 0.22,
@@ -317,14 +317,14 @@
     "Rock Blast"
    ],
    "ability": "SKILLLINK",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Luxray",
    "crest": "Luxray Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 200,
+   "dump": 205,
    "with_crest": 0.259,
    "without": 0.138,
    "gain": 0.121,
@@ -334,14 +334,14 @@
     "Ice Fang"
    ],
    "ability": "INTIMIDATE",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Shiinotic",
    "crest": "Shiinotic Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 232,
+   "dump": 237,
    "with_crest": 0.257,
    "without": 0.222,
    "gain": 0.035,
@@ -350,14 +350,14 @@
     "Giga Drain"
    ],
    "ability": "ILLUMINATE",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Meganium",
    "crest": "Meganium Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 64,
+   "dump": 66,
    "with_crest": 0.245,
    "without": 0.122,
    "gain": 0.123,
@@ -366,14 +366,14 @@
     "Ancient Power"
    ],
    "ability": "LEAFGUARD",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Beheeyem",
    "crest": "Beheeyem Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 114,
+   "dump": 116,
    "with_crest": 0.199,
    "without": 0.169,
    "gain": 0.03,
@@ -389,7 +389,7 @@
    "crest": "Magcargo Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 203,
+   "dump": 208,
    "with_crest": 0.191,
    "without": 0.223,
    "gain": -0.031,
@@ -405,7 +405,7 @@
    "crest": "Swalot Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 363,
+   "dump": 371,
    "with_crest": 0.189,
    "without": 0.168,
    "gain": 0.021,
@@ -422,7 +422,7 @@
    "crest": "Sawsbuck Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 313,
+   "dump": 321,
    "with_crest": 0.18,
    "without": 0.031,
    "gain": 0.149,
@@ -438,7 +438,7 @@
    "crest": "Skuntank Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 340,
+   "dump": 348,
    "with_crest": 0.179,
    "without": 0.159,
    "gain": 0.021,
@@ -470,7 +470,7 @@
    "crest": "Hypno Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 164,
+   "dump": 167,
    "with_crest": 0.175,
    "without": 0.145,
    "gain": 0.03,
@@ -487,7 +487,7 @@
    "crest": "Simisear Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 334,
+   "dump": 342,
    "with_crest": 0.174,
    "without": 0.122,
    "gain": 0.053,
@@ -502,7 +502,7 @@
    "crest": "Whiscash Crest",
    "held": true,
    "where": "Active",
-   "dump": 515,
+   "dump": 516,
    "with_crest": 0.17,
    "without": null,
    "gain": null,
@@ -519,13 +519,13 @@
    "crest": "Phione Crest",
    "held": true,
    "where": "Active",
-   "dump": 492,
+   "dump": 496,
    "with_crest": 0.165,
    "without": 0.006,
    "gain": 0.159,
    "attacks": [
     "Surf",
-    "Secret Power",
+    "Facade",
     "Deluge"
    ],
    "ability": "HYDRATION",
@@ -569,7 +569,7 @@
    "crest": "Electrode Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 113,
+   "dump": 115,
    "with_crest": 0.142,
    "without": -0.048,
    "gain": 0.19,
@@ -585,7 +585,7 @@
    "crest": "Sunflora Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 360,
+   "dump": 368,
    "with_crest": 0.14,
    "without": 0.14,
    "gain": 0.0,
@@ -601,7 +601,7 @@
    "crest": "Vespiquen Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 405,
+   "dump": 413,
    "with_crest": 0.12,
    "without": 0.12,
    "gain": 0.0,
@@ -610,14 +610,14 @@
     "Air Slash"
    ],
    "ability": "PRESSURE",
-   "tier": "B"
+   "tier": "A"
   },
   {
    "name": "Oricorio (Pom-Pom Style)",
    "crest": "Oricorio Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 258,
+   "dump": 263,
    "with_crest": 0.117,
    "without": 0.037,
    "gain": 0.08,
@@ -626,14 +626,14 @@
     "Revelation Dance"
    ],
    "ability": "DANCER",
-   "tier": "B"
+   "tier": "A"
   },
   {
    "name": "Zoroark",
    "crest": "Zoroark Crest",
    "held": true,
    "where": "Active",
-   "dump": 517,
+   "dump": 518,
    "with_crest": 0.111,
    "without": -0.002,
    "gain": 0.113,
@@ -642,14 +642,14 @@
     "Sludge Bomb"
    ],
    "ability": "SHEERFORCE",
-   "tier": "B"
+   "tier": "A"
   },
   {
    "name": "Zangoose",
    "crest": "Zangoose Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 434,
+   "dump": 442,
    "with_crest": 0.102,
    "without": 0.08,
    "gain": 0.022,
@@ -659,14 +659,14 @@
     "Slash"
    ],
    "ability": "IMMUNITY",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Simipour",
    "crest": "Simipour Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 333,
+   "dump": 341,
    "with_crest": 0.091,
    "without": -0.116,
    "gain": 0.207,
@@ -676,7 +676,7 @@
     "Low Kick"
    ],
    "ability": "TORRENT",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Ariados",
@@ -693,14 +693,14 @@
     "Poison Jab"
    ],
    "ability": "SNIPER",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Leafeon",
    "crest": "Leafeon Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 107,
+   "dump": 109,
    "with_crest": 0.071,
    "without": 0.033,
    "gain": 0.038,
@@ -710,14 +710,14 @@
     "Double Kick"
    ],
    "ability": "CHLOROPHYLL",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Simisage",
    "crest": "Simisage Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 265,
+   "dump": 270,
    "with_crest": 0.052,
    "without": -0.129,
    "gain": 0.181,
@@ -727,7 +727,7 @@
     "Low Kick"
    ],
    "ability": "GLUTTONY",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Castform",
@@ -739,7 +739,7 @@
    "without": 0.021,
    "gain": 0.018,
    "attacks": [
-    "Secret Power",
+    "Facade",
     "Shadow Ball",
     "Fire Blast"
    ],
@@ -751,7 +751,7 @@
    "crest": "Seviper Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 320,
+   "dump": 328,
    "with_crest": 0.034,
    "without": 0.04,
    "gain": -0.006,
@@ -768,7 +768,7 @@
    "crest": "Thievul Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 241,
+   "dump": 246,
    "with_crest": 0.027,
    "without": -0.048,
    "gain": 0.075,
@@ -785,7 +785,7 @@
    "crest": "Oricorio Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 257,
+   "dump": 262,
    "with_crest": 0.023,
    "without": -0.024,
    "gain": 0.047,
@@ -801,7 +801,7 @@
    "crest": "Oricorio Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 260,
+   "dump": 265,
    "with_crest": 0.023,
    "without": -0.041,
    "gain": 0.064,
@@ -817,7 +817,7 @@
    "crest": "Dedenne Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 87,
+   "dump": 89,
    "with_crest": 0.019,
    "without": -0.109,
    "gain": 0.128,
@@ -833,7 +833,7 @@
    "crest": "Fearow Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 346,
+   "dump": 354,
    "with_crest": 0.018,
    "without": -0.075,
    "gain": 0.093,
@@ -849,7 +849,7 @@
    "crest": "Minun Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 229,
+   "dump": 234,
    "with_crest": 0.018,
    "without": 0.018,
    "gain": 0.0,
@@ -865,7 +865,7 @@
    "crest": "Plusle Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 284,
+   "dump": 289,
    "with_crest": 0.007,
    "without": 0.007,
    "gain": 0.0,
@@ -881,7 +881,7 @@
    "crest": "Oricorio Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 259,
+   "dump": 264,
    "with_crest": -0.021,
    "without": -0.125,
    "gain": 0.104,
@@ -897,7 +897,7 @@
    "crest": "Delcatty Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 338,
+   "dump": 346,
    "with_crest": -0.031,
    "without": -0.122,
    "gain": 0.091,
@@ -914,7 +914,7 @@
    "crest": "Ledian Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 186,
+   "dump": 191,
    "with_crest": -0.047,
    "without": -0.057,
    "gain": 0.01,
@@ -930,7 +930,7 @@
    "crest": "Cherrim Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 61,
+   "dump": 63,
    "with_crest": -0.123,
    "without": -0.123,
    "gain": 0.0,

@@ -1,0 +1,699 @@
+[
+ {
+  "dump": 60,
+  "owned": "Charcadet",
+  "level": 60,
+  "now_ability": "Flash Fire",
+  "now_moves": [
+   "Flamethrower",
+   "Psyshock",
+   "Calm Mind",
+   "Protect"
+  ],
+  "final": "Charcadet",
+  "evolve": "",
+  "gate": "",
+  "types": "Fire",
+  "score": 0.049,
+  "tier": "D",
+  "ability": "Flash Fire",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Overheat",
+   "Flame Charge",
+   "Flamethrower",
+   "Protect"
+  ],
+  "move_src": {
+   "Overheat": "TM50",
+   "Flame Charge": "Lv 24",
+   "Flamethrower": "known",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.22,
+   "danni": 0.51,
+   "troye": 0.06,
+   "zena": 0.07,
+   "marcie": 0.3,
+   "spector": 0.09,
+   "spector2": -0.09,
+   "jenner9": -0.2,
+   "erick": -0.06
+  }
+ },
+ {
+  "dump": 61,
+  "owned": "Charcadet",
+  "level": 60,
+  "now_ability": "Flash Fire",
+  "now_moves": [
+   "Protect",
+   "Swords Dance",
+   "Shadow Claw",
+   "Bitter Blade"
+  ],
+  "final": "Charcadet",
+  "evolve": "",
+  "gate": "",
+  "types": "Fire",
+  "score": 0.119,
+  "tier": "D",
+  "ability": "Flash Fire",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Bitter Blade",
+   "Shadow Claw",
+   "Overheat",
+   "Protect"
+  ],
+  "move_src": {
+   "Bitter Blade": "known",
+   "Shadow Claw": "known",
+   "Overheat": "TM50",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.32,
+   "danni": 0.64,
+   "troye": 0.13,
+   "zena": 0.19,
+   "marcie": 0.37,
+   "spector": 0.14,
+   "spector2": -0.05,
+   "jenner9": -0.18,
+   "erick": 0.03
+  }
+ },
+ {
+  "dump": 107,
+  "owned": "Dusclops",
+  "level": 60,
+  "now_ability": "Frisk",
+  "now_moves": [
+   "Will-O-Wisp",
+   "Mean Look",
+   "Memento",
+   "Charge Beam"
+  ],
+  "final": "Dusclops",
+  "evolve": "",
+  "gate": "",
+  "types": "Ghost",
+  "score": 0.341,
+  "tier": "D",
+  "ability": "Frisk",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Shadow Punch",
+   "Fire Punch",
+   "Ice Punch",
+   "Protect"
+  ],
+  "move_src": {
+   "Shadow Punch": "evolution",
+   "Fire Punch": "known",
+   "Ice Punch": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.32,
+   "danni": 0.66,
+   "troye": 0.38,
+   "zena": 0.43,
+   "marcie": 0.35,
+   "spector": 0.27,
+   "spector2": 0.23,
+   "jenner9": 0.22,
+   "erick": 0.39
+  }
+ },
+ {
+  "dump": 153,
+  "owned": "Graveler",
+  "level": 60,
+  "now_ability": "Sturdy",
+  "now_moves": [
+   "Bulldoze",
+   "Rock Throw",
+   "Smack Down",
+   "Self-Destruct"
+  ],
+  "final": "Graveler",
+  "evolve": "",
+  "gate": "",
+  "types": "Rock/Ground",
+  "score": 0.335,
+  "tier": "D",
+  "ability": "Sturdy",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Stone Edge",
+   "Earthquake",
+   "Hammer Arm",
+   "Protect"
+  ],
+  "move_src": {
+   "Stone Edge": "Lv 54",
+   "Earthquake": "Lv 40",
+   "Hammer Arm": "Egg",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.5,
+   "danni": 0.65,
+   "troye": 0.39,
+   "zena": 0.73,
+   "marcie": 0.23,
+   "spector": 0.42,
+   "spector2": 0.23,
+   "jenner9": 0.02,
+   "erick": 0.2
+  }
+ },
+ {
+  "dump": 154,
+  "owned": "Graveler",
+  "level": 60,
+  "now_ability": "Sturdy",
+  "now_moves": [
+   "Stone Edge",
+   "Earthquake",
+   "Stealth Rock",
+   "Protect"
+  ],
+  "final": "Graveler",
+  "evolve": "",
+  "gate": "",
+  "types": "Rock/Ground",
+  "score": 0.335,
+  "tier": "D",
+  "ability": "Sturdy",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Stone Edge",
+   "Earthquake",
+   "Hammer Arm",
+   "Protect"
+  ],
+  "move_src": {
+   "Stone Edge": "known",
+   "Earthquake": "known",
+   "Hammer Arm": "Egg",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.5,
+   "danni": 0.65,
+   "troye": 0.39,
+   "zena": 0.73,
+   "marcie": 0.23,
+   "spector": 0.42,
+   "spector2": 0.23,
+   "jenner9": 0.02,
+   "erick": 0.2
+  }
+ },
+ {
+  "dump": 155,
+  "owned": "Graveler",
+  "level": 60,
+  "now_ability": "Rock Head",
+  "now_moves": [
+   "Stealth Rock",
+   "Rock Blast",
+   "Earthquake",
+   "Explosion"
+  ],
+  "final": "Graveler",
+  "evolve": "",
+  "gate": "",
+  "types": "Rock/Ground",
+  "score": 0.335,
+  "tier": "D",
+  "ability": "Rock Head",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Stone Edge",
+   "Earthquake",
+   "Hammer Arm",
+   "Protect"
+  ],
+  "move_src": {
+   "Stone Edge": "Lv 54",
+   "Earthquake": "known",
+   "Hammer Arm": "Egg",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.5,
+   "danni": 0.65,
+   "troye": 0.39,
+   "zena": 0.73,
+   "marcie": 0.23,
+   "spector": 0.42,
+   "spector2": 0.23,
+   "jenner9": 0.02,
+   "erick": 0.2
+  }
+ },
+ {
+  "dump": 177,
+  "owned": "Kadabra",
+  "level": 60,
+  "now_ability": "Inner Focus",
+  "now_moves": [
+   "Teleport"
+  ],
+  "final": "Kadabra",
+  "evolve": "",
+  "gate": "",
+  "types": "Psychic",
+  "score": 0.156,
+  "tier": "D",
+  "ability": "Inner Focus",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Psychic",
+   "Shadow Ball",
+   "Psyshock",
+   "Protect"
+  ],
+  "move_src": {
+   "Psychic": "Lv 35",
+   "Shadow Ball": "TM30",
+   "Psyshock": "Lv 30",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.29,
+   "danni": 0.53,
+   "troye": 0.05,
+   "zena": 0.27,
+   "marcie": 0.26,
+   "spector": 0.36,
+   "spector2": 0.18,
+   "jenner9": -0.11,
+   "erick": 0.11
+  }
+ },
+ {
+  "dump": 179,
+  "owned": "Karrablast",
+  "level": 60,
+  "now_ability": "No Guard",
+  "now_moves": [
+   "X-Scissor",
+   "Iron Head",
+   "Swords Dance",
+   "Protect"
+  ],
+  "final": "Karrablast",
+  "evolve": "",
+  "gate": "",
+  "types": "Bug",
+  "score": 0.088,
+  "tier": "D",
+  "ability": "Swarm",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "X-Scissor",
+   "Iron Head",
+   "Knock Off",
+   "Protect"
+  ],
+  "move_src": {
+   "X-Scissor": "known",
+   "Iron Head": "known",
+   "Knock Off": "Egg",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.02,
+   "danni": 0.51,
+   "troye": 0.09,
+   "zena": 0.36,
+   "marcie": 0.63,
+   "spector": 0.07,
+   "spector2": -0.12,
+   "jenner9": -0.22,
+   "erick": 0.09
+  }
+ },
+ {
+  "dump": 206,
+  "owned": "Machoke",
+  "level": 60,
+  "now_ability": "Steadfast",
+  "now_moves": [
+   "Dual Chop",
+   "Bulk Up",
+   "Seismic Toss",
+   "Dynamic Punch"
+  ],
+  "final": "Machoke",
+  "evolve": "",
+  "gate": "",
+  "types": "Fighting",
+  "score": 0.45,
+  "tier": "C",
+  "ability": "No Guard",
+  "capsule": true,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Dynamic Punch",
+   "Knock Off",
+   "Strength",
+   "Protect"
+  ],
+  "move_src": {
+   "Dynamic Punch": "known",
+   "Knock Off": "Lv 16",
+   "Strength": "Lv 31",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.63,
+   "danni": 0.93,
+   "troye": 0.71,
+   "zena": 0.62,
+   "marcie": 0.58,
+   "spector": 0.26,
+   "spector2": 0.12,
+   "jenner9": 0.12,
+   "erick": 0.41
+  }
+ },
+ {
+  "dump": 272,
+  "owned": "Paras-Aevian",
+  "level": 60,
+  "now_ability": "Resuscitation",
+  "now_moves": [
+   "Cross Poison",
+   "Venom Drench",
+   "Sleep Powder",
+   "X-Scissor"
+  ],
+  "final": "Paras (Aevian Form)",
+  "evolve": "",
+  "gate": "",
+  "types": "Bug/Poison",
+  "score": 0.122,
+  "tier": "D",
+  "ability": "Resuscitation",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Gunk Shot",
+   "Shadow Claw",
+   "X-Scissor",
+   "Protect"
+  ],
+  "move_src": {
+   "Gunk Shot": "Lv 54",
+   "Shadow Claw": "Lv 41",
+   "X-Scissor": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.05,
+   "danni": 0.52,
+   "troye": 0.12,
+   "zena": 0.37,
+   "marcie": 0.66,
+   "spector": 0.1,
+   "spector2": -0.06,
+   "jenner9": -0.14,
+   "erick": 0.09
+  }
+ },
+ {
+  "dump": 291,
+  "owned": "Porygon",
+  "level": 60,
+  "now_ability": "Trace",
+  "now_moves": [
+   "Magnet Rise",
+   "Thunder Shock",
+   "Psybeam",
+   "Conversion 2"
+  ],
+  "final": "Porygon",
+  "evolve": "",
+  "gate": "",
+  "types": "Normal",
+  "score": 0.263,
+  "tier": "D",
+  "ability": "Trace",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Tri Attack",
+   "Shadow Ball",
+   "Signal Beam",
+   "Protect"
+  ],
+  "move_src": {
+   "Tri Attack": "Lv 45",
+   "Shadow Ball": "TM30",
+   "Signal Beam": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.3,
+   "danni": 0.51,
+   "troye": 0.21,
+   "zena": 0.51,
+   "marcie": 0.23,
+   "spector": 0.64,
+   "spector2": 0.35,
+   "jenner9": -0.02,
+   "erick": 0.22
+  }
+ },
+ {
+  "dump": 292,
+  "owned": "Porygon",
+  "level": 60,
+  "now_ability": "Download",
+  "now_moves": [
+   "Nasty Plot",
+   "Protect",
+   "Shadow Ball",
+   "Tri Attack"
+  ],
+  "final": "Porygon",
+  "evolve": "",
+  "gate": "",
+  "types": "Normal",
+  "score": 0.263,
+  "tier": "D",
+  "ability": "Download",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Tri Attack",
+   "Shadow Ball",
+   "Signal Beam",
+   "Protect"
+  ],
+  "move_src": {
+   "Tri Attack": "known",
+   "Shadow Ball": "known",
+   "Signal Beam": "known",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.3,
+   "danni": 0.51,
+   "troye": 0.21,
+   "zena": 0.51,
+   "marcie": 0.23,
+   "spector": 0.64,
+   "spector2": 0.35,
+   "jenner9": -0.02,
+   "erick": 0.22
+  }
+ },
+ {
+  "dump": 293,
+  "owned": "Primeape",
+  "level": 60,
+  "now_ability": "Anger Point",
+  "now_moves": [
+   "Close Combat",
+   "Screech",
+   "Stomping Tantrum",
+   "Outrage"
+  ],
+  "final": "Primeape",
+  "evolve": "",
+  "gate": "",
+  "types": "Fighting",
+  "score": 0.497,
+  "tier": "C",
+  "ability": "Anger Point",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Close Combat",
+   "Outrage",
+   "Shadow Claw",
+   "Protect"
+  ],
+  "move_src": {
+   "Close Combat": "known",
+   "Outrage": "known",
+   "Shadow Claw": "TM65",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.84,
+   "danni": 0.75,
+   "troye": 0.61,
+   "zena": 0.77,
+   "marcie": 0.59,
+   "spector": 0.24,
+   "spector2": 0.18,
+   "jenner9": 0.19,
+   "erick": 0.42
+  }
+ },
+ {
+  "dump": 307,
+  "owned": "Rhydon",
+  "level": 60,
+  "now_ability": "Reckless",
+  "now_moves": [
+   "Headlong Rush",
+   "Stone Edge",
+   "Rock Blast",
+   "Protect"
+  ],
+  "final": "Rhydon",
+  "evolve": "",
+  "gate": "",
+  "types": "Ground/Rock",
+  "score": 0.531,
+  "tier": "B",
+  "ability": "Reckless",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Stone Edge",
+   "Headlong Rush",
+   "Hammer Arm",
+   "Protect"
+  ],
+  "move_src": {
+   "Stone Edge": "known",
+   "Headlong Rush": "known",
+   "Hammer Arm": "evolution",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.71,
+   "danni": 0.91,
+   "troye": 0.62,
+   "zena": 0.9,
+   "marcie": 0.32,
+   "spector": 0.66,
+   "spector2": 0.53,
+   "jenner9": 0.22,
+   "erick": 0.31
+  }
+ }
+]

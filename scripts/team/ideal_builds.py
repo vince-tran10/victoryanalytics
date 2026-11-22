@@ -26,6 +26,10 @@ CREST_IDS = {k for k, v in I.items() if (v.get('name') or '') in OWNED_CRESTS}
 FIXED = {'Lapras (Aevian Form)': dict(ability='NOGUARD', moves=['Rock Slide', 'Zen Headbutt', 'Dragon Dance', 'Sing'], item='Hard Stone'),
          'Gastrodon': dict(ability='STORMDRAIN', moves=['Earth Power', 'Muddy Water', 'Yawn', 'Protect'], item='Sitrus Berry', nature='Modest', evs='252 HP / 252 SpA'),
          'Furret': dict(ability=None, moves=['Follow Me', 'Super Fang', 'Baton Pass', 'Protect'], item=None, role='support'),   # crest: free Substitute -> support
+         # 22 Nov core roles: Amoonguss = doubles lead redirection (Rage Powder replaces Bullet Seed: Atk build was a trainer set),
+         # Alomomola = mid-game Wish / Regenerator support (no Flip Turn / Liquidation legal: Aqua Jet STAB + Wake-Up Slap)
+         'Amoonguss': dict(ability='REGENERATOR', moves=['Spore', 'Rage Powder', 'Sludge Bomb', 'Protect'], item='Sitrus Berry', nature='Modest', evs='252 HP / 252 SpA', role='support'),
+         'Alomomola': dict(ability='REGENERATOR', moves=['Wish', 'Aqua Jet', 'Wake-Up Slap', 'Protect'], item='Sitrus Berry', nature='Adamant', evs='252 HP / 252 Atk', role='support'),
          'Ceruledge': dict(ability=None, moves=['Bitter Blade', 'Shadow Claw', 'Swords Dance', 'Protect'], item='Focus Sash', nature='Jolly', evs='252 Atk / 252 Spe')}
 NO = {'PROTECT', 'DETECT', 'TRICK', 'SWITCHEROO', 'FLING', 'LASTRESORT', 'FRUSTRATION', 'RETURN', 'HIDDENPOWER', 'NATUREPOWER',
       'SECRETPOWER', 'SOLARBEAM', 'SKYATTACK', 'FOCUSPUNCH', 'EXPLOSION', 'SELFDESTRUCT', 'FINALGAMBIT', 'MEMENTO', 'HEALINGWISH',

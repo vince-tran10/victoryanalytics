@@ -27,7 +27,7 @@ FIGHT_NAME = {'darkgardevoir': 'Dark Gardevoir', 'garbodor': 'Rift Garbodor', 'k
               'spector2': 'Spector (night)', 'jenner9': 'Spirit Jenner', 'amanda': 'Amanda', 'erick': 'Erick'}
 
 # ---------------------------------------------------------------- party slots (Team tab hero)
-party = {d['species']: d for d in cb.parse(st['export'])[:6]}
+party = {d['species']: d for d in cb.parse(st['export'])[:6] if d.get('box', 'Party') == 'Party'}
 core = set(st.get('core') or [])
 def spr(n, size='s', shiny=False):
     r = T.get(n) or {}
@@ -643,17 +643,30 @@ def why_tier(r, ab_id, moves):   # 22 Nov (Vincent): the tier = 70% META DOMINAN
     return out
 for r in T.values():
     d_ = disp(r['name']); ib = IDB.get(r['name']) or {}; pty = party.get(d_)
-    if pty:   # in your party: show YOUR build (the item etc. can differ by team role, e.g. Arcanine-H's Focus Sash)
-        ab_ = pty.get('ability') or ''; nat_ = pty.get('nature') or ''; evs_ = ' / '.join(f"{v} {k}" for k, v in (pty.get('evs') or {}).items() if v >= 100)
-        it_ = pty.get('item') or ''; mv_ = pty.get('moves') or []; src_ = 'Your build'
-    else:
-        ab_ = abn(re.sub(r'[^A-Z]', '', (ib.get('ability') or r['ability']).upper())); nat_ = ib.get('nature') or r.get('nature', '')
-        evs_ = ib.get('evs') or ' / '.join(f"{v} {k}" for k, v in (r.get('evs') or {}).items() if v >= 100)
-        it_ = ib.get('item') or ''; mv_ = ib.get('moves') or r['attacks']; src_ = 'Ideal build'
+    # 22 Nov (Vincent): the sheet always shows the IDEAL build (team members: the build I recommend for their role);
+    # for a party member each line that differs from what he runs today gets "yours: X" so he can set it up
+    nm_ = r['name']
+    ab_ = (st.get('abilities') or {}).get(nm_) or abn(re.sub(r'[^A-Z]', '', (ib.get('ability') or r['ability']).upper()))
+    nat_ = ib.get('nature') or r.get('nature', '')
+    evs_ = ib.get('evs') or ' / '.join(f"{v} {k}" for k, v in (r.get('evs') or {}).items() if v >= 100)
+    it_ = (st.get('items') or {}).get(nm_) or ib.get('item') or ''
+    mv_ = (st.get('moves') or {}).get(nm_) or ib.get('moves') or r['attacks']
+    src_ = 'Ideal build'
+    yours = {}
+    if pty:
+        _n = lambda x: re.sub(r'[^a-z]', '', (x or '').lower())
+        y_ab = pty.get('ability') or ''; y_nat = pty.get('nature') or ''; y_it = pty.get('item') or 'none'
+        y_ev = ' / '.join(f"{v} {k}" for k, v in (pty.get('evs') or {}).items() if v >= 100) or 'none'
+        if _n(y_ab) != _n(ab_): yours['a'] = y_ab
+        if _n(y_nat) != _n(nat_): yours['n'] = y_nat
+        if _n(y_ev) != _n(evs_): yours['e'] = y_ev
+        if _n(y_it) != _n(it_): yours['it'] = y_it
+        miss = [m for m in mv_ if _n(m) not in {_n(x) for x in pty.get('moves') or []}]
+        if miss: yours['mv'] = [m for m in pty.get('moves') or [] if _n(m) not in {_n(x) for x in mv_}]
     ab_id = re.sub(r'[^A-Z]', '', ab_.upper())
     _why = why_tier(r, ab_id, mv_)
     DEX[d_] = dict(t=r['tier'], s=r['blend'], m=meta_top(r['meta_label']), ty=r['types'], b=r['base'], bp=[_pct(k, r['base'][k]) for k in _STATS],
-                   a=ab_, n=nat_txt(nat_), e=evs_, mv=mv_, it=it_, src=src_, why=_why, sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])
+                   a=ab_, n=nat_txt(nat_), e=evs_, mv=mv_, it=it_, src=src_, why=_why, y=yours, sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])
 SHEET = ('<div class="sheet" id="dexsheet" hidden><div class="sheet-bg" data-close></div><div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="ds-name">'
          '<button type="button" class="sheet-x" data-close aria-label="Close">×</button><div id="ds-body"></div></div></div>'
          '<script type="application/json" id="dexdata">' + json.dumps(DEX).replace('</', '<\\/') + '</script>')
@@ -886,17 +899,19 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .fx.down .fx-ar { color: var(--bad); background: color-mix(in srgb, var(--bad) 14%, transparent) }
 .fx-note { color: var(--muted); font-size: 12px }
 .bgrid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) }
-.bslot { background: var(--card, #fff); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; display: grid; gap: 8px }
+.bslot { background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; display: grid; gap: 8px; align-content: start; box-shadow: var(--shadow) }
 .bslot header { display: flex; align-items: center; gap: 8px } .bslot header b { font: 700 16px var(--display) }
-.bn { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; background: var(--ink, #222); color: #fff; font: 700 12px var(--mono) }
+.bn { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: var(--panel); font: 700 12px var(--mono) }
 .bneeds { margin: 0; padding-left: 18px; font-size: 13px; color: var(--muted); display: grid; gap: 1px }
 .bhead { font: 600 10.5px var(--mono); text-transform: uppercase; color: var(--muted) } .bhead small { text-transform: none }
 .bcands { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px }
-.bc { display: grid; gap: 3px; padding: 5px 8px; border-radius: 10px; background: var(--card-2, rgba(127,127,127,.06)); font-size: 13px } .bct { display: flex; align-items: center; gap: 6px }
+.bc { display: grid; gap: 3px; padding: 5px 8px; border-radius: 10px; background: var(--panel-2); font-size: 13px } .bct { display: flex; align-items: center; gap: 6px }
 .bempty { margin-left: auto; font: 700 10px var(--body); text-transform: uppercase; letter-spacing: .04em; color: var(--bad, #b91c1c) }
-.bc.pick.rec { outline: 2px solid #eab308; outline-offset: 2px } .bc.rec { outline: 2px solid #eab308; background: color-mix(in srgb, #eab308 10%, transparent) } .brec { margin-left: auto; font: 700 10px var(--body); letter-spacing: .04em; text-transform: uppercase; color: #a16207 }
-.bstat { font: 600 10.5px var(--body); padding: 1px 7px; border-radius: 99px; background: rgba(127,127,127,.12) }
-.btools { display: flex; flex-wrap: wrap; gap: 4px; padding-left: 30px } .btool { font: 600 10.5px var(--body); padding: 1px 7px; border-radius: 99px; background: color-mix(in srgb, var(--good, #16a34a) 14%, transparent); color: var(--good, #15803d) }
+.bwhy { padding-left: 30px; font-size: 12px; margin-top: 2px } .bwhy b { font: 700 11px var(--body); color: var(--warn) } .bwhy ul { margin: 2px 0 0; padding-left: 16px }
+.ds-diff { color: var(--bad, #b91c1c); font-weight: 700 }
+.bc.pick.rec { outline: 2px solid #eab308; outline-offset: 2px } .bc.rec { outline: 2px solid #eab308; background: var(--warn-soft) } .brec { margin-left: auto; font: 700 10px var(--body); letter-spacing: .04em; text-transform: uppercase; color: var(--warn) }
+.bstat { font: 600 10.5px var(--body); padding: 1px 7px; border-radius: 99px; background: rgba(127,127,127,.16); color: var(--ink) }
+.btools { display: flex; flex-wrap: wrap; gap: 4px; padding-left: 30px } .btool { font: 600 10.5px var(--body); padding: 1px 7px; border-radius: 99px; background: var(--good-soft); color: var(--good) }
 .bc b { flex: 1; min-width: 0 } .bc.pick { box-shadow: inset 0 0 0 2px var(--accent, #c81e3a) }
 .bpick { font: 700 10px var(--mono); text-transform: uppercase; color: var(--accent, #c81e3a) } .bsc { font: 600 11.5px var(--mono); color: var(--muted) }
 .brank { font-size: 12.5px; font-weight: 600 }
@@ -1042,13 +1057,15 @@ DEXJS = r'''<script id="dex-js">
     var st = ['HP','Atk','Def','SpA','SpD','Spe'].map(function(k, i){   // colour = how this stat ranks in YOUR box (red low -> green high)
       var p = d.bp[i], h = Math.round(p * 1.3);
       return '<div style="background:hsl('+h+' 65% 45% / .22);box-shadow:inset 0 -3px 0 hsl('+h+' 70% 45%)" title="better than '+p+'% of your box"><small>'+k+'</small>'+d.b[k]+'<em>'+p+'%</em></div>'; }).join('');
+    function row(k,v,f){ return '<li>'+k+': '+esc(v)+((d.y&&d.y[f])?'<span class="ds-diff"> (yours: '+esc(d.y[f])+')</span>':'')+'</li>'; }
     body.innerHTML = '<div class="ds-head"><i class="spr sp-'+d.sp+'" aria-hidden="true"></i><div><h3 id="ds-name">'+esc(name)+'</h3>'
       + '<div class="ds-sub"><span class="tier t'+d.t+'">'+d.t+'</span> score '+d.s.toFixed(2)+'</div>'
       + '<div class="ds-sub">'+d.ty.map(function(t){return t[0]+t.slice(1).toLowerCase();}).join('/')+'</div>'
       + (d.m ? '<div class="ds-sub">'+esc(d.m)+'</div>' : '') + '</div></div><div class="ds-stats">'+st+'</div>'
       + '<div class="ds-sec">Why '+d.t+' tier</div><ul class="ds-b ds-why">'+d.why.map(function(w){ return '<li>'+esc(w)+'</li>'; }).join('')+'</ul>'
-      + '<div class="ds-sec">'+esc(d.src)+'</div><ul class="ds-b"><li>Ability: '+esc(d.a)+'</li>'+(d.n?'<li>Nature: '+esc(d.n)+'</li>':'')+(d.e?'<li>EVs: '+esc(d.e)+'</li>':'')+(d.it?'<li>Item: '+esc(d.it)+'</li>':'')
-      + '<li>Moves: '+d.mv.map(esc).join(' / ')+'</li></ul>';
+      + '<div class="ds-sec">'+esc(d.src)+'</div><ul class="ds-b">'+row('Ability',d.a,'a')+(d.n?row('Nature',d.n,'n'):'')+(d.e?row('EVs',d.e,'e'):'')+(d.it?row('Item',d.it,'it'):'')
+      + d.mv.map(function(m,i){ var yv=(d.y&&d.y.mv)||[]; var mine=yv.indexOf(m)<0 && ((d.y&&d.y.mv)!==undefined); return '<li>Move '+(i+1)+': '+esc(m)+'</li>'; }).join('')
+      + ((d.y&&d.y.mv&&d.y.mv.length)?'<li class="ds-diff">Replace yours: '+d.y.mv.map(esc).join(', ')+'</li>':'')+'</ul>';
     last = document.activeElement; sheet.hidden = false; sheet.querySelector('.sheet-x').focus();
   }
   function close(){ sheet.hidden = true; if (last) last.focus(); }

@@ -6,20 +6,20 @@
   "pairs": [
    {
     "foe": "Electivire",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 93,
-    "taken": 68,
-    "ok": true,
+    "mon": "Alomomola",
+    "ability": "REGENERATOR",
+    "dealt": 35,
+    "taken": 36,
+    "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Raichu",
-    "mon": "Shedinja",
-    "ability": "WONDERGUARD",
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
     "dealt": 130,
-    "taken": 0,
+    "taken": 53,
     "ok": true,
     "setup": false,
     "wincons": []
@@ -36,11 +36,11 @@
    },
    {
     "foe": "Togedemaru",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
+    "mon": "Palossand (Fiery Aevian Form)",
+    "ability": "STEAMENGINE",
     "dealt": 130,
-    "taken": 70,
-    "ok": false,
+    "taken": 24,
+    "ok": true,
     "setup": false,
     "wincons": []
    },
@@ -56,10 +56,10 @@
    },
    {
     "foe": "Toxtricity",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 47,
-    "taken": 139,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 22,
+    "taken": 100,
     "ok": false,
     "setup": false,
     "wincons": []

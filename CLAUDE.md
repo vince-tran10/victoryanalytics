@@ -66,8 +66,8 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Slush Rush/Ice Body → snow; Surge Surfer → Electric Terrain…). No anti-synergy (e.g. Glare or fast mons under Trick
   Room). Owned weather/terrain setters (16 Nov): Drought Ninetales, Snow Warning (Ninetales-Alola, Vanilluxe, Aurorus,
   Abomasnow), Grassy Surge Glalie-A, Electric Surge Pincurchin. No Drizzle / Sand Stream. Checked by checks.py.
-- **Core slot 1 (22 Nov): Gholdengo is illegal at Ch9 → Veluza-Aevian stands in** (best legal lead in the Builder; Vincent
-  confirms slot by slot). **Picked core (16 Nov): Balance / tempo** = Arcanine-Hisui (Intimidate) · Golisopod-Aevian (Skill Link, SD) · Gholdengo
+- **Core now (22 Nov 11:33 export, Vincent took the Builder suggestions): Veluza-Aevian · Amoonguss (Rage Powder support) ·
+  Alomomola (Wish / Regenerator) · Golisopod-Aevian.** Gholdengo is illegal at Ch9. Older history below. **Picked core (16 Nov): Balance / tempo** = Arcanine-Hisui (Intimidate) · Golisopod-Aevian (Skill Link, SD) · Gholdengo
   (Good as Gold, Thunder Wave) · Vaporeon (Water Absorb, Haze). #1 core score of 89,985 cores from the top 40 across all tier
   lists; no shared weakness. Swaps now: Copperajah + Muk-Alola (Dark Gardevoir). The core resists no Dark / Ghost:
   every fight's 2 swaps must bring a Dark/Ghost resist when that fight uses them (Muk-Alola resists both). checks.py: core (b) +
@@ -193,6 +193,11 @@ damage score and the fight's real win condition was only read after Vincent lost
   Takes N hits to KO (median vs all foes), Resists N types, Weak to N types, 'Single target only'; green: Spread: <move it runs>
   (party moves / ideal build), Intimidate, Fake Out, priority, Taunt, Good as Gold. common_chips() (resists / weak / spread) is
   meant for slots 2-4 too when Vincent redoes them.
+  Tiers in the Builder = the LIVE Dex tiers (22 Nov; the chapter freeze is no longer used there). Stability: his pick stays the
+  suggestion when same tier and within 0.3 fit. One suggestion per Pokémon across slots. When my suggestion is not the highest
+  tier in that slot, its card lists 'Why not X (tier)' lines (role tools, weaknesses, resists, shared weaknesses, phys/spec balance).
+  Dex sheet (22 Nov) ALWAYS shows the ideal build (team members: the role build), one line per move; party lines that differ show
+  '(yours: X)' + 'Replace yours: ...'. Dark mode: Builder uses --panel / --panel-2 / --warn tokens.
   RED outline = his pick. YELLOW 'Suggested' = MY pick for EVERY slot (Vincent 22 Nov): tier rank + role fit (slot 1 lead win;
   2/3 role tool count; 4 boost size capped at +2) + 0.1 x (resists - weaknesses); both outlines when they agree.
   Key-detail chips on every slot (22 Nov): grey = resists / weak / 'Single target only'; green = role tools + what its build RUNS

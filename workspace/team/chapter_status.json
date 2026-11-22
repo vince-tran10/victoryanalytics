@@ -27,7 +27,7 @@
  "nores": [
   "DARK",
   "GHOST",
-  "GRASS",
+  "NORMAL",
   "PSYCHIC"
  ],
  "misses": [
@@ -36,18 +36,6 @@
    "fight": "spector",
    "best": "Golisopod (Aevian Form)",
    "dmg": 82
-  },
-  {
-   "foe": "Stoutland",
-   "fight": "jenner9",
-   "best": "Golisopod (Aevian Form)",
-   "dmg": 79
-  },
-  {
-   "foe": "Porygon-Z",
-   "fight": "jenner9",
-   "best": "Golisopod (Aevian Form)",
-   "dmg": 94
   },
   {
    "foe": "Kommo-o",

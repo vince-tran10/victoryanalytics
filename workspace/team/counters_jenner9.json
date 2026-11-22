@@ -2,7 +2,7 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 3,
+  "counters": 2,
   "pairs": [
    {
     "foe": "Stoutland",
@@ -16,18 +16,18 @@
      {
       "what": "Setup",
       "answers": [
-       "Haze (Vaporeon)"
+       "teach Encore (Musharna)"
       ]
      }
     ]
    },
    {
     "foe": "Appletun",
-    "mon": "Frosmoth",
-    "ability": "ICESCALES",
-    "dealt": 103,
-    "taken": 40,
-    "ok": true,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 34,
+    "taken": 47,
+    "ok": false,
     "setup": false,
     "wincons": [
      {
@@ -40,10 +40,10 @@
    },
    {
     "foe": "Noivern",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "INTIMIDATE",
-    "dealt": 120,
-    "taken": 60,
+    "mon": "Aurorus",
+    "ability": "SNOWWARNING",
+    "dealt": 130,
+    "taken": 39,
     "ok": true,
     "setup": false,
     "wincons": [
@@ -57,10 +57,10 @@
    },
    {
     "foe": "Porygon-Z",
-    "mon": "Vaporeon",
-    "ability": "WATERABSORB",
-    "dealt": 52,
-    "taken": 99,
+    "mon": "Alomomola",
+    "ability": "REGENERATOR",
+    "dealt": 39,
+    "taken": 151,
     "ok": false,
     "setup": false,
     "wincons": []
@@ -87,7 +87,7 @@
      {
       "what": "Setup",
       "answers": [
-       "Haze (Vaporeon)"
+       "teach Encore (Musharna)"
       ]
      }
     ]
