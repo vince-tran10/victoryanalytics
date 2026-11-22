@@ -162,6 +162,18 @@ for key in KEYS:
         cands = list(itertools.combinations(pool, 2))
     for pr_ in cands:
         for r in pr_: M.setdefault(r['name'], mats(r, SPE))
+    def score_pairs(cands_):
+        out_ = []
+        for pair in cands_:
+            if pair[0]['name'].split(' (')[0] == pair[1]['name'].split(' (')[0]: continue
+            for r in pair: M.setdefault(r['name'], mats(r, SPE))
+            six = core + list(pair)
+            sc, pr, nok = pairing(six); w3, nr = rule_fail(six, key)
+            ans = sum(1 for j in range(n) for w in wincons(R, j) if answers_for(w, six, [x['name'] for x in pair]))
+            out_.append((sc + 5 * ans - 30 * (len(w3) + len(nr)) + .01 * sum(r['score'] for r in pair), pair, pr, nok, w3, nr))
+        return sorted(out_, key=lambda x: -x[0])
+    # 22 Nov (Vincent): the Builder's Flex 1 / Flex 2 cards list the best alternative pairs, also for a hand-planned fight
+    ALTS = score_pairs(list(itertools.combinations(pool, 2)))[:8] if (key == FIGHT or HAND) else None
     res = []
     for pair in cands:
         if pair[0]['name'].split(' (')[0] == pair[1]['name'].split(' (')[0]: continue
@@ -226,7 +238,7 @@ for key in KEYS:
                   wincons=[dict(what=w[0], answers=answers_for(w, six, [x['name'] for x in pair])) for w in wincons(R, j)]) for j in range(n)]
     plans[key] = dict(key=key, format=FMT, foes=FO, swaps=[srow(r) for r in pair], counters=nok, n=n, pairs=pairs,
                       weak3=w3, nores=nr, leads=[six[i]['name'] for i in lead], lead_foes=[FO[j] for j in lf], lead_taken=round(float(ltk)),
-                      sim=SIM, lead_ok=bool(lv[0]), note='' if (key == FIGHT or HAND) else NEED_TIPS.get(key, ''), hand=bool(key == FIGHT or HAND))
+                      sim=SIM, lead_ok=bool(lv[0]), alts=[dict(swaps=[r['name'] for r in x[1]], score=round(float(x[0]), 2), counters=x[3]) for x in (ALTS or res[:8])], note='' if (key == FIGHT or HAND) else NEED_TIPS.get(key, ''), hand=bool(key == FIGHT or HAND))
     json.dump(dict(preview=False, plan=True, current=dict(counters=nok, pairs=pairs)), open(f'team/counters_{key}.json', 'w'), indent=1)
     BUILD.update({n: dict(moves=m, ability=(st.get('abilities') or {}).get(n)) for n, m in (st.get('moves') or {}).items()})   # undo per-fight builds
     print(f"{key:13s} {FMT:7s} swaps {[r['name'] for r in pair]} counters {nok}/{n} rules {w3 or ''}{nr or ''} "

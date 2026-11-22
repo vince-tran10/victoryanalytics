@@ -208,6 +208,9 @@ damage score and the fight's real win condition was only read after Vincent lost
   ALWAYS VERIFY (Vincent, 22 Nov): before saying what the page shows, read it back from output/chapter8_report.html / builder.json
   AFTER the final run (checks.py prints 'Builder: my suggestion matches your core'). Fit = 2 x tier rank + role tools (max 2)
   + 0.1 x (resists - weak) + 0.2 x covered gaps (max 3): a lower tier can't win on tool count alone.
+  FLEX cards (22 Nov): Builder ends with 'F1 Flex 1 · Mid game · <next fight>' and 'F2 Flex 2 · Closer · <next fight>': the plan's
+  2 swaps (state.team) + the best alternatives from fight_plans.json 'alts' (full pair search, also for the hand-planned next fight),
+  split by role (closer = has a setup move), 'Counters: <foe>' chips from the plan's pairs. Only the NEXT fight; Ch9-specific.
   RED outline = his pick. YELLOW 'Suggested' = MY pick for EVERY slot (Vincent 22 Nov): tier rank + role fit (slot 1 lead win;
   2/3 role tool count; 4 boost size capped at +2) + 0.1 x (resists - weaknesses); both outlines when they agree.
   Key-detail chips on every slot (22 Nov): grey = resists / weak / 'Single target only'; green = role tools + what its build RUNS

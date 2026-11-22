@@ -68,7 +68,7 @@ chk('Synergy: the team states one identity', 'Identity' in text(team) or 'Identi
 # 22 Nov (Vincent: "ALWAYS double check"): the Builder's suggestion vs his core, read from builder.json every run
 if os.path.exists('team/builder.json'):
     _bj = json.load(open('team/builder.json'))
-    _diff = [f"slot {x['slot']}: suggested {x.get('rec')} vs your {x['pick']}" for x in _bj.get('slots', []) if x.get('rec') != x['pick']]
+    _diff = [f"slot {x['slot']}: suggested {x.get('rec')} vs your {x['pick']}" for x in _bj.get('slots', []) if not x.get('flex') and x.get('rec') != x['pick']]
     chk('Builder: my suggestion matches your core in every slot', not _diff, '; '.join(_diff) or '4/4 agree', blocking=False)
 tc = st.get('team_check') or {}
 if st.get('core') and st.get('core_check'):   # 16 Nov model: core of 4 for the chapter, + 2 swaps per fight

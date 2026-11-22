@@ -85,7 +85,7 @@ KIT = [('Redirection', ['FOLLOWME', 'RAGEPOWDER']),
        ('Stat reset', ['HAZE', 'CLEARSMOG', 'ROAR', 'WHIRLWIND', 'DRAGONTAIL', 'CIRCLETHROW']),
        ('Disrupt', ['FAKEOUT', 'TAUNT', 'ENCORE', 'KNOCKOFF', 'TRICK']),
        ('Screens', ['REFLECT', 'LIGHTSCREEN', 'AURORAVEIL']),
-       ('Support', ['HELPINGHAND', 'WIDEGUARD', 'QUICKGUARD', 'POLLENPUFF', 'LIFEDEW'])]
+       ('Support', ['HELPINGHAND', 'WIDEGUARD', 'QUICKGUARD', 'POLLENPUFF', 'LIFEDEW', 'SAFEGUARD', 'MISTYTERRAIN'])]
 def kit(m):
     bm = build_moves(m.name); out_ = []
     for lab, ids in KIT:
@@ -247,6 +247,34 @@ if len(core) == 4:
                                     sid=m.r.get('sid'), form=str(m.r.get('form', '0')), pick=m.name == mine, rec=m.name == rec)
                                for _, _, _, m, t in top]))
         for c in out[-1]['cands']: c['tools'], c['teach'] = teach_split(ALLM[c['name']], c['tools'])
+# 22 Nov (Vincent): Flex 1 / Flex 2 = the 2 chapter swaps for the NEXT fight only (fight_plans.json: the plan + its best alternatives)
+FIGHT_TITLE = {'spector': 'Spector (day)', 'spector2': 'Spector (night)', 'jenner9': 'Spirit Jenner', 'amanda': 'Amanda', 'erick': 'Erick',
+               'karrina': 'Karrina', 'garbodor': 'Rift Garbodor', 'darkgardevoir': 'Dark Gardevoir'}
+_fp = json.load(open('team/fight_plans.json')) if os.path.exists('team/fight_plans.json') else {}
+_fk = st.get('fight') or next((k for k in _fp), None)
+_pl = _fp.get(_fk) or {}
+if _pl and len(core) == 4:
+    flexes = [n for n in st['team'] if n not in st['core']][:2]
+    counters_of = {}
+    for p_ in _pl.get('pairs') or []:
+        if p_.get('ok'): counters_of.setdefault(p_['mon'], []).append(p_['foe'])
+    alt_names = []
+    for a_ in _pl.get('alts') or []:
+        for n_ in a_['swaps']:
+            if n_ not in alt_names and n_ not in st['core']: alt_names.append(n_)
+    for fi, (lab, fn) in enumerate(zip(['Flex 1 · Mid game', 'Flex 2 · Closer'], flexes)):
+        _setup = lambda n_: any(k.startswith('Setup') for k in kit(ALLM[n_])) if n_ in ALLM else False
+        names = [fn] + [x for x in alt_names if x not in flexes and (_setup(x) == (fi == 1))][:4]   # closer flex = has a setup move
+        cands = []
+        for n_ in names:
+            m = ALLM.get(n_)
+            if not m: continue
+            cs, ct = common_chips(m)
+            tl = merge(ct + [f'Counters: {f_}' for f_ in counters_of.get(n_, [])], kit(m))
+            have, teach = teach_split(m, tl)
+            cands.append(dict(name=n_, tier=m.r['tier'], stats=cs + ([] if ct else ['Single target only']), tools=have, teach=teach,
+                              sid=m.r.get('sid'), form=str(m.r.get('form', '0')), pick=n_ == fn, rec=n_ == fn))
+        out.append(dict(slot=5 + fi, title=f"{lab} · {FIGHT_TITLE.get(_fk, _fk)}", pick=fn, rec=fn, flex=True, cands=cands))
 json.dump(dict(core=core, slots=out), open('team/builder.json', 'w'), indent=1, ensure_ascii=False)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sprites as SP
@@ -261,7 +289,7 @@ for s_ in out:
                  + '<div class="btools">' + ''.join('<span class="bstat">' + E(x) + '</span>' for x in c.get('stats', [])) + ''.join('<span class="btool">' + E(x) + '</span>' for x in c['tools']) + ''.join('<span class="bteach">Teach: ' + E(x) + '</span>' for x in c.get('teach', [])) + '</div>'
                  + (''.join('<div class="bwhy"><b>Why not ' + E(w['name']) + ' (' + w['tier'] + ')</b><ul>' + ''.join('<li>' + E(l) + '</li>' for l in w['lines']) + '</ul></div>'
                             for w in s_.get('why') or [] if w['lines']) if c.get('rec') else '') + '</li>')
-    cards += ('<article class="bslot"><header><span class="bn">' + str(s_['slot']) + '</span><b>' + E(s_['title']) + '</b>'
+    cards += ('<article class="bslot' + (' bflex' if s_.get('flex') else '') + '"><header><span class="bn">' + (('F' + str(s_['slot'] - 4)) if s_.get('flex') else str(s_['slot'])) + '</span><b>' + E(s_['title']) + '</b>'
               + ('<span class="bempty">Empty</span>' if not s_['pick'] else '') + '</header>'
               + '<ol class="bcands">' + rows + '</ol></article>')
 # 22 Nov (Vincent): type matrix at the bottom; tick a Pokémon's box to add it (your 4 picks start ticked)
