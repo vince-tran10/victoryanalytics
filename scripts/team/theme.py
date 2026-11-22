@@ -704,8 +704,9 @@ IC = {
  'cores': '<rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/>',
  'todo': '<path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1.5 1.5L7.5 5M3.5 12l1.5 1.5L7.5 11M3.5 18l1.5 1.5L7.5 17"/>',
  'boxes': '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M9 5v14M15 5v14"/>',
+ 'builder': '<path d="M4 20h16M6 16l4-10 4 6 4-8"/><circle cx="10" cy="6" r="1.5"/>',
  'dex': '<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="3"/><path d="M8.5 15h7M8.5 18h4"/>'}
-NAV = [('team', 'Team'), ('fights', 'Fights'), ('todo', 'To do'), ('boxes', 'Boxes'), ('dex', 'Dex')]   # 22 Nov: Cores tab removed (Vincent)
+NAV = [('team', 'Team'), ('builder', 'Builder'), ('fights', 'Fights'), ('todo', 'To do'), ('boxes', 'Boxes'), ('dex', 'Dex')]   # 22 Nov: Cores tab removed (Vincent)
 nav = '<nav class="appnav" aria-label="Guide">' + ''.join(
     f'<button type="button" data-go="{k}"><svg viewBox="0 0 24 24" aria-hidden="true">{IC[k]}</svg><span>{t}</span></button>' for k, t in NAV) + '</nav>'
 seg = ('<div class="seg" role="group" aria-label="Dex lists"><button type="button" data-go="tiers">Pokémon</button>'
@@ -769,7 +770,7 @@ a { color: var(--link) }
 .viewtitle { max-width: 1120px; margin: 0 auto; font: 700 24px/1.1 var(--display); padding-block: 2px 12px; letter-spacing: .01em }
 @media (max-width: 720px) { .appbar-chips { display: none } .viewtitle { font-size: 21px } }
 /* navigation: bottom bar (phone), side rail (desktop) */
-.appnav { position: fixed; z-index: 25; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(5, 1fr);
+.appnav { position: fixed; z-index: 25; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(6, 1fr);
   background: var(--panel); border-top: 1px solid var(--line); box-shadow: 0 -4px 16px rgba(0,0,0,.06);
   padding: 6px max(6px, env(safe-area-inset-right, 0px)) calc(6px + env(safe-area-inset-bottom, 0px)) max(6px, env(safe-area-inset-left, 0px)) }
 .appnav button { display: grid; justify-items: center; gap: 2px; border: 0; background: none; color: var(--muted); font: 700 11px var(--body); padding: 6px 0; border-radius: 12px; cursor: pointer }
@@ -884,6 +885,17 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .fx.up .fx-ar { color: var(--good); background: color-mix(in srgb, var(--good) 14%, transparent) }
 .fx.down .fx-ar { color: var(--bad); background: color-mix(in srgb, var(--bad) 14%, transparent) }
 .fx-note { color: var(--muted); font-size: 12px }
+.bgrid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) }
+.bslot { background: var(--card, #fff); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; display: grid; gap: 8px }
+.bslot header { display: flex; align-items: center; gap: 8px } .bslot header b { font: 700 16px var(--display) }
+.bn { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; background: var(--ink, #222); color: #fff; font: 700 12px var(--mono) }
+.bneeds { margin: 0; padding-left: 18px; font-size: 13px; color: var(--muted); display: grid; gap: 1px }
+.bhead { font: 600 10.5px var(--mono); text-transform: uppercase; color: var(--muted) } .bhead small { text-transform: none }
+.bcands { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px }
+.bc { display: flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 10px; background: var(--card-2, rgba(127,127,127,.06)); font-size: 13px }
+.bc b { flex: 1; min-width: 0 } .bc.pick { box-shadow: inset 0 0 0 2px var(--accent, #c81e3a) }
+.bpick { font: 700 10px var(--mono); text-transform: uppercase; color: var(--accent, #c81e3a) } .bsc { font: 600 11.5px var(--mono); color: var(--muted) }
+.brank { font-size: 12.5px; font-weight: 600 }
 .dtier { margin: 0 0 14px } .dth { display: flex; align-items: center; gap: 6px; margin: 0 0 6px; font-size: 16px } .dcount { font: 600 12px var(--mono); color: var(--muted) }
 .dgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 5px }
 .dtile { display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px 2px; border-radius: 10px; border: 1px solid var(--line);
@@ -1048,7 +1060,7 @@ DEXJS = r'''<script id="dex-js">
 '''
 JS = r'''<script id="app-theme-js">
 (function(){
-  var NAMES = {team:'Team', fights:'Fights', cores:'Cores', todo:'To do', boxes:'Boxes', tiers:'Dex · Pokémon', aevian:'Dex · Aevian', crests:'Dex · Crests', checks:'Checks & data'};
+  var NAMES = {team:'Team', builder:'Team Builder', fights:'Fights', cores:'Cores', todo:'To do', boxes:'Boxes', tiers:'Dex · Pokémon', aevian:'Dex · Aevian', crests:'Dex · Crests', checks:'Checks & data'};
   var DEX = {tiers:1, aevian:1, crests:1};
   var orig = function(k){ return document.querySelector('#tabbar button[data-tab="'+k+'"]'); };
   function current(){ var b = document.querySelector('#tabbar button[aria-selected="true"]'); return b ? b.dataset.tab : 'team'; }

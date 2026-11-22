@@ -170,7 +170,10 @@ damage score and the fight's real win condition was only read after Vincent lost
 - Clean, a guide not an essay: bullets, no paragraphs; explanations go in chat, not on the page.
   **ONE THOUGHT PER LINE (Vincent, 22 Nov, ANYTIME):** never join separate thoughts with " · " or commas on the page; each
   thought is its own bullet / line (e.g. Zoroark line, Next battle card). Same in chat replies.
-- Tabs: Team · Fights · To do · Boxes · Dex (tier lists) · C&A checks. **Cores tab REMOVED (Vincent, 22 Nov)**: he plays the team
+- Tabs: Team · Builder · Fights · To do · Boxes · Dex (tier lists) · C&A checks. **Team Builder tab (Vincent, 22 Nov):**
+  scripts/team/builder.py (runs after tier_tabs, before tabs.py) → team/builder.json + section 'sbuild': one card per CORE slot
+  (1 Lead · 2 Doubles lead · 3 Mid game · 4 Closer): the role's needs (bullets), top 5 candidates for THAT slot with the other
+  three kept (cores.py core score), your pick outlined, and its rank. Flex / chapter swaps come later. **Cores tab REMOVED (Vincent, 22 Nov)**: he plays the team
   I recommend; cores.py only runs with CORES=1 (chat analysis). Team check for the remaining fights: scripts/team/team_fights.py
   (core + best 2 flexes per fight, full-six one-to-one counters).
 - **App look (Vincent, 17 Nov): it must look like an app, Pokémon themed.** scripts/team/theme.py runs LAST (after tabs.py) and

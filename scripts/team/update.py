@@ -255,6 +255,7 @@ def main():
     # one blended tier scale (Ch9 fights + meta) for Crests / Aevians / all other Pokémon, then the Cores tab (16 Nov)
     sh(['../scripts/team/tier_all.py'], dict(env, BASE_RUN=f'r{run}', CREST_RUN=f'rc{run}', ALL_RUN=f'r{run}all'))
     sh(['../scripts/team/tier_tabs.py', OUT], pe)
+    sh(['../scripts/team/builder.py', OUT], pe)   # 22 Nov: Team Builder tab (how each core slot was picked)
     # 22 Nov (Vincent): Cores tab removed; cores.py no longer runs (CORES=1 to run it for chat)
     if os.environ.get('CORES'): sh(['../scripts/team/cores.py', OUT], pe)
     sh(['../scripts/team/counters_tab.py', OUT], pe)
