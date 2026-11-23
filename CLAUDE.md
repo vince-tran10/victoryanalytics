@@ -54,7 +54,10 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
 ## Team rules (chapter rules)
 - **CORE BUILDER (Vincent, 23 Nov, later the same day): one main core of 4 + 2 flexes per fight, NO fixed roles.** scripts/team/core4.py
   picks the best GENERAL 4 (no opponent) and shows it on the Builder tab with how it is picked (strength / defense / offense / synergy /
-  Aevian, each member's tier + meta + in-game, synergy lines, close alternatives, type check). Flexes (lead, mid or closer) are added per fight.
+  Aevian, each member's tier + meta + in-game, synergy lines, close alternatives, type check). Flexes (lead, mid or closer) are added per fight:
+  the planner LOCKS the core 4 and picks only the 2 flexes for the next fight. Party order: slot 1 = singles lead and left doubles lead,
+  slot 2 = doubles lead partner (a flex may take either). Team tab: Core / Flex + role labels and a 'Flexes for the next fight' card
+  (opponent, field, format, their lead, each flex's role and why, threats, guide tips).
 - **TEAM PLANNER (Vincent, 23 Nov) REPLACES the core-of-4 + 2 flexes.** state mode='planner': scripts/team/planner.py picks the whole SIX
   for the next fight (state.fight) from his POOL = Party + Active box (S/A/B) + S/A he is moving in from Overflow. PRIORITIES (Vincent, 23 Nov,
   after losing again): 1) as many of the six as possible RESIST EACH MOVE THEY CARRY (move-level, field type chart + second types);

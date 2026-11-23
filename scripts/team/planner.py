@@ -74,7 +74,11 @@ run = os.environ.get('BASE_RUN') or f"r{st['run']}"
 C = {c['name']: c for c in pickle.load(open(f'team/{run}{"n" if BREAK else ""}_native.json.pkl', 'rb'))['cands'] if not c.get('gate')}
 POOL = [n for n, r in TA.items() if r.get('where') in ('Party', 'Active') and r['tier'] in ('S', 'A', 'B') and n in C and FK in C[n]['matchups']]
 POOL += [n for n, r in TA.items() if r.get('where') == 'Overflow' and r['tier'] in ('S', 'A') and n not in POOL and n in C and FK in C[n]['matchups']]
-POOL += [n for n in (st.get('team') or []) if n in TA and n not in POOL and n in C and FK in C[n]['matchups']]   # the current six stays in the pool (tiers wobble)   # 23 Nov: the S / A moving into Active
+POOL += [n for n in (st.get('team') or []) if n in TA and n not in POOL and n in C and FK in C[n]['matchups']]
+# 23 Nov (Vincent): ONE main core of 4 (core4.py, general, no opponent) + 2 flexes per fight
+CORE = [m['name'] for m in json.load(open('team/core4.json'))['core']] if os.path.exists('team/core4.json') and st.get('core_lock', True) else []
+CORE = [n for n in CORE if n in TA and n in C and FK in C[n]['matchups']]
+POOL += [n for n in CORE if n not in POOL]   # the current six stays in the pool (tiers wobble)   # 23 Nov: the S / A moving into Active
 MOVE_OVR = {}   # planner-made move changes (Flash user) shown on the page
 def build(n):
     b = IB.get(n) or {}
@@ -266,7 +270,12 @@ def score(ix):
     s += 3 * tips_met(ix)   # 23 Nov: the guide's tips count
     s += 1.5 * np.minimum(SAFE[ix].sum(0), 3).sum() - 4 * DEAD[ix].sum() + .4 * TIER[ix].sum() + 1.0 * AEV[ix].sum() - 4 * FLAGN[ix].sum() + 2 * (ANS[ix].max(0).sum() if len(WINS) else 0)
     return s
-res = sorted(((score(ix), ix) for ix in itertools.combinations(top, 6)), key=lambda x: -x[0])
+if len(CORE) == 4:   # core locked: every pair of flexes from the whole pool
+    _ci = tuple(NAMES.index(n) for n in CORE)
+    _cands = (_ci + pr for pr in itertools.combinations([i for i in range(NP) if i not in _ci], 2))
+else:
+    _cands = itertools.combinations(top, 6)
+res = sorted(((score(ix), ix) for ix in _cands), key=lambda x: -x[0])
 if os.environ.get('PLAN_SIX'):   # evaluate a given six (names | separated) instead of searching
     _fix = tuple(NAMES.index(x) for x in os.environ['PLAN_SIX'].split('|'))
     res = [(score(_fix), _fix)] + res
@@ -286,7 +295,12 @@ if BREAK and not os.environ.get('PLAN_SIX') and os.path.exists('team/planner_kee
     if all(x in NAMES for x in _k):
         _ki = [NAMES.index(x) for x in _k]
         if FLASH[_ki].any() and cmp_score(_ki) > cmp_score(best): best = _ki
-leads = max(itertools.combinations(best, 2), key=lambda p: LQ[p[0]][p[1]]) if FMT == 'Doubles' else (max(best, key=lambda i: -TAKE[i][0]),)
+if FMT == 'Doubles':
+    leads = max(itertools.combinations(best, 2), key=lambda p: LQ[p[0]][p[1]])
+    leads = tuple(sorted(leads, key=lambda i: -lead_q((i,))))
+else:   # singles fight: slot 1 leads (best vs their lead), slot 2 = the doubles partner for later doubles fights
+    _l1 = max(best, key=lambda i: lead_q((i,)) - TAKE[i][0] / 100)
+    leads = (_l1, max([i for i in best if i != _l1], key=lambda i: lead_q((_l1, i))))
 order = list(leads) + sorted([i for i in best if i not in leads], key=lambda i: -ind[i])
 FLASHER = None
 if BREAK:
@@ -313,9 +327,14 @@ def tip_who(nd):
         j = fidx(nd[3:]); top2 = sorted(best, key=lambda i: -DEAL[i][j])[:2] if j is not None else []
         return [f"{NAMES[i]}: deals {int(DEAL[i][j])}%" for i in top2] if top2 and sum(DEAL[i][j] for i in top2) >= 100 else []
     return [f"{NAMES[i]}: {meets(i, nd)}" for i in best if meets(i, nd)]
+SETUP_ = {'SWORDSDANCE', 'NASTYPLOT', 'DRAGONDANCE', 'QUIVERDANCE', 'CALMMIND', 'BULKUP', 'CURSE', 'SHELLSMASH', 'COIL', 'BELLYDRUM', 'SHIFTGEAR'}
+def role_of_(i):
+    if i == leads[0]: return 'Lead'
+    if len(leads) > 1 and i == leads[1]: return 'Doubles lead'
+    return 'Closer' if {mvid(x) for x in build(NAMES[i])[2]} & SETUP_ else 'Mid game'
 def mem(i):
     ms, ab, mnames = build(NAMES[i])
-    return dict(name=NAMES[i], tier=TA[NAMES[i]]['tier'], types=TA[NAMES[i]]['types'], sid=TA[NAMES[i]].get('sid'), form=str(TA[NAMES[i]].get('form', '0')),
+    return dict(core=NAMES[i] in CORE, role=role_of_(i), name=NAMES[i], tier=TA[NAMES[i]]['tier'], types=TA[NAMES[i]]['types'], sid=TA[NAMES[i]].get('sid'), form=str(TA[NAMES[i]].get('form', '0')),
                 lead=i in leads, where=TA[NAMES[i]].get('where'), moves=mnames, ability=ab,
                 take=[int(x) for x in TAKE[i]], deal=[int(x) for x in DEAL[i]], worst=int(TAKE[i].max()), worst_foe=FN[int(TAKE[i].argmax())],
                 safe=int(SAFE[i].sum()), mult={t: float(MULT[i][k]) for k, t in enumerate(MAIN)},

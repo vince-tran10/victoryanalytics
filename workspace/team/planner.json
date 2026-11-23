@@ -109,20 +109,20 @@
   "DRAGON",
   "PSYCHIC",
   "FIGHTING",
-  "STEEL",
-  "ELECTRIC"
+  "ELECTRIC",
+  "STEEL"
  ],
  "atk": {
-  "PSYCHIC": [
+  "NORMAL": [
+   "Kommo-o",
+   "Noivern",
    "Porygon-Z",
    "Stoutland"
   ],
   "DARK": [
    "Stoutland"
   ],
-  "NORMAL": [
-   "Kommo-o",
-   "Noivern",
+  "PSYCHIC": [
    "Porygon-Z",
    "Stoutland"
   ],
@@ -147,10 +147,10 @@
   "FIRE": [
    "Kommo-o"
   ],
-  "STEEL": [
+  "ELECTRIC": [
    "Klinklang"
   ],
-  "ELECTRIC": [
+  "STEEL": [
    "Klinklang"
   ]
  },
@@ -161,9 +161,7 @@
     "Klinklang",
     "Stoutland"
    ],
-   "answered_by": [
-    "Muk (Alolan Form)"
-   ]
+   "answered_by": []
   },
   {
    "win": "Spread attacks",
@@ -328,93 +326,95 @@
  "tips": [],
  "six": [
   {
-   "name": "Glalie (Aevian Form)",
-   "tier": "S",
+   "core": false,
+   "role": "Lead",
+   "name": "Scrafty",
+   "tier": "B",
    "types": [
-    "GRASS",
-    "ROCK"
+    "DARK",
+    "FIGHTING"
    ],
-   "sid": "GLALIE",
-   "form": "1",
+   "sid": "SCRAFTY",
+   "form": "0",
    "lead": true,
    "where": "Active",
    "moves": [
-    "Grassy Glide",
-    "Wood Hammer",
-    "Rock Slide",
+    "Crunch",
+    "High Jump Kick",
+    "Fake Out",
     "Protect"
    ],
-   "ability": "GRASSYSURGE",
+   "ability": "MOXIE",
    "take": [
-    30,
-    48,
-    46,
-    62,
-    89,
-    118
+    56,
+    49,
+    73,
+    116,
+    84,
+    61
    ],
    "deal": [
-    49,
-    15,
-    62,
-    58,
-    16,
-    22
+    90,
+    25,
+    41,
+    107,
+    30,
+    80
    ],
-   "worst": 118,
-   "worst_foe": "Klinklang",
-   "safe": 3,
+   "worst": 116,
+   "worst_foe": "Porygon-Z",
+   "safe": 1,
    "mult": {
-    "NORMAL": 0.5,
+    "NORMAL": 1.0,
     "DRAGON": 1.0,
-    "PSYCHIC": 1.0,
+    "PSYCHIC": 0.0,
     "FIGHTING": 2.0,
-    "STEEL": 2.0,
-    "ELECTRIC": 0.5
+    "ELECTRIC": 1.0,
+    "STEEL": 1.0
    },
    "rm": [
+    0.25,
+    0.0,
     1.0,
     1.0,
+    2.0,
+    1.0,
+    2.0,
+    1.0,
+    1.0,
+    0.0,
     0.5,
     1.0,
     2.0,
     1.0,
     1.0,
-    0.5,
     1.0,
     1.0,
-    1.0,
-    0.5,
-    2.0,
-    0.5,
-    1.0,
-    1.0,
-    2.0,
-    0.5
+    1.0
    ],
    "off": [
-    0.0,
-    0.0,
     2.0,
-    0.0,
-    0.0,
-    0.0
+    1.5,
+    1.5,
+    2.0,
+    1.5,
+    2.0
    ],
    "answers": [],
    "why": [
     {
-     "move": "Grassy Glide",
-     "why": "STAB; Priority +1 on Grassy Terrain: Grassy Surge sets it on entry (replaces Haunted Field for a few turns)",
+     "move": "Crunch",
+     "why": "Your best hit on Noivern; STAB",
      "flag": false
     },
     {
-     "move": "Wood Hammer",
-     "why": "Your best hit on Stoutland, Porygon-Z, Kommo-o, Klinklang; STAB",
+     "move": "High Jump Kick",
+     "why": "Your best hit on Stoutland, Appletun, Porygon-Z, Kommo-o, Klinklang; Super effective on Stoutland, Porygon-Z, Klinklang; STAB",
      "flag": false
     },
     {
-     "move": "Rock Slide",
-     "why": "Your best hit on Appletun, Noivern; Super effective on Noivern; STAB; hits both foes; Spread move that never hits your partner; 30% flinch",
+     "move": "Fake Out",
+     "why": "x1.5 on this field; Flinches on its first turn: a free hit, x1.5 on Concert Venue",
      "flag": false
     },
     {
@@ -426,170 +426,74 @@
    "warn": []
   },
   {
-   "name": "Chandelure",
-   "tier": "B",
+   "core": true,
+   "role": "Doubles lead",
+   "name": "Musharna (Aevian Form)",
+   "tier": "A",
    "types": [
-    "GHOST",
-    "FIRE"
+    "DARK",
+    "FAIRY"
    ],
-   "sid": "CHANDELURE",
-   "form": "0",
-   "lead": false,
-   "where": "Active",
+   "sid": "MUSHARNA",
+   "form": "1",
+   "lead": true,
+   "where": "Party",
    "moves": [
-    "Shadow Ball",
-    "Will-O-Wisp",
-    "Overheat",
+    "Lovely Kiss",
+    "Shadow Claw",
+    "Play Rough",
     "Protect"
    ],
-   "ability": "FLASHFIRE",
+   "ability": "TOUGHCLAWS",
    "take": [
-    75,
     56,
-    55,
-    87,
-    106,
-    42
+    33,
+    70,
+    114,
+    70,
+    121
    ],
    "deal": [
-    63,
-    33,
-    47,
-    70,
-    33,
-    144
+    0,
+    17,
+    35,
+    0,
+    21,
+    28
    ],
-   "worst": 106,
-   "worst_foe": "Kommo-o",
+   "worst": 121,
+   "worst_foe": "Klinklang",
    "safe": 1,
    "mult": {
-    "NORMAL": 0.0,
-    "DRAGON": 1.0,
-    "PSYCHIC": 1.0,
-    "FIGHTING": 0.0,
-    "STEEL": 0.5,
-    "ELECTRIC": 1.0
+    "NORMAL": 1.0,
+    "DRAGON": 0.0,
+    "PSYCHIC": 0.0,
+    "FIGHTING": 1.0,
+    "ELECTRIC": 1.0,
+    "STEEL": 2.0
    },
    "rm": [
-    2.0,
+    0.25,
+    0.0,
     1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
     0.0,
     0.5,
+    1.0,
+    1.0,
+    1.0,
     0.0,
-    1.0,
-    1.0,
-    0.0,
-    1.0,
     1.0,
     2.0,
-    0.0,
-    0.0,
-    0.0,
-    1.0,
-    0.0,
-    0.5,
     1.0
    ],
    "off": [
     0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    2.0
-   ],
-   "answers": [],
-   "why": [
-    {
-     "move": "Shadow Ball",
-     "why": "Your best hit on Noivern, Kommo-o; STAB; no effect on Stoutland, Porygon-Z",
-     "flag": false
-    },
-    {
-     "move": "Will-O-Wisp",
-     "why": "Utility move",
-     "flag": false
-    },
-    {
-     "move": "Overheat",
-     "why": "Your best hit on Stoutland, Appletun, Porygon-Z, Klinklang; Super effective on Klinklang; STAB",
-     "flag": false
-    },
-    {
-     "move": "Protect",
-     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
-     "flag": false
-    }
-   ],
-   "warn": []
-  },
-  {
-   "name": "Azumarill",
-   "tier": "B",
-   "types": [
-    "WATER",
-    "FAIRY"
-   ],
-   "sid": "AZUMARILL",
-   "form": "0",
-   "lead": false,
-   "where": "Active",
-   "moves": [
-    "Play Rough",
-    "Aqua Jet",
-    "Belly Drum",
-    "Protect"
-   ],
-   "ability": "HUGEPOWER",
-   "take": [
-    63,
-    77,
-    80,
-    130,
-    79,
-    75
-   ],
-   "deal": [
-    13,
-    14,
-    29,
-    15,
-    37,
-    6
-   ],
-   "worst": 130,
-   "worst_foe": "Porygon-Z",
-   "safe": 0,
-   "mult": {
-    "NORMAL": 1.0,
-    "DRAGON": 0.0,
-    "PSYCHIC": 1.0,
-    "FIGHTING": 0.5,
-    "STEEL": 1.0,
-    "ELECTRIC": 2.0
-   },
-   "rm": [
-    0.5,
-    1.0,
-    1.0,
-    2.0,
-    0.5,
-    0.0,
-    1.0,
-    1.0,
-    0.0,
-    1.0,
-    1.0,
-    1.0,
-    0.5,
-    1.0,
-    0.0,
-    0.5,
-    1.0,
-    2.0
-   ],
-   "off": [
-    0.0,
     2.0,
     2.0,
     0.0,
@@ -599,18 +503,18 @@
    "answers": [],
    "why": [
     {
+     "move": "Lovely Kiss",
+     "why": "Puts one foe to sleep (75% accurate)",
+     "flag": false
+    },
+    {
+     "move": "Shadow Claw",
+     "why": "Your best hit on Klinklang; no effect on Stoutland, Porygon-Z",
+     "flag": false
+    },
+    {
      "move": "Play Rough",
-     "why": "Your best hit on Stoutland, Appletun, Noivern, Porygon-Z, Kommo-o, Klinklang; Super effective on Appletun, Noivern, Kommo-o; STAB",
-     "flag": false
-    },
-    {
-     "move": "Aqua Jet",
-     "why": "STAB; Priority +1",
-     "flag": false
-    },
-    {
-     "move": "Belly Drum",
-     "why": "Utility move",
+     "why": "Your best hit on Stoutland, Appletun, Noivern, Porygon-Z, Kommo-o; Super effective on Appletun, Noivern, Kommo-o; STAB",
      "flag": false
     },
     {
@@ -622,6 +526,8 @@
    "warn": []
   },
   {
+   "core": false,
+   "role": "Closer",
    "name": "Lapras (Aevian Form)",
    "tier": "S",
    "types": [
@@ -663,8 +569,8 @@
     "DRAGON": 1.0,
     "PSYCHIC": 0.5,
     "FIGHTING": 1.0,
-    "STEEL": 2.0,
-    "ELECTRIC": 1.0
+    "ELECTRIC": 1.0,
+    "STEEL": 2.0
    },
    "rm": [
     2.0,
@@ -720,69 +626,71 @@
    "warn": []
   },
   {
-   "name": "Muk (Alolan Form)",
+   "core": true,
+   "role": "Closer",
+   "name": "Golisopod (Aevian Form)",
    "tier": "S",
    "types": [
-    "POISON",
-    "DARK"
+    "BUG",
+    "GROUND"
    ],
-   "sid": "MUK",
+   "sid": "GOLISOPOD",
    "form": "1",
    "lead": false,
-   "where": "Party",
+   "where": "Active",
    "moves": [
-    "Knock Off",
-    "Shadow Sneak",
-    "Clear Smog",
+    "Bone Rush",
+    "Pin Missile",
+    "Swords Dance",
     "Protect"
    ],
-   "ability": "POISONTOUCH",
+   "ability": "SKILLLINK",
    "take": [
-    65,
-    40,
-    64,
-    106,
-    76,
-    70
+    48,
+    47,
+    78,
+    124,
+    89,
+    51
    ],
    "deal": [
-    28,
-    15,
-    31,
-    33,
-    9,
-    25
+    40,
+    40,
+    19,
+    48,
+    27,
+    16
    ],
-   "worst": 106,
+   "worst": 124,
    "worst_foe": "Porygon-Z",
-   "safe": 1,
+   "safe": 2,
    "mult": {
     "NORMAL": 1.0,
     "DRAGON": 1.0,
-    "PSYCHIC": 0.0,
-    "FIGHTING": 1.0,
-    "STEEL": 1.0,
-    "ELECTRIC": 1.0
+    "PSYCHIC": 1.0,
+    "FIGHTING": 0.5,
+    "ELECTRIC": 0.0,
+    "STEEL": 1.0
    },
    "rm": [
-    0.5,
-    0.0,
-    1.0,
-    0.5,
     1.0,
     1.0,
     1.0,
     1.0,
-    1.0,
-    0.0,
     0.5,
     1.0,
+    2.0,
     1.0,
     1.0,
     1.0,
     1.0,
     1.0,
-    1.0
+    0.5,
+    1.0,
+    1.0,
+    2.0,
+    1.0,
+    0.0
    ],
    "off": [
     0.0,
@@ -790,25 +698,23 @@
     0.0,
     0.0,
     0.0,
-    0.0
+    2.0
    ],
-   "answers": [
-    "Setup (stat boosts)"
-   ],
+   "answers": [],
    "why": [
     {
-     "move": "Knock Off",
-     "why": "Your best hit on Stoutland, Noivern, Porygon-Z, Klinklang; STAB; Removes their item (Stoutland Chople Berry, Porygon-Z Choice Scarf, Kommo-o Kommonium Z, Klinklang Air Balloon)",
+     "move": "Bone Rush",
+     "why": "Your best hit on Stoutland, Porygon-Z, Kommo-o, Klinklang; Super effective on Klinklang; STAB; no effect on Noivern",
      "flag": false
     },
     {
-     "move": "Shadow Sneak",
-     "why": "Priority +1: finishes a weakened foe first; no effect on Stoutland, Porygon-Z",
+     "move": "Pin Missile",
+     "why": "Your best hit on Appletun, Noivern; Super effective on Appletun; STAB",
      "flag": false
     },
     {
-     "move": "Clear Smog",
-     "why": "Your best hit on Appletun, Kommo-o; Super effective on Appletun; STAB; Resets the target boosts (Luxray Howl); no effect on Klinklang",
+     "move": "Swords Dance",
+     "why": "Attack +2",
      "flag": false
     },
     {
@@ -820,64 +726,66 @@
    "warn": []
   },
   {
-   "name": "Scrafty",
-   "tier": "B",
+   "core": true,
+   "role": "Mid game",
+   "name": "Slowking (Galarian Form)",
+   "tier": "S",
    "types": [
-    "DARK",
-    "FIGHTING"
+    "POISON",
+    "PSYCHIC"
    ],
-   "sid": "SCRAFTY",
-   "form": "0",
+   "sid": "SLOWKING",
+   "form": "1",
    "lead": false,
    "where": "Active",
    "moves": [
-    "Crunch",
-    "High Jump Kick",
-    "Fake Out",
+    "Sludge Bomb",
+    "Psychic",
+    "Shadow Ball",
     "Protect"
    ],
-   "ability": "MOXIE",
+   "ability": "REGENERATOR",
    "take": [
-    56,
-    49,
-    73,
-    116,
-    84,
-    61
+    68,
+    39,
+    62,
+    103,
+    74,
+    69
    ],
    "deal": [
-    90,
-    25,
-    41,
-    107,
-    30,
-    80
+    40,
+    62,
+    44,
+    44,
+    63,
+    27
    ],
-   "worst": 116,
+   "worst": 103,
    "worst_foe": "Porygon-Z",
    "safe": 1,
    "mult": {
     "NORMAL": 1.0,
     "DRAGON": 1.0,
-    "PSYCHIC": 0.0,
-    "FIGHTING": 2.0,
-    "STEEL": 1.0,
-    "ELECTRIC": 1.0
+    "PSYCHIC": 1.0,
+    "FIGHTING": 0.25,
+    "ELECTRIC": 1.0,
+    "STEEL": 1.0
    },
    "rm": [
-    0.25,
-    0.0,
-    1.0,
-    1.0,
-    2.0,
-    1.0,
     2.0,
     1.0,
     1.0,
-    0.0,
     0.5,
+    0.25,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
     1.0,
     2.0,
+    1.0,
+    0.25,
     1.0,
     1.0,
     1.0,
@@ -885,28 +793,128 @@
     1.0
    ],
    "off": [
+    0.0,
     2.0,
-    1.5,
-    1.5,
+    0.0,
+    0.0,
     2.0,
-    1.5,
+    0.0
+   ],
+   "answers": [],
+   "why": [
+    {
+     "move": "Sludge Bomb",
+     "why": "Your best hit on Stoutland, Appletun, Noivern, Porygon-Z; Super effective on Appletun; STAB; no effect on Klinklang",
+     "flag": false
+    },
+    {
+     "move": "Psychic",
+     "why": "Your best hit on Stoutland, Noivern, Porygon-Z, Kommo-o; Super effective on Kommo-o; STAB",
+     "flag": false
+    },
+    {
+     "move": "Shadow Ball",
+     "why": "Your best hit on Klinklang; no effect on Stoutland, Porygon-Z",
+     "flag": false
+    },
+    {
+     "move": "Protect",
+     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
+     "flag": false
+    }
+   ],
+   "warn": []
+  },
+  {
+   "core": true,
+   "role": "Mid game",
+   "name": "Veluza (Aevian Form)",
+   "tier": "S",
+   "types": [
+    "WATER",
+    "FIRE"
+   ],
+   "sid": "VELUZA",
+   "form": "1",
+   "lead": false,
+   "where": "Active",
+   "moves": [
+    "Wave Crash",
+    "Flare Blitz",
+    "Head Smash",
+    "Protect"
+   ],
+   "ability": "RECKLESS",
+   "take": [
+    98,
+    78,
+    124,
+    150,
+    146,
+    118
+   ],
+   "deal": [
+    60,
+    18,
+    73,
+    71,
+    20,
+    88
+   ],
+   "worst": 150,
+   "worst_foe": "Porygon-Z",
+   "safe": 0,
+   "mult": {
+    "NORMAL": 1.0,
+    "DRAGON": 1.0,
+    "PSYCHIC": 1.0,
+    "FIGHTING": 1.0,
+    "ELECTRIC": 2.0,
+    "STEEL": 0.25
+   },
+   "rm": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.25,
+    0.25,
+    2.0
+   ],
+   "off": [
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    0.0,
     2.0
    ],
    "answers": [],
    "why": [
     {
-     "move": "Crunch",
-     "why": "Your best hit on Noivern; STAB",
+     "move": "Wave Crash",
+     "why": "Your best hit on Stoutland, Porygon-Z, Kommo-o; STAB",
      "flag": false
     },
     {
-     "move": "High Jump Kick",
-     "why": "Your best hit on Stoutland, Appletun, Porygon-Z, Kommo-o, Klinklang; Super effective on Stoutland, Porygon-Z, Klinklang; STAB",
+     "move": "Flare Blitz",
+     "why": "Your best hit on Stoutland, Appletun, Porygon-Z, Kommo-o, Klinklang; Super effective on Klinklang; STAB",
      "flag": false
     },
     {
-     "move": "Fake Out",
-     "why": "x1.5 on this field; Flinches on its first turn: a free hit, x1.5 on Concert Venue",
+     "move": "Head Smash",
+     "why": "Your best hit on Noivern; Super effective on Noivern",
      "flag": false
     },
     {
@@ -920,18 +928,7 @@
  ],
  "alts": [
   {
-   "score": 134.5,
-   "in": [
-    "Sylveon",
-    "Clodsire"
-   ],
-   "out": [
-    "Muk (Alolan Form)",
-    "Glalie (Aevian Form)"
-   ]
-  },
-  {
-   "score": 134.2,
+   "score": 87.2,
    "in": [
     "Solrock (Solrock Dominant Fusion)"
    ],
@@ -940,52 +937,110 @@
    ]
   },
   {
-   "score": 132.7,
+   "score": 86.1,
    "in": [
-    "Sylveon",
-    "Solrock (Solrock Dominant Fusion)",
-    "Clodsire"
+    "Arcanine (Hisuian Form)",
+    "Golurk"
    ],
    "out": [
     "Lapras (Aevian Form)",
-    "Muk (Alolan Form)",
-    "Glalie (Aevian Form)"
+    "Scrafty"
+   ]
+  },
+  {
+   "score": 84.5,
+   "in": [
+    "Chandelure"
+   ],
+   "out": [
+    "Lapras (Aevian Form)"
    ]
   }
  ],
  "swaps": {
-  "Chandelure": [
-   {
-    "name": "Emboar",
-    "tier": "B",
-    "sid": "EMBOAR",
-    "form": "0",
-    "delta": -13.2,
-    "res": 4,
-    "se": 3,
-    "oneshot": [
-     "Porygon-Z",
-     "Kommo-o"
-    ]
-   },
+  "Golisopod (Aevian Form)": [
    {
     "name": "Clodsire",
     "tier": "B",
     "sid": "CLODSIRE",
     "form": "0",
-    "delta": -16.9,
+    "delta": 4.6,
     "res": 3,
     "se": 1,
     "oneshot": []
+   },
+   {
+    "name": "Amoonguss",
+    "tier": "A",
+    "sid": "AMOONGUSS",
+    "form": "0",
+    "delta": 0.8,
+    "res": 4,
+    "se": 1,
+    "oneshot": [
+     "Porygon-Z"
+    ]
    }
   ],
-  "Azumarill": [
+  "Slowking (Galarian Form)": [
+   {
+    "name": "Chandelure",
+    "tier": "B",
+    "sid": "CHANDELURE",
+    "form": "0",
+    "delta": 18.1,
+    "res": 9,
+    "se": 1,
+    "oneshot": [
+     "Kommo-o"
+    ]
+   },
+   {
+    "name": "Muk (Alolan Form)",
+    "tier": "S",
+    "sid": "MUK",
+    "form": "1",
+    "delta": 11.2,
+    "res": 5,
+    "se": 1,
+    "oneshot": [
+     "Porygon-Z"
+    ]
+   }
+  ],
+  "Veluza (Aevian Form)": [
+   {
+    "name": "Azumarill",
+    "tier": "B",
+    "sid": "AZUMARILL",
+    "form": "0",
+    "delta": 16.1,
+    "res": 7,
+    "se": 3,
+    "oneshot": [
+     "Porygon-Z"
+    ]
+   },
+   {
+    "name": "Muk (Alolan Form)",
+    "tier": "S",
+    "sid": "MUK",
+    "form": "1",
+    "delta": 14.2,
+    "res": 5,
+    "se": 1,
+    "oneshot": [
+     "Porygon-Z"
+    ]
+   }
+  ],
+  "Musharna (Aevian Form)": [
    {
     "name": "Sylveon",
     "tier": "B",
     "sid": "SYLVEON",
     "form": "0",
-    "delta": -13.9,
+    "delta": -0.2,
     "res": 6,
     "se": 3,
     "oneshot": [
@@ -993,16 +1048,15 @@
     ]
    },
    {
-    "name": "Clefable",
-    "tier": "A",
-    "sid": "CLEFABLE",
+    "name": "Azumarill",
+    "tier": "B",
+    "sid": "AZUMARILL",
     "form": "0",
-    "delta": -17.5,
-    "res": 6,
+    "delta": -0.5,
+    "res": 7,
     "se": 3,
     "oneshot": [
-     "Porygon-Z",
-     "Klinklang"
+     "Porygon-Z"
     ]
    }
   ],
@@ -1012,7 +1066,7 @@
     "tier": "B",
     "sid": "SOLROCK",
     "form": "1",
-    "delta": -0.8,
+    "delta": -1.8,
     "res": 8,
     "se": 3,
     "oneshot": [
@@ -1020,63 +1074,15 @@
     ]
    },
    {
-    "name": "Sylveon",
+    "name": "Chandelure",
     "tier": "B",
-    "sid": "SYLVEON",
+    "sid": "CHANDELURE",
     "form": "0",
-    "delta": -9.2,
-    "res": 6,
-    "se": 3,
-    "oneshot": [
-     "Klinklang"
-    ]
-   }
-  ],
-  "Muk (Alolan Form)": [
-   {
-    "name": "Amoonguss",
-    "tier": "A",
-    "sid": "AMOONGUSS",
-    "form": "0",
-    "delta": -4.8,
-    "res": 4,
+    "delta": -4.5,
+    "res": 9,
     "se": 1,
     "oneshot": [
-     "Porygon-Z"
-    ]
-   },
-   {
-    "name": "Clodsire",
-    "tier": "B",
-    "sid": "CLODSIRE",
-    "form": "0",
-    "delta": -5.0,
-    "res": 3,
-    "se": 1,
-    "oneshot": []
-   }
-  ],
-  "Glalie (Aevian Form)": [
-   {
-    "name": "Clodsire",
-    "tier": "B",
-    "sid": "CLODSIRE",
-    "form": "0",
-    "delta": -2.4,
-    "res": 3,
-    "se": 1,
-    "oneshot": []
-   },
-   {
-    "name": "Golisopod (Aevian Form)",
-    "tier": "S",
-    "sid": "GOLISOPOD",
-    "form": "1",
-    "delta": -5.0,
-    "res": 3,
-    "se": 2,
-    "oneshot": [
-     "Porygon-Z"
+     "Kommo-o"
     ]
    }
   ],
@@ -1086,7 +1092,7 @@
     "tier": "B",
     "sid": "EMBOAR",
     "form": "0",
-    "delta": -6.4,
+    "delta": -7.0,
     "res": 4,
     "se": 3,
     "oneshot": [
@@ -1095,20 +1101,39 @@
     ]
    },
    {
-    "name": "Hariyama",
+    "name": "Pangoro",
     "tier": "B",
-    "sid": "HARIYAMA",
+    "sid": "PANGORO",
     "form": "0",
-    "delta": -11.1,
-    "res": 1,
+    "delta": -8.0,
+    "res": 4,
     "se": 3,
     "oneshot": [
-     "Porygon-Z"
+     "Porygon-Z",
+     "Kommo-o"
     ]
    }
   ]
  },
  "poolfit": [
+  {
+   "name": "Musharna (Aevian Form)",
+   "tier": "A",
+   "sid": "MUSHARNA",
+   "form": "1",
+   "fit": 18.1,
+   "grade": "Great",
+   "res": 7,
+   "weak": 1,
+   "nmoves": 18,
+   "se": 3,
+   "oneshot": [
+    "Porygon-Z",
+    "Klinklang"
+   ],
+   "in_six": true,
+   "where": "Party"
+  },
   {
    "name": "Sylveon",
    "tier": "B",
@@ -1158,7 +1183,7 @@
    "oneshot": [
     "Kommo-o"
    ],
-   "in_six": true,
+   "in_six": false,
    "where": "Active"
   },
   {
@@ -1175,7 +1200,7 @@
    "oneshot": [
     "Porygon-Z"
    ],
-   "in_six": true,
+   "in_six": false,
    "where": "Active"
   },
   {
@@ -1243,7 +1268,7 @@
    "oneshot": [
     "Porygon-Z"
    ],
-   "in_six": true,
+   "in_six": false,
    "where": "Party"
   },
   {
@@ -1278,26 +1303,8 @@
    "oneshot": [
     "Klinklang"
    ],
-   "in_six": true,
-   "where": "Active"
-  },
-  {
-   "name": "Musharna (Aevian Form)",
-   "tier": "A",
-   "sid": "MUSHARNA",
-   "form": "1",
-   "fit": 11.5,
-   "grade": "Great",
-   "res": 7,
-   "weak": 1,
-   "nmoves": 18,
-   "se": 0,
-   "oneshot": [
-    "Porygon-Z",
-    "Klinklang"
-   ],
    "in_six": false,
-   "where": "Party"
+   "where": "Active"
   },
   {
    "name": "Ninetales (Alolan Form)",
@@ -1365,7 +1372,7 @@
    "oneshot": [
     "Porygon-Z"
    ],
-   "in_six": false,
+   "in_six": true,
    "where": "Active"
   },
   {
@@ -1414,7 +1421,7 @@
    "oneshot": [
     "Porygon-Z"
    ],
-   "in_six": false,
+   "in_six": true,
    "where": "Active"
   },
   {
@@ -1685,7 +1692,7 @@
     "Kommo-o",
     "Klinklang"
    ],
-   "in_six": false,
+   "in_six": true,
    "where": "Active"
   },
   {
@@ -2096,37 +2103,54 @@
   }
  ],
  "pool": 55,
- "score": 135.0,
- "cmp": 16.5,
+ "score": 89.0,
+ "cmp": -2.5,
  "break_field": null,
  "checks": {
   "weak3": [],
   "nores": [],
   "res_lt2": [
+   "NORMAL",
    "DRAGON",
-   "STEEL",
-   "ELECTRIC"
+   "ELECTRIC",
+   "STEEL"
   ],
   "no_se": [],
   "one_shot": [
    [
-    "Chandelure",
+    "Golisopod (Aevian Form)",
+    "Porygon-Z"
+   ],
+   [
+    "Slowking (Galarian Form)",
+    "Porygon-Z"
+   ],
+   [
+    "Veluza (Aevian Form)",
+    "Noivern"
+   ],
+   [
+    "Veluza (Aevian Form)",
+    "Porygon-Z"
+   ],
+   [
+    "Veluza (Aevian Form)",
     "Kommo-o"
    ],
    [
-    "Azumarill",
-    "Porygon-Z"
-   ],
-   [
-    "Lapras (Aevian Form)",
+    "Veluza (Aevian Form)",
     "Klinklang"
    ],
    [
-    "Muk (Alolan Form)",
+    "Musharna (Aevian Form)",
     "Porygon-Z"
    ],
    [
-    "Glalie (Aevian Form)",
+    "Musharna (Aevian Form)",
+    "Klinklang"
+   ],
+   [
+    "Lapras (Aevian Form)",
     "Klinklang"
    ],
    [
@@ -2135,18 +2159,19 @@
    ]
   ],
   "unanswered": [
+   "Setup (stat boosts)",
    "Spread attacks"
   ]
  },
  "alt_plan": {
-  "cmp": 16.5,
+  "cmp": -2.5,
   "six": [
-   "Glalie (Aevian Form)",
-   "Chandelure",
-   "Azumarill",
+   "Scrafty",
+   "Musharna (Aevian Form)",
    "Lapras (Aevian Form)",
-   "Muk (Alolan Form)",
-   "Scrafty"
+   "Golisopod (Aevian Form)",
+   "Slowking (Galarian Form)",
+   "Veluza (Aevian Form)"
   ],
   "break_field": false
  }

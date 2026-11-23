@@ -211,7 +211,9 @@ def main():
                     st.setdefault('abilities', {})[n] = (st.get('abilities') or {}).get(n) or IDEAL.get(n, {}).get('ability') or ''
             print([l for l in open(os.path.join(TEAMD, 'one_six.json')).read().splitlines()][:1] and 'ONE SIX: ' + ', '.join(st['team']))
         nxt = next((k for k in ORDER9 if k not in st['done']), None)
-        if not st.get('fight') and nxt:   # last fight beaten: the next fight's six becomes the team (core + its 2 swaps)
+        if not st.get('fight') and nxt and st.get('mode') == 'planner':   # 23 Nov: planner mode: just the next fight (the planner picks the six)
+            st['fight'] = nxt
+        elif not st.get('fight') and nxt:   # last fight beaten: the next fight's six becomes the team (core + its 2 swaps)
             P = json.load(open(os.path.join(TEAMD, 'fight_plans.json')))[nxt]
             sw = [r['name'] for r in P['swaps']]
             st['fight'] = nxt; st['team'] = list(st['core'][:3]) + sw + list(st['core'][3:]); order_team(st)   # closer last (21 Nov)
@@ -235,6 +237,7 @@ def main():
 
     if st.get('mode') == 'planner':   # 23 Nov (Vincent): the Team Planner picks the whole six from Party + Active for the next fight
         json.dump(dict(st, export=new), open(STATE, 'w'), indent=1, ensure_ascii=False)
+        print(sh(['../scripts/team/core4.py'], env).strip())   # 23 Nov: the general core of 4 first (the planner locks it)
         print(sh(['../scripts/team/planner.py'], dict(env, BASE_RUN=f'r{run}')).strip())   # plan A: keep the field
         print(sh(['../scripts/team/planner.py'], dict(env, BASE_RUN=f'r{run}', PLAN_BREAK='1', PLAN_APPLY='1')).strip())   # plan B: Flash breaks it; the better plan wins
         _s3 = json.load(open(STATE)); st['team'] = _s3['team']; st['moves'] = _s3['moves']; st['abilities'] = _s3['abilities']

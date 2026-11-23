@@ -107,7 +107,7 @@
    "moves": [
     "Lovely Kiss",
     "Shadow Claw",
-    "Gastro Acid",
+    "Play Rough",
     "Protect"
    ],
    "ability": "TOUGHCLAWS",
@@ -129,21 +129,20 @@
    ]
   }
  ],
- "score": 44.24,
+ "score": 44.49,
  "parts": {
   "strength": 33.14,
   "defense": 4.2,
-  "offense": 3.75,
+  "offense": 4.0,
   "synergy": 2.25,
   "aevian": 0.9,
   "shared": [],
   "triple": [],
   "resisted": 14,
-  "covered": 15,
+  "covered": 16,
   "uncovered": [
    "NORMAL",
-   "WATER",
-   "DRAGON"
+   "WATER"
   ],
   "why": [
    "Physical and special attackers: one Intimidate or screen cannot stop both",
@@ -155,22 +154,22 @@
   {
    "out": "Musharna (Aevian Form)",
    "in": "Glalie (Aevian Form)",
-   "delta": -0.25
-  },
-  {
-   "out": "Musharna (Aevian Form)",
-   "in": "Gastrodon (West Aevian Form)",
-   "delta": -1.09
+   "delta": -0.5
   },
   {
    "out": "Slowking (Galarian Form)",
    "in": "Muk (Alolan Form)",
-   "delta": -1.2
+   "delta": -0.95
+  },
+  {
+   "out": "Musharna (Aevian Form)",
+   "in": "Gastrodon (West Aevian Form)",
+   "delta": -1.34
   },
   {
    "out": "Musharna (Aevian Form)",
    "in": "Alomomola",
-   "delta": -1.33
+   "delta": -1.58
   }
  ],
  "pool": 26,

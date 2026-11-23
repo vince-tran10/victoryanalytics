@@ -607,26 +607,44 @@
   {
    "slot": 5,
    "title": "Flex 1 · Mid game · Spirit Jenner",
-   "pick": "Glalie (Aevian Form)",
-   "rec": "Glalie (Aevian Form)",
+   "pick": "Scrafty",
+   "rec": "Scrafty",
    "flex": true,
    "cands": [
     {
-     "name": "Glalie (Aevian Form)",
-     "tier": "S",
+     "name": "Scrafty",
+     "tier": "B",
      "stats": [
-      "Resists 2 types",
-      "Weak to 4 types"
+      "Resists 4 types",
+      "Weak to 3 types",
+      "Single target only"
      ],
      "tools": [
-      "Spread: Rock Slide",
-      "Priority: Grassy Glide"
+      "Counters: Stoutland",
+      "Disrupt: Fake Out"
      ],
      "teach": [],
-     "sid": "GLALIE",
-     "form": "1",
+     "sid": "SCRAFTY",
+     "form": "0",
      "pick": true,
      "rec": true
+    },
+    {
+     "name": "Arcanine (Hisuian Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 7 types",
+      "Weak to 4 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Priority: Extreme Speed"
+     ],
+     "teach": [],
+     "sid": "ARCANINE",
+     "form": "1",
+     "pick": false,
+     "rec": false
     },
     {
      "name": "Clefable",
@@ -661,6 +679,23 @@
      "rec": false
     },
     {
+     "name": "Glalie (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 2 types",
+      "Weak to 4 types"
+     ],
+     "tools": [
+      "Spread: Rock Slide",
+      "Priority: Grassy Glide"
+     ],
+     "teach": [],
+     "sid": "GLALIE",
+     "form": "1",
+     "pick": false,
+     "rec": false
+    },
+    {
      "name": "Ninetales (Alolan Form)",
      "tier": "A",
      "stats": [
@@ -676,48 +711,28 @@
      "form": "1",
      "pick": false,
      "rec": false
-    },
-    {
-     "name": "Arcanine (Hisuian Form)",
-     "tier": "A",
-     "stats": [
-      "Resists 7 types",
-      "Weak to 4 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Priority: Extreme Speed"
-     ],
-     "teach": [],
-     "sid": "ARCANINE",
-     "form": "1",
-     "pick": false,
-     "rec": false
     }
    ]
   },
   {
    "slot": 6,
    "title": "Flex 2 · Closer · Spirit Jenner",
-   "pick": "Chandelure",
-   "rec": "Chandelure",
+   "pick": "Musharna (Aevian Form)",
+   "rec": "Musharna (Aevian Form)",
    "flex": true,
    "cands": [
     {
-     "name": "Chandelure",
-     "tier": "B",
+     "name": "Musharna (Aevian Form)",
+     "tier": "A",
      "stats": [
-      "Resists 9 types",
-      "Weak to 5 types",
+      "Resists 4 types",
+      "Weak to 3 types",
       "Single target only"
      ],
-     "tools": [
-      "Counters: Klinklang",
-      "Status: Will-O-Wisp"
-     ],
+     "tools": [],
      "teach": [],
-     "sid": "CHANDELURE",
-     "form": "0",
+     "sid": "MUSHARNA",
+     "form": "1",
      "pick": true,
      "rec": true
     },
@@ -735,6 +750,40 @@
      ],
      "teach": [],
      "sid": "AZUMARILL",
+     "form": "0",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Palossand (Fiery Aevian Form)",
+     "tier": "B",
+     "stats": [
+      "Resists 9 types",
+      "Weak to 5 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Setup: Iron Defense"
+     ],
+     "teach": [],
+     "sid": "PALOSSAND",
+     "form": "2",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Revavroom",
+     "tier": "B",
+     "stats": [
+      "Resists 10 types",
+      "Weak to 2 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Setup: Shift Gear"
+     ],
+     "teach": [],
+     "sid": "REVAVROOM",
      "form": "0",
      "pick": false,
      "rec": false

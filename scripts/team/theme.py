@@ -50,8 +50,10 @@ def build_html(b, p, here):
             '</dd><dt>Item</dt><dd>' + E(b['item']) + '</dd></dl><ul class="mvs">' + ''.join('<li>' + E(m) + '</li>' for m in b['moves']) + '</ul>'
             + ('<ul class="todo-mini">' + todo + '</ul>' if todo else '') + ('<div class="slot-sub">' + here + '</div>' if here else ''))
 slots = ''
-try: _PL_LEADS = {m['name'] for m in json.load(open('team/planner.json'))['six'] if m['lead']}
-except Exception: _PL_LEADS = set()
+try:
+    _PLJ = json.load(open('team/planner.json')); _PL_MEM = {m['name']: m for m in _PLJ['six']}; _PL_LEADS = {m['name'] for m in _PLJ['six'] if m['lead']}
+except Exception:
+    _PLJ, _PL_MEM, _PL_LEADS = {}, {}, set()
 for i, nm in enumerate(st['team']):
     d = disp(nm); r = T.get(nm, {}); p = party.get(d) or {}
     lv = p.get('level') or max([x.get('level') or 0 for x in cb.parse(st['export']) if x.get('species') == d] or [0])   # not in the party yet: its box level
@@ -65,8 +67,9 @@ for i, nm in enumerate(st['team']):
         _mv = {re.sub(r'[^A-Z]', '', m.upper()) for m in (st.get('moves') or {}).get(nm, [])}
         role = ('Closer' if _mv & {'SWORDSDANCE', 'DRAGONDANCE', 'NASTYPLOT', 'CALMMIND', 'SHELLSMASH', 'SHIFTGEAR',
                 'QUIVERDANCE', 'BULKUP', 'CURSE', 'FILLETAWAY', 'TIDYUP', 'VICTORYDANCE'} else 'Mid game')
-    if st.get('mode') == 'planner':   # 23 Nov (Vincent): no core slots any more: only the planner's leads are marked
-        tag = 'Lead' if nm in _PL_LEADS else ''; role = ''
+    if st.get('mode') == 'planner':   # 23 Nov (Vincent): core 4 (Core Builder) + 2 flexes; slot 1 = lead, slot 2 = doubles lead
+        _pm = _PL_MEM.get(nm) or {}
+        tag = 'Core' if _pm.get('core') else 'Flex'; role = _pm.get('role', '')
     here = '' if p else '<span class="slot-miss">not in party</span>'
     slots += (f'<li class="slot{" is-core" if nm in core else ""}">' + spr(nm, 'l', bool(p.get('shiny'))) + f'<div class="slot-top"><span class="slot-n">{i + 1}</span>'
               + (f'<span class="slot-tag">{tag}{" · " + E(role) if role else ""}</span>' if tag else '') + '</div>'
@@ -93,7 +96,31 @@ if _zn and any(n.startswith('Zoroark') for n in st.get('team') or []):   # 22 No
     _lines = ['Zoroark Crest → copies <b>' + E(disp(_zn['copies'])) + '</b> (' + E(_ab or '—') + ')', ('⚠ Party order changed' if _zn['moved'] else 'Order unchanged')]
     if _lo and not _zn['moved']: _lines.append('Considered ' + E(', '.join(disp(o['lead']) for o in _lo)) + ': not worth moving a lead')
     zoro_box = '<ul class="zbox' + (' moved' if _zn['moved'] else '') + '">' + ''.join('<li>' + l + '</li>' for l in _lines) + '</ul>'
-hero = f'<div class="hero"><div class="hero-head"><h3>Your party</h3></div>{zoro_box}<ol class="party">{slots}</ol>{nxt}</div>'
+# 23 Nov (Vincent): the 2 flexes are for the NEXT fight: field, format, opponent, guide tips, notes, and the flex's role
+flexbox = ''
+if st.get('mode') == 'planner' and _PLJ:
+    _FN = [f['name'] for f in _PLJ.get('foes', [])]
+    _TT = {'jenner9': 'Spirit Jenner', 'spector': 'Spector (day)', 'spector2': 'Spector (night)', 'erick': 'Erick', 'amanda': 'Amanda', 'karrina': 'Karrina'}
+    _fl = [m for m in _PLJ['six'] if not m.get('core')]
+    _li = []
+    for m in _fl:
+        walls = [_FN[j] for j in range(len(_FN)) if m['take'][j] < 50][:3]
+        beats = [_FN[j] for j in range(len(_FN)) if m['deal'][j] >= 100][:3]
+        tips_ = [t['tip'] for t in _PLJ.get('tips') or [] if any(any(x.startswith(m['name'] + ':') for x in n_['met_by']) for n_ in t['needs'])]
+        why_ = ([f'Takes under half from {", ".join(walls)}'] if walls else []) + ([f'Knocks out {", ".join(beats)}'] if beats else []) + [f'Guide: {t}' for t in tips_[:1]]
+        _li.append(f'<li><div class="fxh">{spr(m["name"], "s")}<b>{E(disp(m["name"]))}</b><span class="fxr">{E(m["role"])}</span></div>'
+                   + ''.join(f'<div class="fxw">{E(w)}</div>' for w in why_[:3]) + '</li>')
+    _info = [f'Opponent: {_TT.get(_PLJ.get("fight"), _PLJ.get("fight"))}', f'Field: {_PLJ.get("field") or "none"}', f'Format: {_PLJ.get("format")}']
+    if _FN: _info.append(f'Their lead: {" + ".join(_FN[:2 if _PLJ.get("format") == "Doubles" else 1])}')
+    _thr = [f for j, f in enumerate(_FN) if sum(1 for m in _PLJ['six'] if m['take'][j] >= 100) >= 2]
+    _notes = [f'Watch {f}: can one-shot 2+ of your six' for f in _thr[:3]]
+    if _PLJ.get('break_field'): _notes.insert(0, f'Turn 1: {disp(_PLJ["break_field"]["user"])} uses {_PLJ["break_field"]["move"]} to break the field')
+    _tips = _PLJ.get('tips') or []
+    flexbox = ('<div class="flexbox"><div class="fxt">Flexes for the next fight</div>' + ''.join(f'<div class="fxi">{E(x)}</div>' for x in _info)
+               + f'<ul class="fxl">{"".join(_li)}</ul>' + ''.join(f'<div class="fxn">{E(x)}</div>' for x in _notes)
+               + (f'<details class="fxd"><summary>Guide tips ({len(_tips)})</summary>' + ''.join(f'<div class="fxi">{E(t["tip"])}</div>' for t in _tips) + '</details>'
+                  if _tips else '<div class="fxi">No guide tips yet: paste them in chat</div>') + '</div>')
+hero = f'<div class="hero"><div class="hero-head"><h3>Your party</h3></div>{zoro_box}<ol class="party">{slots}</ol>{flexbox}{nxt}</div>'
 page = re.sub(r'(<section aria-labelledby="s1">\s*<h2 id="s1">.*?</h2>)', lambda m: m.group(1) + hero, page, count=1, flags=re.S)
 
 page = re.sub(r'<div class="panel pad lvl">.*?</div>\s*', '', page, count=1, flags=re.S)   # the party slots show levels now
@@ -1191,6 +1218,11 @@ details.ckref { display: block }
 footer { max-width: 1120px; margin: 0 auto; padding: 0 max(16px, env(safe-area-inset-right, 0px)) 0 max(16px, env(safe-area-inset-left, 0px)) }
 
 .ds-pc { list-style: none; padding-left: 0 } .ds-pc li { display: flex; gap: 6px } .pc-up b { color: #1f8a4c } .pc-dn b { color: #b3261e } .pc-nt b { color: var(--muted) }
+.flexbox { margin-top: 12px; padding: 12px 14px; border-radius: 14px; background: var(--panel); border: 1px solid var(--line); display: grid; gap: 4px }
+.fxt { font: 700 15px var(--display) } .fxi { font-size: 13px; color: var(--muted) } .fxn { font-size: 13px; color: #b3261e }
+.fxl { list-style: none; margin: 6px 0; padding: 0; display: grid; gap: 8px } .fxh { display: flex; align-items: center; gap: 6px }
+.fxr { margin-left: auto; font: 700 11px var(--body); text-transform: uppercase; color: var(--accent) } .fxw { font-size: 12.5px; padding-left: 26px }
+.fxd summary { cursor: pointer; font-size: 13px; font-weight: 600 }
 </style>'''
 CSS = CSS.replace('</style>', ''.join(f'.tmx-t th.ty-{k.lower()} {{ background: {v} }} ' for k, v in TYPE.items()) + '</style>', 1)
 DEXJS = r'''<script id="dex-js">

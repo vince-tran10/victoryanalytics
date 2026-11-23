@@ -1,13 +1,13 @@
 {
- "anchor_low": 0.17,
- "anchor_median": 0.312,
+ "anchor_low": 0.074,
+ "anchor_median": 0.295,
  "team": {
-  "Glalie (Aevian Form)": 0.311,
-  "Chandelure": 0.426,
-  "Azumarill": 0.312,
+  "Scrafty": 0.403,
+  "Musharna (Aevian Form)": 0.074,
   "Lapras (Aevian Form)": 0.25,
-  "Muk (Alolan Form)": 0.17,
-  "Scrafty": 0.403
+  "Golisopod (Aevian Form)": 0.325,
+  "Slowking (Galarian Form)": 0.295,
+  "Veluza (Aevian Form)": 0.172
  },
  "rows": [
   {
@@ -138,7 +138,7 @@
     "Crunch"
    ],
    "ability": "RKSSYSTEM",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Furret",
@@ -154,7 +154,7 @@
     "Sucker Punch"
    ],
    "ability": "FRISK",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Torterra",
@@ -329,7 +329,7 @@
    "gain": 0.078,
    "attacks": [
     "Night Slash",
-    "Secret Power",
+    "Facade",
     "Ice Fang"
    ],
    "ability": "INTIMIDATE",
@@ -362,7 +362,7 @@
    "without": 0.013,
    "gain": 0.205,
    "attacks": [
-    "Secret Power",
+    "Facade",
     "Shadow Claw",
     "Low Sweep"
    ],
@@ -414,7 +414,7 @@
    "attacks": [
     "Gunk Shot",
     "Bullet Seed",
-    "Rock Smash"
+    "Power-Up Punch"
    ],
    "ability": "GLUTTONY",
    "tier": "A"
@@ -497,7 +497,7 @@
     "Megahorn"
    ],
    "ability": "SAPSIPPER",
-   "tier": "B"
+   "tier": "A"
   },
   {
    "name": "Phione",
@@ -510,11 +510,11 @@
    "gain": 0.157,
    "attacks": [
     "Surf",
-    "Secret Power",
+    "Facade",
     "Deluge"
    ],
    "ability": "HYDRATION",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Skuntank",
@@ -529,7 +529,7 @@
     "Sucker Punch"
    ],
    "ability": "STENCH",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Boltund",
@@ -546,7 +546,7 @@
     "Play Rough"
    ],
    "ability": "STRONGJAW",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Bastiodon",
@@ -562,7 +562,7 @@
     "Rock Blast"
    ],
    "ability": "SOUNDPROOF",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Whiscash",
@@ -579,7 +579,7 @@
     "Bounce"
    ],
    "ability": "OBLIVIOUS",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Vespiquen",
@@ -595,7 +595,7 @@
     "Air Slash"
    ],
    "ability": "PRESSURE",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Sunflora",
@@ -611,7 +611,7 @@
     "Sludge Bomb"
    ],
    "ability": "SOLARPOWER",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Electrode",
@@ -627,7 +627,7 @@
     "Signal Beam"
    ],
    "ability": "AFTERMATH",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Oricorio (Pom-Pom Style)",
@@ -643,7 +643,7 @@
     "Revelation Dance"
    ],
    "ability": "DANCER",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Ariados",
@@ -660,7 +660,7 @@
     "Poison Jab"
    ],
    "ability": "SNIPER",
-   "tier": "D"
+   "tier": "B"
   },
   {
    "name": "Simipour",
@@ -805,7 +805,7 @@
    "without": -0.026,
    "gain": 0.024,
    "attacks": [
-    "Secret Power",
+    "Facade",
     "Fire Blast",
     "Thief"
    ],
@@ -823,7 +823,7 @@
    "gain": 0.087,
    "attacks": [
     "Sucker Punch",
-    "Secret Power"
+    "Facade"
    ],
    "ability": "HUGEPOWER",
    "tier": "C"

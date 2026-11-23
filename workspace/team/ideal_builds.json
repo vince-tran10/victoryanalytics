@@ -717,7 +717,7 @@
    "HEADSMASH"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "your team"
  },
  "Lucario": {
   "ability": "INNERFOCUS",
@@ -4674,7 +4674,7 @@
   "moves": [
    "Lovely Kiss",
    "Shadow Claw",
-   "Gastro Acid",
+   "Play Rough",
    "Protect"
   ],
   "move_ids": [

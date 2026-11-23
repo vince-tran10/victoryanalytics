@@ -4,9 +4,9 @@
  "export_label": "23 Nov 08:03",
  "active_start": 468,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 300,
- "run": 314,
- "final": 318,
+ "roster": 302,
+ "run": 316,
+ "final": 320,
  "done": [
   "aelita",
   "narcissa1",
@@ -36,12 +36,12 @@
  ],
  "fight": "jenner9",
  "team": [
-  "Glalie (Aevian Form)",
-  "Chandelure",
-  "Azumarill",
+  "Scrafty",
+  "Musharna (Aevian Form)",
   "Lapras (Aevian Form)",
-  "Muk (Alolan Form)",
-  "Scrafty"
+  "Golisopod (Aevian Form)",
+  "Slowking (Galarian Form)",
+  "Veluza (Aevian Form)"
  ],
  "moves": {
   "Golisopod (Aevian Form)": [
@@ -155,7 +155,7 @@
   "Musharna (Aevian Form)": [
    "Lovely Kiss",
    "Shadow Claw",
-   "Gastro Acid",
+   "Play Rough",
    "Protect"
   ],
   "Mandibuzz": [
@@ -211,6 +211,12 @@
    "Zen Headbutt",
    "Dragon Dance",
    "Sing"
+  ],
+  "Veluza (Aevian Form)": [
+   "Wave Crash",
+   "Flare Blitz",
+   "Head Smash",
+   "Protect"
   ]
  },
  "promote": "team/promote_1108.json",
@@ -305,7 +311,8 @@
   "Aurorus": "REFRIGERATE",
   "Chandelure": "FLASHFIRE",
   "Azumarill": "HUGEPOWER",
-  "Lapras (Aevian Form)": "NOGUARD"
+  "Lapras (Aevian Form)": "NOGUARD",
+  "Veluza (Aevian Form)": "RECKLESS"
  },
  "crests_owned": [
   "Dedenne Crest",
