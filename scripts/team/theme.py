@@ -642,6 +642,7 @@ def why_tier(r, ab_id, moves):   # 22 Nov (Vincent): the tier = 70% META DOMINAN
     if gp is not None:
         out.append(f"In-game: top {max(1, round(100 * (1 - gp)))}% of your box" + (f" across all {n_all} fights in the game" if n_all else ''))
     return out
+DROLES = (json.load(open('team/builder.json')).get('roles') or {}) if os.path.exists('team/builder.json') else {}   # 22 Nov: Dex roles (builder.py)
 for r in T.values():
     d_ = disp(r['name']); ib = IDB.get(r['name']) or {}; pty = party.get(d_)
     # 22 Nov (Vincent): the sheet always shows the IDEAL build (team members: the build I recommend for their role);
@@ -667,7 +668,7 @@ for r in T.values():
     ab_id = re.sub(r'[^A-Z]', '', ab_.upper())
     _why = why_tier(r, ab_id, mv_)
     DEX[d_] = dict(t=r['tier'], s=r['blend'], m=meta_top(r['meta_label']), ty=r['types'], b=r['base'], bp=[_pct(k, r['base'][k]) for k in _STATS],
-                   a=ab_, n=nat_txt(nat_), e=evs_, mv=mv_, it=it_, src=src_, why=_why, y=yours, sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])
+                   a=ab_, n=nat_txt(nat_), e=evs_, mv=mv_, it=it_, src=src_, why=_why, y=yours, ro=(DROLES.get(d_) or ['Attacker', '']), sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])
 TMJS = '\n<script>\n(function(){   /* 22 Nov (Vincent): Builder type matrix: ticked Pokémon x attacking types */\n  var el = document.getElementById(\'tmdata\'), tb = document.getElementById(\'tmx\'); if (!el || !tb) return;\n  var D = JSON.parse(el.textContent), KEY = \'tm-sel\', sel = null;\n  try { sel = JSON.parse(localStorage.getItem(KEY) || \'null\'); } catch (e) {}\n  var boxes = function(){ return Array.prototype.slice.call(document.querySelectorAll(\'input[data-tm]\')); };\n  if (sel) boxes().forEach(function(b){ b.checked = sel.indexOf(b.dataset.tm) >= 0; });\n  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {\'&\':\'&amp;\',\'<\':\'&lt;\',\'>\':\'&gt;\',\'"\':\'&quot;\'}[c]; }); }\n  function fmt(m){ return m === 0 ? \'0\' : m === 0.25 ? \'¼\' : m === 0.5 ? \'½\' : m === 1 ? \'\' : m + \'×\'; }\n  function cls(m){ return m === 0 ? \'im\' : m < 1 ? \'rs\' : m > 2 ? \'w4\' : m > 1 ? \'wk\' : \'\'; }\n  function draw(){\n    var names = []; boxes().forEach(function(b){ if (b.checked && names.indexOf(b.dataset.tm) < 0 && D.mons[b.dataset.tm]) names.push(b.dataset.tm); });\n    try { localStorage.setItem(KEY, JSON.stringify(names)); } catch (e) {}\n    boxes().forEach(function(b){ b.checked = names.indexOf(b.dataset.tm) >= 0; });\n    if (!names.length) { tb.innerHTML = \'<tr><td class="tmx-empty">No Pokémon ticked</td></tr>\'; return; }\n    var h = \'<thead><tr><th>Type</th>\' + names.map(function(n){ return \'<th title="\' + esc(n) + \'"><i class="spr sp-\' + D.mons[n].sp + \'" aria-hidden="true"></i><span>\' + esc(n) + \'</span></th>\'; }).join(\'\') + \'<th>Weak</th><th>Resist</th></tr></thead><tbody>\';\n    D.types.forEach(function(t){\n      var w = 0, r = 0, cells = names.map(function(n){ var m = D.mons[n].m[t]; if (m > 1) w++; if (m < 1) r++; return \'<td class="\' + cls(m) + \'">\' + fmt(m) + \'</td>\'; }).join(\'\');\n      h += \'<tr><th class="tp ty-\' + t.toLowerCase() + \'">\' + t + \'</th>\' + cells + \'<td class="cnt\' + (w >= 3 ? \' bad\' : w >= 2 ? \' meh\' : \'\') + \'">\' + (w || \'\') + \'</td><td class="cnt\' + (r === 0 && w ? \' bad\' : r ? \' ok\' : \'\') + \'">\' + (r || \'\') + \'</td></tr>\';\n    });\n    tb.innerHTML = h + \'</tbody>\';\n  }\n  document.addEventListener(\'change\', function(e){ if (e.target.matches(\'input[data-tm]\')) { var on = e.target.checked, n = e.target.dataset.tm; boxes().forEach(function(b){ if (b.dataset.tm === n) b.checked = on; }); draw(); } });\n  draw();\n})();\n</script>'
 SHEET = ('<div class="sheet" id="dexsheet" hidden><div class="sheet-bg" data-close></div><div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="ds-name">'
          '<button type="button" class="sheet-x" data-close aria-label="Close">×</button><div id="ds-body"></div></div></div>'
@@ -675,18 +676,23 @@ SHEET = ('<div class="sheet" id="dexsheet" hidden><div class="sheet-bg" data-clo
 page = page.replace('</body>', SHEET + TMJS + '</body>') if '</body>' in page else page + SHEET + TMJS
 
 # ---------------------------------------------------------------- Dex as a real tier list (Vincent, 22 Nov): "S Tier" etc., icon + name tiles
+RSHORT = {'Lead': 'Lead', 'Doubles lead': 'Dbl lead', 'Mid game': 'Mid', 'Closer': 'Closer', 'Support': 'Support', 'Attacker': 'Attacker'}
 def dex_tiles(kind):
     rows_ = [r for r in json.load(open('team/tier_all.json'))['rows'] if r['kind'] == kind]
+    present = [k for k in RSHORT if any((DROLES.get(disp(r['name'])) or ['Attacker'])[0] == k for r in rows_)]
+    bar = ('<div class="drole-bar" role="group" aria-label="Filter by role"><button type="button" class="drf on" data-role="">All</button>'
+           + ''.join('<button type="button" class="drf" data-role="' + k + '">' + k + '</button>' for k in present) + '</div>')
     seen_, out_ = set(), ''
     for t_ in 'SABCD':
         tr_ = [r for r in rows_ if r['tier'] == t_ and r['name'] not in seen_]
         if not tr_: continue
         seen_.update(r['name'] for r in tr_)
-        tiles = ''.join('<button type="button" class="dtile" data-dn="' + E(disp(r['name'])) + '">' + SP.tag(r.get('sid'), r.get('form', '0'), size='m')
-                        + '<span>' + E(disp(r['name'])) + '</span></button>' for r in tr_)
+        tiles = ''.join('<button type="button" class="dtile" data-dn="' + E(disp(r['name'])) + '" data-role="' + E((DROLES.get(disp(r['name'])) or ['Attacker'])[0]) + '">'
+                        + SP.tag(r.get('sid'), r.get('form', '0'), size='m')
+                        + '<span>' + E(disp(r['name'])) + '</span><em class="drole">' + E(RSHORT.get((DROLES.get(disp(r['name'])) or ['Attacker'])[0], '')) + '</em></button>' for r in tr_)
         out_ += ('<div class="dtier"><h3 class="dth"><span class="tier t' + t_ + '">' + t_ + '</span> ' + t_ + ' Tier <span class="dcount">' + str(len(tr_)) + '</span></h3>'
                  '<div class="dgrid">' + tiles + '</div></div>')
-    return out_
+    return bar + out_
 for _sec, _kind in (('s6', 'crest'), ('s7', 'aevian'), ('s8', 'regular')):
     page = re.sub(rf'(<section aria-labelledby="{_sec}">\s*<h2 id="{_sec}">.*?</h2>\s*(?:<ul class="legend">.*?</ul>)?).*?(</section>)',
                   lambda m_, k_=_kind: m_.group(1) + dex_tiles(k_) + m_.group(2), page, count=1, flags=re.S)
@@ -921,6 +927,10 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .tmx-t td.wk { background: var(--bad-soft); color: var(--bad) } .tmx-t td.w4 { background: var(--bad); color: var(--panel) }
 .tmx-t td.rs { background: var(--good-soft); color: var(--good) } .tmx-t td.im { background: var(--good); color: var(--panel) }
 .tmx-t td.cnt.bad { color: var(--bad); font-weight: 800 } .tmx-t td.cnt.meh { color: var(--warn) } .tmx-t td.cnt.ok { color: var(--good) } .tmx-empty { color: var(--muted) }
+.drole { font: 600 9.5px var(--body); font-style: normal; color: var(--muted); line-height: 1.1 }
+.drole-bar { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 10px } .drf { font: 600 12px var(--body); padding: 4px 10px; border-radius: 99px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer }
+.drf.on { background: var(--accent); border-color: var(--accent); color: #fff } .dtile[hidden], .dtier[hidden] { display: none }
+.ds-role { font-weight: 700 }
 .ds-diff { color: var(--bad, #b91c1c); font-weight: 700 }
 .bc.pick.rec { outline: 2px solid #eab308; outline-offset: 2px } .bc.rec { outline: 2px solid #eab308; background: var(--warn-soft) } .brec { margin-left: auto; font: 700 10px var(--body); letter-spacing: .04em; text-transform: uppercase; color: var(--warn) }
 .bstat { font: 600 10.5px var(--body); padding: 1px 7px; border-radius: 99px; background: rgba(127,127,127,.16); color: var(--ink) }
@@ -1075,6 +1085,7 @@ DEXJS = r'''<script id="dex-js">
     body.innerHTML = '<div class="ds-head"><i class="spr sp-'+d.sp+'" aria-hidden="true"></i><div><h3 id="ds-name">'+esc(name)+'</h3>'
       + '<div class="ds-sub"><span class="tier t'+d.t+'">'+d.t+'</span> score '+d.s.toFixed(2)+'</div>'
       + '<div class="ds-sub">'+d.ty.map(function(t){return t[0]+t.slice(1).toLowerCase();}).join('/')+'</div>'
+      + (d.ro ? '<div class="ds-sub ds-role">Role: '+esc(d.ro[0])+(d.ro[1]?' ('+esc(d.ro[1])+')':'')+'</div>' : '')
       + (d.m ? '<div class="ds-sub">'+esc(d.m)+'</div>' : '') + '</div></div><div class="ds-stats">'+st+'</div>'
       + '<div class="ds-sec">Why '+d.t+' tier</div><ul class="ds-b ds-why">'+d.why.map(function(w){ return '<li>'+esc(w)+'</li>'; }).join('')+'</ul>'
       + '<div class="ds-sec">'+esc(d.src)+'</div><ul class="ds-b">'+row('Ability',d.a,'a')+(d.n?row('Nature',d.n,'n'):'')+(d.e?row('EVs',d.e,'e'):'')+(d.it?row('Item',d.it,'it'):'')
@@ -1085,6 +1096,10 @@ DEXJS = r'''<script id="dex-js">
   function close(){ sheet.hidden = true; if (last) last.focus(); }
   document.addEventListener('click', function(e){
     if (e.target.closest('[data-close]')) { close(); return; }
+    var rf = e.target.closest('.drf');
+    if (rf) { var sec = rf.closest('section'); sec.querySelectorAll('.drf').forEach(function(b){ b.classList.toggle('on', b === rf); });
+      sec.querySelectorAll('.dtile').forEach(function(t){ t.hidden = !!rf.dataset.role && t.dataset.role !== rf.dataset.role; });
+      sec.querySelectorAll('.dtier').forEach(function(d){ d.hidden = !d.querySelector('.dtile:not([hidden])'); }); return; }
     var tile = e.target.closest('.dtile'); if (tile) { open(tile.dataset.dn); return; }
     if (e.target.closest('.bchk')) return;   // the type-matrix checkbox, not the card
     var bcard = e.target.closest('.bc[data-dn]'); if (bcard) { open(bcard.dataset.dn); return; }

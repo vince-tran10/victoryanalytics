@@ -275,7 +275,33 @@ if _pl and len(core) == 4:
             cands.append(dict(name=n_, tier=m.r['tier'], stats=cs + ([] if ct else ['Single target only']), tools=have, teach=teach,
                               sid=m.r.get('sid'), form=str(m.r.get('form', '0')), pick=n_ == fn, rec=n_ == fn))
         out.append(dict(slot=5 + fi, title=f"{lab} · {FIGHT_TITLE.get(_fk, _fk)}", pick=fn, rec=fn, flex=True, cands=cands))
-json.dump(dict(core=core, slots=out), open('team/builder.json', 'w'), indent=1, ensure_ascii=False)
+# 22 Nov (Vincent): a role for EVERY Pokémon (Dex tiles / filters / sheet), from what its BUILD runs (same data as the chips)
+ROLE_ORDER = ['Lead', 'Doubles lead', 'Mid game', 'Closer', 'Support', 'Attacker']
+def role_of(m):
+    bm = set(build_moves(m.name)); ab = set(m.r.get('abilities') or [])
+    ab_run = re.sub(r'[^A-Z]', '', str((st.get('abilities') or {}).get(m.name) or (IB.get(m.name) or {}).get('ability') or m.r.get('ability') or '').upper())
+    has = lambda ids: next((mname(x) for x in ids if x in bm), None)
+    x = has(['FOLLOWME', 'RAGEPOWDER']) or has(['FAKEOUT']) or ('Intimidate' if ab_run == 'INTIMIDATE' else None) or has(['TAILWIND'])
+    if x: return 'Doubles lead', x
+    v = LEAD.get(m.name)
+    if v and v['fast'] >= .70 and v['ko'] >= .65 and v['surv'] >= .60: return 'Lead', f"outspeeds {v['fast']:.0%}"
+    x = has(['SWORDSDANCE', 'NASTYPLOT', 'SHELLSMASH', 'BELLYDRUM', 'DRAGONDANCE', 'QUIVERDANCE', 'CALMMIND', 'BULKUP', 'CURSE', 'SHIFTGEAR',
+             'COIL', 'TIDYUP', 'VICTORYDANCE', 'FILLETAWAY', 'TAILGLOW', 'GEOMANCY'])
+    if x: return 'Closer', x
+    x = (('Regenerator' if ab_run == 'REGENERATOR' else None) or has(['RECOVER', 'ROOST', 'SLACKOFF', 'MOONLIGHT', 'SYNTHESIS', 'SOFTBOILED', 'WISH',
+         'SHOREUP', 'STRENGTHSAP', 'MILKDRINK', 'MORNINGSUN']) or has(['HAZE', 'CLEARSMOG', 'ROAR', 'WHIRLWIND']) or has(['UTURN', 'VOLTSWITCH', 'FLIPTURN', 'PARTINGSHOT', 'TELEPORT']))
+    if x and m.bulk >= 270: return 'Mid game', x
+    SET = {'DROUGHT': 'Drought', 'DRIZZLE': 'Drizzle', 'SANDSTREAM': 'Sand Stream', 'SNOWWARNING': 'Snow Warning', 'GRASSYSURGE': 'Grassy Surge',
+           'ELECTRICSURGE': 'Electric Surge', 'PSYCHICSURGE': 'Psychic Surge', 'MISTYSURGE': 'Misty Surge'}
+    if ab_run in SET: return 'Support', f'{SET[ab_run]} setter'
+    x = has(['TRICKROOM', 'REFLECT', 'LIGHTSCREEN', 'AURORAVEIL', 'SAFEGUARD', 'HELPINGHAND', 'WIDEGUARD', 'SPORE', 'SLEEPPOWDER', 'YAWN',
+             'WILLOWISP', 'THUNDERWAVE', 'GLARE', 'STEALTHROCK', 'SPIKES', 'TOXICSPIKES', 'STICKYWEB', 'LIGHTSCREEN'])
+    if x: return 'Support', x
+    return 'Attacker', ''
+ROLES_ALL = {}
+for m in ALLM.values():
+    ROLES_ALL[disp(m.name)] = role_of(m)
+json.dump(dict(core=core, slots=out, roles=ROLES_ALL), open('team/builder.json', 'w'), indent=1, ensure_ascii=False)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sprites as SP
 cards = ''

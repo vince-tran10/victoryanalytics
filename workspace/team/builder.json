@@ -650,5 +650,1531 @@
     }
    ]
   }
- ]
+ ],
+ "roles": {
+  "Golisopod-Aevian": [
+   "Closer",
+   "Swords Dance"
+  ],
+  "Veluza-Aevian": [
+   "Lead",
+   "outspeeds 84%"
+  ],
+  "Slowking-Galar": [
+   "Mid game",
+   "Regenerator"
+  ],
+  "Amoonguss": [
+   "Doubles lead",
+   "Rage Powder"
+  ],
+  "Glalie-Aevian": [
+   "Support",
+   "Grassy Surge setter"
+  ],
+  "Musharna-Aevian": [
+   "Attacker",
+   ""
+  ],
+  "Muk-Alola": [
+   "Mid game",
+   "Clear Smog"
+  ],
+  "Lapras-Aevian": [
+   "Closer",
+   "Dragon Dance"
+  ],
+  "Whiscash": [
+   "Attacker",
+   ""
+  ],
+  "Alomomola": [
+   "Mid game",
+   "Regenerator"
+  ],
+  "Arcanine-Hisui": [
+   "Lead",
+   "outspeeds 75%"
+  ],
+  "Clefable": [
+   "Support",
+   "Safeguard"
+  ],
+  "Drapion-Aevian": [
+   "Attacker",
+   ""
+  ],
+  "Slowbro": [
+   "Mid game",
+   "Regenerator"
+  ],
+  "Swampert": [
+   "Attacker",
+   ""
+  ],
+  "Froslass-Aevian": [
+   "Attacker",
+   ""
+  ],
+  "Slowking": [
+   "Mid game",
+   "Regenerator"
+  ],
+  "Gastrodon-Aevian (West)": [
+   "Attacker",
+   ""
+  ],
+  "Ninetales-Alola": [
+   "Support",
+   "Snow Warning setter"
+  ],
+  "Toxtricity-Aevian": [
+   "Lead",
+   "outspeeds 80%"
+  ],
+  "Donphan": [
+   "Attacker",
+   ""
+  ],
+  "Palossand-Aevian (Fiery)": [
+   "Attacker",
+   ""
+  ],
+  "Mandibuzz": [
+   "Mid game",
+   "Roost"
+  ],
+  "Zoroark-Hisui": [
+   "Closer",
+   "Nasty Plot"
+  ],
+  "Palossand-Aevian (Rocky)": [
+   "Attacker",
+   ""
+  ],
+  "Gallade": [
+   "Attacker",
+   ""
+  ],
+  "Gastrodon": [
+   "Support",
+   "Yawn"
+  ],
+  "Azumarill": [
+   "Closer",
+   "Belly Drum"
+  ],
+  "Ampharos-Aevian": [
+   "Attacker",
+   ""
+  ],
+  "Magnezone": [
+   "Attacker",
+   ""
+  ],
+  "Gothitelle": [
+   "Support",
+   "Thunder Wave"
+  ],
+  "Furret": [
+   "Doubles lead",
+   "Follow Me"
+  ],
+  "Palossand-Aevian (Icy)": [
+   "Attacker",
+   ""
+  ],
+  "Zoroark": [
+   "Attacker",
+   ""
+  ],
+  "Mamoswine": [
+   "Attacker",
+   ""
+  ],
+  "Flamigo": [
+   "Lead",
+   "outspeeds 75%"
+  ],
+  "Chandelure": [
+   "Support",
+   "Will-O-Wisp"
+  ],
+  "Revavroom": [
+   "Lead",
+   "outspeeds 75%"
+  ],
+  "Lokix": [
+   "Attacker",
+   ""
+  ],
+  "Venusaur": [
+   "Support",
+   "Sleep Powder"
+  ],
+  "Talonflame": [
+   "Doubles lead",
+   "Tailwind"
+  ],
+  "Vaporeon": [
+   "Mid game",
+   "Wish"
+  ],
+  "Phione": [
+   "Attacker",
+   ""
+  ],
+  "Tsareena": [
+   "Attacker",
+   ""
+  ],
+  "Clodsire": [
+   "Closer",
+   "Curse"
+  ],
+  "Braviary": [
+   "Attacker",
+   ""
+  ],
+  "Shuckle": [
+   "Support",
+   "Sticky Web"
+  ],
+  "Crawdaunt": [
+   "Closer",
+   "Swords Dance"
+  ],
+  "Arcanine": [
+   "Doubles lead",
+   "Intimidate"
+  ],
+  "Ariados": [
+   "Attacker",
+   ""
+  ],
+  "Noivern": [
+   "Doubles lead",
+   "Tailwind"
+  ],
+  "Roserade-Aevian": [
+   "Support",
+   "Spikes"
+  ],
+  "Copperajah": [
+   "Attacker",
+   ""
+  ],
+  "Meowscarada": [
+   "Attacker",
+   ""
+  ],
+  "Empoleon": [
+   "Mid game",
+   "Roost"
+  ],
+  "Leavanny-Aevian": [
+   "Doubles lead",
+   "Intimidate"
+  ],
+  "Sylveon": [
+   "Mid game",
+   "Wish"
+  ],
+  "Ninetales": [
+   "Support",
+   "Drought setter"
+  ],
+  "Scrafty": [
+   "Doubles lead",
+   "Fake Out"
+  ],
+  "Quagsire": [
+   "Attacker",
+   ""
+  ],
+  "Dudunsparce": [
+   "Mid game",
+   "Roost"
+  ],
+  "Golurk": [
+   "Attacker",
+   ""
+  ],
+  "Vikavolt": [
+   "Attacker",
+   ""
+  ],
+  "Nidoking": [
+   "Lead",
+   "outspeeds 74%"
+  ],
+  "Malamar": [
+   "Attacker",
+   ""
+  ],
+  "Mismagius-Aevian": [
+   "Attacker",
+   ""
+  ],
+  "Rampardos": [
+   "Attacker",
+   ""
+  ],
+  "Yanmega": [
+   "Attacker",
+   ""
+  ],
+  "Clawitzer": [
+   "Attacker",
+   ""
+  ],
+  "Reuniclus": [
+   "Mid game",
+   "Recover"
+  ],
+  "Toxtricity": [
+   "Attacker",
+   ""
+  ],
+  "Decidueye": [
+   "Attacker",
+   ""
+  ],
+  "Ursaring": [
+   "Attacker",
+   ""
+  ],
+  "Overqwil": [
+   "Doubles lead",
+   "Intimidate"
+  ],
+  "Dragalge": [
+   "Attacker",
+   ""
+  ],
+  "Hariyama": [
+   "Attacker",
+   ""
+  ],
+  "Florges": [
+   "Mid game",
+   "Synthesis"
+  ],
+  "Typhlosion": [
+   "Lead",
+   "outspeeds 81%"
+  ],
+  "Solrock (Solrock Dominant Fusion)": [
+   "Attacker",
+   ""
+  ],
+  "Unfezant-Aevian": [
+   "Attacker",
+   ""
+  ],
+  "Ludicolo": [
+   "Attacker",
+   ""
+  ],
+  "Oranguru": [
+   "Support",
+   "Trick Room"
+  ],
+  "Crabominable": [
+   "Attacker",
+   ""
+  ],
+  "Rhydon": [
+   "Attacker",
+   ""
+  ],
+  "Pangoro": [
+   "Attacker",
+   ""
+  ],
+  "Palossand": [
+   "Attacker",
+   ""
+  ],
+  "Flareon": [
+   "Attacker",
+   ""
+  ],
+  "Crobat": [
+   "Doubles lead",
+   "Tailwind"
+  ],
+  "Silvally": [
+   "Support",
+   "Thunder Wave"
+  ],
+  "Emboar": [
+   "Attacker",
+   ""
+  ],
+  "Lickilicky": [
+   "Attacker",
+   ""
+  ],
+  "Lunatone (Lunatone Dominant Fusion)": [
+   "Attacker",
+   ""
+  ],
+  "Drednaw": [
+   "Attacker",
+   ""
+  ],
+  "Wyrdeer": [
+   "Doubles lead",
+   "Intimidate"
+  ],
+  "Bellibolt": [
+   "Mid game",
+   "Slack Off"
+  ],
+  "Mabosstiff": [
+   "Doubles lead",
+   "Intimidate"
+  ],
+  "Diggersby": [
+   "Attacker",
+   ""
+  ],
+  "Kingler": [
+   "Attacker",
+   ""
+  ],
+  "Nidoqueen": [
+   "Support",
+   "Toxic Spikes"
+  ],
+  "Walrein": [
+   "Closer",
+   "Curse"
+  ],
+  "Grapploct": [
+   "Attacker",
+   ""
+  ],
+  "Tatsugiri": [
+   "Closer",
+   "Nasty Plot"
+  ],
+  "Eelektross": [
+   "Attacker",
+   ""
+  ],
+  "Runerigus": [
+   "Attacker",
+   ""
+  ],
+  "Heatmor": [
+   "Attacker",
+   ""
+  ],
+  "Mantine": [
+   "Attacker",
+   ""
+  ],
+  "Camerupt": [
+   "Support",
+   "Yawn"
+  ],
+  "Musharna": [
+   "Attacker",
+   ""
+  ],
+  "Blissey": [
+   "Mid game",
+   "Soft-Boiled"
+  ],
+  "Barbaracle": [
+   "Closer",
+   "Shell Smash"
+  ],
+  "Beartic": [
+   "Attacker",
+   ""
+  ],
+  "Tangrowth": [
+   "Mid game",
+   "Regenerator"
+  ],
+  "Toxicroak": [
+   "Attacker",
+   ""
+  ],
+  "Tyrantrum": [
+   "Attacker",
+   ""
+  ],
+  "Kilowattrel": [
+   "Attacker",
+   ""
+  ],
+  "Cradily": [
+   "Mid game",
+   "Recover"
+  ],
+  "Jellicent": [
+   "Mid game",
+   "Recover"
+  ],
+  "Veluza": [
+   "Attacker",
+   ""
+  ],
+  "Ribombee": [
+   "Support",
+   "Sticky Web"
+  ],
+  "Arctozolt": [
+   "Attacker",
+   ""
+  ],
+  "Centiskorch": [
+   "Attacker",
+   ""
+  ],
+  "Sandaconda": [
+   "Closer",
+   "Coil"
+  ],
+  "Omastar": [
+   "Attacker",
+   ""
+  ],
+  "Throh": [
+   "Attacker",
+   ""
+  ],
+  "Cursola": [
+   "Attacker",
+   ""
+  ],
+  "Umbreon": [
+   "Mid game",
+   "Wish"
+  ],
+  "Hitmonchan": [
+   "Attacker",
+   ""
+  ],
+  "Ampharos": [
+   "Attacker",
+   ""
+  ],
+  "Oinkologne": [
+   "Attacker",
+   ""
+  ],
+  "Espeon": [
+   "Lead",
+   "outspeeds 85%"
+  ],
+  "Drampa": [
+   "Support",
+   "Glare"
+  ],
+  "Mudsdale": [
+   "Mid game",
+   "Roar"
+  ],
+  "Dodrio": [
+   "Closer",
+   "Swords Dance"
+  ],
+  "Jolteon": [
+   "Support",
+   "Yawn"
+  ],
+  "Cofagrigus": [
+   "Support",
+   "Will-O-Wisp"
+  ],
+  "Cetitan": [
+   "Closer",
+   "Belly Drum"
+  ],
+  "Marowak-Alola": [
+   "Attacker",
+   ""
+  ],
+  "Passimian": [
+   "Closer",
+   "Bulk Up"
+  ],
+  "Appletun": [
+   "Mid game",
+   "Recover"
+  ],
+  "Feraligatr": [
+   "Attacker",
+   ""
+  ],
+  "Bruxish": [
+   "Attacker",
+   ""
+  ],
+  "Glaceon": [
+   "Attacker",
+   ""
+  ],
+  "Pyroar": [
+   "Attacker",
+   ""
+  ],
+  "Pidgeot": [
+   "Doubles lead",
+   "Tailwind"
+  ],
+  "Hitmontop": [
+   "Attacker",
+   ""
+  ],
+  "Arboliva": [
+   "Mid game",
+   "Strength Sap"
+  ],
+  "Exeggutor": [
+   "Attacker",
+   ""
+  ],
+  "Scovillain": [
+   "Attacker",
+   ""
+  ],
+  "Breloom": [
+   "Support",
+   "Spore"
+  ],
+  "Grumpig": [
+   "Attacker",
+   ""
+  ],
+  "Squawkabilly (White Plumage)": [
+   "Attacker",
+   ""
+  ],
+  "Dusclops": [
+   "Support",
+   "Will-O-Wisp"
+  ],
+  "Klinklang": [
+   "Closer",
+   "Shift Gear"
+  ],
+  "Dubwool": [
+   "Attacker",
+   ""
+  ],
+  "Comfey": [
+   "Attacker",
+   ""
+  ],
+  "Simisear": [
+   "Attacker",
+   ""
+  ],
+  "Boltund": [
+   "Attacker",
+   ""
+  ],
+  "Barraskewda": [
+   "Attacker",
+   ""
+  ],
+  "Drapion": [
+   "Attacker",
+   ""
+  ],
+  "Raichu": [
+   "Doubles lead",
+   "Fake Out"
+  ],
+  "Crustle": [
+   "Attacker",
+   ""
+  ],
+  "Stoutland": [
+   "Doubles lead",
+   "Intimidate"
+  ],
+  "Slaking": [
+   "Attacker",
+   ""
+  ],
+  "Bombirdier": [
+   "Attacker",
+   ""
+  ],
+  "Mismagius": [
+   "Attacker",
+   ""
+  ],
+  "Marowak": [
+   "Attacker",
+   ""
+  ],
+  "Primeape": [
+   "Lead",
+   "outspeeds 79%"
+  ],
+  "Magmar": [
+   "Doubles lead",
+   "Follow Me"
+  ],
+  "Perrserker": [
+   "Doubles lead",
+   "Fake Out"
+  ],
+  "Toedscruel": [
+   "Support",
+   "Spore"
+  ],
+  "Sunflora": [
+   "Attacker",
+   ""
+  ],
+  "Starmie": [
+   "Attacker",
+   ""
+  ],
+  "Lucario": [
+   "Closer",
+   "Calm Mind"
+  ],
+  "Arctovish": [
+   "Support",
+   "Aurora Veil"
+  ],
+  "Seaking": [
+   "Attacker",
+   ""
+  ],
+  "Skuntank": [
+   "Attacker",
+   ""
+  ],
+  "Druddigon": [
+   "Support",
+   "Glare"
+  ],
+  "Aurorus": [
+   "Support",
+   "Aurora Veil"
+  ],
+  "Meganium": [
+   "Support",
+   "Reflect"
+  ],
+  "Basculin (Blue-Striped)": [
+   "Lead",
+   "outspeeds 80%"
+  ],
+  "Vileplume": [
+   "Attacker",
+   ""
+  ],
+  "Drifblim": [
+   "Doubles lead",
+   "Tailwind"
+  ],
+  "Tropius": [
+   "Support",
+   "Wide Guard"
+  ],
+  "Roserade": [
+   "Support",
+   "Sleep Powder"
+  ],
+  "Golduck": [
+   "Attacker",
+   ""
+  ],
+  "Muk": [
+   "Attacker",
+   ""
+  ],
+  "Chimecho": [
+   "Attacker",
+   ""
+  ],
+  "Cinccino": [
+   "Attacker",
+   ""
+  ],
+  "Paras-Aevian": [
+   "Attacker",
+   ""
+  ],
+  "Orbeetle": [
+   "Support",
+   "Reflect"
+  ],
+  "Stunfisk-Galar": [
+   "Support",
+   "Yawn"
+  ],
+  "Sudowoodo": [
+   "Attacker",
+   ""
+  ],
+  "Pawmot": [
+   "Doubles lead",
+   "Fake Out"
+  ],
+  "Swanna": [
+   "Attacker",
+   ""
+  ],
+  "Alcremie": [
+   "Attacker",
+   ""
+  ],
+  "Heliolisk": [
+   "Attacker",
+   ""
+  ],
+  "Magcargo": [
+   "Support",
+   "Yawn"
+  ],
+  "Pincurchin": [
+   "Support",
+   "Electric Surge setter"
+  ],
+  "Seismitoad": [
+   "Attacker",
+   ""
+  ],
+  "Electrode-Hisui": [
+   "Support",
+   "Thunder Wave"
+  ],
+  "Zebstrika": [
+   "Support",
+   "Thunder Wave"
+  ],
+  "Tentacruel": [
+   "Attacker",
+   ""
+  ],
+  "Lurantis": [
+   "Attacker",
+   ""
+  ],
+  "Vanilluxe": [
+   "Support",
+   "Snow Warning setter"
+  ],
+  "Electabuzz": [
+   "Support",
+   "Thunder Wave"
+  ],
+  "Abomasnow": [
+   "Support",
+   "Snow Warning setter"
+  ],
+  "Bellossom": [
+   "Closer",
+   "Quiver Dance"
+  ],
+  "Probopass": [
+   "Support",
+   "Thunder Wave"
+  ],
+  "Hitmonlee": [
+   "Doubles lead",
+   "Fake Out"
+  ],
+  "Brambleghast": [
+   "Attacker",
+   ""
+  ],
+  "Raticate-Alola": [
+   "Attacker",
+   ""
+  ],
+  "Golisopod": [
+   "Attacker",
+   ""
+  ],
+  "Slowbro-Galar": [
+   "Attacker",
+   ""
+  ],
+  "Carnivine": [
+   "Support",
+   "Sleep Powder"
+  ],
+  "Bronzong": [
+   "Attacker",
+   ""
+  ],
+  "Greedent": [
+   "Attacker",
+   ""
+  ],
+  "Leafeon": [
+   "Closer",
+   "Swords Dance"
+  ],
+  "Lapras": [
+   "Attacker",
+   ""
+  ],
+  "Stunfisk": [
+   "Support",
+   "Thunder Wave"
+  ],
+  "Victreebel": [
+   "Support",
+   "Sleep Powder"
+  ],
+  "Gogoat": [
+   "Attacker",
+   ""
+  ],
+  "Sirfetch'd": [
+   "Attacker",
+   ""
+  ],
+  "Klawf": [
+   "Closer",
+   "Swords Dance"
+  ],
+  "Audino": [
+   "Attacker",
+   ""
+  ],
+  "Forretress": [
+   "Support",
+   "Spikes"
+  ],
+  "Garbodor": [
+   "Attacker",
+   ""
+  ],
+  "Frosmoth": [
+   "Closer",
+   "Quiver Dance"
+  ],
+  "Octillery": [
+   "Attacker",
+   ""
+  ],
+  "Zangoose": [
+   "Attacker",
+   ""
+  ],
+  "Graveler": [
+   "Attacker",
+   ""
+  ],
+  "Heracross": [
+   "Closer",
+   "Swords Dance"
+  ],
+  "Swellow": [
+   "Attacker",
+   ""
+  ],
+  "Dachsbun": [
+   "Support",
+   "Yawn"
+  ],
+  "Houndoom": [
+   "Closer",
+   "Nasty Plot"
+  ],
+  "Oricorio (Pom-Pom Style)": [
+   "Attacker",
+   ""
+  ],
+  "Medicham": [
+   "Attacker",
+   ""
+  ],
+  "Tauros": [
+   "Doubles lead",
+   "Intimidate"
+  ],
+  "Claydol": [
+   "Attacker",
+   ""
+  ],
+  "Machoke": [
+   "Attacker",
+   ""
+  ],
+  "Meowstic": [
+   "Support",
+   "Reflect"
+  ],
+  "Floatzel": [
+   "Attacker",
+   ""
+  ],
+  "Turtonator": [
+   "Closer",
+   "Shell Smash"
+  ],
+  "Armaldo": [
+   "Attacker",
+   ""
+  ],
+  "Tauros (Paldean Combat Breed)": [
+   "Doubles lead",
+   "Intimidate"
+  ],
+  "Beheeyem": [
+   "Attacker",
+   ""
+  ],
+  "Shiinotic": [
+   "Support",
+   "Spore"
+  ],
+  "Mawile": [
+   "Doubles lead",
+   "Intimidate"
+  ],
+  "Wigglytuff": [
+   "Attacker",
+   ""
+  ],
+  "Mr. Mime": [
+   "Support",
+   "Reflect"
+  ],
+  "Eiscue": [
+   "Support",
+   "Aurora Veil"
+  ],
+  "Hypno": [
+   "Attacker",
+   ""
+  ],
+  "Toucannon": [
+   "Attacker",
+   ""
+  ],
+  "Qwilfish": [
+   "Doubles lead",
+   "Intimidate"
+  ],
+  "Porygon": [
+   "Attacker",
+   ""
+  ],
+  "Exploud": [
+   "Attacker",
+   ""
+  ],
+  "Avalugg-Hisui": [
+   "Mid game",
+   "Recover"
+  ],
+  "Fearow": [
+   "Attacker",
+   ""
+  ],
+  "Grafaiai": [
+   "Attacker",
+   ""
+  ],
+  "Ambipom": [
+   "Doubles lead",
+   "Fake Out"
+  ],
+  "Coalossal": [
+   "Attacker",
+   ""
+  ],
+  "Pinsir": [
+   "Closer",
+   "Swords Dance"
+  ],
+  "Swalot": [
+   "Support",
+   "Yawn"
+  ],
+  "Manectric": [
+   "Support",
+   "Thunder Wave"
+  ],
+  "Sandslash-Alola": [
+   "Attacker",
+   ""
+  ],
+  "Carbink": [
+   "Support",
+   "Light Screen"
+  ],
+  "Sceptile": [
+   "Attacker",
+   ""
+  ],
+  "Altaria": [
+   "Mid game",
+   "Roost"
+  ],
+  "Venomoth": [
+   "Support",
+   "Sleep Powder"
+  ],
+  "Corsola": [
+   "Attacker",
+   ""
+  ],
+  "Luxray": [
+   "Doubles lead",
+   "Intimidate"
+  ],
+  "Scolipede": [
+   "Attacker",
+   ""
+  ],
+  "Jumpluff": [
+   "Support",
+   "Sleep Powder"
+  ],
+  "Oricorio": [
+   "Attacker",
+   ""
+  ],
+  "Simipour": [
+   "Attacker",
+   ""
+  ],
+  "Absol": [
+   "Closer",
+   "Swords Dance"
+  ],
+  "Rapidash": [
+   "Attacker",
+   ""
+  ],
+  "Wormadam (Sandy Cloak)": [
+   "Attacker",
+   ""
+  ],
+  "Furfrou": [
+   "Support",
+   "Thunder Wave"
+  ],
+  "Cryogonal": [
+   "Support",
+   "Reflect"
+  ],
+  "Sandslash": [
+   "Closer",
+   "Swords Dance"
+  ],
+  "Avalugg": [
+   "Mid game",
+   "Recover"
+  ],
+  "Obstagoon": [
+   "Attacker",
+   ""
+  ],
+  "Leavanny": [
+   "Closer",
+   "Swords Dance"
+  ],
+  "Xatu": [
+   "Attacker",
+   ""
+  ],
+  "Seviper": [
+   "Attacker",
+   ""
+  ],
+  "Bastiodon": [
+   "Attacker",
+   ""
+  ],
+  "Sawsbuck": [
+   "Attacker",
+   ""
+  ],
+  "Eldegoss": [
+   "Attacker",
+   ""
+  ],
+  "Shiftry": [
+   "Doubles lead",
+   "Fake Out"
+  ],
+  "Persian-Alola": [
+   "Attacker",
+   ""
+  ],
+  "Minun": [
+   "Closer",
+   "Nasty Plot"
+  ],
+  "Volbeat": [
+   "Attacker",
+   ""
+  ],
+  "Weezing": [
+   "Attacker",
+   ""
+  ],
+  "Cramorant": [
+   "Attacker",
+   ""
+  ],
+  "Noctowl": [
+   "Attacker",
+   ""
+  ],
+  "Linoone": [
+   "Attacker",
+   ""
+  ],
+  "Kangaskhan": [
+   "Doubles lead",
+   "Fake Out"
+  ],
+  "Lumineon": [
+   "Attacker",
+   ""
+  ],
+  "Oricorio (Sensu Style)": [
+   "Attacker",
+   ""
+  ],
+  "Thievul": [
+   "Attacker",
+   ""
+  ],
+  "Mightyena": [
+   "Doubles lead",
+   "Intimidate"
+  ],
+  "Vespiquen": [
+   "Attacker",
+   ""
+  ],
+  "Kabutops": [
+   "Attacker",
+   ""
+  ],
+  "Boldore": [
+   "Attacker",
+   ""
+  ],
+  "Kecleon": [
+   "Attacker",
+   ""
+  ],
+  "Maractus": [
+   "Attacker",
+   ""
+  ],
+  "Spritzee": [
+   "Attacker",
+   ""
+  ],
+  "Minior": [
+   "Closer",
+   "Shell Smash"
+  ],
+  "Graveler-Alola": [
+   "Attacker",
+   ""
+  ],
+  "Arbok": [
+   "Doubles lead",
+   "Intimidate"
+  ],
+  "Jynx": [
+   "Attacker",
+   ""
+  ],
+  "Dugtrio-Alola": [
+   "Attacker",
+   ""
+  ],
+  "Stonjourner": [
+   "Support",
+   "Wide Guard"
+  ],
+  "Floette": [
+   "Attacker",
+   ""
+  ],
+  "Butterfree": [
+   "Support",
+   "Sleep Powder"
+  ],
+  "Gumshoos": [
+   "Support",
+   "Yawn"
+  ],
+  "Plusle": [
+   "Closer",
+   "Nasty Plot"
+  ],
+  "Salazzle": [
+   "Closer",
+   "Nasty Plot"
+  ],
+  "Unfezant": [
+   "Attacker",
+   ""
+  ],
+  "Wormadam": [
+   "Closer",
+   "Quiver Dance"
+  ],
+  "Electrode": [
+   "Support",
+   "Thunder Wave"
+  ],
+  "Chatot": [
+   "Attacker",
+   ""
+  ],
+  "Wormadam (Trash Cloak)": [
+   "Attacker",
+   ""
+  ],
+  "Morpeko": [
+   "Doubles lead",
+   "Fake Out"
+  ],
+  "Sharpedo": [
+   "Attacker",
+   ""
+  ],
+  "Ditto": [
+   "Attacker",
+   ""
+  ],
+  "Raticate": [
+   "Attacker",
+   ""
+  ],
+  "Simisage": [
+   "Attacker",
+   ""
+  ],
+  "Glalie": [
+   "Attacker",
+   ""
+  ],
+  "Watchog": [
+   "Attacker",
+   ""
+  ],
+  "Phantump": [
+   "Attacker",
+   ""
+  ],
+  "Castform": [
+   "Attacker",
+   ""
+  ],
+  "Onix": [
+   "Closer",
+   "Curse"
+  ],
+  "Vivillon": [
+   "Support",
+   "Sleep Powder"
+  ],
+  "Bibarel": [
+   "Closer",
+   "Swords Dance"
+  ],
+  "Swoobat": [
+   "Closer",
+   "Calm Mind"
+  ],
+  "Beedrill": [
+   "Attacker",
+   ""
+  ],
+  "Cacturne": [
+   "Attacker",
+   ""
+  ],
+  "Cherrim": [
+   "Support",
+   "Helping Hand"
+  ],
+  "Oricorio (Pa'u Style)": [
+   "Attacker",
+   ""
+  ],
+  "Banette": [
+   "Attacker",
+   ""
+  ],
+  "Clamperl": [
+   "Closer",
+   "Shell Smash"
+  ],
+  "Liepard": [
+   "Support",
+   "Thunder Wave"
+  ],
+  "Illumise": [
+   "Attacker",
+   ""
+  ],
+  "Wailord": [
+   "Attacker",
+   ""
+  ],
+  "Kadabra": [
+   "Closer",
+   "Calm Mind"
+  ],
+  "Parasect": [
+   "Support",
+   "Spore"
+  ],
+  "Masquerain": [
+   "Doubles lead",
+   "Intimidate"
+  ],
+  "Dewgong": [
+   "Doubles lead",
+   "Fake Out"
+  ],
+  "Wugtrio": [
+   "Attacker",
+   ""
+  ],
+  "Spidops": [
+   "Attacker",
+   ""
+  ],
+  "Gimmighoul": [
+   "Attacker",
+   ""
+  ],
+  "Swirlix": [
+   "Attacker",
+   ""
+  ],
+  "Purugly": [
+   "Doubles lead",
+   "Fake Out"
+  ],
+  "Lopunny": [
+   "Doubles lead",
+   "Fake Out"
+  ],
+  "Kricketune": [
+   "Attacker",
+   ""
+  ],
+  "Mothim": [
+   "Attacker",
+   ""
+  ],
+  "Emolga": [
+   "Attacker",
+   ""
+  ],
+  "Dedenne": [
+   "Attacker",
+   ""
+  ],
+  "Farfetch'd": [
+   "Attacker",
+   ""
+  ],
+  "Pumpkaboo": [
+   "Attacker",
+   ""
+  ],
+  "Persian": [
+   "Doubles lead",
+   "Fake Out"
+  ],
+  "Dugtrio": [
+   "Attacker",
+   ""
+  ],
+  "Shedinja": [
+   "Attacker",
+   ""
+  ],
+  "Dustox": [
+   "Attacker",
+   ""
+  ],
+  "Spinda": [
+   "Attacker",
+   ""
+  ],
+  "Karrablast": [
+   "Attacker",
+   ""
+  ],
+  "Beautifly": [
+   "Closer",
+   "Quiver Dance"
+  ],
+  "Togedemaru": [
+   "Attacker",
+   ""
+  ],
+  "Salandit": [
+   "Attacker",
+   ""
+  ],
+  "Ledian": [
+   "Doubles lead",
+   "Tailwind"
+  ],
+  "Pyukumuku": [
+   "Mid game",
+   "Recover"
+  ],
+  "Delcatty": [
+   "Doubles lead",
+   "Fake Out"
+  ],
+  "Pachirisu": [
+   "Doubles lead",
+   "Follow Me"
+  ],
+  "Shelmet": [
+   "Attacker",
+   ""
+  ],
+  "Luvdisc": [
+   "Attacker",
+   ""
+  ],
+  "Delibird": [
+   "Attacker",
+   ""
+  ],
+  "Charcadet": [
+   "Attacker",
+   ""
+  ],
+  "Wishiwashi": [
+   "Attacker",
+   ""
+  ],
+  "Combee": [
+   "Attacker",
+   ""
+  ],
+  "Unown": [
+   "Attacker",
+   ""
+  ]
+ }
 }
