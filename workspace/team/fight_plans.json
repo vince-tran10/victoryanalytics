@@ -436,7 +436,7 @@
     "moves": [
      "Earthquake",
      "Rock Slide",
-     "Hammer Arm"
+     "Deluge"
     ],
     "setup": null,
     "where": "Party",
@@ -456,6 +456,7 @@
     "name": "Alomomola",
     "ab": "REGENERATOR",
     "moves": [
+     "Deluge",
      "Aqua Jet",
      "Wake-Up Slap"
     ],
@@ -477,6 +478,7 @@
     "ab": "POISONTOUCH",
     "moves": [
      "Knock Off",
+     "Shadow Sneak",
      "Clear Smog"
     ],
     "setup": null,
@@ -538,8 +540,7 @@
     "name": "Mandibuzz",
     "ab": "OVERCOAT",
     "moves": [
-     "Knock Off",
-     "Pluck"
+     "Knock Off"
     ],
     "setup": null,
     "where": "Overflow",
@@ -603,7 +604,7 @@
     "foe": "Typhlosion",
     "mon": "Alomomola",
     "ability": "REGENERATOR",
-    "dealt": 40,
+    "dealt": 58,
     "taken": 130,
     "ok": false,
     "setup": false,

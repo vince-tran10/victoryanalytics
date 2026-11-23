@@ -29,7 +29,9 @@ FIXED = {'Lapras (Aevian Form)': dict(ability='NOGUARD', moves=['Rock Slide', 'Z
          # 22 Nov core roles: Amoonguss = doubles lead redirection (Rage Powder replaces Bullet Seed: Atk build was a trainer set),
          # Alomomola = mid-game Wish / Regenerator support (no Flip Turn / Liquidation legal: Aqua Jet STAB + Wake-Up Slap)
          'Amoonguss': dict(ability='REGENERATOR', moves=['Spore', 'Rage Powder', 'Clear Smog', 'Protect'], item='Sitrus Berry', nature='Modest', evs='252 HP / 252 SpA', role='support'),
-         'Alomomola': dict(ability='REGENERATOR', moves=['Wish', 'Aqua Jet', 'Wake-Up Slap', 'Protect'], item='Sitrus Berry', nature='Adamant', evs='252 HP / 252 Atk', role='support'),
+         # 23 Nov (Vincent: 'why Wake-Up Slap?'): Alomomola's 75 Atk does ~20-40%; its value is support. Wide Guard blocks spread
+         # attacks (Rock Slide / Heat Wave / Eruption: priority +3), Helping Hand boosts the partner, Wish heals. No attacks -> Bold 252 HP / 252 Def.
+         'Alomomola': dict(ability='REGENERATOR', moves=['Wish', 'Wide Guard', 'Helping Hand', 'Protect'], item='Sitrus Berry', nature='Bold', evs='252 HP / 252 Def', role='support'),
          # 22 Nov: Aevian builds = the community's best use of the kit (community.py), so the rating and the build match
          'Glalie (Aevian Form)': dict(ability='GRASSYSURGE', moves=['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'], item='Miracle Seed', nature='Adamant', evs='252 HP / 252 Atk'),
          'Froslass (Aevian Form)': dict(ability='ADAPTABILITY', moves=['Hydro Pump', 'Muddy Water', 'Giga Drain', 'Protect'], item='Mystic Water', nature='Timid', evs='252 SpA / 252 Spe'),

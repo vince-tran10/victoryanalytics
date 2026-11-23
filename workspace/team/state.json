@@ -4,9 +4,9 @@
  "export_label": "22 Nov 22:34",
  "active_start": 447,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 284,
- "run": 298,
- "final": 302,
+ "roster": 285,
+ "run": 299,
+ "final": 303,
  "done": [
   "aelita",
   "narcissa1",
@@ -56,7 +56,7 @@
   ],
   "Muk (Alolan Form)": [
    "Knock Off",
-   "Gastro Acid",
+   "Shadow Sneak",
    "Clear Smog",
    "Protect"
   ],
@@ -135,7 +135,7 @@
   "Swampert": [
    "Earthquake",
    "Rock Slide",
-   "Hammer Arm",
+   "Deluge",
    "Protect"
   ],
   "Arcanine (Hisuian Form)": [
@@ -157,15 +157,15 @@
    "Protect"
   ],
   "Mandibuzz": [
-   "Roost",
+   "Tailwind",
    "Knock Off",
-   "Pluck",
+   "Roost",
    "Protect"
   ],
   "Alomomola": [
    "Wish",
-   "Aqua Jet",
-   "Wake-Up Slap",
+   "Wide Guard",
+   "Helping Hand",
    "Protect"
   ],
   "Dragalge": [

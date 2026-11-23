@@ -141,10 +141,10 @@
   "DARK": [
    "Luxray"
   ],
-  "BUG": [
+  "GROUND": [
    "Golisopod"
   ],
-  "GROUND": [
+  "BUG": [
    "Golisopod"
   ],
   "FIGHTING": [
@@ -160,7 +160,9 @@
    "foes": [
     "Sigilyph"
    ],
-   "answered_by": []
+   "answered_by": [
+    "Mandibuzz"
+   ]
   },
   {
    "win": "Setup (stat boosts)",
@@ -179,7 +181,9 @@
     "Stonjourner",
     "Typhlosion"
    ],
-   "answered_by": []
+   "answered_by": [
+    "Alomomola"
+   ]
   }
  ],
  "emoves": [
@@ -359,7 +363,7 @@
    "moves": [
     "Earthquake",
     "Rock Slide",
-    "Hammer Arm",
+    "Deluge",
     "Protect"
    ],
    "ability": "TORRENT",
@@ -413,7 +417,7 @@
     2.0,
     0.0,
     2.0,
-    0.0,
+    2.0,
     2.0,
     0.0
    ],
@@ -434,8 +438,8 @@
    "where": "Active",
    "moves": [
     "Wish",
-    "Aqua Jet",
-    "Wake-Up Slap",
+    "Wide Guard",
+    "Helping Hand",
     "Protect"
    ],
    "ability": "REGENERATOR",
@@ -486,14 +490,16 @@
     1.0
    ],
    "off": [
-    2.0,
     0.0,
     0.0,
-    2.0,
-    2.0,
+    0.0,
+    0.0,
+    0.0,
     0.0
    ],
-   "answers": [],
+   "answers": [
+    "Spread attacks"
+   ],
    "warn": []
   },
   {
@@ -509,7 +515,7 @@
    "where": "Party",
    "moves": [
     "Knock Off",
-    "Gastro Acid",
+    "Shadow Sneak",
     "Clear Smog",
     "Protect"
    ],
@@ -561,10 +567,10 @@
     0.5
    ],
    "off": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
+    1.5,
+    2.0,
+    1.5,
+    1.5,
     2.0,
     2.0
    ],
@@ -737,9 +743,9 @@
    "lead": false,
    "where": "Overflow",
    "moves": [
-    "Roost",
+    "Tailwind",
     "Knock Off",
-    "Pluck",
+    "Roost",
     "Protect"
    ],
    "ability": "OVERCOAT",
@@ -793,17 +799,19 @@
     0.0,
     0.0,
     0.0,
-    2.0,
+    0.0,
     2.0,
     2.0
    ],
-   "answers": [],
+   "answers": [
+    "Speed control (Tailwind / Trick Room)"
+   ],
    "warn": []
   }
  ],
  "alts": [
   {
-   "score": 181.9,
+   "score": 185.9,
    "in": [
     "Vaporeon"
    ],
@@ -812,7 +820,7 @@
    ]
   },
   {
-   "score": 179.0,
+   "score": 185.4,
    "in": [
     "Gastrodon (West Aevian Form)"
    ],
@@ -821,19 +829,19 @@
    ]
   },
   {
-   "score": 178.7,
+   "score": 185.2,
    "in": [
-    "Vaporeon",
-    "Gastrodon (West Aevian Form)"
+    "Golisopod (Aevian Form)",
+    "Arcanine (Hisuian Form)"
    ],
    "out": [
     "Clodsire",
-    "Alomomola"
+    "Mandibuzz"
    ]
   }
  ],
  "pool": 55,
- "score": 182.2,
+ "score": 187.6,
  "cmp": 37.5,
  "break_field": null,
  "checks": {
@@ -857,9 +865,6 @@
     "Banette"
    ]
   ],
-  "unanswered": [
-   "Speed control (Tailwind / Trick Room)",
-   "Spread attacks"
-  ]
+  "unanswered": []
  }
 }

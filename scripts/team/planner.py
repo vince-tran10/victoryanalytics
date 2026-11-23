@@ -86,6 +86,7 @@ MULT = np.array([[E.chart_eff(t, TA[n]['types'], FE) for t in MAIN] for n in NAM
 ALLT = sorted(ATK)
 MALL = np.array([[E.chart_eff(t, TA[n]['types'], FE) for t in ALLT] for n in NAMES])
 TIER = np.array([RK[TA[n]['tier']] for n in NAMES], float)
+AEV = np.array(['Aevian' in n for n in NAMES], float)   # 23 Nov (Vincent): prefer Aevian forms (unique, often stronger): a tiebreak bonus
 ANS = np.zeros((len(NAMES), len(WINS)))
 for i, n in enumerate(NAMES):
     ms, ab, _ = build(n)
@@ -151,7 +152,7 @@ for i in range(NP):
         if BREAK and not (FLASH[i] or FLASH[j]): continue   # break plan: a lead must carry Flash / Dazzling Gleam
         LQ[i, j] = LQ[j, i] = lead_q((i, j)) if FMT == 'Doubles' else 0
 ind = (2 * ((RM < 1) * W).sum(1) - 3 * ((RM > 1) * W).sum(1) + 1.5 * (OFF >= 2).sum(1) + .7 * (OFF > 0).sum(1)
-       + 1.5 * SAFE.sum(1) - 2 * DEAD.sum(1) + .6 * TIER + LQ.max(1).clip(-5, 99) * .5)
+       + 1.5 * SAFE.sum(1) - 2 * DEAD.sum(1) + .6 * TIER + LQ.max(1).clip(-5, 99) * .5 + .8 * AEV)
 top = list(np.argsort(-ind)[:min(24, NP)])
 if BREAK:   # make sure the best Flash users are in the search
     top += [i for i in np.argsort(-ind) if FLASH[i] and i not in top][:3]
@@ -163,7 +164,7 @@ def score(ix):
     s += 3 * np.minimum(oc, 2).sum() + 1 * np.minimum(ob, 3).sum() - 6 * (ob == 0).sum()   # 2) offense: super effective / field-boosted on every foe
     s += 4 * max(LQ[a][b] for a, b in itertools.combinations(ix, 2)) if FMT == 'Doubles' else 0   # 3) a lead pair that resists their leads
     if BREAK and not FLASH[ix].any(): s -= 999
-    s += 1.5 * np.minimum(SAFE[ix].sum(0), 3).sum() - 4 * DEAD[ix].sum() + .4 * TIER[ix].sum() + 2 * (ANS[ix].max(0).sum() if len(WINS) else 0)
+    s += 1.5 * np.minimum(SAFE[ix].sum(0), 3).sum() - 4 * DEAD[ix].sum() + .4 * TIER[ix].sum() + 1.0 * AEV[ix].sum() + 2 * (ANS[ix].max(0).sum() if len(WINS) else 0)
     return s
 res = sorted(((score(ix), ix) for ix in itertools.combinations(top, 6)), key=lambda x: -x[0])
 def cmp_score(ix):   # field-neutral comparison of the two plans: safe switch-ins, one-shots, super-effective coverage

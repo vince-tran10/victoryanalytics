@@ -111,9 +111,6 @@
   "POISON"
  ],
  "atk": {
-  "STEEL": [
-   "Stonjourner"
-  ],
   "ROCK": [
    "Golisopod",
    "Stonjourner"
@@ -123,28 +120,31 @@
    "Stonjourner",
    "Typhlosion"
   ],
+  "STEEL": [
+   "Stonjourner"
+  ],
+  "FAIRY": [
+   "Sigilyph"
+  ],
   "GHOST": [
    "Banette",
    "Golisopod",
    "Sigilyph",
    "Typhlosion"
   ],
-  "FAIRY": [
-   "Sigilyph"
-  ],
   "NORMAL": [
-   "Luxray"
-  ],
-  "ELECTRIC": [
    "Luxray"
   ],
   "DARK": [
    "Luxray"
   ],
-  "GROUND": [
-   "Golisopod"
+  "ELECTRIC": [
+   "Luxray"
   ],
   "BUG": [
+   "Golisopod"
+  ],
+  "GROUND": [
    "Golisopod"
   ],
   "FIGHTING": [
@@ -160,7 +160,9 @@
    "foes": [
     "Sigilyph"
    ],
-   "answered_by": []
+   "answered_by": [
+    "Mandibuzz"
+   ]
   },
   {
    "win": "Setup (stat boosts)",
@@ -511,7 +513,7 @@
    "moves": [
     "Earthquake",
     "Rock Slide",
-    "Hammer Arm",
+    "Deluge",
     "Protect"
    ],
    "ability": "TORRENT",
@@ -565,7 +567,7 @@
     2.0,
     0.0,
     2.0,
-    0.0,
+    2.0,
     2.0,
     0.0
    ],
@@ -734,9 +736,9 @@
    "lead": false,
    "where": "Overflow",
    "moves": [
-    "Roost",
+    "Tailwind",
     "Knock Off",
-    "Pluck",
+    "Roost",
     "Protect"
    ],
    "ability": "OVERCOAT",
@@ -790,26 +792,19 @@
     0.0,
     0.0,
     0.0,
-    2.0,
+    0.0,
     2.0,
     2.0
    ],
-   "answers": [],
+   "answers": [
+    "Speed control (Tailwind / Trick Room)"
+   ],
    "warn": []
   }
  ],
  "alts": [
   {
-   "score": 180.5,
-   "in": [
-    "Golurk"
-   ],
-   "out": [
-    "Palossand"
-   ]
-  },
-  {
-   "score": 180.3,
+   "score": 182.7,
    "in": [
     "Alomomola"
    ],
@@ -818,7 +813,16 @@
    ]
   },
   {
-   "score": 179.2,
+   "score": 182.5,
+   "in": [
+    "Golurk"
+   ],
+   "out": [
+    "Palossand"
+   ]
+  },
+  {
+   "score": 182.2,
    "in": [
     "Gastrodon (West Aevian Form)"
    ],
@@ -828,7 +832,7 @@
   }
  ],
  "pool": 55,
- "score": 182.0,
+ "score": 184.0,
  "cmp": 37.0,
  "break_field": {
   "user": "Clodsire",
@@ -871,7 +875,6 @@
    ]
   ],
   "unanswered": [
-   "Speed control (Tailwind / Trick Room)",
    "Spread attacks"
   ]
  }

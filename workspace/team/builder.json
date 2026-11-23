@@ -77,7 +77,7 @@
    "slot": 2,
    "title": "Core 2 · Doubles lead",
    "pick": "Amoonguss",
-   "rec": "Amoonguss",
+   "rec": "Mandibuzz",
    "why": [],
    "cands": [
     {
@@ -135,7 +135,7 @@
      "sid": "AMOONGUSS",
      "form": "0",
      "pick": true,
-     "rec": true,
+     "rec": false,
      "teach": []
     },
     {
@@ -167,16 +167,15 @@
       "Single target only"
      ],
      "tools": [
+      "Tailwind",
       "Recovery: Roost",
       "Disrupt: Knock Off"
      ],
      "sid": "MANDIBUZZ",
      "form": "0",
      "pick": false,
-     "rec": false,
-     "teach": [
-      "Tailwind"
-     ]
+     "rec": true,
+     "teach": []
     }
    ]
   },
@@ -275,7 +274,8 @@
      ],
      "tools": [
       "Stat reset: Clear Smog",
-      "Disrupt: Knock Off"
+      "Disrupt: Knock Off",
+      "Priority: Shadow Sneak"
      ],
      "sid": "MUK",
      "form": "1",
@@ -296,7 +296,7 @@
      "tools": [
       "Wish",
       "Regenerator",
-      "Priority: Aqua Jet"
+      "Support: Wide Guard"
      ],
      "sid": "ALOMOMOLA",
      "form": "0",
@@ -352,6 +352,7 @@
      ],
      "tools": [
       "Roost",
+      "Speed control: Tailwind",
       "Disrupt: Knock Off"
      ],
      "sid": "MANDIBUZZ",
@@ -490,6 +491,7 @@
       "Single target only"
      ],
      "tools": [
+      "Priority: Shadow Sneak (+0.8)",
       "Stat reset: Clear Smog",
       "Disrupt: Knock Off"
      ],
@@ -605,24 +607,6 @@
      "teach": [
       "Curse"
      ]
-    },
-    {
-     "name": "Alomomola",
-     "tier": "A",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 2 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Priority: Aqua Jet (+0.8)",
-      "Recovery: Wish"
-     ],
-     "sid": "ALOMOMOLA",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": []
     },
     {
      "name": "Roserade (Aevian Form)",
@@ -801,7 +785,7 @@
      ],
      "tools": [
       "Recovery: Wish",
-      "Priority: Aqua Jet"
+      "Support: Wide Guard"
      ],
      "teach": [],
      "sid": "ALOMOMOLA",
@@ -938,8 +922,8 @@
    ""
   ],
   "Mandibuzz": [
-   "Mid game",
-   "Roost"
+   "Doubles lead",
+   "Tailwind"
   ],
   "Zoroark-Hisui": [
    "Closer",
@@ -2514,12 +2498,11 @@
    {
     "name": "Alomomola",
     "tier": "A",
-    "score": 4.75,
+    "score": 4.5,
     "why": [
      "Amoonguss draws attacks so Alomomola attacks freely",
      "Amoonguss's sleep takes a foe out for Alomomola",
      "Alomomola switches in on Fire, Ice hits aimed at Amoonguss and heals on the way out",
-     "Physical + special: Intimidate or one screen can't stop both",
      "Resists your weaknesses: Fire, Ice",
      "You resist its weaknesses: Electric, Grass",
      "Used together in the real meta"
@@ -2601,35 +2584,31 @@
    {
     "name": "Amoonguss",
     "tier": "A",
-    "score": 2.5,
+    "score": 2.75,
     "why": [
      "Amoonguss draws attacks so Muk-Alola attacks freely",
      "Amoonguss's sleep takes a foe out for Muk-Alola",
+     "Physical + special: Intimidate or one screen can't stop both",
      "You resist its weaknesses: Psychic",
      "Used together in the real meta"
     ]
    },
    {
-    "name": "Mismagius-Aevian",
+    "name": "Slowbro",
     "tier": "A",
-    "score": 2.0,
+    "score": 1.75,
     "why": [
-     "Speed split: Mismagius-Aevian moves first, Muk-Alola is the bulky one",
      "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Ground",
-     "You resist its weaknesses: Ghost, Dark"
+     "You resist its weaknesses: Grass, Ghost, Dark"
     ]
    },
    {
-    "name": "Lapras-Aevian",
-    "tier": "S",
+    "name": "Slowking",
+    "tier": "A",
     "score": 1.75,
     "why": [
-     "Muk-Alola resets foe boosts that would stop Lapras-Aevian's sweep",
-     "Lapras-Aevian's sleep takes a foe out for Muk-Alola",
      "Physical + special: Intimidate or one screen can't stop both",
-     "You resist its weaknesses: Grass, Ghost, Dark",
-     "Shared weaknesses: Ground"
+     "You resist its weaknesses: Grass, Ghost, Dark"
     ]
    }
   ],
@@ -2677,12 +2656,11 @@
    {
     "name": "Amoonguss",
     "tier": "A",
-    "score": 4.75,
+    "score": 4.5,
     "why": [
      "Alomomola switches in on Fire, Ice hits aimed at Amoonguss and heals on the way out",
      "Amoonguss draws attacks so Alomomola attacks freely",
      "Amoonguss's sleep takes a foe out for Alomomola",
-     "Physical + special: Intimidate or one screen can't stop both",
      "Resists your weaknesses: Electric, Grass",
      "You resist its weaknesses: Fire, Ice",
      "Used together in the real meta"
@@ -2755,23 +2733,22 @@
     ]
    },
    {
-    "name": "Alomomola",
-    "tier": "A",
-    "score": 2.25,
-    "why": [
-     "Alomomola switches in on Steel hits aimed at Clefable and heals on the way out",
-     "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Steel",
-     "Used together in the real meta"
-    ]
-   },
-   {
     "name": "Swampert",
     "tier": "A",
     "score": 2.25,
     "why": [
      "Physical + special: Intimidate or one screen can't stop both",
      "Resists your weaknesses: Poison, Steel",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Amoonguss",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Amoonguss draws attacks so Clefable attacks freely",
+     "Amoonguss's sleep takes a foe out for Clefable",
      "Used together in the real meta"
     ]
    }

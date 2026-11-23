@@ -653,7 +653,7 @@
   "moves": [
    "Earthquake",
    "Rock Slide",
-   "Hammer Arm",
+   "Deluge",
    "Protect"
   ],
   "move_ids": [
@@ -2540,7 +2540,7 @@
   "item": "Black Glasses",
   "moves": [
    "Knock Off",
-   "Gastro Acid",
+   "Shadow Sneak",
    "Clear Smog",
    "Protect"
   ],
@@ -3346,9 +3346,9 @@
   "evs": "252 HP / 252 Atk",
   "item": "Black Glasses",
   "moves": [
-   "Roost",
+   "Tailwind",
    "Knock Off",
-   "Pluck",
+   "Roost",
    "Protect"
   ],
   "move_ids": [
@@ -5838,13 +5838,13 @@
  },
  "Alomomola": {
   "ability": "REGENERATOR",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
+  "nature": "Bold",
+  "evs": "252 HP / 252 Def",
   "item": "Sitrus Berry",
   "moves": [
    "Wish",
-   "Aqua Jet",
-   "Wake-Up Slap",
+   "Wide Guard",
+   "Helping Hand",
    "Protect"
   ],
   "move_ids": [
