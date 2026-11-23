@@ -93,12 +93,12 @@
   },
   {
    "name": "Drifblim",
-   "where": "#107",
+   "where": "#108",
    "move": "Mystical Fire"
   },
   {
    "name": "Drifblim",
-   "where": "#107",
+   "where": "#108",
    "move": "Hurricane"
   },
   {
@@ -118,252 +118,252 @@
   },
   {
    "name": "Empoleon",
-   "where": "#127",
+   "where": "#128",
    "move": "Icy Wind"
   },
   {
    "name": "Flamigo",
-   "where": "#136",
+   "where": "#137",
    "move": "U-turn"
   },
   {
    "name": "Glalie",
-   "where": "#152",
+   "where": "#154",
    "move": "Stealth Rock"
   },
   {
    "name": "Golisopod",
-   "where": "#158",
+   "where": "#160",
    "move": "Spikes"
   },
   {
    "name": "Houndoom",
-   "where": "#177",
+   "where": "#179",
    "move": "Snarl"
   },
   {
    "name": "Jynx",
-   "where": "#187",
+   "where": "#189",
    "move": "Nasty Plot"
   },
   {
    "name": "Karrablast",
-   "where": "#191",
+   "where": "#193",
    "move": "Iron Head"
   },
   {
    "name": "Lumineon",
-   "where": "#214",
+   "where": "#216",
    "move": "Quiver Dance"
   },
   {
    "name": "Lumineon",
-   "where": "#214",
+   "where": "#216",
    "move": "Headbutt"
   },
   {
    "name": "Manectric",
-   "where": "#227",
+   "where": "#229",
    "move": "Mat Block"
   },
   {
    "name": "Manectric",
-   "where": "#227",
+   "where": "#229",
    "move": "Frost Breath"
   },
   {
    "name": "Manectric",
-   "where": "#227",
+   "where": "#229",
    "move": "Volt Switch"
   },
   {
    "name": "Maractus",
-   "where": "#232",
+   "where": "#234",
    "move": "Spikes"
   },
   {
    "name": "Masquerain",
-   "where": "#236",
+   "where": "#238",
    "move": "Discharge"
   },
   {
    "name": "Masquerain",
-   "where": "#236",
+   "where": "#238",
    "move": "Aqua Ring"
   },
   {
    "name": "Masquerain",
-   "where": "#236",
+   "where": "#238",
    "move": "Ice Beam"
   },
   {
    "name": "Mismagius",
-   "where": "#250",
+   "where": "#252",
    "move": "Confuse Ray"
   },
   {
    "name": "Mismagius",
-   "where": "#250",
+   "where": "#252",
    "move": "Nasty Plot"
   },
   {
    "name": "Nidoran-M",
-   "where": "#262",
+   "where": "#265",
    "move": "Morning Sun"
   },
   {
    "name": "Persian",
-   "where": "#290",
+   "where": "#294",
    "move": "Tail Slap"
   },
   {
    "name": "Persian",
-   "where": "#290",
+   "where": "#294",
    "move": "Destiny Bond"
   },
   {
    "name": "Persian",
-   "where": "#290",
+   "where": "#294",
    "move": "Glare"
   },
   {
    "name": "Pidove",
-   "where": "#297",
+   "where": "#301",
    "move": "Hone Claws"
   },
   {
    "name": "Pidove",
-   "where": "#297",
+   "where": "#301",
    "move": "Dual Wingbeat"
   },
   {
    "name": "Porygon",
-   "where": "#305",
+   "where": "#309",
    "move": "Nasty Plot"
   },
   {
    "name": "Purugly",
-   "where": "#311",
+   "where": "#314",
    "move": "Thrash"
   },
   {
    "name": "Purugly",
-   "where": "#311",
+   "where": "#314",
    "move": "Swords Dance"
   },
   {
    "name": "Purugly",
-   "where": "#311",
+   "where": "#314",
    "move": "Earthquake"
   },
   {
    "name": "Pyukumuku",
-   "where": "#312",
+   "where": "#316",
    "move": "Block"
   },
   {
    "name": "Pyukumuku",
-   "where": "#313",
+   "where": "#317",
    "move": "Block"
   },
   {
    "name": "Quagsire",
-   "where": "#314",
+   "where": "#318",
    "move": "Lava Plume"
   },
   {
    "name": "Rapidash",
-   "where": "#317",
+   "where": "#321",
    "move": "Fell Stinger"
   },
   {
    "name": "Rapidash",
-   "where": "#317",
+   "where": "#321",
    "move": "High Horsepower"
   },
   {
    "name": "Rhydon",
-   "where": "#322",
+   "where": "#326",
    "move": "Headlong Rush"
   },
   {
    "name": "Stunfisk-Galar",
-   "where": "#380",
+   "where": "#384",
    "move": "Gyro Ball"
   },
   {
    "name": "Stunfisk-Galar",
-   "where": "#380",
+   "where": "#384",
    "move": "Nature Power"
   },
   {
    "name": "Stunfisk-Galar",
-   "where": "#380",
+   "where": "#384",
    "move": "Earthquake"
   },
   {
    "name": "Tatsugiri Droopy Form",
-   "where": "#398",
+   "where": "#402",
    "move": "Searing Shot"
   },
   {
    "name": "Throh",
-   "where": "#408",
+   "where": "#411",
    "move": "Knock Off"
   },
   {
    "name": "Vivillon Butterfly of Fate",
-   "where": "#433",
+   "where": "#437",
    "move": "Roost"
   },
   {
    "name": "Vivillon Butterfly of Fate",
-   "where": "#433",
+   "where": "#437",
    "move": "Magic Powder"
   },
   {
    "name": "Vivillon Butterfly of Fate",
-   "where": "#433",
+   "where": "#437",
    "move": "Psychic"
   },
   {
    "name": "Vivillon Butterfly of Fate",
-   "where": "#433",
+   "where": "#437",
    "move": "Destiny Bond"
   },
   {
    "name": "Vulpix",
-   "where": "#437",
+   "where": "#441",
    "move": "Heat Wave"
   },
   {
    "name": "Wiglett",
-   "where": "#445",
+   "where": "#449",
    "move": "Endure"
   },
   {
    "name": "Wooper-Paldea",
-   "where": "#450",
+   "where": "#454",
    "move": "Earth Power"
   },
   {
    "name": "Arcanine",
-   "where": "#466",
+   "where": "#470",
    "move": "Close Combat"
   },
   {
    "name": "Crabominable",
-   "where": "#473",
+   "where": "#477",
    "move": "Crabhammer"
   },
   {
    "name": "Crawdaunt",
-   "where": "#474",
+   "where": "#478",
    "move": "Dragon Dance"
   },
   {
    "name": "Mismagius-Aevian",
-   "where": "#494",
+   "where": "#496",
    "move": "Confuse Ray"
   },
   {

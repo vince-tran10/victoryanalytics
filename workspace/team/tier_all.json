@@ -236,7 +236,7 @@
     "XSCISSOR"
    ],
    "where": "Active",
-   "dump": 487,
+   "dump": 489,
    "owned_as": "Golisopod-Aevian",
    "evo": "",
    "per_fight": {
@@ -299,8 +299,8 @@
    "meta": 0.892,
    "meta_label": "OU 14.1% | NatDex Doubles 1.1%",
    "general": 0.853,
-   "blend": 0.875,
-   "game_pct": 0.926,
+   "blend": 0.874,
+   "game_pct": 0.921,
    "n_all": 32,
    "ability": "REGENERATOR",
    "abilities": [
@@ -655,7 +655,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Active",
-   "dump": 490,
+   "dump": 492,
    "owned_as": "Lapras-Aevian",
    "evo": "",
    "per_fight": {
@@ -795,7 +795,7 @@
     "WORRYSEED"
    ],
    "where": "Active",
-   "dump": 486,
+   "dump": 488,
    "owned_as": "Glalie-Aevian",
    "evo": "",
    "per_fight": {
@@ -845,13 +845,13 @@
     "Spe": 29
    },
    "bst": 487,
-   "fight": 0.372,
+   "fight": 0.389,
    "fight_pct": 0.968,
    "meta": 0.72,
    "meta_label": "Community rating | Reddit list 1: S++ | Reddit list 2: A | Reddit: Top Trick Room mon: sets TR itself, Tough Claws | Reddit: \"a must have for every dedicated Trick Room team\"",
    "general": 0.697,
-   "blend": 0.761,
-   "game_pct": 0.911,
+   "blend": 0.769,
+   "game_pct": 0.937,
    "n_all": 32,
    "ability": "TOUGHCLAWS",
    "abilities": [
@@ -943,10 +943,10 @@
    "owned_as": "Musharna-Aevian",
    "evo": "",
    "per_fight": {
-    "spector": 0.696,
-    "spector2": 0.47,
-    "jenner9": 0.315,
-    "erick": 0.389
+    "spector": 0.763,
+    "spector2": 0.507,
+    "jenner9": 0.319,
+    "erick": 0.425
    },
    "counters": [
     "erick:Raichu",
@@ -1251,7 +1251,7 @@
    },
    "bst": 500,
    "fight": 0.199,
-   "fight_pct": 0.742,
+   "fight_pct": 0.739,
    "meta": 0.821,
    "meta_label": "VGC 11.6% | RU 6.7%",
    "general": 0.794,
@@ -1491,7 +1491,7 @@
     "XSCISSOR"
    ],
    "where": "Active",
-   "dump": 479,
+   "dump": 482,
    "owned_as": "Drapion-Aevian",
    "evo": "",
    "per_fight": {
@@ -1874,7 +1874,7 @@
     "THUNDERFANG"
    ],
    "where": "Active",
-   "dump": 467,
+   "dump": 471,
    "owned_as": "Arcanine-Hisui",
    "evo": "",
    "per_fight": {
@@ -1999,7 +1999,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 137,
+   "dump": 138,
    "owned_as": "Foongus",
    "evo": "Amoonguss (Level 39)",
    "per_fight": {
@@ -2147,7 +2147,7 @@
     "WORKUP"
    ],
    "where": "Active",
-   "dump": 472,
+   "dump": 476,
    "owned_as": "Clefable",
    "evo": "",
    "per_fight": {
@@ -2290,7 +2290,7 @@
     "WORRYSEED"
    ],
    "where": "Active",
-   "dump": 482,
+   "dump": 485,
    "owned_as": "Froslass-Aevian",
    "evo": "",
    "per_fight": {
@@ -2421,7 +2421,7 @@
     "XSCISSOR"
    ],
    "where": "Active",
-   "dump": 491,
+   "dump": 493,
    "owned_as": "Leavanny-Aevian",
    "evo": "",
    "per_fight": {
@@ -2450,6 +2450,149 @@
    "tier": "A"
   },
   {
+   "name": "Swampert",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "SWAMPERT",
+   "form": "0",
+   "types": [
+    "WATER",
+    "GROUND"
+   ],
+   "base": {
+    "HP": 100,
+    "Atk": 110,
+    "Def": 90,
+    "SpA": 85,
+    "SpD": 90,
+    "Spe": 60
+   },
+   "bst": 535,
+   "fight": 0.204,
+   "fight_pct": 0.75,
+   "meta": 0.487,
+   "meta_label": "NatDex UU 12.1% | NatDex Doubles 0.5%",
+   "general": 0.509,
+   "blend": 0.643,
+   "game_pct": 0.955,
+   "n_all": 32,
+   "ability": "TORRENT",
+   "abilities": [
+    "TORRENT",
+    "DAMP"
+   ],
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "cat": "Physical",
+   "attacks": [
+    "Earthquake",
+    "Rock Slide",
+    "Deluge"
+   ],
+   "legal": [
+    "AMNESIA",
+    "ANCIENTPOWER",
+    "ATTRACT",
+    "BARRIER",
+    "BIDE",
+    "BITE",
+    "BULLDOZE",
+    "CHILLINGWATER",
+    "CONFIDE",
+    "COUNTER",
+    "CURSE",
+    "DELUGE",
+    "DIG",
+    "DOUBLEEDGE",
+    "DOUBLETEAM",
+    "EARTHQUAKE",
+    "ECHOEDVOICE",
+    "FACADE",
+    "FALSESWIPE",
+    "FLING",
+    "FORESIGHT",
+    "GROWL",
+    "HAMMERARM",
+    "HELPINGHAND",
+    "HIDDENPOWER",
+    "ICEBALL",
+    "MIRRORCOAT",
+    "MUDBARRAGE",
+    "MUDBOMB",
+    "MUDDYWATER",
+    "MUDSHOT",
+    "MUDSLAP",
+    "POISONSWEEP",
+    "POWERUPPUNCH",
+    "PROTECT",
+    "REFRESH",
+    "REST",
+    "ROAR",
+    "ROCKCLIMB",
+    "ROCKSLIDE",
+    "ROCKSMASH",
+    "ROCKTHROW",
+    "ROCKTOMB",
+    "ROUND",
+    "SANDTOMB",
+    "SCARYFACE",
+    "SCREECH",
+    "SECRETPOWER",
+    "SLEEPTALK",
+    "SLUDGE",
+    "SNORE",
+    "STACKINGSHOT",
+    "STOMP",
+    "SUPERSONIC",
+    "SURF",
+    "SWAGGER",
+    "TACKLE",
+    "TAKEDOWN",
+    "UPROAR",
+    "WATERGUN",
+    "WATERPULSE",
+    "WHIRLPOOL",
+    "WIDEGUARD",
+    "WORKUP",
+    "YAWN"
+   ],
+   "where": "Party",
+   "dump": 1,
+   "owned_as": "Swampert",
+   "evo": "",
+   "per_fight": {
+    "spector": 0.46,
+    "spector2": 0.52,
+    "jenner9": 0.129,
+    "erick": 0.221
+   },
+   "counters": [
+    "spector2:Luxray",
+    "spector:Gengar",
+    "spector:Ninetales"
+   ],
+   "stats": {
+    "HP": 226,
+    "Atk": 194,
+    "Def": 121,
+    "SpA": 103,
+    "SpD": 121,
+    "Spe": 88
+   },
+   "tags": [
+    "guard",
+    "helping",
+    "sleep",
+    "speed"
+   ],
+   "tier": "A"
+  },
+  {
    "name": "Slowbro",
    "kind": "regular",
    "crest": "",
@@ -2470,7 +2613,7 @@
    },
    "bst": 490,
    "fight": 0.194,
-   "fight_pct": 0.734,
+   "fight_pct": 0.732,
    "meta": 0.561,
    "meta_label": "NatDex UU 16.6% | NatDex Doubles 0.4%",
    "general": 0.555,
@@ -2706,7 +2849,7 @@
     "ZAPCANNON"
    ],
    "where": "Active",
-   "dump": 465,
+   "dump": 469,
    "owned_as": "Ampharos-Aevian",
    "evo": "",
    "per_fight": {
@@ -2880,147 +3023,6 @@
    "tier": "A"
   },
   {
-   "name": "Swampert",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "SWAMPERT",
-   "form": "0",
-   "types": [
-    "WATER",
-    "GROUND"
-   ],
-   "base": {
-    "HP": 100,
-    "Atk": 110,
-    "Def": 90,
-    "SpA": 85,
-    "SpD": 90,
-    "Spe": 60
-   },
-   "bst": 535,
-   "fight": 0.176,
-   "fight_pct": 0.695,
-   "meta": 0.487,
-   "meta_label": "NatDex UU 12.1% | NatDex Doubles 0.5%",
-   "general": 0.509,
-   "blend": 0.631,
-   "game_pct": 0.916,
-   "n_all": 32,
-   "ability": "TORRENT",
-   "abilities": [
-    "TORRENT",
-    "DAMP"
-   ],
-   "nature": "Adamant",
-   "evs": {
-    "Atk": 252,
-    "HP": 252,
-    "SpD": 4
-   },
-   "cat": "Physical",
-   "attacks": [
-    "Earthquake",
-    "Rock Slide",
-    "Deluge"
-   ],
-   "legal": [
-    "AMNESIA",
-    "ANCIENTPOWER",
-    "ATTRACT",
-    "BARRIER",
-    "BIDE",
-    "BITE",
-    "BULLDOZE",
-    "CHILLINGWATER",
-    "CONFIDE",
-    "COUNTER",
-    "CURSE",
-    "DELUGE",
-    "DIG",
-    "DOUBLEEDGE",
-    "DOUBLETEAM",
-    "EARTHQUAKE",
-    "ECHOEDVOICE",
-    "FACADE",
-    "FALSESWIPE",
-    "FLING",
-    "FORESIGHT",
-    "GROWL",
-    "HAMMERARM",
-    "HELPINGHAND",
-    "HIDDENPOWER",
-    "ICEBALL",
-    "MIRRORCOAT",
-    "MUDBARRAGE",
-    "MUDBOMB",
-    "MUDDYWATER",
-    "MUDSHOT",
-    "MUDSLAP",
-    "POISONSWEEP",
-    "POWERUPPUNCH",
-    "PROTECT",
-    "REFRESH",
-    "REST",
-    "ROAR",
-    "ROCKCLIMB",
-    "ROCKSLIDE",
-    "ROCKSMASH",
-    "ROCKTHROW",
-    "ROCKTOMB",
-    "ROUND",
-    "SANDTOMB",
-    "SCARYFACE",
-    "SCREECH",
-    "SECRETPOWER",
-    "SLEEPTALK",
-    "SLUDGE",
-    "SNORE",
-    "STACKINGSHOT",
-    "STOMP",
-    "SUPERSONIC",
-    "SURF",
-    "SWAGGER",
-    "TACKLE",
-    "TAKEDOWN",
-    "UPROAR",
-    "WATERGUN",
-    "WATERPULSE",
-    "WHIRLPOOL",
-    "WIDEGUARD",
-    "WORKUP",
-    "YAWN"
-   ],
-   "where": "Party",
-   "dump": 1,
-   "owned_as": "Swampert",
-   "evo": "",
-   "per_fight": {
-    "spector": 0.417,
-    "spector2": 0.442,
-    "jenner9": 0.102,
-    "erick": 0.221
-   },
-   "counters": [
-    "spector:Gengar"
-   ],
-   "stats": {
-    "HP": 226,
-    "Atk": 194,
-    "Def": 121,
-    "SpA": 103,
-    "SpD": 121,
-    "Spe": 88
-   },
-   "tags": [
-    "guard",
-    "helping",
-    "sleep",
-    "speed"
-   ],
-   "tier": "A"
-  },
-  {
    "name": "Zoroark",
    "kind": "crest",
    "crest": "Zoroark Crest",
@@ -3186,7 +3188,7 @@
    "meta_label": "Community rating | Reddit list 1: B | Reddit list 2: A",
    "general": 0.469,
    "blend": 0.614,
-   "game_pct": 0.953,
+   "game_pct": 0.95,
    "n_all": 32,
    "ability": "STORMDRAIN",
    "abilities": [
@@ -3271,7 +3273,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 146,
+   "dump": 147,
    "owned_as": "Gastrodon",
    "evo": "",
    "per_fight": {
@@ -3398,7 +3400,7 @@
     "WONDERROOM"
    ],
    "where": "Active",
-   "dump": 496,
+   "dump": 497,
    "owned_as": "Ninetales-Alola",
    "evo": "",
    "per_fight": {
@@ -3540,7 +3542,7 @@
     "TRAILBLAZE"
    ],
    "where": "Overflow",
-   "dump": 291,
+   "dump": 295,
    "owned_as": "Phanpy",
    "evo": "Donphan (Level 25)",
    "per_fight": {
@@ -3681,7 +3683,7 @@
     "XSCISSOR"
    ],
    "where": "Active",
-   "dump": 494,
+   "dump": 496,
    "owned_as": "Mismagius-Aevian",
    "evo": "",
    "per_fight": {
@@ -3969,7 +3971,7 @@
     "XSCISSOR"
    ],
    "where": "Active",
-   "dump": 483,
+   "dump": 486,
    "owned_as": "Gallade",
    "evo": "",
    "per_fight": {
@@ -4027,8 +4029,8 @@
    "meta": 0.4,
    "meta_label": "Community rating (Whiscash Crest) | F4: C tier | W: immune to Grass moves (they raise Attack instead) | W: +20% Atk and SpA",
    "general": 0.4,
-   "blend": 0.561,
-   "game_pct": 0.937,
+   "blend": 0.559,
+   "game_pct": 0.932,
    "n_all": 32,
    "ability": "OBLIVIOUS",
    "abilities": [
@@ -4230,7 +4232,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 347,
+   "dump": 351,
    "owned_as": "Shellos",
    "evo": "Gastrodon (Level 30)",
    "per_fight": {
@@ -4284,8 +4286,8 @@
    "meta": 0.39,
    "meta_label": "Community rating | Reddit list 1: A- | Reddit list 2: B- | Reddit: OP: Rocky > Fiery > Icy (early Stealth Rock)",
    "general": 0.396,
-   "blend": 0.553,
-   "game_pct": 0.918,
+   "blend": 0.551,
+   "game_pct": 0.913,
    "n_all": 32,
    "ability": "STEAMENGINE",
    "abilities": [
@@ -4354,7 +4356,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 335,
+   "dump": 339,
    "owned_as": "Sandygast-Aevian",
    "evo": "Palossand (Level 42)",
    "per_fight": {
@@ -4498,7 +4500,7 @@
     "WORKUP"
    ],
    "where": "Active",
-   "dump": 468,
+   "dump": 472,
    "owned_as": "Azumarill",
    "evo": "",
    "per_fight": {
@@ -4619,7 +4621,7 @@
     "TRIATTACK"
    ],
    "where": "Overflow",
-   "dump": 224,
+   "dump": 226,
    "owned_as": "Magnemite",
    "evo": "Magneton (Level 30); Magnezone (Item Thunder Stone)",
    "per_fight": {
@@ -4755,7 +4757,7 @@
     "UPROAR"
    ],
    "where": "Overflow",
-   "dump": 161,
+   "dump": 163,
    "owned_as": "Gothorita",
    "evo": "Gothitelle (Level 41)",
    "per_fight": {
@@ -4804,7 +4806,7 @@
    },
    "bst": 480,
    "fight": 0.193,
-   "fight_pct": 0.729,
+   "fight_pct": 0.726,
    "meta": 0.39,
    "meta_label": "Community rating | Reddit list 1: A- | Reddit list 2: B- | Reddit: OP: Rocky > Fiery > Icy (early Stealth Rock)",
    "general": 0.396,
@@ -4880,7 +4882,7 @@
     "WATERPULSE"
    ],
    "where": "Overflow",
-   "dump": 334,
+   "dump": 338,
    "owned_as": "Sandygast-Aevian",
    "evo": "Palossand (Level 42)",
    "per_fight": {
@@ -4929,7 +4931,7 @@
    },
    "bst": 530,
    "fight": 0.203,
-   "fight_pct": 0.747,
+   "fight_pct": 0.745,
    "meta": 0.308,
    "meta_label": "UU 3.5% | NatDex Doubles 0.9%",
    "general": 0.345,
@@ -5009,7 +5011,7 @@
     "TRAILBLAZE"
    ],
    "where": "Overflow",
-   "dump": 300,
+   "dump": 304,
    "owned_as": "Piloswine",
    "evo": "Mamoswine (HasMove Ancientpower)",
    "per_fight": {
@@ -5126,7 +5128,7 @@
     "WINGATTACK"
    ],
    "where": "Overflow",
-   "dump": 136,
+   "dump": 137,
    "owned_as": "Flamigo",
    "evo": "",
    "per_fight": {
@@ -5245,7 +5247,7 @@
     "WILLOWISP"
    ],
    "where": "Active",
-   "dump": 470,
+   "dump": 474,
    "owned_as": "Chandelure",
    "evo": "",
    "per_fight": {
@@ -5370,7 +5372,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 209,
+   "dump": 211,
    "owned_as": "Lokix",
    "evo": "",
    "per_fight": {
@@ -5390,123 +5392,6 @@
     "SpA": 71,
     "SpD": 82,
     "Spe": 157
-   },
-   "tags": [
-    "speed"
-   ],
-   "tier": "B"
-  },
-  {
-   "name": "Revavroom",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "REVAVROOM",
-   "form": "0",
-   "types": [
-    "STEEL",
-    "POISON"
-   ],
-   "base": {
-    "HP": 80,
-    "Atk": 119,
-    "Def": 90,
-    "SpA": 54,
-    "SpD": 67,
-    "Spe": 90
-   },
-   "bst": 500,
-   "fight": 0.295,
-   "fight_pct": 0.911,
-   "meta": 0.304,
-   "meta_label": "UU 4.4% | NatDex Doubles 0.1%",
-   "general": 0.328,
-   "blend": 0.512,
-   "game_pct": 0.939,
-   "n_all": 32,
-   "ability": "FILTER",
-   "abilities": [
-    "OVERCOAT",
-    "FILTER"
-   ],
-   "nature": "Adamant",
-   "evs": {
-    "Atk": 252,
-    "Spe": 252,
-    "Def": 4
-   },
-   "cat": "Physical",
-   "attacks": [
-    "Gunk Shot",
-    "Spin Out"
-   ],
-   "legal": [
-    "ASSURANCE",
-    "ATTRACT",
-    "BULLDOZE",
-    "CONFIDE",
-    "DOUBLETEAM",
-    "FACADE",
-    "FALSESWIPE",
-    "GUNKSHOT",
-    "GYROBALL",
-    "HAZE",
-    "HEADBUTT",
-    "HIDDENPOWER",
-    "IRONHEAD",
-    "LICK",
-    "MAGMADRIFT",
-    "MAGNETRISE",
-    "OVERHEAT",
-    "PARTINGSHOT",
-    "POISONGAS",
-    "POISONJAB",
-    "PROTECT",
-    "REST",
-    "ROUND",
-    "SCARYFACE",
-    "SCREECH",
-    "SECRETPOWER",
-    "SELFDESTRUCT",
-    "SHIFTGEAR",
-    "SLEEPTALK",
-    "SLUDGE",
-    "SLUDGEBOMB",
-    "SMOG",
-    "SNORE",
-    "SPINOUT",
-    "SWAGGER",
-    "TAKEDOWN",
-    "TAUNT",
-    "THIEF",
-    "TORMENT",
-    "TOXIC",
-    "UPROAR",
-    "VENOSHOCK"
-   ],
-   "where": "Overflow",
-   "dump": 321,
-   "owned_as": "Revavroom",
-   "evo": "",
-   "per_fight": {
-    "spector": 0.359,
-    "spector2": 0.203,
-    "jenner9": 0.288,
-    "erick": 0.335
-   },
-   "counters": [
-    "erick:Electivire",
-    "erick:Raichu",
-    "spector2:Stonjourner",
-    "spector:Murkrow"
-   ],
-   "stats": {
-    "HP": 170,
-    "Atk": 205,
-    "Def": 121,
-    "SpA": 72,
-    "SpD": 95,
-    "Spe": 155
    },
    "tags": [
     "speed"
@@ -5898,6 +5783,123 @@
    "tier": "B"
   },
   {
+   "name": "Revavroom",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "REVAVROOM",
+   "form": "0",
+   "types": [
+    "STEEL",
+    "POISON"
+   ],
+   "base": {
+    "HP": 80,
+    "Atk": 119,
+    "Def": 90,
+    "SpA": 54,
+    "SpD": 67,
+    "Spe": 90
+   },
+   "bst": 500,
+   "fight": 0.295,
+   "fight_pct": 0.911,
+   "meta": 0.304,
+   "meta_label": "UU 4.4% | NatDex Doubles 0.1%",
+   "general": 0.328,
+   "blend": 0.51,
+   "game_pct": 0.934,
+   "n_all": 32,
+   "ability": "FILTER",
+   "abilities": [
+    "OVERCOAT",
+    "FILTER"
+   ],
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "Def": 4
+   },
+   "cat": "Physical",
+   "attacks": [
+    "Gunk Shot",
+    "Spin Out"
+   ],
+   "legal": [
+    "ASSURANCE",
+    "ATTRACT",
+    "BULLDOZE",
+    "CONFIDE",
+    "DOUBLETEAM",
+    "FACADE",
+    "FALSESWIPE",
+    "GUNKSHOT",
+    "GYROBALL",
+    "HAZE",
+    "HEADBUTT",
+    "HIDDENPOWER",
+    "IRONHEAD",
+    "LICK",
+    "MAGMADRIFT",
+    "MAGNETRISE",
+    "OVERHEAT",
+    "PARTINGSHOT",
+    "POISONGAS",
+    "POISONJAB",
+    "PROTECT",
+    "REST",
+    "ROUND",
+    "SCARYFACE",
+    "SCREECH",
+    "SECRETPOWER",
+    "SELFDESTRUCT",
+    "SHIFTGEAR",
+    "SLEEPTALK",
+    "SLUDGE",
+    "SLUDGEBOMB",
+    "SMOG",
+    "SNORE",
+    "SPINOUT",
+    "SWAGGER",
+    "TAKEDOWN",
+    "TAUNT",
+    "THIEF",
+    "TORMENT",
+    "TOXIC",
+    "UPROAR",
+    "VENOSHOCK"
+   ],
+   "where": "Overflow",
+   "dump": 325,
+   "owned_as": "Revavroom",
+   "evo": "",
+   "per_fight": {
+    "spector": 0.359,
+    "spector2": 0.203,
+    "jenner9": 0.288,
+    "erick": 0.335
+   },
+   "counters": [
+    "erick:Electivire",
+    "erick:Raichu",
+    "spector2:Stonjourner",
+    "spector:Murkrow"
+   ],
+   "stats": {
+    "HP": 170,
+    "Atk": 205,
+    "Def": 121,
+    "SpA": 72,
+    "SpD": 95,
+    "Spe": 155
+   },
+   "tags": [
+    "speed"
+   ],
+   "tier": "B"
+  },
+  {
    "name": "Talonflame",
    "kind": "regular",
    "crest": "",
@@ -5985,7 +5987,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 395,
+   "dump": 399,
    "owned_as": "Talonflame",
    "evo": "",
    "per_fight": {
@@ -6388,7 +6390,7 @@
     "WHIRLPOOL"
    ],
    "where": "Overflow",
-   "dump": 282,
+   "dump": 285,
    "owned_as": "Palossand-Aevian",
    "evo": "",
    "per_fight": {
@@ -6642,7 +6644,7 @@
     "WRAP"
    ],
    "where": "Overflow",
-   "dump": 352,
+   "dump": 356,
    "owned_as": "Shuckle",
    "evo": "",
    "per_fight": {
@@ -6761,7 +6763,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 264,
+   "dump": 267,
    "owned_as": "Noivern",
    "evo": "",
    "per_fight": {
@@ -6886,7 +6888,7 @@
     "THUNDERFANG"
    ],
    "where": "Active",
-   "dump": 466,
+   "dump": 470,
    "owned_as": "Arcanine",
    "evo": "",
    "per_fight": {
@@ -6940,8 +6942,8 @@
    "meta": 0.28,
    "meta_label": "RU 7.6% | NatDex Doubles 0.2%",
    "general": 0.292,
-   "blend": 0.483,
-   "game_pct": 0.929,
+   "blend": 0.482,
+   "game_pct": 0.924,
    "n_all": 32,
    "ability": "ADAPTABILITY",
    "abilities": [
@@ -7020,7 +7022,7 @@
     "XSCISSOR"
    ],
    "where": "Active",
-   "dump": 474,
+   "dump": 478,
    "owned_as": "Crawdaunt",
    "evo": "",
    "per_fight": {
@@ -7150,7 +7152,7 @@
     "WORRYSEED"
    ],
    "where": "Active",
-   "dump": 493,
+   "dump": 495,
    "owned_as": "Meowscarada",
    "evo": "",
    "per_fight": {
@@ -7262,7 +7264,7 @@
     "WORKUP"
    ],
    "where": "Active",
-   "dump": 469,
+   "dump": 473,
    "owned_as": "Braviary",
    "evo": "",
    "per_fight": {
@@ -7418,8 +7420,8 @@
    "meta": 0.247,
    "meta_label": "NU 13.0% | NatDex Doubles 0.0%",
    "general": 0.277,
-   "blend": 0.476,
-   "game_pct": 0.942,
+   "blend": 0.475,
+   "game_pct": 0.939,
    "n_all": 32,
    "ability": "SHEERFORCE",
    "abilities": [
@@ -7533,7 +7535,7 @@
    },
    "bst": 530,
    "fight": 0.202,
-   "fight_pct": 0.745,
+   "fight_pct": 0.742,
    "meta": 0.329,
    "meta_label": "RU 9.4% | NatDex Doubles 0.7%",
    "general": 0.364,
@@ -7623,7 +7625,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 127,
+   "dump": 128,
    "owned_as": "Empoleon",
    "evo": "",
    "per_fight": {
@@ -7749,7 +7751,7 @@
     "WILLOWISP"
    ],
    "where": "Overflow",
-   "dump": 437,
+   "dump": 441,
    "owned_as": "Vulpix",
    "evo": "Ninetales (Item Fire Stone)",
    "per_fight": {
@@ -7896,7 +7898,7 @@
     "WHIRLPOOL"
    ],
    "where": "Overflow",
-   "dump": 262,
+   "dump": 265,
    "owned_as": "Nidoran-M",
    "evo": "Nidorino (Level 16); Nidoking (Item Moon Stone)",
    "per_fight": {
@@ -8168,7 +8170,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 314,
+   "dump": 318,
    "owned_as": "Quagsire",
    "evo": "",
    "per_fight": {
@@ -8436,7 +8438,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 114,
+   "dump": 115,
    "owned_as": "Dunsparce",
    "evo": "Dudunsparce (HasMove Hyperdrill)",
    "per_fight": {
@@ -8566,7 +8568,7 @@
     "TRICK"
    ],
    "where": "Active",
-   "dump": 488,
+   "dump": 490,
    "owned_as": "Golurk",
    "evo": "",
    "per_fight": {
@@ -8820,7 +8822,7 @@
     "WRAP"
    ],
    "where": "Overflow",
-   "dump": 181,
+   "dump": 183,
    "owned_as": "Inkay",
    "evo": "Malamar (Level 30)",
    "per_fight": {
@@ -8947,7 +8949,7 @@
     "WINGATTACK"
    ],
    "where": "Overflow",
-   "dump": 459,
+   "dump": 463,
    "owned_as": "Yanma",
    "evo": "Yanmega (HasMove Ancientpower)",
    "per_fight": {
@@ -9129,8 +9131,8 @@
    "meta": 0.176,
    "meta_label": "NatDex Doubles 0.7% | UU 0.1%",
    "general": 0.21,
-   "blend": 0.434,
-   "game_pct": 0.955,
+   "blend": 0.433,
+   "game_pct": 0.953,
    "n_all": 32,
    "ability": "MOLDBREAKER",
    "abilities": [
@@ -9325,7 +9327,7 @@
     "WATERSPORT"
    ],
    "where": "Active",
-   "dump": 471,
+   "dump": 475,
    "owned_as": "Clawitzer",
    "evo": "",
    "per_fight": {
@@ -9452,7 +9454,7 @@
     "WHIRLPOOL"
    ],
    "where": "Overflow",
-   "dump": 280,
+   "dump": 283,
    "owned_as": "Overqwil",
    "evo": "",
    "per_fight": {
@@ -9585,7 +9587,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 93,
+   "dump": 94,
    "owned_as": "Decidueye",
    "evo": "",
    "per_fight": {
@@ -9607,124 +9609,6 @@
    },
    "tags": [
     "helping"
-   ],
-   "tier": "B"
-  },
-  {
-   "name": "Dragalge",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "DRAGALGE",
-   "form": "0",
-   "types": [
-    "POISON",
-    "DRAGON"
-   ],
-   "base": {
-    "HP": 65,
-    "Atk": 75,
-    "Def": 90,
-    "SpA": 97,
-    "SpD": 123,
-    "Spe": 44
-   },
-   "bst": 494,
-   "fight": 0.302,
-   "fight_pct": 0.929,
-   "meta": 0.172,
-   "meta_label": "NU 4.3% | NatDex Doubles 0.4%",
-   "general": 0.206,
-   "blend": 0.429,
-   "game_pct": 0.947,
-   "n_all": 32,
-   "ability": "ADAPTABILITY",
-   "abilities": [
-    "POISONPOINT",
-    "POISONTOUCH",
-    "ADAPTABILITY"
-   ],
-   "nature": "Modest",
-   "evs": {
-    "SpA": 252,
-    "HP": 252,
-    "SpD": 4
-   },
-   "cat": "Special",
-   "attacks": [
-    "Sludge Bomb",
-    "Dragon Pulse",
-    "Surf"
-   ],
-   "legal": [
-    "ACID",
-    "ACIDARMOR",
-    "AQUATAIL",
-    "ATTRACT",
-    "BOUNCE",
-    "BUBBLE",
-    "CAMOUFLAGE",
-    "CHILLINGWATER",
-    "CONFIDE",
-    "DELUGE",
-    "DOUBLETEAM",
-    "DRAGONPULSE",
-    "DRAGONTAIL",
-    "FACADE",
-    "FALSESWIPE",
-    "FEINTATTACK",
-    "HAZE",
-    "HIDDENPOWER",
-    "MUDBARRAGE",
-    "MUDSHOT",
-    "POISONTAIL",
-    "PROTECT",
-    "REST",
-    "ROUND",
-    "SCARYFACE",
-    "SECRETPOWER",
-    "SHADOWBALL",
-    "SHOCKWAVE",
-    "SLEEPTALK",
-    "SLUDGEBOMB",
-    "SMOKESCREEN",
-    "SNORE",
-    "SURF",
-    "SWAGGER",
-    "TACKLE",
-    "TAILWHIP",
-    "TAKEDOWN",
-    "THIEF",
-    "TOXIC",
-    "TWISTER",
-    "VENOSHOCK",
-    "WATERGUN",
-    "WATERPULSE",
-    "WHIRLPOOL"
-   ],
-   "where": "Active",
-   "dump": 478,
-   "owned_as": "Dragalge",
-   "evo": "",
-   "per_fight": {
-    "spector": 0.374,
-    "spector2": 0.369,
-    "jenner9": 0.254,
-    "erick": 0.423
-   },
-   "counters": [
-    "spector2:Stonjourner"
-   ],
-   "stats": {
-    "HP": 188,
-    "Atk": 93,
-    "Def": 121,
-    "SpA": 179,
-    "SpD": 157,
-    "Spe": 70
-   },
-   "tags": [
-    "speed"
    ],
    "tier": "B"
   },
@@ -9839,7 +9723,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 142,
+   "dump": 143,
    "owned_as": "Furret",
    "evo": "",
    "per_fight": {
@@ -9867,6 +9751,124 @@
    "tier": "B"
   },
   {
+   "name": "Dragalge",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "DRAGALGE",
+   "form": "0",
+   "types": [
+    "POISON",
+    "DRAGON"
+   ],
+   "base": {
+    "HP": 65,
+    "Atk": 75,
+    "Def": 90,
+    "SpA": 97,
+    "SpD": 123,
+    "Spe": 44
+   },
+   "bst": 494,
+   "fight": 0.302,
+   "fight_pct": 0.929,
+   "meta": 0.172,
+   "meta_label": "NU 4.3% | NatDex Doubles 0.4%",
+   "general": 0.206,
+   "blend": 0.428,
+   "game_pct": 0.945,
+   "n_all": 32,
+   "ability": "ADAPTABILITY",
+   "abilities": [
+    "POISONPOINT",
+    "POISONTOUCH",
+    "ADAPTABILITY"
+   ],
+   "nature": "Modest",
+   "evs": {
+    "SpA": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "cat": "Special",
+   "attacks": [
+    "Sludge Bomb",
+    "Dragon Pulse",
+    "Surf"
+   ],
+   "legal": [
+    "ACID",
+    "ACIDARMOR",
+    "AQUATAIL",
+    "ATTRACT",
+    "BOUNCE",
+    "BUBBLE",
+    "CAMOUFLAGE",
+    "CHILLINGWATER",
+    "CONFIDE",
+    "DELUGE",
+    "DOUBLETEAM",
+    "DRAGONPULSE",
+    "DRAGONTAIL",
+    "FACADE",
+    "FALSESWIPE",
+    "FEINTATTACK",
+    "HAZE",
+    "HIDDENPOWER",
+    "MUDBARRAGE",
+    "MUDSHOT",
+    "POISONTAIL",
+    "PROTECT",
+    "REST",
+    "ROUND",
+    "SCARYFACE",
+    "SECRETPOWER",
+    "SHADOWBALL",
+    "SHOCKWAVE",
+    "SLEEPTALK",
+    "SLUDGEBOMB",
+    "SMOKESCREEN",
+    "SNORE",
+    "SURF",
+    "SWAGGER",
+    "TACKLE",
+    "TAILWHIP",
+    "TAKEDOWN",
+    "THIEF",
+    "TOXIC",
+    "TWISTER",
+    "VENOSHOCK",
+    "WATERGUN",
+    "WATERPULSE",
+    "WHIRLPOOL"
+   ],
+   "where": "Active",
+   "dump": 481,
+   "owned_as": "Dragalge",
+   "evo": "",
+   "per_fight": {
+    "spector": 0.374,
+    "spector2": 0.369,
+    "jenner9": 0.254,
+    "erick": 0.423
+   },
+   "counters": [
+    "spector2:Stonjourner"
+   ],
+   "stats": {
+    "HP": 188,
+    "Atk": 93,
+    "Def": 121,
+    "SpA": 179,
+    "SpD": 157,
+    "Spe": 70
+   },
+   "tags": [
+    "speed"
+   ],
+   "tier": "B"
+  },
+  {
    "name": "Typhlosion",
    "kind": "regular",
    "crest": "",
@@ -9890,8 +9892,8 @@
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.4% | NatDex OU 0.0%",
    "general": 0.205,
-   "blend": 0.427,
-   "game_pct": 0.945,
+   "blend": 0.426,
+   "game_pct": 0.942,
    "n_all": 32,
    "ability": "FLASHFIRE",
    "abilities": [
@@ -10024,8 +10026,8 @@
    "meta": 0.191,
    "meta_label": "NU 5.7% | NatDex Doubles 0.4%",
    "general": 0.215,
-   "blend": 0.426,
-   "game_pct": 0.921,
+   "blend": 0.425,
+   "game_pct": 0.916,
    "n_all": 32,
    "ability": "THICKFAT",
    "abilities": [
@@ -10113,7 +10115,7 @@
     "WORKUP"
    ],
    "where": "Active",
-   "dump": 489,
+   "dump": 491,
    "owned_as": "Hariyama",
    "evo": "",
    "per_fight": {
@@ -10143,122 +10145,6 @@
     "guard",
     "helping",
     "speed"
-   ],
-   "tier": "B"
-  },
-  {
-   "name": "Florges",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "FLORGES",
-   "form": "0",
-   "types": [
-    "FAIRY"
-   ],
-   "base": {
-    "HP": 78,
-    "Atk": 65,
-    "Def": 68,
-    "SpA": 112,
-    "SpD": 154,
-    "Spe": 75
-   },
-   "bst": 552,
-   "fight": 0.43,
-   "fight_pct": 0.989,
-   "meta": 0.15,
-   "meta_label": "NatDex Doubles 0.3% | UU 0.4%",
-   "general": 0.213,
-   "blend": 0.426,
-   "game_pct": 0.924,
-   "n_all": 32,
-   "ability": "FLOWERVEIL",
-   "abilities": [
-    "FLOWERVEIL",
-    "SYMBIOSIS"
-   ],
-   "nature": "Modest",
-   "evs": {
-    "SpA": 252,
-    "HP": 252,
-    "SpD": 4
-   },
-   "cat": "Special",
-   "attacks": [
-    "Moonblast",
-    "Giga Drain"
-   ],
-   "legal": [
-    "AROMATHERAPY",
-    "ATTRACT",
-    "CAMOUFLAGE",
-    "CAPTIVATE",
-    "CHILLINGWATER",
-    "CONFIDE",
-    "COPYCAT",
-    "DISARMINGVOICE",
-    "DOUBLETEAM",
-    "ECHOEDVOICE",
-    "ENDEAVOR",
-    "FACADE",
-    "FALSESWIPE",
-    "FLASH",
-    "FLOWERSHIELD",
-    "GIGADRAIN",
-    "GRASSKNOT",
-    "GRASSYTERRAIN",
-    "HELPINGHAND",
-    "HIDDENPOWER",
-    "LUCKYCHANT",
-    "MAGICALLEAF",
-    "MISTYTERRAIN",
-    "MOONBLAST",
-    "NATUREPOWER",
-    "PETALBLIZZARD",
-    "PETALDANCE",
-    "PROTECT",
-    "REST",
-    "ROUND",
-    "SAFEGUARD",
-    "SECRETPOWER",
-    "SKILLSWAP",
-    "SLEEPTALK",
-    "SNORE",
-    "SOLARBEAM",
-    "SWAGGER",
-    "SYNTHESIS",
-    "TEARFULLOOK",
-    "TRAILBLAZE",
-    "TRICK",
-    "WISH",
-    "WORRYSEED"
-   ],
-   "where": "Active",
-   "dump": 481,
-   "owned_as": "Florges",
-   "evo": "",
-   "per_fight": {
-    "spector": 0.429,
-    "spector2": 0.321,
-    "jenner9": 0.493,
-    "erick": 0.232
-   },
-   "counters": [
-    "jenner9:Kommo-o",
-    "jenner9:Noivern",
-    "spector:Murkrow"
-   ],
-   "stats": {
-    "HP": 202,
-    "Atk": 83,
-    "Def": 96,
-    "SpA": 196,
-    "SpD": 192,
-    "Spe": 104
-   },
-   "tags": [
-    "helping"
    ],
    "tier": "B"
   },
@@ -10386,6 +10272,122 @@
    "tier": "B"
   },
   {
+   "name": "Florges",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "FLORGES",
+   "form": "0",
+   "types": [
+    "FAIRY"
+   ],
+   "base": {
+    "HP": 78,
+    "Atk": 65,
+    "Def": 68,
+    "SpA": 112,
+    "SpD": 154,
+    "Spe": 75
+   },
+   "bst": 552,
+   "fight": 0.43,
+   "fight_pct": 0.989,
+   "meta": 0.15,
+   "meta_label": "NatDex Doubles 0.3% | UU 0.4%",
+   "general": 0.213,
+   "blend": 0.425,
+   "game_pct": 0.918,
+   "n_all": 32,
+   "ability": "FLOWERVEIL",
+   "abilities": [
+    "FLOWERVEIL",
+    "SYMBIOSIS"
+   ],
+   "nature": "Modest",
+   "evs": {
+    "SpA": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "cat": "Special",
+   "attacks": [
+    "Moonblast",
+    "Giga Drain"
+   ],
+   "legal": [
+    "AROMATHERAPY",
+    "ATTRACT",
+    "CAMOUFLAGE",
+    "CAPTIVATE",
+    "CHILLINGWATER",
+    "CONFIDE",
+    "COPYCAT",
+    "DISARMINGVOICE",
+    "DOUBLETEAM",
+    "ECHOEDVOICE",
+    "ENDEAVOR",
+    "FACADE",
+    "FALSESWIPE",
+    "FLASH",
+    "FLOWERSHIELD",
+    "GIGADRAIN",
+    "GRASSKNOT",
+    "GRASSYTERRAIN",
+    "HELPINGHAND",
+    "HIDDENPOWER",
+    "LUCKYCHANT",
+    "MAGICALLEAF",
+    "MISTYTERRAIN",
+    "MOONBLAST",
+    "NATUREPOWER",
+    "PETALBLIZZARD",
+    "PETALDANCE",
+    "PROTECT",
+    "REST",
+    "ROUND",
+    "SAFEGUARD",
+    "SECRETPOWER",
+    "SKILLSWAP",
+    "SLEEPTALK",
+    "SNORE",
+    "SOLARBEAM",
+    "SWAGGER",
+    "SYNTHESIS",
+    "TEARFULLOOK",
+    "TRAILBLAZE",
+    "TRICK",
+    "WISH",
+    "WORRYSEED"
+   ],
+   "where": "Active",
+   "dump": 484,
+   "owned_as": "Florges",
+   "evo": "",
+   "per_fight": {
+    "spector": 0.429,
+    "spector2": 0.321,
+    "jenner9": 0.493,
+    "erick": 0.232
+   },
+   "counters": [
+    "jenner9:Kommo-o",
+    "jenner9:Noivern",
+    "spector:Murkrow"
+   ],
+   "stats": {
+    "HP": 202,
+    "Atk": 83,
+    "Def": 96,
+    "SpA": 196,
+    "SpD": 192,
+    "Spe": 104
+   },
+   "tags": [
+    "helping"
+   ],
+   "tier": "B"
+  },
+  {
    "name": "Ludicolo",
    "kind": "regular",
    "crest": "",
@@ -10489,7 +10491,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Active",
-   "dump": 492,
+   "dump": 494,
    "owned_as": "Ludicolo",
    "evo": "",
    "per_fight": {
@@ -10615,7 +10617,7 @@
     "WORKUP"
    ],
    "where": "Active",
-   "dump": 473,
+   "dump": 477,
    "owned_as": "Crabominable",
    "evo": "",
    "per_fight": {
@@ -10669,8 +10671,8 @@
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.1% | NatDex OU 0.0%",
    "general": 0.187,
-   "blend": 0.416,
-   "game_pct": 0.95,
+   "blend": 0.415,
+   "game_pct": 0.947,
    "n_all": 32,
    "ability": "SCRAPPY",
    "abilities": [
@@ -10761,7 +10763,7 @@
     "XSCISSOR"
    ],
    "where": "Active",
-   "dump": 498,
+   "dump": 499,
    "owned_as": "Pangoro",
    "evo": "",
    "per_fight": {
@@ -10793,133 +10795,6 @@
    "tier": "B"
   },
   {
-   "name": "Palossand",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "PALOSSAND",
-   "form": "0",
-   "types": [
-    "GHOST",
-    "GROUND"
-   ],
-   "base": {
-    "HP": 85,
-    "Atk": 75,
-    "Def": 110,
-    "SpA": 100,
-    "SpD": 75,
-    "Spe": 35
-   },
-   "bst": 480,
-   "fight": 0.238,
-   "fight_pct": 0.837,
-   "meta": 0.166,
-   "meta_label": "NatDex UU 1.3% | NatDex Doubles 0.1%",
-   "general": 0.195,
-   "blend": 0.416,
-   "game_pct": 0.932,
-   "n_all": 32,
-   "ability": "WATERCOMPACTION",
-   "abilities": [
-    "WATERCOMPACTION",
-    "SANDVEIL"
-   ],
-   "nature": "Modest",
-   "evs": {
-    "SpA": 252,
-    "HP": 252,
-    "SpD": 4
-   },
-   "cat": "Special",
-   "attacks": [
-    "Shadow Ball",
-    "Earth Power",
-    "Giga Drain"
-   ],
-   "legal": [
-    "ABSORB",
-    "ANCIENTPOWER",
-    "ASTONISH",
-    "ATTRACT",
-    "BRINE",
-    "BULLDOZE",
-    "CHILLINGWATER",
-    "CONFIDE",
-    "CURSE",
-    "DESTINYBOND",
-    "DOUBLETEAM",
-    "EARTHPOWER",
-    "EMBARGO",
-    "FACADE",
-    "FALSESWIPE",
-    "FLING",
-    "GIGADRAIN",
-    "HARDEN",
-    "HEX",
-    "HIDDENPOWER",
-    "HYPNOSIS",
-    "IMPRISON",
-    "INFESTATION",
-    "IRONDEFENSE",
-    "MEGADRAIN",
-    "MUDBARRAGE",
-    "MUDSHOT",
-    "NIGHTSHADE",
-    "PROTECT",
-    "QUASH",
-    "RECYCLE",
-    "REST",
-    "ROCKPOLISH",
-    "ROCKTOMB",
-    "ROLEPLAY",
-    "ROUND",
-    "SANDATTACK",
-    "SANDTOMB",
-    "SCARYFACE",
-    "SECRETPOWER",
-    "SHADOWBALL",
-    "SKILLSWAP",
-    "SLEEPTALK",
-    "SLUDGEBOMB",
-    "SNORE",
-    "SPITUP",
-    "STOCKPILE",
-    "SWAGGER",
-    "SWALLOW",
-    "TRICK"
-   ],
-   "where": "Active",
-   "dump": 497,
-   "owned_as": "Palossand",
-   "evo": "",
-   "per_fight": {
-    "spector": 0.373,
-    "spector2": 0.472,
-    "jenner9": 0.165,
-    "erick": 0.346
-   },
-   "counters": [
-    "erick:Raichu",
-    "spector2:Luxray",
-    "spector2:Stonjourner",
-    "spector:Gothitelle"
-   ],
-   "stats": {
-    "HP": 210,
-    "Atk": 93,
-    "Def": 143,
-    "SpA": 182,
-    "SpD": 105,
-    "Spe": 60
-   },
-   "tags": [
-    "sleep",
-    "speed"
-   ],
-   "tier": "B"
-  },
-  {
    "name": "Flareon",
    "kind": "regular",
    "crest": "",
@@ -10943,8 +10818,8 @@
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.0% | NU 0.0%",
    "general": 0.201,
-   "blend": 0.415,
-   "game_pct": 0.913,
+   "blend": 0.414,
+   "game_pct": 0.911,
    "n_all": 32,
    "ability": "GUTS",
    "abilities": [
@@ -11027,7 +10902,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 117,
+   "dump": 118,
    "owned_as": "Eevee",
    "evo": "Flareon (Item Fire Stone)",
    "per_fight": {
@@ -11054,6 +10929,133 @@
    },
    "tags": [
     "helping",
+    "sleep",
+    "speed"
+   ],
+   "tier": "B"
+  },
+  {
+   "name": "Palossand",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "PALOSSAND",
+   "form": "0",
+   "types": [
+    "GHOST",
+    "GROUND"
+   ],
+   "base": {
+    "HP": 85,
+    "Atk": 75,
+    "Def": 110,
+    "SpA": 100,
+    "SpD": 75,
+    "Spe": 35
+   },
+   "bst": 480,
+   "fight": 0.238,
+   "fight_pct": 0.837,
+   "meta": 0.166,
+   "meta_label": "NatDex UU 1.3% | NatDex Doubles 0.1%",
+   "general": 0.195,
+   "blend": 0.414,
+   "game_pct": 0.926,
+   "n_all": 32,
+   "ability": "WATERCOMPACTION",
+   "abilities": [
+    "WATERCOMPACTION",
+    "SANDVEIL"
+   ],
+   "nature": "Modest",
+   "evs": {
+    "SpA": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "cat": "Special",
+   "attacks": [
+    "Shadow Ball",
+    "Earth Power",
+    "Giga Drain"
+   ],
+   "legal": [
+    "ABSORB",
+    "ANCIENTPOWER",
+    "ASTONISH",
+    "ATTRACT",
+    "BRINE",
+    "BULLDOZE",
+    "CHILLINGWATER",
+    "CONFIDE",
+    "CURSE",
+    "DESTINYBOND",
+    "DOUBLETEAM",
+    "EARTHPOWER",
+    "EMBARGO",
+    "FACADE",
+    "FALSESWIPE",
+    "FLING",
+    "GIGADRAIN",
+    "HARDEN",
+    "HEX",
+    "HIDDENPOWER",
+    "HYPNOSIS",
+    "IMPRISON",
+    "INFESTATION",
+    "IRONDEFENSE",
+    "MEGADRAIN",
+    "MUDBARRAGE",
+    "MUDSHOT",
+    "NIGHTSHADE",
+    "PROTECT",
+    "QUASH",
+    "RECYCLE",
+    "REST",
+    "ROCKPOLISH",
+    "ROCKTOMB",
+    "ROLEPLAY",
+    "ROUND",
+    "SANDATTACK",
+    "SANDTOMB",
+    "SCARYFACE",
+    "SECRETPOWER",
+    "SHADOWBALL",
+    "SKILLSWAP",
+    "SLEEPTALK",
+    "SLUDGEBOMB",
+    "SNORE",
+    "SPITUP",
+    "STOCKPILE",
+    "SWAGGER",
+    "SWALLOW",
+    "TRICK"
+   ],
+   "where": "Active",
+   "dump": 498,
+   "owned_as": "Palossand",
+   "evo": "",
+   "per_fight": {
+    "spector": 0.373,
+    "spector2": 0.472,
+    "jenner9": 0.165,
+    "erick": 0.346
+   },
+   "counters": [
+    "erick:Raichu",
+    "spector2:Luxray",
+    "spector2:Stonjourner",
+    "spector:Gothitelle"
+   ],
+   "stats": {
+    "HP": 210,
+    "Atk": 93,
+    "Def": 143,
+    "SpA": 182,
+    "SpD": 105,
+    "Spe": 60
+   },
+   "tags": [
     "sleep",
     "speed"
    ],
@@ -11165,7 +11167,7 @@
     "YAWN"
    ],
    "where": "Active",
-   "dump": 480,
+   "dump": 483,
    "owned_as": "Emboar",
    "evo": "",
    "per_fight": {
@@ -11295,7 +11297,7 @@
     "XSCISSOR"
    ],
    "where": "Active",
-   "dump": 475,
+   "dump": 479,
    "owned_as": "Crobat",
    "evo": "",
    "per_fight": {
@@ -11530,7 +11532,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 356,
+   "dump": 360,
    "owned_as": "Silvally",
    "evo": "",
    "per_fight": {
@@ -11769,7 +11771,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Overflow",
-   "dump": 215,
+   "dump": 217,
    "owned_as": "Lunatone-Idol",
    "evo": "",
    "per_fight": {
@@ -11900,7 +11902,7 @@
     "WRINGOUT"
    ],
    "where": "Overflow",
-   "dump": 205,
+   "dump": 207,
    "owned_as": "Lickilicky",
    "evo": "",
    "per_fight": {
@@ -12013,7 +12015,7 @@
     "TRAILBLAZE"
    ],
    "where": "Overflow",
-   "dump": 220,
+   "dump": 222,
    "owned_as": "Mabosstiff",
    "evo": "",
    "per_fight": {
@@ -12064,7 +12066,7 @@
    },
    "bst": 490,
    "fight": 0.181,
-   "fight_pct": 0.705,
+   "fight_pct": 0.703,
    "meta": 0.271,
    "meta_label": "NatDex Doubles 1.8% | NU 0.0%",
    "general": 0.294,
@@ -12144,7 +12146,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Overflow",
-   "dump": 274,
+   "dump": 277,
    "owned_as": "Oranguru",
    "evo": "",
    "per_fight": {
@@ -12266,7 +12268,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 339,
+   "dump": 343,
    "owned_as": "Sealeo",
    "evo": "Walrein (Level 44)",
    "per_fight": {
@@ -12315,7 +12317,7 @@
    },
    "bst": 505,
    "fight": 0.191,
-   "fight_pct": 0.721,
+   "fight_pct": 0.718,
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.1% | NatDex OU 0.1%",
    "general": 0.192,
@@ -12414,7 +12416,7 @@
     "WHIRLPOOL"
    ],
    "where": "Overflow",
-   "dump": 261,
+   "dump": 264,
    "owned_as": "Nidoqueen",
    "evo": "",
    "per_fight": {
@@ -12541,7 +12543,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 194,
+   "dump": 196,
    "owned_as": "Kingler",
    "evo": "",
    "per_fight": {
@@ -12801,7 +12803,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Overflow",
-   "dump": 456,
+   "dump": 460,
    "owned_as": "Wyrdeer",
    "evo": "",
    "per_fight": {
@@ -12913,7 +12915,7 @@
     "WHIRLPOOL"
    ],
    "where": "Overflow",
-   "dump": 398,
+   "dump": 402,
    "owned_as": "Tatsugiri Droopy Form",
    "evo": "",
    "per_fight": {
@@ -13036,7 +13038,7 @@
     "ZAPCANNON"
    ],
    "where": "Overflow",
-   "dump": 116,
+   "dump": 117,
    "owned_as": "Eelektross",
    "evo": "",
    "per_fight": {
@@ -13161,7 +13163,7 @@
     "WONDERROOM"
    ],
    "where": "Overflow",
-   "dump": 327,
+   "dump": 331,
    "owned_as": "Runerigus",
    "evo": "",
    "per_fight": {
@@ -13180,137 +13182,6 @@
     "SpA": 69,
     "SpD": 138,
     "Spe": 55
-   },
-   "tags": [
-    "speed"
-   ],
-   "tier": "C"
-  },
-  {
-   "name": "Diggersby",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "DIGGERSBY",
-   "form": "0",
-   "types": [
-    "NORMAL",
-    "GROUND"
-   ],
-   "base": {
-    "HP": 85,
-    "Atk": 56,
-    "Def": 77,
-    "SpA": 50,
-    "SpD": 77,
-    "Spe": 78
-   },
-   "bst": 423,
-   "fight": 0.189,
-   "fight_pct": 0.718,
-   "meta": 0.15,
-   "meta_label": "NatDex OU 0.1% | NatDex Doubles 0.0%",
-   "general": 0.155,
-   "blend": 0.388,
-   "game_pct": 0.934,
-   "n_all": 32,
-   "ability": "HUGEPOWER",
-   "abilities": [
-    "PICKUP",
-    "CHEEKPOUCH",
-    "HUGEPOWER"
-   ],
-   "nature": "Adamant",
-   "evs": {
-    "Atk": 252,
-    "HP": 252,
-    "SpD": 4
-   },
-   "cat": "Physical",
-   "attacks": [
-    "Earthquake",
-    "Quick Attack",
-    "Bounce"
-   ],
-   "legal": [
-    "ATTRACT",
-    "BOUNCE",
-    "BRUTALSWING",
-    "BULLDOZE",
-    "CONFIDE",
-    "CUT",
-    "DEFENSECURL",
-    "DIG",
-    "DOUBLEKICK",
-    "DOUBLESLAP",
-    "DOUBLETEAM",
-    "EARTHQUAKE",
-    "FACADE",
-    "FALSESWIPE",
-    "FLAIL",
-    "FLING",
-    "GASTROACID",
-    "GRASSKNOT",
-    "HIDDENPOWER",
-    "LASERFOCUS",
-    "LEER",
-    "MUDBARRAGE",
-    "MUDSHOT",
-    "MUDSLAP",
-    "NATUREPOWER",
-    "ODORSLEUTH",
-    "PAYBACK",
-    "POISONSWEEP",
-    "POWERUPPUNCH",
-    "PROTECT",
-    "QUICKATTACK",
-    "RECYCLE",
-    "REST",
-    "ROCKSMASH",
-    "ROCKTOMB",
-    "ROLLOUT",
-    "ROTOTILLER",
-    "ROUND",
-    "SANDTOMB",
-    "SECRETPOWER",
-    "SLEEPTALK",
-    "SLUDGEBOMB",
-    "SNATCH",
-    "SNORE",
-    "STACKINGSHOT",
-    "SUPERFANG",
-    "SURF",
-    "SWAGGER",
-    "SWORDSDANCE",
-    "TACKLE",
-    "TAKEDOWN",
-    "THIEF",
-    "TORMENT",
-    "UPROAR",
-    "WORKUP"
-   ],
-   "where": "Overflow",
-   "dump": 98,
-   "owned_as": "Diggersby",
-   "evo": "",
-   "per_fight": {
-    "spector": 0.459,
-    "spector2": 0.429,
-    "jenner9": 0.124,
-    "erick": 0.191
-   },
-   "counters": [
-    "spector2:Luxray",
-    "spector2:Stonjourner",
-    "spector:Ninetales"
-   ],
-   "stats": {
-    "HP": 210,
-    "Atk": 129,
-    "Def": 106,
-    "SpA": 69,
-    "SpD": 107,
-    "Spe": 107
    },
    "tags": [
     "speed"
@@ -13418,7 +13289,7 @@
     "WRAP"
    ],
    "where": "Overflow",
-   "dump": 171,
+   "dump": 173,
    "owned_as": "Heatmor",
    "evo": "",
    "per_fight": {
@@ -13439,6 +13310,137 @@
     "SpA": 189,
     "SpD": 95,
     "Spe": 93
+   },
+   "tags": [
+    "speed"
+   ],
+   "tier": "C"
+  },
+  {
+   "name": "Diggersby",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "DIGGERSBY",
+   "form": "0",
+   "types": [
+    "NORMAL",
+    "GROUND"
+   ],
+   "base": {
+    "HP": 85,
+    "Atk": 56,
+    "Def": 77,
+    "SpA": 50,
+    "SpD": 77,
+    "Spe": 78
+   },
+   "bst": 423,
+   "fight": 0.189,
+   "fight_pct": 0.716,
+   "meta": 0.15,
+   "meta_label": "NatDex OU 0.1% | NatDex Doubles 0.0%",
+   "general": 0.155,
+   "blend": 0.387,
+   "game_pct": 0.929,
+   "n_all": 32,
+   "ability": "HUGEPOWER",
+   "abilities": [
+    "PICKUP",
+    "CHEEKPOUCH",
+    "HUGEPOWER"
+   ],
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "cat": "Physical",
+   "attacks": [
+    "Earthquake",
+    "Quick Attack",
+    "Bounce"
+   ],
+   "legal": [
+    "ATTRACT",
+    "BOUNCE",
+    "BRUTALSWING",
+    "BULLDOZE",
+    "CONFIDE",
+    "CUT",
+    "DEFENSECURL",
+    "DIG",
+    "DOUBLEKICK",
+    "DOUBLESLAP",
+    "DOUBLETEAM",
+    "EARTHQUAKE",
+    "FACADE",
+    "FALSESWIPE",
+    "FLAIL",
+    "FLING",
+    "GASTROACID",
+    "GRASSKNOT",
+    "HIDDENPOWER",
+    "LASERFOCUS",
+    "LEER",
+    "MUDBARRAGE",
+    "MUDSHOT",
+    "MUDSLAP",
+    "NATUREPOWER",
+    "ODORSLEUTH",
+    "PAYBACK",
+    "POISONSWEEP",
+    "POWERUPPUNCH",
+    "PROTECT",
+    "QUICKATTACK",
+    "RECYCLE",
+    "REST",
+    "ROCKSMASH",
+    "ROCKTOMB",
+    "ROLLOUT",
+    "ROTOTILLER",
+    "ROUND",
+    "SANDTOMB",
+    "SECRETPOWER",
+    "SLEEPTALK",
+    "SLUDGEBOMB",
+    "SNATCH",
+    "SNORE",
+    "STACKINGSHOT",
+    "SUPERFANG",
+    "SURF",
+    "SWAGGER",
+    "SWORDSDANCE",
+    "TACKLE",
+    "TAKEDOWN",
+    "THIEF",
+    "TORMENT",
+    "UPROAR",
+    "WORKUP"
+   ],
+   "where": "Overflow",
+   "dump": 99,
+   "owned_as": "Diggersby",
+   "evo": "",
+   "per_fight": {
+    "spector": 0.459,
+    "spector2": 0.429,
+    "jenner9": 0.124,
+    "erick": 0.191
+   },
+   "counters": [
+    "spector2:Luxray",
+    "spector2:Stonjourner",
+    "spector:Ninetales"
+   ],
+   "stats": {
+    "HP": 210,
+    "Atk": 129,
+    "Def": 106,
+    "SpA": 69,
+    "SpD": 107,
+    "Spe": 107
    },
    "tags": [
     "speed"
@@ -13543,7 +13545,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Overflow",
-   "dump": 258,
+   "dump": 261,
    "owned_as": "Musharna",
    "evo": "",
    "per_fight": {
@@ -13672,7 +13674,7 @@
     "WINGATTACK"
    ],
    "where": "Overflow",
-   "dump": 231,
+   "dump": 232,
    "owned_as": "Mantyke",
    "evo": "Mantine (HasInParty Remoraid)",
    "per_fight": {
@@ -13718,7 +13720,7 @@
    },
    "bst": 460,
    "fight": 0.199,
-   "fight_pct": 0.739,
+   "fight_pct": 0.737,
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.1% | UU 0.0%",
    "general": 0.171,
@@ -13950,7 +13952,7 @@
     "WHIRLPOOL"
    ],
    "where": "Overflow",
-   "dump": 322,
+   "dump": 326,
    "owned_as": "Rhydon",
    "evo": "",
    "per_fight": {
@@ -14105,7 +14107,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 411,
+   "dump": 415,
    "owned_as": "Toxicroak",
    "evo": "",
    "per_fight": {
@@ -14238,7 +14240,7 @@
     "WRINGOUT"
    ],
    "where": "Overflow",
-   "dump": 396,
+   "dump": 400,
    "owned_as": "Tangela",
    "evo": "Tangrowth (HasMove Ancientpower)",
    "per_fight": {
@@ -14421,7 +14423,7 @@
    },
    "bst": 500,
    "fight": 0.194,
-   "fight_pct": 0.732,
+   "fight_pct": 0.729,
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.1% | NatDex OU 0.0%",
    "general": 0.19,
@@ -14637,7 +14639,7 @@
     "THUNDERFANG"
    ],
    "where": "Overflow",
-   "dump": 419,
+   "dump": 423,
    "owned_as": "Tyrantrum",
    "evo": "",
    "per_fight": {
@@ -14681,7 +14683,7 @@
    },
    "bst": 495,
    "fight": 0.185,
-   "fight_pct": 0.713,
+   "fight_pct": 0.711,
    "meta": 0.196,
    "meta_label": "NatDex Doubles 0.9% | NatDex OU 0.0%",
    "general": 0.229,
@@ -14869,7 +14871,7 @@
     "WEATHERBALL"
    ],
    "where": "Overflow",
-   "dump": 193,
+   "dump": 195,
    "owned_as": "Kilowattrel",
    "evo": "",
    "per_fight": {
@@ -15064,7 +15066,7 @@
    "meta_label": "RU 7.6% | Doubles OU 0.2%",
    "general": 0.322,
    "blend": 0.376,
-   "game_pct": 0.503,
+   "game_pct": 0.5,
    "n_all": 32,
    "ability": "INNERFOCUS",
    "abilities": [
@@ -15156,7 +15158,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 117,
+   "dump": 118,
    "owned_as": "Eevee",
    "evo": "Umbreon (HappinessNight 0)",
    "per_fight": {
@@ -15282,7 +15284,7 @@
     "WONDERROOM"
    ],
    "where": "Overflow",
-   "dump": 91,
+   "dump": 92,
    "owned_as": "Cutiefly",
    "evo": "Ribombee (Level 25)",
    "per_fight": {
@@ -15398,7 +15400,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 359,
+   "dump": 363,
    "owned_as": "Sizzlipede",
    "evo": "Centiskorch (Level 28)",
    "per_fight": {
@@ -15609,7 +15611,7 @@
     "WATERPULSE"
    ],
    "where": "Overflow",
-   "dump": 427,
+   "dump": 431,
    "owned_as": "Veluza",
    "evo": "",
    "per_fight": {
@@ -15731,7 +15733,7 @@
     "WRINGOUT"
    ],
    "where": "Overflow",
-   "dump": 182,
+   "dump": 184,
    "owned_as": "Jellicent",
    "evo": "",
    "per_fight": {
@@ -15843,7 +15845,7 @@
     "WRAP"
    ],
    "where": "Overflow",
-   "dump": 354,
+   "dump": 358,
    "owned_as": "Silicobra",
    "evo": "Sandaconda (Level 36)",
    "per_fight": {
@@ -15966,8 +15968,8 @@
     "WATERPULSE",
     "WHIRLPOOL"
    ],
-   "where": "Active",
-   "dump": 476,
+   "where": "Overflow",
+   "dump": 91,
    "owned_as": "Cursola",
    "evo": "",
    "per_fight": {
@@ -16091,7 +16093,7 @@
     "WRINGOUT"
    ],
    "where": "Overflow",
-   "dump": 272,
+   "dump": 275,
    "owned_as": "Omastar",
    "evo": "",
    "per_fight": {
@@ -16223,7 +16225,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 403,
+   "dump": 407,
    "owned_as": "Teddiursa",
    "evo": "Ursaring (Level 30)",
    "per_fight": {
@@ -16331,6 +16333,7 @@
     "HELPINGHAND",
     "HIDDENPOWER",
     "IONDELUGE",
+    "LIGHTSCREEN",
     "MAGNETICFLUX",
     "MAGNETRISE",
     "ODORSLEUTH",
@@ -16353,6 +16356,7 @@
     "SWAGGER",
     "TACKLE",
     "TAKEDOWN",
+    "THUNDER",
     "THUNDERPUNCH",
     "THUNDERSHOCK",
     "THUNDERWAVE",
@@ -16360,7 +16364,7 @@
     "ZAPCANNON"
    ],
    "where": "Overflow",
-   "dump": 233,
+   "dump": 235,
    "owned_as": "Mareep",
    "evo": "Flaaffy (Level 15); Ampharos (Level 30)",
    "per_fight": {
@@ -16380,6 +16384,7 @@
    },
    "tags": [
     "helping",
+    "screens",
     "speed"
    ],
    "tier": "C"
@@ -16448,6 +16453,7 @@
     "GRASSKNOT",
     "HELPINGHAND",
     "HIDDENPOWER",
+    "KNOCKOFF",
     "LEER",
     "LOWSWEEP",
     "MATBLOCK",
@@ -16475,7 +16481,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 407,
+   "dump": 411,
    "owned_as": "Throh",
    "evo": "",
    "per_fight": {
@@ -16621,7 +16627,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 117,
+   "dump": 118,
    "owned_as": "Eevee",
    "evo": "Espeon (HappinessDay 0)",
    "per_fight": {
@@ -16755,7 +16761,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 420,
+   "dump": 424,
    "owned_as": "Tyrogue",
    "evo": "Hitmonchan (DefenseGreater 20)",
    "per_fight": {
@@ -16873,7 +16879,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 270,
+   "dump": 273,
    "owned_as": "Oinkologne",
    "evo": "",
    "per_fight": {
@@ -17127,7 +17133,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 117,
+   "dump": 118,
    "owned_as": "Eevee",
    "evo": "Jolteon (Item Thunder Stone)",
    "per_fight": {
@@ -17368,8 +17374,8 @@
     "SWAGGER",
     "TAKEDOWN"
    ],
-   "where": "Active",
-   "dump": 495,
+   "where": "Overflow",
+   "dump": 257,
    "owned_as": "Mudsdale",
    "evo": "",
    "per_fight": {
@@ -17416,7 +17422,7 @@
    },
    "bst": 425,
    "fight": 0.192,
-   "fight_pct": 0.726,
+   "fight_pct": 0.724,
    "meta": 0.232,
    "meta_label": "NatDex Doubles 0.8% | NatDex OU 0.8%",
    "general": 0.229,
@@ -17621,8 +17627,8 @@
     "VITALTHROW",
     "WORKUP"
    ],
-   "where": "Active",
-   "dump": 499,
+   "where": "Overflow",
+   "dump": 291,
    "owned_as": "Passimian",
    "evo": "",
    "per_fight": {
@@ -17878,7 +17884,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 133,
+   "dump": 134,
    "owned_as": "Feraligatr",
    "evo": "",
    "per_fight": {
@@ -18125,7 +18131,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 105,
+   "dump": 106,
    "owned_as": "Drampa",
    "evo": "",
    "per_fight": {
@@ -18263,10 +18269,10 @@
     "WORKUP",
     "YAWN"
    ],
-   "where": "Active",
-   "dump": 485,
-   "owned_as": "Glaceon",
-   "evo": "",
+   "where": "Overflow",
+   "dump": 118,
+   "owned_as": "Eevee",
+   "evo": "Glaceon (Item Ice Stone)",
    "per_fight": {
     "spector": 0.614,
     "spector2": 0.513,
@@ -18314,7 +18320,7 @@
    },
    "bst": 455,
    "fight": 0.178,
-   "fight_pct": 0.703,
+   "fight_pct": 0.7,
    "meta": 0.241,
    "meta_label": "NatDex Doubles 1.0% | NU 5.1%",
    "general": 0.251,
@@ -18394,7 +18400,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 420,
+   "dump": 424,
    "owned_as": "Tyrogue",
    "evo": "Hitmontop (AtkDefEqual 20)",
    "per_fight": {
@@ -18528,7 +18534,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 129,
+   "dump": 130,
    "owned_as": "Exeggutor",
    "evo": "",
    "per_fight": {
@@ -18831,7 +18837,7 @@
    },
    "bst": 510,
    "fight": 0.176,
-   "fight_pct": 0.697,
+   "fight_pct": 0.695,
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.3% | UU 0.3%",
    "general": 0.194,
@@ -19148,7 +19154,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Overflow",
-   "dump": 374,
+   "dump": 378,
    "owned_as": "Spoink",
    "evo": "Grumpig (Level 32)",
    "per_fight": {
@@ -19258,7 +19264,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 295,
+   "dump": 299,
    "owned_as": "Pidgeot",
    "evo": "",
    "per_fight": {
@@ -19385,7 +19391,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 103,
+   "dump": 104,
    "owned_as": "Doduo",
    "evo": "Dodrio (Level 31)",
    "per_fight": {
@@ -19493,7 +19499,7 @@
     "THUNDERWAVE"
    ],
    "where": "Overflow",
-   "dump": 449,
+   "dump": 453,
    "owned_as": "Wooloo",
    "evo": "Dubwool (Level 24)",
    "per_fight": {
@@ -19538,7 +19544,7 @@
    },
    "bst": 520,
    "fight": 0.185,
-   "fight_pct": 0.711,
+   "fight_pct": 0.708,
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.1%",
    "general": 0.199,
@@ -19602,7 +19608,7 @@
     "ZAPCANNON"
    ],
    "where": "Overflow",
-   "dump": 195,
+   "dump": 197,
    "owned_as": "Klang",
    "evo": "Klinklang (Level 49)",
    "per_fight": {
@@ -19719,7 +19725,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 208,
+   "dump": 210,
    "owned_as": "Litleo",
    "evo": "Pyroar (Level 35)",
    "per_fight": {
@@ -19854,7 +19860,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 358,
+   "dump": 362,
    "owned_as": "Simisear",
    "evo": "",
    "per_fight": {
@@ -20361,7 +20367,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 365,
+   "dump": 369,
    "owned_as": "Slakoth",
    "evo": "Vigoroth (Level 18); Slaking (Level 36)",
    "per_fight": {
@@ -20407,7 +20413,7 @@
    },
    "bst": 485,
    "fight": 0.183,
-   "fight_pct": 0.708,
+   "fight_pct": 0.705,
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.2% | NatDex OU 0.1%",
    "general": 0.183,
@@ -20621,7 +20627,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 106,
+   "dump": 107,
    "owned_as": "Drapion",
    "evo": "",
    "per_fight": {
@@ -20766,7 +20772,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 316,
+   "dump": 320,
    "owned_as": "Raichu",
    "evo": "",
    "per_fight": {
@@ -21010,7 +21016,7 @@
     "WONDERROOM"
    ],
    "where": "Overflow",
-   "dump": 250,
+   "dump": 252,
    "owned_as": "Mismagius",
    "evo": "",
    "per_fight": {
@@ -21288,7 +21294,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 213,
+   "dump": 215,
    "owned_as": "Lucario",
    "evo": "",
    "per_fight": {
@@ -21423,7 +21429,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 242,
+   "dump": 244,
    "owned_as": "Meowth-Galar",
    "evo": "Perrserker (Level 28)",
    "per_fight": {
@@ -21473,8 +21479,8 @@
    "meta": 0.202,
    "meta_label": "Doubles OU 0.6% | OU 0.2%",
    "general": 0.243,
-   "blend": 0.327,
-   "game_pct": 0.521,
+   "blend": 0.326,
+   "game_pct": 0.518,
    "n_all": 32,
    "ability": "MYCELIUMMIGHT",
    "abilities": [
@@ -21543,7 +21549,7 @@
     "WRAP"
    ],
    "where": "Overflow",
-   "dump": 409,
+   "dump": 413,
    "owned_as": "Toedscool",
    "evo": "Toedscruel (Level 30)",
    "per_fight": {
@@ -21591,7 +21597,7 @@
    },
    "bst": 425,
    "fight": 0.14,
-   "fight_pct": 0.6,
+   "fight_pct": 0.597,
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.0%",
    "general": 0.155,
@@ -21669,7 +21675,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 383,
+   "dump": 387,
    "owned_as": "Sunflora",
    "evo": "",
    "per_fight": {
@@ -21886,7 +21892,7 @@
     "WONDERROOM"
    ],
    "where": "Overflow",
-   "dump": 377,
+   "dump": 381,
    "owned_as": "Starmie",
    "evo": "",
    "per_fight": {
@@ -22023,7 +22029,7 @@
     "VENOSHOCK"
    ],
    "where": "Overflow",
-   "dump": 364,
+   "dump": 368,
    "owned_as": "Skuntank",
    "evo": "",
    "per_fight": {
@@ -22144,7 +22150,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 174,
+   "dump": 176,
    "owned_as": "Herdier",
    "evo": "Stoutland (Level 32)",
    "per_fight": {
@@ -22251,7 +22257,7 @@
     "UPROAR"
    ],
    "where": "Overflow",
-   "dump": 376,
+   "dump": 380,
    "owned_as": "Squawkabilly-White",
    "evo": "",
    "per_fight": {
@@ -22487,7 +22493,7 @@
     "WHIRLPOOL"
    ],
    "where": "Overflow",
-   "dump": 338,
+   "dump": 342,
    "owned_as": "Seaking",
    "evo": "",
    "per_fight": {
@@ -22616,7 +22622,7 @@
     "TORMENT"
    ],
    "where": "Overflow",
-   "dump": 110,
+   "dump": 111,
    "owned_as": "Druddigon",
    "evo": "",
    "per_fight": {
@@ -22983,7 +22989,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 154,
+   "dump": 156,
    "owned_as": "Gloom",
    "evo": "Vileplume (Item Leaf Stone)",
    "per_fight": {
@@ -23112,7 +23118,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 414,
+   "dump": 418,
    "owned_as": "Tropius",
    "evo": "",
    "per_fight": {
@@ -23240,7 +23246,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 325,
+   "dump": 329,
    "owned_as": "Roserade",
    "evo": "",
    "per_fight": {
@@ -23369,7 +23375,7 @@
     "TRICK"
    ],
    "where": "Overflow",
-   "dump": 107,
+   "dump": 108,
    "owned_as": "Drifblim",
    "evo": "",
    "per_fight": {
@@ -23513,7 +23519,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Overflow",
-   "dump": 308,
+   "dump": 312,
    "owned_as": "Psyduck",
    "evo": "Golduck (Level 33)",
    "per_fight": {
@@ -23620,7 +23626,7 @@
     "WONDERROOM"
    ],
    "where": "Overflow",
-   "dump": 245,
+   "dump": 247,
    "owned_as": "Milcery",
    "evo": "Alcremie (Level 42)",
    "per_fight": {
@@ -23756,7 +23762,7 @@
     "VENOSHOCK"
    ],
    "where": "Overflow",
-   "dump": 169,
+   "dump": 171,
    "owned_as": "Grimer",
    "evo": "Muk (Level 38)",
    "per_fight": {
@@ -23802,7 +23808,7 @@
    },
    "bst": 455,
    "fight": 0.177,
-   "fight_pct": 0.7,
+   "fight_pct": 0.697,
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.1% | RU 0.1%",
    "general": 0.169,
@@ -24005,7 +24011,7 @@
     "WISH"
    ],
    "where": "Overflow",
-   "dump": 289,
+   "dump": 293,
    "owned_as": "Pawmi",
    "evo": "Pawmo (Level 18); Pawmot (WalkSteps 1000)",
    "per_fight": {
@@ -24257,7 +24263,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 380,
+   "dump": 384,
    "owned_as": "Stunfisk-Galar",
    "evo": "",
    "per_fight": {
@@ -24310,7 +24316,7 @@
    "blend": 0.309,
    "game_pct": 0.684,
    "n_all": 32,
-   "ability": "ROCKHEAD",
+   "ability": "STURDY",
    "abilities": [
     "STURDY",
     "ROCKHEAD",
@@ -24389,7 +24395,7 @@
     "WOODHAMMER"
    ],
    "where": "Overflow",
-   "dump": 381,
+   "dump": 385,
    "owned_as": "Sudowoodo",
    "evo": "",
    "per_fight": {
@@ -24507,7 +24513,7 @@
     "WINGATTACK"
    ],
    "where": "Overflow",
-   "dump": 112,
+   "dump": 113,
    "owned_as": "Ducklett",
    "evo": "Swanna (Level 35)",
    "per_fight": {
@@ -24638,7 +24644,7 @@
     "WRINGOUT"
    ],
    "where": "Overflow",
-   "dump": 404,
+   "dump": 408,
    "owned_as": "Tentacool",
    "evo": "Tentacruel (Level 30)",
    "per_fight": {
@@ -24681,7 +24687,7 @@
    },
    "bst": 455,
    "fight": 0.189,
-   "fight_pct": 0.716,
+   "fight_pct": 0.713,
    "meta": 0.154,
    "meta_label": "Doubles OU 0.4% | UU 0.2%",
    "general": 0.173,
@@ -24774,7 +24780,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 307,
+   "dump": 311,
    "owned_as": "Primeape",
    "evo": "",
    "per_fight": {
@@ -24900,7 +24906,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 223,
+   "dump": 225,
    "owned_as": "Magcargo",
    "evo": "",
    "per_fight": {
@@ -25029,7 +25035,7 @@
     "WATERPULSE"
    ],
    "where": "Overflow",
-   "dump": 341,
+   "dump": 345,
    "owned_as": "Seismitoad",
    "evo": "",
    "per_fight": {
@@ -25142,7 +25148,7 @@
     "ZINGZAP"
    ],
    "where": "Overflow",
-   "dump": 301,
+   "dump": 305,
    "owned_as": "Pincurchin",
    "evo": "",
    "per_fight": {
@@ -25252,7 +25258,7 @@
     "THUNDERWAVE"
    ],
    "where": "Overflow",
-   "dump": 124,
+   "dump": 125,
    "owned_as": "Electrode-Hisui",
    "evo": "",
    "per_fight": {
@@ -25401,120 +25407,6 @@
    "tier": "C"
   },
   {
-   "name": "Vanilluxe",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "VANILLUXE",
-   "form": "0",
-   "types": [
-    "ICE"
-   ],
-   "base": {
-    "HP": 71,
-    "Atk": 95,
-    "Def": 85,
-    "SpA": 110,
-    "SpD": 95,
-    "Spe": 79
-   },
-   "bst": 535,
-   "fight": 0.23,
-   "fight_pct": 0.818,
-   "meta": 0.15,
-   "meta_label": "NatDex Doubles 0.2% | NatDex OU 0.0%",
-   "general": 0.205,
-   "blend": 0.299,
-   "game_pct": 0.516,
-   "n_all": 32,
-   "ability": "SNOWWARNING",
-   "abilities": [
-    "ICEBODY",
-    "SNOWWARNING",
-    "WEAKARMOR"
-   ],
-   "nature": "Modest",
-   "evs": {
-    "SpA": 252,
-    "HP": 252,
-    "SpD": 4
-   },
-   "cat": "Special",
-   "attacks": [
-    "Blizzard",
-    "Mirror Shot"
-   ],
-   "legal": [
-    "ACIDARMOR",
-    "ASTONISH",
-    "ATTRACT",
-    "AURORAVEIL",
-    "AUTOTOMIZE",
-    "AVALANCHE",
-    "BEATUP",
-    "BLIZZARD",
-    "CONFIDE",
-    "DELUGE",
-    "DOUBLETEAM",
-    "EXPLOSION",
-    "FACADE",
-    "FALSESWIPE",
-    "FREEZEDRY",
-    "FROSTBREATH",
-    "HARDEN",
-    "HIDDENPOWER",
-    "ICEBEAM",
-    "ICESHARD",
-    "ICICLECRASH",
-    "ICICLESPEAR",
-    "ICYWIND",
-    "IMPRISON",
-    "MAGNETRISE",
-    "MIRRORCOAT",
-    "MIRRORSHOT",
-    "MIST",
-    "NATURALGIFT",
-    "POWDERSNOW",
-    "PROTECT",
-    "REST",
-    "ROUND",
-    "SECRETPOWER",
-    "SIGNALBEAM",
-    "SLEEPTALK",
-    "SNORE",
-    "SNOWSCAPE",
-    "SWAGGER",
-    "TAUNT",
-    "UPROAR",
-    "WATERPULSE",
-    "WEATHERBALL"
-   ],
-   "where": "Overflow",
-   "dump": 426,
-   "owned_as": "Vanillite",
-   "evo": "Vanillish (Level 35); Vanilluxe (Level 47)",
-   "per_fight": {
-    "spector": 0.286,
-    "spector2": 0.197,
-    "jenner9": 0.247,
-    "erick": 0.148
-   },
-   "counters": [],
-   "stats": {
-    "HP": 194,
-    "Atk": 113,
-    "Def": 115,
-    "SpA": 194,
-    "SpD": 127,
-    "Spe": 108
-   },
-   "tags": [
-    "screens",
-    "speed"
-   ],
-   "tier": "C"
-  },
-  {
    "name": "Lurantis",
    "kind": "regular",
    "crest": "",
@@ -25541,7 +25433,7 @@
    "blend": 0.299,
    "game_pct": 0.576,
    "n_all": 32,
-   "ability": "CONTRARY",
+   "ability": "LEAFGUARD",
    "abilities": [
     "LEAFGUARD",
     "CONTRARY"
@@ -25611,7 +25503,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 216,
+   "dump": 218,
    "owned_as": "Lurantis",
    "evo": "",
    "per_fight": {
@@ -25632,6 +25524,120 @@
     "Spe": 71
    },
    "tags": [
+    "speed"
+   ],
+   "tier": "C"
+  },
+  {
+   "name": "Vanilluxe",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "VANILLUXE",
+   "form": "0",
+   "types": [
+    "ICE"
+   ],
+   "base": {
+    "HP": 71,
+    "Atk": 95,
+    "Def": 85,
+    "SpA": 110,
+    "SpD": 95,
+    "Spe": 79
+   },
+   "bst": 535,
+   "fight": 0.23,
+   "fight_pct": 0.818,
+   "meta": 0.15,
+   "meta_label": "NatDex Doubles 0.2% | NatDex OU 0.0%",
+   "general": 0.205,
+   "blend": 0.298,
+   "game_pct": 0.513,
+   "n_all": 32,
+   "ability": "SNOWWARNING",
+   "abilities": [
+    "ICEBODY",
+    "SNOWWARNING",
+    "WEAKARMOR"
+   ],
+   "nature": "Modest",
+   "evs": {
+    "SpA": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "cat": "Special",
+   "attacks": [
+    "Blizzard",
+    "Mirror Shot"
+   ],
+   "legal": [
+    "ACIDARMOR",
+    "ASTONISH",
+    "ATTRACT",
+    "AURORAVEIL",
+    "AUTOTOMIZE",
+    "AVALANCHE",
+    "BEATUP",
+    "BLIZZARD",
+    "CONFIDE",
+    "DELUGE",
+    "DOUBLETEAM",
+    "EXPLOSION",
+    "FACADE",
+    "FALSESWIPE",
+    "FREEZEDRY",
+    "FROSTBREATH",
+    "HARDEN",
+    "HIDDENPOWER",
+    "ICEBEAM",
+    "ICESHARD",
+    "ICICLECRASH",
+    "ICICLESPEAR",
+    "ICYWIND",
+    "IMPRISON",
+    "MAGNETRISE",
+    "MIRRORCOAT",
+    "MIRRORSHOT",
+    "MIST",
+    "NATURALGIFT",
+    "POWDERSNOW",
+    "PROTECT",
+    "REST",
+    "ROUND",
+    "SECRETPOWER",
+    "SIGNALBEAM",
+    "SLEEPTALK",
+    "SNORE",
+    "SNOWSCAPE",
+    "SWAGGER",
+    "TAUNT",
+    "UPROAR",
+    "WATERPULSE",
+    "WEATHERBALL"
+   ],
+   "where": "Overflow",
+   "dump": 430,
+   "owned_as": "Vanillite",
+   "evo": "Vanillish (Level 35); Vanilluxe (Level 47)",
+   "per_fight": {
+    "spector": 0.286,
+    "spector2": 0.197,
+    "jenner9": 0.247,
+    "erick": 0.148
+   },
+   "counters": [],
+   "stats": {
+    "HP": 194,
+    "Atk": 113,
+    "Def": 115,
+    "SpA": 194,
+    "SpD": 127,
+    "Spe": 108
+   },
+   "tags": [
+    "screens",
     "speed"
    ],
    "tier": "C"
@@ -25867,7 +25873,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 158,
+   "dump": 160,
    "owned_as": "Golisopod",
    "evo": "",
    "per_fight": {
@@ -26008,129 +26014,6 @@
    "tier": "C"
   },
   {
-   "name": "Probopass",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "PROBOPASS",
-   "form": "0",
-   "types": [
-    "ROCK",
-    "STEEL"
-   ],
-   "base": {
-    "HP": 60,
-    "Atk": 55,
-    "Def": 145,
-    "SpA": 75,
-    "SpD": 150,
-    "Spe": 40
-   },
-   "bst": 525,
-   "fight": 0.204,
-   "fight_pct": 0.75,
-   "meta": 0.15,
-   "meta_label": "NatDex Doubles 0.1% | OU 0.0%",
-   "general": 0.201,
-   "blend": 0.294,
-   "game_pct": 0.511,
-   "n_all": 32,
-   "ability": "SANDFORCE",
-   "abilities": [
-    "STURDY",
-    "MAGNETPULL",
-    "SANDFORCE"
-   ],
-   "nature": "Modest",
-   "evs": {
-    "SpA": 252,
-    "HP": 252,
-    "SpD": 4
-   },
-   "cat": "Special",
-   "attacks": [
-    "Power Gem",
-    "Discharge"
-   ],
-   "legal": [
-    "ATTRACT",
-    "BLOCK",
-    "BODYPRESS",
-    "BULLDOZE",
-    "CONFIDE",
-    "DISCHARGE",
-    "DOUBLEEDGE",
-    "DOUBLETEAM",
-    "EARTHPOWER",
-    "FACADE",
-    "FALSESWIPE",
-    "GRAVITY",
-    "HARDEN",
-    "HEADSMASH",
-    "HELPINGHAND",
-    "HIDDENPOWER",
-    "IRONDEFENSE",
-    "LOCKON",
-    "MAGNETBOMB",
-    "MAGNETICFLUX",
-    "MAGNETRISE",
-    "MAGNITUDE",
-    "POWERGEM",
-    "PROTECT",
-    "REST",
-    "ROCKBLAST",
-    "ROCKPOLISH",
-    "ROCKSLIDE",
-    "ROCKSMASH",
-    "ROCKTHROW",
-    "ROCKTOMB",
-    "ROLLOUT",
-    "ROUND",
-    "SANDSTORM",
-    "SANDTOMB",
-    "SECRETPOWER",
-    "SHOCKWAVE",
-    "SLEEPTALK",
-    "SNORE",
-    "SPARK",
-    "STONEEDGE",
-    "SWAGGER",
-    "TACKLE",
-    "TAKEDOWN",
-    "TELEKINESIS",
-    "THUNDERWAVE",
-    "TORMENT",
-    "TRIATTACK",
-    "WIDEGUARD",
-    "ZAPCANNON"
-   ],
-   "where": "Overflow",
-   "dump": 265,
-   "owned_as": "Nosepass",
-   "evo": "Probopass (Item Thunder Stone)",
-   "per_fight": {
-    "spector": 0.397,
-    "spector2": 0.237,
-    "jenner9": 0.188,
-    "erick": 0.155
-   },
-   "counters": [],
-   "stats": {
-    "HP": 182,
-    "Atk": 73,
-    "Def": 181,
-    "SpA": 152,
-    "SpD": 187,
-    "Spe": 66
-   },
-   "tags": [
-    "guard",
-    "helping",
-    "speed"
-   ],
-   "tier": "C"
-  },
-  {
    "name": "Cinccino",
    "kind": "regular",
    "crest": "",
@@ -26258,6 +26141,129 @@
    "tier": "C"
   },
   {
+   "name": "Probopass",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "PROBOPASS",
+   "form": "0",
+   "types": [
+    "ROCK",
+    "STEEL"
+   ],
+   "base": {
+    "HP": 60,
+    "Atk": 55,
+    "Def": 145,
+    "SpA": 75,
+    "SpD": 150,
+    "Spe": 40
+   },
+   "bst": 525,
+   "fight": 0.204,
+   "fight_pct": 0.747,
+   "meta": 0.15,
+   "meta_label": "NatDex Doubles 0.1% | OU 0.0%",
+   "general": 0.201,
+   "blend": 0.293,
+   "game_pct": 0.508,
+   "n_all": 32,
+   "ability": "SANDFORCE",
+   "abilities": [
+    "STURDY",
+    "MAGNETPULL",
+    "SANDFORCE"
+   ],
+   "nature": "Modest",
+   "evs": {
+    "SpA": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "cat": "Special",
+   "attacks": [
+    "Power Gem",
+    "Discharge"
+   ],
+   "legal": [
+    "ATTRACT",
+    "BLOCK",
+    "BODYPRESS",
+    "BULLDOZE",
+    "CONFIDE",
+    "DISCHARGE",
+    "DOUBLEEDGE",
+    "DOUBLETEAM",
+    "EARTHPOWER",
+    "FACADE",
+    "FALSESWIPE",
+    "GRAVITY",
+    "HARDEN",
+    "HEADSMASH",
+    "HELPINGHAND",
+    "HIDDENPOWER",
+    "IRONDEFENSE",
+    "LOCKON",
+    "MAGNETBOMB",
+    "MAGNETICFLUX",
+    "MAGNETRISE",
+    "MAGNITUDE",
+    "POWERGEM",
+    "PROTECT",
+    "REST",
+    "ROCKBLAST",
+    "ROCKPOLISH",
+    "ROCKSLIDE",
+    "ROCKSMASH",
+    "ROCKTHROW",
+    "ROCKTOMB",
+    "ROLLOUT",
+    "ROUND",
+    "SANDSTORM",
+    "SANDTOMB",
+    "SECRETPOWER",
+    "SHOCKWAVE",
+    "SLEEPTALK",
+    "SNORE",
+    "SPARK",
+    "STONEEDGE",
+    "SWAGGER",
+    "TACKLE",
+    "TAKEDOWN",
+    "TELEKINESIS",
+    "THUNDERWAVE",
+    "TORMENT",
+    "TRIATTACK",
+    "WIDEGUARD",
+    "ZAPCANNON"
+   ],
+   "where": "Overflow",
+   "dump": 268,
+   "owned_as": "Nosepass",
+   "evo": "Probopass (Item Thunder Stone)",
+   "per_fight": {
+    "spector": 0.397,
+    "spector2": 0.237,
+    "jenner9": 0.188,
+    "erick": 0.155
+   },
+   "counters": [],
+   "stats": {
+    "HP": 182,
+    "Atk": 73,
+    "Def": 181,
+    "SpA": 152,
+    "SpD": 187,
+    "Spe": 66
+   },
+   "tags": [
+    "guard",
+    "helping",
+    "speed"
+   ],
+   "tier": "C"
+  },
+  {
    "name": "Bellossom",
    "kind": "regular",
    "crest": "",
@@ -26277,7 +26283,7 @@
    },
    "bst": 490,
    "fight": 0.198,
-   "fight_pct": 0.737,
+   "fight_pct": 0.734,
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.1% | OU 0.0%",
    "general": 0.185,
@@ -26358,7 +26364,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 154,
+   "dump": 156,
    "owned_as": "Gloom",
    "evo": "Bellossom (Item Sun Stone)",
    "per_fight": {
@@ -26483,7 +26489,7 @@
     "VOLTSWITCH"
    ],
    "where": "Overflow",
-   "dump": 172,
+   "dump": 174,
    "owned_as": "Heliolisk",
    "evo": "",
    "per_fight": {
@@ -26617,7 +26623,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 420,
+   "dump": 424,
    "owned_as": "Tyrogue",
    "evo": "Hitmonlee (AttackGreater 20)",
    "per_fight": {
@@ -26742,7 +26748,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Overflow",
-   "dump": 366,
+   "dump": 370,
    "owned_as": "Slowbro-Galar",
    "evo": "",
    "per_fight": {
@@ -26987,7 +26993,7 @@
     "VENOSHOCK"
    ],
    "where": "Overflow",
-   "dump": 319,
+   "dump": 323,
    "owned_as": "Rattata-Alola",
    "evo": "Raticate (LevelNight 20)",
    "per_fight": {
@@ -27114,7 +27120,7 @@
     "UPROAR"
    ],
    "where": "Overflow",
-   "dump": 122,
+   "dump": 123,
    "owned_as": "Electabuzz",
    "evo": "",
    "per_fight": {
@@ -27235,7 +27241,7 @@
     "VOLTSWITCH"
    ],
    "where": "Overflow",
-   "dump": 94,
+   "dump": 95,
    "owned_as": "Dedenne",
    "evo": "",
    "per_fight": {
@@ -27365,7 +27371,7 @@
     "WONDERROOM"
    ],
    "where": "Overflow",
-   "dump": 115,
+   "dump": 116,
    "owned_as": "Dusclops",
    "evo": "",
    "per_fight": {
@@ -27617,7 +27623,7 @@
     "WHIRLPOOL"
    ],
    "where": "Overflow",
-   "dump": 203,
+   "dump": 205,
    "owned_as": "Lapras",
    "evo": "",
    "per_fight": {
@@ -27754,7 +27760,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 117,
+   "dump": 118,
    "owned_as": "Eevee",
    "evo": "Leafeon (Item Leaf Stone)",
    "per_fight": {
@@ -27778,6 +27784,128 @@
     "helping",
     "sleep"
    ],
+   "tier": "C"
+  },
+  {
+   "name": "Garbodor",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "GARBODOR",
+   "form": "0",
+   "types": [
+    "POISON"
+   ],
+   "base": {
+    "HP": 80,
+    "Atk": 95,
+    "Def": 82,
+    "SpA": 60,
+    "SpD": 82,
+    "Spe": 75
+   },
+   "bst": 474,
+   "fight": 0.141,
+   "fight_pct": 0.6,
+   "meta": 0.15,
+   "meta_label": "NatDex Doubles 0.0%",
+   "general": 0.178,
+   "blend": 0.282,
+   "game_pct": 0.524,
+   "n_all": 32,
+   "ability": "AFTERMATH",
+   "abilities": [
+    "STENCH",
+    "WEAKARMOR",
+    "AFTERMATH"
+   ],
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "cat": "Physical",
+   "attacks": [
+    "Gunk Shot",
+    "Body Slam"
+   ],
+   "legal": [
+    "ACIDSPRAY",
+    "AMNESIA",
+    "ATTRACT",
+    "AUTOTOMIZE",
+    "BELCH",
+    "BODYSLAM",
+    "CLEARSMOG",
+    "CONFIDE",
+    "CROSSPOISON",
+    "CURSE",
+    "DOUBLESLAP",
+    "DOUBLETEAM",
+    "EXPLOSION",
+    "FACADE",
+    "FALSESWIPE",
+    "FLING",
+    "GIGADRAIN",
+    "GUNKSHOT",
+    "HAZE",
+    "HIDDENPOWER",
+    "INFESTATION",
+    "IRRITATION",
+    "METALCLAW",
+    "MUDBARRAGE",
+    "MUDSPORT",
+    "PAINSPLIT",
+    "PAYBACK",
+    "POISONGAS",
+    "POISONSWEEP",
+    "POUND",
+    "PROTECT",
+    "RECYCLE",
+    "REST",
+    "ROCKBLAST",
+    "ROCKPOLISH",
+    "ROLLOUT",
+    "ROUND",
+    "SANDATTACK",
+    "SCREECH",
+    "SECRETPOWER",
+    "SLEEPTALK",
+    "SLUDGE",
+    "SLUDGEBOMB",
+    "SNORE",
+    "STOCKPILE",
+    "SWAGGER",
+    "SWALLOW",
+    "TAKEDOWN",
+    "THIEF",
+    "TOXIC",
+    "TOXICSPIKES",
+    "VENOSHOCK"
+   ],
+   "where": "Overflow",
+   "dump": 145,
+   "owned_as": "Garbodor",
+   "evo": "",
+   "per_fight": {
+    "spector": 0.175,
+    "spector2": 0.027,
+    "jenner9": 0.097,
+    "erick": 0.357
+   },
+   "counters": [
+    "erick:Electivire"
+   ],
+   "stats": {
+    "HP": 204,
+    "Atk": 177,
+    "Def": 112,
+    "SpA": 79,
+    "SpD": 112,
+    "Spe": 104
+   },
+   "tags": [],
    "tier": "C"
   },
   {
@@ -27875,7 +28003,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 360,
+   "dump": 364,
    "owned_as": "Skiddo",
    "evo": "Gogoat (Level 32)",
    "per_fight": {
@@ -27993,7 +28121,7 @@
     "UPROAR"
    ],
    "where": "Overflow",
-   "dump": 167,
+   "dump": 169,
    "owned_as": "Greedent",
    "evo": "",
    "per_fight": {
@@ -28018,135 +28146,6 @@
     "Spe": 44
    },
    "tags": [
-    "speed"
-   ],
-   "tier": "C"
-  },
-  {
-   "name": "Stunfisk",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "STUNFISK",
-   "form": "0",
-   "types": [
-    "GROUND",
-    "ELECTRIC"
-   ],
-   "base": {
-    "HP": 109,
-    "Atk": 66,
-    "Def": 84,
-    "SpA": 81,
-    "SpD": 99,
-    "Spe": 32
-   },
-   "bst": 471,
-   "fight": 0.132,
-   "fight_pct": 0.587,
-   "meta": 0.15,
-   "meta_label": "NatDex Doubles 0.0% | NatDex OU 0.0%",
-   "general": 0.176,
-   "blend": 0.279,
-   "game_pct": 0.518,
-   "n_all": 32,
-   "ability": "LIMBER",
-   "abilities": [
-    "STATIC",
-    "LIMBER",
-    "SANDVEIL"
-   ],
-   "nature": "Modest",
-   "evs": {
-    "SpA": 252,
-    "HP": 252,
-    "SpD": 4
-   },
-   "cat": "Special",
-   "attacks": [
-    "Muddy Water",
-    "Discharge"
-   ],
-   "legal": [
-    "ASTONISH",
-    "ATTRACT",
-    "BIDE",
-    "BOUNCE",
-    "BULLDOZE",
-    "CAMOUFLAGE",
-    "CHARGE",
-    "CONFIDE",
-    "CURSE",
-    "DELUGE",
-    "DIG",
-    "DISCHARGE",
-    "DOUBLETEAM",
-    "ELECTRICTERRAIN",
-    "ELECTROWEB",
-    "ENDURE",
-    "FACADE",
-    "FALSESWIPE",
-    "FISSURE",
-    "FLAIL",
-    "FLASH",
-    "HIDDENPOWER",
-    "INFESTATION",
-    "IRRITATION",
-    "MAGNETRISE",
-    "MEFIRST",
-    "MUDBARRAGE",
-    "MUDBOMB",
-    "MUDDYWATER",
-    "MUDSHOT",
-    "MUDSLAP",
-    "MUDSPORT",
-    "PAINSPLIT",
-    "PAYBACK",
-    "PROTECT",
-    "REFLECTTYPE",
-    "REST",
-    "REVENGE",
-    "ROCKTOMB",
-    "ROUND",
-    "SECRETPOWER",
-    "SHOCKWAVE",
-    "SLEEPTALK",
-    "SLUDGEBOMB",
-    "SNORE",
-    "SPARK",
-    "SPITE",
-    "SUCKERPUNCH",
-    "SURF",
-    "SWAGGER",
-    "TACKLE",
-    "THUNDERSHOCK",
-    "THUNDERWAVE",
-    "UPROAR",
-    "WATERGUN",
-    "WATERPULSE",
-    "YAWN"
-   ],
-   "where": "Overflow",
-   "dump": 379,
-   "owned_as": "Stunfisk",
-   "evo": "",
-   "per_fight": {
-    "spector": 0.271,
-    "spector2": 0.211,
-    "jenner9": 0.105,
-    "erick": 0.132
-   },
-   "counters": [],
-   "stats": {
-    "HP": 236,
-    "Atk": 84,
-    "Def": 114,
-    "SpA": 159,
-    "SpD": 131,
-    "Spe": 57
-   },
-   "tags": [
-    "sleep",
     "speed"
    ],
    "tier": "C"
@@ -28278,6 +28277,135 @@
    "tier": "C"
   },
   {
+   "name": "Stunfisk",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "STUNFISK",
+   "form": "0",
+   "types": [
+    "GROUND",
+    "ELECTRIC"
+   ],
+   "base": {
+    "HP": 109,
+    "Atk": 66,
+    "Def": 84,
+    "SpA": 81,
+    "SpD": 99,
+    "Spe": 32
+   },
+   "bst": 471,
+   "fight": 0.132,
+   "fight_pct": 0.587,
+   "meta": 0.15,
+   "meta_label": "NatDex Doubles 0.0% | NatDex OU 0.0%",
+   "general": 0.176,
+   "blend": 0.278,
+   "game_pct": 0.516,
+   "n_all": 32,
+   "ability": "LIMBER",
+   "abilities": [
+    "STATIC",
+    "LIMBER",
+    "SANDVEIL"
+   ],
+   "nature": "Modest",
+   "evs": {
+    "SpA": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "cat": "Special",
+   "attacks": [
+    "Muddy Water",
+    "Discharge"
+   ],
+   "legal": [
+    "ASTONISH",
+    "ATTRACT",
+    "BIDE",
+    "BOUNCE",
+    "BULLDOZE",
+    "CAMOUFLAGE",
+    "CHARGE",
+    "CONFIDE",
+    "CURSE",
+    "DELUGE",
+    "DIG",
+    "DISCHARGE",
+    "DOUBLETEAM",
+    "ELECTRICTERRAIN",
+    "ELECTROWEB",
+    "ENDURE",
+    "FACADE",
+    "FALSESWIPE",
+    "FISSURE",
+    "FLAIL",
+    "FLASH",
+    "HIDDENPOWER",
+    "INFESTATION",
+    "IRRITATION",
+    "MAGNETRISE",
+    "MEFIRST",
+    "MUDBARRAGE",
+    "MUDBOMB",
+    "MUDDYWATER",
+    "MUDSHOT",
+    "MUDSLAP",
+    "MUDSPORT",
+    "PAINSPLIT",
+    "PAYBACK",
+    "PROTECT",
+    "REFLECTTYPE",
+    "REST",
+    "REVENGE",
+    "ROCKTOMB",
+    "ROUND",
+    "SECRETPOWER",
+    "SHOCKWAVE",
+    "SLEEPTALK",
+    "SLUDGEBOMB",
+    "SNORE",
+    "SPARK",
+    "SPITE",
+    "SUCKERPUNCH",
+    "SURF",
+    "SWAGGER",
+    "TACKLE",
+    "THUNDERSHOCK",
+    "THUNDERWAVE",
+    "UPROAR",
+    "WATERGUN",
+    "WATERPULSE",
+    "YAWN"
+   ],
+   "where": "Overflow",
+   "dump": 383,
+   "owned_as": "Stunfisk",
+   "evo": "",
+   "per_fight": {
+    "spector": 0.271,
+    "spector2": 0.211,
+    "jenner9": 0.105,
+    "erick": 0.132
+   },
+   "counters": [],
+   "stats": {
+    "HP": 236,
+    "Atk": 84,
+    "Def": 114,
+    "SpA": 159,
+    "SpD": 131,
+    "Spe": 57
+   },
+   "tags": [
+    "sleep",
+    "speed"
+   ],
+   "tier": "C"
+  },
+  {
    "name": "Victreebel",
    "kind": "regular",
    "crest": "",
@@ -28381,7 +28509,7 @@
     "WRAP"
    ],
    "where": "Overflow",
-   "dump": 431,
+   "dump": 435,
    "owned_as": "Victreebel",
    "evo": "",
    "per_fight": {
@@ -28504,7 +28632,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 132,
+   "dump": 133,
    "owned_as": "Farfetch'd-Galar",
    "evo": "Sirfetch'd (LandCritical 3)",
    "per_fight": {
@@ -28529,128 +28657,6 @@
     "guard",
     "helping"
    ],
-   "tier": "C"
-  },
-  {
-   "name": "Garbodor",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "GARBODOR",
-   "form": "0",
-   "types": [
-    "POISON"
-   ],
-   "base": {
-    "HP": 80,
-    "Atk": 95,
-    "Def": 82,
-    "SpA": 60,
-    "SpD": 82,
-    "Spe": 75
-   },
-   "bst": 474,
-   "fight": 0.138,
-   "fight_pct": 0.592,
-   "meta": 0.15,
-   "meta_label": "NatDex Doubles 0.0%",
-   "general": 0.178,
-   "blend": 0.274,
-   "game_pct": 0.5,
-   "n_all": 32,
-   "ability": "AFTERMATH",
-   "abilities": [
-    "STENCH",
-    "WEAKARMOR",
-    "AFTERMATH"
-   ],
-   "nature": "Adamant",
-   "evs": {
-    "Atk": 252,
-    "HP": 252,
-    "SpD": 4
-   },
-   "cat": "Physical",
-   "attacks": [
-    "Gunk Shot",
-    "Body Slam"
-   ],
-   "legal": [
-    "ACIDSPRAY",
-    "AMNESIA",
-    "ATTRACT",
-    "AUTOTOMIZE",
-    "BELCH",
-    "BODYSLAM",
-    "CLEARSMOG",
-    "CONFIDE",
-    "CROSSPOISON",
-    "CURSE",
-    "DOUBLESLAP",
-    "DOUBLETEAM",
-    "EXPLOSION",
-    "FACADE",
-    "FALSESWIPE",
-    "FLING",
-    "GIGADRAIN",
-    "GUNKSHOT",
-    "HAZE",
-    "HIDDENPOWER",
-    "INFESTATION",
-    "IRRITATION",
-    "METALCLAW",
-    "MUDBARRAGE",
-    "MUDSPORT",
-    "PAINSPLIT",
-    "PAYBACK",
-    "POISONGAS",
-    "POISONSWEEP",
-    "POUND",
-    "PROTECT",
-    "RECYCLE",
-    "REST",
-    "ROCKBLAST",
-    "ROCKPOLISH",
-    "ROLLOUT",
-    "ROUND",
-    "SANDATTACK",
-    "SCREECH",
-    "SECRETPOWER",
-    "SLEEPTALK",
-    "SLUDGE",
-    "SLUDGEBOMB",
-    "SNORE",
-    "STOCKPILE",
-    "SWAGGER",
-    "SWALLOW",
-    "TAKEDOWN",
-    "THIEF",
-    "TOXIC",
-    "TOXICSPIKES",
-    "VENOSHOCK"
-   ],
-   "where": "Overflow",
-   "dump": 144,
-   "owned_as": "Garbodor",
-   "evo": "",
-   "per_fight": {
-    "spector": 0.175,
-    "spector2": 0.024,
-    "jenner9": 0.095,
-    "erick": 0.35
-   },
-   "counters": [
-    "erick:Electivire"
-   ],
-   "stats": {
-    "HP": 204,
-    "Atk": 177,
-    "Def": 112,
-    "SpA": 79,
-    "SpD": 112,
-    "Spe": 104
-   },
-   "tags": [],
    "tier": "C"
   },
   {
@@ -28741,7 +28747,7 @@
     "WIDEGUARD"
    ],
    "where": "Overflow",
-   "dump": 140,
+   "dump": 141,
    "owned_as": "Frosmoth",
    "evo": "",
    "per_fight": {
@@ -28767,122 +28773,6 @@
     "guard",
     "helping",
     "screens",
-    "speed"
-   ],
-   "tier": "C"
-  },
-  {
-   "name": "Klawf",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "KLAWF",
-   "form": "0",
-   "types": [
-    "ROCK"
-   ],
-   "base": {
-    "HP": 70,
-    "Atk": 100,
-    "Def": 115,
-    "SpA": 35,
-    "SpD": 55,
-    "Spe": 75
-   },
-   "bst": 450,
-   "fight": -0.008,
-   "fight_pct": 0.208,
-   "meta": 0.15,
-   "meta_label": "OU 0.1% | NatDex Doubles 0.0%",
-   "general": 0.167,
-   "blend": 0.271,
-   "game_pct": 0.513,
-   "n_all": 32,
-   "ability": "ANGERSHELL",
-   "abilities": [
-    "ANGERSHELL",
-    "SHELLARMOR",
-    "REGENERATOR"
-   ],
-   "nature": "Adamant",
-   "evs": {
-    "Atk": 252,
-    "HP": 252,
-    "SpD": 4
-   },
-   "cat": "Physical",
-   "attacks": [
-    "High Horsepower",
-    "Rock Slide"
-   ],
-   "legal": [
-    "ANCIENTPOWER",
-    "ATTRACT",
-    "BULLDOZE",
-    "CONFIDE",
-    "CRABHAMMER",
-    "DIG",
-    "DOUBLETEAM",
-    "ENDEAVOR",
-    "FACADE",
-    "FALSESWIPE",
-    "FLAIL",
-    "FLING",
-    "HARDEN",
-    "HELPINGHAND",
-    "HIDDENPOWER",
-    "HIGHHORSEPOWER",
-    "IRONDEFENSE",
-    "KNOCKOFF",
-    "METALCLAW",
-    "MUDSHOT",
-    "PROTECT",
-    "REST",
-    "ROCKBLAST",
-    "ROCKSLIDE",
-    "ROCKSMASH",
-    "ROCKTHROW",
-    "ROCKTOMB",
-    "ROUND",
-    "SCARYFACE",
-    "SECRETPOWER",
-    "SHADOWCLAW",
-    "SLEEPTALK",
-    "SNORE",
-    "STACKINGSHOT",
-    "SWAGGER",
-    "SWORDSDANCE",
-    "TAKEDOWN",
-    "THIEF",
-    "TRAILBLAZE",
-    "VICEGRIP",
-    "XSCISSOR"
-   ],
-   "where": "Overflow",
-   "dump": 196,
-   "owned_as": "Klawf",
-   "evo": "",
-   "per_fight": {
-    "spector": 0.321,
-    "spector2": 0.093,
-    "jenner9": -0.06,
-    "erick": -0.017
-   },
-   "counters": [
-    "spector2:Luxray",
-    "spector:Murkrow",
-    "spector:Ninetales"
-   ],
-   "stats": {
-    "HP": 193,
-    "Atk": 182,
-    "Def": 148,
-    "SpA": 54,
-    "SpD": 83,
-    "Spe": 104
-   },
-   "tags": [
-    "helping",
     "speed"
    ],
    "tier": "C"
@@ -28996,7 +28886,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 173,
+   "dump": 175,
    "owned_as": "Heracross",
    "evo": "",
    "per_fight": {
@@ -29024,37 +28914,37 @@
    "tier": "C"
   },
   {
-   "name": "Audino",
+   "name": "Klawf",
    "kind": "regular",
    "crest": "",
    "zoro_partner": null,
-   "sid": "AUDINO",
+   "sid": "KLAWF",
    "form": "0",
    "types": [
-    "NORMAL"
+    "ROCK"
    ],
    "base": {
-    "HP": 103,
-    "Atk": 60,
-    "Def": 86,
-    "SpA": 60,
-    "SpD": 86,
-    "Spe": 50
+    "HP": 70,
+    "Atk": 100,
+    "Def": 115,
+    "SpA": 35,
+    "SpD": 55,
+    "Spe": 75
    },
-   "bst": 445,
-   "fight": 0.192,
-   "fight_pct": 0.724,
+   "bst": 450,
+   "fight": -0.008,
+   "fight_pct": 0.208,
    "meta": 0.15,
-   "meta_label": "NatDex Doubles 0.3% | NatDex OU 0.0%",
-   "general": 0.165,
-   "blend": 0.268,
-   "game_pct": 0.508,
+   "meta_label": "OU 0.1% | NatDex Doubles 0.0%",
+   "general": 0.167,
+   "blend": 0.27,
+   "game_pct": 0.511,
    "n_all": 32,
-   "ability": "KLUTZ",
+   "ability": "ANGERSHELL",
    "abilities": [
-    "HEALER",
-    "REGENERATOR",
-    "KLUTZ"
+    "ANGERSHELL",
+    "SHELLARMOR",
+    "REGENERATOR"
    ],
    "nature": "Adamant",
    "evs": {
@@ -29064,92 +28954,80 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Double-Edge",
-    "Shadow Ball"
+    "High Horsepower",
+    "Rock Slide"
    ],
    "legal": [
-    "AFTERYOU",
+    "ANCIENTPOWER",
     "ATTRACT",
-    "BABYDOLLEYES",
-    "BESTOW",
-    "CHARGEBEAM",
+    "BULLDOZE",
     "CONFIDE",
+    "CRABHAMMER",
     "DIG",
-    "DISARMINGVOICE",
-    "DOUBLEEDGE",
-    "DOUBLESLAP",
     "DOUBLETEAM",
-    "ECHOEDVOICE",
-    "ENTRAINMENT",
+    "ENDEAVOR",
     "FACADE",
     "FALSESWIPE",
-    "FLASH",
+    "FLAIL",
     "FLING",
-    "GRASSKNOT",
-    "GROWL",
-    "HEALINGWISH",
-    "HEALPULSE",
+    "HARDEN",
     "HELPINGHAND",
     "HIDDENPOWER",
-    "HYPERVOICE",
-    "INCINERATE",
-    "LIFEDEW",
-    "LUCKYCHANT",
-    "PLAYNICE",
-    "POUND",
-    "POWERUPPUNCH",
+    "HIGHHORSEPOWER",
+    "IRONDEFENSE",
+    "KNOCKOFF",
+    "METALCLAW",
+    "MUDSHOT",
     "PROTECT",
-    "REFRESH",
     "REST",
-    "ROLEPLAY",
+    "ROCKBLAST",
+    "ROCKSLIDE",
+    "ROCKSMASH",
+    "ROCKTHROW",
+    "ROCKTOMB",
     "ROUND",
-    "SAFEGUARD",
+    "SCARYFACE",
     "SECRETPOWER",
-    "SHADOWBALL",
-    "SIGNALBEAM",
-    "SIMPLEBEAM",
-    "SKILLSWAP",
+    "SHADOWCLAW",
     "SLEEPTALK",
-    "SNATCH",
     "SNORE",
     "STACKINGSHOT",
-    "SURF",
     "SWAGGER",
-    "SWEETKISS",
+    "SWORDSDANCE",
     "TAKEDOWN",
-    "TELEKINESIS",
-    "THUNDERWAVE",
-    "UPROAR",
-    "WISH",
-    "WORKUP",
-    "YAWN",
-    "ZENHEADBUTT"
+    "THIEF",
+    "TRAILBLAZE",
+    "VICEGRIP",
+    "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 20,
-   "owned_as": "Audino",
+   "dump": 198,
+   "owned_as": "Klawf",
    "evo": "",
    "per_fight": {
-    "spector": 0.314,
-    "spector2": 0.271,
-    "jenner9": 0.135,
-    "erick": 0.318
+    "spector": 0.321,
+    "spector2": 0.093,
+    "jenner9": -0.06,
+    "erick": -0.017
    },
-   "counters": [],
+   "counters": [
+    "spector2:Luxray",
+    "spector:Murkrow",
+    "spector:Ninetales"
+   ],
    "stats": {
-    "HP": 230,
-    "Atk": 134,
-    "Def": 116,
-    "SpA": 79,
-    "SpD": 117,
-    "Spe": 77
+    "HP": 193,
+    "Atk": 182,
+    "Def": 148,
+    "SpA": 54,
+    "SpD": 83,
+    "Spe": 104
    },
    "tags": [
     "helping",
-    "sleep",
     "speed"
    ],
-   "tier": "D"
+   "tier": "C"
   },
   {
    "name": "Houndoom",
@@ -29258,7 +29136,7 @@
     "UPROAR"
    ],
    "where": "Overflow",
-   "dump": 177,
+   "dump": 179,
    "owned_as": "Houndoom",
    "evo": "",
    "per_fight": {
@@ -29369,7 +29247,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 277,
+   "dump": 280,
    "owned_as": "Oricorio-Pom-Pom",
    "evo": "",
    "per_fight": {
@@ -29495,7 +29373,7 @@
     "WRINGOUT"
    ],
    "where": "Overflow",
-   "dump": 268,
+   "dump": 271,
    "owned_as": "Octillery",
    "evo": "",
    "per_fight": {
@@ -29515,6 +29393,134 @@
    },
    "tags": [
     "helping",
+    "speed"
+   ],
+   "tier": "D"
+  },
+  {
+   "name": "Audino",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "AUDINO",
+   "form": "0",
+   "types": [
+    "NORMAL"
+   ],
+   "base": {
+    "HP": 103,
+    "Atk": 60,
+    "Def": 86,
+    "SpA": 60,
+    "SpD": 86,
+    "Spe": 50
+   },
+   "bst": 445,
+   "fight": 0.192,
+   "fight_pct": 0.721,
+   "meta": 0.15,
+   "meta_label": "NatDex Doubles 0.3% | NatDex OU 0.0%",
+   "general": 0.165,
+   "blend": 0.267,
+   "game_pct": 0.505,
+   "n_all": 32,
+   "ability": "KLUTZ",
+   "abilities": [
+    "HEALER",
+    "REGENERATOR",
+    "KLUTZ"
+   ],
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "cat": "Physical",
+   "attacks": [
+    "Double-Edge",
+    "Shadow Ball"
+   ],
+   "legal": [
+    "AFTERYOU",
+    "ATTRACT",
+    "BABYDOLLEYES",
+    "BESTOW",
+    "CHARGEBEAM",
+    "CONFIDE",
+    "DIG",
+    "DISARMINGVOICE",
+    "DOUBLEEDGE",
+    "DOUBLESLAP",
+    "DOUBLETEAM",
+    "ECHOEDVOICE",
+    "ENTRAINMENT",
+    "FACADE",
+    "FALSESWIPE",
+    "FLASH",
+    "FLING",
+    "GRASSKNOT",
+    "GROWL",
+    "HEALINGWISH",
+    "HEALPULSE",
+    "HELPINGHAND",
+    "HIDDENPOWER",
+    "HYPERVOICE",
+    "INCINERATE",
+    "LIFEDEW",
+    "LUCKYCHANT",
+    "PLAYNICE",
+    "POUND",
+    "POWERUPPUNCH",
+    "PROTECT",
+    "REFRESH",
+    "REST",
+    "ROLEPLAY",
+    "ROUND",
+    "SAFEGUARD",
+    "SECRETPOWER",
+    "SHADOWBALL",
+    "SIGNALBEAM",
+    "SIMPLEBEAM",
+    "SKILLSWAP",
+    "SLEEPTALK",
+    "SNATCH",
+    "SNORE",
+    "STACKINGSHOT",
+    "SURF",
+    "SWAGGER",
+    "SWEETKISS",
+    "TAKEDOWN",
+    "TELEKINESIS",
+    "THUNDERWAVE",
+    "UPROAR",
+    "WISH",
+    "WORKUP",
+    "YAWN",
+    "ZENHEADBUTT"
+   ],
+   "where": "Overflow",
+   "dump": 20,
+   "owned_as": "Audino",
+   "evo": "",
+   "per_fight": {
+    "spector": 0.314,
+    "spector2": 0.271,
+    "jenner9": 0.135,
+    "erick": 0.318
+   },
+   "counters": [],
+   "stats": {
+    "HP": 230,
+    "Atk": 134,
+    "Def": 116,
+    "SpA": 79,
+    "SpD": 117,
+    "Spe": 77
+   },
+   "tags": [
+    "helping",
+    "sleep",
     "speed"
    ],
    "tier": "D"
@@ -29620,7 +29626,7 @@
     "WIDEGUARD"
    ],
    "where": "Overflow",
-   "dump": 149,
+   "dump": 150,
    "owned_as": "Geodude",
    "evo": "Graveler (Level 25)",
    "per_fight": {
@@ -29734,7 +29740,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 92,
+   "dump": 93,
    "owned_as": "Dachsbun",
    "evo": "",
    "per_fight": {
@@ -29782,7 +29788,7 @@
    },
    "bst": 465,
    "fight": 0.138,
-   "fight_pct": 0.597,
+   "fight_pct": 0.595,
    "meta": 0.286,
    "meta_label": "RU 8.3% | NatDex Doubles 0.1%",
    "general": 0.296,
@@ -29865,7 +29871,7 @@
     "ZAPCANNON"
    ],
    "where": "Overflow",
-   "dump": 138,
+   "dump": 139,
    "owned_as": "Forretress",
    "evo": "",
    "per_fight": {
@@ -29886,149 +29892,6 @@
     "Spe": 66
    },
    "tags": [
-    "helping",
-    "speed"
-   ],
-   "tier": "D"
-  },
-  {
-   "name": "Medicham",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "MEDICHAM",
-   "form": "0",
-   "types": [
-    "FIGHTING",
-    "PSYCHIC"
-   ],
-   "base": {
-    "HP": 60,
-    "Atk": 60,
-    "Def": 75,
-    "SpA": 60,
-    "SpD": 75,
-    "Spe": 80
-   },
-   "bst": 410,
-   "fight": 0.144,
-   "fight_pct": 0.613,
-   "meta": 0.15,
-   "meta_label": "NatDex Doubles 0.3% | NU 1.9%",
-   "general": 0.149,
-   "blend": 0.261,
-   "game_pct": 0.524,
-   "n_all": 32,
-   "ability": "TELEPATHY",
-   "abilities": [
-    "PUREPOWER",
-    "TELEPATHY"
-   ],
-   "nature": "Adamant",
-   "evs": {
-    "Atk": 252,
-    "HP": 252,
-    "SpD": 4
-   },
-   "cat": "Physical",
-   "attacks": [
-    "Ice Punch",
-    "High Jump Kick",
-    "Zen Headbutt"
-   ],
-   "legal": [
-    "ACUPRESSURE",
-    "ATTRACT",
-    "AXEKICK",
-    "BATONPASS",
-    "BIDE",
-    "BULLETPUNCH",
-    "CALMMIND",
-    "CONFIDE",
-    "CONFUSION",
-    "COUNTER",
-    "DETECT",
-    "DOUBLETEAM",
-    "DYNAMICPUNCH",
-    "ENDURE",
-    "FACADE",
-    "FAKEOUT",
-    "FALSESWIPE",
-    "FEINT",
-    "FIREPUNCH",
-    "FLASH",
-    "FLING",
-    "FORCEPALM",
-    "FORESIGHT",
-    "GRASSKNOT",
-    "GUARDSWAP",
-    "HELPINGHAND",
-    "HIDDENPOWER",
-    "HIJUMPKICK",
-    "ICEPUNCH",
-    "IMPRISON",
-    "LOWSWEEP",
-    "MEDITATE",
-    "MINDREADER",
-    "NIGHTSHADE",
-    "POISONSWEEP",
-    "POUND",
-    "POWERSWAP",
-    "POWERTRICK",
-    "POWERUPPUNCH",
-    "PROTECT",
-    "PSYBEAM",
-    "PSYCHOCUT",
-    "PSYCHUP",
-    "QUICKGUARD",
-    "RECOVER",
-    "RECYCLE",
-    "REST",
-    "ROCKSMASH",
-    "ROCKTOMB",
-    "ROLEPLAY",
-    "ROUND",
-    "SECRETPOWER",
-    "SHADOWBALL",
-    "SIGNALBEAM",
-    "SKILLSWAP",
-    "SLEEPTALK",
-    "SNORE",
-    "STACKINGSHOT",
-    "SWAGGER",
-    "TAKEDOWN",
-    "TELEKINESIS",
-    "THIEF",
-    "THUNDERPUNCH",
-    "TRAILBLAZE",
-    "TRICK",
-    "WORKUP",
-    "ZENHEADBUTT"
-   ],
-   "where": "Overflow",
-   "dump": 238,
-   "owned_as": "Medicham",
-   "evo": "",
-   "per_fight": {
-    "spector": 0.07,
-    "spector2": -0.003,
-    "jenner9": 0.133,
-    "erick": 0.299
-   },
-   "counters": [
-    "erick:Togedemaru"
-   ],
-   "stats": {
-    "HP": 182,
-    "Atk": 134,
-    "Def": 104,
-    "SpA": 79,
-    "SpD": 105,
-    "Spe": 110
-   },
-   "tags": [
-    "fakeout",
-    "guard",
     "helping",
     "speed"
    ],
@@ -30125,7 +29988,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Overflow",
-   "dump": 399,
+   "dump": 403,
    "owned_as": "Tauros",
    "evo": "",
    "per_fight": {
@@ -30410,6 +30273,149 @@
    "tier": "D"
   },
   {
+   "name": "Medicham",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "MEDICHAM",
+   "form": "0",
+   "types": [
+    "FIGHTING",
+    "PSYCHIC"
+   ],
+   "base": {
+    "HP": 60,
+    "Atk": 60,
+    "Def": 75,
+    "SpA": 60,
+    "SpD": 75,
+    "Spe": 80
+   },
+   "bst": 410,
+   "fight": 0.144,
+   "fight_pct": 0.613,
+   "meta": 0.15,
+   "meta_label": "NatDex Doubles 0.3% | NU 1.9%",
+   "general": 0.149,
+   "blend": 0.26,
+   "game_pct": 0.521,
+   "n_all": 32,
+   "ability": "TELEPATHY",
+   "abilities": [
+    "PUREPOWER",
+    "TELEPATHY"
+   ],
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "cat": "Physical",
+   "attacks": [
+    "Ice Punch",
+    "High Jump Kick",
+    "Zen Headbutt"
+   ],
+   "legal": [
+    "ACUPRESSURE",
+    "ATTRACT",
+    "AXEKICK",
+    "BATONPASS",
+    "BIDE",
+    "BULLETPUNCH",
+    "CALMMIND",
+    "CONFIDE",
+    "CONFUSION",
+    "COUNTER",
+    "DETECT",
+    "DOUBLETEAM",
+    "DYNAMICPUNCH",
+    "ENDURE",
+    "FACADE",
+    "FAKEOUT",
+    "FALSESWIPE",
+    "FEINT",
+    "FIREPUNCH",
+    "FLASH",
+    "FLING",
+    "FORCEPALM",
+    "FORESIGHT",
+    "GRASSKNOT",
+    "GUARDSWAP",
+    "HELPINGHAND",
+    "HIDDENPOWER",
+    "HIJUMPKICK",
+    "ICEPUNCH",
+    "IMPRISON",
+    "LOWSWEEP",
+    "MEDITATE",
+    "MINDREADER",
+    "NIGHTSHADE",
+    "POISONSWEEP",
+    "POUND",
+    "POWERSWAP",
+    "POWERTRICK",
+    "POWERUPPUNCH",
+    "PROTECT",
+    "PSYBEAM",
+    "PSYCHOCUT",
+    "PSYCHUP",
+    "QUICKGUARD",
+    "RECOVER",
+    "RECYCLE",
+    "REST",
+    "ROCKSMASH",
+    "ROCKTOMB",
+    "ROLEPLAY",
+    "ROUND",
+    "SECRETPOWER",
+    "SHADOWBALL",
+    "SIGNALBEAM",
+    "SKILLSWAP",
+    "SLEEPTALK",
+    "SNORE",
+    "STACKINGSHOT",
+    "SWAGGER",
+    "TAKEDOWN",
+    "TELEKINESIS",
+    "THIEF",
+    "THUNDERPUNCH",
+    "TRAILBLAZE",
+    "TRICK",
+    "WORKUP",
+    "ZENHEADBUTT"
+   ],
+   "where": "Overflow",
+   "dump": 240,
+   "owned_as": "Medicham",
+   "evo": "",
+   "per_fight": {
+    "spector": 0.07,
+    "spector2": -0.003,
+    "jenner9": 0.133,
+    "erick": 0.299
+   },
+   "counters": [
+    "erick:Togedemaru"
+   ],
+   "stats": {
+    "HP": 182,
+    "Atk": 134,
+    "Def": 104,
+    "SpA": 79,
+    "SpD": 105,
+    "Spe": 110
+   },
+   "tags": [
+    "fakeout",
+    "guard",
+    "helping",
+    "speed"
+   ],
+   "tier": "D"
+  },
+  {
    "name": "Meowstic",
    "kind": "regular",
    "crest": "",
@@ -30516,7 +30522,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 240,
+   "dump": 242,
    "owned_as": "Meowstic",
    "evo": "",
    "per_fight": {
@@ -30639,7 +30645,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 417,
+   "dump": 421,
    "owned_as": "Turtonator",
    "evo": "",
    "per_fight": {
@@ -30884,7 +30890,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Overflow",
-   "dump": 400,
+   "dump": 404,
    "owned_as": "Tauros-Paldea",
    "evo": "",
    "per_fight": {
@@ -31112,7 +31118,7 @@
     "WHIRLPOOL"
    ],
    "where": "Overflow",
-   "dump": 119,
+   "dump": 120,
    "owned_as": "Eiscue",
    "evo": "",
    "per_fight": {
@@ -31243,7 +31249,7 @@
     "UPROAR"
    ],
    "where": "Overflow",
-   "dump": 222,
+   "dump": 224,
    "owned_as": "Magby",
    "evo": "Magmar (Level 30)",
    "per_fight": {
@@ -31360,7 +31366,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 251,
+   "dump": 253,
    "owned_as": "Morelull",
    "evo": "Shiinotic (Level 24)",
    "per_fight": {
@@ -31491,7 +31497,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Overflow",
-   "dump": 125,
+   "dump": 126,
    "owned_as": "Elgyem",
    "evo": "Beheeyem (Level 42)",
    "per_fight": {
@@ -31628,7 +31634,7 @@
     "WHIRLPOOL"
    ],
    "where": "Overflow",
-   "dump": 315,
+   "dump": 319,
    "owned_as": "Qwilfish",
    "evo": "",
    "per_fight": {
@@ -31647,142 +31653,6 @@
     "Spe": 150
    },
    "tags": [
-    "intimidate",
-    "speed"
-   ],
-   "tier": "D"
-  },
-  {
-   "name": "Mawile",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "MAWILE",
-   "form": "0",
-   "types": [
-    "STEEL",
-    "FAIRY"
-   ],
-   "base": {
-    "HP": 50,
-    "Atk": 85,
-    "Def": 85,
-    "SpA": 55,
-    "SpD": 55,
-    "Spe": 50
-   },
-   "bst": 380,
-   "fight": 0.167,
-   "fight_pct": 0.661,
-   "meta": 0.15,
-   "meta_label": "NatDex Doubles 0.0%",
-   "general": 0.135,
-   "blend": 0.246,
-   "game_pct": 0.505,
-   "n_all": 32,
-   "ability": "INTIMIDATE",
-   "abilities": [
-    "HYPERCUTTER",
-    "INTIMIDATE",
-    "SHEERFORCE"
-   ],
-   "nature": "Adamant",
-   "evs": {
-    "Atk": 252,
-    "HP": 252,
-    "SpD": 4
-   },
-   "cat": "Physical",
-   "attacks": [
-    "Play Rough",
-    "Sucker Punch",
-    "Iron Head"
-   ],
-   "legal": [
-    "ANCIENTPOWER",
-    "ASSURANCE",
-    "ASTONISH",
-    "ATTRACT",
-    "BATONPASS",
-    "BITE",
-    "BRUTALSWING",
-    "CAPTIVATE",
-    "CHARGEBEAM",
-    "CONFIDE",
-    "CRUNCH",
-    "DOUBLETEAM",
-    "EMBARGO",
-    "FACADE",
-    "FAIRYWIND",
-    "FAKETEARS",
-    "FALSESWIPE",
-    "FEINTATTACK",
-    "FIREFANG",
-    "FLING",
-    "GRASSKNOT",
-    "GROWL",
-    "GUARDSWAP",
-    "HELPINGHAND",
-    "HIDDENPOWER",
-    "ICEFANG",
-    "INCINERATE",
-    "IRONDEFENSE",
-    "IRONHEAD",
-    "MAGNETRISE",
-    "METALBURST",
-    "PAYBACK",
-    "PLAYROUGH",
-    "POISONFANG",
-    "POWERUPPUNCH",
-    "PROTECT",
-    "PUNISHMENT",
-    "REST",
-    "ROCKSMASH",
-    "ROCKTOMB",
-    "ROUND",
-    "SECRETPOWER",
-    "SEISMICTOSS",
-    "SHADOWBALL",
-    "SLAM",
-    "SLEEPTALK",
-    "SLUDGEBOMB",
-    "SNATCH",
-    "SNORE",
-    "SPITUP",
-    "STACKINGSHOT",
-    "STOCKPILE",
-    "SUCKERPUNCH",
-    "SUPERFANG",
-    "SWAGGER",
-    "SWALLOW",
-    "SWEETSCENT",
-    "TAUNT",
-    "THUNDERFANG",
-    "TICKLE",
-    "TORMENT",
-    "VICEGRIP"
-   ],
-   "where": "Overflow",
-   "dump": 237,
-   "owned_as": "Mawile",
-   "evo": "",
-   "per_fight": {
-    "spector": 0.235,
-    "spector2": 0.105,
-    "jenner9": 0.173,
-    "erick": 0.141
-   },
-   "counters": [],
-   "stats": {
-    "HP": 171,
-    "Atk": 165,
-    "Def": 115,
-    "SpA": 73,
-    "SpD": 83,
-    "Spe": 77
-   },
-   "tags": [
-    "helping",
     "intimidate",
     "speed"
    ],
@@ -31905,7 +31775,7 @@
     "WONDERROOM"
    ],
    "where": "Overflow",
-   "dump": 246,
+   "dump": 248,
    "owned_as": "Mime Jr.",
    "evo": "Mr. Mime (HasMove Mimic)",
    "per_fight": {
@@ -32055,6 +31925,142 @@
    "tier": "D"
   },
   {
+   "name": "Mawile",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "MAWILE",
+   "form": "0",
+   "types": [
+    "STEEL",
+    "FAIRY"
+   ],
+   "base": {
+    "HP": 50,
+    "Atk": 85,
+    "Def": 85,
+    "SpA": 55,
+    "SpD": 55,
+    "Spe": 50
+   },
+   "bst": 380,
+   "fight": 0.167,
+   "fight_pct": 0.661,
+   "meta": 0.15,
+   "meta_label": "NatDex Doubles 0.0%",
+   "general": 0.135,
+   "blend": 0.245,
+   "game_pct": 0.503,
+   "n_all": 32,
+   "ability": "INTIMIDATE",
+   "abilities": [
+    "HYPERCUTTER",
+    "INTIMIDATE",
+    "SHEERFORCE"
+   ],
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "cat": "Physical",
+   "attacks": [
+    "Play Rough",
+    "Sucker Punch",
+    "Iron Head"
+   ],
+   "legal": [
+    "ANCIENTPOWER",
+    "ASSURANCE",
+    "ASTONISH",
+    "ATTRACT",
+    "BATONPASS",
+    "BITE",
+    "BRUTALSWING",
+    "CAPTIVATE",
+    "CHARGEBEAM",
+    "CONFIDE",
+    "CRUNCH",
+    "DOUBLETEAM",
+    "EMBARGO",
+    "FACADE",
+    "FAIRYWIND",
+    "FAKETEARS",
+    "FALSESWIPE",
+    "FEINTATTACK",
+    "FIREFANG",
+    "FLING",
+    "GRASSKNOT",
+    "GROWL",
+    "GUARDSWAP",
+    "HELPINGHAND",
+    "HIDDENPOWER",
+    "ICEFANG",
+    "INCINERATE",
+    "IRONDEFENSE",
+    "IRONHEAD",
+    "MAGNETRISE",
+    "METALBURST",
+    "PAYBACK",
+    "PLAYROUGH",
+    "POISONFANG",
+    "POWERUPPUNCH",
+    "PROTECT",
+    "PUNISHMENT",
+    "REST",
+    "ROCKSMASH",
+    "ROCKTOMB",
+    "ROUND",
+    "SECRETPOWER",
+    "SEISMICTOSS",
+    "SHADOWBALL",
+    "SLAM",
+    "SLEEPTALK",
+    "SLUDGEBOMB",
+    "SNATCH",
+    "SNORE",
+    "SPITUP",
+    "STACKINGSHOT",
+    "STOCKPILE",
+    "SUCKERPUNCH",
+    "SUPERFANG",
+    "SWAGGER",
+    "SWALLOW",
+    "SWEETSCENT",
+    "TAUNT",
+    "THUNDERFANG",
+    "TICKLE",
+    "TORMENT",
+    "VICEGRIP"
+   ],
+   "where": "Overflow",
+   "dump": 239,
+   "owned_as": "Mawile",
+   "evo": "",
+   "per_fight": {
+    "spector": 0.235,
+    "spector2": 0.105,
+    "jenner9": 0.173,
+    "erick": 0.141
+   },
+   "counters": [],
+   "stats": {
+    "HP": 171,
+    "Atk": 165,
+    "Def": 115,
+    "SpA": 73,
+    "SpD": 83,
+    "Spe": 77
+   },
+   "tags": [
+    "helping",
+    "intimidate",
+    "speed"
+   ],
+   "tier": "D"
+  },
+  {
    "name": "Hypno",
    "kind": "regular",
    "crest": "",
@@ -32168,7 +32174,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Overflow",
-   "dump": 178,
+   "dump": 180,
    "owned_as": "Hypno",
    "evo": "",
    "per_fight": {
@@ -32308,7 +32314,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 461,
+   "dump": 465,
    "owned_as": "Zangoose",
    "evo": "",
    "per_fight": {
@@ -32363,7 +32369,7 @@
    "blend": 0.241,
    "game_pct": 0.395,
    "n_all": 32,
-   "ability": "LIQUIDOOZE",
+   "ability": "GLUTTONY",
    "abilities": [
     "LIQUIDOOZE",
     "STICKYHOLD",
@@ -32441,7 +32447,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 386,
+   "dump": 390,
    "owned_as": "Swalot",
    "evo": "",
    "per_fight": {
@@ -32577,7 +32583,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 142,
+   "dump": 143,
    "owned_as": "Furret",
    "evo": "",
    "per_fight": {
@@ -32687,7 +32693,7 @@
     "TARSHOT"
    ],
    "where": "Overflow",
-   "dump": 324,
+   "dump": 328,
    "owned_as": "Rolycoly",
    "evo": "Carkol (Level 18); Coalossal (Level 34)",
    "per_fight": {
@@ -32807,7 +32813,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 302,
+   "dump": 306,
    "owned_as": "Pinsir",
    "evo": "",
    "per_fight": {
@@ -32955,7 +32961,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 184,
+   "dump": 186,
    "owned_as": "Jigglypuff",
    "evo": "Wigglytuff (Item Moon Stone)",
    "per_fight": {
@@ -33073,7 +33079,7 @@
     "WILDCHARGE"
    ],
    "where": "Overflow",
-   "dump": 227,
+   "dump": 229,
    "owned_as": "Manectric",
    "evo": "",
    "per_fight": {
@@ -33203,7 +33209,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 332,
+   "dump": 336,
    "owned_as": "Sandslash-Alola",
    "evo": "",
    "per_fight": {
@@ -33315,7 +33321,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 388,
+   "dump": 392,
    "owned_as": "Swellow",
    "evo": "",
    "per_fight": {
@@ -33662,7 +33668,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 276,
+   "dump": 279,
    "owned_as": "Oricorio",
    "evo": "",
    "per_fight": {
@@ -33787,7 +33793,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Overflow",
-   "dump": 429,
+   "dump": 433,
    "owned_as": "Venonat",
    "evo": "Venomoth (Level 31)",
    "per_fight": {
@@ -33931,7 +33937,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 413,
+   "dump": 417,
    "owned_as": "Treecko",
    "evo": "Grovyle (Level 16); Sceptile (Level 36)",
    "per_fight": {
@@ -34316,7 +34322,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 416,
+   "dump": 420,
    "owned_as": "Trumbeak",
    "evo": "Toucannon (Level 28)",
    "per_fight": {
@@ -34360,7 +34366,7 @@
    },
    "bst": 523,
    "fight": 0.138,
-   "fight_pct": 0.595,
+   "fight_pct": 0.592,
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.1%",
    "general": 0.2,
@@ -34430,7 +34436,7 @@
     "VOLTSWITCH"
    ],
    "where": "Overflow",
-   "dump": 219,
+   "dump": 221,
    "owned_as": "Luxray",
    "evo": "",
    "per_fight": {
@@ -34555,7 +34561,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 212,
+   "dump": 214,
    "owned_as": "Loudred",
    "evo": "Exploud (Level 40)",
    "per_fight": {
@@ -34810,7 +34816,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 443,
+   "dump": 447,
    "owned_as": "Whirlipede",
    "evo": "Scolipede (Level 30)",
    "per_fight": {
@@ -34925,7 +34931,7 @@
     "VENOSHOCK"
    ],
    "where": "Overflow",
-   "dump": 452,
+   "dump": 456,
    "owned_as": "Wormadam-Sandy",
    "evo": "",
    "per_fight": {
@@ -35050,7 +35056,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 331,
+   "dump": 335,
    "owned_as": "Sandshrew",
    "evo": "Sandslash (Level 22)",
    "per_fight": {
@@ -35286,7 +35292,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 357,
+   "dump": 361,
    "owned_as": "Simipour",
    "evo": "",
    "per_fight": {
@@ -35403,7 +35409,7 @@
     "THRASH"
    ],
    "where": "Overflow",
-   "dump": 317,
+   "dump": 321,
    "owned_as": "Rapidash",
    "evo": "",
    "per_fight": {
@@ -35764,7 +35770,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 176,
+   "dump": 178,
    "owned_as": "Hoppip",
    "evo": "Skiploom (Level 18); Jumpluff (Level 27)",
    "per_fight": {
@@ -35873,7 +35879,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 121,
+   "dump": 122,
    "owned_as": "Eldegoss",
    "evo": "",
    "per_fight": {
@@ -35989,7 +35995,7 @@
     "WONDERROOM"
    ],
    "where": "Overflow",
-   "dump": 305,
+   "dump": 309,
    "owned_as": "Porygon",
    "evo": "",
    "per_fight": {
@@ -36118,7 +36124,7 @@
     "WISH"
    ],
    "where": "Overflow",
-   "dump": 259,
+   "dump": 262,
    "owned_as": "Natu",
    "evo": "Xatu (Level 25)",
    "per_fight": {
@@ -36246,7 +36252,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 344,
+   "dump": 348,
    "owned_as": "Sewaddle",
    "evo": "Swadloon (Level 20); Leavanny (Happiness 0)",
    "per_fight": {
@@ -36379,7 +36385,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 343,
+   "dump": 347,
    "owned_as": "Seviper",
    "evo": "",
    "per_fight": {
@@ -36503,7 +36509,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 162,
+   "dump": 164,
    "owned_as": "Grafaiai",
    "evo": "",
    "per_fight": {
@@ -36618,7 +36624,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 141,
+   "dump": 142,
    "owned_as": "Furfrou",
    "evo": "",
    "per_fight": {
@@ -36733,7 +36739,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 369,
+   "dump": 373,
    "owned_as": "Spearow",
    "evo": "Fearow (Level 20)",
    "per_fight": {
@@ -36855,7 +36861,7 @@
     "WISH"
    ],
    "where": "Overflow",
-   "dump": 249,
+   "dump": 251,
    "owned_as": "Minun",
    "evo": "",
    "per_fight": {
@@ -37131,7 +37137,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 463,
+   "dump": 467,
    "owned_as": "Zigzagoon-Galar",
    "evo": "Linoone (Level 20); Obstagoon (LevelNight 35)",
    "per_fight": {
@@ -37384,7 +37390,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 241,
+   "dump": 243,
    "owned_as": "Meowth-Alola",
    "evo": "Persian (Happiness 0)",
    "per_fight": {
@@ -37523,7 +37529,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 286,
+   "dump": 289,
    "owned_as": "Paras-Aevian",
    "evo": "",
    "per_fight": {
@@ -37654,7 +37660,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Overflow",
-   "dump": 336,
+   "dump": 340,
    "owned_as": "Sawsbuck",
    "evo": "",
    "per_fight": {
@@ -37799,7 +37805,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 349,
+   "dump": 353,
    "owned_as": "Shiftry",
    "evo": "",
    "per_fight": {
@@ -38031,7 +38037,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Overflow",
-   "dump": 434,
+   "dump": 438,
    "owned_as": "Volbeat",
    "evo": "",
    "per_fight": {
@@ -38155,7 +38161,7 @@
     "VENOSHOCK"
    ],
    "where": "Overflow",
-   "dump": 198,
+   "dump": 200,
    "owned_as": "Koffing",
    "evo": "Weezing (Level 35)",
    "per_fight": {
@@ -38271,7 +38277,7 @@
     "WHIRLPOOL"
    ],
    "where": "Overflow",
-   "dump": 134,
+   "dump": 135,
    "owned_as": "Finneon",
    "evo": "Lumineon (Level 31)",
    "per_fight": {
@@ -38391,7 +38397,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 243,
+   "dump": 245,
    "owned_as": "Mightyena",
    "evo": "",
    "per_fight": {
@@ -38503,7 +38509,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 279,
+   "dump": 282,
    "owned_as": "Oricorio-Sensu",
    "evo": "",
    "per_fight": {
@@ -38625,7 +38631,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 175,
+   "dump": 177,
    "owned_as": "Hoothoot",
    "evo": "Noctowl (Level 20)",
    "per_fight": {
@@ -38754,7 +38760,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 188,
+   "dump": 190,
    "owned_as": "Kabutops",
    "evo": "",
    "per_fight": {
@@ -38882,7 +38888,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 430,
+   "dump": 434,
    "owned_as": "Vespiquen",
    "evo": "",
    "per_fight": {
@@ -38994,7 +39000,7 @@
     "TORMENT"
    ],
    "where": "Overflow",
-   "dump": 260,
+   "dump": 263,
    "owned_as": "Nickit",
    "evo": "Thievul (Level 18)",
    "per_fight": {
@@ -39136,7 +39142,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 190,
+   "dump": 192,
    "owned_as": "Kangaskhan",
    "evo": "",
    "per_fight": {
@@ -39257,7 +39263,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 232,
+   "dump": 234,
    "owned_as": "Maractus",
    "evo": "",
    "per_fight": {
@@ -39363,7 +39369,7 @@
     "TELEKINESIS"
    ],
    "where": "Overflow",
-   "dump": 247,
+   "dump": 249,
    "owned_as": "Minior",
    "evo": "",
    "per_fight": {
@@ -39491,7 +39497,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 101,
+   "dump": 102,
    "owned_as": "Diglett-Alola",
    "evo": "Dugtrio (Level 26)",
    "per_fight": {
@@ -39622,7 +39628,7 @@
     "WRINGOUT"
    ],
    "where": "Overflow",
-   "dump": 186,
+   "dump": 188,
    "owned_as": "Jynx",
    "evo": "",
    "per_fight": {
@@ -39984,7 +39990,7 @@
     "WISH"
    ],
    "where": "Overflow",
-   "dump": 375,
+   "dump": 379,
    "owned_as": "Spritzee",
    "evo": "",
    "per_fight": {
@@ -40119,7 +40125,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 462,
+   "dump": 466,
    "owned_as": "Zigzagoon",
    "evo": "Linoone (Level 20)",
    "per_fight": {
@@ -40227,7 +40233,7 @@
     "WONDERROOM"
    ],
    "where": "Overflow",
-   "dump": 378,
+   "dump": 382,
    "owned_as": "Stonjourner",
    "evo": "",
    "per_fight": {
@@ -40359,7 +40365,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 192,
+   "dump": 194,
    "owned_as": "Kecleon",
    "evo": "",
    "per_fight": {
@@ -40482,7 +40488,7 @@
     "WISH"
    ],
    "where": "Overflow",
-   "dump": 303,
+   "dump": 307,
    "owned_as": "Plusle",
    "evo": "",
    "per_fight": {
@@ -40616,7 +40622,7 @@
     "VENOSHOCK"
    ],
    "where": "Overflow",
-   "dump": 330,
+   "dump": 334,
    "owned_as": "Salazzle",
    "evo": "",
    "per_fight": {
@@ -40737,7 +40743,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 451,
+   "dump": 455,
    "owned_as": "Wormadam",
    "evo": "",
    "per_fight": {
@@ -40863,7 +40869,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 170,
+   "dump": 172,
    "owned_as": "Gumshoos",
    "evo": "",
    "per_fight": {
@@ -40982,7 +40988,7 @@
     "VENOSHOCK"
    ],
    "where": "Overflow",
-   "dump": 453,
+   "dump": 457,
    "owned_as": "Wormadam-Trash",
    "evo": "",
    "per_fight": {
@@ -41334,7 +41340,7 @@
     "UPROAR"
    ],
    "where": "Overflow",
-   "dump": 252,
+   "dump": 254,
    "owned_as": "Morpeko",
    "evo": "",
    "per_fight": {
@@ -41414,6 +41420,7 @@
     "DEFOG",
     "DETECT",
     "DOUBLETEAM",
+    "DUALWINGBEAT",
     "ECHOEDVOICE",
     "FACADE",
     "FALSESWIPE",
@@ -41422,6 +41429,7 @@
     "GROWL",
     "GUST",
     "HIDDENPOWER",
+    "HONECLAWS",
     "HYPNOSIS",
     "LEER",
     "LUCKYCHANT",
@@ -41444,7 +41452,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 296,
+   "dump": 301,
    "owned_as": "Pidove",
    "evo": "Tranquill (Level 21); Unfezant (Level 32)",
    "per_fight": {
@@ -41555,7 +41563,7 @@
     "TORMENT"
    ],
    "where": "Overflow",
-   "dump": 123,
+   "dump": 124,
    "owned_as": "Electrode",
    "evo": "",
    "per_fight": {
@@ -41686,7 +41694,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 284,
+   "dump": 287,
    "owned_as": "Pansage",
    "evo": "Simisage (Item Leaf Stone)",
    "per_fight": {
@@ -41920,7 +41928,7 @@
     "WEATHERBALL"
    ],
    "where": "Overflow",
-   "dump": 152,
+   "dump": 154,
    "owned_as": "Glalie",
    "evo": "",
    "per_fight": {
@@ -41992,7 +42000,7 @@
     "TRANSFORM"
    ],
    "where": "Overflow",
-   "dump": 102,
+   "dump": 103,
    "owned_as": "Ditto",
    "evo": "",
    "per_fight": {
@@ -42117,7 +42125,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 294,
+   "dump": 298,
    "owned_as": "Phantump",
    "evo": "",
    "per_fight": {
@@ -42243,7 +42251,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 318,
+   "dump": 322,
    "owned_as": "Raticate",
    "evo": "",
    "per_fight": {
@@ -42359,7 +42367,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 135,
+   "dump": 136,
    "owned_as": "Flabébé-Purple",
    "evo": "Floette (Level 19)",
    "per_fight": {
@@ -42470,7 +42478,7 @@
     "THIEF"
    ],
    "where": "Overflow",
-   "dump": 337,
+   "dump": 341,
    "owned_as": "Scatterbug",
    "evo": "Spewpa (Level 9); Vivillon (Level 12)",
    "per_fight": {
@@ -42600,7 +42608,7 @@
     "UPROAR"
    ],
    "where": "Overflow",
-   "dump": 391,
+   "dump": 395,
    "owned_as": "Swoobat",
    "evo": "",
    "per_fight": {
@@ -43072,7 +43080,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 278,
+   "dump": 281,
    "owned_as": "Oricorio-Pa'u",
    "evo": "",
    "per_fight": {
@@ -43343,7 +43351,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 285,
+   "dump": 288,
    "owned_as": "Paras",
    "evo": "Parasect (Level 24)",
    "per_fight": {
@@ -43585,7 +43593,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 441,
+   "dump": 445,
    "owned_as": "Watchog",
    "evo": "",
    "per_fight": {
@@ -43705,7 +43713,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 206,
+   "dump": 208,
    "owned_as": "Liepard",
    "evo": "",
    "per_fight": {
@@ -43958,7 +43966,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Overflow",
-   "dump": 179,
+   "dump": 181,
    "owned_as": "Illumise",
    "evo": "",
    "per_fight": {
@@ -44094,7 +44102,7 @@
     "WHIRLWIND"
    ],
    "where": "Overflow",
-   "dump": 236,
+   "dump": 238,
    "owned_as": "Masquerain",
    "evo": "",
    "per_fight": {
@@ -44212,7 +44220,7 @@
     "WHIRLPOOL"
    ],
    "where": "Overflow",
-   "dump": 438,
+   "dump": 442,
    "owned_as": "Wailord",
    "evo": "",
    "per_fight": {
@@ -44432,7 +44440,7 @@
     "THIEF"
    ],
    "where": "Overflow",
-   "dump": 150,
+   "dump": 151,
    "owned_as": "Gimmighoul",
    "evo": "",
    "per_fight": {
@@ -44559,7 +44567,7 @@
     "WHIRLPOOL"
    ],
    "where": "Overflow",
-   "dump": 97,
+   "dump": 98,
    "owned_as": "Dewgong",
    "evo": "",
    "per_fight": {
@@ -44669,7 +44677,7 @@
     "WRAP"
    ],
    "where": "Overflow",
-   "dump": 445,
+   "dump": 449,
    "owned_as": "Wiglett",
    "evo": "Wugtrio (Level 26)",
    "per_fight": {
@@ -44797,7 +44805,7 @@
     "ZAPCANNON"
    ],
    "where": "Overflow",
-   "dump": 166,
+   "dump": 168,
    "owned_as": "Graveler-Alola",
    "evo": "",
    "per_fight": {
@@ -44915,7 +44923,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 397,
+   "dump": 401,
    "owned_as": "Tarountula",
    "evo": "Spidops (Level 15)",
    "per_fight": {
@@ -45122,7 +45130,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 390,
+   "dump": 394,
    "owned_as": "Swirlix",
    "evo": "",
    "per_fight": {
@@ -45235,7 +45243,7 @@
     "VENOSHOCK"
    ],
    "where": "Overflow",
-   "dump": 253,
+   "dump": 255,
    "owned_as": "Mothim",
    "evo": "",
    "per_fight": {
@@ -45353,7 +45361,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 201,
+   "dump": 203,
    "owned_as": "Kricketune",
    "evo": "",
    "per_fight": {
@@ -45607,7 +45615,7 @@
     "VOLTSWITCH"
    ],
    "where": "Overflow",
-   "dump": 126,
+   "dump": 127,
    "owned_as": "Emolga",
    "evo": "",
    "per_fight": {
@@ -45724,7 +45732,7 @@
     "VOLTSWITCH"
    ],
    "where": "Overflow",
-   "dump": 94,
+   "dump": 95,
    "owned_as": "Dedenne",
    "evo": "",
    "per_fight": {
@@ -45849,7 +45857,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 153,
+   "dump": 155,
    "owned_as": "Glameow",
    "evo": "Purugly (Level 38)",
    "per_fight": {
@@ -45975,7 +45983,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 221,
+   "dump": 223,
    "owned_as": "Machoke",
    "evo": "",
    "per_fight": {
@@ -46091,7 +46099,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 346,
+   "dump": 350,
    "owned_as": "Shedinja",
    "evo": "",
    "per_fight": {
@@ -46330,7 +46338,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 131,
+   "dump": 132,
    "owned_as": "Farfetch'd",
    "evo": "",
    "per_fight": {
@@ -46703,7 +46711,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 290,
+   "dump": 294,
    "owned_as": "Persian",
    "evo": "",
    "per_fight": {
@@ -46828,7 +46836,7 @@
     "VENOSHOCK"
    ],
    "where": "Overflow",
-   "dump": 329,
+   "dump": 333,
    "owned_as": "Salandit",
    "evo": "",
    "per_fight": {
@@ -46962,7 +46970,7 @@
     "WORKUP"
    ],
    "where": "Overflow",
-   "dump": 373,
+   "dump": 377,
    "owned_as": "Spinda",
    "evo": "",
    "per_fight": {
@@ -47084,7 +47092,7 @@
     "UPROAR"
    ],
    "where": "Overflow",
-   "dump": 204,
+   "dump": 206,
    "owned_as": "Ledian",
    "evo": "",
    "per_fight": {
@@ -47204,7 +47212,7 @@
     "ZINGZAP"
    ],
    "where": "Overflow",
-   "dump": 410,
+   "dump": 414,
    "owned_as": "Togedemaru",
    "evo": "",
    "per_fight": {
@@ -47322,7 +47330,7 @@
     "XSCISSOR"
    ],
    "where": "Overflow",
-   "dump": 191,
+   "dump": 193,
    "owned_as": "Karrablast",
    "evo": "",
    "per_fight": {
@@ -47453,7 +47461,7 @@
     "UPROAR"
    ],
    "where": "Overflow",
-   "dump": 281,
+   "dump": 284,
    "owned_as": "Pachirisu",
    "evo": "",
    "per_fight": {
@@ -47505,7 +47513,7 @@
    "blend": 0.11,
    "game_pct": 0.021,
    "n_all": 32,
-   "ability": "INNARDSOUT",
+   "ability": "UNAWARE",
    "abilities": [
     "INNARDSOUT",
     "UNAWARE"
@@ -47555,7 +47563,7 @@
     "WATERSPORT"
    ],
    "where": "Overflow",
-   "dump": 312,
+   "dump": 316,
    "owned_as": "Pyukumuku",
    "evo": "",
    "per_fight": {
@@ -47679,7 +47687,7 @@
     "ZENHEADBUTT"
    ],
    "where": "Overflow",
-   "dump": 362,
+   "dump": 366,
    "owned_as": "Skitty",
    "evo": "Delcatty (Item Moon Stone)",
    "per_fight": {
@@ -47794,7 +47802,7 @@
     "YAWN"
    ],
    "where": "Overflow",
-   "dump": 348,
+   "dump": 352,
    "owned_as": "Shelmet",
    "evo": "",
    "per_fight": {
@@ -47907,7 +47915,7 @@
     "WISH"
    ],
    "where": "Overflow",
-   "dump": 218,
+   "dump": 220,
    "owned_as": "Luvdisc",
    "evo": "",
    "per_fight": {
@@ -48027,7 +48035,7 @@
     "WATERPULSE"
    ],
    "where": "Overflow",
-   "dump": 95,
+   "dump": 96,
    "owned_as": "Delibird",
    "evo": "",
    "per_fight": {
@@ -48153,7 +48161,7 @@
     "WIDEGUARD"
    ],
    "where": "Overflow",
-   "dump": 273,
+   "dump": 276,
    "owned_as": "Onix",
    "evo": "",
    "per_fight": {
@@ -48273,7 +48281,7 @@
     "WORRYSEED"
    ],
    "where": "Overflow",
-   "dump": 309,
+   "dump": 313,
    "owned_as": "Pumpkaboo",
    "evo": "",
    "per_fight": {
@@ -48482,7 +48490,7 @@
     "WHIRLPOOL"
    ],
    "where": "Overflow",
-   "dump": 446,
+   "dump": 450,
    "owned_as": "Wishiwashi",
    "evo": "",
    "per_fight": {
@@ -48628,7 +48636,7 @@
     "PROTECT"
    ],
    "where": "Overflow",
-   "dump": 424,
+   "dump": 428,
    "owned_as": "Unown O",
    "evo": "",
    "per_fight": {

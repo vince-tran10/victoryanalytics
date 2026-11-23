@@ -708,6 +708,21 @@
      "form": "1",
      "pick": false,
      "rec": false
+    },
+    {
+     "name": "Musharna (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "teach": [],
+     "sid": "MUSHARNA",
+     "form": "1",
+     "pick": false,
+     "rec": false
     }
    ]
   },
@@ -1716,13 +1731,13 @@
    "Attacker",
    ""
   ],
-  "Medicham": [
-   "Attacker",
-   ""
-  ],
   "Tauros": [
    "Doubles lead",
    "Intimidate"
+  ],
+  "Medicham": [
+   "Attacker",
+   ""
   ],
   "Claydol": [
    "Attacker",
