@@ -111,17 +111,17 @@
   "POISON"
  ],
  "atk": {
-  "FIRE": [
-   "Sigilyph",
-   "Stonjourner",
-   "Typhlosion"
-  ],
   "STEEL": [
    "Stonjourner"
   ],
   "ROCK": [
    "Golisopod",
    "Stonjourner"
+  ],
+  "FIRE": [
+   "Sigilyph",
+   "Stonjourner",
+   "Typhlosion"
   ],
   "FAIRY": [
    "Sigilyph"
@@ -132,19 +132,19 @@
    "Sigilyph",
    "Typhlosion"
   ],
+  "DARK": [
+   "Luxray"
+  ],
   "ELECTRIC": [
    "Luxray"
   ],
   "NORMAL": [
    "Luxray"
   ],
-  "DARK": [
-   "Luxray"
-  ],
-  "BUG": [
+  "GROUND": [
    "Golisopod"
   ],
-  "GROUND": [
+  "BUG": [
    "Golisopod"
   ],
   "FIGHTING": [

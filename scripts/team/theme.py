@@ -50,6 +50,8 @@ def build_html(b, p, here):
             '</dd><dt>Item</dt><dd>' + E(b['item']) + '</dd></dl><ul class="mvs">' + ''.join('<li>' + E(m) + '</li>' for m in b['moves']) + '</ul>'
             + ('<ul class="todo-mini">' + todo + '</ul>' if todo else '') + ('<div class="slot-sub">' + here + '</div>' if here else ''))
 slots = ''
+try: _PL_LEADS = {m['name'] for m in json.load(open('team/planner.json'))['six'] if m['lead']}
+except Exception: _PL_LEADS = set()
 for i, nm in enumerate(st['team']):
     d = disp(nm); r = T.get(nm, {}); p = party.get(d) or {}
     lv = p.get('level') or max([x.get('level') or 0 for x in cb.parse(st['export']) if x.get('species') == d] or [0])   # not in the party yet: its box level
@@ -63,9 +65,11 @@ for i, nm in enumerate(st['team']):
         _mv = {re.sub(r'[^A-Z]', '', m.upper()) for m in (st.get('moves') or {}).get(nm, [])}
         role = ('Closer' if _mv & {'SWORDSDANCE', 'DRAGONDANCE', 'NASTYPLOT', 'CALMMIND', 'SHELLSMASH', 'SHIFTGEAR',
                 'QUIVERDANCE', 'BULKUP', 'CURSE', 'FILLETAWAY', 'TIDYUP', 'VICTORYDANCE'} else 'Mid game')
+    if st.get('mode') == 'planner':   # 23 Nov (Vincent): no core slots any more: only the planner's leads are marked
+        tag = 'Lead' if nm in _PL_LEADS else ''; role = ''
     here = '' if p else '<span class="slot-miss">not in party</span>'
     slots += (f'<li class="slot{" is-core" if nm in core else ""}">' + spr(nm, 'l', bool(p.get('shiny'))) + f'<div class="slot-top"><span class="slot-n">{i + 1}</span>'
-              f'<span class="slot-tag">{tag}{" · " + E(role) if role else ""}</span></div>'
+              + (f'<span class="slot-tag">{tag}{" · " + E(role) if role else ""}</span>' if tag else '') + '</div>'
               f'<b class="slot-name">{E(d)}</b><div class="slot-types">{types}</div>'
               f'<div class="slot-lv"><span>Lv {lv or "?"}</span><span class="lv-bar" role="img" aria-label="Level {lv} of {CAP}">'
               f'<i style="width:{min(100, round(100 * lv / CAP)) if lv else 0}%"></i></span><span class="lv-cap">{CAP}</span></div>'
@@ -73,9 +77,11 @@ for i, nm in enumerate(st['team']):
 nxt = ''
 if st.get('fight') and st['fight'] in FP:
     p = FP[st['fight']]
-    nxt = (f'<a class="next" href="#fights" data-go="fights"><span class="next-k">Next battle</span>'
-           f'<b>{E(FIGHT_NAME.get(st["fight"], st["fight"]))}</b><span>{E(p["format"])}</span><span>Bring {E(" + ".join(disp(r["name"]) for r in p["swaps"]))}'
-           f'</span><span class="next-go" aria-hidden="true">›</span></a>')
+    _NG = 'planner' if st.get('mode') == 'planner' else 'fights'
+    nxt = (f'<a class="next" href="#{_NG}" data-go="{_NG}"><span class="next-k">Next battle</span>'
+           f'<b>{E(FIGHT_NAME.get(st["fight"], st["fight"]))}</b><span>{E(p["format"])}</span>'
+           + ('' if st.get('mode') == 'planner' else f'<span>Bring {E(" + ".join(disp(r["name"]) for r in p["swaps"]))}</span>')
+           + f'<span class="next-go" aria-hidden="true">›</span></a>')
 low = sum(1 for nm in st['team'] if (party.get(disp(nm)) or {}).get('level', CAP) < CAP)
 _zn = st.get('zoro_note')
 zoro_box = ''
