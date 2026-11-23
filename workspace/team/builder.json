@@ -2565,35 +2565,31 @@
    {
     "name": "Amoonguss",
     "tier": "A",
-    "score": 2.5,
+    "score": 2.75,
     "why": [
      "Amoonguss draws attacks so Muk-Alola attacks freely",
      "Amoonguss's sleep takes a foe out for Muk-Alola",
+     "Physical + special: Intimidate or one screen can't stop both",
      "You resist its weaknesses: Psychic",
      "Used together in the real meta"
     ]
    },
    {
-    "name": "Mismagius-Aevian",
+    "name": "Slowbro",
     "tier": "A",
-    "score": 2.0,
+    "score": 1.75,
     "why": [
-     "Speed split: Mismagius-Aevian moves first, Muk-Alola is the bulky one",
      "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Ground",
-     "You resist its weaknesses: Ghost, Dark"
+     "You resist its weaknesses: Grass, Ghost, Dark"
     ]
    },
    {
-    "name": "Lapras-Aevian",
-    "tier": "S",
+    "name": "Slowking",
+    "tier": "A",
     "score": 1.75,
     "why": [
-     "Muk-Alola resets foe boosts that would stop Lapras-Aevian's sweep",
-     "Lapras-Aevian's sleep takes a foe out for Muk-Alola",
      "Physical + special: Intimidate or one screen can't stop both",
-     "You resist its weaknesses: Grass, Ghost, Dark",
-     "Shared weaknesses: Ground"
+     "You resist its weaknesses: Grass, Ghost, Dark"
     ]
    }
   ],

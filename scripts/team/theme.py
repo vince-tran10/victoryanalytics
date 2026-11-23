@@ -79,7 +79,7 @@ if st.get('fight') and st['fight'] in FP:
 low = sum(1 for nm in st['team'] if (party.get(disp(nm)) or {}).get('level', CAP) < CAP)
 _zn = st.get('zoro_note')
 zoro_box = ''
-if _zn:   # 22 Nov (Vincent): always call out who Zoroark copies and whether the order changed for it
+if _zn and any(n.startswith('Zoroark') for n in st.get('team') or []):   # 22 Nov (Vincent): always call out who Zoroark copies and whether the order changed for it
     _ab = abn(_zn['ability']) if _zn.get('ability') else ''
     _lo = [o for o in (_zn.get('lead_options') or []) if not o['ok']]
     _st = ('⚠ order changed' if _zn['moved'] else 'order unchanged')

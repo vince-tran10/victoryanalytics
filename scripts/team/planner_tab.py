@@ -19,21 +19,34 @@ h = f'<div class="pl-head"><b>{E(TITLE.get(P["fight"], P["fight"]))}</b><span cl
 h += '<article class="plc"><h3>Their team</h3><ol class="pfoes">' + ''.join(
     f'<li class="{"plead" if i < L else ""}"><span class="pn">{i + 1}</span>{SP.tag(f["sid"], "0", size="s")}<span>{E(f["name"])}</span></li>' for i, f in enumerate(foes)) + '</ol>'
 h += '<div class="psub">Their attacks</div><div class="pills">' + ''.join(f'{pill(t)}<small>×{len(P["atk"][t])}</small>' for t in P['main']) + '</div>'
-h += '<div class="psub">How they win</div><ul class="pwin">' + ''.join(
-    f'<li class="{"pw-ok" if w["answered_by"] else "pw-no"}"><b>{"✓" if w["answered_by"] else "✗"}</b> {E(w["win"])}: {E(", ".join(w["foes"]))}'
-    + (f'<div class="pans">Answer: {E(", ".join(disp(n) for n in w["answered_by"]))}</div>' if w['answered_by'] else '<div class="pans">No answer on the six</div>') + '</li>'
-    for w in P['wins']) + '</ul></article>'
+h += '</article>'
+# 23 Nov (Vincent): the game plan instead of rule text: leads + turn 1, then who takes each of their Pokémon
+six = P['six']; FN = [f['name'] for f in foes]
+def best_vs(j, pool):   # walls it (takes < 50%) and hits hardest; else the one that takes least
+    w = [m for m in pool if m['take'][j] < 50]
+    return max(w, key=lambda m: m['deal'][j]) if w else min(pool, key=lambda m: m['take'][j])
+gp = []
+ld = [m for m in six if m['lead']]
+gp.append('Lead ' + ' + '.join(disp(m['name']) for m in ld))
+for m in ld:
+    j = max(range(L), key=lambda j: m['deal'][j])
+    gp.append(f"Turn 1: {disp(m['name'])} hits {FN[j]} ({m['deal'][j]}%)")
+for j in range(L, len(FN)):
+    m = best_vs(j, six)
+    gp.append(f"{FN[j]}: bring {disp(m['name'])} (takes {m['take'][j]}%)")
+h += '<article class="plc"><h3>Game plan</h3><ul class="pck">' + ''.join(f'<li>{E(x)}</li>' for x in gp) + '</ul></article>'
 # our six
 rows = ''
 for m in P['six']:
     wc = 'bad' if m['worst'] >= 100 else 'ok' if m['worst'] < 50 else ''
-    nres = sum(v < 1 for v in m['mult'].values())
+    walls = [FN[j] for j in sorted(range(len(FN)), key=lambda j: m['take'][j]) if m['take'][j] < 50]   # takes < 50% from it
+    beats = [FN[j] for j in sorted(range(len(FN)), key=lambda j: -m['deal'][j]) if m['deal'][j] >= 100]
     rows += (f'<li class="bc pmem{" plead" if m["lead"] else ""}" data-dn="{E(disp(m["name"]))}" tabindex="0" role="button"><div class="bct">'
              f'<span class="tier t{m["tier"]}">{m["tier"]}</span>{SP.tag(m["sid"], m["form"], size="s")}<b>{E(disp(m["name"]))}</b>'
              + ('<span class="plt">Lead</span>' if m['lead'] else '') + '</div><div class="bchips">'
-             f'<span class="bstat">Resists {nres} of their {len(P["main"])} attack types</span>' +
-             (f'<span class="bstat {wc}">Can be one-shot by {E(m["worst_foe"])}</span>' if m["worst"] >= 100 else f'<span class="bstat {wc}">Worst hit {m["worst"]}% ({E(m["worst_foe"])})</span>')
-             + (f'<span class="btool">{E(m["answers"][0])}</span>' if m['answers'] else '') + '</div></li>')
+             + (f'<span class="btool">Walls {E(", ".join(walls[:3]))}</span>' if walls else '')
+             + (f'<span class="bstat">Beats {E(", ".join(beats[:3]))}</span>' if beats else '')
+             + '</div></li>')
 h += f'<article class="plc"><h3>Your six</h3><ul class="bl">{rows}</ul></article>'
 # type check
 th = ''.join(f'<th>{SP.tag(m["sid"], m["form"], size="s")}</th>' for m in P['six'])
@@ -51,12 +64,11 @@ lines.append('✓ No attack type hits 3 of your six' if not ck['weak3'] else '�
 lines.append('✓ Every attack type they use is resisted' if not ck.get('nores') else '✗ Nobody resists: ' + ', '.join(t.title() for t in ck['nores']))
 lines.append('✓ Each of their main attack types is resisted twice' if not ck['res_lt2'] else '✗ Resisted fewer than twice: ' + ', '.join(t.title() for t in ck['res_lt2']))
 for n, f in ck['one_shot']: lines.append(f'! {disp(n)} can be one-shot by {f}: keep it away from it')
-h += '<article class="plc"><h3>Checks</h3><ul class="pck">' + ''.join(f'<li>{E(x)}</li>' for x in lines) + '</ul>'
+h += '<details class="plc pho"><summary>Checks and alternatives</summary><ul class="pck">' + ''.join(f'<li>{E(x)}</li>' for x in lines) + '</ul>'
 if P['alts']:
     h += '<div class="psub">Close alternatives</div><ul class="pck">' + ''.join(
         f'<li>{E(", ".join(disp(n) for n in a["out"]))} → {E(", ".join(disp(n) for n in a["in"]))}</li>' for a in P['alts']) + '</ul>'
-h += '</article>'
-h += ('<details class="plc pho"><summary>How this six is picked</summary><ol>'
+h += ('<div class="psub">How this six is picked</div><ol>'
       '<li>Pool = your Party + Active box</li><li>Scout: their six, their attack types after the field, how they win</li>'
       '<li>Defense first: every member takes their hits; no type hits 3; each type resisted twice</li>'
       '<li>Answers: one per way they win</li><li>Offense second</li><li>Leads: the pair that beats their lead pair</li>'
