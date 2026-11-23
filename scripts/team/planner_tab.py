@@ -5,6 +5,11 @@ import html, json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sprites as SP
 from kits import disp
+from cues import cues
+os.environ.setdefault('MOVE_RULES', 'relearn')
+import engine as _eng
+_E = _eng.Engine(os.path.abspath('.'))
+def _chart(t, types): return _E.chart_eff(t, types)
 E = html.escape
 OUT = sys.argv[1]
 if not os.path.exists('team/planner.json'): sys.exit(0)
@@ -34,7 +39,6 @@ for m in ld:
 for j in range(L, len(FN)):
     m = best_vs(j, six)
     gp.append(f"{FN[j]}: bring {disp(m['name'])} (takes {m['take'][j]}%)")
-h += '<article class="plc"><h3>Game plan</h3><ul class="pck">' + ''.join(f'<li>{E(x)}</li>' for x in gp) + '</ul></article>'
 # our six
 rows = ''
 for m in P['six']:
@@ -43,9 +47,8 @@ for m in P['six']:
     beats = [FN[j] for j in sorted(range(len(FN)), key=lambda j: -m['deal'][j]) if m['deal'][j] >= 100]
     rows += (f'<li class="bc pmem{" plead" if m["lead"] else ""}" data-dn="{E(disp(m["name"]))}" tabindex="0" role="button"><div class="bct">'
              f'<span class="tier t{m["tier"]}">{m["tier"]}</span>{SP.tag(m["sid"], m["form"], size="s")}<b>{E(disp(m["name"]))}</b>'
-             + ('<span class="plt">Lead</span>' if m['lead'] else '') + '</div><div class="bchips">'
-             + (f'<span class="btool">Walls {E(", ".join(walls[:3]))}</span>' if walls else '')
-             + (f'<span class="bstat">Beats {E(", ".join(beats[:3]))}</span>' if beats else '')
+             + ('<span class="plt">Lead</span>' if m['lead'] else '') + '</div><div class="pcues">'
+             + ''.join(f'<div class="pcue">{E(c)}</div>' for c in cues(m['types'], m['ability'], m['moves'], _chart))
              + '</div></li>')
 h += f'<article class="plc"><h3>Your six</h3><ul class="bl">{rows}</ul></article>'
 # type check
@@ -64,7 +67,7 @@ lines.append('✓ No attack type hits 3 of your six' if not ck['weak3'] else '�
 lines.append('✓ Every attack type they use is resisted' if not ck.get('nores') else '✗ Nobody resists: ' + ', '.join(t.title() for t in ck['nores']))
 lines.append('✓ Each of their main attack types is resisted twice' if not ck['res_lt2'] else '✗ Resisted fewer than twice: ' + ', '.join(t.title() for t in ck['res_lt2']))
 for n, f in ck['one_shot']: lines.append(f'! {disp(n)} can be one-shot by {f}: keep it away from it')
-h += '<details class="plc pho"><summary>Checks and alternatives</summary><ul class="pck">' + ''.join(f'<li>{E(x)}</li>' for x in lines) + '</ul>'
+h += '<details class="plc pho"><summary>Details</summary><div class="psub">Game plan</div><ul class="pck">' + ''.join(f'<li>{E(x)}</li>' for x in gp) + '</ul><div class="psub">Checks</div><ul class="pck">' + ''.join(f'<li>{E(x)}</li>' for x in lines) + '</ul>'
 if P['alts']:
     h += '<div class="psub">Close alternatives</div><ul class="pck">' + ''.join(
         f'<li>{E(", ".join(disp(n) for n in a["out"]))} → {E(", ".join(disp(n) for n in a["in"]))}</li>' for a in P['alts']) + '</ul>'
@@ -96,6 +99,7 @@ css = '''<style id="plan-css">
 .ptab td.cnt.bad { color: var(--bad); font-weight: 800 } .ptab td.cnt.ok { color: var(--good) }
 .plc .tp.ty-normal { background: #9a9a7a } .plc .tp.ty-fire { background: #e2703a } .plc .tp.ty-water { background: #4a86d8 } .plc .tp.ty-electric { background: #d6b21e } .plc .tp.ty-grass { background: #5ca83a } .plc .tp.ty-ice { background: #4fb3c4 } .plc .tp.ty-fighting { background: #b83a2e } .plc .tp.ty-poison { background: #9045a0 } .plc .tp.ty-ground { background: #b88a3a } .plc .tp.ty-flying { background: #7f8fe0 } .plc .tp.ty-psychic { background: #e0507a } .plc .tp.ty-bug { background: #8fa222 } .plc .tp.ty-rock { background: #a8923e } .plc .tp.ty-ghost { background: #6a5490 } .plc .tp.ty-dragon { background: #5a3fe0 } .plc .tp.ty-dark { background: #5a4a40 } .plc .tp.ty-steel { background: #8a8aa8 } .plc .tp.ty-fairy { background: #d97fae } 
 .ptab .spr { transform: scale(.8) } .ptab th, .ptab td { padding: 3px 2px } .ptab thead th:nth-last-child(-n+2) { font-size: 10px }
+.pcues { display: grid; gap: 2px; padding-left: 4px } .pcue { font-size: 12.5px; color: var(--ink) } .pcue::before { content: '▸ '; color: var(--accent) }
 .plc ul.bl { padding: 0; margin: 0; list-style: none; display: grid; gap: 6px } .pho summary { cursor: pointer; font-weight: 700 } .pho ol { margin: 6px 0 0; padding-left: 20px; font-size: 13px; display: grid; gap: 3px }
 #splan + .pgrid, .pgrid { display: grid; gap: 14px }
 </style>'''
