@@ -1,0 +1,13 @@
+Scrafty | Active 60 | Moxie  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Crunch', 'High Jump Kick', 'Fake Out', 'Protect'] | Black Glasses (already holding) | 
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Slowking (Galarian Form) | Active 60 | Regenerator  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Sludge Bomb', 'Psychic', 'Thunder Wave', 'Protect'] | Focus Sash (already holding) | 
+Veluza (Aevian Form) | Active 60 | Reckless  | Adamant {'Atk': 252, 'Spe': 252, 'Def': 4} | ['Wave Crash', 'Flare Blitz', 'Head Smash', 'Protect'] | Mystic Water (already holding) | 
+Lapras (Aevian Form) | Active 60 | No Guard  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Rock Slide', 'Zen Headbutt', 'Dragon Dance', 'Sing'] | Hard Stone (already holding) | 
+Golisopod (Aevian Form) | Active 60 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Bone Rush', 'Pin Missile', 'Swords Dance', 'Protect'] | Focus Sash (already holding) | 
+jenner 1.177 -> 1.374 leads ['Scrafty'] swaps [('Arcanine (Hisuian Form)', 'Veluza (Aevian Form)', 0.073), ('Typhlosion', 'Veluza (Aevian Form)', 0.07), ('Unfezant (Aevian Form Male)', 'Veluza (Aevian Form)', 0.07)]
+danni 1.168 -> 1.719 leads ['Scrafty', 'Veluza (Aevian Form)'] swaps [('Arcanine', 'Golisopod (Aevian Form)', 0.111), ('Toxtricity (Aevian Form)', 'Golisopod (Aevian Form)', 0.105), ('Chandelure', 'Golisopod (Aevian Form)', 0.104)]
+troye 0.858 -> 1.442 leads ['Golisopod (Aevian Form)', 'Veluza (Aevian Form)'] swaps [('Arcanine', 'Slowking (Galarian Form)', 0.128), ('Toxtricity (Aevian Form)', 'Slowking (Galarian Form)', 0.103), ('Brambleghast', 'Slowking (Galarian Form)', 0.077)]
+zena 1.243 -> 1.3 leads ['Golisopod (Aevian Form)'] swaps [('Meganium', 'Slowking (Galarian Form)', 0.187), ('Venusaur', 'Slowking (Galarian Form)', 0.187), ('Decidueye', 'Slowking (Galarian Form)', 0.166)]
+marcie 0.679 -> 1.436 leads ['Slowking (Galarian Form)', 'Golisopod (Aevian Form)'] swaps [('Leavanny (Aevian Form)', 'Veluza (Aevian Form)', 0.253), ('Toxtricity (Aevian Form)', 'Veluza (Aevian Form)', 0.192), ('Arcanine', 'Veluza (Aevian Form)', 0.184)]
+jenner9 0.465 -> 0.702 leads ['Scrafty'] swaps [('Florges', 'Veluza (Aevian Form)', 0.122), ('Emboar', 'Veluza (Aevian Form)', 0.095), ('Chandelure', 'Veluza (Aevian Form)', 0.093)]
+erick 0.733 -> 1.177 leads ['Golisopod (Aevian Form)', 'Musharna (Aevian Form)'] swaps [('Chandelure', 'Veluza (Aevian Form)', 0.122), ('Gallade', 'Veluza (Aevian Form)', 0.1), ('Palossand (Fiery Aevian Form)', 'Veluza (Aevian Form)', 0.087)]
