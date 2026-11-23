@@ -431,6 +431,48 @@
   ],
   "swaps": [
    {
+    "name": "Swampert",
+    "ab": "TORRENT",
+    "moves": [
+     "Earthquake",
+     "Rock Slide",
+     "Hammer Arm"
+    ],
+    "setup": null,
+    "where": "Party",
+    "dump": 5,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "WATER",
+     "GROUND"
+    ]
+   },
+   {
+    "name": "Alomomola",
+    "ab": "REGENERATOR",
+    "moves": [
+     "Aqua Jet",
+     "Wake-Up Slap"
+    ],
+    "setup": null,
+    "where": "Active",
+    "dump": 448,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "WATER"
+    ]
+   },
+   {
     "name": "Muk (Alolan Form)",
     "ab": "POISONTOUCH",
     "moves": [
@@ -452,16 +494,14 @@
     ]
    },
    {
-    "name": "Glalie (Aevian Form)",
-    "ab": "GRASSYSURGE",
+    "name": "Clodsire",
+    "ab": "UNAWARE",
     "moves": [
-     "Grassy Glide",
-     "Wood Hammer",
-     "Rock Slide"
+     "Earthquake"
     ],
     "setup": null,
     "where": "Party",
-    "dump": 3,
+    "dump": 6,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -469,8 +509,8 @@
      "SpD": 4
     },
     "types": [
-     "GRASS",
-     "ROCK"
+     "POISON",
+     "GROUND"
     ]
    },
    {
@@ -495,16 +535,15 @@
     ]
    },
    {
-    "name": "Swampert",
-    "ab": "TORRENT",
+    "name": "Mandibuzz",
+    "ab": "OVERCOAT",
     "moves": [
-     "Earthquake",
-     "Rock Slide",
-     "Hammer Arm"
+     "Knock Off",
+     "Pluck"
     ],
     "setup": null,
-    "where": "Party",
-    "dump": 5,
+    "where": "Overflow",
+    "dump": 420,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -512,28 +551,8 @@
      "SpD": 4
     },
     "types": [
-     "WATER",
-     "GROUND"
-    ]
-   },
-   {
-    "name": "Clodsire",
-    "ab": "UNAWARE",
-    "moves": [
-     "Earthquake"
-    ],
-    "setup": null,
-    "where": "Party",
-    "dump": 6,
-    "nature": "Adamant",
-    "evs": {
-     "Atk": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "POISON",
-     "GROUND"
+     "DARK",
+     "FLYING"
     ]
    }
   ],
@@ -552,20 +571,20 @@
    },
    {
     "foe": "Sigilyph",
-    "mon": "Glalie (Aevian Form)",
-    "ability": "GRASSYSURGE",
-    "dealt": 110,
-    "taken": 81,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 130,
+    "taken": 82,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Luxray",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 130,
-    "taken": 33,
+    "mon": "Swampert",
+    "ability": "TORRENT",
+    "dealt": 106,
+    "taken": 39,
     "ok": true,
     "setup": false,
     "wincons": []
@@ -582,20 +601,20 @@
    },
    {
     "foe": "Typhlosion",
-    "mon": "Amoonguss",
+    "mon": "Alomomola",
     "ability": "REGENERATOR",
-    "dealt": 8,
-    "taken": 240,
+    "dealt": 40,
+    "taken": 130,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Banette",
-    "mon": "Muk (Alolan Form)",
-    "ability": "POISONTOUCH",
-    "dealt": 75,
-    "taken": 64,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 9,
+    "taken": 127,
     "ok": false,
     "setup": false,
     "wincons": []
@@ -604,10 +623,12 @@
   "weak3": [
    "GROUND"
   ],
-  "nores": [],
+  "nores": [
+   "NORMAL"
+  ],
   "leads": [
    "Golisopod (Aevian Form)",
-   "Glalie (Aevian Form)"
+   "Swampert"
   ],
   "lead_foes": [
    "Stonjourner",

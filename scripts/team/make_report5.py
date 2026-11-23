@@ -791,6 +791,16 @@ for (sp, n, box), ch in sorted(PROFILE.items(), key=lambda kv: (kv[0][2] != 'Par
     if CF and box == 'Active': continue   # fight mode: only the lineup and staging verdicts, no generic Active-box rebuilds
     if str(ACTIONS.get(n, '')).startswith('Move to Overflow'): continue   # no build card for a mon going to Overflow
     if ch: _cards.append((1 if box == 'Party' else 2, sp, f'{box} #{n}', ch))
+# 23 Nov: never two cards for one Pokemon (a team card "Active #N -> party" + a generic Active #N card): merge into the first
+_seen = {}
+for c in sorted(_cards, key=lambda c: c[0]):
+    nm_ = disp(c[1]) if c[1] else c[1]
+    if nm_ in _seen:
+        _hasT = any(y.startswith('Teach') for y in _seen[nm_][3])   # the first card's build wins: no second set of Teach lines
+        _seen[nm_][3].extend(x for x in c[3] if x not in _seen[nm_][3] and not x.startswith(('Ability:', 'Nature:', 'EVs:')) and not (_hasT and x.startswith('Teach')))
+    else:
+        _seen[nm_] = (c[0], c[1], c[2], list(c[3]))
+_cards = list(_seen.values())
 # 22 Nov (Vincent): Pokémon he can't have yet at his story point -> de-evolve card (scripts/team/legality.py)
 _LEG = json.load(open('team/legality.json')).get('devolve', []) if os.path.exists('team/legality.json') else []
 _devn = {d['dump'] for d in _LEG}

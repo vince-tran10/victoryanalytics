@@ -1,4 +1,8 @@
 {
+ "1": "Move out of the party, back to the Active box",
+ "3": "Move out of the party, back to the Active box",
+ "448": "Move into the party (Spector (night) lineup)",
+ "213": "Move into the party (Spector (night) lineup)",
  "447": "Move to Overflow",
  "455": "Move to Overflow",
  "456": "Move to Overflow",
@@ -27,7 +31,6 @@
  "512": "Move to Overflow",
  "519": "Move to Overflow",
  "130": "Move to Active",
- "213": "Move to Active",
  "237": "Move to Active",
  "251": "Move to Active",
  "311": "Move to Active",

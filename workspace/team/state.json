@@ -4,9 +4,9 @@
  "export_label": "22 Nov 22:34",
  "active_start": 447,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 279,
- "run": 293,
- "final": 297,
+ "roster": 283,
+ "run": 297,
+ "final": 301,
  "done": [
   "aelita",
   "narcissa1",
@@ -34,12 +34,12 @@
  ],
  "fight": "spector2",
  "team": [
-  "Golisopod (Aevian Form)",
-  "Muk (Alolan Form)",
-  "Glalie (Aevian Form)",
-  "Musharna (Aevian Form)",
   "Swampert",
-  "Clodsire"
+  "Alomomola",
+  "Muk (Alolan Form)",
+  "Clodsire",
+  "Musharna (Aevian Form)",
+  "Mandibuzz"
  ],
  "moves": {
   "Golisopod (Aevian Form)": [
@@ -155,6 +155,18 @@
    "Shadow Claw",
    "Play Rough",
    "Protect"
+  ],
+  "Mandibuzz": [
+   "Roost",
+   "Knock Off",
+   "Pluck",
+   "Protect"
+  ],
+  "Alomomola": [
+   "Wish",
+   "Aqua Jet",
+   "Wake-Up Slap",
+   "Protect"
   ]
  },
  "promote": "team/promote_1108.json",
@@ -240,7 +252,9 @@
   "Swampert": "TORRENT",
   "Arcanine (Hisuian Form)": "ROCKHEAD",
   "Glalie (Aevian Form)": "GRASSYSURGE",
-  "Musharna (Aevian Form)": "TOUGHCLAWS"
+  "Musharna (Aevian Form)": "TOUGHCLAWS",
+  "Mandibuzz": "OVERCOAT",
+  "Alomomola": "REGENERATOR"
  },
  "crests_owned": [
   "Dedenne Crest",
@@ -258,13 +272,17 @@
   "core": {
    "n": 6,
    "weak3": [],
-   "nores": [],
+   "nores": [
+    "NORMAL"
+   ],
    "minor": []
   },
   "fight": {
    "n": 6,
    "weak3": [],
-   "nores": [],
+   "nores": [
+    "NORMAL"
+   ],
    "minor": [],
    "key": "spector2"
   }

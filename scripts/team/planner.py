@@ -66,6 +66,7 @@ IB = json.load(open('team/ideal_builds.json')) if os.path.exists('team/ideal_bui
 run = os.environ.get('BASE_RUN') or f"r{st['run']}"
 C = {c['name']: c for c in pickle.load(open(f'team/{run}_native.json.pkl', 'rb'))['cands'] if not c.get('gate')}
 POOL = [n for n, r in TA.items() if r.get('where') in ('Party', 'Active') and r['tier'] in ('S', 'A', 'B') and n in C and FK in C[n]['matchups']]
+POOL += [n for n, r in TA.items() if r.get('where') == 'Overflow' and r['tier'] in ('S', 'A') and n not in POOL and n in C and FK in C[n]['matchups']]   # 23 Nov: the S / A moving into Active
 def build(n):
     b = IB.get(n) or {}
     ms = (st.get('moves') or {}).get(n) or b.get('moves') or TA[n].get('attacks') or []
@@ -90,29 +91,68 @@ for i, n in enumerate(NAMES):
         if ms & a.get('moves', set()) or ab in a.get('abil', set()) or set(TA[n]['types']) & a.get('types', set()): ANS[i, j] = 1
 SAFE = TAKE < 50          # takes under half from that foe's best move
 DEAD = TAKE >= 100        # one-shot by it
-BEAT = (DEAL >= 100) | ((DEAL >= 50) & FAST) | (DEAL >= 60) & ~DEAD
-# individual value -> prefilter (defense counts double offense)
-ind = 3 * SAFE.sum(1) - 4 * DEAD.sum(1) + 1.2 * BEAT.sum(1) + .8 * TIER + .5 * (MULT < 1).sum(1) - .5 * (MULT > 1).sum(1) + 1.5 * ANS.sum(1)
-top = list(np.argsort(-ind)[:min(24, len(NAMES))])
+# ---- 23 Nov (Vincent, after losing again): 1) RESIST THE MOVES THEY HAVE, 2) HIT EVERY FOE SUPER EFFECTIVELY (or with a field-boosted move),
+# 3) LEADS that resist every attack their two leads carry. Move-level type checks with the field's type chart + second types.
+ABSORB = {'FLASHFIRE': 'FIRE', 'WELLBAKEDBODY': 'FIRE', 'WATERABSORB': 'WATER', 'STORMDRAIN': 'WATER', 'DRYSKIN': 'WATER', 'VOLTABSORB': 'ELECTRIC',
+          'LIGHTNINGROD': 'ELECTRIC', 'MOTORDRIVE': 'ELECTRIC', 'SAPSIPPER': 'GRASS', 'LEVITATE': 'GROUND', 'EARTHEATER': 'GROUND'}
+TB = {t: float(m) for m, ts in (FT.get('typeBoosts') or {}).items() for t in ts}
+DMODS = {mv: float(m) for m, ms in (FT.get('damageMods') or {}).items() for mv in ms}
+def mtypes(m): d = MV.get(m) or {}; return [d.get('type')] + ([TYPEMODS[m]] if m in TYPEMODS else [])
+def meff(m, types, ab=''):
+    ts = mtypes(m)
+    if ab in ABSORB and ABSORB[ab] in ts: return 0.0
+    e = 1.0
+    for t in ts:
+        if t: e *= E.chart_eff(t, types, FE, m)
+    return e
+EM = []   # their damaging moves: (foe index, move id, weight)
+for fi, ms in enumerate(fmoves):
+    for m in sorted(ms):
+        d = MV.get(m) or {}; bp = int(d.get('basedamage') or 0)
+        if bp <= 0 and m not in ('NIGHTSHADE', 'SEISMICTOSS'): continue
+        EM.append((fi, m, max(.6, min(1.5, (bp or 60) * TB.get(d.get('type'), 1) * DMODS.get(m, 1) / 100))))
+ABS_ = [build(n)[1] for n in NAMES]
+RM = np.array([[meff(m, TA[n]['types'], ABS_[i]) for (_, m, _) in EM] for i, n in enumerate(NAMES)])   # member x their move
+W = np.array([w for (_, _, w) in EM])
+# offense: each member vs each foe: super effective with a build move, or a field-boosted (x1.5+) move that lands neutral or better
+OFF = np.zeros((len(NAMES), nF))
+for i, n in enumerate(NAMES):
+    ms, _, _ = build(n)
+    for fi, f in enumerate(FOES):
+        best_ = 0
+        for m in ms:
+            d = MV.get(m) or {}
+            if int(d.get('basedamage') or 0) <= 0: continue
+            e = meff(m, f['types'], (f.get('ability') or '').upper().replace(' ', ''))
+            fb = TB.get(d.get('type'), 1) * DMODS.get(m, 1)
+            best_ = max(best_, 2 if e >= 2 else 1.5 if (fb >= 1.5 and e >= 1) else 0)
+        OFF[i, fi] = best_
+L = [0, 1] if FMT == 'Doubles' else [0]
+LM = [k for k, (fi, _, _) in enumerate(EM) if fi in L]   # their leads' attacks
+def lead_q(p):   # every attack their leads carry: resisted by BOTH of ours (+), anything super effective on either (heavy -)
+    p = list(p); r = RM[p][:, LM]
+    return (r < 1).sum() + .5 * (r == 0).sum() - 4 * (r > 1).sum() + .5 * (OFF[p][:, L] >= 2).any(0).sum() + .3 * (OFF[p][:, L] > 0).sum() / len(p)
+NP = len(NAMES)
+LQ = np.full((NP, NP), -99.0)
+for i in range(NP):
+    for j in range(i + 1, NP): LQ[i, j] = LQ[j, i] = lead_q((i, j)) if FMT == 'Doubles' else 0
+ind = (2 * ((RM < 1) * W).sum(1) - 3 * ((RM > 1) * W).sum(1) + 1.5 * (OFF >= 2).sum(1) + .7 * (OFF > 0).sum(1)
+       + 1.5 * SAFE.sum(1) - 2 * DEAD.sum(1) + .6 * TIER + LQ.max(1).clip(-5, 99) * .5)
+top = list(np.argsort(-ind)[:min(24, NP)])
 def score(ix):
-    ix = list(ix)
-    safe = np.minimum(SAFE[ix].sum(0), 3).sum(); dead = DEAD[ix].sum()
-    beat = np.minimum(BEAT[ix].sum(0), 2).sum()
-    weak = (MULT[ix] > 1).sum(0); res = (MULT[ix] < 1).sum(0)
-    ans = (ANS[ix].max(0) if len(WINS) else np.zeros(0)).sum()
-    s = 3 * safe - 4 * dead + 1.5 * beat + .6 * TIER[ix].sum() + 3 * ans
-    s -= 8 * ((MALL[ix] > 1).sum(0) >= 3).sum() + 3 * (res < 2).sum() + 4 * ((MALL[ix] < 1).sum(0) == 0).sum()   # all their types: none hits 3, each resisted once; main types resisted twice
-    s -= 4 * (np.minimum(SAFE[ix].sum(0), 3) == 0).sum()   # a foe nobody can take a hit from
+    ix = list(ix); r = RM[ix]
+    res = (r < 1).sum(0); weak = (r > 1).sum(0)
+    s = 3 * (W * np.minimum(res, 4)).sum() - 2.5 * (W * np.maximum(weak - 1, 0)).sum() - 12 * (weak >= 3).sum() - 6 * (res == 0).sum()   # 1) defense: every move resisted by someone
+    oc = (OFF[ix] >= 2).sum(0); ob = (OFF[ix] > 0).sum(0)
+    s += 3 * np.minimum(oc, 2).sum() + 1 * np.minimum(ob, 3).sum() - 6 * (ob == 0).sum()   # 2) offense: super effective / field-boosted on every foe
+    s += 4 * max(LQ[a][b] for a, b in itertools.combinations(ix, 2)) if FMT == 'Doubles' else 0   # 3) a lead pair that resists their leads
+    s += 1.5 * np.minimum(SAFE[ix].sum(0), 3).sum() - 4 * DEAD[ix].sum() + .4 * TIER[ix].sum() + 2 * (ANS[ix].max(0).sum() if len(WINS) else 0)
     return s
 res = sorted(((score(ix), ix) for ix in itertools.combinations(top, 6)), key=lambda x: -x[0])
 best = list(res[0][1])
-# leads: the pair that handles THEIR lead pair (doubles) / their lead (singles): least damage taken, then damage dealt, speed
-L = [0, 1] if FMT == 'Doubles' else [0]
-def lead_q(p):
-    p = list(p)
-    return -TAKE[p][:, L].max() / 100 + .5 * DEAL[p][:, L].max(0).sum() / 100 + .2 * FAST[p][:, L].mean() + .3 * ANS[p].max(0).sum()
-leads = max(itertools.combinations(best, 2 if FMT == 'Doubles' else 1), key=lead_q)
+leads = max(itertools.combinations(best, 2), key=lambda p: LQ[p[0]][p[1]]) if FMT == 'Doubles' else (max(best, key=lambda i: -TAKE[i][0]),)
 order = list(leads) + sorted([i for i in best if i not in leads], key=lambda i: -ind[i])
+MULT = np.array([[E.chart_eff(t, TA[n]['types'], FE) for t in MAIN] for n in NAMES]) if MAIN else np.zeros((NP, 0))
 alts = []
 for s_, ix in res[1:40]:
     d = [NAMES[i] for i in ix if i not in best]
@@ -124,14 +164,18 @@ def mem(i):
                 lead=i in leads, where=TA[NAMES[i]].get('where'), moves=mnames, ability=ab,
                 take=[int(x) for x in TAKE[i]], deal=[int(x) for x in DEAL[i]], worst=int(TAKE[i].max()), worst_foe=FN[int(TAKE[i].argmax())],
                 safe=int(SAFE[i].sum()), mult={t: float(MULT[i][k]) for k, t in enumerate(MAIN)},
+                rm=[float(x) for x in RM[i]], off=[float(x) for x in OFF[i]],
                 answers=[WINS[j][0] for j in range(len(WINS)) if ANS[i, j]])
 out = dict(fight=FK, field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], types=f['types'], moves=f['moves'], item=f.get('item'), ability=f.get('ability'),
            sid=f['species'], form=f.get('form')) for f in FOES], main=MAIN, atk={t: sorted(v) for t, v in ATK.items()},
            wins=[dict(win=w, foes=fs, answered_by=[NAMES[i] for i in best if ANS[i, j]]) for j, (w, fs) in enumerate(WINS)],
+           emoves=[dict(foe=FN[fi], move=(MV.get(m) or {}).get('name', m), types=[t for t in mtypes(m) if t], w=round(float(w), 2)) for (fi, m, w) in EM],
+           lead_moves=LM,
            six=[mem(i) for i in order], alts=alts, pool=len(NAMES), score=round(float(res[0][0]), 1),
            checks=dict(weak3=[t for k, t in enumerate(ALLT) if (MALL[best][:, k] > 1).sum() >= 3],
                        nores=[t for k, t in enumerate(ALLT) if (MALL[best][:, k] < 1).sum() == 0],
                        res_lt2=[t for k, t in enumerate(MAIN) if (MULT[best][:, k] < 1).sum() < 2],
+                       no_se=[FN[f] for f in range(nF) if not (OFF[best][:, f] >= 2).any()],
                        one_shot=[(NAMES[i], FN[j]) for i in best for j in range(nF) if DEAD[i, j]],
                        unanswered=[w for j, (w, _) in enumerate(WINS) if not ANS[best].max(0)[j]]))
 json.dump(out, open('team/planner.json', 'w'), indent=1, ensure_ascii=False)

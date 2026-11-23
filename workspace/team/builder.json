@@ -682,27 +682,43 @@
   {
    "slot": 5,
    "title": "Flex 1 · Mid game · Spector (night)",
-   "pick": "Muk (Alolan Form)",
-   "rec": "Muk (Alolan Form)",
+   "pick": "Swampert",
+   "rec": "Swampert",
    "flex": true,
    "cands": [
     {
-     "name": "Muk (Alolan Form)",
-     "tier": "S",
+     "name": "Swampert",
+     "tier": "A",
      "stats": [
       "Resists 5 types",
-      "Weak to 1 type",
-      "Single target only"
+      "Weak to 1 type"
      ],
      "tools": [
-      "Stat reset: Clear Smog",
-      "Disrupt: Knock Off"
+      "Spread: Earthquake",
+      "Counters: Luxray"
      ],
      "teach": [],
-     "sid": "MUK",
-     "form": "1",
+     "sid": "SWAMPERT",
+     "form": "0",
      "pick": true,
      "rec": true
+    },
+    {
+     "name": "Glalie (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 2 types",
+      "Weak to 4 types"
+     ],
+     "tools": [
+      "Spread: Rock Slide",
+      "Priority: Grassy Glide"
+     ],
+     "teach": [],
+     "sid": "GLALIE",
+     "form": "1",
+     "pick": false,
+     "rec": false
     },
     {
      "name": "Zoroark",
@@ -771,24 +787,25 @@
   {
    "slot": 6,
    "title": "Flex 2 · Closer · Spector (night)",
-   "pick": "Glalie (Aevian Form)",
-   "rec": "Glalie (Aevian Form)",
+   "pick": "Alomomola",
+   "rec": "Alomomola",
    "flex": true,
    "cands": [
     {
-     "name": "Glalie (Aevian Form)",
-     "tier": "S",
+     "name": "Alomomola",
+     "tier": "A",
      "stats": [
-      "Resists 2 types",
-      "Weak to 4 types"
+      "Resists 4 types",
+      "Weak to 2 types",
+      "Single target only"
      ],
      "tools": [
-      "Spread: Rock Slide",
-      "Priority: Grassy Glide"
+      "Recovery: Wish",
+      "Priority: Aqua Jet"
      ],
      "teach": [],
-     "sid": "GLALIE",
-     "form": "1",
+     "sid": "ALOMOMOLA",
+     "form": "0",
      "pick": true,
      "rec": true
     },
@@ -2584,35 +2601,31 @@
    {
     "name": "Amoonguss",
     "tier": "A",
-    "score": 2.5,
+    "score": 2.75,
     "why": [
      "Amoonguss draws attacks so Muk-Alola attacks freely",
      "Amoonguss's sleep takes a foe out for Muk-Alola",
+     "Physical + special: Intimidate or one screen can't stop both",
      "You resist its weaknesses: Psychic",
      "Used together in the real meta"
     ]
    },
    {
-    "name": "Mismagius-Aevian",
+    "name": "Slowbro",
     "tier": "A",
-    "score": 2.0,
+    "score": 1.75,
     "why": [
-     "Speed split: Mismagius-Aevian moves first, Muk-Alola is the bulky one",
      "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Ground",
-     "You resist its weaknesses: Ghost, Dark"
+     "You resist its weaknesses: Grass, Ghost, Dark"
     ]
    },
    {
-    "name": "Lapras-Aevian",
-    "tier": "S",
+    "name": "Slowking",
+    "tier": "A",
     "score": 1.75,
     "why": [
-     "Muk-Alola resets foe boosts that would stop Lapras-Aevian's sweep",
-     "Lapras-Aevian's sleep takes a foe out for Muk-Alola",
      "Physical + special: Intimidate or one screen can't stop both",
-     "You resist its weaknesses: Grass, Ghost, Dark",
-     "Shared weaknesses: Ground"
+     "You resist its weaknesses: Grass, Ghost, Dark"
     ]
    }
   ],

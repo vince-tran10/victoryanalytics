@@ -3357,7 +3357,7 @@
    "PLUCK"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "your team"
  },
  "Vanilluxe": {
   "ability": "SNOWWARNING",
@@ -5853,7 +5853,7 @@
    "WAKEUPSLAP"
   ],
   "role": "support",
-  "source": "your rules"
+  "source": "your team"
  },
  "Weezing": {
   "ability": "LEVITATE",

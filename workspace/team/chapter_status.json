@@ -24,13 +24,15 @@
   "Ice"
  ],
  "weak3": [],
- "nores": [],
+ "nores": [
+  "NORMAL"
+ ],
  "misses": [
   {
    "foe": "Golisopod",
    "fight": "spector2",
-   "best": "Glalie (Aevian Form)",
-   "dmg": 58
+   "best": "Musharna (Aevian Form)",
+   "dmg": 37
   }
  ],
  "n_types": 18

@@ -51,15 +51,31 @@ for m in P['six']:
              + ''.join(f'<span class="{"btool" if k == "tool" else "bstat"}">{E(c)}</span>' for k, c in cues(m['types'], m['ability'], m['moves'], _chart))
              + '</div></li>')
 h += f'<article class="plc"><h3>Your six</h3><ul class="bl">{rows}</ul></article>'
-# type check
-th = ''.join(f'<th>{SP.tag(m["sid"], m["form"], size="s")}</th>' for m in P['six'])
-tr = ''
-for t in P['main']:
-    cells = ''.join(f'<td class="{fcls(m["mult"][t])}">{fx(m["mult"][t])}</td>' for m in P['six'])
-    w = sum(m['mult'][t] > 1 for m in P['six']); r = sum(m['mult'][t] < 1 for m in P['six'])
-    tr += f'<tr><th>{pill(t)}</th>{cells}<td class="cnt{" bad" if w >= 3 else ""}">{w or ""}</td><td class="cnt{" bad" if r < 2 else " ok"}">{r}</td></tr>'
-h += (f'<article class="plc"><h3>Type check</h3><div class="ptm"><table class="ptab"><thead><tr><th></th>{th}<th>Weak</th><th>Res.</th></tr></thead>'
-      f'<tbody>{tr}</tbody></table></div></article>')
+# 23 Nov (Vincent): move-level checks. 1) leads vs their leads' attacks 2) every move they have vs the six 3) super effective on each foe
+EM = P.get('emoves') or []; LM = set(P.get('lead_moves') or [])
+def mrow(k, e, mems):
+    cells = ''.join(f'<td class="{fcls(m["rm"][k])}">{fx(m["rm"][k])}</td>' for m in mems)
+    return f'<tr><th><span class="pmv">{E(e["move"])}</span>{"".join(pill(t) for t in e["types"])}</th>{cells}</tr>'
+ld = [m for m in P['six'] if m['lead']]
+if EM and ld:
+    rows_ = ''.join(mrow(k, e, ld) for k, e in enumerate(EM) if k in LM)
+    hdr = ''.join(f'<th>{SP.tag(m["sid"], m["form"], size="s")}</th>' for m in ld)
+    h += (f'<article class="plc"><h3>Your leads vs their leads</h3><div class="ptm"><table class="ptab pmt"><thead><tr><th></th>{hdr}</tr></thead>'
+          f'<tbody>{rows_}</tbody></table></div></article>')
+if EM:
+    hdr = ''.join(f'<th>{SP.tag(m["sid"], m["form"], size="s")}</th>' for m in P['six'])
+    rows_ = ''; last = None
+    for k, e in enumerate(EM):
+        if e['foe'] != last: rows_ += f'<tr class="pfo"><td colspan="{len(P["six"]) + 1}">{E(e["foe"])}</td></tr>'; last = e['foe']
+        rows_ += mrow(k, e, P['six'])
+    h += (f'<article class="plc"><h3>Their moves vs your six</h3><div class="ptm"><table class="ptab pmt"><thead><tr><th></th>{hdr}</tr></thead>'
+          f'<tbody>{rows_}</tbody></table></div></article>')
+    hdr = ''.join(f'<th>{SP.tag(m["sid"], m["form"], size="s")}</th>' for m in P['six'])
+    rows_ = ''.join(f'<tr><th>{E(f["name"])}</th>' + ''.join(
+        f'<td class="{"rs" if m["off"][j] >= 2 else "fb" if m["off"][j] > 0 else ""}">{"2×" if m["off"][j] >= 2 else "▲" if m["off"][j] > 0 else ""}</td>' for m in P['six']) + '</tr>'
+        for j, f in enumerate(foes))
+    h += (f'<article class="plc"><h3>Who hits them hard</h3><div class="ptm"><table class="ptab pmt"><thead><tr><th></th>{hdr}</tr></thead>'
+          f'<tbody>{rows_}</tbody></table></div></article>')
 # checks + alternatives
 ck = P['checks']
 lines = []
@@ -100,6 +116,10 @@ css = '''<style id="plan-css">
 .plc .tp.ty-normal { background: #9a9a7a } .plc .tp.ty-fire { background: #e2703a } .plc .tp.ty-water { background: #4a86d8 } .plc .tp.ty-electric { background: #d6b21e } .plc .tp.ty-grass { background: #5ca83a } .plc .tp.ty-ice { background: #4fb3c4 } .plc .tp.ty-fighting { background: #b83a2e } .plc .tp.ty-poison { background: #9045a0 } .plc .tp.ty-ground { background: #b88a3a } .plc .tp.ty-flying { background: #7f8fe0 } .plc .tp.ty-psychic { background: #e0507a } .plc .tp.ty-bug { background: #8fa222 } .plc .tp.ty-rock { background: #a8923e } .plc .tp.ty-ghost { background: #6a5490 } .plc .tp.ty-dragon { background: #5a3fe0 } .plc .tp.ty-dark { background: #5a4a40 } .plc .tp.ty-steel { background: #8a8aa8 } .plc .tp.ty-fairy { background: #d97fae } 
 .ptab .spr { transform: scale(.8) } .ptab th, .ptab td { padding: 3px 2px } .ptab thead th:nth-last-child(-n+2) { font-size: 10px }
 .pcues { display: grid; gap: 2px; padding-left: 4px } .pcue { font-size: 12.5px; color: var(--ink) } .pcue::before { content: '▸ '; color: var(--accent) }
+.pmt { table-layout: fixed } .pmt thead th:first-child { width: 36% } .pmt tbody th { font-weight: 600; font-size: 11.5px; white-space: normal; line-height: 1.25 } .pmv { display: block }
+.pmt .tp { font-size: 9.5px; padding: 0 5px } .pmt .spr { transform: scale(.72); margin: -6px }
+.pmt tr.pfo td { text-align: left; font: 700 11px var(--body); text-transform: uppercase; letter-spacing: .04em; color: var(--muted); padding-top: 8px; border-top: 0 }
+.ptab td.fb { background: rgba(217,119,6,.14); color: #b45309; font-weight: 700 }
 .plc ul.bl { padding: 0; margin: 0; list-style: none; display: grid; gap: 6px } .pho summary { cursor: pointer; font-weight: 700 } .pho ol { margin: 6px 0 0; padding-left: 20px; font-size: 13px; display: grid; gap: 3px }
 #splan + .pgrid, .pgrid { display: grid; gap: 14px }
 </style>'''

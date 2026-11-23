@@ -1,13 +1,13 @@
 {
- "anchor_low": 0.11,
- "anchor_median": 0.389,
+ "anchor_low": 0.048,
+ "anchor_median": 0.198,
  "team": {
-  "Golisopod (Aevian Form)": 0.419,
-  "Muk (Alolan Form)": 0.198,
-  "Glalie (Aevian Form)": 0.39,
-  "Musharna (Aevian Form)": 0.389,
   "Swampert": 0.235,
-  "Clodsire": 0.11
+  "Alomomola": 0.048,
+  "Muk (Alolan Form)": 0.198,
+  "Clodsire": 0.11,
+  "Musharna (Aevian Form)": 0.389,
+  "Mandibuzz": 0.157
  },
  "rows": [
   {
@@ -90,7 +90,7 @@
     "Ice Fang"
    ],
    "ability": "SHEERFORCE",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Reuniclus",
@@ -106,7 +106,7 @@
     "Shadow Ball"
    ],
    "ability": "OVERCOAT",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Rampardos",
@@ -123,7 +123,7 @@
     "Dragon Claw"
    ],
    "ability": "MOLDBREAKER",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Empoleon",
@@ -140,7 +140,7 @@
     "Grass Knot"
    ],
    "ability": "COMPETITIVE",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Silvally",
@@ -157,7 +157,7 @@
     "Fire Fang"
    ],
    "ability": "RKSSYSTEM",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Torterra",
@@ -174,7 +174,7 @@
     "Earthquake"
    ],
    "ability": "SHELLARMOR",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Glaceon",
@@ -190,7 +190,7 @@
     "Shadow Ball"
    ],
    "ability": "ICEBODY",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Furret",
@@ -206,7 +206,7 @@
     "Shadow Claw"
    ],
    "ability": "FRISK",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Cryogonal",
@@ -221,7 +221,7 @@
     "Ice Beam"
    ],
    "ability": "LEVITATE",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Cofagrigus",
@@ -237,7 +237,7 @@
     "Grass Knot"
    ],
    "ability": "MUMMY",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Typhlosion",
@@ -253,7 +253,7 @@
     "Shadow Claw"
    ],
    "ability": "FLASHFIRE",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Probopass",
@@ -269,7 +269,7 @@
     "Body Press"
    ],
    "ability": "SANDFORCE",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Gothitelle",
@@ -285,7 +285,7 @@
     "Shadow Ball"
    ],
    "ability": "SHADOWTAG",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Noctowl",
@@ -302,7 +302,7 @@
     "Air Slash"
    ],
    "ability": "TINTEDLENS",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Luxray",
@@ -319,7 +319,7 @@
     "Ice Fang"
    ],
    "ability": "INTIMIDATE",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Shiinotic",
@@ -335,7 +335,7 @@
     "Giga Drain"
    ],
    "ability": "ILLUMINATE",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Zoroark (Hisuian Form)",
@@ -351,7 +351,7 @@
     "Sludge Bomb"
    ],
    "ability": "SHEERFORCE",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Meganium",
@@ -367,7 +367,7 @@
     "Ancient Power"
    ],
    "ability": "LEAFGUARD",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Cinccino",
@@ -383,7 +383,7 @@
     "Rock Blast"
    ],
    "ability": "SKILLLINK",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Beheeyem",
@@ -399,7 +399,7 @@
     "Shadow Ball"
    ],
    "ability": "TELEPATHY",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Magcargo",
@@ -676,7 +676,7 @@
     "Low Kick"
    ],
    "ability": "TORRENT",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Ariados",
@@ -693,7 +693,7 @@
     "Poison Jab"
    ],
    "ability": "SNIPER",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Leafeon",
@@ -710,7 +710,7 @@
     "Double Kick"
    ],
    "ability": "CHLOROPHYLL",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Zangoose",
@@ -727,7 +727,7 @@
     "Slash"
    ],
    "ability": "IMMUNITY",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Simisage",
@@ -744,7 +744,7 @@
     "Low Kick"
    ],
    "ability": "GLUTTONY",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Seviper",
@@ -838,7 +838,7 @@
    "without": -0.0,
    "gain": 0.018,
    "attacks": [
-    "Headbutt",
+    "Facade",
     "Shadow Ball",
     "Fire Blast"
    ],
