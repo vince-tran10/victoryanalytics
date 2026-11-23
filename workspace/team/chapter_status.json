@@ -32,16 +32,22 @@
  ],
  "misses": [
   {
-   "foe": "Stoutland",
-   "fight": "jenner9",
-   "best": "Golisopod (Aevian Form)",
-   "dmg": 79
+   "foe": "Houndstone",
+   "fight": "spector",
+   "best": "Toxtricity (Aevian Form)",
+   "dmg": 91
   },
   {
-   "foe": "Porygon-Z",
+   "foe": "Kommo-o",
    "fight": "jenner9",
    "best": "Golisopod (Aevian Form)",
-   "dmg": 94
+   "dmg": 53
+  },
+  {
+   "foe": "Chandelure",
+   "fight": "erick",
+   "best": "Toxtricity (Aevian Form)",
+   "dmg": 71
   }
  ],
  "n_types": 18

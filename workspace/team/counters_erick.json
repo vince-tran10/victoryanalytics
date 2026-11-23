@@ -26,20 +26,20 @@
    },
    {
     "foe": "Magneton",
-    "mon": "Veluza (Aevian Form)",
-    "ability": "RECKLESS",
-    "dealt": 102,
-    "taken": 194,
+    "mon": "Turtonator",
+    "ability": "SHELLARMOR",
+    "dealt": 92,
+    "taken": 38,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Togedemaru",
-    "mon": "Palossand (Fiery Aevian Form)",
-    "ability": "STEAMENGINE",
+    "mon": "Toxtricity (Aevian Form)",
+    "ability": "PUNKROCK",
     "dealt": 130,
-    "taken": 24,
+    "taken": 43,
     "ok": true,
     "setup": false,
     "wincons": []

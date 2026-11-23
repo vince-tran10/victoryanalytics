@@ -790,3 +790,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 22 Nov: Core synergy card hidden; synergy now weighs every Builder suggestion (+0.15 x pair score with the other three). Full update + read-back: 4/4 core + flexes unchanged.
 - 22 Nov: guide pass (all 10 suggestions): Fights progress + Plan block + threat dots; To do checklist + Coming soon + Boxes folded in; Builder gap line (Flying -> Lapras-Aevian); matrix ticks the six; C&A one line.
 - 22 Nov: bottom nav fixed (grid had 6 columns for 5 tabs); Fights Plan block + threat dots removed.
+- 22 Nov 20:41 export: Toxtricity-A = Core 1 (Torch Song / Boomburst / Sludge Bomb / Protect, Punk Rock, Charcoal); Torch Song added via engine.EXTRA_LEGAL; Punk Rock now modelled (recommend.py). Annihilape / Electivire de-evolved. Builder gaps: Flying (Lapras-A), Psychic (Muk-Alola).

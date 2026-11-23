@@ -14,6 +14,7 @@ import crests
 from bosses import load_battles, load_battles_walk, FIELD, HIGH_STRIKER
 
 CAP = 55
+EXTRA_LEGAL = {'TOXTRICITY': ['TORCHSONG']}   # 22 Nov (Vincent, confirmed in-game): Toxtricity-Aevian learns Torch Song
 def _legal_item(it):   # 22 Nov legality: a crest from a later chapter (wiki list in community.py) is ignored for his mons
     try:
         import community as _CM
@@ -373,6 +374,7 @@ class Engine:
             elif self.move_rules == 'relearn' and method == 'Move Relearner':
                 legal.add(mid)   # Move Relearner unlocked (11-05): relearner-only moves + any level-up move <= cap
         legal |= {'PROTECT', 'FALSESWIPE'}
+        legal |= set(EXTRA_LEGAL.get(sid, []))   # 22 Nov (Vincent): moves he confirmed in his game that the data lacks (Toxtricity-A Torch Song)
         for k in known:
             mid = self.move_id(k)
             if mid:

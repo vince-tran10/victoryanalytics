@@ -1,20 +1,5 @@
 {
- "evo": [
-  {
-   "name": "Annihilape",
-   "where": "#10",
-   "level": 50,
-   "step": "Primeape -> Annihilape",
-   "why": "uses Rage Fist x20, not learnable yet"
-  },
-  {
-   "name": "Electivire",
-   "where": "#114",
-   "level": 55,
-   "step": "Electabuzz -> Electivire",
-   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  }
- ],
+ "evo": [],
  "moves": [
   {
    "name": "Abra",
@@ -27,388 +12,361 @@
    "move": "Substitute"
   },
   {
-   "name": "Annihilape",
-   "where": "#10",
-   "move": "Sucker Punch"
-  },
-  {
-   "name": "Annihilape",
-   "where": "#10",
-   "move": "Explosion"
-  },
-  {
    "name": "Blipbug",
-   "where": "#36",
+   "where": "#32",
    "move": "Expanding Force"
   },
   {
    "name": "Bulbasaur",
-   "where": "#45",
+   "where": "#41",
    "move": "Amnesia"
   },
   {
    "name": "Buneary",
-   "where": "#46",
+   "where": "#42",
    "move": "Cosmic Power"
   },
   {
    "name": "Buneary",
-   "where": "#47",
+   "where": "#43",
    "move": "Cosmic Power"
   },
   {
    "name": "Cacturne",
-   "where": "#49",
+   "where": "#45",
    "move": "Fake Out"
   },
   {
    "name": "Cacturne",
-   "where": "#49",
+   "where": "#45",
    "move": "Obstruct"
   },
   {
    "name": "Charcadet",
-   "where": "#60",
+   "where": "#56",
    "move": "Flamethrower"
   },
   {
    "name": "Charcadet",
-   "where": "#60",
+   "where": "#56",
    "move": "Psyshock"
   },
   {
    "name": "Charcadet",
-   "where": "#60",
+   "where": "#56",
    "move": "Calm Mind"
   },
   {
    "name": "Charcadet",
-   "where": "#61",
+   "where": "#57",
    "move": "Swords Dance"
   },
   {
    "name": "Charcadet",
-   "where": "#61",
+   "where": "#57",
    "move": "Shadow Claw"
   },
   {
    "name": "Charcadet",
-   "where": "#61",
+   "where": "#57",
    "move": "Bitter Blade"
   },
   {
    "name": "Claydol",
-   "where": "#71",
+   "where": "#67",
    "move": "Steel Beam"
   },
   {
    "name": "Claydol",
-   "where": "#71",
+   "where": "#67",
    "move": "Flamethrower"
   },
   {
    "name": "Claydol",
-   "where": "#71",
+   "where": "#67",
    "move": "Rock Blast"
   },
   {
    "name": "Corsola",
-   "where": "#77",
+   "where": "#73",
    "move": "Throat Chop"
   },
   {
    "name": "Drifblim",
-   "where": "#100",
+   "where": "#96",
    "move": "Mystical Fire"
   },
   {
    "name": "Drifblim",
-   "where": "#100",
+   "where": "#96",
    "move": "Hurricane"
   },
   {
    "name": "Drifloon",
-   "where": "#101",
+   "where": "#97",
    "move": "Tail Whip"
   },
   {
    "name": "Drifloon",
-   "where": "#101",
+   "where": "#97",
    "move": "Nuzzle"
   },
   {
    "name": "Drifloon",
-   "where": "#101",
+   "where": "#97",
    "move": "Tackle"
   },
   {
    "name": "Empoleon",
-   "where": "#118",
+   "where": "#114",
    "move": "Icy Wind"
   },
   {
    "name": "Flamigo",
-   "where": "#125",
+   "where": "#121",
    "move": "U-turn"
   },
   {
    "name": "Glalie",
-   "where": "#142",
+   "where": "#138",
    "move": "Stealth Rock"
   },
   {
    "name": "Golisopod",
-   "where": "#148",
+   "where": "#144",
    "move": "Spikes"
   },
   {
    "name": "Houndoom",
-   "where": "#166",
+   "where": "#162",
    "move": "Snarl"
   },
   {
    "name": "Jynx",
-   "where": "#175",
+   "where": "#171",
    "move": "Nasty Plot"
   },
   {
    "name": "Karrablast",
-   "where": "#179",
+   "where": "#175",
    "move": "Iron Head"
   },
   {
    "name": "Lumineon",
-   "where": "#201",
+   "where": "#197",
    "move": "Quiver Dance"
   },
   {
    "name": "Lumineon",
-   "where": "#201",
+   "where": "#197",
    "move": "Headbutt"
   },
   {
    "name": "Manectric",
-   "where": "#213",
+   "where": "#209",
    "move": "Mat Block"
   },
   {
    "name": "Manectric",
-   "where": "#213",
+   "where": "#209",
    "move": "Frost Breath"
   },
   {
    "name": "Manectric",
-   "where": "#213",
+   "where": "#209",
    "move": "Volt Switch"
   },
   {
    "name": "Maractus",
-   "where": "#218",
+   "where": "#214",
    "move": "Spikes"
   },
   {
    "name": "Masquerain",
-   "where": "#222",
+   "where": "#218",
    "move": "Discharge"
   },
   {
    "name": "Masquerain",
-   "where": "#222",
+   "where": "#218",
    "move": "Aqua Ring"
   },
   {
    "name": "Masquerain",
-   "where": "#222",
+   "where": "#218",
    "move": "Ice Beam"
   },
   {
    "name": "Mismagius",
-   "where": "#235",
+   "where": "#231",
    "move": "Confuse Ray"
   },
   {
    "name": "Mismagius",
-   "where": "#235",
+   "where": "#231",
    "move": "Nasty Plot"
   },
   {
    "name": "Mismagius-Aevian",
-   "where": "#236",
+   "where": "#232",
    "move": "Confuse Ray"
   },
   {
    "name": "Nidoran-M",
-   "where": "#248",
+   "where": "#244",
    "move": "Morning Sun"
   },
   {
    "name": "Persian",
-   "where": "#276",
+   "where": "#272",
    "move": "Tail Slap"
   },
   {
    "name": "Persian",
-   "where": "#276",
+   "where": "#272",
    "move": "Destiny Bond"
   },
   {
    "name": "Persian",
-   "where": "#276",
+   "where": "#272",
    "move": "Glare"
   },
   {
    "name": "Pidove",
-   "where": "#283",
+   "where": "#279",
    "move": "Hone Claws"
   },
   {
    "name": "Pidove",
-   "where": "#283",
+   "where": "#279",
    "move": "Dual Wingbeat"
   },
   {
    "name": "Porygon",
-   "where": "#292",
+   "where": "#288",
    "move": "Nasty Plot"
   },
   {
    "name": "Purugly",
-   "where": "#297",
+   "where": "#293",
    "move": "Thrash"
   },
   {
    "name": "Purugly",
-   "where": "#297",
+   "where": "#293",
    "move": "Swords Dance"
   },
   {
    "name": "Purugly",
-   "where": "#297",
+   "where": "#293",
    "move": "Earthquake"
   },
   {
    "name": "Pyukumuku",
-   "where": "#298",
+   "where": "#294",
    "move": "Block"
   },
   {
    "name": "Pyukumuku",
-   "where": "#299",
+   "where": "#295",
    "move": "Block"
   },
   {
    "name": "Quagsire",
-   "where": "#300",
+   "where": "#296",
    "move": "Lava Plume"
   },
   {
    "name": "Rapidash",
-   "where": "#302",
+   "where": "#298",
    "move": "Fell Stinger"
   },
   {
    "name": "Rapidash",
-   "where": "#302",
+   "where": "#298",
    "move": "High Horsepower"
   },
   {
    "name": "Rhydon",
-   "where": "#307",
+   "where": "#303",
    "move": "Headlong Rush"
   },
   {
    "name": "Stunfisk-Galar",
-   "where": "#365",
+   "where": "#361",
    "move": "Gyro Ball"
   },
   {
    "name": "Stunfisk-Galar",
-   "where": "#365",
+   "where": "#361",
    "move": "Nature Power"
   },
   {
    "name": "Stunfisk-Galar",
-   "where": "#365",
+   "where": "#361",
    "move": "Earthquake"
   },
   {
    "name": "Throh",
-   "where": "#391",
+   "where": "#387",
    "move": "Knock Off"
   },
   {
    "name": "Vivillon Butterfly of Fate",
-   "where": "#416",
+   "where": "#411",
    "move": "Roost"
   },
   {
    "name": "Vivillon Butterfly of Fate",
-   "where": "#416",
+   "where": "#411",
    "move": "Magic Powder"
   },
   {
    "name": "Vivillon Butterfly of Fate",
-   "where": "#416",
+   "where": "#411",
    "move": "Psychic"
   },
   {
    "name": "Vivillon Butterfly of Fate",
-   "where": "#416",
+   "where": "#411",
    "move": "Destiny Bond"
   },
   {
    "name": "Vulpix",
-   "where": "#420",
+   "where": "#415",
    "move": "Heat Wave"
   },
   {
    "name": "Wiglett",
-   "where": "#428",
+   "where": "#423",
    "move": "Endure"
   },
   {
    "name": "Wooper-Paldea",
-   "where": "#433",
+   "where": "#428",
    "move": "Earth Power"
   },
   {
    "name": "Arcanine",
-   "where": "#447",
+   "where": "#444",
    "move": "Close Combat"
   },
   {
    "name": "Crabominable",
-   "where": "#458",
+   "where": "#455",
    "move": "Crabhammer"
   },
   {
    "name": "Crawdaunt",
-   "where": "#459",
+   "where": "#456",
    "move": "Dragon Dance"
   },
   {
    "name": "Tatsugiri Droopy Form",
-   "where": "#508",
+   "where": "#506",
    "move": "Searing Shot"
   }
  ],
- "devolve": [
-  {
-   "dump": 10,
-   "name": "Annihilape",
-   "to_sid": "PRIMEAPE",
-   "to_form": "0",
-   "to_name": "Primeape",
-   "why": "uses Rage Fist x20, not learnable yet"
-  },
-  {
-   "dump": 114,
-   "name": "Electivire",
-   "to_sid": "ELECTABUZZ",
-   "to_form": "0",
-   "to_name": "Electabuzz",
-   "why": "trade evolution: your Link Hearts go to S / A tier only (Slowking)"
-  }
- ],
+ "devolve": [],
  "bad_items": []
 }

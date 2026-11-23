@@ -66,7 +66,11 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Slush Rush/Ice Body → snow; Surge Surfer → Electric Terrain…). No anti-synergy (e.g. Glare or fast mons under Trick
   Room). Owned weather/terrain setters (16 Nov): Drought Ninetales, Snow Warning (Ninetales-Alola, Vanilluxe, Aurorus,
   Abomasnow), Grassy Surge Glalie-A, Electric Surge Pincurchin. No Drizzle / Sand Stream. Checked by checks.py.
-- **Core now (22 Nov 11:33 export, Vincent took the Builder suggestions): Veluza-Aevian (confirmed slot 1, 22 Nov) · Amoonguss (confirmed slot 2: Spore / Rage Powder / Clear Smog / Protect, Modest 252 HP / SpA, Sitrus; Clear Smog over Sludge Bomb = the core's only stat reset; Pollen Puff not legal) ·
+- **Core now (22 Nov 20:41 export): Toxtricity-Aevian = CORE 1 (Vincent: 'my strongest Pokémon'; Torch Song CONFIRMED learnable in his
+  game, engine.EXTRA_LEGAL; build Torch Song / Boomburst / Sludge Bomb / Protect, Punk Rock (sound x1.3, x1.5 on Big Top / Cave / Concert,
+  halves sound damage taken; Battle_Move.rb 1846), Timid 252 SpA / Spe, Charcoal; recommend.py now models Punk Rock). Veluza-Aevian left
+  the core (box flex). Slot 1 stability: his lead stays suggested when same tier and within 0.10 lead win (one-hit model can't value
+  Torch Song's Sp. Atk boosts). Earlier: Veluza-Aevian (slot 1 until 22 Nov 20:41) · Amoonguss (confirmed slot 2: Spore / Rage Powder / Clear Smog / Protect, Modest 252 HP / SpA, Sitrus; Clear Smog over Sludge Bomb = the core's only stat reset; Pollen Puff not legal) ·
   Slowking-Galar (confirmed slot 3, 22 Nov: Sludge Bomb / Psychic / Shadow Ball / Protect. Chilly Reception out (sets SNOW, helps no one);
   Surf out too (spread move: hits Golisopod-A super effectively in doubles); Shadow Ball = single target, neutral on Steel, x1.5 on Haunted Field), Regenerator, Modest 252 HP / SpA,
   Poison Barb; replaced Alomomola) · Golisopod-Aevian (confirmed slot 4).** Rules (b)(c) per fight are HARD only for types in 2+

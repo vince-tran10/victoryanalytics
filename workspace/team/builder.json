@@ -1,6 +1,6 @@
 {
  "core": [
-  "Veluza (Aevian Form)",
+  "Toxtricity (Aevian Form)",
   "Amoonguss",
   "Slowking (Galarian Form)",
   "Golisopod (Aevian Form)"
@@ -9,8 +9,8 @@
   {
    "slot": 1,
    "title": "Core 1 · Lead",
-   "pick": "Veluza (Aevian Form)",
-   "rec": "Veluza (Aevian Form)",
+   "pick": "Toxtricity (Aevian Form)",
+   "rec": "Toxtricity (Aevian Form)",
    "cands": [
     {
      "name": "Veluza (Aevian Form)",
@@ -25,8 +25,8 @@
      "tools": [],
      "sid": "VELUZA",
      "form": "1",
-     "pick": true,
-     "rec": true,
+     "pick": false,
+     "rec": false,
      "teach": [
       "Extreme Speed"
      ]
@@ -45,8 +45,8 @@
      ],
      "sid": "TOXTRICITY",
      "form": "2",
-     "pick": false,
-     "rec": false,
+     "pick": true,
+     "rec": true,
      "teach": [
       "Taunt"
      ]
@@ -215,23 +215,6 @@
      "teach": []
     },
     {
-     "name": "Talonflame",
-     "tier": "B",
-     "stats": [
-      "Resists 7 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Tailwind"
-     ],
-     "sid": "TALONFLAME",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": []
-    },
-    {
      "name": "Noivern",
      "tier": "B",
      "stats": [
@@ -243,6 +226,23 @@
       "Tailwind"
      ],
      "sid": "NOIVERN",
+     "form": "0",
+     "pick": false,
+     "rec": false,
+     "teach": []
+    },
+    {
+     "name": "Crobat",
+     "tier": "B",
+     "stats": [
+      "Resists 6 types",
+      "Weak to 4 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Tailwind"
+     ],
+     "sid": "CROBAT",
      "form": "0",
      "pick": false,
      "rec": false,
@@ -619,6 +619,24 @@
      "form": "0",
      "pick": false,
      "rec": false
+    },
+    {
+     "name": "Crawdaunt",
+     "tier": "B",
+     "stats": [
+      "Resists 7 types",
+      "Weak to 5 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Setup: Swords Dance",
+      "Disrupt: Knock Off"
+     ],
+     "teach": [],
+     "sid": "CRAWDAUNT",
+     "form": "0",
+     "pick": false,
+     "rec": false
     }
    ]
   }
@@ -904,10 +922,6 @@
    "Mid game",
    "Recover"
   ],
-  "Toxtricity": [
-   "Attacker",
-   ""
-  ],
   "Decidueye": [
    "Attacker",
    ""
@@ -960,11 +974,11 @@
    "Attacker",
    ""
   ],
-  "Pangoro": [
+  "Palossand": [
    "Attacker",
    ""
   ],
-  "Palossand": [
+  "Pangoro": [
    "Attacker",
    ""
   ],
@@ -1172,6 +1186,10 @@
    "Attacker",
    ""
   ],
+  "Feraligatr": [
+   "Attacker",
+   ""
+  ],
   "Passimian": [
    "Closer",
    "Bulk Up"
@@ -1179,10 +1197,6 @@
   "Appletun": [
    "Mid game",
    "Recover"
-  ],
-  "Feraligatr": [
-   "Attacker",
-   ""
   ],
   "Bruxish": [
    "Attacker",
@@ -1356,13 +1370,13 @@
    "Support",
    "Wide Guard"
   ],
-  "Roserade": [
-   "Support",
-   "Sleep Powder"
-  ],
   "Golduck": [
    "Attacker",
    ""
+  ],
+  "Roserade": [
+   "Support",
+   "Sleep Powder"
   ],
   "Muk": [
    "Attacker",
@@ -1380,13 +1394,13 @@
    "Attacker",
    ""
   ],
-  "Orbeetle": [
-   "Support",
-   "Reflect"
-  ],
   "Stunfisk-Galar": [
    "Support",
    "Yawn"
+  ],
+  "Orbeetle": [
+   "Support",
+   "Reflect"
   ],
   "Sudowoodo": [
    "Attacker",
@@ -1420,11 +1434,11 @@
    "Attacker",
    ""
   ],
-  "Electrode-Hisui": [
+  "Zebstrika": [
    "Support",
    "Thunder Wave"
   ],
-  "Zebstrika": [
+  "Electrode-Hisui": [
    "Support",
    "Thunder Wave"
   ],
@@ -1488,13 +1502,13 @@
    "Attacker",
    ""
   ],
-  "Leafeon": [
-   "Closer",
-   "Swords Dance"
-  ],
   "Lapras": [
    "Attacker",
    ""
+  ],
+  "Leafeon": [
+   "Closer",
+   "Swords Dance"
   ],
   "Stunfisk": [
    "Support",
@@ -1540,13 +1554,13 @@
    "Attacker",
    ""
   ],
-  "Graveler": [
-   "Attacker",
-   ""
-  ],
   "Heracross": [
    "Closer",
    "Swords Dance"
+  ],
+  "Graveler": [
+   "Attacker",
+   ""
   ],
   "Swellow": [
    "Attacker",
@@ -1640,13 +1654,13 @@
    "Attacker",
    ""
   ],
-  "Exploud": [
-   "Attacker",
-   ""
-  ],
   "Avalugg-Hisui": [
    "Mid game",
    "Recover"
+  ],
+  "Exploud": [
+   "Attacker",
+   ""
   ],
   "Fearow": [
    "Attacker",
@@ -1664,13 +1678,13 @@
    "Attacker",
    ""
   ],
-  "Pinsir": [
-   "Closer",
-   "Swords Dance"
-  ],
   "Swalot": [
    "Support",
    "Yawn"
+  ],
+  "Pinsir": [
+   "Closer",
+   "Swords Dance"
   ],
   "Manectric": [
    "Support",
@@ -1724,11 +1738,11 @@
    "Closer",
    "Swords Dance"
   ],
-  "Rapidash": [
+  "Wormadam (Sandy Cloak)": [
    "Attacker",
    ""
   ],
-  "Wormadam (Sandy Cloak)": [
+  "Rapidash": [
    "Attacker",
    ""
   ],
@@ -1780,13 +1794,13 @@
    "Doubles lead",
    "Fake Out"
   ],
-  "Persian-Alola": [
-   "Attacker",
-   ""
-  ],
   "Minun": [
    "Closer",
    "Nasty Plot"
+  ],
+  "Persian-Alola": [
+   "Attacker",
+   ""
   ],
   "Volbeat": [
    "Attacker",
@@ -1796,11 +1810,11 @@
    "Attacker",
    ""
   ],
-  "Cramorant": [
+  "Noctowl": [
    "Attacker",
    ""
   ],
-  "Noctowl": [
+  "Cramorant": [
    "Attacker",
    ""
   ],
@@ -2012,13 +2026,13 @@
    "Support",
    "Spore"
   ],
-  "Masquerain": [
-   "Doubles lead",
-   "Intimidate"
-  ],
   "Dewgong": [
    "Doubles lead",
    "Fake Out"
+  ],
+  "Masquerain": [
+   "Doubles lead",
+   "Intimidate"
   ],
   "Wugtrio": [
    "Attacker",
@@ -3014,36 +3028,37 @@
  },
  "core_pairs": [
   {
-   "a": "Veluza-Aevian",
+   "a": "Toxtricity-Aevian",
    "b": "Amoonguss",
-   "score": 3.0,
+   "score": 2.0,
    "why": [
-    "Amoonguss draws attacks so Veluza-Aevian attacks freely",
-    "Amoonguss's sleep takes a foe out for Veluza-Aevian",
-    "Speed split: Veluza-Aevian moves first, Amoonguss is the bulky one",
-    "Physical + special: Intimidate or one screen can't stop both",
-    "Resists your weaknesses: Electric",
-    "You resist its weaknesses: Fire, Ice"
+    "Amoonguss draws attacks so Toxtricity-Aevian attacks freely",
+    "Amoonguss's sleep takes a foe out for Toxtricity-Aevian",
+    "Speed split: Toxtricity-Aevian moves first, Amoonguss is the bulky one",
+    "Resists your weaknesses: Water",
+    "You resist its weaknesses: Fire, Ice",
+    "Shared weaknesses: Psychic"
    ]
   },
   {
-   "a": "Veluza-Aevian",
+   "a": "Toxtricity-Aevian",
    "b": "Slowking-Galar",
-   "score": -0.25,
+   "score": -0.5,
    "why": [
-    "Speed split: Veluza-Aevian moves first, Slowking-Galar is the bulky one",
-    "Physical + special: Intimidate or one screen can't stop both",
+    "Speed split: Toxtricity-Aevian moves first, Slowking-Galar is the bulky one",
     "Shared weaknesses: Ground"
    ]
   },
   {
-   "a": "Veluza-Aevian",
+   "a": "Toxtricity-Aevian",
    "b": "Golisopod-Aevian",
-   "score": 2.25,
+   "score": 1.25,
    "why": [
-    "Speed split: Veluza-Aevian moves first, Golisopod-Aevian is the bulky one",
-    "Resists your weaknesses: Electric, Ground",
-    "You resist its weaknesses: Fire, Ice"
+    "Speed split: Toxtricity-Aevian moves first, Golisopod-Aevian is the bulky one",
+    "Physical + special: Intimidate or one screen can't stop both",
+    "Resists your weaknesses: Ground",
+    "You resist its weaknesses: Fire, Ice",
+    "Shared weaknesses: Water"
    ]
   },
   {

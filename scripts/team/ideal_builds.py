@@ -36,6 +36,8 @@ FIXED = {'Lapras (Aevian Form)': dict(ability='NOGUARD', moves=['Rock Slide', 'Z
          'Unfezant (Aevian Form Male)': dict(ability='ROCKHEAD', moves=['Head Smash', 'Brick Break', 'Rock Slide', 'Protect'], item='Hard Stone', nature='Jolly', evs='252 Atk / 252 Spe'),
          'Slowking (Galarian Form)': dict(ability='REGENERATOR', moves=['Sludge Bomb', 'Psychic', 'Shadow Ball', 'Protect'], item='Poison Barb', nature='Modest', evs='252 HP / 252 SpA'),   # 22 Nov core slot 3
          'Slowking': dict(ability='REGENERATOR', moves=['Surf', 'Psychic', 'Shadow Ball', 'Protect'], item='Mystic Water', nature='Modest', evs='252 HP / 252 SpA'),   # 22 Nov: no Chilly Reception (snow does nothing for his team)
+         # 22 Nov (Vincent): Toxtricity-A = Core 1; Torch Song confirmed learnable in his game. Punk Rock (sound x1.3 on Torch Song AND Boomburst)
+         'Toxtricity (Aevian Form)': dict(ability='PUNKROCK', moves=['Torch Song', 'Boomburst', 'Sludge Bomb', 'Protect'], item='Charcoal', nature='Timid', evs='252 SpA / 252 Spe'),
          'Ceruledge': dict(ability=None, moves=['Bitter Blade', 'Shadow Claw', 'Swords Dance', 'Protect'], item='Focus Sash', nature='Jolly', evs='252 Atk / 252 Spe')}
 NO = {'PROTECT', 'DETECT', 'TRICK', 'SWITCHEROO', 'FLING', 'LASTRESORT', 'FRUSTRATION', 'RETURN', 'HIDDENPOWER', 'NATUREPOWER',
       'SECRETPOWER', 'SOLARBEAM', 'SKYATTACK', 'FOCUSPUNCH', 'EXPLOSION', 'SELFDESTRUCT', 'FINALGAMBIT', 'MEMENTO', 'HEALINGWISH',

@@ -1,0 +1,102 @@
+[
+ {
+  "dump": 1,
+  "owned": "Toxtricity-Aevian",
+  "level": 60,
+  "now_ability": "Galvanize",
+  "now_moves": [
+   "Torch Song",
+   "Sludge Bomb",
+   "Boomburst",
+   "Protect"
+  ],
+  "final": "Toxtricity (Aevian Form)",
+  "evolve": "",
+  "gate": "",
+  "types": "Fire/Poison",
+  "score": 0.615,
+  "tier": "A",
+  "ability": "Punk Rock",
+  "capsule": true,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Torch Song",
+   "Sludge Bomb",
+   "Boomburst",
+   "Protect"
+  ],
+  "move_src": {
+   "Torch Song": "known",
+   "Sludge Bomb": "known",
+   "Boomburst": "known",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.88,
+   "danni": 1.08,
+   "troye": 0.7,
+   "zena": 0.47,
+   "marcie": 0.93,
+   "spector": 0.55,
+   "spector2": 0.31,
+   "jenner9": 0.4,
+   "erick": 0.55
+  }
+ },
+ {
+  "dump": 110,
+  "owned": "Electabuzz",
+  "level": 60,
+  "now_ability": "Vital Spirit",
+  "now_moves": [
+   "Thunder Punch",
+   "Cross Chop",
+   "Quick Attack",
+   "Protect"
+  ],
+  "final": "Electabuzz",
+  "evolve": "",
+  "gate": "",
+  "types": "Electric",
+  "score": 0.324,
+  "tier": "D",
+  "ability": "Vital Spirit",
+  "capsule": false,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Thunderbolt",
+   "Signal Beam",
+   "Discharge",
+   "Protect"
+  ],
+  "move_src": {
+   "Thunderbolt": "Lv 46",
+   "Signal Beam": "known",
+   "Discharge": "Lv 34",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.38,
+   "danni": 0.7,
+   "troye": 0.51,
+   "zena": 0.51,
+   "marcie": 0.52,
+   "spector": 0.44,
+   "spector2": 0.27,
+   "jenner9": -0.03,
+   "erick": 0.27
+  }
+ }
+]

@@ -1,12 +1,12 @@
 {
  "_doc": "Read/written by scripts/team/update.py. Edit by hand only to change the six or its moves.",
- "export": "party_and_boxes_2026-11-22_1133.txt",
- "export_label": "22 Nov 11:33",
- "active_start": 445,
+ "export": "party_and_boxes_2026-11-22_2041.txt",
+ "export_label": "22 Nov 20:41",
+ "active_start": 440,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 252,
- "run": 266,
- "final": 270,
+ "roster": 254,
+ "run": 268,
+ "final": 272,
  "done": [
   "aelita",
   "narcissa1",
@@ -34,7 +34,7 @@
  ],
  "fight": "spector",
  "team": [
-  "Veluza (Aevian Form)",
+  "Toxtricity (Aevian Form)",
   "Amoonguss",
   "Oranguru",
   "Zoroark (Hisuian Form)",
@@ -114,16 +114,16 @@
    "Clear Smog",
    "Protect"
   ],
-  "Veluza (Aevian Form)": [
-   "Wave Crash",
-   "Flare Blitz",
-   "Head Smash",
-   "Protect"
-  ],
   "Slowking (Galarian Form)": [
    "Sludge Bomb",
    "Psychic",
    "Shadow Ball",
+   "Protect"
+  ],
+  "Toxtricity (Aevian Form)": [
+   "Torch Song",
+   "Boomburst",
+   "Sludge Bomb",
    "Protect"
   ]
  },
@@ -145,12 +145,12 @@
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
   "rank": null,
-  "of": 436489,
-  "gap": 42.35,
+  "of": 486818,
+  "gap": 27.87,
   "top": [
    {
     "score": 1.0433,
-    "pct": 142.3,
+    "pct": 127.9,
     "team": [
      "Golisopod-A",
      "Scrafty",
@@ -163,7 +163,7 @@
    },
    {
     "score": 1.0423,
-    "pct": 142.2,
+    "pct": 127.7,
     "team": [
      "Golisopod-A",
      "Scrafty",
@@ -176,7 +176,7 @@
    },
    {
     "score": 1.0423,
-    "pct": 142.2,
+    "pct": 127.7,
     "team": [
      "Golisopod-A",
      "Scrafty",
@@ -188,10 +188,7 @@
     "misses": []
    }
   ],
-  "current_misses": [
-   "Stoutland",
-   "Porygon-Z"
-  ]
+  "current_misses": []
  },
  "team_check_cache": true,
  "abilities": {
@@ -207,8 +204,8 @@
   "Scrafty": "MOXIE",
   "Zoroark (Hisuian Form)": "ILLUSION",
   "Amoonguss": "Regenerator",
-  "Veluza (Aevian Form)": "Reckless",
-  "Slowking (Galarian Form)": "Regenerator"
+  "Slowking (Galarian Form)": "Regenerator",
+  "Toxtricity (Aevian Form)": "Punk Rock"
  },
  "crests_owned": [
   "Phione Crest"
@@ -216,7 +213,7 @@
  "cap": 60,
  "chapter": 9,
  "core": [
-  "Veluza (Aevian Form)",
+  "Toxtricity (Aevian Form)",
   "Amoonguss",
   "Slowking (Galarian Form)",
   "Golisopod (Aevian Form)"
@@ -311,11 +308,17 @@
  "items": {
   "Oranguru": "Sitrus Berry",
   "Amoonguss": "Sitrus Berry",
-  "Slowking (Galarian Form)": "Poison Barb"
+  "Slowking (Galarian Form)": "Poison Barb",
+  "Toxtricity (Aevian Form)": "Charcoal"
  },
  "link_hearts": [
   "Slowking"
  ],
+ "extra_legal": {
+  "Toxtricity (Aevian Form)": [
+   "TORCHSONG"
+  ]
+ },
  "zoro_note": {
   "zoroark": "Zoroark (Hisuian Form)",
   "copies": "Slowking (Galarian Form)",
@@ -330,11 +333,11 @@
   "replacement": null,
   "lead_options": [
    {
-    "lead": "Veluza (Aevian Form)",
+    "lead": "Toxtricity (Aevian Form)",
     "slot": 1,
     "gain": 0.0,
     "replacement": "Golisopod (Aevian Form)",
-    "cost": -0.02,
+    "cost": -0.1,
     "ok": false
    },
    {
@@ -347,7 +350,7 @@
    }
   ],
   "options": {
-   "Veluza (Aevian Form)": 0.0,
+   "Toxtricity (Aevian Form)": 0.0,
    "Amoonguss": 0.1,
    "Slowking (Galarian Form)": 0.1,
    "Oranguru": 0.0,

@@ -2,7 +2,7 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 2,
+  "counters": 3,
   "pairs": [
    {
     "foe": "Stoutland",
@@ -77,11 +77,11 @@
    },
    {
     "foe": "Klinklang",
-    "mon": "Veluza (Aevian Form)",
-    "ability": "RECKLESS",
-    "dealt": 107,
-    "taken": 118,
-    "ok": false,
+    "mon": "Toxtricity (Aevian Form)",
+    "ability": "PUNKROCK",
+    "dealt": 130,
+    "taken": 58,
+    "ok": true,
     "setup": false,
     "wincons": [
      {

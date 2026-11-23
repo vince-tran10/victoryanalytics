@@ -19,7 +19,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 492,
+    "dump": 490,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -39,7 +39,7 @@
     ],
     "setup": "Nasty Plot",
     "where": "Active",
-    "dump": 519,
+    "dump": 518,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -57,9 +57,9 @@
   "pairs": [
    {
     "foe": "Murkrow",
-    "mon": "Veluza (Aevian Form)",
-    "ability": "RECKLESS",
-    "dealt": 100,
+    "mon": "Toxtricity (Aevian Form)",
+    "ability": "PUNKROCK",
+    "dealt": 126,
     "taken": 0,
     "ok": true,
     "setup": false,
@@ -161,14 +161,14 @@
   ],
   "nores": [],
   "leads": [
-   "Veluza (Aevian Form)",
-   "Golisopod (Aevian Form)"
+   "Golisopod (Aevian Form)",
+   "Zoroark (Hisuian Form)"
   ],
   "lead_foes": [
    "Murkrow",
    "Gothitelle"
   ],
-  "lead_taken": 75,
+  "lead_taken": 95,
   "sim": null,
   "lead_ok": true,
   "alts": [
@@ -177,7 +177,7 @@
      "Zoroark (Hisuian Form)",
      "Mr. Mime"
     ],
-    "score": 45.34,
+    "score": 45.39,
     "counters": 4
    },
    {
@@ -185,7 +185,7 @@
      "Zoroark (Hisuian Form)",
      "Musharna (Aevian Form)"
     ],
-    "score": 45.14,
+    "score": 45.19,
     "counters": 4
    },
    {
@@ -193,7 +193,7 @@
      "Zoroark (Hisuian Form)",
      "Solrock (Solrock Dominant Fusion)"
     ],
-    "score": 45.1,
+    "score": 45.02,
     "counters": 4
    },
    {
@@ -201,7 +201,7 @@
      "Squawkabilly (White Plumage)",
      "Solrock (Solrock Dominant Fusion)"
     ],
-    "score": 44.86,
+    "score": 44.76,
     "counters": 4
    },
    {
@@ -209,7 +209,15 @@
      "Obstagoon",
      "Barbaracle"
     ],
-    "score": 44.68,
+    "score": 44.73,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Crawdaunt",
+     "Barbaracle"
+    ],
+    "score": 44.73,
     "counters": 4
    },
    {
@@ -217,23 +225,15 @@
      "Chandelure",
      "Obstagoon"
     ],
-    "score": 44.67,
+    "score": 44.72,
     "counters": 4
    },
    {
     "swaps": [
-     "Solrock (Solrock Dominant Fusion)",
-     "Obstagoon"
+     "Crawdaunt",
+     "Solrock (Solrock Dominant Fusion)"
     ],
-    "score": 44.65,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Pangoro",
-     "Barbaracle"
-    ],
-    "score": 44.64,
+    "score": 44.72,
     "counters": 4
    }
   ],
@@ -260,7 +260,7 @@
     ],
     "setup": "Nasty Plot",
     "where": "Active",
-    "dump": 519,
+    "dump": 518,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -282,7 +282,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 494,
+    "dump": 492,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -330,10 +330,10 @@
    },
    {
     "foe": "Golisopod",
-    "mon": "Veluza (Aevian Form)",
-    "ability": "RECKLESS",
-    "dealt": 109,
-    "taken": 353,
+    "mon": "Toxtricity (Aevian Form)",
+    "ability": "PUNKROCK",
+    "dealt": 130,
+    "taken": 693,
     "ok": true,
     "setup": false,
     "wincons": []
@@ -378,7 +378,7 @@
      "Zoroark (Hisuian Form)",
      "Pangoro"
     ],
-    "score": 44.14,
+    "score": 44.21,
     "counters": 4
    },
    {
@@ -386,7 +386,7 @@
      "Zoroark (Hisuian Form)",
      "Scrafty"
     ],
-    "score": 44.13,
+    "score": 44.19,
     "counters": 4
    },
    {
@@ -394,7 +394,7 @@
      "Zoroark (Hisuian Form)",
      "Roserade (Aevian Form)"
     ],
-    "score": 44.11,
+    "score": 44.17,
     "counters": 4
    },
    {
@@ -402,7 +402,7 @@
      "Palossand",
      "Mabosstiff"
     ],
-    "score": 44.1,
+    "score": 44.16,
     "counters": 4
    },
    {
@@ -410,7 +410,7 @@
      "Zoroark (Hisuian Form)",
      "Gastrodon (West Aevian Form)"
     ],
-    "score": 44.06,
+    "score": 44.13,
     "counters": 4
    },
    {
@@ -418,7 +418,7 @@
      "Palossand",
      "Scrafty"
     ],
-    "score": 43.95,
+    "score": 44.02,
     "counters": 4
    },
    {
@@ -426,7 +426,7 @@
      "Cofagrigus",
      "Scrafty"
     ],
-    "score": 43.95,
+    "score": 44.02,
     "counters": 4
    },
    {
@@ -434,7 +434,7 @@
      "Mismagius",
      "Scrafty"
     ],
-    "score": 43.95,
+    "score": 44.02,
     "counters": 4
    }
   ],
@@ -462,7 +462,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 491,
+    "dump": 489,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -483,7 +483,7 @@
     ],
     "setup": null,
     "where": "Overflow",
-    "dump": 19,
+    "dump": 15,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -496,7 +496,7 @@
     ]
    }
   ],
-  "counters": 2,
+  "counters": 3,
   "n": 6,
   "pairs": [
    {
@@ -572,11 +572,11 @@
    },
    {
     "foe": "Klinklang",
-    "mon": "Veluza (Aevian Form)",
-    "ability": "RECKLESS",
-    "dealt": 107,
-    "taken": 118,
-    "ok": false,
+    "mon": "Toxtricity (Aevian Form)",
+    "ability": "PUNKROCK",
+    "dealt": 130,
+    "taken": 58,
+    "ok": true,
     "setup": false,
     "wincons": [
      {
@@ -605,64 +605,64 @@
      "Musharna (Aevian Form)",
      "Aurorus"
     ],
-    "score": 43.76,
-    "counters": 2
+    "score": 54.08,
+    "counters": 3
    },
    {
     "swaps": [
      "Musharna (Aevian Form)",
      "Drednaw"
     ],
-    "score": 43.65,
-    "counters": 2
+    "score": 53.96,
+    "counters": 3
    },
    {
     "swaps": [
      "Arcanine (Hisuian Form)",
      "Musharna (Aevian Form)"
     ],
-    "score": 43.64,
-    "counters": 2
+    "score": 53.95,
+    "counters": 3
    },
    {
     "swaps": [
      "Solrock (Solrock Dominant Fusion)",
      "Musharna (Aevian Form)"
     ],
-    "score": 43.62,
-    "counters": 2
+    "score": 53.94,
+    "counters": 3
    },
    {
     "swaps": [
      "Musharna (Aevian Form)",
      "Rampardos"
     ],
-    "score": 33.57,
-    "counters": 1
+    "score": 43.89,
+    "counters": 2
    },
    {
     "swaps": [
      "Musharna (Aevian Form)",
      "Lunatone (Lunatone Dominant Fusion)"
     ],
-    "score": 33.34,
-    "counters": 1
+    "score": 43.65,
+    "counters": 2
    },
    {
     "swaps": [
      "Florges",
      "Solrock (Solrock Dominant Fusion)"
     ],
-    "score": 23.73,
-    "counters": 3
+    "score": 34.05,
+    "counters": 4
    },
    {
     "swaps": [
      "Solrock (Solrock Dominant Fusion)",
      "Alcremie"
     ],
-    "score": 23.58,
-    "counters": 3
+    "score": 33.9,
+    "counters": 4
    }
   ],
   "note": "",
@@ -681,15 +681,15 @@
   ],
   "swaps": [
    {
-    "name": "Palossand (Fiery Aevian Form)",
-    "ab": "STEAMENGINE",
+    "name": "Turtonator",
+    "ab": "SHELLARMOR",
     "moves": [
-     "Shadow Ball",
-     "Overheat"
+     "Shell Trap",
+     "Dragon Pulse"
     ],
-    "setup": null,
-    "where": "Overflow",
-    "dump": 320,
+    "setup": "Shell Smash",
+    "where": "Active",
+    "dump": 509,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -697,8 +697,8 @@
      "SpD": 4
     },
     "types": [
-     "GHOST",
-     "FIRE"
+     "FIRE",
+     "DRAGON"
     ]
    },
    {
@@ -710,7 +710,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 486,
+    "dump": 484,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -747,20 +747,20 @@
    },
    {
     "foe": "Magneton",
-    "mon": "Veluza (Aevian Form)",
-    "ability": "RECKLESS",
-    "dealt": 102,
-    "taken": 194,
+    "mon": "Turtonator",
+    "ability": "SHELLARMOR",
+    "dealt": 92,
+    "taken": 38,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Togedemaru",
-    "mon": "Palossand (Fiery Aevian Form)",
-    "ability": "STEAMENGINE",
+    "mon": "Toxtricity (Aevian Form)",
+    "ability": "PUNKROCK",
     "dealt": 130,
-    "taken": 24,
+    "taken": 43,
     "ok": true,
     "setup": false,
     "wincons": []
@@ -789,8 +789,8 @@
   "weak3": [],
   "nores": [],
   "leads": [
-   "Slowking (Galarian Form)",
-   "Golisopod (Aevian Form)"
+   "Golisopod (Aevian Form)",
+   "Turtonator"
   ],
   "lead_foes": [
    "Electivire",
@@ -802,10 +802,18 @@
   "alts": [
    {
     "swaps": [
-     "Palossand (Fiery Aevian Form)",
+     "Turtonator",
      "Mabosstiff"
     ],
-    "score": 53.66,
+    "score": 53.93,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Gallade",
+     "Mabosstiff"
+    ],
+    "score": 53.87,
     "counters": 5
    },
    {
@@ -813,7 +821,15 @@
      "Chandelure",
      "Mabosstiff"
     ],
-    "score": 53.61,
+    "score": 53.85,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Palossand (Fiery Aevian Form)",
+     "Mabosstiff"
+    ],
+    "score": 53.8,
     "counters": 5
    },
    {
@@ -821,7 +837,7 @@
      "Scrafty",
      "Bruxish"
     ],
-    "score": 53.6,
+    "score": 53.73,
     "counters": 5
    },
    {
@@ -829,7 +845,7 @@
      "Scrafty",
      "Espeon"
     ],
-    "score": 53.59,
+    "score": 53.73,
     "counters": 5
    },
    {
@@ -837,7 +853,7 @@
      "Azumarill",
      "Mabosstiff"
     ],
-    "score": 53.57,
+    "score": 53.71,
     "counters": 5
    },
    {
@@ -845,23 +861,7 @@
      "Scrafty",
      "Kadabra"
     ],
-    "score": 53.55,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Pangoro",
-     "Bruxish"
-    ],
-    "score": 53.55,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Toxtricity (Aevian Form)",
-     "Mabosstiff"
-    ],
-    "score": 53.54,
+    "score": 53.69,
     "counters": 5
    }
   ],

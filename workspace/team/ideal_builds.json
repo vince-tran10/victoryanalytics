@@ -37,6 +37,25 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Toxtricity (Aevian Form)": {
+  "ability": "Punk Rock",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe",
+  "item": "Charcoal",
+  "moves": [
+   "Torch Song",
+   "Boomburst",
+   "Sludge Bomb",
+   "Protect"
+  ],
+  "move_ids": [
+   "SLUDGEBOMB",
+   "TORCHSONG",
+   "BOOMBURST"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
  "Arcanine (Hisuian Form)": {
   "ability": "ROCKHEAD",
   "nature": "Jolly",
@@ -302,25 +321,6 @@
   ],
   "role": "attacker",
   "source": "your team"
- },
- "Toxtricity (Aevian Form)": {
-  "ability": "PUNKROCK",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
-  "item": "Poison Barb",
-  "moves": [
-   "Sludge Bomb",
-   "Boomburst",
-   "Overheat",
-   "Protect"
-  ],
-  "move_ids": [
-   "SLUDGEBOMB",
-   "BOOMBURST",
-   "OVERHEAT"
-  ],
-  "role": "attacker",
-  "source": "game"
  },
  "Hitmonchan": {
   "ability": "IRONFIST",
@@ -703,7 +703,7 @@
   "source": "game"
  },
  "Veluza (Aevian Form)": {
-  "ability": "Reckless",
+  "ability": "RECKLESS",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
   "item": "Mystic Water",
@@ -719,7 +719,7 @@
    "HEADSMASH"
   ],
   "role": "attacker",
-  "source": "your team"
+  "source": "game"
  },
  "Heatmor": {
   "ability": "GLUTTONY",
@@ -852,25 +852,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Primeape": {
-  "ability": "VITALSPIRIT",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Black Belt",
-  "moves": [
-   "Close Combat",
-   "Punishment",
-   "Outrage",
-   "Protect"
-  ],
-  "move_ids": [
-   "CLOSECOMBAT",
-   "PUNISHMENT",
-   "OUTRAGE"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Crobat": {
   "ability": "INFILTRATOR",
   "nature": "Jolly",
@@ -998,6 +979,25 @@
    "STRANGESTEAM",
    "SLUDGEBOMB",
    "EARTHPOWER"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Primeape": {
+  "ability": "VITALSPIRIT",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Black Belt",
+  "moves": [
+   "Close Combat",
+   "Punishment",
+   "Outrage",
+   "Protect"
+  ],
+  "move_ids": [
+   "CLOSECOMBAT",
+   "PUNISHMENT",
+   "OUTRAGE"
   ],
   "role": "attacker",
   "source": "game"
@@ -1926,25 +1926,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Toxtricity": {
-  "ability": "PUNKROCK",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Magnet",
-  "moves": [
-   "Overdrive",
-   "Boomburst",
-   "Sludge Bomb",
-   "Protect"
-  ],
-  "move_ids": [
-   "OVERDRIVE",
-   "BOOMBURST",
-   "SLUDGEBOMB"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
  },
  "Ampharos": {
   "ability": "STATIC",

@@ -268,7 +268,12 @@ if len(core) == 4:
             res.sort(key=lambda x: (-x[0], -x[1], -x[2]))
             mine = base[i].name if base[i] else None; pv = LEAD.get(mine, dict(win=0, fast=0))
             # yellow = a real alternative: same tier or higher, not in the core, fits the other three, clearly better lead (win +.05)
-            rec = res[0][3].name if res else None; USED.add(rec)   # 22 Nov: my suggestion = the top of this ranking (tier, then role preference)
+            rec = res[0][3].name if res else None
+            _m1 = next((x for x in res if x[3].name == (base[i].name if base[i] else None)), None)
+            # stability (22 Nov): his lead stays my suggestion when same tier and within 0.10 lead win (the one-hit model can't value
+            # Torch Song's Sp. Atk boosts, so it under-rates Toxtricity-A)
+            if _m1 and res and _m1[0] == res[0][0] and _m1[1] >= res[0][1] - .10: rec = _m1[3].name
+            USED.add(rec)   # 22 Nov: my suggestion = the top of this ranking (tier, then role preference)
             top = [x for x in res if x[3].name not in (rec, mine)][:6 - len({rec, mine} - {None})]
             for want in (rec, mine):
                 if want and want not in [x[3].name for x in top]:

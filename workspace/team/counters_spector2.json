@@ -36,10 +36,10 @@
    },
    {
     "foe": "Golisopod",
-    "mon": "Veluza (Aevian Form)",
-    "ability": "RECKLESS",
-    "dealt": 109,
-    "taken": 353,
+    "mon": "Toxtricity (Aevian Form)",
+    "ability": "PUNKROCK",
+    "dealt": 130,
+    "taken": 693,
     "ok": true,
     "setup": false,
     "wincons": []

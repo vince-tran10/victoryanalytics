@@ -158,6 +158,8 @@ def ability_move_mult(ab, mv, mtype, stab_types):
         mult *= 1.5
     if ab == 'TOUGHCLAWS' and 'Contact' in flags:
         mult *= 1.3
+    if ab in ('PUNKROCK', 'JUNGLEBEAT') and 'Soundmove' in flags:   # 22 Nov: Battle_Move.rb finalmult 1.3 on sound moves
+        mult *= 1.3
     if ab == 'RECKLESS' and 'Recoil' in flags:
         mult *= 1.2
     if ab == 'SHEERFORCE' and m.get('Chance') not in (None, '', '0', '100'):
