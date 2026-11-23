@@ -420,8 +420,19 @@ if CORE_PAIRS and os.environ.get('SHOW_SYNERGY'):   # 22 Nov (Vincent): card hid
     _syn = '<article class="bslot bsyn"><header><span class="bn">⇄</span><b>Core synergy</b></header><ul class="bpairs">' + _pc + '</ul></article>'
     _i = cards.find('<article class="bslot bflex">')
     cards = cards[:_i] + _syn + cards[_i:] if _i >= 0 else cards + _syn
+# 22 Nov (Vincent): weak-spot line = types the core is weak to (2+) and nobody resists, with the best flex that covers it
+_gap = ''
+if len(core) == 4 and all(core):
+    _cm = [ALLM[n] for n in core]
+    for a in TYPES:
+        w_ = sum(m.mult[a] > 1 for m in _cm)
+        if w_ >= 2 and not any(m.mult[a] < 1 for m in _cm):
+            cands_ = [m for m in ALLM.values() if m.r.get('tier') in ('S', 'A') and m.mult[a] < 1 and m.name not in core]
+            fix = max(cands_, key=lambda m: (RK.get(m.r['tier'], 0), sum(pair(m, o)[0] for o in _cm)), default=None)
+            _gap += ('<div class="bgap"><b>Gap: ' + a.title() + '</b> hits ' + str(w_) + ' of your core and none resists it'
+                     + ('<br>Best flex: ' + E(disp(fix.name)) + ' (' + fix.r['tier'] + ')' if fix else '') + '</div>')
 sec = ('<section aria-labelledby="sbuild">\n  <h2 id="sbuild">Team Builder</h2>\n'
-       '  <div class="bgrid">' + cards + '</div>\n' + TM + '\n</section>\n')
+       + _gap + '  <div class="bgrid">' + cards + '</div>\n' + TM + '\n</section>\n')
 page = open(OUT, encoding='utf-8').read()
 page = re.sub(r'<section aria-labelledby="sbuild">.*?</section>\s*', '', page, flags=re.S)
 anchor = page.find('<section aria-labelledby="s1f">')

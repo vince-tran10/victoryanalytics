@@ -403,9 +403,61 @@ def foes_html(k, names):   # 22 Nov (Vincent): their team in order, one note per
         types = [t.upper() for t in re.split(r'[/ ]', (w.get('types') or '')) if t]
         tp = ''.join(f'<span class="pt" style="--tc:{TYPE.get(t, "#888")}">{E(t.title())}</span>' for t in types)
         lead = (j < (2 if dbl else 1))
-        out += ('<li class="ofoe' + (' lead' if lead else '') + '"><span class="on">' + str(j + 1) + '</span>' + (SP.tag(*ids[j], size='s') if j < len(ids) else '')
-                + '<b>' + E(foe.split(' (')[0]) + '</b></li>')
+        _wc = sorted({w['what'] for q in (FP.get(k) or {}).get('pairs', []) if q['foe'] == foe for w in q.get('wincons') or []})
+        _big = [b_ for b_ in bits if b_.startswith(('Mega', 'Shadow Tag')) or 'Perish' in b_]
+        _thr = ' · '.join((_wc + _big)[:2]) if (_wc or _big) else ''   # 22 Nov (Vincent): red dot only on real threats; tap for why
+        out += ('<li class="ofoe' + (' lead' if lead else '') + (' threat' if _thr else '') + '"' + (' tabindex="0" role="button"' if _thr else '') + '><span class="on">' + str(j + 1) + '</span>' + (SP.tag(*ids[j], size='s') if j < len(ids) else '')
+                + '<b>' + E(foe.split(' (')[0]) + '</b>' + ('<i class="tdot" aria-hidden="true"></i><small class="tnote" hidden>' + E(_thr) + '</small>' if _thr else '') + '</li>')
     return '<ol class="ofoes">' + out + '</ol>'
+
+_MVD = json.load(open('gamedata/movetext.json')) if os.path.exists('gamedata/movetext.json') else {}
+_MON = json.load(open('gamedata/montext.json')) if os.path.exists('gamedata/montext.json') else {}
+_CH = {'NORMAL': {'ROCK': .5, 'STEEL': .5, 'GHOST': 0}, 'FIRE': {'GRASS': 2, 'ICE': 2, 'BUG': 2, 'STEEL': 2, 'FIRE': .5, 'WATER': .5, 'ROCK': .5, 'DRAGON': .5},
+       'WATER': {'FIRE': 2, 'GROUND': 2, 'ROCK': 2, 'WATER': .5, 'GRASS': .5, 'DRAGON': .5}, 'ELECTRIC': {'WATER': 2, 'FLYING': 2, 'ELECTRIC': .5, 'GRASS': .5, 'DRAGON': .5, 'GROUND': 0},
+       'GRASS': {'WATER': 2, 'GROUND': 2, 'ROCK': 2, 'FIRE': .5, 'GRASS': .5, 'POISON': .5, 'FLYING': .5, 'BUG': .5, 'DRAGON': .5, 'STEEL': .5},
+       'ICE': {'GRASS': 2, 'GROUND': 2, 'FLYING': 2, 'DRAGON': 2, 'FIRE': .5, 'WATER': .5, 'ICE': .5, 'STEEL': .5},
+       'FIGHTING': {'NORMAL': 2, 'ICE': 2, 'ROCK': 2, 'DARK': 2, 'STEEL': 2, 'POISON': .5, 'FLYING': .5, 'PSYCHIC': .5, 'BUG': .5, 'FAIRY': .5, 'GHOST': 0},
+       'POISON': {'GRASS': 2, 'FAIRY': 2, 'POISON': .5, 'GROUND': .5, 'ROCK': .5, 'GHOST': .5, 'STEEL': 0},
+       'GROUND': {'FIRE': 2, 'ELECTRIC': 2, 'POISON': 2, 'ROCK': 2, 'STEEL': 2, 'GRASS': .5, 'BUG': .5, 'FLYING': 0},
+       'FLYING': {'GRASS': 2, 'FIGHTING': 2, 'BUG': 2, 'ELECTRIC': .5, 'ROCK': .5, 'STEEL': .5}, 'PSYCHIC': {'FIGHTING': 2, 'POISON': 2, 'PSYCHIC': .5, 'STEEL': .5, 'DARK': 0},
+       'BUG': {'GRASS': 2, 'PSYCHIC': 2, 'DARK': 2, 'FIRE': .5, 'FIGHTING': .5, 'POISON': .5, 'FLYING': .5, 'GHOST': .5, 'STEEL': .5, 'FAIRY': .5},
+       'ROCK': {'FIRE': 2, 'ICE': 2, 'FLYING': 2, 'BUG': 2, 'FIGHTING': .5, 'GROUND': .5, 'STEEL': .5}, 'GHOST': {'PSYCHIC': 2, 'GHOST': 2, 'DARK': .5, 'NORMAL': 0},
+       'DRAGON': {'DRAGON': 2, 'STEEL': .5, 'FAIRY': 0}, 'DARK': {'PSYCHIC': 2, 'GHOST': 2, 'FIGHTING': .5, 'DARK': .5, 'FAIRY': .5},
+       'STEEL': {'ICE': 2, 'ROCK': 2, 'FAIRY': 2, 'FIRE': .5, 'WATER': .5, 'ELECTRIC': .5, 'STEEL': .5}, 'FAIRY': {'FIGHTING': 2, 'DRAGON': 2, 'DARK': 2, 'FIRE': .5, 'POISON': .5, 'STEEL': .5}}
+def _foe_types(sid):
+    f = next(iter((_MON.get(sid) or {}).values()), {}) if sid else {}
+    return [t for t in (f.get('Type1'), f.get('Type2')) if t]
+def _best_move(name, sid):   # 22 Nov cheat sheet: the move it should click on that foe (power x STAB x type effectiveness)
+    mv = ((st.get('plan_builds') or {}).get(st.get('fight') or '', {}).get(name) or {}).get('moves') or (st.get('moves') or {}).get(name) or (IDB.get(name) or {}).get('moves') or []
+    my = (T.get(name) or {}).get('types') or []; ft = _foe_types(sid); best = (0, None)
+    for m in mv:
+        d = _MVD.get(re.sub(r'[^A-Z]', '', m.upper())) or {}
+        if d.get('category') not in ('physical', 'special'): continue
+        e = 1
+        for t in ft: e *= _CH.get(d.get('type'), {}).get(t, 1)
+        v = (d.get('basedamage') or 0) * (1.5 if d.get('type') in my else 1) * e
+        if v > best[0]: best = (v, m)
+    return best[1]
+def cheat_html(k):
+    p = FP.get(k) or {}
+    try: R = json.load(open(f'team/{k}_eval.json'))
+    except Exception: return ''
+    ids = R.get('foe_ids') or []; spe = R.get('foe_spe') or []; foes = [f[1] for f in R['foes']]
+    rows_ = {y['name']: y for y in R['rows'] if y.get('fixed') or y['name'] not in {}}
+    lines = []
+    for me, fo in zip(p.get('leads') or [], p.get('lead_foes') or []):
+        j = foes.index(fo) if fo in foes else -1; y = rows_.get(me) or {}
+        mv = _best_move(me, ids[j][0] if 0 <= j < len(ids) else None)
+        fast = j >= 0 and y and float(y.get('spe', 0)) > spe[j]
+        ko = j >= 0 and y and float((y.get('cov') or [0] * 9)[j] if isinstance(y.get('cov'), list) else 0) >= 100
+        lines.append('<li><b>Turn 1</b>' + E(disp(me)) + ' → ' + E(mv or 'attack') + ' on ' + E(fo) + '<span class="cs-t">' + ('faster' if fast else 'slower') + (' · KO' if ko else '') + '</span></li>')
+    grp = {}
+    for q in p.get('pairs') or []:
+        for w in q.get('wincons') or []:
+            if w.get('answers'): grp.setdefault((q['foe'], w['answers'][0]), []).append(w['what'])
+    for (fo, ans), whats in grp.items():
+        lines.append('<li><b>Watch</b>' + E(fo) + ': ' + E(', '.join(dict.fromkeys(whats))) + ' → ' + E(ans) + '</li>')
+    return ('<ul class="cheat">' + ''.join(lines[:7]) + '</ul>') if lines else ''
 def fight_cards():
     order = [k for k in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick'] if k in FP]
     out = ''
@@ -439,13 +491,18 @@ def fight_cards():
                 + '<div class="fbody"><div class="frow"><span class="fk">Bring</span><ul class="mons">' + bring + '</ul></div>'
                 + (('<div class="frow ftop"><span class="fk">Field</span>' + _fh + '</div>') if (_fh := field_html(hf.get('field', ''), list(st.get('core') or []) + [r['name'] for r in p['swaps']])) else '')
                 + ((('<div class="frow ftop"><span class="fk">Their team</span>' + _fo + '</div>') if (_fo := foes_html(k, list(st.get('core') or []) + [r['name'] for r in p['swaps']])) else '') if not hf.get('boss') else '')
+                + ((('<div class="frow ftop"><span class="fk">Plan</span>' + _ch + '</div>') if (idx == 0 and (_ch := cheat_html(k))) else ''))
                 + (_bp or '') + '</div></details>')   # 21 Nov (Vincent): foe -> counter list removed; boss fights keep the bar plan
     # 21 Nov (Vincent): only the upcoming fight shows; the rest fold away (fights can come out of order)
     cards_ = re.findall(r'<details class="fc.*?</details>', out, re.S)
     if len(cards_) > 1:
         out = cards_[0] + ('<details class="later"><summary>Later fights · ' + str(len(cards_) - 1) + '</summary><div class="fcards">'
                            + ''.join(cards_[1:]) + '</div></details>')
-    return '<div class="fcards">' + out + '</div>'
+    _all = ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick']
+    _nx = next((k_ for k_ in _all if k_ not in st.get('done', [])), None)
+    prog = '<ol class="chprog">' + ''.join('<li class="' + ('done' if k_ in st.get('done', []) else 'next' if k_ == _nx else '') + '">'
+                                         + ('✓ ' if k_ in st.get('done', []) else '▶ ' if k_ == _nx else '') + E(FIGHT_NAME.get(k_, k_)) + '</li>' for k_ in _all) + '</ol>'
+    return prog + '<div class="fcards">' + out + '</div>'
 if FP and st.get('fight') in FP:   # 21 Nov (Vincent, trial): party cards warn about moves the next fight's field weakens / blocks
     _ord = [k_ for k_ in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick'] if k_ in FP]
     _fld = (HF[_ord.index(st['fight'])] if _ord.index(st['fight']) < len(HF) else {}).get('field', '')
@@ -542,6 +599,31 @@ def todo_card(m):
     return (f'<div class="tcard"><div class="thead">{spr_species(nm_, "m")}<div><b>{E(nm_)}</b><span class="tplace">{E(place)}</span></div>'
             + (f'<span class="tlv">{E(lv)}</span>' if lv else '') + f'</div>' + (f'<ul class="tfix">{rows}</ul>' if rows else done) + '</div>')
 page = re.sub(r'<div class="tgroup pcard"><h3>(.*?) <span class="legend">(.*?)</span></h3><ul class="todo">(.*?)</ul></div>', todo_card, page, flags=re.S)
+# 22 Nov (Vincent): To do = one checklist in battle order on top, "Coming soon" at the bottom
+def _todo_extra(page):
+    i = page.find('<section aria-labelledby="s3">')
+    if i < 0: return page
+    j = page.find('</section>', i); sec = page[i:j]
+    cards = {re.sub(r'<[^>]+>', '', m.group(1)).strip(): len(re.findall(r'<li>', m.group(2)))
+             for m in re.finditer(r'<div class="tcard"><div class="thead">.*?<b>(.*?)</b>.*?(?:<ul class="tfix">(.*?)</ul>|<p class="tdone">)', sec, re.S)}
+    fx = {'spector': 'Spector (day)', 'spector2': 'Spector (night)', 'jenner9': 'Spirit Jenner', 'amanda': 'Amanda', 'erick': 'Erick'}.get(st.get('fight') or '', '')
+    li = ''
+    for i_, n in enumerate(st.get('team') or []):
+        d = disp(n); c = cards.get(d, 0)
+        li += '<li class="' + ('ok' if not c else '') + '"><span class="ckn">' + str(i_ + 1) + '</span><b>' + E(d) + '</b><span>' + ('✓ ready' if not c else f'{c} change' + ('s' if c > 1 else '')) + '</span></li>'
+    top = '<div class="tchk"><h3>Before ' + E(fx or 'the next fight') + '</h3><ol>' + li + '</ol></div>'
+    own = {x['species'] for x in cb.parse(st['export'])}
+    SOON = [('Primeape', 'Annihilape', 'Rage Fist (15 badges)'), ('Charcadet', 'Ceruledge / Armarouge', 'Armors (Shayda shop)'),
+            ('Rhydon', 'Rhyperior', 'Protector (Ch10)'), ('Paras-Aevian', 'Parasect-Aevian', 'Xen Waste (Ch12)'),
+            ('Gimmighoul', 'Gholdengo', '999 Gimmighoul Coins'), ('Porygon', 'Porygon2', 'Upgrade + a spare Link Heart')]
+    soon = ''.join('<li><b>' + E(b) + '</b><span>' + E(w) + '</span></li>' for a, b, w in SOON if a in own)
+    soon += '<li><b>Level cap 65</b><span>after Erick</span></li>'
+    bottom = '<div class="tchk soon"><h3>Coming soon</h3><ul>' + soon + '</ul></div>'
+    h2 = re.search(r'<h2 id="s3">.*?</h2>', sec, re.S)
+    sec2 = sec[:h2.end()] + top + sec[h2.end():] + bottom if h2 else sec
+    return page[:i] + sec2 + page[j:]
+page = _todo_extra(page)
+
 
 # ---------------------------------------------------------------- Checks (17 Nov): summary + problems first; passed checks and reference panels folded
 def checks(m):
@@ -703,6 +785,14 @@ for _sec, _kind in (('s6', 'crest'), ('s7', 'aevian'), ('s8', 'regular')):
     page = re.sub(rf'(<section aria-labelledby="{_sec}">\s*<h2 id="{_sec}">.*?</h2>\s*(?:<ul class="legend">.*?</ul>)?).*?(</section>)',
                   lambda m_, k_=_kind: m_.group(1) + dex_tiles(k_) + m_.group(2), page, count=1, flags=re.S)
 
+# 22 Nov (Vincent): C&A checks = one line; the warnings fold away like the passed ones
+def _ck(m):
+    blk = m.group(0); nf = blk.count('class="ck fail"'); nw = len(re.findall(r'class="ck warn"', blk.split('ckmore')[0]))
+    head = ('<div class="ckhead"><b>' + ('All checks pass' if not nf else f'{nf} failing') + '</b><span>' + (f'{nw} warnings' if nw else '') + '</span></div>')
+    blk = re.sub(r'<div class="ckhead">.*?</div>', head, blk, count=1, flags=re.S)
+    if nw and not nf: blk = re.sub(r'(</div>)(<ul class="cks">.*?</ul>)', r'\1<details class="ckmore"><summary>Warnings (' + str(nw) + r')</summary>\2</details>', blk, count=1, flags=re.S)
+    return blk
+page = re.sub(r'<section aria-labelledby="s5">.*?</section>', _ck, page, count=1, flags=re.S)
 # ---------------------------------------------------------------- fold scoring explanations ("How this works")
 def fold(m):
     return f'{m.group(1)}<details class="how"><summary>How this works</summary>{m.group(2)}</details>'
@@ -733,7 +823,7 @@ IC = {
  'boxes': '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M9 5v14M15 5v14"/>',
  'builder': '<path d="M4 20h16M6 16l4-10 4 6 4-8"/><circle cx="10" cy="6" r="1.5"/>',
  'dex': '<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="3"/><path d="M8.5 15h7M8.5 18h4"/>'}
-NAV = [('team', 'Team'), ('builder', 'Builder'), ('fights', 'Fights'), ('todo', 'To do'), ('boxes', 'Boxes'), ('dex', 'Dex')]   # 22 Nov: Cores tab removed (Vincent)
+NAV = [('team', 'Team'), ('builder', 'Builder'), ('fights', 'Fights'), ('todo', 'To do'), ('dex', 'Dex')]   # 22 Nov: Boxes folded into To do   # 22 Nov: Cores tab removed (Vincent)
 nav = '<nav class="appnav" aria-label="Guide">' + ''.join(
     f'<button type="button" data-go="{k}"><svg viewBox="0 0 24 24" aria-hidden="true">{IC[k]}</svg><span>{t}</span></button>' for k, t in NAV) + '</nav>'
 seg = ('<div class="seg" role="group" aria-label="Dex lists"><button type="button" data-go="tiers">Pokémon</button>'
@@ -940,6 +1030,17 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .bpairs { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px } .bpair { padding: 6px 8px; border-radius: 10px; background: var(--panel-2); font-size: 13px }
 .bpair > b { margin-right: 6px } .bpv { font: 700 11px var(--body) } .bpair.ok .bpv { color: var(--good) } .bpair.bad .bpv { color: var(--bad) } .bpair ul { margin: 3px 0 0; padding-left: 16px; font-size: 12px; color: var(--muted) }
 .ds-bp ul { margin: 2px 0 4px; padding-left: 16px; font-size: 12px; color: var(--muted) } .ds-bp .tier { font-size: 10px; padding: 0 5px }
+.cheat { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 13px } .cheat b { display: inline-block; min-width: 52px; font: 700 11px var(--body); color: var(--muted); text-transform: uppercase }
+.cs-t { margin-left: 6px; font: 600 11px var(--body); color: var(--good) }
+.ofoe.threat { cursor: pointer; position: relative; flex-wrap: wrap } .tdot { width: 8px; height: 8px; border-radius: 50%; background: var(--bad); display: inline-block; margin-left: 4px; vertical-align: middle }
+.tnote { display: block; flex-basis: 100%; font-size: 11.5px; color: var(--bad) } .tnote[hidden] { display: none }
+.chprog { list-style: none; margin: 0 0 10px; padding: 0; display: flex; flex-wrap: wrap; gap: 4px } .chprog li { font: 600 11.5px var(--body); padding: 2px 8px; border-radius: 99px; background: var(--panel-2); color: var(--muted) }
+.chprog li.done { color: var(--good) } .chprog li.next { background: var(--accent); color: #fff }
+.tchk { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; margin: 0 0 12px } .tchk h3 { margin: 0 0 6px; font: 700 14px var(--display) }
+.tchk ol, .tchk ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; font-size: 13px } .tchk li { display: flex; gap: 8px; align-items: baseline }
+.tchk li span:last-child { margin-left: auto; color: var(--warn); font-weight: 700; font-size: 12px } .tchk li.ok span:last-child { color: var(--good) }
+.tchk.soon li span:last-child { color: var(--muted); font-weight: 600 } .ckn { width: 16px; color: var(--muted); font: 600 11px var(--mono) }
+.bgap { margin: 0 0 10px; padding: 8px 12px; border-radius: 12px; background: var(--warn-soft); font-size: 13px } .bgap b { color: var(--warn) }
 .ds-diff { color: var(--bad, #b91c1c); font-weight: 700 }
 .bc.pick.rec { outline: 2px solid #eab308; outline-offset: 2px } .bc.rec { outline: 2px solid #eab308; background: var(--warn-soft) } .brec { margin-left: auto; font: 700 10px var(--body); letter-spacing: .04em; text-transform: uppercase; color: var(--warn) }
 .bstat { font: 600 10.5px var(--body); padding: 1px 7px; border-radius: 99px; background: rgba(127,127,127,.16); color: var(--ink) }
@@ -1111,6 +1212,7 @@ DEXJS = r'''<script id="dex-js">
       sec.querySelectorAll('.dtile').forEach(function(t){ t.hidden = !!rf.dataset.role && t.dataset.role !== rf.dataset.role; });
       sec.querySelectorAll('.dtier').forEach(function(d){ d.hidden = !d.querySelector('.dtile:not([hidden])'); }); return; }
     var tile = e.target.closest('.dtile'); if (tile) { open(tile.dataset.dn); return; }
+    var th = e.target.closest('.ofoe.threat'); if (th) { var n_ = th.querySelector('.tnote'); if (n_) n_.hidden = !n_.hidden; return; }
     if (e.target.closest('.bchk')) return;   // the type-matrix checkbox, not the card
     var bcard = e.target.closest('.bc[data-dn]'); if (bcard) { open(bcard.dataset.dn); return; }
     var tr = e.target.closest('.tlx tbody tr'); if (!tr) return;

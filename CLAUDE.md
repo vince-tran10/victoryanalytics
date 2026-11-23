@@ -314,6 +314,12 @@ damage score and the fight's real win condition was only read after Vincent lost
   fight protocol was done in chat, e.g. Garbodor). Melia partner fights (darkgardevoir, garbodor): ONE lead (she has the other
   slot). Boss fights (bars of one boss): the same member may take several bars. Rule 9 as written: an outspeeding one-shot
   counts whatever it would take.
+- **22 Nov guide pass (Vincent: clean, short):** Fights: chapter progress chips on top (✓ done / ▶ next); next fight card has a
+  'Plan' block (Turn 1 per lead: best move by power x STAB x type, faster/slower, KO; Watch: foe: win conditions → answer, grouped);
+  their-team grid puts a red dot only on real threats (win conditions, Mega, Shadow Tag, Perish), tap = one-line why.
+  To do: 'Before <fight>' checklist in party order (✓ ready / N changes) on top, Boxes moves inside the To do tab (Boxes tab
+  removed, nav = 5 tabs), 'Coming soon' unlocks at the bottom. Builder: 'Gap: <type>' line (2+ core weak, none resists) + best
+  S/A flex. Type matrix starts with the six ticked. C&A checks: one line ('All checks pass · N warnings'), warnings folded.
 - **To do tab = profile fixes only:** one card per Pokémon listing everything it needs (moves with replacements, EVs,
   nature, ability, item, level). Never two places for the same Pokémon. No box moves.
 - **Boxes tab = all box moves:** GREEN = move into Active / the party, RED = move out. A Pokémon moving into Active also

@@ -788,3 +788,4 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 22 Nov: guide refresh: Team tab labels match the Builder (Doubles lead), flex levels read from the box (no 'Lv ?'), 'see its To do card' only when a card exists.\n
 - 22 Nov: Builder max 3 chips per Pokémon; core synergy shows how they play together first; Best partners removed from the Dex; 'Why X tier' cut to the main rationale.
 - 22 Nov: Core synergy card hidden; synergy now weighs every Builder suggestion (+0.15 x pair score with the other three). Full update + read-back: 4/4 core + flexes unchanged.
+- 22 Nov: guide pass (all 10 suggestions): Fights progress + Plan block + threat dots; To do checklist + Coming soon + Boxes folded in; Builder gap line (Flying -> Lapras-Aevian); matrix ticks the six; C&A one line.

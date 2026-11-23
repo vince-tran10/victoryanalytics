@@ -987,7 +987,7 @@ input:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px }}
 
 <section aria-labelledby="s3">
   <h2 id="s3">To do</h2>
-  <p class="legend">Profile fixes only: one card per Pokémon with everything it needs. Box moves are on the Boxes tab.</p>
+
   <div class="todos pcards">{todo_html or '<p class="ok">Nothing to fix: every Party and Active Pokémon matches its build ✓</p>'}</div>
 
 </section>

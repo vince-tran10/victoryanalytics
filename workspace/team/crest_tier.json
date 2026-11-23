@@ -525,7 +525,7 @@
    "gain": 0.159,
    "attacks": [
     "Surf",
-    "Secret Power",
+    "Facade",
     "Deluge"
    ],
    "ability": "HYDRATION",
@@ -739,7 +739,7 @@
    "without": 0.021,
    "gain": 0.018,
    "attacks": [
-    "Secret Power",
+    "Facade",
     "Shadow Ball",
     "Fire Blast"
    ],
