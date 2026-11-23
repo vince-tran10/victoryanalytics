@@ -24,7 +24,28 @@ TYPES = ['NORMAL', 'FIRE', 'WATER', 'ELECTRIC', 'GRASS', 'ICE', 'FIGHTING', 'POI
          'DRAGON', 'DARK', 'STEEL', 'FAIRY']
 RK = {'S': 4, 'A': 3, 'B': 2, 'C': 1, 'D': 0}
 POOL = [n for n, r in TA.items() if (r.get('where') in ('Party', 'Active') and r['tier'] in ('S', 'A', 'B')) or (r.get('where') == 'Overflow' and r['tier'] in ('S', 'A'))]
-POOL = sorted(POOL, key=lambda n: -TA[n]['blend'])[:26]   # the strongest 26 by tier score
+MODE = st.get('core_mode') or 'chapter'   # 23 Nov (Vincent): core of 3 = RAW POWER for this chapter's remaining fights (changes every chapter)
+if MODE != 'chapter': POOL = sorted(POOL, key=lambda n: -TA[n]['blend'])[:26]   # the strongest 26 by tier score
+import math, pickle, bosses
+REM = [b[0] for b in bosses.CH9 if b[0] not in (st.get('done') or [])]
+REMT = {b[0]: b[1].split(' – ')[0] for b in bosses.CH9}
+_AB = lambda n: ((st.get('abilities') or {}).get(n) or (IB.get(n) or {}).get('ability') or '').upper().replace(' ', '')
+CND = {}
+for c in pickle.load(open(f"team/r{st['run']}_native.json.pkl", 'rb'))['cands']:
+    if c.get('gate'): continue
+    if c['name'] not in CND or (c['ability'] == _AB(c['name']) and CND[c['name']]['ability'] != _AB(c['name'])): CND[c['name']] = c
+POW = {}   # name -> dict(wins, ohko, n, beats=[(fight, foe)]): 1-v-1 wins vs every foe left this chapter (engine, field, real build)
+for n in POOL:
+    if n not in CND: continue
+    w = o = t = 0; beats = []
+    for fk in REM:
+        for x in CND[n]['matchups'].get(fk, []):
+            t += 1; off, dff = max(x['off'], 1e-6), max(x['deff'], 1e-6)
+            hk, hd = math.ceil(100 / off), math.ceil(100 / dff)
+            if hk < hd or (hk == hd and x['faster']): w += 1; beats.append((fk, x['foe']))
+            o += off >= 100
+    POW[n] = dict(wins=w, ohko=o, n=t, beats=beats, power=w + .25 * o)
+if MODE == 'chapter': POOL = [n for n in POOL if n in POW]
 def mvid(n): return BYNAME.get((n or '').lower())
 def build(n):
     b = IB.get(n) or {}
@@ -103,6 +124,12 @@ def synergy(c):
     return s, why
 def score(c):
     c = list(c)
+    if MODE == 'chapter':   # raw power: each member's 1-v-1 wins (+ one-shots), the three's combined reach as a tiebreak, never 3 weak to one type
+        tri = [t for t in TYPES if all(DEF[n][t] > 1 for n in c)]
+        uni = len(set().union(*(set(POW[n]['beats']) for n in c)))
+        tot = sum(POW[n]['power'] for n in c) + .3 * uni - 6 * len(tri) + .1 * sum('Aevian' in n for n in c)
+        return tot, dict(strength=round(sum(POW[n]['power'] for n in c), 2), defense=-6 * len(tri), offense=round(.3 * uni, 2), synergy=0, aevian=0,
+                         shared=[], triple=tri, resisted=sum(any(DEF[n][t] < 1 for n in c) for t in TYPES), covered=uni, uncovered=[], why=[])
     strength = sum(TA[n]['blend'] for n in c) * 10
     d = 0.0; shared, triple, res_ = [], [], 0
     for t in TYPES:
@@ -131,7 +158,9 @@ def mem(n):
                 types=r['types'], moves=INFO[n]['mnames'], ability=INFO[n]['ab'], aevian='Aevian' in n, where=r.get('where'),
                 chips=cues(r['types'], INFO[n]['ab'], INFO[n]['mnames'], lambda t, ty: E.chart_eff(t, ty)))
 _sg, _dg = fmt_fit(best)
-out = dict(core=[mem(n) for n in best], n=N, score=round(tot, 2), parts=br, runners=runners, pool=len(POOL),
+out = dict(core=[mem(n) for n in best], n=N, mode=MODE, rem=[REMT[k] for k in REM],
+           power={n: POW[n] for n in best if n in POW}, left=[f'{REMT[fk]}: {x["foe"]}' for fk in REM for x in (CND[best[0]]['matchups'].get(fk, []))
+                    if not any((fk, x['foe']) in POW.get(n, {}).get('beats', []) for n in best)], score=round(tot, 2), parts=br, runners=runners, pool=len(POOL),
            singles={k: v for k, v in _sg.items()}, doubles={k: v for k, v in _dg.items()},
            matrix={n: DEF[n] for n in best})
 json.dump(out, open('team/core4.json', 'w'), indent=1, ensure_ascii=False)
@@ -139,11 +168,13 @@ print('core4:', best, round(tot, 2), {k: v for k, v in br.items() if k in ('stre
 if not OUT: sys.exit(0)
 # ---- Builder tab: your best 4 (no opponent), how it is picked, close alternatives, type check
 def pill(t): return f'<span class="tp ty-{t.lower()}">{t.title()}</span>'
-h = f'<article class="plc"><h3>Your core of {N}</h3><ul class="bl">'
+h = f'<article class="plc"><h3>Your core of {N}</h3>' + (f'<div class="pmuted">Raw power for the rest of Chapter 9: {E_(" and ".join(out["rem"]))}</div>' if MODE == 'chapter' else '') + '<ul class="bl">'
 for m in out['core']:
     h += (f'<li class="bc" data-dn="{E_(disp(m["name"]))}" tabindex="0" role="button"><div class="bct"><span class="tier t{m["tier"]}">{m["tier"]}</span>'
           f'{SP.tag(m["sid"], m["form"], size="s")}<b>{E_(disp(m["name"]))}</b></div><div class="bchips">'
-          + ''.join(f'<span class="{"btool" if k == "tool" else "bstat"}">{E_(c)}</span>' for k, c in m['chips'][:3]) + '</div></li>')
+          + ((f'<span class="btool">Beats {out["power"][m["name"]]["wins"]} of {out["power"][m["name"]]["n"]}</span>'
+              f'<span class="bstat">One-shots {out["power"][m["name"]]["ohko"]}</span>') if m['name'] in out.get('power', {}) else '')
+          + ''.join(f'<span class="{"btool" if k == "tool" else "bstat"}">{E_(c)}</span>' for k, c in m['chips'][:1 if m['name'] in out.get('power', {}) else 3]) + '</div></li>')
 h += '</ul></article>'
 def _fit(title, d):
     return (f'<article class="plc"><h3>{title}</h3><ul class="pwin">' + ''.join(
@@ -161,7 +192,18 @@ dfn = [f'Resists {P_["resisted"]} of 18 attacking types']
 dfn += [f'Shared weakness: {t.title()}' for t in P_['shared']] or ['No shared weakness']
 dfn += [f'3 weak to {t.title()}' for t in P_['triple']]
 ofn = [f'Super effective on {P_["covered"]} of 18 types'] + ([f'Not covered: {", ".join(t.title() for t in P_["uncovered"])}'] if P_['uncovered'] else [])
-h += ('<article class="plc"><h3>How the core is picked</h3><ul class="pscore">' + rows + '</ul>'
+if MODE == 'chapter':
+    _by = {}
+    for n in best:
+        for fk, f in POW[n]['beats']: _by.setdefault((REMT[fk], f), []).append(disp(n))
+    _ln = ''.join(f'<li class="pw-ok"><b>✓</b> {E_(f)} <span class="pmuted">({E_(t)})</span><div class="pans">{E_(", ".join(v))}</div></li>' for (t, f), v in _by.items())
+    _ln += ''.join(f'<li class="pw-no"><b>✗</b> {E_(x.split(": ")[1])} <span class="pmuted">({E_(x.split(": ")[0])})</span><div class="pans">Left for the flexes</div></li>' for x in out['left'])
+    h += (f'<article class="plc"><h3>Who they beat</h3><ul class="pwin">{_ln}</ul></article>'
+          '<details class="plc pho"><summary>How the core is picked</summary><ul class="pck"><li>Every Pokémon in your Party / Active (S / A / B) and S / A in Overflow</li>'
+          '<li>1-v-1 against every foe left this chapter: who knocks the other out first (engine: field, levels, real build)</li>'
+          '<li>Score = wins + ¼ per one-shot</li><li>The top 3; their combined reach breaks ties</li><li>Never all 3 weak to one type</li>'
+          '<li>No synergy or roles here: the flexes cover gaps per fight</li><li>Re-picked every chapter</li></ul></details>')
+if MODE != 'chapter': h += ('<article class="plc"><h3>How the core is picked</h3><ul class="pscore">' + rows + '</ul>'
       '<details class="pho"><summary>Each member</summary><ul class="pwhy2">' + mrows + '</ul></details>'
       '<details class="pho"><summary>Synergy</summary><ul class="pck">' + syn + '</ul></details>'
       '<details class="pho"><summary>Defense and offense</summary><ul class="pck">' + ''.join(f'<li>{E_(x)}</li>' for x in dfn + ofn) + '</ul></details>'

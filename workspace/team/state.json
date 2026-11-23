@@ -4,9 +4,9 @@
  "export_label": "23 Nov 08:03",
  "active_start": 468,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 314,
- "run": 328,
- "final": 332,
+ "roster": 315,
+ "run": 329,
+ "final": 333,
  "done": [
   "aelita",
   "narcissa1",
@@ -37,11 +37,11 @@
  "fight": "jenner9",
  "team": [
   "Musharna (Aevian Form)",
-  "Toxtricity (Aevian Form)",
+  "Glalie (Aevian Form)",
   "Slowking (Galarian Form)",
-  "Veluza (Aevian Form)",
-  "Lapras (Aevian Form)",
-  "Golisopod (Aevian Form)"
+  "Toxtricity (Aevian Form)",
+  "Arcanine (Hisuian Form)",
+  "Gallade"
  ],
  "moves": {
   "Golisopod (Aevian Form)": [
@@ -217,6 +217,12 @@
    "Flare Blitz",
    "Head Smash",
    "Protect"
+  ],
+  "Gallade": [
+   "Psycho Cut",
+   "Sacred Sword",
+   "Leaf Blade",
+   "Protect"
   ]
  },
  "promote": "team/promote_1108.json",
@@ -312,7 +318,8 @@
   "Chandelure": "FLASHFIRE",
   "Azumarill": "HUGEPOWER",
   "Lapras (Aevian Form)": "NOGUARD",
-  "Veluza (Aevian Form)": "RECKLESS"
+  "Veluza (Aevian Form)": "RECKLESS",
+  "Gallade": "SHARPNESS"
  },
  "crests_owned": [
   "Dedenne Crest",
@@ -334,10 +341,13 @@
    "minor": []
   },
   "fight": {
-   "n": 6,
+   "n": 5,
    "weak3": [],
    "nores": [],
-   "minor": [],
+   "minor": [
+    "FLYING",
+    "NORMAL"
+   ],
    "key": "jenner9"
   }
  },

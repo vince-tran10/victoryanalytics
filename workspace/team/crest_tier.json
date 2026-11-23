@@ -1,13 +1,13 @@
 {
- "anchor_low": 0.172,
- "anchor_median": 0.325,
+ "anchor_low": 0.287,
+ "anchor_median": 0.443,
  "team": {
   "Musharna (Aevian Form)": 0.34,
-  "Toxtricity (Aevian Form)": 0.446,
+  "Glalie (Aevian Form)": 0.311,
   "Slowking (Galarian Form)": 0.287,
-  "Veluza (Aevian Form)": 0.172,
-  "Lapras (Aevian Form)": 0.25,
-  "Golisopod (Aevian Form)": 0.325
+  "Toxtricity (Aevian Form)": 0.446,
+  "Arcanine (Hisuian Form)": 0.443,
+  "Gallade": 0.489
  },
  "rows": [
   {
@@ -57,7 +57,7 @@
     "Superpower"
    ],
    "ability": "ROUGHSKIN",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Ampharos (Aevian Form)",
@@ -73,7 +73,7 @@
     "Discharge"
    ],
    "ability": "FILTER",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Empoleon",
@@ -90,7 +90,7 @@
     "Grass Knot"
    ],
    "ability": "COMPETITIVE",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Reuniclus",
@@ -220,7 +220,7 @@
     "Grass Knot"
    ],
    "ability": "MUMMY",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Probopass",
@@ -236,7 +236,7 @@
     "Body Press"
    ],
    "ability": "SANDFORCE",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Gothitelle",
@@ -252,7 +252,7 @@
     "Shadow Ball"
    ],
    "ability": "SHADOWTAG",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Glaceon",
@@ -268,7 +268,7 @@
     "Shadow Ball"
    ],
    "ability": "ICEBODY",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Shiinotic",
@@ -284,7 +284,7 @@
     "Giga Drain"
    ],
    "ability": "ILLUMINATE",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Typhlosion",
@@ -299,7 +299,7 @@
     "Eruption"
    ],
    "ability": "FLASHFIRE",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Noctowl",
@@ -316,7 +316,7 @@
     "Shadow Ball"
    ],
    "ability": "TINTEDLENS",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Luxray",
@@ -333,7 +333,7 @@
     "Ice Fang"
    ],
    "ability": "INTIMIDATE",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Hypno",
@@ -350,7 +350,7 @@
     "Ice Punch"
    ],
    "ability": "INSOMNIA",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Zoroark (Hisuian Form)",
@@ -367,7 +367,7 @@
     "Low Sweep"
    ],
    "ability": "HUGEPOWER",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Meganium",
@@ -383,7 +383,7 @@
     "Ancient Power"
    ],
    "ability": "LEAFGUARD",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Beheeyem",
@@ -400,7 +400,7 @@
     "Signal Beam"
    ],
    "ability": "TELEPATHY",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Swalot",
@@ -414,10 +414,10 @@
    "attacks": [
     "Gunk Shot",
     "Bullet Seed",
-    "Power-Up Punch"
+    "Stacking Shot"
    ],
    "ability": "GLUTTONY",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Simisear",
@@ -432,7 +432,7 @@
     "Flare Blitz"
    ],
    "ability": "BLAZE",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Claydol",
@@ -449,7 +449,7 @@
     "Signal Beam"
    ],
    "ability": "LEVITATE",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Cinccino",
@@ -465,7 +465,7 @@
     "Rock Blast"
    ],
    "ability": "SKILLLINK",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Magcargo",
@@ -480,7 +480,7 @@
     "Overheat"
    ],
    "ability": "WEAKARMOR",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Sawsbuck",
@@ -497,7 +497,7 @@
     "Megahorn"
    ],
    "ability": "SAPSIPPER",
-   "tier": "B"
+   "tier": "C"
   },
   {
    "name": "Phione",
@@ -805,7 +805,7 @@
    "without": -0.026,
    "gain": 0.024,
    "attacks": [
-    "Headbutt",
+    "Facade",
     "Fire Blast",
     "Thief"
    ],

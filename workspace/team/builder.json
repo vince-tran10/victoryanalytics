@@ -677,23 +677,6 @@
      "rec": false
     },
     {
-     "name": "Glalie (Aevian Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 2 types",
-      "Weak to 4 types"
-     ],
-     "tools": [
-      "Spread: Rock Slide",
-      "Priority: Grassy Glide"
-     ],
-     "teach": [],
-     "sid": "GLALIE",
-     "form": "1",
-     "pick": false,
-     "rec": false
-    },
-    {
      "name": "Ninetales (Alolan Form)",
      "tier": "A",
      "stats": [
@@ -715,21 +698,23 @@
   {
    "slot": 6,
    "title": "Flex 2 · Closer · Spirit Jenner",
-   "pick": "Veluza (Aevian Form)",
-   "rec": "Veluza (Aevian Form)",
+   "pick": "Glalie (Aevian Form)",
+   "rec": "Glalie (Aevian Form)",
    "flex": true,
    "cands": [
     {
-     "name": "Veluza (Aevian Form)",
+     "name": "Glalie (Aevian Form)",
      "tier": "S",
      "stats": [
-      "Resists 5 types",
-      "Weak to 3 types",
-      "Single target only"
+      "Resists 2 types",
+      "Weak to 4 types"
      ],
-     "tools": [],
+     "tools": [
+      "Spread: Rock Slide",
+      "Priority: Grassy Glide"
+     ],
      "teach": [],
-     "sid": "VELUZA",
+     "sid": "GLALIE",
      "form": "1",
      "pick": true,
      "rec": true

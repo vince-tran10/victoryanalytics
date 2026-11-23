@@ -1,220 +1,329 @@
 {
  "core": [
   {
-   "name": "Golisopod (Aevian Form)",
+   "name": "Toxtricity (Aevian Form)",
    "tier": "S",
-   "sid": "GOLISOPOD",
-   "form": "1",
-   "blend": 0.934,
-   "meta": 0.93,
-   "game": 1.0,
+   "sid": "TOXTRICITY",
+   "form": "2",
+   "blend": 0.741,
+   "meta": 0.67,
+   "game": 0.934,
    "types": [
-    "BUG",
-    "GROUND"
+    "FIRE",
+    "POISON"
    ],
    "moves": [
-    "Bone Rush",
-    "Pin Missile",
-    "Swords Dance",
+    "Torch Song",
+    "Boomburst",
+    "Sludge Bomb",
     "Protect"
    ],
-   "ability": "SKILLLINK",
+   "ability": "PUNKROCK",
    "aevian": true,
    "where": "Active",
    "chips": [
     [
      "tool",
-     "Breaks Sash / shields"
+     "Punk Rock"
     ],
     [
      "stat",
-     "Immune Electric"
-    ],
-    [
-     "stat",
-     "Resists Ground / Fighting"
+     "Resists Fire / Fighting"
     ]
    ]
   },
   {
-   "name": "Slowking (Galarian Form)",
-   "tier": "S",
-   "sid": "SLOWKING",
+   "name": "Arcanine (Hisuian Form)",
+   "tier": "A",
+   "sid": "ARCANINE",
    "form": "1",
-   "blend": 0.858,
-   "meta": 0.892,
-   "game": 0.868,
+   "blend": 0.673,
+   "meta": 0.508,
+   "game": 0.989,
    "types": [
-    "POISON",
-    "PSYCHIC"
+    "FIRE",
+    "ROCK"
    ],
    "moves": [
-    "Sludge Bomb",
-    "Psychic",
-    "Thunder Wave",
+    "Flare Blitz",
+    "Extreme Speed",
+    "Head Smash",
     "Protect"
    ],
-   "ability": "REGENERATOR",
+   "ability": "ROCKHEAD",
    "aevian": false,
    "where": "Active",
    "chips": [
     [
      "tool",
-     "Paralysis"
+     "Priority"
     ],
-    [
-     "stat",
-     "Resists Fighting / Fairy"
-    ]
-   ]
-  },
-  {
-   "name": "Veluza (Aevian Form)",
-   "tier": "S",
-   "sid": "VELUZA",
-   "form": "1",
-   "blend": 0.833,
-   "meta": 0.8,
-   "game": 0.992,
-   "types": [
-    "WATER",
-    "FIRE"
-   ],
-   "moves": [
-    "Wave Crash",
-    "Flare Blitz",
-    "Head Smash",
-    "Protect"
-   ],
-   "ability": "RECKLESS",
-   "aevian": true,
-   "where": "Active",
-   "chips": [
     [
      "stat",
      "Resists Fire / Ice"
     ]
    ]
+  },
+  {
+   "name": "Gallade",
+   "tier": "B",
+   "sid": "GALLADE",
+   "form": "0",
+   "blend": 0.562,
+   "meta": 0.348,
+   "game": 0.995,
+   "types": [
+    "PSYCHIC",
+    "FIGHTING"
+   ],
+   "moves": [
+    "Psycho Cut",
+    "Sacred Sword",
+    "Leaf Blade",
+    "Protect"
+   ],
+   "ability": "SHARPNESS",
+   "aevian": false,
+   "where": "Active",
+   "chips": [
+    [
+     "stat",
+     "Resists Fighting / Rock"
+    ]
+   ]
   }
  ],
  "n": 3,
- "score": 40.6,
+ "mode": "chapter",
+ "rem": [
+  "Spirit Jenner",
+  "Erick (Pulse Badge gym)"
+ ],
+ "power": {
+  "Toxtricity (Aevian Form)": {
+   "wins": 7,
+   "ohko": 5,
+   "n": 12,
+   "beats": [
+    [
+     "jenner9",
+     "Appletun"
+    ],
+    [
+     "jenner9",
+     "Noivern"
+    ],
+    [
+     "jenner9",
+     "Klinklang"
+    ],
+    [
+     "erick",
+     "Electivire"
+    ],
+    [
+     "erick",
+     "Magneton"
+    ],
+    [
+     "erick",
+     "Togedemaru"
+    ],
+    [
+     "erick",
+     "Chandelure"
+    ]
+   ],
+   "power": 8.25
+  },
+  "Arcanine (Hisuian Form)": {
+   "wins": 7,
+   "ohko": 3,
+   "n": 12,
+   "beats": [
+    [
+     "jenner9",
+     "Stoutland"
+    ],
+    [
+     "jenner9",
+     "Noivern"
+    ],
+    [
+     "erick",
+     "Raichu"
+    ],
+    [
+     "erick",
+     "Magneton"
+    ],
+    [
+     "erick",
+     "Togedemaru"
+    ],
+    [
+     "erick",
+     "Chandelure"
+    ],
+    [
+     "erick",
+     "Toxtricity"
+    ]
+   ],
+   "power": 7.75
+  },
+  "Gallade": {
+   "wins": 8,
+   "ohko": 8,
+   "n": 12,
+   "beats": [
+    [
+     "jenner9",
+     "Stoutland"
+    ],
+    [
+     "jenner9",
+     "Appletun"
+    ],
+    [
+     "jenner9",
+     "Klinklang"
+    ],
+    [
+     "erick",
+     "Electivire"
+    ],
+    [
+     "erick",
+     "Raichu"
+    ],
+    [
+     "erick",
+     "Magneton"
+    ],
+    [
+     "erick",
+     "Togedemaru"
+    ],
+    [
+     "erick",
+     "Toxtricity"
+    ]
+   ],
+   "power": 10.0
+  }
+ },
+ "left": [
+  "Spirit Jenner: Porygon-Z",
+  "Spirit Jenner: Kommo-o"
+ ],
+ "score": 29.1,
  "parts": {
-  "strength": 26.25,
-  "defense": 3.0,
-  "offense": 3.5,
-  "synergy": 7.25,
-  "aevian": 0.6,
+  "strength": 26.0,
+  "defense": 0,
+  "offense": 3.0,
+  "synergy": 0,
+  "aevian": 0,
   "shared": [],
   "triple": [],
-  "resisted": 10,
-  "covered": 14,
-  "uncovered": [
-   "NORMAL",
-   "WATER",
-   "GHOST",
-   "DRAGON"
-  ],
-  "why": [
-   "Physical and special attackers: one Intimidate or screen cannot stop both",
-   "Fast and slow members: works with and without speed control",
-   "Speed control: Slowking-Galar",
-   "Regenerator switches: Slowking-Galar"
-  ]
+  "resisted": 11,
+  "covered": 10,
+  "uncovered": [],
+  "why": []
  },
  "runners": [
   {
-   "out": "Veluza (Aevian Form)",
+   "out": "Arcanine (Hisuian Form)",
    "in": "Musharna (Aevian Form)",
-   "delta": -1.64
+   "delta": -0.6
   },
   {
-   "out": "Veluza (Aevian Form)",
-   "in": "Muk (Alolan Form)",
-   "delta": -2.39
+   "out": "Arcanine (Hisuian Form)",
+   "in": "Crabominable",
+   "delta": -0.75
   },
   {
-   "out": "Veluza (Aevian Form)",
-   "in": "Unfezant (Aevian Form Male)",
-   "delta": -2.94
+   "out": "Arcanine (Hisuian Form)",
+   "in": "Rampardos",
+   "delta": -1.2
   },
   {
-   "out": "Golisopod (Aevian Form)",
-   "in": "Froslass (Aevian Form)",
-   "delta": -3.23
+   "out": "Arcanine (Hisuian Form)",
+   "in": "Arcanine",
+   "delta": -1.25
   }
  ],
- "pool": 26,
+ "pool": 55,
  "singles": {
-  "Fast cleaner": "Veluza (Aevian Form)",
-  "Bulky pivot": "Slowking (Galarian Form)",
-  "Wallbreaker": "Golisopod (Aevian Form)"
+  "Fast cleaner": "Toxtricity (Aevian Form)",
+  "Bulky pivot": null,
+  "Wallbreaker": "Toxtricity (Aevian Form)"
  },
  "doubles": {
   "Fake Out / redirection": null,
-  "Spread or speed control": "Slowking (Galarian Form)",
-  "Bulky attacker": "Golisopod (Aevian Form)"
+  "Spread or speed control": "Toxtricity (Aevian Form)",
+  "Bulky attacker": null
  },
  "matrix": {
-  "Golisopod (Aevian Form)": {
+  "Toxtricity (Aevian Form)": {
    "NORMAL": 1.0,
-   "FIRE": 2.0,
+   "FIRE": 0.5,
    "WATER": 2.0,
-   "ELECTRIC": 0.0,
-   "GRASS": 1.0,
-   "ICE": 2.0,
+   "ELECTRIC": 1.0,
+   "GRASS": 0.25,
+   "ICE": 0.5,
    "FIGHTING": 0.5,
    "POISON": 0.5,
-   "GROUND": 0.5,
-   "FLYING": 2.0,
-   "PSYCHIC": 1.0,
-   "BUG": 1.0,
-   "ROCK": 1.0,
+   "GROUND": 4.0,
+   "FLYING": 1.0,
+   "PSYCHIC": 2.0,
+   "BUG": 0.25,
+   "ROCK": 2.0,
    "GHOST": 1.0,
    "DRAGON": 1.0,
    "DARK": 1.0,
-   "STEEL": 1.0,
-   "FAIRY": 1.0
+   "STEEL": 0.5,
+   "FAIRY": 0.25
   },
-  "Slowking (Galarian Form)": {
-   "NORMAL": 1.0,
-   "FIRE": 1.0,
-   "WATER": 1.0,
-   "ELECTRIC": 1.0,
-   "GRASS": 0.5,
-   "ICE": 1.0,
-   "FIGHTING": 0.25,
-   "POISON": 0.5,
-   "GROUND": 2.0,
-   "FLYING": 1.0,
-   "PSYCHIC": 1.0,
-   "BUG": 1.0,
-   "ROCK": 1.0,
-   "GHOST": 2.0,
-   "DRAGON": 1.0,
-   "DARK": 2.0,
-   "STEEL": 1.0,
-   "FAIRY": 0.5
-  },
-  "Veluza (Aevian Form)": {
-   "NORMAL": 1.0,
+  "Arcanine (Hisuian Form)": {
+   "NORMAL": 0.5,
    "FIRE": 0.25,
-   "WATER": 1.0,
-   "ELECTRIC": 2.0,
+   "WATER": 4.0,
+   "ELECTRIC": 1.0,
    "GRASS": 1.0,
-   "ICE": 0.25,
-   "FIGHTING": 1.0,
-   "POISON": 1.0,
-   "GROUND": 2.0,
-   "FLYING": 1.0,
+   "ICE": 0.5,
+   "FIGHTING": 2.0,
+   "POISON": 0.5,
+   "GROUND": 4.0,
+   "FLYING": 0.5,
    "PSYCHIC": 1.0,
    "BUG": 0.5,
    "ROCK": 2.0,
    "GHOST": 1.0,
    "DRAGON": 1.0,
    "DARK": 1.0,
-   "STEEL": 0.25,
+   "STEEL": 1.0,
    "FAIRY": 0.5
+  },
+  "Gallade": {
+   "NORMAL": 1.0,
+   "FIRE": 1.0,
+   "WATER": 1.0,
+   "ELECTRIC": 1.0,
+   "GRASS": 1.0,
+   "ICE": 1.0,
+   "FIGHTING": 0.5,
+   "POISON": 1.0,
+   "GROUND": 1.0,
+   "FLYING": 2.0,
+   "PSYCHIC": 1.0,
+   "BUG": 1.0,
+   "ROCK": 0.5,
+   "GHOST": 2.0,
+   "DRAGON": 1.0,
+   "DARK": 1.0,
+   "STEEL": 1.0,
+   "FAIRY": 2.0
   }
  }
 }
