@@ -211,16 +211,34 @@ def pair(a, b):
     if shared: why.append(f"Shared weaknesses: {', '.join(shared)}")
     ma, mb = set(build_moves(a.name)), set(build_moves(b.name))
     for x, y, p, q in ((a, b, ma, mb), (b, a, mb, ma)):
-        if p & {'RAGEPOWDER', 'FOLLOWME'} and q & _SETUP: sc += 1.5; why.append(f"{disp(x.name)}'s redirection buys {disp(y.name)} its setup turn")
+        if p & {'RAGEPOWDER', 'FOLLOWME'} and q & _SETUP: sc += 1.5; why.insert(0, f"{disp(x.name)}'s redirection buys {disp(y.name)} its setup turn")
         if 'TRICKROOM' in p and y.r['base']['Spe'] <= 60: sc += 1; why.append(f"{disp(x.name)}'s Trick Room lets {disp(y.name)} move first")
         if 'TRICKROOM' in p and y.r['base']['Spe'] >= 95: sc -= .5; why.append(f"{disp(y.name)} is slowed down by Trick Room")
-        if p & {'SPORE', 'SLEEPPOWDER', 'YAWN', 'HYPNOSIS', 'LOVELYKISS', 'SING'} and q & _SETUP: sc += .5; why.append(f"{disp(x.name)}'s sleep gives {disp(y.name)} free turns")
+        if p & {'SPORE', 'SLEEPPOWDER', 'YAWN', 'HYPNOSIS', 'LOVELYKISS', 'SING'} and q & _SETUP: sc += .5; why.insert(1, f"{disp(x.name)}'s sleep gives {disp(y.name)} free turns")
         if _abrun(x) == 'REGENERATOR' and q & _SETUP: sc += .25
         for mv, mult in _spread_hits_ally(x, y):
             if mult == 0: sc += .5; why.append(f"{disp(x.name)}'s {mv} can't hurt {disp(y.name)}")
             elif mult > 1: sc -= 1; why.append(f"{disp(x.name)}'s {mv} hits {disp(y.name)} super effectively")
         if 'CLEARSMOG' in p and False: pass
     if a.sd and b.sd and (b.sd in _TM.get(a.sd, ()) or a.sd in _TM.get(b.sd, ())): sc += 1; why.append('Used together in the real meta')
+    play = []   # 22 Nov (Vincent): how they play together, not just type cover
+    for x, y, p, q in ((a, b, ma, mb), (b, a, mb, ma)):
+        if p & {'RAGEPOWDER', 'FOLLOWME'} and not (q & _SETUP): play.append(f"{disp(x.name)} draws attacks so {disp(y.name)} attacks freely"); sc += .75
+        if p & {'SPORE', 'SLEEPPOWDER', 'YAWN', 'HYPNOSIS', 'LOVELYKISS', 'SING'} and not (q & _SETUP): play.append(f"{disp(x.name)}'s sleep takes a foe out for {disp(y.name)}"); sc += .25
+        if p & {'CLEARSMOG', 'HAZE'} and q & _SETUP: play.append(f"{disp(x.name)} resets foe boosts that would stop {disp(y.name)}'s sweep"); sc += .5
+        weak_y = [t for t in TYPES if y.mult[t] > 1 and x.mult[t] < 1]
+        if _abrun(x) == 'REGENERATOR' and len(weak_y) >= 1 and x.bulk >= 270:
+            play.append(f"{disp(x.name)} switches in on {', '.join(t.title() for t in weak_y[:2])} hits aimed at {disp(y.name)} and heals on the way out"); sc += .5
+    sa, sb = a.r['base']['Spe'], b.r['base']['Spe']
+    if max(sa, sb) >= 95 and min(sa, sb) <= 60: sc += .25; play.append(f"Speed split: {disp(a.name if sa > sb else b.name)} moves first, {disp(b.name if sa > sb else a.name)} is the bulky one")
+    def _cat(m):   # from the moves its build RUNS
+        cs = [MT.get(x, {}).get('category') for x in build_moves(m.name)]
+        cs = [c for c in cs if c in ('physical', 'special')]
+        return max(set(cs), key=cs.count) if cs else None
+    ca, cb = _cat(a), _cat(b)
+    if ca and cb and ca != cb: play.append('Physical + special: Intimidate or one screen can\'t stop both'); sc += .25
+    combo = [w for w in why if 'redirection buys' in w or 'free turns' in w or 'Trick Room' in w]
+    why = combo + play + [w for w in why if w not in combo]
     return round(sc, 2), why
 PARTNERS = {}
 _pool_p = [m for m in ALLM.values() if m.r.get('tier') in ('S', 'A')]   # partners worth building around: S / A tier
@@ -363,6 +381,13 @@ if _pl and len(core) == 4:
 json.dump(dict(core=core, slots=out, roles=ROLES_ALL, partners=PARTNERS, core_pairs=CORE_PAIRS), open('team/builder.json', 'w'), indent=1, ensure_ascii=False)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sprites as SP
+def chips3(c, s_):   # 22 Nov (Vincent): only the top 2-3 facts per Pokémon
+    st_, tl = list(c.get('stats', [])), list(c['tools'])
+    if s_['slot'] == 1: pick = [x for x in st_ if x.startswith('Outspeeds')][:1] + tl[:1] + [x for x in st_ if x.startswith('Takes')][:1]
+    elif s_.get('flex'): pick = [x for x in tl if x.startswith('Counters')][:1] + [x for x in tl if not x.startswith('Counters')][:1] + [x for x in st_ if x.startswith('Weak')][:1]
+    else: pick = tl[:2] + [x for x in st_ if x.startswith('Weak')][:1]
+    pick = pick[:3]
+    return ''.join('<span class="' + ('btool' if x in tl else 'bstat') + '">' + E(x) + '</span>' for x in pick)
 cards = ''
 for s_ in out:
     rows = ''
@@ -371,7 +396,7 @@ for s_ in out:
                  + '<label class="bchk" title="Add to the type matrix"><input type="checkbox" data-tm="' + E(disp(c['name'])) + '"' + (' checked' if c['pick'] else '') + '></label>'
                  + '<span class="tier t' + c['tier'] + '">' + c['tier'] + '</span>' + SP.tag(c['sid'], c['form'], size='s')
                  + '<b>' + E(disp(c['name'])) + '</b>' + ('<span class="bpick">Your pick</span>' if c['pick'] else '') + ('<span class="brec">Suggested</span>' if c.get('rec') else '') + '</div>'
-                 + '<div class="btools">' + ''.join('<span class="bstat">' + E(x) + '</span>' for x in c.get('stats', [])) + ''.join('<span class="btool">' + E(x) + '</span>' for x in c['tools']) + '</div>'
+                 + '<div class="btools">' + chips3(c, s_) + '</div>'
                  + (''.join('<div class="bwhy"><b>Why not ' + E(w['name']) + ' (' + w['tier'] + ')</b><ul>' + ''.join('<li>' + E(l) + '</li>' for l in w['lines']) + '</ul></div>'
                             for w in s_.get('why') or [] if w['lines']) if c.get('rec') else '') + '</li>')
     cards += ('<article class="bslot' + (' bflex' if s_.get('flex') else '') + '"><header><span class="bn">' + (('F' + str(s_['slot'] - 4)) if s_.get('flex') else str(s_['slot'])) + '</span><b>' + E(s_['title']) + '</b>'
@@ -391,7 +416,7 @@ if CORE_PAIRS:
     for p_ in CORE_PAIRS:
         ok_ = p_['score'] >= 0
         _pc += ('<li class="bpair ' + ('ok' if ok_ else 'bad') + '"><b>' + E(p_['a']) + ' + ' + E(p_['b']) + '</b><span class="bpv">' + ('✓ works' if ok_ else '✗ friction') + '</span>'
-                + '<ul>' + ''.join('<li>' + E(w) + '</li>' for w in p_['why'][:4]) + '</ul></li>')
+                + '<ul>' + ''.join('<li>' + E(w) + '</li>' for w in p_['why'][:3]) + '</ul></li>')
     _syn = '<article class="bslot bsyn"><header><span class="bn">⇄</span><b>Core synergy</b></header><ul class="bpairs">' + _pc + '</ul></article>'
     _i = cards.find('<article class="bslot bflex">')
     cards = cards[:_i] + _syn + cards[_i:] if _i >= 0 else cards + _syn

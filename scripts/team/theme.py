@@ -631,16 +631,20 @@ _MVT = {}
 try: _MVT = json.load(open('gamedata/movetext.json'))
 except Exception: pass
 MULTI5 = {'BONERUSH', 'PINMISSILE', 'ROCKBLAST', 'BULLETSEED', 'ICICLESPEAR', 'TAILSLAP', 'ARMTHRUST', 'FURYATTACK', 'SCALESHOT', 'WATERSHURIKEN', 'DOUBLESLAP', 'COMETPUNCH', 'SPIKECANNON', 'BARRAGE', 'FURYSWIPES'}
-def why_tier(r, ab_id, moves):   # 22 Nov (Vincent): the tier = 70% META DOMINANCE + 30% in-game across EVERY hard fight; say exactly that
-    out = []
+def why_tier(r, ab_id, moves):   # 22 Nov (Vincent): just the main rationale, not every number
     labs = [x.strip() for x in (r.get('meta_label') or '').split('|') if x.strip()]
-    if labs:
-        out.append((labs[0] if labs[0].startswith(('Community', 'Kit rating')) else 'Meta dominance') + f" {round(100 * r.get('meta', 0))}/100")
-        if labs[0].startswith(('Community', 'Kit rating')): labs = labs[1:]
-        for x in labs: out.append(x + (' usage' if x.endswith('%') else ''))
-    gp = r.get('game_pct'); n_all = r.get('n_all') or 0
-    if gp is not None:
-        out.append(f"In-game: top {max(1, round(100 * (1 - gp)))}% of your box" + (f" across all {n_all} fights in the game" if n_all else ''))
+    out = []
+    if labs and labs[0].startswith(('Community', 'Kit rating')):
+        q = next((x for x in labs[1:] if '"' in x or x.startswith('Kit:')), labs[1] if len(labs) > 1 else '')
+        out.append(re.sub(r'^F\d+(/F\d+)?: |^W: ', '', q) if q else labs[0])
+    elif labs and '%' in labs[0]:
+        fmt = re.sub(r'\s+[\d.]+%$', '', labs[0]); u = float(re.search(r'([\d.]+)%', labs[0]).group(1))
+        out.append(('A staple in ' if u >= 10 else 'Used in ' if u >= 3 else 'Niche in ') + fmt + (f' ({u:.0f}% of teams)' if u >= 1 else ''))
+    elif labs: out.append(labs[0])
+    gp = r.get('game_pct')
+    if gp is not None and gp >= .85: out.append('One of the strongest in your box across the game\'s fights')
+    elif gp is not None and gp <= .25 and (DROLES.get(disp(r['name'])) or ['Attacker'])[0] in ('Attacker', 'Lead', 'Closer'):
+        out.append('Weak in this game\'s fights')   # support kits (sleep / redirection) score 0 in the damage model: no verdict for them
     return out
 _BJ = json.load(open('team/builder.json')) if os.path.exists('team/builder.json') else {}
 DROLES = _BJ.get('roles') or {}   # 22 Nov: Dex roles (builder.py)
@@ -1096,7 +1100,7 @@ DEXJS = r'''<script id="dex-js">
       + '<div class="ds-sec">'+esc(d.src)+'</div><ul class="ds-b">'+row('Ability',d.a,'a')+(d.n?row('Nature',d.n,'n'):'')+(d.e?row('EVs',d.e,'e'):'')+(d.it?row('Item',d.it,'it'):'')
       + d.mv.map(function(m,i){ var yv=(d.y&&d.y.mv)||[]; var mine=yv.indexOf(m)<0 && ((d.y&&d.y.mv)!==undefined); return '<li>Move '+(i+1)+': '+esc(m)+'</li>'; }).join('')
       + ((d.y&&d.y.mv&&d.y.mv.length)?'<li class="ds-diff">Replace yours: '+d.y.mv.map(esc).join(', ')+'</li>':'')+'</ul>'
-      + ((d.pt&&d.pt.length)?'<div class="ds-sec">Best partners</div><ul class="ds-b ds-bp">'+d.pt.map(function(p){ return '<li><b>'+esc(p.n)+'</b> <span class="tier t'+p.t+'">'+p.t+'</span>'+(p.w.length?'<ul>'+p.w.map(function(w){return '<li>'+esc(w)+'</li>';}).join('')+'</ul>':'')+'</li>'; }).join('')+'</ul>':'');
+      ;
     last = document.activeElement; sheet.hidden = false; sheet.querySelector('.sheet-x').focus();
   }
   function close(){ sheet.hidden = true; if (last) last.focus(); }
