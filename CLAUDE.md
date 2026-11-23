@@ -238,7 +238,8 @@ damage score and the fight's real win condition was only read after Vincent lost
   'Role: X (why)'. builder.py role_of() from what the BUILD runs, first match: Doubles lead (Follow Me / Rage Powder / Fake Out /
   Intimidate / Tailwind) > Lead (slot-1 gate: outspeeds 70% / KOs 65% / survives 60%) > Closer (setup move) > Mid game (Regenerator /
   recovery / stat reset / pivot, bulk 270+) > Support (weather / terrain setter, Trick Room, screens, Safeguard, sleep, hazards...)
-  > Attacker. Stored in builder.json 'roles' (theme.py DROLES; the old ROLES = team_roles.json is a different thing).
+  > Attacker. Builder slot lists show ONLY Pokémon whose Dex role is that slot's role (best fit; 22 Nov), so Builder and Dex agree.
+  Stored in builder.json 'roles' (theme.py DROLES; the old ROLES = team_roles.json is a different thing).
   **Dex = real tier list (Vincent, 22 Nov):** headers just "S Tier" / "A Tier"… (+ count), then a tight grid of tiles (sprite +
   name only, ~4 per row on a phone); tap a tile → detail sheet (one fact per line). Bottom nav = 5 tabs (Cores removed).
   Detail sheet (Vincent, 22 Nov): no box location; meta = ONLY the best Smogon tier (META_W; usage / unranked hidden); base stats

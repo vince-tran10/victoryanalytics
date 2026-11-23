@@ -72,26 +72,6 @@
      "teach": []
     },
     {
-     "name": "Arcanine",
-     "tier": "B",
-     "stats": [
-      "Outspeeds 79%",
-      "Takes 2 hits to KO",
-      "Resists 6 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Intimidate",
-      "Priority: Extreme Speed"
-     ],
-     "sid": "ARCANINE",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": []
-    },
-    {
      "name": "Typhlosion",
      "tier": "B",
      "stats": [
@@ -131,6 +111,25 @@
      "teach": [
       "Quick Attack"
      ]
+    },
+    {
+     "name": "Basculin (Blue-Striped)",
+     "tier": "C",
+     "stats": [
+      "Outspeeds 80%",
+      "Takes 2 hits to KO",
+      "Resists 4 types",
+      "Weak to 2 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "sid": "BASCULIN",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Aqua Jet"
+     ]
     }
    ]
   },
@@ -159,46 +158,6 @@
      "pick": true,
      "rec": true,
      "teach": []
-    },
-    {
-     "name": "Clefable",
-     "tier": "A",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 2 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Status: Thunder Wave",
-      "Support: Safeguard"
-     ],
-     "sid": "CLEFABLE",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Follow Me"
-     ]
-    },
-    {
-     "name": "Mandibuzz",
-     "tier": "A",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 4 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Recovery: Roost",
-      "Disrupt: Knock Off"
-     ],
-     "sid": "MANDIBUZZ",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Tailwind"
-     ]
     },
     {
      "name": "Leavanny (Aevian Form)",
@@ -254,6 +213,40 @@
      "pick": false,
      "rec": false,
      "teach": []
+    },
+    {
+     "name": "Talonflame",
+     "tier": "B",
+     "stats": [
+      "Resists 7 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Tailwind"
+     ],
+     "sid": "TALONFLAME",
+     "form": "0",
+     "pick": false,
+     "rec": false,
+     "teach": []
+    },
+    {
+     "name": "Noivern",
+     "tier": "B",
+     "stats": [
+      "Resists 6 types",
+      "Weak to 4 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Tailwind"
+     ],
+     "sid": "NOIVERN",
+     "form": "0",
+     "pick": false,
+     "rec": false,
+     "teach": []
     }
    ]
   },
@@ -301,27 +294,6 @@
      "rec": false,
      "teach": [
       "Haze"
-     ]
-    },
-    {
-     "name": "Lapras (Aevian Form)",
-     "tier": "A",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 7 types"
-     ],
-     "tools": [
-      "Spread: Rock Slide",
-      "Status: Sing",
-      "Setup: Dragon Dance"
-     ],
-     "sid": "LAPRAS",
-     "form": "1",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Roar",
-      "Teleport"
      ]
     },
     {
@@ -379,6 +351,25 @@
      "teach": [
       "Slack Off"
      ]
+    },
+    {
+     "name": "Vaporeon",
+     "tier": "B",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 2 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Wish"
+     ],
+     "sid": "VAPOREON",
+     "form": "0",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Haze"
+     ]
     }
    ]
   },
@@ -425,75 +416,74 @@
      "teach": []
     },
     {
-     "name": "Zoroark",
-     "tier": "A",
+     "name": "Azumarill",
+     "tier": "B",
      "stats": [
-      "Resists 3 types",
+      "Resists 7 types",
       "Weak to 3 types",
       "Single target only"
      ],
-     "tools": [],
-     "sid": "ZOROARK",
+     "tools": [
+      "Belly Drum (+6)",
+      "Priority: Aqua Jet"
+     ],
+     "sid": "AZUMARILL",
      "form": "0",
      "pick": false,
      "rec": false,
-     "teach": [
-      "Nasty Plot"
-     ]
+     "teach": []
     },
     {
-     "name": "Ninetales (Alolan Form)",
-     "tier": "A",
+     "name": "Crawdaunt",
+     "tier": "B",
      "stats": [
-      "Resists 4 types",
-      "Weak to 4 types"
-     ],
-     "tools": [
-      "Spread: Blizzard",
-      "Screens: Aurora Veil"
-     ],
-     "sid": "NINETALES",
-     "form": "1",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Nasty Plot"
-     ]
-    },
-    {
-     "name": "Swampert",
-     "tier": "A",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 1 type"
-     ],
-     "tools": [
-      "Spread: Earthquake"
-     ],
-     "sid": "SWAMPERT",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Curse"
-     ]
-    },
-    {
-     "name": "Mismagius (Aevian Form)",
-     "tier": "A",
-     "stats": [
-      "Resists 6 types",
+      "Resists 7 types",
       "Weak to 5 types",
       "Single target only"
      ],
-     "tools": [],
-     "sid": "MISMAGIUS",
-     "form": "1",
+     "tools": [
+      "Swords Dance (+2)",
+      "Disrupt: Knock Off"
+     ],
+     "sid": "CRAWDAUNT",
+     "form": "0",
      "pick": false,
      "rec": false,
-     "teach": [
-      "Curse"
-     ]
+     "teach": []
+    },
+    {
+     "name": "Cetitan",
+     "tier": "C",
+     "stats": [
+      "Resists 1 type",
+      "Weak to 4 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Belly Drum (+6)"
+     ],
+     "sid": "CETITAN",
+     "form": "0",
+     "pick": false,
+     "rec": false,
+     "teach": []
+    },
+    {
+     "name": "Tatsugiri",
+     "tier": "C",
+     "stats": [
+      "Resists 3 types",
+      "Weak to 2 types"
+     ],
+     "tools": [
+      "Nasty Plot (+2)",
+      "Spread: Surf"
+     ],
+     "sid": "TATSUGIRI",
+     "form": "0",
+     "pick": false,
+     "rec": false,
+     "teach": []
     }
    ]
   },
