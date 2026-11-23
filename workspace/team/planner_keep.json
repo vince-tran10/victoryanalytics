@@ -111,11 +111,11 @@
   "POISON"
  ],
  "atk": {
-  "ROCK": [
-   "Golisopod",
+  "STEEL": [
    "Stonjourner"
   ],
-  "STEEL": [
+  "ROCK": [
+   "Golisopod",
    "Stonjourner"
   ],
   "FIRE": [
@@ -123,17 +123,14 @@
    "Stonjourner",
    "Typhlosion"
   ],
+  "FAIRY": [
+   "Sigilyph"
+  ],
   "GHOST": [
    "Banette",
    "Golisopod",
    "Sigilyph",
    "Typhlosion"
-  ],
-  "FAIRY": [
-   "Sigilyph"
-  ],
-  "NORMAL": [
-   "Luxray"
   ],
   "ELECTRIC": [
    "Luxray"
@@ -141,10 +138,13 @@
   "DARK": [
    "Luxray"
   ],
-  "BUG": [
-   "Golisopod"
+  "NORMAL": [
+   "Luxray"
   ],
   "GROUND": [
+   "Golisopod"
+  ],
+  "BUG": [
    "Golisopod"
   ],
   "FIGHTING": [
@@ -1034,7 +1034,7 @@
  ],
  "pool": 55,
  "score": 202.6,
- "cmp": 37.5,
+ "cmp": 45.0,
  "break_field": null,
  "checks": {
   "weak3": [],

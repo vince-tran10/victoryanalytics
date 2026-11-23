@@ -46,10 +46,10 @@
    },
    {
     "foe": "Typhlosion",
-    "mon": "Swampert",
-    "ability": "TORRENT",
-    "dealt": 91,
-    "taken": 103,
+    "mon": "Clodsire",
+    "ability": "UNAWARE",
+    "dealt": 71,
+    "taken": 94,
     "ok": false,
     "setup": false,
     "wincons": []

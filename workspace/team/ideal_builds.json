@@ -360,25 +360,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Throh": {
-  "ability": "GUTS",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Belt",
-  "moves": [
-   "Circle Throw",
-   "Knock Off",
-   "Bulldoze",
-   "Protect"
-  ],
-  "move_ids": [
-   "CIRCLETHROW",
-   "KNOCKOFF",
-   "BULLDOZE"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Grapploct": {
   "ability": "LIMBER",
   "nature": "Adamant",
@@ -1794,6 +1775,25 @@
    "AIRSLASH",
    "WIDEGUARD",
    "LEAFTORNADO"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Throh": {
+  "ability": "GUTS",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Belt",
+  "moves": [
+   "Circle Throw",
+   "Knock Off",
+   "Bulldoze",
+   "Protect"
+  ],
+  "move_ids": [
+   "CIRCLETHROW",
+   "KNOCKOFF",
+   "BULLDOZE"
   ],
   "role": "attacker",
   "source": "game"

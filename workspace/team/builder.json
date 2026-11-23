@@ -625,22 +625,24 @@
   {
    "slot": 5,
    "title": "Flex 1 · Mid game · Spector (night)",
-   "pick": "Swampert",
-   "rec": "Swampert",
+   "pick": "Alomomola",
+   "rec": "Alomomola",
    "flex": true,
    "cands": [
     {
-     "name": "Swampert",
-     "tier": "A",
+     "name": "Alomomola",
+     "tier": "S",
      "stats": [
-      "Resists 5 types",
-      "Weak to 1 type"
+      "Resists 4 types",
+      "Weak to 2 types",
+      "Single target only"
      ],
      "tools": [
-      "Spread: Earthquake"
+      "Recovery: Wish",
+      "Support: Wide Guard"
      ],
      "teach": [],
-     "sid": "SWAMPERT",
+     "sid": "ALOMOMOLA",
      "form": "0",
      "pick": true,
      "rec": true
@@ -710,6 +712,22 @@
      "rec": false
     },
     {
+     "name": "Swampert",
+     "tier": "A",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 1 type"
+     ],
+     "tools": [
+      "Spread: Earthquake"
+     ],
+     "teach": [],
+     "sid": "SWAMPERT",
+     "form": "0",
+     "pick": false,
+     "rec": false
+    },
+    {
      "name": "Musharna (Aevian Form)",
      "tier": "S",
      "stats": [
@@ -729,24 +747,23 @@
   {
    "slot": 6,
    "title": "Flex 2 · Closer · Spector (night)",
-   "pick": "Alomomola",
-   "rec": "Alomomola",
+   "pick": "Clodsire",
+   "rec": "Clodsire",
    "flex": true,
    "cands": [
     {
-     "name": "Alomomola",
-     "tier": "S",
+     "name": "Clodsire",
+     "tier": "B",
      "stats": [
-      "Resists 4 types",
-      "Weak to 2 types",
-      "Single target only"
+      "Resists 6 types",
+      "Weak to 4 types"
      ],
      "tools": [
-      "Recovery: Wish",
-      "Support: Wide Guard"
+      "Spread: Earthquake",
+      "Recovery: Recover"
      ],
      "teach": [],
-     "sid": "ALOMOMOLA",
+     "sid": "CLODSIRE",
      "form": "0",
      "pick": true,
      "rec": true
@@ -1255,13 +1272,13 @@
    "Mid game",
    "Recover"
   ],
-  "Veluza": [
-   "Attacker",
-   ""
-  ],
   "Jellicent": [
    "Mid game",
    "Recover"
+  ],
+  "Veluza": [
+   "Attacker",
+   ""
   ],
   "Ribombee": [
    "Support",
@@ -1467,13 +1484,13 @@
    "Doubles lead",
    "Fake Out"
   ],
-  "Toedscruel": [
-   "Support",
-   "Spore"
-  ],
   "Sunflora": [
    "Attacker",
    ""
+  ],
+  "Toedscruel": [
+   "Support",
+   "Spore"
   ],
   "Starmie": [
    "Attacker",
@@ -1511,13 +1528,13 @@
    "Lead",
    "outspeeds 80%"
   ],
-  "Vileplume": [
-   "Attacker",
-   ""
-  ],
   "Tropius": [
    "Support",
    "Wide Guard"
+  ],
+  "Vileplume": [
+   "Attacker",
+   ""
   ],
   "Drifblim": [
    "Doubles lead",
@@ -1531,11 +1548,11 @@
    "Attacker",
    ""
   ],
-  "Muk": [
+  "Chimecho": [
    "Attacker",
    ""
   ],
-  "Chimecho": [
+  "Muk": [
    "Attacker",
    ""
   ],
@@ -1547,13 +1564,13 @@
    "Attacker",
    ""
   ],
-  "Orbeetle": [
-   "Support",
-   "Reflect"
-  ],
   "Stunfisk-Galar": [
    "Support",
    "Yawn"
+  ],
+  "Orbeetle": [
+   "Support",
+   "Reflect"
   ],
   "Sudowoodo": [
    "Attacker",

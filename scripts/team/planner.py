@@ -207,9 +207,24 @@ def score(ix):
     s += 1.5 * np.minimum(SAFE[ix].sum(0), 3).sum() - 4 * DEAD[ix].sum() + .4 * TIER[ix].sum() + 1.0 * AEV[ix].sum() + 2 * (ANS[ix].max(0).sum() if len(WINS) else 0)
     return s
 res = sorted(((score(ix), ix) for ix in itertools.combinations(top, 6)), key=lambda x: -x[0])
-def cmp_score(ix):   # field-neutral comparison of the two plans: safe switch-ins, one-shots, super-effective coverage
-    ix = list(ix); return float(1.5 * np.minimum(SAFE[ix].sum(0), 3).sum() - 4 * DEAD[ix].sum() + 3 * np.minimum((OFF[ix] >= 2).sum(0), 2).sum() - 2 * ((RM[ix] > 1).sum(0) >= 3).sum())
+if os.environ.get('PLAN_SIX'):   # evaluate a given six (names | separated) instead of searching
+    _fix = tuple(NAMES.index(x) for x in os.environ['PLAN_SIX'].split('|'))
+    res = [(score(_fix), _fix)] + res
+# 23 Nov: their field SEEDS (Battler.rb seedCheck): Haunted Magical Seed burns the holder on entry -> Guts / Flare Boost / Toxic Boost /
+# Quick Feet / Marvel Scale switch on (and Facade doubles). The engine does not model foe abilities, so count it here: breaking the field
+# before a NON-lead seed holder enters denies its combo (leads are burned at the start either way).
+SEED_ABUSE = {'GUTS', 'FLAREBOOST', 'TOXICBOOST', 'QUICKFEET', 'MARVELSCALE'}
+_seed = (FT.get('seed') or {}).get('seedtype') if FT else (G.load('fieldtext').get(FE0 or '', {}).get('seed') or {}).get('seedtype')
+SEED_DENIED = [f['name'] for k, f in enumerate(FOES) if k not in L and _seed and (f.get('item') or '').upper().replace(' ', '') == _seed
+               and (f.get('ability') or '').upper().replace(' ', '') in SEED_ABUSE]
+def cmp_score(ix):   # field-neutral comparison of the two plans: safe switch-ins, one-shots, super-effective coverage, guide tips, denied seeds
+    ix = list(ix); return float(1.5 * tips_met(ix) + (4 * len(SEED_DENIED) if BREAK else 0) + 1.5 * np.minimum(SAFE[ix].sum(0), 3).sum() - 4 * DEAD[ix].sum() + 3 * np.minimum((OFF[ix] >= 2).sum(0), 2).sum() - 2 * ((RM[ix] > 1).sum(0) >= 3).sum())
 best = list(res[0][1])
+if BREAK and not os.environ.get('PLAN_SIX') and os.path.exists('team/planner_keep.json'):   # 23 Nov: also try the keep plan's six with Flash
+    _k = [m['name'] for m in json.load(open('team/planner_keep.json'))['six']]
+    if all(x in NAMES for x in _k):
+        _ki = [NAMES.index(x) for x in _k]
+        if FLASH[_ki].any() and cmp_score(_ki) > cmp_score(best): best = _ki
 leads = max(itertools.combinations(best, 2), key=lambda p: LQ[p[0]][p[1]]) if FMT == 'Doubles' else (max(best, key=lambda i: -TAKE[i][0]),)
 order = list(leads) + sorted([i for i in best if i not in leads], key=lambda i: -ind[i])
 FLASHER = None
@@ -221,7 +236,7 @@ if BREAK:
     def _val(m):   # how much this move adds vs their six (super effective hits); status moves 0
         mid = mvid(m); d = MV.get(mid) or {}
         return 0 if int(d.get('basedamage') or 0) <= 0 else sum(meff(mid, f['types']) >= 2 for f in FOES) + .5
-    _rep = min(_cand, key=_val) if _cand else None
+    _rep = (min(_cand, key=_val) if _cand else None) if _mv not in _ms else None   # already knows it: nothing replaced
     if _rep and _mv not in _ms: _ms[_ms.index(_rep)] = _mv
     FLASH_PLAN = dict(user=NAMES[FLASHER], move=_mv, replaces=_rep, moves=_ms)
 MULT = np.array([[E.chart_eff(t, TA[n]['types'], FE) for t in MAIN] for n in NAMES]) if MAIN else np.zeros((NP, 0))
@@ -295,7 +310,7 @@ out = dict(fight=FK, field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], 
            lead_moves=LM,
            tips=[dict(tip=t['tip'], needs=[dict(need=nd, met_by=[f"{NAMES[i]}: {meets(i, nd)}" for i in best if meets(i, nd)]) for nd in t['needs']]) for t in TIPS],
            six=[mem(i) for i in order], alts=alts, pool=len(NAMES), score=round(float(res[0][0]), 1), cmp=round(cmp_score(best), 2),
-           break_field=FLASH_PLAN if BREAK else None,
+           break_field=dict(FLASH_PLAN, denies=SEED_DENIED) if BREAK else None,
            checks=dict(weak3=[t for k, t in enumerate(ALLT) if (MALL[best][:, k] > 1).sum() >= 3],
                        nores=[t for k, t in enumerate(ALLT) if (MALL[best][:, k] < 1).sum() == 0],
                        res_lt2=[t for k, t in enumerate(MAIN) if (MULT[best][:, k] < 1).sum() < 2],

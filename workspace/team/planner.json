@@ -1,7 +1,7 @@
 {
  "fight": "spector2",
  "field": "Haunted Field",
- "fe": "HAUNTED",
+ "fe": null,
  "format": "Doubles",
  "foes": [
   {
@@ -111,10 +111,6 @@
   "POISON"
  ],
  "atk": {
-  "ROCK": [
-   "Golisopod",
-   "Stonjourner"
-  ],
   "STEEL": [
    "Stonjourner"
   ],
@@ -123,28 +119,32 @@
    "Stonjourner",
    "Typhlosion"
   ],
+  "ROCK": [
+   "Golisopod",
+   "Stonjourner"
+  ],
+  "FAIRY": [
+   "Sigilyph"
+  ],
   "GHOST": [
    "Banette",
    "Golisopod",
    "Sigilyph",
    "Typhlosion"
   ],
-  "FAIRY": [
-   "Sigilyph"
-  ],
-  "NORMAL": [
+  "ELECTRIC": [
    "Luxray"
   ],
-  "ELECTRIC": [
+  "NORMAL": [
    "Luxray"
   ],
   "DARK": [
    "Luxray"
   ],
-  "BUG": [
+  "GROUND": [
    "Golisopod"
   ],
-  "GROUND": [
+  "BUG": [
    "Golisopod"
   ],
   "FIGHTING": [
@@ -233,7 +233,7 @@
    "types": [
     "GHOST"
    ],
-   "w": 1.2
+   "w": 0.8
   },
   {
    "foe": "Luxray",
@@ -313,7 +313,7 @@
    "types": [
     "GHOST"
    ],
-   "w": 0.97
+   "w": 0.65
   },
   {
    "foe": "Banette",
@@ -329,7 +329,7 @@
    "types": [
     "GHOST"
    ],
-   "w": 1.35
+   "w": 0.9
   },
   {
    "foe": "Banette",
@@ -410,105 +410,6 @@
  ],
  "six": [
   {
-   "name": "Swampert",
-   "tier": "A",
-   "types": [
-    "WATER",
-    "GROUND"
-   ],
-   "sid": "SWAMPERT",
-   "form": "0",
-   "lead": true,
-   "where": "Party",
-   "moves": [
-    "Earthquake",
-    "Rock Slide",
-    "Deluge",
-    "Protect"
-   ],
-   "ability": "TORRENT",
-   "take": [
-    15,
-    59,
-    29,
-    79,
-    79,
-    85
-   ],
-   "deal": [
-    62,
-    56,
-    105,
-    42,
-    109,
-    52
-   ],
-   "worst": 85,
-   "worst_foe": "Banette",
-   "safe": 2,
-   "mult": {
-    "GHOST": 1.0,
-    "FIRE": 0.5,
-    "ROCK": 0.5,
-    "POISON": 0.5
-   },
-   "rm": [
-    0.5,
-    0.5,
-    0.5,
-    0.5,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    0.0,
-    1.0,
-    1.0,
-    0.5,
-    1.0,
-    0.5,
-    1.0,
-    1.0,
-    0.5,
-    1.0,
-    1.0
-   ],
-   "off": [
-    2.0,
-    0.0,
-    2.0,
-    2.0,
-    2.0,
-    0.0
-   ],
-   "answers": [],
-   "why": [
-    {
-     "move": "Earthquake",
-     "why": "Your best hit on Luxray; Super effective on Stonjourner, Luxray, Typhlosion; STAB; hits both foes; Also hits your partner: only next to a Flying / Levitate partner",
-     "flag": false
-    },
-    {
-     "move": "Rock Slide",
-     "why": "Super effective on Typhlosion; hits both foes; Spread move that never hits your partner; 30% flinch",
-     "flag": false
-    },
-    {
-     "move": "Deluge",
-     "why": "Your best hit on Stonjourner, Sigilyph, Golisopod, Typhlosion, Banette; Super effective on Stonjourner, Golisopod, Typhlosion; STAB; Goes last, power x2 (120) if that foe hit you first this turn",
-     "flag": false
-    },
-    {
-     "move": "Protect",
-     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
-     "flag": false
-    }
-   ],
-   "warn": [
-    "Earthquake-type spread moves hit Alomomola"
-   ]
-  },
-  {
    "name": "Alomomola",
    "tier": "S",
    "types": [
@@ -527,11 +428,11 @@
    "ability": "REGENERATOR",
    "take": [
     26,
-    75,
+    59,
     83,
-    65,
-    99,
-    71
+    43,
+    66,
+    47
    ],
    "deal": [
     33,
@@ -541,9 +442,9 @@
     58,
     28
    ],
-   "worst": 99,
-   "worst_foe": "Typhlosion",
-   "safe": 1,
+   "worst": 83,
+   "worst_foe": "Luxray",
+   "safe": 3,
    "mult": {
     "GHOST": 1.0,
     "FIRE": 0.5,
@@ -607,105 +508,6 @@
    "warn": []
   },
   {
-   "name": "Muk (Alolan Form)",
-   "tier": "S",
-   "types": [
-    "POISON",
-    "DARK"
-   ],
-   "sid": "MUK",
-   "form": "1",
-   "lead": false,
-   "where": "Party",
-   "moves": [
-    "Knock Off",
-    "Shadow Sneak",
-    "Clear Smog",
-    "Protect"
-   ],
-   "ability": "POISONTOUCH",
-   "take": [
-    35,
-    42,
-    56,
-    150,
-    80,
-    48
-   ],
-   "deal": [
-    22,
-    50,
-    37,
-    21,
-    78,
-    74
-   ],
-   "worst": 150,
-   "worst_foe": "Golisopod",
-   "safe": 3,
-   "mult": {
-    "GHOST": 0.5,
-    "FIRE": 1.0,
-    "ROCK": 1.0,
-    "POISON": 0.5
-   },
-   "rm": [
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    0.5,
-    0.5,
-    1.0,
-    1.0,
-    2.0,
-    1.0,
-    1.0,
-    0.5,
-    1.0,
-    1.0,
-    0.5,
-    0.5,
-    0.5,
-    0.5
-   ],
-   "off": [
-    1.5,
-    2.0,
-    1.5,
-    1.5,
-    2.0,
-    2.0
-   ],
-   "answers": [
-    "Setup (stat boosts)"
-   ],
-   "why": [
-    {
-     "move": "Knock Off",
-     "why": "Your best hit on Stonjourner, Luxray, Golisopod, Typhlosion, Banette; Super effective on Typhlosion, Banette; STAB; Removes their item (Stonjourner Focus Sash, Golisopod Ghost Gem, Typhlosion Life Orb)",
-     "flag": false
-    },
-    {
-     "move": "Shadow Sneak",
-     "why": "Your best hit on Sigilyph; Super effective on Sigilyph, Typhlosion, Banette; x1.5 on this field; Priority +1: finishes a weakened foe first",
-     "flag": false
-    },
-    {
-     "move": "Clear Smog",
-     "why": "STAB; Resets the target boosts (Luxray Howl)",
-     "flag": false
-    },
-    {
-     "move": "Protect",
-     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
-     "flag": false
-    }
-   ],
-   "warn": []
-  },
-  {
    "name": "Clodsire",
    "tier": "B",
    "types": [
@@ -714,7 +516,7 @@
    ],
    "sid": "CLODSIRE",
    "form": "0",
-   "lead": false,
+   "lead": true,
    "where": "Party",
    "moves": [
     "Earthquake",
@@ -725,11 +527,11 @@
    "ability": "UNAWARE",
    "take": [
     30,
-    48,
+    32,
     35,
-    150,
+    126,
     72,
-    102
+    68
    ],
    "deal": [
     41,
@@ -739,7 +541,7 @@
     71,
     34
    ],
-   "worst": 150,
+   "worst": 126,
    "worst_foe": "Golisopod",
    "safe": 3,
    "mult": {
@@ -802,6 +604,204 @@
      "flag": false
     }
    ],
+   "warn": [
+    "Earthquake-type spread moves hit Alomomola"
+   ]
+  },
+  {
+   "name": "Swampert",
+   "tier": "A",
+   "types": [
+    "WATER",
+    "GROUND"
+   ],
+   "sid": "SWAMPERT",
+   "form": "0",
+   "lead": false,
+   "where": "Party",
+   "moves": [
+    "Earthquake",
+    "Rock Slide",
+    "Deluge",
+    "Protect"
+   ],
+   "ability": "TORRENT",
+   "take": [
+    15,
+    47,
+    29,
+    52,
+    52,
+    57
+   ],
+   "deal": [
+    62,
+    56,
+    105,
+    42,
+    109,
+    52
+   ],
+   "worst": 57,
+   "worst_foe": "Banette",
+   "safe": 3,
+   "mult": {
+    "GHOST": 1.0,
+    "FIRE": 0.5,
+    "ROCK": 0.5,
+    "POISON": 0.5
+   },
+   "rm": [
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    0.5,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    1.0
+   ],
+   "off": [
+    2.0,
+    0.0,
+    2.0,
+    2.0,
+    2.0,
+    0.0
+   ],
+   "answers": [],
+   "why": [
+    {
+     "move": "Earthquake",
+     "why": "Your best hit on Luxray; Super effective on Stonjourner, Luxray, Typhlosion; STAB; hits both foes; Also hits your partner: only next to a Flying / Levitate partner",
+     "flag": false
+    },
+    {
+     "move": "Rock Slide",
+     "why": "Super effective on Typhlosion; hits both foes; Spread move that never hits your partner; 30% flinch",
+     "flag": false
+    },
+    {
+     "move": "Deluge",
+     "why": "Your best hit on Stonjourner, Sigilyph, Golisopod, Typhlosion, Banette; Super effective on Stonjourner, Golisopod, Typhlosion; STAB; Goes last, power x2 (120) if that foe hit you first this turn",
+     "flag": false
+    },
+    {
+     "move": "Protect",
+     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
+     "flag": false
+    }
+   ],
+   "warn": []
+  },
+  {
+   "name": "Muk (Alolan Form)",
+   "tier": "S",
+   "types": [
+    "POISON",
+    "DARK"
+   ],
+   "sid": "MUK",
+   "form": "1",
+   "lead": false,
+   "where": "Party",
+   "moves": [
+    "Knock Off",
+    "Shadow Sneak",
+    "Clear Smog",
+    "Protect"
+   ],
+   "ability": "POISONTOUCH",
+   "take": [
+    35,
+    42,
+    56,
+    119,
+    80,
+    32
+   ],
+   "deal": [
+    22,
+    40,
+    37,
+    21,
+    78,
+    74
+   ],
+   "worst": 119,
+   "worst_foe": "Golisopod",
+   "safe": 3,
+   "mult": {
+    "GHOST": 0.5,
+    "FIRE": 1.0,
+    "ROCK": 1.0,
+    "POISON": 0.5
+   },
+   "rm": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.5,
+    0.5,
+    1.0,
+    1.0,
+    2.0,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    1.0,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+   ],
+   "off": [
+    0.0,
+    2.0,
+    0.0,
+    0.0,
+    2.0,
+    2.0
+   ],
+   "answers": [
+    "Setup (stat boosts)"
+   ],
+   "why": [
+    {
+     "move": "Knock Off",
+     "why": "Your best hit on Stonjourner, Sigilyph, Luxray, Golisopod, Typhlosion, Banette; Super effective on Typhlosion, Banette; STAB; Removes their item (Stonjourner Focus Sash, Golisopod Ghost Gem, Typhlosion Life Orb)",
+     "flag": false
+    },
+    {
+     "move": "Shadow Sneak",
+     "why": "Super effective on Sigilyph, Typhlosion, Banette; Priority +1: finishes a weakened foe first",
+     "flag": false
+    },
+    {
+     "move": "Clear Smog",
+     "why": "STAB; Resets the target boosts (Luxray Howl)",
+     "flag": false
+    },
+    {
+     "move": "Protect",
+     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
+     "flag": false
+    }
+   ],
    "warn": []
   },
   {
@@ -826,17 +826,17 @@
     48,
     90,
     48,
-    76,
+    51,
     87,
     79
    ],
    "deal": [
-    37,
-    136,
-    63,
     36,
-    131,
-    126
+    90,
+    60,
+    34,
+    87,
+    84
    ],
    "worst": 90,
    "worst_foe": "Sigilyph",
@@ -869,10 +869,10 @@
     0.5
    ],
    "off": [
-    1.5,
+    0.0,
     2.0,
-    1.5,
-    1.5,
+    0.0,
+    0.0,
     2.0,
     2.0
    ],
@@ -885,7 +885,7 @@
     },
     {
      "move": "Shadow Claw",
-     "why": "Your best hit on Sigilyph, Typhlosion, Banette; Super effective on Sigilyph, Typhlosion, Banette; x1.5 on this field",
+     "why": "Your best hit on Sigilyph, Typhlosion, Banette; Super effective on Sigilyph, Typhlosion, Banette",
      "flag": false
     },
     {
@@ -925,7 +925,7 @@
     85,
     49,
     81,
-    36
+    34
    ],
    "deal": [
     16,
@@ -1003,39 +1003,54 @@
  ],
  "alts": [
   {
-   "score": 200.4,
+   "score": 184.0,
    "in": [
-    "Gastrodon (West Aevian Form)"
+    "Dragalge",
+    "Palossand"
    ],
    "out": [
-    "Clodsire"
-   ]
-  },
-  {
-   "score": 197.6,
-   "in": [
-    "Golisopod (Aevian Form)",
-    "Arcanine (Hisuian Form)"
-   ],
-   "out": [
-    "Clodsire",
+    "Muk (Alolan Form)",
     "Mandibuzz"
    ]
   },
   {
-   "score": 197.5,
+   "score": 183.8,
    "in": [
-    "Vaporeon"
+    "Braviary",
+    "Palossand"
    ],
    "out": [
-    "Alomomola"
+    "Musharna (Aevian Form)",
+    "Mandibuzz"
+   ]
+  },
+  {
+   "score": 183.8,
+   "in": [
+    "Golisopod (Aevian Form)"
+   ],
+   "out": [
+    "Mandibuzz"
    ]
   }
  ],
  "pool": 55,
- "score": 202.6,
- "cmp": 37.5,
- "break_field": null,
+ "score": 184.6,
+ "cmp": 57.5,
+ "break_field": {
+  "user": "Clodsire",
+  "move": "Flash",
+  "replaces": null,
+  "moves": [
+   "Earthquake",
+   "Flash",
+   "Recover",
+   "Protect"
+  ],
+  "denies": [
+   "Luxray"
+  ]
+ },
  "checks": {
   "weak3": [],
   "nores": [
@@ -1051,24 +1066,20 @@
    [
     "Clodsire",
     "Golisopod"
-   ],
-   [
-    "Clodsire",
-    "Banette"
    ]
   ],
   "unanswered": []
  },
  "alt_plan": {
-  "cmp": 36.5,
+  "cmp": 45.0,
   "six": [
-   "Clodsire",
-   "Alomomola",
    "Swampert",
+   "Alomomola",
    "Muk (Alolan Form)",
+   "Clodsire",
    "Musharna (Aevian Form)",
-   "Palossand"
+   "Mandibuzz"
   ],
-  "break_field": true
+  "break_field": false
  }
 }

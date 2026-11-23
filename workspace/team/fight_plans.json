@@ -20,7 +20,7 @@
     ],
     "setup": "Swords Dance",
     "where": "Active",
-    "dump": 474,
+    "dump": 478,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -431,6 +431,47 @@
   ],
   "swaps": [
    {
+    "name": "Alomomola",
+    "ab": "REGENERATOR",
+    "moves": [
+     "Deluge",
+     "Aqua Jet",
+     "Wake-Up Slap"
+    ],
+    "setup": null,
+    "where": "Party",
+    "dump": 2,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "WATER"
+    ]
+   },
+   {
+    "name": "Clodsire",
+    "ab": "UNAWARE",
+    "moves": [
+     "Earthquake"
+    ],
+    "setup": null,
+    "where": "Party",
+    "dump": 4,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "POISON",
+     "GROUND"
+    ]
+   },
+   {
     "name": "Swampert",
     "ab": "TORRENT",
     "moves": [
@@ -453,27 +494,6 @@
     ]
    },
    {
-    "name": "Alomomola",
-    "ab": "REGENERATOR",
-    "moves": [
-     "Deluge",
-     "Aqua Jet",
-     "Wake-Up Slap"
-    ],
-    "setup": null,
-    "where": "Party",
-    "dump": 2,
-    "nature": "Adamant",
-    "evs": {
-     "Atk": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "WATER"
-    ]
-   },
-   {
     "name": "Muk (Alolan Form)",
     "ab": "POISONTOUCH",
     "moves": [
@@ -493,26 +513,6 @@
     "types": [
      "POISON",
      "DARK"
-    ]
-   },
-   {
-    "name": "Clodsire",
-    "ab": "UNAWARE",
-    "moves": [
-     "Earthquake"
-    ],
-    "setup": null,
-    "where": "Party",
-    "dump": 4,
-    "nature": "Adamant",
-    "evs": {
-     "Atk": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "POISON",
-     "GROUND"
     ]
    },
    {
@@ -602,10 +602,10 @@
    },
    {
     "foe": "Typhlosion",
-    "mon": "Swampert",
-    "ability": "TORRENT",
-    "dealt": 91,
-    "taken": 103,
+    "mon": "Clodsire",
+    "ability": "UNAWARE",
+    "dealt": 71,
+    "taken": 94,
     "ok": false,
     "setup": false,
     "wincons": []
@@ -629,7 +629,7 @@
   ],
   "leads": [
    "Golisopod (Aevian Form)",
-   "Swampert"
+   "Clodsire"
   ],
   "lead_foes": [
    "Stonjourner",
@@ -649,14 +649,6 @@
    },
    {
     "swaps": [
-     "Mabosstiff",
-     "Runerigus"
-    ],
-    "score": 44.14,
-    "counters": 4
-   },
-   {
-    "swaps": [
      "Palossand",
      "Scrafty"
     ],
@@ -685,14 +677,6 @@
      "Scrafty"
     ],
     "score": 44.02,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Scrafty",
-     "Runerigus"
-    ],
-    "score": 44.0,
     "counters": 4
    },
    {
@@ -733,14 +717,6 @@
      "Pangoro"
     ],
     "score": 43.99,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Pangoro",
-     "Runerigus"
-    ],
-    "score": 43.97,
     "counters": 4
    },
    {
@@ -757,14 +733,6 @@
      "Zoroark"
     ],
     "score": 43.93,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Zoroark",
-     "Runerigus"
-    ],
-    "score": 43.91,
     "counters": 4
    },
    {
@@ -809,26 +777,10 @@
    },
    {
     "swaps": [
-     "Crawdaunt",
-     "Runerigus"
-    ],
-    "score": 34.06,
-    "counters": 3
-   },
-   {
-    "swaps": [
      "Palossand",
      "Persian (Alolan Form)"
     ],
     "score": 33.92,
-    "counters": 3
-   },
-   {
-    "swaps": [
-     "Persian (Alolan Form)",
-     "Runerigus"
-    ],
-    "score": 33.91,
     "counters": 3
    },
    {
@@ -878,6 +830,54 @@
     ],
     "score": 24.03,
     "counters": 5
+   },
+   {
+    "swaps": [
+     "Vaporeon",
+     "Pangoro"
+    ],
+    "score": 24.01,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Scrafty",
+     "Floatzel"
+    ],
+    "score": 23.99,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Pangoro",
+     "Floatzel"
+    ],
+    "score": 23.97,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Mabosstiff",
+     "Sandslash"
+    ],
+    "score": 14.18,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Gastrodon",
+     "Mabosstiff"
+    ],
+    "score": 14.17,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Diggersby",
+     "Mabosstiff"
+    ],
+    "score": 14.16,
+    "counters": 4
    }
   ],
   "note": "",
@@ -1307,7 +1307,7 @@
     ],
     "setup": "Shell Smash",
     "where": "Overflow",
-    "dump": 417,
+    "dump": 421,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -1328,7 +1328,7 @@
     ],
     "setup": null,
     "where": "Overflow",
-    "dump": 220,
+    "dump": 222,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,

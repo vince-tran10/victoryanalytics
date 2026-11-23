@@ -57,7 +57,9 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   after losing again): 1) as many of the six as possible RESIST EACH MOVE THEY CARRY (move-level, field type chart + second types);
   2) every foe hit super effectively or with a field-boosted move; 3) the lead pair resists every attack their two leads carry.
   Planner tab grids: leads vs their leads, their moves vs your six, who hits them hard. Two plans per run: keep the field vs
-  break it with a Flash / Dazzling Gleam lead (no-field engine run); field-neutral cmp picks. AEVIAN PREFERENCE (Vincent, 23 Nov):
+  break it with a Flash / Dazzling Gleam lead (no-field engine run); field-neutral cmp (+ guide tips, + denied foe seed combos:
+  field seeds that switch on Guts / Flare Boost etc. for a NON-lead foe; the engine does not model foe abilities) picks; the break plan
+  also tests the keep plan's six. AEVIAN PREFERENCE (Vincent, 23 Nov):
   +1 per Aevian in the six (tiebreak, never over defense). Every move on the six must do something IN THAT FIGHT (Vincent: 'why Wake-Up
   Slap?'): audit each build vs their team before recommending; field seeds can backfire (Haunted Magical Seed burns its holder). planner.move_why() writes a reason per move
   (collapsed 'Why these moves' on the Planner tab) and FLAGS any attack that is the best hit on no foe: zero flags before recommending. Lead spread moves that hit the partner = penalty. Older wording: DEFENSE FIRST (Vincent: a counter that gets one-shot is useless;

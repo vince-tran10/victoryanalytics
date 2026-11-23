@@ -4,9 +4,9 @@
  "export_label": "23 Nov 08:03",
  "active_start": 468,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 290,
- "run": 304,
- "final": 308,
+ "roster": 292,
+ "run": 306,
+ "final": 310,
  "done": [
   "aelita",
   "narcissa1",
@@ -34,10 +34,10 @@
  ],
  "fight": "spector2",
  "team": [
-  "Swampert",
   "Alomomola",
-  "Muk (Alolan Form)",
   "Clodsire",
+  "Swampert",
+  "Muk (Alolan Form)",
   "Musharna (Aevian Form)",
   "Mandibuzz"
  ],

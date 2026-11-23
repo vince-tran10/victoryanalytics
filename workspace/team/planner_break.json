@@ -123,22 +123,22 @@
    "Golisopod",
    "Stonjourner"
   ],
+  "FAIRY": [
+   "Sigilyph"
+  ],
   "GHOST": [
    "Banette",
    "Golisopod",
    "Sigilyph",
    "Typhlosion"
   ],
-  "FAIRY": [
-   "Sigilyph"
+  "ELECTRIC": [
+   "Luxray"
   ],
   "NORMAL": [
    "Luxray"
   ],
   "DARK": [
-   "Luxray"
-  ],
-  "ELECTRIC": [
    "Luxray"
   ],
   "GROUND": [
@@ -160,7 +160,9 @@
    "foes": [
     "Sigilyph"
    ],
-   "answered_by": []
+   "answered_by": [
+    "Mandibuzz"
+   ]
   },
   {
    "win": "Setup (stat boosts)",
@@ -168,8 +170,8 @@
     "Luxray"
    ],
    "answered_by": [
-    "Clodsire",
-    "Muk (Alolan Form)"
+    "Muk (Alolan Form)",
+    "Clodsire"
    ]
   },
   {
@@ -365,7 +367,8 @@
      "need": "resist:GHOST",
      "met_by": [
       "Muk (Alolan Form): resists Ghost",
-      "Musharna (Aevian Form): resists Ghost"
+      "Musharna (Aevian Form): resists Ghost",
+      "Mandibuzz: resists Ghost"
      ]
     }
    ]
@@ -375,7 +378,9 @@
    "needs": [
     {
      "need": "speed_control",
-     "met_by": []
+     "met_by": [
+      "Mandibuzz: Tailwind"
+     ]
     }
    ]
   },
@@ -404,6 +409,104 @@
   }
  ],
  "six": [
+  {
+   "name": "Alomomola",
+   "tier": "S",
+   "types": [
+    "WATER"
+   ],
+   "sid": "ALOMOMOLA",
+   "form": "0",
+   "lead": true,
+   "where": "Party",
+   "moves": [
+    "Wish",
+    "Wide Guard",
+    "Helping Hand",
+    "Protect"
+   ],
+   "ability": "REGENERATOR",
+   "take": [
+    26,
+    59,
+    83,
+    43,
+    66,
+    47
+   ],
+   "deal": [
+    33,
+    30,
+    28,
+    32,
+    58,
+    28
+   ],
+   "worst": 83,
+   "worst_foe": "Luxray",
+   "safe": 3,
+   "mult": {
+    "GHOST": 1.0,
+    "FIRE": 0.5,
+    "ROCK": 1.0,
+    "POISON": 1.0
+   },
+   "rm": [
+    0.5,
+    0.5,
+    1.0,
+    0.5,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "off": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "answers": [
+    "Spread attacks"
+   ],
+   "why": [
+    {
+     "move": "Wish",
+     "why": "Heals 50% next turn, to itself or whoever switches in",
+     "flag": false
+    },
+    {
+     "move": "Wide Guard",
+     "why": "Blocks spread attacks for both of yours (goes first, priority +3)",
+     "flag": false
+    },
+    {
+     "move": "Helping Hand",
+     "why": "Partner's attack x1.5 (goes first, priority +5)",
+     "flag": false
+    },
+    {
+     "move": "Protect",
+     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
+     "flag": false
+    }
+   ],
+   "warn": []
+  },
   {
    "name": "Clodsire",
    "tier": "B",
@@ -504,104 +607,6 @@
    "warn": [
     "Earthquake-type spread moves hit Alomomola"
    ]
-  },
-  {
-   "name": "Alomomola",
-   "tier": "S",
-   "types": [
-    "WATER"
-   ],
-   "sid": "ALOMOMOLA",
-   "form": "0",
-   "lead": true,
-   "where": "Party",
-   "moves": [
-    "Wish",
-    "Wide Guard",
-    "Helping Hand",
-    "Protect"
-   ],
-   "ability": "REGENERATOR",
-   "take": [
-    26,
-    59,
-    83,
-    43,
-    66,
-    47
-   ],
-   "deal": [
-    33,
-    30,
-    28,
-    32,
-    58,
-    28
-   ],
-   "worst": 83,
-   "worst_foe": "Luxray",
-   "safe": 3,
-   "mult": {
-    "GHOST": 1.0,
-    "FIRE": 0.5,
-    "ROCK": 1.0,
-    "POISON": 1.0
-   },
-   "rm": [
-    0.5,
-    0.5,
-    1.0,
-    0.5,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    2.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    0.5,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0
-   ],
-   "off": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0
-   ],
-   "answers": [
-    "Spread attacks"
-   ],
-   "why": [
-    {
-     "move": "Wish",
-     "why": "Heals 50% next turn, to itself or whoever switches in",
-     "flag": false
-    },
-    {
-     "move": "Wide Guard",
-     "why": "Blocks spread attacks for both of yours (goes first, priority +3)",
-     "flag": false
-    },
-    {
-     "move": "Helping Hand",
-     "why": "Partner's attack x1.5 (goes first, priority +5)",
-     "flag": false
-    },
-    {
-     "move": "Protect",
-     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
-     "flag": false
-    }
-   ],
-   "warn": []
   },
   {
    "name": "Swampert",
@@ -897,93 +902,95 @@
    "warn": []
   },
   {
-   "name": "Palossand",
+   "name": "Mandibuzz",
    "tier": "B",
    "types": [
-    "GHOST",
-    "GROUND"
+    "DARK",
+    "FLYING"
    ],
-   "sid": "PALOSSAND",
+   "sid": "MANDIBUZZ",
    "form": "0",
    "lead": false,
-   "where": "Active",
+   "where": "Party",
    "moves": [
-    "Shadow Ball",
-    "Earth Power",
-    "Giga Drain",
+    "Tailwind",
+    "Knock Off",
+    "Roost",
     "Protect"
    ],
-   "ability": "WATERCOMPACTION",
+   "ability": "OVERCOAT",
    "take": [
-    22,
-    99,
-    54,
-    48,
-    130,
-    104
+    53,
+    85,
+    85,
+    49,
+    81,
+    34
    ],
    "deal": [
-    150,
-    95,
-    99,
-    31,
-    95,
-    90
+    16,
+    30,
+    28,
+    16,
+    58,
+    56
    ],
-   "worst": 130,
-   "worst_foe": "Typhlosion",
+   "worst": 85,
+   "worst_foe": "Sigilyph",
    "safe": 2,
    "mult": {
-    "GHOST": 2.0,
+    "GHOST": 0.5,
     "FIRE": 1.0,
-    "ROCK": 0.5,
-    "POISON": 0.25
+    "ROCK": 2.0,
+    "POISON": 1.0
    },
    "rm": [
     1.0,
     1.0,
+    2.0,
+    1.0,
+    2.0,
+    0.5,
+    0.5,
+    1.0,
+    2.0,
+    0.0,
+    1.0,
+    2.0,
     0.5,
     1.0,
     1.0,
-    2.0,
-    2.0,
-    0.0,
-    0.0,
+    0.5,
     1.0,
     0.5,
-    0.5,
-    2.0,
-    1.0,
-    0.0,
-    2.0,
-    0.25,
-    2.0,
-    2.0
+    0.5
    ],
    "off": [
-    2.0,
-    2.0,
-    2.0,
+    0.0,
+    0.0,
+    0.0,
     0.0,
     2.0,
     2.0
    ],
-   "answers": [],
+   "answers": [
+    "Speed control (Tailwind / Trick Room)"
+   ],
    "why": [
     {
-     "move": "Shadow Ball",
-     "why": "Your best hit on Sigilyph, Golisopod, Banette; Super effective on Sigilyph, Typhlosion, Banette; STAB",
+     "move": "Tailwind",
+     "why": "Doubles your Speed for 4 turns: answers their Tailwind",
      "flag": false
     },
     {
-     "move": "Earth Power",
-     "why": "Your best hit on Stonjourner, Luxray, Typhlosion; Super effective on Stonjourner, Luxray, Typhlosion; STAB",
+     "move": "Knock Off",
+     "why": "Your best hit on Stonjourner, Sigilyph, Luxray, Golisopod, Typhlosion, Banette; Super effective on Typhlosion, Banette; STAB; Removes their item (Stonjourner Focus Sash, Golisopod Ghost Gem, Typhlosion Life Orb)",
      "flag": false
     },
     {
-     "move": "Giga Drain",
-     "why": "Super effective on Stonjourner",
-     "flag": true
+     "move": "Roost",
+     "why": "Heals 50%",
+     "flag": false
     },
     {
      "move": "Protect",
@@ -998,19 +1005,23 @@
   {
    "score": 184.0,
    "in": [
-    "Dragalge"
+    "Dragalge",
+    "Palossand"
    ],
    "out": [
-    "Muk (Alolan Form)"
+    "Muk (Alolan Form)",
+    "Mandibuzz"
    ]
   },
   {
    "score": 183.8,
    "in": [
-    "Braviary"
+    "Braviary",
+    "Palossand"
    ],
    "out": [
-    "Musharna (Aevian Form)"
+    "Musharna (Aevian Form)",
+    "Mandibuzz"
    ]
   },
   {
@@ -1019,51 +1030,44 @@
     "Golisopod (Aevian Form)"
    ],
    "out": [
-    "Palossand"
+    "Mandibuzz"
    ]
   }
  ],
  "pool": 55,
  "score": 184.6,
- "cmp": 36.5,
+ "cmp": 57.5,
  "break_field": {
   "user": "Clodsire",
   "move": "Flash",
-  "replaces": "Recover",
+  "replaces": null,
   "moves": [
    "Earthquake",
    "Flash",
    "Recover",
    "Protect"
+  ],
+  "denies": [
+   "Luxray"
   ]
  },
  "checks": {
   "weak3": [],
   "nores": [
-   "GROUND"
+   "NORMAL"
   ],
   "res_lt2": [],
   "no_se": [],
   "one_shot": [
    [
-    "Clodsire",
-    "Golisopod"
-   ],
-   [
     "Muk (Alolan Form)",
     "Golisopod"
    ],
    [
-    "Palossand",
-    "Typhlosion"
-   ],
-   [
-    "Palossand",
-    "Banette"
+    "Clodsire",
+    "Golisopod"
    ]
   ],
-  "unanswered": [
-   "Speed control (Tailwind / Trick Room)"
-  ]
+  "unanswered": []
  }
 }
