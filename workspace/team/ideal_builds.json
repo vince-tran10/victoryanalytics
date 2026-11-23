@@ -18,25 +18,6 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Toxtricity (Aevian Form)": {
-  "ability": "Punk Rock",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
-  "item": "Charcoal",
-  "moves": [
-   "Torch Song",
-   "Boomburst",
-   "Sludge Bomb",
-   "Protect"
-  ],
-  "move_ids": [
-   "SLUDGEBOMB",
-   "TORCHSONG",
-   "BOOMBURST"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Crabominable": {
   "ability": "IRONFIST",
   "nature": "Adamant",
@@ -128,6 +109,25 @@
    "CRUNCH",
    "HIJUMPKICK",
    "FAKEOUT"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
+ "Toxtricity (Aevian Form)": {
+  "ability": "Punk Rock",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe",
+  "item": "Charcoal",
+  "moves": [
+   "Torch Song",
+   "Boomburst",
+   "Sludge Bomb",
+   "Protect"
+  ],
+  "move_ids": [
+   "SLUDGEBOMB",
+   "TORCHSONG",
+   "BOOMBURST"
   ],
   "role": "attacker",
   "source": "your team"
@@ -757,25 +757,6 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Slowking (Galarian Form)": {
-  "ability": "Regenerator",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Poison Barb",
-  "moves": [
-   "Sludge Bomb",
-   "Psychic",
-   "Shadow Ball",
-   "Protect"
-  ],
-  "move_ids": [
-   "SLUDGEBOMB",
-   "CHILLYRECEPTION",
-   "PSYCHIC"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Pawmot": {
   "ability": "IRONFIST",
   "nature": "Jolly",
@@ -829,6 +810,25 @@
    "PLAYROUGH",
    "AQUAJET",
    "BELLYDRUM"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
+ "Slowking (Galarian Form)": {
+  "ability": "Regenerator",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Poison Barb",
+  "moves": [
+   "Sludge Bomb",
+   "Psychic",
+   "Thunder Wave",
+   "Protect"
+  ],
+  "move_ids": [
+   "SLUDGEBOMB",
+   "CHILLYRECEPTION",
+   "PSYCHIC"
   ],
   "role": "attacker",
   "source": "your team"

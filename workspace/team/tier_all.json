@@ -232,13 +232,13 @@
     "Spe": 30
    },
    "bst": 490,
-   "fight": 0.295,
-   "fight_pct": 0.924,
+   "fight": 0.287,
+   "fight_pct": 0.916,
    "meta": 0.892,
    "meta_label": "OU 14.1% | NatDex Doubles 1.1%",
    "general": 0.853,
-   "blend": 0.874,
-   "game_pct": 0.921,
+   "blend": 0.858,
+   "game_pct": 0.868,
    "n_all": 32,
    "ability": "REGENERATOR",
    "abilities": [
@@ -255,8 +255,7 @@
    "cat": "Special",
    "attacks": [
     "Sludge Bomb",
-    "Psychic",
-    "Shadow Ball"
+    "Psychic"
    ],
    "legal": [
     "ACID",
@@ -336,8 +335,8 @@
    "owned_as": "Slowking-Galar",
    "evo": "",
    "per_fight": {
-    "jenner9": 0.252,
-    "erick": 0.466
+    "jenner9": 0.248,
+    "erick": 0.444
    },
    "counters": [
     "erick:Electivire",
@@ -770,7 +769,7 @@
    "meta_label": "Community rating | Reddit list 1: S++ | Reddit list 2: A | Reddit: Top Trick Room mon: sets TR itself, Tough Claws | Reddit: \"a must have for every dedicated Trick Room team\"",
    "general": 0.697,
    "blend": 0.769,
-   "game_pct": 0.937,
+   "game_pct": 0.939,
    "n_all": 32,
    "ability": "TOUGHCLAWS",
    "abilities": [
@@ -902,13 +901,13 @@
     "Spe": 98
    },
    "bst": 502,
-   "fight": 0.496,
-   "fight_pct": 1.0,
+   "fight": 0.446,
+   "fight_pct": 0.997,
    "meta": 0.67,
    "meta_label": "Community rating | Reddit list 1: A- | Reddit list 2: A | Reddit: Aevian-only run: move up to A+ | Reddit: \"three crazy offensive types\" (Fire / Poison / Electric)",
    "general": 0.658,
-   "blend": 0.755,
-   "game_pct": 0.982,
+   "blend": 0.741,
+   "game_pct": 0.934,
    "n_all": 32,
    "ability": "PUNKROCK",
    "abilities": [
@@ -996,8 +995,8 @@
    "owned_as": "Toxtricity-Aevian",
    "evo": "",
    "per_fight": {
-    "jenner9": 0.476,
-    "erick": 0.575
+    "jenner9": 0.433,
+    "erick": 0.501
    },
    "counters": [
     "erick:Magneton",
@@ -2343,7 +2342,7 @@
    "meta_label": "NatDex UU 12.1% | NatDex Doubles 0.5%",
    "general": 0.509,
    "blend": 0.643,
-   "game_pct": 0.955,
+   "game_pct": 0.958,
    "n_all": 32,
    "ability": "TORRENT",
    "abilities": [
@@ -2754,8 +2753,8 @@
    "meta": 0.523,
    "meta_label": "UU 12.5% | NatDex Doubles 0.4%",
    "general": 0.52,
-   "blend": 0.635,
-   "game_pct": 0.903,
+   "blend": 0.636,
+   "game_pct": 0.905,
    "n_all": 32,
    "ability": "OBLIVIOUS",
    "abilities": [
@@ -3028,7 +3027,7 @@
    "meta_label": "Community rating | Reddit list 1: B | Reddit list 2: A",
    "general": 0.469,
    "blend": 0.614,
-   "game_pct": 0.95,
+   "game_pct": 0.953,
    "n_all": 32,
    "ability": "STORMDRAIN",
    "abilities": [
@@ -3670,7 +3669,7 @@
    },
    "bst": 518,
    "fight": 0.489,
-   "fight_pct": 0.997,
+   "fight_pct": 1.0,
    "meta": 0.348,
    "meta_label": "Doubles OU 1.6% | RU 8.6%",
    "general": 0.376,
@@ -3956,8 +3955,8 @@
    "meta": 0.42,
    "meta_label": "RU 12.9% | NatDex Doubles 2.7%",
    "general": 0.421,
-   "blend": 0.555,
-   "game_pct": 0.868,
+   "blend": 0.556,
+   "game_pct": 0.871,
    "n_all": 32,
    "ability": "SANDFORCE",
    "abilities": [
@@ -4085,8 +4084,8 @@
    "meta": 0.39,
    "meta_label": "Community rating | Reddit list 1: A- | Reddit list 2: B- | Reddit: OP: Rocky > Fiery > Icy (early Stealth Rock)",
    "general": 0.396,
-   "blend": 0.551,
-   "game_pct": 0.913,
+   "blend": 0.552,
+   "game_pct": 0.916,
    "n_all": 32,
    "ability": "STEAMENGINE",
    "abilities": [
@@ -4713,7 +4712,7 @@
    "meta_label": "UU 3.5% | NatDex Doubles 0.9%",
    "general": 0.345,
    "blend": 0.531,
-   "game_pct": 0.963,
+   "game_pct": 0.966,
    "n_all": 32,
    "ability": "OBLIVIOUS",
    "abilities": [
@@ -4806,6 +4805,128 @@
    },
    "tags": [
     "speed"
+   ],
+   "tier": "B"
+  },
+  {
+   "name": "Chandelure",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "CHANDELURE",
+   "form": "0",
+   "types": [
+    "GHOST",
+    "FIRE"
+   ],
+   "base": {
+    "HP": 60,
+    "Atk": 55,
+    "Def": 90,
+    "SpA": 145,
+    "SpD": 90,
+    "Spe": 80
+   },
+   "bst": 520,
+   "fight": 0.426,
+   "fight_pct": 0.987,
+   "meta": 0.294,
+   "meta_label": "NU 14.1% | Doubles OU 0.6%",
+   "general": 0.328,
+   "blend": 0.522,
+   "game_pct": 0.974,
+   "n_all": 32,
+   "ability": "FLAMEBODY",
+   "abilities": [
+    "FLASHFIRE",
+    "FLAMEBODY",
+    "INFILTRATOR"
+   ],
+   "nature": "Modest",
+   "evs": {
+    "SpA": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "cat": "Special",
+   "attacks": [
+    "Shadow Ball",
+    "Overheat"
+   ],
+   "legal": [
+    "ACID",
+    "ACIDARMOR",
+    "ASTONISH",
+    "ATTRACT",
+    "CAPTIVATE",
+    "CLEARSMOG",
+    "CONFIDE",
+    "CONFUSERAY",
+    "CURSE",
+    "DOUBLETEAM",
+    "EMBARGO",
+    "EMBER",
+    "FACADE",
+    "FALSESWIPE",
+    "FIRESPIN",
+    "FLAMEBURST",
+    "FLAMECHARGE",
+    "FLASH",
+    "HAZE",
+    "HEX",
+    "HIDDENPOWER",
+    "IMPRISON",
+    "INCINERATE",
+    "INFERNO",
+    "MAGMADRIFT",
+    "MEMENTO",
+    "MINIMIZE",
+    "NIGHTSHADE",
+    "OVERHEAT",
+    "PAINSPLIT",
+    "PAYBACK",
+    "POWERSPLIT",
+    "PROTECT",
+    "REST",
+    "ROUND",
+    "SAFEGUARD",
+    "SECRETPOWER",
+    "SHADOWBALL",
+    "SHOCKWAVE",
+    "SLEEPTALK",
+    "SMOG",
+    "SNORE",
+    "SWAGGER",
+    "TELEKINESIS",
+    "THIEF",
+    "TRAILBLAZE",
+    "TRICK",
+    "WILLOWISP"
+   ],
+   "where": "Active",
+   "dump": 474,
+   "owned_as": "Chandelure",
+   "evo": "",
+   "per_fight": {
+    "jenner9": 0.362,
+    "erick": 0.685
+   },
+   "counters": [
+    "erick:Magneton",
+    "erick:Raichu",
+    "erick:Togedemaru",
+    "jenner9:Klinklang"
+   ],
+   "stats": {
+    "HP": 182,
+    "Atk": 73,
+    "Def": 121,
+    "SpA": 237,
+    "SpD": 121,
+    "Spe": 110
+   },
+   "tags": [
+    "burn"
    ],
    "tier": "B"
   },
@@ -4918,128 +5039,6 @@
    },
    "tags": [
     "guard"
-   ],
-   "tier": "B"
-  },
-  {
-   "name": "Chandelure",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "CHANDELURE",
-   "form": "0",
-   "types": [
-    "GHOST",
-    "FIRE"
-   ],
-   "base": {
-    "HP": 60,
-    "Atk": 55,
-    "Def": 90,
-    "SpA": 145,
-    "SpD": 90,
-    "Spe": 80
-   },
-   "bst": 520,
-   "fight": 0.426,
-   "fight_pct": 0.987,
-   "meta": 0.294,
-   "meta_label": "NU 14.1% | Doubles OU 0.6%",
-   "general": 0.328,
-   "blend": 0.521,
-   "game_pct": 0.971,
-   "n_all": 32,
-   "ability": "FLAMEBODY",
-   "abilities": [
-    "FLASHFIRE",
-    "FLAMEBODY",
-    "INFILTRATOR"
-   ],
-   "nature": "Modest",
-   "evs": {
-    "SpA": 252,
-    "HP": 252,
-    "SpD": 4
-   },
-   "cat": "Special",
-   "attacks": [
-    "Shadow Ball",
-    "Overheat"
-   ],
-   "legal": [
-    "ACID",
-    "ACIDARMOR",
-    "ASTONISH",
-    "ATTRACT",
-    "CAPTIVATE",
-    "CLEARSMOG",
-    "CONFIDE",
-    "CONFUSERAY",
-    "CURSE",
-    "DOUBLETEAM",
-    "EMBARGO",
-    "EMBER",
-    "FACADE",
-    "FALSESWIPE",
-    "FIRESPIN",
-    "FLAMEBURST",
-    "FLAMECHARGE",
-    "FLASH",
-    "HAZE",
-    "HEX",
-    "HIDDENPOWER",
-    "IMPRISON",
-    "INCINERATE",
-    "INFERNO",
-    "MAGMADRIFT",
-    "MEMENTO",
-    "MINIMIZE",
-    "NIGHTSHADE",
-    "OVERHEAT",
-    "PAINSPLIT",
-    "PAYBACK",
-    "POWERSPLIT",
-    "PROTECT",
-    "REST",
-    "ROUND",
-    "SAFEGUARD",
-    "SECRETPOWER",
-    "SHADOWBALL",
-    "SHOCKWAVE",
-    "SLEEPTALK",
-    "SMOG",
-    "SNORE",
-    "SWAGGER",
-    "TELEKINESIS",
-    "THIEF",
-    "TRAILBLAZE",
-    "TRICK",
-    "WILLOWISP"
-   ],
-   "where": "Active",
-   "dump": 474,
-   "owned_as": "Chandelure",
-   "evo": "",
-   "per_fight": {
-    "jenner9": 0.362,
-    "erick": 0.685
-   },
-   "counters": [
-    "erick:Magneton",
-    "erick:Raichu",
-    "erick:Togedemaru",
-    "jenner9:Klinklang"
-   ],
-   "stats": {
-    "HP": 182,
-    "Atk": 73,
-    "Def": 121,
-    "SpA": 237,
-    "SpD": 121,
-    "Spe": 110
-   },
-   "tags": [
-    "burn"
    ],
    "tier": "B"
   },
@@ -5404,6 +5403,119 @@
    "tier": "B"
   },
   {
+   "name": "Revavroom",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "REVAVROOM",
+   "form": "0",
+   "types": [
+    "STEEL",
+    "POISON"
+   ],
+   "base": {
+    "HP": 80,
+    "Atk": 119,
+    "Def": 90,
+    "SpA": 54,
+    "SpD": 67,
+    "Spe": 90
+   },
+   "bst": 500,
+   "fight": 0.297,
+   "fight_pct": 0.926,
+   "meta": 0.304,
+   "meta_label": "UU 4.4% | NatDex Doubles 0.1%",
+   "general": 0.328,
+   "blend": 0.511,
+   "game_pct": 0.937,
+   "n_all": 32,
+   "ability": "FILTER",
+   "abilities": [
+    "OVERCOAT",
+    "FILTER"
+   ],
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "Spe": 252,
+    "Def": 4
+   },
+   "cat": "Physical",
+   "attacks": [
+    "Gunk Shot",
+    "Spin Out"
+   ],
+   "legal": [
+    "ASSURANCE",
+    "ATTRACT",
+    "BULLDOZE",
+    "CONFIDE",
+    "DOUBLETEAM",
+    "FACADE",
+    "FALSESWIPE",
+    "GUNKSHOT",
+    "GYROBALL",
+    "HAZE",
+    "HEADBUTT",
+    "HIDDENPOWER",
+    "IRONHEAD",
+    "LICK",
+    "MAGMADRIFT",
+    "MAGNETRISE",
+    "OVERHEAT",
+    "PARTINGSHOT",
+    "POISONGAS",
+    "POISONJAB",
+    "PROTECT",
+    "REST",
+    "ROUND",
+    "SCARYFACE",
+    "SCREECH",
+    "SECRETPOWER",
+    "SELFDESTRUCT",
+    "SHIFTGEAR",
+    "SLEEPTALK",
+    "SLUDGE",
+    "SLUDGEBOMB",
+    "SMOG",
+    "SNORE",
+    "SPINOUT",
+    "SWAGGER",
+    "TAKEDOWN",
+    "TAUNT",
+    "THIEF",
+    "TORMENT",
+    "TOXIC",
+    "UPROAR",
+    "VENOSHOCK"
+   ],
+   "where": "Overflow",
+   "dump": 325,
+   "owned_as": "Revavroom",
+   "evo": "",
+   "per_fight": {
+    "jenner9": 0.288,
+    "erick": 0.335
+   },
+   "counters": [
+    "erick:Electivire",
+    "erick:Raichu"
+   ],
+   "stats": {
+    "HP": 170,
+    "Atk": 205,
+    "Def": 121,
+    "SpA": 72,
+    "SpD": 95,
+    "Spe": 155
+   },
+   "tags": [
+    "speed"
+   ],
+   "tier": "B"
+  },
+  {
    "name": "Clodsire",
    "kind": "regular",
    "crest": "",
@@ -5528,119 +5640,6 @@
    "tags": [
     "helping",
     "sleep",
-    "speed"
-   ],
-   "tier": "B"
-  },
-  {
-   "name": "Revavroom",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "REVAVROOM",
-   "form": "0",
-   "types": [
-    "STEEL",
-    "POISON"
-   ],
-   "base": {
-    "HP": 80,
-    "Atk": 119,
-    "Def": 90,
-    "SpA": 54,
-    "SpD": 67,
-    "Spe": 90
-   },
-   "bst": 500,
-   "fight": 0.297,
-   "fight_pct": 0.926,
-   "meta": 0.304,
-   "meta_label": "UU 4.4% | NatDex Doubles 0.1%",
-   "general": 0.328,
-   "blend": 0.51,
-   "game_pct": 0.934,
-   "n_all": 32,
-   "ability": "FILTER",
-   "abilities": [
-    "OVERCOAT",
-    "FILTER"
-   ],
-   "nature": "Adamant",
-   "evs": {
-    "Atk": 252,
-    "Spe": 252,
-    "Def": 4
-   },
-   "cat": "Physical",
-   "attacks": [
-    "Gunk Shot",
-    "Spin Out"
-   ],
-   "legal": [
-    "ASSURANCE",
-    "ATTRACT",
-    "BULLDOZE",
-    "CONFIDE",
-    "DOUBLETEAM",
-    "FACADE",
-    "FALSESWIPE",
-    "GUNKSHOT",
-    "GYROBALL",
-    "HAZE",
-    "HEADBUTT",
-    "HIDDENPOWER",
-    "IRONHEAD",
-    "LICK",
-    "MAGMADRIFT",
-    "MAGNETRISE",
-    "OVERHEAT",
-    "PARTINGSHOT",
-    "POISONGAS",
-    "POISONJAB",
-    "PROTECT",
-    "REST",
-    "ROUND",
-    "SCARYFACE",
-    "SCREECH",
-    "SECRETPOWER",
-    "SELFDESTRUCT",
-    "SHIFTGEAR",
-    "SLEEPTALK",
-    "SLUDGE",
-    "SLUDGEBOMB",
-    "SMOG",
-    "SNORE",
-    "SPINOUT",
-    "SWAGGER",
-    "TAKEDOWN",
-    "TAUNT",
-    "THIEF",
-    "TORMENT",
-    "TOXIC",
-    "UPROAR",
-    "VENOSHOCK"
-   ],
-   "where": "Overflow",
-   "dump": 325,
-   "owned_as": "Revavroom",
-   "evo": "",
-   "per_fight": {
-    "jenner9": 0.288,
-    "erick": 0.335
-   },
-   "counters": [
-    "erick:Electivire",
-    "erick:Raichu"
-   ],
-   "stats": {
-    "HP": 170,
-    "Atk": 205,
-    "Def": 121,
-    "SpA": 72,
-    "SpD": 95,
-    "Spe": 155
-   },
-   "tags": [
     "speed"
    ],
    "tier": "B"
@@ -5781,8 +5780,8 @@
    "meta": 0.278,
    "meta_label": "NU 13.9% | NatDex Doubles 0.3%",
    "general": 0.316,
-   "blend": 0.509,
-   "game_pct": 0.958,
+   "blend": 0.51,
+   "game_pct": 0.961,
    "n_all": 32,
    "ability": "WATERABSORB",
    "abilities": [
@@ -5917,8 +5916,8 @@
    "meta": 0.27,
    "meta_label": "RU 6.8% | NatDex Doubles 0.2%",
    "general": 0.309,
-   "blend": 0.507,
-   "game_pct": 0.968,
+   "blend": 0.508,
+   "game_pct": 0.971,
    "n_all": 32,
    "ability": "SHELLARMOR",
    "abilities": [
@@ -6531,8 +6530,8 @@
    "meta": 0.214,
    "meta_label": "NatDex Doubles 0.8% | NU 5.7%",
    "general": 0.272,
-   "blend": 0.483,
-   "game_pct": 0.974,
+   "blend": 0.484,
+   "game_pct": 0.976,
    "n_all": 32,
    "ability": "INTIMIDATE",
    "abilities": [
@@ -6630,6 +6629,115 @@
    "tags": [
     "helping",
     "intimidate",
+    "speed"
+   ],
+   "tier": "B"
+  },
+  {
+   "name": "Braviary",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "BRAVIARY",
+   "form": "0",
+   "types": [
+    "NORMAL",
+    "FLYING"
+   ],
+   "base": {
+    "HP": 100,
+    "Atk": 123,
+    "Def": 75,
+    "SpA": 57,
+    "SpD": 75,
+    "Spe": 80
+   },
+   "bst": 510,
+   "fight": 0.278,
+   "fight_pct": 0.9,
+   "meta": 0.238,
+   "meta_label": "NU 10.8% | NatDex Doubles 0.1%",
+   "general": 0.274,
+   "blend": 0.482,
+   "game_pct": 0.968,
+   "n_all": 32,
+   "ability": "SHEERFORCE",
+   "abilities": [
+    "KEENEYE",
+    "SHEERFORCE",
+    "DEFIANT"
+   ],
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "cat": "Physical",
+   "attacks": [
+    "Crush Claw",
+    "Shadow Claw",
+    "Brave Bird"
+   ],
+   "legal": [
+    "AERIALACE",
+    "ASSURANCE",
+    "ATTRACT",
+    "BRAVEBIRD",
+    "CONFIDE",
+    "CRUSHCLAW",
+    "CUT",
+    "DOUBLETEAM",
+    "FACADE",
+    "FALSESWIPE",
+    "FEATHERDANCE",
+    "FURYATTACK",
+    "HELPINGHAND",
+    "HIDDENPOWER",
+    "HONECLAWS",
+    "LEER",
+    "PECK",
+    "PROTECT",
+    "REST",
+    "ROCKSMASH",
+    "ROCKTOMB",
+    "ROUND",
+    "SCARYFACE",
+    "SECRETPOWER",
+    "SHADOWCLAW",
+    "SKYATTACK",
+    "SKYDROP",
+    "SLASH",
+    "SLEEPTALK",
+    "SNORE",
+    "STEELWING",
+    "SUPERPOWER",
+    "SWAGGER",
+    "TAILWIND",
+    "TAKEDOWN",
+    "WHIRLWIND",
+    "WINGATTACK",
+    "WORKUP"
+   ],
+   "where": "Active",
+   "dump": 473,
+   "owned_as": "Braviary",
+   "evo": "",
+   "per_fight": {
+    "jenner9": 0.304,
+    "erick": 0.174
+   },
+   "counters": [],
+   "stats": {
+    "HP": 226,
+    "Atk": 211,
+    "Def": 104,
+    "SpA": 75,
+    "SpD": 105,
+    "Spe": 110
+   },
+   "tags": [
+    "helping",
     "speed"
    ],
    "tier": "B"
@@ -6882,115 +6990,6 @@
    "tier": "B"
   },
   {
-   "name": "Braviary",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "BRAVIARY",
-   "form": "0",
-   "types": [
-    "NORMAL",
-    "FLYING"
-   ],
-   "base": {
-    "HP": 100,
-    "Atk": 123,
-    "Def": 75,
-    "SpA": 57,
-    "SpD": 75,
-    "Spe": 80
-   },
-   "bst": 510,
-   "fight": 0.278,
-   "fight_pct": 0.9,
-   "meta": 0.238,
-   "meta_label": "NU 10.8% | NatDex Doubles 0.1%",
-   "general": 0.274,
-   "blend": 0.481,
-   "game_pct": 0.966,
-   "n_all": 32,
-   "ability": "SHEERFORCE",
-   "abilities": [
-    "KEENEYE",
-    "SHEERFORCE",
-    "DEFIANT"
-   ],
-   "nature": "Adamant",
-   "evs": {
-    "Atk": 252,
-    "HP": 252,
-    "SpD": 4
-   },
-   "cat": "Physical",
-   "attacks": [
-    "Crush Claw",
-    "Shadow Claw",
-    "Brave Bird"
-   ],
-   "legal": [
-    "AERIALACE",
-    "ASSURANCE",
-    "ATTRACT",
-    "BRAVEBIRD",
-    "CONFIDE",
-    "CRUSHCLAW",
-    "CUT",
-    "DOUBLETEAM",
-    "FACADE",
-    "FALSESWIPE",
-    "FEATHERDANCE",
-    "FURYATTACK",
-    "HELPINGHAND",
-    "HIDDENPOWER",
-    "HONECLAWS",
-    "LEER",
-    "PECK",
-    "PROTECT",
-    "REST",
-    "ROCKSMASH",
-    "ROCKTOMB",
-    "ROUND",
-    "SCARYFACE",
-    "SECRETPOWER",
-    "SHADOWCLAW",
-    "SKYATTACK",
-    "SKYDROP",
-    "SLASH",
-    "SLEEPTALK",
-    "SNORE",
-    "STEELWING",
-    "SUPERPOWER",
-    "SWAGGER",
-    "TAILWIND",
-    "TAKEDOWN",
-    "WHIRLWIND",
-    "WINGATTACK",
-    "WORKUP"
-   ],
-   "where": "Active",
-   "dump": 473,
-   "owned_as": "Braviary",
-   "evo": "",
-   "per_fight": {
-    "jenner9": 0.304,
-    "erick": 0.174
-   },
-   "counters": [],
-   "stats": {
-    "HP": 226,
-    "Atk": 211,
-    "Def": 104,
-    "SpA": 75,
-    "SpD": 105,
-    "Spe": 110
-   },
-   "tags": [
-    "helping",
-    "speed"
-   ],
-   "tier": "B"
-  },
-  {
    "name": "Phione",
    "kind": "crest",
    "crest": "Phione Crest",
@@ -7115,8 +7114,8 @@
    "meta": 0.247,
    "meta_label": "NU 13.0% | NatDex Doubles 0.0%",
    "general": 0.277,
-   "blend": 0.475,
-   "game_pct": 0.939,
+   "blend": 0.476,
+   "game_pct": 0.942,
    "n_all": 32,
    "ability": "SHEERFORCE",
    "abilities": [
@@ -7893,8 +7892,8 @@
    "meta": 0.212,
    "meta_label": "RU 3.6% | NatDex Doubles 0.5%",
    "general": 0.24,
-   "blend": 0.456,
-   "game_pct": 0.961,
+   "blend": 0.457,
+   "game_pct": 0.963,
    "n_all": 32,
    "ability": "MOXIE",
    "abilities": [
@@ -8158,7 +8157,7 @@
    "meta_label": "RU 5.4% | NatDex Doubles 0.1%",
    "general": 0.261,
    "blend": 0.453,
-   "game_pct": 0.9,
+   "game_pct": 0.903,
    "n_all": 32,
    "ability": "IRONFIST",
    "abilities": [
@@ -8781,8 +8780,8 @@
    "meta": 0.176,
    "meta_label": "NatDex Doubles 0.7% | UU 0.1%",
    "general": 0.21,
-   "blend": 0.433,
-   "game_pct": 0.953,
+   "blend": 0.434,
+   "game_pct": 0.955,
    "n_all": 32,
    "ability": "MOLDBREAKER",
    "abilities": [
@@ -8996,6 +8995,135 @@
    "tier": "B"
   },
   {
+   "name": "Decidueye",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "DECIDUEYE",
+   "form": "0",
+   "types": [
+    "GRASS",
+    "GHOST"
+   ],
+   "base": {
+    "HP": 78,
+    "Atk": 107,
+    "Def": 75,
+    "SpA": 100,
+    "SpD": 100,
+    "Spe": 70
+   },
+   "bst": 530,
+   "fight": 0.266,
+   "fight_pct": 0.895,
+   "meta": 0.189,
+   "meta_label": "NU 5.7% | NatDex Doubles 0.3%",
+   "general": 0.238,
+   "blend": 0.432,
+   "game_pct": 0.884,
+   "n_all": 32,
+   "ability": "LONGREACH",
+   "abilities": [
+    "OVERGROW",
+    "LONGREACH"
+   ],
+   "nature": "Adamant",
+   "evs": {
+    "Atk": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "cat": "Physical",
+   "attacks": [
+    "Spirit Shackle",
+    "Leaf Blade"
+   ],
+   "legal": [
+    "ASTONISH",
+    "ATTRACT",
+    "BULLETSEED",
+    "CONFIDE",
+    "CONFUSERAY",
+    "CURSE",
+    "DEFOG",
+    "DOUBLETEAM",
+    "ECHOEDVOICE",
+    "FACADE",
+    "FALSESWIPE",
+    "FEATHERDANCE",
+    "FORESIGHT",
+    "FURYATTACK",
+    "GIGADRAIN",
+    "GRASSKNOT",
+    "GROWL",
+    "HAZE",
+    "HELPINGHAND",
+    "HEX",
+    "HIDDENPOWER",
+    "IMPRISON",
+    "KNOCKOFF",
+    "LEAFAGE",
+    "LEAFBLADE",
+    "LEAFSTORM",
+    "LOWSWEEP",
+    "MAGICALLEAF",
+    "NASTYPLOT",
+    "NATUREPOWER",
+    "NIGHTSHADE",
+    "OMINOUSWIND",
+    "PECK",
+    "PHANTOMFORCE",
+    "PLUCK",
+    "PROTECT",
+    "RAZORLEAF",
+    "REST",
+    "ROOST",
+    "ROUND",
+    "SAFEGUARD",
+    "SECRETPOWER",
+    "SHADOWBALL",
+    "SHADOWCLAW",
+    "SHADOWSNEAK",
+    "SLEEPTALK",
+    "SNORE",
+    "SPIRITSHACKLE",
+    "SPITE",
+    "STEELWING",
+    "SUCKERPUNCH",
+    "SWAGGER",
+    "SYNTHESIS",
+    "TACKLE",
+    "TAKEDOWN",
+    "TRAILBLAZE",
+    "UTURN",
+    "WORKUP",
+    "WORRYSEED"
+   ],
+   "where": "Overflow",
+   "dump": 94,
+   "owned_as": "Decidueye",
+   "evo": "",
+   "per_fight": {
+    "jenner9": 0.226,
+    "erick": 0.425
+   },
+   "counters": [
+    "erick:Raichu"
+   ],
+   "stats": {
+    "HP": 202,
+    "Atk": 191,
+    "Def": 104,
+    "SpA": 118,
+    "SpD": 132,
+    "Spe": 99
+   },
+   "tags": [
+    "helping"
+   ],
+   "tier": "B"
+  },
+  {
    "name": "Overqwil",
    "kind": "regular",
    "crest": "",
@@ -9117,131 +9245,116 @@
    "tier": "B"
   },
   {
-   "name": "Decidueye",
+   "name": "Dragalge",
    "kind": "regular",
    "crest": "",
    "zoro_partner": null,
-   "sid": "DECIDUEYE",
+   "sid": "DRAGALGE",
    "form": "0",
    "types": [
-    "GRASS",
-    "GHOST"
+    "POISON",
+    "DRAGON"
    ],
    "base": {
-    "HP": 78,
-    "Atk": 107,
-    "Def": 75,
-    "SpA": 100,
-    "SpD": 100,
-    "Spe": 70
+    "HP": 65,
+    "Atk": 75,
+    "Def": 90,
+    "SpA": 97,
+    "SpD": 123,
+    "Spe": 44
    },
-   "bst": 530,
-   "fight": 0.266,
-   "fight_pct": 0.895,
-   "meta": 0.189,
-   "meta_label": "NU 5.7% | NatDex Doubles 0.3%",
-   "general": 0.238,
-   "blend": 0.431,
-   "game_pct": 0.882,
+   "bst": 494,
+   "fight": 0.288,
+   "fight_pct": 0.921,
+   "meta": 0.172,
+   "meta_label": "NU 4.3% | NatDex Doubles 0.4%",
+   "general": 0.206,
+   "blend": 0.429,
+   "game_pct": 0.947,
    "n_all": 32,
-   "ability": "LONGREACH",
+   "ability": "ADAPTABILITY",
    "abilities": [
-    "OVERGROW",
-    "LONGREACH"
+    "POISONPOINT",
+    "POISONTOUCH",
+    "ADAPTABILITY"
    ],
-   "nature": "Adamant",
+   "nature": "Modest",
    "evs": {
-    "Atk": 252,
+    "SpA": 252,
     "HP": 252,
     "SpD": 4
    },
-   "cat": "Physical",
+   "cat": "Special",
    "attacks": [
-    "Spirit Shackle",
-    "Leaf Blade"
+    "Sludge Bomb",
+    "Dragon Pulse",
+    "Surf"
    ],
    "legal": [
-    "ASTONISH",
+    "ACID",
+    "ACIDARMOR",
+    "AQUATAIL",
     "ATTRACT",
-    "BULLETSEED",
+    "BOUNCE",
+    "BUBBLE",
+    "CAMOUFLAGE",
+    "CHILLINGWATER",
     "CONFIDE",
-    "CONFUSERAY",
-    "CURSE",
-    "DEFOG",
+    "DELUGE",
     "DOUBLETEAM",
-    "ECHOEDVOICE",
+    "DRAGONPULSE",
+    "DRAGONTAIL",
     "FACADE",
     "FALSESWIPE",
-    "FEATHERDANCE",
-    "FORESIGHT",
-    "FURYATTACK",
-    "GIGADRAIN",
-    "GRASSKNOT",
-    "GROWL",
+    "FEINTATTACK",
     "HAZE",
-    "HELPINGHAND",
-    "HEX",
     "HIDDENPOWER",
-    "IMPRISON",
-    "KNOCKOFF",
-    "LEAFAGE",
-    "LEAFBLADE",
-    "LEAFSTORM",
-    "LOWSWEEP",
-    "MAGICALLEAF",
-    "NASTYPLOT",
-    "NATUREPOWER",
-    "NIGHTSHADE",
-    "OMINOUSWIND",
-    "PECK",
-    "PHANTOMFORCE",
-    "PLUCK",
+    "MUDBARRAGE",
+    "MUDSHOT",
+    "POISONTAIL",
     "PROTECT",
-    "RAZORLEAF",
     "REST",
-    "ROOST",
     "ROUND",
-    "SAFEGUARD",
+    "SCARYFACE",
     "SECRETPOWER",
     "SHADOWBALL",
-    "SHADOWCLAW",
-    "SHADOWSNEAK",
+    "SHOCKWAVE",
     "SLEEPTALK",
+    "SLUDGEBOMB",
+    "SMOKESCREEN",
     "SNORE",
-    "SPIRITSHACKLE",
-    "SPITE",
-    "STEELWING",
-    "SUCKERPUNCH",
+    "SURF",
     "SWAGGER",
-    "SYNTHESIS",
     "TACKLE",
+    "TAILWHIP",
     "TAKEDOWN",
-    "TRAILBLAZE",
-    "UTURN",
-    "WORKUP",
-    "WORRYSEED"
+    "THIEF",
+    "TOXIC",
+    "TWISTER",
+    "VENOSHOCK",
+    "WATERGUN",
+    "WATERPULSE",
+    "WHIRLPOOL"
    ],
-   "where": "Overflow",
-   "dump": 94,
-   "owned_as": "Decidueye",
+   "where": "Active",
+   "dump": 481,
+   "owned_as": "Dragalge",
    "evo": "",
    "per_fight": {
-    "jenner9": 0.226,
-    "erick": 0.425
+    "jenner9": 0.254,
+    "erick": 0.423
    },
-   "counters": [
-    "erick:Raichu"
-   ],
+   "counters": [],
    "stats": {
-    "HP": 202,
-    "Atk": 191,
-    "Def": 104,
-    "SpA": 118,
-    "SpD": 132,
-    "Spe": 99
+    "HP": 188,
+    "Atk": 93,
+    "Def": 121,
+    "SpA": 179,
+    "SpD": 157,
+    "Spe": 70
    },
    "tags": [
-    "helping"
+    "speed"
    ],
    "tier": "B"
   },
@@ -9381,120 +9494,6 @@
    "tier": "B"
   },
   {
-   "name": "Dragalge",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "DRAGALGE",
-   "form": "0",
-   "types": [
-    "POISON",
-    "DRAGON"
-   ],
-   "base": {
-    "HP": 65,
-    "Atk": 75,
-    "Def": 90,
-    "SpA": 97,
-    "SpD": 123,
-    "Spe": 44
-   },
-   "bst": 494,
-   "fight": 0.288,
-   "fight_pct": 0.918,
-   "meta": 0.172,
-   "meta_label": "NU 4.3% | NatDex Doubles 0.4%",
-   "general": 0.206,
-   "blend": 0.428,
-   "game_pct": 0.945,
-   "n_all": 32,
-   "ability": "ADAPTABILITY",
-   "abilities": [
-    "POISONPOINT",
-    "POISONTOUCH",
-    "ADAPTABILITY"
-   ],
-   "nature": "Modest",
-   "evs": {
-    "SpA": 252,
-    "HP": 252,
-    "SpD": 4
-   },
-   "cat": "Special",
-   "attacks": [
-    "Sludge Bomb",
-    "Dragon Pulse",
-    "Surf"
-   ],
-   "legal": [
-    "ACID",
-    "ACIDARMOR",
-    "AQUATAIL",
-    "ATTRACT",
-    "BOUNCE",
-    "BUBBLE",
-    "CAMOUFLAGE",
-    "CHILLINGWATER",
-    "CONFIDE",
-    "DELUGE",
-    "DOUBLETEAM",
-    "DRAGONPULSE",
-    "DRAGONTAIL",
-    "FACADE",
-    "FALSESWIPE",
-    "FEINTATTACK",
-    "HAZE",
-    "HIDDENPOWER",
-    "MUDBARRAGE",
-    "MUDSHOT",
-    "POISONTAIL",
-    "PROTECT",
-    "REST",
-    "ROUND",
-    "SCARYFACE",
-    "SECRETPOWER",
-    "SHADOWBALL",
-    "SHOCKWAVE",
-    "SLEEPTALK",
-    "SLUDGEBOMB",
-    "SMOKESCREEN",
-    "SNORE",
-    "SURF",
-    "SWAGGER",
-    "TACKLE",
-    "TAILWHIP",
-    "TAKEDOWN",
-    "THIEF",
-    "TOXIC",
-    "TWISTER",
-    "VENOSHOCK",
-    "WATERGUN",
-    "WATERPULSE",
-    "WHIRLPOOL"
-   ],
-   "where": "Active",
-   "dump": 481,
-   "owned_as": "Dragalge",
-   "evo": "",
-   "per_fight": {
-    "jenner9": 0.254,
-    "erick": 0.423
-   },
-   "counters": [],
-   "stats": {
-    "HP": 188,
-    "Atk": 93,
-    "Def": 121,
-    "SpA": 179,
-    "SpD": 157,
-    "Spe": 70
-   },
-   "tags": [
-    "speed"
-   ],
-   "tier": "B"
-  },
-  {
    "name": "Typhlosion",
    "kind": "regular",
    "crest": "",
@@ -9518,8 +9517,8 @@
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.4% | NatDex OU 0.0%",
    "general": 0.205,
-   "blend": 0.426,
-   "game_pct": 0.942,
+   "blend": 0.427,
+   "game_pct": 0.945,
    "n_all": 32,
    "ability": "FLASHFIRE",
    "abilities": [
@@ -9650,8 +9649,8 @@
    "meta": 0.191,
    "meta_label": "NU 5.7% | NatDex Doubles 0.4%",
    "general": 0.215,
-   "blend": 0.425,
-   "game_pct": 0.916,
+   "blend": 0.426,
+   "game_pct": 0.918,
    "n_all": 32,
    "ability": "THICKFAT",
    "abilities": [
@@ -9792,8 +9791,8 @@
    "meta": 0.15,
    "meta_label": "no competitive data",
    "general": 0.189,
-   "blend": 0.425,
-   "game_pct": 0.976,
+   "blend": 0.426,
+   "game_pct": 0.979,
    "n_all": 32,
    "ability": "SOLARIDOL",
    "abilities": [
@@ -9910,8 +9909,8 @@
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.3% | UU 0.4%",
    "general": 0.213,
-   "blend": 0.425,
-   "game_pct": 0.918,
+   "blend": 0.426,
+   "game_pct": 0.921,
    "n_all": 32,
    "ability": "FLOWERVEIL",
    "abilities": [
@@ -10024,8 +10023,8 @@
    "meta": 0.199,
    "meta_label": "RU 3.2% | NatDex Doubles 0.4%",
    "general": 0.225,
-   "blend": 0.423,
-   "game_pct": 0.887,
+   "blend": 0.424,
+   "game_pct": 0.889,
    "n_all": 32,
    "ability": "OWNTEMPO",
    "abilities": [
@@ -10149,8 +10148,8 @@
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.2% | OU 0.0%",
    "general": 0.18,
-   "blend": 0.419,
-   "game_pct": 0.979,
+   "blend": 0.42,
+   "game_pct": 0.982,
    "n_all": 32,
    "ability": "IRONFIST",
    "abilities": [
@@ -10273,8 +10272,8 @@
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.1% | NatDex OU 0.0%",
    "general": 0.187,
-   "blend": 0.415,
-   "game_pct": 0.947,
+   "blend": 0.416,
+   "game_pct": 0.95,
    "n_all": 32,
    "ability": "SCRAPPY",
    "abilities": [
@@ -10415,8 +10414,8 @@
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.0% | NU 0.0%",
    "general": 0.201,
-   "blend": 0.414,
-   "game_pct": 0.911,
+   "blend": 0.415,
+   "game_pct": 0.913,
    "n_all": 32,
    "ability": "GUTS",
    "abilities": [
@@ -10675,8 +10674,8 @@
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.1% | OU 0.0%",
    "general": 0.202,
-   "blend": 0.411,
-   "game_pct": 0.897,
+   "blend": 0.412,
+   "game_pct": 0.9,
    "n_all": 32,
    "ability": "RECKLESS",
    "abilities": [
@@ -10809,8 +10808,8 @@
    "meta": 0.158,
    "meta_label": "NatDex Doubles 0.5% | NatDex OU 0.1%",
    "general": 0.213,
-   "blend": 0.411,
-   "game_pct": 0.874,
+   "blend": 0.412,
+   "game_pct": 0.876,
    "n_all": 32,
    "ability": "INFILTRATOR",
    "abilities": [
@@ -11280,8 +11279,8 @@
    "meta": 0.15,
    "meta_label": "no competitive data",
    "general": 0.189,
-   "blend": 0.405,
-   "game_pct": 0.908,
+   "blend": 0.406,
+   "game_pct": 0.911,
    "n_all": 32,
    "ability": "LUNARIDOL",
    "abilities": [
@@ -11393,8 +11392,8 @@
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.2%",
    "general": 0.196,
-   "blend": 0.404,
-   "game_pct": 0.889,
+   "blend": 0.405,
+   "game_pct": 0.892,
    "n_all": 32,
    "ability": "OWNTEMPO",
    "abilities": [
@@ -11521,7 +11520,7 @@
    "meta_label": "NatDex Doubles 0.1% | NatDex OU 0.1%",
    "general": 0.192,
    "blend": 0.403,
-   "game_pct": 0.895,
+   "game_pct": 0.897,
    "n_all": 32,
    "ability": "INTIMIDATE",
    "abilities": [
@@ -11758,8 +11757,8 @@
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.1% | NatDex OU 0.1%",
    "general": 0.192,
-   "blend": 0.398,
-   "game_pct": 0.879,
+   "blend": 0.399,
+   "game_pct": 0.882,
    "n_all": 32,
    "ability": "SHEERFORCE",
    "abilities": [
@@ -11896,7 +11895,7 @@
    },
    "bst": 530,
    "fight": 0.289,
-   "fight_pct": 0.921,
+   "fight_pct": 0.924,
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.1%",
    "general": 0.203,
@@ -12018,8 +12017,8 @@
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.0%",
    "general": 0.178,
-   "blend": 0.396,
-   "game_pct": 0.905,
+   "blend": 0.397,
+   "game_pct": 0.908,
    "n_all": 32,
    "ability": "HYPERCUTTER",
    "abilities": [
@@ -12144,8 +12143,8 @@
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.4%",
    "general": 0.18,
-   "blend": 0.394,
-   "game_pct": 0.892,
+   "blend": 0.395,
+   "game_pct": 0.895,
    "n_all": 32,
    "ability": "LIMBER",
    "abilities": [
@@ -12236,6 +12235,113 @@
    },
    "tags": [
     "speed"
+   ],
+   "tier": "C"
+  },
+  {
+   "name": "Tatsugiri",
+   "kind": "regular",
+   "crest": "",
+   "zoro_partner": null,
+   "sid": "TATSUGIRI",
+   "form": "0",
+   "types": [
+    "DRAGON",
+    "WATER"
+   ],
+   "base": {
+    "HP": 68,
+    "Atk": 50,
+    "Def": 60,
+    "SpA": 120,
+    "SpD": 95,
+    "Spe": 82
+   },
+   "bst": 475,
+   "fight": 0.137,
+   "fight_pct": 0.629,
+   "meta": 0.157,
+   "meta_label": "NU 5.5% (doubles usage needs Dondozo, not owned)",
+   "general": 0.185,
+   "blend": 0.393,
+   "game_pct": 0.879,
+   "n_all": 32,
+   "ability": "COMMANDER",
+   "abilities": [
+    "COMMANDER",
+    "STORMDRAIN"
+   ],
+   "nature": "Modest",
+   "evs": {
+    "SpA": 252,
+    "HP": 252,
+    "SpD": 4
+   },
+   "cat": "Special",
+   "attacks": [
+    "Surf",
+    "Dragon Pulse"
+   ],
+   "legal": [
+    "ATTRACT",
+    "BATONPASS",
+    "CHILLINGWATER",
+    "CONFIDE",
+    "COUNTER",
+    "DELUGE",
+    "DOUBLETEAM",
+    "DRAGONCHEER",
+    "DRAGONPULSE",
+    "FACADE",
+    "FALSESWIPE",
+    "HARDEN",
+    "HELPINGHAND",
+    "HIDDENPOWER",
+    "LUNGE",
+    "MEMENTO",
+    "MIRRORCOAT",
+    "MUDBARRAGE",
+    "MUDDYWATER",
+    "NASTYPLOT",
+    "PROTECT",
+    "RAPIDSPIN",
+    "REST",
+    "ROUND",
+    "SEARINGSHOT",
+    "SECRETPOWER",
+    "SLEEPTALK",
+    "SNORE",
+    "SOAK",
+    "SPLASH",
+    "SURF",
+    "SWAGGER",
+    "TAKEDOWN",
+    "TAUNT",
+    "WATERGUN",
+    "WATERPULSE",
+    "WHIRLPOOL"
+   ],
+   "where": "Overflow",
+   "dump": 402,
+   "owned_as": "Tatsugiri Droopy Form",
+   "evo": "",
+   "per_fight": {
+    "jenner9": 0.088,
+    "erick": 0.332
+   },
+   "counters": [
+    "erick:Raichu"
+   ],
+   "stats": {
+    "HP": 191,
+    "Atk": 69,
+    "Def": 88,
+    "SpA": 206,
+    "SpD": 127,
+    "Spe": 112
+   },
+   "tags": [
+    "helping"
    ],
    "tier": "C"
   },
@@ -12368,113 +12474,6 @@
     "intimidate",
     "sleep",
     "speed"
-   ],
-   "tier": "C"
-  },
-  {
-   "name": "Tatsugiri",
-   "kind": "regular",
-   "crest": "",
-   "zoro_partner": null,
-   "sid": "TATSUGIRI",
-   "form": "0",
-   "types": [
-    "DRAGON",
-    "WATER"
-   ],
-   "base": {
-    "HP": 68,
-    "Atk": 50,
-    "Def": 60,
-    "SpA": 120,
-    "SpD": 95,
-    "Spe": 82
-   },
-   "bst": 475,
-   "fight": 0.137,
-   "fight_pct": 0.629,
-   "meta": 0.157,
-   "meta_label": "NU 5.5% (doubles usage needs Dondozo, not owned)",
-   "general": 0.185,
-   "blend": 0.392,
-   "game_pct": 0.876,
-   "n_all": 32,
-   "ability": "COMMANDER",
-   "abilities": [
-    "COMMANDER",
-    "STORMDRAIN"
-   ],
-   "nature": "Modest",
-   "evs": {
-    "SpA": 252,
-    "HP": 252,
-    "SpD": 4
-   },
-   "cat": "Special",
-   "attacks": [
-    "Surf",
-    "Dragon Pulse"
-   ],
-   "legal": [
-    "ATTRACT",
-    "BATONPASS",
-    "CHILLINGWATER",
-    "CONFIDE",
-    "COUNTER",
-    "DELUGE",
-    "DOUBLETEAM",
-    "DRAGONCHEER",
-    "DRAGONPULSE",
-    "FACADE",
-    "FALSESWIPE",
-    "HARDEN",
-    "HELPINGHAND",
-    "HIDDENPOWER",
-    "LUNGE",
-    "MEMENTO",
-    "MIRRORCOAT",
-    "MUDBARRAGE",
-    "MUDDYWATER",
-    "NASTYPLOT",
-    "PROTECT",
-    "RAPIDSPIN",
-    "REST",
-    "ROUND",
-    "SEARINGSHOT",
-    "SECRETPOWER",
-    "SLEEPTALK",
-    "SNORE",
-    "SOAK",
-    "SPLASH",
-    "SURF",
-    "SWAGGER",
-    "TAKEDOWN",
-    "TAUNT",
-    "WATERGUN",
-    "WATERPULSE",
-    "WHIRLPOOL"
-   ],
-   "where": "Overflow",
-   "dump": 402,
-   "owned_as": "Tatsugiri Droopy Form",
-   "evo": "",
-   "per_fight": {
-    "jenner9": 0.088,
-    "erick": 0.332
-   },
-   "counters": [
-    "erick:Raichu"
-   ],
-   "stats": {
-    "HP": 191,
-    "Atk": 69,
-    "Def": 88,
-    "SpA": 206,
-    "SpD": 127,
-    "Spe": 112
-   },
-   "tags": [
-    "helping"
    ],
    "tier": "C"
   },
@@ -12622,7 +12621,7 @@
    "meta_label": "NatDex Doubles 0.5%",
    "general": 0.182,
    "blend": 0.389,
-   "game_pct": 0.871,
+   "game_pct": 0.874,
    "n_all": 32,
    "ability": "WANDERINGSPIRIT",
    "abilities": [
@@ -13239,8 +13238,8 @@
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.1% | UU 0.0%",
    "general": 0.171,
-   "blend": 0.385,
-   "game_pct": 0.884,
+   "blend": 0.386,
+   "game_pct": 0.887,
    "n_all": 32,
    "ability": "SOLIDROCK",
    "abilities": [
@@ -16837,7 +16836,7 @@
    },
    "bst": 490,
    "fight": 0.288,
-   "fight_pct": 0.916,
+   "fight_pct": 0.918,
    "meta": 0.15,
    "meta_label": "NatDex Doubles 0.1% | NU 0.2%",
    "general": 0.185,

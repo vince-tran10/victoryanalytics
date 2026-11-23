@@ -21,6 +21,13 @@
  ],
  "weak3": [],
  "nores": [],
- "misses": [],
+ "misses": [
+  {
+   "foe": "Stoutland",
+   "fight": "jenner9",
+   "best": "Toxtricity (Aevian Form)",
+   "dmg": 100
+  }
+ ],
  "n_types": 14
 }

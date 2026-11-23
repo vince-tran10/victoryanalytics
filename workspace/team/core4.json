@@ -41,9 +41,9 @@
    "tier": "S",
    "sid": "SLOWKING",
    "form": "1",
-   "blend": 0.874,
+   "blend": 0.858,
    "meta": 0.892,
-   "game": 0.921,
+   "game": 0.868,
    "types": [
     "POISON",
     "PSYCHIC"
@@ -51,13 +51,17 @@
    "moves": [
     "Sludge Bomb",
     "Psychic",
-    "Shadow Ball",
+    "Thunder Wave",
     "Protect"
    ],
    "ability": "REGENERATOR",
    "aevian": false,
    "where": "Active",
    "chips": [
+    [
+     "tool",
+     "Paralysis"
+    ],
     [
      "stat",
      "Resists Fighting / Fairy"
@@ -99,7 +103,7 @@
    "form": "1",
    "blend": 0.769,
    "meta": 0.72,
-   "game": 0.937,
+   "game": 0.939,
    "types": [
     "DARK",
     "FAIRY"
@@ -129,12 +133,12 @@
    ]
   }
  ],
- "score": 45.45,
+ "score": 46.79,
  "parts": {
-  "strength": 34.1,
+  "strength": 33.94,
   "defense": 4.2,
   "offense": 4.0,
-  "synergy": 2.25,
+  "synergy": 3.75,
   "aevian": 0.9,
   "shared": [],
   "triple": [],
@@ -147,29 +151,30 @@
   "why": [
    "Physical and special attackers: one Intimidate or screen cannot stop both",
    "Fast and slow members: works with and without speed control",
-   "Musharna-Aevian puts a foe to sleep: free turns for Golisopod-Aevian"
+   "Musharna-Aevian puts a foe to sleep: free turns for Golisopod-Aevian",
+   "Speed control: Slowking-Galar"
   ]
  },
  "runners": [
   {
-   "out": "Slowking (Galarian Form)",
-   "in": "Muk (Alolan Form)",
-   "delta": -0.95
-  },
-  {
    "out": "Musharna (Aevian Form)",
    "in": "Glalie (Aevian Form)",
-   "delta": -1.46
-  },
-  {
-   "out": "Slowking (Galarian Form)",
-   "in": "Gastrodon (West Aevian Form)",
-   "delta": -2.0
+   "delta": -1.71
   },
   {
    "out": "Musharna (Aevian Form)",
+   "in": "Gastrodon (West Aevian Form)",
+   "delta": -2.55
+  },
+  {
+   "out": "Veluza (Aevian Form)",
    "in": "Alomomola",
-   "delta": -2.54
+   "delta": -2.78
+  },
+  {
+   "out": "Musharna (Aevian Form)",
+   "in": "Clefable",
+   "delta": -2.91
   }
  ],
  "pool": 26,

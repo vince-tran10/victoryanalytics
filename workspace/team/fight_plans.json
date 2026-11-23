@@ -12,28 +12,6 @@
   ],
   "swaps": [
    {
-    "name": "Scrafty",
-    "ab": "MOXIE",
-    "moves": [
-     "Crunch",
-     "High Jump Kick",
-     "Fake Out"
-    ],
-    "setup": null,
-    "where": "Active",
-    "dump": 504,
-    "nature": "Adamant",
-    "evs": {
-     "Atk": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "DARK",
-     "FIGHTING"
-    ]
-   },
-   {
     "name": "Musharna (Aevian Form)",
     "ab": "TOUGHCLAWS",
     "moves": [
@@ -52,27 +30,6 @@
     "types": [
      "DARK",
      "FAIRY"
-    ]
-   },
-   {
-    "name": "Lapras (Aevian Form)",
-    "ab": "NOGUARD",
-    "moves": [
-     "Rock Slide",
-     "Zen Headbutt"
-    ],
-    "setup": "Dragon Dance",
-    "where": "Active",
-    "dump": 492,
-    "nature": "Adamant",
-    "evs": {
-     "Atk": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "ROCK",
-     "PSYCHIC"
     ]
    },
    {
@@ -96,19 +53,40 @@
      "WATER",
      "FIRE"
     ]
+   },
+   {
+    "name": "Lapras (Aevian Form)",
+    "ab": "NOGUARD",
+    "moves": [
+     "Rock Slide",
+     "Zen Headbutt"
+    ],
+    "setup": "Dragon Dance",
+    "where": "Active",
+    "dump": 492,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "ROCK",
+     "PSYCHIC"
+    ]
    }
   ],
-  "counters": 3,
+  "counters": 2,
   "n": 6,
   "pairs": [
    {
     "foe": "Stoutland",
-    "mon": "Scrafty",
-    "ability": "MOXIE",
-    "dealt": 91,
-    "taken": 57,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 66,
+    "taken": 49,
     "ok": true,
-    "setup": false,
+    "setup": "Swords Dance",
     "wincons": [
      {
       "what": "Setup",
@@ -120,12 +98,12 @@
    },
    {
     "foe": "Appletun",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 65,
-    "taken": 47,
-    "ok": true,
-    "setup": "Swords Dance",
+    "mon": "Slowking (Galarian Form)",
+    "ability": "REGENERATOR",
+    "dealt": 62,
+    "taken": 40,
+    "ok": false,
+    "setup": false,
     "wincons": [
      {
       "what": "Healing",
@@ -137,10 +115,10 @@
    },
    {
     "foe": "Noivern",
-    "mon": "Slowking (Galarian Form)",
-    "ability": "REGENERATOR",
-    "dealt": 44,
-    "taken": 63,
+    "mon": "Veluza (Aevian Form)",
+    "ability": "RECKLESS",
+    "dealt": 88,
+    "taken": 125,
     "ok": false,
     "setup": false,
     "wincons": [
@@ -190,9 +168,7 @@
     ]
    }
   ],
-  "weak3": [
-   "FLYING"
-  ],
+  "weak3": [],
   "nores": [],
   "leads": [
    "Golisopod (Aevian Form)"
@@ -321,7 +297,7 @@
      "Chandelure",
      "Musharna (Aevian Form)"
     ],
-    "score": 13.83,
+    "score": 13.75,
     "counters": 2
    },
    {
@@ -329,7 +305,7 @@
      "Musharna (Aevian Form)",
      "Palossand (Fiery Aevian Form)"
     ],
-    "score": 13.82,
+    "score": 13.74,
     "counters": 2
    },
    {
@@ -598,14 +574,6 @@
    },
    {
     "swaps": [
-     "Scrafty",
-     "Turtonator"
-    ],
-    "score": 53.87,
-    "counters": 5
-   },
-   {
-    "swaps": [
      "Chandelure",
      "Mabosstiff"
     ],
@@ -614,50 +582,10 @@
    },
    {
     "swaps": [
-     "Pangoro",
-     "Turtonator"
-    ],
-    "score": 53.82,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Gallade",
-     "Scrafty"
-    ],
-    "score": 53.81,
-    "counters": 5
-   },
-   {
-    "swaps": [
      "Palossand (Fiery Aevian Form)",
      "Mabosstiff"
     ],
     "score": 53.8,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Chandelure",
-     "Scrafty"
-    ],
-    "score": 53.79,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Gallade",
-     "Pangoro"
-    ],
-    "score": 53.76,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Chandelure",
-     "Pangoro"
-    ],
-    "score": 53.74,
     "counters": 5
    },
    {
@@ -774,30 +702,6 @@
    },
    {
     "swaps": [
-     "Scrafty",
-     "Typhlosion"
-    ],
-    "score": 53.61,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Flareon",
-     "Scrafty"
-    ],
-    "score": 53.6,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Turtonator",
-     "Crawdaunt"
-    ],
-    "score": 53.59,
-    "counters": 5
-   },
-   {
-    "swaps": [
      "Bruxish",
      "Mabosstiff"
     ],
@@ -818,6 +722,78 @@
      "Espeon"
     ],
     "score": 53.58,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Veluza",
+     "Mabosstiff"
+    ],
+    "score": 53.57,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Clawitzer",
+     "Mabosstiff"
+    ],
+    "score": 53.57,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Ursaring",
+     "Mabosstiff"
+    ],
+    "score": 53.56,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Solrock (Solrock Dominant Fusion)",
+     "Mabosstiff"
+    ],
+    "score": 53.55,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Mabosstiff",
+     "Kadabra"
+    ],
+    "score": 53.55,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Veluza (Aevian Form)",
+     "Mabosstiff"
+    ],
+    "score": 53.54,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Centiskorch",
+     "Mabosstiff"
+    ],
+    "score": 53.53,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Bruxish",
+     "Crawdaunt"
+    ],
+    "score": 53.45,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Crawdaunt",
+     "Espeon"
+    ],
+    "score": 53.45,
     "counters": 5
    }
   ],

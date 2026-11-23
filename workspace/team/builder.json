@@ -10,7 +10,7 @@
    "slot": 1,
    "title": "Core 1 · Lead",
    "pick": "Toxtricity (Aevian Form)",
-   "rec": "Toxtricity (Aevian Form)",
+   "rec": "Veluza (Aevian Form)",
    "cands": [
     {
      "name": "Veluza (Aevian Form)",
@@ -26,7 +26,7 @@
      "sid": "VELUZA",
      "form": "1",
      "pick": false,
-     "rec": false,
+     "rec": true,
      "teach": [
       "Extreme Speed"
      ]
@@ -46,7 +46,7 @@
      "sid": "TOXTRICITY",
      "form": "2",
      "pick": true,
-     "rec": true,
+     "rec": false,
      "teach": [
       "Taunt"
      ]
@@ -175,7 +175,8 @@
       "Single target only"
      ],
      "tools": [
-      "Regenerator"
+      "Regenerator",
+      "Status: Thunder Wave"
      ],
      "sid": "SLOWKING",
      "form": "1",
@@ -607,25 +608,22 @@
   {
    "slot": 5,
    "title": "Flex 1 · Mid game · Spirit Jenner",
-   "pick": "Scrafty",
-   "rec": "Scrafty",
+   "pick": "Musharna (Aevian Form)",
+   "rec": "Musharna (Aevian Form)",
    "flex": true,
    "cands": [
     {
-     "name": "Scrafty",
-     "tier": "B",
+     "name": "Musharna (Aevian Form)",
+     "tier": "S",
      "stats": [
       "Resists 4 types",
       "Weak to 3 types",
       "Single target only"
      ],
-     "tools": [
-      "Counters: Stoutland",
-      "Disrupt: Fake Out"
-     ],
+     "tools": [],
      "teach": [],
-     "sid": "SCRAFTY",
-     "form": "0",
+     "sid": "MUSHARNA",
+     "form": "1",
      "pick": true,
      "rec": true
     },
@@ -717,21 +715,21 @@
   {
    "slot": 6,
    "title": "Flex 2 · Closer · Spirit Jenner",
-   "pick": "Musharna (Aevian Form)",
-   "rec": "Musharna (Aevian Form)",
+   "pick": "Veluza (Aevian Form)",
+   "rec": "Veluza (Aevian Form)",
    "flex": true,
    "cands": [
     {
-     "name": "Musharna (Aevian Form)",
+     "name": "Veluza (Aevian Form)",
      "tier": "S",
      "stats": [
-      "Resists 4 types",
+      "Resists 5 types",
       "Weak to 3 types",
       "Single target only"
      ],
      "tools": [],
      "teach": [],
-     "sid": "MUSHARNA",
+     "sid": "VELUZA",
      "form": "1",
      "pick": true,
      "rec": true
@@ -932,13 +930,13 @@
    "Attacker",
    ""
   ],
-  "Flamigo": [
-   "Lead",
-   "outspeeds 75%"
-  ],
   "Chandelure": [
    "Support",
    "Will-O-Wisp"
+  ],
+  "Flamigo": [
+   "Lead",
+   "outspeeds 75%"
   ],
   "Torterra": [
    "Closer",
