@@ -4,9 +4,9 @@
  "export_label": "22 Nov 11:33",
  "active_start": 445,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 241,
- "run": 255,
- "final": 259,
+ "roster": 244,
+ "run": 258,
+ "final": 262,
  "done": [
   "aelita",
   "narcissa1",
@@ -145,12 +145,12 @@
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
   "rank": null,
-  "of": 434779,
-  "gap": 42.6,
+  "of": 436489,
+  "gap": 42.35,
   "top": [
    {
     "score": 1.0433,
-    "pct": 142.6,
+    "pct": 142.3,
     "team": [
      "Golisopod-A",
      "Scrafty",
@@ -163,7 +163,7 @@
    },
    {
     "score": 1.0423,
-    "pct": 142.5,
+    "pct": 142.2,
     "team": [
      "Golisopod-A",
      "Scrafty",
@@ -176,7 +176,7 @@
    },
    {
     "score": 1.0423,
-    "pct": 142.5,
+    "pct": 142.2,
     "team": [
      "Golisopod-A",
      "Scrafty",
@@ -189,10 +189,8 @@
    }
   ],
   "current_misses": [
-   "Houndstone",
    "Stoutland",
-   "Porygon-Z",
-   "Chandelure"
+   "Porygon-Z"
   ]
  },
  "team_check_cache": true,

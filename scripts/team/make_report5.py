@@ -250,8 +250,8 @@ def verify(name, ab, nat, evs, item, moves):
             TEAM_SRC[name] = (d0['species'], d0['n'], d0['box'])
         if d0 and not CF:
             ACTIONS[d0['n']] = f"Move into the party (part of the ideal six)"
-        if CF and name in CF_NAMES:
-            return [f"Into the party: build on the {CF['title']} lineup card (To do tab)"]
+        if CF and name in CF_NAMES:   # 22 Nov: only point at the To do tab when its build really needs work
+            return ["Into the party: see its To do card"] if (d0 and verify_mon(d0, ab, nat, evs, item, moves)) else []
         if CF:
             return [f"After {CF['title']}: back into the party"]
         out = [f"Put {name} in the party (now in {d0['box']} #{d0['n']})" if d0 else (EVOLVE_FIRST.get(name) or f'Put {name} in the party')]

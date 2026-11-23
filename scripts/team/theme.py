@@ -52,12 +52,12 @@ def build_html(b, p, here):
 slots = ''
 for i, nm in enumerate(st['team']):
     d = disp(nm); r = T.get(nm, {}); p = party.get(d) or {}
-    lv = p.get('level') or 0
+    lv = p.get('level') or max([x.get('level') or 0 for x in cb.parse(st['export']) if x.get('species') == d] or [0])   # not in the party yet: its box level
     types = ''.join(f'<span class="pt" style="--tc:{TYPE.get(t, "#888")}">{E(t.title())}</span>' for t in r.get('types', []))
     # 21 Nov (Vincent): Core 1 lead · Core 2 lead partner · Core 3 mid game · Flex 1-2 (battle start / mid game / closer) · Core 4 closer
     _core = list(st.get('core') or [])
     if nm in _core:
-        _ci = _core.index(nm); tag = f'Core {_ci + 1}'; role = ('Lead', 'Lead partner', 'Mid game', 'Closer')[min(_ci, 3)]
+        _ci = _core.index(nm); tag = f'Core {_ci + 1}'; role = ('Lead', 'Doubles lead', 'Mid game', 'Closer')[min(_ci, 3)]   # 22 Nov: same names as the Builder
     else:
         _fl = [x for x in st['team'] if x not in _core]; tag = f'Flex {_fl.index(nm) + 1}'
         _mv = {re.sub(r'[^A-Z]', '', m.upper()) for m in (st.get('moves') or {}).get(nm, [])}
