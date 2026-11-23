@@ -47,8 +47,8 @@ for m in P['six']:
     beats = [FN[j] for j in sorted(range(len(FN)), key=lambda j: -m['deal'][j]) if m['deal'][j] >= 100]
     rows += (f'<li class="bc pmem{" plead" if m["lead"] else ""}" data-dn="{E(disp(m["name"]))}" tabindex="0" role="button"><div class="bct">'
              f'<span class="tier t{m["tier"]}">{m["tier"]}</span>{SP.tag(m["sid"], m["form"], size="s")}<b>{E(disp(m["name"]))}</b>'
-             + ('<span class="plt">Lead</span>' if m['lead'] else '') + '</div><div class="pcues">'
-             + ''.join(f'<div class="pcue">{E(c)}</div>' for c in cues(m['types'], m['ability'], m['moves'], _chart))
+             + ('<span class="plt">Lead</span>' if m['lead'] else '') + '</div><div class="bchips">'
+             + ''.join(f'<span class="{"btool" if k == "tool" else "bstat"}">{E(c)}</span>' for k, c in cues(m['types'], m['ability'], m['moves'], _chart))
              + '</div></li>')
 h += f'<article class="plc"><h3>Your six</h3><ul class="bl">{rows}</ul></article>'
 # type check

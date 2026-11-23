@@ -58,7 +58,7 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   of theirs hits 3+, every type they use resisted once and their main types twice, a named answer per win condition (Tailwind / TR, setup,
   sleep, Perish trap, spread, Destiny Bond, screens); offense second; leads = the pair that beats their lead pair. Workflow shown on the
   Planner tab (Vincent, 23 Nov): Their team + attacks, GAME PLAN (leads, turn 1 targets, who takes each back foe), Your six with
-  2 GENERAL cues each (cues.py: 'Switch in on X / Y / Z moves' + 'Bring in when <its job>'; replaces the old roles' 'when do I swap it in'),
+  max 3 SHORT chips each (cues.py, 1-3 words: green = its job, e.g. Stat reset / Sleep / Spread / Unaware; grey = Immune X, Resists X / Y),
   type check; game plan + checks + alternatives + method folded under 'Details' at the bottom (Vincent: that text is for me, not him). No 'How they win' text. Lost? Ask what beat him and add it as a threat. The old Builder / core rules below are legacy.
 - **Field type charts (23 Nov, lesson: Haunted Field made Ghost hit Normal neutrally and I missed it):** field rules live in TWO places:
   fieldtext (boosts, accuracy, typeMods, changes) AND the battle code (Battle_Move.rb pbTypeModifier type-chart overrides, Battle.rb

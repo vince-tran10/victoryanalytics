@@ -111,13 +111,13 @@
   "POISON"
  ],
  "atk": {
-  "STEEL": [
-   "Stonjourner"
-  ],
   "FIRE": [
    "Sigilyph",
    "Stonjourner",
    "Typhlosion"
+  ],
+  "STEEL": [
+   "Stonjourner"
   ],
   "ROCK": [
    "Golisopod",
@@ -135,10 +135,10 @@
   "ELECTRIC": [
    "Luxray"
   ],
-  "DARK": [
+  "NORMAL": [
    "Luxray"
   ],
-  "NORMAL": [
+  "DARK": [
    "Luxray"
   ],
   "BUG": [
