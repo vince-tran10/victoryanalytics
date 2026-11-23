@@ -640,6 +640,14 @@ if team_todo:
     TODO.append(('Team', team_todo))
 import re as _re
 promo_todo, promo_left = [], []
+# 23 Nov: the old promotion list (promote_*.json, 8 Nov tiers) only counts when the LIVE tier (tier_all.json) is still S / A
+try:
+    _LT = {}
+    for _r in json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'tier_all.json')))['rows']:
+        if _r.get('owned_as'): _LT[_r['owned_as']] = max(_LT.get(_r['owned_as'], 'D'), _r['tier'], key=lambda t: 'DCBAS'.index(t))
+    promo = [p for p in promo if _LT.get(p.get('owned'), _LT.get(p.get('final'), 'S')) in ('S', 'A')]
+except Exception:
+    pass
 for p in promo:
     nat = p['nature'].split(' ')[0]
     mv = [_re.sub(r' \(Lv \d+\)$', '', m) for m in p['moves']]

@@ -27,19 +27,6 @@
  "nores": [
   "NORMAL"
  ],
- "misses": [
-  {
-   "foe": "Stoutland",
-   "fight": "jenner9",
-   "best": "Swampert",
-   "dmg": 53
-  },
-  {
-   "foe": "Porygon-Z",
-   "fight": "jenner9",
-   "best": "Swampert",
-   "dmg": 63
-  }
- ],
+ "misses": [],
  "n_types": 18
 }

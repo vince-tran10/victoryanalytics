@@ -111,10 +111,6 @@
   "POISON"
  ],
  "atk": {
-  "ROCK": [
-   "Golisopod",
-   "Stonjourner"
-  ],
   "STEEL": [
    "Stonjourner"
   ],
@@ -123,8 +119,9 @@
    "Stonjourner",
    "Typhlosion"
   ],
-  "FAIRY": [
-   "Sigilyph"
+  "ROCK": [
+   "Golisopod",
+   "Stonjourner"
   ],
   "GHOST": [
    "Banette",
@@ -132,8 +129,8 @@
    "Sigilyph",
    "Typhlosion"
   ],
-  "NORMAL": [
-   "Luxray"
+  "FAIRY": [
+   "Sigilyph"
   ],
   "ELECTRIC": [
    "Luxray"
@@ -141,10 +138,13 @@
   "DARK": [
    "Luxray"
   ],
-  "BUG": [
-   "Golisopod"
+  "NORMAL": [
+   "Luxray"
   ],
   "GROUND": [
+   "Golisopod"
+  ],
+  "BUG": [
    "Golisopod"
   ],
   "FIGHTING": [
@@ -514,7 +514,7 @@
    "sid": "ALOMOMOLA",
    "form": "0",
    "lead": true,
-   "where": "Active",
+   "where": "Party",
    "moves": [
     "Wish",
     "Wide Guard",
@@ -630,12 +630,12 @@
     57
    ],
    "deal": [
-    62,
-    56,
-    105,
+    52,
+    46,
+    87,
     42,
-    109,
-    52
+    90,
+    43
    ],
    "worst": 57,
    "worst_foe": "Banette",
@@ -827,11 +827,11 @@
    ],
    "deal": [
     36,
-    90,
+    75,
     60,
     34,
-    87,
-    84
+    73,
+    70
    ],
    "worst": 90,
    "worst_foe": "Sigilyph",

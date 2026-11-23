@@ -1,23 +1,4 @@
 {
- "Golisopod (Aevian Form)": {
-  "ability": "Skill Link",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Soft Sand",
-  "moves": [
-   "Bone Rush",
-   "Pin Missile",
-   "Swords Dance",
-   "Protect"
-  ],
-  "move_ids": [
-   "PINMISSILE",
-   "ROCKBLAST",
-   "BONERUSH"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Gallade": {
   "ability": "SHARPNESS",
   "nature": "Adamant",
@@ -52,6 +33,25 @@
    "SLUDGEBOMB",
    "TORCHSONG",
    "BOOMBURST"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
+ "Golisopod (Aevian Form)": {
+  "ability": "Skill Link",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Soft Sand",
+  "moves": [
+   "Bone Rush",
+   "Pin Missile",
+   "Swords Dance",
+   "Protect"
+  ],
+  "move_ids": [
+   "PINMISSILE",
+   "ROCKBLAST",
+   "BONERUSH"
   ],
   "role": "attacker",
   "source": "your team"
@@ -131,25 +131,6 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
- },
- "Glalie (Aevian Form)": {
-  "ability": "GRASSYSURGE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Miracle Seed",
-  "moves": [
-   "Grassy Glide",
-   "Wood Hammer",
-   "Rock Slide",
-   "Protect"
-  ],
-  "move_ids": [
-   "ROCKSLIDE",
-   "WOODHAMMER",
-   "HELPINGHAND"
-  ],
-  "role": "attacker",
-  "source": "your team"
  },
  "Hariyama": {
   "ability": "GUTS",
@@ -303,6 +284,25 @@
   "role": "attacker",
   "source": "your team"
  },
+ "Glalie (Aevian Form)": {
+  "ability": "GRASSYSURGE",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Miracle Seed",
+  "moves": [
+   "Grassy Glide",
+   "Wood Hammer",
+   "Rock Slide",
+   "Protect"
+  ],
+  "move_ids": [
+   "ROCKSLIDE",
+   "WOODHAMMER",
+   "HELPINGHAND"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
  "Braviary": {
   "ability": "SHEERFORCE",
   "nature": "Adamant",
@@ -321,25 +321,6 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
- },
- "Musharna (Aevian Form)": {
-  "ability": "TOUGHCLAWS",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Spell Tag",
-  "moves": [
-   "Lovely Kiss",
-   "Shadow Claw",
-   "Play Rough",
-   "Protect"
-  ],
-  "move_ids": [
-   "LOVELYKISS",
-   "SHADOWCLAW",
-   "PLAYROUGH"
-  ],
-  "role": "attacker",
-  "source": "your team"
  },
  "Hitmonchan": {
   "ability": "IRONFIST",
@@ -416,6 +397,25 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Musharna (Aevian Form)": {
+  "ability": "TOUGHCLAWS",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Spell Tag",
+  "moves": [
+   "Lovely Kiss",
+   "Shadow Claw",
+   "Play Rough",
+   "Protect"
+  ],
+  "move_ids": [
+   "LOVELYKISS",
+   "SHADOWCLAW",
+   "PLAYROUGH"
+  ],
+  "role": "attacker",
+  "source": "your team"
  },
  "Typhlosion": {
   "ability": "BLAZE",
@@ -810,25 +810,6 @@
    "EARTHQUAKE",
    "QUICKATTACK",
    "BOUNCE"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
- "Swampert": {
-  "ability": "TORRENT",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Soft Sand",
-  "moves": [
-   "Earthquake",
-   "Rock Slide",
-   "Deluge",
-   "Protect"
-  ],
-  "move_ids": [
-   "EARTHQUAKE",
-   "ROCKSLIDE",
-   "HAMMERARM"
   ],
   "role": "attacker",
   "source": "your team"
@@ -1343,6 +1324,25 @@
   ],
   "role": "attacker",
   "source": "your rules"
+ },
+ "Swampert": {
+  "ability": "TORRENT",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Soft Sand",
+  "moves": [
+   "Earthquake",
+   "Rock Slide",
+   "Deluge",
+   "Protect"
+  ],
+  "move_ids": [
+   "EARTHQUAKE",
+   "ROCKSLIDE",
+   "HAMMERARM"
+  ],
+  "role": "attacker",
+  "source": "your team"
  },
  "Vaporeon": {
   "ability": "WATERABSORB",
@@ -1912,25 +1912,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Ampharos": {
-  "ability": "STATIC",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Dragon Fang",
-  "moves": [
-   "Dragon Pulse",
-   "Power Gem",
-   "Discharge",
-   "Protect"
-  ],
-  "move_ids": [
-   "DRAGONPULSE",
-   "POWERGEM",
-   "DISCHARGE"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Sunflora": {
   "ability": "CHLOROPHYLL",
   "nature": "Modest",
@@ -2246,6 +2227,25 @@
    "SHELLSMASH",
    "RAZORSHELL",
    "STONEEDGE"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Ampharos": {
+  "ability": "STATIC",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Dragon Fang",
+  "moves": [
+   "Dragon Pulse",
+   "Power Gem",
+   "Discharge",
+   "Protect"
+  ],
+  "move_ids": [
+   "DRAGONPULSE",
+   "POWERGEM",
+   "DISCHARGE"
   ],
   "role": "attacker",
   "source": "game"
@@ -3644,25 +3644,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Garbodor": {
-  "ability": "STENCH",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Poison Barb",
-  "moves": [
-   "Gunk Shot",
-   "Body Slam",
-   "Toxic",
-   "Protect"
-  ],
-  "move_ids": [
-   "GUNKSHOT",
-   "BODYSLAM",
-   "TOXIC"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Noctowl": {
   "ability": "INSOMNIA",
   "nature": "Modest",
@@ -3928,6 +3909,25 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
+ },
+ "Garbodor": {
+  "ability": "STENCH",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Poison Barb",
+  "moves": [
+   "Gunk Shot",
+   "Body Slam",
+   "Toxic",
+   "Protect"
+  ],
+  "move_ids": [
+   "GUNKSHOT",
+   "BODYSLAM",
+   "TOXIC"
+  ],
+  "role": "attacker",
+  "source": "game"
  },
  "Sawsbuck": {
   "ability": "CHLOROPHYLL",

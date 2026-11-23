@@ -637,14 +637,28 @@
       "Weak to 1 type"
      ],
      "tools": [
-      "Spread: Earthquake",
-      "Counters: Luxray"
+      "Spread: Earthquake"
      ],
      "teach": [],
      "sid": "SWAMPERT",
      "form": "0",
      "pick": true,
      "rec": true
+    },
+    {
+     "name": "Zoroark",
+     "tier": "A",
+     "stats": [
+      "Resists 3 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "teach": [],
+     "sid": "ZOROARK",
+     "form": "0",
+     "pick": false,
+     "rec": false
     },
     {
      "name": "Glalie (Aevian Form)",
@@ -660,21 +674,6 @@
      "teach": [],
      "sid": "GLALIE",
      "form": "1",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Zoroark",
-     "tier": "A",
-     "stats": [
-      "Resists 3 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "teach": [],
-     "sid": "ZOROARK",
-     "form": "0",
      "pick": false,
      "rec": false
     },
@@ -706,21 +705,6 @@
      "tools": [],
      "teach": [],
      "sid": "GASTRODON",
-     "form": "1",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Musharna (Aevian Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "teach": [],
-     "sid": "MUSHARNA",
      "form": "1",
      "pick": false,
      "rec": false
@@ -1732,13 +1716,13 @@
    "Attacker",
    ""
   ],
-  "Tauros": [
-   "Doubles lead",
-   "Intimidate"
-  ],
   "Medicham": [
    "Attacker",
    ""
+  ],
+  "Tauros": [
+   "Doubles lead",
+   "Intimidate"
   ],
   "Claydol": [
    "Attacker",
