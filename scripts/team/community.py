@@ -78,6 +78,7 @@ CREST = {
  'Furret Crest':   (.45, ['W: free Substitute (25% HP) on every switch-in', 'F4: listed among crests that "deserve more love"']),
  'Ariados Crest':  (.35, ['W: +50% Speed, crits on slowed / poisoned foes', 'F4: "barely useable on its own"']),
  'Whiscash Crest': (.40, ['F4: C tier', 'W: immune to Grass moves (they raise Attack instead)', 'W: +20% Atk and SpA']),
+ 'Dedenne Crest':  (.40, ['Game text: physical attacks use its Speed (base 101) instead of Attack (58)', 'Not discussed by the community']),
  'Typhlosion Crest': (.70, ['W: Atk = SpA', 'W: contact moves hit an extra time']),
 }
 # chapter each crest is FIRST obtainable (Vincent 22 Nov: earliest instance of wiki.gg Crests vs the BIGJRA walkthrough)
@@ -95,7 +96,7 @@ CREST_CH = {
  "Crabominable Crest": 13,
  "Cryogonal Crest": 13,
  "Darmanitan Crest": 14,
- "Dedenne Crest": 14,
+ "Dedenne Crest": 9,   # Vincent 23 Nov: available to him now (wiki listed Ch14)
  "Druddigon Crest": 9,
  "Dusknoir Crest": 14,
  "Electrode Crest": 8,

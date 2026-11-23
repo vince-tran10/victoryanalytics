@@ -7450,7 +7450,7 @@
    "cat": "Physical",
    "attacks": [
     "Surf",
-    "Secret Power",
+    "Facade",
     "Deluge"
    ],
    "legal": [
@@ -26901,6 +26901,122 @@
     "Spe": 106
    },
    "tags": [
+    "speed"
+   ],
+   "tier": "C"
+  },
+  {
+   "name": "Dedenne",
+   "kind": "crest",
+   "crest": "Dedenne Crest",
+   "zoro_partner": null,
+   "sid": "DEDENNE",
+   "form": "0",
+   "types": [
+    "ELECTRIC",
+    "FAIRY"
+   ],
+   "base": {
+    "HP": 67,
+    "Atk": 58,
+    "Def": 57,
+    "SpA": 81,
+    "SpD": 67,
+    "Spe": 101
+   },
+   "bst": 431,
+   "fight": 0.017,
+   "fight_pct": 0.259,
+   "meta": 0.4,
+   "meta_label": "Community rating (Dedenne Crest) | Game text: physical attacks use its Speed (base 101) instead of Attack (58) | Not discussed by the community",
+   "general": 0.383,
+   "blend": 0.287,
+   "game_pct": 0.063,
+   "n_all": 32,
+   "ability": "PLUS",
+   "abilities": [
+    "CHEEKPOUCH",
+    "PICKUP",
+    "PLUS"
+   ],
+   "nature": "Modest",
+   "evs": {
+    "SpA": 252,
+    "Spe": 252,
+    "Def": 4
+   },
+   "cat": "Special",
+   "attacks": [
+    "Play Rough",
+    "Volt Switch"
+   ],
+   "legal": [
+    "ATTRACT",
+    "CHARGE",
+    "CHARGEBEAM",
+    "CHARM",
+    "CONFIDE",
+    "COVET",
+    "CUT",
+    "DIG",
+    "DISCHARGE",
+    "DOUBLETEAM",
+    "ELECTROWEB",
+    "ENTRAINMENT",
+    "FACADE",
+    "FALSESWIPE",
+    "FLASH",
+    "FLING",
+    "GRASSKNOT",
+    "HELPINGHAND",
+    "HIDDENPOWER",
+    "MAGNETRISE",
+    "NATURALGIFT",
+    "NUZZLE",
+    "PARABOLICCHARGE",
+    "PLAYROUGH",
+    "PROTECT",
+    "RECYCLE",
+    "REST",
+    "ROUND",
+    "SECRETPOWER",
+    "SHOCKWAVE",
+    "SIGNALBEAM",
+    "SLEEPTALK",
+    "SNORE",
+    "SUPERFANG",
+    "SWAGGER",
+    "TACKLE",
+    "TAILWHIP",
+    "TAKEDOWN",
+    "TEARFULLOOK",
+    "THIEF",
+    "THUNDERSHOCK",
+    "THUNDERWAVE",
+    "TRAILBLAZE",
+    "VOLTSWITCH"
+   ],
+   "where": "Overflow",
+   "dump": 85,
+   "owned_as": "Dedenne",
+   "evo": "",
+   "per_fight": {
+    "spector": 0.116,
+    "spector2": 0.049,
+    "jenner9": -0.025,
+    "erick": 0.118
+   },
+   "counters": [],
+   "stats": {
+    "HP": 155,
+    "Atk": 167,
+    "Def": 85,
+    "SpA": 159,
+    "SpD": 95,
+    "Spe": 167
+   },
+   "tags": [
+    "helping",
     "speed"
    ],
    "tier": "C"

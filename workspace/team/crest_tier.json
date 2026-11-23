@@ -525,7 +525,7 @@
    "gain": 0.159,
    "attacks": [
     "Surf",
-    "Secret Power",
+    "Facade",
     "Deluge"
    ],
    "ability": "HYDRATION",
@@ -813,22 +813,6 @@
    "tier": "C"
   },
   {
-   "name": "Dedenne",
-   "crest": "Dedenne Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 85,
-   "with_crest": 0.019,
-   "without": -0.109,
-   "gain": 0.128,
-   "attacks": [
-    "Play Rough",
-    "Volt Switch"
-   ],
-   "ability": "PLUS",
-   "tier": "C"
-  },
-  {
    "name": "Fearow",
    "crest": "Fearow Crest",
    "held": false,
@@ -859,6 +843,22 @@
    ],
    "ability": "MINUS",
    "tier": "D"
+  },
+  {
+   "name": "Dedenne",
+   "crest": "Dedenne Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 85,
+   "with_crest": 0.017,
+   "without": -0.109,
+   "gain": 0.126,
+   "attacks": [
+    "Play Rough",
+    "Volt Switch"
+   ],
+   "ability": "PLUS",
+   "tier": "C"
   },
   {
    "name": "Plusle",

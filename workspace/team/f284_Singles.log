@@ -1,0 +1,15 @@
+Toxtricity (Aevian Form) | Party 60 | Galvanize  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Torch Song', 'Boomburst', 'Sludge Bomb', 'Protect'] | Poison Barb (already holding) | 
+Amoonguss | Active 60 | Regenerator  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Spore', 'Rage Powder', 'Clear Smog', 'Protect'] | Sitrus Berry (already holding) | 
+Oranguru | Active 60 | Inner Focus  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Trick Room', 'Psychic', 'Safeguard', 'Protect'] | Sitrus Berry (already holding) | 
+Zoroark (Hisuian Form) | Active 60 | Illusion  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Bitter Malice', 'Nasty Plot', 'Taunt', 'Protect'] | Zoroark Crest (already holding) | 
+Golisopod (Aevian Form) | Active 60 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Bone Rush', 'Pin Missile', 'Swords Dance', 'Protect'] | Soft Sand (already holding) | 
+Slowking (Galarian Form) | Active 60 | Regenerator  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Sludge Bomb', 'Psychic', 'Shadow Ball', 'Protect'] | Focus Sash (already holding) | 
+jenner 0.881 -> 1.29 leads ['Golisopod (Aevian Form)'] swaps [('Passimian', 'Zoroark (Hisuian Form)', 0.113), ('Unfezant (Aevian Form Male)', 'Zoroark (Hisuian Form)', 0.109), ('Azumarill', 'Zoroark (Hisuian Form)', 0.099)]
+danni 1.324 -> 1.498 leads ['Golisopod (Aevian Form)'] swaps [('Chandelure', 'Zoroark (Hisuian Form)', 0.095), ('Bombirdier', 'Zoroark (Hisuian Form)', 0.095), ('Arcanine', 'Zoroark (Hisuian Form)', 0.084)]
+troye 0.765 -> 1.186 leads ['Golisopod (Aevian Form)'] swaps [('Arcanine', 'Zoroark (Hisuian Form)', 0.129), ('Veluza (Aevian Form)', 'Zoroark (Hisuian Form)', 0.126), ('Arcanine (Hisuian Form)', 'Zoroark (Hisuian Form)', 0.1)]
+zena 1.021 -> 1.185 leads ['Golisopod (Aevian Form)'] swaps [('Decidueye', 'Zoroark (Hisuian Form)', 0.202), ('Gallade', 'Zoroark (Hisuian Form)', 0.185), ('Meganium', 'Zoroark (Hisuian Form)', 0.183)]
+marcie 0.945 -> 1.361 leads ['Toxtricity (Aevian Form)'] swaps [('Glalie (Aevian Form)', 'Zoroark (Hisuian Form)', 0.132), ('Gallade', 'Zoroark (Hisuian Form)', 0.12), ('Leavanny (Aevian Form)', 'Zoroark (Hisuian Form)', 0.1)]
+spector 0.814 -> 1.336 leads ['Toxtricity (Aevian Form)'] swaps [('Diggersby', 'Slowking (Galarian Form)', 0.108), ('Arcanine (Hisuian Form)', 'Slowking (Galarian Form)', 0.093), ('Crawdaunt', 'Slowking (Galarian Form)', 0.081)]
+spector2 0.511 -> 0.899 leads ['Golisopod (Aevian Form)'] swaps [('Swampert', 'Slowking (Galarian Form)', 0.083), ('Diggersby', 'Slowking (Galarian Form)', 0.076), ('Vaporeon', 'Slowking (Galarian Form)', 0.073)]
+jenner9 0.336 -> 0.572 leads ['Golisopod (Aevian Form)'] swaps [('Florges', 'Zoroark (Hisuian Form)', 0.221), ('Clefable', 'Zoroark (Hisuian Form)', 0.136), ('Crabominable', 'Zoroark (Hisuian Form)', 0.129)]
+erick 0.531 -> 0.836 leads ['Golisopod (Aevian Form)'] swaps [('Chandelure', 'Zoroark (Hisuian Form)', 0.152), ('Gallade', 'Oranguru', 0.139), ('Flareon', 'Zoroark (Hisuian Form)', 0.112)]

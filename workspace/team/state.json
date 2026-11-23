@@ -4,9 +4,9 @@
  "export_label": "22 Nov 20:41",
  "active_start": 440,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 264,
- "run": 278,
- "final": 282,
+ "roster": 267,
+ "run": 281,
+ "final": 285,
  "done": [
   "aelita",
   "narcissa1",
@@ -208,6 +208,7 @@
   "Toxtricity (Aevian Form)": "Punk Rock"
  },
  "crests_owned": [
+  "Dedenne Crest",
   "Phione Crest"
  ],
  "cap": 60,

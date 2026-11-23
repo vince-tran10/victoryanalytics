@@ -229,6 +229,10 @@ damage score and the fight's real win condition was only read after Vincent lost
   SENT = every point players make for / against each Aevian (owned AND not owned; game notes as 'Note'), shown on the Dex sheet ('What players
   say', ▲/▼) and under 'Not owned yet' (community-only grade) so it is ready when he unlocks them. Add new inputs there, never by hand in tiers.
 - Builder fit (23 Nov): role tools count only when the BUILD runs them (could-learn = 0.5); a setup move is never a slot 2 tool.
+- **Builder lists (Vincent, 23 Nov):** S / A only; B only when a slot has fewer than 3 S / A; never C or below; no cap on options. A slot
+  lists everyone who meets its gate (not just best-fit role). S / A that would make 3 of 4 weak to one type show a red '3 of 4 weak to X'
+  chip and are never suggested. Closer gate also accepts a priority STAB cleaner in the build (+0.8). Flexes = plan + fight_plans alts (30) +
+  every S / A with per-fight score >= .5. Dedenne Crest counts as available now (Vincent; crests_owned).
 - **App look (Vincent, 17 Nov): it must look like an app, Pokémon themed.** scripts/team/theme.py runs LAST (after tabs.py) and
   only reskins: Rotom-Dex red app bar, party slots with level bars + "Next battle" card on Team, bottom tab bar (phone) / side
   rail (desktop) with 6 tabs (Team, Fights, Cores, To do, Boxes, Dex = the 3 tier tabs behind a switcher; C&A checks behind the

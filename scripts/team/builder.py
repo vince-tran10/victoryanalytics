@@ -136,6 +136,11 @@ def tools(m, slot):   # the role's tools this Pokémon can legally run (moves) o
             t.append(f"{mname(best_)} ({setv[best_]})")
         for a_ in ('SPEEDBOOST', 'MOXIE', 'BEASTBOOST'):
             if a_ in ab: t.append(a_.title().replace('boost', ' Boost'))
+        # 23 Nov (Vincent): a priority STAB cleaner (in its build) also closes games, e.g. Glalie-A Grassy Glide under its own Grassy Surge
+        bm_ = {re.sub(r'[^A-Z]', '', x.upper()) for x in build_moves(m.name)}
+        pr_ = [k for k in ('GRASSYGLIDE', 'EXTREMESPEED', 'SUCKERPUNCH', 'AQUAJET', 'VACUUMWAVE', 'SHADOWSNEAK', 'BULLETPUNCH', 'ICESHARD',
+                           'MACHPUNCH', 'ACCELEROCK', 'JETPUNCH', 'FIRSTIMPRESSION') if k in bm_]
+        if pr_ and (pr_[0] != 'GRASSYGLIDE' or 'GRASSYSURGE' in ab): t.append(f"Priority: {mname(pr_[0])} (+0.8)")
     return t
 NEED = {1: lambda m, t: bool(t) and (m.spe >= 80 or m.bulk >= 270),
         2: lambda m, t: any(x in ('Intimidate', 'Fake Out', 'Tailwind', 'Follow Me', 'Rage Powder') for x in t),
@@ -252,6 +257,11 @@ if len(core) == 4 and all(core):
         sc_, w_ = pair(ALLM[x], ALLM[y]); CORE_PAIRS.append(dict(a=disp(x), b=disp(y), score=sc_, why=w_))
 out = []
 USED = set()   # one suggestion per Pokémon across the 4 slots
+def tier_ok(rows, name_of, keep=()):   # 23 Nov (Vincent): S / A only; B only when the slot has < 3 S / A options; never C or below
+    sa = [x for x in rows if ALLM[name_of(x)].r.get('tier') in ('S', 'A') or name_of(x) in keep]
+    if sum(ALLM[name_of(x)].r.get('tier') in ('S', 'A') for x in rows) < 3:
+        sa = [x for x in rows if ALLM[name_of(x)].r.get('tier') in ('S', 'A', 'B') or name_of(x) in keep]
+    return sa
 if len(core) == 4:
     base = [ALLM[n] if n else None for n in core]
     for i, (title, needs) in enumerate(ROLES):
@@ -262,7 +272,6 @@ if len(core) == 4:
             for m in ALLM.values():
                 v = LEAD.get(m.name)
                 if not v or m.sp in {o.sp for o in others}: continue
-                if ROLES_ALL.get(disp(m.name), ('',))[0] != 'Lead' and m.name != (base[i].name if base[i] else None): continue   # 22 Nov: listed only where it fits best
                 if v['fast'] < .70 or v['ko'] < .65 or v['surv'] < .60 or weak3(others + [m]): continue
                 res.append((RK.get(m.r['tier'], 0), v['win'], v['fast'], m, lead_chips(m)))
             res.sort(key=lambda x: (-x[0], -x[1], -x[2]))
@@ -274,7 +283,7 @@ if len(core) == 4:
             # Torch Song's Sp. Atk boosts, so it under-rates Toxtricity-A)
             if _m1 and res and _m1[0] == res[0][0] and _m1[1] >= res[0][1] - .10: rec = _m1[3].name
             USED.add(rec)   # 22 Nov: my suggestion = the top of this ranking (tier, then role preference)
-            top = [x for x in res if x[3].name not in (rec, mine)][:6 - len({rec, mine} - {None})]
+            top = [x for x in tier_ok(res, lambda x: x[3].name) if x[3].name not in (rec, mine)]   # 23 Nov: every S / A option, no cap
             for want in (rec, mine):
                 if want and want not in [x[3].name for x in top]:
                     v_ = LEAD.get(want, dict(win=0, fast=0))
@@ -286,21 +295,23 @@ if len(core) == 4:
             for c in out[-1]['cands']: c['tools'], c['teach'] = teach_split(ALLM[c['name']], c['tools'])
             continue
         SLOT_ROLE = {2: 'Doubles lead', 3: 'Mid game', 4: 'Closer'}
+        W3 = {}
         for m in ALLM.values():
             if m.sp in {o.sp for o in others}: continue
-            if ROLES_ALL.get(disp(m.name), ('',))[0] != SLOT_ROLE[slot] and m.name != (base[i].name if base[i] else None): continue   # best-fit role only
             t = tools(m, slot)
             if not NEED[slot](m, t): continue
-            if weak3(others + [m]): continue
-            sz = max([{'(+6)': 6, '(+3)': 3, '(+2)': 2, '(+1/+2)': 1.9, '(+1/+1)': 1.6, '(+1)': 1}.get(x.split(' ')[-1], 0) for x in t] + [0]) if slot == 4 else len(t)
+            if weak3(others + [m]):   # 23 Nov (Vincent): S / A stay visible with a warning (never suggested); lower tiers dropped
+                if m.r.get('tier') not in ('S', 'A'): continue
+                W3[m.name] = [a.title() for a in TYPES if sum(o.mult[a] > 1 for o in others + [m]) >= 3]
+            sz = max([{'(+6)': 6, '(+3)': 3, '(+2)': 2, '(+1/+2)': 1.9, '(+1/+1)': 1.6, '(+1)': 1, '(+0.8)': .8}.get(x.split(' ')[-1], 0) for x in t] + [0]) if slot == 4 else len(t)
             res.append((RK.get(m.r['tier'], 0), sz, m.r['blend'], m, t))
         res.sort(key=lambda x: (-x[0], -x[1], -x[2]))
         names = [x[3].name for x in res]
-        top = res[:6]
         mine = base[i].name if base[i] else None
+        top = tier_ok(res, lambda x: x[3].name, keep=(mine,))   # 23 Nov (Vincent): all S / A that qualify for the slot (B only if needed)
         if mine not in [x[3].name for x in top]:
             hit = next((x for x in res if x[3].name == mine), None)
-            if hit: top = top[:5] + [hit]
+            if hit: top = top + [hit]
         # suggestion (Vincent 22 Nov: highlight MY pick per slot): tier + role fit + type matchups, not just the list order
         def _fit(x):
             m, t = x[3], x[4]
@@ -314,14 +325,14 @@ if len(core) == 4:
             # 22 Nov fix: tier counts double and tools cap at 2, so tool count / coverage can't lift a lower tier over a higher one
             # by itself (Scrafty B was suggested over Amoonguss A on Intimidate + Fake Out)
             return 2 * RK.get(m.r['tier'], 0) + min(f_, 2) + .1 * (sum(m.mult[a] < 1 for a in TYPES) - sum(m.mult[a] > 1 for a in TYPES)) + .2 * min(cover, 3) + .15 * sum(pair(m, o)[0] for o in others)   # 22 Nov (Vincent): synergy with the other three (pair())
-        _pool = [x for x in res if x[3].name not in USED] or res
+        _pool = [x for x in res if x[3].name not in USED and x[3].name not in W3] or res
         _best = max(_pool, key=_fit) if _pool else None
         _mine = next((x for x in _pool if x[3].name == (base[i].name if base[i] else None)), None)
         # stability (22 Nov): his pick stays my suggestion when it is the same tier and within 0.3 role fit of the best (no flip-flops)
         if _best and _mine and _mine[0] == _best[0] and _fit(_mine) >= _fit(_best) - .3: _best = _mine
         rec = _best[3].name if _best else None
         USED.add(rec)
-        if rec and rec not in [x[3].name for x in top]: top = top[:5] + [next(x for x in res if x[3].name == rec)]
+        if rec and rec not in [x[3].name for x in top]: top = top + [next(x for x in res if x[3].name == rec)]
         top.sort(key=lambda x: (-x[0], -x[1], -x[2]))
         def _st(m):
             cs, ct = common_chips(m)
@@ -355,7 +366,7 @@ if len(core) == 4:
                 if x[0] > x_rec[0] and len(WHY) < 2:
                     WHY.append(dict(name=disp(x[3].name), tier=x[3].r['tier'], lines=why_not(x_rec[3], x_rec[4], x[3], x[4])))
         out.append(dict(slot=slot, title=title, pick=mine, rec=rec, why=WHY,
-                        cands=[dict(name=m.name, tier=m.r['tier'], stats=_st(m)[0], tools=merge([x for x in t if not x.startswith('spread')] + _st(m)[1], kit(m)),
+                        cands=[dict(name=m.name, tier=m.r['tier'], stats=([f"3 of 4 weak to {'/'.join(W3[m.name])}"] if m.name in W3 else []) + _st(m)[0], tools=merge([x for x in t if not x.startswith('spread')] + _st(m)[1], kit(m)),
                                     sid=m.r.get('sid'), form=str(m.r.get('form', '0')), pick=m.name == mine, rec=m.name == rec)
                                for _, _, _, m, t in top]))
         for c in out[-1]['cands']: c['tools'], c['teach'] = teach_split(ALLM[c['name']], c['tools'])
@@ -374,9 +385,13 @@ if _pl and len(core) == 4:
     for a_ in _pl.get('alts') or []:
         for n_ in a_['swaps']:
             if n_ not in alt_names and n_ not in st['core']: alt_names.append(n_)
+    # 23 Nov (Vincent): also every S / A Pokémon that does well in THIS fight (tier_all per-fight score >= .5), best first
+    for m_ in sorted(ALLM.values(), key=lambda m_: -(m_.r.get('per_fight') or {}).get(_fk, 0)):
+        if m_.r.get('tier') in ('S', 'A') and (m_.r.get('per_fight') or {}).get(_fk, 0) >= .5 and m_.name not in alt_names and m_.name not in st['core']:
+            alt_names.append(m_.name)
     for fi, (lab, fn) in enumerate(zip(['Flex 1 · Mid game', 'Flex 2 · Closer'], flexes)):
         _setup = lambda n_: any(k.startswith('Setup') for k in kit(ALLM[n_])) if n_ in ALLM else False
-        names = [fn] + [x for x in alt_names if x not in flexes and (_setup(x) == (fi == 1))][:4]   # closer flex = has a setup move
+        names = [fn] + tier_ok([x for x in alt_names if x in ALLM and x not in flexes and (_setup(x) == (fi == 1))], lambda x: x)   # closer flex = has a setup move; 23 Nov: S / A (B if needed), no cap
         cands = []
         for n_ in names:
             m = ALLM.get(n_)
@@ -394,9 +409,9 @@ def chips3(c, s_):   # 22 Nov (Vincent): only the top 2-3 facts per Pokémon
     st_, tl = list(c.get('stats', [])), list(c['tools'])
     if s_['slot'] == 1: pick = [x for x in st_ if x.startswith('Outspeeds')][:1] + tl[:1] + [x for x in st_ if x.startswith('Takes')][:1]
     elif s_.get('flex'): pick = [x for x in tl if x.startswith('Counters')][:1] + [x for x in tl if not x.startswith('Counters')][:1] + [x for x in st_ if x.startswith('Weak')][:1]
-    else: pick = tl[:2] + [x for x in st_ if x.startswith('Weak')][:1]
+    else: pick = [x for x in st_ if x.startswith('3 of 4')][:1] + tl[:2] + [x for x in st_ if x.startswith('Weak')][:1]
     pick = pick[:3]
-    return ''.join('<span class="' + ('btool' if x in tl else 'bstat') + '">' + E(x) + '</span>' for x in pick)
+    return ''.join('<span class="' + ('btool' if x in tl else 'bstat bwarn' if x.startswith('3 of 4') else 'bstat') + '">' + E(x) + '</span>' for x in pick)
 cards = ''
 for s_ in out:
     rows = ''

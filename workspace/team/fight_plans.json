@@ -235,6 +235,182 @@
     ],
     "score": 44.72,
     "counters": 4
+   },
+   {
+    "swaps": [
+     "Pangoro",
+     "Barbaracle"
+    ],
+    "score": 44.69,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Chandelure",
+     "Pangoro"
+    ],
+    "score": 44.69,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Cursola",
+     "Obstagoon"
+    ],
+    "score": 44.67,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Crawdaunt",
+     "Chandelure"
+    ],
+    "score": 44.65,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Pangoro",
+     "Cursola"
+    ],
+    "score": 44.64,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Absol",
+     "Barbaracle"
+    ],
+    "score": 44.6,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Crawdaunt",
+     "Cursola"
+    ],
+    "score": 44.6,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Chandelure",
+     "Absol"
+    ],
+    "score": 44.6,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Cursola",
+     "Absol"
+    ],
+    "score": 44.55,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Persian (Alolan Form)",
+     "Barbaracle"
+    ],
+    "score": 44.55,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Solrock (Solrock Dominant Fusion)",
+     "Obstagoon"
+    ],
+    "score": 44.55,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Chandelure",
+     "Persian (Alolan Form)"
+    ],
+    "score": 44.54,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Pangoro",
+     "Solrock (Solrock Dominant Fusion)"
+    ],
+    "score": 44.51,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Solrock (Solrock Dominant Fusion)",
+     "Absol"
+    ],
+    "score": 44.5,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Persian (Alolan Form)",
+     "Cursola"
+    ],
+    "score": 44.49,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Zoroark",
+     "Barbaracle"
+    ],
+    "score": 44.47,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Chandelure",
+     "Zoroark"
+    ],
+    "score": 44.46,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Zoroark",
+     "Cursola"
+    ],
+    "score": 44.42,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Persian (Alolan Form)",
+     "Solrock (Solrock Dominant Fusion)"
+    ],
+    "score": 44.37,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Zoroark",
+     "Solrock (Solrock Dominant Fusion)"
+    ],
+    "score": 44.29,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Diggersby",
+     "Solrock (Solrock Dominant Fusion)"
+    ],
+    "score": 34.8,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Braviary",
+     "Solrock (Solrock Dominant Fusion)"
+    ],
+    "score": 34.8,
+    "counters": 4
    }
   ],
   "note": "",
@@ -435,6 +611,182 @@
      "Scrafty"
     ],
     "score": 44.02,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Glalie (Aevian Form)",
+     "Scrafty"
+    ],
+    "score": 44.01,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Scrafty",
+     "Jellicent"
+    ],
+    "score": 43.99,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Palossand",
+     "Pangoro"
+    ],
+    "score": 43.99,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Cofagrigus",
+     "Pangoro"
+    ],
+    "score": 43.99,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Mismagius",
+     "Pangoro"
+    ],
+    "score": 43.99,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Glalie (Aevian Form)",
+     "Pangoro"
+    ],
+    "score": 43.98,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Pangoro",
+     "Jellicent"
+    ],
+    "score": 43.96,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Palossand",
+     "Zoroark"
+    ],
+    "score": 43.93,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Palossand",
+     "Crawdaunt"
+    ],
+    "score": 34.07,
+    "counters": 3
+   },
+   {
+    "swaps": [
+     "Palossand",
+     "Persian (Alolan Form)"
+    ],
+    "score": 33.92,
+    "counters": 3
+   },
+   {
+    "swaps": [
+     "Zoroark (Hisuian Form)",
+     "Sylveon"
+    ],
+    "score": 24.33,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Sylveon",
+     "Scrafty"
+    ],
+    "score": 24.06,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Scrafty",
+     "Barraskewda"
+    ],
+    "score": 24.06,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Sylveon",
+     "Pangoro"
+    ],
+    "score": 24.04,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Vaporeon",
+     "Scrafty"
+    ],
+    "score": 24.04,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Pangoro",
+     "Barraskewda"
+    ],
+    "score": 24.03,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Vaporeon",
+     "Pangoro"
+    ],
+    "score": 24.01,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Scrafty",
+     "Floatzel"
+    ],
+    "score": 23.99,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Pangoro",
+     "Floatzel"
+    ],
+    "score": 23.97,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Zoroark (Hisuian Form)",
+     "Sandslash"
+    ],
+    "score": 14.3,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Zoroark (Hisuian Form)",
+     "Gastrodon"
+    ],
+    "score": 14.29,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Diggersby",
+     "Zoroark (Hisuian Form)"
+    ],
+    "score": 14.28,
     "counters": 4
    }
   ],
@@ -663,6 +1015,182 @@
     ],
     "score": 33.9,
     "counters": 4
+   },
+   {
+    "swaps": [
+     "Musharna (Aevian Form)",
+     "Sandslash (Alolan Form)"
+    ],
+    "score": 23.99,
+    "counters": 3
+   },
+   {
+    "swaps": [
+     "Clefable",
+     "Solrock (Solrock Dominant Fusion)"
+    ],
+    "score": 23.91,
+    "counters": 3
+   },
+   {
+    "swaps": [
+     "Solrock (Solrock Dominant Fusion)",
+     "Azumarill"
+    ],
+    "score": 23.88,
+    "counters": 3
+   },
+   {
+    "swaps": [
+     "Solrock (Solrock Dominant Fusion)",
+     "Gastrodon (West Aevian Form)"
+    ],
+    "score": 23.83,
+    "counters": 3
+   },
+   {
+    "swaps": [
+     "Florges",
+     "Lunatone (Lunatone Dominant Fusion)"
+    ],
+    "score": 23.76,
+    "counters": 3
+   },
+   {
+    "swaps": [
+     "Musharna (Aevian Form)",
+     "Glalie (Aevian Form)"
+    ],
+    "score": 23.76,
+    "counters": 3
+   },
+   {
+    "swaps": [
+     "Lunatone (Lunatone Dominant Fusion)",
+     "Alcremie"
+    ],
+    "score": 23.61,
+    "counters": 3
+   },
+   {
+    "swaps": [
+     "Chandelure",
+     "Musharna (Aevian Form)"
+    ],
+    "score": 13.94,
+    "counters": 2
+   },
+   {
+    "swaps": [
+     "Musharna (Aevian Form)",
+     "Palossand (Fiery Aevian Form)"
+    ],
+    "score": 13.93,
+    "counters": 2
+   },
+   {
+    "swaps": [
+     "Copperajah",
+     "Musharna (Aevian Form)"
+    ],
+    "score": 13.72,
+    "counters": 2
+   },
+   {
+    "swaps": [
+     "Clefable",
+     "Lunatone (Lunatone Dominant Fusion)"
+    ],
+    "score": 13.63,
+    "counters": 2
+   },
+   {
+    "swaps": [
+     "Azumarill",
+     "Lunatone (Lunatone Dominant Fusion)"
+    ],
+    "score": 13.59,
+    "counters": 2
+   },
+   {
+    "swaps": [
+     "Lunatone (Lunatone Dominant Fusion)",
+     "Gastrodon (West Aevian Form)"
+    ],
+    "score": 13.55,
+    "counters": 2
+   },
+   {
+    "swaps": [
+     "Musharna (Aevian Form)",
+     "Revavroom"
+    ],
+    "score": 13.54,
+    "counters": 2
+   },
+   {
+    "swaps": [
+     "Florges",
+     "Drednaw"
+    ],
+    "score": 4.07,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Alcremie",
+     "Drednaw"
+    ],
+    "score": 3.92,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Solrock (Solrock Dominant Fusion)",
+     "Ninetales (Alolan Form)"
+    ],
+    "score": 3.83,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Scrafty",
+     "Drednaw"
+    ],
+    "score": 3.74,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Solrock (Solrock Dominant Fusion)",
+     "Scrafty"
+    ],
+    "score": 3.72,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Florges",
+     "Aurorus"
+    ],
+    "score": -5.81,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Florges",
+     "Sandslash (Alolan Form)"
+    ],
+    "score": -5.9,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Florges",
+     "Arcanine (Hisuian Form)"
+    ],
+    "score": -5.94,
+    "counters": 4
    }
   ],
   "note": "",
@@ -862,6 +1390,182 @@
      "Kadabra"
     ],
     "score": 53.69,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Pangoro",
+     "Bruxish"
+    ],
+    "score": 53.68,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Pangoro",
+     "Espeon"
+    ],
+    "score": 53.68,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Typhlosion",
+     "Mabosstiff"
+    ],
+    "score": 53.68,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Flareon",
+     "Mabosstiff"
+    ],
+    "score": 53.66,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Bruxish",
+     "Ursaring"
+    ],
+    "score": 53.66,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Kingler",
+     "Mabosstiff"
+    ],
+    "score": 53.66,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Ursaring",
+     "Espeon"
+    ],
+    "score": 53.65,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Pangoro",
+     "Kadabra"
+    ],
+    "score": 53.64,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Scrafty",
+     "Mabosstiff"
+    ],
+    "score": 53.63,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Ursaring",
+     "Kadabra"
+    ],
+    "score": 53.62,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Bruxish",
+     "Mabosstiff"
+    ],
+    "score": 53.59,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Pangoro",
+     "Mabosstiff"
+    ],
+    "score": 53.58,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Mabosstiff",
+     "Espeon"
+    ],
+    "score": 53.58,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Veluza",
+     "Mabosstiff"
+    ],
+    "score": 53.57,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Clawitzer",
+     "Mabosstiff"
+    ],
+    "score": 53.57,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Ursaring",
+     "Mabosstiff"
+    ],
+    "score": 53.56,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Solrock (Solrock Dominant Fusion)",
+     "Mabosstiff"
+    ],
+    "score": 53.55,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Mabosstiff",
+     "Kadabra"
+    ],
+    "score": 53.55,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Veluza (Aevian Form)",
+     "Mabosstiff"
+    ],
+    "score": 53.54,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Centiskorch",
+     "Mabosstiff"
+    ],
+    "score": 53.53,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Bruxish",
+     "Crawdaunt"
+    ],
+    "score": 53.45,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Crawdaunt",
+     "Espeon"
+    ],
+    "score": 53.45,
     "counters": 5
    }
   ],

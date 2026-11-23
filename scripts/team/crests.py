@@ -43,7 +43,7 @@ def apply_stats(me):
     elif c == 'CLAYDOL':
         s['SpA'] = s['Def']
     elif c == 'DEDENNE':
-        s['Atk'] = s['SpA'] = s['Spe']
+        s['Atk'] = s['Spe']   # game item text: Dedenne's PHYSICAL attacks use its Speed stat (23 Nov fix: SpA untouched)
     elif c == 'TYPHLOSION':
         s['Atk'] = s['SpA']
     elif c == 'INFERNAPE':

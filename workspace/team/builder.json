@@ -70,66 +70,6 @@
      "pick": false,
      "rec": false,
      "teach": []
-    },
-    {
-     "name": "Typhlosion",
-     "tier": "B",
-     "stats": [
-      "Outspeeds 81%",
-      "Takes 2 hits to KO",
-      "Resists 6 types",
-      "Weak to 3 types"
-     ],
-     "tools": [
-      "Spread: Eruption"
-     ],
-     "sid": "TYPHLOSION",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Quick Attack"
-     ]
-    },
-    {
-     "name": "Espeon",
-     "tier": "C",
-     "stats": [
-      "Outspeeds 85%",
-      "Takes 2 hits to KO",
-      "Resists 2 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Recovery: Morning Sun"
-     ],
-     "sid": "ESPEON",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Quick Attack"
-     ]
-    },
-    {
-     "name": "Basculin (Blue-Striped)",
-     "tier": "C",
-     "stats": [
-      "Outspeeds 80%",
-      "Takes 2 hits to KO",
-      "Resists 4 types",
-      "Weak to 2 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "sid": "BASCULIN",
-     "form": "1",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Aqua Jet"
-     ]
     }
    ]
   },
@@ -161,6 +101,25 @@
      ]
     },
     {
+     "name": "Arcanine (Hisuian Form)",
+     "tier": "A",
+     "stats": [
+      "3 of 4 weak to Water/Ground",
+      "Resists 7 types",
+      "Weak to 4 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Intimidate",
+      "Priority: Extreme Speed"
+     ],
+     "sid": "ARCANINE",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": []
+    },
+    {
      "name": "Amoonguss",
      "tier": "A",
      "stats": [
@@ -180,73 +139,44 @@
      "teach": []
     },
     {
-     "name": "Scrafty",
-     "tier": "B",
+     "name": "Clefable",
+     "tier": "A",
      "stats": [
       "Resists 4 types",
-      "Weak to 3 types",
+      "Weak to 2 types",
       "Single target only"
      ],
      "tools": [
-      "Intimidate",
-      "Fake Out"
+      "Status: Thunder Wave",
+      "Support: Safeguard"
      ],
-     "sid": "SCRAFTY",
+     "sid": "CLEFABLE",
      "form": "0",
      "pick": false,
      "rec": false,
-     "teach": []
-    },
-    {
-     "name": "Furret",
-     "tier": "B",
-     "stats": [
-      "Resists 1 type",
-      "Weak to 1 type",
-      "Single target only"
-     ],
-     "tools": [
+     "teach": [
       "Follow Me"
-     ],
-     "sid": "FURRET",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": []
+     ]
     },
     {
-     "name": "Noivern",
-     "tier": "B",
+     "name": "Mandibuzz",
+     "tier": "A",
      "stats": [
-      "Resists 6 types",
+      "Resists 5 types",
       "Weak to 4 types",
       "Single target only"
      ],
      "tools": [
-      "Tailwind"
+      "Recovery: Roost",
+      "Disrupt: Knock Off"
      ],
-     "sid": "NOIVERN",
+     "sid": "MANDIBUZZ",
      "form": "0",
      "pick": false,
      "rec": false,
-     "teach": []
-    },
-    {
-     "name": "Crobat",
-     "tier": "B",
-     "stats": [
-      "Resists 6 types",
-      "Weak to 4 types",
-      "Single target only"
-     ],
-     "tools": [
+     "teach": [
       "Tailwind"
-     ],
-     "sid": "CROBAT",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": []
+     ]
     }
    ]
   },
@@ -274,6 +204,65 @@
      "rec": true,
      "teach": [
       "Slack Off"
+     ]
+    },
+    {
+     "name": "Lapras (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "3 of 4 weak to Water",
+      "Resists 5 types",
+      "Weak to 7 types"
+     ],
+     "tools": [
+      "Spread: Rock Slide",
+      "Status: Sing",
+      "Setup: Dragon Dance"
+     ],
+     "sid": "LAPRAS",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Roar",
+      "Teleport"
+     ]
+    },
+    {
+     "name": "Glalie (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "3 of 4 weak to Ice",
+      "Resists 2 types",
+      "Weak to 4 types"
+     ],
+     "tools": [
+      "Spread: Rock Slide",
+      "Priority: Grassy Glide"
+     ],
+     "sid": "GLALIE",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Synthesis"
+     ]
+    },
+    {
+     "name": "Musharna (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "sid": "MUSHARNA",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Moonlight"
      ]
     },
     {
@@ -353,22 +342,62 @@
      ]
     },
     {
-     "name": "Vaporeon",
-     "tier": "B",
+     "name": "Mandibuzz",
+     "tier": "A",
      "stats": [
-      "Resists 4 types",
-      "Weak to 2 types",
+      "3 of 4 weak to Ice",
+      "Resists 5 types",
+      "Weak to 4 types",
       "Single target only"
      ],
      "tools": [
-      "Wish"
+      "Roost",
+      "Disrupt: Knock Off"
      ],
-     "sid": "VAPOREON",
+     "sid": "MANDIBUZZ",
      "form": "0",
      "pick": false,
      "rec": false,
      "teach": [
-      "Haze"
+      "Whirlwind"
+     ]
+    },
+    {
+     "name": "Swampert",
+     "tier": "A",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 1 type"
+     ],
+     "tools": [
+      "Spread: Earthquake"
+     ],
+     "sid": "SWAMPERT",
+     "form": "0",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Roar"
+     ]
+    },
+    {
+     "name": "Donphan",
+     "tier": "A",
+     "stats": [
+      "3 of 4 weak to Water/Ice",
+      "Resists 3 types",
+      "Weak to 3 types"
+     ],
+     "tools": [
+      "Spread: Earthquake",
+      "Priority: Ice Shard"
+     ],
+     "sid": "DONPHAN",
+     "form": "0",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Roar"
      ]
     }
    ]
@@ -398,6 +427,98 @@
      "teach": []
     },
     {
+     "name": "Veluza (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "3 of 4 weak to Ground",
+      "Resists 5 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "sid": "VELUZA",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Fillet Away"
+     ]
+    },
+    {
+     "name": "Lapras (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "3 of 4 weak to Ground",
+      "Resists 5 types",
+      "Weak to 7 types"
+     ],
+     "tools": [
+      "Dragon Dance (+1/+1)",
+      "Spread: Rock Slide",
+      "Status: Sing"
+     ],
+     "sid": "LAPRAS",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": []
+    },
+    {
+     "name": "Musharna (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "sid": "MUSHARNA",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Curse"
+     ]
+    },
+    {
+     "name": "Muk (Alolan Form)",
+     "tier": "S",
+     "stats": [
+      "3 of 4 weak to Ground",
+      "Resists 5 types",
+      "Weak to 1 type",
+      "Single target only"
+     ],
+     "tools": [
+      "Stat reset: Clear Smog",
+      "Disrupt: Knock Off"
+     ],
+     "sid": "MUK",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Curse"
+     ]
+    },
+    {
+     "name": "Glalie (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 2 types",
+      "Weak to 4 types"
+     ],
+     "tools": [
+      "Priority: Grassy Glide (+0.8)",
+      "Spread: Rock Slide"
+     ],
+     "sid": "GLALIE",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": []
+    },
+    {
      "name": "Zoroark (Hisuian Form)",
      "tier": "A",
      "stats": [
@@ -416,70 +537,142 @@
      "teach": []
     },
     {
-     "name": "Azumarill",
-     "tier": "B",
+     "name": "Leavanny (Aevian Form)",
+     "tier": "A",
      "stats": [
-      "Resists 7 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Belly Drum (+6)",
-      "Priority: Aqua Jet"
-     ],
-     "sid": "AZUMARILL",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": []
-    },
-    {
-     "name": "Crawdaunt",
-     "tier": "B",
-     "stats": [
-      "Resists 7 types",
+      "Resists 5 types",
       "Weak to 5 types",
       "Single target only"
      ],
      "tools": [
-      "Swords Dance (+2)",
-      "Disrupt: Knock Off"
+      "Swords Dance (+2)"
      ],
-     "sid": "CRAWDAUNT",
+     "sid": "LEAVANNY",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": []
+    },
+    {
+     "name": "Zoroark",
+     "tier": "A",
+     "stats": [
+      "Resists 3 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "sid": "ZOROARK",
+     "form": "0",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Nasty Plot"
+     ]
+    },
+    {
+     "name": "Ninetales (Alolan Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 4 types"
+     ],
+     "tools": [
+      "Spread: Blizzard",
+      "Screens: Aurora Veil"
+     ],
+     "sid": "NINETALES",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Nasty Plot"
+     ]
+    },
+    {
+     "name": "Swampert",
+     "tier": "A",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 1 type"
+     ],
+     "tools": [
+      "Spread: Earthquake"
+     ],
+     "sid": "SWAMPERT",
+     "form": "0",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Curse"
+     ]
+    },
+    {
+     "name": "Alomomola",
+     "tier": "A",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 2 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Priority: Aqua Jet (+0.8)",
+      "Recovery: Wish"
+     ],
+     "sid": "ALOMOMOLA",
      "form": "0",
      "pick": false,
      "rec": false,
      "teach": []
     },
     {
-     "name": "Cetitan",
-     "tier": "C",
+     "name": "Roserade (Aevian Form)",
+     "tier": "A",
      "stats": [
-      "Resists 1 type",
+      "3 of 4 weak to Psychic",
+      "Resists 5 types",
+      "Weak to 6 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Priority: Vacuum Wave (+0.8)"
+     ],
+     "sid": "ROSERADE",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": []
+    },
+    {
+     "name": "Arcanine (Hisuian Form)",
+     "tier": "A",
+     "stats": [
+      "3 of 4 weak to Ground",
+      "Resists 7 types",
       "Weak to 4 types",
       "Single target only"
      ],
      "tools": [
-      "Belly Drum (+6)"
+      "Priority: Extreme Speed (+0.8)"
      ],
-     "sid": "CETITAN",
-     "form": "0",
+     "sid": "ARCANINE",
+     "form": "1",
      "pick": false,
      "rec": false,
      "teach": []
     },
     {
-     "name": "Tatsugiri",
-     "tier": "C",
+     "name": "Donphan",
+     "tier": "A",
      "stats": [
       "Resists 3 types",
-      "Weak to 2 types"
+      "Weak to 3 types"
      ],
      "tools": [
-      "Nasty Plot (+2)",
-      "Spread: Surf"
+      "Priority: Ice Shard (+0.8)",
+      "Spread: Earthquake"
      ],
-     "sid": "TATSUGIRI",
+     "sid": "DONPHAN",
      "form": "0",
      "pick": false,
      "rec": false,
@@ -514,23 +707,6 @@
      "rec": true
     },
     {
-     "name": "Mr. Mime",
-     "tier": "D",
-     "stats": [
-      "Resists 3 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Screens: Reflect"
-     ],
-     "teach": [],
-     "sid": "MRMIME",
-     "form": "0",
-     "pick": false,
-     "rec": false
-    },
-    {
      "name": "Musharna (Aevian Form)",
      "tier": "S",
      "stats": [
@@ -546,32 +722,64 @@
      "rec": false
     },
     {
-     "name": "Solrock (Solrock Dominant Fusion)",
-     "tier": "B",
+     "name": "Zoroark",
+     "tier": "A",
      "stats": [
-      "Resists 5 types",
-      "Weak to 7 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "teach": [],
-     "sid": "SOLROCK",
-     "form": "1",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Squawkabilly (White Plumage)",
-     "tier": "C",
-     "stats": [
-      "Resists 4 types",
+      "Resists 3 types",
       "Weak to 3 types",
       "Single target only"
      ],
      "tools": [],
      "teach": [],
-     "sid": "SQUAWKABILLY",
-     "form": "3",
+     "sid": "ZOROARK",
+     "form": "0",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Arcanine (Hisuian Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 7 types",
+      "Weak to 4 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Priority: Extreme Speed"
+     ],
+     "teach": [],
+     "sid": "ARCANINE",
+     "form": "1",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Veluza (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "teach": [],
+     "sid": "VELUZA",
+     "form": "1",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Gastrodon (West Aevian Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 7 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "teach": [],
+     "sid": "GASTRODON",
+     "form": "1",
      "pick": false,
      "rec": false
     }
@@ -602,23 +810,6 @@
      "form": "1",
      "pick": true,
      "rec": true
-    },
-    {
-     "name": "Barbaracle",
-     "tier": "C",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 4 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Setup: Shell Smash"
-     ],
-     "teach": [],
-     "sid": "BARBARACLE",
-     "form": "0",
-     "pick": false,
-     "rec": false
     },
     {
      "name": "Crawdaunt",
@@ -2390,34 +2581,31 @@
    {
     "name": "Amoonguss",
     "tier": "A",
-    "score": 2.5,
+    "score": 2.75,
     "why": [
      "Amoonguss draws attacks so Muk-Alola attacks freely",
      "Amoonguss's sleep takes a foe out for Muk-Alola",
+     "Physical + special: Intimidate or one screen can't stop both",
      "You resist its weaknesses: Psychic",
      "Used together in the real meta"
     ]
    },
    {
-    "name": "Lapras-Aevian",
-    "tier": "S",
-    "score": 1.75,
-    "why": [
-     "Muk-Alola resets foe boosts that would stop Lapras-Aevian's sweep",
-     "Lapras-Aevian's sleep takes a foe out for Muk-Alola",
-     "Physical + special: Intimidate or one screen can't stop both",
-     "You resist its weaknesses: Grass, Ghost, Dark",
-     "Shared weaknesses: Ground"
-    ]
-   },
-   {
-    "name": "Alomomola",
+    "name": "Slowbro",
     "tier": "A",
     "score": 1.75,
     "why": [
      "Physical + special: Intimidate or one screen can't stop both",
-     "You resist its weaknesses: Grass",
-     "Used together in the real meta"
+     "You resist its weaknesses: Grass, Ghost, Dark"
+    ]
+   },
+   {
+    "name": "Slowking",
+    "tier": "A",
+    "score": 1.75,
+    "why": [
+     "Physical + special: Intimidate or one screen can't stop both",
+     "You resist its weaknesses: Grass, Ghost, Dark"
     ]
    }
   ],
