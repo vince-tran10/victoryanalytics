@@ -4,9 +4,9 @@
  "export_label": "22 Nov 22:34",
  "active_start": 447,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 283,
- "run": 297,
- "final": 301,
+ "roster": 284,
+ "run": 298,
+ "final": 302,
  "done": [
   "aelita",
   "narcissa1",
@@ -62,7 +62,7 @@
   ],
   "Clodsire": [
    "Earthquake",
-   "Curse",
+   "Flash",
    "Recover",
    "Protect"
   ],
@@ -167,6 +167,18 @@
    "Aqua Jet",
    "Wake-Up Slap",
    "Protect"
+  ],
+  "Dragalge": [
+   "Sludge Bomb",
+   "Dragon Pulse",
+   "Surf",
+   "Protect"
+  ],
+  "Palossand": [
+   "Shadow Ball",
+   "Earth Power",
+   "Giga Drain",
+   "Protect"
   ]
  },
  "promote": "team/promote_1108.json",
@@ -254,7 +266,9 @@
   "Glalie (Aevian Form)": "GRASSYSURGE",
   "Musharna (Aevian Form)": "TOUGHCLAWS",
   "Mandibuzz": "OVERCOAT",
-  "Alomomola": "REGENERATOR"
+  "Alomomola": "REGENERATOR",
+  "Dragalge": "ADAPTABILITY",
+  "Palossand": "WATERCOMPACTION"
  },
  "crests_owned": [
   "Dedenne Crest",

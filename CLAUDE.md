@@ -56,7 +56,8 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   for the next fight (state.fight) from his POOL = Party + Active box (S/A/B) + S/A he is moving in from Overflow. PRIORITIES (Vincent, 23 Nov,
   after losing again): 1) as many of the six as possible RESIST EACH MOVE THEY CARRY (move-level, field type chart + second types);
   2) every foe hit super effectively or with a field-boosted move; 3) the lead pair resists every attack their two leads carry.
-  Planner tab grids: leads vs their leads, their moves vs your six, who hits them hard. Older wording: DEFENSE FIRST (Vincent: a counter that gets one-shot is useless;
+  Planner tab grids: leads vs their leads, their moves vs your six, who hits them hard. Two plans per run: keep the field vs
+  break it with a Flash / Dazzling Gleam lead (no-field engine run); field-neutral cmp picks. Lead spread moves that hit the partner = penalty. Older wording: DEFENSE FIRST (Vincent: a counter that gets one-shot is useless;
   it must heavily resist what they bring): per foe count members taking < 50% from its best move, heavy penalty per one-shot, no attack type
   of theirs hits 3+, every type they use resisted once and their main types twice, a named answer per win condition (Tailwind / TR, setup,
   sleep, Perish trap, spread, Destiny Bond, screens); offense second; leads = the pair that beats their lead pair. Workflow shown on the

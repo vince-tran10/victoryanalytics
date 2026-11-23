@@ -700,7 +700,7 @@
    "SURF"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "your team"
  },
  "Lickilicky": {
   "ability": "OWNTEMPO",
@@ -1133,7 +1133,7 @@
    "GIGADRAIN"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "your team"
  },
  "Centiskorch": {
   "ability": "FLASHFIRE",
@@ -3841,7 +3841,7 @@
   "item": "Sitrus Berry",
   "moves": [
    "Earthquake",
-   "Curse",
+   "Flash",
    "Recover",
    "Protect"
   ],

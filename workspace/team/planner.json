@@ -111,6 +111,9 @@
   "POISON"
  ],
  "atk": {
+  "STEEL": [
+   "Stonjourner"
+  ],
   "ROCK": [
    "Golisopod",
    "Stonjourner"
@@ -119,9 +122,6 @@
    "Sigilyph",
    "Stonjourner",
    "Typhlosion"
-  ],
-  "STEEL": [
-   "Stonjourner"
   ],
   "GHOST": [
    "Banette",
@@ -132,13 +132,13 @@
   "FAIRY": [
    "Sigilyph"
   ],
-  "DARK": [
-   "Luxray"
-  ],
   "ELECTRIC": [
    "Luxray"
   ],
   "NORMAL": [
+   "Luxray"
+  ],
+  "DARK": [
    "Luxray"
   ],
   "BUG": [
@@ -417,7 +417,10 @@
     2.0,
     0.0
    ],
-   "answers": []
+   "answers": [],
+   "warn": [
+    "Earthquake-type spread moves hit Alomomola"
+   ]
   },
   {
    "name": "Alomomola",
@@ -490,7 +493,8 @@
     2.0,
     0.0
    ],
-   "answers": []
+   "answers": [],
+   "warn": []
   },
   {
    "name": "Muk (Alolan Form)",
@@ -566,7 +570,8 @@
    ],
    "answers": [
     "Setup (stat boosts)"
-   ]
+   ],
+   "warn": []
   },
   {
    "name": "Clodsire",
@@ -581,7 +586,7 @@
    "where": "Party",
    "moves": [
     "Earthquake",
-    "Curse",
+    "Flash",
     "Recover",
     "Protect"
    ],
@@ -642,7 +647,8 @@
    ],
    "answers": [
     "Setup (stat boosts)"
-   ]
+   ],
+   "warn": []
   },
   {
    "name": "Musharna (Aevian Form)",
@@ -716,7 +722,8 @@
     2.0,
     2.0
    ],
-   "answers": []
+   "answers": [],
+   "warn": []
   },
   {
    "name": "Mandibuzz",
@@ -790,12 +797,13 @@
     2.0,
     2.0
    ],
-   "answers": []
+   "answers": [],
+   "warn": []
   }
  ],
  "alts": [
   {
-   "score": 187.9,
+   "score": 181.9,
    "in": [
     "Vaporeon"
    ],
@@ -804,7 +812,7 @@
    ]
   },
   {
-   "score": 185.0,
+   "score": 179.0,
    "in": [
     "Gastrodon (West Aevian Form)"
    ],
@@ -813,7 +821,7 @@
    ]
   },
   {
-   "score": 184.7,
+   "score": 178.7,
    "in": [
     "Vaporeon",
     "Gastrodon (West Aevian Form)"
@@ -825,7 +833,9 @@
   }
  ],
  "pool": 55,
- "score": 188.2,
+ "score": 182.2,
+ "cmp": 37.5,
+ "break_field": null,
  "checks": {
   "weak3": [],
   "nores": [
@@ -851,5 +861,17 @@
    "Speed control (Tailwind / Trick Room)",
    "Spread attacks"
   ]
+ },
+ "alt_plan": {
+  "cmp": 37.0,
+  "six": [
+   "Clodsire",
+   "Vaporeon",
+   "Swampert",
+   "Dragalge",
+   "Palossand",
+   "Mandibuzz"
+  ],
+  "break_field": true
  }
 }

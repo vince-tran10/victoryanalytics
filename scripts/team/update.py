@@ -235,7 +235,8 @@ def main():
 
     if st.get('mode') == 'planner':   # 23 Nov (Vincent): the Team Planner picks the whole six from Party + Active for the next fight
         json.dump(dict(st, export=new), open(STATE, 'w'), indent=1, ensure_ascii=False)
-        print(sh(['../scripts/team/planner.py'], dict(env, BASE_RUN=f'r{run}')).strip())
+        print(sh(['../scripts/team/planner.py'], dict(env, BASE_RUN=f'r{run}')).strip())   # plan A: keep the field
+        print(sh(['../scripts/team/planner.py'], dict(env, BASE_RUN=f'r{run}', PLAN_BREAK='1', PLAN_APPLY='1')).strip())   # plan B: Flash breaks it; the better plan wins
         _s3 = json.load(open(STATE)); st['team'] = _s3['team']; st['moves'] = _s3['moves']; st['abilities'] = _s3['abilities']
     # 6) team rules + team search
     stat = json.loads(sh(['../scripts/team/chapter_rules.py', '.', '30', '--status'], env))

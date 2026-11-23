@@ -1,0 +1,878 @@
+{
+ "fight": "spector2",
+ "field": "Haunted Field",
+ "fe": null,
+ "format": "Doubles",
+ "foes": [
+  {
+   "name": "Stonjourner",
+   "types": [
+    "ROCK"
+   ],
+   "moves": [
+    "Protect",
+    "Rock Slide",
+    "Heavy Slam",
+    "Heat Crash"
+   ],
+   "item": "Focus Sash",
+   "ability": "Power Spot",
+   "sid": "STONJOURNER",
+   "form": "Normal Form"
+  },
+  {
+   "name": "Sigilyph",
+   "types": [
+    "FAIRY",
+    "GHOST"
+   ],
+   "moves": [
+    "Tailwind",
+    "Shadow Ball",
+    "Heat Wave",
+    "Moonblast"
+   ],
+   "item": "Magical Seed",
+   "ability": "Flare Boost",
+   "sid": "SIGILYPH",
+   "form": "Aevian Form"
+  },
+  {
+   "name": "Luxray",
+   "types": [
+    "ELECTRIC"
+   ],
+   "moves": [
+    "Crunch",
+    "Wild Charge",
+    "Facade",
+    "Howl"
+   ],
+   "item": "Magical Seed",
+   "ability": "Guts",
+   "sid": "LUXRAY",
+   "form": "Normal Form"
+  },
+  {
+   "name": "Golisopod",
+   "types": [
+    "BUG",
+    "GROUND"
+   ],
+   "moves": [
+    "Rock Blast",
+    "Bone Rush",
+    "Pin Missile",
+    "Shadow Sneak"
+   ],
+   "item": "Ghost Gem",
+   "ability": "Skill Link",
+   "sid": "GOLISOPOD",
+   "form": "Aevian Form"
+  },
+  {
+   "name": "Typhlosion",
+   "types": [
+    "FIRE",
+    "GHOST"
+   ],
+   "moves": [
+    "Infernal Parade",
+    "Eruption",
+    "Focus Blast",
+    "Protect"
+   ],
+   "item": "Life Orb",
+   "ability": "Frisk",
+   "sid": "TYPHLOSION",
+   "form": "Hisuian Form"
+  },
+  {
+   "name": "Banette",
+   "types": [
+    "GHOST"
+   ],
+   "moves": [
+    "Shadow Sneak",
+    "Disable",
+    "Gunk Shot",
+    "Phantom Force"
+   ],
+   "item": "Banettite",
+   "ability": "Insomnia",
+   "sid": "BANETTE",
+   "form": "Normal Form"
+  }
+ ],
+ "main": [
+  "GHOST",
+  "FIRE",
+  "ROCK",
+  "POISON"
+ ],
+ "atk": {
+  "STEEL": [
+   "Stonjourner"
+  ],
+  "ROCK": [
+   "Golisopod",
+   "Stonjourner"
+  ],
+  "FIRE": [
+   "Sigilyph",
+   "Stonjourner",
+   "Typhlosion"
+  ],
+  "GHOST": [
+   "Banette",
+   "Golisopod",
+   "Sigilyph",
+   "Typhlosion"
+  ],
+  "FAIRY": [
+   "Sigilyph"
+  ],
+  "NORMAL": [
+   "Luxray"
+  ],
+  "ELECTRIC": [
+   "Luxray"
+  ],
+  "DARK": [
+   "Luxray"
+  ],
+  "GROUND": [
+   "Golisopod"
+  ],
+  "BUG": [
+   "Golisopod"
+  ],
+  "FIGHTING": [
+   "Typhlosion"
+  ],
+  "POISON": [
+   "Banette"
+  ]
+ },
+ "wins": [
+  {
+   "win": "Speed control (Tailwind / Trick Room)",
+   "foes": [
+    "Sigilyph"
+   ],
+   "answered_by": []
+  },
+  {
+   "win": "Setup (stat boosts)",
+   "foes": [
+    "Luxray"
+   ],
+   "answered_by": [
+    "Clodsire"
+   ]
+  },
+  {
+   "win": "Spread attacks",
+   "foes": [
+    "Sigilyph",
+    "Stonjourner",
+    "Typhlosion"
+   ],
+   "answered_by": []
+  }
+ ],
+ "emoves": [
+  {
+   "foe": "Stonjourner",
+   "move": "Heat Crash",
+   "types": [
+    "FIRE"
+   ],
+   "w": 0.6
+  },
+  {
+   "foe": "Stonjourner",
+   "move": "Heavy Slam",
+   "types": [
+    "STEEL"
+   ],
+   "w": 0.6
+  },
+  {
+   "foe": "Stonjourner",
+   "move": "Rock Slide",
+   "types": [
+    "ROCK"
+   ],
+   "w": 0.75
+  },
+  {
+   "foe": "Sigilyph",
+   "move": "Heat Wave",
+   "types": [
+    "FIRE"
+   ],
+   "w": 0.95
+  },
+  {
+   "foe": "Sigilyph",
+   "move": "Moonblast",
+   "types": [
+    "FAIRY"
+   ],
+   "w": 0.95
+  },
+  {
+   "foe": "Sigilyph",
+   "move": "Shadow Ball",
+   "types": [
+    "GHOST"
+   ],
+   "w": 0.8
+  },
+  {
+   "foe": "Luxray",
+   "move": "Crunch",
+   "types": [
+    "DARK"
+   ],
+   "w": 0.8
+  },
+  {
+   "foe": "Luxray",
+   "move": "Facade",
+   "types": [
+    "NORMAL"
+   ],
+   "w": 0.7
+  },
+  {
+   "foe": "Luxray",
+   "move": "Wild Charge",
+   "types": [
+    "ELECTRIC"
+   ],
+   "w": 0.9
+  },
+  {
+   "foe": "Golisopod",
+   "move": "Bone Rush",
+   "types": [
+    "GROUND"
+   ],
+   "w": 0.6
+  },
+  {
+   "foe": "Golisopod",
+   "move": "Pin Missile",
+   "types": [
+    "BUG"
+   ],
+   "w": 0.6
+  },
+  {
+   "foe": "Golisopod",
+   "move": "Rock Blast",
+   "types": [
+    "ROCK"
+   ],
+   "w": 0.6
+  },
+  {
+   "foe": "Golisopod",
+   "move": "Shadow Sneak",
+   "types": [
+    "GHOST"
+   ],
+   "w": 0.6
+  },
+  {
+   "foe": "Typhlosion",
+   "move": "Eruption",
+   "types": [
+    "FIRE"
+   ],
+   "w": 1.5
+  },
+  {
+   "foe": "Typhlosion",
+   "move": "Focus Blast",
+   "types": [
+    "FIGHTING"
+   ],
+   "w": 1.2
+  },
+  {
+   "foe": "Typhlosion",
+   "move": "Infernal Parade",
+   "types": [
+    "GHOST"
+   ],
+   "w": 0.65
+  },
+  {
+   "foe": "Banette",
+   "move": "Gunk Shot",
+   "types": [
+    "POISON"
+   ],
+   "w": 1.2
+  },
+  {
+   "foe": "Banette",
+   "move": "Phantom Force",
+   "types": [
+    "GHOST"
+   ],
+   "w": 0.9
+  },
+  {
+   "foe": "Banette",
+   "move": "Shadow Sneak",
+   "types": [
+    "GHOST"
+   ],
+   "w": 0.6
+  }
+ ],
+ "lead_moves": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "six": [
+  {
+   "name": "Clodsire",
+   "tier": "B",
+   "types": [
+    "POISON",
+    "GROUND"
+   ],
+   "sid": "CLODSIRE",
+   "form": "0",
+   "lead": true,
+   "where": "Party",
+   "moves": [
+    "Earthquake",
+    "Flash",
+    "Recover",
+    "Protect"
+   ],
+   "ability": "UNAWARE",
+   "take": [
+    30,
+    32,
+    35,
+    126,
+    72,
+    68
+   ],
+   "deal": [
+    41,
+    36,
+    69,
+    9,
+    71,
+    34
+   ],
+   "worst": 126,
+   "worst_foe": "Golisopod",
+   "safe": 3,
+   "mult": {
+    "GHOST": 1.0,
+    "FIRE": 1.0,
+    "ROCK": 0.5,
+    "POISON": 0.25
+   },
+   "rm": [
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    0.5,
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    2.0,
+    0.5,
+    0.5,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    0.25,
+    1.0,
+    1.0
+   ],
+   "off": [
+    2.0,
+    0.0,
+    2.0,
+    0.0,
+    2.0,
+    0.0
+   ],
+   "answers": [
+    "Setup (stat boosts)"
+   ],
+   "warn": [
+    "Earthquake-type spread moves hit Vaporeon"
+   ]
+  },
+  {
+   "name": "Vaporeon",
+   "tier": "B",
+   "types": [
+    "WATER"
+   ],
+   "sid": "VAPOREON",
+   "form": "0",
+   "lead": true,
+   "where": "Active",
+   "moves": [
+    "Wish",
+    "Shadow Ball",
+    "Hydro Pump",
+    "Protect"
+   ],
+   "ability": "WATERABSORB",
+   "take": [
+    37,
+    39,
+    120,
+    63,
+    43,
+    68
+   ],
+   "deal": [
+    150,
+    67,
+    51,
+    73,
+    99,
+    64
+   ],
+   "worst": 120,
+   "worst_foe": "Luxray",
+   "safe": 3,
+   "mult": {
+    "GHOST": 1.0,
+    "FIRE": 0.5,
+    "ROCK": 1.0,
+    "POISON": 1.0
+   },
+   "rm": [
+    0.5,
+    0.5,
+    1.0,
+    0.5,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "off": [
+    2.0,
+    2.0,
+    0.0,
+    2.0,
+    2.0,
+    2.0
+   ],
+   "answers": [],
+   "warn": []
+  },
+  {
+   "name": "Swampert",
+   "tier": "A",
+   "types": [
+    "WATER",
+    "GROUND"
+   ],
+   "sid": "SWAMPERT",
+   "form": "0",
+   "lead": false,
+   "where": "Party",
+   "moves": [
+    "Earthquake",
+    "Rock Slide",
+    "Hammer Arm",
+    "Protect"
+   ],
+   "ability": "TORRENT",
+   "take": [
+    15,
+    47,
+    29,
+    52,
+    52,
+    57
+   ],
+   "deal": [
+    62,
+    56,
+    105,
+    15,
+    109,
+    52
+   ],
+   "worst": 57,
+   "worst_foe": "Banette",
+   "safe": 3,
+   "mult": {
+    "GHOST": 1.0,
+    "FIRE": 0.5,
+    "ROCK": 0.5,
+    "POISON": 0.5
+   },
+   "rm": [
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    0.5,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    1.0
+   ],
+   "off": [
+    2.0,
+    0.0,
+    2.0,
+    0.0,
+    2.0,
+    0.0
+   ],
+   "answers": [],
+   "warn": []
+  },
+  {
+   "name": "Dragalge",
+   "tier": "B",
+   "types": [
+    "POISON",
+    "DRAGON"
+   ],
+   "sid": "DRAGALGE",
+   "form": "0",
+   "lead": false,
+   "where": "Active",
+   "moves": [
+    "Sludge Bomb",
+    "Dragon Pulse",
+    "Surf",
+    "Protect"
+   ],
+   "ability": "ADAPTABILITY",
+   "take": [
+    38,
+    44,
+    35,
+    126,
+    48,
+    68
+   ],
+   "deal": [
+    136,
+    69,
+    65,
+    43,
+    59,
+    62
+   ],
+   "worst": 126,
+   "worst_foe": "Golisopod",
+   "safe": 4,
+   "mult": {
+    "GHOST": 1.0,
+    "FIRE": 0.5,
+    "ROCK": 1.0,
+    "POISON": 0.5
+   },
+   "rm": [
+    0.5,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.5,
+    2.0,
+    0.5,
+    1.0,
+    1.0,
+    0.5,
+    0.5,
+    1.0,
+    0.5,
+    1.0,
+    1.0
+   ],
+   "off": [
+    2.0,
+    0.0,
+    0.0,
+    2.0,
+    2.0,
+    0.0
+   ],
+   "answers": [],
+   "warn": []
+  },
+  {
+   "name": "Palossand",
+   "tier": "B",
+   "types": [
+    "GHOST",
+    "GROUND"
+   ],
+   "sid": "PALOSSAND",
+   "form": "0",
+   "lead": false,
+   "where": "Active",
+   "moves": [
+    "Shadow Ball",
+    "Earth Power",
+    "Giga Drain",
+    "Protect"
+   ],
+   "ability": "WATERCOMPACTION",
+   "take": [
+    22,
+    99,
+    54,
+    48,
+    130,
+    104
+   ],
+   "deal": [
+    150,
+    95,
+    99,
+    31,
+    95,
+    90
+   ],
+   "worst": 130,
+   "worst_foe": "Typhlosion",
+   "safe": 2,
+   "mult": {
+    "GHOST": 2.0,
+    "FIRE": 1.0,
+    "ROCK": 0.5,
+    "POISON": 0.25
+   },
+   "rm": [
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    1.0,
+    2.0,
+    2.0,
+    0.0,
+    0.0,
+    1.0,
+    0.5,
+    0.5,
+    2.0,
+    1.0,
+    0.0,
+    2.0,
+    0.25,
+    2.0,
+    2.0
+   ],
+   "off": [
+    2.0,
+    2.0,
+    2.0,
+    0.0,
+    2.0,
+    2.0
+   ],
+   "answers": [],
+   "warn": []
+  },
+  {
+   "name": "Mandibuzz",
+   "tier": "A",
+   "types": [
+    "DARK",
+    "FLYING"
+   ],
+   "sid": "MANDIBUZZ",
+   "form": "0",
+   "lead": false,
+   "where": "Overflow",
+   "moves": [
+    "Roost",
+    "Knock Off",
+    "Pluck",
+    "Protect"
+   ],
+   "ability": "OVERCOAT",
+   "take": [
+    53,
+    85,
+    85,
+    49,
+    81,
+    34
+   ],
+   "deal": [
+    16,
+    30,
+    28,
+    30,
+    58,
+    56
+   ],
+   "worst": 85,
+   "worst_foe": "Sigilyph",
+   "safe": 2,
+   "mult": {
+    "GHOST": 0.5,
+    "FIRE": 1.0,
+    "ROCK": 2.0,
+    "POISON": 1.0
+   },
+   "rm": [
+    1.0,
+    1.0,
+    2.0,
+    1.0,
+    2.0,
+    0.5,
+    0.5,
+    1.0,
+    2.0,
+    0.0,
+    1.0,
+    2.0,
+    0.5,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    0.5,
+    0.5
+   ],
+   "off": [
+    0.0,
+    0.0,
+    0.0,
+    2.0,
+    2.0,
+    2.0
+   ],
+   "answers": [],
+   "warn": []
+  }
+ ],
+ "alts": [
+  {
+   "score": 180.5,
+   "in": [
+    "Golurk"
+   ],
+   "out": [
+    "Palossand"
+   ]
+  },
+  {
+   "score": 180.3,
+   "in": [
+    "Alomomola"
+   ],
+   "out": [
+    "Vaporeon"
+   ]
+  },
+  {
+   "score": 179.2,
+   "in": [
+    "Gastrodon (West Aevian Form)"
+   ],
+   "out": [
+    "Dragalge"
+   ]
+  }
+ ],
+ "pool": 55,
+ "score": 182.0,
+ "cmp": 37.0,
+ "break_field": {
+  "user": "Clodsire",
+  "move": "Flash",
+  "replaces": "Recover",
+  "moves": [
+   "Earthquake",
+   "Flash",
+   "Recover",
+   "Protect"
+  ]
+ },
+ "checks": {
+  "weak3": [],
+  "nores": [],
+  "res_lt2": [
+   "GHOST"
+  ],
+  "no_se": [],
+  "one_shot": [
+   [
+    "Dragalge",
+    "Golisopod"
+   ],
+   [
+    "Clodsire",
+    "Golisopod"
+   ],
+   [
+    "Vaporeon",
+    "Luxray"
+   ],
+   [
+    "Palossand",
+    "Typhlosion"
+   ],
+   [
+    "Palossand",
+    "Banette"
+   ]
+  ],
+  "unanswered": [
+   "Speed control (Tailwind / Trick Room)",
+   "Spread attacks"
+  ]
+ }
+}

@@ -20,10 +20,13 @@ def fx(m): return '0' if m == 0 else '¼' if m == .25 else '½' if m == .5 else 
 def fcls(m): return 'im' if m == 0 else 'rs' if m < 1 else 'w4' if m > 2 else 'wk' if m > 1 else ''
 foes = P['foes']; L = 2 if P['format'] == 'Doubles' else 1
 h = f'<div class="pl-head"><b>{E(TITLE.get(P["fight"], P["fight"]))}</b><span class="pchip">{E(P["field"] or "No field")}</span><span class="pchip">{E(P["format"])}</span></div>'
+if P.get('break_field'):
+    bf = P['break_field']
+    h += f'<div class="pbreak">Turn 1: {E(disp(bf["user"]))} uses {E(bf["move"])} to break the field</div>'
 # their team
 h += '<article class="plc"><h3>Their team</h3><ol class="pfoes">' + ''.join(
     f'<li class="{"plead" if i < L else ""}"><span class="pn">{i + 1}</span>{SP.tag(f["sid"], "0", size="s")}<span>{E(f["name"])}</span></li>' for i, f in enumerate(foes)) + '</ol>'
-h += '<div class="psub">Their attacks</div><div class="pills">' + ''.join(f'{pill(t)}<small>×{len(P["atk"][t])}</small>' for t in P['main']) + '</div>'
+h += '<div class="psub">Their attacks</div><div class="pills">' + ''.join(f'{pill(t)}<small>×{len(P["atk"][t])}</small>' for t in sorted(P['atk'], key=lambda t: -len(P['atk'][t]))) + '</div>'
 h += '</article>'
 # 23 Nov (Vincent): the game plan instead of rule text: leads + turn 1, then who takes each of their Pokémon
 six = P['six']; FN = [f['name'] for f in foes]
@@ -48,7 +51,8 @@ for m in P['six']:
     rows += (f'<li class="bc pmem{" plead" if m["lead"] else ""}" data-dn="{E(disp(m["name"]))}" tabindex="0" role="button"><div class="bct">'
              f'<span class="tier t{m["tier"]}">{m["tier"]}</span>{SP.tag(m["sid"], m["form"], size="s")}<b>{E(disp(m["name"]))}</b>'
              + ('<span class="plt">Lead</span>' if m['lead'] else '') + '</div><div class="bchips">'
-             + ''.join(f'<span class="{"btool" if k == "tool" else "bstat"}">{E(c)}</span>' for k, c in cues(m['types'], m['ability'], m['moves'], _chart))
+             + ''.join(f'<span class="bstat bad">No Earthquake next to partner</span>' for _ in (m.get('warn') or [])[:1])
+             + ''.join(f'<span class="{"btool" if k == "tool" else "bstat"}">{E(c)}</span>' for k, c in cues(m['types'], m['ability'], m['moves'], _chart)[:2 if m.get('warn') else 3])
              + '</div></li>')
 h += f'<article class="plc"><h3>Your six</h3><ul class="bl">{rows}</ul></article>'
 # 23 Nov (Vincent): move-level checks. 1) leads vs their leads' attacks 2) every move they have vs the six 3) super effective on each foe
@@ -120,6 +124,7 @@ css = '''<style id="plan-css">
 .pmt .tp { font-size: 9.5px; padding: 0 5px } .pmt .spr { transform: scale(.72); margin: -6px }
 .pmt tr.pfo td { text-align: left; font: 700 11px var(--body); text-transform: uppercase; letter-spacing: .04em; color: var(--muted); padding-top: 8px; border-top: 0 }
 .ptab td.fb { background: rgba(217,119,6,.14); color: #b45309; font-weight: 700 }
+.pbreak { background: rgba(31,138,76,.12); color: #1f8a4c; font-weight: 700; padding: 8px 12px; border-radius: 10px; font-size: 13px }
 .plc ul.bl { padding: 0; margin: 0; list-style: none; display: grid; gap: 6px } .pho summary { cursor: pointer; font-weight: 700 } .pho ol { margin: 6px 0 0; padding-left: 20px; font-size: 13px; display: grid; gap: 3px }
 #splan + .pgrid, .pgrid { display: grid; gap: 14px }
 </style>'''
