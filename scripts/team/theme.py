@@ -405,7 +405,7 @@ def foes_html(k, names):   # 22 Nov (Vincent): their team in order, one note per
         lead = (j < (2 if dbl else 1))
         _wc = sorted({w['what'] for q in (FP.get(k) or {}).get('pairs', []) if q['foe'] == foe for w in q.get('wincons') or []})
         _big = [b_ for b_ in bits if b_.startswith(('Mega', 'Shadow Tag')) or 'Perish' in b_]
-        _thr = ' · '.join((_wc + _big)[:2]) if (_wc or _big) else ''   # 22 Nov (Vincent): red dot only on real threats; tap for why
+        _thr = ''   # 22 Nov (Vincent): threat dots removed from the page
         out += ('<li class="ofoe' + (' lead' if lead else '') + (' threat' if _thr else '') + '"' + (' tabindex="0" role="button"' if _thr else '') + '><span class="on">' + str(j + 1) + '</span>' + (SP.tag(*ids[j], size='s') if j < len(ids) else '')
                 + '<b>' + E(foe.split(' (')[0]) + '</b>' + ('<i class="tdot" aria-hidden="true"></i><small class="tnote" hidden>' + E(_thr) + '</small>' if _thr else '') + '</li>')
     return '<ol class="ofoes">' + out + '</ol>'
@@ -491,7 +491,7 @@ def fight_cards():
                 + '<div class="fbody"><div class="frow"><span class="fk">Bring</span><ul class="mons">' + bring + '</ul></div>'
                 + (('<div class="frow ftop"><span class="fk">Field</span>' + _fh + '</div>') if (_fh := field_html(hf.get('field', ''), list(st.get('core') or []) + [r['name'] for r in p['swaps']])) else '')
                 + ((('<div class="frow ftop"><span class="fk">Their team</span>' + _fo + '</div>') if (_fo := foes_html(k, list(st.get('core') or []) + [r['name'] for r in p['swaps']])) else '') if not hf.get('boss') else '')
-                + ((('<div class="frow ftop"><span class="fk">Plan</span>' + _ch + '</div>') if (idx == 0 and (_ch := cheat_html(k))) else ''))
+                + ((('<div class="frow ftop"><span class="fk">Plan</span>' + _ch + '</div>') if (False and idx == 0 and (_ch := cheat_html(k))) else ''))   # 22 Nov (Vincent): Plan block removed from the page
                 + (_bp or '') + '</div></details>')   # 21 Nov (Vincent): foe -> counter list removed; boss fights keep the bar plan
     # 21 Nov (Vincent): only the upcoming fight shows; the rest fold away (fights can come out of order)
     cards_ = re.findall(r'<details class="fc.*?</details>', out, re.S)
@@ -887,7 +887,7 @@ a { color: var(--link) }
 .viewtitle { max-width: 1120px; margin: 0 auto; font: 700 24px/1.1 var(--display); padding-block: 2px 12px; letter-spacing: .01em }
 @media (max-width: 720px) { .appbar-chips { display: none } .viewtitle { font-size: 21px } }
 /* navigation: bottom bar (phone), side rail (desktop) */
-.appnav { position: fixed; z-index: 25; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(6, 1fr);
+.appnav { position: fixed; z-index: 25; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(5, 1fr);   /* 22 Nov: 5 tabs (Boxes folded into To do) */
   background: var(--panel); border-top: 1px solid var(--line); box-shadow: 0 -4px 16px rgba(0,0,0,.06);
   padding: 6px max(6px, env(safe-area-inset-right, 0px)) calc(6px + env(safe-area-inset-bottom, 0px)) max(6px, env(safe-area-inset-left, 0px)) }
 .appnav button { display: grid; justify-items: center; gap: 2px; border: 0; background: none; color: var(--muted); font: 700 11px var(--body); padding: 6px 0; border-radius: 12px; cursor: pointer }

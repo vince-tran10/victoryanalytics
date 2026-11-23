@@ -316,9 +316,9 @@ damage score and the fight's real win condition was only read after Vincent lost
   counts whatever it would take.
 - **22 Nov guide pass (Vincent: clean, short):** Fights: chapter progress chips on top (✓ done / ▶ next); next fight card has a
   'Plan' block (Turn 1 per lead: best move by power x STAB x type, faster/slower, KO; Watch: foe: win conditions → answer, grouped);
-  their-team grid puts a red dot only on real threats (win conditions, Mega, Shadow Tag, Perish), tap = one-line why.
+  (Plan block and threat dots REMOVED from the page, Vincent 22 Nov; code kept off in theme.py).
   To do: 'Before <fight>' checklist in party order (✓ ready / N changes) on top, Boxes moves inside the To do tab (Boxes tab
-  removed, nav = 5 tabs), 'Coming soon' unlocks at the bottom. Builder: 'Gap: <type>' line (2+ core weak, none resists) + best
+  removed, nav = 5 tabs, .appnav grid = repeat(5)), 'Coming soon' unlocks at the bottom. Builder: 'Gap: <type>' line (2+ core weak, none resists) + best
   S/A flex. Type matrix starts with the six ticked. C&A checks: one line ('All checks pass · N warnings'), warnings folded.
 - **To do tab = profile fixes only:** one card per Pokémon listing everything it needs (moves with replacements, EVs,
   nature, ability, item, level). Never two places for the same Pokémon. No box moves.
