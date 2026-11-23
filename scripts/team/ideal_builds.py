@@ -20,6 +20,7 @@ TT = json.load(open('gamedata/trainertext.json'))
 I = json.load(open('gamedata/itemtext.json')) if os.path.exists('gamedata/itemtext.json') else {}
 import crests, current_box as cb
 HELD = {d['item'] for d in cb.parse(st['export']) if d.get('item') and 'Crest' in d['item']}
+OWNED_ITEMS = {d['item'] for d in cb.parse(st['export']) if d.get('item')} - {'Choice Scarf', 'Choice Band', 'Choice Specs', 'Life Orb', 'Leftovers'}
 OWNED_CRESTS = set(st.get('crests_owned') or []) | HELD
 CREST_IDS = {k for k, v in I.items() if (v.get('name') or '') in OWNED_CRESTS}
 # builds written into CLAUDE.md win over the generated ones; the team's own builds come from state.json
@@ -153,7 +154,27 @@ for c in sorted(cands, key=lambda c: c['gate'] != ''):
         if not (b.get('item') or '').endswith('Crest') and b.get('item') not in ('Sitrus Berry', 'Focus Sash') and _atk:
             b['item'] = BOOSTER.get(D.moves[_atk[0]]['Type'], b['item'])
     if (st.get('items') or {}).get(c['name']): b['item'] = st['items'][c['name']]
+    # 23 Nov (Vincent): only items he actually has (held by something in his export); else an owned booster of another attack, Sash, Sitrus
+    if b.get('item') and b['item'] not in OWNED_ITEMS and not b['item'].endswith('Crest'):
+        _atk = [mid(m) for m in b['moves'] if mid(m) in D.moves and D.moves[mid(m)]['Category'] != 'Status']
+        _alt = next((BOOSTER[D.moves[x]['Type']] for x in _atk if BOOSTER.get(D.moves[x]['Type']) in OWNED_ITEMS), None)
+        b['item_wanted'] = b['item']
+        b['item'] = _alt or ('Focus Sash' if (c.get('base') or {}).get('Spe', 0) >= 85 and 'Focus Sash' in OWNED_ITEMS else 'Sitrus Berry')
     out[c['name']] = b
+# 23 Nov (Vincent): the six can only use items he has, as many as he has (counted in the export). Core members pick first.
+import collections as _col
+_CNT = _col.Counter(d['item'] for d in cb.parse(st['export']) if d.get('item'))
+_core = [m['name'] for m in json.load(open('team/core4.json'))['core']] if os.path.exists('team/core4.json') else []
+for n in [x for x in (st.get('team') or []) if x in out and (st.get('items') or {}).get(x)]:   # his own item picks take theirs first
+    _CNT[out[n]['item']] -= 1
+for n in sorted([x for x in (st.get('team') or []) if x in out], key=lambda x: x not in _core):
+    b = out[n]; it = b.get('item')
+    if not it or it.endswith('Crest') or (st.get('items') or {}).get(n): continue
+    if _CNT[it] > 0: _CNT[it] -= 1; continue
+    _atk = [mid(m) for m in b['moves'] if mid(m) in D.moves and D.moves[mid(m)]['Category'] != 'Status']
+    alt = next((BOOSTER[D.moves[x]['Type']] for x in _atk if _CNT[BOOSTER.get(D.moves[x]['Type'])] > 0), None) \
+        or next((x for x in ('Focus Sash', 'Sitrus Berry') if _CNT[x] > 0), None)
+    if alt: b.setdefault('item_wanted', it); b['item'] = alt; _CNT[alt] -= 1
 json.dump(out, open('team/ideal_builds.json', 'w'), indent=1, ensure_ascii=False)
 for n in ['Golisopod (Aevian Form)', 'Furret', 'Veluza (Aevian Form)', 'Glalie (Aevian Form)', 'Gholdengo', 'Clodsire', 'Musharna (Aevian Form)',
           'Lapras (Aevian Form)', 'Parasect (Aevian Form)', 'Zoroark (Hisuian Form)', 'Arcanine (Hisuian Form)', 'Whiscash']:

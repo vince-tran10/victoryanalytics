@@ -20,14 +20,9 @@
   "Poison"
  ],
  "weak3": [],
- "nores": [],
- "misses": [
-  {
-   "foe": "Stoutland",
-   "fight": "jenner9",
-   "best": "Toxtricity (Aevian Form)",
-   "dmg": 100
-  }
+ "nores": [
+  "ELECTRIC"
  ],
+ "misses": [],
  "n_types": 14
 }

@@ -33,37 +33,16 @@
     ]
    },
    {
-    "name": "Veluza (Aevian Form)",
-    "ab": "RECKLESS",
+    "name": "Muk (Alolan Form)",
+    "ab": "POISONTOUCH",
     "moves": [
-     "Wave Crash",
-     "Flare Blitz",
-     "Head Smash"
+     "Knock Off",
+     "Shadow Sneak",
+     "Clear Smog"
     ],
     "setup": null,
-    "where": "Active",
-    "dump": 517,
-    "nature": "Adamant",
-    "evs": {
-     "Atk": 252,
-     "Spe": 252,
-     "Def": 4
-    },
-    "types": [
-     "WATER",
-     "FIRE"
-    ]
-   },
-   {
-    "name": "Lapras (Aevian Form)",
-    "ab": "NOGUARD",
-    "moves": [
-     "Rock Slide",
-     "Zen Headbutt"
-    ],
-    "setup": "Dragon Dance",
-    "where": "Active",
-    "dump": 492,
+    "where": "Party",
+    "dump": 3,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -71,8 +50,73 @@
      "SpD": 4
     },
     "types": [
-     "ROCK",
-     "PSYCHIC"
+     "POISON",
+     "DARK"
+    ]
+   },
+   {
+    "name": "Arcanine (Hisuian Form)",
+    "ab": "INTIMIDATE",
+    "moves": [
+     "Flare Blitz",
+     "Extreme Speed",
+     "Head Smash"
+    ],
+    "setup": null,
+    "where": "Active",
+    "dump": 471,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "Spe": 252,
+     "Def": 4
+    },
+    "types": [
+     "FIRE",
+     "ROCK"
+    ]
+   },
+   {
+    "name": "Gallade",
+    "ab": "SHARPNESS",
+    "moves": [
+     "Psycho Cut",
+     "Sacred Sword",
+     "Leaf Blade"
+    ],
+    "setup": null,
+    "where": "Active",
+    "dump": 486,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "PSYCHIC",
+     "FIGHTING"
+    ]
+   },
+   {
+    "name": "Azumarill",
+    "ab": "HUGEPOWER",
+    "moves": [
+     "Play Rough",
+     "Aqua Jet"
+    ],
+    "setup": "Belly Drum",
+    "where": "Active",
+    "dump": 472,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "WATER",
+     "FAIRY"
     ]
    }
   ],
@@ -91,7 +135,8 @@
      {
       "what": "Setup",
       "answers": [
-       "Clear Smog (Amoonguss)"
+       "Clear Smog (Amoonguss)",
+       "Clear Smog (Muk)"
       ]
      }
     ]
@@ -108,24 +153,24 @@
      {
       "what": "Healing",
       "answers": [
-       "teach Gastro Acid (Musharna)"
+       "Knock Off (Muk)"
       ]
      }
     ]
    },
    {
     "foe": "Noivern",
-    "mon": "Veluza (Aevian Form)",
-    "ability": "RECKLESS",
-    "dealt": 88,
-    "taken": 125,
+    "mon": "Muk (Alolan Form)",
+    "ability": "POISONTOUCH",
+    "dealt": 31,
+    "taken": 65,
     "ok": false,
     "setup": false,
     "wincons": [
      {
       "what": "Healing",
       "answers": [
-       "teach Gastro Acid (Musharna)"
+       "Knock Off (Muk)"
       ]
      }
     ]
@@ -162,13 +207,16 @@
      {
       "what": "Setup",
       "answers": [
-       "Clear Smog (Amoonguss)"
+       "Clear Smog (Amoonguss)",
+       "Clear Smog (Muk)"
       ]
      }
     ]
    }
   ],
-  "weak3": [],
+  "weak3": [
+   "FLYING"
+  ],
   "nores": [],
   "leads": [
    "Golisopod (Aevian Form)"

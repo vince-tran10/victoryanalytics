@@ -1,0 +1,13 @@
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Glalie (Aevian Form) | Active 60 | Grassy Surge  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'] | Focus Sash (already holding) | 
+Slowking (Galarian Form) | Active 60 | Regenerator  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Sludge Bomb', 'Psychic', 'Thunder Wave', 'Protect'] | Focus Sash (already holding) | 
+Toxtricity (Aevian Form) | Active 60 | Galvanize  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Torch Song', 'Boomburst', 'Sludge Bomb', 'Protect'] | Charcoal (already holding) | 
+Arcanine (Hisuian Form) | Active 60 | Intimidate  | Adamant {'Atk': 252, 'Spe': 252, 'Def': 4} | ['Flare Blitz', 'Extreme Speed', 'Head Smash', 'Protect'] | Focus Sash (already holding) | 
+Gallade | Active 60 | Sharpness  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Psycho Cut', 'Sacred Sword', 'Leaf Blade', 'Protect'] | Sitrus Berry (already holding) | 
+jenner 1.195 -> 1.657 leads ['Gallade', 'Glalie (Aevian Form)'] swaps [('Meowstic', 'Glalie (Aevian Form)', 0.06), ('Mr. Mime', 'Glalie (Aevian Form)', 0.045), ('Raichu', 'Slowking (Galarian Form)', 0.045)]
+danni 1.168 -> 1.757 leads ['Gallade', 'Arcanine (Hisuian Form)'] swaps [('Vivillon', 'Slowking (Galarian Form)', 0.066), ('Scrafty', 'Glalie (Aevian Form)', 0.06), ('Mr. Mime', 'Slowking (Galarian Form)', 0.059)]
+troye 0.858 -> 1.468 leads ['Gallade', 'Toxtricity (Aevian Form)'] swaps [('Brambleghast', 'Slowking (Galarian Form)', 0.072), ('Hariyama', 'Slowking (Galarian Form)', 0.061), ('Clawitzer', 'Slowking (Galarian Form)', 0.061)]
+zena 1.311 -> 1.583 leads ['Gallade', 'Glalie (Aevian Form)'] swaps [('Meganium', 'Slowking (Galarian Form)', 0.075), ('Diggersby', 'Slowking (Galarian Form)', 0.071), ('Scrafty', 'Slowking (Galarian Form)', 0.069)]
+marcie 0.679 -> 1.66 leads ['Toxtricity (Aevian Form)', 'Arcanine (Hisuian Form)'] swaps [('Leavanny (Aevian Form)', 'Slowking (Galarian Form)', 0.101), ('Orbeetle', 'Slowking (Galarian Form)', 0.077), ('Vivillon', 'Slowking (Galarian Form)', 0.077)]
+jenner9 0.605 -> 1.016 leads ['Gallade', 'Toxtricity (Aevian Form)'] swaps [('Frosmoth', 'Slowking (Galarian Form)', 0.105), ('Florges', 'Slowking (Galarian Form)', 0.104), ('Clefable', 'Slowking (Galarian Form)', 0.073)]
+erick 0.733 -> 1.261 leads ['Gallade', 'Musharna (Aevian Form)'] swaps [('Scrafty', 'Glalie (Aevian Form)', 0.043), ('Chandelure', 'Toxtricity (Aevian Form)', 0.035), ('Raichu', 'Slowking (Galarian Form)', 0.034)]

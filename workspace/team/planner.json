@@ -1,5 +1,420 @@
 {
  "fight": "jenner9",
+ "brief": [
+  {
+   "id": "jenner9:setup:Stoutland:0",
+   "fight": "jenner9",
+   "kind": "setup",
+   "foe": "Stoutland",
+   "text": "Stoutland: Work Up (+2 here)",
+   "how": "KO it before it boosts twice, or Haze / Clear Smog / Encore / Unaware / phazing",
+   "need": 1,
+   "stage": 2,
+   "cov": [
+    [
+     "Muk (Alolan Form)",
+     "Clear Smog"
+    ]
+   ],
+   "ok": true,
+   "core_ok": false
+  },
+  {
+   "id": "jenner9:heal:Appletun:1",
+   "fight": "jenner9",
+   "kind": "heal",
+   "foe": "Appletun",
+   "text": "Appletun heals (Recover)",
+   "how": "One-shot it, or Knock Off / Heal Block",
+   "need": 1,
+   "cov": [
+    [
+     "Muk (Alolan Form)",
+     "Knock Off"
+    ]
+   ],
+   "ok": true,
+   "core_ok": false
+  },
+  {
+   "id": "jenner9:item:Appletun:2",
+   "fight": "jenner9",
+   "kind": "item",
+   "foe": "Appletun",
+   "text": "Appletun: Appletunite (Mega Evolves)",
+   "how": "Plan around it",
+   "need": 1,
+   "item": "Appletunite",
+   "cov": [
+    [
+     "Toxtricity (Aevian Form)",
+     "beats it (74%)"
+    ]
+   ],
+   "ok": true,
+   "core_ok": true
+  },
+  {
+   "id": "jenner9:heal:Noivern:3",
+   "fight": "jenner9",
+   "kind": "heal",
+   "foe": "Noivern",
+   "text": "Noivern heals (Roost)",
+   "how": "One-shot it, or Knock Off / Heal Block",
+   "need": 1,
+   "cov": [
+    [
+     "Musharna (Aevian Form)",
+     "one-shots it"
+    ],
+    [
+     "Toxtricity (Aevian Form)",
+     "one-shots it"
+    ],
+    [
+     "Muk (Alolan Form)",
+     "Knock Off"
+    ],
+    [
+     "Arcanine (Hisuian Form)",
+     "one-shots it"
+    ]
+   ],
+   "ok": true,
+   "core_ok": true
+  },
+  {
+   "id": "jenner9:item:Noivern:4",
+   "fight": "jenner9",
+   "kind": "item",
+   "foe": "Noivern",
+   "text": "Noivern: Synthetic Seed (field seed: boosts it on entry)",
+   "how": "Plan around it",
+   "need": 1,
+   "item": "Synthetic Seed",
+   "cov": [
+    [
+     "Musharna (Aevian Form)",
+     "beats it (101%)"
+    ],
+    [
+     "Toxtricity (Aevian Form)",
+     "beats it (104%)"
+    ],
+    [
+     "Arcanine (Hisuian Form)",
+     "beats it (120%)"
+    ]
+   ],
+   "ok": true,
+   "core_ok": true
+  },
+  {
+   "id": "jenner9:ability:Porygon-Z:5",
+   "fight": "jenner9",
+   "kind": "ability",
+   "foe": "Porygon-Z",
+   "text": "Porygon-Z: Adaptability (STAB x2: hits very hard)",
+   "how": "Plan around it",
+   "need": 1,
+   "ability": "ADAPTABILITY",
+   "cov": [
+    [
+     "Toxtricity (Aevian Form)",
+     "still hits it for 110%"
+    ],
+    [
+     "Gallade",
+     "still hits it for 155%"
+    ],
+    [
+     "Arcanine (Hisuian Form)",
+     "still hits it for 65%"
+    ]
+   ],
+   "ok": true,
+   "core_ok": true
+  },
+  {
+   "id": "jenner9:item:Porygon-Z:6",
+   "fight": "jenner9",
+   "kind": "item",
+   "foe": "Porygon-Z",
+   "text": "Porygon-Z: Choice Scarf (Speed x1.5 (locked into one move))",
+   "how": "Plan around it",
+   "need": 1,
+   "item": "Choice Scarf",
+   "cov": [
+    [
+     "Toxtricity (Aevian Form)",
+     "beats it (110%)"
+    ],
+    [
+     "Gallade",
+     "beats it (155%)"
+    ]
+   ],
+   "ok": true,
+   "core_ok": true
+  },
+  {
+   "id": "jenner9:ability:Kommo-o:7",
+   "fight": "jenner9",
+   "kind": "ability",
+   "foe": "Kommo-o",
+   "text": "Kommo-o: Soundproof (immune to sound moves)",
+   "how": "Hit it with something its ability does not block",
+   "need": 1,
+   "ability": "SOUNDPROOF",
+   "cov": [
+    [
+     "Musharna (Aevian Form)",
+     "still hits it for 124%"
+    ],
+    [
+     "Gallade",
+     "still hits it for 70%"
+    ],
+    [
+     "Azumarill",
+     "still hits it for 121%"
+    ]
+   ],
+   "ok": true,
+   "core_ok": true
+  },
+  {
+   "id": "jenner9:item:Kommo-o:8",
+   "fight": "jenner9",
+   "kind": "item",
+   "foe": "Kommo-o",
+   "text": "Kommo-o: Kommonium Z (Z-move: one huge hit, once)",
+   "how": "Protect / resist the Z-move; multi-hit or priority breaks Sash / Sturdy",
+   "need": 1,
+   "item": "Kommonium Z",
+   "cov": [
+    [
+     "Musharna (Aevian Form)",
+     "beats it (124%)"
+    ],
+    [
+     "Azumarill",
+     "beats it (121%)"
+    ]
+   ],
+   "ok": true,
+   "core_ok": true
+  },
+  {
+   "id": "jenner9:setup:Klinklang:9",
+   "fight": "jenner9",
+   "kind": "setup",
+   "foe": "Klinklang",
+   "text": "Klinklang: Shift Gear (+1)",
+   "how": "KO it before it boosts twice, or Haze / Clear Smog / Encore / Unaware / phazing",
+   "need": 1,
+   "stage": 1,
+   "cov": [
+    [
+     "Muk (Alolan Form)",
+     "Clear Smog"
+    ]
+   ],
+   "ok": true,
+   "core_ok": false
+  },
+  {
+   "id": "jenner9:ability:Klinklang:10",
+   "fight": "jenner9",
+   "kind": "ability",
+   "foe": "Klinklang",
+   "text": "Klinklang: Plus (raises the crowd Hype on entry)",
+   "how": "Plan around it",
+   "need": 1,
+   "ability": "PLUS",
+   "cov": [
+    [
+     "Toxtricity (Aevian Form)",
+     "still hits it for 228%"
+    ],
+    [
+     "Gallade",
+     "still hits it for 115%"
+    ],
+    [
+     "Arcanine (Hisuian Form)",
+     "still hits it for 97%"
+    ]
+   ],
+   "ok": true,
+   "core_ok": true
+  },
+  {
+   "id": "jenner9:speed:Stoutland:11",
+   "fight": "jenner9",
+   "kind": "speed",
+   "foe": "Stoutland",
+   "text": "Stoutland: Speed 165",
+   "how": "Singles: outspeed and KO, priority, or paralyse it then outspeed",
+   "need": 1,
+   "spe": 165,
+   "cov": [],
+   "ok": false,
+   "core_ok": false
+  },
+  {
+   "id": "jenner9:speed:Noivern:12",
+   "fight": "jenner9",
+   "kind": "speed",
+   "foe": "Noivern",
+   "text": "Noivern: Speed 219",
+   "how": "Singles: outspeed and KO, priority, or paralyse it then outspeed",
+   "need": 1,
+   "spe": 219,
+   "cov": [
+    [
+     "Azumarill",
+     "priority Aqua Jet"
+    ],
+    [
+     "Arcanine (Hisuian Form)",
+     "priority Extreme Speed"
+    ]
+   ],
+   "ok": true,
+   "core_ok": false
+  },
+  {
+   "id": "jenner9:speed:Porygon-Z:13",
+   "fight": "jenner9",
+   "kind": "speed",
+   "foe": "Porygon-Z",
+   "text": "Porygon-Z: Speed 270 (Choice Scarf)",
+   "how": "Singles: outspeed and KO, priority, or paralyse it then outspeed",
+   "need": 1,
+   "spe": 270,
+   "cov": [
+    [
+     "Arcanine (Hisuian Form)",
+     "priority Extreme Speed"
+    ]
+   ],
+   "ok": true,
+   "core_ok": false
+  },
+  {
+   "id": "jenner9:speed:Kommo-o:14",
+   "fight": "jenner9",
+   "kind": "speed",
+   "foe": "Kommo-o",
+   "text": "Kommo-o: Speed 166",
+   "how": "Singles: outspeed and KO, priority, or paralyse it then outspeed",
+   "need": 1,
+   "spe": 166,
+   "cov": [
+    [
+     "Azumarill",
+     "priority Aqua Jet"
+    ]
+   ],
+   "ok": true,
+   "core_ok": false
+  },
+  {
+   "id": "jenner9:speed:Klinklang:15",
+   "fight": "jenner9",
+   "kind": "speed",
+   "foe": "Klinklang",
+   "text": "Klinklang: Speed 185",
+   "how": "Singles: outspeed and KO, priority, or paralyse it then outspeed",
+   "need": 1,
+   "spe": 185,
+   "cov": [
+    [
+     "Arcanine (Hisuian Form)",
+     "priority Extreme Speed"
+    ]
+   ],
+   "ok": true,
+   "core_ok": false
+  },
+  {
+   "id": "jenner9:type:NORMAL:16",
+   "fight": "jenner9",
+   "kind": "type",
+   "foe": "NORMAL",
+   "text": "Normal attacks from 4",
+   "how": "Two of yours resist or are immune",
+   "need": 2,
+   "atype": "NORMAL",
+   "cov": [
+    [
+     "Arcanine (Hisuian Form)",
+     "resists"
+    ]
+   ],
+   "ok": false,
+   "core_ok": false
+  },
+  {
+   "id": "jenner9:type:DRAGON:17",
+   "fight": "jenner9",
+   "kind": "type",
+   "foe": "DRAGON",
+   "text": "Dragon attacks from 3",
+   "how": "Two of yours resist or are immune",
+   "need": 2,
+   "atype": "DRAGON",
+   "cov": [
+    [
+     "Musharna (Aevian Form)",
+     "immune"
+    ],
+    [
+     "Azumarill",
+     "immune"
+    ]
+   ],
+   "ok": true,
+   "core_ok": false
+  },
+  {
+   "id": "jenner9:fieldexploit:Concert Venue:18",
+   "fight": "jenner9",
+   "kind": "fieldexploit",
+   "foe": "Concert Venue",
+   "text": "Concert Venue boosts: sound moves x1.5",
+   "how": "Bring a Pokemon whose best hit is field-boosted",
+   "need": 1,
+   "boosted": [],
+   "sound": true,
+   "cov": [
+    [
+     "Toxtricity (Aevian Form)",
+     "Torch Song"
+    ]
+   ],
+   "ok": true,
+   "core_ok": true
+  }
+ ],
+ "flexwhy": {
+  "Azumarill": [
+   "Noivern: Speed 219",
+   "Kommo-o: Speed 166",
+   "Dragon attacks from 3"
+  ],
+  "Muk (Alolan Form)": [
+   "Stoutland: Work Up (+2 here)",
+   "Appletun heals (Recover)",
+   "Klinklang: Shift Gear (+1)"
+  ],
+  "Arcanine (Hisuian Form)": [
+   "Noivern: Speed 219",
+   "Porygon-Z: Speed 270 (Choice Scarf)",
+   "Klinklang: Speed 185"
+  ]
+ },
  "field": "Concert Venue",
  "fe": "CONCERT1",
  "format": "Singles",
@@ -109,10 +524,16 @@
   "DRAGON",
   "PSYCHIC",
   "FIGHTING",
-  "ELECTRIC",
-  "STEEL"
+  "STEEL",
+  "ELECTRIC"
  ],
  "atk": {
+  "NORMAL": [
+   "Kommo-o",
+   "Noivern",
+   "Porygon-Z",
+   "Stoutland"
+  ],
   "DARK": [
    "Stoutland"
   ],
@@ -120,23 +541,17 @@
    "Porygon-Z",
    "Stoutland"
   ],
-  "NORMAL": [
+  "DRAGON": [
+   "Appletun",
    "Kommo-o",
-   "Noivern",
-   "Porygon-Z",
-   "Stoutland"
-  ],
-  "GRASS": [
-   "Appletun"
+   "Noivern"
   ],
   "FIGHTING": [
    "Appletun",
    "Kommo-o"
   ],
-  "DRAGON": [
-   "Appletun",
-   "Kommo-o",
-   "Noivern"
+  "GRASS": [
+   "Appletun"
   ],
   "FLYING": [
    "Noivern"
@@ -147,10 +562,10 @@
   "FIRE": [
    "Kommo-o"
   ],
-  "ELECTRIC": [
+  "STEEL": [
    "Klinklang"
   ],
-  "STEEL": [
+  "ELECTRIC": [
    "Klinklang"
   ]
  },
@@ -161,7 +576,9 @@
     "Klinklang",
     "Stoutland"
    ],
-   "answered_by": []
+   "answered_by": [
+    "Muk (Alolan Form)"
+   ]
   },
   {
    "win": "Spread attacks",
@@ -328,11 +745,9 @@
    "Stoutland": [],
    "Appletun": [
     "Musharna (Aevian Form)",
-    "Slowking (Galarian Form)"
+    "Muk (Alolan Form)"
    ],
-   "Noivern": [
-    "Glalie (Aevian Form)"
-   ],
+   "Noivern": [],
    "Porygon-Z": [],
    "Kommo-o": [],
    "Klinklang": []
@@ -348,10 +763,6 @@
   "para": {
    "Stoutland": [
     "Gallade"
-   ],
-   "Noivern": [
-    "Toxtricity (Aevian Form)",
-    "Arcanine (Hisuian Form)"
    ],
    "Porygon-Z": [
     "Toxtricity (Aevian Form)"
@@ -380,38 +791,34 @@
    "Klinklang": 185
   },
   "myspeed": {
-   "Toxtricity (Aevian Form)": 164,
-   "Arcanine (Hisuian Form)": 155,
-   "Gallade": 110,
    "Musharna (Aevian Form)": 53,
-   "Glalie (Aevian Form)": 77,
-   "Slowking (Galarian Form)": 55
+   "Toxtricity (Aevian Form)": 164,
+   "Gallade": 110,
+   "Azumarill": 77,
+   "Muk (Alolan Form)": 77,
+   "Arcanine (Hisuian Form)": 155
   },
   "sc": {
    "Stoutland": [
-    "Slowking (Galarian Form): Thunder Wave"
+    "Azumarill: Aqua Jet (priority)"
    ],
-   "Appletun": [
-    "Slowking (Galarian Form): Thunder Wave"
-   ],
-   "Noivern": [
-    "Slowking (Galarian Form): Thunder Wave"
-   ],
+   "Appletun": [],
+   "Noivern": [],
    "Porygon-Z": [
-    "Slowking (Galarian Form): Thunder Wave"
+    "Azumarill: Aqua Jet (priority)"
    ],
-   "Kommo-o": [
-    "Slowking (Galarian Form): Thunder Wave"
-   ],
+   "Kommo-o": [],
    "Klinklang": [
-    "Slowking (Galarian Form): Thunder Wave"
+    "Azumarill: Aqua Jet (priority)"
    ]
   },
-  "priority": [],
-  "pivot": [
-   "Slowking (Galarian Form)"
+  "priority": [
+   "Azumarill"
   ],
-  "hazards": [],
+  "pivot": [],
+  "hazards": [
+   "Muk (Alolan Form)"
+  ],
   "immune": {
    "ELECTRIC": []
   }
@@ -421,51 +828,45 @@
    "foe": "Stoutland",
    "faster_than": 6,
    "tools": [
-    "Slowking (Galarian Form): Thunder Wave"
+    "Azumarill: Aqua Jet (priority)"
    ]
   },
   {
    "foe": "Appletun",
-   "faster_than": 2,
-   "tools": [
-    "Slowking (Galarian Form): Thunder Wave"
-   ]
+   "faster_than": 1,
+   "tools": []
   },
   {
    "foe": "Noivern",
    "faster_than": 6,
-   "tools": [
-    "Slowking (Galarian Form): Thunder Wave"
-   ]
+   "tools": []
   },
   {
    "foe": "Porygon-Z",
    "faster_than": 6,
    "tools": [
-    "Slowking (Galarian Form): Thunder Wave"
+    "Azumarill: Aqua Jet (priority)"
    ]
   },
   {
    "foe": "Kommo-o",
    "faster_than": 6,
-   "tools": [
-    "Slowking (Galarian Form): Thunder Wave"
-   ]
+   "tools": []
   },
   {
    "foe": "Klinklang",
    "faster_than": 6,
    "tools": [
-    "Slowking (Galarian Form): Thunder Wave"
+    "Azumarill: Aqua Jet (priority)"
    ]
   }
  ],
  "tips": [],
  "six": [
   {
-   "core": false,
+   "core": true,
    "role": "Lead",
-   "job": "Counter: Appletun",
+   "job": null,
    "name": "Musharna (Aevian Form)",
    "tier": "S",
    "types": [
@@ -507,8 +908,8 @@
     "DRAGON": 0.0,
     "PSYCHIC": 0.0,
     "FIGHTING": 1.0,
-    "ELECTRIC": 1.0,
-    "STEEL": 2.0
+    "STEEL": 2.0,
+    "ELECTRIC": 1.0
    },
    "rm": [
     0.25,
@@ -566,94 +967,96 @@
   {
    "core": false,
    "role": "Mid game",
-   "job": "Counter: Noivern",
-   "name": "Glalie (Aevian Form)",
+   "job": "Counter: Appletun",
+   "name": "Muk (Alolan Form)",
    "tier": "S",
    "types": [
-    "GRASS",
-    "ROCK"
+    "POISON",
+    "DARK"
    ],
-   "sid": "GLALIE",
+   "sid": "MUK",
    "form": "1",
    "lead": false,
-   "where": "Active",
+   "where": "Party",
    "moves": [
-    "Grassy Glide",
-    "Wood Hammer",
-    "Rock Slide",
+    "Knock Off",
+    "Shadow Sneak",
+    "Clear Smog",
     "Protect"
    ],
-   "ability": "GRASSYSURGE",
+   "ability": "POISONTOUCH",
    "take": [
-    30,
-    48,
-    46,
-    62,
-    89,
-    118
+    65,
+    40,
+    64,
+    106,
+    76,
+    70
    ],
    "deal": [
-    64,
+    28,
     15,
-    62,
-    76,
-    22,
-    28
+    31,
+    33,
+    9,
+    25
    ],
-   "worst": 118,
-   "worst_foe": "Klinklang",
-   "safe": 3,
+   "worst": 106,
+   "worst_foe": "Porygon-Z",
+   "safe": 1,
    "mult": {
-    "NORMAL": 0.5,
+    "NORMAL": 1.0,
     "DRAGON": 1.0,
-    "PSYCHIC": 1.0,
-    "FIGHTING": 2.0,
-    "ELECTRIC": 0.5,
-    "STEEL": 2.0
+    "PSYCHIC": 0.0,
+    "FIGHTING": 1.0,
+    "STEEL": 1.0,
+    "ELECTRIC": 1.0
    },
    "rm": [
-    1.0,
-    1.0,
     0.5,
-    1.0,
-    2.0,
-    1.0,
+    0.0,
     1.0,
     0.5,
     1.0,
     1.0,
     1.0,
-    0.5,
-    2.0,
+    1.0,
+    1.0,
+    0.0,
     0.5,
     1.0,
     1.0,
-    2.0,
-    0.5
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
    ],
    "off": [
     0.0,
-    0.0,
     2.0,
+    0.0,
     0.0,
     0.0,
     0.0
    ],
-   "answers": [],
+   "answers": [
+    "Setup (stat boosts)"
+   ],
    "why": [
     {
-     "move": "Grassy Glide",
-     "why": "STAB; Priority +1 on Grassy Terrain: Grassy Surge sets it on entry (replaces Haunted Field for a few turns)",
+     "move": "Knock Off",
+     "why": "Your best hit on Stoutland, Noivern, Porygon-Z, Klinklang; STAB; Removes their item (Stoutland Chople Berry, Porygon-Z Choice Scarf, Kommo-o Kommonium Z, Klinklang Air Balloon)",
      "flag": false
     },
     {
-     "move": "Wood Hammer",
-     "why": "Your best hit on Stoutland, Porygon-Z, Kommo-o, Klinklang; STAB",
+     "move": "Shadow Sneak",
+     "why": "Priority +1: finishes a weakened foe first; no effect on Stoutland, Porygon-Z",
      "flag": false
     },
     {
-     "move": "Rock Slide",
-     "why": "Your best hit on Appletun, Noivern; Super effective on Noivern; STAB; hits both foes; Spread move that never hits your partner; 30% flinch",
+     "move": "Clear Smog",
+     "why": "Your best hit on Appletun, Kommo-o; Super effective on Appletun; STAB; Resets the target boosts (Luxray Howl); no effect on Klinklang",
      "flag": false
     },
     {
@@ -667,209 +1070,7 @@
   {
    "core": false,
    "role": "Mid game",
-   "job": "Speed control",
-   "name": "Slowking (Galarian Form)",
-   "tier": "S",
-   "types": [
-    "POISON",
-    "PSYCHIC"
-   ],
-   "sid": "SLOWKING",
-   "form": "1",
-   "lead": false,
-   "where": "Active",
-   "moves": [
-    "Sludge Bomb",
-    "Psychic",
-    "Thunder Wave",
-    "Protect"
-   ],
-   "ability": "REGENERATOR",
-   "take": [
-    68,
-    39,
-    62,
-    103,
-    74,
-    69
-   ],
-   "deal": [
-    40,
-    62,
-    44,
-    44,
-    63,
-    22
-   ],
-   "worst": 103,
-   "worst_foe": "Porygon-Z",
-   "safe": 1,
-   "mult": {
-    "NORMAL": 1.0,
-    "DRAGON": 1.0,
-    "PSYCHIC": 1.0,
-    "FIGHTING": 0.25,
-    "ELECTRIC": 1.0,
-    "STEEL": 1.0
-   },
-   "rm": [
-    2.0,
-    1.0,
-    1.0,
-    0.5,
-    0.25,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    2.0,
-    1.0,
-    0.25,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0
-   ],
-   "off": [
-    0.0,
-    2.0,
-    0.0,
-    0.0,
-    2.0,
-    0.0
-   ],
-   "answers": [],
-   "why": [
-    {
-     "move": "Sludge Bomb",
-     "why": "Your best hit on Stoutland, Appletun, Noivern, Porygon-Z; Super effective on Appletun; STAB; no effect on Klinklang",
-     "flag": false
-    },
-    {
-     "move": "Psychic",
-     "why": "Your best hit on Stoutland, Noivern, Porygon-Z, Kommo-o, Klinklang; Super effective on Kommo-o; STAB",
-     "flag": false
-    },
-    {
-     "move": "Thunder Wave",
-     "why": "Speed control: paralysis halves Speed, 25% full para; slows Stoutland, Appletun, Noivern, Porygon-Z, Kommo-o, Klinklang",
-     "flag": false
-    },
-    {
-     "move": "Protect",
-     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
-     "flag": false
-    }
-   ],
-   "warn": []
-  },
-  {
-   "core": true,
-   "role": "Mid game",
-   "job": null,
-   "name": "Toxtricity (Aevian Form)",
-   "tier": "S",
-   "types": [
-    "FIRE",
-    "POISON"
-   ],
-   "sid": "TOXTRICITY",
-   "form": "2",
-   "lead": false,
-   "where": "Active",
-   "moves": [
-    "Torch Song",
-    "Boomburst",
-    "Sludge Bomb",
-    "Protect"
-   ],
-   "ability": "PUNKROCK",
-   "take": [
-    107,
-    76,
-    74,
-    133,
-    71,
-    58
-   ],
-   "deal": [
-    99,
-    74,
-    104,
-    110,
-    32,
-    150
-   ],
-   "worst": 133,
-   "worst_foe": "Porygon-Z",
-   "safe": 0,
-   "mult": {
-    "NORMAL": 1.0,
-    "DRAGON": 1.0,
-    "PSYCHIC": 2.0,
-    "FIGHTING": 0.5,
-    "ELECTRIC": 1.0,
-    "STEEL": 0.5
-   },
-   "rm": [
-    1.0,
-    2.0,
-    1.0,
-    0.25,
-    0.5,
-    1.0,
-    1.0,
-    0.5,
-    1.0,
-    2.0,
-    1.0,
-    0.5,
-    0.5,
-    0.5,
-    0.5,
-    0.5,
-    0.5,
-    1.0
-   ],
-   "off": [
-    1.5,
-    2.0,
-    1.5,
-    1.5,
-    0.0,
-    2.0
-   ],
-   "answers": [],
-   "why": [
-    {
-     "move": "Torch Song",
-     "why": "Your best hit on Klinklang; Super effective on Klinklang; x2.25 on this field; STAB; no effect on Kommo-o",
-     "flag": false
-    },
-    {
-     "move": "Boomburst",
-     "why": "Your best hit on Stoutland, Appletun, Noivern, Porygon-Z; x2.25 on this field; hits both foes; no effect on Kommo-o",
-     "flag": false
-    },
-    {
-     "move": "Sludge Bomb",
-     "why": "Your best hit on Kommo-o; Super effective on Appletun; STAB; no effect on Klinklang",
-     "flag": false
-    },
-    {
-     "move": "Protect",
-     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
-     "flag": false
-    }
-   ],
-   "warn": []
-  },
-  {
-   "core": true,
-   "role": "Mid game",
-   "job": null,
+   "job": "Counter",
    "name": "Arcanine (Hisuian Form)",
    "tier": "A",
    "types": [
@@ -911,8 +1112,8 @@
     "DRAGON": 1.0,
     "PSYCHIC": 1.0,
     "FIGHTING": 2.0,
-    "ELECTRIC": 1.0,
-    "STEEL": 1.0
+    "STEEL": 1.0,
+    "ELECTRIC": 1.0
    },
    "rm": [
     1.0,
@@ -971,6 +1172,107 @@
    "core": true,
    "role": "Mid game",
    "job": null,
+   "name": "Toxtricity (Aevian Form)",
+   "tier": "S",
+   "types": [
+    "FIRE",
+    "POISON"
+   ],
+   "sid": "TOXTRICITY",
+   "form": "2",
+   "lead": false,
+   "where": "Active",
+   "moves": [
+    "Torch Song",
+    "Boomburst",
+    "Sludge Bomb",
+    "Protect"
+   ],
+   "ability": "PUNKROCK",
+   "take": [
+    107,
+    76,
+    74,
+    133,
+    71,
+    58
+   ],
+   "deal": [
+    99,
+    74,
+    104,
+    110,
+    32,
+    150
+   ],
+   "worst": 133,
+   "worst_foe": "Porygon-Z",
+   "safe": 0,
+   "mult": {
+    "NORMAL": 1.0,
+    "DRAGON": 1.0,
+    "PSYCHIC": 2.0,
+    "FIGHTING": 0.5,
+    "STEEL": 0.5,
+    "ELECTRIC": 1.0
+   },
+   "rm": [
+    1.0,
+    2.0,
+    1.0,
+    0.25,
+    0.5,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    2.0,
+    1.0,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    1.0
+   ],
+   "off": [
+    1.5,
+    2.0,
+    1.5,
+    1.5,
+    0.0,
+    2.0
+   ],
+   "answers": [],
+   "why": [
+    {
+     "move": "Torch Song",
+     "why": "Your best hit on Klinklang; Super effective on Klinklang; x2.25 on this field; STAB; no effect on Kommo-o",
+     "flag": false
+    },
+    {
+     "move": "Boomburst",
+     "why": "Your best hit on Stoutland, Appletun, Noivern, Porygon-Z; x2.25 on this field; hits both foes; no effect on Kommo-o",
+     "flag": false
+    },
+    {
+     "move": "Sludge Bomb",
+     "why": "Your best hit on Kommo-o; Super effective on Appletun; STAB; no effect on Klinklang",
+     "flag": false
+    },
+    {
+     "move": "Protect",
+     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
+     "flag": false
+    }
+   ],
+   "warn": []
+  },
+  {
+   "core": true,
+   "role": "Mid game",
+   "job": null,
    "name": "Gallade",
    "tier": "B",
    "types": [
@@ -1012,8 +1314,8 @@
     "DRAGON": 1.0,
     "PSYCHIC": 1.0,
     "FIGHTING": 0.5,
-    "ELECTRIC": 1.0,
-    "STEEL": 1.0
+    "STEEL": 1.0,
+    "ELECTRIC": 1.0
    },
    "rm": [
     1.0,
@@ -1067,68 +1369,255 @@
     }
    ],
    "warn": []
+  },
+  {
+   "core": false,
+   "role": "Closer",
+   "job": "Speed control",
+   "name": "Azumarill",
+   "tier": "B",
+   "types": [
+    "WATER",
+    "FAIRY"
+   ],
+   "sid": "AZUMARILL",
+   "form": "0",
+   "lead": false,
+   "where": "Active",
+   "moves": [
+    "Play Rough",
+    "Aqua Jet",
+    "Belly Drum",
+    "Protect"
+   ],
+   "ability": "HUGEPOWER",
+   "take": [
+    63,
+    77,
+    80,
+    130,
+    79,
+    75
+   ],
+   "deal": [
+    45,
+    49,
+    98,
+    53,
+    121,
+    20
+   ],
+   "worst": 130,
+   "worst_foe": "Porygon-Z",
+   "safe": 0,
+   "mult": {
+    "NORMAL": 1.0,
+    "DRAGON": 0.0,
+    "PSYCHIC": 1.0,
+    "FIGHTING": 0.5,
+    "STEEL": 1.0,
+    "ELECTRIC": 2.0
+   },
+   "rm": [
+    0.5,
+    1.0,
+    1.0,
+    2.0,
+    0.5,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    0.0,
+    0.5,
+    1.0,
+    2.0
+   ],
+   "off": [
+    0.0,
+    2.0,
+    2.0,
+    0.0,
+    2.0,
+    0.0
+   ],
+   "answers": [],
+   "why": [
+    {
+     "move": "Play Rough",
+     "why": "Your best hit on Stoutland, Appletun, Noivern, Porygon-Z, Kommo-o, Klinklang; Super effective on Appletun, Noivern, Kommo-o; STAB",
+     "flag": false
+    },
+    {
+     "move": "Aqua Jet",
+     "why": "STAB; Priority +1",
+     "flag": false
+    },
+    {
+     "move": "Belly Drum",
+     "why": "Utility move",
+     "flag": false
+    },
+    {
+     "move": "Protect",
+     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
+     "flag": false
+    }
+   ],
+   "warn": []
   }
  ],
  "alts": [
   {
-   "score": 134.1,
+   "score": 186.3,
    "in": [
-    "Azumarill"
+    "Lapras (Aevian Form)"
    ],
    "out": [
+    "Arcanine (Hisuian Form)"
+   ]
+  },
+  {
+   "score": 185.7,
+   "in": [
     "Glalie (Aevian Form)"
+   ],
+   "out": [
+    "Muk (Alolan Form)"
    ]
   },
   {
-   "score": 133.4,
+   "score": 185.5,
    "in": [
-    "Azumarill",
-    "Golurk"
+    "Solrock (Solrock Dominant Fusion)"
    ],
    "out": [
-    "Glalie (Aevian Form)",
-    "Slowking (Galarian Form)"
-   ]
-  },
-  {
-   "score": 131.9,
-   "in": [
-    "Lapras (Aevian Form)",
-    "Azumarill"
-   ],
-   "out": [
-    "Glalie (Aevian Form)",
-    "Slowking (Galarian Form)"
+    "Arcanine (Hisuian Form)"
    ]
   }
  ],
  "swaps": {
-  "Toxtricity (Aevian Form)": [
+  "Musharna (Aevian Form)": [
    {
-    "name": "Azumarill",
+    "name": "Glalie (Aevian Form)",
     "gain": [
-     "survives Stoutland",
-     "priority attack",
-     "speed control"
+     "checks Noivern",
+     "survives Porygon-Z",
+     "answers Porygon-Z: Adaptability (STAB x2: hits very hard)",
+     "answers Normal attacks from 4"
     ],
     "loss": [
+     "loses the check on Appletun",
+     "loses Dragon attacks from 3"
+    ],
+    "tier": "S",
+    "sid": "GLALIE",
+    "form": "1",
+    "delta": 5.5,
+    "res": 5,
+    "se": 1,
+    "oneshot": [
+     "Klinklang"
+    ]
+   },
+   {
+    "name": "Golurk",
+    "gain": [
+     "survives Porygon-Z",
+     "survives Klinklang",
+     "answers Porygon-Z: Adaptability (STAB x2: hits very hard)",
+     "answers Normal attacks from 4"
+    ],
+    "loss": [
+     "loses the check on Appletun",
+     "loses Dragon attacks from 3"
+    ],
+    "tier": "B",
+    "sid": "GOLURK",
+    "form": "0",
+    "delta": 4.8,
+    "res": 7,
+    "se": 1,
+    "oneshot": []
+   },
+   {
+    "name": "Lapras (Aevian Form)",
+    "gain": [
+     "checks Noivern",
+     "survives Porygon-Z",
+     "answers Normal attacks from 4"
+    ],
+    "loss": [
+     "loses the check on Appletun",
+     "loses Dragon attacks from 3",
+     "fits the team worse (both weak to Ghost, both weak to Grass, both weak to Ground,)"
+    ],
+    "tier": "S",
+    "sid": "LAPRAS",
+    "form": "1",
+    "delta": 4.8,
+    "res": 8,
+    "se": 2,
+    "oneshot": [
+     "Klinklang"
+    ]
+   }
+  ],
+  "Toxtricity (Aevian Form)": [
+   {
+    "name": "Chandelure",
+    "gain": [
+     "survives Stoutland",
+     "survives Porygon-Z",
+     "answers Normal attacks from 4"
+    ],
+    "loss": [
+     "one-shot by Kommo-o",
+     "loses Appletun: Appletunite (Mega Evolves)",
+     "loses Concert Venue boosts: sound moves x1.5",
      "uses the field less"
     ],
     "tier": "B",
-    "sid": "AZUMARILL",
+    "sid": "CHANDELURE",
     "form": "0",
-    "delta": -17.5,
-    "res": 7,
-    "se": 3,
+    "delta": -14.0,
+    "res": 9,
+    "se": 1,
     "oneshot": [
-     "Porygon-Z"
+     "Kommo-o"
     ]
+   },
+   {
+    "name": "Golurk",
+    "gain": [
+     "survives Stoutland",
+     "survives Porygon-Z",
+     "answers Normal attacks from 4"
+    ],
+    "loss": [
+     "loses Appletun: Appletunite (Mega Evolves)",
+     "loses Concert Venue boosts: sound moves x1.5",
+     "uses the field less"
+    ],
+    "tier": "B",
+    "sid": "GOLURK",
+    "form": "0",
+    "delta": -15.2,
+    "res": 7,
+    "se": 1,
+    "oneshot": []
    },
    {
     "name": "Vikavolt",
     "gain": [
      "survives Stoutland",
-     "outspeeds and one-shots Appletun"
+     "outspeeds and one-shots Appletun",
+     "answers Appletun heals (Recover)"
     ],
     "loss": [
      "one-shot by Kommo-o",
@@ -1137,126 +1626,91 @@
     "tier": "B",
     "sid": "VIKAVOLT",
     "form": "0",
-    "delta": -21.8,
+    "delta": -15.9,
     "res": 5,
     "se": 2,
     "oneshot": [
      "Porygon-Z",
      "Kommo-o"
     ]
-   },
-   {
-    "name": "Chandelure",
-    "gain": [
-     "survives Stoutland",
-     "survives Porygon-Z"
-    ],
-    "loss": [
-     "one-shot by Kommo-o",
-     "uses the field less"
-    ],
-    "tier": "B",
-    "sid": "CHANDELURE",
-    "form": "0",
-    "delta": -23.0,
-    "res": 9,
-    "se": 1,
-    "oneshot": [
-     "Kommo-o"
-    ]
-   }
-  ],
-  "Arcanine (Hisuian Form)": [
-   {
-    "name": "Azumarill",
-    "gain": [
-     "survives Kommo-o",
-     "priority attack",
-     "speed control"
-    ],
-    "loss": [
-     "one-shot by Porygon-Z"
-    ],
-    "tier": "B",
-    "sid": "AZUMARILL",
-    "form": "0",
-    "delta": 3.2,
-    "res": 7,
-    "se": 3,
-    "oneshot": [
-     "Porygon-Z"
-    ]
-   },
-   {
-    "name": "Mandibuzz",
-    "gain": [
-     "survives Kommo-o"
-    ],
-    "loss": [
-     "one-shot by Porygon-Z"
-    ],
-    "tier": "B",
-    "sid": "MANDIBUZZ",
-    "form": "0",
-    "delta": -3.4,
-    "res": 5,
-    "se": 0,
-    "oneshot": [
-     "Porygon-Z"
-    ]
-   },
-   {
-    "name": "Muk (Alolan Form)",
-    "gain": [
-     "checks Appletun",
-     "survives Kommo-o"
-    ],
-    "loss": [
-     "one-shot by Porygon-Z"
-    ],
-    "tier": "S",
-    "sid": "MUK",
-    "form": "1",
-    "delta": -4.2,
-    "res": 5,
-    "se": 1,
-    "oneshot": [
-     "Porygon-Z"
-    ]
    }
   ],
   "Gallade": [
    {
-    "name": "Chandelure",
+    "name": "Golurk",
     "gain": [
-     "survives Porygon-Z"
+     "survives Porygon-Z",
+     "answers Normal attacks from 4",
+     "uses the field more"
+    ],
+    "loss": [],
+    "tier": "B",
+    "sid": "GOLURK",
+    "form": "0",
+    "delta": 23.8,
+    "res": 7,
+    "se": 1,
+    "oneshot": []
+   },
+   {
+    "name": "Lapras (Aevian Form)",
+    "gain": [
+     "checks Noivern",
+     "survives Porygon-Z",
+     "answers Normal attacks from 4"
     ],
     "loss": [
-     "one-shot by Kommo-o"
+     "one-shot by Klinklang",
+     "fits the team worse (both weak to Grass, both weak to Ground, both weak to Steel,)"
+    ],
+    "tier": "S",
+    "sid": "LAPRAS",
+    "form": "1",
+    "delta": 21.3,
+    "res": 8,
+    "se": 2,
+    "oneshot": [
+     "Klinklang"
+    ]
+   },
+   {
+    "name": "Chandelure",
+    "gain": [
+     "survives Porygon-Z",
+     "answers Normal attacks from 4"
+    ],
+    "loss": [
+     "one-shot by Kommo-o",
+     "fits the team worse (both weak to Ground, both weak to Water)"
     ],
     "tier": "B",
     "sid": "CHANDELURE",
     "form": "0",
-    "delta": 14.6,
+    "delta": 21.0,
     "res": 9,
     "se": 1,
     "oneshot": [
      "Kommo-o"
     ]
-   },
+   }
+  ],
+  "Azumarill": [
    {
-    "name": "Azumarill",
+    "name": "Slowking (Galarian Form)",
     "gain": [
-     "priority attack",
-     "speed control"
+     "checks Appletun"
     ],
-    "loss": [],
-    "tier": "B",
-    "sid": "AZUMARILL",
-    "form": "0",
-    "delta": 14.1,
-    "res": 7,
-    "se": 3,
+    "loss": [
+     "loses Kommo-o: Speed 166",
+     "loses Dragon attacks from 3",
+     "fits the team worse (both weak to Ghost, both weak to Ground)"
+    ],
+    "tier": "S",
+    "sid": "SLOWKING",
+    "form": "1",
+    "delta": -11.6,
+    "res": 3,
+    "se": 2,
     "oneshot": [
      "Porygon-Z"
     ]
@@ -1265,162 +1719,35 @@
     "name": "Golurk",
     "gain": [
      "survives Porygon-Z",
+     "answers Porygon-Z: Adaptability (STAB x2: hits very hard)",
+     "answers Normal attacks from 4",
      "uses the field more"
     ],
-    "loss": [],
+    "loss": [
+     "loses Kommo-o: Speed 166",
+     "loses Dragon attacks from 3"
+    ],
     "tier": "B",
     "sid": "GOLURK",
     "form": "0",
-    "delta": 13.6,
+    "delta": -29.5,
     "res": 7,
     "se": 1,
     "oneshot": []
-   }
-  ],
-  "Musharna (Aevian Form)": [
-   {
-    "name": "Muk (Alolan Form)",
-    "gain": [
-     "survives Klinklang"
-    ],
-    "loss": [],
-    "tier": "S",
-    "sid": "MUK",
-    "form": "1",
-    "delta": -13.8,
-    "res": 5,
-    "se": 1,
-    "oneshot": [
-     "Porygon-Z"
-    ]
-   },
-   {
-    "name": "Azumarill",
-    "gain": [
-     "survives Klinklang",
-     "priority attack",
-     "speed control"
-    ],
-    "loss": [
-     "loses the check on Appletun"
-    ],
-    "tier": "B",
-    "sid": "AZUMARILL",
-    "form": "0",
-    "delta": -14.4,
-    "res": 7,
-    "se": 3,
-    "oneshot": [
-     "Porygon-Z"
-    ]
-   },
-   {
-    "name": "Sylveon",
-    "gain": [
-     "survives Porygon-Z"
-    ],
-    "loss": [],
-    "tier": "B",
-    "sid": "SYLVEON",
-    "form": "0",
-    "delta": -16.6,
-    "res": 6,
-    "se": 3,
-    "oneshot": [
-     "Klinklang"
-    ]
-   }
-  ],
-  "Glalie (Aevian Form)": [
-   {
-    "name": "Azumarill",
-    "gain": [
-     "survives Klinklang",
-     "priority attack",
-     "speed control"
-    ],
-    "loss": [
-     "loses the check on Noivern",
-     "one-shot by Porygon-Z"
-    ],
-    "tier": "B",
-    "sid": "AZUMARILL",
-    "form": "0",
-    "delta": -3.0,
-    "res": 7,
-    "se": 3,
-    "oneshot": [
-     "Porygon-Z"
-    ]
-   },
-   {
-    "name": "Gastrodon (West Aevian Form)",
-    "gain": [],
-    "loss": [
-     "loses the check on Noivern",
-     "one-shot by Porygon-Z"
-    ],
-    "tier": "A",
-    "sid": "GASTRODON",
-    "form": "1",
-    "delta": -6.1,
-    "res": 7,
-    "se": 4,
-    "oneshot": [
-     "Porygon-Z",
-     "Klinklang"
-    ]
-   },
-   {
-    "name": "Clodsire",
-    "gain": [
-     "survives Klinklang"
-    ],
-    "loss": [
-     "loses the check on Noivern"
-    ],
-    "tier": "B",
-    "sid": "CLODSIRE",
-    "form": "0",
-    "delta": -7.7,
-    "res": 3,
-    "se": 1,
-    "oneshot": []
-   }
-  ],
-  "Slowking (Galarian Form)": [
-   {
-    "name": "Azumarill",
-    "gain": [
-     "priority attack"
-    ],
-    "loss": [
-     "loses the check on Appletun"
-    ],
-    "tier": "B",
-    "sid": "AZUMARILL",
-    "form": "0",
-    "delta": -3.4,
-    "res": 7,
-    "se": 3,
-    "oneshot": [
-     "Porygon-Z"
-    ]
    },
    {
     "name": "Roserade (Aevian Form)",
-    "gain": [
-     "priority attack"
-    ],
+    "gain": [],
     "loss": [
      "one-shot by Stoutland",
-     "loses the check on Appletun",
-     "one-shot by Noivern"
+     "one-shot by Noivern",
+     "one-shot by Kommo-o",
+     "one-shot by Klinklang"
     ],
     "tier": "A",
     "sid": "ROSERADE",
     "form": "1",
-    "delta": -27.0,
+    "delta": -29.6,
     "res": 2,
     "se": 3,
     "oneshot": [
@@ -1430,24 +1757,141 @@
      "Kommo-o",
      "Klinklang"
     ]
-   },
+   }
+  ],
+  "Muk (Alolan Form)": [
    {
-    "name": "Chandelure",
+    "name": "Glalie (Aevian Form)",
     "gain": [
-     "survives Porygon-Z"
+     "checks Noivern",
+     "survives Porygon-Z",
+     "answers Porygon-Z: Adaptability (STAB x2: hits very hard)",
+     "answers Normal attacks from 4"
     ],
     "loss": [
      "loses the check on Appletun",
-     "one-shot by Kommo-o"
+     "one-shot by Klinklang",
+     "loses Stoutland: Work Up (+2 here)",
+     "loses Appletun heals (Recover)"
     ],
-    "tier": "B",
-    "sid": "CHANDELURE",
-    "form": "0",
-    "delta": -32.9,
-    "res": 9,
+    "tier": "S",
+    "sid": "GLALIE",
+    "form": "1",
+    "delta": -4.7,
+    "res": 5,
     "se": 1,
     "oneshot": [
-     "Kommo-o"
+     "Klinklang"
+    ]
+   },
+   {
+    "name": "Golurk",
+    "gain": [
+     "survives Porygon-Z",
+     "answers Porygon-Z: Adaptability (STAB x2: hits very hard)",
+     "answers Normal attacks from 4",
+     "uses the field more"
+    ],
+    "loss": [
+     "loses the check on Appletun",
+     "loses Stoutland: Work Up (+2 here)",
+     "loses Appletun heals (Recover)",
+     "loses Klinklang: Shift Gear (+1)"
+    ],
+    "tier": "B",
+    "sid": "GOLURK",
+    "form": "0",
+    "delta": -4.9,
+    "res": 7,
+    "se": 1,
+    "oneshot": []
+   },
+   {
+    "name": "Lapras (Aevian Form)",
+    "gain": [
+     "checks Noivern",
+     "survives Porygon-Z",
+     "answers Normal attacks from 4"
+    ],
+    "loss": [
+     "loses the check on Appletun",
+     "one-shot by Klinklang",
+     "loses Stoutland: Work Up (+2 here)",
+     "loses Appletun heals (Recover)"
+    ],
+    "tier": "S",
+    "sid": "LAPRAS",
+    "form": "1",
+    "delta": -6.5,
+    "res": 8,
+    "se": 2,
+    "oneshot": [
+     "Klinklang"
+    ]
+   }
+  ],
+  "Arcanine (Hisuian Form)": [
+   {
+    "name": "Lapras (Aevian Form)",
+    "gain": [
+     "checks Noivern",
+     "survives Kommo-o"
+    ],
+    "loss": [
+     "one-shot by Klinklang",
+     "loses Porygon-Z: Speed 270 (Choice Scarf)",
+     "loses Klinklang: Speed 185"
+    ],
+    "tier": "S",
+    "sid": "LAPRAS",
+    "form": "1",
+    "delta": -4.1,
+    "res": 8,
+    "se": 2,
+    "oneshot": [
+     "Klinklang"
+    ]
+   },
+   {
+    "name": "Solrock (Solrock Dominant Fusion)",
+    "gain": [
+     "checks Noivern",
+     "survives Kommo-o"
+    ],
+    "loss": [
+     "one-shot by Klinklang",
+     "loses Porygon-Z: Speed 270 (Choice Scarf)",
+     "loses Klinklang: Speed 185"
+    ],
+    "tier": "B",
+    "sid": "SOLROCK",
+    "form": "1",
+    "delta": -4.9,
+    "res": 8,
+    "se": 3,
+    "oneshot": [
+     "Klinklang"
+    ]
+   },
+   {
+    "name": "Glalie (Aevian Form)",
+    "gain": [
+     "checks Noivern",
+     "survives Kommo-o"
+    ],
+    "loss": [
+     "one-shot by Klinklang",
+     "loses Porygon-Z: Speed 270 (Choice Scarf)",
+     "loses Klinklang: Speed 185"
+    ],
+    "tier": "S",
+    "sid": "GLALIE",
+    "form": "1",
+    "delta": -5.9,
+    "res": 5,
+    "se": 1,
+    "oneshot": [
+     "Klinklang"
     ]
    }
   ]
@@ -1589,7 +2033,7 @@
    "oneshot": [
     "Porygon-Z"
    ],
-   "in_six": false,
+   "in_six": true,
    "where": "Active"
   },
   {
@@ -1623,7 +2067,7 @@
    "oneshot": [
     "Klinklang"
    ],
-   "in_six": true,
+   "in_six": false,
    "where": "Active"
   },
   {
@@ -1658,7 +2102,7 @@
    "oneshot": [
     "Porygon-Z"
    ],
-   "in_six": false,
+   "in_six": true,
    "where": "Party"
   },
   {
@@ -1776,7 +2220,7 @@
    "oneshot": [
     "Porygon-Z"
    ],
-   "in_six": true,
+   "in_six": false,
    "where": "Active"
   },
   {
@@ -2437,20 +2881,29 @@
   }
  ],
  "pool": 55,
- "score": 137.1,
- "cmp": 7.0,
+ "score": 190.4,
+ "cmp": 4.0,
  "break_field": null,
  "checks": {
   "weak3": [],
-  "nores": [],
+  "nores": [
+   "ELECTRIC"
+  ],
   "res_lt2": [
-   "DRAGON",
-   "PSYCHIC",
-   "ELECTRIC",
-   "STEEL"
+   "NORMAL",
+   "STEEL",
+   "ELECTRIC"
   ],
   "no_se": [],
   "one_shot": [
+   [
+    "Musharna (Aevian Form)",
+    "Porygon-Z"
+   ],
+   [
+    "Musharna (Aevian Form)",
+    "Klinklang"
+   ],
    [
     "Toxtricity (Aevian Form)",
     "Stoutland"
@@ -2460,44 +2913,35 @@
     "Porygon-Z"
    ],
    [
-    "Arcanine (Hisuian Form)",
-    "Kommo-o"
-   ],
-   [
     "Gallade",
     "Porygon-Z"
    ],
    [
-    "Musharna (Aevian Form)",
+    "Azumarill",
     "Porygon-Z"
    ],
    [
-    "Musharna (Aevian Form)",
-    "Klinklang"
-   ],
-   [
-    "Glalie (Aevian Form)",
-    "Klinklang"
-   ],
-   [
-    "Slowking (Galarian Form)",
+    "Muk (Alolan Form)",
     "Porygon-Z"
+   ],
+   [
+    "Arcanine (Hisuian Form)",
+    "Kommo-o"
    ]
   ],
   "unanswered": [
-   "Setup (stat boosts)",
    "Spread attacks"
   ]
  },
  "alt_plan": {
-  "cmp": 7.0,
+  "cmp": 4.0,
   "six": [
    "Musharna (Aevian Form)",
-   "Glalie (Aevian Form)",
-   "Slowking (Galarian Form)",
-   "Toxtricity (Aevian Form)",
+   "Muk (Alolan Form)",
    "Arcanine (Hisuian Form)",
-   "Gallade"
+   "Toxtricity (Aevian Form)",
+   "Gallade",
+   "Azumarill"
   ],
   "break_field": false
  }

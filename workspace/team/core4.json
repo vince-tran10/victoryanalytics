@@ -1,6 +1,42 @@
 {
  "core": [
   {
+   "name": "Musharna (Aevian Form)",
+   "tier": "S",
+   "sid": "MUSHARNA",
+   "form": "1",
+   "blend": 0.769,
+   "meta": 0.72,
+   "game": 0.939,
+   "types": [
+    "DARK",
+    "FAIRY"
+   ],
+   "moves": [
+    "Lovely Kiss",
+    "Shadow Claw",
+    "Play Rough",
+    "Protect"
+   ],
+   "ability": "TOUGHCLAWS",
+   "aevian": true,
+   "where": "Party",
+   "chips": [
+    [
+     "tool",
+     "Sleep"
+    ],
+    [
+     "stat",
+     "Immune Psychic / Dragon"
+    ],
+    [
+     "stat",
+     "Resists Ghost / Dark"
+    ]
+   ]
+  },
+  {
    "name": "Toxtricity (Aevian Form)",
    "tier": "S",
    "sid": "TOXTRICITY",
@@ -29,38 +65,6 @@
     [
      "stat",
      "Resists Fire / Fighting"
-    ]
-   ]
-  },
-  {
-   "name": "Arcanine (Hisuian Form)",
-   "tier": "A",
-   "sid": "ARCANINE",
-   "form": "1",
-   "blend": 0.673,
-   "meta": 0.508,
-   "game": 0.989,
-   "types": [
-    "FIRE",
-    "ROCK"
-   ],
-   "moves": [
-    "Flare Blitz",
-    "Extreme Speed",
-    "Head Smash",
-    "Protect"
-   ],
-   "ability": "ROCKHEAD",
-   "aevian": false,
-   "where": "Active",
-   "chips": [
-    [
-     "tool",
-     "Priority"
-    ],
-    [
-     "stat",
-     "Resists Fire / Ice"
     ]
    ]
   },
@@ -99,7 +103,951 @@
   "Spirit Jenner",
   "Erick (Pulse Badge gym)"
  ],
+ "checks": [
+  {
+   "fight": "jenner9",
+   "title": "Spirit Jenner",
+   "format": "Singles",
+   "field": "Concert Venue",
+   "foes": [
+    {
+     "name": "Stoutland",
+     "sid": "STOUTLAND",
+     "form": "Normal Form",
+     "item": "Chople Berry",
+     "ability": "Scrappy",
+     "moves": [
+      "Return",
+      "Work Up",
+      "Crunch",
+      "Psychic Fangs"
+     ],
+     "types": [
+      "NORMAL"
+     ],
+     "spe": 165
+    },
+    {
+     "name": "Appletun",
+     "sid": "APPLETUN",
+     "form": "Normal Form",
+     "item": "Appletunite",
+     "ability": "Thick Fat",
+     "moves": [
+      "Draco Meteor",
+      "Recover",
+      "Apple Acid",
+      "Body Press"
+     ],
+     "types": [
+      "GRASS",
+      "DRAGON"
+     ],
+     "spe": 63
+    },
+    {
+     "name": "Noivern",
+     "sid": "NOIVERN",
+     "form": "Normal Form",
+     "item": "Synthetic Seed",
+     "ability": "Infiltrator",
+     "moves": [
+      "Dragon Pulse",
+      "Roost",
+      "Air Slash",
+      "Boomburst"
+     ],
+     "types": [
+      "FLYING",
+      "DRAGON"
+     ],
+     "spe": 219
+    },
+    {
+     "name": "Porygon-Z",
+     "sid": "PORYGONZ",
+     "form": "Normal Form",
+     "item": "Choice Scarf",
+     "ability": "Adaptability",
+     "moves": [
+      "Uproar",
+      "Shadow Ball",
+      "Trick",
+      "Psychic"
+     ],
+     "types": [
+      "NORMAL"
+     ],
+     "spe": 270
+    },
+    {
+     "name": "Kommo-o",
+     "sid": "KOMMOO",
+     "form": "Normal Form",
+     "item": "Kommonium Z",
+     "ability": "Soundproof",
+     "moves": [
+      "Clanging Scales",
+      "Aura Sphere",
+      "Boomburst",
+      "Flamethrower"
+     ],
+     "types": [
+      "DRAGON",
+      "FIGHTING"
+     ],
+     "spe": 166
+    },
+    {
+     "name": "Klinklang",
+     "sid": "KLINKLANG",
+     "form": "Normal Form",
+     "item": "Air Balloon",
+     "ability": "Plus",
+     "moves": [
+      "Gear Grind",
+      "Shift Gear",
+      "Substitute",
+      "Wild Charge"
+     ],
+     "types": [
+      "STEEL"
+     ],
+     "spe": 185
+    }
+   ],
+   "factors": [
+    {
+     "id": "jenner9:setup:Stoutland:0",
+     "fight": "jenner9",
+     "kind": "setup",
+     "foe": "Stoutland",
+     "text": "Stoutland: Work Up (+2 here)",
+     "how": "KO it before it boosts twice, or Haze / Clear Smog / Encore / Unaware / phazing",
+     "need": 1,
+     "stage": 2,
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "jenner9:heal:Appletun:1",
+     "fight": "jenner9",
+     "kind": "heal",
+     "foe": "Appletun",
+     "text": "Appletun heals (Recover)",
+     "how": "One-shot it, or Knock Off / Heal Block",
+     "need": 1,
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "jenner9:item:Appletun:2",
+     "fight": "jenner9",
+     "kind": "item",
+     "foe": "Appletun",
+     "text": "Appletun: Appletunite (Mega Evolves)",
+     "how": "Plan around it",
+     "need": 1,
+     "item": "Appletunite",
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "beats it (74%)"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "jenner9:heal:Noivern:3",
+     "fight": "jenner9",
+     "kind": "heal",
+     "foe": "Noivern",
+     "text": "Noivern heals (Roost)",
+     "how": "One-shot it, or Knock Off / Heal Block",
+     "need": 1,
+     "cov": [
+      [
+       "Musharna-Aevian",
+       "one-shots it"
+      ],
+      [
+       "Toxtricity-Aevian",
+       "one-shots it"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "jenner9:item:Noivern:4",
+     "fight": "jenner9",
+     "kind": "item",
+     "foe": "Noivern",
+     "text": "Noivern: Synthetic Seed (field seed: boosts it on entry)",
+     "how": "Plan around it",
+     "need": 1,
+     "item": "Synthetic Seed",
+     "cov": [
+      [
+       "Musharna-Aevian",
+       "beats it (101%)"
+      ],
+      [
+       "Toxtricity-Aevian",
+       "beats it (104%)"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "jenner9:ability:Porygon-Z:5",
+     "fight": "jenner9",
+     "kind": "ability",
+     "foe": "Porygon-Z",
+     "text": "Porygon-Z: Adaptability (STAB x2: hits very hard)",
+     "how": "Plan around it",
+     "need": 1,
+     "ability": "ADAPTABILITY",
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "still hits it for 110%"
+      ],
+      [
+       "Gallade",
+       "still hits it for 155%"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "jenner9:item:Porygon-Z:6",
+     "fight": "jenner9",
+     "kind": "item",
+     "foe": "Porygon-Z",
+     "text": "Porygon-Z: Choice Scarf (Speed x1.5 (locked into one move))",
+     "how": "Plan around it",
+     "need": 1,
+     "item": "Choice Scarf",
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "beats it (110%)"
+      ],
+      [
+       "Gallade",
+       "beats it (155%)"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "jenner9:ability:Kommo-o:7",
+     "fight": "jenner9",
+     "kind": "ability",
+     "foe": "Kommo-o",
+     "text": "Kommo-o: Soundproof (immune to sound moves)",
+     "how": "Hit it with something its ability does not block",
+     "need": 1,
+     "ability": "SOUNDPROOF",
+     "cov": [
+      [
+       "Musharna-Aevian",
+       "still hits it for 124%"
+      ],
+      [
+       "Gallade",
+       "still hits it for 70%"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "jenner9:item:Kommo-o:8",
+     "fight": "jenner9",
+     "kind": "item",
+     "foe": "Kommo-o",
+     "text": "Kommo-o: Kommonium Z (Z-move: one huge hit, once)",
+     "how": "Protect / resist the Z-move; multi-hit or priority breaks Sash / Sturdy",
+     "need": 1,
+     "item": "Kommonium Z",
+     "cov": [
+      [
+       "Musharna-Aevian",
+       "beats it (124%)"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "jenner9:setup:Klinklang:9",
+     "fight": "jenner9",
+     "kind": "setup",
+     "foe": "Klinklang",
+     "text": "Klinklang: Shift Gear (+1)",
+     "how": "KO it before it boosts twice, or Haze / Clear Smog / Encore / Unaware / phazing",
+     "need": 1,
+     "stage": 1,
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "jenner9:ability:Klinklang:10",
+     "fight": "jenner9",
+     "kind": "ability",
+     "foe": "Klinklang",
+     "text": "Klinklang: Plus (raises the crowd Hype on entry)",
+     "how": "Plan around it",
+     "need": 1,
+     "ability": "PLUS",
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "still hits it for 228%"
+      ],
+      [
+       "Gallade",
+       "still hits it for 115%"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "jenner9:speed:Stoutland:11",
+     "fight": "jenner9",
+     "kind": "speed",
+     "foe": "Stoutland",
+     "text": "Stoutland: Speed 165",
+     "how": "Singles: outspeed and KO, priority, or paralyse it then outspeed",
+     "need": 1,
+     "spe": 165,
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "jenner9:speed:Noivern:12",
+     "fight": "jenner9",
+     "kind": "speed",
+     "foe": "Noivern",
+     "text": "Noivern: Speed 219",
+     "how": "Singles: outspeed and KO, priority, or paralyse it then outspeed",
+     "need": 1,
+     "spe": 219,
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "jenner9:speed:Porygon-Z:13",
+     "fight": "jenner9",
+     "kind": "speed",
+     "foe": "Porygon-Z",
+     "text": "Porygon-Z: Speed 270 (Choice Scarf)",
+     "how": "Singles: outspeed and KO, priority, or paralyse it then outspeed",
+     "need": 1,
+     "spe": 270,
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "jenner9:speed:Kommo-o:14",
+     "fight": "jenner9",
+     "kind": "speed",
+     "foe": "Kommo-o",
+     "text": "Kommo-o: Speed 166",
+     "how": "Singles: outspeed and KO, priority, or paralyse it then outspeed",
+     "need": 1,
+     "spe": 166,
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "jenner9:speed:Klinklang:15",
+     "fight": "jenner9",
+     "kind": "speed",
+     "foe": "Klinklang",
+     "text": "Klinklang: Speed 185",
+     "how": "Singles: outspeed and KO, priority, or paralyse it then outspeed",
+     "need": 1,
+     "spe": 185,
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "jenner9:type:NORMAL:16",
+     "fight": "jenner9",
+     "kind": "type",
+     "foe": "NORMAL",
+     "text": "Normal attacks from 4",
+     "how": "Two of yours resist or are immune",
+     "need": 2,
+     "atype": "NORMAL",
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "jenner9:type:DRAGON:17",
+     "fight": "jenner9",
+     "kind": "type",
+     "foe": "DRAGON",
+     "text": "Dragon attacks from 3",
+     "how": "Two of yours resist or are immune",
+     "need": 2,
+     "atype": "DRAGON",
+     "cov": [
+      [
+       "Musharna-Aevian",
+       "immune"
+      ]
+     ],
+     "ok": false
+    },
+    {
+     "id": "jenner9:fieldexploit:Concert Venue:18",
+     "fight": "jenner9",
+     "kind": "fieldexploit",
+     "foe": "Concert Venue",
+     "text": "Concert Venue boosts: sound moves x1.5",
+     "how": "Bring a Pokemon whose best hit is field-boosted",
+     "need": 1,
+     "boosted": [],
+     "sound": true,
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "Boomburst"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "jenner9:fieldnote:Concert Venue:19",
+     "fight": "jenner9",
+     "kind": "fieldnote",
+     "foe": "Concert Venue",
+     "text": "All Sleep Effects fail on Hype Stage 3+",
+     "how": "Plan around it",
+     "need": 1,
+     "cov": [],
+     "ok": null
+    }
+   ]
+  },
+  {
+   "fight": "erick",
+   "title": "Erick (Pulse Badge gym)",
+   "format": "Doubles",
+   "field": "Murkwater Surface",
+   "foes": [
+    {
+     "name": "Electivire",
+     "sid": "ELECTIVIRE",
+     "form": "Normal Form",
+     "item": "Assault Vest",
+     "ability": "Motor Drive",
+     "moves": [
+      "Thunder Raid",
+      "Ice Punch",
+      "Cross Chop",
+      "Fire Punch"
+     ],
+     "types": [
+      "ELECTRIC"
+     ],
+     "spe": 175
+    },
+    {
+     "name": "Raichu",
+     "sid": "RAICHU",
+     "form": "Alolan Form",
+     "item": "Focus Sash",
+     "ability": "Surge Surfer",
+     "moves": [
+      "Discharge",
+      "Psychic",
+      "Focus Blast",
+      "Grass Knot"
+     ],
+     "types": [
+      "ELECTRIC",
+      "PSYCHIC"
+     ],
+     "spe": 205
+    },
+    {
+     "name": "Magneton",
+     "sid": "MAGNETON",
+     "form": "Normal Form",
+     "item": "Eviolite",
+     "ability": "Sturdy",
+     "moves": [
+      "Hidden Power (Ice)",
+      "Signal Beam",
+      "Discharge",
+      "Flash Cannon"
+     ],
+     "types": [
+      "ELECTRIC",
+      "STEEL"
+     ],
+     "spe": 104
+    },
+    {
+     "name": "Togedemaru",
+     "sid": "TOGEDEMARU",
+     "form": "Normal Form",
+     "item": "Elemental Seed",
+     "ability": "Lightning Rod",
+     "moves": [
+      "Thunder Raid",
+      "Iron Head",
+      "Fell Stinger",
+      "Poison Jab"
+     ],
+     "types": [
+      "ELECTRIC",
+      "STEEL"
+     ],
+     "spe": 173
+    },
+    {
+     "name": "Chandelure",
+     "sid": "CHANDELURE",
+     "form": "Aevian Form",
+     "item": "Colbur Berry",
+     "ability": "Levitate",
+     "moves": [
+      "Burning Jealousy",
+      "Discharge",
+      "Shadow Ball",
+      "Energy Ball"
+     ],
+     "types": [
+      "GHOST",
+      "ELECTRIC"
+     ],
+     "spe": 117
+    },
+    {
+     "name": "Toxtricity",
+     "sid": "TOXTRICITY",
+     "form": "Amped Form",
+     "item": "Toxtricitite",
+     "ability": "Static",
+     "moves": [
+      "Overdrive",
+      "Sludge Bomb",
+      "Thunderbolt",
+      "Hidden Power (Ice)"
+     ],
+     "types": [
+      "ELECTRIC",
+      "POISON"
+     ],
+     "spe": 111
+    }
+   ],
+   "factors": [
+    {
+     "id": "erick:ability:Electivire:0",
+     "fight": "erick",
+     "kind": "ability",
+     "foe": "Electivire",
+     "text": "Electivire: Motor Drive (absorbs Electric (+Speed))",
+     "how": "Hit it with something its ability does not block",
+     "need": 1,
+     "ability": "MOTORDRIVE",
+     "cov": [
+      [
+       "Musharna-Aevian",
+       "still hits it for 73%"
+      ],
+      [
+       "Gallade",
+       "still hits it for 104%"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "erick:item:Electivire:1",
+     "fight": "erick",
+     "kind": "item",
+     "foe": "Electivire",
+     "text": "Electivire: Assault Vest (special bulk x1.5: hit it physically)",
+     "how": "Plan around it",
+     "need": 1,
+     "item": "Assault Vest",
+     "cov": [
+      [
+       "Gallade",
+       "beats it (104%)"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "erick:spread:Raichu:2",
+     "fight": "erick",
+     "kind": "spread",
+     "foe": "Raichu",
+     "text": "Raichu: spread Discharge",
+     "how": "Wide Guard, or resist / immune to it",
+     "need": 1,
+     "moves": [
+      "DISCHARGE"
+     ],
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "erick:ability:Raichu:3",
+     "fight": "erick",
+     "kind": "ability",
+     "foe": "Raichu",
+     "text": "Raichu: Surge Surfer (Speed x2 on Electric Terrain)",
+     "how": "Plan around it",
+     "need": 1,
+     "ability": "SURGESURFER",
+     "cov": [
+      [
+       "Musharna-Aevian",
+       "still hits it for 150%"
+      ],
+      [
+       "Toxtricity-Aevian",
+       "still hits it for 98%"
+      ],
+      [
+       "Gallade",
+       "still hits it for 102%"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "erick:item:Raichu:4",
+     "fight": "erick",
+     "kind": "item",
+     "foe": "Raichu",
+     "text": "Raichu: Focus Sash (survives one hit from full HP)",
+     "how": "Protect / resist the Z-move; multi-hit or priority breaks Sash / Sturdy",
+     "need": 1,
+     "item": "Focus Sash",
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "erick:spread:Magneton:5",
+     "fight": "erick",
+     "kind": "spread",
+     "foe": "Magneton",
+     "text": "Magneton: spread Discharge",
+     "how": "Wide Guard, or resist / immune to it",
+     "need": 1,
+     "moves": [
+      "DISCHARGE"
+     ],
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "erick:ability:Magneton:6",
+     "fight": "erick",
+     "kind": "ability",
+     "foe": "Magneton",
+     "text": "Magneton: Sturdy (survives any one hit from full)",
+     "how": "Plan around it",
+     "need": 1,
+     "ability": "STURDY",
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "erick:setup:Togedemaru:7",
+     "fight": "erick",
+     "kind": "setup",
+     "foe": "Togedemaru",
+     "text": "Togedemaru: Fell Stinger (+3)",
+     "how": "KO it before it boosts twice, or Haze / Clear Smog / Encore / Unaware / phazing",
+     "need": 1,
+     "stage": 3,
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "erick:ability:Togedemaru:8",
+     "fight": "erick",
+     "kind": "ability",
+     "foe": "Togedemaru",
+     "text": "Togedemaru: Lightning Rod (absorbs Electric and pulls Electric moves to itself in doubles)",
+     "how": "Hit it with something its ability does not block",
+     "need": 1,
+     "ability": "LIGHTNINGROD",
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "still hits it for 190%"
+      ],
+      [
+       "Gallade",
+       "still hits it for 243%"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "erick:item:Togedemaru:9",
+     "fight": "erick",
+     "kind": "item",
+     "foe": "Togedemaru",
+     "text": "Togedemaru: Elemental Seed (field seed: boosts it on entry)",
+     "how": "Plan around it",
+     "need": 1,
+     "item": "Elemental Seed",
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "beats it (190%)"
+      ],
+      [
+       "Gallade",
+       "beats it (243%)"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "erick:spread:Chandelure:10",
+     "fight": "erick",
+     "kind": "spread",
+     "foe": "Chandelure",
+     "text": "Chandelure: spread Burning Jealousy, Discharge",
+     "how": "Wide Guard, or resist / immune to it",
+     "need": 1,
+     "moves": [
+      "BURNINGJEALOUSY",
+      "DISCHARGE"
+     ],
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "erick:ability:Chandelure:11",
+     "fight": "erick",
+     "kind": "ability",
+     "foe": "Chandelure",
+     "text": "Chandelure: Levitate (immune to Ground)",
+     "how": "Hit it with something its ability does not block",
+     "need": 1,
+     "ability": "LEVITATE",
+     "cov": [
+      [
+       "Musharna-Aevian",
+       "still hits it for 73%"
+      ],
+      [
+       "Toxtricity-Aevian",
+       "still hits it for 65%"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "erick:spread:Toxtricity:12",
+     "fight": "erick",
+     "kind": "spread",
+     "foe": "Toxtricity",
+     "text": "Toxtricity: spread Overdrive",
+     "how": "Wide Guard, or resist / immune to it",
+     "need": 1,
+     "moves": [
+      "OVERDRIVE"
+     ],
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "erick:item:Toxtricity:13",
+     "fight": "erick",
+     "kind": "item",
+     "foe": "Toxtricity",
+     "text": "Toxtricity: Toxtricitite (Mega Evolves)",
+     "how": "Plan around it",
+     "need": 1,
+     "item": "Toxtricitite",
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "beats it (76%)"
+      ],
+      [
+       "Gallade",
+       "beats it (135%)"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "erick:speed:Electivire:14",
+     "fight": "erick",
+     "kind": "speed",
+     "foe": "Electivire",
+     "text": "Electivire: Speed 175",
+     "how": "Doubles: Tailwind / Trick Room / Icy Wind / Electroweb / paralysis",
+     "need": 1,
+     "spe": 175,
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "erick:speed:Raichu:15",
+     "fight": "erick",
+     "kind": "speed",
+     "foe": "Raichu",
+     "text": "Raichu: Speed 205",
+     "how": "Doubles: Tailwind / Trick Room / Icy Wind / Electroweb / paralysis",
+     "need": 1,
+     "spe": 205,
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "erick:speed:Togedemaru:16",
+     "fight": "erick",
+     "kind": "speed",
+     "foe": "Togedemaru",
+     "text": "Togedemaru: Speed 173",
+     "how": "Doubles: Tailwind / Trick Room / Icy Wind / Electroweb / paralysis",
+     "need": 1,
+     "spe": 173,
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "erick:type:ELECTRIC:17",
+     "fight": "erick",
+     "kind": "type",
+     "foe": "ELECTRIC",
+     "text": "Electric attacks from 6 (x1.3 on this field)",
+     "how": "Two of yours resist or are immune",
+     "need": 2,
+     "atype": "ELECTRIC",
+     "cov": [],
+     "ok": false
+    },
+    {
+     "id": "erick:type:POISON:18",
+     "fight": "erick",
+     "kind": "type",
+     "foe": "POISON",
+     "text": "Poison attacks from 2 (x1.5 on this field)",
+     "how": "Two of yours resist or are immune",
+     "need": 2,
+     "atype": "POISON",
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "resists"
+      ]
+     ],
+     "ok": false
+    },
+    {
+     "id": "erick:fieldblock:Murkwater Surface:19",
+     "fight": "erick",
+     "kind": "fieldblock",
+     "foe": "Murkwater Surface",
+     "text": "Murkwater Surface: Ground attacks fail",
+     "how": "Do not rely on Ground moves",
+     "need": 1,
+     "atype": "GROUND",
+     "cov": [],
+     "ok": true
+    },
+    {
+     "id": "erick:fieldexploit:Murkwater Surface:20",
+     "fight": "erick",
+     "kind": "fieldexploit",
+     "foe": "Murkwater Surface",
+     "text": "Murkwater Surface boosts: Electric, Poison, Water x1.3/1.5",
+     "how": "Bring a Pokemon whose best hit is field-boosted",
+     "need": 1,
+     "boosted": [
+      "ELECTRIC",
+      "POISON",
+      "WATER"
+     ],
+     "sound": false,
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "Sludge Bomb"
+      ]
+     ],
+     "ok": true
+    },
+    {
+     "id": "erick:fieldnote:Murkwater Surface:21",
+     "fight": "erick",
+     "kind": "fieldnote",
+     "foe": "Murkwater Surface",
+     "text": "Speed x0.75 unless Water type, airborne or Swift Swim / Surge Surfer",
+     "how": "Plan around it",
+     "need": 1,
+     "cov": [],
+     "ok": null
+    },
+    {
+     "id": "erick:fieldnote:Murkwater Surface:22",
+     "fight": "erick",
+     "kind": "fieldnote",
+     "foe": "Murkwater Surface",
+     "text": "End of turn Poison damage when grounded, and not Poison or Steel type.",
+     "how": "Plan around it",
+     "need": 1,
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "immune to it"
+      ]
+     ],
+     "ok": null
+    }
+   ]
+  }
+ ],
  "power": {
+  "Musharna (Aevian Form)": {
+   "wins": 6,
+   "ohko": 3,
+   "n": 12,
+   "beats": [
+    [
+     "jenner9",
+     "Appletun"
+    ],
+    [
+     "jenner9",
+     "Noivern"
+    ],
+    [
+     "jenner9",
+     "Kommo-o"
+    ],
+    [
+     "erick",
+     "Electivire"
+    ],
+    [
+     "erick",
+     "Raichu"
+    ],
+    [
+     "erick",
+     "Chandelure"
+    ]
+   ],
+   "power": 6.75
+  },
   "Toxtricity (Aevian Form)": {
    "wins": 7,
    "ohko": 5,
@@ -136,58 +1084,14 @@
    ],
    "power": 8.25
   },
-  "Arcanine (Hisuian Form)": {
-   "wins": 7,
-   "ohko": 3,
-   "n": 12,
-   "beats": [
-    [
-     "jenner9",
-     "Stoutland"
-    ],
-    [
-     "jenner9",
-     "Noivern"
-    ],
-    [
-     "erick",
-     "Raichu"
-    ],
-    [
-     "erick",
-     "Magneton"
-    ],
-    [
-     "erick",
-     "Togedemaru"
-    ],
-    [
-     "erick",
-     "Chandelure"
-    ],
-    [
-     "erick",
-     "Toxtricity"
-    ]
-   ],
-   "power": 7.75
-  },
   "Gallade": {
-   "wins": 8,
+   "wins": 5,
    "ohko": 8,
    "n": 12,
    "beats": [
     [
      "jenner9",
-     "Stoutland"
-    ],
-    [
-     "jenner9",
      "Appletun"
-    ],
-    [
-     "jenner9",
-     "Klinklang"
     ],
     [
      "erick",
@@ -203,68 +1107,84 @@
     ],
     [
      "erick",
-     "Togedemaru"
-    ],
-    [
-     "erick",
      "Toxtricity"
     ]
    ],
-   "power": 10.0
+   "power": 7.0
   }
  },
  "left": [
-  "Spirit Jenner: Porygon-Z",
-  "Spirit Jenner: Kommo-o"
+  "Spirit Jenner: Stoutland",
+  "Spirit Jenner: Porygon-Z"
  ],
- "score": 29.1,
+ "score": 25.2,
  "parts": {
-  "strength": 26.0,
+  "strength": 22.0,
   "defense": 0,
   "offense": 3.0,
   "synergy": 0,
   "aevian": 0,
   "shared": [],
   "triple": [],
-  "resisted": 11,
+  "resisted": 13,
   "covered": 10,
   "uncovered": [],
   "why": []
  },
  "runners": [
   {
-   "out": "Arcanine (Hisuian Form)",
-   "in": "Musharna (Aevian Form)",
-   "delta": -0.6
+   "out": "Musharna (Aevian Form)",
+   "in": "Chandelure",
+   "delta": -1.15
   },
   {
-   "out": "Arcanine (Hisuian Form)",
-   "in": "Crabominable",
-   "delta": -0.75
-  },
-  {
-   "out": "Arcanine (Hisuian Form)",
-   "in": "Rampardos",
-   "delta": -1.2
-  },
-  {
-   "out": "Arcanine (Hisuian Form)",
-   "in": "Arcanine",
+   "out": "Gallade",
+   "in": "Arcanine (Hisuian Form)",
    "delta": -1.25
+  },
+  {
+   "out": "Musharna (Aevian Form)",
+   "in": "Florges",
+   "delta": -1.35
+  },
+  {
+   "out": "Gallade",
+   "in": "Dragalge",
+   "delta": -1.5
   }
  ],
  "pool": 55,
  "singles": {
   "Fast cleaner": "Toxtricity (Aevian Form)",
-  "Bulky pivot": null,
-  "Wallbreaker": "Toxtricity (Aevian Form)"
+  "Bulky pivot": "Musharna (Aevian Form)",
+  "Wallbreaker": "Musharna (Aevian Form)"
  },
  "doubles": {
   "Fake Out / redirection": null,
   "Spread or speed control": "Toxtricity (Aevian Form)",
-  "Bulky attacker": null
+  "Bulky attacker": "Musharna (Aevian Form)"
  },
  "matrix": {
+  "Musharna (Aevian Form)": {
+   "NORMAL": 1.0,
+   "FIRE": 1.0,
+   "WATER": 1.0,
+   "ELECTRIC": 1.0,
+   "GRASS": 1.0,
+   "ICE": 1.0,
+   "FIGHTING": 1.0,
+   "POISON": 2.0,
+   "GROUND": 1.0,
+   "FLYING": 1.0,
+   "PSYCHIC": 0.0,
+   "BUG": 1.0,
+   "ROCK": 1.0,
+   "GHOST": 0.5,
+   "DRAGON": 0.0,
+   "DARK": 0.25,
+   "STEEL": 2.0,
+   "FAIRY": 2.0
+  },
   "Toxtricity (Aevian Form)": {
    "NORMAL": 1.0,
    "FIRE": 0.5,
@@ -284,26 +1204,6 @@
    "DARK": 1.0,
    "STEEL": 0.5,
    "FAIRY": 0.25
-  },
-  "Arcanine (Hisuian Form)": {
-   "NORMAL": 0.5,
-   "FIRE": 0.25,
-   "WATER": 4.0,
-   "ELECTRIC": 1.0,
-   "GRASS": 1.0,
-   "ICE": 0.5,
-   "FIGHTING": 2.0,
-   "POISON": 0.5,
-   "GROUND": 4.0,
-   "FLYING": 0.5,
-   "PSYCHIC": 1.0,
-   "BUG": 0.5,
-   "ROCK": 2.0,
-   "GHOST": 1.0,
-   "DRAGON": 1.0,
-   "DARK": 1.0,
-   "STEEL": 1.0,
-   "FAIRY": 0.5
   },
   "Gallade": {
    "NORMAL": 1.0,

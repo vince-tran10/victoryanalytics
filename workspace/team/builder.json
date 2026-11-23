@@ -677,6 +677,23 @@
      "rec": false
     },
     {
+     "name": "Glalie (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 2 types",
+      "Weak to 4 types"
+     ],
+     "tools": [
+      "Spread: Rock Slide",
+      "Priority: Grassy Glide"
+     ],
+     "teach": [],
+     "sid": "GLALIE",
+     "form": "1",
+     "pick": false,
+     "rec": false
+    },
+    {
      "name": "Ninetales (Alolan Form)",
      "tier": "A",
      "stats": [
@@ -698,23 +715,25 @@
   {
    "slot": 6,
    "title": "Flex 2 · Closer · Spirit Jenner",
-   "pick": "Glalie (Aevian Form)",
-   "rec": "Glalie (Aevian Form)",
+   "pick": "Muk (Alolan Form)",
+   "rec": "Muk (Alolan Form)",
    "flex": true,
    "cands": [
     {
-     "name": "Glalie (Aevian Form)",
+     "name": "Muk (Alolan Form)",
      "tier": "S",
      "stats": [
-      "Resists 2 types",
-      "Weak to 4 types"
+      "Resists 5 types",
+      "Weak to 1 type",
+      "Single target only"
      ],
      "tools": [
-      "Spread: Rock Slide",
-      "Priority: Grassy Glide"
+      "Stat reset: Clear Smog",
+      "Disrupt: Knock Off",
+      "Priority: Shadow Sneak"
      ],
      "teach": [],
-     "sid": "GLALIE",
+     "sid": "MUK",
      "form": "1",
      "pick": true,
      "rec": true

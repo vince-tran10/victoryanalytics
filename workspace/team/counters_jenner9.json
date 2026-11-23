@@ -16,7 +16,8 @@
      {
       "what": "Setup",
       "answers": [
-       "Clear Smog (Amoonguss)"
+       "Clear Smog (Amoonguss)",
+       "Clear Smog (Muk)"
       ]
      }
     ]
@@ -33,24 +34,24 @@
      {
       "what": "Healing",
       "answers": [
-       "teach Gastro Acid (Musharna)"
+       "Knock Off (Muk)"
       ]
      }
     ]
    },
    {
     "foe": "Noivern",
-    "mon": "Veluza (Aevian Form)",
-    "ability": "RECKLESS",
-    "dealt": 88,
-    "taken": 125,
+    "mon": "Muk (Alolan Form)",
+    "ability": "POISONTOUCH",
+    "dealt": 31,
+    "taken": 65,
     "ok": false,
     "setup": false,
     "wincons": [
      {
       "what": "Healing",
       "answers": [
-       "teach Gastro Acid (Musharna)"
+       "Knock Off (Muk)"
       ]
      }
     ]
@@ -87,7 +88,8 @@
      {
       "what": "Setup",
       "answers": [
-       "Clear Smog (Amoonguss)"
+       "Clear Smog (Amoonguss)",
+       "Clear Smog (Muk)"
       ]
      }
     ]

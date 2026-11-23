@@ -4,9 +4,9 @@
  "export_label": "23 Nov 08:03",
  "active_start": 468,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 315,
- "run": 329,
- "final": 333,
+ "roster": 319,
+ "run": 333,
+ "final": 337,
  "done": [
   "aelita",
   "narcissa1",
@@ -37,11 +37,11 @@
  "fight": "jenner9",
  "team": [
   "Musharna (Aevian Form)",
-  "Glalie (Aevian Form)",
-  "Slowking (Galarian Form)",
-  "Toxtricity (Aevian Form)",
+  "Muk (Alolan Form)",
   "Arcanine (Hisuian Form)",
-  "Gallade"
+  "Toxtricity (Aevian Form)",
+  "Gallade",
+  "Azumarill"
  ],
  "moves": {
   "Golisopod (Aevian Form)": [
@@ -337,17 +337,18 @@
   "core": {
    "n": 6,
    "weak3": [],
-   "nores": [],
+   "nores": [
+    "ELECTRIC"
+   ],
    "minor": []
   },
   "fight": {
-   "n": 5,
+   "n": 6,
    "weak3": [],
-   "nores": [],
-   "minor": [
-    "FLYING",
-    "NORMAL"
+   "nores": [
+    "ELECTRIC"
    ],
+   "minor": [],
    "key": "jenner9"
   }
  },

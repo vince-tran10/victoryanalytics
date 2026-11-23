@@ -1,7 +1,7 @@
 """Group the report's sections into tabs (runs last, after box_audit.py and highlight.py).
 usage: python3 -I tabs.py report.html"""
 import re, sys
-TABS = [('team', 'Team', ['s1']), ('planner', 'Planner', ['splan']), ('builder', 'Builder', ['sbuild']), ('fights', 'Fights', ['s1f', 'sctr']), 
+TABS = [('fights', 'Fights', ['s1f', 'sctr']), ('builder', 'Builder', ['sbuild']), ('planner', 'Planner', ['splan']), ('team', 'Team', ['s1']), 
         ('todo', 'To do', ['s3', 's4']), ('community', 'Community', ['scomm']), ('tiers', 'Tier list', ['s8']), ('crests', 'Crest tiers', ['s6']),
         ('aevian', 'Aevian tiers', ['s7']), ('checks', 'C&A checks', ['s5'])]
 p = sys.argv[1]; page = open(p, encoding='utf-8').read()
@@ -38,7 +38,7 @@ if(push)history.replaceState(null,'','#'+k);}
 bs.forEach(function(b,i){b.addEventListener('click',function(){show(b.dataset.tab,true);window.scrollTo(0,0)});
 b.addEventListener('keydown',function(e){var j=e.key==='ArrowRight'?i+1:e.key==='ArrowLeft'?i-1:-9;if(j>-9){j=(j+bs.length)%bs.length;bs[j].focus();show(bs[j].dataset.tab,true)}})});
 var start=(location.hash||'').slice(1);if(!start){try{start=localStorage.getItem('ch8-tab')||''}catch(e){}}
-show(start||'team',false);
+show(start||'fights',false);
 var f=document.getElementById('boxfind');if(f)f.addEventListener('focus',function(){show('boxes',true)});})();
 </script>'''
 page = page.replace('</style>', '</style>\n' + css, 1)

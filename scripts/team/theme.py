@@ -876,7 +876,7 @@ IC = {
  'planner': '<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/>',
  'builder': '<path d="M4 20h16M6 16l4-10 4 6 4-8"/><circle cx="10" cy="6" r="1.5"/>',
  'dex': '<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="3"/><path d="M8.5 15h7M8.5 18h4"/>'}
-NAV = [('team', 'Team'), ('builder', 'Core'), ('planner', 'Flex'), ('fights', 'Fights'), ('todo', 'To do'), ('dex', 'Dex'), ('community', 'Community')]   # 22 Nov: Boxes folded into To do   # 22 Nov: Cores tab removed (Vincent)
+NAV = [('fights', 'Fights'), ('builder', 'Core'), ('planner', 'Flex'), ('team', 'Team'), ('todo', 'To do'), ('dex', 'Dex'), ('community', 'Community')]   # 22 Nov: Boxes folded into To do   # 22 Nov: Cores tab removed (Vincent)
 nav = '<nav class="appnav" aria-label="Guide">' + ''.join(
     f'<button type="button" data-go="{k}"><svg viewBox="0 0 24 24" aria-hidden="true">{IC[k]}</svg><span>{t}</span></button>' for k, t in NAV) + '</nav>'
 seg = ('<div class="seg" role="group" aria-label="Dex lists"><button type="button" data-go="tiers">Pokémon</button>'
@@ -1291,7 +1291,7 @@ JS = r'''<script id="app-theme-js">
   var NAMES = {team:'Team', planner:'Flex', builder:'Core', fights:'Fights', cores:'Cores', todo:'To do', community:'Community', boxes:'Boxes', tiers:'Dex · Pokémon', aevian:'Dex · Aevian', crests:'Dex · Crests', checks:'Checks & data'};
   var DEX = {tiers:1, aevian:1, crests:1};
   var orig = function(k){ return document.querySelector('#tabbar button[data-tab="'+k+'"]'); };
-  function current(){ var b = document.querySelector('#tabbar button[aria-selected="true"]'); return b ? b.dataset.tab : 'team'; }
+  function current(){ var b = document.querySelector('#tabbar button[aria-selected="true"]'); return b ? b.dataset.tab : 'fights'; }
   function paint(){
     var k = current(), top = DEX[k] ? 'dex' : k;
     document.querySelectorAll('.appnav button').forEach(function(b){ if (b.dataset.go === top) b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current'); });

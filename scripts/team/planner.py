@@ -370,6 +370,23 @@ def mindset(ix):
     for t in ('GROUND', 'ELECTRIC'):
         if t in ATK and _IMM[t][ix].any(): s += 2
     return s
+# 23 Nov (Vincent): the FIGHT BRIEF (chapter_brief.py): everything that makes this fight hard; the six must answer each point.
+import chapter_brief as CB
+BR = CB.brief(FK, CB.foe_speeds(E, FK))
+BF = [f for f in BR['factors'] if f['kind'] != 'fieldnote' or ('End of turn' in f['text'] and 'Poison or Steel' in f['text'])]
+def _bmem(i):
+    n = NAMES[i]
+    return dict(name=n, types=TA[n]['types'], ability=build(n)[1], moves=list(build(n)[0]), spe=float(SPE_M[i]), mu={x['foe']: x for x in C[n]['matchups'].get(FK, [])})
+BMEM = [_bmem(i) for i in range(NP)]
+BCOV = np.array([[bool(CB.cover(f, [BMEM[i]], E, BR['tb'], FMT)) for f in BF] for i in range(NP)])   # member alone answers the point
+def bcheck(ix):   # -> list of (factor, [(name, how)], ok) for the group (speed: paralysis + a teammate that then one-shots)
+    mm = [BMEM[i] for i in ix]
+    return [(f, cv, CB.ok(f, cv)) for f in BF for cv in [CB.cover(f, mm, E, BR['tb'], FMT)]]
+_BNEED = np.array([f.get('need', 1) for f in BF]); _BBLK = np.array([f['kind'] == 'fieldblock' for f in BF]); _BNOTE = np.array([f['kind'] == 'fieldnote' for f in BF])
+def bscore(ix):   # fast: member-alone covers (paralysis pairs are counted in the final check only)
+    c = BCOV[list(ix)].sum(0)
+    ok = np.where(_BBLK, c == 0, c >= _BNEED)
+    return 4 * (ok & ~_BNOTE).sum() - 2 * (~ok & ~_BNOTE).sum() + 1 * np.minimum(c, 2)[_BNOTE].sum()
 def score(ix):
     ix = list(ix); r = RM[ix]
     res = (r < 1).sum(0); weak = (r > 1).sum(0)
@@ -385,6 +402,7 @@ def score(ix):
     s += 4 * (fastf & ans_).sum() - 4 * (fastf & ~ans_).sum()   # speed control on each fast foe
     if FMT == 'Singles': s += mindset(ix)
     else: s += mindset_d(ix)
+    s += bscore(ix)
     s += 3 if FIELDV[ix].max() >= 2 else 0   # a field hijacker in the six
     if BOSS: s += 3 if BOSSB[ix].any() else -3
     return s
@@ -475,6 +493,17 @@ def mem(i):
 # 23 Nov (Vincent): the Planner = an evaluation of his boxes for this fight. SWAPS: for each member of the six, the best
 # replacements from the pool (six score with the swap); POOL FIT: every pool Pokemon rated for this fight
 _b0 = score(best)
+def pair(a, b):   # synergy of two members: shared weaknesses (-), one covers the other's weakness (+), spread move hitting the partner (-)
+    s_ = 0
+    for t in ALLT_18:
+        ea, eb = E.chart_eff(t, TA[NAMES[a]]['types']), E.chart_eff(t, TA[NAMES[b]]['types'])
+        if ea > 1 and eb > 1: s_ -= .75
+        if (ea > 1 and eb < 1) or (eb > 1 and ea < 1): s_ += .5
+    if FMT == 'Doubles': s_ -= 1.5 * (ally_hit(a, b) >= 2) + 1.5 * (ally_hit(b, a) >= 2)
+    return s_
+def pairw(a, b):
+    return [f'both weak to {t.title()}' for t in ALLT_18 if E.chart_eff(t, TA[NAMES[a]]['types']) > 1 and E.chart_eff(t, TA[NAMES[b]]['types']) > 1][:1]
+ALLT_18 = ['NORMAL', 'FIRE', 'WATER', 'ELECTRIC', 'GRASS', 'ICE', 'FIGHTING', 'POISON', 'GROUND', 'FLYING', 'PSYCHIC', 'BUG', 'ROCK', 'GHOST', 'DRAGON', 'DARK', 'STEEL', 'FAIRY']
 SWAPS = {}
 for i in best:
     alt_ = []
@@ -491,11 +520,17 @@ for i in best:
             if REVK[c, j] and not REVK[i, j]: g.append(f'outspeeds and one-shots {FN[j]}')
             if DEAD[c, j] and not DEAD[i, j]: l.append(f'one-shot by {FN[j]}')
             if DEAD[i, j] and not DEAD[c, j]: g.append(f'survives {FN[j]}')
+        for k_, f_ in enumerate(BF):
+            if f_['kind'] in ('fieldnote', 'fieldblock'): continue
+            if BCOV[c, k_] and not BCOV[i, k_]: g.append('answers ' + f_['text'])
+            if BCOV[i, k_] and not BCOV[c, k_] and BCOV[[j for j in best if j != i], k_].sum() < f_.get('need', 1): l.append('loses ' + f_['text'])
         if FIELDV[c] > FIELDV[i]: g.append('uses the field more')
         if FIELDV[c] < FIELDV[i]: l.append('uses the field less')
         if PRIO[c] and not PRIO[i]: g.append('priority attack')
         if SCM[c].any() and not SCM[i].any(): g.append('speed control')
-        return g[:3], l[:3]
+        _pc = [pair(c, j) for j in best if j != i]; _pi = [pair(i, j) for j in best if j != i]
+        if sum(_pc) < sum(_pi) - .5: l.append('fits the team worse (' + ', '.join(sorted({w for j in best if j != i for w in pairw(c, j)}))[:60] + ')')
+        return g[:4], l[:4]
     SWAPS[NAMES[i]] = [dict(name=NAMES[c], gain=_why_sw(c)[0], loss=_why_sw(c)[1], tier=TA[NAMES[c]]['tier'], sid=TA[NAMES[c]].get('sid'), form=str(TA[NAMES[c]].get('form', '0')),
                             delta=round(float(d_), 1), res=int((RM[c] < 1).sum()), se=int((OFF[c] >= 2).sum()),
                             oneshot=[FN[j] for j in range(nF) if DEAD[c, j]]) for d_, c in alt_[:3]]
@@ -506,7 +541,12 @@ POOLFIT = [dict(name=NAMES[i], tier=TA[NAMES[i]]['tier'], sid=TA[NAMES[i]].get('
                 res=int((RM[i] < 1).sum()), weak=int((RM[i] > 1).sum()), nmoves=len(EM), se=int((OFF[i] >= 2).sum()),
                 oneshot=[FN[j] for j in range(nF) if DEAD[i, j]], in_six=i in best, where=TA[NAMES[i]].get('where'))
            for i in np.argsort(-_fit)]
-out = dict(fight=FK, field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], types=f['types'], moves=f['moves'], item=f.get('item'), ability=f.get('ability'),
+_core_ix = [i for i in best if NAMES[i] in CORE]
+_bc_core = {f['id']: ok for f, _, ok in bcheck(_core_ix)}
+BRIEF_OUT = [dict(f, cov=[[a, b] for a, b in cv], ok=ok, core_ok=_bc_core.get(f['id'])) for f, cv, ok in bcheck(best)]
+FLEXWHY = {NAMES[i]: [f['text'] for f, cv, ok in bcheck(best) if ok and any(a == NAMES[i] for a, _ in cv) and not _bc_core.get(f['id']) and f['kind'] not in ('fieldnote', 'fieldblock')]
+           for i in best if NAMES[i] not in CORE}
+out = dict(fight=FK, brief=BRIEF_OUT, flexwhy=FLEXWHY, field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], types=f['types'], moves=f['moves'], item=f.get('item'), ability=f.get('ability'),
            sid=f['species'], form=f.get('form')) for f in FOES], main=MAIN, atk={t: sorted(v) for t, v in ATK.items()},
            wins=[dict(win=w, foes=fs, answered_by=[NAMES[i] for i in best if ANS[i, j]]) for j, (w, fs) in enumerate(WINS)],
            emoves=[dict(foe=FN[fi], move=(MV.get(m) or {}).get('name', m), types=[t for t in mtypes(m) if t], w=round(float(w), 2)) for (fi, m, w) in EM],

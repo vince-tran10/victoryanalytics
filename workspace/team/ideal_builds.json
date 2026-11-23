@@ -3,7 +3,7 @@
   "ability": "SHARPNESS",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Twisted Spoon",
+  "item": "Black Belt",
   "moves": [
    "Psycho Cut",
    "Sacred Sword",
@@ -16,7 +16,8 @@
    "LEAFBLADE"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "your team",
+  "item_wanted": "Twisted Spoon"
  },
  "Crabominable": {
   "ability": "IRONFIST",
@@ -41,7 +42,7 @@
   "ability": "ROCKHEAD",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Charcoal",
+  "item": "Silk Scarf",
   "moves": [
    "Flare Blitz",
    "Extreme Speed",
@@ -54,7 +55,8 @@
    "HEADSMASH"
   ],
   "role": "attacker",
-  "source": "your team"
+  "source": "your team",
+  "item_wanted": "Charcoal"
  },
  "Chandelure": {
   "ability": "FLASHFIRE",
@@ -193,7 +195,7 @@
   "ability": "SOLARIDOL",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Twisted Spoon",
+  "item": "Charcoal",
   "moves": [
    "Zen Headbutt",
    "Flare Blitz",
@@ -206,7 +208,8 @@
    "STONEEDGE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Twisted Spoon"
  },
  "Flareon": {
   "ability": "GUTS",
@@ -345,7 +348,7 @@
   "ability": "GRASSYSURGE",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Miracle Seed",
+  "item": "Hard Stone",
   "moves": [
    "Grassy Glide",
    "Wood Hammer",
@@ -358,7 +361,8 @@
    "HELPINGHAND"
   ],
   "role": "attacker",
-  "source": "your team"
+  "source": "your team",
+  "item_wanted": "Miracle Seed"
  },
  "Typhlosion": {
   "ability": "BLAZE",
@@ -440,7 +444,7 @@
   "ability": "LEVITATE",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Silver Powder",
+  "item": "Magnet",
   "moves": [
    "Bug Buzz",
    "Thunderbolt",
@@ -453,7 +457,8 @@
    "MUDSHOT"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Musharna (Aevian Form)": {
   "ability": "TOUGHCLAWS",
@@ -516,7 +521,7 @@
   "ability": "LUNARIDOL",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Twisted Spoon",
+  "item": "Spell Tag",
   "moves": [
    "Psychic",
    "Shadow Ball",
@@ -529,13 +534,14 @@
    "MOONBLAST"
   ],
   "role": "attacker",
-  "source": "engine"
+  "source": "engine",
+  "item_wanted": "Twisted Spoon"
  },
  "Wyrdeer": {
   "ability": "INTIMIDATE",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Twisted Spoon",
+  "item": "Silk Scarf",
   "moves": [
    "Hypnosis",
    "Psyshield Bash",
@@ -548,7 +554,8 @@
    "DOUBLEEDGE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Twisted Spoon"
  },
  "Torterra": {
   "ability": "OVERGROW",
@@ -685,7 +692,7 @@
   "ability": "OWNTEMPO",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Miracle Seed",
+  "item": "Black Glasses",
   "moves": [
    "Power Whip",
    "Knock Off",
@@ -698,7 +705,8 @@
    "THRASH"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Dragalge": {
   "ability": "ADAPTABILITY",
@@ -837,7 +845,7 @@
   "ability": "CONTRARY",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Twisted Spoon",
+  "item": "Black Belt",
   "moves": [
    "Psycho Cut",
    "Superpower",
@@ -850,7 +858,8 @@
    "NIGHTSLASH"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Twisted Spoon"
  },
  "Crobat": {
   "ability": "INFILTRATOR",
@@ -989,7 +998,7 @@
   "ability": "FOREWARN",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Twisted Spoon",
+  "item": "Fairy Feather",
   "moves": [
    "Psychic",
    "Hypnosis",
@@ -1002,7 +1011,8 @@
    "MOONBLAST"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Twisted Spoon"
  },
  "Simisear": {
   "ability": "BLAZE",
@@ -1063,7 +1073,7 @@
   "ability": "SCRAPPY",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Sharp Beak",
+  "item": "Focus Sash",
   "moves": [
    "Brave Bird",
    "U-turn",
@@ -1076,7 +1086,8 @@
    "ROOST"
   ],
   "role": "attacker",
-  "source": "smogon"
+  "source": "smogon",
+  "item_wanted": "Sharp Beak"
  },
  "Camerupt": {
   "ability": "SOLIDROCK",
@@ -1234,7 +1245,7 @@
   "ability": "SWARM",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Silver Powder",
+  "item": "Focus Sash",
   "moves": [
    "Bug Buzz",
    "Psychic",
@@ -1247,13 +1258,14 @@
    "REFLECT"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Venusaur": {
   "ability": "CHLOROPHYLL",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Miracle Seed",
+  "item": "Poison Barb",
   "moves": [
    "Giga Drain",
    "Sludge Bomb",
@@ -1266,7 +1278,8 @@
    "SLEEPPOWDER"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Miracle Seed"
  },
  "Palossand": {
   "ability": "WATERCOMPACTION",
@@ -1386,7 +1399,7 @@
   "ability": "SHADOWTAG",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Twisted Spoon",
+  "item": "Spell Tag",
   "moves": [
    "Thunder Wave",
    "Psychic",
@@ -1399,7 +1412,8 @@
    "SHADOWBALL"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Twisted Spoon"
  },
  "Runerigus": {
   "ability": "WANDERINGSPIRIT",
@@ -1460,7 +1474,7 @@
   "ability": "THICKFAT",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Twisted Spoon",
+  "item": "Charcoal",
   "moves": [
    "Psychic",
    "Teeter Dance",
@@ -1473,13 +1487,14 @@
    "MAGMADRIFT"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Twisted Spoon"
  },
  "Tsareena": {
   "ability": "QUEENLYMAJESTY",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Miracle Seed",
+  "item": "Silk Scarf",
   "moves": [
    "Power Whip",
    "Rapid Spin",
@@ -1492,7 +1507,8 @@
    "SYNTHESIS"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Miracle Seed"
  },
  "Reuniclus": {
   "ability": "MAGICGUARD",
@@ -1517,7 +1533,7 @@
   "ability": "REGENERATOR",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Twisted Spoon",
+  "item": "Mystic Water",
   "moves": [
    "Slack Off",
    "Psychic",
@@ -1530,13 +1546,14 @@
    "SURF"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Twisted Spoon"
  },
  "Appletun": {
   "ability": "THICKFAT",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Miracle Seed",
+  "item": "Sitrus Berry",
   "moves": [
    "Recover",
    "Apple Acid",
@@ -1549,7 +1566,8 @@
    "DRAGONPULSE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Nidoking": {
   "ability": "SHEERFORCE",
@@ -1612,7 +1630,7 @@
   "ability": "RUNAWAY",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Sharp Beak",
+  "item": "Black Belt",
   "moves": [
    "Brave Bird",
    "Jump Kick",
@@ -1625,13 +1643,14 @@
    "SWORDSDANCE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Sharp Beak"
  },
  "Frosmoth": {
   "ability": "ICESCALES",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Silver Powder",
+  "item": "Sitrus Berry",
   "moves": [
    "Bug Buzz",
    "Quiver Dance",
@@ -1644,7 +1663,8 @@
    "GIGADRAIN"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Kingler": {
   "ability": "HYPERCUTTER",
@@ -1707,7 +1727,7 @@
   "ability": "EFFECTSPORE",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Miracle Seed",
+  "item": "Fairy Feather",
   "moves": [
    "Giga Drain",
    "Strength Sap",
@@ -1720,7 +1740,8 @@
    "MOONBLAST"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Stoutland": {
   "ability": "INTIMIDATE",
@@ -1764,7 +1785,7 @@
   "ability": "HUSTLE",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Sharp Beak",
+  "item": "Focus Sash",
   "moves": [
    "Brave Bird",
    "Protect"
@@ -1773,7 +1794,8 @@
    "BRAVEBIRD"
   ],
   "role": "attacker",
-  "source": "engine"
+  "source": "engine",
+  "item_wanted": "Sharp Beak"
  },
  "Talonflame": {
   "ability": "GALEWINGS",
@@ -1817,7 +1839,7 @@
   "ability": "SPEEDBOOST",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Silver Powder",
+  "item": "Hard Stone",
   "moves": [
    "Bug Buzz",
    "Air Slash",
@@ -1830,13 +1852,14 @@
    "ANCIENTPOWER"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Silver Powder"
  },
  "Tropius": {
   "ability": "CHLOROPHYLL",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Sharp Beak",
+  "item": "Sitrus Berry",
   "moves": [
    "Air Slash",
    "Wide Guard",
@@ -1849,13 +1872,14 @@
    "LEAFTORNADO"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Sharp Beak"
  },
  "Exeggutor": {
   "ability": "CHLOROPHYLL",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Miracle Seed",
+  "item": "Sitrus Berry",
   "moves": [
    "Leech Seed",
    "Giga Drain",
@@ -1868,7 +1892,8 @@
    "EXTRASENSORY"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Bombirdier": {
   "ability": "ROCKYPAYLOAD",
@@ -2062,7 +2087,7 @@
   "ability": "STATIC",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Dragon Fang",
+  "item": "Hard Stone",
   "moves": [
    "Dragon Pulse",
    "Power Gem",
@@ -2075,7 +2100,8 @@
    "DISCHARGE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Dragon Fang"
  },
  "Sunflora": {
   "ability": "CHLOROPHYLL",
@@ -2195,7 +2221,7 @@
   "ability": "FLUFFY",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Sharp Beak",
+  "item": "Silk Scarf",
   "moves": [
    "Bounce",
    "Double-Edge",
@@ -2208,7 +2234,8 @@
    "PAYBACK"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Sharp Beak"
  },
  "Shiinotic": {
   "ability": "EFFECTSPORE",
@@ -2309,7 +2336,7 @@
   "ability": "WATERABSORB",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Sharp Beak",
+  "item": "Mystic Water",
   "moves": [
    "Air Slash",
    "Hydro Pump",
@@ -2322,7 +2349,8 @@
    "MUDBARRAGE"
   ],
   "role": "attacker",
-  "source": "engine"
+  "source": "engine",
+  "item_wanted": "Sharp Beak"
  },
  "Pidgeot": {
   "ability": "KEENEYE",
@@ -2366,7 +2394,7 @@
   "ability": "SWIFTSWIM",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Miracle Seed",
+  "item": "Mystic Water",
   "moves": [
    "Giga Drain",
    "Surf",
@@ -2379,7 +2407,8 @@
    "RAINDANCE"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Miracle Seed"
  },
  "Crustle": {
   "ability": "STURDY",
@@ -2423,7 +2452,7 @@
   "ability": "MOXIE",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Silver Powder",
+  "item": "Black Belt",
   "moves": [
    "X-Scissor",
    "Storm Throw",
@@ -2436,7 +2465,8 @@
    "SWORDSDANCE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Zangoose": {
   "ability": "TOXICBOOST",
@@ -2461,7 +2491,7 @@
   "ability": "CHLOROPHYLL",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Miracle Seed",
+  "item": "Fairy Feather",
   "moves": [
    "Quiver Dance",
    "Giga Drain",
@@ -2474,7 +2504,8 @@
    "MOONBLAST"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Barbaracle": {
   "ability": "TOUGHCLAWS",
@@ -2518,7 +2549,7 @@
   "ability": "LEVITATE",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Twisted Spoon",
+  "item": "Spell Tag",
   "moves": [
    "Perish Song",
    "Extrasensory",
@@ -2531,7 +2562,8 @@
    "SHADOWBALL"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Twisted Spoon"
  },
  "Feraligatr": {
   "ability": "SHEERFORCE",
@@ -2613,7 +2645,7 @@
   "ability": "INTIMIDATE",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Silver Powder",
+  "item": "Focus Sash",
   "moves": [
    "X-Scissor",
    "Dual Chop",
@@ -2626,7 +2658,8 @@
    "SWORDSDANCE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Tyrantrum": {
   "ability": "ROCKHEAD",
@@ -2651,7 +2684,7 @@
   "ability": "ROUGHSKIN",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Dragon Fang",
+  "item": "Black Glasses",
   "moves": [
    "Dragon Claw",
    "Sucker Punch",
@@ -2664,7 +2697,8 @@
    "GLARE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Dragon Fang"
  },
  "Alcremie": {
   "ability": "SWEETVEIL",
@@ -2708,7 +2742,7 @@
   "ability": "SEEDSOWER",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Miracle Seed",
+  "item": "Silk Scarf",
   "moves": [
    "Strength Sap",
    "Energy Ball",
@@ -2721,13 +2755,14 @@
    "WEATHERBALL"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Noivern": {
   "ability": "INFILTRATOR",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Dragon Fang",
+  "item": "Focus Sash",
   "moves": [
    "Dragon Pulse",
    "Tailwind",
@@ -2740,7 +2775,8 @@
    "AIRSLASH"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Dragon Fang"
  },
  "Sylveon": {
   "ability": "PIXILATE",
@@ -2765,7 +2801,7 @@
   "ability": "STRONGJAW",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Twisted Spoon",
+  "item": "Mystic Water",
   "moves": [
    "Psychic Fangs",
    "Wave Crash",
@@ -2776,7 +2812,8 @@
    "WAVECRASH"
   ],
   "role": "attacker",
-  "source": "engine"
+  "source": "engine",
+  "item_wanted": "Twisted Spoon"
  },
  "Marowak (Alolan Form)": {
   "ability": "ROCKHEAD",
@@ -2801,7 +2838,7 @@
   "ability": "AFTERMATH",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Miracle Seed",
+  "item": "Focus Sash",
   "moves": [
    "Chloroblast",
    "Thunder Wave",
@@ -2812,7 +2849,8 @@
    "THUNDERWAVE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Jellicent": {
   "ability": "CURSEDBODY",
@@ -2928,7 +2966,7 @@
   "ability": "SOUNDPROOF",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Miracle Seed",
+  "item": "Focus Sash",
   "moves": [
    "Magical Leaf",
    "Psychic",
@@ -2941,7 +2979,8 @@
    "REFLECT"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Cradily": {
   "ability": "STORMDRAIN",
@@ -3023,7 +3062,7 @@
   "ability": "CHLOROPHYLL",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Miracle Seed",
+  "item": "Focus Sash",
   "moves": [
    "Leaf Blade",
    "Swords Dance",
@@ -3036,13 +3075,14 @@
    "XSCISSOR"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Heracross": {
   "ability": "MOXIE",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Silver Powder",
+  "item": "Hard Stone",
   "moves": [
    "Pin Missile",
    "Rock Blast",
@@ -3055,13 +3095,14 @@
    "SWORDSDANCE"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Silver Powder"
  },
  "Armaldo": {
   "ability": "BATTLEARMOR",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Silver Powder",
+  "item": "Silk Scarf",
   "moves": [
    "X-Scissor",
    "Rapid Spin",
@@ -3074,7 +3115,8 @@
    "AQUAJET"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Lurantis": {
   "ability": "LEAFGUARD",
@@ -3099,7 +3141,7 @@
   "ability": "CLOUDNINE",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Dragon Fang",
+  "item": "Sitrus Berry",
   "moves": [
    "Roost",
    "Dragon Claw",
@@ -3112,7 +3154,8 @@
    "PLUCK"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Dragon Fang"
  },
  "Garbodor": {
   "ability": "STENCH",
@@ -3137,7 +3180,7 @@
   "ability": "PROTEAN",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Miracle Seed",
+  "item": "Black Glasses",
   "moves": [
    "Flower Trick",
    "U-turn",
@@ -3150,13 +3193,14 @@
    "KNOCKOFF"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Miracle Seed"
  },
  "Victreebel": {
   "ability": "GLUTTONY",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Miracle Seed",
+  "item": "Poison Barb",
   "moves": [
    "Leaf Blade",
    "Sleep Powder",
@@ -3169,7 +3213,8 @@
    "SLUDGEBOMB"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Stunfisk (Galarian Form)": {
   "ability": "MIMICRY",
@@ -3213,7 +3258,7 @@
   "ability": "SNOWWARNING",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Miracle Seed",
+  "item": "Never-Melt Ice",
   "moves": [
    "Wood Hammer",
    "Ice Shard",
@@ -3226,7 +3271,8 @@
    "GRASSWHISTLE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Mismagius": {
   "ability": "LEVITATE",
@@ -3270,7 +3316,7 @@
   "ability": "TECHNICIAN",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Miracle Seed",
+  "item": "Hard Stone",
   "moves": [
    "Spore",
    "Bullet Seed",
@@ -3283,13 +3329,14 @@
    "ROCKTOMB"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Miracle Seed"
  },
  "Meganium": {
   "ability": "OVERGROW",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Miracle Seed",
+  "item": "Hard Stone",
   "moves": [
    "Reflect",
    "Giga Drain",
@@ -3302,13 +3349,14 @@
    "ANCIENTPOWER"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Slowbro (Galarian Form)": {
   "ability": "REGENERATOR",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Twisted Spoon",
+  "item": "Poison Barb",
   "moves": [
    "Slack Off",
    "Zen Headbutt",
@@ -3321,7 +3369,8 @@
    "SHELLSIDEARM"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Twisted Spoon"
  },
  "Jolteon": {
   "ability": "VOLTABSORB",
@@ -3479,7 +3528,7 @@
   "ability": "REGENERATOR",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Miracle Seed",
+  "item": "Poison Barb",
   "moves": [
    "Giga Drain",
    "Sleep Powder",
@@ -3492,7 +3541,8 @@
    "SLUDGEBOMB"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Miracle Seed"
  },
  "Luxray": {
   "ability": "INTIMIDATE",
@@ -3648,7 +3698,7 @@
   "ability": "SAPSIPPER",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Miracle Seed",
+  "item": "Sitrus Berry",
   "moves": [
    "Horn Leech",
    "Milk Drink",
@@ -3661,13 +3711,14 @@
    "BOUNCE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Tauros": {
   "ability": "INTIMIDATE",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Twisted Spoon",
+  "item": "Silk Scarf",
   "moves": [
    "Zen Headbutt",
    "Rock Climb",
@@ -3680,7 +3731,8 @@
    "WORKUP"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Twisted Spoon"
  },
  "Exploud": {
   "ability": "SCRAPPY",
@@ -3876,7 +3928,7 @@
   "ability": "KEENEYE",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Twisted Spoon",
+  "item": "Spell Tag",
   "moves": [
    "Psyshock",
    "Reflect",
@@ -3889,7 +3941,8 @@
    "SHADOWBALL"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Twisted Spoon"
  },
  "Marowak": {
   "ability": "ROCKHEAD",
@@ -4009,7 +4062,7 @@
   "ability": "TINTEDLENS",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Silver Powder",
+  "item": "Black Glasses",
   "moves": [
    "First Impression",
    "Sucker Punch",
@@ -4022,13 +4075,14 @@
    "AXEKICK"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Silver Powder"
  },
  "Kilowattrel": {
   "ability": "WINDPOWER",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Sharp Beak",
+  "item": "Magnet",
   "moves": [
    "Hurricane",
    "Roost",
@@ -4041,13 +4095,14 @@
    "VOLTSWITCH"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Sharp Beak"
  },
  "Swanna": {
   "ability": "KEENEYE",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Sharp Beak",
+  "item": "Mystic Water",
   "moves": [
    "Roost",
    "Brave Bird",
@@ -4060,13 +4115,14 @@
    "SURF"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Sharp Beak"
  },
  "Venomoth": {
   "ability": "TINTEDLENS",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Silver Powder",
+  "item": "Focus Sash",
   "moves": [
    "Sleep Powder",
    "Bug Buzz",
@@ -4079,7 +4135,8 @@
    "PSYCHIC"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Roserade (Aevian Form)": {
   "ability": "TECHNICIAN",
@@ -4218,7 +4275,7 @@
   "ability": "UNBURDEN",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Miracle Seed",
+  "item": "Focus Sash",
   "moves": [
    "Giga Drain",
    "Dragon Breath",
@@ -4231,13 +4288,14 @@
    "ENERGYBALL"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Miracle Seed"
  },
  "Vespiquen": {
   "ability": "PRESSURE",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Silver Powder",
+  "item": "Sitrus Berry",
   "moves": [
    "Heal Order",
    "Attack Order",
@@ -4250,7 +4308,8 @@
    "AIRSLASH"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Sandslash (Alolan Form)": {
   "ability": "SLUSHRUSH",
@@ -4332,7 +4391,7 @@
   "ability": "GUTS",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Sharp Beak",
+  "item": "Silk Scarf",
   "moves": [
    "Brave Bird",
    "Facade",
@@ -4343,7 +4402,8 @@
    "FACADE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Sharp Beak"
  },
  "Grafaiai": {
   "ability": "PRANKSTER",
@@ -4423,7 +4483,7 @@
   "ability": "COTTONDOWN",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Miracle Seed",
+  "item": "Silk Scarf",
   "moves": [
    "Giga Drain",
    "Leech Seed",
@@ -4436,13 +4496,14 @@
    "HYPERVOICE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Floette": {
   "ability": "FLOWERVEIL",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Miracle Seed",
+  "item": "Fairy Feather",
   "moves": [
    "Wish",
    "Magical Leaf",
@@ -4455,7 +4516,8 @@
    "MOONBLAST"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Wigglytuff": {
   "ability": "CUTECHARM",
@@ -4537,7 +4599,7 @@
   "ability": "CHLOROPHYLL",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Miracle Seed",
+  "item": "Focus Sash",
   "moves": [
    "Leaf Blade",
    "X-Scissor",
@@ -4550,13 +4612,14 @@
    "SWORDSDANCE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Starmie": {
   "ability": "ANALYTIC",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Twisted Spoon",
+  "item": "Mystic Water",
   "moves": [
    "Psychic",
    "Recover",
@@ -4569,7 +4632,8 @@
    "HYDROPUMP"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Twisted Spoon"
  },
  "Brambleghast": {
   "ability": "WINDRIDER",
@@ -4632,7 +4696,7 @@
   "ability": "COMPOUNDEYES",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Silver Powder",
+  "item": "Sitrus Berry",
   "moves": [
    "Sleep Powder",
    "Bug Buzz",
@@ -4645,7 +4709,8 @@
    "AIRSLASH"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Kecleon": {
   "ability": "PROTEAN",
@@ -4689,7 +4754,7 @@
   "ability": "DANCER",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Sharp Beak",
+  "item": "Silk Scarf",
   "moves": [
    "Hurricane",
    "Revelation Dance",
@@ -4702,13 +4767,14 @@
    "BATONPASS"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Sharp Beak"
  },
  "Octillery": {
   "ability": "SUCTIONCUPS",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Miracle Seed",
+  "item": "Poison Barb",
   "moves": [
    "Bullet Seed",
    "Gunk Shot",
@@ -4721,7 +4787,8 @@
    "ROCKBLAST"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Dugtrio (Alolan Form)": {
   "ability": "TANGLINGHAIR",
@@ -4746,7 +4813,7 @@
   "ability": "COMPOUNDEYES",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Sharp Beak",
+  "item": "Focus Sash",
   "moves": [
    "Sleep Powder",
    "Hurricane",
@@ -4759,7 +4826,8 @@
    "BUGBUZZ"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Sharp Beak"
  },
  "Furfrou": {
   "ability": "FURCOAT",
@@ -4822,7 +4890,7 @@
   "ability": "EMERGENCYEXIT",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Silver Powder",
+  "item": "Mystic Water",
   "moves": [
    "First Impression",
    "Aqua Jet",
@@ -4835,7 +4903,8 @@
    "SUCKERPUNCH"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Kangaskhan": {
   "ability": "SCRAPPY",
@@ -4860,7 +4929,7 @@
   "ability": "SPEEDBOOST",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Silver Powder",
+  "item": "Poison Barb",
   "moves": [
    "X-Scissor",
    "Cross Poison",
@@ -4873,7 +4942,8 @@
    "BULLDOZE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Lapras": {
   "ability": "WATERABSORB",
@@ -5008,7 +5078,7 @@
   "ability": "WATERABSORB",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Miracle Seed",
+  "item": "Sitrus Berry",
   "moves": [
    "Synthesis",
    "Giga Drain",
@@ -5021,7 +5091,8 @@
    "IRRITATION"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Linoone": {
   "ability": "PICKUP",
@@ -5065,7 +5136,7 @@
   "ability": "VOLTABSORB",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Miracle Seed",
+  "item": "Magnet",
   "moves": [
    "Nasty Plot",
    "Grass Knot",
@@ -5078,7 +5149,8 @@
    "ELECTROBALL"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Mandibuzz": {
   "ability": "OVERCOAT",
@@ -5141,7 +5213,7 @@
   "ability": "WINDRIDER",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Miracle Seed",
+  "item": "Silk Scarf",
   "moves": [
    "Leaf Blade",
    "Growth",
@@ -5154,13 +5226,14 @@
    "FAKEOUT"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game+smogon",
+  "item_wanted": "Miracle Seed"
  },
  "Volbeat": {
   "ability": "PRANKSTER",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Silver Powder",
+  "item": "Fairy Feather",
   "moves": [
    "Lunge",
    "Play Rough",
@@ -5173,7 +5246,8 @@
    "ZENHEADBUTT"
   ],
   "role": "attacker",
-  "source": "engine"
+  "source": "engine",
+  "item_wanted": "Silver Powder"
  },
  "Bellibolt": {
   "ability": "ELECTROMORPHOSIS",
@@ -5198,7 +5272,7 @@
   "ability": "LIGHTNINGROD",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Miracle Seed",
+  "item": "Magnet",
   "moves": [
    "Nasty Plot",
    "Grass Knot",
@@ -5211,7 +5285,8 @@
    "ELECTROBALL"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Stunfisk": {
   "ability": "STATIC",
@@ -5274,7 +5349,7 @@
   "ability": "OVERCOAT",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Twisted Spoon",
+  "item": "Sitrus Berry",
   "moves": [
    "Psychic",
    "Bug Buzz",
@@ -5287,7 +5362,8 @@
    "QUIVERDANCE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Twisted Spoon"
  },
  "Wormadam (Sandy Cloak)": {
   "ability": "ANTICIPATION",
@@ -5388,7 +5464,7 @@
   "ability": "MAGICBOUNCE",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Twisted Spoon",
+  "item": "Focus Sash",
   "moves": [
    "Psychic",
    "Roost",
@@ -5401,7 +5477,8 @@
    "AIRSLASH"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Twisted Spoon"
  },
  "Avalugg (Hisuian Form)": {
   "ability": "STURDY",
@@ -5521,7 +5598,7 @@
   "ability": "DRYSKIN",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Silver Powder",
+  "item": "Sitrus Berry",
   "moves": [
    "Spore",
    "X-Scissor",
@@ -5534,7 +5611,8 @@
    "BULLETSEED"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Porygon": {
   "ability": "DOWNLOAD",
@@ -5578,7 +5656,7 @@
   "ability": "SANDVEIL",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Miracle Seed",
+  "item": "Sitrus Berry",
   "moves": [
    "Needle Arm",
    "Pin Missile",
@@ -5591,7 +5669,8 @@
    "SANDATTACK"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Graveler (Alolan Form)": {
   "ability": "GALVANIZE",
@@ -5616,7 +5695,7 @@
   "ability": "SNIPER",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Sharp Beak",
+  "item": "Soft Sand",
   "moves": [
    "Drill Peck",
    "Drill Run",
@@ -5629,13 +5708,14 @@
    "FURYATTACK"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Sharp Beak"
  },
  "Kabutops": {
   "ability": "SWIFTSWIM",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Silver Powder",
+  "item": "Mystic Water",
   "moves": [
    "X-Scissor",
    "Aqua Jet",
@@ -5648,13 +5728,14 @@
    "NIGHTSLASH"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Spidops": {
   "ability": "STAKEOUT",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Silver Powder",
+  "item": "Black Glasses",
   "moves": [
    "First Impression",
    "Sucker Punch",
@@ -5667,7 +5748,8 @@
    "CIRCLETHROW"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Blissey": {
   "ability": "SERENEGRACE",
@@ -5711,7 +5793,7 @@
   "ability": "CHLOROPHYLL",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Miracle Seed",
+  "item": "Focus Sash",
   "moves": [
    "Sleep Powder",
    "Bullet Seed",
@@ -5724,7 +5806,8 @@
    "ACROBATICS"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Boldore": {
   "ability": "STURDY",
@@ -5764,7 +5847,7 @@
   "ability": "KEENEYE",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Sharp Beak",
+  "item": "Silk Scarf",
   "moves": [
    "Chatter",
    "Hyper Voice",
@@ -5777,7 +5860,8 @@
    "BOOMBURST"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Sharp Beak"
  },
  "Bibarel": {
   "ability": "SIMPLE",
@@ -5821,7 +5905,7 @@
   "ability": "SWARM",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Silver Powder",
+  "item": "Black Glasses",
   "moves": [
    "Fury Cutter",
    "Night Slash",
@@ -5834,7 +5918,8 @@
    "BUGBITE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Klawf": {
   "ability": "ANGERSHELL",
@@ -5897,7 +5982,7 @@
   "ability": "COMPOUNDEYES",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Silver Powder",
+  "item": "Poison Barb",
   "moves": [
    "Leech Life",
    "Sludge Bomb",
@@ -5910,7 +5995,8 @@
    "SHADOWBALL"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Watchog": {
   "ability": "ANALYTIC",
@@ -6011,7 +6097,7 @@
   "ability": "OBLIVIOUS",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Twisted Spoon",
+  "item": "Spell Tag",
   "moves": [
    "Lovely Kiss",
    "Psychic",
@@ -6024,7 +6110,8 @@
    "SHADOWBALL"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Twisted Spoon"
  },
  "Sandslash": {
   "ability": "SANDRUSH",
@@ -6068,7 +6155,7 @@
   "ability": "UNAWARE",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Twisted Spoon",
+  "item": "Focus Sash",
   "moves": [
    "Psychic",
    "Air Slash",
@@ -6081,7 +6168,8 @@
    "CALMMIND"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Twisted Spoon"
  },
  "Shuckle": {
   "ability": "STURDY",
@@ -6391,7 +6479,7 @@
   "ability": "SWARM",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Silver Powder",
+  "item": "Sitrus Berry",
   "moves": [
    "Quiver Dance",
    "Bug Buzz",
@@ -6404,7 +6492,8 @@
    "GIGADRAIN"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Thievul": {
   "ability": "UNBURDEN",
@@ -6448,7 +6537,7 @@
   "ability": "STATIC",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Sharp Beak",
+  "item": "Magnet",
   "moves": [
    "Acrobatics",
    "Nuzzle",
@@ -6461,7 +6550,8 @@
    "ROOST"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Sharp Beak"
  },
  "Shedinja": {
   "ability": "WONDERGUARD",
@@ -6505,7 +6595,7 @@
   "ability": "TINTEDLENS",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Silver Powder",
+  "item": "Sitrus Berry",
   "moves": [
    "Lunge",
    "Psychic",
@@ -6518,7 +6608,8 @@
    "AIRSLASH"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Glalie": {
   "ability": "INNERFOCUS",
@@ -6543,7 +6634,7 @@
   "ability": "DANCER",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Sharp Beak",
+  "item": "Silk Scarf",
   "moves": [
    "Feather Dance",
    "Air Cutter",
@@ -6556,7 +6647,8 @@
    "REVELATIONDANCE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Sharp Beak"
  },
  "Lumineon": {
   "ability": "STORMDRAIN",
@@ -6598,7 +6690,7 @@
   "ability": "INNERFOCUS",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Twisted Spoon",
+  "item": "Spell Tag",
   "moves": [
    "Psychic",
    "Shadow Ball",
@@ -6611,7 +6703,8 @@
    "CALMMIND"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Twisted Spoon"
  },
  "Machoke": {
   "ability": "GUTS",
@@ -6693,7 +6786,7 @@
   "ability": "IRONFIST",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Twisted Spoon",
+  "item": "Focus Sash",
   "moves": [
    "Tailwind",
    "Psybeam",
@@ -6706,7 +6799,8 @@
    "BUGBUZZ"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Twisted Spoon"
  },
  "Dewgong": {
   "ability": "THICKFAT",
@@ -6750,7 +6844,7 @@
   "ability": "INSOMNIA",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Miracle Seed",
+  "item": "Spell Tag",
   "moves": [
    "Razor Leaf",
    "Shadow Sneak",
@@ -6763,7 +6857,8 @@
    "LEECHSEED"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Miracle Seed"
  },
  "Masquerain": {
   "ability": "INTIMIDATE",
@@ -6824,7 +6919,7 @@
   "ability": "OBLIVIOUS",
   "nature": "Timid",
   "evs": "252 SpA / 252 Spe",
-  "item": "Silver Powder",
+  "item": "Spell Tag",
   "moves": [
    "Infestation",
    "Flatter",
@@ -6837,7 +6932,8 @@
    "SHADOWBALL"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Silver Powder"
  },
  "Gimmighoul": {
   "ability": "RATTLED",
@@ -6879,7 +6975,7 @@
   "ability": "NOGUARD",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Silver Powder",
+  "item": "Metal Coat",
   "moves": [
    "X-Scissor",
    "Iron Head",
@@ -6892,7 +6988,8 @@
    "KNOCKOFF"
   ],
   "role": "attacker",
-  "source": "engine"
+  "source": "engine",
+  "item_wanted": "Silver Powder"
  },
  "Wugtrio": {
   "ability": "SANDVEIL",
@@ -6991,7 +7088,7 @@
   "ability": "WATERVEIL",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Sharp Beak",
+  "item": "Metal Coat",
   "moves": [
    "Bounce",
    "Noble Roar",
@@ -7004,7 +7101,8 @@
    "HEAVYSLAM"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game",
+  "item_wanted": "Sharp Beak"
  },
  "Togedemaru": {
   "ability": "LIGHTNINGROD",
@@ -7122,7 +7220,7 @@
   "ability": "HONEYGATHER",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Silver Powder",
+  "item": "Sitrus Berry",
   "moves": [
    "Lunge",
    "Gust",
@@ -7133,7 +7231,8 @@
    "GUST"
   ],
   "role": "attacker",
-  "source": "engine"
+  "source": "engine",
+  "item_wanted": "Silver Powder"
  },
  "Unown": {
   "ability": "LEVITATE",

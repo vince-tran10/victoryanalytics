@@ -4,6 +4,7 @@ usage (from workspace/): python3 -I ../scripts/team/planner_tab.py <report.html>
 import html, json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sprites as SP
+import chapter_brief as CB
 from kits import disp
 from cues import cues
 os.environ.setdefault('MOVE_RULES', 'relearn')
@@ -27,6 +28,9 @@ if P.get('break_field'):
 h += '<article class="plc"><h3>Their team</h3><ol class="pfoes">' + ''.join(
     f'<li class="{"plead" if i < L else ""}"><span class="pn">{i + 1}</span>{SP.tag(f["sid"], "0", size="s")}<span>{E(f["name"])}</span></li>' for i, f in enumerate(foes)) + '</ol>'
 h += '</article>'
+# 23 Nov (Vincent): 2) what makes this fight hard and how to beat it in this format (before the pick)
+if P.get('brief'):
+    h += f'<article class="plc"><h3>What makes this fight hard</h3>{CB.render(P["brief"], False)}</article>'
 # 23 Nov (Vincent): the game plan instead of rule text: leads + turn 1, then who takes each of their Pokémon
 six = P['six']; FN = [f['name'] for f in foes]
 def best_vs(j, pool):   # walls it (takes < 50%) and hits hardest; else the one that takes least
@@ -43,7 +47,7 @@ for j in range(L, len(FN)):
     gp.append(f"{FN[j]}: bring {disp(m['name'])} (takes {m['take'][j]}%)")
 # our six
 rows = ''
-for m in P['six']:
+for m in [m for m in P['six'] if not m.get('core')]:   # 23 Nov (Vincent): only the 3 flexes here (the core is fixed for the chapter)
     wc = 'bad' if m['worst'] >= 100 else 'ok' if m['worst'] < 50 else ''
     walls = [FN[j] for j in sorted(range(len(FN)), key=lambda j: m['take'][j]) if m['take'][j] < 50]   # takes < 50% from it
     beats = [FN[j] for j in sorted(range(len(FN)), key=lambda j: -m['deal'][j]) if m['deal'][j] >= 100]
@@ -54,6 +58,7 @@ for m in P['six']:
              + ''.join(f'<span class="bstat bad">No Earthquake next to partner</span>' for _ in (m.get('warn') or [])[:1])
              + ''.join(f'<span class="{"btool" if k == "tool" else "bstat"}">{E(c)}</span>' for k, c in cues(m['types'], m['ability'], m['moves'], _chart)[:1 if m.get('warn') else 2])
              + '</div>'
+             + ''.join(f'<div class="pans cok">✓ {E(w)}</div>' for w in (P.get('flexwhy') or {}).get(m['name'], [])[:3])
              + '<details class="pwhy" onclick="event.stopPropagation()"><summary>Why these moves</summary><ul>' + ''.join(
                  f'<li class="{"pflag" if w["flag"] else ""}"><b>{E(w["move"])}</b><span>{E(w["why"])}</span></li>' for w in m.get('why') or []) + '</ul></details>'
              + (('<details class="pwhy" onclick="event.stopPropagation()"><summary>Swap options</summary><ul>' + ''.join(
@@ -64,7 +69,9 @@ for m in P['six']:
                  + ('' if (x.get("gain") or x.get("loss")) else '<span>Same checks, lower score</span>') + '</li>'
                  for x in (P.get('swaps') or {}).get(m['name'], [])) + '</ul></details>') if (not m.get('core') and (P.get('swaps') or {}).get(m['name'])) else '')
              + '</li>')
-h += f'<article class="plc"><h3>Your six</h3><ul class="bl">{rows}</ul></article>'
+_core = [m for m in P['six'] if m.get('core')]
+h += (f'<article class="plc"><h3>Your 3 flexes</h3><div class="pmuted">Core: {E(", ".join(disp(m["name"]) for m in _core))}</div>'
+      f'<ul class="bl">{rows}</ul></article>')
 # 23 Nov (Vincent): the FORMAT MINDSET checklist, honest: a tick only when the six really does it in this fight
 MS = P.get('mindset')
 if MS:
@@ -72,25 +79,21 @@ if MS:
     def _ln(ok, txt, subs): return (f'<li class="{"pw-ok" if ok else "pw-no"}"><b>{"✓" if ok else "✗"}</b> {E(txt)}'
                                     + ''.join(f'<div class="pans">{E(x)}</div>' for x in subs) + '</li>')
     li_ = ''
-    for f, (mv_, stg) in (MS.get('setup') or {}).items():
-        sv = MS['layered'].get(f) or []
-        li_ += _ln(bool(sv), f'{f} sets up: {mv_} (+{stg} here)', [f'Takes it after the boost: {", ".join(disp(x) for x in sv)}'] if sv else ['Nobody takes its boosted hit: KO it first or put it to sleep turn 1'])
     no_ = [f for f in _foes if not MS['layered'].get(f)]
     two = [f for f in _foes if len(MS['layered'].get(f) or []) >= 2]
     li_ += _ln(not no_, f'Two checks per threat: {len(two)} of {len(_foes)}', [f'{f}: ' + ', '.join(disp(x) for x in MS['layered'][f]) for f in _foes if MS['layered'].get(f)][:3] + (['No check for ' + ', '.join(no_)] if no_ else []))
-    for f in _foes:   # speed: per foe faster than most of the six
-        if sum(1 for v in MS['myspeed'].values() if v < MS['speeds'].get(f, 0)) < 4: continue
-        rv = MS['revenge'].get(f) or []; pr = (MS.get('para') or {}).get(f) or []; sc = (MS.get('sc') or {}).get(f) or []
-        if rv: li_ += _ln(True, f'{f} (Speed {MS["speeds"][f]}): outspeed and one-shot', [disp(rv[0])])
-        elif pr: li_ += _ln(True, f'{f} (Speed {MS["speeds"][f]}): paralyse, then one-shot', [disp(sc[0].split(": ")[0]) + ': ' + sc[0].split(": ")[1], f'then {disp(pr[0])} outspeeds and one-shots'])
-        elif sc: li_ += _ln(False, f'{f} (Speed {MS["speeds"][f]}): can be paralysed, nobody then one-shots it', [disp(sc[0].split(": ")[0]) + ': ' + sc[0].split(": ")[1]])
-        else: li_ += _ln(False, f'{f} (Speed {MS["speeds"][f]}): no speed answer', [])
     li_ += _ln(bool(MS['priority']), 'Priority attack', [', '.join(disp(x) for x in MS['priority']) or 'None on the six'])
     li_ += _ln(len(MS['pivot']) >= 2, 'Safe switches (Regenerator / recovery / pivot)', [', '.join(disp(x) for x in MS['pivot']) or 'None'])
     for t_, w_ in (MS.get('immune') or {}).items():
         li_ += _ln(bool(w_), f'{t_.title()} immunity', [', '.join(disp(x) for x in w_) or 'None'])
-    h += f'<article class="plc"><h3>{E(P["format"])} mindset</h3><ul class="pwin">{li_}</ul></article>'
+    MSLI = li_
 
+# 23 Nov (Vincent): 4) re-check with the whole six: every point answered, then the format mindset
+if P.get('brief'):
+    _ok = sum(1 for x in P['brief'] if x['ok']); _no = sum(1 for x in P['brief'] if x['ok'] is False)
+    h += (f'<article class="plc"><h3>Re-check: your six</h3><div class="pmuted">{_ok} answered, {_no} not</div>'
+          + CB.render(P['brief'], True, disp, 'not covered')
+          + (f'<div class="psub">{E(P["format"])} mindset</div><ul class="pwin">{MSLI}</ul>' if MS else '') + '</article>')
 # 23 Nov (Vincent): the guide's tips for this fight and how the six covers each one (collapsed)
 TP = P.get('tips') or []
 if TP:
@@ -150,7 +153,7 @@ css = '''<style id="plan-css">
 .pwhy { margin-top: 4px; font-size: 12.5px } .pwhy summary { cursor: pointer; color: var(--muted); font-weight: 600 }
 .pwhy ul { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 4px } .pwhy li { display: grid; gap: 1px } .pwhy li span { color: var(--muted) }
 .pwhy li.pflag b { color: #b3261e } .pwhy li.pflag b::after { content: '  ⚠ check' }
-.pwhy .pbad { color: #b3261e } .pwhy .pgood { color: #1f8a4c } .bc.pft.pin { box-shadow: inset 0 0 0 2px var(--accent) }
+.pwhy .pbad { color: #b3261e } .pans.cok { color: #1f8a4c } .pans.cno { color: #b3261e } .pwin li.pw-nt b { color: var(--muted) } .pwhy .pgood { color: #1f8a4c } .bc.pft.pin { box-shadow: inset 0 0 0 2px var(--accent) }
 .plc ul.bl { padding: 0; margin: 0; list-style: none; display: grid; gap: 6px } .pho summary { cursor: pointer; font-weight: 700 } .pho ol { margin: 6px 0 0; padding-left: 20px; font-size: 13px; display: grid; gap: 3px }
 #splan + .pgrid, .pgrid { display: grid; gap: 14px }
 </style>'''

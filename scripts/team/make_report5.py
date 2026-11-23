@@ -215,7 +215,8 @@ if _ST.get('team'):
         _d = _K.disp(_n); _old = next((t for t in TEAM if t[1] == _d), None)
         if _old:   # keep its card, but the moves follow state.json (a fight can change them, e.g. Gastro Acid Muk)
             _sm = (_ST.get('moves') or {}).get(_n)
-            _new.append((('Lead', 'Lead', 'Mid', 'Mid', 'Closer', 'Closer')[min(_i, 5)],) + _old[1:7] + ([(m, 0) for m in _sm] if _sm else _old[7],) + _old[8:]); continue
+            _it = (_ST.get('items') or {}).get(_n) or (_IB.get(_n) or {}).get('item') or _old[6]   # 23 Nov: owned items only (ideal_builds filters)
+            _new.append((('Lead', 'Lead', 'Mid', 'Mid', 'Closer', 'Closer')[min(_i, 5)],) + _old[1:6] + (_it,) + ([(m, 0) for m in _sm] if _sm else _old[7],) + _old[8:]); continue
         _b = _IB.get(_n, {}); _mv = (_ST.get('moves') or {}).get(_n) or _b.get('moves', [])
         _new.append((('Lead', 'Lead', 'Mid', 'Mid', 'Closer', 'Closer')[min(_i, 5)], _d, '/'.join(x.title() for x in (_TA.get(_n) or {}).get('types', [])), _abn((_ST.get('abilities') or {}).get(_n) or _b.get('ability')),
                      _b.get('nature', ''), _b.get('evs', ''), (_ST.get('items') or {}).get(_n) or _b.get('item', ''), [(m, 0) for m in _mv], []))
@@ -453,12 +454,18 @@ BOOSTER = {'FIRE': 'Charcoal', 'WATER': 'Mystic Water', 'GRASS': 'Miracle Seed',
            'FIGHTING': 'Black Belt', 'POISON': 'Poison Barb', 'GROUND': 'Soft Sand', 'FLYING': 'Sharp Beak', 'PSYCHIC': 'Twisted Spoon',
            'BUG': 'Silver Powder', 'ROCK': 'Hard Stone', 'GHOST': 'Spell Tag', 'DRAGON': 'Dragon Fang', 'DARK': 'Black Glasses',
            'STEEL': 'Metal Coat', 'FAIRY': 'Fairy Feather', 'NORMAL': 'Silk Scarf'}
+try:
+    import current_box as _cbo
+    OWNED_ITEMS = {x['item'] for x in _cbo.parse(NEWX) if x.get('item')}
+except Exception:
+    OWNED_ITEMS = set()
 def best_item(attacks, phys):
-    """Unlimited items (Vincent): reusable booster of the main attack's type (first planned attack)."""
+    """23 Nov (Vincent): only items he has (held in his export): booster of the first attack whose booster he owns, else Sitrus."""
     for m in attacks:
         v = SX.MV.get(m) or {}
         if v.get('Category') in ('Physical', 'Special'):
-            return BOOSTER.get((v.get('Type') or '').upper())
+            b_ = BOOSTER.get((v.get('Type') or '').upper())
+            if b_ and (not OWNED_ITEMS or b_ in OWNED_ITEMS): return b_
     return 'Sitrus Berry'
 def plan_moves(have, target, phys, ability):
     """target attacks (+Protect) -> list of 'Teach X (replaces Y)' lines; free slots keep the best existing moves."""

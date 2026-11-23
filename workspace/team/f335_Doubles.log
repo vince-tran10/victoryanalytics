@@ -1,0 +1,13 @@
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Chandelure | Active 60 | Flash Fire  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Shadow Ball', 'Will-O-Wisp', 'Overheat', 'Protect'] | Sitrus Berry | 
+Glalie (Aevian Form) | Active 60 | Grassy Surge  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'] | Focus Sash (already holding) | 
+Toxtricity (Aevian Form) | Active 60 | Galvanize  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Torch Song', 'Boomburst', 'Sludge Bomb', 'Protect'] | Charcoal (already holding) | 
+Gallade | Active 60 | Sharpness  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Psycho Cut', 'Sacred Sword', 'Leaf Blade', 'Protect'] | Sitrus Berry (already holding) | 
+Azumarill | Active 60 | Huge Power  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Play Rough', 'Aqua Jet', 'Belly Drum', 'Protect'] | Sitrus Berry (already holding) | 
+jenner 1.195 -> 1.649 leads ['Gallade', 'Glalie (Aevian Form)'] swaps [('Meowstic', 'Glalie (Aevian Form)', 0.06), ('Hitmontop', 'Glalie (Aevian Form)', 0.06), ('Arcanine (Hisuian Form)', 'Gallade', 0.046)]
+danni 1.168 -> 1.761 leads ['Gallade', 'Chandelure'] swaps [('Vivillon', 'Azumarill', 0.061), ('Raichu', 'Azumarill', 0.06), ('Mr. Mime', 'Glalie (Aevian Form)', 0.06)]
+troye 0.858 -> 1.396 leads ['Gallade', 'Toxtricity (Aevian Form)'] swaps [('Arcanine', 'Chandelure', 0.102), ('Arcanine (Hisuian Form)', 'Azumarill', 0.087), ('Mabosstiff', 'Azumarill', 0.079)]
+zena 1.311 -> 1.556 leads ['Gallade', 'Glalie (Aevian Form)'] swaps [('Golisopod (Aevian Form)', 'Toxtricity (Aevian Form)', 0.088), ('Diggersby', 'Toxtricity (Aevian Form)', 0.085), ('Swampert', 'Toxtricity (Aevian Form)', 0.08)]
+marcie 0.679 -> 1.618 leads ['Toxtricity (Aevian Form)', 'Chandelure'] swaps [('Leavanny (Aevian Form)', 'Azumarill', 0.142), ('Orbeetle', 'Azumarill', 0.088), ('Vivillon', 'Azumarill', 0.088)]
+jenner9 0.605 -> 1.016 leads ['Gallade', 'Toxtricity (Aevian Form)'] swaps [('Frosmoth', 'Toxtricity (Aevian Form)', 0.117), ('Florges', 'Musharna (Aevian Form)', 0.109), ('Vikavolt', 'Toxtricity (Aevian Form)', 0.083)]
+erick 0.733 -> 1.216 leads ['Gallade', 'Musharna (Aevian Form)'] swaps [('Hitmontop', 'Azumarill', 0.079), ('Raichu', 'Azumarill', 0.07), ('Leavanny (Aevian Form)', 'Azumarill', 0.07)]
