@@ -5,9 +5,9 @@
    "tier": "S",
    "sid": "MUSHARNA",
    "form": "1",
-   "blend": 0.769,
+   "blend": 0.768,
    "meta": 0.72,
-   "game": 0.939,
+   "game": 0.934,
    "types": [
     "DARK",
     "FAIRY"
@@ -41,9 +41,9 @@
    "tier": "S",
    "sid": "TOXTRICITY",
    "form": "2",
-   "blend": 0.741,
+   "blend": 0.74,
    "meta": 0.67,
-   "game": 0.934,
+   "game": 0.929,
    "types": [
     "FIRE",
     "POISON"
@@ -83,7 +83,7 @@
    "moves": [
     "Psycho Cut",
     "Sacred Sword",
-    "Leaf Blade",
+    "X-Scissor",
     "Protect"
    ],
    "ability": "SHARPNESS",
@@ -235,7 +235,7 @@
      "kind": "heal",
      "foe": "Appletun",
      "text": "Appletun heals (Recover)",
-     "how": "One-shot it, or Knock Off / Heal Block",
+     "how": "One-shot it, or Knock Off / Heal Block / Toxic",
      "need": 1,
      "cov": [],
      "ok": false
@@ -263,7 +263,7 @@
      "kind": "heal",
      "foe": "Noivern",
      "text": "Noivern heals (Roost)",
-     "how": "One-shot it, or Knock Off / Heal Block",
+     "how": "One-shot it, or Knock Off / Heal Block / Toxic",
      "need": 1,
      "cov": [
       [
@@ -718,7 +718,7 @@
       ],
       [
        "Gallade",
-       "still hits it for 102%"
+       "still hits it for 182%"
       ]
      ],
      "ok": true

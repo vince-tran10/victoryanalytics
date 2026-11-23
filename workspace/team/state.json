@@ -4,9 +4,9 @@
  "export_label": "23 Nov 08:03",
  "active_start": 468,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 320,
- "run": 334,
- "final": 338,
+ "roster": 324,
+ "run": 338,
+ "final": 342,
  "done": [
   "aelita",
   "narcissa1",
@@ -36,11 +36,11 @@
  ],
  "fight": "jenner9",
  "team": [
-  "Musharna (Aevian Form)",
-  "Muk (Alolan Form)",
   "Arcanine (Hisuian Form)",
+  "Golurk",
+  "Muk (Alolan Form)",
   "Toxtricity (Aevian Form)",
-  "Gallade",
+  "Musharna (Aevian Form)",
   "Azumarill"
  ],
  "moves": {
@@ -64,7 +64,7 @@
   ],
   "Clodsire": [
    "Earthquake",
-   "Flash",
+   "Toxic",
    "Recover",
    "Protect"
   ],
@@ -204,7 +204,7 @@
    "Play Rough",
    "Aqua Jet",
    "Belly Drum",
-   "Protect"
+   "Superpower"
   ],
   "Lapras (Aevian Form)": [
    "Rock Slide",
@@ -221,7 +221,13 @@
   "Gallade": [
    "Psycho Cut",
    "Sacred Sword",
-   "Leaf Blade",
+   "X-Scissor",
+   "Protect"
+  ],
+  "Golurk": [
+   "Shadow Punch",
+   "Hammer Arm",
+   "Stomping Tantrum",
    "Protect"
   ]
  },
@@ -319,7 +325,8 @@
   "Azumarill": "HUGEPOWER",
   "Lapras (Aevian Form)": "NOGUARD",
   "Veluza (Aevian Form)": "RECKLESS",
-  "Gallade": "SHARPNESS"
+  "Gallade": "SHARPNESS",
+  "Golurk": "IRONFIST"
  },
  "crests_owned": [
   "Dedenne Crest",
@@ -337,17 +344,13 @@
   "core": {
    "n": 6,
    "weak3": [],
-   "nores": [
-    "ELECTRIC"
-   ],
+   "nores": [],
    "minor": []
   },
   "fight": {
    "n": 6,
    "weak3": [],
-   "nores": [
-    "ELECTRIC"
-   ],
+   "nores": [],
    "minor": [],
    "key": "jenner9"
   }

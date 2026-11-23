@@ -480,6 +480,24 @@
      "teach": []
     },
     {
+     "name": "Azumarill",
+     "tier": "A",
+     "stats": [
+      "Resists 7 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Belly Drum (+6)",
+      "Priority: Aqua Jet (+0.8)"
+     ],
+     "sid": "AZUMARILL",
+     "form": "0",
+     "pick": false,
+     "rec": false,
+     "teach": []
+    },
+    {
      "name": "Leavanny (Aevian Form)",
      "tier": "A",
      "stats": [
@@ -608,10 +626,28 @@
   {
    "slot": 5,
    "title": "Flex 1 · Mid game · Spirit Jenner",
-   "pick": "Musharna (Aevian Form)",
-   "rec": "Musharna (Aevian Form)",
+   "pick": "Arcanine (Hisuian Form)",
+   "rec": "Arcanine (Hisuian Form)",
    "flex": true,
    "cands": [
+    {
+     "name": "Arcanine (Hisuian Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 7 types",
+      "Weak to 4 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Counters: Noivern",
+      "Priority: Extreme Speed"
+     ],
+     "teach": [],
+     "sid": "ARCANINE",
+     "form": "1",
+     "pick": true,
+     "rec": true
+    },
     {
      "name": "Musharna (Aevian Form)",
      "tier": "S",
@@ -623,23 +659,6 @@
      "tools": [],
      "teach": [],
      "sid": "MUSHARNA",
-     "form": "1",
-     "pick": true,
-     "rec": true
-    },
-    {
-     "name": "Arcanine (Hisuian Form)",
-     "tier": "A",
-     "stats": [
-      "Resists 7 types",
-      "Weak to 4 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Priority: Extreme Speed"
-     ],
-     "teach": [],
-     "sid": "ARCANINE",
      "form": "1",
      "pick": false,
      "rec": false
@@ -715,32 +734,28 @@
   {
    "slot": 6,
    "title": "Flex 2 · Closer · Spirit Jenner",
-   "pick": "Muk (Alolan Form)",
-   "rec": "Muk (Alolan Form)",
+   "pick": "Golurk",
+   "rec": "Golurk",
    "flex": true,
    "cands": [
     {
-     "name": "Muk (Alolan Form)",
-     "tier": "S",
+     "name": "Golurk",
+     "tier": "B",
      "stats": [
-      "Resists 5 types",
-      "Weak to 1 type",
+      "Resists 6 types",
+      "Weak to 5 types",
       "Single target only"
      ],
-     "tools": [
-      "Stat reset: Clear Smog",
-      "Disrupt: Knock Off",
-      "Priority: Shadow Sneak"
-     ],
+     "tools": [],
      "teach": [],
-     "sid": "MUK",
-     "form": "1",
+     "sid": "GOLURK",
+     "form": "0",
      "pick": true,
      "rec": true
     },
     {
      "name": "Azumarill",
-     "tier": "B",
+     "tier": "A",
      "stats": [
       "Resists 7 types",
       "Weak to 3 types",
@@ -1038,13 +1053,13 @@
    "Attacker",
    ""
   ],
-  "Dudunsparce": [
-   "Mid game",
-   "Roost"
-  ],
   "Golurk": [
    "Attacker",
    ""
+  ],
+  "Dudunsparce": [
+   "Mid game",
+   "Roost"
   ],
   "Vikavolt": [
    "Attacker",
@@ -3074,21 +3089,21 @@
    "s": [
     [
      "D",
-     "Recover"
+     "Toxic / Recover"
     ],
     [
      "E",
-     "Unaware / Flash"
+     "Unaware"
     ]
    ],
    "d": [
     [
      "D",
-     "Recover"
+     "Toxic / Recover"
     ],
     [
      "E",
-     "Unaware / Flash"
+     "Unaware"
     ]
    ]
   },
@@ -3382,20 +3397,6 @@
     ]
    ]
   },
-  "Dudunsparce": {
-   "s": [
-    [
-     "D",
-     "Roost"
-    ]
-   ],
-   "d": [
-    [
-     "D",
-     "Roost"
-    ]
-   ]
-  },
   "Golurk": {
    "s": [
     [
@@ -3407,6 +3408,20 @@
     [
      "C",
      "Iron Fist"
+    ]
+   ]
+  },
+  "Dudunsparce": {
+   "s": [
+    [
+     "D",
+     "Roost"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Roost"
     ]
    ]
   },
@@ -7895,6 +7910,15 @@
     ]
    },
    {
+    "name": "Azumarill",
+    "tier": "A",
+    "score": 2.5,
+    "why": [
+     "Resists your weaknesses: Fire, Water, Ice",
+     "You resist its weaknesses: Electric, Poison"
+    ]
+   },
+   {
     "name": "Veluza-Aevian",
     "tier": "S",
     "score": 2.25,
@@ -7902,18 +7926,6 @@
      "Speed split: Veluza-Aevian moves first, Golisopod-Aevian is the bulky one",
      "Resists your weaknesses: Fire, Ice",
      "You resist its weaknesses: Electric, Ground"
-    ]
-   },
-   {
-    "name": "Slowbro",
-    "tier": "A",
-    "score": 2.0,
-    "why": [
-     "Slowbro switches in on Fire, Water hits aimed at Golisopod-Aevian and heals on the way out",
-     "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Fire, Water, Ice",
-     "You resist its weaknesses: Electric",
-     "Slowbro's Surf hits Golisopod-Aevian super effectively"
     ]
    }
   ],
@@ -7993,6 +8005,20 @@
   ],
   "Amoonguss": [
    {
+    "name": "Azumarill",
+    "tier": "A",
+    "score": 6.0,
+    "why": [
+     "Amoonguss's redirection buys Azumarill its setup turn",
+     "Amoonguss's sleep gives Azumarill free turns",
+     "Amoonguss resets foe boosts that would stop Azumarill's sweep",
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Fire, Ice",
+     "You resist its weaknesses: Electric, Grass",
+     "Used together in the real meta"
+    ]
+   },
+   {
     "name": "Lapras-Aevian",
     "tier": "S",
     "score": 5.75,
@@ -8015,19 +8041,6 @@
      "Amoonguss's sleep takes a foe out for Slowbro",
      "Slowbro switches in on Fire, Ice hits aimed at Amoonguss and heals on the way out",
      "Resists your weaknesses: Fire, Ice, Psychic",
-     "You resist its weaknesses: Electric, Grass",
-     "Used together in the real meta"
-    ]
-   },
-   {
-    "name": "Alomomola",
-    "tier": "S",
-    "score": 4.5,
-    "why": [
-     "Amoonguss draws attacks so Alomomola attacks freely",
-     "Amoonguss's sleep takes a foe out for Alomomola",
-     "Alomomola switches in on Fire, Ice hits aimed at Amoonguss and heals on the way out",
-     "Resists your weaknesses: Fire, Ice",
      "You resist its weaknesses: Electric, Grass",
      "Used together in the real meta"
     ]
@@ -8602,6 +8615,41 @@
      "Physical + special: Intimidate or one screen can't stop both",
      "Resists your weaknesses: Water",
      "You resist its weaknesses: Poison"
+    ]
+   }
+  ],
+  "Azumarill": [
+   {
+    "name": "Amoonguss",
+    "tier": "A",
+    "score": 6.0,
+    "why": [
+     "Amoonguss's redirection buys Azumarill its setup turn",
+     "Amoonguss's sleep gives Azumarill free turns",
+     "Amoonguss resets foe boosts that would stop Azumarill's sweep",
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Electric, Grass",
+     "You resist its weaknesses: Fire, Ice",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Mismagius-Aevian",
+    "tier": "A",
+    "score": 2.75,
+    "why": [
+     "Speed split: Mismagius-Aevian moves first, Azumarill is the bulky one",
+     "Resists your weaknesses: Electric, Grass",
+     "You resist its weaknesses: Fire, Ice, Dark"
+    ]
+   },
+   {
+    "name": "Golisopod-Aevian",
+    "tier": "S",
+    "score": 2.5,
+    "why": [
+     "Resists your weaknesses: Electric, Poison",
+     "You resist its weaknesses: Fire, Water, Ice"
     ]
    }
   ],

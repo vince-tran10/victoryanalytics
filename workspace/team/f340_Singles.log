@@ -1,0 +1,13 @@
+Arcanine (Hisuian Form) | Active 60 | Intimidate  | Adamant {'Atk': 252, 'Spe': 252, 'Def': 4} | ['Flare Blitz', 'Extreme Speed', 'Head Smash', 'Protect'] | Focus Sash (already holding) | 
+Clodsire | Party 60 | Unaware  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Earthquake', 'Toxic', 'Recover', 'Protect'] | Sitrus Berry (already holding) | 
+Toxtricity (Aevian Form) | Active 60 | Galvanize  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Torch Song', 'Boomburst', 'Sludge Bomb', 'Protect'] | Charcoal (already holding) | 
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Gallade | Active 60 | Sharpness  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Psycho Cut', 'Sacred Sword', 'X-Scissor', 'Protect'] | Sitrus Berry (already holding) | 
+Azumarill | Active 60 | Huge Power  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Play Rough', 'Aqua Jet', 'Belly Drum', 'Protect'] | Sitrus Berry (already holding) | 
+jenner 1.177 -> 1.51 leads ['Arcanine (Hisuian Form)'] swaps [('Unfezant (Aevian Form Male)', 'Gallade', 0.041), ('Passimian', 'Gallade', 0.021)]
+danni 1.101 -> 1.568 leads ['Gallade'] swaps [('Rampardos', 'Clodsire', 0.053), ('Chandelure', 'Clodsire', 0.047), ('Bombirdier', 'Clodsire', 0.044)]
+troye 0.862 -> 1.24 leads ['Gallade'] swaps [('Clawitzer', 'Clodsire', 0.083), ('Passimian', 'Clodsire', 0.081), ('Brambleghast', 'Clodsire', 0.077)]
+zena 1.243 -> 1.189 leads ['Clodsire'] swaps [('Meganium', 'Toxtricity (Aevian Form)', 0.19), ('Venusaur', 'Toxtricity (Aevian Form)', 0.19), ('Torterra', 'Toxtricity (Aevian Form)', 0.179)]
+marcie 0.585 -> 1.359 leads ['Toxtricity (Aevian Form)'] swaps [('Glalie (Aevian Form)', 'Azumarill', 0.115), ('Golisopod (Aevian Form)', 'Azumarill', 0.104), ('Leavanny (Aevian Form)', 'Azumarill', 0.094)]
+jenner9 0.465 -> 0.808 leads ['Gallade'] swaps [('Florges', 'Musharna (Aevian Form)', 0.098), ('Frosmoth', 'Toxtricity (Aevian Form)', 0.078), ('Vikavolt', 'Clodsire', 0.063)]
+erick 0.555 -> 0.964 leads ['Gallade'] swaps [('Shedinja', 'Azumarill', 0.064), ('Chandelure', 'Azumarill', 0.063), ('Scrafty', 'Azumarill', 0.059)]

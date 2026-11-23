@@ -41,6 +41,8 @@ FIXED = {'Lapras (Aevian Form)': dict(ability='NOGUARD', moves=['Rock Slide', 'Z
          'Slowking': dict(ability='REGENERATOR', moves=['Surf', 'Psychic', 'Shadow Ball', 'Protect'], item='Mystic Water', nature='Modest', evs='252 HP / 252 SpA'),   # 22 Nov: no Chilly Reception (snow does nothing for his team)
          # 22 Nov (Vincent): Toxtricity-A = Core 1; Torch Song confirmed learnable in his game. Punk Rock (sound x1.3 on Torch Song AND Boomburst)
          'Toxtricity (Aevian Form)': dict(ability='PUNKROCK', moves=['Torch Song', 'Boomburst', 'Sludge Bomb', 'Protect'], item='Charcoal', nature='Timid', evs='252 SpA / 252 Spe'),
+         'Clodsire': dict(ability='UNAWARE', moves=['Earthquake', 'Toxic', 'Recover', 'Protect'], item='Sitrus Berry', nature='Adamant', evs='252 HP / 252 Atk'),   # 23 Nov audit: Toxic over Flash (Concert cannot be Flashed)
+         'Gallade': dict(ability='SHARPNESS', moves=['Psycho Cut', 'Sacred Sword', 'X-Scissor', 'Protect'], item='Black Belt', nature='Adamant', evs='252 HP / 252 Atk'),   # 23 Nov audit: X-Scissor over Leaf Blade (Appletun, Raichu)
          'Ceruledge': dict(ability=None, moves=['Bitter Blade', 'Shadow Claw', 'Swords Dance', 'Protect'], item='Focus Sash', nature='Jolly', evs='252 Atk / 252 Spe')}
 NO = {'PROTECT', 'DETECT', 'TRICK', 'SWITCHEROO', 'FLING', 'LASTRESORT', 'FRUSTRATION', 'RETURN', 'HIDDENPOWER', 'NATUREPOWER',
       'SECRETPOWER', 'SOLARBEAM', 'SKYATTACK', 'FOCUSPUNCH', 'EXPLOSION', 'SELFDESTRUCT', 'FINALGAMBIT', 'MEMENTO', 'HEALINGWISH',

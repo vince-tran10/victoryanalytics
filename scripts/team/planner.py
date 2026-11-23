@@ -4,7 +4,7 @@ Replaces the fixed core-of-4 + 2 flexes. Workflow it encodes:
   types resisted, nothing hits 3+)  3 answers to each win condition  4 offense second  5 leads = the pair that beats their lead
   pair. Data: per-foe matchups from the engine run (field rules incl. the type-chart overrides), types via engine.chart_eff.
 usage (from workspace/): python3 -I ../scripts/team/planner.py   -> team/planner.json (+ state team when mode == 'planner')"""
-import itertools, json, os, pickle, sys
+import itertools, json, math, os, pickle, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'gamedata'))
 import numpy as np
@@ -86,7 +86,7 @@ POOL += [n for n in CORE if n not in POOL]   # the current six stays in the pool
 MOVE_OVR = {}   # planner-made move changes (Flash user) shown on the page
 def build(n):
     b = IB.get(n) or {}
-    ms = MOVE_OVR.get(n) or (st.get('moves') or {}).get(n) or b.get('moves') or TA[n].get('attacks') or []
+    ms = MOVE_OVR.get(n) or ((st.get('plan_builds') or {}).get(FK) or {}).get(n) or (st.get('base_moves') or {}).get(n) or (st.get('moves') or {}).get(n) or b.get('moves') or TA[n].get('attacks') or []
     ab = (st.get('abilities') or {}).get(n) or b.get('ability') or TA[n].get('ability') or ''
     return {mvid(m) or m.upper().replace(' ', '') for m in ms}, ab.upper().replace(' ', ''), ms
 nF = len(FOES); FN = [f['name'] for f in FOES]
@@ -229,7 +229,8 @@ WHY_STATUS = {
  'HAZE': 'Resets all stat boosts', 'SWORDSDANCE': 'Attack +2', 'CURSE': 'Attack and Defense +1, Speed -1', 'NASTYPLOT': 'Sp. Atk +2',
  'CALMMIND': 'Sp. Atk and Sp. Def +1', 'DRAGONDANCE': 'Attack and Speed +1', 'GASTROACID': 'Removes a foe ability',
  'THUNDERWAVE': 'Speed control: paralysis halves Speed, 25% full para', 'GLARE': 'Speed control: paralysis (hits Ground too)',
- 'NUZZLE': 'Speed control: paralysis + chip', 'SING': 'Puts one foe to sleep', 'STUNSPORE': 'Speed control: paralysis',
+ 'NUZZLE': 'Speed control: paralysis + chip', 'TOXIC': 'Badly poisons: beats Recover / Roost stallers (not Poison / Steel types)',
+ 'HAZE': 'Resets every stat change', 'YAWN': 'Sleep next turn or forces a switch', 'SING': 'Puts one foe to sleep', 'STUNSPORE': 'Speed control: paralysis',
 }
 EXTRA = {'DELUGE': 'Goes last, power x2 (120) if that foe hit you first this turn', 'KNOCKOFF': 'Removes their item (Focus Sash, Life Orb, Ghost Gem)',
          'CLEARSMOG': 'Resets the target boosts (Luxray Howl)', 'SHADOWSNEAK': 'Priority +1: finishes a weakened foe first',
@@ -243,6 +244,9 @@ def move_why(n, mname):
     mid = mvid(mname) or mname.upper().replace(' ', ''); d = MV.get(mid) or {}
     bp = int(d.get('basedamage') or 0)
     if bp <= 0:
+        # 23 Nov audit: a status move must do something in THIS fight too
+        if mid == 'FLASH' and not BREAKABLE: return ('Flash cannot change this field: does nothing here', True)
+        if mid in SLEEP and any((f.get('ability') or '').upper().replace(' ', '') in ('INSOMNIA', 'VITALSPIRIT', 'COMATOSE') for f in FOES) and all((f.get('ability') or '').upper().replace(' ', '') in ('INSOMNIA', 'VITALSPIRIT', 'COMATOSE') for f in FOES): return ('Nobody here can sleep', True)
         w_ = WHY_STATUS.get(mid, 'Utility move')
         if mid in SLEEP and _NOSLEEP: w_ += '; not ' + ', '.join(_NOSLEEP) + ' (cannot sleep)'
         if mid in ('THUNDERWAVE', 'GLARE', 'NUZZLE', 'STUNSPORE'):
@@ -271,7 +275,10 @@ def move_why(n, mname):
     mine = [mvid(x) or x.upper().replace(' ', '') for x in build(n)[2]]
     best_on = [f['name'] for f in FOES if epow(mid, f) > 0 and epow(mid, f) >= max(epow(x, f) for x in mine)]
     if best_on: bits.insert(0, 'Your best hit on ' + ', '.join(best_on))
-    flag = not best_on and mid not in EXTRA
+    if int(d.get('priority') or 0) > 0 and mid != 'FAKEOUT':   # 23 Nov audit: priority attacks have a job (Extreme Speed, Aqua Jet...)
+        fast_ = [FN[j] for j in range(nF) if FASTF[NAMES.index(n), j]] if n in NAMES else []
+        bits.insert(0, f'Priority +{d.get("priority")}: hits first' + (f' (they outspeed it: {", ".join(fast_[:3])})' if fast_ else ''))
+    flag = not best_on and mid not in EXTRA and not (int(d.get('priority') or 0) > 0 and mid != 'FAKEOUT')
     return ('; '.join(bits) or 'Neutral coverage', flag)
 
 # 23 Nov (Vincent, Jenner: 'fast Boomburst wrecks me'): SPEED CONTROL by format. Singles: paralysis / priority / Trick Room
@@ -431,13 +438,18 @@ def score(ix):
     s += 3 if FIELDV[ix].max() >= 2 else 0   # a field hijacker in the six
     if BOSS: s += 3 if BOSSB[ix].any() else -3
     return s
+SITOUT_GAIN = 10
 if len(CORE) >= 3:   # core locked (23 Nov: core of 3 + 3 flexes): every set of flexes from the strongest 30 of the pool
     _ci = tuple(NAMES.index(n) for n in CORE)
     _fp = [i for i in np.argsort(-ind) if i not in _ci][:30]
-    _cands = (_ci + pr for pr in itertools.combinations(_fp, 6 - len(_ci)))
+    _cands = [_ci + pr for pr in itertools.combinations(_fp, 6 - len(_ci))]
+    # 23 Nov (Vincent): a core member may sit out THIS fight only when that is clearly better (+10 or more); the core stays the stars
+    SITOUT_GAIN = 10
+    _cands += [tuple(c for c in _ci if c != o) + pr for o in _ci for pr in itertools.combinations(_fp[:15], 7 - len(_ci))]
 else:
     _cands = itertools.combinations(top, 6)
-res = sorted(((score(ix), ix) for ix in _cands), key=lambda x: -x[0])
+_CI = set(NAMES.index(n) for n in CORE) if len(CORE) >= 3 else set()
+res = sorted(((score(ix) - (SITOUT_GAIN if _CI and not _CI <= set(ix) else 0), ix) for ix in _cands), key=lambda x: -x[0])
 if os.environ.get('PLAN_SIX'):   # evaluate a given six (names | separated) instead of searching
     _fix = tuple(NAMES.index(x) for x in os.environ['PLAN_SIX'].split('|'))
     res = [(score(_fix), _fix)] + res
@@ -461,7 +473,12 @@ if FMT == 'Doubles':
     leads = max(itertools.combinations(best, 2), key=lambda p: LQ[p[0]][p[1]])
     leads = tuple(sorted(leads, key=lambda i: -lead_q((i,))))
 else:   # singles fight: slot 1 leads (best vs their lead), slot 2 = the doubles partner for later doubles fights
-    _l1 = max(best, key=lambda i: lead_q((i,)) - TAKE_B[i][0] / 50 + (DEAL[i][0] >= 100) * 2)
+    def _lead_win(i):   # 23 Nov audit: the singles lead must WIN the opening 1-v-1 vs their lead (their setup turn counted)
+        k = FSTG[0]; hk = math.ceil(100 / max(DEAL[i][0], 1)); hd_plain = math.ceil(100 / max(TAKE[i][0], 1)); hd_b = math.ceil(100 / max(TAKE_B[i][0], 1))
+        if k:   # they boost on turn 1: we get a free hit, then they hit boosted
+            return hk <= 1 or hk <= hd_b
+        return hk < hd_plain or (hk == hd_plain and FAST[i][0])
+    _l1 = max(best, key=lambda i: 5 * _lead_win(i) + DEAL[i][0] / 100 - TAKE_B[i][0] / 100)
     leads = (_l1,)   # 23 Nov: singles has one lead; slot 2 follows the mid game / closer order
 _setup_ids = {'SWORDSDANCE', 'NASTYPLOT', 'DRAGONDANCE', 'QUIVERDANCE', 'CALMMIND', 'BULKUP', 'CURSE', 'SHELLSMASH', 'COIL', 'BELLYDRUM', 'SHIFTGEAR'}
 def _is_closer(i): return bool({mvid(x) for x in build(NAMES[i])[2]} & _setup_ids)
@@ -566,13 +583,71 @@ POOLFIT = [dict(name=NAMES[i], tier=TA[NAMES[i]]['tier'], sid=TA[NAMES[i]].get('
                 res=int((RM[i] < 1).sum()), weak=int((RM[i] > 1).sum()), nmoves=len(EM), se=int((OFF[i] >= 2).sum()),
                 oneshot=[FN[j] for j in range(nF) if DEAD[i, j]], in_six=i in best, where=TA[NAMES[i]].get('where'))
            for i in np.argsort(-_fit)]
+SITOUT = [n for n in CORE if NAMES.index(n) not in best] if CORE else []
+SITOUT_WHY = {}
+for n in SITOUT:
+    SITOUT_WHY[n] = f'sits out this fight: the six without it scores {SITOUT_GAIN}+ higher'
+# 23 Nov (Vincent): per-fight builds. Singles: a FLEX drops Protect for a clearly better move (the core keeps it: doubles fights remain);
+# EVs / nature = what this fight needs (speed benchmarks vs their Speed, else bulk vs the side that hits it hardest), no fixed rule
+FBUILD = {}
+def _mid(x): return mvid(x) or (x or '').upper().replace(' ', '').replace('-', '')
+BADSWAP = {'FOCUSPUNCH', 'HYPERBEAM', 'GIGAIMPACT', 'SKYATTACK', 'SOLARBEAM', 'SOLARBLADE', 'METEORBEAM', 'EXPLOSION', 'SELFDESTRUCT', 'MISTYEXPLOSION',
+           'FUTURESIGHT', 'DOOMDESIRE', 'BELCH', 'LASTRESORT', 'DREAMEATER', 'SYNCHRONOISE', 'OUTRAGE', 'THRASH', 'PETALDANCE', 'RAGINGFURY', 'FLING',
+           'NATURALGIFT', 'SNORE', 'COUNTER', 'MIRRORCOAT', 'METALBURST', 'BIDE', 'ROLLOUT', 'ICEBALL', 'FAKEOUT', 'FIRSTIMPRESSION', 'SKULLBASH',
+           'RAZORWIND', 'FLY', 'DIG', 'DIVE', 'BOUNCE', 'PHANTOMFORCE', 'SHADOWFORCE', 'FREEZESHOCK', 'ICEBURN', 'GEOMANCY', 'ELECTROSHOT',
+           'STEELBEAM', 'MINDBLOWN', 'CHLOROBLAST', 'HEADLONGRUSH', 'SPITUP', 'POLTERGEIST', 'UPPERHAND', 'BURNUP', 'DOUBLESHOCK', 'SUCKERPUNCH',
+           'THUNDERCLAP', 'SHELLTRAP', 'BEAKBLAST', 'ROLLINGKICK', 'DYNAMICPUNCH', 'ZAPCANNON', 'INFERNO'}   # charge / recharge / self-KO / conditional / 50% accuracy
+def _stat(b_, ev, mult=1.0, hp=False):
+    v = (2 * b_ + 31 + ev // 4) * 60 // 100
+    return int((v + 60 + 10) if hp else int((v + 5) * mult))
+for i in best:
+    n = NAMES[i]; ms, ab, mn = build(n); base_ = TA[n]['base']; why_ = []; mn = list(mn)
+    atk_ = [_mid(x) for x in mn if int((MV.get(_mid(x)) or {}).get('basedamage') or 0) > 0]
+    phys = sum((MV.get(m) or {}).get('category') == 'physical' for m in atk_) >= sum((MV.get(m) or {}).get('category') == 'special' for m in atk_)
+    def _ep(m_, f):
+        d_ = MV.get(m_) or {}; b_ = int(d_.get('basedamage') or 0)
+        return b_ * (1.5 if d_.get('type') in TA[n]['types'] else 1) * meff(m_, f['types'], (f.get('ability') or '').upper().replace(' ', '')) * fbm(m_, ab) if b_ > 0 else 0
+    if n not in CORE:   # flexes are built for THIS fight: dead attacks (best hit on no foe) and, in singles, Protect make way for better moves
+        legal_ = [m for m in (C[n].get('legal') or []) if int((MV.get(m) or {}).get('basedamage') or 0) >= 40 and m not in BADSWAP
+                  and (MV.get(m) or {}).get('category') == ('physical' if phys else 'special') and int((MV.get(m) or {}).get('accuracy') or 100) >= 80]
+        def _dead(m_, kept):
+            return all(_ep(m_, f) < max([_ep(x, f) for x in kept if x != m_] or [0]) or _ep(m_, f) == 0 for f in FOES) and int((MV.get(m_) or {}).get('priority') or 0) <= 0
+        for slot in list(mn):
+            m0 = _mid(slot)
+            is_prot = slot == 'Protect' and FMT == 'Singles' and not ({'TOXIC', 'LEECHSEED', 'WISH', 'PERISHSONG'} & ms)
+            ids_ = [_mid(x) for x in mn if int((MV.get(_mid(x)) or {}).get('basedamage') or 0) > 0]
+            if not (is_prot or (m0 in ids_ and _dead(m0, ids_))): continue
+            keep_ = [x for x in ids_ if x != m0]; ktypes = {(MV.get(x) or {}).get('type') for x in keep_}
+            gain = lambda c_: sum(max(0, _ep(c_, f) - max([_ep(x, f) for x in keep_] or [0])) for f in FOES)
+            cands_ = [c_ for c_ in legal_ if c_ not in keep_ and (MV.get(c_) or {}).get('type') not in ktypes]
+            bestm = max(cands_, key=gain, default=None)
+            if bestm and gain(bestm) >= (120 if is_prot else 1):
+                hit_ = [f['name'] for f in FOES if _ep(bestm, f) > max([_ep(x, f) for x in keep_] or [0])]
+                mn[mn.index(slot)] = MV[bestm]['name']
+                why_.append(f"{MV[bestm]['name']} replaces {slot}" + (' (singles: Protect matters less)' if is_prot else ' (it was the best hit on no foe)')
+                            + f": better hit on {', '.join(hit_[:3])}")
+    sp_ = base_['Spe']; key_ = 'Atk' if phys else 'SpA'
+    s_max = _stat(sp_, 252, 1.1); s_min = _stat(sp_, 0, 1.0)
+    flips = [FN[j] for j in range(nF) if s_min <= SPE_F[j] < s_max and DEAL[i][j] >= 100]   # outspeed AND one-shot is what Speed buys
+    wall = (ab in ('UNAWARE', 'REGENERATOR') or {'RECOVER', 'ROOST', 'SLACKOFF', 'WISH', 'MOONLIGHT', 'SOFTBOILED', 'STRENGTHSAP'} & ms) and max(DEAL[i]) < 100
+    if flips and not wall:
+        evs_ = f'252 {key_} / 252 Spe / 4 HP'; nat_ = 'Jolly' if phys else 'Timid'; why_.append(f"Speed: outspeeds {', '.join(flips[:3])} only with full Speed")
+    elif wall:
+        sp_cnt = sum(1 for (_, m_, w_) in EM if (MV.get(m_) or {}).get('category') == 'special'); ph_cnt = len(EM) - sp_cnt
+        d_ = 'SpD' if sp_cnt >= ph_cnt else 'Def'
+        evs_ = f'252 HP / 252 {d_} / 4 {key_}'; nat_ = ('Careful' if phys else 'Calm') if d_ == 'SpD' else ('Impish' if phys else 'Bold')
+        why_.append(f"Wall: their attacks are mostly {'special' if d_ == 'SpD' else 'physical'}")
+    else:
+        evs_ = f'252 HP / 252 {key_} / 4 Def'; nat_ = 'Adamant' if phys else 'Modest'
+        why_.append('Bulk + power: Speed EVs change no matchup here' if s_max < max(SPE_F) else 'Bulk + power: it already outspeeds what it needs to')
+    FBUILD[n] = dict(moves=mn, evs=evs_, nature=nat_, why=why_)
 _core_ix = [i for i in best if NAMES[i] in CORE]
 _bc_core = {f['id']: ok for f, _, ok in bcheck(_core_ix)}
 _bcc = {f['id']: cv for f, cv, _ in bcheck(_core_ix)}
 BRIEF_OUT = [dict(f, cov=[[a, b] for a, b in cv], ok=ok, core_ok=_bc_core.get(f['id']), core_cov=[[a, b] for a, b in _bcc.get(f['id'], [])]) for f, cv, ok in bcheck(best)]
 FLEXWHY = {NAMES[i]: [f['text'] for f, cv, ok in bcheck(best) if ok and any(a == NAMES[i] for a, _ in cv) and not _bc_core.get(f['id']) and f['kind'] not in ('fieldnote', 'fieldblock')]
            for i in best if NAMES[i] not in CORE}
-out = dict(fight=FK, brief=BRIEF_OUT, flexwhy=FLEXWHY, mind_core=mind_items(_core_ix), mind_six=mind_items(best), field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], types=f['types'], moves=f['moves'], item=f.get('item'), ability=f.get('ability'),
+out = dict(fight=FK, fbuild=FBUILD, sitout=SITOUT_WHY, brief=BRIEF_OUT, flexwhy=FLEXWHY, mind_core=mind_items(_core_ix), mind_six=mind_items(best), field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], types=f['types'], moves=f['moves'], item=f.get('item'), ability=f.get('ability'),
            sid=f['species'], form=f.get('form')) for f in FOES], main=MAIN, atk={t: sorted(v) for t, v in ATK.items()},
            wins=[dict(win=w, foes=fs, answered_by=[NAMES[i] for i in best if ANS[i, j]]) for j, (w, fs) in enumerate(WINS)],
            emoves=[dict(foe=FN[fi], move=(MV.get(m) or {}).get('name', m), types=[t for t in mtypes(m) if t], w=round(float(w), 2)) for (fi, m, w) in EM],
@@ -616,6 +691,15 @@ if APPLY and st.get('mode') == 'planner':   # the planner's six IS the team (lea
     st['team'] = six
     if out.get('break_field'):
         st.setdefault('moves', {})[out['break_field']['user']] = out['break_field']['moves']
+    _fb = out.get('fbuild') or {}
+    for n, fb in _fb.items():
+        bm = (st.get('base_moves') or {}).get(n) or (st.get('moves') or {}).get(n) or (IB.get(n) or {}).get('moves')
+        if fb['moves'] != bm:
+            st.setdefault('base_moves', {})[n] = bm; st.setdefault('plan_builds', {}).setdefault(FK, {})[n] = fb['moves']; st['moves'][n] = fb['moves']
+        elif n in (st.get('base_moves') or {}):
+            st['moves'][n] = st['base_moves'][n]
+        if n in IB: IB[n].update(evs=fb['evs'], nature=fb['nature'], fight_why=fb['why'], moves=st['moves'].get(n, IB[n].get('moves')))
+    json.dump(IB, open('team/ideal_builds.json', 'w'), indent=1, ensure_ascii=False)
     for n in six:
         b = IB.get(n) or {}
         st.setdefault('moves', {})[n] = (st.get('moves') or {}).get(n) or b.get('moves') or TA[n].get('attacks') or []

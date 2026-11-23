@@ -2,16 +2,16 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 2,
+  "counters": 3,
   "pairs": [
    {
     "foe": "Stoutland",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 66,
-    "taken": 49,
-    "ok": true,
-    "setup": "Swords Dance",
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 13,
+    "taken": 73,
+    "ok": false,
+    "setup": false,
     "wincons": [
      {
       "what": "Setup",
@@ -24,12 +24,12 @@
    },
    {
     "foe": "Appletun",
-    "mon": "Slowking (Galarian Form)",
-    "ability": "REGENERATOR",
-    "dealt": 62,
-    "taken": 40,
-    "ok": false,
-    "setup": false,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 65,
+    "taken": 47,
+    "ok": true,
+    "setup": "Swords Dance",
     "wincons": [
      {
       "what": "Healing",
@@ -41,11 +41,11 @@
    },
    {
     "foe": "Noivern",
-    "mon": "Muk (Alolan Form)",
-    "ability": "POISONTOUCH",
-    "dealt": 31,
-    "taken": 65,
-    "ok": false,
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 120,
+    "taken": 60,
+    "ok": true,
     "setup": false,
     "wincons": [
      {
@@ -58,20 +58,20 @@
    },
    {
     "foe": "Porygon-Z",
-    "mon": "Amoonguss",
-    "ability": "REGENERATOR",
-    "dealt": 14,
-    "taken": 122,
+    "mon": "Golurk",
+    "ability": "IRONFIST",
+    "dealt": 83,
+    "taken": 83,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Kommo-o",
-    "mon": "Musharna (Aevian Form)",
-    "ability": "TOUGHCLAWS",
-    "dealt": 125,
-    "taken": 70,
+    "mon": "Slowking (Galarian Form)",
+    "ability": "REGENERATOR",
+    "dealt": 63,
+    "taken": 74,
     "ok": false,
     "setup": false,
     "wincons": []

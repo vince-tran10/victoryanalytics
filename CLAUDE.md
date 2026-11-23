@@ -101,6 +101,13 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   singles = immunity to types 2+ of them use, two checks per threat (notes foes NOTHING in his boxes checks), priority (STAB or 80+ power),
   a safe switch, speed control; doubles = disruption, speed control, spread attack, Wide Guard vs 2+ spread, Protect on almost all, no
   hazards. Scored +8 per tick in the pick (the main check).
+- **FINAL-PICK AUDIT (Vincent, 23 Nov: 'no more Wake-Up Slap'):** before any team rec: zero flagged moves (attacks that are the
+  best hit on no foe; status moves that do nothing here, e.g. Flash on an unbreakable field; priority attacks never flagged), items owned,
+  abilities set (To do capsule lines), lead WINS the opening 1-v-1 vs their lead with their setup turn counted (planner _lead_win).
+  Flexes get per-fight builds (FBUILD -> state plan_builds[fight] + base_moves kept): dead attacks replaced by the best legal non-duplicate
+  type, in SINGLES Protect replaced when another move adds 120+ effective power (no charge / recharge / self-KO / conditional moves);
+  the CORE keeps Protect while a doubles fight is left. A core member may SIT OUT a fight only for +10 or more (shown on the Flex tab);
+  the core stays the chapter's stars. Chips on Core + Flex = chapter_brief.good_for (role: why, field use, answers / beats).
 - **ITEMS (Vincent, 23 Nov): only items he has.** No bag data: owned = items held by anything in his export, as many as are held (he has NO
   Choice items). ideal_builds.py swaps unowned items for an owned booster of another attack, then Focus Sash (Spe 85+) / Sitrus, and
   allocates the six's items by count (his state.items first, then core, then flexes; item_wanted keeps the ideal one). make_report5 best_item
@@ -233,8 +240,9 @@ damage score and the fight's real win condition was only read after Vincent lost
   stay ONLY when they are clearly better than a coverage/other move for that Pokémon's job (Vincent, 13 Nov); otherwise
   replace them and say why (e.g. Shell Smash + Overheat cancel out). Cut wrong-stat attacks, weaker same-type duplicates,
   or recovery on Regenerator mons first.
-- **One answer only:** never "X or Y" for EVs, natures, moves or items. EVs = 252 attacking stat + 252 Spe if base
-  Speed ≥ 85, else 252 HP. Nature follows (Jolly/Timid with Speed EVs, Adamant/Modest with HP).
+- **One answer only:** never "X or Y" for EVs, natures, moves or items. **NO fixed EV rule (Vincent, 23 Nov):** EVs / nature = what the
+  fight needs (planner FBUILD): full Speed only when it then outspeeds AND one-shots a foe it otherwise doesn't; walls (Unaware /
+  Regenerator / recovery, no one-shots) = HP + the defense their attacks hit (Careful / Calm / Impish / Bold); else HP + attack.
 - Judge physical vs special from the moves the Pokémon actually knows.
 - **Every To do / build card names the best item** (Vincent, 14 Nov): the booster of its main attack's type unless the job
   says Sash / Sitrus (make_report5 BOOSTER).

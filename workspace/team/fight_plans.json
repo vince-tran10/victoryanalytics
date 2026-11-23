@@ -12,15 +12,38 @@
   ],
   "swaps": [
    {
-    "name": "Musharna (Aevian Form)",
-    "ab": "TOUGHCLAWS",
+    "name": "Arcanine (Hisuian Form)",
+    "ab": "INTIMIDATE",
     "moves": [
-     "Shadow Claw",
-     "Play Rough"
+     "Flare Blitz",
+     "Extreme Speed",
+     "Head Smash"
     ],
     "setup": null,
-    "where": "Party",
-    "dump": 5,
+    "where": "Active",
+    "dump": 471,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "Spe": 252,
+     "Def": 4
+    },
+    "types": [
+     "FIRE",
+     "ROCK"
+    ]
+   },
+   {
+    "name": "Golurk",
+    "ab": "IRONFIST",
+    "moves": [
+     "Shadow Punch",
+     "Hammer Arm",
+     "Stomping Tantrum"
+    ],
+    "setup": null,
+    "where": "Active",
+    "dump": 490,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -28,8 +51,8 @@
      "SpD": 4
     },
     "types": [
-     "DARK",
-     "FAIRY"
+     "GROUND",
+     "GHOST"
     ]
    },
    {
@@ -55,38 +78,15 @@
     ]
    },
    {
-    "name": "Arcanine (Hisuian Form)",
-    "ab": "INTIMIDATE",
+    "name": "Musharna (Aevian Form)",
+    "ab": "TOUGHCLAWS",
     "moves": [
-     "Flare Blitz",
-     "Extreme Speed",
-     "Head Smash"
+     "Shadow Claw",
+     "Play Rough"
     ],
     "setup": null,
-    "where": "Active",
-    "dump": 471,
-    "nature": "Adamant",
-    "evs": {
-     "Atk": 252,
-     "Spe": 252,
-     "Def": 4
-    },
-    "types": [
-     "FIRE",
-     "ROCK"
-    ]
-   },
-   {
-    "name": "Gallade",
-    "ab": "SHARPNESS",
-    "moves": [
-     "Psycho Cut",
-     "Sacred Sword",
-     "Leaf Blade"
-    ],
-    "setup": null,
-    "where": "Active",
-    "dump": 486,
+    "where": "Party",
+    "dump": 5,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -94,8 +94,8 @@
      "SpD": 4
     },
     "types": [
-     "PSYCHIC",
-     "FIGHTING"
+     "DARK",
+     "FAIRY"
     ]
    },
    {
@@ -103,7 +103,8 @@
     "ab": "HUGEPOWER",
     "moves": [
      "Play Rough",
-     "Aqua Jet"
+     "Aqua Jet",
+     "Superpower"
     ],
     "setup": "Belly Drum",
     "where": "Active",
@@ -120,17 +121,17 @@
     ]
    }
   ],
-  "counters": 2,
+  "counters": 3,
   "n": 6,
   "pairs": [
    {
     "foe": "Stoutland",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 66,
-    "taken": 49,
-    "ok": true,
-    "setup": "Swords Dance",
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 13,
+    "taken": 73,
+    "ok": false,
+    "setup": false,
     "wincons": [
      {
       "what": "Setup",
@@ -143,12 +144,12 @@
    },
    {
     "foe": "Appletun",
-    "mon": "Slowking (Galarian Form)",
-    "ability": "REGENERATOR",
-    "dealt": 62,
-    "taken": 40,
-    "ok": false,
-    "setup": false,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 65,
+    "taken": 47,
+    "ok": true,
+    "setup": "Swords Dance",
     "wincons": [
      {
       "what": "Healing",
@@ -160,11 +161,11 @@
    },
    {
     "foe": "Noivern",
-    "mon": "Muk (Alolan Form)",
-    "ability": "POISONTOUCH",
-    "dealt": 31,
-    "taken": 65,
-    "ok": false,
+    "mon": "Arcanine (Hisuian Form)",
+    "ability": "INTIMIDATE",
+    "dealt": 120,
+    "taken": 60,
+    "ok": true,
     "setup": false,
     "wincons": [
      {
@@ -177,20 +178,20 @@
    },
    {
     "foe": "Porygon-Z",
-    "mon": "Amoonguss",
-    "ability": "REGENERATOR",
-    "dealt": 14,
-    "taken": 122,
+    "mon": "Golurk",
+    "ability": "IRONFIST",
+    "dealt": 83,
+    "taken": 83,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Kommo-o",
-    "mon": "Musharna (Aevian Form)",
-    "ability": "TOUGHCLAWS",
-    "dealt": 125,
-    "taken": 70,
+    "mon": "Slowking (Galarian Form)",
+    "ability": "REGENERATOR",
+    "dealt": 63,
+    "taken": 74,
     "ok": false,
     "setup": false,
     "wincons": []
@@ -214,9 +215,7 @@
     ]
    }
   ],
-  "weak3": [
-   "FLYING"
-  ],
+  "weak3": [],
   "nores": [],
   "leads": [
    "Golisopod (Aevian Form)"
@@ -310,8 +309,8 @@
    },
    {
     "swaps": [
-     "Solrock (Solrock Dominant Fusion)",
-     "Azumarill"
+     "Azumarill",
+     "Solrock (Solrock Dominant Fusion)"
     ],
     "score": 23.77,
     "counters": 3
@@ -378,6 +377,14 @@
      "Lunatone (Lunatone Dominant Fusion)"
     ],
     "score": 13.52,
+    "counters": 2
+   },
+   {
+    "swaps": [
+     "Musharna (Aevian Form)",
+     "Golurk"
+    ],
+    "score": 13.5,
     "counters": 2
    },
    {
@@ -458,14 +465,6 @@
      "Sandslash (Alolan Form)"
     ],
     "score": -6.01,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Florges",
-     "Arcanine (Hisuian Form)"
-    ],
-    "score": -6.05,
     "counters": 4
    }
   ],

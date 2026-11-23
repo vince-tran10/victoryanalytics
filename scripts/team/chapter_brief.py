@@ -75,7 +75,7 @@ def brief(fk, speeds=None):
             add('setup', f['name'], f"{f['name']}: {sm} (+{st}{' here' if any(m in sb for m in ms if m in SETUP) else ''})",
                 'KO it before it boosts twice, or Haze / Clear Smog / Encore / Unaware / phazing', stage=st)
         if any(m in HEAL for m in ms):
-            add('heal', f['name'], f"{f['name']} heals ({', '.join(MV[m]['name'] for m in ms if m in HEAL)})", 'One-shot it, or Knock Off / Heal Block')
+            add('heal', f['name'], f"{f['name']} heals ({', '.join(MV[m]['name'] for m in ms if m in HEAL)})", 'One-shot it, or Knock Off / Heal Block / Toxic')
         pr = [m for m in ms if int(MV.get(m, {}).get('priority') or 0) > 0 and int(MV.get(m, {}).get('basedamage') or 0) > 0]
         if pr: add('priority', f['name'], f"{f['name']}: priority {MV[pr[0]]['name']}", 'Bulk that takes it, or Psychic Terrain / Quick Guard', move=pr[0])
         spr = [m for m in ms if MV.get(m, {}).get('target') in ('AllOpposing', 'AllNonUsers') and int(MV.get(m, {}).get('basedamage') or 0) > 0]
@@ -144,7 +144,7 @@ def cover(fc, mem, E, tb=None, fmt='Singles'):
             elif mv & RESET or m['ability'] == 'UNAWARE': out.append((m['name'], MV[next(iter(mv & RESET))]['name'] if mv & RESET else 'Unaware'))
         elif k == 'heal':
             if off >= 100: out.append((m['name'], 'one-shots it'))
-            elif mv & {'KNOCKOFF', 'HEALBLOCK'}: out.append((m['name'], 'Knock Off'))
+            elif mv & {'KNOCKOFF', 'HEALBLOCK', 'TOXIC'}: out.append((m['name'], MV[next(iter(mv & {'KNOCKOFF', 'HEALBLOCK', 'TOXIC'}))]['name']))
         elif k == 'priority':
             if dff < 50: out.append((m['name'], f'takes {int(dff)}% from it'))
         elif k == 'spread':
@@ -239,3 +239,17 @@ def render(fs, post, disp=lambda x: x, miss='flex', todo=False):   # one row per
         mark = '☐' if todo else '•' if (not post or g['ok'] is None) else ('✓' if g['ok'] else '✗')
         li += f'<li class="{st_.strip() or "pw-nt"}"><b>{mark}</b> <b>{_E(g["label"])}</b>' + ('' if (post or todo) else f' <span class="pmuted">{_E(g["how"])}</span>') + sub + '</li>'
     return f'<ul class="pwin">{li}</ul>'
+
+
+ROLE_WORD = {'A': 'Win con', 'B': 'Enabler', 'C': 'Wallbreaker', 'D': 'Pivot', 'E': 'Tech'}
+
+
+def good_for(tags, fmt='Singles', field_move=None, beats=None, answers=None):
+    """23 Nov (Vincent): what this Pokemon is good for, max 3 short chips, same on the Core and Flex tabs:
+    its win-con job (wincon_tags), how it uses the field, then what it answers / who it beats"""
+    t_ = (tags or {}).get('s' if fmt == 'Singles' else 'd') or (tags or {}).get('s') or []
+    out = [f'{ROLE_WORD[k]}: {w}' for k, w in t_[:1]]
+    if field_move: out.append(f'Field: {field_move}')
+    if answers: out.append('Answers ' + ', '.join(answers[:2]) + (f' +{len(answers) - 2}' if len(answers) > 2 else ''))
+    if beats and len(out) < 3: out.append('Beats ' + ', '.join(beats[:2]) + (f' +{len(beats) - 2}' if len(beats) > 2 else ''))
+    return out[:3]

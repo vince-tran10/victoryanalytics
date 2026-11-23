@@ -7,7 +7,7 @@
   "moves": [
    "Psycho Cut",
    "Sacred Sword",
-   "Leaf Blade",
+   "X-Scissor",
    "Protect"
   ],
   "move_ids": [
@@ -40,8 +40,8 @@
  },
  "Arcanine (Hisuian Form)": {
   "ability": "ROCKHEAD",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk / 4 Def",
   "item": "Silk Scarf",
   "moves": [
    "Flare Blitz",
@@ -56,7 +56,10 @@
   ],
   "role": "attacker",
   "source": "your team",
-  "item_wanted": "Charcoal"
+  "item_wanted": "Charcoal",
+  "fight_why": [
+   "Bulk + power: Speed EVs change no matchup here"
+  ]
  },
  "Chandelure": {
   "ability": "FLASHFIRE",
@@ -118,7 +121,7 @@
  "Toxtricity (Aevian Form)": {
   "ability": "Punk Rock",
   "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
+  "evs": "252 SpA / 252 Spe / 4 HP",
   "item": "Charcoal",
   "moves": [
    "Torch Song",
@@ -132,7 +135,32 @@
    "BOOMBURST"
   ],
   "role": "attacker",
-  "source": "your team"
+  "source": "your team",
+  "fight_why": [
+   "Speed: outspeeds Klinklang only with full Speed"
+  ]
+ },
+ "Azumarill": {
+  "ability": "HUGEPOWER",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk / 4 Def",
+  "item": "Fairy Feather",
+  "moves": [
+   "Play Rough",
+   "Aqua Jet",
+   "Belly Drum",
+   "Superpower"
+  ],
+  "move_ids": [
+   "PLAYROUGH",
+   "AQUAJET",
+   "BELLYDRUM"
+  ],
+  "role": "attacker",
+  "source": "your team",
+  "fight_why": [
+   "Bulk + power: Speed EVs change no matchup here"
+  ]
  },
  "Hariyama": {
   "ability": "GUTS",
@@ -463,7 +491,7 @@
  "Musharna (Aevian Form)": {
   "ability": "TOUGHCLAWS",
   "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
+  "evs": "252 HP / 252 Atk / 4 Def",
   "item": "Spell Tag",
   "moves": [
    "Lovely Kiss",
@@ -477,7 +505,10 @@
    "PLAYROUGH"
   ],
   "role": "attacker",
-  "source": "your team"
+  "source": "your team",
+  "fight_why": [
+   "Bulk + power: Speed EVs change no matchup here"
+  ]
  },
  "Ursaring": {
   "ability": "QUICKFEET",
@@ -497,6 +528,29 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Golurk": {
+  "ability": "IRONFIST",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk / 4 Def",
+  "item": "Black Belt",
+  "moves": [
+   "Shadow Punch",
+   "Hammer Arm",
+   "Stomping Tantrum",
+   "Protect"
+  ],
+  "move_ids": [
+   "SHADOWPUNCH",
+   "HEAVYSLAM",
+   "STOMPINGTANTRUM"
+  ],
+  "role": "attacker",
+  "source": "your team",
+  "item_wanted": "Spell Tag",
+  "fight_why": [
+   "Bulk + power: Speed EVs change no matchup here"
+  ]
  },
  "Clawitzer": {
   "ability": "MEGALAUNCHER",
@@ -803,25 +857,6 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Azumarill": {
-  "ability": "HUGEPOWER",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Fairy Feather",
-  "moves": [
-   "Play Rough",
-   "Aqua Jet",
-   "Belly Drum",
-   "Protect"
-  ],
-  "move_ids": [
-   "PLAYROUGH",
-   "AQUAJET",
-   "BELLYDRUM"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Slowking (Galarian Form)": {
   "ability": "Regenerator",
   "nature": "Modest",
@@ -1049,25 +1084,6 @@
   ],
   "role": "attacker",
   "source": "engine"
- },
- "Golurk": {
-  "ability": "IRONFIST",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Spell Tag",
-  "moves": [
-   "Shadow Punch",
-   "Heavy Slam",
-   "Stomping Tantrum",
-   "Protect"
-  ],
-  "move_ids": [
-   "SHADOWPUNCH",
-   "HEAVYSLAM",
-   "STOMPINGTANTRUM"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
  },
  "Flamigo": {
   "ability": "SCRAPPY",
@@ -2874,7 +2890,7 @@
  "Muk (Alolan Form)": {
   "ability": "Poison Touch",
   "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
+  "evs": "252 HP / 252 Atk / 4 Def",
   "item": "Black Glasses",
   "moves": [
    "Knock Off",
@@ -2888,7 +2904,10 @@
    "CURSE"
   ],
   "role": "attacker",
-  "source": "your team"
+  "source": "your team",
+  "fight_why": [
+   "Bulk + power: Speed EVs change no matchup here"
+  ]
  },
  "Espeon": {
   "ability": "MAGICBOUNCE",
@@ -3989,7 +4008,7 @@
   "item": "Sitrus Berry",
   "moves": [
    "Earthquake",
-   "Flash",
+   "Toxic",
    "Recover",
    "Protect"
   ],

@@ -216,7 +216,9 @@ if _ST.get('team'):
         if _old:   # keep its card, but the moves follow state.json (a fight can change them, e.g. Gastro Acid Muk)
             _sm = (_ST.get('moves') or {}).get(_n)
             _it = (_ST.get('items') or {}).get(_n) or (_IB.get(_n) or {}).get('item') or _old[6]   # 23 Nov: owned items only (ideal_builds filters)
-            _new.append((('Lead', 'Lead', 'Mid', 'Mid', 'Closer', 'Closer')[min(_i, 5)],) + _old[1:6] + (_it,) + ([(m, 0) for m in _sm] if _sm else _old[7],) + _old[8:]); continue
+            _ib = _IB.get(_n) or {}   # 23 Nov: nature / EVs follow this fight's build (planner fbuild -> ideal_builds.json)
+            _new.append((('Lead', 'Lead', 'Mid', 'Mid', 'Closer', 'Closer')[min(_i, 5)],) + _old[1:3] + (_abn((_ST.get('abilities') or {}).get(_n) or _ib.get('ability')) or _old[3], _ib.get('nature') or _old[4], _ib.get('evs') or _old[5], _it)
+                        + ([(m, 0) for m in _sm] if _sm else _old[7],) + _old[8:]); continue
         _b = _IB.get(_n, {}); _mv = (_ST.get('moves') or {}).get(_n) or _b.get('moves', [])
         _new.append((('Lead', 'Lead', 'Mid', 'Mid', 'Closer', 'Closer')[min(_i, 5)], _d, '/'.join(x.title() for x in (_TA.get(_n) or {}).get('types', [])), _abn((_ST.get('abilities') or {}).get(_n) or _b.get('ability')),
                      _b.get('nature', ''), _b.get('evs', ''), (_ST.get('items') or {}).get(_n) or _b.get('item', ''), [(m, 0) for m in _mv], []))

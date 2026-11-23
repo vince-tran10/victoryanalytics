@@ -2,12 +2,12 @@
  "anchor_low": 0.17,
  "anchor_median": 0.443,
  "team": {
-  "Musharna (Aevian Form)": 0.34,
-  "Muk (Alolan Form)": 0.17,
   "Arcanine (Hisuian Form)": 0.443,
+  "Golurk": 0.358,
+  "Muk (Alolan Form)": 0.17,
   "Toxtricity (Aevian Form)": 0.446,
-  "Gallade": 0.489,
-  "Azumarill": 0.312
+  "Musharna (Aevian Form)": 0.34,
+  "Azumarill": 0.457
  },
  "rows": [
   {
@@ -329,7 +329,7 @@
    "gain": 0.078,
    "attacks": [
     "Night Slash",
-    "Facade",
+    "Secret Power",
     "Ice Fang"
    ],
    "ability": "INTIMIDATE",
@@ -362,7 +362,7 @@
    "without": 0.013,
    "gain": 0.205,
    "attacks": [
-    "Facade",
+    "Secret Power",
     "Shadow Claw",
     "Low Sweep"
    ],
@@ -414,7 +414,7 @@
    "attacks": [
     "Gunk Shot",
     "Bullet Seed",
-    "Power-Up Punch"
+    "Rock Smash"
    ],
    "ability": "GLUTTONY",
    "tier": "A"
@@ -510,7 +510,7 @@
    "gain": 0.157,
    "attacks": [
     "Surf",
-    "Facade",
+    "Secret Power",
     "Deluge"
    ],
    "ability": "HYDRATION",
@@ -805,7 +805,7 @@
    "without": -0.026,
    "gain": 0.024,
    "attacks": [
-    "Facade",
+    "Headbutt",
     "Fire Blast",
     "Thief"
    ],
@@ -823,7 +823,7 @@
    "gain": 0.087,
    "attacks": [
     "Sucker Punch",
-    "Facade"
+    "Secret Power"
    ],
    "ability": "HUGEPOWER",
    "tier": "C"

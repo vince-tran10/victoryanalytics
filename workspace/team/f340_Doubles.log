@@ -1,0 +1,13 @@
+Arcanine (Hisuian Form) | Active 60 | Intimidate  | Adamant {'Atk': 252, 'Spe': 252, 'Def': 4} | ['Flare Blitz', 'Extreme Speed', 'Head Smash', 'Protect'] | Focus Sash (already holding) | 
+Clodsire | Party 60 | Unaware  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Earthquake', 'Toxic', 'Recover', 'Protect'] | Sitrus Berry (already holding) | 
+Toxtricity (Aevian Form) | Active 60 | Galvanize  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Torch Song', 'Boomburst', 'Sludge Bomb', 'Protect'] | Charcoal (already holding) | 
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Gallade | Active 60 | Sharpness  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Psycho Cut', 'Sacred Sword', 'X-Scissor', 'Protect'] | Sitrus Berry (already holding) | 
+Azumarill | Active 60 | Huge Power  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Play Rough', 'Aqua Jet', 'Belly Drum', 'Protect'] | Sitrus Berry (already holding) | 
+jenner 1.195 -> 1.66 leads ['Gallade', 'Azumarill'] swaps [('Meowstic', 'Clodsire', 0.09), ('Mr. Mime', 'Clodsire', 0.075), ('Lucario', 'Gallade', 0.065)]
+danni 1.168 -> 1.727 leads ['Gallade', 'Arcanine (Hisuian Form)'] swaps [('Mr. Mime', 'Clodsire', 0.092), ('Meowstic', 'Clodsire', 0.09), ('Scrafty', 'Clodsire', 0.086)]
+troye 0.858 -> 1.379 leads ['Gallade', 'Toxtricity (Aevian Form)'] swaps [('Hariyama', 'Clodsire', 0.146), ('Passimian', 'Clodsire', 0.128), ('Scrafty', 'Clodsire', 0.122)]
+zena 1.311 -> 1.353 leads ['Gallade', 'Musharna (Aevian Form)'] swaps [('Meganium', 'Clodsire', 0.194), ('Venusaur', 'Clodsire', 0.17), ('Torterra', 'Clodsire', 0.163)]
+marcie 0.679 -> 1.512 leads ['Toxtricity (Aevian Form)', 'Arcanine (Hisuian Form)'] swaps [('Glalie (Aevian Form)', 'Azumarill', 0.143), ('Golisopod (Aevian Form)', 'Azumarill', 0.131), ('Leavanny (Aevian Form)', 'Azumarill', 0.123)]
+jenner9 0.605 -> 0.995 leads ['Gallade', 'Toxtricity (Aevian Form)'] swaps [('Frosmoth', 'Clodsire', 0.139), ('Florges', 'Musharna (Aevian Form)', 0.099), ('Hariyama', 'Clodsire', 0.083)]
+erick 0.733 -> 1.191 leads ['Gallade', 'Musharna (Aevian Form)'] swaps [('Scrafty', 'Azumarill', 0.101), ('Meowstic', 'Azumarill', 0.09), ('Hariyama', 'Azumarill', 0.086)]

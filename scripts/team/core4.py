@@ -187,15 +187,9 @@ def pill(t): return f'<span class="tp ty-{t.lower()}">{t.title()}</span>'
 # (unticked list) 3) the core of 3 with why each belongs 4) type check 5) core check: green = covered, red = for the flexes
 # 6) folded at the bottom: singles plan, doubles plan, who they beat, how the core is picked, close alternatives
 BT = json.load(open('team/builder.json')).get('tags', {}) if os.path.exists('team/builder.json') else {}
-def _why_core(n):
-    out_ = []
-    t_ = (BT.get(disp(n)) or {}).get('s') or []
-    if t_: out_.append(t_[0][1])
+def _why_core(n):   # 23 Nov (Vincent): what this Pokemon is good for (same chips as the Flex tab)
     fu = [b for c in out['checks'] for x in c['factors'] if x['kind'] == 'fieldexploit' for a, b in x['cov'] if a == disp(n)]
-    if fu: out_.append(f'Uses the field: {fu[0]}')
-    bt = list(dict.fromkeys(f for _, f in POW[n]['beats']))
-    if bt: out_.append('Beats ' + ', '.join(bt[:2]) + (f' +{len(bt) - 2}' if len(bt) > 2 else ''))
-    return out_[:3]
+    return CB.good_for(BT.get(disp(n)), 'Singles', fu[0] if fu else None, beats=list(dict.fromkeys(f for _, f in POW[n]['beats'])))
 rows_ = ''
 for c in out['checks']:
     nf = sum(1 for x in c['factors'] if x['ok'] is not None)

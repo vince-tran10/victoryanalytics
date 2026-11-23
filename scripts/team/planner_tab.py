@@ -55,6 +55,14 @@ for j in range(L, len(FN)):
     m = best_vs(j, six)
     gp.append(f"{FN[j]}: bring {disp(m['name'])} (takes {m['take'][j]}%)")
 # our six
+_BT = json.load(open('team/builder.json')).get('tags', {}) if os.path.exists('team/builder.json') else {}
+def _short_fix(t):   # 'Stoutland: Work Up (+2 here)' -> 'Work Up'
+    t = t.split(': ', 1)[1] if ': ' in t else t
+    return re.sub(r'\s*\(.*$', '', t).replace(' heals', '')
+def _good(m):   # 23 Nov (Vincent): what this Pokemon is good for (same chips as the Core tab)
+    fu = next((b for x in P.get('brief') or [] if x['kind'] == 'fieldexploit' for a, b in x['cov'] if a == m['name']), None)
+    fx_ = [_short_fix(t) for t in (P.get('flexwhy') or {}).get(m['name'], [])]
+    return CB.good_for(_BT.get(disp(m['name'])), P['format'], fu, beats=[FN[j] for j in range(len(FN)) if m['deal'][j] >= 100], answers=fx_)
 rows = ''
 for m in [m for m in P['six'] if not m.get('core')]:   # 23 Nov (Vincent): only the 3 flexes here (the core is fixed for the chapter)
     wc = 'bad' if m['worst'] >= 100 else 'ok' if m['worst'] < 50 else ''
@@ -63,11 +71,9 @@ for m in [m for m in P['six'] if not m.get('core')]:   # 23 Nov (Vincent): only 
     rows += (f'<li class="bc pmem{" plead" if m["lead"] else ""}" data-dn="{E(disp(m["name"]))}" tabindex="0" role="button"><div class="bct">'
              f'<span class="tier t{m["tier"]}">{m["tier"]}</span>{SP.tag(m["sid"], m["form"], size="s")}<b>{E(disp(m["name"]))}</b>'
              + ('<span class="plt">Lead</span>' if m['lead'] else '') + '</div><div class="bchips">'
-             + (f'<span class="btool">{"Core" if m.get("core") else E((m.get("job") or "Flex").split(":")[0])}</span>')
-             + ''.join(f'<span class="bstat bad">No Earthquake next to partner</span>' for _ in (m.get('warn') or [])[:1])
-             + ''.join(f'<span class="{"btool" if k == "tool" else "bstat"}">{E(c)}</span>' for k, c in cues(m['types'], m['ability'], m['moves'], _chart)[:1 if m.get('warn') else 2])
+             + ''.join(f'<span class="btool">{E(c)}</span>' for c in _good(m))
              + '</div>'
-             + ''.join(f'<div class="pans cok">✓ {E(w)}</div>' for w in (P.get('flexwhy') or {}).get(m['name'], [])[:3])
+             + ''.join(f'<div class="pans">{E(w)}</div>' for w in ((P.get('fbuild') or {}).get(m['name']) or {}).get('why', []) if 'replaces' in w)
              + '<details class="pwhy" onclick="event.stopPropagation()"><summary>Why these moves</summary><ul>' + ''.join(
                  f'<li class="{"pflag" if w["flag"] else ""}"><b>{E(w["move"])}</b><span>{E(w["why"])}</span></li>' for w in m.get('why') or []) + '</ul></details>'
              + (('<details class="pwhy" onclick="event.stopPropagation()"><summary>Swap options</summary><ul>' + ''.join(
@@ -79,8 +85,11 @@ for m in [m for m in P['six'] if not m.get('core')]:   # 23 Nov (Vincent): only 
                  for x in (P.get('swaps') or {}).get(m['name'], [])) + '</ul></details>') if (not m.get('core') and (P.get('swaps') or {}).get(m['name'])) else '')
              + '</li>')
 _core = [m for m in P['six'] if m.get('core')]
-h += (f'<article class="plc"><h3>Your 3 flexes</h3><div class="pmuted">Core: {E(", ".join(disp(m["name"]) for m in _core))}</div>'
-      f'<ul class="bl">{rows}</ul></article>')
+_so = P.get('sitout') or {}
+_nflex = len([m for m in P['six'] if not m.get('core')])
+h += (f'<article class="plc"><h3>Your {_nflex} flexes</h3><div class="pmuted">Core: {E(", ".join(disp(m["name"]) for m in _core))}</div>'
+      + ''.join(f'<div class="pans cno">{E(disp(n))} {E(w)}</div>' for n, w in _so.items())
+      + f'<ul class="bl">{rows}</ul></article>')
 # 23 Nov (Vincent): the FORMAT MINDSET checklist, honest: a tick only when the six really does it in this fight
 MS = P.get('mindset')
 if MS:
