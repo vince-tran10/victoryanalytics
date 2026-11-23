@@ -604,7 +604,7 @@ def _todo_extra(page):
     i = page.find('<section aria-labelledby="s3">')
     if i < 0: return page
     j = page.find('</section>', i); sec = page[i:j]
-    cards = {re.sub(r'<[^>]+>', '', m.group(1)).strip(): len(re.findall(r'<li>', m.group(2)))
+    cards = {re.sub(r'<[^>]+>', '', m.group(1)).strip(): len(re.findall(r'<li>', m.group(2) or ''))
              for m in re.finditer(r'<div class="tcard"><div class="thead">.*?<b>(.*?)</b>.*?(?:<ul class="tfix">(.*?)</ul>|<p class="tdone">)', sec, re.S)}
     fx = {'spector': 'Spector (day)', 'spector2': 'Spector (night)', 'jenner9': 'Spirit Jenner', 'amanda': 'Amanda', 'erick': 'Erick'}.get(st.get('fight') or '', '')
     li = ''
@@ -824,9 +824,10 @@ IC = {
  'community': '<path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/>',
  'todo': '<path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1.5 1.5L7.5 5M3.5 12l1.5 1.5L7.5 11M3.5 18l1.5 1.5L7.5 17"/>',
  'boxes': '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M9 5v14M15 5v14"/>',
+ 'planner': '<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/>',
  'builder': '<path d="M4 20h16M6 16l4-10 4 6 4-8"/><circle cx="10" cy="6" r="1.5"/>',
  'dex': '<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="3"/><path d="M8.5 15h7M8.5 18h4"/>'}
-NAV = [('team', 'Team'), ('builder', 'Builder'), ('fights', 'Fights'), ('todo', 'To do'), ('dex', 'Dex'), ('community', 'Community')]   # 22 Nov: Boxes folded into To do   # 22 Nov: Cores tab removed (Vincent)
+NAV = [('team', 'Team'), ('planner', 'Planner'), ('fights', 'Fights'), ('todo', 'To do'), ('dex', 'Dex'), ('community', 'Community')]   # 22 Nov: Boxes folded into To do   # 22 Nov: Cores tab removed (Vincent)
 nav = '<nav class="appnav" aria-label="Guide">' + ''.join(
     f'<button type="button" data-go="{k}"><svg viewBox="0 0 24 24" aria-hidden="true">{IC[k]}</svg><span>{t}</span></button>' for k, t in NAV) + '</nav>'
 seg = ('<div class="seg" role="group" aria-label="Dex lists"><button type="button" data-go="tiers">Pokémon</button>'
@@ -1231,7 +1232,7 @@ DEXJS = r'''<script id="dex-js">
 '''
 JS = r'''<script id="app-theme-js">
 (function(){
-  var NAMES = {team:'Team', builder:'Team Builder', fights:'Fights', cores:'Cores', todo:'To do', community:'Community', boxes:'Boxes', tiers:'Dex · Pokémon', aevian:'Dex · Aevian', crests:'Dex · Crests', checks:'Checks & data'};
+  var NAMES = {team:'Team', planner:'Team Planner', builder:'Team Builder', fights:'Fights', cores:'Cores', todo:'To do', community:'Community', boxes:'Boxes', tiers:'Dex · Pokémon', aevian:'Dex · Aevian', crests:'Dex · Crests', checks:'Checks & data'};
   var DEX = {tiers:1, aevian:1, crests:1};
   var orig = function(k){ return document.querySelector('#tabbar button[data-tab="'+k+'"]'); };
   function current(){ var b = document.querySelector('#tabbar button[aria-selected="true"]'); return b ? b.dataset.tab : 'team'; }

@@ -1,13 +1,13 @@
 {
- "anchor_low": 0.031,
- "anchor_median": 0.294,
+ "anchor_low": 0.11,
+ "anchor_median": 0.372,
  "team": {
-  "Toxtricity (Aevian Form)": 0.487,
-  "Amoonguss": 0.031,
-  "Oranguru": 0.229,
-  "Zoroark (Hisuian Form)": 0.122,
   "Golisopod (Aevian Form)": 0.419,
-  "Slowking (Galarian Form)": 0.294
+  "Muk (Alolan Form)": 0.198,
+  "Glalie (Aevian Form)": 0.39,
+  "Musharna (Aevian Form)": 0.372,
+  "Swampert": 0.221,
+  "Clodsire": 0.11
  },
  "rows": [
   {
@@ -32,9 +32,9 @@
    "held": false,
    "where": "Active",
    "dump": 516,
-   "with_crest": 0.548,
-   "without": 0.299,
-   "gain": 0.249,
+   "with_crest": 0.501,
+   "without": 0.257,
+   "gain": 0.245,
    "attacks": [
     "Double-Edge",
     "Psyshield Bash",
@@ -77,23 +77,6 @@
    "tier": "S"
   },
   {
-   "name": "Silvally",
-   "crest": "Silvally Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 336,
-   "with_crest": 0.344,
-   "without": 0.257,
-   "gain": 0.087,
-   "attacks": [
-    "Multi-Attack",
-    "Shadow Claw",
-    "Fire Fang"
-   ],
-   "ability": "RKSSYSTEM",
-   "tier": "S"
-  },
-  {
    "name": "Feraligatr",
    "crest": "Feraligatr Crest",
    "held": false,
@@ -107,7 +90,7 @@
     "Ice Fang"
    ],
    "ability": "SHEERFORCE",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Reuniclus",
@@ -123,7 +106,7 @@
     "Shadow Ball"
    ],
    "ability": "OVERCOAT",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Rampardos",
@@ -140,23 +123,7 @@
     "Dragon Claw"
    ],
    "ability": "MOLDBREAKER",
-   "tier": "S"
-  },
-  {
-   "name": "Furret",
-   "crest": "Furret Crest",
-   "held": true,
-   "where": "Overflow",
-   "dump": 128,
-   "with_crest": 0.327,
-   "without": 0.056,
-   "gain": 0.272,
-   "attacks": [
-    "Double-Edge",
-    "Shadow Claw"
-   ],
-   "ability": "FRISK",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Empoleon",
@@ -173,7 +140,24 @@
     "Grass Knot"
    ],
    "ability": "COMPETITIVE",
-   "tier": "S"
+   "tier": "A"
+  },
+  {
+   "name": "Silvally",
+   "crest": "Silvally Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 336,
+   "with_crest": 0.325,
+   "without": 0.245,
+   "gain": 0.08,
+   "attacks": [
+    "Multi-Attack",
+    "Shadow Claw",
+    "Fire Fang"
+   ],
+   "ability": "RKSSYSTEM",
+   "tier": "A"
   },
   {
    "name": "Glaceon",
@@ -189,7 +173,23 @@
     "Shadow Ball"
    ],
    "ability": "ICEBODY",
-   "tier": "S"
+   "tier": "A"
+  },
+  {
+   "name": "Furret",
+   "crest": "Furret Crest",
+   "held": true,
+   "where": "Overflow",
+   "dump": 128,
+   "with_crest": 0.319,
+   "without": 0.02,
+   "gain": 0.299,
+   "attacks": [
+    "Double-Edge",
+    "Shadow Claw"
+   ],
+   "ability": "FRISK",
+   "tier": "A"
   },
   {
    "name": "Cryogonal",
@@ -204,23 +204,7 @@
     "Ice Beam"
    ],
    "ability": "LEVITATE",
-   "tier": "S"
-  },
-  {
-   "name": "Zoroark (Hisuian Form)",
-   "crest": "Zoroark Crest",
-   "held": true,
-   "where": "Active",
-   "dump": 518,
-   "with_crest": 0.311,
-   "without": 0.122,
-   "gain": 0.189,
-   "attacks": [
-    "Shadow Ball",
-    "Sludge Bomb"
-   ],
-   "ability": "SHEERFORCE",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Cofagrigus",
@@ -236,24 +220,7 @@
     "Grass Knot"
    ],
    "ability": "MUMMY",
-   "tier": "S"
-  },
-  {
-   "name": "Noctowl",
-   "crest": "Noctowl Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 160,
-   "with_crest": 0.3,
-   "without": 0.17,
-   "gain": 0.13,
-   "attacks": [
-    "Moonblast",
-    "Shadow Ball",
-    "Air Slash"
-   ],
-   "ability": "TINTEDLENS",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Typhlosion",
@@ -304,19 +271,20 @@
    "tier": "A"
   },
   {
-   "name": "Cinccino",
-   "crest": "Cinccino Crest",
+   "name": "Noctowl",
+   "crest": "Noctowl Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 65,
-   "with_crest": 0.259,
-   "without": 0.039,
-   "gain": 0.22,
+   "dump": 160,
+   "with_crest": 0.271,
+   "without": 0.152,
+   "gain": 0.119,
    "attacks": [
-    "Tail Slap",
-    "Rock Blast"
+    "Moonblast",
+    "Shadow Ball",
+    "Air Slash"
    ],
-   "ability": "SKILLLINK",
+   "ability": "TINTEDLENS",
    "tier": "A"
   },
   {
@@ -353,6 +321,22 @@
    "tier": "A"
   },
   {
+   "name": "Zoroark (Hisuian Form)",
+   "crest": "Zoroark Crest",
+   "held": true,
+   "where": "Active",
+   "dump": 518,
+   "with_crest": 0.255,
+   "without": 0.067,
+   "gain": 0.187,
+   "attacks": [
+    "Shadow Ball",
+    "Sludge Bomb"
+   ],
+   "ability": "SHEERFORCE",
+   "tier": "A"
+  },
+  {
    "name": "Meganium",
    "crest": "Meganium Crest",
    "held": false,
@@ -366,6 +350,22 @@
     "Ancient Power"
    ],
    "ability": "LEAFGUARD",
+   "tier": "A"
+  },
+  {
+   "name": "Cinccino",
+   "crest": "Cinccino Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 65,
+   "with_crest": 0.212,
+   "without": 0.002,
+   "gain": 0.21,
+   "attacks": [
+    "Tail Slap",
+    "Rock Blast"
+   ],
+   "ability": "SKILLLINK",
    "tier": "A"
   },
   {
@@ -424,8 +424,8 @@
    "where": "Overflow",
    "dump": 317,
    "with_crest": 0.18,
-   "without": 0.031,
-   "gain": 0.149,
+   "without": 0.019,
+   "gain": 0.161,
    "attacks": [
     "Double-Edge",
     "Jump Kick"
@@ -645,23 +645,6 @@
    "tier": "A"
   },
   {
-   "name": "Zangoose",
-   "crest": "Zangoose Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 437,
-   "with_crest": 0.102,
-   "without": 0.08,
-   "gain": 0.022,
-   "attacks": [
-    "Close Combat",
-    "Shadow Claw",
-    "Slash"
-   ],
-   "ability": "IMMUNITY",
-   "tier": "A"
-  },
-  {
    "name": "Simipour",
    "crest": "Simipour Crest",
    "held": false,
@@ -676,7 +659,7 @@
     "Low Kick"
    ],
    "ability": "TORRENT",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Ariados",
@@ -693,7 +676,7 @@
     "Poison Jab"
    ],
    "ability": "SNIPER",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Leafeon",
@@ -710,7 +693,24 @@
     "Double Kick"
    ],
    "ability": "CHLOROPHYLL",
-   "tier": "A"
+   "tier": "C"
+  },
+  {
+   "name": "Zangoose",
+   "crest": "Zangoose Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 437,
+   "with_crest": 0.058,
+   "without": 0.042,
+   "gain": 0.016,
+   "attacks": [
+    "Close Combat",
+    "Shadow Claw",
+    "Slash"
+   ],
+   "ability": "IMMUNITY",
+   "tier": "D"
   },
   {
    "name": "Simisage",
@@ -727,24 +727,7 @@
     "Low Kick"
    ],
    "ability": "GLUTTONY",
-   "tier": "A"
-  },
-  {
-   "name": "Castform",
-   "crest": "Castform Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 52,
-   "with_crest": 0.039,
-   "without": 0.021,
-   "gain": 0.018,
-   "attacks": [
-    "Secret Power",
-    "Shadow Ball",
-    "Fire Blast"
-   ],
-   "ability": "FORECAST",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Seviper",
@@ -761,7 +744,7 @@
     "Fire Fang"
    ],
    "ability": "INFILTRATOR",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Thievul",
@@ -778,7 +761,7 @@
     "Shadow Ball"
    ],
    "ability": "STAKEOUT",
-   "tier": "B"
+   "tier": "C"
   },
   {
    "name": "Oricorio",
@@ -813,22 +796,6 @@
    "tier": "C"
   },
   {
-   "name": "Fearow",
-   "crest": "Fearow Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 350,
-   "with_crest": 0.018,
-   "without": -0.075,
-   "gain": 0.093,
-   "attacks": [
-    "Drill Peck",
-    "Drill Run"
-   ],
-   "ability": "KEENEYE",
-   "tier": "C"
-  },
-  {
    "name": "Minun",
    "crest": "Minun Crest",
    "held": false,
@@ -842,6 +809,23 @@
     "Signal Beam"
    ],
    "ability": "MINUS",
+   "tier": "D"
+  },
+  {
+   "name": "Castform",
+   "crest": "Castform Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 52,
+   "with_crest": 0.018,
+   "without": -0.0,
+   "gain": 0.018,
+   "attacks": [
+    "Facade",
+    "Shadow Ball",
+    "Fire Blast"
+   ],
+   "ability": "FORECAST",
    "tier": "D"
   },
   {
@@ -893,20 +877,19 @@
    "tier": "C"
   },
   {
-   "name": "Delcatty",
-   "crest": "Delcatty Crest",
+   "name": "Fearow",
+   "crest": "Fearow Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 342,
-   "with_crest": -0.031,
-   "without": -0.122,
-   "gain": 0.091,
+   "dump": 350,
+   "with_crest": -0.023,
+   "without": -0.111,
+   "gain": 0.088,
    "attacks": [
-    "Double-Edge",
-    "Sucker Punch",
-    "Play Rough"
+    "Drill Peck",
+    "Drill Run"
    ],
-   "ability": "CUTECHARM",
+   "ability": "KEENEYE",
    "tier": "C"
   },
   {
@@ -924,6 +907,21 @@
    ],
    "ability": "SWARM",
    "tier": "D"
+  },
+  {
+   "name": "Delcatty",
+   "crest": "Delcatty Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 342,
+   "with_crest": -0.064,
+   "without": -0.147,
+   "gain": 0.082,
+   "attacks": [
+    "Double-Edge"
+   ],
+   "ability": "NORMALIZE",
+   "tier": "C"
   },
   {
    "name": "Cherrim",

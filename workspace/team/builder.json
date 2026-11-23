@@ -519,24 +519,6 @@
      "teach": []
     },
     {
-     "name": "Zoroark (Hisuian Form)",
-     "tier": "A",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 1 type",
-      "Single target only"
-     ],
-     "tools": [
-      "Nasty Plot (+2)",
-      "Disrupt: Taunt"
-     ],
-     "sid": "ZOROARK",
-     "form": "1",
-     "pick": false,
-     "rec": false,
-     "teach": []
-    },
-    {
      "name": "Leavanny (Aevian Form)",
      "tier": "A",
      "stats": [
@@ -601,6 +583,23 @@
      ],
      "sid": "SWAMPERT",
      "form": "0",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Curse"
+     ]
+    },
+    {
+     "name": "Mismagius (Aevian Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 6 types",
+      "Weak to 5 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "sid": "MISMAGIUS",
+     "form": "1",
      "pick": false,
      "rec": false,
      "teach": [
@@ -682,44 +681,28 @@
   },
   {
    "slot": 5,
-   "title": "Flex 1 · Mid game · Spector (day)",
-   "pick": "Oranguru",
-   "rec": "Oranguru",
+   "title": "Flex 1 · Mid game · Spector (night)",
+   "pick": "Muk (Alolan Form)",
+   "rec": "Muk (Alolan Form)",
    "flex": true,
    "cands": [
     {
-     "name": "Oranguru",
-     "tier": "B",
+     "name": "Muk (Alolan Form)",
+     "tier": "S",
      "stats": [
-      "Resists 2 types",
-      "Weak to 2 types",
+      "Resists 5 types",
+      "Weak to 1 type",
       "Single target only"
      ],
      "tools": [
-      "Counters: Gengar",
-      "Speed control: Trick Room",
-      "Support: Safeguard"
+      "Stat reset: Clear Smog",
+      "Disrupt: Knock Off"
      ],
      "teach": [],
-     "sid": "ORANGURU",
-     "form": "0",
+     "sid": "MUK",
+     "form": "1",
      "pick": true,
      "rec": true
-    },
-    {
-     "name": "Musharna (Aevian Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "teach": [],
-     "sid": "MUSHARNA",
-     "form": "1",
-     "pick": false,
-     "rec": false
     },
     {
      "name": "Zoroark",
@@ -737,33 +720,18 @@
      "rec": false
     },
     {
-     "name": "Arcanine (Hisuian Form)",
+     "name": "Roserade (Aevian Form)",
      "tier": "A",
      "stats": [
-      "Resists 7 types",
-      "Weak to 4 types",
+      "Resists 5 types",
+      "Weak to 6 types",
       "Single target only"
      ],
      "tools": [
-      "Priority: Extreme Speed"
+      "Priority: Vacuum Wave"
      ],
      "teach": [],
-     "sid": "ARCANINE",
-     "form": "1",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Veluza (Aevian Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "teach": [],
-     "sid": "VELUZA",
+     "sid": "ROSERADE",
      "form": "1",
      "pick": false,
      "rec": false
@@ -787,29 +755,45 @@
   },
   {
    "slot": 6,
-   "title": "Flex 2 · Closer · Spector (day)",
-   "pick": "Zoroark (Hisuian Form)",
-   "rec": "Zoroark (Hisuian Form)",
+   "title": "Flex 2 · Closer · Spector (night)",
+   "pick": "Glalie (Aevian Form)",
+   "rec": "Glalie (Aevian Form)",
    "flex": true,
    "cands": [
     {
+     "name": "Glalie (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 2 types",
+      "Weak to 4 types"
+     ],
+     "tools": [
+      "Spread: Rock Slide",
+      "Priority: Grassy Glide"
+     ],
+     "teach": [],
+     "sid": "GLALIE",
+     "form": "1",
+     "pick": true,
+     "rec": true
+    },
+    {
      "name": "Zoroark (Hisuian Form)",
-     "tier": "A",
+     "tier": "B",
      "stats": [
       "Resists 5 types",
       "Weak to 1 type",
       "Single target only"
      ],
      "tools": [
-      "Counters: Houndstone",
       "Setup: Nasty Plot",
       "Disrupt: Taunt"
      ],
      "teach": [],
      "sid": "ZOROARK",
      "form": "1",
-     "pick": true,
-     "rec": true
+     "pick": false,
+     "rec": false
     },
     {
      "name": "Crawdaunt",
@@ -1021,13 +1005,13 @@
    "Support",
    "Sticky Web"
   ],
-  "Crawdaunt": [
-   "Closer",
-   "Swords Dance"
-  ],
   "Arcanine": [
    "Doubles lead",
    "Intimidate"
+  ],
+  "Crawdaunt": [
+   "Closer",
+   "Swords Dance"
   ],
   "Ariados": [
    "Attacker",
@@ -1129,13 +1113,13 @@
    "Attacker",
    ""
   ],
-  "Hariyama": [
-   "Attacker",
-   ""
-  ],
   "Typhlosion": [
    "Lead",
    "outspeeds 81%"
+  ],
+  "Hariyama": [
+   "Attacker",
+   ""
   ],
   "Florges": [
    "Mid game",
@@ -1153,23 +1137,23 @@
    "Attacker",
    ""
   ],
-  "Oranguru": [
-   "Support",
-   "Trick Room"
-  ],
   "Crabominable": [
    "Attacker",
    ""
+  ],
+  "Oranguru": [
+   "Support",
+   "Trick Room"
   ],
   "Rhydon": [
    "Attacker",
    ""
   ],
-  "Palossand": [
+  "Pangoro": [
    "Attacker",
    ""
   ],
-  "Pangoro": [
+  "Palossand": [
    "Attacker",
    ""
   ],
@@ -1181,13 +1165,13 @@
    "Doubles lead",
    "Tailwind"
   ],
-  "Silvally": [
-   "Support",
-   "Thunder Wave"
-  ],
   "Emboar": [
    "Attacker",
    ""
+  ],
+  "Silvally": [
+   "Support",
+   "Thunder Wave"
   ],
   "Lickilicky": [
    "Attacker",
@@ -1217,13 +1201,13 @@
    "Attacker",
    ""
   ],
-  "Kingler": [
-   "Attacker",
-   ""
-  ],
   "Nidoqueen": [
    "Support",
    "Toxic Spikes"
+  ],
+  "Kingler": [
+   "Attacker",
+   ""
   ],
   "Walrein": [
    "Closer",
@@ -1261,13 +1245,13 @@
    "Attacker",
    ""
   ],
-  "Blissey": [
-   "Mid game",
-   "Soft-Boiled"
-  ],
   "Barbaracle": [
    "Closer",
    "Shell Smash"
+  ],
+  "Blissey": [
+   "Mid game",
+   "Soft-Boiled"
   ],
   "Beartic": [
    "Attacker",
@@ -1321,11 +1305,11 @@
    "Attacker",
    ""
   ],
-  "Throh": [
+  "Cursola": [
    "Attacker",
    ""
   ],
-  "Cursola": [
+  "Throh": [
    "Attacker",
    ""
   ],
@@ -1333,11 +1317,11 @@
    "Mid game",
    "Wish"
   ],
-  "Hitmonchan": [
+  "Ampharos": [
    "Attacker",
    ""
   ],
-  "Ampharos": [
+  "Hitmonchan": [
    "Attacker",
    ""
   ],
@@ -1349,13 +1333,13 @@
    "Lead",
    "outspeeds 85%"
   ],
-  "Drampa": [
-   "Support",
-   "Glare"
-  ],
   "Mudsdale": [
    "Mid game",
    "Roar"
+  ],
+  "Drampa": [
+   "Support",
+   "Glare"
   ],
   "Dodrio": [
    "Closer",
@@ -1365,19 +1349,15 @@
    "Support",
    "Yawn"
   ],
-  "Cofagrigus": [
-   "Support",
-   "Will-O-Wisp"
-  ],
   "Cetitan": [
    "Closer",
    "Belly Drum"
   ],
-  "Marowak-Alola": [
-   "Attacker",
-   ""
+  "Cofagrigus": [
+   "Support",
+   "Will-O-Wisp"
   ],
-  "Feraligatr": [
+  "Marowak-Alola": [
    "Attacker",
    ""
   ],
@@ -1389,6 +1369,10 @@
    "Mid game",
    "Recover"
   ],
+  "Feraligatr": [
+   "Attacker",
+   ""
+  ],
   "Bruxish": [
    "Attacker",
    ""
@@ -1397,13 +1381,13 @@
    "Attacker",
    ""
   ],
-  "Pyroar": [
-   "Attacker",
-   ""
-  ],
   "Pidgeot": [
    "Doubles lead",
    "Tailwind"
+  ],
+  "Pyroar": [
+   "Attacker",
+   ""
   ],
   "Hitmontop": [
    "Attacker",
@@ -1437,13 +1421,13 @@
    "Support",
    "Will-O-Wisp"
   ],
-  "Klinklang": [
-   "Closer",
-   "Shift Gear"
-  ],
   "Dubwool": [
    "Attacker",
    ""
+  ],
+  "Klinklang": [
+   "Closer",
+   "Shift Gear"
   ],
   "Comfey": [
    "Attacker",
@@ -1465,13 +1449,13 @@
    "Attacker",
    ""
   ],
-  "Raichu": [
-   "Doubles lead",
-   "Fake Out"
-  ],
   "Crustle": [
    "Attacker",
    ""
+  ],
+  "Raichu": [
+   "Doubles lead",
+   "Fake Out"
   ],
   "Stoutland": [
    "Doubles lead",
@@ -1505,13 +1489,13 @@
    "Doubles lead",
    "Fake Out"
   ],
-  "Toedscruel": [
-   "Support",
-   "Spore"
-  ],
   "Sunflora": [
    "Attacker",
    ""
+  ],
+  "Toedscruel": [
+   "Support",
+   "Spore"
   ],
   "Starmie": [
    "Attacker",
@@ -1561,13 +1545,13 @@
    "Support",
    "Wide Guard"
   ],
-  "Golduck": [
-   "Attacker",
-   ""
-  ],
   "Roserade": [
    "Support",
    "Sleep Powder"
+  ],
+  "Golduck": [
+   "Attacker",
+   ""
   ],
   "Muk": [
    "Attacker",
@@ -1585,13 +1569,13 @@
    "Attacker",
    ""
   ],
-  "Stunfisk-Galar": [
-   "Support",
-   "Yawn"
-  ],
   "Orbeetle": [
    "Support",
    "Reflect"
+  ],
+  "Stunfisk-Galar": [
+   "Support",
+   "Yawn"
   ],
   "Sudowoodo": [
    "Attacker",
@@ -1621,13 +1605,13 @@
    "Support",
    "Electric Surge setter"
   ],
-  "Seismitoad": [
-   "Attacker",
-   ""
-  ],
   "Zebstrika": [
    "Support",
    "Thunder Wave"
+  ],
+  "Seismitoad": [
+   "Attacker",
+   ""
   ],
   "Electrode-Hisui": [
    "Support",
@@ -1705,13 +1689,13 @@
    "Support",
    "Thunder Wave"
   ],
-  "Victreebel": [
-   "Support",
-   "Sleep Powder"
-  ],
   "Gogoat": [
    "Attacker",
    ""
+  ],
+  "Victreebel": [
+   "Support",
+   "Sleep Powder"
   ],
   "Sirfetch'd": [
    "Attacker",
@@ -1805,13 +1789,13 @@
    "Doubles lead",
    "Intimidate"
   ],
-  "Beheeyem": [
-   "Attacker",
-   ""
-  ],
   "Shiinotic": [
    "Support",
    "Spore"
+  ],
+  "Beheeyem": [
+   "Attacker",
+   ""
   ],
   "Mawile": [
    "Doubles lead",
@@ -1821,25 +1805,25 @@
    "Attacker",
    ""
   ],
-  "Mr. Mime": [
-   "Support",
-   "Reflect"
-  ],
   "Eiscue": [
    "Support",
    "Aurora Veil"
   ],
-  "Hypno": [
-   "Attacker",
-   ""
+  "Mr. Mime": [
+   "Support",
+   "Reflect"
   ],
-  "Toucannon": [
+  "Hypno": [
    "Attacker",
    ""
   ],
   "Qwilfish": [
    "Doubles lead",
    "Intimidate"
+  ],
+  "Toucannon": [
+   "Attacker",
+   ""
   ],
   "Porygon": [
    "Attacker",
@@ -1929,21 +1913,21 @@
    "Closer",
    "Swords Dance"
   ],
-  "Wormadam (Sandy Cloak)": [
-   "Attacker",
-   ""
-  ],
   "Rapidash": [
    "Attacker",
    ""
   ],
-  "Furfrou": [
-   "Support",
-   "Thunder Wave"
+  "Wormadam (Sandy Cloak)": [
+   "Attacker",
+   ""
   ],
   "Cryogonal": [
    "Support",
    "Reflect"
+  ],
+  "Furfrou": [
+   "Support",
+   "Thunder Wave"
   ],
   "Sandslash": [
    "Closer",
@@ -1953,13 +1937,13 @@
    "Mid game",
    "Recover"
   ],
-  "Obstagoon": [
-   "Attacker",
-   ""
-  ],
   "Leavanny": [
    "Closer",
    "Swords Dance"
+  ],
+  "Obstagoon": [
+   "Attacker",
+   ""
   ],
   "Xatu": [
    "Attacker",
@@ -2001,21 +1985,21 @@
    "Attacker",
    ""
   ],
-  "Noctowl": [
-   "Attacker",
-   ""
-  ],
   "Cramorant": [
    "Attacker",
    ""
   ],
-  "Linoone": [
+  "Noctowl": [
    "Attacker",
    ""
   ],
   "Kangaskhan": [
    "Doubles lead",
    "Fake Out"
+  ],
+  "Linoone": [
+   "Attacker",
+   ""
   ],
   "Lumineon": [
    "Attacker",
@@ -2033,19 +2017,15 @@
    "Doubles lead",
    "Intimidate"
   ],
-  "Vespiquen": [
-   "Attacker",
-   ""
-  ],
   "Kabutops": [
    "Attacker",
    ""
   ],
-  "Boldore": [
+  "Vespiquen": [
    "Attacker",
    ""
   ],
-  "Kecleon": [
+  "Boldore": [
    "Attacker",
    ""
   ],
@@ -2057,6 +2037,10 @@
    "Attacker",
    ""
   ],
+  "Kecleon": [
+   "Attacker",
+   ""
+  ],
   "Minior": [
    "Closer",
    "Shell Smash"
@@ -2065,13 +2049,13 @@
    "Attacker",
    ""
   ],
-  "Arbok": [
-   "Doubles lead",
-   "Intimidate"
-  ],
   "Jynx": [
    "Attacker",
    ""
+  ],
+  "Arbok": [
+   "Doubles lead",
+   "Intimidate"
   ],
   "Dugtrio-Alola": [
    "Attacker",
@@ -2145,11 +2129,11 @@
    "Attacker",
    ""
   ],
-  "Watchog": [
+  "Phantump": [
    "Attacker",
    ""
   ],
-  "Phantump": [
+  "Watchog": [
    "Attacker",
    ""
   ],
@@ -2177,15 +2161,15 @@
    "Attacker",
    ""
   ],
-  "Cacturne": [
-   "Attacker",
-   ""
-  ],
   "Cherrim": [
    "Support",
    "Helping Hand"
   ],
   "Oricorio (Pa'u Style)": [
+   "Attacker",
+   ""
+  ],
+  "Cacturne": [
    "Attacker",
    ""
   ],
@@ -2217,13 +2201,13 @@
    "Support",
    "Spore"
   ],
-  "Dewgong": [
-   "Doubles lead",
-   "Fake Out"
-  ],
   "Masquerain": [
    "Doubles lead",
    "Intimidate"
+  ],
+  "Dewgong": [
+   "Doubles lead",
+   "Fake Out"
   ],
   "Wugtrio": [
    "Attacker",
@@ -2241,19 +2225,19 @@
    "Attacker",
    ""
   ],
-  "Purugly": [
-   "Doubles lead",
-   "Fake Out"
-  ],
   "Lopunny": [
    "Doubles lead",
    "Fake Out"
   ],
-  "Kricketune": [
+  "Purugly": [
+   "Doubles lead",
+   "Fake Out"
+  ],
+  "Mothim": [
    "Attacker",
    ""
   ],
-  "Mothim": [
+  "Kricketune": [
    "Attacker",
    ""
   ],
@@ -2317,13 +2301,13 @@
    "Mid game",
    "Recover"
   ],
-  "Delcatty": [
-   "Doubles lead",
-   "Fake Out"
-  ],
   "Pachirisu": [
    "Doubles lead",
    "Follow Me"
+  ],
+  "Delcatty": [
+   "Doubles lead",
+   "Fake Out"
   ],
   "Shelmet": [
    "Attacker",
@@ -2581,31 +2565,35 @@
    {
     "name": "Amoonguss",
     "tier": "A",
-    "score": 2.75,
+    "score": 2.5,
     "why": [
      "Amoonguss draws attacks so Muk-Alola attacks freely",
      "Amoonguss's sleep takes a foe out for Muk-Alola",
-     "Physical + special: Intimidate or one screen can't stop both",
      "You resist its weaknesses: Psychic",
      "Used together in the real meta"
     ]
    },
    {
-    "name": "Slowbro",
+    "name": "Mismagius-Aevian",
     "tier": "A",
-    "score": 1.75,
+    "score": 2.0,
     "why": [
+     "Speed split: Mismagius-Aevian moves first, Muk-Alola is the bulky one",
      "Physical + special: Intimidate or one screen can't stop both",
-     "You resist its weaknesses: Grass, Ghost, Dark"
+     "Resists your weaknesses: Ground",
+     "You resist its weaknesses: Ghost, Dark"
     ]
    },
    {
-    "name": "Slowking",
-    "tier": "A",
+    "name": "Lapras-Aevian",
+    "tier": "S",
     "score": 1.75,
     "why": [
+     "Muk-Alola resets foe boosts that would stop Lapras-Aevian's sweep",
+     "Lapras-Aevian's sleep takes a foe out for Muk-Alola",
      "Physical + special: Intimidate or one screen can't stop both",
-     "You resist its weaknesses: Grass, Ghost, Dark"
+     "You resist its weaknesses: Grass, Ghost, Dark",
+     "Shared weaknesses: Ground"
     ]
    }
   ],
@@ -2675,14 +2663,13 @@
     ]
    },
    {
-    "name": "Slowking-Galar",
-    "tier": "S",
-    "score": 2.25,
+    "name": "Mismagius-Aevian",
+    "tier": "A",
+    "score": 2.5,
     "why": [
-     "Slowking-Galar switches in on Grass hits aimed at Alomomola and heals on the way out",
-     "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Grass",
-     "Used together in the real meta"
+     "Alomomola switches in on Fire, Ice hits aimed at Mismagius-Aevian and heals on the way out",
+     "Resists your weaknesses: Electric, Grass",
+     "You resist its weaknesses: Fire, Ice"
     ]
    }
   ],
@@ -2700,6 +2687,15 @@
     ]
    },
    {
+    "name": "Mismagius-Aevian",
+    "tier": "A",
+    "score": 3.0,
+    "why": [
+     "Resists your weaknesses: Water, Fighting, Ground",
+     "You resist its weaknesses: Fire, Ice, Flying"
+    ]
+   },
+   {
     "name": "Froslass-Aevian",
     "tier": "A",
     "score": 2.75,
@@ -2707,16 +2703,6 @@
      "Physical + special: Intimidate or one screen can't stop both",
      "Resists your weaknesses: Water, Ground",
      "You resist its weaknesses: Poison, Flying, Bug"
-    ]
-   },
-   {
-    "name": "Gastrodon-Aevian (West)",
-    "tier": "A",
-    "score": 2.25,
-    "why": [
-     "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Water, Fighting, Rock",
-     "You resist its weaknesses: Ice"
     ]
    }
   ],
@@ -3034,13 +3020,14 @@
     ]
    },
    {
-    "name": "Glalie-Aevian",
-    "tier": "S",
-    "score": 2.5,
+    "name": "Mismagius-Aevian",
+    "tier": "A",
+    "score": 2.75,
     "why": [
-     "Speed split: Toxtricity-Aevian moves first, Glalie-Aevian is the bulky one",
      "Physical + special: Intimidate or one screen can't stop both",
-     "You resist its weaknesses: Ice, Fighting, Bug, Steel"
+     "Resists your weaknesses: Water, Ground",
+     "You resist its weaknesses: Fire, Ice",
+     "Toxtricity-Aevian's Boomburst can't hurt Mismagius-Aevian"
     ]
    }
   ],
@@ -3114,41 +3101,6 @@
      "Resists your weaknesses: Electric, Fairy",
      "You resist its weaknesses: Psychic",
      "Shared weaknesses: Ice"
-    ]
-   }
-  ],
-  "Zoroark-Hisui": [
-   {
-    "name": "Amoonguss",
-    "tier": "A",
-    "score": 3.0,
-    "why": [
-     "Amoonguss's redirection buys Zoroark-Hisui its setup turn",
-     "Amoonguss's sleep gives Zoroark-Hisui free turns",
-     "Amoonguss resets foe boosts that would stop Zoroark-Hisui's sweep",
-     "Speed split: Zoroark-Hisui moves first, Amoonguss is the bulky one"
-    ]
-   },
-   {
-    "name": "Musharna-Aevian",
-    "tier": "S",
-    "score": 2.0,
-    "why": [
-     "Musharna-Aevian's sleep gives Zoroark-Hisui free turns",
-     "Speed split: Zoroark-Hisui moves first, Musharna-Aevian is the bulky one",
-     "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Dark",
-     "You resist its weaknesses: Poison"
-    ]
-   },
-   {
-    "name": "Glalie-Aevian",
-    "tier": "S",
-    "score": 1.5,
-    "why": [
-     "Speed split: Zoroark-Hisui moves first, Glalie-Aevian is the bulky one",
-     "Physical + special: Intimidate or one screen can't stop both",
-     "You resist its weaknesses: Fighting, Bug"
     ]
    }
   ],
@@ -3292,6 +3244,37 @@
     ]
    }
   ],
+  "Mismagius-Aevian": [
+   {
+    "name": "Arcanine-Hisui",
+    "tier": "A",
+    "score": 3.0,
+    "why": [
+     "Resists your weaknesses: Fire, Ice, Flying",
+     "You resist its weaknesses: Water, Fighting, Ground"
+    ]
+   },
+   {
+    "name": "Unfezant-Aevian",
+    "tier": "A",
+    "score": 3.0,
+    "why": [
+     "Resists your weaknesses: Fire, Dark",
+     "You resist its weaknesses: Water, Grass, Fighting, Ground"
+    ]
+   },
+   {
+    "name": "Toxtricity-Aevian",
+    "tier": "S",
+    "score": 2.75,
+    "why": [
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Fire, Ice",
+     "You resist its weaknesses: Water, Ground",
+     "Toxtricity-Aevian's Boomburst can't hurt Mismagius-Aevian"
+    ]
+   }
+  ],
   "Unfezant-Aevian": [
    {
     "name": "Amoonguss",
@@ -3308,6 +3291,15 @@
     ]
    },
    {
+    "name": "Mismagius-Aevian",
+    "tier": "A",
+    "score": 3.0,
+    "why": [
+     "Resists your weaknesses: Water, Grass, Fighting, Ground",
+     "You resist its weaknesses: Fire, Dark"
+    ]
+   },
+   {
     "name": "Froslass-Aevian",
     "tier": "A",
     "score": 2.75,
@@ -3315,19 +3307,6 @@
      "Physical + special: Intimidate or one screen can't stop both",
      "Resists your weaknesses: Water, Ground, Steel",
      "You resist its weaknesses: Poison, Bug"
-    ]
-   },
-   {
-    "name": "Slowking-Galar",
-    "tier": "S",
-    "score": 2.25,
-    "why": [
-     "Slowking-Galar switches in on Grass, Fighting hits aimed at Unfezant-Aevian and heals on the way out",
-     "Speed split: Unfezant-Aevian moves first, Slowking-Galar is the bulky one",
-     "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Grass, Fighting, Fairy",
-     "You resist its weaknesses: Dark",
-     "Shared weaknesses: Ground"
     ]
    }
   ]

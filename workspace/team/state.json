@@ -4,9 +4,9 @@
  "export_label": "22 Nov 20:41",
  "active_start": 440,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 267,
- "run": 281,
- "final": 285,
+ "roster": 271,
+ "run": 285,
+ "final": 289,
  "done": [
   "aelita",
   "narcissa1",
@@ -32,14 +32,14 @@
   "amanda",
   "karrina"
  ],
- "fight": "spector",
+ "fight": "spector2",
  "team": [
-  "Toxtricity (Aevian Form)",
-  "Amoonguss",
-  "Oranguru",
-  "Zoroark (Hisuian Form)",
   "Golisopod (Aevian Form)",
-  "Slowking (Galarian Form)"
+  "Muk (Alolan Form)",
+  "Glalie (Aevian Form)",
+  "Musharna (Aevian Form)",
+  "Swampert",
+  "Clodsire"
  ],
  "moves": {
   "Golisopod (Aevian Form)": [
@@ -125,6 +125,36 @@
    "Boomburst",
    "Sludge Bomb",
    "Protect"
+  ],
+  "Vaporeon": [
+   "Wish",
+   "Shadow Ball",
+   "Hydro Pump",
+   "Protect"
+  ],
+  "Swampert": [
+   "Earthquake",
+   "Rock Slide",
+   "Hammer Arm",
+   "Protect"
+  ],
+  "Arcanine (Hisuian Form)": [
+   "Flare Blitz",
+   "Extreme Speed",
+   "Head Smash",
+   "Protect"
+  ],
+  "Glalie (Aevian Form)": [
+   "Grassy Glide",
+   "Wood Hammer",
+   "Rock Slide",
+   "Protect"
+  ],
+  "Musharna (Aevian Form)": [
+   "Lovely Kiss",
+   "Shadow Claw",
+   "Play Rough",
+   "Protect"
   ]
  },
  "promote": "team/promote_1108.json",
@@ -205,7 +235,12 @@
   "Zoroark (Hisuian Form)": "ILLUSION",
   "Amoonguss": "Regenerator",
   "Slowking (Galarian Form)": "Regenerator",
-  "Toxtricity (Aevian Form)": "Punk Rock"
+  "Toxtricity (Aevian Form)": "Punk Rock",
+  "Vaporeon": "WATERABSORB",
+  "Swampert": "TORRENT",
+  "Arcanine (Hisuian Form)": "ROCKHEAD",
+  "Glalie (Aevian Form)": "GRASSYSURGE",
+  "Musharna (Aevian Form)": "TOUGHCLAWS"
  },
  "crests_owned": [
   "Dedenne Crest",
@@ -221,24 +256,17 @@
  ],
  "core_check": {
   "core": {
-   "n": 4,
+   "n": 6,
    "weak3": [],
-   "nores": [
-    "DARK",
-    "GHOST",
-    "NORMAL",
-    "PSYCHIC"
-   ],
+   "nores": [],
    "minor": []
   },
   "fight": {
    "n": 6,
    "weak3": [],
    "nores": [],
-   "minor": [
-    "FIRE/GHOST"
-   ],
-   "key": "spector"
+   "minor": [],
+   "key": "spector2"
   }
  },
  "plan_swaps": {},
@@ -357,5 +385,6 @@
    "Oranguru": 0.0,
    "Golisopod (Aevian Form)": 0.0
   }
- }
+ },
+ "mode": "planner"
 }

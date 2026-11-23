@@ -1,0 +1,525 @@
+{
+ "fight": "spector2",
+ "field": "Haunted Field",
+ "fe": "HAUNTED",
+ "format": "Doubles",
+ "foes": [
+  {
+   "name": "Stonjourner",
+   "types": [
+    "ROCK"
+   ],
+   "moves": [
+    "Protect",
+    "Rock Slide",
+    "Heavy Slam",
+    "Heat Crash"
+   ],
+   "item": "Focus Sash",
+   "ability": "Power Spot",
+   "sid": "STONJOURNER",
+   "form": "Normal Form"
+  },
+  {
+   "name": "Sigilyph",
+   "types": [
+    "FAIRY",
+    "GHOST"
+   ],
+   "moves": [
+    "Tailwind",
+    "Shadow Ball",
+    "Heat Wave",
+    "Moonblast"
+   ],
+   "item": "Magical Seed",
+   "ability": "Flare Boost",
+   "sid": "SIGILYPH",
+   "form": "Aevian Form"
+  },
+  {
+   "name": "Luxray",
+   "types": [
+    "ELECTRIC"
+   ],
+   "moves": [
+    "Crunch",
+    "Wild Charge",
+    "Facade",
+    "Howl"
+   ],
+   "item": "Magical Seed",
+   "ability": "Guts",
+   "sid": "LUXRAY",
+   "form": "Normal Form"
+  },
+  {
+   "name": "Golisopod",
+   "types": [
+    "BUG",
+    "GROUND"
+   ],
+   "moves": [
+    "Rock Blast",
+    "Bone Rush",
+    "Pin Missile",
+    "Shadow Sneak"
+   ],
+   "item": "Ghost Gem",
+   "ability": "Skill Link",
+   "sid": "GOLISOPOD",
+   "form": "Aevian Form"
+  },
+  {
+   "name": "Typhlosion",
+   "types": [
+    "FIRE",
+    "GHOST"
+   ],
+   "moves": [
+    "Infernal Parade",
+    "Eruption",
+    "Focus Blast",
+    "Protect"
+   ],
+   "item": "Life Orb",
+   "ability": "Frisk",
+   "sid": "TYPHLOSION",
+   "form": "Hisuian Form"
+  },
+  {
+   "name": "Banette",
+   "types": [
+    "GHOST"
+   ],
+   "moves": [
+    "Shadow Sneak",
+    "Disable",
+    "Gunk Shot",
+    "Phantom Force"
+   ],
+   "item": "Banettite",
+   "ability": "Insomnia",
+   "sid": "BANETTE",
+   "form": "Normal Form"
+  }
+ ],
+ "main": [
+  "GHOST",
+  "FIRE",
+  "ROCK",
+  "POISON"
+ ],
+ "atk": {
+  "STEEL": [
+   "Stonjourner"
+  ],
+  "FIRE": [
+   "Sigilyph",
+   "Stonjourner",
+   "Typhlosion"
+  ],
+  "ROCK": [
+   "Golisopod",
+   "Stonjourner"
+  ],
+  "FAIRY": [
+   "Sigilyph"
+  ],
+  "GHOST": [
+   "Banette",
+   "Golisopod",
+   "Sigilyph",
+   "Typhlosion"
+  ],
+  "ELECTRIC": [
+   "Luxray"
+  ],
+  "NORMAL": [
+   "Luxray"
+  ],
+  "DARK": [
+   "Luxray"
+  ],
+  "BUG": [
+   "Golisopod"
+  ],
+  "GROUND": [
+   "Golisopod"
+  ],
+  "FIGHTING": [
+   "Typhlosion"
+  ],
+  "POISON": [
+   "Banette"
+  ]
+ },
+ "wins": [
+  {
+   "win": "Speed control (Tailwind / Trick Room)",
+   "foes": [
+    "Sigilyph"
+   ],
+   "answered_by": []
+  },
+  {
+   "win": "Setup (stat boosts)",
+   "foes": [
+    "Luxray"
+   ],
+   "answered_by": [
+    "Muk (Alolan Form)",
+    "Clodsire"
+   ]
+  },
+  {
+   "win": "Spread attacks",
+   "foes": [
+    "Sigilyph",
+    "Stonjourner",
+    "Typhlosion"
+   ],
+   "answered_by": []
+  }
+ ],
+ "six": [
+  {
+   "name": "Golisopod (Aevian Form)",
+   "tier": "S",
+   "types": [
+    "BUG",
+    "GROUND"
+   ],
+   "sid": "GOLISOPOD",
+   "form": "1",
+   "lead": true,
+   "where": "Active",
+   "moves": [
+    "Bone Rush",
+    "Pin Missile",
+    "Swords Dance",
+    "Protect"
+   ],
+   "ability": "SKILLLINK",
+   "take": [
+    41,
+    62,
+    25,
+    39,
+    150,
+    72
+   ],
+   "deal": [
+    115,
+    104,
+    150,
+    27,
+    150,
+    96
+   ],
+   "worst": 150,
+   "worst_foe": "Typhlosion",
+   "safe": 3,
+   "mult": {
+    "GHOST": 1.0,
+    "FIRE": 2.0,
+    "ROCK": 1.0,
+    "POISON": 0.5
+   },
+   "answers": []
+  },
+  {
+   "name": "Muk (Alolan Form)",
+   "tier": "S",
+   "types": [
+    "POISON",
+    "DARK"
+   ],
+   "sid": "MUK",
+   "form": "1",
+   "lead": true,
+   "where": "Active",
+   "moves": [
+    "Knock Off",
+    "Gastro Acid",
+    "Clear Smog",
+    "Protect"
+   ],
+   "ability": "POISONTOUCH",
+   "take": [
+    35,
+    42,
+    56,
+    150,
+    80,
+    48
+   ],
+   "deal": [
+    22,
+    40,
+    37,
+    21,
+    78,
+    74
+   ],
+   "worst": 150,
+   "worst_foe": "Golisopod",
+   "safe": 3,
+   "mult": {
+    "GHOST": 0.5,
+    "FIRE": 1.0,
+    "ROCK": 1.0,
+    "POISON": 0.5
+   },
+   "answers": [
+    "Setup (stat boosts)"
+   ]
+  },
+  {
+   "name": "Glalie (Aevian Form)",
+   "tier": "S",
+   "types": [
+    "GRASS",
+    "ROCK"
+   ],
+   "sid": "GLALIE",
+   "form": "1",
+   "lead": false,
+   "where": "Active",
+   "moves": [
+    "Grassy Glide",
+    "Wood Hammer",
+    "Rock Slide",
+    "Protect"
+   ],
+   "ability": "GRASSYSURGE",
+   "take": [
+    47,
+    62,
+    28,
+    88,
+    94,
+    81
+   ],
+   "deal": [
+    77,
+    70,
+    66,
+    37,
+    58,
+    65
+   ],
+   "worst": 94,
+   "worst_foe": "Typhlosion",
+   "safe": 2,
+   "mult": {
+    "GHOST": 1.0,
+    "FIRE": 1.0,
+    "ROCK": 1.0,
+    "POISON": 1.0
+   },
+   "answers": []
+  },
+  {
+   "name": "Musharna (Aevian Form)",
+   "tier": "S",
+   "types": [
+    "DARK",
+    "FAIRY"
+   ],
+   "sid": "MUSHARNA",
+   "form": "1",
+   "lead": false,
+   "where": "Active",
+   "moves": [
+    "Lovely Kiss",
+    "Shadow Claw",
+    "Play Rough",
+    "Protect"
+   ],
+   "ability": "TOUGHCLAWS",
+   "take": [
+    48,
+    90,
+    48,
+    76,
+    87,
+    79
+   ],
+   "deal": [
+    36,
+    113,
+    60,
+    34,
+    109,
+    105
+   ],
+   "worst": 90,
+   "worst_foe": "Sigilyph",
+   "safe": 2,
+   "mult": {
+    "GHOST": 0.5,
+    "FIRE": 1.0,
+    "ROCK": 1.0,
+    "POISON": 2.0
+   },
+   "answers": []
+  },
+  {
+   "name": "Swampert",
+   "tier": "A",
+   "types": [
+    "WATER",
+    "GROUND"
+   ],
+   "sid": "SWAMPERT",
+   "form": "0",
+   "lead": false,
+   "where": "Active",
+   "moves": [
+    "Earthquake",
+    "Rock Slide",
+    "Hammer Arm",
+    "Protect"
+   ],
+   "ability": "TORRENT",
+   "take": [
+    15,
+    59,
+    29,
+    79,
+    79,
+    85
+   ],
+   "deal": [
+    52,
+    46,
+    87,
+    12,
+    90,
+    43
+   ],
+   "worst": 85,
+   "worst_foe": "Banette",
+   "safe": 2,
+   "mult": {
+    "GHOST": 1.0,
+    "FIRE": 0.5,
+    "ROCK": 0.5,
+    "POISON": 0.5
+   },
+   "answers": []
+  },
+  {
+   "name": "Clodsire",
+   "tier": "B",
+   "types": [
+    "POISON",
+    "GROUND"
+   ],
+   "sid": "CLODSIRE",
+   "form": "0",
+   "lead": false,
+   "where": "Active",
+   "moves": [
+    "Earthquake",
+    "Curse",
+    "Recover",
+    "Protect"
+   ],
+   "ability": "UNAWARE",
+   "take": [
+    30,
+    48,
+    35,
+    150,
+    72,
+    102
+   ],
+   "deal": [
+    41,
+    36,
+    69,
+    9,
+    71,
+    34
+   ],
+   "worst": 150,
+   "worst_foe": "Golisopod",
+   "safe": 3,
+   "mult": {
+    "GHOST": 1.0,
+    "FIRE": 1.0,
+    "ROCK": 0.5,
+    "POISON": 0.25
+   },
+   "answers": [
+    "Setup (stat boosts)"
+   ]
+  }
+ ],
+ "alts": [
+  {
+   "score": 37.0,
+   "in": [
+    "Alomomola"
+   ],
+   "out": [
+    "Musharna (Aevian Form)"
+   ]
+  },
+  {
+   "score": 36.0,
+   "in": [
+    "Scrafty",
+    "Alomomola"
+   ],
+   "out": [
+    "Musharna (Aevian Form)",
+    "Clodsire"
+   ]
+  },
+  {
+   "score": 36.0,
+   "in": [
+    "Scrafty",
+    "Clefable"
+   ],
+   "out": [
+    "Musharna (Aevian Form)",
+    "Clodsire"
+   ]
+  }
+ ],
+ "pool": 45,
+ "score": 37.6,
+ "checks": {
+  "weak3": [],
+  "nores": [],
+  "res_lt2": [
+   "FIRE"
+  ],
+  "one_shot": [
+   [
+    "Golisopod (Aevian Form)",
+    "Typhlosion"
+   ],
+   [
+    "Muk (Alolan Form)",
+    "Golisopod"
+   ],
+   [
+    "Clodsire",
+    "Golisopod"
+   ],
+   [
+    "Clodsire",
+    "Banette"
+   ]
+  ],
+  "unanswered": [
+   "Speed control (Tailwind / Trick Room)",
+   "Spread attacks"
+  ]
+ }
+}

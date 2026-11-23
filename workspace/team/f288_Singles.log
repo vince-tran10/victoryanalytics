@@ -1,0 +1,15 @@
+Golisopod (Aevian Form) | Active 60 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Bone Rush', 'Pin Missile', 'Swords Dance', 'Protect'] | Soft Sand (already holding) | 
+Muk (Alolan Form) | Active 60 | Poison Touch  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Knock Off', 'Gastro Acid', 'Clear Smog', 'Protect'] | Black Sludge (already holding) | 
+Glalie (Aevian Form) | Active 60 | Grassy Surge  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'] | Miracle Seed (already holding) | 
+Musharna (Aevian Form) | Active 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Sitrus Berry (already holding) | 
+Swampert | Active 60 | Torrent  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Earthquake', 'Rock Slide', 'Hammer Arm', 'Protect'] | Focus Sash (already holding) | 
+Clodsire | Active 60 | Unaware  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Earthquake', 'Curse', 'Recover', 'Protect'] | Sitrus Berry | 
+jenner 0.881 -> 1.339 leads ['Glalie (Aevian Form)'] swaps [('Typhlosion', 'Muk (Alolan Form)', 0.085), ('Unfezant (Aevian Form Male)', 'Muk (Alolan Form)', 0.084), ('Arcanine (Hisuian Form)', 'Muk (Alolan Form)', 0.077)]
+danni 1.324 -> 1.274 leads ['Glalie (Aevian Form)'] swaps [('Chandelure', 'Swampert', 0.259), ('Toxtricity (Aevian Form)', 'Swampert', 0.235), ('Typhlosion', 'Swampert', 0.212)]
+troye 0.765 -> 1.184 leads ['Golisopod (Aevian Form)'] swaps [('Arcanine', 'Swampert', 0.177), ('Talonflame', 'Swampert', 0.156), ('Toxtricity (Aevian Form)', 'Swampert', 0.152)]
+zena 1.021 -> 1.425 leads ['Swampert'] swaps [('Meganium', 'Musharna (Aevian Form)', 0.105), ('Venusaur', 'Musharna (Aevian Form)', 0.105), ('Decidueye', 'Musharna (Aevian Form)', 0.084)]
+marcie 0.945 -> 1.255 leads ['Golisopod (Aevian Form)'] swaps [('Leavanny (Aevian Form)', 'Swampert', 0.255), ('Leavanny', 'Swampert', 0.24), ('Scolipede', 'Swampert', 0.239)]
+spector 0.785 -> 1.112 leads ['Musharna (Aevian Form)'] swaps [('Chandelure', 'Clodsire', 0.09), ('Mabosstiff', 'Clodsire', 0.06), ('Cursola', 'Clodsire', 0.06)]
+spector2 0.492 -> 0.958 leads ['Golisopod (Aevian Form)'] swaps [('Mabosstiff', 'Muk (Alolan Form)', 0.057), ('Vaporeon', 'Muk (Alolan Form)', 0.051), ('Walrein', 'Muk (Alolan Form)', 0.043)]
+jenner9 0.336 -> 0.691 leads ['Glalie (Aevian Form)'] swaps [('Florges', 'Muk (Alolan Form)', 0.134), ('Toxtricity (Aevian Form)', 'Muk (Alolan Form)', 0.122), ('Chandelure', 'Muk (Alolan Form)', 0.102)]
+erick 0.531 -> 0.827 leads ['Glalie (Aevian Form)'] swaps [('Gallade', 'Musharna (Aevian Form)', 0.206), ('Chandelure', 'Musharna (Aevian Form)', 0.181), ('Typhlosion', 'Musharna (Aevian Form)', 0.137)]

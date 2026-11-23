@@ -25,29 +25,29 @@
  ],
  "weak3": [],
  "nores": [
-  "DARK",
-  "GHOST",
-  "NORMAL",
-  "PSYCHIC"
+  "BUG",
+  "FIRE",
+  "GRASS",
+  "STEEL"
  ],
  "misses": [
   {
-   "foe": "Houndstone",
-   "fight": "spector",
-   "best": "Toxtricity (Aevian Form)",
-   "dmg": 91
+   "foe": "Golisopod",
+   "fight": "spector2",
+   "best": "Glalie (Aevian Form)",
+   "dmg": 58
   },
   {
-   "foe": "Kommo-o",
+   "foe": "Stoutland",
    "fight": "jenner9",
    "best": "Golisopod (Aevian Form)",
-   "dmg": 53
+   "dmg": 79
   },
   {
-   "foe": "Chandelure",
-   "fight": "erick",
-   "best": "Toxtricity (Aevian Form)",
-   "dmg": 71
+   "foe": "Porygon-Z",
+   "fight": "jenner9",
+   "best": "Golisopod (Aevian Form)",
+   "dmg": 94
   }
  ],
  "n_types": 18

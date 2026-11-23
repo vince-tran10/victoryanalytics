@@ -30,3 +30,39 @@ if __name__ == '__main__':
         if g['add']: print('  type add-ons (move type gains a 2nd type):', g['add'])
         if g['typeMods']: print('  typeMods:', g['typeMods'])
         if g['fieldChange']: print('  field changes:', {k: v for k, v in g['fieldChange'].items()})
+
+
+# 23 Nov (Vincent): field TYPE-CHART overrides. They live in the battle code, not in fieldtext:
+# Battle_Move.rb pbTypeModifier (per defending type, replaces that type's multiplier). Ported 1:1 (Rejuv branches).
+GUIDE_TO_FE = dict(MAP, **{'Blessed Field': 'HOLY', 'Haunted Field': 'HAUNTED'})
+def field_typemod(fe, atype, opptype, mod, move=None):
+    if not fe: return mod
+    if fe == 'CAVE' and opptype == 'FLYING' and atype == 'GROUND': mod = 1.0
+    if fe == 'HOLY':
+        if opptype in ('DARK', 'GHOST') and atype == 'NORMAL': mod = 2.0
+        if opptype == 'GHOST' and move == 'SPIRITBREAK': mod = 2.0
+    if fe == 'UNDERWATER' and opptype == 'WATER' and atype == 'WATER': mod = 1.0
+    if fe == 'FAIRYTALE' and opptype == 'DRAGON' and atype == 'STEEL': mod = 2.0
+    if fe == 'GLITCH':
+        if atype == 'DRAGON': mod = 1.0
+        if atype == 'GHOST' and opptype == 'PSYCHIC': mod = 0.0
+        if atype == 'BUG' and opptype == 'POISON': mod = 2.0
+        if atype == 'POISON' and opptype == 'BUG': mod = 2.0
+        if atype == 'ICE' and opptype == 'FIRE': mod = 1.0
+        if atype == 'DARK' and opptype == 'STEEL': mod = 0.5
+        if atype == 'GHOST' and opptype == 'STEEL': mod = 0.5
+    if fe == 'HAUNTED':
+        if opptype == 'NORMAL' and atype == 'GHOST': mod = 1.0
+        if opptype == 'GHOST' and move == 'SPIRITBREAK': mod = 2.0
+    if fe == 'BEWITCHED':
+        if opptype == 'GRASS' and atype == 'POISON': mod = 1.0
+        if opptype == 'STEEL' and atype == 'FAIRY': mod = 2.0
+        if opptype == 'DARK' and atype == 'FAIRY': mod = 1.0
+        if opptype == 'FAIRY' and atype == 'DARK': mod = 1.0
+    if fe == 'SKY' and opptype == 'FLYING' and move == 'BONEMERANG': mod = 2.0
+    if fe == 'INFERNAL' and opptype == 'GHOST' and atype == 'FIRE': mod = 2.0
+    if fe == 'DEEPEARTH' and atype == 'GROUND' and opptype == 'GROUND': mod = 0.5
+    if fe == 'DEUXFINALIS':
+        if opptype == 'ROCK' and atype == 'GHOST': mod = 0.5
+        if atype == 'FAIRY': mod = 1.0
+    return mod

@@ -6,90 +6,90 @@
   "pairs": [
    {
     "foe": "Murkrow",
-    "mon": "Toxtricity (Aevian Form)",
-    "ability": "PUNKROCK",
-    "dealt": 126,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 71,
     "taken": 0,
     "ok": true,
-    "setup": false,
+    "setup": "Swords Dance",
     "wincons": [
      {
       "what": "Healing",
       "answers": [
-       "Taunt (Zoroark)"
+       "Knock Off (Crawdaunt)"
       ]
      },
      {
       "what": "Perish Song",
       "answers": [
-       "Taunt (Zoroark)"
+       "teach Taunt (Crawdaunt)"
       ]
      }
     ]
    },
    {
     "foe": "Gothitelle",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 88,
-    "taken": 45,
+    "mon": "Crawdaunt",
+    "ability": "ADAPTABILITY",
+    "dealt": 74,
+    "taken": 10,
     "ok": true,
     "setup": "Swords Dance",
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "Safeguard (Oranguru)"
+       "teach Safeguard (Barbaracle)"
       ]
      }
     ]
    },
    {
     "foe": "Gengar",
-    "mon": "Oranguru",
-    "ability": "INNERFOCUS",
-    "dealt": 111,
-    "taken": 0,
+    "mon": "Toxtricity (Aevian Form)",
+    "ability": "PUNKROCK",
+    "dealt": 130,
+    "taken": 64,
     "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "Safeguard (Oranguru)"
+       "teach Safeguard (Barbaracle)"
       ]
      },
      {
       "what": "Perish Song",
       "answers": [
-       "Taunt (Zoroark)"
+       "teach Taunt (Crawdaunt)"
       ]
      }
     ]
    },
    {
     "foe": "Houndstone",
-    "mon": "Zoroark (Hisuian Form)",
-    "ability": "ILLUSION",
-    "dealt": 108,
-    "taken": 0,
-    "ok": true,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 6,
+    "taken": 87,
+    "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Ninetales",
-    "mon": "Amoonguss",
-    "ability": "REGENERATOR",
-    "dealt": 11,
-    "taken": 42,
-    "ok": false,
+    "mon": "Barbaracle",
+    "ability": "TOUGHCLAWS",
+    "dealt": 93,
+    "taken": 32,
+    "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "Safeguard (Oranguru)"
+       "teach Safeguard (Barbaracle)"
       ]
      }
     ]

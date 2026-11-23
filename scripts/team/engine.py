@@ -9,6 +9,8 @@ Rules mirrored from the user's workbook:
 import json, math, os, re, sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from dataset import Data
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'gamedata'))
+from fields import field_typemod as _FTM, GUIDE_TO_FE as _G2FE
 from recommend import (move_base_value, ability_move_mult, ability_stat_mult, EXCLUDE, TWO_TURN, type_eff as _te)
 import crests
 from bosses import load_battles, load_battles_walk, FIELD, HIGH_STRIKER
@@ -106,10 +108,12 @@ class Engine:
                 b['format'] = os.environ['FORCE_FORMAT']
 
     # ------------------------------------------------------------ helpers
-    def chart_eff(self, atk_type, def_types):
+    def chart_eff(self, atk_type, def_types, fe=None, move=None):
         e = 1.0
         for t in def_types:
-            e *= _te(atk_type, t.capitalize(), self.D.chart)
+            m_ = _te(atk_type, t.capitalize(), self.D.chart)
+            if fe: m_ = _FTM(fe, atk_type, t.upper(), m_, move)   # 23 Nov: field type-chart overrides (Battle_Move.rb pbTypeModifier)
+            e *= m_
         return e
 
     def move_id(self, name):
@@ -284,7 +288,8 @@ class Engine:
             Dv *= 1.5
         # type effectiveness + immunities
         gravity = field.get('gravity')
-        eff = self.chart_eff(mtype, [t for t in dfn['types'] if not (gravity and mtype == 'GROUND' and t == 'FLYING')])
+        _fe = None if os.environ.get('NOFIELD') else _G2FE.get(_fo or battle['field'])
+        eff = self.chart_eff(mtype, [t for t in dfn['types'] if not (gravity and mtype == 'GROUND' and t == 'FLYING')], _fe, mid)
         dab = dfn['ability']
         if gravity and mtype == 'GROUND' and dab == 'LEVITATE':
             dab = ''
@@ -299,12 +304,12 @@ class Engine:
         if dab == 'WONDERGUARD' and eff <= 1:
             eff = 0
         if dfn.get('crest'):
-            eff = crests.def_typemod(dfn, mtype, eff, lambda a, t: self.chart_eff(a, [t]))
+            eff = crests.def_typemod(dfn, mtype, eff, lambda a, t: self.chart_eff(a, [t], _fe, mid))
             mult *= crests.def_final(att, dfn, eff)
         # field second type (game: Battle_Move.rb fieldTypeChangeModifier multiplies a 2nd type in, like Flying Press)
         _t2 = (field.get('mtype2') or {}).get(mid) or (field.get('add') or {}).get(mtype)
         if _t2 and eff:
-            eff *= self.chart_eff(_t2, dfn['types'])
+            eff *= self.chart_eff(_t2, dfn['types'], _fe, mid)
         if eff == 0:
             return 0.0
         if dab in ('FILTER', 'SOLIDROCK', 'PRISMARMOR') and eff > 1:

@@ -233,13 +233,17 @@ def main():
         print(out_)
         env.update(TEAM_NAMES=json.dumps(st['team']), MOVES=json.dumps(st['moves']))
 
+    if st.get('mode') == 'planner':   # 23 Nov (Vincent): the Team Planner picks the whole six from Party + Active for the next fight
+        json.dump(dict(st, export=new), open(STATE, 'w'), indent=1, ensure_ascii=False)
+        print(sh(['../scripts/team/planner.py'], dict(env, BASE_RUN=f'r{run}')).strip())
+        _s3 = json.load(open(STATE)); st['team'] = _s3['team']; st['moves'] = _s3['moves']; st['abilities'] = _s3['abilities']
     # 6) team rules + team search
     stat = json.loads(sh(['../scripts/team/chapter_rules.py', '.', '30', '--status'], env))
     print(f"Chapter rules: {stat['fights']} hard fights; 3+ weak {stat['weak3'] or 'none'}; unresisted {stat['nores'] or 'none'}; "
           f"misses {[x['foe'] + ' (' + x['fight'] + ')' for x in stat['misses']]}")
     if st.get('core'):   # core-of-4 model: core vs the whole chapter, the six vs the fight it is built for
         st['core_check'] = json.loads(sh(['../scripts/team/chapter_rules.py', '.', '30', '--sets'],
-                                         dict(env, CORE_NAMES=json.dumps(st['core']), FIGHT_KEY=st.get('fight') or '', ALSO_OVF='|'.join(st['team']), FORCE_POOL='|'.join(st['team']))).strip().splitlines()[-1])
+                                         dict(env, CORE_NAMES=json.dumps(st['team'] if st.get('mode') == 'planner' else st['core']), FIGHT_KEY=st.get('fight') or '', ALSO_OVF='|'.join(st['team']), FORCE_POOL='|'.join(st['team']))).strip().splitlines()[-1])
         print('Core / fight rules:', st['core_check'])
     if not a.quick:
         print('Team search (36-mon pool, ~1-2 min)...')
@@ -248,7 +252,9 @@ def main():
               f"({', '.join(tc['top'][0]['team'])})" if tc['top'] else '  no six passes')
         st['team_check'] = tc
 
-    order_team(st); json.dump(dict(st, export=new), open(STATE, 'w'), indent=1, ensure_ascii=False)   # flex order before the page
+    if st.get('mode') != 'planner':
+        order_team(st)
+    json.dump(dict(st, export=new), open(STATE, 'w'), indent=1, ensure_ascii=False)   # flex order before the page
     # 7) page
     pe = dict(env, EXPORT_LABEL=label)
     if st.get('fight'): pe['FIGHT'] = st['fight']
@@ -262,7 +268,8 @@ def main():
     sh(['../scripts/team/tier_all.py'], dict(env, BASE_RUN=f'r{run}', CREST_RUN=f'rc{run}', ALL_RUN=f'r{run}all'))
     sh(['../scripts/team/tier_tabs.py', OUT], pe)
     sh(['../scripts/team/builder.py', OUT], pe)   # 22 Nov: Team Builder tab (how each core slot was picked)
-    sh(['../scripts/team/community_tab.py', OUT], pe)   # 23 Nov: Community tab (saved community inputs, consolidated)
+    sh(['../scripts/team/community_tab.py', OUT], pe)
+    sh(['../scripts/team/planner_tab.py', OUT], pe)   # 23 Nov: Team Planner tab (the six for the next fight)   # 23 Nov: Community tab (saved community inputs, consolidated)
     # 22 Nov (Vincent): Cores tab removed; cores.py no longer runs (CORES=1 to run it for chat)
     if os.environ.get('CORES'): sh(['../scripts/team/cores.py', OUT], pe)
     sh(['../scripts/team/counters_tab.py', OUT], pe)

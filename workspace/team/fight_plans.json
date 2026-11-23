@@ -12,43 +12,45 @@
   ],
   "swaps": [
    {
-    "name": "Oranguru",
-    "ab": "INNERFOCUS",
+    "name": "Crawdaunt",
+    "ab": "ADAPTABILITY",
     "moves": [
-     "Psychic"
+     "Knock Off",
+     "Crabhammer"
     ],
-    "setup": null,
+    "setup": "Swords Dance",
     "where": "Active",
-    "dump": 490,
-    "nature": "Modest",
+    "dump": 456,
+    "nature": "Adamant",
     "evs": {
-     "SpA": 252,
+     "Atk": 252,
      "HP": 252,
      "SpD": 4
     },
     "types": [
-     "NORMAL",
-     "PSYCHIC"
+     "WATER",
+     "DARK"
     ]
    },
    {
-    "name": "Zoroark (Hisuian Form)",
-    "ab": "ILLUSION",
+    "name": "Barbaracle",
+    "ab": "TOUGHCLAWS",
     "moves": [
-     "Bitter Malice"
+     "Razor Shell",
+     "Stone Edge"
     ],
-    "setup": "Nasty Plot",
-    "where": "Active",
-    "dump": 518,
-    "nature": "Modest",
+    "setup": "Shell Smash",
+    "where": "Overflow",
+    "dump": 19,
+    "nature": "Adamant",
     "evs": {
-     "SpA": 252,
-     "Spe": 252,
-     "Def": 4
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
     },
     "types": [
-     "NORMAL",
-     "GHOST"
+     "ROCK",
+     "WATER"
     ]
    }
   ],
@@ -57,90 +59,90 @@
   "pairs": [
    {
     "foe": "Murkrow",
-    "mon": "Toxtricity (Aevian Form)",
-    "ability": "PUNKROCK",
-    "dealt": 126,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 71,
     "taken": 0,
     "ok": true,
-    "setup": false,
+    "setup": "Swords Dance",
     "wincons": [
      {
       "what": "Healing",
       "answers": [
-       "Taunt (Zoroark)"
+       "Knock Off (Crawdaunt)"
       ]
      },
      {
       "what": "Perish Song",
       "answers": [
-       "Taunt (Zoroark)"
+       "teach Taunt (Crawdaunt)"
       ]
      }
     ]
    },
    {
     "foe": "Gothitelle",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 88,
-    "taken": 45,
+    "mon": "Crawdaunt",
+    "ability": "ADAPTABILITY",
+    "dealt": 74,
+    "taken": 10,
     "ok": true,
     "setup": "Swords Dance",
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "Safeguard (Oranguru)"
+       "teach Safeguard (Barbaracle)"
       ]
      }
     ]
    },
    {
     "foe": "Gengar",
-    "mon": "Oranguru",
-    "ability": "INNERFOCUS",
-    "dealt": 111,
-    "taken": 0,
+    "mon": "Toxtricity (Aevian Form)",
+    "ability": "PUNKROCK",
+    "dealt": 130,
+    "taken": 64,
     "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "Safeguard (Oranguru)"
+       "teach Safeguard (Barbaracle)"
       ]
      },
      {
       "what": "Perish Song",
       "answers": [
-       "Taunt (Zoroark)"
+       "teach Taunt (Crawdaunt)"
       ]
      }
     ]
    },
    {
     "foe": "Houndstone",
-    "mon": "Zoroark (Hisuian Form)",
-    "ability": "ILLUSION",
-    "dealt": 108,
-    "taken": 0,
-    "ok": true,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 6,
+    "taken": 87,
+    "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Ninetales",
-    "mon": "Amoonguss",
-    "ability": "REGENERATOR",
-    "dealt": 11,
-    "taken": 42,
-    "ok": false,
+    "mon": "Barbaracle",
+    "ability": "TOUGHCLAWS",
+    "dealt": 93,
+    "taken": 32,
+    "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "Safeguard (Oranguru)"
+       "teach Safeguard (Barbaracle)"
       ]
      }
     ]
@@ -161,71 +163,23 @@
   ],
   "nores": [],
   "leads": [
-   "Golisopod (Aevian Form)",
-   "Zoroark (Hisuian Form)"
+   "Crawdaunt",
+   "Barbaracle"
   ],
   "lead_foes": [
    "Murkrow",
    "Gothitelle"
   ],
-  "lead_taken": 95,
+  "lead_taken": 53,
   "sim": null,
   "lead_ok": true,
   "alts": [
-   {
-    "swaps": [
-     "Zoroark (Hisuian Form)",
-     "Mr. Mime"
-    ],
-    "score": 45.39,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Zoroark (Hisuian Form)",
-     "Musharna (Aevian Form)"
-    ],
-    "score": 45.19,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Zoroark (Hisuian Form)",
-     "Solrock (Solrock Dominant Fusion)"
-    ],
-    "score": 45.02,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Squawkabilly (White Plumage)",
-     "Solrock (Solrock Dominant Fusion)"
-    ],
-    "score": 44.76,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Obstagoon",
-     "Barbaracle"
-    ],
-    "score": 44.73,
-    "counters": 4
-   },
    {
     "swaps": [
      "Crawdaunt",
      "Barbaracle"
     ],
     "score": 44.73,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Chandelure",
-     "Obstagoon"
-    ],
-    "score": 44.72,
     "counters": 4
    },
    {
@@ -254,14 +208,6 @@
    },
    {
     "swaps": [
-     "Cursola",
-     "Obstagoon"
-    ],
-    "score": 44.67,
-    "counters": 4
-   },
-   {
-    "swaps": [
      "Crawdaunt",
      "Chandelure"
     ],
@@ -274,6 +220,14 @@
      "Cursola"
     ],
     "score": 44.64,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Zoroark (Hisuian Form)",
+     "Mr. Mime"
+    ],
+    "score": 44.63,
     "counters": 4
    },
    {
@@ -312,14 +266,6 @@
     "swaps": [
      "Persian (Alolan Form)",
      "Barbaracle"
-    ],
-    "score": 44.55,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Solrock (Solrock Dominant Fusion)",
-     "Obstagoon"
     ],
     "score": 44.55,
     "counters": 4
@@ -374,6 +320,14 @@
    },
    {
     "swaps": [
+     "Musharna (Aevian Form)",
+     "Zoroark (Hisuian Form)"
+    ],
+    "score": 44.42,
+    "counters": 4
+   },
+   {
+    "swaps": [
      "Zoroark",
      "Cursola"
     ],
@@ -398,23 +352,71 @@
    },
    {
     "swaps": [
-     "Diggersby",
-     "Solrock (Solrock Dominant Fusion)"
+     "Solrock (Solrock Dominant Fusion)",
+     "Zoroark (Hisuian Form)"
     ],
-    "score": 34.8,
+    "score": 44.29,
     "counters": 4
    },
    {
     "swaps": [
-     "Braviary",
-     "Solrock (Solrock Dominant Fusion)"
+     "Musharna (Aevian Form)",
+     "Barbaracle"
     ],
-    "score": 34.8,
+    "score": 34.76,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Musharna (Aevian Form)",
+     "Chandelure"
+    ],
+    "score": 34.75,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Musharna (Aevian Form)",
+     "Arcanine (Hisuian Form)"
+    ],
+    "score": 34.73,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Musharna (Aevian Form)",
+     "Cursola"
+    ],
+    "score": 34.7,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Musharna (Aevian Form)",
+     "Rampardos"
+    ],
+    "score": 34.7,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Barbaracle",
+     "Muk (Alolan Form)"
+    ],
+    "score": 34.65,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Chandelure",
+     "Muk (Alolan Form)"
+    ],
+    "score": 34.65,
     "counters": 4
    }
   ],
   "note": "",
-  "hand": true
+  "hand": false
  },
  "spector2": {
   "key": "spector2",
@@ -429,36 +431,15 @@
   ],
   "swaps": [
    {
-    "name": "Zoroark (Hisuian Form)",
-    "ab": "ILLUSION",
+    "name": "Muk (Alolan Form)",
+    "ab": "POISONTOUCH",
     "moves": [
-     "Bitter Malice"
-    ],
-    "setup": "Nasty Plot",
-    "where": "Active",
-    "dump": 518,
-    "nature": "Modest",
-    "evs": {
-     "SpA": 252,
-     "Spe": 252,
-     "Def": 4
-    },
-    "types": [
-     "NORMAL",
-     "GHOST"
-    ]
-   },
-   {
-    "name": "Pangoro",
-    "ab": "SCRAPPY",
-    "moves": [
-     "Bullet Punch",
-     "Crunch",
-     "Storm Throw"
+     "Knock Off",
+     "Clear Smog"
     ],
     "setup": null,
     "where": "Active",
-    "dump": 492,
+    "dump": 488,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -466,12 +447,97 @@
      "SpD": 4
     },
     "types": [
-     "FIGHTING",
+     "POISON",
      "DARK"
+    ]
+   },
+   {
+    "name": "Glalie (Aevian Form)",
+    "ab": "GRASSYSURGE",
+    "moves": [
+     "Grassy Glide",
+     "Wood Hammer",
+     "Rock Slide"
+    ],
+    "setup": null,
+    "where": "Active",
+    "dump": 473,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "GRASS",
+     "ROCK"
+    ]
+   },
+   {
+    "name": "Musharna (Aevian Form)",
+    "ab": "TOUGHCLAWS",
+    "moves": [
+     "Shadow Claw",
+     "Play Rough"
+    ],
+    "setup": null,
+    "where": "Active",
+    "dump": 489,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "DARK",
+     "FAIRY"
+    ]
+   },
+   {
+    "name": "Swampert",
+    "ab": "TORRENT",
+    "moves": [
+     "Earthquake",
+     "Rock Slide",
+     "Hammer Arm"
+    ],
+    "setup": null,
+    "where": "Active",
+    "dump": 503,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "WATER",
+     "GROUND"
+    ]
+   },
+   {
+    "name": "Clodsire",
+    "ab": "UNAWARE",
+    "moves": [
+     "Earthquake"
+    ],
+    "setup": null,
+    "where": "Active",
+    "dump": 454,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "POISON",
+     "GROUND"
     ]
    }
   ],
-  "counters": 4,
+  "counters": 3,
   "n": 6,
   "pairs": [
    {
@@ -486,10 +552,10 @@
    },
    {
     "foe": "Sigilyph",
-    "mon": "Amoonguss",
-    "ability": "REGENERATOR",
-    "dealt": 17,
-    "taken": 79,
+    "mon": "Glalie (Aevian Form)",
+    "ability": "GRASSYSURGE",
+    "dealt": 110,
+    "taken": 81,
     "ok": false,
     "setup": false,
     "wincons": []
@@ -516,30 +582,32 @@
    },
    {
     "foe": "Typhlosion",
-    "mon": "Pangoro",
-    "ability": "SCRAPPY",
-    "dealt": 106,
-    "taken": 145,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 8,
+    "taken": 240,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Banette",
-    "mon": "Zoroark (Hisuian Form)",
-    "ability": "ILLUSION",
-    "dealt": 130,
-    "taken": 58,
-    "ok": true,
+    "mon": "Muk (Alolan Form)",
+    "ability": "POISONTOUCH",
+    "dealt": 75,
+    "taken": 64,
+    "ok": false,
     "setup": false,
     "wincons": []
    }
   ],
-  "weak3": [],
+  "weak3": [
+   "GROUND"
+  ],
   "nores": [],
   "leads": [
-   "Amoonguss",
-   "Golisopod (Aevian Form)"
+   "Golisopod (Aevian Form)",
+   "Glalie (Aevian Form)"
   ],
   "lead_foes": [
    "Stonjourner",
@@ -551,30 +619,6 @@
   "alts": [
    {
     "swaps": [
-     "Zoroark (Hisuian Form)",
-     "Pangoro"
-    ],
-    "score": 44.21,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Zoroark (Hisuian Form)",
-     "Scrafty"
-    ],
-    "score": 44.19,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Zoroark (Hisuian Form)",
-     "Roserade (Aevian Form)"
-    ],
-    "score": 44.17,
-    "counters": 4
-   },
-   {
-    "swaps": [
      "Palossand",
      "Mabosstiff"
     ],
@@ -583,10 +627,10 @@
    },
    {
     "swaps": [
-     "Zoroark (Hisuian Form)",
-     "Gastrodon (West Aevian Form)"
+     "Mabosstiff",
+     "Runerigus"
     ],
-    "score": 44.13,
+    "score": 44.14,
     "counters": 4
    },
    {
@@ -615,10 +659,26 @@
    },
    {
     "swaps": [
+     "Zoroark (Hisuian Form)",
+     "Scrafty"
+    ],
+    "score": 44.02,
+    "counters": 4
+   },
+   {
+    "swaps": [
      "Glalie (Aevian Form)",
      "Scrafty"
     ],
     "score": 44.01,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Scrafty",
+     "Runerigus"
+    ],
+    "score": 44.0,
     "counters": 4
    },
    {
@@ -655,10 +715,26 @@
    },
    {
     "swaps": [
+     "Zoroark (Hisuian Form)",
+     "Pangoro"
+    ],
+    "score": 43.99,
+    "counters": 4
+   },
+   {
+    "swaps": [
      "Glalie (Aevian Form)",
      "Pangoro"
     ],
     "score": 43.98,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Pangoro",
+     "Runerigus"
+    ],
+    "score": 43.97,
     "counters": 4
    },
    {
@@ -679,10 +755,42 @@
    },
    {
     "swaps": [
+     "Zoroark",
+     "Runerigus"
+    ],
+    "score": 43.91,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Zoroark (Hisuian Form)",
+     "Roserade (Aevian Form)"
+    ],
+    "score": 43.88,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Zoroark (Hisuian Form)",
+     "Gastrodon (West Aevian Form)"
+    ],
+    "score": 43.84,
+    "counters": 4
+   },
+   {
+    "swaps": [
      "Palossand",
      "Crawdaunt"
     ],
     "score": 34.07,
+    "counters": 3
+   },
+   {
+    "swaps": [
+     "Crawdaunt",
+     "Runerigus"
+    ],
+    "score": 34.06,
     "counters": 3
    },
    {
@@ -695,11 +803,11 @@
    },
    {
     "swaps": [
-     "Zoroark (Hisuian Form)",
-     "Sylveon"
+     "Persian (Alolan Form)",
+     "Runerigus"
     ],
-    "score": 24.33,
-    "counters": 5
+    "score": 33.91,
+    "counters": 3
    },
    {
     "swaps": [
@@ -715,6 +823,14 @@
      "Barraskewda"
     ],
     "score": 24.06,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Sylveon",
+     "Zoroark (Hisuian Form)"
+    ],
+    "score": 24.04,
     "counters": 5
    },
    {
@@ -740,58 +856,10 @@
     ],
     "score": 24.03,
     "counters": 5
-   },
-   {
-    "swaps": [
-     "Vaporeon",
-     "Pangoro"
-    ],
-    "score": 24.01,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Scrafty",
-     "Floatzel"
-    ],
-    "score": 23.99,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Pangoro",
-     "Floatzel"
-    ],
-    "score": 23.97,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Zoroark (Hisuian Form)",
-     "Sandslash"
-    ],
-    "score": 14.3,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Zoroark (Hisuian Form)",
-     "Gastrodon"
-    ],
-    "score": 14.29,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Diggersby",
-     "Zoroark (Hisuian Form)"
-    ],
-    "score": 14.28,
-    "counters": 4
    }
   ],
   "note": "",
-  "hand": false
+  "hand": true
  },
  "jenner9": {
   "key": "jenner9",

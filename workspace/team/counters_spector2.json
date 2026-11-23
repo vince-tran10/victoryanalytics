@@ -2,7 +2,7 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 4,
+  "counters": 3,
   "pairs": [
    {
     "foe": "Stonjourner",
@@ -16,10 +16,10 @@
    },
    {
     "foe": "Sigilyph",
-    "mon": "Amoonguss",
-    "ability": "REGENERATOR",
-    "dealt": 17,
-    "taken": 79,
+    "mon": "Glalie (Aevian Form)",
+    "ability": "GRASSYSURGE",
+    "dealt": 110,
+    "taken": 81,
     "ok": false,
     "setup": false,
     "wincons": []
@@ -46,21 +46,21 @@
    },
    {
     "foe": "Typhlosion",
-    "mon": "Pangoro",
-    "ability": "SCRAPPY",
-    "dealt": 106,
-    "taken": 145,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 8,
+    "taken": 240,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Banette",
-    "mon": "Zoroark (Hisuian Form)",
-    "ability": "ILLUSION",
-    "dealt": 130,
-    "taken": 58,
-    "ok": true,
+    "mon": "Muk (Alolan Form)",
+    "ability": "POISONTOUCH",
+    "dealt": 75,
+    "taken": 64,
+    "ok": false,
     "setup": false,
     "wincons": []
    }

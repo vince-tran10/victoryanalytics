@@ -1,0 +1,15 @@
+Muk (Alolan Form) | Active 60 | Poison Touch  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Knock Off', 'Gastro Acid', 'Clear Smog', 'Protect'] | Black Sludge (already holding) | 
+Vaporeon | Active 60 | Water Absorb  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Wish', 'Shadow Ball', 'Hydro Pump', 'Protect'] | Mystic Water (already holding) | 
+Golisopod (Aevian Form) | Active 60 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Bone Rush', 'Pin Missile', 'Swords Dance', 'Protect'] | Soft Sand (already holding) | 
+Scrafty | Active 60 | Moxie  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Crunch', 'High Jump Kick', 'Fake Out', 'Protect'] | Black Glasses (already holding) | 
+Swampert | Active 60 | Torrent  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Earthquake', 'Rock Slide', 'Hammer Arm', 'Protect'] | Focus Sash (already holding) | 
+Clefable | Active 60 | Magic Guard  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Moonblast', 'Thunder Wave', 'Safeguard', 'Protect'] | Fairy Feather (already holding) | 
+jenner 0.881 -> 1.346 leads ['Scrafty'] swaps [('Unfezant (Aevian Form Male)', 'Vaporeon', 0.076), ('Azumarill', 'Vaporeon', 0.075), ('Typhlosion', 'Vaporeon', 0.075)]
+danni 1.517 -> 1.581 leads ['Scrafty', 'Golisopod (Aevian Form)'] swaps [('Toxtricity (Aevian Form)', 'Swampert', 0.204), ('Chandelure', 'Swampert', 0.203), ('Arcanine', 'Swampert', 0.194)]
+troye 0.948 -> 1.404 leads ['Golisopod (Aevian Form)', 'Vaporeon'] swaps [('Arcanine', 'Swampert', 0.19), ('Toxtricity (Aevian Form)', 'Swampert', 0.176), ('Talonflame', 'Swampert', 0.138)]
+zena 1.021 -> 1.361 leads ['Swampert'] swaps [('Meganium', 'Vaporeon', 0.171), ('Venusaur', 'Vaporeon', 0.171), ('Decidueye', 'Vaporeon', 0.15)]
+marcie 1.143 -> 1.336 leads ['Golisopod (Aevian Form)', 'Clefable'] swaps [('Leavanny (Aevian Form)', 'Swampert', 0.317), ('Toxtricity (Aevian Form)', 'Swampert', 0.29), ('Arcanine', 'Swampert', 0.277)]
+spector 0.966 -> 1.292 leads ['Clefable', 'Golisopod (Aevian Form)'] swaps [('Chandelure', 'Vaporeon', 0.103), ('Mabosstiff', 'Swampert', 0.08), ('Arcanine (Hisuian Form)', 'Swampert', 0.077)]
+spector2 0.705 -> 1.193 leads ['Golisopod (Aevian Form)', 'Vaporeon'] swaps [('Mabosstiff', 'Muk (Alolan Form)', 0.068), ('Arctovish', 'Muk (Alolan Form)', 0.04), ('Chandelure', 'Muk (Alolan Form)', 0.035)]
+jenner9 0.336 -> 0.72 leads ['Scrafty'] swaps [('Florges', 'Swampert', 0.134), ('Toxtricity (Aevian Form)', 'Swampert', 0.112), ('Arcanine (Hisuian Form)', 'Swampert', 0.09)]
+erick 0.819 -> 1.058 leads ['Golisopod (Aevian Form)', 'Scrafty'] swaps [('Gallade', 'Vaporeon', 0.186), ('Chandelure', 'Swampert', 0.163), ('Toxtricity (Aevian Form)', 'Vaporeon', 0.122)]

@@ -1,7 +1,10 @@
 {
- "518": "Move into the party (Spector (day) lineup)",
- "474": "Move into the party (Spector (day) lineup)",
- "490": "Move into the party (Spector (day) lineup)",
- "442": "Move into the party (Spector (day) lineup)",
- "501": "Move into the party (Spector (day) lineup)"
+ "1": "Move out of the party, back to the Active box",
+ "473": "Move into the party (Spector (night) lineup)",
+ "474": "Move into the party (Spector (night) lineup)",
+ "488": "Move into the party (Spector (night) lineup)",
+ "489": "Move into the party (Spector (night) lineup)",
+ "503": "Move into the party (Spector (night) lineup)",
+ "454": "Move into the party (Spector (night) lineup)",
+ "442": "Move to Overflow"
 }
