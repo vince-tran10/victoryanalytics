@@ -224,7 +224,7 @@ import html as _html
 _E = _html.escape
 
 
-def render(fs, post, disp=lambda x: x, miss='flex'):   # one row per kind of threat; post = after the pick: ✓ / ✗ with who answers each one
+def render(fs, post, disp=lambda x: x, miss='flex', todo=False):   # one row per kind of threat; post = after the pick: ✓ / ✗ with who answers each one
     li = ''
     for g in group(fs):
         sub = ''
@@ -236,6 +236,6 @@ def render(fs, post, disp=lambda x: x, miss='flex'):   # one row per kind of thr
             else:
                 sub += f'<div class="pans">{_E(who + short(x) if who else x["text"])}</div>'
         st_ = '' if (not post or g['ok'] is None) else (' pw-ok' if g['ok'] else ' pw-no')
-        mark = '•' if (not post or g['ok'] is None) else ('✓' if g['ok'] else '✗')
-        li += f'<li class="{st_.strip() or "pw-nt"}"><b>{mark}</b> <b>{_E(g["label"])}</b>' + ('' if post else f' <span class="pmuted">{_E(g["how"])}</span>') + sub + '</li>'
+        mark = '☐' if todo else '•' if (not post or g['ok'] is None) else ('✓' if g['ok'] else '✗')
+        li += f'<li class="{st_.strip() or "pw-nt"}"><b>{mark}</b> <b>{_E(g["label"])}</b>' + ('' if (post or todo) else f' <span class="pmuted">{_E(g["how"])}</span>') + sub + '</li>'
     return f'<ul class="pwin">{li}</ul>'

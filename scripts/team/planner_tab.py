@@ -29,8 +29,17 @@ h += '<article class="plc"><h3>Their team</h3><ol class="pfoes">' + ''.join(
     f'<li class="{"plead" if i < L else ""}"><span class="pn">{i + 1}</span>{SP.tag(f["sid"], "0", size="s")}<span>{E(f["name"])}</span></li>' for i, f in enumerate(foes)) + '</ol>'
 h += '</article>'
 # 23 Nov (Vincent): 2) what makes this fight hard and how to beat it in this format (before the pick)
-if P.get('brief'):
-    h += f'<article class="plc"><h3>What makes this fight hard</h3>{CB.render(P["brief"], False)}</article>'
+def _mind(items, miss):
+    return ''.join(f'<li class="{"pw-ok" if x["ok"] else "pw-no"}"><b>{"✓" if x["ok"] else "✗"}</b> {E(x["text"])}'
+                   + (f'<div class="pans">{E(", ".join(disp(w) for w in x["who"]))}</div>' if x['who'] else ('' if x['ok'] else f'<div class="pans">{E(miss)}</div>'))
+                   + '</li>' for x in items)
+if P.get('brief'):   # 23 Nov (Vincent): the Core check for THIS fight: green = the core covers it, red = what the flexes must bring
+    _cv = [dict(x, ok=x.get('core_ok'), cov=x.get('core_cov') or []) for x in P['brief']]
+    _ok = sum(1 for x in _cv if x['ok']); _no = sum(1 for x in _cv if x['ok'] is False)
+    h += (f'<article class="plc"><h3>What the flexes must cover</h3><div class="pmuted">Core: {_ok} covered, {_no} left</div>'
+          + CB.render(_cv, True, disp, 'flex')
+          + (f'<div class="psub">{E(P["format"])} mindset: core only</div><ul class="pwin">{_mind(P.get("mind_core") or [], "flex")}</ul>' if P.get('mind_core') else '')
+          + '</article>')
 # 23 Nov (Vincent): the game plan instead of rule text: leads + turn 1, then who takes each of their Pokémon
 six = P['six']; FN = [f['name'] for f in foes]
 def best_vs(j, pool):   # walls it (takes < 50%) and hits hardest; else the one that takes least
@@ -93,7 +102,7 @@ if P.get('brief'):
     _ok = sum(1 for x in P['brief'] if x['ok']); _no = sum(1 for x in P['brief'] if x['ok'] is False)
     h += (f'<article class="plc"><h3>Re-check: your six</h3><div class="pmuted">{_ok} answered, {_no} not</div>'
           + CB.render(P['brief'], True, disp, 'not covered')
-          + (f'<div class="psub">{E(P["format"])} mindset</div><ul class="pwin">{MSLI}</ul>' if MS else '') + '</article>')
+          + (f'<div class="psub">{E(P["format"])} mindset: your six</div><ul class="pwin">{_mind(P.get("mind_six") or [], "not covered")}</ul>' if P.get('mind_six') else '') + '</article>')
 # 23 Nov (Vincent): the guide's tips for this fight and how the six covers each one (collapsed)
 TP = P.get('tips') or []
 if TP:

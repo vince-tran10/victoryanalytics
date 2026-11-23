@@ -90,6 +90,17 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   line; each flex: ✓ points it answers that the core did not, Why these moves, Swap options with + / - incl. brief points and team fit),
   'Re-check: your six' (brief ✓ / ✗ + format mindset: two checks per threat, priority, safe switches, immunities). planner.py scores the
   brief (bscore: +4 per point answered, -2 per point not). Foe setup always counts (their boosted hit, field statusBuffs).
+- **TAB LAYOUT v2 (Vincent, 23 Nov, latest; replaces the two bullets above where they differ):**
+  FIGHTS: every fight left, all open (nothing folded), per card: their team + field effect only (no 'Your moves', no 'Flex').
+  CORE: 1) 'Chapter 9: fights left' (row per fight, 'What makes them hard (N)' folded under it) 2) 'What the core must cover' (☐ list per
+  fight) 3) core of 3 with chips saying WHY it belongs (its win-con tag, field use, who it beats; no raw-power line) 4) Type check
+  5) 'Core check' green = covered / red = for the flexes 6) folded at the bottom: Singles plan, Doubles plan, Who they beat, How the core
+  is picked, Close alternatives.
+  FLEX: 1) Their team 2) 'What the flexes must cover' = the Core check for THIS fight (green core covers / red for flexes) + '<Format>
+  mindset: core only' 3) 'Your 3 flexes' 4) 'Re-check: your six' (same brief + '<Format> mindset: your six'). Mindset = planner.mind_items:
+  singles = immunity to types 2+ of them use, two checks per threat (notes foes NOTHING in his boxes checks), priority (STAB or 80+ power),
+  a safe switch, speed control; doubles = disruption, speed control, spread attack, Wide Guard vs 2+ spread, Protect on almost all, no
+  hazards. Scored +8 per tick in the pick (the main check).
 - **ITEMS (Vincent, 23 Nov): only items he has.** No bag data: owned = items held by anything in his export, as many as are held (he has NO
   Choice items). ideal_builds.py swaps unowned items for an owned booster of another attack, then Focus Sash (Spe 85+) / Sitrus, and
   allocates the six's items by count (his state.items first, then core, then flexes; item_wanted keeps the ideal one). make_report5 best_item

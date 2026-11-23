@@ -322,7 +322,7 @@ CHECK = (TAKE_B < 50) & ((DEAL >= 60) | (OFF >= 2))        # member checks foe: 
 REVK = FAST & (DEAL >= 100)                                 # outspeeds and one-shots it
 def _has(i, ids): return bool({mvid(x) for x in build(NAMES[i])[2]} & ids)
 PRIO = np.array([any(int((MV.get(mvid(x)) or {}).get('priority') or 0) > 0 and int((MV.get(mvid(x)) or {}).get('basedamage') or 0) > 0
-                     and mvid(x) != 'FAKEOUT' and (MV.get(mvid(x)) or {}).get('type') in TA[n]['types'] for x in build(n)[2]) for n in NAMES])
+                     and mvid(x) != 'FAKEOUT' and ((MV.get(mvid(x)) or {}).get('type') in TA[n]['types'] or int((MV.get(mvid(x)) or {}).get('basedamage') or 0) >= 80) for x in build(n)[2]) for n in NAMES])
 PIVOT = np.array([build(n)[1] == 'REGENERATOR' or _has(i, {'UTURN', 'VOLTSWITCH', 'FLIPTURN', 'PARTINGSHOT', 'TELEPORT', 'RECOVER', 'ROOST', 'SLACKOFF',
                   'SOFTBOILED', 'MOONLIGHT', 'SYNTHESIS', 'WISH', 'SHOREUP', 'STRENGTHSAP'}) for i, n in enumerate(NAMES)])
 HAZ = np.array([_has(i, {'STEALTHROCK', 'SPIKES', 'TOXICSPIKES', 'STICKYWEB', 'KNOCKOFF'}) for i in range(NP)])
@@ -387,6 +387,30 @@ def bscore(ix):   # fast: member-alone covers (paralysis pairs are counted in th
     c = BCOV[list(ix)].sum(0)
     ok = np.where(_BBLK, c == 0, c >= _BNEED)
     return 4 * (ok & ~_BNOTE).sum() - 2 * (~ok & ~_BNOTE).sum() + 1 * np.minimum(c, 2)[_BNOTE].sum()
+def mind_items(ix):   # 23 Nov (Vincent): the format mindset as a checklist (community_inputs.json 'mindset'), for any group
+    ix = list(ix); nm = lambda xs: [NAMES[i] for i in xs]; out_ = []
+    def it(ok, text, who): out_.append(dict(ok=bool(ok), text=text, who=who))
+    for t in ('GROUND', 'ELECTRIC'):
+        if len(ATK.get(t, ())) >= 2: w = [i for i in ix if _IMM[t][i]]; it(w, f'{t.title()} immunity ({len(ATK[t])} of them use {t.title()})', nm(w))
+    if FMT == 'Singles':
+        ch = CHECK[ix].sum(0); two = [FN[j] for j in range(nF) if ch[j] >= 2]; none_ = [FN[j] for j in range(nF) if ch[j] == 0]
+        _imp = [f for f in none_ if not CHECK[:, FN.index(f)].any()]   # nothing in his boxes walls it after its boost and hits it hard
+        it(not [f for f in none_ if f not in _imp], f'Two checks per threat: {len(two)} of {nF}',
+           (['No check for ' + ', '.join(f for f in none_ if f not in _imp)] if [f for f in none_ if f not in _imp] else [])
+           + (['Nothing in your boxes checks ' + ', '.join(_imp) + ': beat them on speed / priority instead'] if _imp else []))
+        pr = [i for i in ix if PRIO[i]]; it(pr, 'Priority attack', nm(pr))
+        pv = [i for i in ix if PIVOT[i]]; it(len(pv) >= 1, 'Safe switch (Regenerator / recovery / pivot)', nm(pv))
+        sp = [i for i in ix if SCM[i].any()] + [i for i in ix if PRIO[i]]
+        it(sp, 'Speed control (paralysis / priority)', nm(list(dict.fromkeys(sp))))
+    else:
+        d_ = [i for i in ix if DISR[i]]; it(d_, 'Disruption: Fake Out / redirection / Intimidate / Snarl / Will-O-Wisp', nm(d_))
+        sc = [i for i in ix if SCM[i].any()]; it(sc, 'Speed control: Tailwind / Trick Room / Icy Wind / Electroweb / paralysis', nm(sc))
+        sp = [i for i in ix if SPRD[i]]; it(sp, 'Spread attack', nm(sp))
+        if FOE_SPREAD >= 2: wg = [i for i in ix if WGUARD[i]]; it(wg, f'Wide Guard (they carry {FOE_SPREAD} spread attacks)', nm(wg))
+        pt = [i for i in ix if _has(i, {'PROTECT', 'DETECT', 'SPIKYSHIELD', 'KINGSSHIELD', 'BANEFULBUNKER', 'SILKTRAP'})]
+        it(len(pt) >= len(ix) - 1, f'Protect on almost everyone ({len(pt)} of {len(ix)})', [])
+        hz = [i for i in ix if HAZ_ONLY[i]]; it(not hz, 'No hazards / passive moves', nm(hz))
+    return out_
 def score(ix):
     ix = list(ix); r = RM[ix]
     res = (r < 1).sum(0); weak = (r > 1).sum(0)
@@ -403,6 +427,7 @@ def score(ix):
     if FMT == 'Singles': s += mindset(ix)
     else: s += mindset_d(ix)
     s += bscore(ix)
+    s += 8 * sum(x['ok'] for x in mind_items(ix))   # 23 Nov (Vincent): the format mindset must be ticked off (the main check)
     s += 3 if FIELDV[ix].max() >= 2 else 0   # a field hijacker in the six
     if BOSS: s += 3 if BOSSB[ix].any() else -3
     return s
@@ -543,10 +568,11 @@ POOLFIT = [dict(name=NAMES[i], tier=TA[NAMES[i]]['tier'], sid=TA[NAMES[i]].get('
            for i in np.argsort(-_fit)]
 _core_ix = [i for i in best if NAMES[i] in CORE]
 _bc_core = {f['id']: ok for f, _, ok in bcheck(_core_ix)}
-BRIEF_OUT = [dict(f, cov=[[a, b] for a, b in cv], ok=ok, core_ok=_bc_core.get(f['id'])) for f, cv, ok in bcheck(best)]
+_bcc = {f['id']: cv for f, cv, _ in bcheck(_core_ix)}
+BRIEF_OUT = [dict(f, cov=[[a, b] for a, b in cv], ok=ok, core_ok=_bc_core.get(f['id']), core_cov=[[a, b] for a, b in _bcc.get(f['id'], [])]) for f, cv, ok in bcheck(best)]
 FLEXWHY = {NAMES[i]: [f['text'] for f, cv, ok in bcheck(best) if ok and any(a == NAMES[i] for a, _ in cv) and not _bc_core.get(f['id']) and f['kind'] not in ('fieldnote', 'fieldblock')]
            for i in best if NAMES[i] not in CORE}
-out = dict(fight=FK, brief=BRIEF_OUT, flexwhy=FLEXWHY, field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], types=f['types'], moves=f['moves'], item=f.get('item'), ability=f.get('ability'),
+out = dict(fight=FK, brief=BRIEF_OUT, flexwhy=FLEXWHY, mind_core=mind_items(_core_ix), mind_six=mind_items(best), field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], types=f['types'], moves=f['moves'], item=f.get('item'), ability=f.get('ability'),
            sid=f['species'], form=f.get('form')) for f in FOES], main=MAIN, atk={t: sorted(v) for t, v in ATK.items()},
            wins=[dict(win=w, foes=fs, answered_by=[NAMES[i] for i in best if ANS[i, j]]) for j, (w, fs) in enumerate(WINS)],
            emoves=[dict(foe=FN[fi], move=(MV.get(m) or {}).get('name', m), types=[t for t in mtypes(m) if t], w=round(float(w), 2)) for (fi, m, w) in EM],

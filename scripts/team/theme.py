@@ -524,18 +524,15 @@ def fight_cards():
                        + '<span class="lab">Takes</span>' + bar(q['taken'], 'take') + '</span><span class="st">'
                        + (('✓ after ' + E(q['setup'])) if q.get('setup') else ('✓' if q['ok'] else 'weak')) + '</span>' + wc_html(q) + '</li>' for q in rows)
         _bp = bar_plan_html(k, SP.tag(*(_bf or _ids[0]), size='m') if (_bf or _ids) else '') if hf.get('boss') else None
-        out += ('<details class="fc' + (' is-next' if idx == 0 else '') + '"' + (' open' if idx == 0 else '') + '>' + head
+        out += ('<details class="fc' + (' is-next' if idx == 0 else '') + '" open>' + head   # 23 Nov (Vincent): every fight open
                 + '<div class="fbody">'   # 23 Nov (Vincent): their team, field effect, your + / - moves, flex (the Flex tab's 2 picks)
                 + ((('<div class="frow ftop"><span class="fk">Their team</span>' + _fo + '</div>') if (_fo := foes_html(k, list(st['team']))) else '') if not hf.get('boss') else '')
                 + (('<div class="frow ftop"><span class="fk">Field effect</span>' + _fh + '</div>') if (_fh := field_html(hf.get('field', ''), list(st['team']), 'fx')) else '')
-                + (('<div class="frow ftop"><span class="fk">Your moves</span>' + _fm + '</div>') if (_fm := field_html(hf.get('field', ''), list(st['team']), 'mine')) else '')
-                + '<div class="frow"><span class="fk">Flex</span>' + (('<ul class="mons">' + ''.join('<li>' + tname(m_['name']) + '</li>' for m_ in _FLEXES) + '</ul>')
-                    if k == st.get('fight') and _FLEXES else '<span class="fx-note">Picked on the Flex tab when this fight is next</span>') + '</div>'
                 + ((('<div class="frow ftop"><span class="fk">Plan</span>' + _ch + '</div>') if (False and idx == 0 and (_ch := cheat_html(k))) else ''))   # 22 Nov (Vincent): Plan block removed from the page
                 + (_bp or '') + '</div></details>')   # 21 Nov (Vincent): foe -> counter list removed; boss fights keep the bar plan
     # 21 Nov (Vincent): only the upcoming fight shows; the rest fold away (fights can come out of order)
     cards_ = re.findall(r'<details class="fc.*?</details>', out, re.S)
-    if len(cards_) > 1:
+    if False and len(cards_) > 1:   # 23 Nov (Vincent): show all fights, nothing folded
         out = cards_[0] + ('<details class="later"><summary>Later fights · ' + str(len(cards_) - 1) + '</summary><div class="fcards">'
                            + ''.join(cards_[1:]) + '</div></details>')
     _all = ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick']

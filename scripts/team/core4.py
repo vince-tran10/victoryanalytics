@@ -183,70 +183,34 @@ if not OUT: sys.exit(0)
 def pill(t): return f'<span class="tp ty-{t.lower()}">{t.title()}</span>'
 # 23 Nov (Vincent): Core tab = 1) the chapter's fights left (short) 2) what makes them hard (pre-check) 3) the core 4) core check: what it
 # covers, what is left for the flexes 5) singles / doubles plan, who they beat, alternatives, type check
-def _grp(fs, post): return CB.render(fs, post)
-PRE = ''
-if MODE == 'chapter' and out.get('checks'):
-    rows_ = ''
-    for c in out['checks']:
-        nf = sum(1 for x in c['factors'] if x['ok'] is not None)
-        rows_ += (f'<li><div class="cfh"><b>{E_(c["title"])}</b><span class="pchip">{E_(c["format"])}</span><span class="pchip">{E_(c["field"])}</span></div>'
-                  f'<div class="cfs">' + ''.join(SP.tag(f.get('sid') or '', '0', size='s') for f in c['foes']) + f'</div>'
-                  f'<div class="pmuted">{nf} things to answer</div></li>')
-    PRE += f'<article class="plc"><h3>Chapter 9: fights left</h3><ul class="cfl">{rows_}</ul></article>'
-    PRE += '<article class="plc"><h3>What makes them hard</h3>' + ''.join(
-        f'<details class="pho" open><summary>{E_(c["title"])}</summary>' + _grp(c['factors'], False) + '</details>' for c in out['checks']) + '</article>'
-    POST = '<article class="plc"><h3>Core check</h3>'
-    for c in out['checks']:
-        ok_ = sum(1 for x in c['factors'] if x['ok']); no_ = sum(1 for x in c['factors'] if x['ok'] is False)
-        POST += f'<details class="pho" open><summary>{E_(c["title"])}: {ok_} covered, {no_} for the flexes</summary>' + _grp(c['factors'], True) + '</details>'
-    POST += '</article>'
-else:
-    POST = ''
-h = PRE + f'<article class="plc"><h3>Your core of {N}</h3>' + (f'<div class="pmuted">Raw power for the rest of Chapter 9: {E_(" and ".join(out["rem"]))}</div>' if MODE == 'chapter' else '') + '<ul class="bl">'
+# 23 Nov (Vincent): Core tab, top to bottom: 1) fights left (each with 'What makes them hard' folded) 2) what the core must cover
+# (unticked list) 3) the core of 3 with why each belongs 4) type check 5) core check: green = covered, red = for the flexes
+# 6) folded at the bottom: singles plan, doubles plan, who they beat, how the core is picked, close alternatives
+BT = json.load(open('team/builder.json')).get('tags', {}) if os.path.exists('team/builder.json') else {}
+def _why_core(n):
+    out_ = []
+    t_ = (BT.get(disp(n)) or {}).get('s') or []
+    if t_: out_.append(t_[0][1])
+    fu = [b for c in out['checks'] for x in c['factors'] if x['kind'] == 'fieldexploit' for a, b in x['cov'] if a == disp(n)]
+    if fu: out_.append(f'Uses the field: {fu[0]}')
+    bt = list(dict.fromkeys(f for _, f in POW[n]['beats']))
+    if bt: out_.append('Beats ' + ', '.join(bt[:2]) + (f' +{len(bt) - 2}' if len(bt) > 2 else ''))
+    return out_[:3]
+rows_ = ''
+for c in out['checks']:
+    nf = sum(1 for x in c['factors'] if x['ok'] is not None)
+    rows_ += (f'<li><div class="cfh"><b>{E_(c["title"])}</b><span class="pchip">{E_(c["format"])}</span><span class="pchip">{E_(c["field"])}</span></div>'
+              f'<div class="cfs">' + ''.join(SP.tag(f.get('sid') or '', '0', size='s') for f in c['foes']) + '</div>'
+              f'<details class="pho"><summary>What makes them hard ({nf})</summary>' + CB.render(c['factors'], False) + '</details></li>')
+h = f'<article class="plc"><h3>Chapter 9: fights left</h3><ul class="cfl">{rows_}</ul></article>'
+h += '<article class="plc"><h3>What the core must cover</h3>' + ''.join(
+    f'<div class="psub">{E_(c["title"])}</div>' + CB.render(c['factors'], False, todo=True) for c in out['checks']) + '</article>'
+h += f'<article class="plc"><h3>Your core of {N}</h3><ul class="bl">'
 for m in out['core']:
     h += (f'<li class="bc" data-dn="{E_(disp(m["name"]))}" tabindex="0" role="button"><div class="bct"><span class="tier t{m["tier"]}">{m["tier"]}</span>'
           f'{SP.tag(m["sid"], m["form"], size="s")}<b>{E_(disp(m["name"]))}</b></div><div class="bchips">'
-          + ((f'<span class="btool">Beats {out["power"][m["name"]]["wins"]} of {out["power"][m["name"]]["n"]}</span>'
-              f'<span class="bstat">One-shots {out["power"][m["name"]]["ohko"]}</span>') if m['name'] in out.get('power', {}) else '')
-          + ''.join(f'<span class="{"btool" if k == "tool" else "bstat"}">{E_(c)}</span>' for k, c in m['chips'][:1 if m['name'] in out.get('power', {}) else 3]) + '</div></li>')
+          + ''.join(f'<span class="btool">{E_(w)}</span>' for w in _why_core(m['name'])) + '</div></li>')
 h += '</ul></article>'
-def _fit(title, d):
-    return (f'<article class="plc"><h3>{title}</h3><ul class="pwin">' + ''.join(
-        f'<li class="{"pw-ok" if v else "pw-no"}"><b>{"✓" if v else "✗"}</b> {E_(k)}<div class="pans">{E_(disp(v)) if v else "A flex fills it"}</div></li>'
-        for k, v in d.items()) + '</ul></article>')
-h += POST + _fit('Singles plan', out['singles']) + _fit('Doubles plan', out['doubles'])
-P_ = out['parts']
-rows = (f'<li><b>Strength</b><span>{P_["strength"]:.1f}</span></li><li><b>Defense</b><span>{P_["defense"]:+.1f}</span></li>'
-        f'<li><b>Offense</b><span>{P_["offense"]:+.1f}</span></li><li><b>Synergy</b><span>{P_["synergy"]:+.1f}</span></li>'
-        f'<li><b>Aevian bonus</b><span>{P_["aevian"]:+.1f}</span></li>')
-mrows = ''.join(f'<li><b>{E_(disp(m["name"]))}</b><span>Tier score {m["blend"]:.2f}</span><span>Meta / community {m["meta"]:.2f}</span>'
-                f'<span>In-game (every fight in the game): better than {round(100 * (m["game"] or 0))}% of your box</span></li>' for m in out['core'])
-syn = ''.join(f'<li>{E_(w)}</li>' for w in P_['why']) or '<li>No special combos</li>'
-dfn = [f'Resists {P_["resisted"]} of 18 attacking types']
-dfn += [f'Shared weakness: {t.title()}' for t in P_['shared']] or ['No shared weakness']
-dfn += [f'3 weak to {t.title()}' for t in P_['triple']]
-ofn = [f'Super effective on {P_["covered"]} of 18 types'] + ([f'Not covered: {", ".join(t.title() for t in P_["uncovered"])}'] if P_['uncovered'] else [])
-if MODE == 'chapter':
-    _by = {}
-    for n in best:
-        for fk, f in POW[n]['beats']: _by.setdefault((REMT[fk], f), []).append(disp(n))
-    _ln = ''.join(f'<li class="pw-ok"><b>✓</b> {E_(f)} <span class="pmuted">({E_(t)})</span><div class="pans">{E_(", ".join(v))}</div></li>' for (t, f), v in _by.items())
-    _ln += ''.join(f'<li class="pw-no"><b>✗</b> {E_(x.split(": ")[1])} <span class="pmuted">({E_(x.split(": ")[0])})</span><div class="pans">Left for the flexes</div></li>' for x in out['left'])
-    h += (f'<details class="plc pho"><summary>Who they beat</summary><ul class="pwin">{_ln}</ul></details>'
-          '<details class="plc pho"><summary>How the core is picked</summary><ul class="pck"><li>Every Pokémon in your Party / Active (S / A / B) and S / A in Overflow</li>'
-          '<li>1-v-1 against every foe left this chapter: who knocks the other out first (engine: field, levels, real build)</li>'
-          '<li>Score = wins + ¼ per one-shot</li><li>The top 3; their combined reach breaks ties</li><li>Never all 3 weak to one type</li>'
-          '<li>No synergy or roles here: the flexes cover gaps per fight</li><li>Re-picked every chapter</li></ul></details>')
-if MODE != 'chapter': h += ('<article class="plc"><h3>How the core is picked</h3><ul class="pscore">' + rows + '</ul>'
-      '<details class="pho"><summary>Each member</summary><ul class="pwhy2">' + mrows + '</ul></details>'
-      '<details class="pho"><summary>Synergy</summary><ul class="pck">' + syn + '</ul></details>'
-      '<details class="pho"><summary>Defense and offense</summary><ul class="pck">' + ''.join(f'<li>{E_(x)}</li>' for x in dfn + ofn) + '</ul></details>'
-      '<details class="pho"><summary>How the score works</summary><ul class="pck"><li>Strength: the four tier scores (meta / community + in-game results)</li>'
-      '<li>Defense: no type 2+ are weak to unless someone resists it</li><li>Offense: types the four hit super effectively</li>'
-      '<li>Synergy: how they play together</li><li>Aevian: small tiebreak bonus</li><li>No opponent and no roles: flexes come per fight</li></ul></details></article>')
-if out['runners']:
-    h += '<article class="plc"><h3>Close alternatives</h3><ul class="pck">' + ''.join(
-        f'<li>{E_(disp(r["out"]))} → {E_(disp(r["in"]))} <span class="pmuted">({r["delta"]:+.1f})</span></li>' for r in out['runners']) + '</ul></article>'
 th = ''.join(f'<th>{SP.tag(m["sid"], m["form"], size="s")}</th>' for m in out['core'])
 def fx(v): return '0' if v == 0 else '¼' if v == .25 else '½' if v == .5 else '2×' if v == 2 else '4×' if v == 4 else ''
 def fc(v): return 'im' if v == 0 else 'rs' if v < 1 else 'w4' if v > 2 else 'wk' if v > 1 else ''
@@ -258,6 +222,29 @@ for t in TYPES:
            + f'<td class="cnt{" bad" if w >= 2 and not r else ""}">{w or ""}</td><td class="cnt{" ok" if r else ""}">{r or ""}</td></tr>')
 h += (f'<article class="plc"><h3>Type check</h3><div class="ptm"><table class="ptab pmt"><thead><tr><th></th>{th}<th>Weak</th><th>Res.</th></tr></thead>'
       f'<tbody>{tr}</tbody></table></div></article>')
+h += '<article class="plc"><h3>Core check</h3>'
+for c in out['checks']:
+    ok_ = sum(1 for x in c['factors'] if x['ok']); no_ = sum(1 for x in c['factors'] if x['ok'] is False)
+    h += f'<div class="psub">{E_(c["title"])}: {ok_} covered, {no_} for the flexes</div>' + CB.render(c['factors'], True)
+h += '</article>'
+def _fit(title, d):
+    return (f'<details class="plc pho"><summary>{title}</summary><ul class="pwin">' + ''.join(
+        f'<li class="{"pw-ok" if v else "pw-no"}"><b>{"✓" if v else "✗"}</b> {E_(k)}<div class="pans">{E_(disp(v)) if v else "A flex fills it"}</div></li>'
+        for k, v in d.items()) + '</ul></details>')
+h += _fit('Singles plan', out['singles']) + _fit('Doubles plan', out['doubles'])
+_by = {}
+for n in best:
+    for fk, f in POW[n]['beats']: _by.setdefault((REMT[fk], f), []).append(disp(n))
+_ln = ''.join(f'<li class="pw-ok"><b>✓</b> {E_(f)} <span class="pmuted">({E_(t)})</span><div class="pans">{E_(", ".join(v))}</div></li>' for (t, f), v in _by.items())
+_ln += ''.join(f'<li class="pw-no"><b>✗</b> {E_(x.split(": ")[1])} <span class="pmuted">({E_(x.split(": ")[0])})</span><div class="pans">Left for the flexes</div></li>' for x in out['left'])
+h += (f'<details class="plc pho"><summary>Who they beat</summary><ul class="pwin">{_ln}</ul></details>'
+      '<details class="plc pho"><summary>How the core is picked</summary><ul class="pck"><li>Every Pokémon in your Party / Active (S / A / B) and S / A in Overflow</li>'
+      '<li>1-v-1 against every foe left this chapter: who knocks the other out first (engine: field, levels, real build, their setup boost)</li>'
+      '<li>Score = wins + ¼ per one-shot</li><li>The top 3; their combined reach breaks ties</li><li>Never all 3 weak to one type</li>'
+      '<li>No synergy or roles here: the flexes cover gaps per fight</li><li>Re-picked every chapter</li></ul></details>')
+if out['runners']:
+    h += '<details class="plc pho"><summary>Close alternatives</summary><ul class="pck">' + ''.join(
+        f'<li>{E_(disp(r["out"]))} → {E_(disp(r["in"]))} <span class="pmuted">({r["delta"]:+.1f})</span></li>' for r in out['runners']) + '</ul></details>'
 css = '''<style id="core4-css">.cfl { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px } .cfh { display: flex; flex-wrap: wrap; gap: 6px; align-items: center }
 .pans.cok { color: #1f8a4c } .pans.cno { color: #b3261e } .cfs { display: flex; flex-wrap: wrap; gap: 2px } .pwin li.pw-nt b { color: var(--muted) }
 .pscore { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 13.5px }
