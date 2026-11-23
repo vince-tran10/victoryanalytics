@@ -26,7 +26,6 @@ if P.get('break_field'):
 # their team
 h += '<article class="plc"><h3>Their team</h3><ol class="pfoes">' + ''.join(
     f'<li class="{"plead" if i < L else ""}"><span class="pn">{i + 1}</span>{SP.tag(f["sid"], "0", size="s")}<span>{E(f["name"])}</span></li>' for i, f in enumerate(foes)) + '</ol>'
-h += '<div class="psub">Their attacks</div><div class="pills">' + ''.join(f'{pill(t)}<small>×{len(P["atk"][t])}</small>' for t in sorted(P['atk'], key=lambda t: -len(P['atk'][t]))) + '</div>'
 h += '</article>'
 # 23 Nov (Vincent): the game plan instead of rule text: leads + turn 1, then who takes each of their Pokémon
 six = P['six']; FN = [f['name'] for f in foes]
@@ -59,52 +58,39 @@ for m in P['six']:
                  f'<li class="{"pflag" if w["flag"] else ""}"><b>{E(w["move"])}</b><span>{E(w["why"])}</span></li>' for w in m.get('why') or []) + '</ul></details>'
              + (('<details class="pwhy" onclick="event.stopPropagation()"><summary>Swap options</summary><ul>' + ''.join(
                  f'<li><b>{SP.tag(x["sid"], x["form"], size="s")}{E(disp(x["name"]))} <span class="tier t{x["tier"]}">{x["tier"]}</span></b>'
-                 f'<span>{"Almost as good" if x["delta"] > -3 else "Weaker for this fight"}</span>'
-                 f'<span>Resists {x["res"]} of their moves</span><span>Super effective on {x["se"]}</span>'
-                 + (f'<span class="pbad">One-shot by {E(", ".join(x["oneshot"]))}</span>' if x["oneshot"] else '') + '</li>'
-                 for x in (P.get('swaps') or {}).get(m['name'], [])) + '</ul></details>') if (P.get('swaps') or {}).get(m['name']) else '')
+                 f'<span>{"About as good" if x["delta"] > -3 else "Weaker for this fight"}</span>'
+                 + ''.join(f'<span class="pgood">+ {E(g)}</span>' for g in x.get("gain") or [])
+                 + ''.join(f'<span class="pbad">- {E(g)}</span>' for g in x.get("loss") or [])
+                 + ('' if (x.get("gain") or x.get("loss")) else '<span>Same checks, lower score</span>') + '</li>'
+                 for x in (P.get('swaps') or {}).get(m['name'], [])) + '</ul></details>') if (not m.get('core') and (P.get('swaps') or {}).get(m['name'])) else '')
              + '</li>')
 h += f'<article class="plc"><h3>Your six</h3><ul class="bl">{rows}</ul></article>'
-# 23 Nov (Vincent, Jenner): speed control. One line per foe faster than 4+ of the six: who slows it
-SPD = [x for x in (P.get('speed') or []) if x['faster_than'] >= 4]
-if SPD:
-    li_ = ''.join(f'<li class="{"pw-ok" if x["tools"] else "pw-no"}"><b>{"✓" if x["tools"] else "✗"}</b> {E(x["foe"])} outspeeds {x["faster_than"]} of 6'
-                  + (''.join(f'<div class="pans">{E(disp(t.split(": ", 1)[0]))}: {E(t.split(": ", 1)[1])}</div>' for t in x['tools'][:2]) or '<div class="pans">No speed control for it</div>')
-                  + '</li>' for x in SPD)
-    h += f'<article class="plc"><h3>Speed control</h3><ul class="pwin">{li_}</ul></article>'
-# 23 Nov (Vincent): singles mindset checklist (community_inputs.json mindset.singles)
+# 23 Nov (Vincent): the FORMAT MINDSET checklist, honest: a tick only when the six really does it in this fight
 MS = P.get('mindset')
 if MS:
     _foes = [f['name'] for f in P['foes']]
-    def _ln(ok, txt, who): return (f'<li class="{"pw-ok" if ok else "pw-no"}"><b>{"✓" if ok else "✗"}</b> {E(txt)}'
-                                   + (f'<div class="pans">{E(who)}</div>' if who else '') + '</li>')
-    lay = [f for f in _foes if len(MS['layered'].get(f, [])) >= 2]
+    def _ln(ok, txt, subs): return (f'<li class="{"pw-ok" if ok else "pw-no"}"><b>{"✓" if ok else "✗"}</b> {E(txt)}'
+                                    + ''.join(f'<div class="pans">{E(x)}</div>' for x in subs) + '</li>')
+    li_ = ''
+    for f, (mv_, stg) in (MS.get('setup') or {}).items():
+        sv = MS['layered'].get(f) or []
+        li_ += _ln(bool(sv), f'{f} sets up: {mv_} (+{stg} here)', [f'Takes it after the boost: {", ".join(disp(x) for x in sv)}'] if sv else ['Nobody takes its boosted hit: KO it first or put it to sleep turn 1'])
     no_ = [f for f in _foes if not MS['layered'].get(f)]
-    rv = [f for f in _foes if MS['revenge'].get(f)]
-    li_ = _ln(not no_, f'Two checks per threat: {len(lay)} of {len(_foes)}', ('No check for ' + ', '.join(no_)) if no_ else '')
-    li_ += _ln(len(rv) >= len(_foes) // 2, f'Outspeeds and one-shots: {len(rv)} of {len(_foes)}', ', '.join(f'{f}: {disp(MS["revenge"][f][0])}' for f in rv))
-    li_ += _ln(bool(MS['priority']), 'Priority attack', ', '.join(disp(x) for x in MS['priority']) or 'None on the six')
-    li_ += _ln(len(MS['pivot']) >= 2, 'Safe switches (Regenerator / recovery / pivot)', ', '.join(disp(x) for x in MS['pivot']) or 'None')
+    two = [f for f in _foes if len(MS['layered'].get(f) or []) >= 2]
+    li_ += _ln(not no_, f'Two checks per threat: {len(two)} of {len(_foes)}', [f'{f}: ' + ', '.join(disp(x) for x in MS['layered'][f]) for f in _foes if MS['layered'].get(f)][:3] + (['No check for ' + ', '.join(no_)] if no_ else []))
+    for f in _foes:   # speed: per foe faster than most of the six
+        if sum(1 for v in MS['myspeed'].values() if v < MS['speeds'].get(f, 0)) < 4: continue
+        rv = MS['revenge'].get(f) or []; pr = (MS.get('para') or {}).get(f) or []; sc = (MS.get('sc') or {}).get(f) or []
+        if rv: li_ += _ln(True, f'{f} (Speed {MS["speeds"][f]}): outspeed and one-shot', [disp(rv[0])])
+        elif pr: li_ += _ln(True, f'{f} (Speed {MS["speeds"][f]}): paralyse, then one-shot', [disp(sc[0].split(": ")[0]) + ': ' + sc[0].split(": ")[1], f'then {disp(pr[0])} outspeeds and one-shots'])
+        elif sc: li_ += _ln(False, f'{f} (Speed {MS["speeds"][f]}): can be paralysed, nobody then one-shots it', [disp(sc[0].split(": ")[0]) + ': ' + sc[0].split(": ")[1]])
+        else: li_ += _ln(False, f'{f} (Speed {MS["speeds"][f]}): no speed answer', [])
+    li_ += _ln(bool(MS['priority']), 'Priority attack', [', '.join(disp(x) for x in MS['priority']) or 'None on the six'])
+    li_ += _ln(len(MS['pivot']) >= 2, 'Safe switches (Regenerator / recovery / pivot)', [', '.join(disp(x) for x in MS['pivot']) or 'None'])
     for t_, w_ in (MS.get('immune') or {}).items():
-        li_ += _ln(bool(w_), f'{t_.title()} immunity', ', '.join(disp(x) for x in w_) or 'None')
-    h += f'<details class="plc pho"><summary>Singles mindset</summary><ul class="pwin">{li_}</ul></details>'
-# 23 Nov (Vincent): the Planner evaluates HIS BOXES for this fight: every pool Pokemon graded, what it brings, what kills it
-PF = P.get('poolfit') or []
-def _tile(x):
-    return (f'<li class="bc pft{" pin" if x["in_six"] else ""}" data-dn="{E(disp(x["name"]))}" tabindex="0" role="button"><div class="bct">'
-            f'<span class="tier t{x["tier"]}">{x["tier"]}</span>{SP.tag(x["sid"], x["form"], size="s")}<b>{E(disp(x["name"]))}</b>'
-            + ('<span class="plt">In your six</span>' if x['in_six'] else '') + '</div><div class="bchips">'
-            f'<span class="bstat">Resists {x["res"]} of {x["nmoves"]} moves</span>'
-            + (f'<span class="btool">Super effective on {x["se"]}</span>' if x['se'] else '')
-            + (f'<span class="bstat bad">One-shot by {E(", ".join(x["oneshot"][:2]))}</span>' if x['oneshot'] else '') + '</div></li>')
-if PF:
-    h += '<article class="plc"><h3>Your boxes for this fight</h3>'
-    for g in ('Great', 'Good'):
-        xs = [x for x in PF if x['grade'] == g]
-        if xs: h += f'<div class="psub">{g} fit</div><ul class="bl">' + ''.join(_tile(x) for x in xs) + '</ul>'
-    xs = [x for x in PF if x['grade'] == 'Weak']
-    if xs: h += f'<details class="pho"><summary>Weak fit ({len(xs)})</summary><ul class="bl">' + ''.join(_tile(x) for x in xs) + '</ul></details>'
-    h += '</article>'
+        li_ += _ln(bool(w_), f'{t_.title()} immunity', [', '.join(disp(x) for x in w_) or 'None'])
+    h += f'<article class="plc"><h3>{E(P["format"])} mindset</h3><ul class="pwin">{li_}</ul></article>'
+
 # 23 Nov (Vincent): the guide's tips for this fight and how the six covers each one (collapsed)
 TP = P.get('tips') or []
 if TP:
@@ -116,31 +102,6 @@ if TP:
             ''.join(f'<div class="pans">{E(disp(x.split(": ", 1)[0]) + ": " + x.split(": ", 1)[1])}</div>' for x in n['met_by']) or '<div class="pans">Not covered on this six</div>'
             for n in t['needs']) + '</li>'
     h += f'<details class="plc pho"><summary>Guide tips: {ok_} of {len(TP)} covered</summary><ul class="pwin">{li_}</ul></details>'
-# 23 Nov (Vincent): move-level checks. 1) leads vs their leads' attacks 2) every move they have vs the six 3) super effective on each foe
-EM = P.get('emoves') or []; LM = set(P.get('lead_moves') or [])
-def mrow(k, e, mems):
-    cells = ''.join(f'<td class="{fcls(m["rm"][k])}">{fx(m["rm"][k])}</td>' for m in mems)
-    return f'<tr><th><span class="pmv">{E(e["move"])}</span>{"".join(pill(t) for t in e["types"])}</th>{cells}</tr>'
-ld = [m for m in P['six'] if m['lead']]
-if EM and ld:
-    rows_ = ''.join(mrow(k, e, ld) for k, e in enumerate(EM) if k in LM)
-    hdr = ''.join(f'<th>{SP.tag(m["sid"], m["form"], size="s")}</th>' for m in ld)
-    h += (f'<article class="plc"><h3>Your leads vs their leads</h3><div class="ptm"><table class="ptab pmt"><thead><tr><th></th>{hdr}</tr></thead>'
-          f'<tbody>{rows_}</tbody></table></div></article>')
-if EM:
-    hdr = ''.join(f'<th>{SP.tag(m["sid"], m["form"], size="s")}</th>' for m in P['six'])
-    rows_ = ''; last = None
-    for k, e in enumerate(EM):
-        if e['foe'] != last: rows_ += f'<tr class="pfo"><td colspan="{len(P["six"]) + 1}">{E(e["foe"])}</td></tr>'; last = e['foe']
-        rows_ += mrow(k, e, P['six'])
-    h += (f'<article class="plc"><h3>Their moves vs your six</h3><div class="ptm"><table class="ptab pmt"><thead><tr><th></th>{hdr}</tr></thead>'
-          f'<tbody>{rows_}</tbody></table></div></article>')
-    hdr = ''.join(f'<th>{SP.tag(m["sid"], m["form"], size="s")}</th>' for m in P['six'])
-    rows_ = ''.join(f'<tr><th>{E(f["name"])}</th>' + ''.join(
-        f'<td class="{"rs" if m["off"][j] >= 2 else "fb" if m["off"][j] > 0 else ""}">{"2×" if m["off"][j] >= 2 else "▲" if m["off"][j] > 0 else ""}</td>' for m in P['six']) + '</tr>'
-        for j, f in enumerate(foes))
-    h += (f'<article class="plc"><h3>Who hits them hard</h3><div class="ptm"><table class="ptab pmt"><thead><tr><th></th>{hdr}</tr></thead>'
-          f'<tbody>{rows_}</tbody></table></div></article>')
 # checks + alternatives
 ck = P['checks']
 lines = []
@@ -189,7 +150,7 @@ css = '''<style id="plan-css">
 .pwhy { margin-top: 4px; font-size: 12.5px } .pwhy summary { cursor: pointer; color: var(--muted); font-weight: 600 }
 .pwhy ul { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 4px } .pwhy li { display: grid; gap: 1px } .pwhy li span { color: var(--muted) }
 .pwhy li.pflag b { color: #b3261e } .pwhy li.pflag b::after { content: '  ⚠ check' }
-.pwhy .pbad { color: #b3261e } .bc.pft.pin { box-shadow: inset 0 0 0 2px var(--accent) }
+.pwhy .pbad { color: #b3261e } .pwhy .pgood { color: #1f8a4c } .bc.pft.pin { box-shadow: inset 0 0 0 2px var(--accent) }
 .plc ul.bl { padding: 0; margin: 0; list-style: none; display: grid; gap: 6px } .pho summary { cursor: pointer; font-weight: 700 } .pho ol { margin: 6px 0 0; padding-left: 20px; font-size: 13px; display: grid; gap: 3px }
 #splan + .pgrid, .pgrid { display: grid; gap: 14px }
 </style>'''

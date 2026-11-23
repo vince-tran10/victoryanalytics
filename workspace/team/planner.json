@@ -126,17 +126,17 @@
   "DARK": [
    "Stoutland"
   ],
-  "FIGHTING": [
-   "Appletun",
-   "Kommo-o"
+  "GRASS": [
+   "Appletun"
   ],
   "DRAGON": [
    "Appletun",
    "Kommo-o",
    "Noivern"
   ],
-  "GRASS": [
-   "Appletun"
+  "FIGHTING": [
+   "Appletun",
+   "Kommo-o"
   ],
   "FLYING": [
    "Noivern"
@@ -325,9 +325,7 @@
  ],
  "mindset": {
   "layered": {
-   "Stoutland": [
-    "Golisopod (Aevian Form)"
-   ],
+   "Stoutland": [],
    "Appletun": [
     "Golisopod (Aevian Form)",
     "Slowking (Galarian Form)",
@@ -347,6 +345,64 @@
    "Porygon-Z": [],
    "Kommo-o": [],
    "Klinklang": []
+  },
+  "para": {
+   "Noivern": [
+    "Toxtricity (Aevian Form)"
+   ],
+   "Porygon-Z": [
+    "Toxtricity (Aevian Form)"
+   ],
+   "Klinklang": [
+    "Veluza (Aevian Form)",
+    "Toxtricity (Aevian Form)"
+   ]
+  },
+  "setup": {
+   "Stoutland": [
+    "Work Up",
+    2
+   ],
+   "Klinklang": [
+    "Shift Gear",
+    1
+   ]
+  },
+  "speeds": {
+   "Stoutland": 165,
+   "Appletun": 63,
+   "Noivern": 219,
+   "Porygon-Z": 270,
+   "Kommo-o": 166,
+   "Klinklang": 185
+  },
+  "myspeed": {
+   "Golisopod (Aevian Form)": 77,
+   "Slowking (Galarian Form)": 55,
+   "Veluza (Aevian Form)": 171,
+   "Toxtricity (Aevian Form)": 164,
+   "Musharna (Aevian Form)": 53,
+   "Lapras (Aevian Form)": 88
+  },
+  "sc": {
+   "Stoutland": [
+    "Slowking (Galarian Form): Thunder Wave"
+   ],
+   "Appletun": [
+    "Slowking (Galarian Form): Thunder Wave"
+   ],
+   "Noivern": [
+    "Slowking (Galarian Form): Thunder Wave"
+   ],
+   "Porygon-Z": [
+    "Slowking (Galarian Form): Thunder Wave"
+   ],
+   "Kommo-o": [
+    "Slowking (Galarian Form): Thunder Wave"
+   ],
+   "Klinklang": [
+    "Slowking (Galarian Form): Thunder Wave"
+   ]
   },
   "priority": [],
   "pivot": [
@@ -1014,7 +1070,7 @@
  ],
  "alts": [
   {
-   "score": 119.9,
+   "score": 121.9,
    "in": [
     "Solrock (Solrock Dominant Fusion)"
    ],
@@ -1023,7 +1079,7 @@
    ]
   },
   {
-   "score": 117.0,
+   "score": 119.0,
    "in": [
     "Sylveon"
    ],
@@ -1032,7 +1088,7 @@
    ]
   },
   {
-   "score": 116.2,
+   "score": 118.2,
    "in": [
     "Azumarill"
    ],
@@ -1044,35 +1100,70 @@
  "swaps": {
   "Golisopod (Aevian Form)": [
    {
-    "name": "Glalie (Aevian Form)",
-    "tier": "S",
-    "sid": "GLALIE",
-    "form": "1",
-    "delta": -1.9,
-    "res": 5,
-    "se": 1,
-    "oneshot": [
-     "Klinklang"
-    ]
-   },
-   {
     "name": "Clodsire",
+    "gain": [
+     "survives Porygon-Z"
+    ],
+    "loss": [
+     "loses the check on Appletun"
+    ],
     "tier": "B",
     "sid": "CLODSIRE",
     "form": "0",
-    "delta": -3.7,
+    "delta": 0.3,
     "res": 3,
     "se": 1,
     "oneshot": []
+   },
+   {
+    "name": "Scrafty",
+    "gain": [],
+    "loss": [
+     "loses the check on Appletun"
+    ],
+    "tier": "B",
+    "sid": "SCRAFTY",
+    "form": "0",
+    "delta": -0.7,
+    "res": 4,
+    "se": 3,
+    "oneshot": [
+     "Porygon-Z"
+    ]
+   },
+   {
+    "name": "Azumarill",
+    "gain": [
+     "priority attack",
+     "speed control"
+    ],
+    "loss": [
+     "loses the check on Appletun"
+    ],
+    "tier": "B",
+    "sid": "AZUMARILL",
+    "form": "0",
+    "delta": -1.9,
+    "res": 7,
+    "se": 3,
+    "oneshot": [
+     "Porygon-Z"
+    ]
    }
   ],
   "Slowking (Galarian Form)": [
    {
     "name": "Azumarill",
+    "gain": [
+     "priority attack"
+    ],
+    "loss": [
+     "loses the check on Appletun"
+    ],
     "tier": "B",
     "sid": "AZUMARILL",
     "form": "0",
-    "delta": -2.5,
+    "delta": -4.5,
     "res": 7,
     "se": 3,
     "oneshot": [
@@ -1080,11 +1171,42 @@
     ]
    },
    {
+    "name": "Roserade (Aevian Form)",
+    "gain": [
+     "priority attack"
+    ],
+    "loss": [
+     "one-shot by Stoutland",
+     "loses the check on Appletun",
+     "one-shot by Noivern"
+    ],
+    "tier": "A",
+    "sid": "ROSERADE",
+    "form": "1",
+    "delta": -26.8,
+    "res": 2,
+    "se": 3,
+    "oneshot": [
+     "Stoutland",
+     "Noivern",
+     "Porygon-Z",
+     "Kommo-o",
+     "Klinklang"
+    ]
+   },
+   {
     "name": "Chandelure",
+    "gain": [
+     "survives Porygon-Z"
+    ],
+    "loss": [
+     "loses the check on Appletun",
+     "one-shot by Kommo-o"
+    ],
     "tier": "B",
     "sid": "CHANDELURE",
     "form": "0",
-    "delta": -18.5,
+    "delta": -28.5,
     "res": 9,
     "se": 1,
     "oneshot": [
@@ -1095,6 +1217,12 @@
   "Veluza (Aevian Form)": [
    {
     "name": "Azumarill",
+    "gain": [
+     "survives Noivern",
+     "survives Kommo-o",
+     "survives Klinklang"
+    ],
+    "loss": [],
     "tier": "B",
     "sid": "AZUMARILL",
     "form": "0",
@@ -1107,6 +1235,12 @@
    },
    {
     "name": "Arcanine (Hisuian Form)",
+    "gain": [
+     "survives Noivern",
+     "survives Porygon-Z",
+     "survives Klinklang"
+    ],
+    "loss": [],
     "tier": "A",
     "sid": "ARCANINE",
     "form": "1",
@@ -1116,15 +1250,39 @@
     "oneshot": [
      "Kommo-o"
     ]
+   },
+   {
+    "name": "Mandibuzz",
+    "gain": [
+     "survives Noivern",
+     "survives Kommo-o",
+     "survives Klinklang"
+    ],
+    "loss": [],
+    "tier": "B",
+    "sid": "MANDIBUZZ",
+    "form": "0",
+    "delta": 22.0,
+    "res": 5,
+    "se": 0,
+    "oneshot": [
+     "Porygon-Z"
+    ]
    }
   ],
   "Toxtricity (Aevian Form)": [
    {
     "name": "Scrafty",
+    "gain": [
+     "survives Stoutland"
+    ],
+    "loss": [
+     "uses the field less"
+    ],
     "tier": "B",
     "sid": "SCRAFTY",
     "form": "0",
-    "delta": -16.2,
+    "delta": -20.2,
     "res": 4,
     "se": 3,
     "oneshot": [
@@ -1132,11 +1290,39 @@
     ]
    },
    {
+    "name": "Emboar",
+    "gain": [
+     "survives Stoutland"
+    ],
+    "loss": [
+     "one-shot by Kommo-o",
+     "uses the field less"
+    ],
+    "tier": "B",
+    "sid": "EMBOAR",
+    "form": "0",
+    "delta": -25.1,
+    "res": 4,
+    "se": 3,
+    "oneshot": [
+     "Porygon-Z",
+     "Kommo-o"
+    ]
+   },
+   {
     "name": "Vikavolt",
+    "gain": [
+     "survives Stoutland",
+     "outspeeds and one-shots Appletun"
+    ],
+    "loss": [
+     "one-shot by Kommo-o",
+     "uses the field less"
+    ],
     "tier": "B",
     "sid": "VIKAVOLT",
     "form": "0",
-    "delta": -18.1,
+    "delta": -26.1,
     "res": 5,
     "se": 2,
     "oneshot": [
@@ -1148,6 +1334,10 @@
   "Musharna (Aevian Form)": [
    {
     "name": "Sylveon",
+    "gain": [
+     "survives Porygon-Z"
+    ],
+    "loss": [],
     "tier": "B",
     "sid": "SYLVEON",
     "form": "0",
@@ -1160,6 +1350,14 @@
    },
    {
     "name": "Azumarill",
+    "gain": [
+     "survives Klinklang",
+     "priority attack",
+     "speed control"
+    ],
+    "loss": [
+     "loses the check on Appletun"
+    ],
     "tier": "B",
     "sid": "AZUMARILL",
     "form": "0",
@@ -1169,11 +1367,29 @@
     "oneshot": [
      "Porygon-Z"
     ]
+   },
+   {
+    "name": "Florges",
+    "gain": [
+     "survives Porygon-Z"
+    ],
+    "loss": [],
+    "tier": "B",
+    "sid": "FLORGES",
+    "form": "0",
+    "delta": -6.7,
+    "res": 6,
+    "se": 3,
+    "oneshot": [
+     "Klinklang"
+    ]
    }
   ],
   "Lapras (Aevian Form)": [
    {
     "name": "Solrock (Solrock Dominant Fusion)",
+    "gain": [],
+    "loss": [],
     "tier": "B",
     "sid": "SOLROCK",
     "form": "1",
@@ -1185,11 +1401,32 @@
     ]
    },
    {
+    "name": "Glalie (Aevian Form)",
+    "gain": [],
+    "loss": [],
+    "tier": "S",
+    "sid": "GLALIE",
+    "form": "1",
+    "delta": -9.0,
+    "res": 5,
+    "se": 1,
+    "oneshot": [
+     "Klinklang"
+    ]
+   },
+   {
     "name": "Chandelure",
+    "gain": [
+     "survives Klinklang"
+    ],
+    "loss": [
+     "loses the check on Noivern",
+     "one-shot by Kommo-o"
+    ],
     "tier": "B",
     "sid": "CHANDELURE",
     "form": "0",
-    "delta": -5.5,
+    "delta": -9.5,
     "res": 9,
     "se": 1,
     "oneshot": [
@@ -2183,7 +2420,7 @@
   }
  ],
  "pool": 55,
- "score": 121.7,
+ "score": 123.7,
  "cmp": -12.5,
  "break_field": null,
  "checks": {

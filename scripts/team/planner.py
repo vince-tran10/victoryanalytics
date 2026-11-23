@@ -305,7 +305,20 @@ if BREAK:   # make sure the best Flash users are in the search
     top += [i for i in np.argsort(-ind) if FLASH[i] and i not in top][:3]
 # 23 Nov (Vincent): SINGLES MINDSET (community_inputs.json 'mindset'; Smogon / r/stunfisk consensus). Singles only:
 # layered answers (2 checks per foe), a fast revenge killer per foe, priority, pivots, Ground / Electric immunity, hazards / Knock Off
-CHECK = (TAKE < 50) & ((DEAL >= 60) | (OFF >= 2))          # member checks foe: walls it and hits it hard
+# 23 Nov (Vincent: 'Return crushed Mush after a Work Up'): a check must survive the foe AFTER its setup move (one boost turn);
+# field statusBuffs add +1 (Concert Venue: Work Up / Howl = +2)
+FSETUP = {'WORKUP': 1, 'HOWL': 1, 'SWORDSDANCE': 2, 'NASTYPLOT': 2, 'DRAGONDANCE': 1, 'SHIFTGEAR': 1, 'CALMMIND': 1, 'BULKUP': 1, 'QUIVERDANCE': 1,
+          'COIL': 1, 'CURSE': 1, 'GROWTH': 1, 'TAILGLOW': 3, 'SHELLSMASH': 2, 'VICTORYDANCE': 1, 'CLANGOROUSSOUL': 1, 'FILLETAWAY': 2, 'TIDYUP': 1,
+          'BELLYDRUM': 6, 'GEOMANCY': 2}
+_SB = set((FT.get('statusBuffs') or []) if not BREAK else [])
+def _fstage(ms): return max([FSETUP[m] + (1 if m in _SB else 0) for m in ms if m in FSETUP] or [0])
+FSTG = [_fstage(ms) for ms in fmoves]
+FSETM = [next((MV[m]['name'] for m in ms if m in FSETUP), None) for ms in fmoves]
+TAKE_B = np.minimum(150, TAKE * np.array([(2 + k) / 2 for k in FSTG]))
+_bt = next((b for b in E.battles if b['key'] == FK), None)
+SPE_F = np.array([(f_['stats']['Spe'] * (1.5 if f_.get('item') == 'Choice Scarf' else 1)) for f_ in (_bt['foes'] if _bt else [])] or [0] * nF, float)[:nF]
+SPE_M = np.array([C[n]['stats']['Spe'] for n in NAMES], float)
+CHECK = (TAKE_B < 50) & ((DEAL >= 60) | (OFF >= 2))        # member checks foe: walls it after its boost and hits it hard
 REVK = FAST & (DEAL >= 100)                                 # outspeeds and one-shots it
 def _has(i, ids): return bool({mvid(x) for x in build(NAMES[i])[2]} & ids)
 PRIO = np.array([any(int((MV.get(mvid(x)) or {}).get('priority') or 0) > 0 and int((MV.get(mvid(x)) or {}).get('basedamage') or 0) > 0
@@ -345,8 +358,14 @@ FIELDV = np.array([_fieldv(i) for i in range(NP)])
 BOSS = 'boss' in (B9[FK][1] if FK in B9 else '').lower()
 BOSSB = np.array([_has(i, {'HAZE', 'CLEARSMOG', 'PERISHSONG', 'LEECHSEED', 'GASTROACID', 'ENDEAVOR', 'TOXIC', 'CURSE', 'KNOCKOFF'})
                   or build(n)[1] == 'UNAWARE' for i, n in enumerate(NAMES)])
+def para_revk(ix):   # foes that someone in ix can paralyse AND someone in ix then outspeeds (Speed / 2) and one-shots
+    ix = list(ix); out = np.zeros(nF, bool)
+    if not len(SPE_F): return out
+    for j in range(nF):
+        if SCM[ix, j].any() and any(SPE_M[i] > SPE_F[j] / 2 and DEAL[i, j] >= 100 for i in ix): out[j] = True
+    return out
 def mindset(ix):
-    ix = list(ix); ch = CHECK[ix].sum(0); rv = REVK[ix].any(0)
+    ix = list(ix); ch = CHECK[ix].sum(0); rv = REVK[ix].any(0) | para_revk(ix)
     s = 3 * (ch >= 2).sum() - 4 * (ch == 0).sum() + 2 * rv.sum() + (3 if PRIO[ix].any() else 0) + (2 if PIVOT[ix].sum() >= 2 else 0) + (1 if HAZ[ix].any() else 0)
     for t in ('GROUND', 'ELECTRIC'):
         if t in ATK and _IMM[t][ix].any(): s += 2
@@ -399,7 +418,7 @@ if FMT == 'Doubles':
     leads = max(itertools.combinations(best, 2), key=lambda p: LQ[p[0]][p[1]])
     leads = tuple(sorted(leads, key=lambda i: -lead_q((i,))))
 else:   # singles fight: slot 1 leads (best vs their lead), slot 2 = the doubles partner for later doubles fights
-    _l1 = max(best, key=lambda i: lead_q((i,)) - TAKE[i][0] / 100)
+    _l1 = max(best, key=lambda i: lead_q((i,)) - TAKE_B[i][0] / 50 + (DEAL[i][0] >= 100) * 2)
     leads = (_l1,)   # 23 Nov: singles has one lead; slot 2 follows the mid game / closer order
 _setup_ids = {'SWORDSDANCE', 'NASTYPLOT', 'DRAGONDANCE', 'QUIVERDANCE', 'CALMMIND', 'BULKUP', 'CURSE', 'SHELLSMASH', 'COIL', 'BELLYDRUM', 'SHIFTGEAR'}
 def _is_closer(i): return bool({mvid(x) for x in build(NAMES[i])[2]} & _setup_ids)
@@ -464,9 +483,22 @@ for i in best:
         t_ = [x for x in best if x != i] + [c]
         alt_.append((score(t_) - _b0, c))
     alt_.sort(key=lambda x: -x[0])
-    SWAPS[NAMES[i]] = [dict(name=NAMES[c], tier=TA[NAMES[c]]['tier'], sid=TA[NAMES[c]].get('sid'), form=str(TA[NAMES[c]].get('form', '0')),
+    def _why_sw(c, i=i):   # 23 Nov (Vincent): considerations per swap option (what it gains / loses vs the member it replaces)
+        g, l = [], []
+        for j in range(nF):
+            if CHECK[c, j] and not CHECK[i, j]: g.append(f'checks {FN[j]}')
+            if CHECK[i, j] and not CHECK[c, j]: l.append(f'loses the check on {FN[j]}')
+            if REVK[c, j] and not REVK[i, j]: g.append(f'outspeeds and one-shots {FN[j]}')
+            if DEAD[c, j] and not DEAD[i, j]: l.append(f'one-shot by {FN[j]}')
+            if DEAD[i, j] and not DEAD[c, j]: g.append(f'survives {FN[j]}')
+        if FIELDV[c] > FIELDV[i]: g.append('uses the field more')
+        if FIELDV[c] < FIELDV[i]: l.append('uses the field less')
+        if PRIO[c] and not PRIO[i]: g.append('priority attack')
+        if SCM[c].any() and not SCM[i].any(): g.append('speed control')
+        return g[:3], l[:3]
+    SWAPS[NAMES[i]] = [dict(name=NAMES[c], gain=_why_sw(c)[0], loss=_why_sw(c)[1], tier=TA[NAMES[c]]['tier'], sid=TA[NAMES[c]].get('sid'), form=str(TA[NAMES[c]].get('form', '0')),
                             delta=round(float(d_), 1), res=int((RM[c] < 1).sum()), se=int((OFF[c] >= 2).sum()),
-                            oneshot=[FN[j] for j in range(nF) if DEAD[c, j]]) for d_, c in alt_[:2]]
+                            oneshot=[FN[j] for j in range(nF) if DEAD[c, j]]) for d_, c in alt_[:3]]
 _fit = ind - FLAGN * 0   # individual value for this fight (defense first, offense, tips, flags)
 _q = np.quantile(_fit, [.5, .8]) if NP > 4 else [0, 0]
 POOLFIT = [dict(name=NAMES[i], tier=TA[NAMES[i]]['tier'], sid=TA[NAMES[i]].get('sid'), form=str(TA[NAMES[i]].get('form', '0')),
@@ -481,6 +513,10 @@ out = dict(fight=FK, field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], 
            lead_moves=LM,
            mindset=dict(layered={FN[j]: [NAMES[i] for i in best if CHECK[i, j]] for j in range(nF)},
                         revenge={FN[j]: [NAMES[i] for i in best if REVK[i, j]] for j in range(nF)},
+                        para={FN[j]: [NAMES[i] for i in best if SPE_M[i] > SPE_F[j] / 2 and DEAL[i, j] >= 100] for j in range(nF) if para_revk(best)[j]},
+                        setup={FN[j]: [FSETM[j], FSTG[j]] for j in range(nF) if FSTG[j]},
+                        speeds={FN[j]: int(SPE_F[j]) for j in range(nF)}, myspeed={NAMES[i]: int(SPE_M[i]) for i in best},
+                        sc={FN[j]: [f"{NAMES[i]}: {sc_on(i, j)}" for i in best if SCM[i, j]] for j in range(nF)},
                         priority=[NAMES[i] for i in best if PRIO[i]], pivot=[NAMES[i] for i in best if PIVOT[i]],
                         hazards=[NAMES[i] for i in best if HAZ[i]],
                         immune={t: [NAMES[i] for i in best if _IMM[t][i]] for t in ('GROUND', 'ELECTRIC') if t in ATK}) if FMT == 'Singles' else None,
