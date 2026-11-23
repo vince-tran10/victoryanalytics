@@ -64,6 +64,13 @@ for m in P['six']:
                  for x in (P.get('swaps') or {}).get(m['name'], [])) + '</ul></details>') if (P.get('swaps') or {}).get(m['name']) else '')
              + '</li>')
 h += f'<article class="plc"><h3>Your six</h3><ul class="bl">{rows}</ul></article>'
+# 23 Nov (Vincent, Jenner): speed control. One line per foe faster than 4+ of the six: who slows it
+SPD = [x for x in (P.get('speed') or []) if x['faster_than'] >= 4]
+if SPD:
+    li_ = ''.join(f'<li class="{"pw-ok" if x["tools"] else "pw-no"}"><b>{"✓" if x["tools"] else "✗"}</b> {E(x["foe"])} outspeeds {x["faster_than"]} of 6'
+                  + (''.join(f'<div class="pans">{E(disp(t.split(": ", 1)[0]))}: {E(t.split(": ", 1)[1])}</div>' for t in x['tools'][:2]) or '<div class="pans">No speed control for it</div>')
+                  + '</li>' for x in SPD)
+    h += f'<article class="plc"><h3>Speed control</h3><ul class="pwin">{li_}</ul></article>'
 # 23 Nov (Vincent): the Planner evaluates HIS BOXES for this fight: every pool Pokemon graded, what it brings, what kills it
 PF = P.get('poolfit') or []
 def _tile(x):

@@ -60,8 +60,9 @@ def synergy(c):
     if red and setp: s += 1.5; why.append(f'{disp(red[0])} redirects while {disp(setp[0])} sets up')
     if slp and setp and not red: s += .75; why.append(f'{disp(slp[0])} puts a foe to sleep: free turns for {disp(setp[0])}')
     if [n for n in c if INFO[n]['ab'] == 'INTIMIDATE']: s += .5; why.append('Intimidate support')
-    sc = has({'TAILWIND', 'TRICKROOM', 'ICYWIND', 'THUNDERWAVE', 'ELECTROWEB'})
-    if sc: s += .75; why.append(f'Speed control: {disp(sc[0])}')
+    sc = has({'TAILWIND', 'TRICKROOM', 'ICYWIND', 'THUNDERWAVE', 'ELECTROWEB', 'GLARE', 'NUZZLE'})   # 23 Nov (Vincent): the core needs its own speed control
+    if sc: s += 1.5; why.append(f'Speed control: {disp(sc[0])}')
+    else: s -= .75
     reset = has({'HAZE', 'CLEARSMOG', 'ROAR', 'WHIRLWIND'}) + [n for n in c if INFO[n]['ab'] == 'UNAWARE']
     if reset: s += .5; why.append(f'Answers setup: {disp(reset[0])}')
     for a in c:

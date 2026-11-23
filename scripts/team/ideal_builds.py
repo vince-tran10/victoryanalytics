@@ -36,7 +36,7 @@ FIXED = {'Lapras (Aevian Form)': dict(ability='NOGUARD', moves=['Rock Slide', 'Z
          'Glalie (Aevian Form)': dict(ability='GRASSYSURGE', moves=['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'], item='Miracle Seed', nature='Adamant', evs='252 HP / 252 Atk'),
          'Froslass (Aevian Form)': dict(ability='ADAPTABILITY', moves=['Hydro Pump', 'Muddy Water', 'Giga Drain', 'Protect'], item='Mystic Water', nature='Timid', evs='252 SpA / 252 Spe'),
          'Unfezant (Aevian Form Male)': dict(ability='ROCKHEAD', moves=['Head Smash', 'Brick Break', 'Rock Slide', 'Protect'], item='Hard Stone', nature='Jolly', evs='252 Atk / 252 Spe'),
-         'Slowking (Galarian Form)': dict(ability='REGENERATOR', moves=['Sludge Bomb', 'Psychic', 'Shadow Ball', 'Protect'], item='Poison Barb', nature='Modest', evs='252 HP / 252 SpA'),   # 22 Nov core slot 3
+         'Slowking (Galarian Form)': dict(ability='REGENERATOR', moves=['Sludge Bomb', 'Psychic', 'Thunder Wave', 'Protect'], item='Poison Barb', nature='Modest', evs='252 HP / 252 SpA'),   # 22 Nov core slot 3
          'Slowking': dict(ability='REGENERATOR', moves=['Surf', 'Psychic', 'Shadow Ball', 'Protect'], item='Mystic Water', nature='Modest', evs='252 HP / 252 SpA'),   # 22 Nov: no Chilly Reception (snow does nothing for his team)
          # 22 Nov (Vincent): Toxtricity-A = Core 1; Torch Song confirmed learnable in his game. Punk Rock (sound x1.3 on Torch Song AND Boomburst)
          'Toxtricity (Aevian Form)': dict(ability='PUNKROCK', moves=['Torch Song', 'Boomburst', 'Sludge Bomb', 'Protect'], item='Charcoal', nature='Timid', evs='252 SpA / 252 Spe'),

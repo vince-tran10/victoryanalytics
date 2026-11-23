@@ -81,6 +81,7 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   fight: the six with collapsed 'Why these moves' + 'Swap options', then 'Your boxes for this fight' (every pool mon graded Great / Good /
   Weak with resists / super effective / one-shot chips), grids, guide tips. Fights / To do / Dex / Community stay, all built from the same six.
   Field breaks only where fieldtext fieldChange lists Flash / Dazzling Gleam. Flagged moves cost -4 each in the pick.
+- **Speed control + sound (23 Nov, Jenner):** planner.py scores speed control per format (singles: paralysis / priority STAB or SE / TR / Icy Wind; doubles + Tailwind / Bulldoze) on every foe faster than 4+ of the six; core4 synergy +1.5 for core speed control (Slowking-G Thunder Wave). Sound moves: fieldtext key 'soundmove'; Punk Rock x1.5 on Concert / Big Top / Cave (x1.3 elsewhere), halves sound taken; Soundproof immune. Planner uses the engine candidate whose ability = the build's. Concert: sleep fails at Hype 3+.
 - **Field type charts (23 Nov, lesson: Haunted Field made Ghost hit Normal neutrally and I missed it):** field rules live in TWO places:
   fieldtext (boosts, accuracy, typeMods, changes) AND the battle code (Battle_Move.rb pbTypeModifier type-chart overrides, Battle.rb
   end-of-turn effects). fields.field_typemod ports pbTypeModifier; engine.chart_eff applies it. Read BOTH before claiming a field mechanic.

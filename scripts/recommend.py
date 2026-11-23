@@ -164,9 +164,7 @@ def ability_move_mult(ab, mv, mtype, stab_types):
         mult *= 1.2
     if ab == 'SHEERFORCE' and m.get('Chance') not in (None, '', '0', '100'):
         mult *= 1.3
-    if ab in ('PUNKROCK',) and 'Soundmove' in flags:
-        mult *= 1.3
-    if ab == 'JUNGLEBEAT' and ('Soundmove' in flags or t == 'GRASS'):
+    if ab == 'JUNGLEBEAT' and t == 'GRASS' and 'Soundmove' not in flags:
         mult *= 1.3
     if ab == 'STEELWORKER' and t == 'STEEL':
         mult *= 1.5

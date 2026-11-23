@@ -4,9 +4,9 @@
  "export_label": "23 Nov 08:03",
  "active_start": 468,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 303,
- "run": 317,
- "final": 321,
+ "roster": 306,
+ "run": 320,
+ "final": 324,
  "done": [
   "aelita",
   "narcissa1",
@@ -36,8 +36,8 @@
  ],
  "fight": "jenner9",
  "team": [
-  "Scrafty",
   "Musharna (Aevian Form)",
+  "Toxtricity (Aevian Form)",
   "Slowking (Galarian Form)",
   "Veluza (Aevian Form)",
   "Lapras (Aevian Form)",
@@ -119,7 +119,7 @@
   "Slowking (Galarian Form)": [
    "Sludge Bomb",
    "Psychic",
-   "Shadow Ball",
+   "Thunder Wave",
    "Protect"
   ],
   "Toxtricity (Aevian Form)": [
@@ -236,46 +236,46 @@
  },
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
-  "rank": null,
-  "of": 486818,
-  "gap": 27.87,
+  "rank": 311774,
+  "of": 945941,
+  "gap": 25.65,
   "top": [
    {
-    "score": 1.0433,
-    "pct": 127.9,
+    "score": 1.047,
+    "pct": 125.7,
     "team": [
-     "Golisopod-A",
-     "Scrafty",
+     "Gallade",
      "Chandelure",
      "Hariyama",
-     "Musharna-A",
-     "Florges"
+     "Florges",
+     "Vikavolt",
+     "Musharna-A"
     ],
     "misses": []
    },
    {
-    "score": 1.0423,
-    "pct": 127.7,
+    "score": 1.0437,
+    "pct": 125.3,
     "team": [
-     "Golisopod-A",
-     "Scrafty",
+     "Gallade",
      "Chandelure",
-     "Glalie-A",
+     "Golisopod-A",
+     "Hariyama",
      "Florges",
-     "Azumarill"
+     "Musharna-A"
     ],
     "misses": []
    },
    {
-    "score": 1.0423,
-    "pct": 127.7,
+    "score": 1.0412,
+    "pct": 125.0,
     "team": [
-     "Golisopod-A",
-     "Scrafty",
+     "Gallade",
      "Chandelure",
-     "Hariyama",
+     "Emboar",
      "Florges",
-     "Clefable"
+     "Vikavolt",
+     "Musharna-A"
     ],
     "misses": []
    }

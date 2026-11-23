@@ -212,6 +212,9 @@ class Engine:
         if att_is_me:
             t2, am, stab_o = ability_move_mult(ab, (mid, dict(mv, _power=p, _drawback=1.0)), mtype, att['types'])
             mtype = t2; mult *= am
+            if ab in ('PUNKROCK', 'JUNGLEBEAT') and 'Soundmove' in (mv.get('DataFlags') or []) and not os.environ.get('NOFIELD') \
+                    and (_fo or battle['field']) in ('Big Top Arena', 'Cave', 'Concert Venue'):
+                mult *= 1.5 / 1.3   # Battle_Move.rb 1845: x1.5 (not x1.3) on Big Top / Cave / Concert
             if att.get('crest'):
                 mtype = crests.move_type(att, mid, mv, mtype)
                 mult *= crests.atk_mult(att, dfn, mid, mv, mtype, int(mv.get('Strength') or 0))

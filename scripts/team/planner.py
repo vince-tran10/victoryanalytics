@@ -71,7 +71,11 @@ WINS = [(w, fs) for w, fs in WINS if fs]
 TA = {r['name']: r for r in json.load(open('team/tier_all.json'))['rows'] if r.get('kind') != 'crest'}
 IB = json.load(open('team/ideal_builds.json')) if os.path.exists('team/ideal_builds.json') else {}
 run = os.environ.get('BASE_RUN') or f"r{st['run']}"
-C = {c['name']: c for c in pickle.load(open(f'team/{run}{"n" if BREAK else ""}_native.json.pkl', 'rb'))['cands'] if not c.get('gate')}
+_AB = lambda n: ((st.get('abilities') or {}).get(n) or (IB.get(n) or {}).get('ability') or '').upper().replace(' ', '')
+C = {}   # 23 Nov: one engine candidate per (name, ability); keep the one whose ability the BUILD runs (Tox = Punk Rock, not Galvanize)
+for c in pickle.load(open(f'team/{run}{"n" if BREAK else ""}_native.json.pkl', 'rb'))['cands']:
+    if c.get('gate'): continue
+    if c['name'] not in C or (c['ability'] == _AB(c['name']) and C[c['name']]['ability'] != _AB(c['name'])): C[c['name']] = c
 POOL = [n for n, r in TA.items() if r.get('where') in ('Party', 'Active') and r['tier'] in ('S', 'A', 'B') and n in C and FK in C[n]['matchups']]
 POOL += [n for n, r in TA.items() if r.get('where') == 'Overflow' and r['tier'] in ('S', 'A') and n not in POOL and n in C and FK in C[n]['matchups']]
 POOL += [n for n in (st.get('team') or []) if n in TA and n not in POOL and n in C and FK in C[n]['matchups']]
@@ -111,11 +115,19 @@ ABSORB = {'FLASHFIRE': 'FIRE', 'WELLBAKEDBODY': 'FIRE', 'WATERABSORB': 'WATER', 
           'LIGHTNINGROD': 'ELECTRIC', 'MOTORDRIVE': 'ELECTRIC', 'SAPSIPPER': 'GRASS', 'LEVITATE': 'GROUND', 'EARTHEATER': 'GROUND'}
 TB = {t: float(m) for m, ts in (FT.get('typeBoosts') or {}).items() for t in ts}
 DMODS = {mv: float(m) for m, ms in (FT.get('damageMods') or {}).items() for mv in ms}
+SOUNDB = TB.pop('soundmove', 1.0) if 'soundmove' in TB else 1.0   # 23 Nov: fieldtext keys sound moves as 'soundmove', not a type
+def fbm(m, ab=''):   # field (+ Punk Rock) multiplier of move m: type boost x damageMods x sound boost
+    d = MV.get(m) or {}; snd = bool(d.get('soundmove'))
+    f = TB.get(d.get('type'), 1) * DMODS.get(m, 1) * (SOUNDB if snd else 1)
+    if snd and ab in ('PUNKROCK',): f *= 1.5 if FIELD in ('Concert Venue', 'Big Top Arena', 'Cave') and not BREAK else 1.3   # Battle_Move.rb 1845
+    return f
 def mtypes(m): d = MV.get(m) or {}; return [d.get('type')] + ([TYPEMODS[m]] if m in TYPEMODS else [])
 def meff(m, types, ab=''):
     ts = mtypes(m)
     if ab in ABSORB and ABSORB[ab] in ts: return 0.0
-    e = 1.0
+    snd = bool((MV.get(m) or {}).get('soundmove'))
+    if snd and ab == 'SOUNDPROOF': return 0.0
+    e = .5 if snd and ab == 'PUNKROCK' else 1.0   # Punk Rock halves sound damage taken (Battle_Move.rb 1759)
     for t in ts:
         if t: e *= E.chart_eff(t, types, FE, m)
     return e
@@ -124,21 +136,21 @@ for fi, ms in enumerate(fmoves):
     for m in sorted(ms):
         d = MV.get(m) or {}; bp = int(d.get('basedamage') or 0)
         if bp <= 0 and m not in ('NIGHTSHADE', 'SEISMICTOSS'): continue
-        EM.append((fi, m, max(.6, min(1.5, (bp or 60) * TB.get(d.get('type'), 1) * DMODS.get(m, 1) / 100))))
+        EM.append((fi, m, max(.6, min(1.5, (bp or 60) * fbm(m, (FOES[fi].get('ability') or '').upper().replace(' ', '')) / 100))))
 ABS_ = [build(n)[1] for n in NAMES]
 RM = np.array([[meff(m, TA[n]['types'], ABS_[i]) for (_, m, _) in EM] for i, n in enumerate(NAMES)])   # member x their move
 W = np.array([w for (_, _, w) in EM])
 # offense: each member vs each foe: super effective with a build move, or a field-boosted (x1.5+) move that lands neutral or better
 OFF = np.zeros((len(NAMES), nF))
 for i, n in enumerate(NAMES):
-    ms, _, _ = build(n)
+    ms, ab_, _ = build(n)
     for fi, f in enumerate(FOES):
         best_ = 0
         for m in ms:
             d = MV.get(m) or {}
             if int(d.get('basedamage') or 0) <= 0: continue
             e = meff(m, f['types'], (f.get('ability') or '').upper().replace(' ', ''))
-            fb = TB.get(d.get('type'), 1) * DMODS.get(m, 1)
+            fb = fbm(m, ab_)
             best_ = max(best_, 2 if e >= 2 else 1.5 if (fb >= 1.5 and e >= 1) else 0)
         OFF[i, fi] = best_
 L = [0, 1] if FMT == 'Doubles' else [0]
@@ -216,6 +228,8 @@ WHY_STATUS = {
  'TRICKROOM': 'Slow Pokemon move first for 5 turns', 'SAFEGUARD': 'Blocks status for 5 turns', 'TAUNT': 'Stops status / setup moves',
  'HAZE': 'Resets all stat boosts', 'SWORDSDANCE': 'Attack +2', 'CURSE': 'Attack and Defense +1, Speed -1', 'NASTYPLOT': 'Sp. Atk +2',
  'CALMMIND': 'Sp. Atk and Sp. Def +1', 'DRAGONDANCE': 'Attack and Speed +1', 'GASTROACID': 'Removes a foe ability',
+ 'THUNDERWAVE': 'Speed control: paralysis halves Speed, 25% full para', 'GLARE': 'Speed control: paralysis (hits Ground too)',
+ 'NUZZLE': 'Speed control: paralysis + chip', 'SING': 'Puts one foe to sleep', 'STUNSPORE': 'Speed control: paralysis',
 }
 EXTRA = {'DELUGE': 'Goes last, power x2 (120) if that foe hit you first this turn', 'KNOCKOFF': 'Removes their item (Focus Sash, Life Orb, Ghost Gem)',
          'CLEARSMOG': 'Resets the target boosts (Luxray Howl)', 'SHADOWSNEAK': 'Priority +1: finishes a weakened foe first',
@@ -231,10 +245,17 @@ def move_why(n, mname):
     if bp <= 0:
         w_ = WHY_STATUS.get(mid, 'Utility move')
         if mid in SLEEP and _NOSLEEP: w_ += '; not ' + ', '.join(_NOSLEEP) + ' (cannot sleep)'
+        if mid in ('THUNDERWAVE', 'GLARE', 'NUZZLE', 'STUNSPORE'):
+            _imm = [f['name'] for j, f in enumerate(FOES) if not any(sc_on(i_, j) for i_ in [NAMES.index(n)] if (sc_on(i_, j) or '').split(' (')[0] == mname)]
+            _fast = [FN[j] for j in range(nF) if FASTF[NAMES.index(n), j] and FN[j] not in _imm]
+            if _fast: w_ += '; slows ' + ', '.join(_fast)
+            if _imm: w_ += '; not ' + ', '.join(_imm)
+        if mid in SLEEP and (FE or '').startswith('CONCERT'):   # Concert Venue: sleep fails at Hype 3+ (fieldnotetext)
+            w_ += '; fails once Hype reaches 3 (their sound moves / Work Up raise it): use it early'
         return (w_, False)
     se = [f['name'] for f in FOES if meff(mid, f['types'], (f.get('ability') or '').upper().replace(' ', '')) >= 2]
     imm = [f['name'] for f in FOES if meff(mid, f['types'], (f.get('ability') or '').upper().replace(' ', '')) == 0]
-    fb = TB.get(d.get('type'), 1) * DMODS.get(mid, 1) if not BREAK else 1
+    fb = fbm(mid, build(n)[1]) if not BREAK else 1
     stab = d.get('type') in TA[n]['types']
     bits = []
     if se: bits.append('Super effective on ' + ', '.join(se))
@@ -246,13 +267,36 @@ def move_why(n, mname):
     def epow(m_, f):   # effective power of move m_ on foe f: power x STAB x type x field
         d_ = MV.get(m_) or {}; b_ = int(d_.get('basedamage') or 0) * (2 if m_ == 'DELUGE' else 1)
         if b_ <= 0: return 0
-        return b_ * (1.5 if d_.get('type') in TA[n]['types'] else 1) * meff(m_, f['types'], (f.get('ability') or '').upper().replace(' ', '')) * (1 if BREAK else TB.get(d_.get('type'), 1) * DMODS.get(m_, 1))
+        return b_ * (1.5 if d_.get('type') in TA[n]['types'] else 1) * meff(m_, f['types'], (f.get('ability') or '').upper().replace(' ', '')) * (1 if BREAK else fbm(m_, build(n)[1]))
     mine = [mvid(x) or x.upper().replace(' ', '') for x in build(n)[2]]
     best_on = [f['name'] for f in FOES if epow(mid, f) > 0 and epow(mid, f) >= max(epow(x, f) for x in mine)]
     if best_on: bits.insert(0, 'Your best hit on ' + ', '.join(best_on))
     flag = not best_on and mid not in EXTRA
     return ('; '.join(bits) or 'Neutral coverage', flag)
 
+# 23 Nov (Vincent, Jenner: 'fast Boomburst wrecks me'): SPEED CONTROL by format. Singles: paralysis / priority / Trick Room
+# (Tailwind lasts 4 turns for one mon); doubles: Tailwind / Trick Room / Icy Wind / Electroweb / paralysis. Per foe that outspeeds
+# 4+ of the six: does someone have a tool that works on IT (Electric can't be paralysed, Ground ignores Thunder Wave...)?
+SC_SINGLES = {'THUNDERWAVE', 'NUZZLE', 'GLARE', 'STUNSPORE', 'TRICKROOM', 'ICYWIND', 'ELECTROWEB', 'STICKYWEB', 'ZAPCANNON'}
+SC_DOUBLES = SC_SINGLES | {'TAILWIND', 'BULLDOZE'}
+SCSET = SC_SINGLES if FMT == 'Singles' else SC_DOUBLES
+def sc_on(i, j):   # member i's speed tool that works on foe j (name) or None
+    n = NAMES[i]; ms, ab, mnames = build(n); f = FOES[j]; ft = set(f['types']); fab = (f.get('ability') or '').upper().replace(' ', '')
+    for x in mnames:
+        m = mvid(x) or ''; d = MV.get(m) or {}
+        if m in SCSET:
+            if m in ('THUNDERWAVE', 'NUZZLE', 'ZAPCANNON') and (ft & {'ELECTRIC', 'GROUND'} or fab == 'LIMBER'): continue
+            if m == 'GLARE' and ('ELECTRIC' in ft or fab == 'LIMBER'): continue
+            if m == 'STUNSPORE' and ('GRASS' in ft or fab in ('OVERCOAT', 'LIMBER')): continue
+            if m in ('ELECTROWEB', 'BULLDOZE') and meff(m, f['types'], fab) == 0: continue
+            if m == 'STICKYWEB' and 'FLYING' in ft: continue
+            return x
+        if int(d.get('priority') or 0) > 0 and int(d.get('basedamage') or 0) > 0 and m != 'FAKEOUT' \
+                and (meff(m, f['types'], fab) >= 2 or (d.get('type') in TA[n]['types'] and meff(m, f['types'], fab) >= 1)):
+            return x + ' (priority)'
+    return None
+SCM = np.array([[sc_on(i, j) is not None for j in range(nF)] for i in range(NP)])
+FASTF = ~FAST   # foe faster than member
 FLAGN = np.array([sum(move_why(n, mv_)[1] for mv_ in build(n)[2]) for n in NAMES], float)   # moves that do nothing here
 ind = (2 * ((RM < 1) * W).sum(1) - 3 * ((RM > 1) * W).sum(1) + 1.5 * (OFF >= 2).sum(1) + .7 * (OFF > 0).sum(1)
        + 1.5 * SAFE.sum(1) - 2 * DEAD.sum(1) + .6 * TIER + LQ.max(1).clip(-5, 99) * .5 + .8 * AEV - 4 * FLAGN)
@@ -269,6 +313,9 @@ def score(ix):
     if BREAK and not FLASH[ix].any(): s -= 999
     s += 3 * tips_met(ix)   # 23 Nov: the guide's tips count
     s += 1.5 * np.minimum(SAFE[ix].sum(0), 3).sum() - 4 * DEAD[ix].sum() + .4 * TIER[ix].sum() + 1.0 * AEV[ix].sum() - 4 * FLAGN[ix].sum() + 2 * (ANS[ix].max(0).sum() if len(WINS) else 0)
+    fastf = FASTF[ix].sum(0) >= 4   # foes that outspeed 4+ of the six
+    ans_ = SCM[ix].any(0)
+    s += 4 * (fastf & ans_).sum() - 4 * (fastf & ~ans_).sum()   # speed control on each fast foe
     return s
 if len(CORE) == 4:   # core locked: every pair of flexes from the whole pool
     _ci = tuple(NAMES.index(n) for n in CORE)
@@ -300,7 +347,7 @@ if FMT == 'Doubles':
     leads = tuple(sorted(leads, key=lambda i: -lead_q((i,))))
 else:   # singles fight: slot 1 leads (best vs their lead), slot 2 = the doubles partner for later doubles fights
     _l1 = max(best, key=lambda i: lead_q((i,)) - TAKE[i][0] / 100)
-    leads = (_l1, max([i for i in best if i != _l1], key=lambda i: lead_q((_l1, i))))
+    leads = (_l1,)   # 23 Nov: singles has one lead; slot 2 follows the mid game / closer order
 _setup_ids = {'SWORDSDANCE', 'NASTYPLOT', 'DRAGONDANCE', 'QUIVERDANCE', 'CALMMIND', 'BULKUP', 'CURSE', 'SHELLSMASH', 'COIL', 'BELLYDRUM', 'SHIFTGEAR'}
 def _is_closer(i): return bool({mvid(x) for x in build(NAMES[i])[2]} & _setup_ids)
 # 23 Nov (Vincent): slots 3-6 by role: mid game first, then closers; a flex closer before a core-only closer (core / flex does not matter otherwise)
@@ -333,7 +380,7 @@ def tip_who(nd):
 SETUP_ = {'SWORDSDANCE', 'NASTYPLOT', 'DRAGONDANCE', 'QUIVERDANCE', 'CALMMIND', 'BULKUP', 'CURSE', 'SHELLSMASH', 'COIL', 'BELLYDRUM', 'SHIFTGEAR'}
 def role_of_(i):
     if i == leads[0]: return 'Lead'
-    if len(leads) > 1 and i == leads[1]: return 'Doubles lead'
+    if FMT == 'Doubles' and len(leads) > 1 and i == leads[1]: return 'Doubles lead'
     return 'Closer' if {mvid(x) for x in build(NAMES[i])[2]} & SETUP_ else 'Mid game'
 def mem(i):
     ms, ab, mnames = build(NAMES[i])
@@ -371,6 +418,8 @@ out = dict(fight=FK, field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], 
            wins=[dict(win=w, foes=fs, answered_by=[NAMES[i] for i in best if ANS[i, j]]) for j, (w, fs) in enumerate(WINS)],
            emoves=[dict(foe=FN[fi], move=(MV.get(m) or {}).get('name', m), types=[t for t in mtypes(m) if t], w=round(float(w), 2)) for (fi, m, w) in EM],
            lead_moves=LM,
+           speed=[dict(foe=FN[j], faster_than=int(FASTF[best][:, j].sum()), tools=[f"{NAMES[i]}: {sc_on(i, j)}" for i in best if SCM[i, j]])
+                  for j in range(nF)],
            tips=[dict(tip=t['tip'], needs=[dict(need=nd, met_by=tip_who(nd)) for nd in t['needs']]) for t in TIPS],
            six=[mem(i) for i in order], alts=alts, swaps=SWAPS, poolfit=POOLFIT, pool=len(NAMES), score=round(float(res[0][0]), 1), cmp=round(cmp_score(best), 2),
            break_field=dict(FLASH_PLAN, denies=SEED_DENIED) if BREAK else None,
