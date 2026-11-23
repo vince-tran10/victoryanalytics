@@ -1,13 +1,13 @@
 {
- "anchor_low": 0.048,
- "anchor_median": 0.198,
+ "anchor_low": 0.07,
+ "anchor_median": 0.199,
  "team": {
-  "Swampert": 0.235,
-  "Alomomola": 0.048,
-  "Muk (Alolan Form)": 0.198,
+  "Swampert": 0.204,
+  "Alomomola": 0.07,
+  "Muk (Alolan Form)": 0.199,
   "Clodsire": 0.11,
   "Musharna (Aevian Form)": 0.389,
-  "Mandibuzz": 0.157
+  "Mandibuzz": 0.13
  },
  "rows": [
   {
@@ -399,7 +399,7 @@
     "Shadow Ball"
    ],
    "ability": "TELEPATHY",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Magcargo",
@@ -542,7 +542,7 @@
    "gain": 0.159,
    "attacks": [
     "Surf",
-    "Secret Power",
+    "Facade",
     "Deluge"
    ],
    "ability": "HYDRATION",
@@ -727,7 +727,7 @@
     "Slash"
    ],
    "ability": "IMMUNITY",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Simisage",
@@ -744,7 +744,7 @@
     "Low Kick"
    ],
    "ability": "GLUTTONY",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Seviper",
@@ -838,7 +838,7 @@
    "without": -0.0,
    "gain": 0.018,
    "attacks": [
-    "Secret Power",
+    "Facade",
     "Shadow Ball",
     "Fire Blast"
    ],

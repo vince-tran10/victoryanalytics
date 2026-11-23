@@ -53,7 +53,10 @@ for m in P['six']:
              + ('<span class="plt">Lead</span>' if m['lead'] else '') + '</div><div class="bchips">'
              + ''.join(f'<span class="bstat bad">No Earthquake next to partner</span>' for _ in (m.get('warn') or [])[:1])
              + ''.join(f'<span class="{"btool" if k == "tool" else "bstat"}">{E(c)}</span>' for k, c in cues(m['types'], m['ability'], m['moves'], _chart)[:2 if m.get('warn') else 3])
-             + '</div></li>')
+             + '</div>'
+             + '<details class="pwhy" onclick="event.stopPropagation()"><summary>Why these moves</summary><ul>' + ''.join(
+                 f'<li class="{"pflag" if w["flag"] else ""}"><b>{E(w["move"])}</b><span>{E(w["why"])}</span></li>' for w in m.get('why') or []) + '</ul></details>'
+             + '</li>')
 h += f'<article class="plc"><h3>Your six</h3><ul class="bl">{rows}</ul></article>'
 # 23 Nov (Vincent): move-level checks. 1) leads vs their leads' attacks 2) every move they have vs the six 3) super effective on each foe
 EM = P.get('emoves') or []; LM = set(P.get('lead_moves') or [])
@@ -125,6 +128,9 @@ css = '''<style id="plan-css">
 .pmt tr.pfo td { text-align: left; font: 700 11px var(--body); text-transform: uppercase; letter-spacing: .04em; color: var(--muted); padding-top: 8px; border-top: 0 }
 .ptab td.fb { background: rgba(217,119,6,.14); color: #b45309; font-weight: 700 }
 .pbreak { background: rgba(31,138,76,.12); color: #1f8a4c; font-weight: 700; padding: 8px 12px; border-radius: 10px; font-size: 13px }
+.pwhy { margin-top: 4px; font-size: 12.5px } .pwhy summary { cursor: pointer; color: var(--muted); font-weight: 600 }
+.pwhy ul { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 4px } .pwhy li { display: grid; gap: 1px } .pwhy li span { color: var(--muted) }
+.pwhy li.pflag b { color: #b3261e } .pwhy li.pflag b::after { content: '  ⚠ check' }
 .plc ul.bl { padding: 0; margin: 0; list-style: none; display: grid; gap: 6px } .pho summary { cursor: pointer; font-weight: 700 } .pho ol { margin: 6px 0 0; padding-left: 20px; font-size: 13px; display: grid; gap: 3px }
 #splan + .pgrid, .pgrid { display: grid; gap: 14px }
 </style>'''

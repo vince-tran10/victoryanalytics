@@ -111,6 +111,9 @@
   "POISON"
  ],
  "atk": {
+  "STEEL": [
+   "Stonjourner"
+  ],
   "ROCK": [
    "Golisopod",
    "Stonjourner"
@@ -120,17 +123,14 @@
    "Stonjourner",
    "Typhlosion"
   ],
-  "STEEL": [
-   "Stonjourner"
-  ],
-  "FAIRY": [
-   "Sigilyph"
-  ],
   "GHOST": [
    "Banette",
    "Golisopod",
    "Sigilyph",
    "Typhlosion"
+  ],
+  "FAIRY": [
+   "Sigilyph"
   ],
   "NORMAL": [
    "Luxray"
@@ -141,10 +141,10 @@
   "ELECTRIC": [
    "Luxray"
   ],
-  "BUG": [
+  "GROUND": [
    "Golisopod"
   ],
-  "GROUND": [
+  "BUG": [
    "Golisopod"
   ],
   "FIGHTING": [
@@ -421,6 +421,28 @@
    "answers": [
     "Setup (stat boosts)"
    ],
+   "why": [
+    {
+     "move": "Earthquake",
+     "why": "Your best hit on Stonjourner, Sigilyph, Luxray, Golisopod, Typhlosion, Banette; Super effective on Stonjourner, Luxray, Typhlosion; STAB; hits both foes; Also hits your partner: only next to a Flying / Levitate partner",
+     "flag": false
+    },
+    {
+     "move": "Flash",
+     "why": "Breaks the field for the rest of the battle (their Ghost moves lose x1.5)",
+     "flag": false
+    },
+    {
+     "move": "Recover",
+     "why": "Heals 50%",
+     "flag": false
+    },
+    {
+     "move": "Protect",
+     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
+     "flag": false
+    }
+   ],
    "warn": [
     "Earthquake-type spread moves hit Vaporeon"
    ]
@@ -497,6 +519,28 @@
     2.0
    ],
    "answers": [],
+   "why": [
+    {
+     "move": "Wish",
+     "why": "Heals 50% next turn, to itself or whoever switches in",
+     "flag": false
+    },
+    {
+     "move": "Shadow Ball",
+     "why": "Super effective on Sigilyph, Typhlosion, Banette",
+     "flag": true
+    },
+    {
+     "move": "Hydro Pump",
+     "why": "Your best hit on Stonjourner, Sigilyph, Luxray, Golisopod, Typhlosion, Banette; Super effective on Stonjourner, Golisopod, Typhlosion; STAB",
+     "flag": false
+    },
+    {
+     "move": "Protect",
+     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
+     "flag": false
+    }
+   ],
    "warn": []
   },
   {
@@ -529,7 +573,7 @@
     62,
     56,
     105,
-    15,
+    42,
     109,
     52
    ],
@@ -572,6 +616,28 @@
     0.0
    ],
    "answers": [],
+   "why": [
+    {
+     "move": "Earthquake",
+     "why": "Your best hit on Luxray; Super effective on Stonjourner, Luxray, Typhlosion; STAB; hits both foes; Also hits your partner: only next to a Flying / Levitate partner",
+     "flag": false
+    },
+    {
+     "move": "Rock Slide",
+     "why": "Super effective on Typhlosion; hits both foes; Spread move that never hits your partner; 30% flinch",
+     "flag": false
+    },
+    {
+     "move": "Deluge",
+     "why": "Your best hit on Stonjourner, Sigilyph, Golisopod, Typhlosion, Banette; Super effective on Stonjourner, Golisopod, Typhlosion; STAB; Goes last, power x2 (120) if that foe hit you first this turn",
+     "flag": false
+    },
+    {
+     "move": "Protect",
+     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
+     "flag": false
+    }
+   ],
    "warn": []
   },
   {
@@ -647,6 +713,28 @@
     0.0
    ],
    "answers": [],
+   "why": [
+    {
+     "move": "Sludge Bomb",
+     "why": "Your best hit on Sigilyph, Luxray; STAB",
+     "flag": false
+    },
+    {
+     "move": "Dragon Pulse",
+     "why": "Your best hit on Banette; STAB; no effect on Sigilyph",
+     "flag": false
+    },
+    {
+     "move": "Surf",
+     "why": "Your best hit on Stonjourner, Golisopod, Typhlosion; Super effective on Stonjourner, Golisopod, Typhlosion; hits both foes",
+     "flag": false
+    },
+    {
+     "move": "Protect",
+     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
+     "flag": false
+    }
+   ],
    "warn": []
   },
   {
@@ -722,6 +810,28 @@
     2.0
    ],
    "answers": [],
+   "why": [
+    {
+     "move": "Shadow Ball",
+     "why": "Your best hit on Sigilyph, Golisopod, Banette; Super effective on Sigilyph, Typhlosion, Banette; STAB",
+     "flag": false
+    },
+    {
+     "move": "Earth Power",
+     "why": "Your best hit on Stonjourner, Luxray, Typhlosion; Super effective on Stonjourner, Luxray, Typhlosion; STAB",
+     "flag": false
+    },
+    {
+     "move": "Giga Drain",
+     "why": "Super effective on Stonjourner",
+     "flag": true
+    },
+    {
+     "move": "Protect",
+     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
+     "flag": false
+    }
+   ],
    "warn": []
   },
   {
@@ -754,7 +864,7 @@
     16,
     30,
     28,
-    30,
+    16,
     58,
     56
    ],
@@ -798,6 +908,28 @@
    ],
    "answers": [
     "Speed control (Tailwind / Trick Room)"
+   ],
+   "why": [
+    {
+     "move": "Tailwind",
+     "why": "Doubles your Speed for 4 turns: answers their Tailwind",
+     "flag": false
+    },
+    {
+     "move": "Knock Off",
+     "why": "Your best hit on Stonjourner, Sigilyph, Luxray, Golisopod, Typhlosion, Banette; Super effective on Typhlosion, Banette; STAB; Removes their item (Stonjourner Focus Sash, Golisopod Ghost Gem, Typhlosion Life Orb)",
+     "flag": false
+    },
+    {
+     "move": "Roost",
+     "why": "Heals 50%",
+     "flag": false
+    },
+    {
+     "move": "Protect",
+     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
+     "flag": false
+    }
    ],
    "warn": []
   }

@@ -645,25 +645,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Swampert": {
-  "ability": "TORRENT",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Soft Sand",
-  "moves": [
-   "Earthquake",
-   "Rock Slide",
-   "Deluge",
-   "Protect"
-  ],
-  "move_ids": [
-   "EARTHQUAKE",
-   "ROCKSLIDE",
-   "HAMMERARM"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Beartic": {
   "ability": "SLUSHRUSH",
   "nature": "Adamant",
@@ -829,6 +810,25 @@
    "EARTHQUAKE",
    "QUICKATTACK",
    "BOUNCE"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
+ "Swampert": {
+  "ability": "TORRENT",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Soft Sand",
+  "moves": [
+   "Earthquake",
+   "Rock Slide",
+   "Deluge",
+   "Protect"
+  ],
+  "move_ids": [
+   "EARTHQUAKE",
+   "ROCKSLIDE",
+   "HAMMERARM"
   ],
   "role": "attacker",
   "source": "your team"
@@ -2514,25 +2514,6 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Pidgeot": {
-  "ability": "KEENEYE",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Sitrus Berry",
-  "moves": [
-   "Tailwind",
-   "Sand Attack",
-   "Brave Bird",
-   "Protect"
-  ],
-  "move_ids": [
-   "TAILWIND",
-   "SANDATTACK",
-   "BRAVEBIRD"
-  ],
-  "role": "support",
-  "source": "game"
- },
  "Muk (Alolan Form)": {
   "ability": "Poison Touch",
   "nature": "Adamant",
@@ -2551,6 +2532,25 @@
   ],
   "role": "attacker",
   "source": "your team"
+ },
+ "Pidgeot": {
+  "ability": "KEENEYE",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Sitrus Berry",
+  "moves": [
+   "Tailwind",
+   "Sand Attack",
+   "Brave Bird",
+   "Protect"
+  ],
+  "move_ids": [
+   "TAILWIND",
+   "SANDATTACK",
+   "BRAVEBIRD"
+  ],
+  "role": "support",
+  "source": "game"
  },
  "Chimecho": {
   "ability": "LEVITATE",
@@ -3339,25 +3339,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Mandibuzz": {
-  "ability": "OVERCOAT",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
-  "moves": [
-   "Tailwind",
-   "Knock Off",
-   "Roost",
-   "Protect"
-  ],
-  "move_ids": [
-   "ROOST",
-   "KNOCKOFF",
-   "PLUCK"
-  ],
-  "role": "attacker",
-  "source": "your team"
  },
  "Vanilluxe": {
   "ability": "SNOWWARNING",
@@ -4780,6 +4761,25 @@
   "role": "attacker",
   "source": "game"
  },
+ "Mandibuzz": {
+  "ability": "OVERCOAT",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Sitrus Berry",
+  "moves": [
+   "Tailwind",
+   "Knock Off",
+   "Roost",
+   "Protect"
+  ],
+  "move_ids": [
+   "ROOST",
+   "TOXIC",
+   "KNOCKOFF"
+  ],
+  "role": "support",
+  "source": "your team"
+ },
  "Avalugg": {
   "ability": "STURDY",
   "nature": "Adamant",
@@ -5346,6 +5346,25 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Alomomola": {
+  "ability": "REGENERATOR",
+  "nature": "Bold",
+  "evs": "252 HP / 252 Def",
+  "item": "Sitrus Berry",
+  "moves": [
+   "Wish",
+   "Wide Guard",
+   "Helping Hand",
+   "Protect"
+  ],
+  "move_ids": [
+   "WISH",
+   "AQUAJET",
+   "WAKEUPSLAP"
+  ],
+  "role": "support",
+  "source": "your team"
+ },
  "Volbeat": {
   "ability": "PRANKSTER",
   "nature": "Jolly",
@@ -5835,25 +5854,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Alomomola": {
-  "ability": "REGENERATOR",
-  "nature": "Bold",
-  "evs": "252 HP / 252 Def",
-  "item": "Sitrus Berry",
-  "moves": [
-   "Wish",
-   "Wide Guard",
-   "Helping Hand",
-   "Protect"
-  ],
-  "move_ids": [
-   "WISH",
-   "AQUAJET",
-   "WAKEUPSLAP"
-  ],
-  "role": "support",
-  "source": "your team"
  },
  "Weezing": {
   "ability": "LEVITATE",

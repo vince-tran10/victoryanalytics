@@ -29,10 +29,16 @@
  ],
  "misses": [
   {
-   "foe": "Golisopod",
-   "fight": "spector2",
-   "best": "Musharna (Aevian Form)",
-   "dmg": 37
+   "foe": "Stoutland",
+   "fight": "jenner9",
+   "best": "Swampert",
+   "dmg": 53
+  },
+  {
+   "foe": "Porygon-Z",
+   "fight": "jenner9",
+   "best": "Swampert",
+   "dmg": 63
   }
  ],
  "n_types": 18

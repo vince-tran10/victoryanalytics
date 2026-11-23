@@ -190,6 +190,54 @@ for s_, ix in res[1:40]:
     d = [NAMES[i] for i in ix if i not in best]
     if d and not any(set(d) == set(a['in']) for a in alts): alts.append(dict(score=round(float(s_), 1), **{'in': d, 'out': [NAMES[i] for i in best if i not in ix]}))
     if len(alts) >= 3: break
+
+# 23 Nov (Vincent: 'explain your rationale for each move'): every move of the six gets a reason from the data, and an attack that does
+# nothing special in this fight (no super-effective target, no field boost, no STAB) is FLAGGED so a bad move can't slip through.
+WHY_STATUS = {
+ 'PROTECT': 'Always the 4th move: scout, stall their Tailwind turns, block double targets',
+ 'DETECT': 'Protect: scout and stall', 'WISH': 'Heals 50% next turn, to itself or whoever switches in',
+ 'WIDEGUARD': 'Blocks spread attacks for both of yours (goes first, priority +3)',
+ 'HELPINGHAND': "Partner's attack x1.5 (goes first, priority +5)",
+ 'TAILWIND': 'Doubles your Speed for 4 turns: answers their Tailwind', 'ROOST': 'Heals 50%', 'RECOVER': 'Heals 50%',
+ 'FLASH': 'Breaks the field for the rest of the battle (their Ghost moves lose x1.5)',
+ 'LOVELYKISS': 'Puts one foe to sleep (75% accurate)', 'SPORE': 'Puts one foe to sleep', 'RAGEPOWDER': 'Pulls single-target attacks to itself',
+ 'TRICKROOM': 'Slow Pokemon move first for 5 turns', 'SAFEGUARD': 'Blocks status for 5 turns', 'TAUNT': 'Stops status / setup moves',
+ 'HAZE': 'Resets all stat boosts', 'SWORDSDANCE': 'Attack +2', 'CURSE': 'Attack and Defense +1, Speed -1', 'NASTYPLOT': 'Sp. Atk +2',
+ 'CALMMIND': 'Sp. Atk and Sp. Def +1', 'DRAGONDANCE': 'Attack and Speed +1', 'GASTROACID': 'Removes a foe ability',
+}
+EXTRA = {'DELUGE': 'Goes last, power x2 (120) if that foe hit you first this turn', 'KNOCKOFF': 'Removes their item (Focus Sash, Life Orb, Ghost Gem)',
+         'CLEARSMOG': 'Resets the target boosts (Luxray Howl)', 'SHADOWSNEAK': 'Priority +1: finishes a weakened foe first',
+         'AQUAJET': 'Priority +1', 'ROCKSLIDE': 'Spread move that never hits your partner; 30% flinch', 'EARTHQUAKE': 'Also hits your partner: only next to a Flying / Levitate partner'}
+_ITEMS = [f"{f['name']} {f['item']}" for f in FOES if f.get('item') and 'Seed' not in f['item'] and 'ite' != f['item'][-3:]]
+EXTRA['KNOCKOFF'] = 'Removes their item' + (' (' + ', '.join(_ITEMS) + ')' if _ITEMS else '')
+_NOSLEEP = [f['name'] for f in FOES if (f.get('ability') or '').upper().replace(' ', '') in ('INSOMNIA', 'VITALSPIRIT', 'SWEETVEIL', 'COMATOSE')]
+def move_why(n, mname):
+    mid = mvid(mname) or mname.upper().replace(' ', ''); d = MV.get(mid) or {}
+    bp = int(d.get('basedamage') or 0)
+    if bp <= 0:
+        w_ = WHY_STATUS.get(mid, 'Utility move')
+        if mid in SLEEP and _NOSLEEP: w_ += '; not ' + ', '.join(_NOSLEEP) + ' (cannot sleep)'
+        return (w_, False)
+    se = [f['name'] for f in FOES if meff(mid, f['types'], (f.get('ability') or '').upper().replace(' ', '')) >= 2]
+    imm = [f['name'] for f in FOES if meff(mid, f['types'], (f.get('ability') or '').upper().replace(' ', '')) == 0]
+    fb = TB.get(d.get('type'), 1) * DMODS.get(mid, 1) if not BREAK else 1
+    stab = d.get('type') in TA[n]['types']
+    bits = []
+    if se: bits.append('Super effective on ' + ', '.join(se))
+    if fb > 1: bits.append(f'x{fb:g} on this field')
+    if stab: bits.append('STAB')
+    if d.get('target') in ('AllOpposing', 'AllNonUsers'): bits.append('hits both foes')
+    if mid in EXTRA: bits.append(EXTRA[mid])
+    if imm: bits.append('no effect on ' + ', '.join(imm))
+    def epow(m_, f):   # effective power of move m_ on foe f: power x STAB x type x field
+        d_ = MV.get(m_) or {}; b_ = int(d_.get('basedamage') or 0) * (2 if m_ == 'DELUGE' else 1)
+        if b_ <= 0: return 0
+        return b_ * (1.5 if d_.get('type') in TA[n]['types'] else 1) * meff(m_, f['types'], (f.get('ability') or '').upper().replace(' ', '')) * (1 if BREAK else TB.get(d_.get('type'), 1) * DMODS.get(m_, 1))
+    mine = [mvid(x) or x.upper().replace(' ', '') for x in build(n)[2]]
+    best_on = [f['name'] for f in FOES if epow(mid, f) > 0 and epow(mid, f) >= max(epow(x, f) for x in mine)]
+    if best_on: bits.insert(0, 'Your best hit on ' + ', '.join(best_on))
+    flag = not best_on and mid not in EXTRA
+    return ('; '.join(bits) or 'Neutral coverage', flag)
 def mem(i):
     ms, ab, mnames = build(NAMES[i])
     return dict(name=NAMES[i], tier=TA[NAMES[i]]['tier'], types=TA[NAMES[i]]['types'], sid=TA[NAMES[i]].get('sid'), form=str(TA[NAMES[i]].get('form', '0')),
@@ -198,6 +246,7 @@ def mem(i):
                 safe=int(SAFE[i].sum()), mult={t: float(MULT[i][k]) for k, t in enumerate(MAIN)},
                 rm=[float(x) for x in RM[i]], off=[float(x) for x in OFF[i]],
                 answers=[WINS[j][0] for j in range(len(WINS)) if ANS[i, j]],
+                why=[dict(move=mv_, why=move_why(NAMES[i], mv_)[0], flag=move_why(NAMES[i], mv_)[1]) for mv_ in build(NAMES[i])[2]],
                 warn=[f"Earthquake-type spread moves hit {NAMES[o]}" for o in leads if o != i and i in leads and ally_hit(i, o) > 0])
 out = dict(fight=FK, field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], types=f['types'], moves=f['moves'], item=f.get('item'), ability=f.get('ability'),
            sid=f['species'], form=f.get('form')) for f in FOES], main=MAIN, atk={t: sorted(v) for t, v in ATK.items()},

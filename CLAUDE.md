@@ -59,7 +59,8 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Planner tab grids: leads vs their leads, their moves vs your six, who hits them hard. Two plans per run: keep the field vs
   break it with a Flash / Dazzling Gleam lead (no-field engine run); field-neutral cmp picks. AEVIAN PREFERENCE (Vincent, 23 Nov):
   +1 per Aevian in the six (tiebreak, never over defense). Every move on the six must do something IN THAT FIGHT (Vincent: 'why Wake-Up
-  Slap?'): audit each build vs their team before recommending; field seeds can backfire (Haunted Magical Seed burns its holder). Lead spread moves that hit the partner = penalty. Older wording: DEFENSE FIRST (Vincent: a counter that gets one-shot is useless;
+  Slap?'): audit each build vs their team before recommending; field seeds can backfire (Haunted Magical Seed burns its holder). planner.move_why() writes a reason per move
+  (collapsed 'Why these moves' on the Planner tab) and FLAGS any attack that is the best hit on no foe: zero flags before recommending. Lead spread moves that hit the partner = penalty. Older wording: DEFENSE FIRST (Vincent: a counter that gets one-shot is useless;
   it must heavily resist what they bring): per foe count members taking < 50% from its best move, heavy penalty per one-shot, no attack type
   of theirs hits 3+, every type they use resisted once and their main types twice, a named answer per win condition (Tailwind / TR, setup,
   sleep, Perish trap, spread, Destiny Bond, screens); offense second; leads = the pair that beats their lead pair. Workflow shown on the
