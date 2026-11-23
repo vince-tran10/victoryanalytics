@@ -247,6 +247,23 @@
      ]
     },
     {
+     "name": "Musharna (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "sid": "MUSHARNA",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Moonlight"
+     ]
+    },
+    {
      "name": "Muk (Alolan Form)",
      "tier": "S",
      "stats": [
@@ -302,23 +319,6 @@
      "rec": false,
      "teach": [
       "Slack Off"
-     ]
-    },
-    {
-     "name": "Musharna (Aevian Form)",
-     "tier": "A",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "sid": "MUSHARNA",
-     "form": "1",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Moonlight"
      ]
     },
     {
@@ -423,6 +423,23 @@
      "teach": []
     },
     {
+     "name": "Musharna (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "sid": "MUSHARNA",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Curse"
+     ]
+    },
+    {
      "name": "Muk (Alolan Form)",
      "tier": "S",
      "stats": [
@@ -495,23 +512,6 @@
      "rec": false,
      "teach": [
       "Nasty Plot"
-     ]
-    },
-    {
-     "name": "Musharna (Aevian Form)",
-     "tier": "A",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "sid": "MUSHARNA",
-     "form": "1",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Curse"
      ]
     },
     {
@@ -723,7 +723,7 @@
    "cands": [
     {
      "name": "Musharna (Aevian Form)",
-     "tier": "A",
+     "tier": "S",
      "stats": [
       "Resists 4 types",
       "Weak to 3 types",
@@ -1092,13 +1092,13 @@
    "Attacker",
    ""
   ],
-  "Hariyama": [
-   "Attacker",
-   ""
-  ],
   "Typhlosion": [
    "Lead",
    "outspeeds 81%"
+  ],
+  "Hariyama": [
+   "Attacker",
+   ""
   ],
   "Florges": [
    "Mid game",
@@ -1264,13 +1264,13 @@
    "Attacker",
    ""
   ],
-  "Arctozolt": [
-   "Attacker",
-   ""
-  ],
   "Ribombee": [
    "Support",
    "Sticky Web"
+  ],
+  "Arctozolt": [
+   "Attacker",
+   ""
   ],
   "Centiskorch": [
    "Attacker",
@@ -1552,13 +1552,13 @@
    "Support",
    "Yawn"
   ],
-  "Sudowoodo": [
-   "Attacker",
-   ""
-  ],
   "Orbeetle": [
    "Support",
    "Reflect"
+  ],
+  "Sudowoodo": [
+   "Attacker",
+   ""
   ],
   "Pawmot": [
    "Doubles lead",
@@ -2403,7 +2403,7 @@
    },
    {
     "name": "Musharna-Aevian",
-    "tier": "A",
+    "tier": "S",
     "score": 3.0,
     "why": [
      "Slowking-Galar switches in on Poison, Fairy hits aimed at Musharna-Aevian and heals on the way out",
@@ -2971,7 +2971,7 @@
   "Toxtricity-Aevian": [
    {
     "name": "Musharna-Aevian",
-    "tier": "A",
+    "tier": "S",
     "score": 2.75,
     "why": [
      "Musharna-Aevian's sleep takes a foe out for Toxtricity-Aevian",

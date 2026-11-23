@@ -57,7 +57,9 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Aevian, each member's tier + meta + in-game, synergy lines, close alternatives, type check). Flexes (lead, mid or closer) are added per fight:
   the planner LOCKS the core 4 and picks only the 2 flexes for the next fight. Party order: slot 1 = singles lead and left doubles lead,
   slot 2 = doubles lead partner (a flex may take either). Team tab: Core / Flex + role labels and a 'Flexes for the next fight' card
-  (opponent, field, format, their lead, each flex's role and why, threats, guide tips).
+  (opponent, field, format, their lead, each flex's role and why, threats, guide tips). PARTY ORDER (Vincent, 23 Nov): 1 lead, 2 doubles
+  lead, then mid game, then closers (flex closer before core-only closer). Tabs: Team · Core (core4.py) · Flex (planner) · Fights · To do
+  · Dex · Community. Fights card: name, format, field, their team, field effect, your + / - moves, Flex (the Flex tab's 2 picks).
 - **TEAM PLANNER (Vincent, 23 Nov) REPLACES the core-of-4 + 2 flexes.** state mode='planner': scripts/team/planner.py picks the whole SIX
   for the next fight (state.fight) from his POOL = Party + Active box (S/A/B) + S/A he is moving in from Overflow. PRIORITIES (Vincent, 23 Nov,
   after losing again): 1) as many of the six as possible RESIST EACH MOVE THEY CARRY (move-level, field type chart + second types);

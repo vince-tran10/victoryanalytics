@@ -169,7 +169,7 @@ css = '''<style id="plan-css">
 .plc ul.bl { padding: 0; margin: 0; list-style: none; display: grid; gap: 6px } .pho summary { cursor: pointer; font-weight: 700 } .pho ol { margin: 6px 0 0; padding-left: 20px; font-size: 13px; display: grid; gap: 3px }
 #splan + .pgrid, .pgrid { display: grid; gap: 14px }
 </style>'''
-sec = f'<section aria-labelledby="splan">\n  <h2 id="splan">Team Planner</h2>\n{css}<div class="pgrid">{h}</div>\n</section>\n'
+sec = f'<section aria-labelledby="splan">\n  <h2 id="splan">Flex</h2>\n{css}<div class="pgrid">{h}</div>\n</section>\n'
 page = open(OUT, encoding='utf-8').read()
 page = re.sub(r'<section aria-labelledby="splan">.*?</section>\s*', '', page, flags=re.S)
 anchor = page.find('<section aria-labelledby="s1f">')

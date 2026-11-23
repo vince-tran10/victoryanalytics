@@ -43,7 +43,7 @@
    "form": "1",
    "blend": 0.874,
    "meta": 0.892,
-   "game": 0.924,
+   "game": 0.921,
    "types": [
     "POISON",
     "PSYCHIC"
@@ -94,12 +94,12 @@
   },
   {
    "name": "Musharna (Aevian Form)",
-   "tier": "A",
+   "tier": "S",
    "sid": "MUSHARNA",
    "form": "1",
-   "blend": 0.673,
+   "blend": 0.769,
    "meta": 0.72,
-   "game": 0.618,
+   "game": 0.937,
    "types": [
     "DARK",
     "FAIRY"
@@ -129,9 +129,9 @@
    ]
   }
  ],
- "score": 44.49,
+ "score": 45.45,
  "parts": {
-  "strength": 33.14,
+  "strength": 34.1,
   "defense": 4.2,
   "offense": 4.0,
   "synergy": 2.25,
@@ -152,24 +152,24 @@
  },
  "runners": [
   {
-   "out": "Musharna (Aevian Form)",
-   "in": "Glalie (Aevian Form)",
-   "delta": -0.5
-  },
-  {
    "out": "Slowking (Galarian Form)",
    "in": "Muk (Alolan Form)",
    "delta": -0.95
   },
   {
    "out": "Musharna (Aevian Form)",
+   "in": "Glalie (Aevian Form)",
+   "delta": -1.46
+  },
+  {
+   "out": "Slowking (Galarian Form)",
    "in": "Gastrodon (West Aevian Form)",
-   "delta": -1.34
+   "delta": -2.0
   },
   {
    "out": "Musharna (Aevian Form)",
    "in": "Alomomola",
-   "delta": -1.58
+   "delta": -2.54
   }
  ],
  "pool": 26,

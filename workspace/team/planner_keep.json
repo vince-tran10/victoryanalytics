@@ -113,16 +113,16 @@
   "STEEL"
  ],
  "atk": {
-  "NORMAL": [
-   "Kommo-o",
-   "Noivern",
+  "PSYCHIC": [
    "Porygon-Z",
    "Stoutland"
   ],
   "DARK": [
    "Stoutland"
   ],
-  "PSYCHIC": [
+  "NORMAL": [
+   "Kommo-o",
+   "Noivern",
    "Porygon-Z",
    "Stoutland"
   ],
@@ -130,13 +130,13 @@
    "Appletun",
    "Kommo-o"
   ],
-  "GRASS": [
-   "Appletun"
-  ],
   "DRAGON": [
    "Appletun",
    "Kommo-o",
    "Noivern"
+  ],
+  "GRASS": [
+   "Appletun"
   ],
   "FLYING": [
    "Noivern"
@@ -454,11 +454,11 @@
     121
    ],
    "deal": [
-    0,
-    17,
-    35,
-    0,
-    21,
+    46,
+    50,
+    101,
+    54,
+    124,
     28
    ],
    "worst": 121,
@@ -515,206 +515,6 @@
     {
      "move": "Play Rough",
      "why": "Your best hit on Stoutland, Appletun, Noivern, Porygon-Z, Kommo-o; Super effective on Appletun, Noivern, Kommo-o; STAB",
-     "flag": false
-    },
-    {
-     "move": "Protect",
-     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
-     "flag": false
-    }
-   ],
-   "warn": []
-  },
-  {
-   "core": false,
-   "role": "Closer",
-   "name": "Lapras (Aevian Form)",
-   "tier": "S",
-   "types": [
-    "ROCK",
-    "PSYCHIC"
-   ],
-   "sid": "LAPRAS",
-   "form": "1",
-   "lead": false,
-   "where": "Active",
-   "moves": [
-    "Rock Slide",
-    "Zen Headbutt",
-    "Dragon Dance",
-    "Sing"
-   ],
-   "ability": "NOGUARD",
-   "take": [
-    57,
-    62,
-    39,
-    62,
-    76,
-    129
-   ],
-   "deal": [
-    36,
-    20,
-    79,
-    43,
-    44,
-    16
-   ],
-   "worst": 129,
-   "worst_foe": "Klinklang",
-   "safe": 1,
-   "mult": {
-    "NORMAL": 0.5,
-    "DRAGON": 1.0,
-    "PSYCHIC": 0.5,
-    "FIGHTING": 1.0,
-    "ELECTRIC": 1.0,
-    "STEEL": 2.0
-   },
-   "rm": [
-    2.0,
-    0.5,
-    0.5,
-    2.0,
-    1.0,
-    1.0,
-    0.5,
-    0.5,
-    1.0,
-    0.5,
-    2.0,
-    0.5,
-    1.0,
-    0.5,
-    1.0,
-    0.5,
-    2.0,
-    1.0
-   ],
-   "off": [
-    0.0,
-    0.0,
-    2.0,
-    0.0,
-    2.0,
-    0.0
-   ],
-   "answers": [],
-   "why": [
-    {
-     "move": "Rock Slide",
-     "why": "Your best hit on Noivern; Super effective on Noivern; STAB; hits both foes; Spread move that never hits your partner; 30% flinch",
-     "flag": false
-    },
-    {
-     "move": "Zen Headbutt",
-     "why": "Your best hit on Stoutland, Appletun, Porygon-Z, Kommo-o, Klinklang; Super effective on Kommo-o; STAB",
-     "flag": false
-    },
-    {
-     "move": "Dragon Dance",
-     "why": "Attack and Speed +1",
-     "flag": false
-    },
-    {
-     "move": "Sing",
-     "why": "Utility move",
-     "flag": false
-    }
-   ],
-   "warn": []
-  },
-  {
-   "core": true,
-   "role": "Closer",
-   "name": "Golisopod (Aevian Form)",
-   "tier": "S",
-   "types": [
-    "BUG",
-    "GROUND"
-   ],
-   "sid": "GOLISOPOD",
-   "form": "1",
-   "lead": false,
-   "where": "Active",
-   "moves": [
-    "Bone Rush",
-    "Pin Missile",
-    "Swords Dance",
-    "Protect"
-   ],
-   "ability": "SKILLLINK",
-   "take": [
-    48,
-    47,
-    78,
-    124,
-    89,
-    51
-   ],
-   "deal": [
-    40,
-    40,
-    19,
-    48,
-    27,
-    16
-   ],
-   "worst": 124,
-   "worst_foe": "Porygon-Z",
-   "safe": 2,
-   "mult": {
-    "NORMAL": 1.0,
-    "DRAGON": 1.0,
-    "PSYCHIC": 1.0,
-    "FIGHTING": 0.5,
-    "ELECTRIC": 0.0,
-    "STEEL": 1.0
-   },
-   "rm": [
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    0.5,
-    1.0,
-    2.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    0.5,
-    1.0,
-    1.0,
-    2.0,
-    1.0,
-    0.0
-   ],
-   "off": [
-    0.0,
-    2.0,
-    0.0,
-    0.0,
-    0.0,
-    2.0
-   ],
-   "answers": [],
-   "why": [
-    {
-     "move": "Bone Rush",
-     "why": "Your best hit on Stoutland, Porygon-Z, Kommo-o, Klinklang; Super effective on Klinklang; STAB; no effect on Noivern",
-     "flag": false
-    },
-    {
-     "move": "Pin Missile",
-     "why": "Your best hit on Appletun, Noivern; Super effective on Appletun; STAB",
-     "flag": false
-    },
-    {
-     "move": "Swords Dance",
-     "why": "Attack +2",
      "flag": false
     },
     {
@@ -915,6 +715,206 @@
     {
      "move": "Head Smash",
      "why": "Your best hit on Noivern; Super effective on Noivern",
+     "flag": false
+    },
+    {
+     "move": "Protect",
+     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
+     "flag": false
+    }
+   ],
+   "warn": []
+  },
+  {
+   "core": false,
+   "role": "Closer",
+   "name": "Lapras (Aevian Form)",
+   "tier": "S",
+   "types": [
+    "ROCK",
+    "PSYCHIC"
+   ],
+   "sid": "LAPRAS",
+   "form": "1",
+   "lead": false,
+   "where": "Active",
+   "moves": [
+    "Rock Slide",
+    "Zen Headbutt",
+    "Dragon Dance",
+    "Sing"
+   ],
+   "ability": "NOGUARD",
+   "take": [
+    57,
+    62,
+    39,
+    62,
+    76,
+    129
+   ],
+   "deal": [
+    36,
+    20,
+    79,
+    43,
+    44,
+    16
+   ],
+   "worst": 129,
+   "worst_foe": "Klinklang",
+   "safe": 1,
+   "mult": {
+    "NORMAL": 0.5,
+    "DRAGON": 1.0,
+    "PSYCHIC": 0.5,
+    "FIGHTING": 1.0,
+    "ELECTRIC": 1.0,
+    "STEEL": 2.0
+   },
+   "rm": [
+    2.0,
+    0.5,
+    0.5,
+    2.0,
+    1.0,
+    1.0,
+    0.5,
+    0.5,
+    1.0,
+    0.5,
+    2.0,
+    0.5,
+    1.0,
+    0.5,
+    1.0,
+    0.5,
+    2.0,
+    1.0
+   ],
+   "off": [
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    2.0,
+    0.0
+   ],
+   "answers": [],
+   "why": [
+    {
+     "move": "Rock Slide",
+     "why": "Your best hit on Noivern; Super effective on Noivern; STAB; hits both foes; Spread move that never hits your partner; 30% flinch",
+     "flag": false
+    },
+    {
+     "move": "Zen Headbutt",
+     "why": "Your best hit on Stoutland, Appletun, Porygon-Z, Kommo-o, Klinklang; Super effective on Kommo-o; STAB",
+     "flag": false
+    },
+    {
+     "move": "Dragon Dance",
+     "why": "Attack and Speed +1",
+     "flag": false
+    },
+    {
+     "move": "Sing",
+     "why": "Utility move",
+     "flag": false
+    }
+   ],
+   "warn": []
+  },
+  {
+   "core": true,
+   "role": "Closer",
+   "name": "Golisopod (Aevian Form)",
+   "tier": "S",
+   "types": [
+    "BUG",
+    "GROUND"
+   ],
+   "sid": "GOLISOPOD",
+   "form": "1",
+   "lead": false,
+   "where": "Active",
+   "moves": [
+    "Bone Rush",
+    "Pin Missile",
+    "Swords Dance",
+    "Protect"
+   ],
+   "ability": "SKILLLINK",
+   "take": [
+    48,
+    47,
+    78,
+    124,
+    89,
+    51
+   ],
+   "deal": [
+    40,
+    40,
+    19,
+    48,
+    27,
+    16
+   ],
+   "worst": 124,
+   "worst_foe": "Porygon-Z",
+   "safe": 2,
+   "mult": {
+    "NORMAL": 1.0,
+    "DRAGON": 1.0,
+    "PSYCHIC": 1.0,
+    "FIGHTING": 0.5,
+    "ELECTRIC": 0.0,
+    "STEEL": 1.0
+   },
+   "rm": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    2.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    1.0,
+    2.0,
+    1.0,
+    0.0
+   ],
+   "off": [
+    0.0,
+    2.0,
+    0.0,
+    0.0,
+    0.0,
+    2.0
+   ],
+   "answers": [],
+   "why": [
+    {
+     "move": "Bone Rush",
+     "why": "Your best hit on Stoutland, Porygon-Z, Kommo-o, Klinklang; Super effective on Klinklang; STAB; no effect on Noivern",
+     "flag": false
+    },
+    {
+     "move": "Pin Missile",
+     "why": "Your best hit on Appletun, Noivern; Super effective on Appletun; STAB",
+     "flag": false
+    },
+    {
+     "move": "Swords Dance",
+     "why": "Attack +2",
      "flag": false
     },
     {

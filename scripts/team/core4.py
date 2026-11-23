@@ -148,7 +148,7 @@ h += (f'<article class="plc"><h3>Type check</h3><div class="ptm"><table class="p
 css = '''<style id="core4-css">.pscore { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 13.5px }
 .pscore li { display: flex; justify-content: space-between } .pwhy2 { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 6px; font-size: 12.5px }
 .pwhy2 li { display: grid } .pwhy2 li span { color: var(--muted) } .pmuted { color: var(--muted) }</style>'''
-sec = f'<section aria-labelledby="sbuild">\n  <h2 id="sbuild">Core Builder</h2>\n{css}<div class="pgrid">{h}</div>\n</section>\n'
+sec = f'<section aria-labelledby="sbuild">\n  <h2 id="sbuild">Core</h2>\n{css}<div class="pgrid">{h}</div>\n</section>\n'
 page = open(OUT, encoding='utf-8').read()
 page = re.sub(r'<section aria-labelledby="sbuild">.*?</section>\s*', '', page, flags=re.S)
 anchor = page.find('<section aria-labelledby="s1f">')

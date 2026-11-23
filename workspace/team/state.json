@@ -4,9 +4,9 @@
  "export_label": "23 Nov 08:03",
  "active_start": 468,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 302,
- "run": 316,
- "final": 320,
+ "roster": 303,
+ "run": 317,
+ "final": 321,
  "done": [
   "aelita",
   "narcissa1",
@@ -38,10 +38,10 @@
  "team": [
   "Scrafty",
   "Musharna (Aevian Form)",
-  "Lapras (Aevian Form)",
-  "Golisopod (Aevian Form)",
   "Slowking (Galarian Form)",
-  "Veluza (Aevian Form)"
+  "Veluza (Aevian Form)",
+  "Lapras (Aevian Form)",
+  "Golisopod (Aevian Form)"
  ],
  "moves": {
   "Golisopod (Aevian Form)": [

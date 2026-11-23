@@ -301,7 +301,10 @@ if FMT == 'Doubles':
 else:   # singles fight: slot 1 leads (best vs their lead), slot 2 = the doubles partner for later doubles fights
     _l1 = max(best, key=lambda i: lead_q((i,)) - TAKE[i][0] / 100)
     leads = (_l1, max([i for i in best if i != _l1], key=lambda i: lead_q((_l1, i))))
-order = list(leads) + sorted([i for i in best if i not in leads], key=lambda i: -ind[i])
+_setup_ids = {'SWORDSDANCE', 'NASTYPLOT', 'DRAGONDANCE', 'QUIVERDANCE', 'CALMMIND', 'BULKUP', 'CURSE', 'SHELLSMASH', 'COIL', 'BELLYDRUM', 'SHIFTGEAR'}
+def _is_closer(i): return bool({mvid(x) for x in build(NAMES[i])[2]} & _setup_ids)
+# 23 Nov (Vincent): slots 3-6 by role: mid game first, then closers; a flex closer before a core-only closer (core / flex does not matter otherwise)
+order = list(leads) + sorted([i for i in best if i not in leads], key=lambda i: (_is_closer(i), NAMES[i] in CORE, -ind[i]))
 FLASHER = None
 if BREAK:
     fl = [i for i in leads if FLASH[i]] or [i for i in best if FLASH[i]]

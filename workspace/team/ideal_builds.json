@@ -455,6 +455,25 @@
   "role": "attacker",
   "source": "game"
  },
+ "Musharna (Aevian Form)": {
+  "ability": "TOUGHCLAWS",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Spell Tag",
+  "moves": [
+   "Lovely Kiss",
+   "Shadow Claw",
+   "Play Rough",
+   "Protect"
+  ],
+  "move_ids": [
+   "LOVELYKISS",
+   "SHADOWCLAW",
+   "PLAYROUGH"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
  "Ursaring": {
   "ability": "QUICKFEET",
   "nature": "Adamant",
@@ -4665,25 +4684,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Musharna (Aevian Form)": {
-  "ability": "TOUGHCLAWS",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Sitrus Berry",
-  "moves": [
-   "Lovely Kiss",
-   "Shadow Claw",
-   "Play Rough",
-   "Protect"
-  ],
-  "move_ids": [
-   "LOVELYKISS",
-   "GLARE",
-   "SHADOWCLAW"
-  ],
-  "role": "support",
-  "source": "your team"
  },
  "Oricorio": {
   "ability": "DANCER",

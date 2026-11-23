@@ -306,7 +306,7 @@ MTX = {}
 try: MTX = json.load(open('gamedata/movetext.json'))
 except Exception: pass
 
-def field_html(fname, names):   # 21 Nov (Vincent): type pills with green ▲ / red ▼ multipliers + your boosted moves
+def field_html(fname, names, part='all'):   # 21 Nov (Vincent): type pills with green ▲ / red ▼ multipliers + your boosted moves
     fv = next((v for v in FT.values() if v.get('name') == fname), None)
     if not fv: return ''
     tc = fv.get('typeCondition') or {}
@@ -327,15 +327,17 @@ def field_html(fname, names):   # 21 Nov (Vincent): type pills with green ▲ / 
                  + f'<span class="fx-note">{len(ms)} named moves</span></div>')
     if fname == 'Corrupted Cave':
         rows += '<div class="fx down"><span class="fx-ar">▼ 1/8 HP</span><span class="fx-note">a turn for your grounded non-Poison / non-Steel Pokémon</span></div>'
+    if part == 'fx': return '<div class="fxs">' + rows + '</div>'
+    if part == 'mine': rows = ''
     mine = boosted_line(fname, names, rows=True)
     if mine:
-        rows += '<div class="fx-h">Your moves here</div>'
+        rows += '<div class="fx-h">Your moves here</div>' if part != 'mine' else ''
         for n, mv, x, why in sorted(mine, key=lambda r: -r[2]):
             up = x > 1
             tag = ''.join(f'<span class="pt" style="--tc:{TYPE.get(w, "#888")}">{E(w.title())}</span>' if w in TYPE else f'<span class="fx-note">{E(w)}</span>' for w in why)
             rows += ('<div class="fx mv ' + ('up' if up else 'down') + '"><span class="fx-ar">' + (f'▲ ×{x:g}' if up else '✕ fails' if x == 0 else f'▼ ×{x:g}') + '</span>'
                      + spr(n) + f'<div class="mvc"><b>{E(disp(n))}</b><div class="mvl"><span>{E(mv)}</span>' + tag + '</div></div></div>')
-    return '<div class="fxs">' + rows + '</div>'
+    return ('<div class="fxs">' + rows + '</div>') if rows else ''
 
 def _six_rows(k, names):
     try: R = json.load(open(f'team/{k}_eval.json'))
@@ -493,6 +495,8 @@ def cheat_html(k):
     return ('<ul class="cheat">' + ''.join(lines[:7]) + '</ul>') if lines else ''
 def fight_cards():
     order = [k for k in ['darkgardevoir', 'garbodor', 'karrina', 'spector', 'spector2', 'jenner9', 'amanda', 'erick'] if k in FP]
+    try: _FLEXES = [m_ for m_ in json.load(open('team/planner.json'))['six'] if not m_.get('core')]
+    except Exception: _FLEXES = []
     out = ''
     for idx, k in enumerate(order):
         p = FP[k]; hf = HF[idx] if idx < len(HF) else {}
@@ -521,9 +525,12 @@ def fight_cards():
                        + (('✓ after ' + E(q['setup'])) if q.get('setup') else ('✓' if q['ok'] else 'weak')) + '</span>' + wc_html(q) + '</li>' for q in rows)
         _bp = bar_plan_html(k, SP.tag(*(_bf or _ids[0]), size='m') if (_bf or _ids) else '') if hf.get('boss') else None
         out += ('<details class="fc' + (' is-next' if idx == 0 else '') + '"' + (' open' if idx == 0 else '') + '>' + head
-                + '<div class="fbody"><div class="frow"><span class="fk">Bring</span><ul class="mons">' + bring + '</ul></div>'
-                + (('<div class="frow ftop"><span class="fk">Field</span>' + _fh + '</div>') if (_fh := field_html(hf.get('field', ''), list(st.get('core') or []) + [r['name'] for r in p['swaps']])) else '')
-                + ((('<div class="frow ftop"><span class="fk">Their team</span>' + _fo + '</div>') if (_fo := foes_html(k, list(st.get('core') or []) + [r['name'] for r in p['swaps']])) else '') if not hf.get('boss') else '')
+                + '<div class="fbody">'   # 23 Nov (Vincent): their team, field effect, your + / - moves, flex (the Flex tab's 2 picks)
+                + ((('<div class="frow ftop"><span class="fk">Their team</span>' + _fo + '</div>') if (_fo := foes_html(k, list(st['team']))) else '') if not hf.get('boss') else '')
+                + (('<div class="frow ftop"><span class="fk">Field effect</span>' + _fh + '</div>') if (_fh := field_html(hf.get('field', ''), list(st['team']), 'fx')) else '')
+                + (('<div class="frow ftop"><span class="fk">Your moves</span>' + _fm + '</div>') if (_fm := field_html(hf.get('field', ''), list(st['team']), 'mine')) else '')
+                + '<div class="frow"><span class="fk">Flex</span>' + (('<ul class="mons">' + ''.join('<li>' + tname(m_['name']) + '</li>' for m_ in _FLEXES) + '</ul>')
+                    if k == st.get('fight') and _FLEXES else '<span class="fx-note">Picked on the Flex tab when this fight is next</span>') + '</div>'
                 + ((('<div class="frow ftop"><span class="fk">Plan</span>' + _ch + '</div>') if (False and idx == 0 and (_ch := cheat_html(k))) else ''))   # 22 Nov (Vincent): Plan block removed from the page
                 + (_bp or '') + '</div></details>')   # 21 Nov (Vincent): foe -> counter list removed; boss fights keep the bar plan
     # 21 Nov (Vincent): only the upcoming fight shows; the rest fold away (fights can come out of order)
@@ -860,7 +867,7 @@ IC = {
  'planner': '<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/>',
  'builder': '<path d="M4 20h16M6 16l4-10 4 6 4-8"/><circle cx="10" cy="6" r="1.5"/>',
  'dex': '<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="3"/><path d="M8.5 15h7M8.5 18h4"/>'}
-NAV = [('team', 'Team'), ('builder', 'Builder'), ('planner', 'Planner'), ('fights', 'Fights'), ('todo', 'To do'), ('dex', 'Dex'), ('community', 'Community')]   # 22 Nov: Boxes folded into To do   # 22 Nov: Cores tab removed (Vincent)
+NAV = [('team', 'Team'), ('builder', 'Core'), ('planner', 'Flex'), ('fights', 'Fights'), ('todo', 'To do'), ('dex', 'Dex'), ('community', 'Community')]   # 22 Nov: Boxes folded into To do   # 22 Nov: Cores tab removed (Vincent)
 nav = '<nav class="appnav" aria-label="Guide">' + ''.join(
     f'<button type="button" data-go="{k}"><svg viewBox="0 0 24 24" aria-hidden="true">{IC[k]}</svg><span>{t}</span></button>' for k, t in NAV) + '</nav>'
 seg = ('<div class="seg" role="group" aria-label="Dex lists"><button type="button" data-go="tiers">Pokémon</button>'
@@ -1270,7 +1277,7 @@ DEXJS = r'''<script id="dex-js">
 '''
 JS = r'''<script id="app-theme-js">
 (function(){
-  var NAMES = {team:'Team', planner:'Team Planner', builder:'Core Builder', fights:'Fights', cores:'Cores', todo:'To do', community:'Community', boxes:'Boxes', tiers:'Dex · Pokémon', aevian:'Dex · Aevian', crests:'Dex · Crests', checks:'Checks & data'};
+  var NAMES = {team:'Team', planner:'Flex', builder:'Core', fights:'Fights', cores:'Cores', todo:'To do', community:'Community', boxes:'Boxes', tiers:'Dex · Pokémon', aevian:'Dex · Aevian', crests:'Dex · Crests', checks:'Checks & data'};
   var DEX = {tiers:1, aevian:1, crests:1};
   var orig = function(k){ return document.querySelector('#tabbar button[data-tab="'+k+'"]'); };
   function current(){ var b = document.querySelector('#tabbar button[aria-selected="true"]'); return b ? b.dataset.tab : 'team'; }
