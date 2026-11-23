@@ -270,6 +270,7 @@ def main():
     sh(['../scripts/team/tier_tabs.py', OUT], pe)
     sh(['../scripts/team/builder.py', OUT], pe)   # 22 Nov: Team Builder tab (how each core slot was picked)
     sh(['../scripts/team/community_tab.py', OUT], pe)
+    sh(['../scripts/team/core4.py', OUT], pe)   # 23 Nov: Core Builder = best general 4 (replaces the slot cards)
     sh(['../scripts/team/planner_tab.py', OUT], pe)   # 23 Nov: Team Planner tab (the six for the next fight)   # 23 Nov: Community tab (saved community inputs, consolidated)
     # 22 Nov (Vincent): Cores tab removed; cores.py no longer runs (CORES=1 to run it for chat)
     if os.environ.get('CORES'): sh(['../scripts/team/cores.py', OUT], pe)

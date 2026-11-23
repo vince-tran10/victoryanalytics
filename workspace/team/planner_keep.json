@@ -126,6 +126,10 @@
    "Porygon-Z",
    "Stoutland"
   ],
+  "FIGHTING": [
+   "Appletun",
+   "Kommo-o"
+  ],
   "GRASS": [
    "Appletun"
   ],
@@ -133,10 +137,6 @@
    "Appletun",
    "Kommo-o",
    "Noivern"
-  ],
-  "FIGHTING": [
-   "Appletun",
-   "Kommo-o"
   ],
   "FLYING": [
    "Noivern"

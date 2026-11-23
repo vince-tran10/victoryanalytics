@@ -2911,7 +2911,7 @@
    "cat": "Physical",
    "attacks": [
     "Sucker Punch",
-    "Facade"
+    "Secret Power"
    ],
    "legal": [
     "AGILITY",
@@ -3568,7 +3568,7 @@
    },
    "cat": "Physical",
    "attacks": [
-    "Facade",
+    "Secret Power",
     "Shadow Claw",
     "Low Sweep"
    ],
@@ -7029,7 +7029,7 @@
    "cat": "Physical",
    "attacks": [
     "Surf",
-    "Facade",
+    "Secret Power",
     "Deluge"
    ],
    "legal": [
