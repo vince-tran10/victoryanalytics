@@ -329,7 +329,7 @@
    "gain": 0.078,
    "attacks": [
     "Night Slash",
-    "Secret Power",
+    "Facade",
     "Ice Fang"
    ],
    "ability": "INTIMIDATE",
@@ -362,7 +362,7 @@
    "without": 0.013,
    "gain": 0.205,
    "attacks": [
-    "Secret Power",
+    "Facade",
     "Shadow Claw",
     "Low Sweep"
    ],
@@ -414,7 +414,7 @@
    "attacks": [
     "Gunk Shot",
     "Bullet Seed",
-    "Stacking Shot"
+    "Power-Up Punch"
    ],
    "ability": "GLUTTONY",
    "tier": "A"
@@ -510,7 +510,7 @@
    "gain": 0.157,
    "attacks": [
     "Surf",
-    "Secret Power",
+    "Facade",
     "Deluge"
    ],
    "ability": "HYDRATION",
@@ -805,7 +805,7 @@
    "without": -0.026,
    "gain": 0.024,
    "attacks": [
-    "Headbutt",
+    "Facade",
     "Fire Blast",
     "Thief"
    ],
@@ -823,7 +823,7 @@
    "gain": 0.087,
    "attacks": [
     "Sucker Punch",
-    "Secret Power"
+    "Facade"
    ],
    "ability": "HUGEPOWER",
    "tier": "C"

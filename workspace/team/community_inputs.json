@@ -1006,6 +1006,56 @@
      "how": "Immunity to a foe's main attack counts as a safe switch-in"
     }
    ]
+  },
+  "wincon": {
+   "title": "Win-condition roles (A-E)",
+   "added": "2026-11-23",
+   "source": "Smogon teambuilding guides, VGC Guide, PokeStats, r/stunfisk, r/PokemonRejuvenation (pasted by Vincent)",
+   "urls": [
+    "https://www.smogon.com/forums/threads/teambuilding-guide.3552468/",
+    "https://www.smogon.com/forums/threads/tips-on-teambuilding.3727229/",
+    "https://www.vgcguide.com/teambuilding",
+    "https://pokestats.cc/guides/vgc-doubles-teambuilding-guide",
+    "https://www.reddit.com/r/stunfisk/comments/1jivnd2/from_singles_to_doubles_heres_what_ive_learned/",
+    "https://www.reddit.com/r/PokemonRejuvenation/comments/1xyxn5l/what_are_some_op_midlate_game_strategies_for/"
+   ],
+   "points": [
+    {
+     "rule": "A Win con: the closer",
+     "check": "tag",
+     "how": "Setup sweeper, speed / priority cleaner; doubles: spread attacker, weather abuser"
+    },
+    {
+     "rule": "B Enabler",
+     "check": "tag",
+     "how": "Tailwind / Trick Room / screens / redirection / Encore / sleep / paralysis / weather or terrain; singles: hazards"
+    },
+    {
+     "rule": "C Wallbreaker",
+     "check": "tag",
+     "how": "Very strong attack stat or a power ability"
+    },
+    {
+     "rule": "D Pivot / glue",
+     "check": "tag",
+     "how": "Bulky: Regenerator, pivot moves, Intimidate, Will-O-Wisp, recovery; doubles: Fake Out, Snarl"
+    },
+    {
+     "rule": "E Field / tech",
+     "check": "tag",
+     "how": "Unaware, Wide Guard, Perish Song, Haze / Clear Smog / phazing, Taunt, Knock Off, field moves"
+    },
+    {
+     "rule": "Singles: core = A + D + C; flexes = B, backup A, E",
+     "check": "next",
+     "how": "Core / Flex tabs (next step)"
+    },
+    {
+     "rule": "Doubles: core = A + B speed or weather + B/D disruption + C/A backup; flexes = alternate mode, doubles tech",
+     "check": "next",
+     "how": "Core / Flex tabs (next step)"
+    }
+   ]
   }
  }
 }

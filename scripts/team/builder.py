@@ -196,6 +196,11 @@ _SETUP = {'SWORDSDANCE', 'NASTYPLOT', 'SHELLSMASH', 'BELLYDRUM', 'DRAGONDANCE', 
 _ABIMM = {'WATERABSORB': 'WATER', 'STORMDRAIN': 'WATER', 'DRYSKIN': 'WATER', 'VOLTABSORB': 'ELECTRIC', 'LIGHTNINGROD': 'ELECTRIC', 'MOTORDRIVE': 'ELECTRIC',
           'FLASHFIRE': 'FIRE', 'SAPSIPPER': 'GRASS', 'LEVITATE': 'GROUND', 'EARTHEATER': 'GROUND', 'WELLBAKEDBODY': 'FIRE'}
 def _abrun(m): return re.sub(r'[^A-Z]', '', str((st.get('abilities') or {}).get(m.name) or (IB.get(m.name) or {}).get('ability') or m.r.get('ability') or '').upper())
+import wincon_tags as WT   # 23 Nov (Vincent): A-E win-condition role tags per Pokemon (singles + doubles), shown on the Dex
+TAGS = {}
+for m in ALLM.values():
+    try: TAGS[disp(m.name)] = WT.tag(m.r['base'], list(build_moves(m.name)), _abrun(m), MT)
+    except Exception as ex_: print('tag fail', m.name, ex_)
 def _spread_hits_ally(a, b):   # a's spread moves that also hit partner b (Surf / Earthquake / Discharge ... hit the ally)
     out_ = []
     for x in build_moves(a.name):
@@ -402,7 +407,7 @@ if _pl and len(core) == 4:
             cands.append(dict(name=n_, tier=m.r['tier'], stats=cs + ([] if ct else ['Single target only']), tools=have, teach=teach,
                               sid=m.r.get('sid'), form=str(m.r.get('form', '0')), pick=n_ == fn, rec=n_ == fn))
         out.append(dict(slot=5 + fi, title=f"{lab} · {FIGHT_TITLE.get(_fk, _fk)}", pick=fn, rec=fn, flex=True, cands=cands))
-json.dump(dict(core=core, slots=out, roles=ROLES_ALL, partners=PARTNERS, core_pairs=CORE_PAIRS), open('team/builder.json', 'w'), indent=1, ensure_ascii=False)
+json.dump(dict(core=core, slots=out, roles=ROLES_ALL, tags=TAGS, partners=PARTNERS, core_pairs=CORE_PAIRS), open('team/builder.json', 'w'), indent=1, ensure_ascii=False)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sprites as SP
 def chips3(c, s_):   # 22 Nov (Vincent): only the top 2-3 facts per Pokémon

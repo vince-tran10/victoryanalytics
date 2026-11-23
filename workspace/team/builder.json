@@ -2315,6 +2315,5569 @@
    ""
   ]
  },
+ "tags": {
+  "Golisopod-Aevian": {
+   "s": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ],
+    [
+     "C",
+     "Skill Link"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ],
+    [
+     "C",
+     "Skill Link"
+    ]
+   ]
+  },
+  "Veluza-Aevian": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 104)"
+    ],
+    [
+     "C",
+     "Reckless"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 104)"
+    ],
+    [
+     "C",
+     "Reckless"
+    ]
+   ]
+  },
+  "Slowking-Galar": {
+   "s": [
+    [
+     "B",
+     "Thunder Wave"
+    ],
+    [
+     "D",
+     "Regenerator"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Thunder Wave"
+    ],
+    [
+     "D",
+     "Regenerator"
+    ]
+   ]
+  },
+  "Amoonguss": {
+   "s": [
+    [
+     "B",
+     "Spore / Rage Powder"
+    ],
+    [
+     "E",
+     "Clear Smog"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Spore / Rage Powder"
+    ],
+    [
+     "E",
+     "Clear Smog"
+    ]
+   ]
+  },
+  "Glalie-Aevian": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Grassy Glide)"
+    ],
+    [
+     "B",
+     "Grassy Surge setter"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Grassy Glide)"
+    ],
+    [
+     "B",
+     "Grassy Surge setter"
+    ]
+   ]
+  },
+  "Musharna-Aevian": {
+   "s": [
+    [
+     "B",
+     "Lovely Kiss"
+    ],
+    [
+     "C",
+     "Tough Claws"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Lovely Kiss"
+    ],
+    [
+     "C",
+     "Tough Claws"
+    ]
+   ]
+  },
+  "Muk-Alola": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Shadow Sneak)"
+    ],
+    [
+     "E",
+     "Knock Off / Clear Smog"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Shadow Sneak)"
+    ],
+    [
+     "E",
+     "Knock Off / Clear Smog"
+    ]
+   ]
+  },
+  "Lapras-Aevian": {
+   "s": [
+    [
+     "A",
+     "Dragon Dance sweeper"
+    ],
+    [
+     "B",
+     "Sing"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Dragon Dance sweeper"
+    ],
+    [
+     "B",
+     "Sing"
+    ]
+   ]
+  },
+  "Whiscash": {
+   "s": [],
+   "d": []
+  },
+  "Alomomola": {
+   "s": [
+    [
+     "D",
+     "Regenerator / Wish"
+    ],
+    [
+     "E",
+     "Wide Guard"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Helping Hand"
+    ],
+    [
+     "D",
+     "Regenerator / Wish"
+    ],
+    [
+     "E",
+     "Wide Guard"
+    ]
+   ]
+  },
+  "Arcanine-Hisui": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Extreme Speed)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Extreme Speed)"
+    ]
+   ]
+  },
+  "Clefable": {
+   "s": [
+    [
+     "E",
+     "Magic Guard / Flash"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Magic Guard / Flash"
+    ]
+   ]
+  },
+  "Drapion-Aevian": {
+   "s": [
+    [
+     "E",
+     "Knock Off"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Knock Off"
+    ]
+   ]
+  },
+  "Slowbro": {
+   "s": [
+    [
+     "D",
+     "Regenerator / Slack Off"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Regenerator / Slack Off"
+    ]
+   ]
+  },
+  "Swampert": {
+   "s": [],
+   "d": [
+    [
+     "A",
+     "Spread attacker (Earthquake)"
+    ]
+   ]
+  },
+  "Froslass-Aevian": {
+   "s": [
+    [
+     "C",
+     "Adaptability"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Adaptability"
+    ]
+   ]
+  },
+  "Slowking": {
+   "s": [
+    [
+     "D",
+     "Regenerator"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Regenerator"
+    ]
+   ]
+  },
+  "Gastrodon-Aevian (West)": {
+   "s": [],
+   "d": []
+  },
+  "Ninetales-Alola": {
+   "s": [
+    [
+     "B",
+     "Snow Warning setter / Aurora Veil"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Snow Warning setter / Aurora Veil"
+    ]
+   ]
+  },
+  "Toxtricity-Aevian": {
+   "s": [
+    [
+     "C",
+     "Punk Rock"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Spread attacker (Boomburst)"
+    ],
+    [
+     "C",
+     "Punk Rock"
+    ]
+   ]
+  },
+  "Donphan": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Ice Shard)"
+    ],
+    [
+     "C",
+     "Attack 120"
+    ],
+    [
+     "E",
+     "Sturdy"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Ice Shard)"
+    ],
+    [
+     "C",
+     "Attack 120"
+    ],
+    [
+     "E",
+     "Sturdy"
+    ]
+   ]
+  },
+  "Palossand-Aevian (Fiery)": {
+   "s": [
+    [
+     "A",
+     "Iron Defense sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Iron Defense sweeper"
+    ]
+   ]
+  },
+  "Mandibuzz": {
+   "s": [
+    [
+     "B",
+     "Tailwind"
+    ],
+    [
+     "D",
+     "Roost"
+    ],
+    [
+     "E",
+     "Knock Off"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Tailwind"
+    ],
+    [
+     "D",
+     "Roost"
+    ],
+    [
+     "E",
+     "Knock Off"
+    ]
+   ]
+  },
+  "Zoroark-Hisui": {
+   "s": [
+    [
+     "A",
+     "Nasty Plot sweeper"
+    ],
+    [
+     "C",
+     "Sp. Atk 125"
+    ],
+    [
+     "E",
+     "Taunt"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Nasty Plot sweeper"
+    ],
+    [
+     "C",
+     "Sp. Atk 125"
+    ],
+    [
+     "E",
+     "Taunt"
+    ]
+   ]
+  },
+  "Palossand-Aevian (Rocky)": {
+   "s": [],
+   "d": []
+  },
+  "Gallade": {
+   "s": [
+    [
+     "C",
+     "Sharpness"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Sharpness"
+    ]
+   ]
+  },
+  "Gastrodon": {
+   "s": [
+    [
+     "B",
+     "Yawn"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Yawn"
+    ]
+   ]
+  },
+  "Azumarill": {
+   "s": [
+    [
+     "A",
+     "Belly Drum sweeper"
+    ],
+    [
+     "C",
+     "Huge Power"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Belly Drum sweeper"
+    ],
+    [
+     "C",
+     "Huge Power"
+    ]
+   ]
+  },
+  "Ampharos-Aevian": {
+   "s": [],
+   "d": [
+    [
+     "A",
+     "Spread attacker (Blizzard)"
+    ]
+   ]
+  },
+  "Magnezone": {
+   "s": [
+    [
+     "C",
+     "Sp. Atk 130"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Spread attacker (Discharge)"
+    ],
+    [
+     "C",
+     "Sp. Atk 130"
+    ]
+   ]
+  },
+  "Gothitelle": {
+   "s": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ]
+  },
+  "Palossand-Aevian (Icy)": {
+   "s": [],
+   "d": []
+  },
+  "Furret": {
+   "s": [
+    [
+     "B",
+     "Follow Me / Baton Pass"
+    ],
+    [
+     "D",
+     "Baton Pass"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Follow Me / Baton Pass"
+    ],
+    [
+     "D",
+     "Baton Pass"
+    ]
+   ]
+  },
+  "Zoroark": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 105)"
+    ],
+    [
+     "C",
+     "Sp. Atk 120"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 105)"
+    ],
+    [
+     "C",
+     "Sp. Atk 120"
+    ]
+   ]
+  },
+  "Mamoswine": {
+   "s": [
+    [
+     "C",
+     "Attack 130"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Spread attacker (Earthquake)"
+    ],
+    [
+     "C",
+     "Attack 130"
+    ]
+   ]
+  },
+  "Chandelure": {
+   "s": [
+    [
+     "C",
+     "Sp. Atk 145"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Sp. Atk 145"
+    ]
+   ]
+  },
+  "Flamigo": {
+   "s": [
+    [
+     "D",
+     "U-turn / Roost"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "U-turn / Roost"
+    ]
+   ]
+  },
+  "Torterra": {
+   "s": [
+    [
+     "A",
+     "Shell Smash sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Shell Smash sweeper"
+    ]
+   ]
+  },
+  "Revavroom": {
+   "s": [
+    [
+     "A",
+     "Shift Gear sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Shift Gear sweeper"
+    ]
+   ]
+  },
+  "Lokix": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (First Impression)"
+    ],
+    [
+     "C",
+     "Tinted Lens"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (First Impression)"
+    ],
+    [
+     "C",
+     "Tinted Lens"
+    ]
+   ]
+  },
+  "Venusaur": {
+   "s": [
+    [
+     "B",
+     "Sleep Powder"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Sun abuser"
+    ],
+    [
+     "B",
+     "Sleep Powder"
+    ]
+   ]
+  },
+  "Talonflame": {
+   "s": [
+    [
+     "B",
+     "Tailwind"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Tailwind"
+    ]
+   ]
+  },
+  "Vaporeon": {
+   "s": [
+    [
+     "D",
+     "Wish"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Wish"
+    ]
+   ]
+  },
+  "Phione": {
+   "s": [],
+   "d": []
+  },
+  "Tsareena": {
+   "s": [
+    [
+     "C",
+     "Attack 120"
+    ],
+    [
+     "E",
+     "Rapid Spin"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Attack 120"
+    ],
+    [
+     "E",
+     "Rapid Spin"
+    ]
+   ]
+  },
+  "Clodsire": {
+   "s": [
+    [
+     "D",
+     "Recover"
+    ],
+    [
+     "E",
+     "Unaware / Flash"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Recover"
+    ],
+    [
+     "E",
+     "Unaware / Flash"
+    ]
+   ]
+  },
+  "Braviary": {
+   "s": [
+    [
+     "C",
+     "Sheer Force"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Sheer Force"
+    ]
+   ]
+  },
+  "Shuckle": {
+   "s": [
+    [
+     "B",
+     "Sticky Web"
+    ],
+    [
+     "E",
+     "Sturdy"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Sturdy"
+    ]
+   ]
+  },
+  "Arcanine": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Extreme Speed)"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Extreme Speed)"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ]
+  },
+  "Crawdaunt": {
+   "s": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ],
+    [
+     "C",
+     "Adaptability"
+    ],
+    [
+     "E",
+     "Knock Off"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ],
+    [
+     "C",
+     "Adaptability"
+    ],
+    [
+     "E",
+     "Knock Off"
+    ]
+   ]
+  },
+  "Ariados": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ]
+   ]
+  },
+  "Noivern": {
+   "s": [
+    [
+     "B",
+     "Tailwind"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Tailwind"
+    ]
+   ]
+  },
+  "Roserade-Aevian": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Vacuum Wave)"
+    ],
+    [
+     "B",
+     "Spikes"
+    ],
+    [
+     "C",
+     "Technician"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Vacuum Wave)"
+    ],
+    [
+     "C",
+     "Technician"
+    ]
+   ]
+  },
+  "Copperajah": {
+   "s": [
+    [
+     "C",
+     "Sheer Force"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Sheer Force"
+    ]
+   ]
+  },
+  "Meowscarada": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 123)"
+    ],
+    [
+     "D",
+     "U-turn"
+    ],
+    [
+     "E",
+     "Knock Off"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 123)"
+    ],
+    [
+     "D",
+     "U-turn"
+    ],
+    [
+     "E",
+     "Knock Off"
+    ]
+   ]
+  },
+  "Empoleon": {
+   "s": [
+    [
+     "D",
+     "Roost"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Spread attacker (Surf)"
+    ],
+    [
+     "D",
+     "Roost"
+    ]
+   ]
+  },
+  "Leavanny-Aevian": {
+   "s": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ]
+  },
+  "Sylveon": {
+   "s": [
+    [
+     "C",
+     "Pixilate"
+    ],
+    [
+     "D",
+     "Wish"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Pixilate"
+    ],
+    [
+     "D",
+     "Wish"
+    ]
+   ]
+  },
+  "Ninetales": {
+   "s": [
+    [
+     "B",
+     "Drought setter"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Drought setter"
+    ]
+   ]
+  },
+  "Scrafty": {
+   "s": [
+    [
+     "A",
+     "Moxie cleaner"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Moxie cleaner"
+    ],
+    [
+     "D",
+     "Fake Out"
+    ]
+   ]
+  },
+  "Quagsire": {
+   "s": [
+    [
+     "E",
+     "Unaware"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Unaware"
+    ]
+   ]
+  },
+  "Dudunsparce": {
+   "s": [
+    [
+     "D",
+     "Roost"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Roost"
+    ]
+   ]
+  },
+  "Golurk": {
+   "s": [
+    [
+     "C",
+     "Iron Fist"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Iron Fist"
+    ]
+   ]
+  },
+  "Vikavolt": {
+   "s": [
+    [
+     "C",
+     "Sp. Atk 145"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Sp. Atk 145"
+    ]
+   ]
+  },
+  "Nidoking": {
+   "s": [
+    [
+     "C",
+     "Sheer Force"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Sheer Force"
+    ]
+   ]
+  },
+  "Malamar": {
+   "s": [],
+   "d": []
+  },
+  "Mismagius-Aevian": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 105)"
+    ],
+    [
+     "E",
+     "Magic Bounce"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 105)"
+    ],
+    [
+     "E",
+     "Magic Bounce"
+    ]
+   ]
+  },
+  "Rampardos": {
+   "s": [
+    [
+     "A",
+     "Rock Polish sweeper"
+    ],
+    [
+     "C",
+     "Attack 165"
+    ],
+    [
+     "E",
+     "Mold Breaker"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Rock Polish sweeper"
+    ],
+    [
+     "C",
+     "Attack 165"
+    ],
+    [
+     "E",
+     "Mold Breaker"
+    ]
+   ]
+  },
+  "Yanmega": {
+   "s": [
+    [
+     "A",
+     "Speed Boost cleaner"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Speed Boost cleaner"
+    ]
+   ]
+  },
+  "Clawitzer": {
+   "s": [
+    [
+     "C",
+     "Mega Launcher"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Mega Launcher"
+    ]
+   ]
+  },
+  "Reuniclus": {
+   "s": [
+    [
+     "C",
+     "Sp. Atk 125"
+    ],
+    [
+     "D",
+     "Recover"
+    ],
+    [
+     "E",
+     "Magic Guard"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Sp. Atk 125"
+    ],
+    [
+     "D",
+     "Recover"
+    ],
+    [
+     "E",
+     "Magic Guard"
+    ]
+   ]
+  },
+  "Decidueye": {
+   "s": [],
+   "d": []
+  },
+  "Ursaring": {
+   "s": [
+    [
+     "C",
+     "Attack 130"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Attack 130"
+    ]
+   ]
+  },
+  "Overqwil": {
+   "s": [
+    [
+     "B",
+     "Spikes"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Intimidate"
+    ]
+   ]
+  },
+  "Dragalge": {
+   "s": [
+    [
+     "C",
+     "Adaptability"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Adaptability"
+    ]
+   ]
+  },
+  "Typhlosion": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 100)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 100)"
+    ]
+   ]
+  },
+  "Hariyama": {
+   "s": [
+    [
+     "C",
+     "Guts"
+    ],
+    [
+     "E",
+     "Knock Off"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Guts"
+    ],
+    [
+     "E",
+     "Knock Off"
+    ]
+   ]
+  },
+  "Florges": {
+   "s": [
+    [
+     "D",
+     "Synthesis"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Synthesis"
+    ]
+   ]
+  },
+  "Solrock (Solrock Dominant Fusion)": {
+   "s": [],
+   "d": []
+  },
+  "Unfezant-Aevian": {
+   "s": [],
+   "d": []
+  },
+  "Ludicolo": {
+   "s": [
+    [
+     "E",
+     "Rain Dance"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Rain abuser"
+    ],
+    [
+     "E",
+     "Rain Dance"
+    ]
+   ]
+  },
+  "Crabominable": {
+   "s": [
+    [
+     "C",
+     "Iron Fist"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Iron Fist"
+    ]
+   ]
+  },
+  "Oranguru": {
+   "s": [
+    [
+     "B",
+     "Trick Room"
+    ],
+    [
+     "E",
+     "Safeguard"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Trick Room"
+    ],
+    [
+     "E",
+     "Safeguard"
+    ]
+   ]
+  },
+  "Rhydon": {
+   "s": [
+    [
+     "C",
+     "Attack 130"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Attack 130"
+    ]
+   ]
+  },
+  "Pangoro": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Bullet Punch)"
+    ],
+    [
+     "C",
+     "Iron Fist"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Bullet Punch)"
+    ],
+    [
+     "C",
+     "Iron Fist"
+    ]
+   ]
+  },
+  "Palossand": {
+   "s": [],
+   "d": []
+  },
+  "Flareon": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Quick Attack)"
+    ],
+    [
+     "C",
+     "Guts"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Quick Attack)"
+    ],
+    [
+     "C",
+     "Guts"
+    ]
+   ]
+  },
+  "Crobat": {
+   "s": [
+    [
+     "B",
+     "Tailwind"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Tailwind"
+    ]
+   ]
+  },
+  "Emboar": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ],
+    [
+     "C",
+     "Reckless"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ],
+    [
+     "C",
+     "Reckless"
+    ]
+   ]
+  },
+  "Silvally": {
+   "s": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ]
+  },
+  "Lickilicky": {
+   "s": [
+    [
+     "E",
+     "Knock Off"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Knock Off"
+    ]
+   ]
+  },
+  "Lunatone (Lunatone Dominant Fusion)": {
+   "s": [],
+   "d": []
+  },
+  "Drednaw": {
+   "s": [
+    [
+     "C",
+     "Strong Jaw"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Strong Jaw"
+    ]
+   ]
+  },
+  "Wyrdeer": {
+   "s": [
+    [
+     "B",
+     "Hypnosis"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Hypnosis"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ]
+  },
+  "Bellibolt": {
+   "s": [
+    [
+     "D",
+     "Slack Off"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Slack Off"
+    ]
+   ]
+  },
+  "Mabosstiff": {
+   "s": [
+    [
+     "C",
+     "Attack 120"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Attack 120"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ]
+  },
+  "Diggersby": {
+   "s": [
+    [
+     "C",
+     "Huge Power"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Huge Power"
+    ]
+   ]
+  },
+  "Nidoqueen": {
+   "s": [
+    [
+     "B",
+     "Toxic Spikes"
+    ],
+    [
+     "C",
+     "Sheer Force"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Sheer Force"
+    ]
+   ]
+  },
+  "Kingler": {
+   "s": [
+    [
+     "C",
+     "Attack 130"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Attack 130"
+    ]
+   ]
+  },
+  "Walrein": {
+   "s": [
+    [
+     "A",
+     "Curse sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Curse sweeper"
+    ]
+   ]
+  },
+  "Grapploct": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ]
+   ]
+  },
+  "Tatsugiri": {
+   "s": [
+    [
+     "A",
+     "Nasty Plot sweeper"
+    ],
+    [
+     "C",
+     "Sp. Atk 120"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Nasty Plot sweeper"
+    ],
+    [
+     "C",
+     "Sp. Atk 120"
+    ]
+   ]
+  },
+  "Eelektross": {
+   "s": [],
+   "d": []
+  },
+  "Runerigus": {
+   "s": [],
+   "d": []
+  },
+  "Heatmor": {
+   "s": [],
+   "d": []
+  },
+  "Mantine": {
+   "s": [],
+   "d": []
+  },
+  "Camerupt": {
+   "s": [
+    [
+     "B",
+     "Yawn"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Yawn"
+    ]
+   ]
+  },
+  "Musharna": {
+   "s": [
+    [
+     "B",
+     "Hypnosis"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Hypnosis"
+    ]
+   ]
+  },
+  "Barbaracle": {
+   "s": [
+    [
+     "A",
+     "Shell Smash sweeper"
+    ],
+    [
+     "C",
+     "Tough Claws"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Shell Smash sweeper"
+    ],
+    [
+     "C",
+     "Tough Claws"
+    ]
+   ]
+  },
+  "Blissey": {
+   "s": [
+    [
+     "D",
+     "Soft-Boiled"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Soft-Boiled"
+    ]
+   ]
+  },
+  "Beartic": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Aqua Jet)"
+    ],
+    [
+     "C",
+     "Attack 130"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Aqua Jet)"
+    ],
+    [
+     "C",
+     "Attack 130"
+    ]
+   ]
+  },
+  "Tangrowth": {
+   "s": [
+    [
+     "B",
+     "Sleep Powder"
+    ],
+    [
+     "D",
+     "Regenerator"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Sleep Powder"
+    ],
+    [
+     "D",
+     "Regenerator"
+    ]
+   ]
+  },
+  "Toxicroak": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ]
+   ]
+  },
+  "Tyrantrum": {
+   "s": [
+    [
+     "C",
+     "Attack 121"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Spread attacker (Earthquake)"
+    ],
+    [
+     "C",
+     "Attack 121"
+    ]
+   ]
+  },
+  "Kilowattrel": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 125)"
+    ],
+    [
+     "D",
+     "Volt Switch / Roost"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 125)"
+    ],
+    [
+     "D",
+     "Volt Switch / Roost"
+    ]
+   ]
+  },
+  "Cradily": {
+   "s": [
+    [
+     "D",
+     "Recover"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Recover"
+    ]
+   ]
+  },
+  "Jellicent": {
+   "s": [
+    [
+     "D",
+     "Recover"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Recover"
+    ]
+   ]
+  },
+  "Veluza": {
+   "s": [
+    [
+     "C",
+     "Sharpness"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Sharpness"
+    ]
+   ]
+  },
+  "Ribombee": {
+   "s": [
+    [
+     "B",
+     "Sticky Web"
+    ]
+   ],
+   "d": []
+  },
+  "Arctozolt": {
+   "s": [],
+   "d": [
+    [
+     "B",
+     "Bulldoze"
+    ]
+   ]
+  },
+  "Centiskorch": {
+   "s": [],
+   "d": []
+  },
+  "Sandaconda": {
+   "s": [
+    [
+     "A",
+     "Coil sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Coil sweeper"
+    ]
+   ]
+  },
+  "Omastar": {
+   "s": [],
+   "d": [
+    [
+     "A",
+     "Rain abuser"
+    ]
+   ]
+  },
+  "Cursola": {
+   "s": [
+    [
+     "C",
+     "Sp. Atk 145"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Sp. Atk 145"
+    ]
+   ]
+  },
+  "Throh": {
+   "s": [
+    [
+     "C",
+     "Guts"
+    ],
+    [
+     "E",
+     "Circle Throw / Knock Off"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Bulldoze"
+    ],
+    [
+     "C",
+     "Guts"
+    ],
+    [
+     "E",
+     "Circle Throw / Knock Off"
+    ]
+   ]
+  },
+  "Umbreon": {
+   "s": [
+    [
+     "D",
+     "Wish"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Wish"
+    ]
+   ]
+  },
+  "Ampharos": {
+   "s": [],
+   "d": [
+    [
+     "A",
+     "Spread attacker (Discharge)"
+    ]
+   ]
+  },
+  "Hitmonchan": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Bullet Punch)"
+    ],
+    [
+     "C",
+     "Iron Fist"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Bullet Punch)"
+    ],
+    [
+     "C",
+     "Iron Fist"
+    ]
+   ]
+  },
+  "Oinkologne": {
+   "s": [],
+   "d": []
+  },
+  "Espeon": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 110)"
+    ],
+    [
+     "C",
+     "Sp. Atk 130"
+    ],
+    [
+     "E",
+     "Magic Bounce"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 110)"
+    ],
+    [
+     "C",
+     "Sp. Atk 130"
+    ],
+    [
+     "E",
+     "Magic Bounce"
+    ]
+   ]
+  },
+  "Mudsdale": {
+   "s": [
+    [
+     "C",
+     "Attack 125"
+    ],
+    [
+     "E",
+     "Roar"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Spread attacker (Earthquake)"
+    ],
+    [
+     "C",
+     "Attack 125"
+    ],
+    [
+     "E",
+     "Roar"
+    ]
+   ]
+  },
+  "Drampa": {
+   "s": [
+    [
+     "B",
+     "Glare"
+    ],
+    [
+     "C",
+     "Sp. Atk 135"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Spread attacker (Hyper Voice)"
+    ],
+    [
+     "B",
+     "Glare"
+    ],
+    [
+     "C",
+     "Sp. Atk 135"
+    ]
+   ]
+  },
+  "Dodrio": {
+   "s": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ]
+   ]
+  },
+  "Jolteon": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 130)"
+    ],
+    [
+     "B",
+     "Yawn"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 130)"
+    ],
+    [
+     "B",
+     "Yawn"
+    ]
+   ]
+  },
+  "Cetitan": {
+   "s": [
+    [
+     "A",
+     "Belly Drum sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Belly Drum sweeper"
+    ]
+   ]
+  },
+  "Cofagrigus": {
+   "s": [
+    [
+     "D",
+     "Will-O-Wisp"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Will-O-Wisp"
+    ]
+   ]
+  },
+  "Marowak-Alola": {
+   "s": [],
+   "d": []
+  },
+  "Passimian": {
+   "s": [
+    [
+     "A",
+     "Bulk Up sweeper"
+    ],
+    [
+     "C",
+     "Attack 120"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Bulk Up sweeper"
+    ],
+    [
+     "C",
+     "Attack 120"
+    ]
+   ]
+  },
+  "Appletun": {
+   "s": [
+    [
+     "D",
+     "Recover"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Recover"
+    ]
+   ]
+  },
+  "Feraligatr": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Aqua Jet)"
+    ],
+    [
+     "C",
+     "Sheer Force"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Aqua Jet)"
+    ],
+    [
+     "C",
+     "Sheer Force"
+    ]
+   ]
+  },
+  "Bruxish": {
+   "s": [
+    [
+     "C",
+     "Strong Jaw"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Strong Jaw"
+    ]
+   ]
+  },
+  "Glaceon": {
+   "s": [
+    [
+     "C",
+     "Sp. Atk 130"
+    ],
+    [
+     "E",
+     "Snowscape"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Spread attacker (Blizzard)"
+    ],
+    [
+     "C",
+     "Sp. Atk 130"
+    ],
+    [
+     "E",
+     "Snowscape"
+    ]
+   ]
+  },
+  "Pidgeot": {
+   "s": [
+    [
+     "B",
+     "Tailwind"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Tailwind"
+    ]
+   ]
+  },
+  "Pyroar": {
+   "s": [
+    [
+     "A",
+     "Work Up sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Work Up sweeper"
+    ]
+   ]
+  },
+  "Hitmontop": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Mach Punch)"
+    ],
+    [
+     "C",
+     "Technician"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Mach Punch)"
+    ],
+    [
+     "C",
+     "Technician"
+    ]
+   ]
+  },
+  "Arboliva": {
+   "s": [
+    [
+     "C",
+     "Sp. Atk 125"
+    ],
+    [
+     "D",
+     "Strength Sap"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Sp. Atk 125"
+    ],
+    [
+     "D",
+     "Strength Sap"
+    ]
+   ]
+  },
+  "Exeggutor": {
+   "s": [
+    [
+     "C",
+     "Sp. Atk 125"
+    ],
+    [
+     "E",
+     "Leech Seed"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Sun abuser"
+    ],
+    [
+     "C",
+     "Sp. Atk 125"
+    ],
+    [
+     "E",
+     "Leech Seed"
+    ]
+   ]
+  },
+  "Scovillain": {
+   "s": [
+    [
+     "A",
+     "Growth sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Growth sweeper"
+    ]
+   ]
+  },
+  "Breloom": {
+   "s": [
+    [
+     "B",
+     "Spore"
+    ],
+    [
+     "C",
+     "Technician"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Spore"
+    ],
+    [
+     "C",
+     "Technician"
+    ]
+   ]
+  },
+  "Grumpig": {
+   "s": [],
+   "d": []
+  },
+  "Squawkabilly (White Plumage)": {
+   "s": [],
+   "d": []
+  },
+  "Dusclops": {
+   "s": [
+    [
+     "D",
+     "Will-O-Wisp"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Will-O-Wisp"
+    ]
+   ]
+  },
+  "Dubwool": {
+   "s": [],
+   "d": []
+  },
+  "Klinklang": {
+   "s": [
+    [
+     "A",
+     "Shift Gear sweeper"
+    ],
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Shift Gear sweeper"
+    ],
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ]
+  },
+  "Comfey": {
+   "s": [
+    [
+     "E",
+     "Leech Seed"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Leech Seed"
+    ]
+   ]
+  },
+  "Simisear": {
+   "s": [],
+   "d": []
+  },
+  "Boltund": {
+   "s": [
+    [
+     "C",
+     "Strong Jaw"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Strong Jaw"
+    ]
+   ]
+  },
+  "Barraskewda": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 136)"
+    ],
+    [
+     "C",
+     "Attack 123"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 136)"
+    ],
+    [
+     "C",
+     "Attack 123"
+    ]
+   ]
+  },
+  "Drapion": {
+   "s": [
+    [
+     "C",
+     "Sniper"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Sniper"
+    ]
+   ]
+  },
+  "Crustle": {
+   "s": [
+    [
+     "A",
+     "Rock Polish sweeper"
+    ],
+    [
+     "E",
+     "Sturdy"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Rock Polish sweeper"
+    ],
+    [
+     "E",
+     "Sturdy"
+    ]
+   ]
+  },
+  "Raichu": {
+   "s": [],
+   "d": [
+    [
+     "D",
+     "Fake Out"
+    ]
+   ]
+  },
+  "Stoutland": {
+   "s": [
+    [
+     "A",
+     "Work Up sweeper"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Work Up sweeper"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ]
+  },
+  "Slaking": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 100)"
+    ],
+    [
+     "C",
+     "Attack 160"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 100)"
+    ],
+    [
+     "C",
+     "Attack 160"
+    ]
+   ]
+  },
+  "Bombirdier": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ],
+    [
+     "C",
+     "Rocky Payload"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ],
+    [
+     "C",
+     "Rocky Payload"
+    ]
+   ]
+  },
+  "Mismagius": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 105)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 105)"
+    ]
+   ]
+  },
+  "Marowak": {
+   "s": [],
+   "d": []
+  },
+  "Primeape": {
+   "s": [],
+   "d": []
+  },
+  "Magmar": {
+   "s": [
+    [
+     "B",
+     "Follow Me"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Follow Me"
+    ]
+   ]
+  },
+  "Perrserker": {
+   "s": [
+    [
+     "C",
+     "Tough Claws"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Tough Claws"
+    ],
+    [
+     "D",
+     "Fake Out"
+    ]
+   ]
+  },
+  "Sunflora": {
+   "s": [
+    [
+     "E",
+     "Sunny Day"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Sun abuser"
+    ],
+    [
+     "E",
+     "Sunny Day"
+    ]
+   ]
+  },
+  "Toedscruel": {
+   "s": [
+    [
+     "B",
+     "Spore"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Spore"
+    ]
+   ]
+  },
+  "Starmie": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 115)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 115)"
+    ]
+   ]
+  },
+  "Lucario": {
+   "s": [
+    [
+     "A",
+     "Calm Mind sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Calm Mind sweeper"
+    ]
+   ]
+  },
+  "Arctovish": {
+   "s": [
+    [
+     "B",
+     "Aurora Veil"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Aurora Veil"
+    ]
+   ]
+  },
+  "Seaking": {
+   "s": [],
+   "d": [
+    [
+     "A",
+     "Rain abuser"
+    ]
+   ]
+  },
+  "Skuntank": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ]
+   ]
+  },
+  "Druddigon": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ],
+    [
+     "B",
+     "Glare"
+    ],
+    [
+     "C",
+     "Attack 120"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ],
+    [
+     "B",
+     "Glare"
+    ],
+    [
+     "C",
+     "Attack 120"
+    ]
+   ]
+  },
+  "Aurorus": {
+   "s": [
+    [
+     "B",
+     "Aurora Veil"
+    ],
+    [
+     "C",
+     "Refrigerate"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Aurora Veil"
+    ],
+    [
+     "C",
+     "Refrigerate"
+    ]
+   ]
+  },
+  "Meganium": {
+   "s": [
+    [
+     "B",
+     "Reflect"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Reflect"
+    ]
+   ]
+  },
+  "Basculin (Blue-Striped)": {
+   "s": [
+    [
+     "E",
+     "Mold Breaker"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Mold Breaker"
+    ]
+   ]
+  },
+  "Vileplume": {
+   "s": [],
+   "d": []
+  },
+  "Tropius": {
+   "s": [
+    [
+     "E",
+     "Wide Guard"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Sun abuser"
+    ],
+    [
+     "E",
+     "Wide Guard"
+    ]
+   ]
+  },
+  "Drifblim": {
+   "s": [
+    [
+     "A",
+     "Unburden cleaner"
+    ],
+    [
+     "B",
+     "Tailwind"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Unburden cleaner"
+    ],
+    [
+     "B",
+     "Tailwind"
+    ]
+   ]
+  },
+  "Roserade": {
+   "s": [
+    [
+     "B",
+     "Sleep Powder"
+    ],
+    [
+     "C",
+     "Sp. Atk 125"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Sleep Powder"
+    ],
+    [
+     "C",
+     "Sp. Atk 125"
+    ]
+   ]
+  },
+  "Golduck": {
+   "s": [],
+   "d": []
+  },
+  "Chimecho": {
+   "s": [
+    [
+     "E",
+     "Perish Song"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Perish Song"
+    ]
+   ]
+  },
+  "Muk": {
+   "s": [
+    [
+     "A",
+     "Acid Armor sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Acid Armor sweeper"
+    ]
+   ]
+  },
+  "Cinccino": {
+   "s": [
+    [
+     "C",
+     "Skill Link"
+    ],
+    [
+     "E",
+     "Knock Off"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Skill Link"
+    ],
+    [
+     "E",
+     "Knock Off"
+    ]
+   ]
+  },
+  "Paras-Aevian": {
+   "s": [],
+   "d": []
+  },
+  "Stunfisk-Galar": {
+   "s": [
+    [
+     "B",
+     "Yawn"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Yawn"
+    ]
+   ]
+  },
+  "Orbeetle": {
+   "s": [
+    [
+     "B",
+     "Reflect"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Reflect"
+    ]
+   ]
+  },
+  "Sudowoodo": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ],
+    [
+     "E",
+     "Sturdy"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ],
+    [
+     "E",
+     "Sturdy"
+    ]
+   ]
+  },
+  "Pawmot": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 105)"
+    ],
+    [
+     "C",
+     "Iron Fist"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 105)"
+    ],
+    [
+     "C",
+     "Iron Fist"
+    ],
+    [
+     "D",
+     "Fake Out"
+    ]
+   ]
+  },
+  "Swanna": {
+   "s": [],
+   "d": []
+  },
+  "Alcremie": {
+   "s": [
+    [
+     "B",
+     "Decorate"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Spread attacker (Dazzling Gleam)"
+    ],
+    [
+     "B",
+     "Decorate"
+    ]
+   ]
+  },
+  "Heliolisk": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 109)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 109)"
+    ]
+   ]
+  },
+  "Magcargo": {
+   "s": [
+    [
+     "B",
+     "Yawn"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Yawn"
+    ]
+   ]
+  },
+  "Pincurchin": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ],
+    [
+     "B",
+     "Electric Surge setter"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ],
+    [
+     "B",
+     "Electric Surge setter"
+    ]
+   ]
+  },
+  "Seismitoad": {
+   "s": [],
+   "d": []
+  },
+  "Electrode-Hisui": {
+   "s": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ]
+  },
+  "Zebstrika": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 116)"
+    ],
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 116)"
+    ],
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ]
+  },
+  "Tentacruel": {
+   "s": [
+    [
+     "E",
+     "Haze"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Haze"
+    ]
+   ]
+  },
+  "Lurantis": {
+   "s": [],
+   "d": []
+  },
+  "Vanilluxe": {
+   "s": [
+    [
+     "B",
+     "Snow Warning setter"
+    ],
+    [
+     "E",
+     "Snowscape"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Spread attacker (Blizzard)"
+    ],
+    [
+     "B",
+     "Snow Warning setter"
+    ],
+    [
+     "E",
+     "Snowscape"
+    ]
+   ]
+  },
+  "Electabuzz": {
+   "s": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ]
+  },
+  "Abomasnow": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Ice Shard)"
+    ],
+    [
+     "B",
+     "Snow Warning setter / Grass Whistle"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Ice Shard)"
+    ],
+    [
+     "B",
+     "Snow Warning setter / Grass Whistle"
+    ]
+   ]
+  },
+  "Probopass": {
+   "s": [
+    [
+     "B",
+     "Thunder Wave"
+    ],
+    [
+     "E",
+     "Sturdy"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Thunder Wave"
+    ],
+    [
+     "E",
+     "Sturdy"
+    ]
+   ]
+  },
+  "Bellossom": {
+   "s": [
+    [
+     "A",
+     "Quiver Dance sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Quiver Dance sweeper"
+    ]
+   ]
+  },
+  "Hitmonlee": {
+   "s": [
+    [
+     "C",
+     "Attack 120"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Attack 120"
+    ],
+    [
+     "D",
+     "Fake Out"
+    ]
+   ]
+  },
+  "Brambleghast": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Shadow Sneak)"
+    ],
+    [
+     "E",
+     "Rapid Spin"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Shadow Sneak)"
+    ],
+    [
+     "E",
+     "Rapid Spin"
+    ]
+   ]
+  },
+  "Raticate-Alola": {
+   "s": [],
+   "d": []
+  },
+  "Golisopod": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (First Impression)"
+    ],
+    [
+     "C",
+     "Attack 125"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (First Impression)"
+    ],
+    [
+     "C",
+     "Attack 125"
+    ]
+   ]
+  },
+  "Slowbro-Galar": {
+   "s": [],
+   "d": []
+  },
+  "Carnivine": {
+   "s": [
+    [
+     "B",
+     "Sleep Powder"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Sleep Powder"
+    ]
+   ]
+  },
+  "Bronzong": {
+   "s": [
+    [
+     "A",
+     "Iron Defense sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Iron Defense sweeper"
+    ],
+    [
+     "B",
+     "Bulldoze"
+    ]
+   ]
+  },
+  "Greedent": {
+   "s": [],
+   "d": []
+  },
+  "Lapras": {
+   "s": [],
+   "d": []
+  },
+  "Leafeon": {
+   "s": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ]
+   ]
+  },
+  "Stunfisk": {
+   "s": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ]
+  },
+  "Gogoat": {
+   "s": [],
+   "d": []
+  },
+  "Victreebel": {
+   "s": [
+    [
+     "B",
+     "Sleep Powder"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Sleep Powder"
+    ]
+   ]
+  },
+  "Sirfetch'd": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (First Impression)"
+    ],
+    [
+     "C",
+     "Attack 135"
+    ],
+    [
+     "E",
+     "Knock Off"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (First Impression)"
+    ],
+    [
+     "C",
+     "Attack 135"
+    ],
+    [
+     "E",
+     "Knock Off"
+    ]
+   ]
+  },
+  "Klawf": {
+   "s": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ]
+   ]
+  },
+  "Audino": {
+   "s": [],
+   "d": []
+  },
+  "Forretress": {
+   "s": [
+    [
+     "B",
+     "Spikes"
+    ],
+    [
+     "E",
+     "Sturdy"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Sturdy"
+    ]
+   ]
+  },
+  "Garbodor": {
+   "s": [],
+   "d": []
+  },
+  "Frosmoth": {
+   "s": [
+    [
+     "A",
+     "Quiver Dance sweeper"
+    ],
+    [
+     "C",
+     "Sp. Atk 125"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Quiver Dance sweeper"
+    ],
+    [
+     "C",
+     "Sp. Atk 125"
+    ]
+   ]
+  },
+  "Octillery": {
+   "s": [],
+   "d": []
+  },
+  "Zangoose": {
+   "s": [],
+   "d": []
+  },
+  "Heracross": {
+   "s": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ],
+    [
+     "C",
+     "Attack 125"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ],
+    [
+     "C",
+     "Attack 125"
+    ]
+   ]
+  },
+  "Graveler": {
+   "s": [
+    [
+     "E",
+     "Sturdy"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Sturdy"
+    ]
+   ]
+  },
+  "Swellow": {
+   "s": [
+    [
+     "C",
+     "Guts"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Guts"
+    ]
+   ]
+  },
+  "Dachsbun": {
+   "s": [
+    [
+     "B",
+     "Yawn"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Yawn"
+    ]
+   ]
+  },
+  "Houndoom": {
+   "s": [
+    [
+     "A",
+     "Nasty Plot sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Nasty Plot sweeper"
+    ]
+   ]
+  },
+  "Oricorio (Pom-Pom Style)": {
+   "s": [
+    [
+     "B",
+     "Baton Pass"
+    ],
+    [
+     "D",
+     "Baton Pass"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Baton Pass"
+    ],
+    [
+     "D",
+     "Baton Pass"
+    ]
+   ]
+  },
+  "Tauros": {
+   "s": [
+    [
+     "A",
+     "Work Up sweeper"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Work Up sweeper"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ]
+  },
+  "Medicham": {
+   "s": [
+    [
+     "C",
+     "Pure Power"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Pure Power"
+    ]
+   ]
+  },
+  "Claydol": {
+   "s": [
+    [
+     "E",
+     "Rapid Spin"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Rapid Spin"
+    ]
+   ]
+  },
+  "Machoke": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Bullet Punch)"
+    ],
+    [
+     "C",
+     "Guts"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Bullet Punch)"
+    ],
+    [
+     "C",
+     "Guts"
+    ]
+   ]
+  },
+  "Meowstic": {
+   "s": [
+    [
+     "B",
+     "Reflect"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Reflect"
+    ]
+   ]
+  },
+  "Floatzel": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 115)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 115)"
+    ]
+   ]
+  },
+  "Turtonator": {
+   "s": [
+    [
+     "A",
+     "Shell Smash sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Shell Smash sweeper"
+    ]
+   ]
+  },
+  "Armaldo": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Aqua Jet)"
+    ],
+    [
+     "C",
+     "Attack 125"
+    ],
+    [
+     "E",
+     "Rapid Spin"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Aqua Jet)"
+    ],
+    [
+     "C",
+     "Attack 125"
+    ],
+    [
+     "E",
+     "Rapid Spin"
+    ]
+   ]
+  },
+  "Tauros (Paldean Combat Breed)": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 100)"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 100)"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ]
+  },
+  "Shiinotic": {
+   "s": [
+    [
+     "B",
+     "Spore"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Spore"
+    ]
+   ]
+  },
+  "Beheeyem": {
+   "s": [
+    [
+     "C",
+     "Sp. Atk 125"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Sp. Atk 125"
+    ]
+   ]
+  },
+  "Mawile": {
+   "s": [
+    [
+     "D",
+     "Intimidate"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Intimidate"
+    ]
+   ]
+  },
+  "Wigglytuff": {
+   "s": [
+    [
+     "B",
+     "Sing"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Sing"
+    ]
+   ]
+  },
+  "Eiscue": {
+   "s": [
+    [
+     "B",
+     "Aurora Veil"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Aurora Veil"
+    ]
+   ]
+  },
+  "Mr. Mime": {
+   "s": [
+    [
+     "B",
+     "Reflect"
+    ],
+    [
+     "E",
+     "Soundproof"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Reflect"
+    ],
+    [
+     "E",
+     "Soundproof"
+    ]
+   ]
+  },
+  "Hypno": {
+   "s": [],
+   "d": []
+  },
+  "Qwilfish": {
+   "s": [
+    [
+     "B",
+     "Toxic Spikes"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Intimidate"
+    ]
+   ]
+  },
+  "Toucannon": {
+   "s": [
+    [
+     "C",
+     "Skill Link"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Skill Link"
+    ]
+   ]
+  },
+  "Porygon": {
+   "s": [],
+   "d": []
+  },
+  "Avalugg-Hisui": {
+   "s": [
+    [
+     "C",
+     "Attack 127"
+    ],
+    [
+     "D",
+     "Recover"
+    ],
+    [
+     "E",
+     "Sturdy"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Attack 127"
+    ],
+    [
+     "D",
+     "Recover"
+    ],
+    [
+     "E",
+     "Sturdy"
+    ]
+   ]
+  },
+  "Exploud": {
+   "s": [],
+   "d": []
+  },
+  "Fearow": {
+   "s": [
+    [
+     "C",
+     "Sniper"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Sniper"
+    ]
+   ]
+  },
+  "Grafaiai": {
+   "s": [
+    [
+     "D",
+     "Parting Shot"
+    ],
+    [
+     "E",
+     "Prankster / Knock Off"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Parting Shot"
+    ],
+    [
+     "E",
+     "Prankster / Knock Off"
+    ]
+   ]
+  },
+  "Ambipom": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 115)"
+    ],
+    [
+     "C",
+     "Technician"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 115)"
+    ],
+    [
+     "C",
+     "Technician"
+    ],
+    [
+     "D",
+     "Fake Out"
+    ]
+   ]
+  },
+  "Coalossal": {
+   "s": [],
+   "d": []
+  },
+  "Swalot": {
+   "s": [
+    [
+     "B",
+     "Yawn"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Yawn"
+    ]
+   ]
+  },
+  "Pinsir": {
+   "s": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ],
+    [
+     "C",
+     "Attack 125"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ],
+    [
+     "C",
+     "Attack 125"
+    ]
+   ]
+  },
+  "Manectric": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 105)"
+    ],
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 105)"
+    ],
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ]
+  },
+  "Sandslash-Alola": {
+   "s": [
+    [
+     "E",
+     "Snowscape"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Snow abuser"
+    ],
+    [
+     "E",
+     "Snowscape"
+    ]
+   ]
+  },
+  "Carbink": {
+   "s": [
+    [
+     "B",
+     "Light Screen"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Light Screen"
+    ]
+   ]
+  },
+  "Sceptile": {
+   "s": [
+    [
+     "A",
+     "Unburden cleaner"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Unburden cleaner"
+    ]
+   ]
+  },
+  "Altaria": {
+   "s": [
+    [
+     "D",
+     "Roost"
+    ],
+    [
+     "E",
+     "Cloud Nine"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Roost"
+    ],
+    [
+     "E",
+     "Cloud Nine"
+    ]
+   ]
+  },
+  "Venomoth": {
+   "s": [
+    [
+     "B",
+     "Sleep Powder"
+    ],
+    [
+     "C",
+     "Tinted Lens"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Sleep Powder"
+    ],
+    [
+     "C",
+     "Tinted Lens"
+    ]
+   ]
+  },
+  "Corsola": {
+   "s": [],
+   "d": []
+  },
+  "Luxray": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Quick Attack)"
+    ],
+    [
+     "C",
+     "Attack 120"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Quick Attack)"
+    ],
+    [
+     "C",
+     "Attack 120"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ]
+  },
+  "Scolipede": {
+   "s": [
+    [
+     "A",
+     "Speed Boost cleaner"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Speed Boost cleaner"
+    ],
+    [
+     "B",
+     "Bulldoze"
+    ]
+   ]
+  },
+  "Jumpluff": {
+   "s": [
+    [
+     "B",
+     "Sleep Powder"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Sun abuser"
+    ],
+    [
+     "B",
+     "Sleep Powder"
+    ]
+   ]
+  },
+  "Oricorio": {
+   "s": [
+    [
+     "B",
+     "Baton Pass"
+    ],
+    [
+     "D",
+     "Baton Pass"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Baton Pass"
+    ],
+    [
+     "D",
+     "Baton Pass"
+    ]
+   ]
+  },
+  "Simipour": {
+   "s": [],
+   "d": []
+  },
+  "Absol": {
+   "s": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ],
+    [
+     "C",
+     "Attack 130"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ],
+    [
+     "C",
+     "Attack 130"
+    ]
+   ]
+  },
+  "Wormadam (Sandy Cloak)": {
+   "s": [],
+   "d": [
+    [
+     "B",
+     "Bulldoze"
+    ]
+   ]
+  },
+  "Rapidash": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 105)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 105)"
+    ]
+   ]
+  },
+  "Cryogonal": {
+   "s": [
+    [
+     "B",
+     "Reflect"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Reflect"
+    ]
+   ]
+  },
+  "Furfrou": {
+   "s": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ]
+  },
+  "Sandslash": {
+   "s": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ]
+   ]
+  },
+  "Avalugg": {
+   "s": [
+    [
+     "D",
+     "Recover"
+    ],
+    [
+     "E",
+     "Sturdy / Rapid Spin"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Recover"
+    ],
+    [
+     "E",
+     "Sturdy / Rapid Spin"
+    ]
+   ]
+  },
+  "Leavanny": {
+   "s": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ]
+   ]
+  },
+  "Obstagoon": {
+   "s": [
+    [
+     "C",
+     "Guts"
+    ],
+    [
+     "E",
+     "Knock Off"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Guts"
+    ],
+    [
+     "E",
+     "Knock Off"
+    ]
+   ]
+  },
+  "Xatu": {
+   "s": [
+    [
+     "E",
+     "Magic Bounce"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Magic Bounce"
+    ]
+   ]
+  },
+  "Seviper": {
+   "s": [],
+   "d": []
+  },
+  "Bastiodon": {
+   "s": [
+    [
+     "E",
+     "Sturdy"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Sturdy"
+    ]
+   ]
+  },
+  "Sawsbuck": {
+   "s": [],
+   "d": [
+    [
+     "A",
+     "Sun abuser"
+    ]
+   ]
+  },
+  "Eldegoss": {
+   "s": [
+    [
+     "E",
+     "Leech Seed"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Leech Seed"
+    ]
+   ]
+  },
+  "Shiftry": {
+   "s": [
+    [
+     "A",
+     "Growth sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Growth sweeper"
+    ],
+    [
+     "D",
+     "Fake Out"
+    ]
+   ]
+  },
+  "Minun": {
+   "s": [
+    [
+     "A",
+     "Nasty Plot sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Nasty Plot sweeper"
+    ]
+   ]
+  },
+  "Persian-Alola": {
+   "s": [
+    [
+     "B",
+     "Hypnosis"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Hypnosis"
+    ]
+   ]
+  },
+  "Volbeat": {
+   "s": [
+    [
+     "E",
+     "Prankster"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Prankster"
+    ]
+   ]
+  },
+  "Weezing": {
+   "s": [],
+   "d": []
+  },
+  "Cramorant": {
+   "s": [],
+   "d": []
+  },
+  "Noctowl": {
+   "s": [],
+   "d": []
+  },
+  "Kangaskhan": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ],
+    [
+     "D",
+     "Fake Out"
+    ]
+   ]
+  },
+  "Linoone": {
+   "s": [],
+   "d": []
+  },
+  "Lumineon": {
+   "s": [
+    [
+     "D",
+     "U-turn"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "U-turn"
+    ]
+   ]
+  },
+  "Oricorio (Sensu Style)": {
+   "s": [],
+   "d": []
+  },
+  "Thievul": {
+   "s": [
+    [
+     "A",
+     "Unburden cleaner"
+    ],
+    [
+     "D",
+     "Parting Shot"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Unburden cleaner"
+    ],
+    [
+     "D",
+     "Parting Shot / Snarl"
+    ]
+   ]
+  },
+  "Mightyena": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ]
+  },
+  "Kabutops": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Aqua Jet)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Aqua Jet)"
+    ]
+   ]
+  },
+  "Vespiquen": {
+   "s": [],
+   "d": []
+  },
+  "Boldore": {
+   "s": [
+    [
+     "E",
+     "Sturdy"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Sturdy"
+    ]
+   ]
+  },
+  "Maractus": {
+   "s": [],
+   "d": []
+  },
+  "Spritzee": {
+   "s": [],
+   "d": []
+  },
+  "Kecleon": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ]
+   ]
+  },
+  "Minior": {
+   "s": [
+    [
+     "A",
+     "Shell Smash sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Shell Smash sweeper"
+    ]
+   ]
+  },
+  "Graveler-Alola": {
+   "s": [
+    [
+     "C",
+     "Galvanize"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Galvanize"
+    ]
+   ]
+  },
+  "Jynx": {
+   "s": [
+    [
+     "B",
+     "Lovely Kiss"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Lovely Kiss"
+    ]
+   ]
+  },
+  "Arbok": {
+   "s": [
+    [
+     "B",
+     "Glare"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Glare"
+    ],
+    [
+     "D",
+     "Intimidate"
+    ]
+   ]
+  },
+  "Dugtrio-Alola": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 110)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 110)"
+    ]
+   ]
+  },
+  "Stonjourner": {
+   "s": [
+    [
+     "C",
+     "Attack 125"
+    ],
+    [
+     "E",
+     "Wide Guard"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Attack 125"
+    ],
+    [
+     "E",
+     "Wide Guard"
+    ]
+   ]
+  },
+  "Floette": {
+   "s": [],
+   "d": []
+  },
+  "Butterfree": {
+   "s": [
+    [
+     "B",
+     "Sleep Powder"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Sleep Powder"
+    ]
+   ]
+  },
+  "Gumshoos": {
+   "s": [
+    [
+     "B",
+     "Yawn"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Yawn"
+    ]
+   ]
+  },
+  "Plusle": {
+   "s": [
+    [
+     "A",
+     "Nasty Plot sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Nasty Plot sweeper"
+    ]
+   ]
+  },
+  "Salazzle": {
+   "s": [
+    [
+     "A",
+     "Nasty Plot sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Nasty Plot sweeper"
+    ]
+   ]
+  },
+  "Unfezant": {
+   "s": [],
+   "d": []
+  },
+  "Wormadam": {
+   "s": [
+    [
+     "A",
+     "Quiver Dance sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Quiver Dance sweeper"
+    ]
+   ]
+  },
+  "Electrode": {
+   "s": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Thunder Wave / Electroweb"
+    ]
+   ]
+  },
+  "Chatot": {
+   "s": [],
+   "d": []
+  },
+  "Wormadam (Trash Cloak)": {
+   "s": [],
+   "d": []
+  },
+  "Morpeko": {
+   "s": [
+    [
+     "A",
+     "Agility sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Agility sweeper"
+    ],
+    [
+     "D",
+     "Fake Out"
+    ]
+   ]
+  },
+  "Sharpedo": {
+   "s": [
+    [
+     "A",
+     "Speed Boost cleaner"
+    ],
+    [
+     "C",
+     "Attack 120"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Speed Boost cleaner"
+    ],
+    [
+     "C",
+     "Attack 120"
+    ]
+   ]
+  },
+  "Ditto": {
+   "s": [],
+   "d": []
+  },
+  "Raticate": {
+   "s": [
+    [
+     "C",
+     "Guts"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Guts"
+    ]
+   ]
+  },
+  "Simisage": {
+   "s": [],
+   "d": []
+  },
+  "Glalie": {
+   "s": [
+    [
+     "E",
+     "Snowscape"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Bulldoze"
+    ],
+    [
+     "E",
+     "Snowscape"
+    ]
+   ]
+  },
+  "Phantump": {
+   "s": [],
+   "d": []
+  },
+  "Watchog": {
+   "s": [
+    [
+     "B",
+     "Hypnosis"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Hypnosis"
+    ]
+   ]
+  },
+  "Castform": {
+   "s": [
+    [
+     "E",
+     "Snowscape"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Snowscape"
+    ]
+   ]
+  },
+  "Onix": {
+   "s": [
+    [
+     "A",
+     "Curse sweeper"
+    ],
+    [
+     "E",
+     "Sturdy"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Curse sweeper"
+    ],
+    [
+     "E",
+     "Sturdy"
+    ]
+   ]
+  },
+  "Vivillon": {
+   "s": [
+    [
+     "B",
+     "Sleep Powder"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Sleep Powder"
+    ]
+   ]
+  },
+  "Bibarel": {
+   "s": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Swords Dance sweeper"
+    ]
+   ]
+  },
+  "Swoobat": {
+   "s": [
+    [
+     "A",
+     "Calm Mind sweeper"
+    ],
+    [
+     "E",
+     "Unaware"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Calm Mind sweeper"
+    ],
+    [
+     "E",
+     "Unaware"
+    ]
+   ]
+  },
+  "Beedrill": {
+   "s": [],
+   "d": []
+  },
+  "Cherrim": {
+   "s": [],
+   "d": [
+    [
+     "B",
+     "Helping Hand"
+    ]
+   ]
+  },
+  "Oricorio (Pa'u Style)": {
+   "s": [],
+   "d": []
+  },
+  "Cacturne": {
+   "s": [],
+   "d": []
+  },
+  "Banette": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Shadow Sneak)"
+    ],
+    [
+     "E",
+     "Knock Off"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Shadow Sneak)"
+    ],
+    [
+     "E",
+     "Knock Off"
+    ]
+   ]
+  },
+  "Clamperl": {
+   "s": [
+    [
+     "A",
+     "Shell Smash sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Shell Smash sweeper"
+    ]
+   ]
+  },
+  "Liepard": {
+   "s": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ]
+  },
+  "Illumise": {
+   "s": [],
+   "d": []
+  },
+  "Wailord": {
+   "s": [],
+   "d": []
+  },
+  "Kadabra": {
+   "s": [
+    [
+     "A",
+     "Calm Mind sweeper"
+    ],
+    [
+     "C",
+     "Sp. Atk 120"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Calm Mind sweeper"
+    ],
+    [
+     "C",
+     "Sp. Atk 120"
+    ]
+   ]
+  },
+  "Parasect": {
+   "s": [
+    [
+     "B",
+     "Spore"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Spore"
+    ]
+   ]
+  },
+  "Masquerain": {
+   "s": [
+    [
+     "D",
+     "Intimidate"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Intimidate"
+    ]
+   ]
+  },
+  "Dewgong": {
+   "s": [
+    [
+     "E",
+     "Perish Song"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Fake Out"
+    ],
+    [
+     "E",
+     "Perish Song"
+    ]
+   ]
+  },
+  "Wugtrio": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 120)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 120)"
+    ]
+   ]
+  },
+  "Spidops": {
+   "s": [
+    [
+     "E",
+     "Circle Throw"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Circle Throw"
+    ]
+   ]
+  },
+  "Gimmighoul": {
+   "s": [],
+   "d": []
+  },
+  "Swirlix": {
+   "s": [],
+   "d": []
+  },
+  "Lopunny": {
+   "s": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Thunder Wave"
+    ],
+    [
+     "D",
+     "Fake Out"
+    ]
+   ]
+  },
+  "Purugly": {
+   "s": [
+    [
+     "B",
+     "Hypnosis"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Hypnosis"
+    ],
+    [
+     "D",
+     "Fake Out"
+    ]
+   ]
+  },
+  "Mothim": {
+   "s": [
+    [
+     "C",
+     "Tinted Lens"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Tinted Lens"
+    ]
+   ]
+  },
+  "Kricketune": {
+   "s": [],
+   "d": []
+  },
+  "Emolga": {
+   "s": [
+    [
+     "B",
+     "Nuzzle"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Nuzzle"
+    ]
+   ]
+  },
+  "Dedenne": {
+   "s": [],
+   "d": [
+    [
+     "B",
+     "Electroweb"
+    ]
+   ]
+  },
+  "Farfetch'd": {
+   "s": [],
+   "d": []
+  },
+  "Pumpkaboo": {
+   "s": [
+    [
+     "E",
+     "Leech Seed"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Leech Seed"
+    ]
+   ]
+  },
+  "Persian": {
+   "s": [
+    [
+     "C",
+     "Technician"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Technician"
+    ],
+    [
+     "D",
+     "Fake Out"
+    ]
+   ]
+  },
+  "Dugtrio": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 120)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 120)"
+    ]
+   ]
+  },
+  "Shedinja": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Shadow Sneak)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Shadow Sneak)"
+    ]
+   ]
+  },
+  "Dustox": {
+   "s": [],
+   "d": []
+  },
+  "Spinda": {
+   "s": [],
+   "d": []
+  },
+  "Karrablast": {
+   "s": [
+    [
+     "E",
+     "Knock Off"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Knock Off"
+    ]
+   ]
+  },
+  "Beautifly": {
+   "s": [
+    [
+     "A",
+     "Quiver Dance sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Quiver Dance sweeper"
+    ]
+   ]
+  },
+  "Togedemaru": {
+   "s": [
+    [
+     "B",
+     "Nuzzle"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Nuzzle"
+    ]
+   ]
+  },
+  "Salandit": {
+   "s": [],
+   "d": []
+  },
+  "Ledian": {
+   "s": [
+    [
+     "B",
+     "Tailwind"
+    ],
+    [
+     "C",
+     "Iron Fist"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Tailwind"
+    ],
+    [
+     "C",
+     "Iron Fist"
+    ]
+   ]
+  },
+  "Pyukumuku": {
+   "s": [
+    [
+     "D",
+     "Recover / Toxic"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Recover / Toxic"
+    ]
+   ]
+  },
+  "Pachirisu": {
+   "s": [
+    [
+     "B",
+     "Nuzzle / Follow Me"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Nuzzle / Follow Me"
+    ]
+   ]
+  },
+  "Delcatty": {
+   "s": [],
+   "d": [
+    [
+     "B",
+     "Helping Hand"
+    ],
+    [
+     "D",
+     "Fake Out"
+    ]
+   ]
+  },
+  "Shelmet": {
+   "s": [],
+   "d": []
+  },
+  "Luvdisc": {
+   "s": [],
+   "d": []
+  },
+  "Delibird": {
+   "s": [],
+   "d": []
+  },
+  "Charcadet": {
+   "s": [],
+   "d": []
+  },
+  "Wishiwashi": {
+   "s": [],
+   "d": []
+  },
+  "Combee": {
+   "s": [],
+   "d": []
+  },
+  "Unown": {
+   "s": [],
+   "d": []
+  }
+ },
  "partners": {
   "Golisopod-Aevian": [
    {
