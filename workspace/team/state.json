@@ -4,9 +4,9 @@
  "export_label": "23 Nov 08:03",
  "active_start": 468,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 306,
- "run": 320,
- "final": 324,
+ "roster": 310,
+ "run": 324,
+ "final": 328,
  "done": [
   "aelita",
   "narcissa1",
@@ -420,5 +420,6 @@
    "TORCHSONG"
   ]
  },
- "mode": "planner"
+ "mode": "planner",
+ "core_n": 3
 }

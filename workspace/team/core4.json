@@ -95,89 +95,66 @@
      "Resists Fire / Ice"
     ]
    ]
-  },
-  {
-   "name": "Musharna (Aevian Form)",
-   "tier": "S",
-   "sid": "MUSHARNA",
-   "form": "1",
-   "blend": 0.769,
-   "meta": 0.72,
-   "game": 0.939,
-   "types": [
-    "DARK",
-    "FAIRY"
-   ],
-   "moves": [
-    "Lovely Kiss",
-    "Shadow Claw",
-    "Play Rough",
-    "Protect"
-   ],
-   "ability": "TOUGHCLAWS",
-   "aevian": true,
-   "where": "Party",
-   "chips": [
-    [
-     "tool",
-     "Sleep"
-    ],
-    [
-     "stat",
-     "Immune Psychic / Dragon"
-    ],
-    [
-     "stat",
-     "Resists Ghost / Dark"
-    ]
-   ]
   }
  ],
- "score": 46.79,
+ "n": 3,
+ "score": 40.6,
  "parts": {
-  "strength": 33.94,
-  "defense": 4.2,
-  "offense": 4.0,
-  "synergy": 3.75,
-  "aevian": 0.9,
+  "strength": 26.25,
+  "defense": 3.0,
+  "offense": 3.5,
+  "synergy": 7.25,
+  "aevian": 0.6,
   "shared": [],
   "triple": [],
-  "resisted": 14,
-  "covered": 16,
+  "resisted": 10,
+  "covered": 14,
   "uncovered": [
    "NORMAL",
-   "WATER"
+   "WATER",
+   "GHOST",
+   "DRAGON"
   ],
   "why": [
    "Physical and special attackers: one Intimidate or screen cannot stop both",
    "Fast and slow members: works with and without speed control",
-   "Musharna-Aevian puts a foe to sleep: free turns for Golisopod-Aevian",
-   "Speed control: Slowking-Galar"
+   "Speed control: Slowking-Galar",
+   "Regenerator switches: Slowking-Galar"
   ]
  },
  "runners": [
   {
-   "out": "Musharna (Aevian Form)",
-   "in": "Glalie (Aevian Form)",
-   "delta": -1.71
-  },
-  {
-   "out": "Musharna (Aevian Form)",
-   "in": "Gastrodon (West Aevian Form)",
-   "delta": -2.55
+   "out": "Veluza (Aevian Form)",
+   "in": "Musharna (Aevian Form)",
+   "delta": -1.64
   },
   {
    "out": "Veluza (Aevian Form)",
-   "in": "Alomomola",
-   "delta": -2.78
+   "in": "Muk (Alolan Form)",
+   "delta": -2.39
   },
   {
-   "out": "Musharna (Aevian Form)",
-   "in": "Clefable",
-   "delta": -2.91
+   "out": "Veluza (Aevian Form)",
+   "in": "Unfezant (Aevian Form Male)",
+   "delta": -2.94
+  },
+  {
+   "out": "Golisopod (Aevian Form)",
+   "in": "Froslass (Aevian Form)",
+   "delta": -3.23
   }
  ],
  "pool": 26,
+ "singles": {
+  "Fast cleaner": "Veluza (Aevian Form)",
+  "Bulky pivot": "Slowking (Galarian Form)",
+  "Wallbreaker": "Golisopod (Aevian Form)"
+ },
+ "doubles": {
+  "Fake Out / redirection": null,
+  "Spread or speed control": "Slowking (Galarian Form)",
+  "Bulky attacker": "Golisopod (Aevian Form)"
+ },
  "matrix": {
   "Golisopod (Aevian Form)": {
    "NORMAL": 1.0,
@@ -238,26 +215,6 @@
    "DARK": 1.0,
    "STEEL": 0.25,
    "FAIRY": 0.5
-  },
-  "Musharna (Aevian Form)": {
-   "NORMAL": 1.0,
-   "FIRE": 1.0,
-   "WATER": 1.0,
-   "ELECTRIC": 1.0,
-   "GRASS": 1.0,
-   "ICE": 1.0,
-   "FIGHTING": 1.0,
-   "POISON": 2.0,
-   "GROUND": 1.0,
-   "FLYING": 1.0,
-   "PSYCHIC": 0.0,
-   "BUG": 1.0,
-   "ROCK": 1.0,
-   "GHOST": 0.5,
-   "DRAGON": 0.0,
-   "DARK": 0.25,
-   "STEEL": 2.0,
-   "FAIRY": 2.0
   }
  }
 }

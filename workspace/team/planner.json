@@ -113,18 +113,22 @@
   "ELECTRIC"
  ],
  "atk": {
-  "NORMAL": [
-   "Kommo-o",
-   "Noivern",
+  "PSYCHIC": [
    "Porygon-Z",
    "Stoutland"
   ],
   "DARK": [
    "Stoutland"
   ],
-  "PSYCHIC": [
+  "NORMAL": [
+   "Kommo-o",
+   "Noivern",
    "Porygon-Z",
    "Stoutland"
+  ],
+  "FIGHTING": [
+   "Appletun",
+   "Kommo-o"
   ],
   "DRAGON": [
    "Appletun",
@@ -133,10 +137,6 @@
   ],
   "GRASS": [
    "Appletun"
-  ],
-  "FIGHTING": [
-   "Appletun",
-   "Kommo-o"
   ],
   "FLYING": [
    "Noivern"
@@ -323,6 +323,42 @@
   1,
   2
  ],
+ "mindset": {
+  "layered": {
+   "Stoutland": [
+    "Golisopod (Aevian Form)"
+   ],
+   "Appletun": [
+    "Golisopod (Aevian Form)",
+    "Slowking (Galarian Form)",
+    "Musharna (Aevian Form)"
+   ],
+   "Noivern": [
+    "Lapras (Aevian Form)"
+   ],
+   "Porygon-Z": [],
+   "Kommo-o": [],
+   "Klinklang": []
+  },
+  "revenge": {
+   "Stoutland": [],
+   "Appletun": [],
+   "Noivern": [],
+   "Porygon-Z": [],
+   "Kommo-o": [],
+   "Klinklang": []
+  },
+  "priority": [],
+  "pivot": [
+   "Slowking (Galarian Form)"
+  ],
+  "hazards": [],
+  "immune": {
+   "ELECTRIC": [
+    "Golisopod (Aevian Form)"
+   ]
+  }
+ },
  "speed": [
   {
    "foe": "Stoutland",
@@ -370,8 +406,9 @@
  "tips": [],
  "six": [
   {
-   "core": true,
+   "core": false,
    "role": "Lead",
+   "job": "Counter: Appletun",
    "name": "Musharna (Aevian Form)",
    "tier": "S",
    "types": [
@@ -472,6 +509,7 @@
   {
    "core": false,
    "role": "Mid game",
+   "job": "Field hijacker",
    "name": "Toxtricity (Aevian Form)",
    "tier": "S",
    "types": [
@@ -572,6 +610,7 @@
   {
    "core": true,
    "role": "Mid game",
+   "job": null,
    "name": "Slowking (Galarian Form)",
    "tier": "S",
    "types": [
@@ -672,6 +711,7 @@
   {
    "core": true,
    "role": "Mid game",
+   "job": null,
    "name": "Veluza (Aevian Form)",
    "tier": "S",
    "types": [
@@ -772,6 +812,7 @@
   {
    "core": false,
    "role": "Closer",
+   "job": "Counter: Noivern",
    "name": "Lapras (Aevian Form)",
    "tier": "S",
    "types": [
@@ -872,6 +913,7 @@
   {
    "core": true,
    "role": "Closer",
+   "job": null,
    "name": "Golisopod (Aevian Form)",
    "tier": "S",
    "types": [
@@ -972,7 +1014,7 @@
  ],
  "alts": [
   {
-   "score": 123.9,
+   "score": 119.9,
    "in": [
     "Solrock (Solrock Dominant Fusion)"
    ],
@@ -981,49 +1023,47 @@
    ]
   },
   {
-   "score": 120.2,
+   "score": 117.0,
    "in": [
-    "Chandelure"
+    "Sylveon"
    ],
    "out": [
-    "Lapras (Aevian Form)"
+    "Musharna (Aevian Form)"
    ]
   },
   {
-   "score": 119.5,
+   "score": 116.2,
    "in": [
-    "Arcanine (Hisuian Form)"
+    "Azumarill"
    ],
    "out": [
-    "Lapras (Aevian Form)"
+    "Musharna (Aevian Form)"
    ]
   }
  ],
  "swaps": {
   "Golisopod (Aevian Form)": [
    {
-    "name": "Scrafty",
-    "tier": "B",
-    "sid": "SCRAFTY",
-    "form": "0",
-    "delta": 1.3,
-    "res": 4,
-    "se": 3,
+    "name": "Glalie (Aevian Form)",
+    "tier": "S",
+    "sid": "GLALIE",
+    "form": "1",
+    "delta": -1.9,
+    "res": 5,
+    "se": 1,
     "oneshot": [
-     "Porygon-Z"
+     "Klinklang"
     ]
    },
    {
-    "name": "Arcanine (Hisuian Form)",
-    "tier": "A",
-    "sid": "ARCANINE",
-    "form": "1",
-    "delta": -0.6,
-    "res": 6,
-    "se": 2,
-    "oneshot": [
-     "Kommo-o"
-    ]
+    "name": "Clodsire",
+    "tier": "B",
+    "sid": "CLODSIRE",
+    "form": "0",
+    "delta": -3.7,
+    "res": 3,
+    "se": 1,
+    "oneshot": []
    }
   ],
   "Slowking (Galarian Form)": [
@@ -1032,7 +1072,7 @@
     "tier": "B",
     "sid": "AZUMARILL",
     "form": "0",
-    "delta": -5.5,
+    "delta": -2.5,
     "res": 7,
     "se": 3,
     "oneshot": [
@@ -1044,7 +1084,7 @@
     "tier": "B",
     "sid": "CHANDELURE",
     "form": "0",
-    "delta": -22.5,
+    "delta": -18.5,
     "res": 9,
     "se": 1,
     "oneshot": [
@@ -1053,6 +1093,18 @@
    }
   ],
   "Veluza (Aevian Form)": [
+   {
+    "name": "Azumarill",
+    "tier": "B",
+    "sid": "AZUMARILL",
+    "form": "0",
+    "delta": 26.3,
+    "res": 7,
+    "se": 3,
+    "oneshot": [
+     "Porygon-Z"
+    ]
+   },
    {
     "name": "Arcanine (Hisuian Form)",
     "tier": "A",
@@ -1064,17 +1116,32 @@
     "oneshot": [
      "Kommo-o"
     ]
-   },
+   }
+  ],
+  "Toxtricity (Aevian Form)": [
    {
-    "name": "Azumarill",
+    "name": "Scrafty",
     "tier": "B",
-    "sid": "AZUMARILL",
+    "sid": "SCRAFTY",
     "form": "0",
-    "delta": 23.3,
-    "res": 7,
+    "delta": -16.2,
+    "res": 4,
     "se": 3,
     "oneshot": [
      "Porygon-Z"
+    ]
+   },
+   {
+    "name": "Vikavolt",
+    "tier": "B",
+    "sid": "VIKAVOLT",
+    "form": "0",
+    "delta": -18.1,
+    "res": 5,
+    "se": 2,
+    "oneshot": [
+     "Porygon-Z",
+     "Kommo-o"
     ]
    }
   ],
@@ -1084,7 +1151,7 @@
     "tier": "B",
     "sid": "SYLVEON",
     "form": "0",
-    "delta": -6.7,
+    "delta": -4.7,
     "res": 6,
     "se": 3,
     "oneshot": [
@@ -1096,7 +1163,7 @@
     "tier": "B",
     "sid": "AZUMARILL",
     "form": "0",
-    "delta": -8.5,
+    "delta": -5.5,
     "res": 7,
     "se": 3,
     "oneshot": [
@@ -1126,33 +1193,6 @@
     "res": 9,
     "se": 1,
     "oneshot": [
-     "Kommo-o"
-    ]
-   }
-  ],
-  "Toxtricity (Aevian Form)": [
-   {
-    "name": "Scrafty",
-    "tier": "B",
-    "sid": "SCRAFTY",
-    "form": "0",
-    "delta": -13.2,
-    "res": 4,
-    "se": 3,
-    "oneshot": [
-     "Porygon-Z"
-    ]
-   },
-   {
-    "name": "Emboar",
-    "tier": "B",
-    "sid": "EMBOAR",
-    "form": "0",
-    "delta": -20.1,
-    "res": 4,
-    "se": 3,
-    "oneshot": [
-     "Porygon-Z",
      "Kommo-o"
     ]
    }
@@ -2143,7 +2183,7 @@
   }
  ],
  "pool": 55,
- "score": 125.7,
+ "score": 121.7,
  "cmp": -12.5,
  "break_field": null,
  "checks": {
@@ -2184,6 +2224,14 @@
     "Klinklang"
    ],
    [
+    "Toxtricity (Aevian Form)",
+    "Stoutland"
+   ],
+   [
+    "Toxtricity (Aevian Form)",
+    "Porygon-Z"
+   ],
+   [
     "Musharna (Aevian Form)",
     "Porygon-Z"
    ],
@@ -2194,14 +2242,6 @@
    [
     "Lapras (Aevian Form)",
     "Klinklang"
-   ],
-   [
-    "Toxtricity (Aevian Form)",
-    "Stoutland"
-   ],
-   [
-    "Toxtricity (Aevian Form)",
-    "Porygon-Z"
    ]
   ],
   "unanswered": [

@@ -838,5 +838,174 @@
    "D",
    0.3
   ]
+ },
+ "mindset": {
+  "singles": {
+   "title": "Singles format mindset",
+   "added": "2026-11-23",
+   "source": "Smogon teambuilding threads, r/stunfisk, Pinkacross videos (pasted by Vincent)",
+   "urls": [
+    "https://www.smogon.com/forums/threads/teambuilding-guide.3552468/",
+    "https://www.smogon.com/forums/threads/tips-on-teambuilding.3727229/",
+    "https://www.reddit.com/r/stunfisk/wiki/teambuildingsmogon/",
+    "https://www.youtube.com/watch?v=NLaXDGKPc68"
+   ],
+   "points": [
+    {
+     "rule": "Layer your answers: two checks per threat",
+     "check": "layered",
+     "how": "Each foe: 2+ of the six take under half from it and hit it hard"
+    },
+    {
+     "rule": "Speed tiers: something fast that KOs first",
+     "check": "revenge",
+     "how": "Each foe: someone outspeeds it and KOs it in one hit"
+    },
+    {
+     "rule": "Priority to stop boosted sweepers",
+     "check": "priority",
+     "how": "A STAB or super-effective priority attack on the six"
+    },
+    {
+     "rule": "Win by chipping, not by trades",
+     "check": "pivot",
+     "how": "Regenerator / recovery / pivot moves count (safe switches)"
+    },
+    {
+     "rule": "Ground and Electric immunity",
+     "check": "immune",
+     "how": "When they use Ground / Electric attacks, someone is immune"
+    },
+    {
+     "rule": "Hazards and Knock Off",
+     "check": "hazards",
+     "how": "Stealth Rock / Spikes / Knock Off on the six (small bonus)"
+    },
+    {
+     "rule": "One archetype, no mixed styles",
+     "check": "identity",
+     "how": "C&A check: one stated game plan, no dead pieces"
+    },
+    {
+     "rule": "Team preview: plan the win condition first",
+     "check": null,
+     "how": "Flex tab: their team, leads, speed control and tips before the battle"
+    }
+   ]
+  },
+  "doubles": {
+   "title": "Doubles format mindset",
+   "added": "2026-11-23",
+   "source": "VGC Guide (Wolfe Glick, Aaron Zheng), Smogon Doubles primer, r/stunfisk, r/VGC (pasted by Vincent)",
+   "urls": [
+    "https://www.vgcguide.com/teambuilding",
+    "https://www.vgcguide.com/synergy",
+    "https://www.smogon.com/dp/articles/double_battles",
+    "https://www.smogon.com/smog/issue24/smogon_doubles",
+    "https://www.smogon.com/forums/threads/doubles-ou-teambuilding-frameworks.3619759/",
+    "https://www.reddit.com/r/stunfisk/comments/zpqgjb/team_building_vgc_doubles/",
+    "https://www.youtube.com/watch?v=FNQR-6pT8zE"
+   ],
+   "points": [
+    {
+     "rule": "Two-Pokemon cores: partners cover each other",
+     "check": "pairs",
+     "how": "Lead pair resists their leads; no shared weakness in the pair"
+    },
+    {
+     "rule": "Speed control beats raw Speed",
+     "check": "speed",
+     "how": "Tailwind / Trick Room / Icy Wind / Electroweb / Thunder Wave on each fast foe"
+    },
+    {
+     "rule": "Disruption: Fake Out, redirection, Intimidate",
+     "check": "disrupt",
+     "how": "Fake Out / Follow Me / Rage Powder / Intimidate / Snarl / Will-O-Wisp on the six"
+    },
+    {
+     "rule": "Protect on almost everyone",
+     "check": "protect",
+     "how": "Build rule: Protect is the 4th move"
+    },
+    {
+     "rule": "Spread moves plus single-target nukes",
+     "check": "spread",
+     "how": "A spread move that does not hit the partner"
+    },
+    {
+     "rule": "Wide Guard vs spread spam",
+     "check": "wideguard",
+     "how": "When they carry 2+ spread attacks: Wide Guard counts"
+    },
+    {
+     "rule": "No hazards, no passive stalling",
+     "check": "nohazard",
+     "how": "Hazard moves on the six count as dead slots in doubles"
+    },
+    {
+     "rule": "No island Pokemon, no anti-synergy",
+     "check": "island",
+     "how": "Ally-hitting spread moves and dead abilities are penalised"
+    }
+   ]
+  },
+  "rejuv": {
+   "title": "Rejuvenation: core of 3 + 3 flexes",
+   "added": "2026-11-23",
+   "source": "r/PokemonRejuvenation team-building threads (pasted by Vincent)",
+   "urls": [
+    "https://www.reddit.com/r/PokemonRejuvenation/comments/1hh3sih/one_balanced_teamor_one_team_for_every_god_damn/",
+    "https://www.reddit.com/r/PokemonRejuvenation/comments/1wk7k7y/please_help_with_actually_understand_what_im_doing/",
+    "https://www.reddit.com/r/PokemonRejuvenation/comments/1vx6v6h/team_build/",
+    "https://www.reddit.com/r/PokemonRejuvenation/comments/1vld0bi/hello_how_to_improve_at_pokemon_for_the_sake_of/"
+   ],
+   "points": [
+    {
+     "rule": "Core of 3: self-sufficient and field-agnostic",
+     "check": "core",
+     "how": "Core tab: no weather / terrain-reliant members"
+    },
+    {
+     "rule": "Core covers each other's weaknesses",
+     "check": "core",
+     "how": "Core tab: no shared weakness, many types resisted"
+    },
+    {
+     "rule": "Core has a pivot move",
+     "check": "core",
+     "how": "U-turn / Volt Switch / Flip Turn / Parting Shot / Teleport (Regenerator counts half)"
+    },
+    {
+     "rule": "Singles core: fast cleaner + bulky pivot + wallbreaker",
+     "check": "core",
+     "how": "Core tab: singles fit"
+    },
+    {
+     "rule": "Doubles core: Fake Out / redirection + spread or speed control + bulky attacker",
+     "check": "core",
+     "how": "Core tab: doubles fit"
+    },
+    {
+     "rule": "Flex 1: field hijacker",
+     "check": "flex",
+     "how": "The biggest field-boosted attacker, or a field breaker"
+    },
+    {
+     "rule": "Flex 2: boss / shield breaker",
+     "check": "flex",
+     "how": "Unaware, stat reset, Perish Song, Leech Seed on boss fights; else the best threat counter"
+    },
+    {
+     "rule": "Flex 3: speed control or hard counter",
+     "check": "flex",
+     "how": "Patches what the core lacks for that fight"
+    },
+    {
+     "rule": "Use the AI: immunity abilities bait free turns",
+     "check": "flex",
+     "how": "Immunity to a foe's main attack counts as a safe switch-in"
+    }
+   ]
+  }
  }
 }

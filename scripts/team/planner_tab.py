@@ -51,8 +51,9 @@ for m in P['six']:
     rows += (f'<li class="bc pmem{" plead" if m["lead"] else ""}" data-dn="{E(disp(m["name"]))}" tabindex="0" role="button"><div class="bct">'
              f'<span class="tier t{m["tier"]}">{m["tier"]}</span>{SP.tag(m["sid"], m["form"], size="s")}<b>{E(disp(m["name"]))}</b>'
              + ('<span class="plt">Lead</span>' if m['lead'] else '') + '</div><div class="bchips">'
+             + (f'<span class="btool">{"Core" if m.get("core") else E((m.get("job") or "Flex").split(":")[0])}</span>')
              + ''.join(f'<span class="bstat bad">No Earthquake next to partner</span>' for _ in (m.get('warn') or [])[:1])
-             + ''.join(f'<span class="{"btool" if k == "tool" else "bstat"}">{E(c)}</span>' for k, c in cues(m['types'], m['ability'], m['moves'], _chart)[:2 if m.get('warn') else 3])
+             + ''.join(f'<span class="{"btool" if k == "tool" else "bstat"}">{E(c)}</span>' for k, c in cues(m['types'], m['ability'], m['moves'], _chart)[:1 if m.get('warn') else 2])
              + '</div>'
              + '<details class="pwhy" onclick="event.stopPropagation()"><summary>Why these moves</summary><ul>' + ''.join(
                  f'<li class="{"pflag" if w["flag"] else ""}"><b>{E(w["move"])}</b><span>{E(w["why"])}</span></li>' for w in m.get('why') or []) + '</ul></details>'
@@ -71,6 +72,22 @@ if SPD:
                   + (''.join(f'<div class="pans">{E(disp(t.split(": ", 1)[0]))}: {E(t.split(": ", 1)[1])}</div>' for t in x['tools'][:2]) or '<div class="pans">No speed control for it</div>')
                   + '</li>' for x in SPD)
     h += f'<article class="plc"><h3>Speed control</h3><ul class="pwin">{li_}</ul></article>'
+# 23 Nov (Vincent): singles mindset checklist (community_inputs.json mindset.singles)
+MS = P.get('mindset')
+if MS:
+    _foes = [f['name'] for f in P['foes']]
+    def _ln(ok, txt, who): return (f'<li class="{"pw-ok" if ok else "pw-no"}"><b>{"✓" if ok else "✗"}</b> {E(txt)}'
+                                   + (f'<div class="pans">{E(who)}</div>' if who else '') + '</li>')
+    lay = [f for f in _foes if len(MS['layered'].get(f, [])) >= 2]
+    no_ = [f for f in _foes if not MS['layered'].get(f)]
+    rv = [f for f in _foes if MS['revenge'].get(f)]
+    li_ = _ln(not no_, f'Two checks per threat: {len(lay)} of {len(_foes)}', ('No check for ' + ', '.join(no_)) if no_ else '')
+    li_ += _ln(len(rv) >= len(_foes) // 2, f'Outspeeds and one-shots: {len(rv)} of {len(_foes)}', ', '.join(f'{f}: {disp(MS["revenge"][f][0])}' for f in rv))
+    li_ += _ln(bool(MS['priority']), 'Priority attack', ', '.join(disp(x) for x in MS['priority']) or 'None on the six')
+    li_ += _ln(len(MS['pivot']) >= 2, 'Safe switches (Regenerator / recovery / pivot)', ', '.join(disp(x) for x in MS['pivot']) or 'None')
+    for t_, w_ in (MS.get('immune') or {}).items():
+        li_ += _ln(bool(w_), f'{t_.title()} immunity', ', '.join(disp(x) for x in w_) or 'None')
+    h += f'<details class="plc pho"><summary>Singles mindset</summary><ul class="pwin">{li_}</ul></details>'
 # 23 Nov (Vincent): the Planner evaluates HIS BOXES for this fight: every pool Pokemon graded, what it brings, what kills it
 PF = P.get('poolfit') or []
 def _tile(x):

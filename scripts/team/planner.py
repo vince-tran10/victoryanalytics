@@ -303,6 +303,54 @@ ind = (2 * ((RM < 1) * W).sum(1) - 3 * ((RM > 1) * W).sum(1) + 1.5 * (OFF >= 2).
 top = list(np.argsort(-ind)[:min(24, NP)])
 if BREAK:   # make sure the best Flash users are in the search
     top += [i for i in np.argsort(-ind) if FLASH[i] and i not in top][:3]
+# 23 Nov (Vincent): SINGLES MINDSET (community_inputs.json 'mindset'; Smogon / r/stunfisk consensus). Singles only:
+# layered answers (2 checks per foe), a fast revenge killer per foe, priority, pivots, Ground / Electric immunity, hazards / Knock Off
+CHECK = (TAKE < 50) & ((DEAL >= 60) | (OFF >= 2))          # member checks foe: walls it and hits it hard
+REVK = FAST & (DEAL >= 100)                                 # outspeeds and one-shots it
+def _has(i, ids): return bool({mvid(x) for x in build(NAMES[i])[2]} & ids)
+PRIO = np.array([any(int((MV.get(mvid(x)) or {}).get('priority') or 0) > 0 and int((MV.get(mvid(x)) or {}).get('basedamage') or 0) > 0
+                     and mvid(x) != 'FAKEOUT' and (MV.get(mvid(x)) or {}).get('type') in TA[n]['types'] for x in build(n)[2]) for n in NAMES])
+PIVOT = np.array([build(n)[1] == 'REGENERATOR' or _has(i, {'UTURN', 'VOLTSWITCH', 'FLIPTURN', 'PARTINGSHOT', 'TELEPORT', 'RECOVER', 'ROOST', 'SLACKOFF',
+                  'SOFTBOILED', 'MOONLIGHT', 'SYNTHESIS', 'WISH', 'SHOREUP', 'STRENGTHSAP'}) for i, n in enumerate(NAMES)])
+HAZ = np.array([_has(i, {'STEALTHROCK', 'SPIKES', 'TOXICSPIKES', 'STICKYWEB', 'KNOCKOFF'}) for i in range(NP)])
+_IMM = {t: np.array([meff_t == 0 for meff_t in [E.chart_eff(t, TA[n]['types'], FE) if build(n)[1] not in
+        ({'LEVITATE', 'EARTHEATER'} if t == 'GROUND' else {'VOLTABSORB', 'LIGHTNINGROD', 'MOTORDRIVE'}) else 0 for n in NAMES]]) for t in ('GROUND', 'ELECTRIC')}
+# 23 Nov (Vincent): DOUBLES MINDSET (VGC guide / Smogon doubles): disruption, spread move, Wide Guard vs spread spam, no hazards
+DISR = np.array([_has(i, {'FAKEOUT', 'FOLLOWME', 'RAGEPOWDER', 'SNARL', 'WILLOWISP', 'ICYWIND', 'ELECTROWEB'}) or build(n)[1] == 'INTIMIDATE'
+                 for i, n in enumerate(NAMES)])
+WGUARD = np.array([_has(i, {'WIDEGUARD'}) for i in range(NP)])
+FOE_SPREAD = sum(1 for (fi, m, _) in EM if (MV.get(m) or {}).get('target') in ('AllOpposing', 'AllNonUsers'))
+HAZ_ONLY = np.array([sum(1 for x in build(n)[2] if mvid(x) in {'STEALTHROCK', 'SPIKES', 'TOXICSPIKES', 'STICKYWEB', 'TOXIC'}) for n in NAMES])
+SPRD = np.array([any((MV.get(mvid(x)) or {}).get('target') in ('AllOpposing', 'AllNonUsers') and int((MV.get(mvid(x)) or {}).get('basedamage') or 0) > 0
+                     for x in build(n)[2]) for n in NAMES])
+def mindset_d(ix):
+    ix = list(ix)
+    s = (3 if DISR[ix].any() else -3) + (2 if SPRD[ix].any() else 0) - 2 * HAZ_ONLY[ix].sum()
+    if FOE_SPREAD >= 2: s += 3 if WGUARD[ix].any() else 0
+    return s
+# 23 Nov (Vincent, Rejuvenation core 3 + flex 3): FIELD HIJACKER = a member whose best hit on 2+ foes is a field-boosted move
+def _fieldv(i):
+    n = NAMES[i]; ab = build(n)[1]; c = 0
+    if BREAK: return 0
+    for f in FOES:
+        best_, fb_ = 0, 1
+        for m in build(n)[0]:
+            d = MV.get(m) or {}; b_ = int(d.get('basedamage') or 0)
+            if b_ <= 0: continue
+            v = b_ * (1.5 if d.get('type') in TA[n]['types'] else 1) * meff(m, f['types'], (f.get('ability') or '').upper().replace(' ', '')) * fbm(m, ab)
+            if v > best_: best_, fb_ = v, fbm(m, ab)
+        c += best_ > 0 and fb_ >= 1.5
+    return c
+FIELDV = np.array([_fieldv(i) for i in range(NP)])
+BOSS = 'boss' in (B9[FK][1] if FK in B9 else '').lower()
+BOSSB = np.array([_has(i, {'HAZE', 'CLEARSMOG', 'PERISHSONG', 'LEECHSEED', 'GASTROACID', 'ENDEAVOR', 'TOXIC', 'CURSE', 'KNOCKOFF'})
+                  or build(n)[1] == 'UNAWARE' for i, n in enumerate(NAMES)])
+def mindset(ix):
+    ix = list(ix); ch = CHECK[ix].sum(0); rv = REVK[ix].any(0)
+    s = 3 * (ch >= 2).sum() - 4 * (ch == 0).sum() + 2 * rv.sum() + (3 if PRIO[ix].any() else 0) + (2 if PIVOT[ix].sum() >= 2 else 0) + (1 if HAZ[ix].any() else 0)
+    for t in ('GROUND', 'ELECTRIC'):
+        if t in ATK and _IMM[t][ix].any(): s += 2
+    return s
 def score(ix):
     ix = list(ix); r = RM[ix]
     res = (r < 1).sum(0); weak = (r > 1).sum(0)
@@ -316,10 +364,15 @@ def score(ix):
     fastf = FASTF[ix].sum(0) >= 4   # foes that outspeed 4+ of the six
     ans_ = SCM[ix].any(0)
     s += 4 * (fastf & ans_).sum() - 4 * (fastf & ~ans_).sum()   # speed control on each fast foe
+    if FMT == 'Singles': s += mindset(ix)
+    else: s += mindset_d(ix)
+    s += 3 if FIELDV[ix].max() >= 2 else 0   # a field hijacker in the six
+    if BOSS: s += 3 if BOSSB[ix].any() else -3
     return s
-if len(CORE) == 4:   # core locked: every pair of flexes from the whole pool
+if len(CORE) >= 3:   # core locked (23 Nov: core of 3 + 3 flexes): every set of flexes from the strongest 30 of the pool
     _ci = tuple(NAMES.index(n) for n in CORE)
-    _cands = (_ci + pr for pr in itertools.combinations([i for i in range(NP) if i not in _ci], 2))
+    _fp = [i for i in np.argsort(-ind) if i not in _ci][:30]
+    _cands = (_ci + pr for pr in itertools.combinations(_fp, 6 - len(_ci)))
 else:
     _cands = itertools.combinations(top, 6)
 res = sorted(((score(ix), ix) for ix in _cands), key=lambda x: -x[0])
@@ -382,9 +435,17 @@ def role_of_(i):
     if i == leads[0]: return 'Lead'
     if FMT == 'Doubles' and len(leads) > 1 and i == leads[1]: return 'Doubles lead'
     return 'Closer' if {mvid(x) for x in build(NAMES[i])[2]} & SETUP_ else 'Mid game'
+def flex_job(i):   # 23 Nov (Rejuvenation mindset): Field hijacker / Boss breaker / Speed control / Counter
+    if NAMES[i] in CORE: return None
+    fl = [j for j in best if NAMES[j] not in CORE]
+    if FIELDV[i] >= 2 and FIELDV[i] == max(FIELDV[j] for j in fl): return 'Field hijacker'
+    if BOSS and BOSSB[i]: return 'Boss breaker'
+    if SCM[i].any() and not SCM[[j for j in best if NAMES[j] in CORE]].any(0)[SCM[i]].all(): return 'Speed control'
+    cj = [FN[j] for j in range(nF) if CHECK[i, j]]
+    return 'Counter' + (': ' + ', '.join(cj[:2]) if cj else '')
 def mem(i):
     ms, ab, mnames = build(NAMES[i])
-    return dict(core=NAMES[i] in CORE, role=role_of_(i), name=NAMES[i], tier=TA[NAMES[i]]['tier'], types=TA[NAMES[i]]['types'], sid=TA[NAMES[i]].get('sid'), form=str(TA[NAMES[i]].get('form', '0')),
+    return dict(core=NAMES[i] in CORE, role=role_of_(i), job=flex_job(i), name=NAMES[i], tier=TA[NAMES[i]]['tier'], types=TA[NAMES[i]]['types'], sid=TA[NAMES[i]].get('sid'), form=str(TA[NAMES[i]].get('form', '0')),
                 lead=i in leads, where=TA[NAMES[i]].get('where'), moves=mnames, ability=ab,
                 take=[int(x) for x in TAKE[i]], deal=[int(x) for x in DEAL[i]], worst=int(TAKE[i].max()), worst_foe=FN[int(TAKE[i].argmax())],
                 safe=int(SAFE[i].sum()), mult={t: float(MULT[i][k]) for k, t in enumerate(MAIN)},
@@ -418,6 +479,11 @@ out = dict(fight=FK, field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], 
            wins=[dict(win=w, foes=fs, answered_by=[NAMES[i] for i in best if ANS[i, j]]) for j, (w, fs) in enumerate(WINS)],
            emoves=[dict(foe=FN[fi], move=(MV.get(m) or {}).get('name', m), types=[t for t in mtypes(m) if t], w=round(float(w), 2)) for (fi, m, w) in EM],
            lead_moves=LM,
+           mindset=dict(layered={FN[j]: [NAMES[i] for i in best if CHECK[i, j]] for j in range(nF)},
+                        revenge={FN[j]: [NAMES[i] for i in best if REVK[i, j]] for j in range(nF)},
+                        priority=[NAMES[i] for i in best if PRIO[i]], pivot=[NAMES[i] for i in best if PIVOT[i]],
+                        hazards=[NAMES[i] for i in best if HAZ[i]],
+                        immune={t: [NAMES[i] for i in best if _IMM[t][i]] for t in ('GROUND', 'ELECTRIC') if t in ATK}) if FMT == 'Singles' else None,
            speed=[dict(foe=FN[j], faster_than=int(FASTF[best][:, j].sum()), tools=[f"{NAMES[i]}: {sc_on(i, j)}" for i in best if SCM[i, j]])
                   for j in range(nF)],
            tips=[dict(tip=t['tip'], needs=[dict(need=nd, met_by=tip_who(nd)) for nd in t['needs']]) for t in TIPS],

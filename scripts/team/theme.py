@@ -96,7 +96,7 @@ if _zn and any(n.startswith('Zoroark') for n in st.get('team') or []):   # 22 No
     _lines = ['Zoroark Crest → copies <b>' + E(disp(_zn['copies'])) + '</b> (' + E(_ab or '—') + ')', ('⚠ Party order changed' if _zn['moved'] else 'Order unchanged')]
     if _lo and not _zn['moved']: _lines.append('Considered ' + E(', '.join(disp(o['lead']) for o in _lo)) + ': not worth moving a lead')
     zoro_box = '<ul class="zbox' + (' moved' if _zn['moved'] else '') + '">' + ''.join('<li>' + l + '</li>' for l in _lines) + '</ul>'
-# 23 Nov (Vincent): the 2 flexes are for the NEXT fight: field, format, opponent, guide tips, notes, and the flex's role
+# 23 Nov (Vincent): the 3 flexes are for the NEXT fight: field, format, opponent, guide tips, notes, and the flex's role
 flexbox = ''
 if st.get('mode') == 'planner' and _PLJ:
     _FN = [f['name'] for f in _PLJ.get('foes', [])]
@@ -107,7 +107,7 @@ if st.get('mode') == 'planner' and _PLJ:
         walls = [_FN[j] for j in range(len(_FN)) if m['take'][j] < 50][:3]
         beats = [_FN[j] for j in range(len(_FN)) if m['deal'][j] >= 100][:3]
         tips_ = [t['tip'] for t in _PLJ.get('tips') or [] if any(any(x.startswith(m['name'] + ':') for x in n_['met_by']) for n_ in t['needs'])]
-        why_ = ([f'Takes under half from {", ".join(walls)}'] if walls else []) + ([f'Knocks out {", ".join(beats)}'] if beats else []) + [f'Guide: {t}' for t in tips_[:1]]
+        why_ = ([m['job']] if m.get('job') else []) + ([f'Takes under half from {", ".join(walls)}'] if walls else []) + ([f'Knocks out {", ".join(beats)}'] if beats else []) + [f'Guide: {t}' for t in tips_[:1]]
         _li.append(f'<li><div class="fxh">{spr(m["name"], "s")}<b>{E(disp(m["name"]))}</b><span class="fxr">{E(m["role"])}</span></div>'
                    + ''.join(f'<div class="fxw">{E(w)}</div>' for w in why_[:3]) + '</li>')
     _info = [f'Opponent: {_TT.get(_PLJ.get("fight"), _PLJ.get("fight"))}', f'Field: {_PLJ.get("field") or "none"}', f'Format: {_PLJ.get("format")}']

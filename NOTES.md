@@ -831,3 +831,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - Core speed control: Slowking-Galar Thunder Wave replaces Shadow Ball (core4 synergy +1.5, -0.75 without). Core unchanged (46.79).
 - Concert: sleep fails at Hype 3+ (noted on Lovely Kiss / Sing). Singles = one lead; slot 2 follows mid / closer order.
 - Jenner six: Musharna-A (lead), Toxtricity-A (flex), Slowking-G, Veluza-A, Lapras-A (flex), Golisopod-A.
+- 23 Nov (later): Vincent sent Singles + Doubles mindsets and the Rejuvenation 'core of 3 + 3 flexes' approach: saved in community_inputs.json 'mindset', shown on the Community tab.
+- core4.py: core of N (state core_n = 3): pivot move (+1, Regenerator +.5), field-reliant abilities -1.5, singles fit (fast cleaner / bulky pivot / wallbreaker) + doubles fit (Fake Out-redirection / spread-speed control / bulky attacker). Core = Golisopod-A, Slowking-G, Veluza-A.
+- planner.py: 3 flexes from the top 30; singles mindset (2 checks per foe, outspeed + OHKO, priority, pivots, immunities, hazards), doubles mindset (disruption, spread, Wide Guard, no hazards), field hijacker +3, boss breaker on boss fights; flex jobs on Team / Flex tabs.
+- Jenner six: Musharna-A (lead, flex), Tox-A (field hijacker), Slowking-G, Veluza-A, Lapras-A (flex), Golisopod-A. Singles mindset fails: no check for Porygon-Z / Kommo-o / Klinklang, no fast OHKO, no priority (Jenner Lv 63-66 vs cap 60).

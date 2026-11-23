@@ -32,6 +32,12 @@ for i in D['inputs']:
     li += ''.join(f'<div class="cnote">{E(x)}</div>' for x in [i.get('source'), i.get('decoded'), i.get('ignored')] if x)
     li += '</li>'
 cards += f'<article class="ccard"><h3>Inputs</h3><ol class="cin">{li}</ol><div class="cnote">{E(D.get("dropped", ""))}</div></article>'
+# 23 Nov (Vincent): format MINDSETS (how a format is won); the planner scores the checks for that format
+for fmt_, m_ in (D.get('mindset') or {}).items():
+    li_ = ''.join(f'<li><b>{E(x["rule"])}</b><div class="cnote">{E(x["how"])}</div></li>' for x in m_['points'])
+    src_ = ''.join(f'<div class="cnote"><a href="{E(u)}" target="_blank" rel="noopener">{E(u.split("//")[1][:48])}</a></div>' for u in m_.get('urls', []))
+    cards += (f'<article class="ccard"><h3>{E(m_["title"])}</h3><div class="cnote">{"Used to pick the core and the flexes" if fmt_ == "rejuv" else "Used to pick flexes in every " + E(fmt_) + " fight"}</div>'
+              f'<ol class="cin">{li_}</ol><details><summary>Sources</summary>{src_}</details></article>')
 # 2) each tier list (folded)
 for i in D['inputs']:
     if not i.get('tiers'): continue
@@ -97,6 +103,7 @@ css = '''<style id="comm-css">
 .cin { margin: 0; padding-left: 0; list-style: none; display: grid; gap: 8px }
 .cin a { color: var(--accent) }
 .cst { font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: 99px; margin: 0 4px }
+.cgrid { min-width: 0 } .cgrid > * { min-width: 0; max-width: 100% } .ccard { overflow-wrap: anywhere; box-sizing: border-box }
 .cst.ok { background: #1f8a4c; color: #fff } .cst.no { background: #b3261e; color: #fff }
 .crow { display: grid; grid-template-columns: 44px 1fr; gap: 8px; align-items: center; border-top: 1px solid var(--line); padding-top: 6px }
 .ctier { font-weight: 800; font-size: 14px; text-align: center }

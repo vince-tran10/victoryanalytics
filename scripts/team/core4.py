@@ -33,7 +33,7 @@ def build(n):
     return [mvid(m) or m.upper().replace(' ', '') for m in ms], ab, ms
 ABSORB = {'FLASHFIRE': 'FIRE', 'WATERABSORB': 'WATER', 'STORMDRAIN': 'WATER', 'DRYSKIN': 'WATER', 'VOLTABSORB': 'ELECTRIC', 'LIGHTNINGROD': 'ELECTRIC',
           'MOTORDRIVE': 'ELECTRIC', 'SAPSIPPER': 'GRASS', 'LEVITATE': 'GROUND', 'EARTHEATER': 'GROUND', 'WELLBAKEDBODY': 'FIRE'}
-DEF, OFFT, INFO = {}, {}, {}
+DEF, OFFT, INFO, PRIO = {}, {}, {}, {}
 for n in POOL:
     ms, ab, mnames = build(n)
     DEF[n] = {t: (0 if ABSORB.get(ab) == t else E.chart_eff(t, TA[n]['types'])) for t in TYPES}
@@ -46,8 +46,29 @@ for n in POOL:
         for t in TYPES:
             if E.chart_eff(d.get('type'), [t]) >= 2: hit.add(t)
     OFFT[n] = hit
+    PRIO[n] = any(int((MV.get(m) or {}).get('priority') or 0) > 0 and int((MV.get(m) or {}).get('basedamage') or 0) > 0 and m != 'FAKEOUT' for m in ms)
     INFO[n] = dict(ms=set(ms), ab=ab, mnames=mnames, cats=cats, spe=TA[n]['base']['Spe'], natk=sum(int((MV.get(m) or {}).get('basedamage') or 0) > 0 for m in ms),
                    spread=[m for m in ms if (MV.get(m) or {}).get('target') == 'AllNonUsers' and int((MV.get(m) or {}).get('basedamage') or 0) > 0])
+N = int(st.get('core_n') or 3)   # 23 Nov (Vincent): core of 3 + 3 flexes (Rejuvenation community mindset)
+PIVOTM = {'UTURN', 'VOLTSWITCH', 'FLIPTURN', 'PARTINGSHOT', 'TELEPORT', 'CHILLYRECEPTION', 'SHEDTAIL'}
+RECOV = {'RECOVER', 'ROOST', 'SLACKOFF', 'SOFTBOILED', 'MOONLIGHT', 'SYNTHESIS', 'MORNINGSUN', 'WISH', 'SHOREUP', 'STRENGTHSAP', 'MILKDRINK'}
+DISRUPT_S = {'ENCORE', 'YAWN', 'WILLOWISP', 'TAUNT', 'THUNDERWAVE', 'GLARE', 'TOXIC', 'KNOCKOFF', 'HAZE', 'CLEARSMOG', 'SPORE', 'LOVELYKISS'}
+FIELDDEP = {'SWIFTSWIM', 'CHLOROPHYLL', 'SANDRUSH', 'SLUSHRUSH', 'SOLARPOWER', 'SURGESURFER', 'SANDFORCE', 'RAINDISH', 'ICEBODY', 'LEAFGUARD',
+            'HYDRATION', 'FLOWERGIFT', 'PROTOSYNTHESIS', 'QUARKDRIVE', 'GRASSPELT', 'SANDVEIL', 'SNOWCLOAK'}
+def bst(n, k): return TA[n]['base'][k]
+def fmt_fit(c):
+    """Rejuvenation core mindset: singles = fast cleaner + bulky pivot + wallbreaker; doubles = Fake Out / redirection +
+    spread or speed control + bulky attacker. -> (singles {role: member}, doubles {role: member})"""
+    def pick(test): return next((n for n in c if test(n)), None)
+    atk = lambda n: INFO[n]['natk'] >= 2
+    bulk = lambda n: bst(n, 'HP') + bst(n, 'Def') + bst(n, 'SpD') >= 270
+    sg = {'Fast cleaner': pick(lambda n: atk(n) and (bst(n, 'Spe') >= 95 or INFO[n]['ms'] & {'DRAGONDANCE', 'QUIVERDANCE', 'SHIFTGEAR'} or PRIO.get(n))),
+          'Bulky pivot': pick(lambda n: bulk(n) and (INFO[n]['ab'] == 'REGENERATOR' or INFO[n]['ms'] & (PIVOTM | RECOV | DISRUPT_S))),
+          'Wallbreaker': pick(lambda n: atk(n) and (max(bst(n, 'Atk'), bst(n, 'SpA')) >= 115 or INFO[n]['ab'] in ('SKILLLINK', 'PUNKROCK', 'ADAPTABILITY', 'HUGEPOWER', 'SHEERFORCE', 'TOUGHCLAWS', 'TECHNICIAN') or INFO[n]['ms'] & SETUP))}
+    dg = {'Fake Out / redirection': pick(lambda n: INFO[n]['ms'] & {'FAKEOUT', 'FOLLOWME', 'RAGEPOWDER'} or INFO[n]['ab'] == 'INTIMIDATE'),
+          'Spread or speed control': pick(lambda n: INFO[n]['spread'] or INFO[n]['ms'] & {'TAILWIND', 'ICYWIND', 'ELECTROWEB', 'TRICKROOM', 'THUNDERWAVE'}),
+          'Bulky attacker': pick(lambda n: atk(n) and bulk(n))}
+    return sg, dg
 SETUP = {'SWORDSDANCE', 'NASTYPLOT', 'DRAGONDANCE', 'QUIVERDANCE', 'CALMMIND', 'BULKUP', 'CURSE', 'SHELLSMASH', 'COIL', 'BELLYDRUM', 'SHIFTGEAR'}
 def synergy(c):
     s, why = 0.0, []
@@ -71,6 +92,14 @@ def synergy(c):
                 for m in INFO[a]['spread']:
                     e = E.chart_eff((MV.get(m) or {}).get('type'), TA[b]['types']) if DEF[b].get((MV.get(m) or {}).get('type'), 1) else 0
                     if e >= 2: s -= 1; why.append(f'Friction: {disp(a)} {MV[m]["name"]} hits {disp(b)} super effectively')
+    piv = [n for n in c if INFO[n]['ms'] & PIVOTM]; reg = [n for n in c if INFO[n]['ab'] == 'REGENERATOR']
+    if piv: s += 1; why.append(f'Pivot move: {disp(piv[0])}')
+    elif reg: s += .5; why.append(f'Regenerator switches: {disp(reg[0])}')
+    else: s -= .5
+    dep = [n for n in c if INFO[n]['ab'] in FIELDDEP]
+    for n in dep: s -= 1.5; why.append(f'Field-reliant: {disp(n)} ({INFO[n]["ab"].title()}) is weak when a boss sets its own field')
+    sg, dg = fmt_fit(c)
+    s += .75 * sum(v is not None for v in sg.values()) + .75 * sum(v is not None for v in dg.values())
     return s, why
 def score(c):
     c = list(c)
@@ -78,7 +107,7 @@ def score(c):
     d = 0.0; shared, triple, res_ = [], [], 0
     for t in TYPES:
         w = sum(DEF[n][t] > 1 for n in c); r = sum(DEF[n][t] < 1 for n in c)
-        if w >= 3: d -= 4; triple.append(t)
+        if w >= 3 or (N == 3 and w >= 2 and r == 0 and w == len(c) - 1 and False): d -= 4; triple.append(t)
         elif w >= 2 and r == 0: d -= 2; shared.append(t)
         if r: d += .3; res_ += 1
     cov = set().union(*(OFFT[n] for n in c))
@@ -88,7 +117,7 @@ def score(c):
     total = strength + d + off + syn + aev
     return total, dict(strength=round(strength, 2), defense=round(d, 2), offense=round(off, 2), synergy=round(syn, 2), aevian=round(aev, 2),
                        shared=shared, triple=triple, resisted=res_, covered=len(cov), uncovered=[t for t in TYPES if t not in cov], why=why)
-res = sorted(((score(c)[0], c) for c in itertools.combinations(POOL, 4)), key=lambda x: -x[0])
+res = sorted(((score(c)[0], c) for c in itertools.combinations(POOL, N)), key=lambda x: -x[0])
 best = list(res[0][1]); tot, br = score(best)
 runners = []
 for s_, c in res[1:60]:
@@ -101,19 +130,26 @@ def mem(n):
     return dict(name=n, tier=r['tier'], sid=r.get('sid'), form=str(r.get('form', '0')), blend=r['blend'], meta=r['meta'], game=r.get('game_pct'),
                 types=r['types'], moves=INFO[n]['mnames'], ability=INFO[n]['ab'], aevian='Aevian' in n, where=r.get('where'),
                 chips=cues(r['types'], INFO[n]['ab'], INFO[n]['mnames'], lambda t, ty: E.chart_eff(t, ty)))
-out = dict(core=[mem(n) for n in best], score=round(tot, 2), parts=br, runners=runners, pool=len(POOL),
+_sg, _dg = fmt_fit(best)
+out = dict(core=[mem(n) for n in best], n=N, score=round(tot, 2), parts=br, runners=runners, pool=len(POOL),
+           singles={k: v for k, v in _sg.items()}, doubles={k: v for k, v in _dg.items()},
            matrix={n: DEF[n] for n in best})
 json.dump(out, open('team/core4.json', 'w'), indent=1, ensure_ascii=False)
 print('core4:', best, round(tot, 2), {k: v for k, v in br.items() if k in ('strength', 'defense', 'offense', 'synergy', 'aevian')})
 if not OUT: sys.exit(0)
 # ---- Builder tab: your best 4 (no opponent), how it is picked, close alternatives, type check
 def pill(t): return f'<span class="tp ty-{t.lower()}">{t.title()}</span>'
-h = '<article class="plc"><h3>Your best 4</h3><ul class="bl">'
+h = f'<article class="plc"><h3>Your core of {N}</h3><ul class="bl">'
 for m in out['core']:
     h += (f'<li class="bc" data-dn="{E_(disp(m["name"]))}" tabindex="0" role="button"><div class="bct"><span class="tier t{m["tier"]}">{m["tier"]}</span>'
           f'{SP.tag(m["sid"], m["form"], size="s")}<b>{E_(disp(m["name"]))}</b></div><div class="bchips">'
           + ''.join(f'<span class="{"btool" if k == "tool" else "bstat"}">{E_(c)}</span>' for k, c in m['chips'][:3]) + '</div></li>')
 h += '</ul></article>'
+def _fit(title, d):
+    return (f'<article class="plc"><h3>{title}</h3><ul class="pwin">' + ''.join(
+        f'<li class="{"pw-ok" if v else "pw-no"}"><b>{"✓" if v else "✗"}</b> {E_(k)}<div class="pans">{E_(disp(v)) if v else "A flex fills it"}</div></li>'
+        for k, v in d.items()) + '</ul></article>')
+h += _fit('Singles plan', out['singles']) + _fit('Doubles plan', out['doubles'])
 P_ = out['parts']
 rows = (f'<li><b>Strength</b><span>{P_["strength"]:.1f}</span></li><li><b>Defense</b><span>{P_["defense"]:+.1f}</span></li>'
         f'<li><b>Offense</b><span>{P_["offense"]:+.1f}</span></li><li><b>Synergy</b><span>{P_["synergy"]:+.1f}</span></li>'
