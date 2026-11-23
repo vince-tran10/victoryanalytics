@@ -111,11 +111,11 @@
   "POISON"
  ],
  "atk": {
-  "STEEL": [
-   "Stonjourner"
-  ],
   "ROCK": [
    "Golisopod",
+   "Stonjourner"
+  ],
+  "STEEL": [
    "Stonjourner"
   ],
   "FIRE": [
@@ -123,28 +123,28 @@
    "Stonjourner",
    "Typhlosion"
   ],
+  "FAIRY": [
+   "Sigilyph"
+  ],
   "GHOST": [
    "Banette",
    "Golisopod",
    "Sigilyph",
    "Typhlosion"
   ],
-  "FAIRY": [
-   "Sigilyph"
-  ],
   "NORMAL": [
-   "Luxray"
-  ],
-  "DARK": [
    "Luxray"
   ],
   "ELECTRIC": [
    "Luxray"
   ],
-  "GROUND": [
-   "Golisopod"
+  "DARK": [
+   "Luxray"
   ],
   "BUG": [
+   "Golisopod"
+  ],
+  "GROUND": [
    "Golisopod"
   ],
   "FIGHTING": [
@@ -160,9 +160,7 @@
    "foes": [
     "Sigilyph"
    ],
-   "answered_by": [
-    "Mandibuzz"
-   ]
+   "answered_by": []
   },
   {
    "win": "Setup (stat boosts)",
@@ -170,7 +168,8 @@
     "Luxray"
    ],
    "answered_by": [
-    "Clodsire"
+    "Clodsire",
+    "Muk (Alolan Form)"
    ]
   },
   {
@@ -180,7 +179,9 @@
     "Stonjourner",
     "Typhlosion"
    ],
-   "answered_by": []
+   "answered_by": [
+    "Alomomola"
+   ]
   }
  ],
  "emoves": [
@@ -345,6 +346,63 @@
   4,
   5
  ],
+ "tips": [
+  {
+   "tip": "Offensive doubles team: tons of strong spread moves (Eruption, Heat Wave, Rock Slide)",
+   "needs": [
+    {
+     "need": "spread_defense",
+     "met_by": [
+      "Alomomola: Wide Guard"
+     ]
+    }
+   ]
+  },
+  {
+   "tip": "Many priority moves",
+   "needs": [
+    {
+     "need": "resist:GHOST",
+     "met_by": [
+      "Muk (Alolan Form): resists Ghost",
+      "Musharna (Aevian Form): resists Ghost"
+     ]
+    }
+   ]
+  },
+  {
+   "tip": "Lots of speed tiers: bring speed control such as Tailwind",
+   "needs": [
+    {
+     "need": "speed_control",
+     "met_by": []
+    }
+   ]
+  },
+  {
+   "tip": "A Shadow Sneak of your own deals with Typhlosion",
+   "needs": [
+    {
+     "need": "priority_vs:Typhlosion",
+     "met_by": [
+      "Muk (Alolan Form): Shadow Sneak"
+     ]
+    }
+   ]
+  },
+  {
+   "tip": "Strong spread moves of your own",
+   "needs": [
+    {
+     "need": "spread_attack",
+     "met_by": [
+      "Swampert: Earthquake",
+      "Clodsire: Earthquake"
+     ]
+    }
+   ]
+  }
+ ],
  "six": [
   {
    "name": "Clodsire",
@@ -444,43 +502,43 @@
     }
    ],
    "warn": [
-    "Earthquake-type spread moves hit Vaporeon"
+    "Earthquake-type spread moves hit Alomomola"
    ]
   },
   {
-   "name": "Vaporeon",
-   "tier": "B",
+   "name": "Alomomola",
+   "tier": "S",
    "types": [
     "WATER"
    ],
-   "sid": "VAPOREON",
+   "sid": "ALOMOMOLA",
    "form": "0",
    "lead": true,
    "where": "Active",
    "moves": [
     "Wish",
-    "Shadow Ball",
-    "Hydro Pump",
+    "Wide Guard",
+    "Helping Hand",
     "Protect"
    ],
-   "ability": "WATERABSORB",
+   "ability": "REGENERATOR",
    "take": [
-    37,
-    39,
-    120,
-    63,
+    26,
+    59,
+    83,
     43,
-    68
+    66,
+    47
    ],
    "deal": [
-    150,
-    67,
-    51,
-    73,
-    99,
-    64
+    33,
+    30,
+    28,
+    32,
+    58,
+    28
    ],
-   "worst": 120,
+   "worst": 83,
    "worst_foe": "Luxray",
    "safe": 3,
    "mult": {
@@ -511,14 +569,16 @@
     1.0
    ],
    "off": [
-    2.0,
-    2.0,
     0.0,
-    2.0,
-    2.0,
-    2.0
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
    ],
-   "answers": [],
+   "answers": [
+    "Spread attacks"
+   ],
    "why": [
     {
      "move": "Wish",
@@ -526,13 +586,13 @@
      "flag": false
     },
     {
-     "move": "Shadow Ball",
-     "why": "Super effective on Sigilyph, Typhlosion, Banette",
-     "flag": true
+     "move": "Wide Guard",
+     "why": "Blocks spread attacks for both of yours (goes first, priority +3)",
+     "flag": false
     },
     {
-     "move": "Hydro Pump",
-     "why": "Your best hit on Stonjourner, Sigilyph, Luxray, Golisopod, Typhlosion, Banette; Super effective on Stonjourner, Golisopod, Typhlosion; STAB",
+     "move": "Helping Hand",
+     "why": "Partner's attack x1.5 (goes first, priority +5)",
      "flag": false
     },
     {
@@ -641,92 +701,191 @@
    "warn": []
   },
   {
-   "name": "Dragalge",
-   "tier": "B",
+   "name": "Muk (Alolan Form)",
+   "tier": "S",
    "types": [
     "POISON",
-    "DRAGON"
+    "DARK"
    ],
-   "sid": "DRAGALGE",
-   "form": "0",
+   "sid": "MUK",
+   "form": "1",
    "lead": false,
-   "where": "Active",
+   "where": "Party",
    "moves": [
-    "Sludge Bomb",
-    "Dragon Pulse",
-    "Surf",
+    "Knock Off",
+    "Shadow Sneak",
+    "Clear Smog",
     "Protect"
    ],
-   "ability": "ADAPTABILITY",
+   "ability": "POISONTOUCH",
    "take": [
-    38,
-    44,
     35,
-    126,
-    48,
-    68
+    42,
+    56,
+    119,
+    80,
+    32
    ],
    "deal": [
-    136,
-    69,
-    65,
-    43,
-    59,
-    62
+    22,
+    40,
+    37,
+    21,
+    78,
+    74
    ],
-   "worst": 126,
+   "worst": 119,
    "worst_foe": "Golisopod",
-   "safe": 4,
+   "safe": 3,
    "mult": {
-    "GHOST": 1.0,
-    "FIRE": 0.5,
+    "GHOST": 0.5,
+    "FIRE": 1.0,
     "ROCK": 1.0,
     "POISON": 0.5
    },
    "rm": [
-    0.5,
     1.0,
-    1.0,
-    0.5,
     1.0,
     1.0,
     1.0,
     1.0,
     0.5,
+    0.5,
+    1.0,
+    1.0,
     2.0,
+    1.0,
+    1.0,
     0.5,
     1.0,
     1.0,
     0.5,
     0.5,
-    1.0,
     0.5,
-    1.0,
-    1.0
+    0.5
    ],
    "off": [
+    0.0,
     2.0,
     0.0,
     0.0,
     2.0,
+    2.0
+   ],
+   "answers": [
+    "Setup (stat boosts)"
+   ],
+   "why": [
+    {
+     "move": "Knock Off",
+     "why": "Your best hit on Stonjourner, Sigilyph, Luxray, Golisopod, Typhlosion, Banette; Super effective on Typhlosion, Banette; STAB; Removes their item (Stonjourner Focus Sash, Golisopod Ghost Gem, Typhlosion Life Orb)",
+     "flag": false
+    },
+    {
+     "move": "Shadow Sneak",
+     "why": "Super effective on Sigilyph, Typhlosion, Banette; Priority +1: finishes a weakened foe first",
+     "flag": false
+    },
+    {
+     "move": "Clear Smog",
+     "why": "STAB; Resets the target boosts (Luxray Howl)",
+     "flag": false
+    },
+    {
+     "move": "Protect",
+     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
+     "flag": false
+    }
+   ],
+   "warn": []
+  },
+  {
+   "name": "Musharna (Aevian Form)",
+   "tier": "S",
+   "types": [
+    "DARK",
+    "FAIRY"
+   ],
+   "sid": "MUSHARNA",
+   "form": "1",
+   "lead": false,
+   "where": "Party",
+   "moves": [
+    "Lovely Kiss",
+    "Shadow Claw",
+    "Play Rough",
+    "Protect"
+   ],
+   "ability": "TOUGHCLAWS",
+   "take": [
+    48,
+    90,
+    48,
+    51,
+    87,
+    79
+   ],
+   "deal": [
+    36,
+    90,
+    60,
+    34,
+    87,
+    84
+   ],
+   "worst": 90,
+   "worst_foe": "Sigilyph",
+   "safe": 2,
+   "mult": {
+    "GHOST": 0.5,
+    "FIRE": 1.0,
+    "ROCK": 1.0,
+    "POISON": 2.0
+   },
+   "rm": [
+    1.0,
     2.0,
-    0.0
+    1.0,
+    1.0,
+    2.0,
+    0.5,
+    0.25,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    1.0,
+    0.5,
+    2.0,
+    0.5,
+    0.5
+   ],
+   "off": [
+    0.0,
+    2.0,
+    0.0,
+    0.0,
+    2.0,
+    2.0
    ],
    "answers": [],
    "why": [
     {
-     "move": "Sludge Bomb",
-     "why": "Your best hit on Sigilyph, Luxray; STAB",
+     "move": "Lovely Kiss",
+     "why": "Puts one foe to sleep (75% accurate); not Banette (cannot sleep)",
      "flag": false
     },
     {
-     "move": "Dragon Pulse",
-     "why": "Your best hit on Banette; STAB; no effect on Sigilyph",
+     "move": "Shadow Claw",
+     "why": "Your best hit on Sigilyph, Typhlosion, Banette; Super effective on Sigilyph, Typhlosion, Banette",
      "flag": false
     },
     {
-     "move": "Surf",
-     "why": "Your best hit on Stonjourner, Golisopod, Typhlosion; Super effective on Stonjourner, Golisopod, Typhlosion; hits both foes",
+     "move": "Play Rough",
+     "why": "Your best hit on Stonjourner, Luxray, Golisopod; STAB",
      "flag": false
     },
     {
@@ -833,139 +992,40 @@
     }
    ],
    "warn": []
-  },
-  {
-   "name": "Mandibuzz",
-   "tier": "A",
-   "types": [
-    "DARK",
-    "FLYING"
-   ],
-   "sid": "MANDIBUZZ",
-   "form": "0",
-   "lead": false,
-   "where": "Overflow",
-   "moves": [
-    "Tailwind",
-    "Knock Off",
-    "Roost",
-    "Protect"
-   ],
-   "ability": "OVERCOAT",
-   "take": [
-    53,
-    85,
-    85,
-    49,
-    81,
-    34
-   ],
-   "deal": [
-    16,
-    30,
-    28,
-    16,
-    58,
-    56
-   ],
-   "worst": 85,
-   "worst_foe": "Sigilyph",
-   "safe": 2,
-   "mult": {
-    "GHOST": 0.5,
-    "FIRE": 1.0,
-    "ROCK": 2.0,
-    "POISON": 1.0
-   },
-   "rm": [
-    1.0,
-    1.0,
-    2.0,
-    1.0,
-    2.0,
-    0.5,
-    0.5,
-    1.0,
-    2.0,
-    0.0,
-    1.0,
-    2.0,
-    0.5,
-    1.0,
-    1.0,
-    0.5,
-    1.0,
-    0.5,
-    0.5
-   ],
-   "off": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    2.0,
-    2.0
-   ],
-   "answers": [
-    "Speed control (Tailwind / Trick Room)"
-   ],
-   "why": [
-    {
-     "move": "Tailwind",
-     "why": "Doubles your Speed for 4 turns: answers their Tailwind",
-     "flag": false
-    },
-    {
-     "move": "Knock Off",
-     "why": "Your best hit on Stonjourner, Sigilyph, Luxray, Golisopod, Typhlosion, Banette; Super effective on Typhlosion, Banette; STAB; Removes their item (Stonjourner Focus Sash, Golisopod Ghost Gem, Typhlosion Life Orb)",
-     "flag": false
-    },
-    {
-     "move": "Roost",
-     "why": "Heals 50%",
-     "flag": false
-    },
-    {
-     "move": "Protect",
-     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
-     "flag": false
-    }
-   ],
-   "warn": []
   }
  ],
  "alts": [
   {
-   "score": 182.7,
+   "score": 184.0,
    "in": [
-    "Alomomola"
+    "Dragalge"
    ],
    "out": [
-    "Vaporeon"
+    "Muk (Alolan Form)"
    ]
   },
   {
-   "score": 182.5,
+   "score": 183.8,
    "in": [
-    "Golurk"
+    "Braviary"
+   ],
+   "out": [
+    "Musharna (Aevian Form)"
+   ]
+  },
+  {
+   "score": 183.8,
+   "in": [
+    "Golisopod (Aevian Form)"
    ],
    "out": [
     "Palossand"
    ]
-  },
-  {
-   "score": 182.2,
-   "in": [
-    "Gastrodon (West Aevian Form)"
-   ],
-   "out": [
-    "Dragalge"
-   ]
   }
  ],
  "pool": 55,
- "score": 184.0,
- "cmp": 37.0,
+ "score": 184.6,
+ "cmp": 36.5,
  "break_field": {
   "user": "Clodsire",
   "move": "Flash",
@@ -979,23 +1039,19 @@
  },
  "checks": {
   "weak3": [],
-  "nores": [],
-  "res_lt2": [
-   "GHOST"
+  "nores": [
+   "GROUND"
   ],
+  "res_lt2": [],
   "no_se": [],
   "one_shot": [
-   [
-    "Dragalge",
-    "Golisopod"
-   ],
    [
     "Clodsire",
     "Golisopod"
    ],
    [
-    "Vaporeon",
-    "Luxray"
+    "Muk (Alolan Form)",
+    "Golisopod"
    ],
    [
     "Palossand",
@@ -1007,7 +1063,7 @@
    ]
   ],
   "unanswered": [
-   "Spread attacks"
+   "Speed control (Tailwind / Trick Room)"
   ]
  }
 }

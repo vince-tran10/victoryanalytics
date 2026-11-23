@@ -69,7 +69,8 @@ IB = json.load(open('team/ideal_builds.json')) if os.path.exists('team/ideal_bui
 run = os.environ.get('BASE_RUN') or f"r{st['run']}"
 C = {c['name']: c for c in pickle.load(open(f'team/{run}{"n" if BREAK else ""}_native.json.pkl', 'rb'))['cands'] if not c.get('gate')}
 POOL = [n for n, r in TA.items() if r.get('where') in ('Party', 'Active') and r['tier'] in ('S', 'A', 'B') and n in C and FK in C[n]['matchups']]
-POOL += [n for n, r in TA.items() if r.get('where') == 'Overflow' and r['tier'] in ('S', 'A') and n not in POOL and n in C and FK in C[n]['matchups']]   # 23 Nov: the S / A moving into Active
+POOL += [n for n, r in TA.items() if r.get('where') == 'Overflow' and r['tier'] in ('S', 'A') and n not in POOL and n in C and FK in C[n]['matchups']]
+POOL += [n for n in (st.get('team') or []) if n in TA and n not in POOL and n in C and FK in C[n]['matchups']]   # the current six stays in the pool (tiers wobble)   # 23 Nov: the S / A moving into Active
 def build(n):
     b = IB.get(n) or {}
     ms = (st.get('moves') or {}).get(n) or b.get('moves') or TA[n].get('attacks') or []
@@ -151,6 +152,44 @@ for i in range(NP):
     for j in range(i + 1, NP):
         if BREAK and not (FLASH[i] or FLASH[j]): continue   # break plan: a lead must carry Flash / Dazzling Gleam
         LQ[i, j] = LQ[j, i] = lead_q((i, j)) if FMT == 'Doubles' else 0
+# 23 Nov (Vincent): guide TIPS for this fight (team/fight_tips.json) are part of the pick: each tip's needs -> which members meet them
+TIPS = (json.load(open('team/fight_tips.json')) if os.path.exists('team/fight_tips.json') else {}).get(FK, [])
+SPEEDC = {'TAILWIND', 'TRICKROOM', 'ICYWIND', 'ELECTROWEB', 'THUNDERWAVE', 'NUZZLE', 'GLARE', 'SCARYFACE', 'STRINGSHOT', 'BULLDOZE'}
+ANTISLEEP_M = {'SAFEGUARD', 'TAUNT', 'MISTYTERRAIN', 'ELECTRICTERRAIN', 'SLEEPTALK'}
+ANTISLEEP_A = {'INSOMNIA', 'VITALSPIRIT', 'SWEETVEIL', 'COMATOSE', 'PURIFYINGSALT', 'ELECTRICSURGE', 'MISTYSURGE'}
+def fidx(nm): return next((k for k, f in enumerate(FOES) if f['name'] == nm), None)
+def meets(i, need):
+    """-> how this member meets the need (text) or None"""
+    n = NAMES[i]; ms, ab, mnames = build(n); kind, _, arg = need.partition(':')
+    mn = lambda ids: next((x for x in mnames if (mvid(x) or '') in ids), None)
+    if kind == 'speed_control': return mn(SPEEDC)
+    if kind == 'spread_defense': return mn({'WIDEGUARD'})
+    if kind == 'spread_attack':
+        return next((x for x in mnames if (MV.get(mvid(x)) or {}).get('target') in ('AllOpposing', 'AllNonUsers') and int((MV.get(mvid(x)) or {}).get('basedamage') or 0) > 0), None)
+    if kind == 'anti_sleep': return mn(ANTISLEEP_M) or (ab.title() if ab in ANTISLEEP_A else None)
+    if kind == 'anti_perish': return mn({'TAUNT'}) or ('Ghost type: switches out of traps' if 'GHOST' in TA[n]['types'] else None) or ('Soundproof' if ab == 'SOUNDPROOF' else None)
+    if kind == 'resist': return f'resists {arg.title()}' if E.chart_eff(arg, TA[n]['types'], FE) < 1 else None
+    j = fidx(arg)
+    if j is None: return None
+    if kind == 'answer': return f'takes {int(TAKE[i][j])}%, deals {int(DEAL[i][j])}%' if TAKE[i][j] < 50 and (DEAL[i][j] >= 60 or OFF[i][j] >= 2) else None
+    if kind in ('ko', 'lead_hits'): return f'deals {int(DEAL[i][j])}%' if DEAL[i][j] >= 50 else None
+    if kind == 'priority_vs':
+        for x in mnames:
+            d = MV.get(mvid(x)) or {}
+            if int(d.get('priority') or 0) > 0 and int(d.get('basedamage') or 0) > 0 and meff(mvid(x), FOES[j]['types']) >= 1: return x
+    return None
+NEEDS = sorted({nd for t in TIPS for nd in t['needs']})
+TM = np.array([[1 if meets(i, nd) else 0 for nd in NEEDS] for i in range(len(NAMES))]) if NEEDS else np.zeros((len(NAMES), 0))
+def tips_met(ix):
+    ix = list(ix); got = 0
+    for k, nd in enumerate(NEEDS):
+        c = TM[ix, k].sum()
+        if nd.startswith('ko:'):   # two members together can take it down in the first turns
+            j = fidx(nd[3:]); ok = j is not None and sorted(DEAL[ix, j])[-2:] and sum(sorted(DEAL[ix, j])[-2:]) >= 100
+        elif nd.startswith('resist:'): ok = c >= 2   # 'many' priority moves: two resists
+        else: ok = c >= 1
+        got += ok
+    return got
 ind = (2 * ((RM < 1) * W).sum(1) - 3 * ((RM > 1) * W).sum(1) + 1.5 * (OFF >= 2).sum(1) + .7 * (OFF > 0).sum(1)
        + 1.5 * SAFE.sum(1) - 2 * DEAD.sum(1) + .6 * TIER + LQ.max(1).clip(-5, 99) * .5 + .8 * AEV)
 top = list(np.argsort(-ind)[:min(24, NP)])
@@ -164,6 +203,7 @@ def score(ix):
     s += 3 * np.minimum(oc, 2).sum() + 1 * np.minimum(ob, 3).sum() - 6 * (ob == 0).sum()   # 2) offense: super effective / field-boosted on every foe
     s += 4 * max(LQ[a][b] for a, b in itertools.combinations(ix, 2)) if FMT == 'Doubles' else 0   # 3) a lead pair that resists their leads
     if BREAK and not FLASH[ix].any(): s -= 999
+    s += 3 * tips_met(ix)   # 23 Nov: the guide's tips count
     s += 1.5 * np.minimum(SAFE[ix].sum(0), 3).sum() - 4 * DEAD[ix].sum() + .4 * TIER[ix].sum() + 1.0 * AEV[ix].sum() + 2 * (ANS[ix].max(0).sum() if len(WINS) else 0)
     return s
 res = sorted(((score(ix), ix) for ix in itertools.combinations(top, 6)), key=lambda x: -x[0])
@@ -253,6 +293,7 @@ out = dict(fight=FK, field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], 
            wins=[dict(win=w, foes=fs, answered_by=[NAMES[i] for i in best if ANS[i, j]]) for j, (w, fs) in enumerate(WINS)],
            emoves=[dict(foe=FN[fi], move=(MV.get(m) or {}).get('name', m), types=[t for t in mtypes(m) if t], w=round(float(w), 2)) for (fi, m, w) in EM],
            lead_moves=LM,
+           tips=[dict(tip=t['tip'], needs=[dict(need=nd, met_by=[f"{NAMES[i]}: {meets(i, nd)}" for i in best if meets(i, nd)]) for nd in t['needs']]) for t in TIPS],
            six=[mem(i) for i in order], alts=alts, pool=len(NAMES), score=round(float(res[0][0]), 1), cmp=round(cmp_score(best), 2),
            break_field=FLASH_PLAN if BREAK else None,
            checks=dict(weak3=[t for k, t in enumerate(ALLT) if (MALL[best][:, k] > 1).sum() >= 3],

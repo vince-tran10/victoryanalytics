@@ -123,17 +123,14 @@
    "Golisopod",
    "Stonjourner"
   ],
-  "FAIRY": [
-   "Sigilyph"
-  ],
   "GHOST": [
    "Banette",
    "Golisopod",
    "Sigilyph",
    "Typhlosion"
   ],
-  "NORMAL": [
-   "Luxray"
+  "FAIRY": [
+   "Sigilyph"
   ],
   "DARK": [
    "Luxray"
@@ -141,10 +138,13 @@
   "ELECTRIC": [
    "Luxray"
   ],
-  "GROUND": [
-   "Golisopod"
+  "NORMAL": [
+   "Luxray"
   ],
   "BUG": [
+   "Golisopod"
+  ],
+  "GROUND": [
    "Golisopod"
   ],
   "FIGHTING": [
@@ -348,6 +348,66 @@
   4,
   5
  ],
+ "tips": [
+  {
+   "tip": "Offensive doubles team: tons of strong spread moves (Eruption, Heat Wave, Rock Slide)",
+   "needs": [
+    {
+     "need": "spread_defense",
+     "met_by": [
+      "Alomomola: Wide Guard"
+     ]
+    }
+   ]
+  },
+  {
+   "tip": "Many priority moves",
+   "needs": [
+    {
+     "need": "resist:GHOST",
+     "met_by": [
+      "Muk (Alolan Form): resists Ghost",
+      "Musharna (Aevian Form): resists Ghost",
+      "Mandibuzz: resists Ghost"
+     ]
+    }
+   ]
+  },
+  {
+   "tip": "Lots of speed tiers: bring speed control such as Tailwind",
+   "needs": [
+    {
+     "need": "speed_control",
+     "met_by": [
+      "Mandibuzz: Tailwind"
+     ]
+    }
+   ]
+  },
+  {
+   "tip": "A Shadow Sneak of your own deals with Typhlosion",
+   "needs": [
+    {
+     "need": "priority_vs:Typhlosion",
+     "met_by": [
+      "Muk (Alolan Form): Shadow Sneak"
+     ]
+    }
+   ]
+  },
+  {
+   "tip": "Strong spread moves of your own",
+   "needs": [
+    {
+     "need": "spread_attack",
+     "met_by": [
+      "Swampert: Earthquake",
+      "Clodsire: Earthquake"
+     ]
+    }
+   ]
+  }
+ ],
  "six": [
   {
    "name": "Swampert",
@@ -450,7 +510,7 @@
   },
   {
    "name": "Alomomola",
-   "tier": "A",
+   "tier": "S",
    "types": [
     "WATER"
    ],
@@ -843,7 +903,7 @@
   },
   {
    "name": "Mandibuzz",
-   "tier": "A",
+   "tier": "B",
    "types": [
     "DARK",
     "FLYING"
@@ -943,16 +1003,7 @@
  ],
  "alts": [
   {
-   "score": 185.9,
-   "in": [
-    "Vaporeon"
-   ],
-   "out": [
-    "Alomomola"
-   ]
-  },
-  {
-   "score": 185.4,
+   "score": 200.4,
    "in": [
     "Gastrodon (West Aevian Form)"
    ],
@@ -961,7 +1012,7 @@
    ]
   },
   {
-   "score": 185.2,
+   "score": 197.6,
    "in": [
     "Golisopod (Aevian Form)",
     "Arcanine (Hisuian Form)"
@@ -970,10 +1021,19 @@
     "Clodsire",
     "Mandibuzz"
    ]
+  },
+  {
+   "score": 197.5,
+   "in": [
+    "Vaporeon"
+   ],
+   "out": [
+    "Alomomola"
+   ]
   }
  ],
  "pool": 55,
- "score": 187.6,
+ "score": 202.6,
  "cmp": 37.5,
  "break_field": null,
  "checks": {

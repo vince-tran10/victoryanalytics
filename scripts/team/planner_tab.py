@@ -58,6 +58,17 @@ for m in P['six']:
                  f'<li class="{"pflag" if w["flag"] else ""}"><b>{E(w["move"])}</b><span>{E(w["why"])}</span></li>' for w in m.get('why') or []) + '</ul></details>'
              + '</li>')
 h += f'<article class="plc"><h3>Your six</h3><ul class="bl">{rows}</ul></article>'
+# 23 Nov (Vincent): the guide's tips for this fight and how the six covers each one (collapsed)
+TP = P.get('tips') or []
+if TP:
+    ok_ = sum(all(n['met_by'] for n in t['needs']) for t in TP)
+    li_ = ''
+    for t in TP:
+        good = all(n['met_by'] for n in t['needs'])
+        li_ += f'<li class="{"pw-ok" if good else "pw-no"}"><b>{"✓" if good else "✗"}</b> {E(t["tip"])}' + ''.join(
+            ''.join(f'<div class="pans">{E(disp(x.split(": ", 1)[0]) + ": " + x.split(": ", 1)[1])}</div>' for x in n['met_by']) or '<div class="pans">Not covered on this six</div>'
+            for n in t['needs']) + '</li>'
+    h += f'<details class="plc pho"><summary>Guide tips: {ok_} of {len(TP)} covered</summary><ul class="pwin">{li_}</ul></details>'
 # 23 Nov (Vincent): move-level checks. 1) leads vs their leads' attacks 2) every move they have vs the six 3) super effective on each foe
 EM = P.get('emoves') or []; LM = set(P.get('lead_moves') or [])
 def mrow(k, e, mems):

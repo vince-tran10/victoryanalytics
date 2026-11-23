@@ -131,6 +131,9 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
 - Meta / Smogon builds preferred (SV + National Dex data in `workspace/smogon`; doubles data for doubles roles).
 
 ## Fight protocol (Vincent, 14 Nov — do this BEFORE recommending any team or lineup)
+**Guide tips (Vincent, 23 Nov): ALWAYS factored in.** Every walkthrough / community tip he sends goes into workspace/team/fight_tips.json
+(per fight: tip text + needs); planner.py scores them (+3 per tip met) and the Planner tab shows 'Guide tips: N of M covered' (collapsed)
+with who covers each tip. Ask for the tips before planning a new fight (step 4 below).
 Why: Geara, Giratina, Holly and Manaphy each took several losses because the six was picked from a one-hit, +0-stage
 damage score and the fight's real win condition was only read after Vincent lost. The data was in the game files.
 1. **Fight brief from game data** (trainertext / bosstext / fieldtext + game code): every foe's moves, ability, item,

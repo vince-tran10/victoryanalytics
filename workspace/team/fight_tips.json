@@ -1,0 +1,70 @@
+{
+ "_source": "BIGJRA-style walkthrough text pasted by Vincent, 23 Nov",
+ "spector": [
+  {
+   "tip": "He wears you down; Mega Banette is his only strong Pokemon",
+   "needs": [
+    "answer:Banette"
+   ]
+  },
+  {
+   "tip": "Murkrow + Gothitelle lead: Shadow Tag + Perish Song traps you unless Gothitelle goes down in the first 3 turns",
+   "needs": [
+    "ko:Gothitelle",
+    "anti_perish"
+   ]
+  },
+  {
+   "tip": "Gothitelle usually Fake Outs turn 1, so one of your leads still gets a hit in",
+   "needs": [
+    "lead_hits:Gothitelle"
+   ]
+  },
+  {
+   "tip": "Ninetales: fast, Hypnosis more accurate on this field",
+   "needs": [
+    "anti_sleep",
+    "answer:Ninetales"
+   ]
+  },
+  {
+   "tip": "Sleep + Perish Song plan: Safeguard, Taunt and similar moves get around it",
+   "needs": [
+    "anti_sleep",
+    "anti_perish"
+   ]
+  }
+ ],
+ "spector2": [
+  {
+   "tip": "Offensive doubles team: tons of strong spread moves (Eruption, Heat Wave, Rock Slide)",
+   "needs": [
+    "spread_defense"
+   ]
+  },
+  {
+   "tip": "Many priority moves",
+   "needs": [
+    "resist:GHOST"
+   ]
+  },
+  {
+   "tip": "Lots of speed tiers: bring speed control such as Tailwind",
+   "needs": [
+    "speed_control"
+   ]
+  },
+  {
+   "tip": "A Shadow Sneak of your own deals with Typhlosion",
+   "needs": [
+    "priority_vs:Typhlosion"
+   ]
+  },
+  {
+   "tip": "Strong spread moves of your own",
+   "needs": [
+    "spread_attack"
+   ]
+  }
+ ]
+}
