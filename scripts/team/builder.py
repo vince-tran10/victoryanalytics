@@ -304,7 +304,11 @@ if len(core) == 4:
         # suggestion (Vincent 22 Nov: highlight MY pick per slot): tier + role fit + type matchups, not just the list order
         def _fit(x):
             m, t = x[3], x[4]
-            f_ = min(x[1], 2) if slot == 4 else len([y for y in t if not y.startswith('spread')])
+            # 23 Nov: count only the role tools its BUILD runs (same as the chips); a tool it could learn but doesn't run counts half
+            _b = IB.get(m.name) or {}
+            _run = {re.sub(r'[^a-z]', '', z.lower()) for z in list(_b.get('moves') or []) + [_b.get('ability') or '', _abrun(m)]}
+            _tl = [y for y in t if not y.lower().startswith('spread')]
+            f_ = min(x[1], 2) if slot == 4 else sum(1 if re.sub(r'[^a-z]', '', y.split(':')[-1].lower()) in _run else .5 for y in _tl)
             cover = sum(1 for a in TYPES if m.mult[a] < 1 and any(o.mult[a] > 1 for o in others) and not any(o.mult[a] < 1 for o in others))
             # 22 Nov: + covering the other three's weaknesses that nobody else resists (the type-matrix gaps)
             # 22 Nov fix: tier counts double and tools cap at 2, so tool count / coverage can't lift a lower tier over a higher one

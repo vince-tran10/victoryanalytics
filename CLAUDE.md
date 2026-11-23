@@ -223,6 +223,12 @@ damage score and the fight's real win condition was only read after Vincent lost
   (KIT in builder.py: Redirection, Status, Speed control, Setup, Pivot, Recovery, Stat reset, Disrupt, Screens, Support, Priority, Spread). Re-evaluated every run (new mons, story, team): expect it rarely, never default to his pick. Flex / chapter swaps come later. **Cores tab REMOVED (Vincent, 22 Nov)**: he plays the team
   I recommend; cores.py only runs with CORES=1 (chat analysis). Team check for the remaining fights: scripts/team/team_fights.py
   (core + best 2 flexes per fight, full-six one-to-one counters).
+- **Community tab + Aevian sentiment (Vincent, 23 Nov):** every community input he sends is saved in workspace/team/community_inputs.json
+  (tier lists: tiers + marks; discussions: gameplay comments with +1/-1/0) and shown on the Community tab (scripts/team/community_tab.py, 6th nav
+  item). community.py: FORUM = older forum ratings; AEVIAN rating = 2/3 x average list mark + 1/3 x FORUM, +/-0.02 per net comment (max .06);
+  SENT = every point players make for / against each Aevian (owned AND not owned; game notes as 'Note'), shown on the Dex sheet ('What players
+  say', ▲/▼) and under 'Not owned yet' (community-only grade) so it is ready when he unlocks them. Add new inputs there, never by hand in tiers.
+- Builder fit (23 Nov): role tools count only when the BUILD runs them (could-learn = 0.5); a setup move is never a slot 2 tool.
 - **App look (Vincent, 17 Nov): it must look like an app, Pokémon themed.** scripts/team/theme.py runs LAST (after tabs.py) and
   only reskins: Rotom-Dex red app bar, party slots with level bars + "Next battle" card on Team, bottom tab bar (phone) / side
   rail (desktop) with 6 tabs (Team, Fights, Cores, To do, Boxes, Dex = the 3 tier tabs behind a switcher; C&A checks behind the

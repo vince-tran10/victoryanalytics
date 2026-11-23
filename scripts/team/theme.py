@@ -755,8 +755,10 @@ for r in T.values():
         if miss: yours['mv'] = [m for m in pty.get('moves') or [] if _n(m) not in {_n(x) for x in mv_}]
     ab_id = re.sub(r'[^A-Z]', '', ab_.upper())
     _why = why_tier(r, ab_id, mv_)
+    import community as _CMS   # 23 Nov (Vincent): every point players make for / against this Aevian
+    _pc = [list(x) for x in _CMS.SENT.get(r.get('sid'), [])] if 'Aevian' in r['name'] else []
     DEX[d_] = dict(t=r['tier'], s=r['blend'], m=meta_top(r['meta_label']), ty=r['types'], b=r['base'], bp=[_pct(k, r['base'][k]) for k in _STATS],
-                   a=ab_, n=nat_txt(nat_), e=evs_, mv=mv_, it=it_, src=src_, why=_why, y=yours, ro=(DROLES.get(d_) or ['Attacker', '']), pt=[dict(n=x['name'], t=x['tier'], w=x['why'][:2]) for x in DPART.get(d_, [])], sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])
+                   a=ab_, n=nat_txt(nat_), e=evs_, mv=mv_, it=it_, src=src_, why=_why, pc=_pc, y=yours, ro=(DROLES.get(d_) or ['Attacker', '']), pt=[dict(n=x['name'], t=x['tier'], w=x['why'][:2]) for x in DPART.get(d_, [])], sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])
 TMJS = '\n<script>\n(function(){   /* 22 Nov (Vincent): Builder type matrix: ticked Pokémon x attacking types */\n  var el = document.getElementById(\'tmdata\'), tb = document.getElementById(\'tmx\'); if (!el || !tb) return;\n  var D = JSON.parse(el.textContent), KEY = \'tm-sel\', sel = null;\n  try { sel = JSON.parse(localStorage.getItem(KEY) || \'null\'); } catch (e) {}\n  var boxes = function(){ return Array.prototype.slice.call(document.querySelectorAll(\'input[data-tm]\')); };\n  if (sel) boxes().forEach(function(b){ b.checked = sel.indexOf(b.dataset.tm) >= 0; });\n  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {\'&\':\'&amp;\',\'<\':\'&lt;\',\'>\':\'&gt;\',\'"\':\'&quot;\'}[c]; }); }\n  function fmt(m){ return m === 0 ? \'0\' : m === 0.25 ? \'¼\' : m === 0.5 ? \'½\' : m === 1 ? \'\' : m + \'×\'; }\n  function cls(m){ return m === 0 ? \'im\' : m < 1 ? \'rs\' : m > 2 ? \'w4\' : m > 1 ? \'wk\' : \'\'; }\n  function draw(){\n    var names = []; boxes().forEach(function(b){ if (b.checked && names.indexOf(b.dataset.tm) < 0 && D.mons[b.dataset.tm]) names.push(b.dataset.tm); });\n    try { localStorage.setItem(KEY, JSON.stringify(names)); } catch (e) {}\n    boxes().forEach(function(b){ b.checked = names.indexOf(b.dataset.tm) >= 0; });\n    if (!names.length) { tb.innerHTML = \'<tr><td class="tmx-empty">No Pokémon ticked</td></tr>\'; return; }\n    var h = \'<thead><tr><th>Type</th>\' + names.map(function(n){ return \'<th title="\' + esc(n) + \'"><i class="spr sp-\' + D.mons[n].sp + \'" aria-hidden="true"></i><span>\' + esc(n) + \'</span></th>\'; }).join(\'\') + \'<th>Weak</th><th>Resist</th></tr></thead><tbody>\';\n    D.types.forEach(function(t){\n      var w = 0, r = 0, cells = names.map(function(n){ var m = D.mons[n].m[t]; if (m > 1) w++; if (m < 1) r++; return \'<td class="\' + cls(m) + \'">\' + fmt(m) + \'</td>\'; }).join(\'\');\n      h += \'<tr><th class="tp ty-\' + t.toLowerCase() + \'">\' + t + \'</th>\' + cells + \'<td class="cnt\' + (w >= 3 ? \' bad\' : w >= 2 ? \' meh\' : \'\') + \'">\' + (w || \'\') + \'</td><td class="cnt\' + (r === 0 && w ? \' bad\' : r ? \' ok\' : \'\') + \'">\' + (r || \'\') + \'</td></tr>\';\n    });\n    tb.innerHTML = h + \'</tbody>\';\n  }\n  document.addEventListener(\'change\', function(e){ if (e.target.matches(\'input[data-tm]\')) { var on = e.target.checked, n = e.target.dataset.tm; boxes().forEach(function(b){ if (b.dataset.tm === n) b.checked = on; }); draw(); } });\n  draw();\n})();\n</script>'
 SHEET = ('<div class="sheet" id="dexsheet" hidden><div class="sheet-bg" data-close></div><div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="ds-name">'
          '<button type="button" class="sheet-x" data-close aria-label="Close">×</button><div id="ds-body"></div></div></div>'
@@ -819,11 +821,12 @@ IC = {
  'team': '<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><circle cx="12" cy="12" r="2.6"/>',
  'fights': '<path d="M4 20l7-7M14 4h6v6L9 21l-3-3z"/><path d="M4 14l6 6"/>',
  'cores': '<rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/>',
+ 'community': '<path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/>',
  'todo': '<path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1.5 1.5L7.5 5M3.5 12l1.5 1.5L7.5 11M3.5 18l1.5 1.5L7.5 17"/>',
  'boxes': '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M9 5v14M15 5v14"/>',
  'builder': '<path d="M4 20h16M6 16l4-10 4 6 4-8"/><circle cx="10" cy="6" r="1.5"/>',
  'dex': '<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="3"/><path d="M8.5 15h7M8.5 18h4"/>'}
-NAV = [('team', 'Team'), ('builder', 'Builder'), ('fights', 'Fights'), ('todo', 'To do'), ('dex', 'Dex')]   # 22 Nov: Boxes folded into To do   # 22 Nov: Cores tab removed (Vincent)
+NAV = [('team', 'Team'), ('builder', 'Builder'), ('fights', 'Fights'), ('todo', 'To do'), ('dex', 'Dex'), ('community', 'Community')]   # 22 Nov: Boxes folded into To do   # 22 Nov: Cores tab removed (Vincent)
 nav = '<nav class="appnav" aria-label="Guide">' + ''.join(
     f'<button type="button" data-go="{k}"><svg viewBox="0 0 24 24" aria-hidden="true">{IC[k]}</svg><span>{t}</span></button>' for k, t in NAV) + '</nav>'
 seg = ('<div class="seg" role="group" aria-label="Dex lists"><button type="button" data-go="tiers">Pokémon</button>'
@@ -887,7 +890,7 @@ a { color: var(--link) }
 .viewtitle { max-width: 1120px; margin: 0 auto; font: 700 24px/1.1 var(--display); padding-block: 2px 12px; letter-spacing: .01em }
 @media (max-width: 720px) { .appbar-chips { display: none } .viewtitle { font-size: 21px } }
 /* navigation: bottom bar (phone), side rail (desktop) */
-.appnav { position: fixed; z-index: 25; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(5, 1fr);   /* 22 Nov: 5 tabs (Boxes folded into To do) */
+.appnav { position: fixed; z-index: 25; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(6, 1fr);   /* 22 Nov: 5 tabs (Boxes folded into To do) */
   background: var(--panel); border-top: 1px solid var(--line); box-shadow: 0 -4px 16px rgba(0,0,0,.06);
   padding: 6px max(6px, env(safe-area-inset-right, 0px)) calc(6px + env(safe-area-inset-bottom, 0px)) max(6px, env(safe-area-inset-left, 0px)) }
 .appnav button { display: grid; justify-items: center; gap: 2px; border: 0; background: none; color: var(--muted); font: 700 11px var(--body); padding: 6px 0; border-radius: 12px; cursor: pointer }
@@ -1178,6 +1181,8 @@ details.ckref { display: block }
   .cft td:first-child, .fplan td:first-child { font-size: 15.5px }
 }
 footer { max-width: 1120px; margin: 0 auto; padding: 0 max(16px, env(safe-area-inset-right, 0px)) 0 max(16px, env(safe-area-inset-left, 0px)) }
+
+.ds-pc { list-style: none; padding-left: 0 } .ds-pc li { display: flex; gap: 6px } .pc-up b { color: #1f8a4c } .pc-dn b { color: #b3261e } .pc-nt b { color: var(--muted) }
 </style>'''
 CSS = CSS.replace('</style>', ''.join(f'.tmx-t th.ty-{k.lower()} {{ background: {v} }} ' for k, v in TYPE.items()) + '</style>', 1)
 DEXJS = r'''<script id="dex-js">
@@ -1198,6 +1203,7 @@ DEXJS = r'''<script id="dex-js">
       + (d.ro ? '<div class="ds-sub ds-role">Role: '+esc(d.ro[0])+(d.ro[1]?' ('+esc(d.ro[1])+')':'')+'</div>' : '')
       + (d.m ? '<div class="ds-sub">'+esc(d.m)+'</div>' : '') + '</div></div><div class="ds-stats">'+st+'</div>'
       + '<div class="ds-sec">Why '+d.t+' tier</div><ul class="ds-b ds-why">'+d.why.map(function(w){ return '<li>'+esc(w)+'</li>'; }).join('')+'</ul>'
+      + ((d.pc && d.pc.length) ? '<div class="ds-sec">What players say</div><ul class="ds-b ds-pc">'+d.pc.map(function(p){ return '<li class="'+(p[0]>0?'pc-up':p[0]<0?'pc-dn':'pc-nt')+'"><b>'+(p[0]>0?'▲':p[0]<0?'▼':'•')+'</b> '+esc(p[1])+'</li>'; }).join('')+'</ul>' : '')
       + '<div class="ds-sec">'+esc(d.src)+'</div><ul class="ds-b">'+row('Ability',d.a,'a')+(d.n?row('Nature',d.n,'n'):'')+(d.e?row('EVs',d.e,'e'):'')+(d.it?row('Item',d.it,'it'):'')
       + d.mv.map(function(m,i){ var yv=(d.y&&d.y.mv)||[]; var mine=yv.indexOf(m)<0 && ((d.y&&d.y.mv)!==undefined); return '<li>Move '+(i+1)+': '+esc(m)+'</li>'; }).join('')
       + ((d.y&&d.y.mv&&d.y.mv.length)?'<li class="ds-diff">Replace yours: '+d.y.mv.map(esc).join(', ')+'</li>':'')+'</ul>'
@@ -1224,7 +1230,7 @@ DEXJS = r'''<script id="dex-js">
 '''
 JS = r'''<script id="app-theme-js">
 (function(){
-  var NAMES = {team:'Team', builder:'Team Builder', fights:'Fights', cores:'Cores', todo:'To do', boxes:'Boxes', tiers:'Dex · Pokémon', aevian:'Dex · Aevian', crests:'Dex · Crests', checks:'Checks & data'};
+  var NAMES = {team:'Team', builder:'Team Builder', fights:'Fights', cores:'Cores', todo:'To do', community:'Community', boxes:'Boxes', tiers:'Dex · Pokémon', aevian:'Dex · Aevian', crests:'Dex · Crests', checks:'Checks & data'};
   var DEX = {tiers:1, aevian:1, crests:1};
   var orig = function(k){ return document.querySelector('#tabbar button[data-tab="'+k+'"]'); };
   function current(){ var b = document.querySelector('#tabbar button[aria-selected="true"]'); return b ? b.dataset.tab : 'team'; }

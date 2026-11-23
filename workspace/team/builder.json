@@ -141,6 +141,26 @@
    "why": [],
    "cands": [
     {
+     "name": "Leavanny (Aevian Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 5 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Intimidate",
+      "Setup: Swords Dance"
+     ],
+     "sid": "LEAVANNY",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Rage Powder"
+     ]
+    },
+    {
      "name": "Amoonguss",
      "tier": "A",
      "stats": [
@@ -158,26 +178,6 @@
      "pick": true,
      "rec": true,
      "teach": []
-    },
-    {
-     "name": "Leavanny (Aevian Form)",
-     "tier": "B",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 5 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Intimidate",
-      "Setup: Swords Dance"
-     ],
-     "sid": "LEAVANNY",
-     "form": "1",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Rage Powder"
-     ]
     },
     {
      "name": "Scrafty",
@@ -532,7 +532,7 @@
     },
     {
      "name": "Musharna (Aevian Form)",
-     "tier": "A",
+     "tier": "S",
      "stats": [
       "Resists 4 types",
       "Weak to 3 types",
@@ -766,13 +766,13 @@
    "Support",
    "Thunder Wave"
   ],
-  "Furret": [
-   "Doubles lead",
-   "Follow Me"
-  ],
   "Palossand-Aevian (Icy)": [
    "Attacker",
    ""
+  ],
+  "Furret": [
+   "Doubles lead",
+   "Follow Me"
   ],
   "Zoroark": [
    "Attacker",
@@ -2213,6 +2213,17 @@
     ]
    },
    {
+    "name": "Gastrodon-Aevian (West)",
+    "tier": "A",
+    "score": 2.5,
+    "why": [
+     "Speed split: Veluza-Aevian moves first, Gastrodon-Aevian (West) is the bulky one",
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Electric, Rock",
+     "You resist its weaknesses: Ice, Steel"
+    ]
+   },
+   {
     "name": "Golisopod-Aevian",
     "tier": "S",
     "score": 2.25,
@@ -2220,16 +2231,6 @@
      "Speed split: Veluza-Aevian moves first, Golisopod-Aevian is the bulky one",
      "Resists your weaknesses: Electric, Ground",
      "You resist its weaknesses: Fire, Ice"
-    ]
-   },
-   {
-    "name": "Glalie-Aevian",
-    "tier": "S",
-    "score": 2.25,
-    "why": [
-     "Speed split: Veluza-Aevian moves first, Glalie-Aevian is the bulky one",
-     "Resists your weaknesses: Electric",
-     "You resist its weaknesses: Ice, Bug, Steel"
     ]
    }
   ],
@@ -2260,7 +2261,7 @@
    },
    {
     "name": "Musharna-Aevian",
-    "tier": "A",
+    "tier": "S",
     "score": 3.0,
     "why": [
      "Slowking-Galar switches in on Poison, Fairy hits aimed at Musharna-Aevian and heals on the way out",
@@ -2274,7 +2275,7 @@
   "Amoonguss": [
    {
     "name": "Lapras-Aevian",
-    "tier": "A",
+    "tier": "S",
     "score": 5.75,
     "why": [
      "Amoonguss's redirection buys Lapras-Aevian its setup turn",
@@ -2398,19 +2399,8 @@
     ]
    },
    {
-    "name": "Mismagius-Aevian",
-    "tier": "A",
-    "score": 2.0,
-    "why": [
-     "Speed split: Mismagius-Aevian moves first, Muk-Alola is the bulky one",
-     "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Ground",
-     "You resist its weaknesses: Ghost, Dark"
-    ]
-   },
-   {
     "name": "Lapras-Aevian",
-    "tier": "A",
+    "tier": "S",
     "score": 1.75,
     "why": [
      "Muk-Alola resets foe boosts that would stop Lapras-Aevian's sweep",
@@ -2418,6 +2408,16 @@
      "Physical + special: Intimidate or one screen can't stop both",
      "You resist its weaknesses: Grass, Ghost, Dark",
      "Shared weaknesses: Ground"
+    ]
+   },
+   {
+    "name": "Alomomola",
+    "tier": "A",
+    "score": 1.75,
+    "why": [
+     "Physical + special: Intimidate or one screen can't stop both",
+     "You resist its weaknesses: Grass",
+     "Used together in the real meta"
     ]
    }
   ],
@@ -2437,6 +2437,17 @@
     ]
    },
    {
+    "name": "Leavanny-Aevian",
+    "tier": "A",
+    "score": 2.75,
+    "why": [
+     "Lapras-Aevian's sleep gives Leavanny-Aevian free turns",
+     "Speed split: Leavanny-Aevian moves first, Lapras-Aevian is the bulky one",
+     "Resists your weaknesses: Water, Grass, Ground",
+     "You resist its weaknesses: Flying"
+    ]
+   },
+   {
     "name": "Froslass-Aevian",
     "tier": "A",
     "score": 2.5,
@@ -2447,15 +2458,6 @@
      "Resists your weaknesses: Water, Ground, Steel",
      "You resist its weaknesses: Poison, Flying",
      "Shared weaknesses: Bug"
-    ]
-   },
-   {
-    "name": "Mandibuzz",
-    "tier": "A",
-    "score": 2.25,
-    "why": [
-     "Lapras-Aevian's sleep takes a foe out for Mandibuzz",
-     "Resists your weaknesses: Grass, Ground, Ghost, Dark"
     ]
    }
   ],
@@ -2485,13 +2487,14 @@
     ]
    },
    {
-    "name": "Mismagius-Aevian",
-    "tier": "A",
-    "score": 2.5,
+    "name": "Slowking-Galar",
+    "tier": "S",
+    "score": 2.25,
     "why": [
-     "Alomomola switches in on Fire, Ice hits aimed at Mismagius-Aevian and heals on the way out",
-     "Resists your weaknesses: Electric, Grass",
-     "You resist its weaknesses: Fire, Ice"
+     "Slowking-Galar switches in on Grass hits aimed at Alomomola and heals on the way out",
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Grass",
+     "Used together in the real meta"
     ]
    }
   ],
@@ -2509,15 +2512,6 @@
     ]
    },
    {
-    "name": "Mismagius-Aevian",
-    "tier": "A",
-    "score": 3.0,
-    "why": [
-     "Resists your weaknesses: Water, Fighting, Ground",
-     "You resist its weaknesses: Fire, Ice, Flying"
-    ]
-   },
-   {
     "name": "Froslass-Aevian",
     "tier": "A",
     "score": 2.75,
@@ -2525,6 +2519,16 @@
      "Physical + special: Intimidate or one screen can't stop both",
      "Resists your weaknesses: Water, Ground",
      "You resist its weaknesses: Poison, Flying, Bug"
+    ]
+   },
+   {
+    "name": "Gastrodon-Aevian (West)",
+    "tier": "A",
+    "score": 2.25,
+    "why": [
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Water, Fighting, Rock",
+     "You resist its weaknesses: Ice"
     ]
    }
   ],
@@ -2625,14 +2629,15 @@
     ]
    },
    {
-    "name": "Ninetales-Alola",
+    "name": "Gastrodon-Aevian (West)",
     "tier": "A",
     "score": 2.75,
     "why": [
-     "Slowbro switches in on Fire, Steel hits aimed at Ninetales-Alola and heals on the way out",
-     "Speed split: Ninetales-Alola moves first, Slowbro is the bulky one",
-     "Resists your weaknesses: Bug, Dark",
-     "You resist its weaknesses: Fire, Steel"
+     "Slowbro switches in on Ice, Steel hits aimed at Gastrodon-Aevian (West) and heals on the way out",
+     "Resists your weaknesses: Electric, Bug, Dark",
+     "You resist its weaknesses: Ice, Steel",
+     "Shared weaknesses: Grass",
+     "Slowbro's Surf can't hurt Gastrodon-Aevian (West)"
     ]
    }
   ],
@@ -2683,8 +2688,18 @@
     ]
    },
    {
-    "name": "Lapras-Aevian",
+    "name": "Unfezant-Aevian",
     "tier": "A",
+    "score": 2.75,
+    "why": [
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Poison, Bug",
+     "You resist its weaknesses: Water, Ground, Steel"
+    ]
+   },
+   {
+    "name": "Lapras-Aevian",
+    "tier": "S",
     "score": 2.5,
     "why": [
      "Lapras-Aevian's sleep takes a foe out for Froslass-Aevian",
@@ -2693,16 +2708,6 @@
      "Resists your weaknesses: Poison, Flying",
      "You resist its weaknesses: Water, Ground, Steel",
      "Shared weaknesses: Bug"
-    ]
-   },
-   {
-    "name": "Drapion-Aevian",
-    "tier": "A",
-    "score": 2.25,
-    "why": [
-     "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Poison, Bug",
-     "You resist its weaknesses: Ground, Steel"
     ]
    }
   ],
@@ -2741,6 +2746,42 @@
      "Physical + special: Intimidate or one screen can't stop both",
      "Resists your weaknesses: Grass, Bug",
      "You resist its weaknesses: Fire, Psychic, Steel"
+    ]
+   }
+  ],
+  "Gastrodon-Aevian (West)": [
+   {
+    "name": "Slowbro",
+    "tier": "A",
+    "score": 2.75,
+    "why": [
+     "Slowbro switches in on Ice, Steel hits aimed at Gastrodon-Aevian (West) and heals on the way out",
+     "Resists your weaknesses: Ice, Steel",
+     "You resist its weaknesses: Electric, Bug, Dark",
+     "Shared weaknesses: Grass",
+     "Slowbro's Surf can't hurt Gastrodon-Aevian (West)"
+    ]
+   },
+   {
+    "name": "Slowking",
+    "tier": "A",
+    "score": 2.75,
+    "why": [
+     "Slowking switches in on Ice, Steel hits aimed at Gastrodon-Aevian (West) and heals on the way out",
+     "Resists your weaknesses: Ice, Steel",
+     "You resist its weaknesses: Electric, Bug, Dark",
+     "Shared weaknesses: Grass",
+     "Slowking's Surf can't hurt Gastrodon-Aevian (West)"
+    ]
+   },
+   {
+    "name": "Toxtricity-Aevian",
+    "tier": "S",
+    "score": 2.75,
+    "why": [
+     "Speed split: Toxtricity-Aevian moves first, Gastrodon-Aevian (West) is the bulky one",
+     "Resists your weaknesses: Grass, Ice, Steel",
+     "You resist its weaknesses: Water, Rock"
     ]
    }
   ],
@@ -2784,7 +2825,7 @@
   "Toxtricity-Aevian": [
    {
     "name": "Musharna-Aevian",
-    "tier": "A",
+    "tier": "S",
     "score": 2.75,
     "why": [
      "Musharna-Aevian's sleep takes a foe out for Toxtricity-Aevian",
@@ -2795,14 +2836,13 @@
     ]
    },
    {
-    "name": "Mismagius-Aevian",
+    "name": "Gastrodon-Aevian (West)",
     "tier": "A",
     "score": 2.75,
     "why": [
-     "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Water, Ground",
-     "You resist its weaknesses: Fire, Ice",
-     "Toxtricity-Aevian's Boomburst can't hurt Mismagius-Aevian"
+     "Speed split: Toxtricity-Aevian moves first, Gastrodon-Aevian (West) is the bulky one",
+     "Resists your weaknesses: Water, Rock",
+     "You resist its weaknesses: Grass, Ice, Steel"
     ]
    },
    {
@@ -2868,7 +2908,7 @@
    },
    {
     "name": "Lapras-Aevian",
-    "tier": "A",
+    "tier": "S",
     "score": 2.25,
     "why": [
      "Lapras-Aevian's sleep takes a foe out for Mandibuzz",
@@ -2903,7 +2943,7 @@
    },
    {
     "name": "Musharna-Aevian",
-    "tier": "A",
+    "tier": "S",
     "score": 2.0,
     "why": [
      "Musharna-Aevian's sleep gives Zoroark-Hisui free turns",
@@ -2921,6 +2961,40 @@
      "Speed split: Zoroark-Hisui moves first, Glalie-Aevian is the bulky one",
      "Physical + special: Intimidate or one screen can't stop both",
      "You resist its weaknesses: Fighting, Bug"
+    ]
+   }
+  ],
+  "Ampharos-Aevian": [
+   {
+    "name": "Slowbro",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Slowbro switches in on Fire, Fighting hits aimed at Ampharos-Aevian and heals on the way out",
+     "Resists your weaknesses: Fire, Fighting",
+     "You resist its weaknesses: Electric"
+    ]
+   },
+   {
+    "name": "Slowking",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Slowking switches in on Fire, Fighting hits aimed at Ampharos-Aevian and heals on the way out",
+     "Resists your weaknesses: Fire, Fighting",
+     "You resist its weaknesses: Electric"
+    ]
+   },
+   {
+    "name": "Amoonguss",
+    "tier": "A",
+    "score": 1.75,
+    "why": [
+     "Amoonguss draws attacks so Ampharos-Aevian attacks freely",
+     "Amoonguss's sleep takes a foe out for Ampharos-Aevian",
+     "Resists your weaknesses: Fighting",
+     "You resist its weaknesses: Ice, Flying",
+     "Shared weaknesses: Fire"
     ]
    }
   ],
@@ -2993,35 +3067,79 @@
     ]
    }
   ],
-  "Mismagius-Aevian": [
+  "Leavanny-Aevian": [
    {
-    "name": "Arcanine-Hisui",
-    "tier": "A",
-    "score": 3.0,
-    "why": [
-     "Resists your weaknesses: Fire, Ice, Flying",
-     "You resist its weaknesses: Water, Fighting, Ground"
-    ]
-   },
-   {
-    "name": "Toxtricity-Aevian",
+    "name": "Lapras-Aevian",
     "tier": "S",
     "score": 2.75,
     "why": [
-     "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Fire, Ice",
-     "You resist its weaknesses: Water, Ground",
-     "Toxtricity-Aevian's Boomburst can't hurt Mismagius-Aevian"
+     "Lapras-Aevian's sleep gives Leavanny-Aevian free turns",
+     "Speed split: Leavanny-Aevian moves first, Lapras-Aevian is the bulky one",
+     "Resists your weaknesses: Flying",
+     "You resist its weaknesses: Water, Grass, Ground"
     ]
    },
    {
-    "name": "Alomomola",
+    "name": "Slowbro",
     "tier": "A",
-    "score": 2.5,
+    "score": 2.75,
     "why": [
-     "Alomomola switches in on Fire, Ice hits aimed at Mismagius-Aevian and heals on the way out",
-     "Resists your weaknesses: Fire, Ice",
+     "Slowbro switches in on Ice hits aimed at Leavanny-Aevian and heals on the way out",
+     "Speed split: Leavanny-Aevian moves first, Slowbro is the bulky one",
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Ice",
      "You resist its weaknesses: Electric, Grass"
+    ]
+   },
+   {
+    "name": "Slowking",
+    "tier": "A",
+    "score": 2.75,
+    "why": [
+     "Slowking switches in on Ice hits aimed at Leavanny-Aevian and heals on the way out",
+     "Speed split: Leavanny-Aevian moves first, Slowking is the bulky one",
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Ice",
+     "You resist its weaknesses: Electric, Grass"
+    ]
+   }
+  ],
+  "Unfezant-Aevian": [
+   {
+    "name": "Amoonguss",
+    "tier": "A",
+    "score": 3.25,
+    "why": [
+     "Amoonguss draws attacks so Unfezant-Aevian attacks freely",
+     "Amoonguss's sleep takes a foe out for Unfezant-Aevian",
+     "Speed split: Unfezant-Aevian moves first, Amoonguss is the bulky one",
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Water, Grass, Fighting, Fairy",
+     "You resist its weaknesses: Fire",
+     "Shared weaknesses: Psychic"
+    ]
+   },
+   {
+    "name": "Froslass-Aevian",
+    "tier": "A",
+    "score": 2.75,
+    "why": [
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Water, Ground, Steel",
+     "You resist its weaknesses: Poison, Bug"
+    ]
+   },
+   {
+    "name": "Slowking-Galar",
+    "tier": "S",
+    "score": 2.25,
+    "why": [
+     "Slowking-Galar switches in on Grass, Fighting hits aimed at Unfezant-Aevian and heals on the way out",
+     "Speed split: Unfezant-Aevian moves first, Slowking-Galar is the bulky one",
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Grass, Fighting, Fairy",
+     "You resist its weaknesses: Dark",
+     "Shared weaknesses: Ground"
     ]
    }
   ]

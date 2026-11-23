@@ -791,3 +791,9 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 22 Nov: guide pass (all 10 suggestions): Fights progress + Plan block + threat dots; To do checklist + Coming soon + Boxes folded in; Builder gap line (Flying -> Lapras-Aevian); matrix ticks the six; C&A one line.
 - 22 Nov: bottom nav fixed (grid had 6 columns for 5 tabs); Fights Plan block + threat dots removed.
 - 22 Nov 20:41 export: Toxtricity-A = Core 1 (Torch Song / Boomburst / Sludge Bomb / Protect, Punk Rock, Charcoal); Torch Song added via engine.EXTRA_LEGAL; Punk Rock now modelled (recommend.py). Annihilape / Electivire de-evolved. Builder gaps: Flying (Lapras-A), Psychic (Muk-Alola).
+
+## 23 Nov — Community tab + Aevian sentiment (3 Reddit inputs)
+- Inputs saved in workspace/team/community_inputs.json: 1 'tierslop' V14 list (sprites matched vs Battlers), 2 UNSUBRAMEN V14 list, 3 'favorite Aevium form' thread. Imgur album dropped (Imgur blocks automated reads).
+- community.py: FORUM = old 22 Nov ratings; AEVIAN = 2/3 x both lists' marks + 1/3 x FORUM, +/-0.02 per net gameplay comment (max .06). SENT = every pro / con point per Aevian (owned or not), shown on Dex sheets ('What players say') and the Community tab ('Not owned yet', community-only grade).
+- Tier moves: Lapras-A, Musharna-A A->S; Unfezant-A, Leavanny-A, Ampharos-A, Gastrodon-A B->A; Mismagius-A A->B. Toxtricity-A stays S.
+- builder.py fit counts only role tools the BUILD runs (could-learn = half): Leavanny-A (could learn Rage Powder) had passed Amoonguss; now 8.15 vs 7.94, so stability keeps Amoonguss. 4/4 agree.
