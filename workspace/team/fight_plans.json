@@ -20,7 +20,7 @@
     ],
     "setup": "Swords Dance",
     "where": "Active",
-    "dump": 456,
+    "dump": 462,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -41,7 +41,7 @@
     ],
     "setup": "Shell Smash",
     "where": "Overflow",
-    "dump": 19,
+    "dump": 24,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -438,8 +438,8 @@
      "Clear Smog"
     ],
     "setup": null,
-    "where": "Active",
-    "dump": 488,
+    "where": "Party",
+    "dump": 2,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -460,8 +460,8 @@
      "Rock Slide"
     ],
     "setup": null,
-    "where": "Active",
-    "dump": 473,
+    "where": "Party",
+    "dump": 3,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -481,8 +481,8 @@
      "Play Rough"
     ],
     "setup": null,
-    "where": "Active",
-    "dump": 489,
+    "where": "Party",
+    "dump": 4,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -503,8 +503,8 @@
      "Hammer Arm"
     ],
     "setup": null,
-    "where": "Active",
-    "dump": 503,
+    "where": "Party",
+    "dump": 5,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -523,8 +523,8 @@
      "Earthquake"
     ],
     "setup": null,
-    "where": "Active",
-    "dump": 454,
+    "where": "Party",
+    "dump": 6,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -627,14 +627,6 @@
    },
    {
     "swaps": [
-     "Mabosstiff",
-     "Runerigus"
-    ],
-    "score": 44.14,
-    "counters": 4
-   },
-   {
-    "swaps": [
      "Palossand",
      "Scrafty"
     ],
@@ -671,14 +663,6 @@
      "Scrafty"
     ],
     "score": 44.01,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Scrafty",
-     "Runerigus"
-    ],
-    "score": 44.0,
     "counters": 4
    },
    {
@@ -732,14 +716,6 @@
    {
     "swaps": [
      "Pangoro",
-     "Runerigus"
-    ],
-    "score": 43.97,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Pangoro",
      "Jellicent"
     ],
     "score": 43.96,
@@ -751,14 +727,6 @@
      "Zoroark"
     ],
     "score": 43.93,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Zoroark",
-     "Runerigus"
-    ],
-    "score": 43.91,
     "counters": 4
    },
    {
@@ -787,26 +755,10 @@
    },
    {
     "swaps": [
-     "Crawdaunt",
-     "Runerigus"
-    ],
-    "score": 34.06,
-    "counters": 3
-   },
-   {
-    "swaps": [
      "Palossand",
      "Persian (Alolan Form)"
     ],
     "score": 33.92,
-    "counters": 3
-   },
-   {
-    "swaps": [
-     "Persian (Alolan Form)",
-     "Runerigus"
-    ],
-    "score": 33.91,
     "counters": 3
    },
    {
@@ -856,6 +808,54 @@
     ],
     "score": 24.03,
     "counters": 5
+   },
+   {
+    "swaps": [
+     "Vaporeon",
+     "Pangoro"
+    ],
+    "score": 24.01,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Scrafty",
+     "Floatzel"
+    ],
+    "score": 23.99,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Pangoro",
+     "Floatzel"
+    ],
+    "score": 23.97,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Mabosstiff",
+     "Sandslash"
+    ],
+    "score": 14.18,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Gastrodon",
+     "Mabosstiff"
+    ],
+    "score": 14.17,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Diggersby",
+     "Mabosstiff"
+    ],
+    "score": 14.16,
+    "counters": 4
    }
   ],
   "note": "",
@@ -881,8 +881,8 @@
      "Play Rough"
     ],
     "setup": null,
-    "where": "Active",
-    "dump": 489,
+    "where": "Party",
+    "dump": 4,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -903,7 +903,7 @@
     ],
     "setup": null,
     "where": "Overflow",
-    "dump": 15,
+    "dump": 20,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -1285,7 +1285,7 @@
     ],
     "setup": "Shell Smash",
     "where": "Active",
-    "dump": 509,
+    "dump": 512,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -1306,7 +1306,7 @@
     ],
     "setup": null,
     "where": "Active",
-    "dump": 484,
+    "dump": 488,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -1414,6 +1414,14 @@
    },
    {
     "swaps": [
+     "Scrafty",
+     "Turtonator"
+    ],
+    "score": 53.87,
+    "counters": 5
+   },
+   {
+    "swaps": [
      "Chandelure",
      "Mabosstiff"
     ],
@@ -1422,10 +1430,50 @@
    },
    {
     "swaps": [
+     "Pangoro",
+     "Turtonator"
+    ],
+    "score": 53.82,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Gallade",
+     "Scrafty"
+    ],
+    "score": 53.81,
+    "counters": 5
+   },
+   {
+    "swaps": [
      "Palossand (Fiery Aevian Form)",
      "Mabosstiff"
     ],
     "score": 53.8,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Chandelure",
+     "Scrafty"
+    ],
+    "score": 53.79,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Gallade",
+     "Pangoro"
+    ],
+    "score": 53.76,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Chandelure",
+     "Pangoro"
+    ],
+    "score": 53.74,
     "counters": 5
    },
    {
@@ -1542,6 +1590,30 @@
    },
    {
     "swaps": [
+     "Scrafty",
+     "Typhlosion"
+    ],
+    "score": 53.61,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Flareon",
+     "Scrafty"
+    ],
+    "score": 53.6,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Turtonator",
+     "Crawdaunt"
+    ],
+    "score": 53.59,
+    "counters": 5
+   },
+   {
+    "swaps": [
      "Bruxish",
      "Mabosstiff"
     ],
@@ -1562,78 +1634,6 @@
      "Espeon"
     ],
     "score": 53.58,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Veluza",
-     "Mabosstiff"
-    ],
-    "score": 53.57,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Clawitzer",
-     "Mabosstiff"
-    ],
-    "score": 53.57,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Ursaring",
-     "Mabosstiff"
-    ],
-    "score": 53.56,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Solrock (Solrock Dominant Fusion)",
-     "Mabosstiff"
-    ],
-    "score": 53.55,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Mabosstiff",
-     "Kadabra"
-    ],
-    "score": 53.55,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Veluza (Aevian Form)",
-     "Mabosstiff"
-    ],
-    "score": 53.54,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Centiskorch",
-     "Mabosstiff"
-    ],
-    "score": 53.53,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Bruxish",
-     "Crawdaunt"
-    ],
-    "score": 53.45,
-    "counters": 5
-   },
-   {
-    "swaps": [
-     "Crawdaunt",
-     "Espeon"
-    ],
-    "score": 53.45,
     "counters": 5
    }
   ],

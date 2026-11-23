@@ -111,11 +111,11 @@
   "POISON"
  ],
  "atk": {
-  "STEEL": [
-   "Stonjourner"
-  ],
   "ROCK": [
    "Golisopod",
+   "Stonjourner"
+  ],
+  "STEEL": [
    "Stonjourner"
   ],
   "FIRE": [
@@ -132,13 +132,13 @@
    "Sigilyph",
    "Typhlosion"
   ],
-  "DARK": [
-   "Luxray"
-  ],
   "ELECTRIC": [
    "Luxray"
   ],
   "NORMAL": [
+   "Luxray"
+  ],
+  "DARK": [
    "Luxray"
   ],
   "GROUND": [
@@ -193,7 +193,7 @@
    "sid": "GOLISOPOD",
    "form": "1",
    "lead": true,
-   "where": "Active",
+   "where": "Party",
    "moves": [
     "Bone Rush",
     "Pin Missile",
@@ -238,7 +238,7 @@
    "sid": "MUK",
    "form": "1",
    "lead": true,
-   "where": "Active",
+   "where": "Party",
    "moves": [
     "Knock Off",
     "Gastro Acid",
@@ -285,7 +285,7 @@
    "sid": "GLALIE",
    "form": "1",
    "lead": false,
-   "where": "Active",
+   "where": "Party",
    "moves": [
     "Grassy Glide",
     "Wood Hammer",
@@ -330,7 +330,7 @@
    "sid": "MUSHARNA",
    "form": "1",
    "lead": false,
-   "where": "Active",
+   "where": "Party",
    "moves": [
     "Lovely Kiss",
     "Shadow Claw",
@@ -347,12 +347,12 @@
     79
    ],
    "deal": [
+    37,
+    136,
+    63,
     36,
-    113,
-    60,
-    34,
-    109,
-    105
+    131,
+    126
    ],
    "worst": 90,
    "worst_foe": "Sigilyph",
@@ -375,7 +375,7 @@
    "sid": "SWAMPERT",
    "form": "0",
    "lead": false,
-   "where": "Active",
+   "where": "Party",
    "moves": [
     "Earthquake",
     "Rock Slide",
@@ -392,12 +392,12 @@
     85
    ],
    "deal": [
-    52,
-    46,
-    87,
-    12,
-    90,
-    43
+    62,
+    56,
+    105,
+    15,
+    109,
+    52
    ],
    "worst": 85,
    "worst_foe": "Banette",
@@ -420,7 +420,7 @@
    "sid": "CLODSIRE",
    "form": "0",
    "lead": false,
-   "where": "Active",
+   "where": "Party",
    "moves": [
     "Earthquake",
     "Curse",
@@ -491,7 +491,7 @@
    ]
   }
  ],
- "pool": 45,
+ "pool": 46,
  "score": 37.6,
  "checks": {
   "weak3": [],

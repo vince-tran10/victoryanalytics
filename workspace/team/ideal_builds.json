@@ -322,6 +322,25 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Musharna (Aevian Form)": {
+  "ability": "TOUGHCLAWS",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Spell Tag",
+  "moves": [
+   "Lovely Kiss",
+   "Shadow Claw",
+   "Play Rough",
+   "Protect"
+  ],
+  "move_ids": [
+   "LOVELYKISS",
+   "SHADOWCLAW",
+   "PLAYROUGH"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
  "Hitmonchan": {
   "ability": "IRONFIST",
   "nature": "Adamant",
@@ -397,25 +416,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Musharna (Aevian Form)": {
-  "ability": "TOUGHCLAWS",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Spell Tag",
-  "moves": [
-   "Lovely Kiss",
-   "Shadow Claw",
-   "Play Rough",
-   "Protect"
-  ],
-  "move_ids": [
-   "LOVELYKISS",
-   "SHADOWCLAW",
-   "PLAYROUGH"
-  ],
-  "role": "attacker",
-  "source": "your team"
  },
  "Typhlosion": {
   "ability": "BLAZE",
@@ -531,6 +531,25 @@
   "role": "attacker",
   "source": "game"
  },
+ "Torterra": {
+  "ability": "OVERGROW",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Soft Sand",
+  "moves": [
+   "Earthquake",
+   "Wood Hammer",
+   "Shell Smash",
+   "Protect"
+  ],
+  "move_ids": [
+   "EARTHQUAKE",
+   "WOODHAMMER",
+   "SHELLSMASH"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
+ },
  "Lunatone (Lunatone Dominant Fusion)": {
   "ability": "LUNARIDOL",
   "nature": "Modest",
@@ -625,6 +644,25 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Swampert": {
+  "ability": "TORRENT",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Soft Sand",
+  "moves": [
+   "Earthquake",
+   "Rock Slide",
+   "Hammer Arm",
+   "Protect"
+  ],
+  "move_ids": [
+   "EARTHQUAKE",
+   "ROCKSLIDE",
+   "HAMMERARM"
+  ],
+  "role": "attacker",
+  "source": "your team"
  },
  "Beartic": {
   "ability": "SLUSHRUSH",
@@ -870,25 +908,6 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
- },
- "Swampert": {
-  "ability": "TORRENT",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Soft Sand",
-  "moves": [
-   "Earthquake",
-   "Rock Slide",
-   "Hammer Arm",
-   "Protect"
-  ],
-  "move_ids": [
-   "EARTHQUAKE",
-   "ROCKSLIDE",
-   "HAMMERARM"
-  ],
-  "role": "attacker",
-  "source": "your team"
  },
  "Camerupt": {
   "ability": "SOLIDROCK",

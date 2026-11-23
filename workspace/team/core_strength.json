@@ -1596,6 +1596,10 @@
   "Karrablast": {
    "blend": 0.116,
    "tier": "D"
+  },
+  "Torterra": {
+   "blend": 0.512,
+   "tier": "B"
   }
  }
 }

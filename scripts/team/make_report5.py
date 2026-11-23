@@ -673,17 +673,35 @@ if promo_todo:
 
 CUTS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'cuts.json')))
 cut_todo = []
-for sp, why in CUTS['move'].items():
-    sp_, lv_ = (sp.split('@') + [None])[:2]
-    hits = [d for d in cur if d['box'] == 'Active' and d['species'] == sp_ and (lv_ is None or str(d['level']) == lv_)]
-    if hits:
-        cut_todo.append((f"{sp_}{' ×' + str(len(hits)) if len(hits) > 1 else ''} (#{', #'.join(str(d['n']) for d in hits)}): move to Overflow", 'mid'))
-        for d in hits: ACTIONS[d['n']] = 'Move to Overflow'
+# 23 Nov (Vincent: 'why would Amoonguss be Overflow if it's A tier'): the hand list cuts.json (7 Nov) is retired. Active keeps every
+# S / A / B Pokémon (the Planner's pool) and the current six; only C / D tier Active mons move out, by the LIVE tier (tier_all.json)
+try:
+    _TT = {}
+    for _r in json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'tier_all.json')))['rows']:
+        if _r.get('owned_as'): _TT[_r['owned_as']] = max(_TT.get(_r['owned_as'], 'D'), _r['tier'], key=lambda t: 'DCBAS'.index(t))
+except Exception:
+    _TT = {}
+_SIX = set(json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'state.json'))).get('team') or [])
+for d in cur:
+    if d['box'] == 'Active' and _TT.get(d['species']) in ('C', 'D') and d['n'] not in ACTIONS and not any(disp(x) == d['species'] for x in _SIX):
+        cut_todo.append((f"{d['species']} (#{d['n']}): move to Overflow ({_TT[d['species']]} tier)", 'mid'))
+        ACTIONS[d['n']] = 'Move to Overflow'
 for d in cur:
     if d['box'] == 'Active' and d['species'] in party and d['species'] in IDEAL and d['n'] not in ACTIONS:
         cut_todo.append((f"{d['species']} (#{d['n']}): move to Overflow. It's a second copy of the one in your party.", 'mid'))
         ACTIONS[d['n']] = 'Move to Overflow (duplicate)'
-for sp, why in CUTS['maybe'].items():
+# 23 Nov: S / A Pokemon stuck in Overflow join Active (the Planner's pool) unless Party / Active already holds that final form
+try:
+    _FIN = {_r['owned_as']: _r['name'] for _r in json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'tier_all.json')))['rows'] if _r.get('owned_as') and _r.get('kind') != 'crest'}
+except Exception:
+    _FIN = {}
+_inpool = {_FIN.get(d['species'], d['species']) for d in cur if d['box'] in ('Party', 'Active')}
+for d in cur:
+    f_ = _FIN.get(d['species'], d['species'])
+    if d['box'] == 'Overflow' and _TT.get(d['species']) in ('S', 'A') and f_ not in _inpool and d['n'] not in ACTIONS:
+        ACTIONS[d['n']] = 'Move to Active'; _inpool.add(f_)
+        cut_todo.append((f"{d['species']} (#{d['n']}): move to Active ({_TT[d['species']]} tier)", 'mid'))
+for sp, why in {}.items():   # 23 Nov: cuts.json 'maybe' retired too
     hits = [d for d in cur if d['box'] == 'Active' and d['species'] == sp]
     if hits:
         cut_todo.append((f"{sp} (#{hits[0]['n']}): your call. {why}", 'low'))

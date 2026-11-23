@@ -190,7 +190,7 @@ damage score and the fight's real win condition was only read after Vincent lost
 
 ## Boxes
 - Export order: Party (6), Overflow A–Z, an optional unsorted staging box, Active A–Z.
-- Active bar: A tier (score ≥ 0.53) and species not already in Party/Active. Boss specialists stay in Active only
+- Active bar (23 Nov, cuts.json RETIRED): Active = the Planner's pool. It keeps every S / A / B (live tier_all, crest tier when the crest is held) and the six; C / D in Active move to Overflow; S / A in Overflow with no copy of that final form in Party / Active move in (make_report5). Never a hand-written cut list. Boss specialists stay in Active only
   while their fight is still ahead. Meowscarada (starter) always stays (Ceruledge rule dropped 22 Nov: not obtainable yet).
 - Every staging Pokémon gets a verdict: Active or Overflow.
 

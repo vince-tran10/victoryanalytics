@@ -750,6 +750,21 @@
      "form": "1",
      "pick": false,
      "rec": false
+    },
+    {
+     "name": "Musharna (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "teach": [],
+     "sid": "MUSHARNA",
+     "form": "1",
+     "pick": false,
+     "rec": false
     }
    ]
   },
@@ -964,6 +979,10 @@
   "Chandelure": [
    "Support",
    "Will-O-Wisp"
+  ],
+  "Torterra": [
+   "Closer",
+   "Shell Smash"
   ],
   "Revavroom": [
    "Lead",
@@ -1277,13 +1296,13 @@
    "Mid game",
    "Recover"
   ],
-  "Jellicent": [
-   "Mid game",
-   "Recover"
-  ],
   "Veluza": [
    "Attacker",
    ""
+  ],
+  "Jellicent": [
+   "Mid game",
+   "Recover"
   ],
   "Ribombee": [
    "Support",
@@ -1489,13 +1508,13 @@
    "Doubles lead",
    "Fake Out"
   ],
-  "Sunflora": [
-   "Attacker",
-   ""
-  ],
   "Toedscruel": [
    "Support",
    "Spore"
+  ],
+  "Sunflora": [
+   "Attacker",
+   ""
   ],
   "Starmie": [
    "Attacker",
@@ -1537,13 +1556,13 @@
    "Attacker",
    ""
   ],
-  "Drifblim": [
-   "Doubles lead",
-   "Tailwind"
-  ],
   "Tropius": [
    "Support",
    "Wide Guard"
+  ],
+  "Drifblim": [
+   "Doubles lead",
+   "Tailwind"
   ],
   "Roserade": [
    "Support",
@@ -1605,15 +1624,15 @@
    "Support",
    "Electric Surge setter"
   ],
-  "Zebstrika": [
-   "Support",
-   "Thunder Wave"
-  ],
   "Seismitoad": [
    "Attacker",
    ""
   ],
   "Electrode-Hisui": [
+   "Support",
+   "Thunder Wave"
+  ],
+  "Zebstrika": [
    "Support",
    "Thunder Wave"
   ],
@@ -1637,13 +1656,13 @@
    "Support",
    "Snow Warning setter"
   ],
-  "Bellossom": [
-   "Closer",
-   "Quiver Dance"
-  ],
   "Probopass": [
    "Support",
    "Thunder Wave"
+  ],
+  "Bellossom": [
+   "Closer",
+   "Quiver Dance"
   ],
   "Hitmonlee": [
    "Doubles lead",
