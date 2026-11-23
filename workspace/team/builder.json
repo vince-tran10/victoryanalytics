@@ -262,11 +262,11 @@
      "tier": "S",
      "stats": [
       "Resists 4 types",
-      "Weak to 3 types"
+      "Weak to 3 types",
+      "Single target only"
      ],
      "tools": [
-      "Regenerator",
-      "Spread: Surf"
+      "Regenerator"
      ],
      "sid": "SLOWKING",
      "form": "1",
@@ -514,21 +514,6 @@
      "rec": true
     },
     {
-     "name": "Solrock (Solrock Dominant Fusion)",
-     "tier": "B",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 7 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "teach": [],
-     "sid": "SOLROCK",
-     "form": "1",
-     "pick": false,
-     "rec": false
-    },
-    {
      "name": "Mr. Mime",
      "tier": "D",
      "stats": [
@@ -556,6 +541,21 @@
      "tools": [],
      "teach": [],
      "sid": "MUSHARNA",
+     "form": "1",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Solrock (Solrock Dominant Fusion)",
+     "tier": "B",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 7 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "teach": [],
+     "sid": "SOLROCK",
      "form": "1",
      "pick": false,
      "rec": false
@@ -602,24 +602,6 @@
      "form": "1",
      "pick": true,
      "rec": true
-    },
-    {
-     "name": "Crawdaunt",
-     "tier": "B",
-     "stats": [
-      "Resists 7 types",
-      "Weak to 5 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Setup: Swords Dance",
-      "Disrupt: Knock Off"
-     ],
-     "teach": [],
-     "sid": "CRAWDAUNT",
-     "form": "0",
-     "pick": false,
-     "rec": false
     },
     {
      "name": "Barbaracle",
@@ -946,13 +928,13 @@
    "Attacker",
    ""
   ],
-  "Florges": [
-   "Mid game",
-   "Synthesis"
-  ],
   "Typhlosion": [
    "Lead",
    "outspeeds 81%"
+  ],
+  "Florges": [
+   "Mid game",
+   "Synthesis"
   ],
   "Solrock (Solrock Dominant Fusion)": [
    "Attacker",
@@ -2166,5 +2148,775 @@
    "Attacker",
    ""
   ]
- }
+ },
+ "partners": {
+  "Golisopod-Aevian": [
+   {
+    "name": "Alomomola",
+    "tier": "A",
+    "score": 2.25,
+    "why": [
+     "Resists your weaknesses: Fire, Water, Ice",
+     "You resist its weaknesses: Electric"
+    ]
+   },
+   {
+    "name": "Veluza-Aevian",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Fire, Ice",
+     "You resist its weaknesses: Electric, Ground"
+    ]
+   },
+   {
+    "name": "Arcanine-Hisui",
+    "tier": "A",
+    "score": 1.75,
+    "why": [
+     "Resists your weaknesses: Fire, Ice, Flying",
+     "You resist its weaknesses: Fighting, Ground",
+     "Shared weaknesses: Water"
+    ]
+   }
+  ],
+  "Veluza-Aevian": [
+   {
+    "name": "Golisopod-Aevian",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Electric, Ground",
+     "You resist its weaknesses: Fire, Ice"
+    ]
+   },
+   {
+    "name": "Glalie-Aevian",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Electric",
+     "You resist its weaknesses: Ice, Bug, Steel"
+    ]
+   },
+   {
+    "name": "Roserade-Aevian",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Electric, Rock",
+     "You resist its weaknesses: Ice, Fairy"
+    ]
+   }
+  ],
+  "Slowking-Galar": [
+   {
+    "name": "Mandibuzz",
+    "tier": "A",
+    "score": 3.0,
+    "why": [
+     "Resists your weaknesses: Ground, Ghost, Dark",
+     "You resist its weaknesses: Fairy",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Zoroark",
+    "tier": "A",
+    "score": 3.0,
+    "why": [
+     "Resists your weaknesses: Ghost, Dark",
+     "You resist its weaknesses: Fighting, Fairy",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Musharna-Aevian",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Ghost, Dark",
+     "You resist its weaknesses: Poison, Fairy"
+    ]
+   }
+  ],
+  "Amoonguss": [
+   {
+    "name": "Lapras-Aevian",
+    "tier": "A",
+    "score": 4.75,
+    "why": [
+     "Resists your weaknesses: Fire, Flying, Psychic",
+     "You resist its weaknesses: Water, Grass",
+     "Amoonguss's redirection buys Lapras-Aevian its setup turn",
+     "Amoonguss's sleep gives Lapras-Aevian free turns"
+    ]
+   },
+   {
+    "name": "Slowbro",
+    "tier": "A",
+    "score": 3.5,
+    "why": [
+     "Resists your weaknesses: Fire, Ice, Psychic",
+     "You resist its weaknesses: Electric, Grass",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Alomomola",
+    "tier": "A",
+    "score": 3.0,
+    "why": [
+     "Resists your weaknesses: Fire, Ice",
+     "You resist its weaknesses: Electric, Grass",
+     "Used together in the real meta"
+    ]
+   }
+  ],
+  "Glalie-Aevian": [
+   {
+    "name": "Veluza-Aevian",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Ice, Bug, Steel",
+     "You resist its weaknesses: Electric"
+    ]
+   },
+   {
+    "name": "Toxtricity-Aevian",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Ice, Fighting, Bug, Steel"
+    ]
+   },
+   {
+    "name": "Alomomola",
+    "tier": "A",
+    "score": 1.5,
+    "why": [
+     "Resists your weaknesses: Ice, Steel",
+     "You resist its weaknesses: Electric"
+    ]
+   }
+  ],
+  "Musharna-Aevian": [
+   {
+    "name": "Slowking-Galar",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Poison, Fairy",
+     "You resist its weaknesses: Ghost, Dark"
+    ]
+   },
+   {
+    "name": "Toxtricity-Aevian",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Poison, Steel, Fairy",
+     "You resist its weaknesses: Psychic"
+    ]
+   },
+   {
+    "name": "Slowbro",
+    "tier": "A",
+    "score": 1.5,
+    "why": [
+     "Resists your weaknesses: Steel",
+     "You resist its weaknesses: Ghost, Dark"
+    ]
+   }
+  ],
+  "Muk-Alola": [
+   {
+    "name": "Amoonguss",
+    "tier": "A",
+    "score": 1.5,
+    "why": [
+     "You resist its weaknesses: Psychic",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Alomomola",
+    "tier": "A",
+    "score": 1.5,
+    "why": [
+     "You resist its weaknesses: Grass",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Slowbro",
+    "tier": "A",
+    "score": 1.5,
+    "why": [
+     "You resist its weaknesses: Grass, Ghost, Dark"
+    ]
+   }
+  ],
+  "Lapras-Aevian": [
+   {
+    "name": "Amoonguss",
+    "tier": "A",
+    "score": 4.75,
+    "why": [
+     "Resists your weaknesses: Water, Grass",
+     "You resist its weaknesses: Fire, Flying, Psychic",
+     "Amoonguss's redirection buys Lapras-Aevian its setup turn",
+     "Amoonguss's sleep gives Lapras-Aevian free turns"
+    ]
+   },
+   {
+    "name": "Mandibuzz",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Grass, Ground, Ghost, Dark"
+    ]
+   },
+   {
+    "name": "Froslass-Aevian",
+    "tier": "A",
+    "score": 1.75,
+    "why": [
+     "Resists your weaknesses: Water, Ground, Steel",
+     "You resist its weaknesses: Poison, Flying",
+     "Shared weaknesses: Bug"
+    ]
+   }
+  ],
+  "Alomomola": [
+   {
+    "name": "Amoonguss",
+    "tier": "A",
+    "score": 3.0,
+    "why": [
+     "Resists your weaknesses: Electric, Grass",
+     "You resist its weaknesses: Fire, Ice",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Golisopod-Aevian",
+    "tier": "S",
+    "score": 2.25,
+    "why": [
+     "Resists your weaknesses: Electric",
+     "You resist its weaknesses: Fire, Water, Ice"
+    ]
+   },
+   {
+    "name": "Mismagius-Aevian",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Electric, Grass",
+     "You resist its weaknesses: Fire, Ice"
+    ]
+   }
+  ],
+  "Arcanine-Hisui": [
+   {
+    "name": "Mismagius-Aevian",
+    "tier": "A",
+    "score": 3.0,
+    "why": [
+     "Resists your weaknesses: Water, Fighting, Ground",
+     "You resist its weaknesses: Fire, Ice, Flying"
+    ]
+   },
+   {
+    "name": "Amoonguss",
+    "tier": "A",
+    "score": 2.5,
+    "why": [
+     "Resists your weaknesses: Water, Fighting",
+     "You resist its weaknesses: Fire, Ice, Flying"
+    ]
+   },
+   {
+    "name": "Froslass-Aevian",
+    "tier": "A",
+    "score": 2.5,
+    "why": [
+     "Resists your weaknesses: Water, Ground",
+     "You resist its weaknesses: Poison, Flying, Bug"
+    ]
+   }
+  ],
+  "Clefable": [
+   {
+    "name": "Slowking-Galar",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Poison",
+     "You resist its weaknesses: Dark",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Swampert",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Poison, Steel",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Alomomola",
+    "tier": "A",
+    "score": 1.5,
+    "why": [
+     "Resists your weaknesses: Steel",
+     "Used together in the real meta"
+    ]
+   }
+  ],
+  "Drapion-Aevian": [
+   {
+    "name": "Slowbro",
+    "tier": "A",
+    "score": 2.5,
+    "why": [
+     "Resists your weaknesses: Fire, Psychic, Steel",
+     "You resist its weaknesses: Grass, Bug"
+    ]
+   },
+   {
+    "name": "Slowking",
+    "tier": "A",
+    "score": 2.5,
+    "why": [
+     "Resists your weaknesses: Fire, Psychic, Steel",
+     "You resist its weaknesses: Grass, Bug"
+    ]
+   },
+   {
+    "name": "Froslass-Aevian",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Ground, Steel",
+     "You resist its weaknesses: Poison, Bug"
+    ]
+   }
+  ],
+  "Slowbro": [
+   {
+    "name": "Amoonguss",
+    "tier": "A",
+    "score": 3.5,
+    "why": [
+     "Resists your weaknesses: Electric, Grass",
+     "You resist its weaknesses: Fire, Ice, Psychic",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Drapion-Aevian",
+    "tier": "A",
+    "score": 2.5,
+    "why": [
+     "Resists your weaknesses: Grass, Bug",
+     "You resist its weaknesses: Fire, Psychic, Steel"
+    ]
+   },
+   {
+    "name": "Ninetales-Alola",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Bug, Dark",
+     "You resist its weaknesses: Fire, Steel"
+    ]
+   }
+  ],
+  "Swampert": [
+   {
+    "name": "Amoonguss",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Grass",
+     "You resist its weaknesses: Fire",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Clefable",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "You resist its weaknesses: Poison, Steel",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Ninetales-Alola",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "You resist its weaknesses: Fire, Poison, Rock, Steel"
+    ]
+   }
+  ],
+  "Froslass-Aevian": [
+   {
+    "name": "Arcanine-Hisui",
+    "tier": "A",
+    "score": 2.5,
+    "why": [
+     "Resists your weaknesses: Poison, Flying, Bug",
+     "You resist its weaknesses: Water, Ground"
+    ]
+   },
+   {
+    "name": "Drapion-Aevian",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Poison, Bug",
+     "You resist its weaknesses: Ground, Steel"
+    ]
+   },
+   {
+    "name": "Toxtricity-Aevian",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Poison, Bug",
+     "You resist its weaknesses: Water, Ground"
+    ]
+   }
+  ],
+  "Slowking": [
+   {
+    "name": "Ninetales-Alola",
+    "tier": "A",
+    "score": 3.0,
+    "why": [
+     "Resists your weaknesses: Bug, Dark",
+     "You resist its weaknesses: Fire, Steel",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Amoonguss",
+    "tier": "A",
+    "score": 2.5,
+    "why": [
+     "Resists your weaknesses: Electric, Grass",
+     "You resist its weaknesses: Fire, Ice, Psychic"
+    ]
+   },
+   {
+    "name": "Drapion-Aevian",
+    "tier": "A",
+    "score": 2.5,
+    "why": [
+     "Resists your weaknesses: Grass, Bug",
+     "You resist its weaknesses: Fire, Psychic, Steel"
+    ]
+   }
+  ],
+  "Ninetales-Alola": [
+   {
+    "name": "Slowking",
+    "tier": "A",
+    "score": 3.0,
+    "why": [
+     "Resists your weaknesses: Fire, Steel",
+     "You resist its weaknesses: Bug, Dark",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Slowking-Galar",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Poison",
+     "You resist its weaknesses: Dark",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Slowbro",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Fire, Steel",
+     "You resist its weaknesses: Bug, Dark"
+    ]
+   }
+  ],
+  "Toxtricity-Aevian": [
+   {
+    "name": "Mismagius-Aevian",
+    "tier": "A",
+    "score": 2.5,
+    "why": [
+     "Resists your weaknesses: Water, Ground",
+     "You resist its weaknesses: Fire, Ice",
+     "Toxtricity-Aevian's Boomburst can't hurt Mismagius-Aevian"
+    ]
+   },
+   {
+    "name": "Glalie-Aevian",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "You resist its weaknesses: Ice, Fighting, Bug, Steel"
+    ]
+   },
+   {
+    "name": "Musharna-Aevian",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Psychic",
+     "You resist its weaknesses: Poison, Steel, Fairy"
+    ]
+   }
+  ],
+  "Donphan": [
+   {
+    "name": "Ninetales-Alola",
+    "tier": "A",
+    "score": 1.5,
+    "why": [
+     "Resists your weaknesses: Ice",
+     "You resist its weaknesses: Poison, Rock"
+    ]
+   },
+   {
+    "name": "Amoonguss",
+    "tier": "A",
+    "score": 1.25,
+    "why": [
+     "Resists your weaknesses: Water, Grass",
+     "Shared weaknesses: Ice",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Mandibuzz",
+    "tier": "A",
+    "score": 1.25,
+    "why": [
+     "Resists your weaknesses: Grass",
+     "You resist its weaknesses: Electric, Rock",
+     "Shared weaknesses: Ice",
+     "Donphan's Earthquake can't hurt Mandibuzz"
+    ]
+   }
+  ],
+  "Mandibuzz": [
+   {
+    "name": "Slowking-Galar",
+    "tier": "S",
+    "score": 3.0,
+    "why": [
+     "Resists your weaknesses: Fairy",
+     "You resist its weaknesses: Ground, Ghost, Dark",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Lapras-Aevian",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "You resist its weaknesses: Grass, Ground, Ghost, Dark"
+    ]
+   },
+   {
+    "name": "Swampert",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Electric, Rock",
+     "You resist its weaknesses: Grass",
+     "Swampert's Earthquake can't hurt Mandibuzz"
+    ]
+   }
+  ],
+  "Zoroark-Hisui": [
+   {
+    "name": "Amoonguss",
+    "tier": "A",
+    "score": 2.25,
+    "why": [
+     "Amoonguss's redirection buys Zoroark-Hisui its setup turn",
+     "Amoonguss's sleep gives Zoroark-Hisui free turns"
+    ]
+   },
+   {
+    "name": "Musharna-Aevian",
+    "tier": "A",
+    "score": 1.5,
+    "why": [
+     "Resists your weaknesses: Dark",
+     "You resist its weaknesses: Poison",
+     "Musharna-Aevian's sleep gives Zoroark-Hisui free turns"
+    ]
+   },
+   {
+    "name": "Glalie-Aevian",
+    "tier": "S",
+    "score": 1.0,
+    "why": [
+     "You resist its weaknesses: Fighting, Bug"
+    ]
+   }
+  ],
+  "Zoroark": [
+   {
+    "name": "Slowking-Galar",
+    "tier": "S",
+    "score": 3.0,
+    "why": [
+     "Resists your weaknesses: Fighting, Fairy",
+     "You resist its weaknesses: Ghost, Dark",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Toxtricity-Aevian",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Fighting, Bug, Fairy",
+     "You resist its weaknesses: Psychic"
+    ]
+   },
+   {
+    "name": "Amoonguss",
+    "tier": "A",
+    "score": 1.5,
+    "why": [
+     "Resists your weaknesses: Fighting, Fairy",
+     "You resist its weaknesses: Psychic"
+    ]
+   }
+  ],
+  "Roserade-Aevian": [
+   {
+    "name": "Veluza-Aevian",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Ice, Fairy",
+     "You resist its weaknesses: Electric, Rock"
+    ]
+   },
+   {
+    "name": "Slowking-Galar",
+    "tier": "S",
+    "score": 1.5,
+    "why": [
+     "Resists your weaknesses: Grass, Fairy",
+     "You resist its weaknesses: Dark"
+    ]
+   },
+   {
+    "name": "Ninetales-Alola",
+    "tier": "A",
+    "score": 1.5,
+    "why": [
+     "Resists your weaknesses: Ice",
+     "You resist its weaknesses: Poison, Rock"
+    ]
+   }
+  ],
+  "Mismagius-Aevian": [
+   {
+    "name": "Arcanine-Hisui",
+    "tier": "A",
+    "score": 3.0,
+    "why": [
+     "Resists your weaknesses: Fire, Ice, Flying",
+     "You resist its weaknesses: Water, Fighting, Ground"
+    ]
+   },
+   {
+    "name": "Toxtricity-Aevian",
+    "tier": "S",
+    "score": 2.5,
+    "why": [
+     "Resists your weaknesses: Fire, Ice",
+     "You resist its weaknesses: Water, Ground",
+     "Toxtricity-Aevian's Boomburst can't hurt Mismagius-Aevian"
+    ]
+   },
+   {
+    "name": "Veluza-Aevian",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "Resists your weaknesses: Fire, Ice",
+     "You resist its weaknesses: Electric, Ground"
+    ]
+   }
+  ]
+ },
+ "core_pairs": [
+  {
+   "a": "Veluza-Aevian",
+   "b": "Amoonguss",
+   "score": 1.5,
+   "why": [
+    "Resists your weaknesses: Electric",
+    "You resist its weaknesses: Fire, Ice"
+   ]
+  },
+  {
+   "a": "Veluza-Aevian",
+   "b": "Slowking-Galar",
+   "score": -0.75,
+   "why": [
+    "Shared weaknesses: Ground"
+   ]
+  },
+  {
+   "a": "Veluza-Aevian",
+   "b": "Golisopod-Aevian",
+   "score": 2.0,
+   "why": [
+    "Resists your weaknesses: Electric, Ground",
+    "You resist its weaknesses: Fire, Ice"
+   ]
+  },
+  {
+   "a": "Amoonguss",
+   "b": "Slowking-Galar",
+   "score": 0.0,
+   "why": []
+  },
+  {
+   "a": "Amoonguss",
+   "b": "Golisopod-Aevian",
+   "score": 0.5,
+   "why": [
+    "You resist its weaknesses: Water",
+    "Shared weaknesses: Fire, Ice, Flying",
+    "Amoonguss's redirection buys Golisopod-Aevian its setup turn",
+    "Amoonguss's sleep gives Golisopod-Aevian free turns"
+   ]
+  },
+  {
+   "a": "Slowking-Galar",
+   "b": "Golisopod-Aevian",
+   "score": 0.75,
+   "why": [
+    "Resists your weaknesses: Ground"
+   ]
+  }
+ ]
 }

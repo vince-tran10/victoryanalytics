@@ -4,9 +4,9 @@
  "export_label": "22 Nov 11:33",
  "active_start": 445,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 240,
- "run": 254,
- "final": 258,
+ "roster": 241,
+ "run": 255,
+ "final": 259,
  "done": [
   "aelita",
   "narcissa1",
@@ -123,7 +123,7 @@
   "Slowking (Galarian Form)": [
    "Sludge Bomb",
    "Psychic",
-   "Surf",
+   "Shadow Ball",
    "Protect"
   ]
  },

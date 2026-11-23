@@ -149,7 +149,7 @@
     "foe": "Banette",
     "mon": "Slowking (Galarian Form)",
     "ability": "REGENERATOR",
-    "dealt": 67,
+    "dealt": 119,
     "taken": 252,
     "ok": false,
     "setup": false,
@@ -175,17 +175,9 @@
    {
     "swaps": [
      "Zoroark (Hisuian Form)",
-     "Solrock (Solrock Dominant Fusion)"
-    ],
-    "score": 45.1,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Zoroark (Hisuian Form)",
      "Mr. Mime"
     ],
-    "score": 45.08,
+    "score": 45.34,
     "counters": 4
    },
    {
@@ -193,7 +185,15 @@
      "Zoroark (Hisuian Form)",
      "Musharna (Aevian Form)"
     ],
-    "score": 45.06,
+    "score": 45.14,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Zoroark (Hisuian Form)",
+     "Solrock (Solrock Dominant Fusion)"
+    ],
+    "score": 45.1,
     "counters": 4
    },
    {
@@ -201,39 +201,39 @@
      "Squawkabilly (White Plumage)",
      "Solrock (Solrock Dominant Fusion)"
     ],
-    "score": 44.6,
+    "score": 44.86,
     "counters": 4
    },
    {
     "swaps": [
-     "Crawdaunt",
-     "Chandelure"
-    ],
-    "score": 44.56,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Persian (Alolan Form)",
+     "Obstagoon",
      "Barbaracle"
     ],
-    "score": 44.5,
+    "score": 44.68,
     "counters": 4
    },
    {
     "swaps": [
      "Chandelure",
-     "Persian (Alolan Form)"
+     "Obstagoon"
     ],
-    "score": 44.49,
+    "score": 44.67,
     "counters": 4
    },
    {
     "swaps": [
-     "Persian (Alolan Form)",
-     "Solrock (Solrock Dominant Fusion)"
+     "Solrock (Solrock Dominant Fusion)",
+     "Obstagoon"
     ],
-    "score": 44.47,
+    "score": 44.65,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Pangoro",
+     "Barbaracle"
+    ],
+    "score": 44.64,
     "counters": 4
    }
   ],
@@ -391,6 +391,14 @@
    },
    {
     "swaps": [
+     "Zoroark (Hisuian Form)",
+     "Roserade (Aevian Form)"
+    ],
+    "score": 44.11,
+    "counters": 4
+   },
+   {
+    "swaps": [
      "Palossand",
      "Mabosstiff"
     ],
@@ -401,14 +409,6 @@
     "swaps": [
      "Zoroark (Hisuian Form)",
      "Gastrodon (West Aevian Form)"
-    ],
-    "score": 44.06,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Zoroark (Hisuian Form)",
-     "Roserade (Aevian Form)"
     ],
     "score": 44.06,
     "counters": 4

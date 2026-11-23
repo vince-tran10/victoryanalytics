@@ -176,6 +176,62 @@ def role_of(m):
 ROLES_ALL = {}
 for m in ALLM.values():
     ROLES_ALL[disp(m.name)] = role_of(m)
+# 22 Nov (Vincent): BEST PARTNERS = can these actually work together. Pair score from the builds they RUN:
+# type cover (+ each of my weaknesses you resist, both ways), shared weaknesses (-), role combos, spread moves vs the ally, meta teammates
+_TM = {}
+try:
+    import smogon_meta as _SM
+    for _f in ('gen9vgc2024regg-1630', 'gen9doublesou-1695', 'gen9ou-1695', 'gen9nationaldexdoubles-1500'):
+        for _sp, _d in _SM.CHAOS.get(_f, {}).items():
+            _TM.setdefault(_sp, set()).update(sorted(_d.get('Teammates') or {}, key=lambda k: -_d['Teammates'][k])[:12])
+except Exception:
+    pass
+_SETUP = {'SWORDSDANCE', 'NASTYPLOT', 'SHELLSMASH', 'BELLYDRUM', 'DRAGONDANCE', 'QUIVERDANCE', 'CALMMIND', 'BULKUP', 'CURSE', 'SHIFTGEAR', 'COIL',
+          'TIDYUP', 'VICTORYDANCE', 'FILLETAWAY', 'TAILGLOW', 'GEOMANCY'}
+_ABIMM = {'WATERABSORB': 'WATER', 'STORMDRAIN': 'WATER', 'DRYSKIN': 'WATER', 'VOLTABSORB': 'ELECTRIC', 'LIGHTNINGROD': 'ELECTRIC', 'MOTORDRIVE': 'ELECTRIC',
+          'FLASHFIRE': 'FIRE', 'SAPSIPPER': 'GRASS', 'LEVITATE': 'GROUND', 'EARTHEATER': 'GROUND', 'WELLBAKEDBODY': 'FIRE'}
+def _abrun(m): return re.sub(r'[^A-Z]', '', str((st.get('abilities') or {}).get(m.name) or (IB.get(m.name) or {}).get('ability') or m.r.get('ability') or '').upper())
+def _spread_hits_ally(a, b):   # a's spread moves that also hit partner b (Surf / Earthquake / Discharge ... hit the ally)
+    out_ = []
+    for x in build_moves(a.name):
+        if x in ('SURF', 'EARTHQUAKE', 'DISCHARGE', 'BULLDOZE', 'LAVAPLUME', 'SLUDGEWAVE', 'BOOMBURST', 'EXPLOSION', 'SELFDESTRUCT', 'MAGNITUDE'):
+            t = MT.get(x, {}).get('type')
+            mult = b.mult.get(t, 1) if t else 1
+            if _ABIMM.get(_abrun(b)) == t: mult = 0
+            out_.append((mname(x), mult))
+    return out_
+def pair(a, b):
+    sc, why = 0.0, []
+    cov_a = [t.title() for t in TYPES if a.mult[t] > 1 and b.mult[t] < 1]
+    cov_b = [t.title() for t in TYPES if b.mult[t] > 1 and a.mult[t] < 1]
+    shared = [t.title() for t in TYPES if a.mult[t] > 1 and b.mult[t] > 1]
+    sc += .5 * len(cov_a) + .5 * len(cov_b) - .75 * len(shared)
+    if cov_a: why.append(f"Resists your weaknesses: {', '.join(cov_a)}")
+    if cov_b: why.append(f"You resist its weaknesses: {', '.join(cov_b)}")
+    if shared: why.append(f"Shared weaknesses: {', '.join(shared)}")
+    ma, mb = set(build_moves(a.name)), set(build_moves(b.name))
+    for x, y, p, q in ((a, b, ma, mb), (b, a, mb, ma)):
+        if p & {'RAGEPOWDER', 'FOLLOWME'} and q & _SETUP: sc += 1.5; why.append(f"{disp(x.name)}'s redirection buys {disp(y.name)} its setup turn")
+        if 'TRICKROOM' in p and y.r['base']['Spe'] <= 60: sc += 1; why.append(f"{disp(x.name)}'s Trick Room lets {disp(y.name)} move first")
+        if 'TRICKROOM' in p and y.r['base']['Spe'] >= 95: sc -= .5; why.append(f"{disp(y.name)} is slowed down by Trick Room")
+        if p & {'SPORE', 'SLEEPPOWDER', 'YAWN', 'HYPNOSIS', 'LOVELYKISS', 'SING'} and q & _SETUP: sc += .5; why.append(f"{disp(x.name)}'s sleep gives {disp(y.name)} free turns")
+        if _abrun(x) == 'REGENERATOR' and q & _SETUP: sc += .25
+        for mv, mult in _spread_hits_ally(x, y):
+            if mult == 0: sc += .5; why.append(f"{disp(x.name)}'s {mv} can't hurt {disp(y.name)}")
+            elif mult > 1: sc -= 1; why.append(f"{disp(x.name)}'s {mv} hits {disp(y.name)} super effectively")
+        if 'CLEARSMOG' in p and False: pass
+    if a.sd and b.sd and (b.sd in _TM.get(a.sd, ()) or a.sd in _TM.get(b.sd, ())): sc += 1; why.append('Used together in the real meta')
+    return round(sc, 2), why
+PARTNERS = {}
+_pool_p = [m for m in ALLM.values() if m.r.get('tier') in ('S', 'A')]   # partners worth building around: S / A tier
+for m in _pool_p:
+    ps = sorted(((pair(m, o), o) for o in _pool_p if o.sp != m.sp), key=lambda x: -x[0][0])[:3]
+    PARTNERS[disp(m.name)] = [dict(name=disp(o.name), tier=o.r['tier'], score=sc_, why=w_) for (sc_, w_), o in ps]
+CORE_PAIRS = []
+if len(core) == 4 and all(core):
+    import itertools as _it
+    for x, y in _it.combinations(core, 2):
+        sc_, w_ = pair(ALLM[x], ALLM[y]); CORE_PAIRS.append(dict(a=disp(x), b=disp(y), score=sc_, why=w_))
 out = []
 USED = set()   # one suggestion per Pokémon across the 4 slots
 if len(core) == 4:
@@ -304,7 +360,7 @@ if _pl and len(core) == 4:
             cands.append(dict(name=n_, tier=m.r['tier'], stats=cs + ([] if ct else ['Single target only']), tools=have, teach=teach,
                               sid=m.r.get('sid'), form=str(m.r.get('form', '0')), pick=n_ == fn, rec=n_ == fn))
         out.append(dict(slot=5 + fi, title=f"{lab} · {FIGHT_TITLE.get(_fk, _fk)}", pick=fn, rec=fn, flex=True, cands=cands))
-json.dump(dict(core=core, slots=out, roles=ROLES_ALL), open('team/builder.json', 'w'), indent=1, ensure_ascii=False)
+json.dump(dict(core=core, slots=out, roles=ROLES_ALL, partners=PARTNERS, core_pairs=CORE_PAIRS), open('team/builder.json', 'w'), indent=1, ensure_ascii=False)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sprites as SP
 cards = ''
@@ -330,6 +386,15 @@ for s_ in out:
 TM = ('<div class="tmx"><h3>Type matrix</h3>'
       '<div class="tmx-wrap"><table class="tmx-t" id="tmx"></table></div></div>'
       '<script type="application/json" id="tmdata">' + json.dumps(dict(types=[a.title() for a in TYPES], mons=_tm)).replace('</', '<\\/') + '</script>')
+if CORE_PAIRS:
+    _pc = ''
+    for p_ in CORE_PAIRS:
+        ok_ = p_['score'] >= 0
+        _pc += ('<li class="bpair ' + ('ok' if ok_ else 'bad') + '"><b>' + E(p_['a']) + ' + ' + E(p_['b']) + '</b><span class="bpv">' + ('✓ works' if ok_ else '✗ friction') + '</span>'
+                + '<ul>' + ''.join('<li>' + E(w) + '</li>' for w in p_['why'][:4]) + '</ul></li>')
+    _syn = '<article class="bslot bsyn"><header><span class="bn">⇄</span><b>Core synergy</b></header><ul class="bpairs">' + _pc + '</ul></article>'
+    _i = cards.find('<article class="bslot bflex">')
+    cards = cards[:_i] + _syn + cards[_i:] if _i >= 0 else cards + _syn
 sec = ('<section aria-labelledby="sbuild">\n  <h2 id="sbuild">Team Builder</h2>\n'
        '  <div class="bgrid">' + cards + '</div>\n' + TM + '\n</section>\n')
 page = open(OUT, encoding='utf-8').read()

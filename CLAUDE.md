@@ -67,8 +67,8 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Room). Owned weather/terrain setters (16 Nov): Drought Ninetales, Snow Warning (Ninetales-Alola, Vanilluxe, Aurorus,
   Abomasnow), Grassy Surge Glalie-A, Electric Surge Pincurchin. No Drizzle / Sand Stream. Checked by checks.py.
 - **Core now (22 Nov 11:33 export, Vincent took the Builder suggestions): Veluza-Aevian (confirmed slot 1, 22 Nov) · Amoonguss (confirmed slot 2: Spore / Rage Powder / Clear Smog / Protect, Modest 252 HP / SpA, Sitrus; Clear Smog over Sludge Bomb = the core's only stat reset; Pollen Puff not legal) ·
-  Slowking-Galar (confirmed slot 3, 22 Nov: Sludge Bomb / Psychic / Surf / Protect (Surf replaced Chilly Reception: Rejuv's Chilly
-  Reception sets SNOW, Battle_MoveEffects 0x516, which helps no one on his team; Surf covers Steel / Tyranitar / Groudon / Krookodile), Regenerator, Modest 252 HP / SpA,
+  Slowking-Galar (confirmed slot 3, 22 Nov: Sludge Bomb / Psychic / Shadow Ball / Protect. Chilly Reception out (sets SNOW, helps no one);
+  Surf out too (spread move: hits Golisopod-A super effectively in doubles); Shadow Ball = single target, neutral on Steel, x1.5 on Haunted Field), Regenerator, Modest 252 HP / SpA,
   Poison Barb; replaced Alomomola) · Golisopod-Aevian (confirmed slot 4).** Rules (b)(c) per fight are HARD only for types in 2+
   hard fights or on a boss; one-off types (e.g. Spector Ninetales Fire/Ghost) are a tiebreak (chapter_rules.check_set 'minor'). Gholdengo is illegal at Ch9. Older history below. **Picked core (16 Nov): Balance / tempo** = Arcanine-Hisui (Intimidate) · Golisopod-Aevian (Skill Link, SD) · Gholdengo
   (Good as Gold, Thunder Wave) · Vaporeon (Water Absorb, Haze). #1 core score of 89,985 cores from the top 40 across all tier
@@ -240,6 +240,10 @@ damage score and the fight's real win condition was only read after Vincent lost
   recovery / stat reset / pivot, bulk 270+) > Support (weather / terrain setter, Trick Room, screens, Safeguard, sleep, hazards...)
   > Attacker. Builder slot lists show ONLY Pokémon whose Dex role is that slot's role (best fit; 22 Nov), so Builder and Dex agree.
   Stored in builder.json 'roles' (theme.py DROLES; the old ROLES = team_roles.json is a different thing).
+  **Best partners / Core synergy (Vincent, 22 Nov):** builder.pair(a, b) from the builds they RUN: +0.5 per weakness the other resists
+  (both ways), -0.75 per shared weakness, redirection + setup partner +1.5, Trick Room + slow partner +1 (fast partner -0.5), sleep +
+  setup +0.5, a spread move that hits the ally super effectively -1 (immune +0.5), real-meta teammates (Smogon chaos) +1. Dex sheet:
+  'Best partners' = top 3 S/A partners with tier + 2 reasons. Builder: 'Core synergy' card = the 6 core pairs, ✓ works / ✗ friction.
   **Dex = real tier list (Vincent, 22 Nov):** headers just "S Tier" / "A Tier"… (+ count), then a tight grid of tiles (sprite +
   name only, ~4 per row on a phone); tap a tile → detail sheet (one fact per line). Bottom nav = 5 tabs (Cores removed).
   Detail sheet (Vincent, 22 Nov): no box location; meta = ONLY the best Smogon tier (META_W; usage / unranked hidden); base stats

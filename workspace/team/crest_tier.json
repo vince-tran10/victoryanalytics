@@ -7,7 +7,7 @@
   "Oranguru": 0.229,
   "Zoroark (Hisuian Form)": 0.122,
   "Golisopod (Aevian Form)": 0.419,
-  "Slowking (Galarian Form)": 0.275
+  "Slowking (Galarian Form)": 0.294
  },
  "rows": [
   {
@@ -525,7 +525,7 @@
    "gain": 0.159,
    "attacks": [
     "Surf",
-    "Facade",
+    "Secret Power",
     "Deluge"
    ],
    "ability": "HYDRATION",
@@ -739,7 +739,7 @@
    "without": 0.021,
    "gain": 0.018,
    "attacks": [
-    "Headbutt",
+    "Secret Power",
     "Shadow Ball",
     "Fire Blast"
    ],

@@ -32,12 +32,6 @@
  ],
  "misses": [
   {
-   "foe": "Houndstone",
-   "fight": "spector",
-   "best": "Golisopod (Aevian Form)",
-   "dmg": 82
-  },
-  {
    "foe": "Stoutland",
    "fight": "jenner9",
    "best": "Golisopod (Aevian Form)",
@@ -48,12 +42,6 @@
    "fight": "jenner9",
    "best": "Golisopod (Aevian Form)",
    "dmg": 94
-  },
-  {
-   "foe": "Chandelure",
-   "fight": "erick",
-   "best": "Veluza (Aevian Form)",
-   "dmg": 70
   }
  ],
  "n_types": 18

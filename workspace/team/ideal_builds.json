@@ -757,6 +757,25 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Slowking (Galarian Form)": {
+  "ability": "Regenerator",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Poison Barb",
+  "moves": [
+   "Sludge Bomb",
+   "Psychic",
+   "Shadow Ball",
+   "Protect"
+  ],
+  "move_ids": [
+   "SLUDGEBOMB",
+   "CHILLYRECEPTION",
+   "PSYCHIC"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
  "Decidueye": {
   "ability": "OVERGROW",
   "nature": "Adamant",
@@ -775,25 +794,6 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
- },
- "Slowking (Galarian Form)": {
-  "ability": "Regenerator",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Poison Barb",
-  "moves": [
-   "Sludge Bomb",
-   "Psychic",
-   "Surf",
-   "Protect"
-  ],
-  "move_ids": [
-   "SLUDGEBOMB",
-   "CHILLYRECEPTION",
-   "PSYCHIC"
-  ],
-  "role": "attacker",
-  "source": "your team"
  },
  "Pyroar": {
   "ability": "UNNERVE",

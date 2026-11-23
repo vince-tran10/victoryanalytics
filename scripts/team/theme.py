@@ -642,7 +642,9 @@ def why_tier(r, ab_id, moves):   # 22 Nov (Vincent): the tier = 70% META DOMINAN
     if gp is not None:
         out.append(f"In-game: top {max(1, round(100 * (1 - gp)))}% of your box" + (f" across all {n_all} fights in the game" if n_all else ''))
     return out
-DROLES = (json.load(open('team/builder.json')).get('roles') or {}) if os.path.exists('team/builder.json') else {}   # 22 Nov: Dex roles (builder.py)
+_BJ = json.load(open('team/builder.json')) if os.path.exists('team/builder.json') else {}
+DROLES = _BJ.get('roles') or {}   # 22 Nov: Dex roles (builder.py)
+DPART = _BJ.get('partners') or {}   # 22 Nov: best partners (builder.pair)
 for r in T.values():
     d_ = disp(r['name']); ib = IDB.get(r['name']) or {}; pty = party.get(d_)
     # 22 Nov (Vincent): the sheet always shows the IDEAL build (team members: the build I recommend for their role);
@@ -668,7 +670,7 @@ for r in T.values():
     ab_id = re.sub(r'[^A-Z]', '', ab_.upper())
     _why = why_tier(r, ab_id, mv_)
     DEX[d_] = dict(t=r['tier'], s=r['blend'], m=meta_top(r['meta_label']), ty=r['types'], b=r['base'], bp=[_pct(k, r['base'][k]) for k in _STATS],
-                   a=ab_, n=nat_txt(nat_), e=evs_, mv=mv_, it=it_, src=src_, why=_why, y=yours, ro=(DROLES.get(d_) or ['Attacker', '']), sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])
+                   a=ab_, n=nat_txt(nat_), e=evs_, mv=mv_, it=it_, src=src_, why=_why, y=yours, ro=(DROLES.get(d_) or ['Attacker', '']), pt=[dict(n=x['name'], t=x['tier'], w=x['why'][:2]) for x in DPART.get(d_, [])], sp=SP.cls(r.get('sid'), r.get('form', '0'))[3:])
 TMJS = '\n<script>\n(function(){   /* 22 Nov (Vincent): Builder type matrix: ticked Pokémon x attacking types */\n  var el = document.getElementById(\'tmdata\'), tb = document.getElementById(\'tmx\'); if (!el || !tb) return;\n  var D = JSON.parse(el.textContent), KEY = \'tm-sel\', sel = null;\n  try { sel = JSON.parse(localStorage.getItem(KEY) || \'null\'); } catch (e) {}\n  var boxes = function(){ return Array.prototype.slice.call(document.querySelectorAll(\'input[data-tm]\')); };\n  if (sel) boxes().forEach(function(b){ b.checked = sel.indexOf(b.dataset.tm) >= 0; });\n  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {\'&\':\'&amp;\',\'<\':\'&lt;\',\'>\':\'&gt;\',\'"\':\'&quot;\'}[c]; }); }\n  function fmt(m){ return m === 0 ? \'0\' : m === 0.25 ? \'¼\' : m === 0.5 ? \'½\' : m === 1 ? \'\' : m + \'×\'; }\n  function cls(m){ return m === 0 ? \'im\' : m < 1 ? \'rs\' : m > 2 ? \'w4\' : m > 1 ? \'wk\' : \'\'; }\n  function draw(){\n    var names = []; boxes().forEach(function(b){ if (b.checked && names.indexOf(b.dataset.tm) < 0 && D.mons[b.dataset.tm]) names.push(b.dataset.tm); });\n    try { localStorage.setItem(KEY, JSON.stringify(names)); } catch (e) {}\n    boxes().forEach(function(b){ b.checked = names.indexOf(b.dataset.tm) >= 0; });\n    if (!names.length) { tb.innerHTML = \'<tr><td class="tmx-empty">No Pokémon ticked</td></tr>\'; return; }\n    var h = \'<thead><tr><th>Type</th>\' + names.map(function(n){ return \'<th title="\' + esc(n) + \'"><i class="spr sp-\' + D.mons[n].sp + \'" aria-hidden="true"></i><span>\' + esc(n) + \'</span></th>\'; }).join(\'\') + \'<th>Weak</th><th>Resist</th></tr></thead><tbody>\';\n    D.types.forEach(function(t){\n      var w = 0, r = 0, cells = names.map(function(n){ var m = D.mons[n].m[t]; if (m > 1) w++; if (m < 1) r++; return \'<td class="\' + cls(m) + \'">\' + fmt(m) + \'</td>\'; }).join(\'\');\n      h += \'<tr><th class="tp ty-\' + t.toLowerCase() + \'">\' + t + \'</th>\' + cells + \'<td class="cnt\' + (w >= 3 ? \' bad\' : w >= 2 ? \' meh\' : \'\') + \'">\' + (w || \'\') + \'</td><td class="cnt\' + (r === 0 && w ? \' bad\' : r ? \' ok\' : \'\') + \'">\' + (r || \'\') + \'</td></tr>\';\n    });\n    tb.innerHTML = h + \'</tbody>\';\n  }\n  document.addEventListener(\'change\', function(e){ if (e.target.matches(\'input[data-tm]\')) { var on = e.target.checked, n = e.target.dataset.tm; boxes().forEach(function(b){ if (b.dataset.tm === n) b.checked = on; }); draw(); } });\n  draw();\n})();\n</script>'
 SHEET = ('<div class="sheet" id="dexsheet" hidden><div class="sheet-bg" data-close></div><div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="ds-name">'
          '<button type="button" class="sheet-x" data-close aria-label="Close">×</button><div id="ds-body"></div></div></div>'
@@ -931,6 +933,9 @@ tbody tr:hover td { background: color-mix(in srgb, var(--accent-soft) 45%, trans
 .drole-bar { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 10px } .drf { font: 600 12px var(--body); padding: 4px 10px; border-radius: 99px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer }
 .drf.on { background: var(--accent); border-color: var(--accent); color: #fff } .dtile[hidden], .dtier[hidden] { display: none }
 .ds-role { font-weight: 700 }
+.bpairs { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px } .bpair { padding: 6px 8px; border-radius: 10px; background: var(--panel-2); font-size: 13px }
+.bpair > b { margin-right: 6px } .bpv { font: 700 11px var(--body) } .bpair.ok .bpv { color: var(--good) } .bpair.bad .bpv { color: var(--bad) } .bpair ul { margin: 3px 0 0; padding-left: 16px; font-size: 12px; color: var(--muted) }
+.ds-bp ul { margin: 2px 0 4px; padding-left: 16px; font-size: 12px; color: var(--muted) } .ds-bp .tier { font-size: 10px; padding: 0 5px }
 .ds-diff { color: var(--bad, #b91c1c); font-weight: 700 }
 .bc.pick.rec { outline: 2px solid #eab308; outline-offset: 2px } .bc.rec { outline: 2px solid #eab308; background: var(--warn-soft) } .brec { margin-left: auto; font: 700 10px var(--body); letter-spacing: .04em; text-transform: uppercase; color: var(--warn) }
 .bstat { font: 600 10.5px var(--body); padding: 1px 7px; border-radius: 99px; background: rgba(127,127,127,.16); color: var(--ink) }
@@ -1090,7 +1095,8 @@ DEXJS = r'''<script id="dex-js">
       + '<div class="ds-sec">Why '+d.t+' tier</div><ul class="ds-b ds-why">'+d.why.map(function(w){ return '<li>'+esc(w)+'</li>'; }).join('')+'</ul>'
       + '<div class="ds-sec">'+esc(d.src)+'</div><ul class="ds-b">'+row('Ability',d.a,'a')+(d.n?row('Nature',d.n,'n'):'')+(d.e?row('EVs',d.e,'e'):'')+(d.it?row('Item',d.it,'it'):'')
       + d.mv.map(function(m,i){ var yv=(d.y&&d.y.mv)||[]; var mine=yv.indexOf(m)<0 && ((d.y&&d.y.mv)!==undefined); return '<li>Move '+(i+1)+': '+esc(m)+'</li>'; }).join('')
-      + ((d.y&&d.y.mv&&d.y.mv.length)?'<li class="ds-diff">Replace yours: '+d.y.mv.map(esc).join(', ')+'</li>':'')+'</ul>';
+      + ((d.y&&d.y.mv&&d.y.mv.length)?'<li class="ds-diff">Replace yours: '+d.y.mv.map(esc).join(', ')+'</li>':'')+'</ul>'
+      + ((d.pt&&d.pt.length)?'<div class="ds-sec">Best partners</div><ul class="ds-b ds-bp">'+d.pt.map(function(p){ return '<li><b>'+esc(p.n)+'</b> <span class="tier t'+p.t+'">'+p.t+'</span>'+(p.w.length?'<ul>'+p.w.map(function(w){return '<li>'+esc(w)+'</li>';}).join('')+'</ul>':'')+'</li>'; }).join('')+'</ul>':'');
     last = document.activeElement; sheet.hidden = false; sheet.querySelector('.sheet-x').focus();
   }
   function close(){ sheet.hidden = true; if (last) last.focus(); }
