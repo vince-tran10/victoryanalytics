@@ -19,7 +19,9 @@ import bosses
 B9 = {b[0]: b for b in bosses.CH9}
 FIELD = B9[FK][2] if FK in B9 else ''
 FE = GUIDE_TO_FE.get(FIELD)
-BREAK = bool(os.environ.get('PLAN_BREAK')) and FE is not None   # 23 Nov: lead a Flash / Dazzling Gleam user, fight on no field
+_FC = (G.load('fieldtext').get(FE or '', {}) or {}).get('fieldChange') or {}
+BREAKABLE = any({'FLASH', 'DAZZLINGGLEAM'} & set(v) for v in _FC.values())   # 23 Nov: only fields the game lets Flash change (not Concert Venue)
+BREAK = bool(os.environ.get('PLAN_BREAK')) and FE is not None and BREAKABLE   # lead a Flash / Dazzling Gleam user, fight on no field
 FE0 = FE
 if BREAK: FE = None
 FMT = B9[FK][3] if FK in B9 else 'Doubles'
@@ -49,6 +51,8 @@ WIN = {
 RK = {'S': 4, 'A': 3, 'B': 2, 'C': 1, 'D': 0}
 # ---- their team
 FOES = G.fight_mons(FK)
+TIPS = (json.load(open('team/fight_tips.json')) if os.path.exists('team/fight_tips.json') else {}).get(FK, [])
+def fidx(nm): return next((k for k, f in enumerate(FOES) if f['name'] == nm), None)
 def mvid(n): return BYNAME.get((n or '').lower())
 fmoves = []
 for f in FOES:
@@ -71,9 +75,10 @@ C = {c['name']: c for c in pickle.load(open(f'team/{run}{"n" if BREAK else ""}_n
 POOL = [n for n, r in TA.items() if r.get('where') in ('Party', 'Active') and r['tier'] in ('S', 'A', 'B') and n in C and FK in C[n]['matchups']]
 POOL += [n for n, r in TA.items() if r.get('where') == 'Overflow' and r['tier'] in ('S', 'A') and n not in POOL and n in C and FK in C[n]['matchups']]
 POOL += [n for n in (st.get('team') or []) if n in TA and n not in POOL and n in C and FK in C[n]['matchups']]   # the current six stays in the pool (tiers wobble)   # 23 Nov: the S / A moving into Active
+MOVE_OVR = {}   # planner-made move changes (Flash user) shown on the page
 def build(n):
     b = IB.get(n) or {}
-    ms = (st.get('moves') or {}).get(n) or b.get('moves') or TA[n].get('attacks') or []
+    ms = MOVE_OVR.get(n) or (st.get('moves') or {}).get(n) or b.get('moves') or TA[n].get('attacks') or []
     ab = (st.get('abilities') or {}).get(n) or b.get('ability') or TA[n].get('ability') or ''
     return {mvid(m) or m.upper().replace(' ', '') for m in ms}, ab.upper().replace(' ', ''), ms
 nF = len(FOES); FN = [f['name'] for f in FOES]
@@ -141,6 +146,9 @@ def ally_hit(a, b):   # a's spread moves that also hit partner b (Earthquake, Su
 def lead_q(p):   # every attack their leads carry: resisted by BOTH of ours (+), anything super effective on either (heavy -)
     p = list(p); r = RM[p][:, LM]
     q = (r < 1).sum() + .5 * (r == 0).sum() - 4 * (r > 1).sum() + .5 * (OFF[p][:, L] >= 2).any(0).sum() + .3 * (OFF[p][:, L] > 0).sum() / len(p)
+    for nd in [t_ for tt in TIPS for t_ in tt['needs'] if t_.startswith('ko:')]:   # 23 Nov: guide says KO this lead fast
+        j_ = fidx(nd[3:])
+        if j_ is not None and j_ in L and DEAL[p][:, j_].sum() >= 100: q += 3
     if len(p) == 2:   # 23 Nov: a lead's spread move must not hurt its partner
         for a, b in ((p[0], p[1]), (p[1], p[0])):
             h_ = ally_hit(a, b); q -= 4 if h_ >= 2 else 1.5 if h_ > 0 else 0
@@ -190,61 +198,6 @@ def tips_met(ix):
         else: ok = c >= 1
         got += ok
     return got
-ind = (2 * ((RM < 1) * W).sum(1) - 3 * ((RM > 1) * W).sum(1) + 1.5 * (OFF >= 2).sum(1) + .7 * (OFF > 0).sum(1)
-       + 1.5 * SAFE.sum(1) - 2 * DEAD.sum(1) + .6 * TIER + LQ.max(1).clip(-5, 99) * .5 + .8 * AEV)
-top = list(np.argsort(-ind)[:min(24, NP)])
-if BREAK:   # make sure the best Flash users are in the search
-    top += [i for i in np.argsort(-ind) if FLASH[i] and i not in top][:3]
-def score(ix):
-    ix = list(ix); r = RM[ix]
-    res = (r < 1).sum(0); weak = (r > 1).sum(0)
-    s = 3 * (W * np.minimum(res, 4)).sum() - 2.5 * (W * np.maximum(weak - 1, 0)).sum() - 12 * (weak >= 3).sum() - 6 * (res == 0).sum()   # 1) defense: every move resisted by someone
-    oc = (OFF[ix] >= 2).sum(0); ob = (OFF[ix] > 0).sum(0)
-    s += 3 * np.minimum(oc, 2).sum() + 1 * np.minimum(ob, 3).sum() - 6 * (ob == 0).sum()   # 2) offense: super effective / field-boosted on every foe
-    s += 4 * max(LQ[a][b] for a, b in itertools.combinations(ix, 2)) if FMT == 'Doubles' else 0   # 3) a lead pair that resists their leads
-    if BREAK and not FLASH[ix].any(): s -= 999
-    s += 3 * tips_met(ix)   # 23 Nov: the guide's tips count
-    s += 1.5 * np.minimum(SAFE[ix].sum(0), 3).sum() - 4 * DEAD[ix].sum() + .4 * TIER[ix].sum() + 1.0 * AEV[ix].sum() + 2 * (ANS[ix].max(0).sum() if len(WINS) else 0)
-    return s
-res = sorted(((score(ix), ix) for ix in itertools.combinations(top, 6)), key=lambda x: -x[0])
-if os.environ.get('PLAN_SIX'):   # evaluate a given six (names | separated) instead of searching
-    _fix = tuple(NAMES.index(x) for x in os.environ['PLAN_SIX'].split('|'))
-    res = [(score(_fix), _fix)] + res
-# 23 Nov: their field SEEDS (Battler.rb seedCheck): Haunted Magical Seed burns the holder on entry -> Guts / Flare Boost / Toxic Boost /
-# Quick Feet / Marvel Scale switch on (and Facade doubles). The engine does not model foe abilities, so count it here: breaking the field
-# before a NON-lead seed holder enters denies its combo (leads are burned at the start either way).
-SEED_ABUSE = {'GUTS', 'FLAREBOOST', 'TOXICBOOST', 'QUICKFEET', 'MARVELSCALE'}
-_seed = (FT.get('seed') or {}).get('seedtype') if FT else (G.load('fieldtext').get(FE0 or '', {}).get('seed') or {}).get('seedtype')
-SEED_DENIED = [f['name'] for k, f in enumerate(FOES) if k not in L and _seed and (f.get('item') or '').upper().replace(' ', '') == _seed
-               and (f.get('ability') or '').upper().replace(' ', '') in SEED_ABUSE]
-def cmp_score(ix):   # field-neutral comparison of the two plans: safe switch-ins, one-shots, super-effective coverage, guide tips, denied seeds
-    ix = list(ix); return float(1.5 * tips_met(ix) + (4 * len(SEED_DENIED) if BREAK else 0) + 1.5 * np.minimum(SAFE[ix].sum(0), 3).sum() - 4 * DEAD[ix].sum() + 3 * np.minimum((OFF[ix] >= 2).sum(0), 2).sum() - 2 * ((RM[ix] > 1).sum(0) >= 3).sum())
-best = list(res[0][1])
-if BREAK and not os.environ.get('PLAN_SIX') and os.path.exists('team/planner_keep.json'):   # 23 Nov: also try the keep plan's six with Flash
-    _k = [m['name'] for m in json.load(open('team/planner_keep.json'))['six']]
-    if all(x in NAMES for x in _k):
-        _ki = [NAMES.index(x) for x in _k]
-        if FLASH[_ki].any() and cmp_score(_ki) > cmp_score(best): best = _ki
-leads = max(itertools.combinations(best, 2), key=lambda p: LQ[p[0]][p[1]]) if FMT == 'Doubles' else (max(best, key=lambda i: -TAKE[i][0]),)
-order = list(leads) + sorted([i for i in best if i not in leads], key=lambda i: -ind[i])
-FLASHER = None
-if BREAK:
-    fl = [i for i in leads if FLASH[i]] or [i for i in best if FLASH[i]]
-    FLASHER = fl[0]
-    _ms = list(build(NAMES[FLASHER])[2]); _mv = 'Flash' if 'FLASH' in (TA[NAMES[FLASHER]].get('legal') or []) else 'Dazzling Gleam'
-    _cand = [m for m in _ms if m != 'Protect' and m != _mv]
-    def _val(m):   # how much this move adds vs their six (super effective hits); status moves 0
-        mid = mvid(m); d = MV.get(mid) or {}
-        return 0 if int(d.get('basedamage') or 0) <= 0 else sum(meff(mid, f['types']) >= 2 for f in FOES) + .5
-    _rep = (min(_cand, key=_val) if _cand else None) if _mv not in _ms else None   # already knows it: nothing replaced
-    if _rep and _mv not in _ms: _ms[_ms.index(_rep)] = _mv
-    FLASH_PLAN = dict(user=NAMES[FLASHER], move=_mv, replaces=_rep, moves=_ms)
-MULT = np.array([[E.chart_eff(t, TA[n]['types'], FE) for t in MAIN] for n in NAMES]) if MAIN else np.zeros((NP, 0))
-alts = []
-for s_, ix in res[1:40]:
-    d = [NAMES[i] for i in ix if i not in best]
-    if d and not any(set(d) == set(a['in']) for a in alts): alts.append(dict(score=round(float(s_), 1), **{'in': d, 'out': [NAMES[i] for i in best if i not in ix]}))
-    if len(alts) >= 3: break
 
 # 23 Nov (Vincent: 'explain your rationale for each move'): every move of the six gets a reason from the data, and an attack that does
 # nothing special in this fight (no super-effective target, no field boost, no STAB) is FLAGGED so a bad move can't slip through.
@@ -262,6 +215,8 @@ WHY_STATUS = {
 }
 EXTRA = {'DELUGE': 'Goes last, power x2 (120) if that foe hit you first this turn', 'KNOCKOFF': 'Removes their item (Focus Sash, Life Orb, Ghost Gem)',
          'CLEARSMOG': 'Resets the target boosts (Luxray Howl)', 'SHADOWSNEAK': 'Priority +1: finishes a weakened foe first',
+         'FAKEOUT': 'Flinches on its first turn: a free hit, x1.5 on Concert Venue',
+         'GRASSYGLIDE': 'Priority +1 on Grassy Terrain: Grassy Surge sets it on entry (replaces Haunted Field for a few turns)',
          'AQUAJET': 'Priority +1', 'ROCKSLIDE': 'Spread move that never hits your partner; 30% flinch', 'EARTHQUAKE': 'Also hits your partner: only next to a Flying / Levitate partner'}
 _ITEMS = [f"{f['name']} {f['item']}" for f in FOES if f.get('item') and 'Seed' not in f['item'] and 'ite' != f['item'][-3:]]
 EXTRA['KNOCKOFF'] = 'Removes their item' + (' (' + ', '.join(_ITEMS) + ')' if _ITEMS else '')
@@ -293,6 +248,71 @@ def move_why(n, mname):
     if best_on: bits.insert(0, 'Your best hit on ' + ', '.join(best_on))
     flag = not best_on and mid not in EXTRA
     return ('; '.join(bits) or 'Neutral coverage', flag)
+
+FLAGN = np.array([sum(move_why(n, mv_)[1] for mv_ in build(n)[2]) for n in NAMES], float)   # moves that do nothing here
+ind = (2 * ((RM < 1) * W).sum(1) - 3 * ((RM > 1) * W).sum(1) + 1.5 * (OFF >= 2).sum(1) + .7 * (OFF > 0).sum(1)
+       + 1.5 * SAFE.sum(1) - 2 * DEAD.sum(1) + .6 * TIER + LQ.max(1).clip(-5, 99) * .5 + .8 * AEV - 4 * FLAGN)
+top = list(np.argsort(-ind)[:min(24, NP)])
+if BREAK:   # make sure the best Flash users are in the search
+    top += [i for i in np.argsort(-ind) if FLASH[i] and i not in top][:3]
+def score(ix):
+    ix = list(ix); r = RM[ix]
+    res = (r < 1).sum(0); weak = (r > 1).sum(0)
+    s = 3 * (W * np.minimum(res, 4)).sum() - 2.5 * (W * np.maximum(weak - 1, 0)).sum() - 12 * (weak >= 3).sum() - 6 * (res == 0).sum()   # 1) defense: every move resisted by someone
+    oc = (OFF[ix] >= 2).sum(0); ob = (OFF[ix] > 0).sum(0)
+    s += 3 * np.minimum(oc, 2).sum() + 1 * np.minimum(ob, 3).sum() - 6 * (ob == 0).sum()   # 2) offense: super effective / field-boosted on every foe
+    s += 4 * max(LQ[a][b] for a, b in itertools.combinations(ix, 2)) if FMT == 'Doubles' else 0   # 3) a lead pair that resists their leads
+    if BREAK and not FLASH[ix].any(): s -= 999
+    s += 3 * tips_met(ix)   # 23 Nov: the guide's tips count
+    s += 1.5 * np.minimum(SAFE[ix].sum(0), 3).sum() - 4 * DEAD[ix].sum() + .4 * TIER[ix].sum() + 1.0 * AEV[ix].sum() - 4 * FLAGN[ix].sum() + 2 * (ANS[ix].max(0).sum() if len(WINS) else 0)
+    return s
+res = sorted(((score(ix), ix) for ix in itertools.combinations(top, 6)), key=lambda x: -x[0])
+if os.environ.get('PLAN_SIX'):   # evaluate a given six (names | separated) instead of searching
+    _fix = tuple(NAMES.index(x) for x in os.environ['PLAN_SIX'].split('|'))
+    res = [(score(_fix), _fix)] + res
+# 23 Nov: their field SEEDS (Battler.rb seedCheck): Haunted Magical Seed burns the holder on entry -> Guts / Flare Boost / Toxic Boost /
+# Quick Feet / Marvel Scale switch on (and Facade doubles). The engine does not model foe abilities, so count it here: breaking the field
+# before a NON-lead seed holder enters denies its combo (leads are burned at the start either way).
+SEED_ABUSE = {'GUTS', 'FLAREBOOST', 'TOXICBOOST', 'QUICKFEET', 'MARVELSCALE'}
+_seed = (FT.get('seed') or {}).get('seedtype') if FT else (G.load('fieldtext').get(FE0 or '', {}).get('seed') or {}).get('seedtype')
+SEED_DENIED = [f['name'] for k, f in enumerate(FOES) if k not in L and _seed and (f.get('item') or '').upper().replace(' ', '') == _seed
+               and (f.get('ability') or '').upper().replace(' ', '') in SEED_ABUSE]
+KO_RACE = any(t_.startswith('ko:') and fidx(t_[3:]) in L for tt in TIPS for t_ in tt['needs'])   # Flash costs a turn in the race
+def cmp_score(ix):   # field-neutral comparison of the two plans: safe switch-ins, one-shots, super-effective coverage, guide tips, denied seeds
+    ix = list(ix); return float(1.5 * tips_met(ix) + (4 * len(SEED_DENIED) if BREAK else 0) - (5 if BREAK and KO_RACE else 0) + 1.5 * np.minimum(SAFE[ix].sum(0), 3).sum() - 4 * DEAD[ix].sum() + 3 * np.minimum((OFF[ix] >= 2).sum(0), 2).sum() - 2 * ((RM[ix] > 1).sum(0) >= 3).sum())
+best = list(res[0][1])
+if BREAK and not os.environ.get('PLAN_SIX') and os.path.exists('team/planner_keep.json'):   # 23 Nov: also try the keep plan's six with Flash
+    _k = [m['name'] for m in json.load(open('team/planner_keep.json'))['six']]
+    if all(x in NAMES for x in _k):
+        _ki = [NAMES.index(x) for x in _k]
+        if FLASH[_ki].any() and cmp_score(_ki) > cmp_score(best): best = _ki
+leads = max(itertools.combinations(best, 2), key=lambda p: LQ[p[0]][p[1]]) if FMT == 'Doubles' else (max(best, key=lambda i: -TAKE[i][0]),)
+order = list(leads) + sorted([i for i in best if i not in leads], key=lambda i: -ind[i])
+FLASHER = None
+if BREAK:
+    fl = [i for i in leads if FLASH[i]] or [i for i in best if FLASH[i]]
+    FLASHER = fl[0]
+    _ms = list(build(NAMES[FLASHER])[2]); _mv = 'Flash' if 'FLASH' in (TA[NAMES[FLASHER]].get('legal') or []) else 'Dazzling Gleam'
+    _cand = [m for m in _ms if m != 'Protect' and m != _mv]
+    def _val(m):   # how much this move adds vs their six (super effective hits); status moves 0
+        mid = mvid(m); d = MV.get(mid) or {}
+        return 0 if int(d.get('basedamage') or 0) <= 0 else sum(meff(mid, f['types']) >= 2 for f in FOES) + .5
+    _rep = (min(_cand, key=_val) if _cand else None) if _mv not in _ms else None   # already knows it: nothing replaced
+    if _rep and _mv not in _ms: _ms[_ms.index(_rep)] = _mv
+    FLASH_PLAN = dict(user=NAMES[FLASHER], move=_mv, replaces=_rep, moves=_ms)
+    MOVE_OVR[NAMES[FLASHER]] = _ms
+MULT = np.array([[E.chart_eff(t, TA[n]['types'], FE) for t in MAIN] for n in NAMES]) if MAIN else np.zeros((NP, 0))
+alts = []
+for s_, ix in res[1:40]:
+    d = [NAMES[i] for i in ix if i not in best]
+    if d and not any(set(d) == set(a['in']) for a in alts): alts.append(dict(score=round(float(s_), 1), **{'in': d, 'out': [NAMES[i] for i in best if i not in ix]}))
+    if len(alts) >= 3: break
+
+def tip_who(nd):
+    if nd.startswith('ko:'):   # two attackers together
+        j = fidx(nd[3:]); top2 = sorted(best, key=lambda i: -DEAL[i][j])[:2] if j is not None else []
+        return [f"{NAMES[i]}: deals {int(DEAL[i][j])}%" for i in top2] if top2 and sum(DEAL[i][j] for i in top2) >= 100 else []
+    return [f"{NAMES[i]}: {meets(i, nd)}" for i in best if meets(i, nd)]
 def mem(i):
     ms, ab, mnames = build(NAMES[i])
     return dict(name=NAMES[i], tier=TA[NAMES[i]]['tier'], types=TA[NAMES[i]]['types'], sid=TA[NAMES[i]].get('sid'), form=str(TA[NAMES[i]].get('form', '0')),
@@ -303,13 +323,34 @@ def mem(i):
                 answers=[WINS[j][0] for j in range(len(WINS)) if ANS[i, j]],
                 why=[dict(move=mv_, why=move_why(NAMES[i], mv_)[0], flag=move_why(NAMES[i], mv_)[1]) for mv_ in build(NAMES[i])[2]],
                 warn=[f"Earthquake-type spread moves hit {NAMES[o]}" for o in leads if o != i and i in leads and ally_hit(i, o) > 0])
+# 23 Nov (Vincent): the Planner = an evaluation of his boxes for this fight. SWAPS: for each member of the six, the best
+# replacements from the pool (six score with the swap); POOL FIT: every pool Pokemon rated for this fight
+_b0 = score(best)
+SWAPS = {}
+for i in best:
+    alt_ = []
+    for c in range(NP):
+        if c in best: continue
+        t_ = [x for x in best if x != i] + [c]
+        alt_.append((score(t_) - _b0, c))
+    alt_.sort(key=lambda x: -x[0])
+    SWAPS[NAMES[i]] = [dict(name=NAMES[c], tier=TA[NAMES[c]]['tier'], sid=TA[NAMES[c]].get('sid'), form=str(TA[NAMES[c]].get('form', '0')),
+                            delta=round(float(d_), 1), res=int((RM[c] < 1).sum()), se=int((OFF[c] >= 2).sum()),
+                            oneshot=[FN[j] for j in range(nF) if DEAD[c, j]]) for d_, c in alt_[:2]]
+_fit = ind - FLAGN * 0   # individual value for this fight (defense first, offense, tips, flags)
+_q = np.quantile(_fit, [.5, .8]) if NP > 4 else [0, 0]
+POOLFIT = [dict(name=NAMES[i], tier=TA[NAMES[i]]['tier'], sid=TA[NAMES[i]].get('sid'), form=str(TA[NAMES[i]].get('form', '0')),
+                fit=round(float(_fit[i]), 1), grade='Great' if _fit[i] >= _q[1] else 'Good' if _fit[i] >= _q[0] else 'Weak',
+                res=int((RM[i] < 1).sum()), weak=int((RM[i] > 1).sum()), nmoves=len(EM), se=int((OFF[i] >= 2).sum()),
+                oneshot=[FN[j] for j in range(nF) if DEAD[i, j]], in_six=i in best, where=TA[NAMES[i]].get('where'))
+           for i in np.argsort(-_fit)]
 out = dict(fight=FK, field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], types=f['types'], moves=f['moves'], item=f.get('item'), ability=f.get('ability'),
            sid=f['species'], form=f.get('form')) for f in FOES], main=MAIN, atk={t: sorted(v) for t, v in ATK.items()},
            wins=[dict(win=w, foes=fs, answered_by=[NAMES[i] for i in best if ANS[i, j]]) for j, (w, fs) in enumerate(WINS)],
            emoves=[dict(foe=FN[fi], move=(MV.get(m) or {}).get('name', m), types=[t for t in mtypes(m) if t], w=round(float(w), 2)) for (fi, m, w) in EM],
            lead_moves=LM,
-           tips=[dict(tip=t['tip'], needs=[dict(need=nd, met_by=[f"{NAMES[i]}: {meets(i, nd)}" for i in best if meets(i, nd)]) for nd in t['needs']]) for t in TIPS],
-           six=[mem(i) for i in order], alts=alts, pool=len(NAMES), score=round(float(res[0][0]), 1), cmp=round(cmp_score(best), 2),
+           tips=[dict(tip=t['tip'], needs=[dict(need=nd, met_by=tip_who(nd)) for nd in t['needs']]) for t in TIPS],
+           six=[mem(i) for i in order], alts=alts, swaps=SWAPS, poolfit=POOLFIT, pool=len(NAMES), score=round(float(res[0][0]), 1), cmp=round(cmp_score(best), 2),
            break_field=dict(FLASH_PLAN, denies=SEED_DENIED) if BREAK else None,
            checks=dict(weak3=[t for k, t in enumerate(ALLT) if (MALL[best][:, k] > 1).sum() >= 3],
                        nores=[t for k, t in enumerate(ALLT) if (MALL[best][:, k] < 1).sum() == 0],
@@ -323,6 +364,9 @@ _other = 'team/planner_keep.json' if BREAK else 'team/planner_break.json'
 APPLY = os.environ.get('PLAN_APPLY')   # the second run decides: the plan with the higher field-neutral score wins
 if APPLY:
     _o = json.load(open(_other)) if os.path.exists(_other) else None
+    if not BREAKABLE:   # field can't be broken: this run IS the keep plan; drop any stale break file
+        _o = None
+        if os.path.exists('team/planner_break.json'): os.remove('team/planner_break.json')
     win_ = out if (not _o or out['cmp'] >= _o['cmp']) else _o
     win_['alt_plan'] = dict(cmp=(_o or out)['cmp'] if win_ is out else out['cmp'], six=[m['name'] for m in ((_o or out)['six'] if win_ is out else out['six'])],
                             break_field=bool(((_o or {}) if win_ is out else out).get('break_field')))

@@ -33,72 +33,10 @@
   "note": "not in engine (beaten or not tracked)"
  },
  "spector": {
-  "label": "Spector (day) – Haunted Field",
-  "game_src": [
-   "Spector (LEADER_SPECTOR #0)"
-  ],
-  "n_game": 6,
-  "n_guide": 6,
-  "rows": [
-   {
-    "mon": "Murkrow",
-    "diff": []
-   },
-   {
-    "mon": "Gothitelle",
-    "diff": []
-   },
-   {
-    "mon": "Gengar",
-    "diff": []
-   },
-   {
-    "mon": "Houndstone",
-    "diff": []
-   },
-   {
-    "mon": "Ninetales",
-    "diff": []
-   },
-   {
-    "mon": "Banette",
-    "diff": []
-   }
-  ]
+  "note": "not in engine (beaten or not tracked)"
  },
  "spector2": {
-  "label": "Spector (night) – Haunted Field",
-  "game_src": [
-   "Spector (LEADER_SPECTOR2 #0)"
-  ],
-  "n_game": 6,
-  "n_guide": 6,
-  "rows": [
-   {
-    "mon": "Stonjourner",
-    "diff": []
-   },
-   {
-    "mon": "Sigilyph",
-    "diff": []
-   },
-   {
-    "mon": "Luxray",
-    "diff": []
-   },
-   {
-    "mon": "Golisopod",
-    "diff": []
-   },
-   {
-    "mon": "Typhlosion",
-    "diff": []
-   },
-   {
-    "mon": "Banette",
-    "diff": []
-   }
-  ]
+  "note": "not in engine (beaten or not tracked)"
  },
  "jenner9": {
   "label": "Spirit Jenner – Concert Venue",

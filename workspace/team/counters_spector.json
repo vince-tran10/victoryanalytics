@@ -6,17 +6,19 @@
   "pairs": [
    {
     "foe": "Murkrow",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 71,
+    "mon": "Clefable",
+    "ability": "MAGICGUARD",
+    "dealt": 124,
     "taken": 0,
     "ok": true,
-    "setup": "Swords Dance",
+    "setup": false,
     "wincons": [
      {
       "what": "Healing",
       "answers": [
-       "Knock Off (Crawdaunt)"
+       "Knock Off (Crawdaunt)",
+       "Knock Off (Muk)",
+       "Knock Off (Mandibuzz)"
       ]
      },
      {
@@ -29,34 +31,34 @@
    },
    {
     "foe": "Gothitelle",
-    "mon": "Crawdaunt",
-    "ability": "ADAPTABILITY",
-    "dealt": 74,
-    "taken": 10,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 87,
+    "taken": 45,
     "ok": true,
     "setup": "Swords Dance",
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "teach Safeguard (Barbaracle)"
+       "Safeguard (Clefable)"
       ]
      }
     ]
    },
    {
     "foe": "Gengar",
-    "mon": "Toxtricity (Aevian Form)",
-    "ability": "PUNKROCK",
+    "mon": "Musharna (Aevian Form)",
+    "ability": "TOUGHCLAWS",
     "dealt": 130,
-    "taken": 64,
+    "taken": 37,
     "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "teach Safeguard (Barbaracle)"
+       "Safeguard (Clefable)"
       ]
      },
      {
@@ -69,27 +71,27 @@
    },
    {
     "foe": "Houndstone",
-    "mon": "Amoonguss",
-    "ability": "REGENERATOR",
-    "dealt": 6,
-    "taken": 87,
-    "ok": false,
+    "mon": "Toxtricity (Aevian Form)",
+    "ability": "PUNKROCK",
+    "dealt": 109,
+    "taken": 129,
+    "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Ninetales",
-    "mon": "Barbaracle",
-    "ability": "TOUGHCLAWS",
-    "dealt": 93,
-    "taken": 32,
-    "ok": true,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 11,
+    "taken": 42,
+    "ok": false,
     "setup": false,
     "wincons": [
      {
       "what": "Sleep",
       "answers": [
-       "teach Safeguard (Barbaracle)"
+       "Safeguard (Clefable)"
       ]
      }
     ]

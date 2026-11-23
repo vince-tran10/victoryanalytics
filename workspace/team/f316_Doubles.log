@@ -1,0 +1,13 @@
+Glalie (Aevian Form) | Active 60 | Grassy Surge  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'] | Focus Sash (already holding) | 
+Chandelure | Active 60 | Flash Fire  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Shadow Ball', 'Will-O-Wisp', 'Overheat', 'Protect'] | Sitrus Berry | 
+Azumarill | Active 60 | Huge Power  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Play Rough', 'Aqua Jet', 'Belly Drum', 'Protect'] | Sitrus Berry (already holding) | 
+Lapras (Aevian Form) | Active 60 | No Guard  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Rock Slide', 'Zen Headbutt', 'Dragon Dance', 'Sing'] | Hard Stone (already holding) | 
+Muk (Alolan Form) | Party 60 | Poison Touch  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Knock Off', 'Shadow Sneak', 'Clear Smog', 'Protect'] | Black Sludge (already holding) | 
+Scrafty | Active 60 | Moxie  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Crunch', 'High Jump Kick', 'Fake Out', 'Protect'] | Black Glasses (already holding) | 
+jenner 1.195 -> 1.617 leads ['Glalie (Aevian Form)', 'Chandelure'] swaps [('Clefable', 'Muk (Alolan Form)', 0.085), ('Dachsbun', 'Muk (Alolan Form)', 0.074), ('Mawile', 'Muk (Alolan Form)', 0.073)]
+danni 1.168 -> 1.773 leads ['Scrafty', 'Chandelure'] swaps [('Arcanine', 'Muk (Alolan Form)', 0.117), ('Bombirdier', 'Muk (Alolan Form)', 0.09), ('Crobat', 'Muk (Alolan Form)', 0.086)]
+troye 0.858 -> 1.37 leads ['Chandelure', 'Glalie (Aevian Form)'] swaps [('Arcanine', 'Muk (Alolan Form)', 0.167), ('Arcanine (Hisuian Form)', 'Muk (Alolan Form)', 0.131), ('Toxtricity (Aevian Form)', 'Muk (Alolan Form)', 0.117)]
+zena 1.311 -> 1.516 leads ['Glalie (Aevian Form)', 'Scrafty'] swaps [('Gallade', 'Muk (Alolan Form)', 0.142), ('Golisopod (Aevian Form)', 'Muk (Alolan Form)', 0.129), ('Torterra', 'Muk (Alolan Form)', 0.129)]
+marcie 0.679 -> 1.473 leads ['Chandelure', 'Glalie (Aevian Form)'] swaps [('Leavanny (Aevian Form)', 'Azumarill', 0.285), ('Arcanine', 'Azumarill', 0.221), ('Yanmega', 'Azumarill', 0.218)]
+jenner9 0.605 -> 0.987 leads ['Scrafty', 'Chandelure'] swaps [('Florges', 'Muk (Alolan Form)', 0.18), ('Clefable', 'Muk (Alolan Form)', 0.134), ('Frosmoth', 'Muk (Alolan Form)', 0.104)]
+erick 0.733 -> 1.259 leads ['Glalie (Aevian Form)', 'Chandelure'] swaps [('Gallade', 'Azumarill', 0.088), ('Leavanny (Aevian Form)', 'Azumarill', 0.065), ('Wyrdeer', 'Azumarill', 0.061)]

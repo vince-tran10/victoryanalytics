@@ -2,55 +2,56 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 3,
+  "counters": 2,
   "pairs": [
    {
     "foe": "Stoutland",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 66,
-    "taken": 49,
-    "ok": true,
-    "setup": "Swords Dance",
+    "mon": "Glalie (Aevian Form)",
+    "ability": "GRASSYSURGE",
+    "dealt": 65,
+    "taken": 31,
+    "ok": false,
+    "setup": false,
     "wincons": [
      {
       "what": "Setup",
       "answers": [
-       "Clear Smog (Amoonguss)"
+       "Clear Smog (Amoonguss)",
+       "Clear Smog (Muk)"
       ]
      }
     ]
    },
    {
     "foe": "Appletun",
-    "mon": "Slowking (Galarian Form)",
-    "ability": "REGENERATOR",
-    "dealt": 62,
-    "taken": 40,
-    "ok": false,
-    "setup": false,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 65,
+    "taken": 47,
+    "ok": true,
+    "setup": "Swords Dance",
     "wincons": [
      {
       "what": "Healing",
       "answers": [
-       "teach Gastro Acid (Musharna)"
+       "Knock Off (Muk)"
       ]
      }
     ]
    },
    {
     "foe": "Noivern",
-    "mon": "Aurorus",
-    "ability": "SNOWWARNING",
-    "dealt": 130,
-    "taken": 39,
-    "ok": true,
+    "mon": "Toxtricity (Aevian Form)",
+    "ability": "PUNKROCK",
+    "dealt": 118,
+    "taken": 75,
+    "ok": false,
     "setup": false,
     "wincons": [
      {
       "what": "Healing",
       "answers": [
-       "teach Gastro Acid (Musharna)"
+       "Knock Off (Muk)"
       ]
      }
     ]
@@ -67,27 +68,28 @@
    },
    {
     "foe": "Kommo-o",
-    "mon": "Musharna (Aevian Form)",
-    "ability": "TOUGHCLAWS",
-    "dealt": 125,
-    "taken": 70,
+    "mon": "Slowking (Galarian Form)",
+    "ability": "REGENERATOR",
+    "dealt": 63,
+    "taken": 74,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Klinklang",
-    "mon": "Toxtricity (Aevian Form)",
-    "ability": "PUNKROCK",
+    "mon": "Chandelure",
+    "ability": "FLASHFIRE",
     "dealt": 130,
-    "taken": 58,
+    "taken": 43,
     "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Setup",
       "answers": [
-       "Clear Smog (Amoonguss)"
+       "Clear Smog (Amoonguss)",
+       "Clear Smog (Muk)"
       ]
      }
     ]

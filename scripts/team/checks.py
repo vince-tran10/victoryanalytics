@@ -73,7 +73,7 @@ if os.path.exists('team/builder.json'):
 tc = st.get('team_check') or {}
 if st.get('core') and st.get('core_check'):   # 16 Nov model: core of 4 for the chapter, + 2 swaps per fight
     cc = st['core_check']; co = cc['core']
-    chk('Core of 4: no major Ch9 attack type hits 3+ of it', not co['weak3'], f"{co['n']}/4 checked · 3+ weak {co['weak3'] or 'none'}")
+    chk('Core of 4: no major Ch9 attack type hits 3+ of it', not co['weak3'], f"{co['n']}/4 checked · 3+ weak {co['weak3'] or 'none'}", blocking=st.get('mode') != 'planner')   # 23 Nov: legacy core rule, planner mode checks the fight six
     chk('Core of 4: major types it resists on its own (the rest must come from the 2 swaps)', not co['nores'],
         f"not resisted by the core: {', '.join(t.title() for t in co['nores']) or 'none'}", blocking=False)
     if cc.get('fight'):

@@ -147,7 +147,6 @@
       "Single target only"
      ],
      "tools": [
-      "Status: Thunder Wave",
       "Support: Safeguard"
      ],
      "sid": "CLEFABLE",
@@ -248,23 +247,6 @@
      ]
     },
     {
-     "name": "Musharna (Aevian Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "sid": "MUSHARNA",
-     "form": "1",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Moonlight"
-     ]
-    },
-    {
      "name": "Muk (Alolan Form)",
      "tier": "S",
      "stats": [
@@ -320,6 +302,23 @@
      "rec": false,
      "teach": [
       "Slack Off"
+     ]
+    },
+    {
+     "name": "Musharna (Aevian Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "sid": "MUSHARNA",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Moonlight"
      ]
     },
     {
@@ -424,23 +423,6 @@
      "teach": []
     },
     {
-     "name": "Musharna (Aevian Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "sid": "MUSHARNA",
-     "form": "1",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Curse"
-     ]
-    },
-    {
      "name": "Muk (Alolan Form)",
      "tier": "S",
      "stats": [
@@ -497,23 +479,6 @@
      "teach": []
     },
     {
-     "name": "Zoroark",
-     "tier": "A",
-     "stats": [
-      "Resists 3 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "sid": "ZOROARK",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Nasty Plot"
-     ]
-    },
-    {
      "name": "Ninetales (Alolan Form)",
      "tier": "A",
      "stats": [
@@ -530,6 +495,23 @@
      "rec": false,
      "teach": [
       "Nasty Plot"
+     ]
+    },
+    {
+     "name": "Musharna (Aevian Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "sid": "MUSHARNA",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Curse"
      ]
     },
     {
@@ -624,44 +606,11 @@
   },
   {
    "slot": 5,
-   "title": "Flex 1 · Mid game · Spector (night)",
-   "pick": "Alomomola",
-   "rec": "Alomomola",
+   "title": "Flex 1 · Mid game · Spirit Jenner",
+   "pick": "Glalie (Aevian Form)",
+   "rec": "Glalie (Aevian Form)",
    "flex": true,
    "cands": [
-    {
-     "name": "Alomomola",
-     "tier": "S",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 2 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Recovery: Wish",
-      "Support: Wide Guard"
-     ],
-     "teach": [],
-     "sid": "ALOMOMOLA",
-     "form": "0",
-     "pick": true,
-     "rec": true
-    },
-    {
-     "name": "Zoroark",
-     "tier": "A",
-     "stats": [
-      "Resists 3 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "teach": [],
-     "sid": "ZOROARK",
-     "form": "0",
-     "pick": false,
-     "rec": false
-    },
     {
      "name": "Glalie (Aevian Form)",
      "tier": "S",
@@ -676,23 +625,23 @@
      "teach": [],
      "sid": "GLALIE",
      "form": "1",
-     "pick": false,
-     "rec": false
+     "pick": true,
+     "rec": true
     },
     {
-     "name": "Roserade (Aevian Form)",
+     "name": "Clefable",
      "tier": "A",
      "stats": [
-      "Resists 5 types",
-      "Weak to 6 types",
+      "Resists 4 types",
+      "Weak to 2 types",
       "Single target only"
      ],
      "tools": [
-      "Priority: Vacuum Wave"
+      "Support: Safeguard"
      ],
      "teach": [],
-     "sid": "ROSERADE",
-     "form": "1",
+     "sid": "CLEFABLE",
+     "form": "0",
      "pick": false,
      "rec": false
     },
@@ -712,32 +661,35 @@
      "rec": false
     },
     {
-     "name": "Swampert",
+     "name": "Ninetales (Alolan Form)",
      "tier": "A",
      "stats": [
-      "Resists 5 types",
-      "Weak to 1 type"
+      "Resists 4 types",
+      "Weak to 4 types"
      ],
      "tools": [
-      "Spread: Earthquake"
+      "Spread: Blizzard",
+      "Screens: Aurora Veil"
      ],
      "teach": [],
-     "sid": "SWAMPERT",
-     "form": "0",
+     "sid": "NINETALES",
+     "form": "1",
      "pick": false,
      "rec": false
     },
     {
-     "name": "Musharna (Aevian Form)",
-     "tier": "S",
+     "name": "Arcanine (Hisuian Form)",
+     "tier": "A",
      "stats": [
-      "Resists 4 types",
-      "Weak to 3 types",
+      "Resists 7 types",
+      "Weak to 4 types",
       "Single target only"
      ],
-     "tools": [],
+     "tools": [
+      "Priority: Extreme Speed"
+     ],
      "teach": [],
-     "sid": "MUSHARNA",
+     "sid": "ARCANINE",
      "form": "1",
      "pick": false,
      "rec": false
@@ -746,60 +698,43 @@
   },
   {
    "slot": 6,
-   "title": "Flex 2 · Closer · Spector (night)",
-   "pick": "Clodsire",
-   "rec": "Clodsire",
+   "title": "Flex 2 · Closer · Spirit Jenner",
+   "pick": "Chandelure",
+   "rec": "Chandelure",
    "flex": true,
    "cands": [
     {
-     "name": "Clodsire",
+     "name": "Chandelure",
      "tier": "B",
      "stats": [
-      "Resists 6 types",
-      "Weak to 4 types"
+      "Resists 9 types",
+      "Weak to 5 types",
+      "Single target only"
      ],
      "tools": [
-      "Spread: Earthquake",
-      "Recovery: Recover"
+      "Counters: Klinklang",
+      "Status: Will-O-Wisp"
      ],
      "teach": [],
-     "sid": "CLODSIRE",
+     "sid": "CHANDELURE",
      "form": "0",
      "pick": true,
      "rec": true
     },
     {
-     "name": "Zoroark (Hisuian Form)",
-     "tier": "B",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 1 type",
-      "Single target only"
-     ],
-     "tools": [
-      "Setup: Nasty Plot",
-      "Disrupt: Taunt"
-     ],
-     "teach": [],
-     "sid": "ZOROARK",
-     "form": "1",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Crawdaunt",
+     "name": "Azumarill",
      "tier": "B",
      "stats": [
       "Resists 7 types",
-      "Weak to 5 types",
+      "Weak to 3 types",
       "Single target only"
      ],
      "tools": [
-      "Setup: Swords Dance",
-      "Disrupt: Knock Off"
+      "Setup: Belly Drum",
+      "Priority: Aqua Jet"
      ],
      "teach": [],
-     "sid": "CRAWDAUNT",
+     "sid": "AZUMARILL",
      "form": "0",
      "pick": false,
      "rec": false
@@ -1108,13 +1043,13 @@
    "Attacker",
    ""
   ],
-  "Typhlosion": [
-   "Lead",
-   "outspeeds 81%"
-  ],
   "Hariyama": [
    "Attacker",
    ""
+  ],
+  "Typhlosion": [
+   "Lead",
+   "outspeeds 81%"
   ],
   "Florges": [
    "Mid game",
@@ -1280,13 +1215,13 @@
    "Attacker",
    ""
   ],
-  "Ribombee": [
-   "Support",
-   "Sticky Web"
-  ],
   "Arctozolt": [
    "Attacker",
    ""
+  ],
+  "Ribombee": [
+   "Support",
+   "Sticky Web"
   ],
   "Centiskorch": [
    "Attacker",
@@ -1528,13 +1463,13 @@
    "Lead",
    "outspeeds 80%"
   ],
-  "Tropius": [
-   "Support",
-   "Wide Guard"
-  ],
   "Vileplume": [
    "Attacker",
    ""
+  ],
+  "Tropius": [
+   "Support",
+   "Wide Guard"
   ],
   "Drifblim": [
    "Doubles lead",
@@ -1568,13 +1503,13 @@
    "Support",
    "Yawn"
   ],
-  "Orbeetle": [
-   "Support",
-   "Reflect"
-  ],
   "Sudowoodo": [
    "Attacker",
    ""
+  ],
+  "Orbeetle": [
+   "Support",
+   "Reflect"
   ],
   "Pawmot": [
    "Doubles lead",
@@ -2152,13 +2087,13 @@
    "Closer",
    "Calm Mind"
   ],
-  "Cherrim": [
-   "Support",
-   "Helping Hand"
-  ],
   "Beedrill": [
    "Attacker",
    ""
+  ],
+  "Cherrim": [
+   "Support",
+   "Helping Hand"
   ],
   "Oricorio (Pa'u Style)": [
    "Attacker",
@@ -2419,7 +2354,7 @@
    },
    {
     "name": "Musharna-Aevian",
-    "tier": "S",
+    "tier": "A",
     "score": 3.0,
     "why": [
      "Slowking-Galar switches in on Poison, Fairy hits aimed at Musharna-Aevian and heals on the way out",
@@ -2987,7 +2922,7 @@
   "Toxtricity-Aevian": [
    {
     "name": "Musharna-Aevian",
-    "tier": "S",
+    "tier": "A",
     "score": 2.75,
     "why": [
      "Musharna-Aevian's sleep takes a foe out for Toxtricity-Aevian",

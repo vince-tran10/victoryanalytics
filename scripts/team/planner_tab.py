@@ -56,8 +56,31 @@ for m in P['six']:
              + '</div>'
              + '<details class="pwhy" onclick="event.stopPropagation()"><summary>Why these moves</summary><ul>' + ''.join(
                  f'<li class="{"pflag" if w["flag"] else ""}"><b>{E(w["move"])}</b><span>{E(w["why"])}</span></li>' for w in m.get('why') or []) + '</ul></details>'
+             + (('<details class="pwhy" onclick="event.stopPropagation()"><summary>Swap options</summary><ul>' + ''.join(
+                 f'<li><b>{SP.tag(x["sid"], x["form"], size="s")}{E(disp(x["name"]))} <span class="tier t{x["tier"]}">{x["tier"]}</span></b>'
+                 f'<span>{"Almost as good" if x["delta"] > -3 else "Weaker for this fight"}</span>'
+                 f'<span>Resists {x["res"]} of their moves</span><span>Super effective on {x["se"]}</span>'
+                 + (f'<span class="pbad">One-shot by {E(", ".join(x["oneshot"]))}</span>' if x["oneshot"] else '') + '</li>'
+                 for x in (P.get('swaps') or {}).get(m['name'], [])) + '</ul></details>') if (P.get('swaps') or {}).get(m['name']) else '')
              + '</li>')
 h += f'<article class="plc"><h3>Your six</h3><ul class="bl">{rows}</ul></article>'
+# 23 Nov (Vincent): the Planner evaluates HIS BOXES for this fight: every pool Pokemon graded, what it brings, what kills it
+PF = P.get('poolfit') or []
+def _tile(x):
+    return (f'<li class="bc pft{" pin" if x["in_six"] else ""}" data-dn="{E(disp(x["name"]))}" tabindex="0" role="button"><div class="bct">'
+            f'<span class="tier t{x["tier"]}">{x["tier"]}</span>{SP.tag(x["sid"], x["form"], size="s")}<b>{E(disp(x["name"]))}</b>'
+            + ('<span class="plt">In your six</span>' if x['in_six'] else '') + '</div><div class="bchips">'
+            f'<span class="bstat">Resists {x["res"]} of {x["nmoves"]} moves</span>'
+            + (f'<span class="btool">Super effective on {x["se"]}</span>' if x['se'] else '')
+            + (f'<span class="bstat bad">One-shot by {E(", ".join(x["oneshot"][:2]))}</span>' if x['oneshot'] else '') + '</div></li>')
+if PF:
+    h += '<article class="plc"><h3>Your boxes for this fight</h3>'
+    for g in ('Great', 'Good'):
+        xs = [x for x in PF if x['grade'] == g]
+        if xs: h += f'<div class="psub">{g} fit</div><ul class="bl">' + ''.join(_tile(x) for x in xs) + '</ul>'
+    xs = [x for x in PF if x['grade'] == 'Weak']
+    if xs: h += f'<details class="pho"><summary>Weak fit ({len(xs)})</summary><ul class="bl">' + ''.join(_tile(x) for x in xs) + '</ul></details>'
+    h += '</article>'
 # 23 Nov (Vincent): the guide's tips for this fight and how the six covers each one (collapsed)
 TP = P.get('tips') or []
 if TP:
@@ -142,6 +165,7 @@ css = '''<style id="plan-css">
 .pwhy { margin-top: 4px; font-size: 12.5px } .pwhy summary { cursor: pointer; color: var(--muted); font-weight: 600 }
 .pwhy ul { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 4px } .pwhy li { display: grid; gap: 1px } .pwhy li span { color: var(--muted) }
 .pwhy li.pflag b { color: #b3261e } .pwhy li.pflag b::after { content: '  ⚠ check' }
+.pwhy .pbad { color: #b3261e } .bc.pft.pin { box-shadow: inset 0 0 0 2px var(--accent) }
 .plc ul.bl { padding: 0; margin: 0; list-style: none; display: grid; gap: 6px } .pho summary { cursor: pointer; font-weight: 700 } .pho ol { margin: 6px 0 0; padding-left: 20px; font-size: 13px; display: grid; gap: 3px }
 #splan + .pgrid, .pgrid { display: grid; gap: 14px }
 </style>'''

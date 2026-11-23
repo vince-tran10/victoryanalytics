@@ -2,7 +2,7 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 3,
+  "counters": 4,
   "pairs": [
    {
     "foe": "Stonjourner",
@@ -36,30 +36,30 @@
    },
    {
     "foe": "Golisopod",
-    "mon": "Alomomola",
-    "ability": "REGENERATOR",
-    "dealt": 33,
-    "taken": 85,
-    "ok": false,
+    "mon": "Toxtricity (Aevian Form)",
+    "ability": "PUNKROCK",
+    "dealt": 130,
+    "taken": 693,
+    "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Typhlosion",
-    "mon": "Clodsire",
-    "ability": "UNAWARE",
-    "dealt": 71,
-    "taken": 94,
+    "mon": "Palossand",
+    "ability": "WATERCOMPACTION",
+    "dealt": 126,
+    "taken": 255,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Banette",
-    "mon": "Toxtricity (Aevian Form)",
-    "ability": "PUNKROCK",
-    "dealt": 130,
-    "taken": 188,
+    "mon": "Mabosstiff",
+    "ability": "INTIMIDATE",
+    "dealt": 119,
+    "taken": 74,
     "ok": true,
     "setup": false,
     "wincons": []

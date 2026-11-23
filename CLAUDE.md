@@ -69,6 +69,10 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Planner tab (Vincent, 23 Nov): Their team + attacks, GAME PLAN (leads, turn 1 targets, who takes each back foe), Your six with
   max 3 SHORT chips each (cues.py, 1-3 words: green = its job, e.g. Stat reset / Sleep / Spread / Unaware; grey = Immune X, Resists X / Y),
   type check; game plan + checks + alternatives + method folded under 'Details' at the bottom (Vincent: that text is for me, not him). No 'How they win' text. Lost? Ask what beat him and add it as a threat. The old Builder / core rules below are legacy.
+  **Tabs (Vincent, 23 Nov):** Team = the six I recommend (planner six, leads first). Planner = an EVALUATION OF HIS BOXES for the next
+  fight: the six with collapsed 'Why these moves' + 'Swap options', then 'Your boxes for this fight' (every pool mon graded Great / Good /
+  Weak with resists / super effective / one-shot chips), grids, guide tips. Fights / To do / Dex / Community stay, all built from the same six.
+  Field breaks only where fieldtext fieldChange lists Flash / Dazzling Gleam. Flagged moves cost -4 each in the pick.
 - **Field type charts (23 Nov, lesson: Haunted Field made Ghost hit Normal neutrally and I missed it):** field rules live in TWO places:
   fieldtext (boosts, accuracy, typeMods, changes) AND the battle code (Battle_Move.rb pbTypeModifier type-chart overrides, Battle.rb
   end-of-turn effects). fields.field_typemod ports pbTypeModifier; engine.chart_eff applies it. Read BOTH before claiming a field mechanic.

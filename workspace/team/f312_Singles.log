@@ -1,0 +1,15 @@
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Clefable | Active 60 | Magic Guard  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Moonblast', 'Flash', 'Safeguard', 'Protect'] | Fairy Feather (already holding) | 
+Crawdaunt | Active 60 | Adaptability  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Knock Off', 'Crabhammer', 'Swords Dance', 'Protect'] | Black Glasses (already holding) | 
+Muk (Alolan Form) | Party 60 | Poison Touch  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Knock Off', 'Shadow Sneak', 'Clear Smog', 'Protect'] | Black Sludge (already holding) | 
+Mandibuzz | Party 60 | Overcoat  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Tailwind', 'Knock Off', 'Roost', 'Protect'] | Sitrus Berry (already holding) | 
+Arcanine (Hisuian Form) | Active 60 | Intimidate  | Adamant {'Atk': 252, 'Spe': 252, 'Def': 4} | ['Flare Blitz', 'Extreme Speed', 'Head Smash', 'Protect'] | Focus Sash (already holding) | 
+jenner 1.177 -> 1.385 leads ['Arcanine (Hisuian Form)'] swaps [('Typhlosion', 'Muk (Alolan Form)', 0.107), ('Passimian', 'Muk (Alolan Form)', 0.103), ('Pawmot', 'Muk (Alolan Form)', 0.101)]
+danni 1.101 -> 1.468 leads ['Crawdaunt'] swaps [('Chandelure', 'Muk (Alolan Form)', 0.126), ('Toxtricity (Aevian Form)', 'Muk (Alolan Form)', 0.107), ('Crobat', 'Muk (Alolan Form)', 0.104)]
+troye 0.862 -> 1.076 leads ['Crawdaunt'] swaps [('Clawitzer', 'Muk (Alolan Form)', 0.141), ('Passimian', 'Muk (Alolan Form)', 0.135), ('Toxtricity (Aevian Form)', 'Muk (Alolan Form)', 0.133)]
+zena 1.243 -> 1.12 leads ['Arcanine (Hisuian Form)'] swaps [('Meganium', 'Mandibuzz', 0.24), ('Venusaur', 'Mandibuzz', 0.24), ('Torterra', 'Arcanine (Hisuian Form)', 0.232)]
+marcie 0.585 -> 0.979 leads ['Arcanine (Hisuian Form)'] swaps [('Toxtricity (Aevian Form)', 'Crawdaunt', 0.325), ('Golisopod (Aevian Form)', 'Crawdaunt', 0.302), ('Leavanny', 'Crawdaunt', 0.287)]
+spector 1.04 -> 1.15 leads ['Clefable'] swaps [('Chandelure', 'Clefable', 0.107), ('Cursola', 'Clefable', 0.079), ('Zoroark', 'Clefable', 0.078)]
+spector2 0.818 -> 0.743 leads ['Clefable'] swaps [('Golisopod (Aevian Form)', 'Muk (Alolan Form)', 0.168), ('Swampert', 'Muk (Alolan Form)', 0.132), ('Diggersby', 'Muk (Alolan Form)', 0.111)]
+jenner9 0.465 -> 0.694 leads ['Arcanine (Hisuian Form)'] swaps [('Toxtricity (Aevian Form)', 'Crawdaunt', 0.148), ('Emboar', 'Crawdaunt', 0.146), ('Hariyama', 'Crawdaunt', 0.135)]
+erick 0.555 -> 0.817 leads ['Crawdaunt'] swaps [('Gallade', 'Mandibuzz', 0.177), ('Chandelure', 'Mandibuzz', 0.13), ('Solrock (Solrock Dominant Fusion)', 'Mandibuzz', 0.097)]

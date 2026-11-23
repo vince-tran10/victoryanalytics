@@ -1,0 +1,13 @@
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Muk (Alolan Form) | Party 60 | Poison Touch  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Knock Off', 'Shadow Sneak', 'Clear Smog', 'Protect'] | Black Sludge (already holding) | 
+Mandibuzz | Party 60 | Overcoat  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Tailwind', 'Knock Off', 'Roost', 'Protect'] | Sitrus Berry (already holding) | 
+Crawdaunt | Active 60 | Adaptability  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Knock Off', 'Crabhammer', 'Swords Dance', 'Protect'] | Black Glasses (already holding) | 
+Glalie (Aevian Form) | Active 60 | Grassy Surge  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'] | Focus Sash (already holding) | 
+Clefable | Active 60 | Magic Guard  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Moonblast', 'Flash', 'Safeguard', 'Protect'] | Fairy Feather (already holding) | 
+jenner 1.177 -> 1.139 leads ['Glalie (Aevian Form)'] swaps [('Arcanine (Hisuian Form)', 'Muk (Alolan Form)', 0.264), ('Typhlosion', 'Muk (Alolan Form)', 0.261), ('Pawmot', 'Muk (Alolan Form)', 0.247)]
+danni 1.168 -> 1.458 leads ['Crawdaunt', 'Glalie (Aevian Form)'] swaps [('Chandelure', 'Muk (Alolan Form)', 0.263), ('Toxtricity (Aevian Form)', 'Muk (Alolan Form)', 0.262), ('Arcanine', 'Muk (Alolan Form)', 0.243)]
+troye 0.858 -> 1.179 leads ['Crawdaunt', 'Glalie (Aevian Form)'] swaps [('Arcanine', 'Muk (Alolan Form)', 0.252), ('Toxtricity (Aevian Form)', 'Muk (Alolan Form)', 0.212), ('Arcanine (Hisuian Form)', 'Muk (Alolan Form)', 0.172)]
+zena 1.243 -> 1.258 leads ['Crawdaunt'] swaps [('Torterra', 'Musharna (Aevian Form)', 0.164), ('Diggersby', 'Musharna (Aevian Form)', 0.151), ('Mamoswine', 'Musharna (Aevian Form)', 0.144)]
+marcie 0.679 -> 1.077 leads ['Glalie (Aevian Form)', 'Clefable'] swaps [('Toxtricity (Aevian Form)', 'Crawdaunt', 0.473), ('Leavanny (Aevian Form)', 'Crawdaunt', 0.469), ('Arcanine', 'Crawdaunt', 0.451)]
+jenner9 0.465 -> 0.633 leads ['Glalie (Aevian Form)'] swaps [('Toxtricity (Aevian Form)', 'Crawdaunt', 0.172), ('Emboar', 'Crawdaunt', 0.16), ('Hariyama', 'Crawdaunt', 0.149)]
+erick 0.733 -> 0.847 leads ['Musharna (Aevian Form)', 'Glalie (Aevian Form)'] swaps [('Chandelure', 'Crawdaunt', 0.275), ('Gallade', 'Crawdaunt', 0.272), ('Toxtricity (Aevian Form)', 'Crawdaunt', 0.247)]

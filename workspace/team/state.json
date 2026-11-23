@@ -4,9 +4,9 @@
  "export_label": "23 Nov 08:03",
  "active_start": 468,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 292,
- "run": 306,
- "final": 310,
+ "roster": 298,
+ "run": 312,
+ "final": 316,
  "done": [
   "aelita",
   "narcissa1",
@@ -30,16 +30,18 @@
   "darkgardevoir",
   "garbodor",
   "amanda",
-  "karrina"
+  "karrina",
+  "spector",
+  "spector2"
  ],
- "fight": "spector2",
+ "fight": "jenner9",
  "team": [
-  "Alomomola",
-  "Clodsire",
-  "Swampert",
+  "Glalie (Aevian Form)",
+  "Chandelure",
+  "Azumarill",
+  "Lapras (Aevian Form)",
   "Muk (Alolan Form)",
-  "Musharna (Aevian Form)",
-  "Mandibuzz"
+  "Scrafty"
  ],
  "moves": {
   "Golisopod (Aevian Form)": [
@@ -74,7 +76,7 @@
   ],
   "Clefable": [
    "Moonblast",
-   "Thunder Wave",
+   "Flash",
    "Safeguard",
    "Protect"
   ],
@@ -153,7 +155,7 @@
   "Musharna (Aevian Form)": [
    "Lovely Kiss",
    "Shadow Claw",
-   "Play Rough",
+   "Gastro Acid",
    "Protect"
   ],
   "Mandibuzz": [
@@ -179,6 +181,36 @@
    "Earth Power",
    "Giga Drain",
    "Protect"
+  ],
+  "Crawdaunt": [
+   "Knock Off",
+   "Crabhammer",
+   "Swords Dance",
+   "Protect"
+  ],
+  "Aurorus": [
+   "Aurora Veil",
+   "Ice Beam",
+   "Ancient Power",
+   "Protect"
+  ],
+  "Chandelure": [
+   "Shadow Ball",
+   "Will-O-Wisp",
+   "Overheat",
+   "Protect"
+  ],
+  "Azumarill": [
+   "Play Rough",
+   "Aqua Jet",
+   "Belly Drum",
+   "Protect"
+  ],
+  "Lapras (Aevian Form)": [
+   "Rock Slide",
+   "Zen Headbutt",
+   "Dragon Dance",
+   "Sing"
   ]
  },
  "promote": "team/promote_1108.json",
@@ -268,7 +300,12 @@
   "Mandibuzz": "OVERCOAT",
   "Alomomola": "REGENERATOR",
   "Dragalge": "ADAPTABILITY",
-  "Palossand": "WATERCOMPACTION"
+  "Palossand": "WATERCOMPACTION",
+  "Crawdaunt": "ADAPTABILITY",
+  "Aurorus": "REFRIGERATE",
+  "Chandelure": "FLASHFIRE",
+  "Azumarill": "HUGEPOWER",
+  "Lapras (Aevian Form)": "NOGUARD"
  },
  "crests_owned": [
   "Dedenne Crest",
@@ -286,19 +323,15 @@
   "core": {
    "n": 6,
    "weak3": [],
-   "nores": [
-    "NORMAL"
-   ],
+   "nores": [],
    "minor": []
   },
   "fight": {
    "n": 6,
    "weak3": [],
-   "nores": [
-    "NORMAL"
-   ],
+   "nores": [],
    "minor": [],
-   "key": "spector2"
+   "key": "jenner9"
   }
  },
  "plan_swaps": {},
@@ -379,44 +412,6 @@
   "Toxtricity (Aevian Form)": [
    "TORCHSONG"
   ]
- },
- "zoro_note": {
-  "zoroark": "Zoroark (Hisuian Form)",
-  "copies": "Slowking (Galarian Form)",
-  "ability": "REGENERATOR",
-  "types": [
-   "POISON",
-   "PSYCHIC"
-  ],
-  "gain": 0.1,
-  "moved": true,
-  "kind": "back",
-  "replacement": null,
-  "lead_options": [
-   {
-    "lead": "Toxtricity (Aevian Form)",
-    "slot": 1,
-    "gain": 0.0,
-    "replacement": "Golisopod (Aevian Form)",
-    "cost": -0.08,
-    "ok": false
-   },
-   {
-    "lead": "Amoonguss",
-    "slot": 2,
-    "gain": 0.1,
-    "replacement": "Golisopod (Aevian Form)",
-    "cost": -0.29,
-    "ok": false
-   }
-  ],
-  "options": {
-   "Toxtricity (Aevian Form)": 0.0,
-   "Amoonguss": 0.1,
-   "Slowking (Galarian Form)": 0.1,
-   "Oranguru": 0.0,
-   "Golisopod (Aevian Form)": 0.0
-  }
  },
  "mode": "planner"
 }
