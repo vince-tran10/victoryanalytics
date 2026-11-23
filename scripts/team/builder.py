@@ -304,7 +304,7 @@ if len(core) == 4:
             # 22 Nov: + covering the other three's weaknesses that nobody else resists (the type-matrix gaps)
             # 22 Nov fix: tier counts double and tools cap at 2, so tool count / coverage can't lift a lower tier over a higher one
             # by itself (Scrafty B was suggested over Amoonguss A on Intimidate + Fake Out)
-            return 2 * RK.get(m.r['tier'], 0) + min(f_, 2) + .1 * (sum(m.mult[a] < 1 for a in TYPES) - sum(m.mult[a] > 1 for a in TYPES)) + .2 * min(cover, 3)
+            return 2 * RK.get(m.r['tier'], 0) + min(f_, 2) + .1 * (sum(m.mult[a] < 1 for a in TYPES) - sum(m.mult[a] > 1 for a in TYPES)) + .2 * min(cover, 3) + .15 * sum(pair(m, o)[0] for o in others)   # 22 Nov (Vincent): synergy with the other three (pair())
         _pool = [x for x in res if x[3].name not in USED] or res
         _best = max(_pool, key=_fit) if _pool else None
         _mine = next((x for x in _pool if x[3].name == (base[i].name if base[i] else None)), None)
@@ -411,7 +411,7 @@ for s_ in out:
 TM = ('<div class="tmx"><h3>Type matrix</h3>'
       '<div class="tmx-wrap"><table class="tmx-t" id="tmx"></table></div></div>'
       '<script type="application/json" id="tmdata">' + json.dumps(dict(types=[a.title() for a in TYPES], mons=_tm)).replace('</', '<\\/') + '</script>')
-if CORE_PAIRS:
+if CORE_PAIRS and os.environ.get('SHOW_SYNERGY'):   # 22 Nov (Vincent): card hidden; synergy still weighs every suggestion
     _pc = ''
     for p_ in CORE_PAIRS:
         ok_ = p_['score'] >= 0

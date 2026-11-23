@@ -243,7 +243,8 @@ damage score and the fight's real win condition was only read after Vincent lost
   **Best partners / Core synergy (Vincent, 22 Nov):** builder.pair(a, b) from the builds they RUN: +0.5 per weakness the other resists
   (both ways), -0.75 per shared weakness, redirection + setup partner +1.5, Trick Room + slow partner +1 (fast partner -0.5), sleep +
   setup +0.5, a spread move that hits the ally super effectively -1 (immune +0.5), real-meta teammates (Smogon chaos) +1. Dex sheet:
-  Builder: 'Core synergy' card = the 6 core pairs, ✓ works / ✗ friction, max 3 lines, HOW THEY PLAY first (redirection / sleep / boost
+  Builder: 'Core synergy' card HIDDEN (Vincent, 22 Nov; SHOW_SYNERGY=1 shows it) but synergy is ALWAYS factored into every
+  suggestion: the slot fit adds 0.15 x pair() with the other three, and every chat recommendation must check pair() first. Card = the 6 core pairs, ✓ works / ✗ friction, max 3 lines, HOW THEY PLAY first (redirection / sleep / boost
   reset / Regenerator switch-ins / speed split / physical + special), then type cover. Dex 'Best partners' REMOVED (Vincent, 22 Nov).
   Builder cards: max 3 chips each (Vincent, 22 Nov). Dex 'Why X tier' = the MAIN rationale only (1 meta / community line + 1 in-game
   line when notable; no 'weak in-game' for support kits the damage model can't score).
