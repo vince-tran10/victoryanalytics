@@ -1,12 +1,12 @@
 {
  "_doc": "Read/written by scripts/team/update.py. Edit by hand only to change the six or its moves.",
- "export": "party_and_boxes_2026-11-23_0803.txt",
- "export_label": "23 Nov 08:03",
+ "export": "party_and_boxes_2026-11-23_1558.txt",
+ "export_label": "23 Nov 15:58",
  "active_start": 468,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 324,
- "run": 338,
- "final": 342,
+ "roster": 326,
+ "run": 340,
+ "final": 344,
  "done": [
   "aelita",
   "narcissa1",
@@ -248,13 +248,13 @@
  },
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
-  "rank": 311774,
-  "of": 945941,
-  "gap": 25.65,
+  "rank": 81547,
+  "of": 540740,
+  "gap": 16.59,
   "top": [
    {
-    "score": 1.047,
-    "pct": 125.7,
+    "score": 1.0477,
+    "pct": 116.6,
     "team": [
      "Gallade",
      "Chandelure",
@@ -266,12 +266,12 @@
     "misses": []
    },
    {
-    "score": 1.0437,
-    "pct": 125.3,
+    "score": 1.0441,
+    "pct": 116.2,
     "team": [
      "Gallade",
-     "Chandelure",
      "Golisopod-A",
+     "Chandelure",
      "Hariyama",
      "Florges",
      "Musharna-A"
@@ -279,15 +279,15 @@
     "misses": []
    },
    {
-    "score": 1.0412,
-    "pct": 125.0,
+    "score": 1.044,
+    "pct": 116.2,
     "team": [
      "Gallade",
+     "Azumarill",
      "Chandelure",
-     "Emboar",
+     "Scrafty",
      "Florges",
-     "Vikavolt",
-     "Musharna-A"
+     "Vikavolt"
     ],
     "misses": []
    }
@@ -435,5 +435,33 @@
   ]
  },
  "mode": "planner",
- "core_n": 3
+ "core_n": 3,
+ "items_seen": {
+  "Soft Sand": 3,
+  "Sitrus Berry": 13,
+  "Black Sludge": 3,
+  "Spell Tag": 1,
+  "Focus Sash": 25,
+  "Ariados Crest": 1,
+  "Everstone": 1,
+  "Black Glasses": 5,
+  "Metal Coat": 4,
+  "Furret Crest": 2,
+  "Silk Scarf": 2,
+  "Mystic Water": 6,
+  "Meowsticite": 1,
+  "Lum Berry": 1,
+  "Berry Juice": 1,
+  "Dragon Scale": 1,
+  "Magnet": 2,
+  "Never-Melt Ice": 1,
+  "Fairy Feather": 3,
+  "Black Belt": 2,
+  "Poison Barb": 1,
+  "Hard Stone": 3,
+  "Phione Crest": 1,
+  "Charcoal": 1,
+  "Whiscash Crest": 1,
+  "Zoroark Crest": 2
+ }
 }

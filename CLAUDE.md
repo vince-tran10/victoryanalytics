@@ -108,7 +108,7 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   type, in SINGLES Protect replaced when another move adds 120+ effective power (no charge / recharge / self-KO / conditional moves);
   the CORE keeps Protect while a doubles fight is left. A core member may SIT OUT a fight only for +10 or more (shown on the Flex tab);
   the core stays the chapter's stars. Chips on Core + Flex = chapter_brief.good_for (role: why, field use, answers / beats).
-- **ITEMS (Vincent, 23 Nov): only items he has.** No bag data: owned = items held by anything in his export, as many as are held (he has NO
+- **ITEMS (Vincent, 23 Nov): only items he has.** No bag data: owned = items held by anything in ANY export so far (state items_seen, max count seen at once; 24 Nov: taking an item off puts it in the bag) (he has NO
   Choice items). ideal_builds.py swaps unowned items for an owned booster of another attack, then Focus Sash (Spe 85+) / Sitrus, and
   allocates the six's items by count (his state.items first, then core, then flexes; item_wanted keeps the ideal one). make_report5 best_item
   follows the same set. In SINGLES Protect may be dropped (Protect-always stays for doubles).

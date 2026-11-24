@@ -641,8 +641,8 @@ def _todo_extra(page):
     i = page.find('<section aria-labelledby="s3">')
     if i < 0: return page
     j = page.find('</section>', i); sec = page[i:j]
-    cards = {re.sub(r'<[^>]+>', '', m.group(1)).strip(): len(re.findall(r'<li>', m.group(2) or ''))
-             for m in re.finditer(r'<div class="tcard"><div class="thead">.*?<b>(.*?)</b>.*?(?:<ul class="tfix">(.*?)</ul>|<p class="tdone">)', sec, re.S)}
+    cards = {re.sub(r'<[^>]+>', '', m.group(1)).strip(): len(re.findall(r'<li>', m.group(2) or '')) + (1 if re.search(r'Lv \d+ → \d+', m.group(0)) else 0)
+             for m in re.finditer(r'<div class="tcard"><div class="thead">.*?<b>(.*?)</b>.*?(?:<ul class="tfix">(.*?)</ul>|<p class="tdone">)', sec, re.S)}   # 24 Nov: a level-up counts as a change
     fx = {'spector': 'Spector (day)', 'spector2': 'Spector (night)', 'jenner9': 'Spirit Jenner', 'amanda': 'Amanda', 'erick': 'Erick'}.get(st.get('fight') or '', '')
     li = ''
     for i_, n in enumerate(st.get('team') or []):

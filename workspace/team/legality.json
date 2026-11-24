@@ -348,7 +348,7 @@
   },
   {
    "name": "Arcanine",
-   "where": "#470",
+   "where": "#471",
    "move": "Close Combat"
   },
   {
@@ -367,8 +367,13 @@
    "move": "Confuse Ray"
   },
   {
+   "name": "Sylveon",
+   "where": "#510",
+   "move": "Hyper Voice"
+  },
+  {
    "name": "Torterra",
-   "where": "#511",
+   "where": "#512",
    "move": "Heavy Slam"
   }
  ],

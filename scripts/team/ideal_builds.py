@@ -20,7 +20,13 @@ TT = json.load(open('gamedata/trainertext.json'))
 I = json.load(open('gamedata/itemtext.json')) if os.path.exists('gamedata/itemtext.json') else {}
 import crests, current_box as cb
 HELD = {d['item'] for d in cb.parse(st['export']) if d.get('item') and 'Crest' in d['item']}
-OWNED_ITEMS = {d['item'] for d in cb.parse(st['export']) if d.get('item')} - {'Choice Scarf', 'Choice Band', 'Choice Specs', 'Life Orb', 'Leftovers'}
+# 24 Nov: items seen held in ANY export stay owned (taking one off puts it in the bag); counts = the most seen at once
+import collections as _col0
+_now = _col0.Counter(d['item'] for d in cb.parse(st['export']) if d.get('item'))
+_seen = _col0.Counter(st.get('items_seen') or {})
+for _k, _v in _now.items(): _seen[_k] = max(_seen[_k], _v)
+st['items_seen'] = dict(_seen); json.dump(st, open('team/state.json', 'w'), indent=1, ensure_ascii=False)
+OWNED_ITEMS = set(_seen) - {'Choice Scarf', 'Choice Band', 'Choice Specs', 'Life Orb', 'Leftovers'}
 OWNED_CRESTS = set(st.get('crests_owned') or []) | HELD
 CREST_IDS = {k for k, v in I.items() if (v.get('name') or '') in OWNED_CRESTS}
 # builds written into CLAUDE.md win over the generated ones; the team's own builds come from state.json
@@ -165,7 +171,7 @@ for c in sorted(cands, key=lambda c: c['gate'] != ''):
     out[c['name']] = b
 # 23 Nov (Vincent): the six can only use items he has, as many as he has (counted in the export). Core members pick first.
 import collections as _col
-_CNT = _col.Counter(d['item'] for d in cb.parse(st['export']) if d.get('item'))
+_CNT = _col.Counter(st.get('items_seen') or {})
 _core = [m['name'] for m in json.load(open('team/core4.json'))['core']] if os.path.exists('team/core4.json') else []
 for n in [x for x in (st.get('team') or []) if x in out and (st.get('items') or {}).get(x)]:   # his own item picks take theirs first
     _CNT[out[n]['item']] -= 1

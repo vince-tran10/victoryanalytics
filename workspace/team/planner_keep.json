@@ -163,6 +163,10 @@
      "one-shots it"
     ],
     [
+     "Azumarill",
+     "one-shots it"
+    ],
+    [
      "Arcanine (Hisuian Form)",
      "one-shots it"
     ],
@@ -203,6 +207,10 @@
      "beats it (104%)"
     ],
     [
+     "Azumarill",
+     "beats it (118%)"
+    ],
+    [
      "Arcanine (Hisuian Form)",
      "beats it (120%)"
     ]
@@ -232,7 +240,7 @@
    "cov": [
     [
      "Toxtricity (Aevian Form)",
-     "still hits it for 110%"
+     "still hits it for 106%"
     ],
     [
      "Azumarill",
@@ -240,7 +248,7 @@
     ],
     [
      "Golurk",
-     "still hits it for 82%"
+     "still hits it for 99%"
     ],
     [
      "Arcanine (Hisuian Form)",
@@ -252,7 +260,7 @@
    "core_cov": [
     [
      "Toxtricity (Aevian Form)",
-     "still hits it for 110%"
+     "still hits it for 106%"
     ]
    ]
   },
@@ -268,7 +276,7 @@
    "cov": [
     [
      "Toxtricity (Aevian Form)",
-     "beats it (110%)"
+     "beats it (106%)"
     ],
     [
      "Azumarill",
@@ -280,7 +288,7 @@
    "core_cov": [
     [
      "Toxtricity (Aevian Form)",
-     "beats it (110%)"
+     "beats it (106%)"
     ]
    ]
   },
@@ -300,7 +308,7 @@
     ],
     [
      "Azumarill",
-     "still hits it for 121%"
+     "still hits it for 145%"
     ]
    ],
    "ok": true,
@@ -328,7 +336,7 @@
     ],
     [
      "Azumarill",
-     "beats it (121%)"
+     "beats it (145%)"
     ]
    ],
    "ok": true,
@@ -371,7 +379,7 @@
    "cov": [
     [
      "Toxtricity (Aevian Form)",
-     "still hits it for 228%"
+     "still hits it for 190%"
     ],
     [
      "Azumarill",
@@ -379,7 +387,7 @@
     ],
     [
      "Golurk",
-     "still hits it for 61%"
+     "still hits it for 74%"
     ],
     [
      "Arcanine (Hisuian Form)",
@@ -391,7 +399,7 @@
    "core_cov": [
     [
      "Toxtricity (Aevian Form)",
-     "still hits it for 228%"
+     "still hits it for 190%"
     ]
    ]
   },
@@ -566,7 +574,7 @@
    "cov": [
     [
      "Toxtricity (Aevian Form)",
-     "Boomburst"
+     "Torch Song"
     ]
    ],
    "ok": true,
@@ -574,7 +582,7 @@
    "core_cov": [
     [
      "Toxtricity (Aevian Form)",
-     "Boomburst"
+     "Torch Song"
     ]
    ]
   }
@@ -772,30 +780,30 @@
   "ELECTRIC"
  ],
  "atk": {
-  "PSYCHIC": [
-   "Porygon-Z",
-   "Stoutland"
-  ],
-  "DARK": [
-   "Stoutland"
-  ],
   "NORMAL": [
    "Kommo-o",
    "Noivern",
    "Porygon-Z",
    "Stoutland"
   ],
-  "FIGHTING": [
-   "Appletun",
-   "Kommo-o"
+  "DARK": [
+   "Stoutland"
+  ],
+  "PSYCHIC": [
+   "Porygon-Z",
+   "Stoutland"
+  ],
+  "GRASS": [
+   "Appletun"
   ],
   "DRAGON": [
    "Appletun",
    "Kommo-o",
    "Noivern"
   ],
-  "GRASS": [
-   "Appletun"
+  "FIGHTING": [
+   "Appletun",
+   "Kommo-o"
   ],
   "FLYING": [
    "Noivern"
@@ -1119,7 +1127,7 @@
    "sid": "ARCANINE",
    "form": "1",
    "lead": true,
-   "where": "Active",
+   "where": "Party",
    "moves": [
     "Flare Blitz",
     "Extreme Speed",
@@ -1128,19 +1136,19 @@
    ],
    "ability": "ROCKHEAD",
    "take": [
-    34,
-    61,
+    42,
+    66,
     59,
     79,
     114,
-    66
+    82
    ],
    "deal": [
     54,
     30,
     120,
     65,
-    18,
+    20,
     97
    ],
    "worst": 114,
@@ -1220,7 +1228,7 @@
    "sid": "GOLURK",
    "form": "0",
    "lead": false,
-   "where": "Active",
+   "where": "Party",
    "moves": [
     "Shadow Punch",
     "Hammer Arm",
@@ -1237,12 +1245,12 @@
     72
    ],
    "deal": [
-    69,
-    19,
+    83,
+    23,
     38,
-    82,
+    99,
     36,
-    61
+    74
    ],
    "worst": 99,
    "worst_foe": "Kommo-o",
@@ -1338,12 +1346,12 @@
     70
    ],
    "deal": [
-    28,
-    15,
-    31,
-    33,
-    9,
-    25
+    34,
+    18,
+    37,
+    40,
+    11,
+    30
    ],
    "worst": 106,
    "worst_foe": "Porygon-Z",
@@ -1424,7 +1432,7 @@
    "sid": "TOXTRICITY",
    "form": "2",
    "lead": false,
-   "where": "Active",
+   "where": "Party",
    "moves": [
     "Torch Song",
     "Boomburst",
@@ -1441,10 +1449,10 @@
     58
    ],
    "deal": [
-    99,
+    95,
     74,
     104,
-    110,
+    106,
     32,
     150
    ],
@@ -1626,7 +1634,7 @@
    "sid": "AZUMARILL",
    "form": "0",
    "lead": false,
-   "where": "Active",
+   "where": "Party",
    "moves": [
     "Play Rough",
     "Aqua Jet",
@@ -1644,10 +1652,10 @@
    ],
    "deal": [
     88,
-    49,
-    98,
+    59,
+    118,
     105,
-    121,
+    145,
     78
    ],
    "worst": 130,
@@ -1726,6 +1734,15 @@
    ]
   },
   {
+   "score": 246.6,
+   "in": [
+    "Sylveon"
+   ],
+   "out": [
+    "Muk (Alolan Form)"
+   ]
+  },
+  {
    "score": 245.2,
    "in": [
     "Chandelure"
@@ -1733,41 +1750,10 @@
    "out": [
     "Arcanine (Hisuian Form)"
    ]
-  },
-  {
-   "score": 242.2,
-   "in": [
-    "Gallade",
-    "Lapras (Aevian Form)",
-    "Clodsire"
-   ],
-   "out": [
-    "Golurk",
-    "Arcanine (Hisuian Form)",
-    "Muk (Alolan Form)"
-   ]
   }
  ],
  "swaps": {
   "Musharna (Aevian Form)": [
-   {
-    "name": "Sylveon",
-    "gain": [
-     "survives Porygon-Z"
-    ],
-    "loss": [
-     "fits the team worse (both weak to Poison)"
-    ],
-    "tier": "B",
-    "sid": "SYLVEON",
-    "form": "0",
-    "delta": 7.3,
-    "res": 6,
-    "se": 3,
-    "oneshot": [
-     "Klinklang"
-    ]
-   },
    {
     "name": "Slowking (Galarian Form)",
     "gain": [
@@ -1786,6 +1772,27 @@
     "se": 2,
     "oneshot": [
      "Porygon-Z"
+    ]
+   },
+   {
+    "name": "Sylveon",
+    "gain": [
+     "outspeeds and one-shots Appletun",
+     "survives Porygon-Z",
+     "answers Appletun heals (Recover)",
+     "answers Appletun: Appletunite (Mega Evolves)"
+    ],
+    "loss": [
+     "fits the team worse (both weak to Poison)"
+    ],
+    "tier": "B",
+    "sid": "SYLVEON",
+    "form": "0",
+    "delta": 5.3,
+    "res": 6,
+    "se": 0,
+    "oneshot": [
+     "Klinklang"
     ]
    },
    {
@@ -1809,6 +1816,29 @@
    }
   ],
   "Toxtricity (Aevian Form)": [
+   {
+    "name": "Sylveon",
+    "gain": [
+     "survives Stoutland",
+     "checks Appletun",
+     "outspeeds and one-shots Appletun",
+     "survives Porygon-Z"
+    ],
+    "loss": [
+     "one-shot by Klinklang",
+     "uses the field less",
+     "fits the team worse (both weak to Poison)"
+    ],
+    "tier": "B",
+    "sid": "SYLVEON",
+    "form": "0",
+    "delta": -9.2,
+    "res": 6,
+    "se": 0,
+    "oneshot": [
+     "Klinklang"
+    ]
+   },
    {
     "name": "Chandelure",
     "gain": [
@@ -1854,30 +1884,6 @@
     "oneshot": [
      "Porygon-Z"
     ]
-   },
-   {
-    "name": "Florges",
-    "gain": [
-     "survives Stoutland",
-     "checks Appletun",
-     "survives Porygon-Z",
-     "answers Kommo-o: Soundproof (immune to sound moves)"
-    ],
-    "loss": [
-     "one-shot by Klinklang",
-     "loses Concert Venue boosts: sound moves x1.5",
-     "uses the field less",
-     "fits the team worse (both weak to Poison)"
-    ],
-    "tier": "B",
-    "sid": "FLORGES",
-    "form": "0",
-    "delta": -23.2,
-    "res": 6,
-    "se": 3,
-    "oneshot": [
-     "Klinklang"
-    ]
    }
   ],
   "Azumarill": [
@@ -1906,7 +1912,9 @@
     "name": "Sylveon",
     "gain": [
      "checks Appletun",
-     "survives Porygon-Z"
+     "outspeeds and one-shots Appletun",
+     "survives Porygon-Z",
+     "answers Appletun heals (Recover)"
     ],
     "loss": [
      "one-shot by Klinklang",
@@ -1919,7 +1927,7 @@
     "form": "0",
     "delta": -40.8,
     "res": 6,
-    "se": 3,
+    "se": 0,
     "oneshot": [
      "Klinklang"
     ]
@@ -1929,8 +1937,7 @@
     "gain": [
      "checks Appletun",
      "survives Porygon-Z",
-     "answers Appletun: Appletunite (Mega Evolves)",
-     "answers Noivern heals (Roost)"
+     "answers Appletun: Appletunite (Mega Evolves)"
     ],
     "loss": [
      "one-shot by Klinklang",
@@ -2073,6 +2080,30 @@
   ],
   "Muk (Alolan Form)": [
    {
+    "name": "Sylveon",
+    "gain": [
+     "outspeeds and one-shots Appletun",
+     "survives Porygon-Z",
+     "answers Appletun: Appletunite (Mega Evolves)",
+     "answers Noivern: Synthetic Seed (field seed: boosts it on entry)"
+    ],
+    "loss": [
+     "one-shot by Klinklang",
+     "loses Stoutland: Work Up (+2 here)",
+     "loses Klinklang: Shift Gear (+1)",
+     "fits the team worse (both weak to Poison)"
+    ],
+    "tier": "B",
+    "sid": "SYLVEON",
+    "form": "0",
+    "delta": -1.9,
+    "res": 6,
+    "se": 0,
+    "oneshot": [
+     "Klinklang"
+    ]
+   },
+   {
     "name": "Clodsire",
     "gain": [
      "survives Porygon-Z"
@@ -2109,22 +2140,6 @@
     "oneshot": [
      "Porygon-Z"
     ]
-   },
-   {
-    "name": "Amoonguss",
-    "gain": [],
-    "loss": [
-     "loses Appletun heals (Recover)"
-    ],
-    "tier": "A",
-    "sid": "AMOONGUSS",
-    "form": "0",
-    "delta": -6.3,
-    "res": 4,
-    "se": 1,
-    "oneshot": [
-     "Porygon-Z"
-    ]
    }
   ]
  },
@@ -2144,7 +2159,7 @@
     "Porygon-Z"
    ],
    "in_six": true,
-   "where": "Active"
+   "where": "Party"
   },
   {
    "name": "Toxtricity (Aevian Form)",
@@ -2162,7 +2177,7 @@
     "Porygon-Z"
    ],
    "in_six": true,
-   "where": "Active"
+   "where": "Party"
   },
   {
    "name": "Musharna (Aevian Form)",
@@ -2181,23 +2196,6 @@
    ],
    "in_six": true,
    "where": "Party"
-  },
-  {
-   "name": "Sylveon",
-   "tier": "B",
-   "sid": "SYLVEON",
-   "form": "0",
-   "fit": 17.6,
-   "grade": "Great",
-   "res": 6,
-   "weak": 1,
-   "nmoves": 18,
-   "se": 3,
-   "oneshot": [
-    "Klinklang"
-   ],
-   "in_six": false,
-   "where": "Active"
   },
   {
    "name": "Chandelure",
@@ -2229,7 +2227,7 @@
    "se": 3,
    "oneshot": [],
    "in_six": true,
-   "where": "Active"
+   "where": "Party"
   },
   {
    "name": "Solrock (Solrock Dominant Fusion)",
@@ -2280,6 +2278,23 @@
     "Kommo-o"
    ],
    "in_six": true,
+   "where": "Party"
+  },
+  {
+   "name": "Sylveon",
+   "tier": "B",
+   "sid": "SYLVEON",
+   "form": "0",
+   "fit": 13.8,
+   "grade": "Great",
+   "res": 6,
+   "weak": 1,
+   "nmoves": 18,
+   "se": 0,
+   "oneshot": [
+    "Klinklang"
+   ],
+   "in_six": false,
    "where": "Active"
   },
   {
@@ -2472,7 +2487,7 @@
     "Porygon-Z"
    ],
    "in_six": false,
-   "where": "Party"
+   "where": "Active"
   },
   {
    "name": "Slowking (Galarian Form)",
@@ -2525,7 +2540,7 @@
     "Porygon-Z"
    ],
    "in_six": false,
-   "where": "Party"
+   "where": "Active"
   },
   {
    "name": "Reuniclus",
@@ -2574,7 +2589,7 @@
    "se": 1,
    "oneshot": [],
    "in_six": false,
-   "where": "Party"
+   "where": "Active"
   },
   {
    "name": "Typhlosion",
@@ -2847,7 +2862,7 @@
     "Kommo-o"
    ],
    "in_six": false,
-   "where": "Party"
+   "where": "Active"
   },
   {
    "name": "Clawitzer",

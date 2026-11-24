@@ -1,13 +1,13 @@
 {
- "anchor_low": 0.17,
- "anchor_median": 0.443,
+ "anchor_low": 0.207,
+ "anchor_median": 0.425,
  "team": {
-  "Arcanine (Hisuian Form)": 0.443,
-  "Golurk": 0.358,
-  "Muk (Alolan Form)": 0.17,
-  "Toxtricity (Aevian Form)": 0.446,
+  "Arcanine (Hisuian Form)": 0.425,
+  "Golurk": 0.402,
+  "Muk (Alolan Form)": 0.207,
+  "Toxtricity (Aevian Form)": 0.432,
   "Musharna (Aevian Form)": 0.34,
-  "Azumarill": 0.457
+  "Azumarill": 0.492
  },
  "rows": [
   {
@@ -57,14 +57,14 @@
     "Superpower"
    ],
    "ability": "ROUGHSKIN",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Ampharos (Aevian Form)",
    "crest": "A. Ampharos Crest",
    "held": false,
    "where": "Active",
-   "dump": 469,
+   "dump": 470,
    "with_crest": 0.376,
    "without": 0.28,
    "gain": 0.095,
@@ -161,7 +161,7 @@
    "crest": "Torterra Crest",
    "held": false,
    "where": "Active",
-   "dump": 511,
+   "dump": 512,
    "with_crest": 0.294,
    "without": 0.188,
    "gain": 0.106,
@@ -329,7 +329,7 @@
    "gain": 0.078,
    "attacks": [
     "Night Slash",
-    "Secret Power",
+    "Facade",
     "Ice Fang"
    ],
    "ability": "INTIMIDATE",
@@ -362,7 +362,7 @@
    "without": 0.013,
    "gain": 0.205,
    "attacks": [
-    "Secret Power",
+    "Facade",
     "Shadow Claw",
     "Low Sweep"
    ],
@@ -400,7 +400,7 @@
     "Signal Beam"
    ],
    "ability": "TELEPATHY",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Swalot",
@@ -417,7 +417,7 @@
     "Rock Smash"
    ],
    "ability": "GLUTTONY",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Simisear",
@@ -432,7 +432,7 @@
     "Flare Blitz"
    ],
    "ability": "BLAZE",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Claydol",
@@ -449,7 +449,7 @@
     "Signal Beam"
    ],
    "ability": "LEVITATE",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Cinccino",
@@ -465,7 +465,7 @@
     "Rock Blast"
    ],
    "ability": "SKILLLINK",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Magcargo",
@@ -480,7 +480,7 @@
     "Overheat"
    ],
    "ability": "WEAKARMOR",
-   "tier": "A"
+   "tier": "D"
   },
   {
    "name": "Sawsbuck",
@@ -497,7 +497,7 @@
     "Megahorn"
    ],
    "ability": "SAPSIPPER",
-   "tier": "B"
+   "tier": "C"
   },
   {
    "name": "Phione",
@@ -510,7 +510,7 @@
    "gain": 0.157,
    "attacks": [
     "Surf",
-    "Secret Power",
+    "Facade",
     "Deluge"
    ],
    "ability": "HYDRATION",
@@ -805,7 +805,7 @@
    "without": -0.026,
    "gain": 0.024,
    "attacks": [
-    "Headbutt",
+    "Facade",
     "Fire Blast",
     "Thief"
    ],
@@ -823,7 +823,7 @@
    "gain": 0.087,
    "attacks": [
     "Sucker Punch",
-    "Secret Power"
+    "Facade"
    ],
    "ability": "HUGEPOWER",
    "tier": "C"

@@ -248,23 +248,6 @@
      ]
     },
     {
-     "name": "Musharna (Aevian Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "sid": "MUSHARNA",
-     "form": "1",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Moonlight"
-     ]
-    },
-    {
      "name": "Muk (Alolan Form)",
      "tier": "S",
      "stats": [
@@ -283,6 +266,23 @@
      "rec": false,
      "teach": [
       "Haze"
+     ]
+    },
+    {
+     "name": "Musharna (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "sid": "MUSHARNA",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Moonlight"
      ]
     },
     {
@@ -424,23 +424,6 @@
      "teach": []
     },
     {
-     "name": "Musharna (Aevian Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "sid": "MUSHARNA",
-     "form": "1",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Curse"
-     ]
-    },
-    {
      "name": "Muk (Alolan Form)",
      "tier": "S",
      "stats": [
@@ -455,6 +438,23 @@
       "Disrupt: Knock Off"
      ],
      "sid": "MUK",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Curse"
+     ]
+    },
+    {
+     "name": "Musharna (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "sid": "MUSHARNA",
      "form": "1",
      "pick": false,
      "rec": false,
@@ -1109,13 +1109,13 @@
    "Attacker",
    ""
   ],
-  "Typhlosion": [
-   "Lead",
-   "outspeeds 81%"
-  ],
   "Hariyama": [
    "Attacker",
    ""
+  ],
+  "Typhlosion": [
+   "Lead",
+   "outspeeds 81%"
   ],
   "Florges": [
    "Mid game",
@@ -1465,11 +1465,11 @@
    "Attacker",
    ""
   ],
-  "Mismagius": [
+  "Marowak": [
    "Attacker",
    ""
   ],
-  "Marowak": [
+  "Mismagius": [
    "Attacker",
    ""
   ],
@@ -1485,13 +1485,13 @@
    "Doubles lead",
    "Fake Out"
   ],
-  "Sunflora": [
-   "Attacker",
-   ""
-  ],
   "Toedscruel": [
    "Support",
    "Spore"
+  ],
+  "Sunflora": [
+   "Attacker",
+   ""
   ],
   "Starmie": [
    "Attacker",
@@ -1533,13 +1533,13 @@
    "Attacker",
    ""
   ],
-  "Tropius": [
-   "Support",
-   "Wide Guard"
-  ],
   "Drifblim": [
    "Doubles lead",
    "Tailwind"
+  ],
+  "Tropius": [
+   "Support",
+   "Wide Guard"
   ],
   "Roserade": [
    "Support",
@@ -1549,11 +1549,11 @@
    "Attacker",
    ""
   ],
-  "Chimecho": [
+  "Muk": [
    "Attacker",
    ""
   ],
-  "Muk": [
+  "Chimecho": [
    "Attacker",
    ""
   ],
@@ -3342,6 +3342,10 @@
    ],
    "d": [
     [
+     "A",
+     "Spread attacker (Hyper Voice)"
+    ],
+    [
      "C",
      "Pixilate"
     ],
@@ -3617,20 +3621,6 @@
     ]
    ]
   },
-  "Typhlosion": {
-   "s": [
-    [
-     "A",
-     "Fast cleaner (Speed 100)"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Fast cleaner (Speed 100)"
-    ]
-   ]
-  },
   "Hariyama": {
    "s": [
     [
@@ -3650,6 +3640,20 @@
     [
      "E",
      "Knock Off"
+    ]
+   ]
+  },
+  "Typhlosion": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 100)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 100)"
     ]
    ]
   },
@@ -4976,6 +4980,10 @@
     ]
    ]
   },
+  "Marowak": {
+   "s": [],
+   "d": []
+  },
   "Mismagius": {
    "s": [
     [
@@ -4989,10 +4997,6 @@
      "Fast cleaner (Speed 105)"
     ]
    ]
-  },
-  "Marowak": {
-   "s": [],
-   "d": []
   },
   "Primeape": {
    "s": [],
@@ -5030,6 +5034,20 @@
     ]
    ]
   },
+  "Toedscruel": {
+   "s": [
+    [
+     "B",
+     "Spore"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Spore"
+    ]
+   ]
+  },
   "Sunflora": {
    "s": [
     [
@@ -5045,20 +5063,6 @@
     [
      "E",
      "Sunny Day"
-    ]
-   ]
-  },
-  "Toedscruel": {
-   "s": [
-    [
-     "B",
-     "Spore"
-    ]
-   ],
-   "d": [
-    [
-     "B",
-     "Spore"
     ]
    ]
   },
@@ -5211,24 +5215,6 @@
    "s": [],
    "d": []
   },
-  "Tropius": {
-   "s": [
-    [
-     "E",
-     "Wide Guard"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Sun abuser"
-    ],
-    [
-     "E",
-     "Wide Guard"
-    ]
-   ]
-  },
   "Drifblim": {
    "s": [
     [
@@ -5248,6 +5234,24 @@
     [
      "B",
      "Tailwind"
+    ]
+   ]
+  },
+  "Tropius": {
+   "s": [
+    [
+     "E",
+     "Wide Guard"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Sun abuser"
+    ],
+    [
+     "E",
+     "Wide Guard"
     ]
    ]
   },
@@ -5277,20 +5281,6 @@
    "s": [],
    "d": []
   },
-  "Chimecho": {
-   "s": [
-    [
-     "E",
-     "Perish Song"
-    ]
-   ],
-   "d": [
-    [
-     "E",
-     "Perish Song"
-    ]
-   ]
-  },
   "Muk": {
    "s": [
     [
@@ -5302,6 +5292,20 @@
     [
      "A",
      "Acid Armor sweeper"
+    ]
+   ]
+  },
+  "Chimecho": {
+   "s": [
+    [
+     "E",
+     "Perish Song"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Perish Song"
     ]
    ]
   },

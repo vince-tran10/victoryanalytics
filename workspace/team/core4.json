@@ -41,9 +41,9 @@
    "tier": "S",
    "sid": "TOXTRICITY",
    "form": "2",
-   "blend": 0.74,
+   "blend": 0.732,
    "meta": 0.67,
-   "game": 0.929,
+   "game": 0.905,
    "types": [
     "FIRE",
     "POISON"
@@ -56,7 +56,7 @@
    ],
    "ability": "PUNKROCK",
    "aevian": true,
-   "where": "Active",
+   "where": "Party",
    "chips": [
     [
      "tool",
@@ -310,7 +310,7 @@
      "cov": [
       [
        "Toxtricity-Aevian",
-       "still hits it for 110%"
+       "still hits it for 106%"
       ],
       [
        "Gallade",
@@ -331,7 +331,7 @@
      "cov": [
       [
        "Toxtricity-Aevian",
-       "beats it (110%)"
+       "beats it (106%)"
       ],
       [
        "Gallade",
@@ -402,7 +402,7 @@
      "cov": [
       [
        "Toxtricity-Aevian",
-       "still hits it for 228%"
+       "still hits it for 190%"
       ],
       [
        "Gallade",
@@ -513,7 +513,7 @@
      "cov": [
       [
        "Toxtricity-Aevian",
-       "Torch Song"
+       "Boomburst"
       ]
      ],
      "ok": true
@@ -785,7 +785,7 @@
      "cov": [
       [
        "Toxtricity-Aevian",
-       "still hits it for 190%"
+       "still hits it for 158%"
       ],
       [
        "Gallade",
@@ -806,7 +806,7 @@
      "cov": [
       [
        "Toxtricity-Aevian",
-       "beats it (190%)"
+       "beats it (158%)"
       ],
       [
        "Gallade",
@@ -843,10 +843,6 @@
       [
        "Musharna-Aevian",
        "still hits it for 73%"
-      ],
-      [
-       "Toxtricity-Aevian",
-       "still hits it for 65%"
       ]
      ],
      "ok": true
@@ -877,7 +873,7 @@
      "cov": [
       [
        "Toxtricity-Aevian",
-       "beats it (76%)"
+       "beats it (63%)"
       ],
       [
        "Gallade",
@@ -1134,6 +1130,11 @@
  "runners": [
   {
    "out": "Musharna (Aevian Form)",
+   "in": "Azumarill",
+   "delta": -0.6
+  },
+  {
+   "out": "Musharna (Aevian Form)",
    "in": "Chandelure",
    "delta": -1.15
   },
@@ -1146,11 +1147,6 @@
    "out": "Musharna (Aevian Form)",
    "in": "Florges",
    "delta": -1.35
-  },
-  {
-   "out": "Gallade",
-   "in": "Dragalge",
-   "delta": -1.5
   }
  ],
  "pool": 55,

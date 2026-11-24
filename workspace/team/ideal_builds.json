@@ -19,67 +19,6 @@
   "source": "your team",
   "item_wanted": "Twisted Spoon"
  },
- "Crabominable": {
-  "ability": "IRONFIST",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Never-Melt Ice",
-  "moves": [
-   "Ice Hammer",
-   "Crabhammer",
-   "Close Combat",
-   "Protect"
-  ],
-  "move_ids": [
-   "ICEHAMMER",
-   "CRABHAMMER",
-   "CLOSECOMBAT"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Arcanine (Hisuian Form)": {
-  "ability": "ROCKHEAD",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk / 4 Def",
-  "item": "Silk Scarf",
-  "moves": [
-   "Flare Blitz",
-   "Extreme Speed",
-   "Head Smash",
-   "Protect"
-  ],
-  "move_ids": [
-   "FLAREBLITZ",
-   "EXTREMESPEED",
-   "HEADSMASH"
-  ],
-  "role": "attacker",
-  "source": "your team",
-  "item_wanted": "Charcoal",
-  "fight_why": [
-   "Bulk + power: Speed EVs change no matchup here"
-  ]
- },
- "Chandelure": {
-  "ability": "FLASHFIRE",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Spell Tag",
-  "moves": [
-   "Shadow Ball",
-   "Will-O-Wisp",
-   "Overheat",
-   "Protect"
-  ],
-  "move_ids": [
-   "SHADOWBALL",
-   "WILLOWISP",
-   "OVERHEAT"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Golisopod (Aevian Form)": {
   "ability": "Skill Link",
   "nature": "Adamant",
@@ -98,47 +37,6 @@
   ],
   "role": "attacker",
   "source": "your team"
- },
- "Scrafty": {
-  "ability": "MOXIE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
-  "moves": [
-   "Crunch",
-   "High Jump Kick",
-   "Fake Out",
-   "Protect"
-  ],
-  "move_ids": [
-   "CRUNCH",
-   "HIJUMPKICK",
-   "FAKEOUT"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
- "Toxtricity (Aevian Form)": {
-  "ability": "Punk Rock",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe / 4 HP",
-  "item": "Charcoal",
-  "moves": [
-   "Torch Song",
-   "Boomburst",
-   "Sludge Bomb",
-   "Protect"
-  ],
-  "move_ids": [
-   "SLUDGEBOMB",
-   "TORCHSONG",
-   "BOOMBURST"
-  ],
-  "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Speed: outspeeds Klinklang only with full Speed"
-  ]
  },
  "Azumarill": {
   "ability": "HUGEPOWER",
@@ -161,6 +59,63 @@
   "fight_why": [
    "Bulk + power: Speed EVs change no matchup here"
   ]
+ },
+ "Crabominable": {
+  "ability": "IRONFIST",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Never-Melt Ice",
+  "moves": [
+   "Ice Hammer",
+   "Crabhammer",
+   "Close Combat",
+   "Protect"
+  ],
+  "move_ids": [
+   "ICEHAMMER",
+   "CRABHAMMER",
+   "CLOSECOMBAT"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Chandelure": {
+  "ability": "FLASHFIRE",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Spell Tag",
+  "moves": [
+   "Shadow Ball",
+   "Will-O-Wisp",
+   "Overheat",
+   "Protect"
+  ],
+  "move_ids": [
+   "SHADOWBALL",
+   "WILLOWISP",
+   "OVERHEAT"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
+ "Scrafty": {
+  "ability": "MOXIE",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
+  "moves": [
+   "Crunch",
+   "High Jump Kick",
+   "Fake Out",
+   "Protect"
+  ],
+  "move_ids": [
+   "CRUNCH",
+   "HIJUMPKICK",
+   "FAKEOUT"
+  ],
+  "role": "attacker",
+  "source": "your team"
  },
  "Hariyama": {
   "ability": "GUTS",
@@ -238,6 +193,51 @@
   "role": "attacker",
   "source": "game",
   "item_wanted": "Twisted Spoon"
+ },
+ "Arcanine (Hisuian Form)": {
+  "ability": "ROCKHEAD",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk / 4 Def",
+  "item": "Silk Scarf",
+  "moves": [
+   "Flare Blitz",
+   "Extreme Speed",
+   "Head Smash",
+   "Protect"
+  ],
+  "move_ids": [
+   "FLAREBLITZ",
+   "EXTREMESPEED",
+   "HEADSMASH"
+  ],
+  "role": "attacker",
+  "source": "your team",
+  "item_wanted": "Charcoal",
+  "fight_why": [
+   "Bulk + power: Speed EVs change no matchup here"
+  ]
+ },
+ "Toxtricity (Aevian Form)": {
+  "ability": "Punk Rock",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe / 4 HP",
+  "item": "Charcoal",
+  "moves": [
+   "Torch Song",
+   "Boomburst",
+   "Sludge Bomb",
+   "Protect"
+  ],
+  "move_ids": [
+   "SLUDGEBOMB",
+   "TORCHSONG",
+   "BOOMBURST"
+  ],
+  "role": "attacker",
+  "source": "your team",
+  "fight_why": [
+   "Speed: outspeeds Klinklang only with full Speed"
+  ]
  },
  "Flareon": {
   "ability": "GUTS",
@@ -352,6 +352,29 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
+ },
+ "Golurk": {
+  "ability": "IRONFIST",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk / 4 Def",
+  "item": "Black Belt",
+  "moves": [
+   "Shadow Punch",
+   "Hammer Arm",
+   "Stomping Tantrum",
+   "Protect"
+  ],
+  "move_ids": [
+   "SHADOWPUNCH",
+   "HEAVYSLAM",
+   "STOMPINGTANTRUM"
+  ],
+  "role": "attacker",
+  "source": "your team",
+  "item_wanted": "Spell Tag",
+  "fight_why": [
+   "Bulk + power: Speed EVs change no matchup here"
+  ]
  },
  "Grapploct": {
   "ability": "LIMBER",
@@ -528,29 +551,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Golurk": {
-  "ability": "IRONFIST",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk / 4 Def",
-  "item": "Black Belt",
-  "moves": [
-   "Shadow Punch",
-   "Hammer Arm",
-   "Stomping Tantrum",
-   "Protect"
-  ],
-  "move_ids": [
-   "SHADOWPUNCH",
-   "HEAVYSLAM",
-   "STOMPINGTANTRUM"
-  ],
-  "role": "attacker",
-  "source": "your team",
-  "item_wanted": "Spell Tag",
-  "fight_why": [
-   "Bulk + power: Speed EVs change no matchup here"
-  ]
  },
  "Clawitzer": {
   "ability": "MEGALAUNCHER",
@@ -781,25 +781,6 @@
   "role": "attacker",
   "source": "your team"
  },
- "Veluza (Aevian Form)": {
-  "ability": "RECKLESS",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Mystic Water",
-  "moves": [
-   "Wave Crash",
-   "Flare Blitz",
-   "Head Smash",
-   "Protect"
-  ],
-  "move_ids": [
-   "WAVECRASH",
-   "FLAREBLITZ",
-   "HEADSMASH"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Lucario": {
   "ability": "INNERFOCUS",
   "nature": "Timid",
@@ -895,6 +876,44 @@
   "role": "attacker",
   "source": "game",
   "item_wanted": "Twisted Spoon"
+ },
+ "Veluza (Aevian Form)": {
+  "ability": "RECKLESS",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Mystic Water",
+  "moves": [
+   "Wave Crash",
+   "Flare Blitz",
+   "Head Smash",
+   "Protect"
+  ],
+  "move_ids": [
+   "WAVECRASH",
+   "FLAREBLITZ",
+   "HEADSMASH"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
+ "Sylveon": {
+  "ability": "PIXILATE",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Silk Scarf",
+  "moves": [
+   "Hyper Voice",
+   "Shadow Ball",
+   "Wish",
+   "Protect"
+  ],
+  "move_ids": [
+   "HYPERVOICE",
+   "SHADOWBALL",
+   "WISH"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
  },
  "Crobat": {
   "ability": "INFILTRATOR",
@@ -1758,6 +1777,28 @@
   "role": "attacker",
   "source": "game",
   "item_wanted": "Miracle Seed"
+ },
+ "Muk (Alolan Form)": {
+  "ability": "Poison Touch",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk / 4 Def",
+  "item": "Black Glasses",
+  "moves": [
+   "Knock Off",
+   "Shadow Sneak",
+   "Clear Smog",
+   "Protect"
+  ],
+  "move_ids": [
+   "CRUNCH",
+   "GUNKSHOT",
+   "CURSE"
+  ],
+  "role": "attacker",
+  "source": "your team",
+  "fight_why": [
+   "Bulk + power: Speed EVs change no matchup here"
+  ]
  },
  "Stoutland": {
   "ability": "INTIMIDATE",
@@ -2794,25 +2835,6 @@
   "source": "game+smogon",
   "item_wanted": "Dragon Fang"
  },
- "Sylveon": {
-  "ability": "PIXILATE",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Spell Tag",
-  "moves": [
-   "Shadow Ball",
-   "Wish",
-   "Draining Kiss",
-   "Protect"
-  ],
-  "move_ids": [
-   "SHADOWBALL",
-   "WISH",
-   "DRAININGKISS"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
  "Bruxish": {
   "ability": "STRONGJAW",
   "nature": "Jolly",
@@ -2886,28 +2908,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Muk (Alolan Form)": {
-  "ability": "Poison Touch",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk / 4 Def",
-  "item": "Black Glasses",
-  "moves": [
-   "Knock Off",
-   "Shadow Sneak",
-   "Clear Smog",
-   "Protect"
-  ],
-  "move_ids": [
-   "CRUNCH",
-   "GUNKSHOT",
-   "CURSE"
-  ],
-  "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Bulk + power: Speed EVs change no matchup here"
-  ]
  },
  "Espeon": {
   "ability": "MAGICBOUNCE",
