@@ -1,0 +1,13 @@
+Glalie (Aevian Form) | Active 60 | Grassy Surge  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'] | Focus Sash (already holding) | 
+Leavanny (Aevian Form) | Active 60 | Intimidate  | Adamant {'Atk': 252, 'Spe': 252, 'Def': 4} | ['X-Scissor', 'Dual Chop', 'Swords Dance', 'Protect'] | Focus Sash (already holding) | 
+Chandelure | Active 60 | Flash Fire  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Shadow Ball', 'Will-O-Wisp', 'Overheat', 'Protect'] | Sitrus Berry | 
+Swampert | Active 60 | Torrent  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Helping Hand', 'Rock Slide', 'Deluge', 'Protect'] | Soft Sand (already holding) | 
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Slowking (Galarian Form) | Active 60 | Regenerator  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Sludge Bomb', 'Psychic', 'Thunder Wave', 'Protect'] | Focus Sash (already holding) | 
+jenner 1.434 -> 1.309 leads ['Chandelure'] swaps [('Typhlosion', 'Leavanny (Aevian Form)', 0.13), ('Arcanine', 'Leavanny (Aevian Form)', 0.125), ('Unfezant (Aevian Form Male)', 'Leavanny (Aevian Form)', 0.113)]
+danni 1.694 -> 1.749 leads ['Chandelure', 'Glalie (Aevian Form)'] swaps [('Arcanine', 'Swampert', 0.07), ('Bombirdier', 'Swampert', 0.067), ('Crobat', 'Swampert', 0.063)]
+troye 1.373 -> 1.266 leads ['Chandelure', 'Glalie (Aevian Form)'] swaps [('Golisopod (Aevian Form)', 'Swampert', 0.21), ('Arcanine', 'Swampert', 0.194), ('Clawitzer', 'Swampert', 0.183)]
+zena 1.151 -> 1.255 leads ['Chandelure'] swaps [('Torterra', 'Swampert', 0.182), ('Diggersby', 'Swampert', 0.152), ('Golisopod (Aevian Form)', 'Swampert', 0.149)]
+marcie 1.412 -> 1.663 leads ['Leavanny (Aevian Form)', 'Chandelure'] swaps [('Orbeetle', 'Swampert', 0.084), ('Hitmonchan', 'Swampert', 0.083), ('Abomasnow', 'Swampert', 0.077)]
+jenner9 0.747 -> 0.668 leads ['Glalie (Aevian Form)'] swaps [('Sylveon', 'Leavanny (Aevian Form)', 0.152), ('Florges', 'Leavanny (Aevian Form)', 0.141), ('Vanilluxe', 'Leavanny (Aevian Form)', 0.121)]
+erick 0.861 -> 1.095 leads ['Glalie (Aevian Form)', 'Musharna (Aevian Form)'] swaps [('Pawmot', 'Swampert', 0.095), ('Scrafty', 'Swampert', 0.088), ('Hariyama', 'Swampert', 0.078)]

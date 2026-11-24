@@ -1,12 +1,12 @@
 {
- "anchor_low": -0.16,
- "anchor_median": 0.304,
+ "anchor_low": -0.163,
+ "anchor_median": 0.325,
  "team": {
   "Glalie (Aevian Form)": 0.304,
   "Musharna (Aevian Form)": 0.325,
-  "Roserade (Aevian Form)": -0.16,
+  "Roserade (Aevian Form)": -0.163,
   "Golisopod (Aevian Form)": 0.333,
-  "Muk (Alolan Form)": 0.177,
+  "Sylveon": 0.367,
   "Slowking (Galarian Form)": 0.254
  },
  "rows": [
@@ -16,9 +16,9 @@
    "held": false,
    "where": "Active",
    "dump": 477,
-   "with_crest": 0.596,
-   "without": 0.404,
-   "gain": 0.193,
+   "with_crest": 0.585,
+   "without": 0.363,
+   "gain": 0.222,
    "attacks": [
     "Close Combat",
     "Ice Hammer"
@@ -50,8 +50,8 @@
    "where": "Overflow",
    "dump": 111,
    "with_crest": 0.421,
-   "without": 0.085,
-   "gain": 0.336,
+   "without": 0.083,
+   "gain": 0.338,
    "attacks": [
     "Outrage",
     "Superpower"
@@ -90,7 +90,7 @@
     "Grass Knot"
    ],
    "ability": "COMPETITIVE",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Reuniclus",
@@ -119,7 +119,7 @@
    "gain": 0.361,
    "attacks": [
     "Double-Edge",
-    "Sucker Punch"
+    "Shadow Claw"
    ],
    "ability": "FRISK",
    "tier": "A"
@@ -172,54 +172,20 @@
    "tier": "A"
   },
   {
-   "name": "Torterra",
-   "crest": "Torterra Crest",
-   "held": false,
-   "where": "Active",
-   "dump": 512,
-   "with_crest": 0.275,
-   "without": 0.171,
-   "gain": 0.104,
-   "attacks": [
-    "Wood Hammer",
-    "Superpower",
-    "Earthquake"
-   ],
-   "ability": "SHELLARMOR",
-   "tier": "A"
-  },
-  {
    "name": "Rampardos",
    "crest": "Rampardos Crest",
    "held": false,
    "where": "Active",
    "dump": 501,
-   "with_crest": 0.269,
+   "with_crest": 0.273,
    "without": 0.234,
-   "gain": 0.035,
+   "gain": 0.038,
    "attacks": [
     "Head Smash",
     "Hammer Arm",
-    "Dragon Claw"
+    "Thrash"
    ],
    "ability": "MOLDBREAKER",
-   "tier": "A"
-  },
-  {
-   "name": "Silvally",
-   "crest": "Silvally Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 360,
-   "with_crest": 0.265,
-   "without": 0.202,
-   "gain": 0.062,
-   "attacks": [
-    "Multi-Attack",
-    "Fire Fang",
-    "Crunch"
-   ],
-   "ability": "RKSSYSTEM",
    "tier": "A"
   },
   {
@@ -236,6 +202,39 @@
     "Grass Knot"
    ],
    "ability": "MUMMY",
+   "tier": "A"
+  },
+  {
+   "name": "Torterra",
+   "crest": "Torterra Crest",
+   "held": false,
+   "where": "Active",
+   "dump": 512,
+   "with_crest": 0.258,
+   "without": 0.171,
+   "gain": 0.087,
+   "attacks": [
+    "Wood Hammer",
+    "Superpower",
+    "Earthquake"
+   ],
+   "ability": "SHELLARMOR",
+   "tier": "A"
+  },
+  {
+   "name": "Silvally",
+   "crest": "Silvally Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 360,
+   "with_crest": 0.255,
+   "without": 0.196,
+   "gain": 0.059,
+   "attacks": [
+    "Multi-Attack",
+    "Fire Fang"
+   ],
+   "ability": "RKSSYSTEM",
    "tier": "A"
   },
   {
@@ -271,39 +270,6 @@
    "tier": "A"
   },
   {
-   "name": "Feraligatr",
-   "crest": "Feraligatr Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 134,
-   "with_crest": 0.219,
-   "without": 0.121,
-   "gain": 0.098,
-   "attacks": [
-    "Crunch",
-    "Ice Fang"
-   ],
-   "ability": "SHEERFORCE",
-   "tier": "A"
-  },
-  {
-   "name": "Luxray",
-   "crest": "Luxray Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 221,
-   "with_crest": 0.216,
-   "without": 0.14,
-   "gain": 0.076,
-   "attacks": [
-    "Night Slash",
-    "Secret Power",
-    "Ice Fang"
-   ],
-   "ability": "INTIMIDATE",
-   "tier": "A"
-  },
-  {
    "name": "Meganium",
    "crest": "Meganium Crest",
    "held": false,
@@ -320,19 +286,36 @@
    "tier": "A"
   },
   {
-   "name": "Probopass",
-   "crest": "Probopass Crest",
+   "name": "Feraligatr",
+   "crest": "Feraligatr Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 268,
-   "with_crest": 0.213,
-   "without": 0.126,
-   "gain": 0.087,
+   "dump": 134,
+   "with_crest": 0.21,
+   "without": 0.115,
+   "gain": 0.095,
    "attacks": [
-    "Power Gem",
-    "Body Press"
+    "Crunch",
+    "Ice Fang"
    ],
-   "ability": "SANDFORCE",
+   "ability": "SHEERFORCE",
+   "tier": "A"
+  },
+  {
+   "name": "Luxray",
+   "crest": "Luxray Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 221,
+   "with_crest": 0.207,
+   "without": 0.14,
+   "gain": 0.067,
+   "attacks": [
+    "Night Slash",
+    "Secret Power",
+    "Ice Fang"
+   ],
+   "ability": "INTIMIDATE",
    "tier": "A"
   },
   {
@@ -362,11 +345,27 @@
    "without": 0.11,
    "gain": 0.085,
    "attacks": [
-    "Moonblast",
     "Air Slash",
+    "Moonblast",
     "Shadow Ball"
    ],
    "ability": "TINTEDLENS",
+   "tier": "A"
+  },
+  {
+   "name": "Probopass",
+   "crest": "Probopass Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 268,
+   "with_crest": 0.194,
+   "without": 0.126,
+   "gain": 0.067,
+   "attacks": [
+    "Power Gem",
+    "Body Press"
+   ],
+   "ability": "SANDFORCE",
    "tier": "A"
   },
   {
@@ -431,26 +430,9 @@
    "attacks": [
     "Gunk Shot",
     "Bullet Seed",
-    "Rock Smash"
+    "Power-Up Punch"
    ],
    "ability": "GLUTTONY",
-   "tier": "A"
-  },
-  {
-   "name": "Zoroark (Hisuian Form)",
-   "crest": "Zoroark Crest",
-   "held": true,
-   "where": "Active",
-   "dump": 521,
-   "with_crest": 0.129,
-   "without": -0.067,
-   "gain": 0.196,
-   "attacks": [
-    "Secret Power",
-    "Shadow Claw",
-    "Low Sweep"
-   ],
-   "ability": "HUGEPOWER",
    "tier": "A"
   },
   {
@@ -487,35 +469,37 @@
    "tier": "A"
   },
   {
+   "name": "Zoroark (Hisuian Form)",
+   "crest": "Zoroark Crest",
+   "held": true,
+   "where": "Active",
+   "dump": 521,
+   "with_crest": 0.118,
+   "without": -0.067,
+   "gain": 0.185,
+   "attacks": [
+    "Secret Power",
+    "Shadow Claw",
+    "Low Sweep"
+   ],
+   "ability": "HUGEPOWER",
+   "tier": "A"
+  },
+  {
    "name": "Sawsbuck",
    "crest": "Sawsbuck Crest",
    "held": false,
    "where": "Overflow",
    "dump": 340,
    "with_crest": 0.117,
-   "without": -0.05,
-   "gain": 0.167,
+   "without": -0.065,
+   "gain": 0.182,
    "attacks": [
     "Double-Edge",
     "Jump Kick",
     "Megahorn"
    ],
    "ability": "SAPSIPPER",
-   "tier": "A"
-  },
-  {
-   "name": "Skuntank",
-   "crest": "Skuntank Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 368,
-   "with_crest": 0.103,
-   "without": 0.094,
-   "gain": 0.009,
-   "attacks": [
-    "Sucker Punch"
-   ],
-   "ability": "STENCH",
    "tier": "A"
   },
   {
@@ -542,8 +526,8 @@
    "where": "Overflow",
    "dump": 74,
    "with_crest": 0.098,
-   "without": -0.093,
-   "gain": 0.191,
+   "without": -0.094,
+   "gain": 0.192,
    "attacks": [
     "Tail Slap",
     "Rock Blast"
@@ -565,6 +549,21 @@
     "Sludge Bomb"
    ],
    "ability": "SOLARPOWER",
+   "tier": "A"
+  },
+  {
+   "name": "Skuntank",
+   "crest": "Skuntank Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 368,
+   "with_crest": 0.094,
+   "without": 0.087,
+   "gain": 0.007,
+   "attacks": [
+    "Sucker Punch"
+   ],
+   "ability": "STENCH",
    "tier": "A"
   },
   {
@@ -620,13 +619,13 @@
    "held": false,
    "where": "Overflow",
    "dump": 42,
-   "with_crest": 0.071,
-   "without": -0.022,
-   "gain": 0.092,
+   "with_crest": 0.057,
+   "without": -0.029,
+   "gain": 0.085,
    "attacks": [
     "Crunch",
     "Thunder Fang",
-    "Play Rough"
+    "Fire Fang"
    ],
    "ability": "STRONGJAW",
    "tier": "A"
@@ -653,13 +652,13 @@
    "held": true,
    "where": "Overflow",
    "dump": 18,
-   "with_crest": 0.015,
-   "without": 0.015,
+   "with_crest": 0.012,
+   "without": 0.012,
    "gain": 0.0,
    "attacks": [
     "Megahorn",
-    "Sucker Punch",
-    "Poison Jab"
+    "Poison Jab",
+    "Sucker Punch"
    ],
    "ability": "SNIPER",
    "tier": "A"
@@ -698,14 +697,31 @@
    "tier": "A"
   },
   {
+   "name": "Castform",
+   "crest": "Castform Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 60,
+   "with_crest": -0.011,
+   "without": -0.056,
+   "gain": 0.046,
+   "attacks": [
+    "Headbutt",
+    "Fire Blast",
+    "Blizzard"
+   ],
+   "ability": "FORECAST",
+   "tier": "A"
+  },
+  {
    "name": "Simisage",
    "crest": "Simisage Crest",
    "held": false,
    "where": "Overflow",
    "dump": 287,
-   "with_crest": -0.025,
+   "with_crest": -0.032,
    "without": -0.204,
-   "gain": 0.179,
+   "gain": 0.171,
    "attacks": [
     "Seed Bomb",
     "Crunch",
@@ -720,9 +736,9 @@
    "held": true,
    "where": "Active",
    "dump": 520,
-   "with_crest": -0.026,
-   "without": -0.112,
-   "gain": 0.086,
+   "with_crest": -0.036,
+   "without": -0.121,
+   "gain": 0.085,
    "attacks": [
     "Sucker Punch",
     "Secret Power"
@@ -731,48 +747,14 @@
    "tier": "A"
   },
   {
-   "name": "Simipour",
-   "crest": "Simipour Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 361,
-   "with_crest": -0.032,
-   "without": -0.19,
-   "gain": 0.158,
-   "attacks": [
-    "Aqua Tail",
-    "Low Kick",
-    "Crunch"
-   ],
-   "ability": "TORRENT",
-   "tier": "A"
-  },
-  {
-   "name": "Castform",
-   "crest": "Castform Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 60,
-   "with_crest": -0.033,
-   "without": -0.056,
-   "gain": 0.023,
-   "attacks": [
-    "Headbutt",
-    "Fire Blast",
-    "Thief"
-   ],
-   "ability": "FORECAST",
-   "tier": "A"
-  },
-  {
    "name": "Seviper",
    "crest": "Seviper Crest",
    "held": false,
    "where": "Overflow",
    "dump": 347,
-   "with_crest": -0.035,
-   "without": -0.021,
-   "gain": -0.014,
+   "with_crest": -0.038,
+   "without": -0.025,
+   "gain": -0.013,
    "attacks": [
     "Poison Jab",
     "Fire Fang",
@@ -782,20 +764,20 @@
    "tier": "A"
   },
   {
-   "name": "Zangoose",
-   "crest": "Zangoose Crest",
+   "name": "Simipour",
+   "crest": "Simipour Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 465,
-   "with_crest": -0.036,
-   "without": -0.036,
-   "gain": 0.0,
+   "dump": 361,
+   "with_crest": -0.039,
+   "without": -0.191,
+   "gain": 0.152,
    "attacks": [
-    "Close Combat",
-    "Shadow Claw",
-    "Slash"
+    "Aqua Tail",
+    "Low Kick",
+    "Crunch"
    ],
-   "ability": "IMMUNITY",
+   "ability": "TORRENT",
    "tier": "A"
   },
   {
@@ -812,6 +794,23 @@
     "Signal Beam"
    ],
    "ability": "MINUS",
+   "tier": "A"
+  },
+  {
+   "name": "Zangoose",
+   "crest": "Zangoose Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 465,
+   "with_crest": -0.06,
+   "without": -0.065,
+   "gain": 0.004,
+   "attacks": [
+    "Close Combat",
+    "Shadow Claw",
+    "Slash"
+   ],
+   "ability": "IMMUNITY",
    "tier": "A"
   },
   {
@@ -884,8 +883,8 @@
    "held": false,
    "where": "Overflow",
    "dump": 263,
-   "with_crest": -0.106,
-   "without": -0.164,
+   "with_crest": -0.111,
+   "without": -0.168,
    "gain": 0.058,
    "attacks": [
     "Foul Play",

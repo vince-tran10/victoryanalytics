@@ -369,7 +369,7 @@ if BREAK:   # make sure the best Flash users are in the search
 # field statusBuffs add +1 (Concert Venue: Work Up / Howl = +2)
 FSETUP = {'WORKUP': 1, 'HOWL': 1, 'SWORDSDANCE': 2, 'NASTYPLOT': 2, 'DRAGONDANCE': 1, 'SHIFTGEAR': 1, 'CALMMIND': 1, 'BULKUP': 1, 'QUIVERDANCE': 1,
           'COIL': 1, 'CURSE': 1, 'GROWTH': 1, 'TAILGLOW': 3, 'SHELLSMASH': 2, 'VICTORYDANCE': 1, 'CLANGOROUSSOUL': 1, 'FILLETAWAY': 2, 'TIDYUP': 1,
-          'BELLYDRUM': 6, 'GEOMANCY': 2}
+          'BELLYDRUM': 6, 'GEOMANCY': 2, 'FELLSTINGER': 0}   # Fell Stinger boosts only on a KO: a warning, not a pre-boost
 _SB = set((FT.get('statusBuffs') or []) if not BREAK else [])
 def _fstage(ms): return max([FSETUP[m] + (1 if m in _SB else 0) for m in ms if m in FSETUP] or [0])
 FSTG = [_fstage(ms) for ms in fmoves]
@@ -544,9 +544,54 @@ for _it in range(12):
     if not _imp: break
 res = [(_bv, tuple(best))] + res
 COUNTERS = []
+FOE_MULTI = {'THUNDERRAID'} | MULTI25 | MULTI2
+def _sash_foe(j): return (FOES[j].get('item') == 'Focus Sash') or (FOES[j].get('ability') or '').upper().replace(' ', '') == 'STURDY'
+def _multi_me(i): return bool(build(NAMES[i])[0] & (MULTI25 | MULTI2))
+def _sash_me(i): return ((IB.get(NAMES[i]) or {}).get('item') == 'Focus Sash') or build(NAMES[i])[1] == 'STURDY'
+def _foe_multi(j): return bool(set(fmoves[j]) & FOE_MULTI)
+def _hits(i, j):   # (hits we need, hits we can take), Focus Sash / Sturdy keep a mon at 1 HP from full unless hit by a multi-hit move
+    hk = math.ceil(100 / max(DEAL[i][j], 1)); hd = math.ceil(100 / max(TAKE_B[i][j], 1))
+    if hk == 1 and _sash_foe(j) and not _multi_me(i): hk = 2
+    if hd == 1 and _sash_me(i) and not _foe_multi(j): hd = 2
+    return hk, hd
+def _bestmv(i, j):
+    n = NAMES[i]; ab = build(n)[1]; f = FOES[j]; best_ = (0, None)
+    for m in build(n)[0]:
+        d_ = MV.get(m) or {}; b_ = int(d_.get('basedamage') or 0)
+        if b_ <= 0: continue
+        v = b_ * hits(m, ab) * (1.5 if d_.get('type') in TA[n]['types'] else 1) * meff(m, f['types'], (f.get('ability') or '').upper().replace(' ', '')) * fbm(m, ab)
+        if v > best_[0]: best_ = (v, d_.get('name'))
+    return best_[1]
+def _plan2(i, j):   # 24 Nov (Vincent): two bullets: how this counter beats it (speed / KO / Sash), then its item / ability / format trap
+    f = FOES[j]; ab_ = (f.get('ability') or '').upper().replace(' ', ''); it_ = f.get('item') or ''; hk, hd = _hits(i, j); mv_ = _bestmv(i, j) or 'your best move'
+    boosted = f' after {FSETM[j]}' if FSETM[j] and TAKE_B[i][j] != TAKE[i][j] else ''
+    if FAST[i][j] and hk == 1: b1 = f'Faster: {mv_} one-shots it ({int(DEAL[i][j])}%) before it moves'
+    elif FAST[i][j]: b1 = f'Faster: {mv_} ({int(min(DEAL[i][j], 999))}% a hit), {hk} hits to KO it; it needs {hd} on you'
+    else: b1 = f'Slower: take its hit ({int(TAKE_B[i][j])}%{boosted}), then {mv_} ({int(DEAL[i][j])}%): {hk} hit{"s" if hk > 1 else ""} to KO it'
+    _mm = next((MV[m]['name'] for m in build(NAMES[i])[0] if m in (MULTI25 | MULTI2)), None)
+    if _sash_foe(j): b1 += ('; ' + (f'{_mm} hits several times and breaks its Focus Sash / Sturdy' if _mm else 'Focus Sash / Sturdy: it lives the first hit at 1 HP, hit it again'))
+    mvs = [MV.get(m, {}).get('name', m) for m in fmoves[j]]
+    spr = [MV[m]['name'] for m in fmoves[j] if (MV.get(m) or {}).get('target') in ('AllOpposing', 'AllNonUsers') and int((MV.get(m) or {}).get('basedamage') or 0) > 0]
+    _mt = {(MV.get(m) or {}).get('type') for m in build(NAMES[i])[0] if int((MV.get(m) or {}).get('basedamage') or 0) > 0}
+    _tt = {(MV.get(m) or {}).get('type') for k in best for m in build(NAMES[k])[0] if int((MV.get(m) or {}).get('basedamage') or 0) > 0}
+    _bm = next((m for m in build(NAMES[i])[0] if (MV.get(m) or {}).get('name') == mv_), None)
+    _spec = (MV.get(_bm) or {}).get('category') == 'special'
+    if FSETM[j]: b2 = f'{FSETM[j]} boosts it' + (' when it KOs something' if FSETM[j] == 'Fell Stinger' else '') + ': KO it first or reset it (Clear Smog / Haze)'
+    elif ab_ in ('MOTORDRIVE', 'VOLTABSORB') and 'ELECTRIC' in _tt: b2 = f'{f.get("ability")}: never use Electric moves on it'
+    elif ab_ == 'LIGHTNINGROD' and 'ELECTRIC' in _tt and FMT == 'Doubles': b2 = 'Lightning Rod pulls every Electric move on your side to it'
+    elif ab_ == 'LEVITATE' and 'GROUND' in _mt: b2 = 'Levitate: your Ground moves miss it'
+    elif it_ == 'Assault Vest' and _spec: b2 = 'Assault Vest: your special hit does 2/3 here'
+    elif RESIST_B.get(it_) and (MV.get(_bm) or {}).get('type') == RESIST_B[it_]: b2 = f'{it_} halves your first {RESIST_B[it_].title()} hit on it: expect 2 hits'
+    elif it_.endswith('ite') and it_ != 'Eviolite': b2 = f'Mega Evolves with {it_}: expect its Mega stats from turn 1'
+    elif spr and FMT == 'Doubles': b2 = f'{", ".join(spr)} hits both of yours: Protect the partner that it hits super effectively'
+    elif 'Seed' in it_: b2 = f'{it_}: boosts it when it comes in'
+    elif FMT == 'Doubles': b2 = 'Doubles: focus it with both your Pokémon if your counter cannot KO it alone'
+    else: b2 = f'Its moves: {", ".join(mvs)}'
+    return [b1, b2]
+RESIST_B = engine.RESIST_BERRY
 if COUNTER:   # 24 Nov (Vincent): the six = one dedicated hard counter per foe (one-to-one), in THEIR party order
     def _q(i, j):
-        hk = math.ceil(100 / max(DEAL[i][j], 1)); hd = math.ceil(100 / max(TAKE_B[i][j], 1))
+        hk, hd = _hits(i, j)
         win = hk < hd or (hk == hd and FAST[i][j])
         hard = (DEAL[i][j] >= 90 or (FAST[i][j] and DEAL[i][j] >= 100)) and TAKE_B[i][j] < 70
         q = 10 * hard + 4 * win + min(DEAL[i][j], 150) / 100 - min(TAKE_B[i][j], 150) / 100 - 4 * FLAGN[i] + .3 * AEV[i] + .2 * TIER[i]
@@ -567,11 +612,11 @@ if COUNTER:   # 24 Nov (Vincent): the six = one dedicated hard counter per foe (
     _rec(0, set(), 0.0, [])
     best = [int(i) for i in _besta]
     for j, i in enumerate(best):
-        hk = math.ceil(100 / max(DEAL[i][j], 1)); hd = math.ceil(100 / max(TAKE_B[i][j], 1))
+        hk, hd = _hits(i, j)
         alts_ = [int(a) for a in np.argsort(-QM[:, j]) if a != i][:3]
         COUNTERS.append(dict(foe=FN[j], member=NAMES[i], deal=int(DEAL[i][j]), take=int(TAKE[i][j]), take_b=int(TAKE_B[i][j]), faster=bool(FAST[i][j]),
                              hard=bool((DEAL[i][j] >= 90 or (FAST[i][j] and DEAL[i][j] >= 100)) and TAKE_B[i][j] < 70),
-                             win=bool(hk < hd or (hk == hd and FAST[i][j])), setup=FSETM[j],
+                             win=bool(hk < hd or (hk == hd and FAST[i][j])), setup=FSETM[j], hk=hk, hd=hd, move=_bestmv(i, j), plan=_plan2(i, j),
                              alts=[dict(name=NAMES[a], deal=int(DEAL[a][j]), take_b=int(TAKE_B[a][j]), faster=bool(FAST[a][j]),
                                         hard=bool((DEAL[a][j] >= 90 or (FAST[a][j] and DEAL[a][j] >= 100)) and TAKE_B[a][j] < 70),
                                         used_for=next((FN[k] for k, x in enumerate(best) if x == a), None)) for a in alts_]))
@@ -825,7 +870,18 @@ BRIEF_OUT = [dict(f, cov=[[a, b] for a, b in cv], ok=ok, core_ok=_bc_core.get(f[
 FLEXWHY = {NAMES[i]: [f['text'] for f, cv, ok in bcheck(best) if ok and any(a == NAMES[i] for a, _ in cv) and not _bc_core.get(f['id']) and f['kind'] not in ('fieldnote', 'fieldblock')]
            for i in best if NAMES[i] not in CORE}
 MODEL_GAPS = CB.model_gaps(FK, E)
-out = dict(fight=FK, counters=COUNTERS, model_gaps=MODEL_GAPS, fbuild=FBUILD, sitout=SITOUT_WHY, brief=BRIEF_OUT, flexwhy=FLEXWHY, mind_core=mind_items(_core_ix), mind_six=mind_items(best), field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], types=f['types'], moves=f['moves'], item=f.get('item'), ability=f.get('ability'),
+_bt2 = next((b for b in E.battles if b['key'] == FK), None)
+FOE_DETAIL = []
+for j, f in enumerate(FOES):
+    ef = (_bt2['foes'][j] if _bt2 and j < len(_bt2['foes']) else {})
+    evl = f.get('ev') or []
+    _mg = bool(ef.get('form') and ef.get('form') != '0' and (f.get('item') or '').endswith('ite') and f.get('item') != 'Eviolite')
+    FOE_DETAIL.append(dict(name=f['name'], level=f.get('level'), types=ef.get('types') or f['types'],
+                           ability=((ef.get('ability') or '').replace('PUNKROCK', 'Punk Rock').title() + ' (Mega)') if _mg else f.get('ability'), item=f.get('item'),
+                           nature=f.get('nature'), evs=' / '.join(f'{v} {k}' for k, v in zip(['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'], evl) if v) if evl else 'min(85, Lv x 1.5) each',
+                           stats=ef.get('stats'), spe_field=int(SPE_F[j]) if j < len(SPE_F) else None, moves=f['moves'], sid=f.get('species'),
+                           mega=bool(ef.get('form') and ef.get('form') != '0' and (f.get('item') or '').endswith('ite') and f.get('item') != 'Eviolite')))
+out = dict(fight=FK, foe_detail=FOE_DETAIL, real_field=B9[FK][2] if FK in B9 else '', trainer=B9[FK][1].split(' – ')[0] if FK in B9 else FK, counters=COUNTERS, model_gaps=MODEL_GAPS, fbuild=FBUILD, sitout=SITOUT_WHY, brief=BRIEF_OUT, flexwhy=FLEXWHY, mind_core=mind_items(_core_ix), mind_six=mind_items(best), field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], types=f['types'], moves=f['moves'], item=f.get('item'), ability=f.get('ability'),
            sid=f['species'], form=f.get('form')) for f in FOES], main=MAIN, atk={t: sorted(v) for t, v in ATK.items()},
            wins=[dict(win=w, foes=fs, answered_by=[NAMES[i] for i in best if ANS[i, j]]) for j, (w, fs) in enumerate(WINS)],
            emoves=[dict(foe=FN[fi], move=(MV.get(m) or {}).get('name', m), types=[t for t in mtypes(m) if t], w=round(float(w), 2)) for (fi, m, w) in EM],
@@ -889,5 +945,5 @@ if APPLY and st.get('mode') == 'planner':   # the planner's six IS the team (lea
         st.setdefault('abilities', {})[n] = (st.get('abilities') or {}).get(n) or b.get('ability') or TA[n].get('ability') or ''
     json.dump(st, open(STATE, 'w'), indent=1, ensure_ascii=False)
 print(f"planner {FK} ({FIELD}{' BROKEN by Flash' if BREAK else ''}, {FMT}): pool {len(NAMES)} cmp {out['cmp'] if not APPLY else cmp_score(best):.1f} | six:", [NAMES[i] + (' (lead)' if i in leads else '') for i in order])
-if APPLY: print('  CHOSEN:', 'break the field' if out.get('break_field') else 'keep the field', [m['name'] for m in out['six']], out.get('break_field'))
+if APPLY: print('  CHOSEN:', out.get('plan'), out.get('alt_field') or '', [m['name'] for m in out['six']], out.get('break_field'))
 print('  main types', MAIN, '| checks', out['checks'])

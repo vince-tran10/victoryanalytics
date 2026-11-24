@@ -19,7 +19,9 @@
   "Bug",
   "Poison"
  ],
- "weak3": [],
+ "weak3": [
+  "STEEL"
+ ],
  "nores": [
   "FIRE",
   "STEEL"

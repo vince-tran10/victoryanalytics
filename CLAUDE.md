@@ -118,6 +118,11 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   tips, details) = section 'schk' and the Core section 'sbuild' live on the Community tab. Field plans now include ability field changes:
   Grassy Surge = Grassy Terrain for 5 turns (Battler.rb 2866); Blizzard freezes Murkwater (Icy layer, undone by EQ / fire / Scald moves).
   Utility attacks (Clear Smog, Knock Off, Icy Wind, pivots...) and Grassy Glide on Grassy Terrain are never 'dead'; doubles replace hazards.
+- **BUILDER v2 (Vincent, 24 Nov):** top = trainer name + the REAL field + format (then the field plan); 'Their team' = all 6 in detail
+  (Lv, types, ability (Mega ability for Megas), item, nature, EVs, stats, Speed on the field, moves); then 'Your hard counters' (full build
+  + verdict + deals / takes / faster) with a 2-bullet GAME PLAN each (planner _plan2: speed / KO / Focus Sash-Sturdy, then their item /
+  ability / setup / spread trap, only when it applies to this counter), Why these moves + Other counters folded. Engine now: Focus Sash /
+  Sturdy (a one-shot from full = 2 hits unless multi-hit), resist berries halve the first super-effective hit; Fell Stinger = warning only.
 - **MODEL CHECK BEFORE EVERY PICK (Vincent, 24 Nov, after Erick beat every six: 'think it ALL through'):** the engine must model the
   fight's real mechanics, not just its numbers. Fixed 24 Nov: Thunder Raid (3 hits 20/40/60 = 120, was scored 20), foe Megas (holder of
   its stone = Mega form stats / types / ability, montext MegaEvolutions), THEIR offensive abilities (Punk Rock, Adaptability...), field

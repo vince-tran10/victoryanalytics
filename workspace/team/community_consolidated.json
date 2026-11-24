@@ -78,19 +78,6 @@
   "rating": 0.67
  },
  {
-  "name": "Unfezant-A",
-  "sid": "UNFEZANT",
-  "form": "1",
-  "l1": "S",
-  "l2": "Amazing (A+)",
-  "net": 2,
-  "t0": "B",
-  "m0": 0.45,
-  "t1": "A",
-  "m1": 0.69,
-  "rating": 0.69
- },
- {
   "name": "Drapion-A",
   "sid": "DRAPION",
   "form": "1",
@@ -102,6 +89,19 @@
   "t1": "A",
   "m1": 0.77,
   "rating": 0.77
+ },
+ {
+  "name": "Unfezant-A",
+  "sid": "UNFEZANT",
+  "form": "1",
+  "l1": "S",
+  "l2": "Amazing (A+)",
+  "net": 2,
+  "t0": "B",
+  "m0": 0.45,
+  "t1": "A",
+  "m1": 0.69,
+  "rating": 0.69
  },
  {
   "name": "Roserade-A",

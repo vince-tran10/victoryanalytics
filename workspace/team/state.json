@@ -4,9 +4,9 @@
  "export_label": "23 Nov 15:58",
  "active_start": 468,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 355,
- "run": 369,
- "final": 373,
+ "roster": 362,
+ "run": 376,
+ "final": 380,
  "done": [
   "aelita",
   "narcissa1",
@@ -40,7 +40,7 @@
   "Musharna (Aevian Form)",
   "Roserade (Aevian Form)",
   "Golisopod (Aevian Form)",
-  "Muk (Alolan Form)",
+  "Sylveon",
   "Slowking (Galarian Form)"
  ],
  "moves": {
@@ -135,7 +135,7 @@
    "Protect"
   ],
   "Swampert": [
-   "Hammer Arm",
+   "Helping Hand",
    "Rock Slide",
    "Deluge",
    "Protect"
@@ -235,6 +235,18 @@
    "Vacuum Wave",
    "Taunt",
    "Protect"
+  ],
+  "Sylveon": [
+   "Hyper Voice",
+   "Shadow Ball",
+   "Wish",
+   "Protect"
+  ],
+  "Leavanny (Aevian Form)": [
+   "X-Scissor",
+   "Dual Chop",
+   "Swords Dance",
+   "Protect"
   ]
  },
  "promote": "team/promote_1108.json",
@@ -333,7 +345,9 @@
   "Veluza (Aevian Form)": "RECKLESS",
   "Gallade": "SHARPNESS",
   "Golurk": "IRONFIST",
-  "Roserade (Aevian Form)": "TECHNICIAN"
+  "Roserade (Aevian Form)": "TECHNICIAN",
+  "Sylveon": "PIXILATE",
+  "Leavanny (Aevian Form)": "INTIMIDATE"
  },
  "crests_owned": [
   "Ariados Crest",
@@ -366,7 +380,9 @@
  "core_check": {
   "core": {
    "n": 6,
-   "weak3": [],
+   "weak3": [
+    "STEEL"
+   ],
    "nores": [
     "FIRE",
     "STEEL"
@@ -375,7 +391,9 @@
   },
   "fight": {
    "n": 6,
-   "weak3": [],
+   "weak3": [
+    "STEEL"
+   ],
    "nores": [
     "FIRE",
     "STEEL"
@@ -443,7 +461,7 @@
   "erick": {
    "Swampert": {
     "moves": [
-     "Hammer Arm",
+     "Helping Hand",
      "Rock Slide",
      "Deluge",
      "Protect"

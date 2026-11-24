@@ -51,6 +51,10 @@ TYPE_ITEMS = {'Metal Coat': 'STEEL', 'Black Belt': 'FIGHTING', 'Hard Stone': 'RO
               'Miracle Seed': 'GRASS', 'Sharp Beak': 'FLYING', 'Silver Powder': 'BUG', 'Spell Tag': 'GHOST',
               'Twisted Spoon': 'PSYCHIC', 'Silk Scarf': 'NORMAL', 'Spooky Plate': 'GHOST'}
 SPREAD_TARGETS = ('AllOpposing', 'AllNonUsers')
+RESIST_BERRY = {'Occa Berry': 'FIRE', 'Passho Berry': 'WATER', 'Wacan Berry': 'ELECTRIC', 'Rindo Berry': 'GRASS', 'Yache Berry': 'ICE',
+                'Chople Berry': 'FIGHTING', 'Kebia Berry': 'POISON', 'Shuca Berry': 'GROUND', 'Coba Berry': 'FLYING', 'Payapa Berry': 'PSYCHIC',
+                'Tanga Berry': 'BUG', 'Charti Berry': 'ROCK', 'Kasib Berry': 'GHOST', 'Haban Berry': 'DRAGON', 'Colbur Berry': 'DARK',
+                'Babiri Berry': 'STEEL', 'Roseli Berry': 'FAIRY'}
 FOE_ABIL_IMMUNE = {'LEVITATE': 'GROUND', 'FLASHFIRE': 'FIRE', 'LIGHTNINGROD': 'ELECTRIC', 'LIGHTININGROD': 'ELECTRIC',
                    'VOLTABSORB': 'ELECTRIC', 'MOTORDRIVE': 'ELECTRIC', 'WATERABSORB': 'WATER', 'STORMDRAIN': 'WATER',
                    'DRYSKIN': 'WATER', 'SAPSIPPER': 'GRASS', 'EARTHEATER': 'GROUND', 'WELLBAKEDBODY': 'FIRE'}
@@ -333,6 +337,8 @@ class Engine:
         dab = dfn['ability']
         if gravity and mtype == 'GROUND' and dab == 'LEVITATE':
             dab = ''
+        if eff > 1 and RESIST_BERRY.get(dfn.get('item') or '') == mtype:   # 24 Nov: resist berry halves the first super-effective hit
+            mult *= 0.5
         if FOE_ABIL_IMMUNE.get(dab) == mtype or (mtype == 'GROUND' and dfn.get('item') == 'Air Balloon' and not gravity):
             eff = 0
         if dfn.get('item') == 'Whiscash Crest' and mtype == 'GRASS':

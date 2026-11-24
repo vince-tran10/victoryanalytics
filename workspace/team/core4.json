@@ -7,7 +7,7 @@
    "form": "1",
    "blend": 0.769,
    "meta": 0.72,
-   "game": 0.937,
+   "game": 0.939,
    "types": [
     "DARK",
     "FAIRY"
@@ -73,9 +73,9 @@
    "tier": "B",
    "sid": "FLORGES",
    "form": "0",
-   "blend": 0.422,
+   "blend": 0.423,
    "meta": 0.15,
-   "game": 0.911,
+   "game": 0.913,
    "types": [
     "FAIRY"
    ],
@@ -1090,12 +1090,12 @@
  "runners": [
   {
    "out": "Florges",
-   "in": "Gallade",
-   "delta": -0.2
+   "in": "Arcanine (Hisuian Form)",
+   "delta": -0.45
   },
   {
    "out": "Florges",
-   "in": "Arcanine (Hisuian Form)",
+   "in": "Gallade",
    "delta": -0.45
   },
   {
@@ -1109,7 +1109,7 @@
    "delta": -1.0
   }
  ],
- "pool": 54,
+ "pool": 52,
  "singles": {
   "Fast cleaner": "Toxtricity (Aevian Form)",
   "Bulky pivot": "Musharna (Aevian Form)",

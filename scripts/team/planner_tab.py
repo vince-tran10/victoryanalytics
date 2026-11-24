@@ -20,7 +20,8 @@ def pill(t): return f'<span class="tp ty-{t.lower()}">{t.title()}</span>'
 def fx(m): return '0' if m == 0 else '¼' if m == .25 else '½' if m == .5 else '2×' if m == 2 else '4×' if m == 4 else ''
 def fcls(m): return 'im' if m == 0 else 'rs' if m < 1 else 'w4' if m > 2 else 'wk' if m > 1 else ''
 foes = P['foes']; L = 2 if P['format'] == 'Doubles' else 1
-h = f'<div class="pl-head"><b>{E(TITLE.get(P["fight"], P["fight"]))}</b><span class="pchip">{E(P["field"] or "No field")}</span><span class="pchip">{E(P["format"])}</span></div>'
+h = (f'<div class="pl-head"><b>{E(P.get("trainer") or TITLE.get(P["fight"], P["fight"]))}</b><span class="pchip">{E(P.get("real_field") or P["field"] or "No field")}</span>'
+     f'<span class="pchip">{E(P["format"])}</span></div>')   # 24 Nov (Vincent): the REAL field, not the one we turn it into
 if P.get('break_field'):
     bf = P['break_field']
     h += f'<div class="pbreak">Turn 1: {E(disp(bf["user"]))} uses {E(bf["move"])} to break the field</div>'
@@ -221,6 +222,7 @@ for k, c in enumerate(P.get('counters') or []):
               f'<li><b>EVs</b> {E(fb.get("evs") or ib.get("evs") or "")}</li></ul>'
               '<div class="ctr-mv">' + ''.join(f'<span>{E(x)}</span>' for x in moves_) + '</div>'
               + ''.join(f'<div class="pans">{E(w)}</div>' for w in fb.get('why', []) if 'replaces' in w)
+              + '<div class="psub">Game plan</div><ul class="ctr-plan">' + ''.join(f'<li>{E(b)}</li>' for b in c.get('plan') or []) + '</ul>'
               + '<details class="pwhy" onclick="event.stopPropagation()"><summary>Why these moves</summary><ul>' + ''.join(
                   f'<li class="{"pflag" if w["flag"] else ""}"><b>{E(w["move"])}</b><span>{E(w["why"])}</span></li>' for w in m.get('why') or []) + '</ul></details>'
               + '<details class="pwhy" onclick="event.stopPropagation()"><summary>Other counters</summary><ul>' + ''.join(
@@ -228,7 +230,20 @@ for k, c in enumerate(P.get('counters') or []):
                   + (f' (already countering {E(a["used_for"])})' if a.get('used_for') else '') + '</span></li>' for a in c['alts']) + '</ul></details>'
               + '</div></li>')
 nh = sum(1 for c in P.get('counters') or [] if c['hard'])
-HB += (f'<article class="plc"><h3>Their team → your counters</h3><div class="pmuted">{nh} of {len(P.get("counters") or [])} are hard counters</div>'
+# 24 Nov (Vincent): their six in full detail (level, types, ability, item, nature, EVs, stats, moves) before the counters
+_fd = ''
+for k, f in enumerate(P.get('foe_detail') or []):
+    st_ = f.get('stats') or {}
+    _fd += (f'<li class="fdt"><div class="bct"><span class="pn">{k + 1}</span>{SP.tag(f.get("sid") or "", "0", size="m")}<b>{E(f["name"])}</b>'
+            f'<span class="pchip">Lv {f.get("level")}</span>' + ('<span class="pchip">Mega</span>' if f.get('mega') else '') + '</div>'
+            '<div class="ctr-types">' + ''.join(pill(t) for t in f.get('types') or []) + '</div>'
+            f'<ul class="ctr-b"><li><b>Ability</b> {E(f.get("ability") or "")}</li><li><b>Item</b> {E(f.get("item") or "none")}</li>'
+            f'<li><b>Nature</b> {E((f.get("nature") or "").title())}</li><li><b>EVs</b> {E(f.get("evs") or "")}</li>'
+            '<li><b>Stats</b> ' + E(' / '.join(f'{st_.get(x, "?")} {x}' for x in ('HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'))) + '</li>'
+            + (f'<li><b>Speed here</b> {f["spe_field"]}</li>' if f.get('spe_field') and st_.get('Spe') and f['spe_field'] != st_.get('Spe') else '') + '</ul>'
+            '<div class="ctr-mv">' + ''.join(f'<span>{E(x)}</span>' for x in f.get('moves') or []) + '</div></li>')
+HB += f'<article class="plc"><h3>Their team</h3><ul class="ctrl">{_fd}</ul></article>'
+HB += (f'<article class="plc"><h3>Your hard counters</h3><div class="pmuted">{nh} of {len(P.get("counters") or [])} are hard counters</div>'
        f'<ul class="ctrl">{rows_}</ul></article>')
 css += '''<style id="ctr-css">.ctrl { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px }
 .ctr { display: grid; gap: 6px; padding: 8px; border-radius: 12px; background: var(--panel-2) } .ctr-lead { box-shadow: inset 0 0 0 2px var(--accent) }
@@ -236,6 +251,7 @@ css += '''<style id="ctr-css">.ctrl { list-style: none; margin: 0; padding: 0; d
 .ctr-me { display: grid; gap: 4px; background: var(--panel); border-radius: 10px; padding: 8px } .ctr-types { display: flex; gap: 4px }
 .ctr-v { font: 800 12px var(--body); text-transform: uppercase } .ctr-v.ok { color: #1f8a4c } .ctr-v.mid { color: #b45309 } .ctr-v.bad { color: #b3261e }
 .ctr-b { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; font-size: 12.5px } .ctr-b b { color: var(--muted); font-weight: 600; margin-right: 4px }
+.ctr-plan { margin: 0; padding-left: 18px; display: grid; gap: 3px; font-size: 13px } .fdt { display: grid; gap: 4px; padding: 8px; border-radius: 12px; background: var(--panel-2) }
 .ctr-mv { display: grid; grid-template-columns: 1fr 1fr; gap: 4px } .ctr-mv span { font-size: 12.5px; padding: 4px 6px; border-radius: 8px; background: var(--panel-2) }
 </style>'''
 sec = f'<section aria-labelledby="splan">\n  <h2 id="splan">Builder</h2>\n{css}<div class="pgrid">{HB}</div>\n</section>\n'

@@ -40,63 +40,6 @@
    "Speed: outspeeds Magneton only with full Speed"
   ]
  },
- "Crabominable": {
-  "ability": "IRONFIST",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Never-Melt Ice",
-  "moves": [
-   "Ice Hammer",
-   "Crabhammer",
-   "Close Combat",
-   "Protect"
-  ],
-  "move_ids": [
-   "ICEHAMMER",
-   "CRABHAMMER",
-   "CLOSECOMBAT"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Scrafty": {
-  "ability": "MOXIE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
-  "moves": [
-   "Crunch",
-   "High Jump Kick",
-   "Fake Out",
-   "Protect"
-  ],
-  "move_ids": [
-   "CRUNCH",
-   "HIJUMPKICK",
-   "FAKEOUT"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
- "Azumarill": {
-  "ability": "HUGEPOWER",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Fairy Feather",
-  "moves": [
-   "Play Rough",
-   "Aqua Jet",
-   "Belly Drum",
-   "Superpower"
-  ],
-  "move_ids": [
-   "PLAYROUGH",
-   "AQUAJET",
-   "BELLYDRUM"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Chandelure": {
   "ability": "FLASHFIRE",
   "nature": "Modest",
@@ -116,24 +59,24 @@
   "role": "attacker",
   "source": "your team"
  },
- "Hariyama": {
-  "ability": "GUTS",
+ "Crabominable": {
+  "ability": "IRONFIST",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
+  "item": "Never-Melt Ice",
   "moves": [
-   "Knock Off",
+   "Ice Hammer",
+   "Crabhammer",
    "Close Combat",
-   "Heavy Slam",
    "Protect"
   ],
   "move_ids": [
-   "KNOCKOFF",
-   "CLOSECOMBAT",
-   "HEAVYSLAM"
+   "ICEHAMMER",
+   "CRABHAMMER",
+   "CLOSECOMBAT"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game"
  },
  "Arcanine": {
   "ability": "INTIMIDATE",
@@ -154,24 +97,43 @@
   "role": "attacker",
   "source": "game"
  },
- "Emboar": {
-  "ability": "RECKLESS",
+ "Azumarill": {
+  "ability": "HUGEPOWER",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Fairy Feather",
+  "moves": [
+   "Play Rough",
+   "Aqua Jet",
+   "Belly Drum",
+   "Superpower"
+  ],
+  "move_ids": [
+   "PLAYROUGH",
+   "AQUAJET",
+   "BELLYDRUM"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
+ "Scrafty": {
+  "ability": "MOXIE",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
   "item": "Black Glasses",
   "moves": [
-   "Sucker Punch",
-   "Superpower",
-   "Take Down",
+   "Crunch",
+   "High Jump Kick",
+   "Fake Out",
    "Protect"
   ],
   "move_ids": [
-   "SUCKERPUNCH",
-   "SUPERPOWER",
-   "TAKEDOWN"
+   "CRUNCH",
+   "HIJUMPKICK",
+   "FAKEOUT"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "your team"
  },
  "Solrock (Solrock Dominant Fusion)": {
   "ability": "SOLARIDOL",
@@ -211,43 +173,24 @@
   "role": "attacker",
   "source": "your team"
  },
- "Hitmonchan": {
-  "ability": "IRONFIST",
+ "Hariyama": {
+  "ability": "GUTS",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Never-Melt Ice",
+  "item": "Black Glasses",
   "moves": [
-   "Ice Punch",
-   "Bullet Punch",
-   "High Jump Kick",
+   "Knock Off",
+   "Close Combat",
+   "Heavy Slam",
    "Protect"
   ],
   "move_ids": [
-   "ICEPUNCH",
-   "BULLETPUNCH",
-   "HIJUMPKICK"
+   "KNOCKOFF",
+   "CLOSECOMBAT",
+   "HEAVYSLAM"
   ],
   "role": "attacker",
-  "source": "game"
- },
- "Copperajah": {
-  "ability": "Sheer Force",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Metal Coat",
-  "moves": [
-   "Iron Head",
-   "Play Rough",
-   "Double-Edge",
-   "Protect"
-  ],
-  "move_ids": [
-   "IRONHEAD",
-   "ROLLOUT",
-   "PLAYROUGH"
-  ],
-  "role": "attacker",
-  "source": "your team"
+  "source": "game+smogon"
  },
  "Palossand (Fiery Aevian Form)": {
   "ability": "FLAMEBODY",
@@ -309,21 +252,97 @@
    "Bulk + power: Speed EVs change no matchup here"
   ]
  },
- "Pangoro": {
-  "ability": "IRONFIST",
+ "Braviary": {
+  "ability": "SHEERFORCE",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Silk Scarf",
+  "moves": [
+   "Crush Claw",
+   "Shadow Claw",
+   "Brave Bird",
+   "Protect"
+  ],
+  "move_ids": [
+   "CRUSHCLAW",
+   "SHADOWCLAW",
+   "BRAVEBIRD"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
+ },
+ "Copperajah": {
+  "ability": "Sheer Force",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
   "item": "Metal Coat",
   "moves": [
-   "Bullet Punch",
-   "Crunch",
-   "Storm Throw",
+   "Iron Head",
+   "Play Rough",
+   "Double-Edge",
    "Protect"
   ],
   "move_ids": [
+   "IRONHEAD",
+   "ROLLOUT",
+   "PLAYROUGH"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
+ "Emboar": {
+  "ability": "RECKLESS",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
+  "moves": [
+   "Sucker Punch",
+   "Superpower",
+   "Take Down",
+   "Protect"
+  ],
+  "move_ids": [
+   "SUCKERPUNCH",
+   "SUPERPOWER",
+   "TAKEDOWN"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Toxtricity (Aevian Form)": {
+  "ability": "Punk Rock",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe",
+  "item": "Charcoal",
+  "moves": [
+   "Torch Song",
+   "Boomburst",
+   "Sludge Bomb",
+   "Protect"
+  ],
+  "move_ids": [
+   "SLUDGEBOMB",
+   "TORCHSONG",
+   "BOOMBURST"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
+ "Hitmonchan": {
+  "ability": "IRONFIST",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Never-Melt Ice",
+  "moves": [
+   "Ice Punch",
+   "Bullet Punch",
+   "High Jump Kick",
+   "Protect"
+  ],
+  "move_ids": [
+   "ICEPUNCH",
    "BULLETPUNCH",
-   "CRUNCH",
-   "STORMTHROW"
+   "HIJUMPKICK"
   ],
   "role": "attacker",
   "source": "game"
@@ -347,82 +366,6 @@
   "role": "attacker",
   "source": "your team"
  },
- "Braviary": {
-  "ability": "SHEERFORCE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Silk Scarf",
-  "moves": [
-   "Crush Claw",
-   "Shadow Claw",
-   "Brave Bird",
-   "Protect"
-  ],
-  "move_ids": [
-   "CRUSHCLAW",
-   "SHADOWCLAW",
-   "BRAVEBIRD"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
- "Toxtricity (Aevian Form)": {
-  "ability": "Punk Rock",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
-  "item": "Charcoal",
-  "moves": [
-   "Torch Song",
-   "Boomburst",
-   "Sludge Bomb",
-   "Protect"
-  ],
-  "move_ids": [
-   "SLUDGEBOMB",
-   "TORCHSONG",
-   "BOOMBURST"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
- "Grapploct": {
-  "ability": "LIMBER",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
-  "moves": [
-   "Octolock",
-   "Sucker Punch",
-   "Superpower",
-   "Protect"
-  ],
-  "move_ids": [
-   "OCTOLOCK",
-   "SUCKERPUNCH",
-   "SUPERPOWER"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Passimian": {
-  "ability": "RECEIVER",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Belt",
-  "moves": [
-   "Close Combat",
-   "Bulk Up",
-   "Beat Up",
-   "Protect"
-  ],
-  "move_ids": [
-   "CLOSECOMBAT",
-   "BULKUP",
-   "BEATUP"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Typhlosion": {
   "ability": "BLAZE",
   "nature": "Timid",
@@ -438,6 +381,25 @@
    "ERUPTION",
    "EXTRASENSORY",
    "SMOKESCREEN"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Pangoro": {
+  "ability": "IRONFIST",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Metal Coat",
+  "moves": [
+   "Bullet Punch",
+   "Crunch",
+   "Storm Throw",
+   "Protect"
+  ],
+  "move_ids": [
+   "BULLETPUNCH",
+   "CRUNCH",
+   "STORMTHROW"
   ],
   "role": "attacker",
   "source": "game"
@@ -521,21 +483,40 @@
   "role": "attacker",
   "source": "your team"
  },
- "Ursaring": {
-  "ability": "QUICKFEET",
+ "Passimian": {
+  "ability": "RECEIVER",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Silk Scarf",
+  "item": "Black Belt",
   "moves": [
-   "Facade",
    "Close Combat",
-   "Play Rough",
+   "Bulk Up",
+   "Beat Up",
    "Protect"
   ],
   "move_ids": [
-   "FACADE",
    "CLOSECOMBAT",
-   "PLAYROUGH"
+   "BULKUP",
+   "BEATUP"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Grapploct": {
+  "ability": "LIMBER",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
+  "moves": [
+   "Octolock",
+   "Sucker Punch",
+   "Superpower",
+   "Protect"
+  ],
+  "move_ids": [
+   "OCTOLOCK",
+   "SUCKERPUNCH",
+   "SUPERPOWER"
   ],
   "role": "attacker",
   "source": "game"
@@ -558,25 +539,6 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
- },
- "Beartic": {
-  "ability": "SLUSHRUSH",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Never-Melt Ice",
-  "moves": [
-   "Icicle Crash",
-   "Aqua Jet",
-   "Superpower",
-   "Protect"
-  ],
-  "move_ids": [
-   "ICICLECRASH",
-   "AQUAJET",
-   "SUPERPOWER"
-  ],
-  "role": "attacker",
-  "source": "game"
  },
  "Wyrdeer": {
   "ability": "INTIMIDATE",
@@ -654,25 +616,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Mabosstiff": {
-  "ability": "INTIMIDATE",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Black Glasses",
-  "moves": [
-   "Crunch",
-   "Hone Claws",
-   "Play Rough",
-   "Protect"
-  ],
-  "move_ids": [
-   "CRUNCH",
-   "HONECLAWS",
-   "PLAYROUGH"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Decidueye": {
   "ability": "OVERGROW",
   "nature": "Adamant",
@@ -711,44 +654,6 @@
   "role": "attacker",
   "source": "your team"
  },
- "Clawitzer": {
-  "ability": "MEGALAUNCHER",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Black Belt",
-  "moves": [
-   "Aura Sphere",
-   "Dark Pulse",
-   "Water Pulse",
-   "Protect"
-  ],
-  "move_ids": [
-   "AURASPHERE",
-   "DARKPULSE",
-   "WATERPULSE"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Pawmot": {
-  "ability": "IRONFIST",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Black Belt",
-  "moves": [
-   "Close Combat",
-   "Revival Blessing",
-   "Fake Out",
-   "Protect"
-  ],
-  "move_ids": [
-   "CLOSECOMBAT",
-   "REVIVALBLESSING",
-   "FAKEOUT"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
  "Dragalge": {
   "ability": "ADAPTABILITY",
   "nature": "Modest",
@@ -768,6 +673,25 @@
   "role": "attacker",
   "source": "your team"
  },
+ "Beartic": {
+  "ability": "SLUSHRUSH",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Never-Melt Ice",
+  "moves": [
+   "Icicle Crash",
+   "Aqua Jet",
+   "Superpower",
+   "Protect"
+  ],
+  "move_ids": [
+   "ICICLECRASH",
+   "AQUAJET",
+   "SUPERPOWER"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Heatmor": {
   "ability": "GLUTTONY",
   "nature": "Modest",
@@ -784,6 +708,44 @@
   ],
   "role": "attacker",
   "source": "engine"
+ },
+ "Ursaring": {
+  "ability": "QUICKFEET",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Silk Scarf",
+  "moves": [
+   "Facade",
+   "Close Combat",
+   "Play Rough",
+   "Protect"
+  ],
+  "move_ids": [
+   "FACADE",
+   "CLOSECOMBAT",
+   "PLAYROUGH"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Mabosstiff": {
+  "ability": "INTIMIDATE",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Black Glasses",
+  "moves": [
+   "Crunch",
+   "Hone Claws",
+   "Play Rough",
+   "Protect"
+  ],
+  "move_ids": [
+   "CRUNCH",
+   "HONECLAWS",
+   "PLAYROUGH"
+  ],
+  "role": "attacker",
+  "source": "game"
  },
  "Slowking (Galarian Form)": {
   "ability": "Regenerator",
@@ -807,63 +769,6 @@
    "Bulk + power: Speed EVs change no matchup here"
   ]
  },
- "Lucario": {
-  "ability": "INNERFOCUS",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
-  "item": "Black Belt",
-  "moves": [
-   "Aura Sphere",
-   "Calm Mind",
-   "Dragon Pulse",
-   "Protect"
-  ],
-  "move_ids": [
-   "AURASPHERE",
-   "CALMMIND",
-   "DRAGONPULSE"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
- "Primeape": {
-  "ability": "VITALSPIRIT",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Black Belt",
-  "moves": [
-   "Close Combat",
-   "Punishment",
-   "Outrage",
-   "Protect"
-  ],
-  "move_ids": [
-   "CLOSECOMBAT",
-   "PUNISHMENT",
-   "OUTRAGE"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Dudunsparce": {
-  "ability": "RATTLED",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Silk Scarf",
-  "moves": [
-   "Roost",
-   "Hyper Drill",
-   "Thief",
-   "Protect"
-  ],
-  "move_ids": [
-   "ROOST",
-   "HYPERDRILL",
-   "THIEF"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
  "Camerupt": {
   "ability": "SOLIDROCK",
   "nature": "Modest",
@@ -885,9 +790,9 @@
  },
  "Sylveon": {
   "ability": "PIXILATE",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Silk Scarf",
+  "nature": "Calm",
+  "evs": "252 HP / 252 SpD / 4 SpA",
+  "item": "Spell Tag",
   "moves": [
    "Hyper Voice",
    "Shadow Ball",
@@ -900,23 +805,46 @@
    "WISH"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "your team",
+  "fight_why": [
+   "Wall: their attacks are mostly special",
+   "Spell Tag: boosts Shadow Ball, the best hit on 4 of their 6"
+  ]
  },
- "Malamar": {
-  "ability": "CONTRARY",
+ "Dudunsparce": {
+  "ability": "RATTLED",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Twisted Spoon",
+  "item": "Silk Scarf",
   "moves": [
-   "Psycho Cut",
-   "Superpower",
-   "Night Slash",
+   "Roost",
+   "Hyper Drill",
+   "Thief",
    "Protect"
   ],
   "move_ids": [
-   "PSYCHOCUT",
-   "SUPERPOWER",
-   "NIGHTSLASH"
+   "ROOST",
+   "HYPERDRILL",
+   "THIEF"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
+ },
+ "Crobat": {
+  "ability": "INFILTRATOR",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Poison Barb",
+  "moves": [
+   "Tailwind",
+   "Cross Poison",
+   "Brave Bird",
+   "Protect"
+  ],
+  "move_ids": [
+   "TAILWIND",
+   "CROSSPOISON",
+   "BRAVEBIRD"
   ],
   "role": "attacker",
   "source": "game"
@@ -940,59 +868,21 @@
   "role": "attacker",
   "source": "game"
  },
- "Crobat": {
-  "ability": "INFILTRATOR",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Poison Barb",
-  "moves": [
-   "Tailwind",
-   "Cross Poison",
-   "Brave Bird",
-   "Protect"
-  ],
-  "move_ids": [
-   "TAILWIND",
-   "CROSSPOISON",
-   "BRAVEBIRD"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Hitmonlee": {
-  "ability": "LIMBER",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
+ "Clawitzer": {
+  "ability": "MEGALAUNCHER",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
   "item": "Black Belt",
   "moves": [
-   "High Jump Kick",
-   "Fake Out",
-   "Blaze Kick",
+   "Aura Sphere",
+   "Dark Pulse",
+   "Water Pulse",
    "Protect"
   ],
   "move_ids": [
-   "HIJUMPKICK",
-   "FAKEOUT",
-   "BLAZEKICK"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Silvally": {
-  "ability": "RKSSYSTEM",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Silvally Crest",
-  "moves": [
-   "Multi-Attack",
-   "Thunder Wave",
-   "Crunch",
-   "Protect"
-  ],
-  "move_ids": [
-   "MULTIATTACK",
-   "THUNDERWAVE",
-   "CRUNCH"
+   "AURASPHERE",
+   "DARKPULSE",
+   "WATERPULSE"
   ],
   "role": "attacker",
   "source": "game"
@@ -1035,6 +925,44 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Silvally": {
+  "ability": "RKSSYSTEM",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Silvally Crest",
+  "moves": [
+   "Multi-Attack",
+   "Thunder Wave",
+   "Crunch",
+   "Protect"
+  ],
+  "move_ids": [
+   "MULTIATTACK",
+   "THUNDERWAVE",
+   "CRUNCH"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Pawmot": {
+  "ability": "IRONFIST",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Black Belt",
+  "moves": [
+   "Close Combat",
+   "Revival Blessing",
+   "Fake Out",
+   "Protect"
+  ],
+  "move_ids": [
+   "CLOSECOMBAT",
+   "REVIVALBLESSING",
+   "FAKEOUT"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
+ },
  "Oinkologne": {
   "ability": "THICKFAT",
   "nature": "Adamant",
@@ -1071,25 +999,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Centiskorch": {
-  "ability": "FLASHFIRE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Charcoal",
-  "moves": [
-   "Fire Lash",
-   "Lunge",
-   "Crunch",
-   "Protect"
-  ],
-  "move_ids": [
-   "FIRELASH",
-   "LUNGE",
-   "CRUNCH"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Lapras (Aevian Form)": {
   "ability": "NOGUARD",
   "nature": "Adamant",
@@ -1108,6 +1017,25 @@
   ],
   "role": "attacker",
   "source": "your team"
+ },
+ "Centiskorch": {
+  "ability": "FLASHFIRE",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Charcoal",
+  "moves": [
+   "Fire Lash",
+   "Lunge",
+   "Crunch",
+   "Protect"
+  ],
+  "move_ids": [
+   "FIRELASH",
+   "LUNGE",
+   "CRUNCH"
+  ],
+  "role": "attacker",
+  "source": "game"
  },
  "Vanilluxe": {
   "ability": "SNOWWARNING",
@@ -1185,25 +1113,6 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Gastrodon (West Aevian Form)": {
-  "ability": "STORMDRAIN",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Fairy Feather",
-  "moves": [
-   "Strange Steam",
-   "Sludge Bomb",
-   "Earth Power",
-   "Protect"
-  ],
-  "move_ids": [
-   "STRANGESTEAM",
-   "SLUDGEBOMB",
-   "EARTHPOWER"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Pyroar": {
   "ability": "UNNERVE",
   "nature": "Timid",
@@ -1242,6 +1151,82 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Primeape": {
+  "ability": "VITALSPIRIT",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Black Belt",
+  "moves": [
+   "Close Combat",
+   "Punishment",
+   "Outrage",
+   "Protect"
+  ],
+  "move_ids": [
+   "CLOSECOMBAT",
+   "PUNISHMENT",
+   "OUTRAGE"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Malamar": {
+  "ability": "CONTRARY",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Twisted Spoon",
+  "moves": [
+   "Psycho Cut",
+   "Superpower",
+   "Night Slash",
+   "Protect"
+  ],
+  "move_ids": [
+   "PSYCHOCUT",
+   "SUPERPOWER",
+   "NIGHTSLASH"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Lucario": {
+  "ability": "INNERFOCUS",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe",
+  "item": "Black Belt",
+  "moves": [
+   "Aura Sphere",
+   "Calm Mind",
+   "Dragon Pulse",
+   "Protect"
+  ],
+  "move_ids": [
+   "AURASPHERE",
+   "CALMMIND",
+   "DRAGONPULSE"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
+ },
+ "Gastrodon (West Aevian Form)": {
+  "ability": "STORMDRAIN",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Fairy Feather",
+  "moves": [
+   "Strange Steam",
+   "Sludge Bomb",
+   "Earth Power",
+   "Protect"
+  ],
+  "move_ids": [
+   "STRANGESTEAM",
+   "SLUDGEBOMB",
+   "EARTHPOWER"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Whiscash": {
   "ability": "OBLIVIOUS",
   "nature": "Adamant",
@@ -1257,6 +1242,63 @@
    "EARTHQUAKE",
    "ZENHEADBUTT",
    "BOUNCE"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Hitmonlee": {
+  "ability": "LIMBER",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Black Belt",
+  "moves": [
+   "High Jump Kick",
+   "Fake Out",
+   "Blaze Kick",
+   "Protect"
+  ],
+  "move_ids": [
+   "HIJUMPKICK",
+   "FAKEOUT",
+   "BLAZEKICK"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Palossand": {
+  "ability": "WATERCOMPACTION",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Spell Tag",
+  "moves": [
+   "Shadow Ball",
+   "Earth Power",
+   "Giga Drain",
+   "Protect"
+  ],
+  "move_ids": [
+   "SHADOWBALL",
+   "EARTHPOWER",
+   "GIGADRAIN"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
+ "Simisear": {
+  "ability": "BLAZE",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Simisear Crest",
+  "moves": [
+   "Bite",
+   "Fury Swipes",
+   "Flare Blitz",
+   "Protect"
+  ],
+  "move_ids": [
+   "BITE",
+   "FURYSWIPES",
+   "FLAREBLITZ"
   ],
   "role": "attacker",
   "source": "game"
@@ -1279,63 +1321,6 @@
   ],
   "role": "attacker",
   "source": "your rules"
- },
- "Palossand": {
-  "ability": "WATERCOMPACTION",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Spell Tag",
-  "moves": [
-   "Shadow Ball",
-   "Earth Power",
-   "Giga Drain",
-   "Protect"
-  ],
-  "move_ids": [
-   "SHADOWBALL",
-   "EARTHPOWER",
-   "GIGADRAIN"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
- "Rhydon": {
-  "ability": "LIGHTNINGROD",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Soft Sand",
-  "moves": [
-   "Drill Run",
-   "Hammer Arm",
-   "Rock Blast",
-   "Protect"
-  ],
-  "move_ids": [
-   "DRILLRUN",
-   "HAMMERARM",
-   "ROCKBLAST"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Simisear": {
-  "ability": "BLAZE",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Simisear Crest",
-  "moves": [
-   "Bite",
-   "Fury Swipes",
-   "Flare Blitz",
-   "Protect"
-  ],
-  "move_ids": [
-   "BITE",
-   "FURYSWIPES",
-   "FLAREBLITZ"
-  ],
-  "role": "attacker",
-  "source": "game"
  },
  "Tsareena": {
   "ability": "QUEENLYMAJESTY",
@@ -1394,25 +1379,6 @@
   "role": "attacker",
   "source": "smogon"
  },
- "Perrserker": {
-  "ability": "TOUGHCLAWS",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Metal Coat",
-  "moves": [
-   "Iron Head",
-   "Fake Out",
-   "Night Slash",
-   "Protect"
-  ],
-  "move_ids": [
-   "IRONHEAD",
-   "FAKEOUT",
-   "NIGHTSLASH"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Palossand (Icy Aevian Form)": {
   "ability": "BULLETPROOF",
   "nature": "Modest",
@@ -1432,6 +1398,25 @@
   "role": "attacker",
   "source": "game"
  },
+ "Perrserker": {
+  "ability": "TOUGHCLAWS",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Metal Coat",
+  "moves": [
+   "Iron Head",
+   "Fake Out",
+   "Night Slash",
+   "Protect"
+  ],
+  "move_ids": [
+   "IRONHEAD",
+   "FAKEOUT",
+   "NIGHTSLASH"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Nidoking": {
   "ability": "SHEERFORCE",
   "nature": "Jolly",
@@ -1447,6 +1432,25 @@
    "POISONJAB",
    "MEGAHORN",
    "DRILLRUN"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Rhydon": {
+  "ability": "LIGHTNINGROD",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Soft Sand",
+  "moves": [
+   "Drill Run",
+   "Hammer Arm",
+   "Rock Blast",
+   "Protect"
+  ],
+  "move_ids": [
+   "DRILLRUN",
+   "HAMMERARM",
+   "ROCKBLAST"
   ],
   "role": "attacker",
   "source": "game"
@@ -1483,44 +1487,6 @@
    "BUGBUZZ",
    "PSYCHIC",
    "REFLECT"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Medicham": {
-  "ability": "PUREPOWER",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Never-Melt Ice",
-  "moves": [
-   "Ice Punch",
-   "High Jump Kick",
-   "Zen Headbutt",
-   "Protect"
-  ],
-  "move_ids": [
-   "ICEPUNCH",
-   "HIJUMPKICK",
-   "ZENHEADBUTT"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
- "Vileplume": {
-  "ability": "EFFECTSPORE",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Miracle Seed",
-  "moves": [
-   "Giga Drain",
-   "Strength Sap",
-   "Moonblast",
-   "Protect"
-  ],
-  "move_ids": [
-   "GIGADRAIN",
-   "STRENGTHSAP",
-   "MOONBLAST"
   ],
   "role": "attacker",
   "source": "game"
@@ -1563,25 +1529,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Ninetales (Alolan Form)": {
-  "ability": "SNOWWARNING",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
-  "item": "Fairy Feather",
-  "moves": [
-   "Aurora Veil",
-   "Moonblast",
-   "Blizzard",
-   "Protect"
-  ],
-  "move_ids": [
-   "AURORAVEIL",
-   "MOONBLAST",
-   "BLIZZARD"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
  "Slowking": {
   "ability": "REGENERATOR",
   "nature": "Modest",
@@ -1620,44 +1567,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Nidoqueen": {
-  "ability": "SHEERFORCE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
-  "moves": [
-   "Toxic Spikes",
-   "Crunch",
-   "Drill Run",
-   "Protect"
-  ],
-  "move_ids": [
-   "TOXICSPIKES",
-   "CRUNCH",
-   "DRILLRUN"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Throh": {
-  "ability": "GUTS",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Belt",
-  "moves": [
-   "Circle Throw",
-   "Knock Off",
-   "Bulldoze",
-   "Protect"
-  ],
-  "move_ids": [
-   "CIRCLETHROW",
-   "KNOCKOFF",
-   "BULLDOZE"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Exeggutor": {
   "ability": "CHLOROPHYLL",
   "nature": "Modest",
@@ -1676,6 +1585,25 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Ninetales (Alolan Form)": {
+  "ability": "SNOWWARNING",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe",
+  "item": "Fairy Feather",
+  "moves": [
+   "Aurora Veil",
+   "Moonblast",
+   "Blizzard",
+   "Protect"
+  ],
+  "move_ids": [
+   "AURORAVEIL",
+   "MOONBLAST",
+   "BLIZZARD"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
  },
  "Tropius": {
   "ability": "CHLOROPHYLL",
@@ -1753,6 +1681,25 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Nidoqueen": {
+  "ability": "SHEERFORCE",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
+  "moves": [
+   "Toxic Spikes",
+   "Crunch",
+   "Drill Run",
+   "Protect"
+  ],
+  "move_ids": [
+   "TOXICSPIKES",
+   "CRUNCH",
+   "DRILLRUN"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Glaceon": {
   "ability": "SNOWCLOAK",
   "nature": "Modest",
@@ -1772,21 +1719,21 @@
   "role": "attacker",
   "source": "game"
  },
- "Stoutland": {
-  "ability": "INTIMIDATE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Fairy Feather",
+ "Vileplume": {
+  "ability": "EFFECTSPORE",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Miracle Seed",
   "moves": [
-   "Play Rough",
-   "Crunch",
-   "Work Up",
+   "Giga Drain",
+   "Strength Sap",
+   "Moonblast",
    "Protect"
   ],
   "move_ids": [
-   "PLAYROUGH",
-   "CRUNCH",
-   "WORKUP"
+   "GIGADRAIN",
+   "STRENGTHSAP",
+   "MOONBLAST"
   ],
   "role": "attacker",
   "source": "game"
@@ -1809,28 +1756,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Muk (Alolan Form)": {
-  "ability": "Poison Touch",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk / 4 Def",
-  "item": "Black Glasses",
-  "moves": [
-   "Knock Off",
-   "Shadow Sneak",
-   "Clear Smog",
-   "Protect"
-  ],
-  "move_ids": [
-   "CRUNCH",
-   "GUNKSHOT",
-   "CURSE"
-  ],
-  "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Bulk + power: Speed EVs change no matchup here"
-  ]
  },
  "Sunflora": {
   "ability": "CHLOROPHYLL",
@@ -1889,25 +1814,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Swampert": {
-  "ability": "TORRENT",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Belt",
-  "moves": [
-   "Hammer Arm",
-   "Rock Slide",
-   "Deluge",
-   "Protect"
-  ],
-  "move_ids": [
-   "EARTHQUAKE",
-   "ROCKSLIDE",
-   "HAMMERARM"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Drifblim": {
   "ability": "UNBURDEN",
   "nature": "Modest",
@@ -1946,43 +1852,24 @@
   "role": "attacker",
   "source": "game"
  },
- "Hitmontop": {
-  "ability": "TECHNICIAN",
+ "Muk (Alolan Form)": {
+  "ability": "Poison Touch",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Black Belt",
+  "item": "Black Glasses",
   "moves": [
-   "Mach Punch",
-   "Drill Run",
-   "Sucker Punch",
+   "Knock Off",
+   "Shadow Sneak",
+   "Clear Smog",
    "Protect"
   ],
   "move_ids": [
-   "MACHPUNCH",
-   "DRILLRUN",
-   "SUCKERPUNCH"
+   "CRUNCH",
+   "GUNKSHOT",
+   "CURSE"
   ],
   "role": "attacker",
-  "source": "game"
- },
- "Shiinotic": {
-  "ability": "EFFECTSPORE",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Fairy Feather",
-  "moves": [
-   "Spore",
-   "Moonblast",
-   "Giga Drain",
-   "Protect"
-  ],
-  "move_ids": [
-   "SPORE",
-   "MOONBLAST",
-   "GIGADRAIN"
-  ],
-  "role": "attacker",
-  "source": "game"
+  "source": "your team"
  },
  "Slowbro": {
   "ability": "REGENERATOR",
@@ -2022,62 +1909,43 @@
   "role": "attacker",
   "source": "game"
  },
- "Toxicroak": {
-  "ability": "DRYSKIN",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Black Glasses",
+ "Medicham": {
+  "ability": "PUREPOWER",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Never-Melt Ice",
   "moves": [
-   "Sucker Punch",
-   "Poison Jab",
-   "Cross Chop",
+   "Ice Punch",
+   "High Jump Kick",
+   "Zen Headbutt",
    "Protect"
   ],
   "move_ids": [
-   "SUCKERPUNCH",
-   "POISONJAB",
-   "CROSSCHOP"
+   "ICEPUNCH",
+   "HIJUMPKICK",
+   "ZENHEADBUTT"
   ],
   "role": "attacker",
   "source": "game+smogon"
  },
- "Kingler": {
-  "ability": "HYPERCUTTER",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Mystic Water",
+ "Shiinotic": {
+  "ability": "EFFECTSPORE",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Fairy Feather",
   "moves": [
-   "Crabhammer",
-   "X-Scissor",
-   "Hammer Arm",
+   "Spore",
+   "Moonblast",
+   "Giga Drain",
    "Protect"
   ],
   "move_ids": [
-   "CRABHAMMER",
-   "XSCISSOR",
-   "HAMMERARM"
+   "SPORE",
+   "MOONBLAST",
+   "GIGADRAIN"
   ],
   "role": "attacker",
   "source": "game"
- },
- "Mawile": {
-  "ability": "INTIMIDATE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Fairy Feather",
-  "moves": [
-   "Play Rough",
-   "Sucker Punch",
-   "Iron Head",
-   "Protect"
-  ],
-  "move_ids": [
-   "PLAYROUGH",
-   "SUCKERPUNCH",
-   "IRONHEAD"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
  },
  "Squawkabilly (White Plumage)": {
   "ability": "HUSTLE",
@@ -2093,25 +1961,6 @@
   ],
   "role": "attacker",
   "source": "engine"
- },
- "Bombirdier": {
-  "ability": "ROCKYPAYLOAD",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
-  "moves": [
-   "Sucker Punch",
-   "Roost",
-   "Dual Wingbeat",
-   "Protect"
-  ],
-  "move_ids": [
-   "SUCKERPUNCH",
-   "ROOST",
-   "DUALWINGBEAT"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
  },
  "Vaporeon": {
   "ability": "WATERABSORB",
@@ -2131,25 +1980,6 @@
   ],
   "role": "attacker",
   "source": "your team"
- },
- "Eelektross": {
-  "ability": "LEVITATE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Magnet",
-  "moves": [
-   "Wild Charge",
-   "Crunch",
-   "Crush Claw",
-   "Protect"
-  ],
-  "move_ids": [
-   "WILDCHARGE",
-   "CRUNCH",
-   "CRUSHCLAW"
-  ],
-  "role": "attacker",
-  "source": "game"
  },
  "Muk": {
   "ability": "POISONTOUCH",
@@ -2189,78 +2019,97 @@
   "role": "attacker",
   "source": "game"
  },
- "Crawdaunt": {
-  "ability": "ADAPTABILITY",
+ "Bombirdier": {
+  "ability": "ROCKYPAYLOAD",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
   "item": "Black Glasses",
   "moves": [
-   "Knock Off",
-   "Crabhammer",
-   "Swords Dance",
+   "Sucker Punch",
+   "Roost",
+   "Dual Wingbeat",
    "Protect"
   ],
   "move_ids": [
-   "KNOCKOFF",
-   "CRABHAMMER",
-   "SWORDSDANCE"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
- "Bellossom": {
-  "ability": "CHLOROPHYLL",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Miracle Seed",
-  "moves": [
-   "Quiver Dance",
-   "Giga Drain",
-   "Moonblast",
-   "Protect"
-  ],
-  "move_ids": [
-   "QUIVERDANCE",
-   "GIGADRAIN",
-   "MOONBLAST"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Overqwil": {
-  "ability": "INTIMIDATE",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Black Glasses",
-  "moves": [
-   "Crunch",
-   "Barb Barrage",
-   "Spikes",
-   "Protect"
-  ],
-  "move_ids": [
-   "CRUNCH",
-   "BARBBARRAGE",
-   "SPIKES"
+   "SUCKERPUNCH",
+   "ROOST",
+   "DUALWINGBEAT"
   ],
   "role": "attacker",
   "source": "game+smogon"
  },
- "Dubwool": {
-  "ability": "FLUFFY",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Sharp Beak",
+ "Throh": {
+  "ability": "GUTS",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Belt",
   "moves": [
-   "Bounce",
-   "Double-Edge",
-   "Payback",
+   "Circle Throw",
+   "Knock Off",
+   "Bulldoze",
    "Protect"
   ],
   "move_ids": [
-   "BOUNCE",
-   "DOUBLEEDGE",
-   "PAYBACK"
+   "CIRCLETHROW",
+   "KNOCKOFF",
+   "BULLDOZE"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Stoutland": {
+  "ability": "INTIMIDATE",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Fairy Feather",
+  "moves": [
+   "Play Rough",
+   "Crunch",
+   "Work Up",
+   "Protect"
+  ],
+  "move_ids": [
+   "PLAYROUGH",
+   "CRUNCH",
+   "WORKUP"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Eelektross": {
+  "ability": "LEVITATE",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Magnet",
+  "moves": [
+   "Wild Charge",
+   "Crunch",
+   "Crush Claw",
+   "Protect"
+  ],
+  "move_ids": [
+   "WILDCHARGE",
+   "CRUNCH",
+   "CRUSHCLAW"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Kingler": {
+  "ability": "HYPERCUTTER",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Mystic Water",
+  "moves": [
+   "Crabhammer",
+   "X-Scissor",
+   "Hammer Arm",
+   "Protect"
+  ],
+  "move_ids": [
+   "CRABHAMMER",
+   "XSCISSOR",
+   "HAMMERARM"
   ],
   "role": "attacker",
   "source": "game"
@@ -2303,6 +2152,25 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Crawdaunt": {
+  "ability": "ADAPTABILITY",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
+  "moves": [
+   "Knock Off",
+   "Crabhammer",
+   "Swords Dance",
+   "Protect"
+  ],
+  "move_ids": [
+   "KNOCKOFF",
+   "CRABHAMMER",
+   "SWORDSDANCE"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
  "Leavanny (Aevian Form)": {
   "ability": "INTIMIDATE",
   "nature": "Jolly",
@@ -2320,7 +2188,7 @@
    "SWORDSDANCE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "your team"
  },
  "Mudsdale": {
   "ability": "STAMINA",
@@ -2341,40 +2209,40 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Drednaw": {
-  "ability": "STRONGJAW",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Mystic Water",
+ "Dubwool": {
+  "ability": "FLUFFY",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Sharp Beak",
   "moves": [
-   "Liquidation",
-   "Jaw Lock",
-   "Ice Fang",
+   "Bounce",
+   "Double-Edge",
+   "Payback",
    "Protect"
   ],
   "move_ids": [
-   "LIQUIDATION",
-   "JAWLOCK",
-   "ICEFANG"
+   "BOUNCE",
+   "DOUBLEEDGE",
+   "PAYBACK"
   ],
   "role": "attacker",
   "source": "game"
  },
- "Druddigon": {
-  "ability": "ROUGHSKIN",
+ "Hitmontop": {
+  "ability": "TECHNICIAN",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Dragon Fang",
+  "item": "Black Belt",
   "moves": [
-   "Dragon Claw",
+   "Mach Punch",
+   "Drill Run",
    "Sucker Punch",
-   "Glare",
    "Protect"
   ],
   "move_ids": [
-   "DRAGONCLAW",
-   "SUCKERPUNCH",
-   "GLARE"
+   "MACHPUNCH",
+   "DRILLRUN",
+   "SUCKERPUNCH"
   ],
   "role": "attacker",
   "source": "game"
@@ -2398,21 +2266,21 @@
   "role": "attacker",
   "source": "game"
  },
- "Skuntank": {
-  "ability": "AFTERMATH",
+ "Druddigon": {
+  "ability": "ROUGHSKIN",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
+  "item": "Dragon Fang",
   "moves": [
+   "Dragon Claw",
    "Sucker Punch",
-   "Poison Gas",
-   "Double-Edge",
+   "Glare",
    "Protect"
   ],
   "move_ids": [
+   "DRAGONCLAW",
    "SUCKERPUNCH",
-   "POISONGAS",
-   "DOUBLEEDGE"
+   "GLARE"
   ],
   "role": "attacker",
   "source": "game"
@@ -2455,24 +2323,24 @@
   "role": "attacker",
   "source": "your team"
  },
- "Boltund": {
-  "ability": "STRONGJAW",
+ "Overqwil": {
+  "ability": "INTIMIDATE",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Magnet",
+  "item": "Black Glasses",
   "moves": [
-   "Thunder Fang",
-   "Fire Fang",
    "Crunch",
+   "Barb Barrage",
+   "Spikes",
    "Protect"
   ],
   "move_ids": [
-   "THUNDERFANG",
-   "FIREFANG",
-   "CRUNCH"
+   "CRUNCH",
+   "BARBBARRAGE",
+   "SPIKES"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game+smogon"
  },
  "Mantine": {
   "ability": "WATERABSORB",
@@ -2492,6 +2360,25 @@
   ],
   "role": "attacker",
   "source": "engine"
+ },
+ "Drednaw": {
+  "ability": "STRONGJAW",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Mystic Water",
+  "moves": [
+   "Liquidation",
+   "Jaw Lock",
+   "Ice Fang",
+   "Protect"
+  ],
+  "move_ids": [
+   "LIQUIDATION",
+   "JAWLOCK",
+   "ICEFANG"
+  ],
+  "role": "attacker",
+  "source": "game"
  },
  "Pidgeot": {
   "ability": "KEENEYE",
@@ -2550,6 +2437,25 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Skuntank": {
+  "ability": "AFTERMATH",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
+  "moves": [
+   "Sucker Punch",
+   "Poison Gas",
+   "Double-Edge",
+   "Protect"
+  ],
+  "move_ids": [
+   "SUCKERPUNCH",
+   "POISONGAS",
+   "DOUBLEEDGE"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Yanmega": {
   "ability": "SPEEDBOOST",
   "nature": "Timid",
@@ -2565,6 +2471,63 @@
    "BUGBUZZ",
    "AIRSLASH",
    "ANCIENTPOWER"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
+ },
+ "Mawile": {
+  "ability": "INTIMIDATE",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Fairy Feather",
+  "moves": [
+   "Play Rough",
+   "Sucker Punch",
+   "Iron Head",
+   "Protect"
+  ],
+  "move_ids": [
+   "PLAYROUGH",
+   "SUCKERPUNCH",
+   "IRONHEAD"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
+ },
+ "Boltund": {
+  "ability": "STRONGJAW",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Magnet",
+  "moves": [
+   "Thunder Fang",
+   "Fire Fang",
+   "Crunch",
+   "Protect"
+  ],
+  "move_ids": [
+   "THUNDERFANG",
+   "FIREFANG",
+   "CRUNCH"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Toxicroak": {
+  "ability": "DRYSKIN",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Black Glasses",
+  "moves": [
+   "Sucker Punch",
+   "Poison Jab",
+   "Cross Chop",
+   "Protect"
+  ],
+  "move_ids": [
+   "SUCKERPUNCH",
+   "POISONJAB",
+   "CROSSCHOP"
   ],
   "role": "attacker",
   "source": "game+smogon"
@@ -2603,6 +2566,25 @@
    "EARTHPOWER",
    "FLAMEBURST",
    "YAWN"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Bellossom": {
+  "ability": "CHLOROPHYLL",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Miracle Seed",
+  "moves": [
+   "Quiver Dance",
+   "Giga Drain",
+   "Moonblast",
+   "Protect"
+  ],
+  "move_ids": [
+   "QUIVERDANCE",
+   "GIGADRAIN",
+   "MOONBLAST"
   ],
   "role": "attacker",
   "source": "game"
@@ -2683,25 +2665,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Umbreon": {
-  "ability": "SYNCHRONIZE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
-  "moves": [
-   "Wish",
-   "Bite",
-   "Double-Edge",
-   "Protect"
-  ],
-  "move_ids": [
-   "WISH",
-   "BITE",
-   "DOUBLEEDGE"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
  "Noivern": {
   "ability": "INFILTRATOR",
   "nature": "Timid",
@@ -2776,25 +2739,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Alcremie": {
-  "ability": "SWEETVEIL",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Sitrus Berry",
-  "moves": [
-   "Decorate",
-   "Aromatic Mist",
-   "Dazzling Gleam",
-   "Protect"
-  ],
-  "move_ids": [
-   "DECORATE",
-   "AROMATICMIST",
-   "DAZZLINGGLEAM"
-  ],
-  "role": "support",
-  "source": "game"
- },
  "Veluza": {
   "ability": "SHARPNESS",
   "nature": "Adamant",
@@ -2812,24 +2756,24 @@
   "role": "attacker",
   "source": "engine"
  },
- "Zangoose": {
-  "ability": "TOXICBOOST",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Silk Scarf",
+ "Umbreon": {
+  "ability": "SYNCHRONIZE",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
   "moves": [
-   "Facade",
-   "Close Combat",
-   "Night Slash",
+   "Wish",
+   "Bite",
+   "Double-Edge",
    "Protect"
   ],
   "move_ids": [
-   "FACADE",
-   "CLOSECOMBAT",
-   "NIGHTSLASH"
+   "WISH",
+   "BITE",
+   "DOUBLEEDGE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game+smogon"
  },
  "Donphan": {
   "ability": "STURDY",
@@ -2884,6 +2828,25 @@
    "THUNDERWAVE"
   ],
   "role": "attacker",
+  "source": "game"
+ },
+ "Alcremie": {
+  "ability": "SWEETVEIL",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Sitrus Berry",
+  "moves": [
+   "Decorate",
+   "Aromatic Mist",
+   "Dazzling Gleam",
+   "Protect"
+  ],
+  "move_ids": [
+   "DECORATE",
+   "AROMATICMIST",
+   "DAZZLINGGLEAM"
+  ],
+  "role": "support",
   "source": "game"
  },
  "Armaldo": {
@@ -2943,44 +2906,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Feraligatr": {
-  "ability": "SHEERFORCE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
-  "moves": [
-   "Crunch",
-   "Ice Fang",
-   "Aqua Jet",
-   "Protect"
-  ],
-  "move_ids": [
-   "CRUNCH",
-   "ICEFANG",
-   "AQUAJET"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
- "Lurantis": {
-  "ability": "LEAFGUARD",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
-  "moves": [
-   "Night Slash",
-   "X-Scissor",
-   "Petal Blizzard",
-   "Protect"
-  ],
-  "move_ids": [
-   "NIGHTSLASH",
-   "XSCISSOR",
-   "PETALBLIZZARD"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Bruxish": {
   "ability": "STRONGJAW",
   "nature": "Jolly",
@@ -3013,25 +2938,6 @@
    "SHADOWBALL",
    "SURF",
    "RECOVER"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Dachsbun": {
-  "ability": "WELLBAKEDBODY",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Fairy Feather",
-  "moves": [
-   "Yawn",
-   "Play Rough",
-   "Crunch",
-   "Protect"
-  ],
-  "move_ids": [
-   "YAWN",
-   "PLAYROUGH",
-   "CRUNCH"
   ],
   "role": "attacker",
   "source": "game"
@@ -3074,6 +2980,25 @@
   "role": "attacker",
   "source": "game"
  },
+ "Lurantis": {
+  "ability": "LEAFGUARD",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
+  "moves": [
+   "Night Slash",
+   "X-Scissor",
+   "Petal Blizzard",
+   "Protect"
+  ],
+  "move_ids": [
+   "NIGHTSLASH",
+   "XSCISSOR",
+   "PETALBLIZZARD"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Jolteon": {
   "ability": "VOLTABSORB",
   "nature": "Timid",
@@ -3093,24 +3018,24 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Pinsir": {
-  "ability": "MOXIE",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Silver Powder",
+ "Feraligatr": {
+  "ability": "SHEERFORCE",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
   "moves": [
-   "X-Scissor",
-   "Storm Throw",
-   "Swords Dance",
+   "Crunch",
+   "Ice Fang",
+   "Aqua Jet",
    "Protect"
   ],
   "move_ids": [
-   "XSCISSOR",
-   "STORMTHROW",
-   "SWORDSDANCE"
+   "CRUNCH",
+   "ICEFANG",
+   "AQUAJET"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game+smogon"
  },
  "Roserade": {
   "ability": "NATURALCURE",
@@ -3146,23 +3071,6 @@
    "LEAFBLADE",
    "SLEEPPOWDER",
    "SLUDGEBOMB"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Raticate (Alolan Form)": {
-  "ability": "HUSTLE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
-  "moves": [
-   "Sucker Punch",
-   "Double-Edge",
-   "Protect"
-  ],
-  "move_ids": [
-   "SUCKERPUNCH",
-   "DOUBLEEDGE"
   ],
   "role": "attacker",
   "source": "game"
@@ -3224,25 +3132,6 @@
   "role": "attacker",
   "source": "your rules"
  },
- "Greedent": {
-  "ability": "CHEEKPOUCH",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
-  "moves": [
-   "Stuff Cheeks",
-   "Payback",
-   "Body Slam",
-   "Protect"
-  ],
-  "move_ids": [
-   "STUFFCHEEKS",
-   "PAYBACK",
-   "BODYSLAM"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Garbodor": {
   "ability": "STENCH",
   "nature": "Adamant",
@@ -3262,24 +3151,41 @@
   "role": "attacker",
   "source": "game"
  },
- "Meowscarada": {
-  "ability": "PROTEAN",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Miracle Seed",
+ "Raticate (Alolan Form)": {
+  "ability": "HUSTLE",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
   "moves": [
-   "Flower Trick",
-   "U-turn",
-   "Knock Off",
+   "Sucker Punch",
+   "Double-Edge",
    "Protect"
   ],
   "move_ids": [
-   "FLOWERTRICK",
-   "UTURN",
-   "KNOCKOFF"
+   "SUCKERPUNCH",
+   "DOUBLEEDGE"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "game"
+ },
+ "Greedent": {
+  "ability": "CHEEKPOUCH",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
+  "moves": [
+   "Stuff Cheeks",
+   "Payback",
+   "Body Slam",
+   "Protect"
+  ],
+  "move_ids": [
+   "STUFFCHEEKS",
+   "PAYBACK",
+   "BODYSLAM"
+  ],
+  "role": "attacker",
+  "source": "game"
  },
  "Tangrowth": {
   "ability": "REGENERATOR",
@@ -3357,6 +3263,25 @@
   "role": "attacker",
   "source": "game"
  },
+ "Meowscarada": {
+  "ability": "PROTEAN",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Miracle Seed",
+  "moves": [
+   "Flower Trick",
+   "U-turn",
+   "Knock Off",
+   "Protect"
+  ],
+  "move_ids": [
+   "FLOWERTRICK",
+   "UTURN",
+   "KNOCKOFF"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
+ },
  "Eiscue": {
   "ability": "ICEFACE",
   "nature": "Adamant",
@@ -3395,24 +3320,24 @@
   "role": "attacker",
   "source": "game"
  },
- "Graveler": {
-  "ability": "STURDY",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Hard Stone",
+ "Zangoose": {
+  "ability": "TOXICBOOST",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Silk Scarf",
   "moves": [
-   "Stone Edge",
-   "Earthquake",
-   "Hammer Arm",
+   "Facade",
+   "Close Combat",
+   "Night Slash",
    "Protect"
   ],
   "move_ids": [
-   "STONEEDGE",
-   "EARTHQUAKE",
-   "HAMMERARM"
+   "FACADE",
+   "CLOSECOMBAT",
+   "NIGHTSLASH"
   ],
   "role": "attacker",
-  "source": "engine"
+  "source": "game"
  },
  "Altaria": {
   "ability": "CLOUDNINE",
@@ -3432,6 +3357,25 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
+ },
+ "Pinsir": {
+  "ability": "MOXIE",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Silver Powder",
+  "moves": [
+   "X-Scissor",
+   "Storm Throw",
+   "Swords Dance",
+   "Protect"
+  ],
+  "move_ids": [
+   "XSCISSOR",
+   "STORMTHROW",
+   "SWORDSDANCE"
+  ],
+  "role": "attacker",
+  "source": "game"
  },
  "Espeon": {
   "ability": "MAGICBOUNCE",
@@ -3471,6 +3415,25 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Graveler": {
+  "ability": "STURDY",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Hard Stone",
+  "moves": [
+   "Stone Edge",
+   "Earthquake",
+   "Hammer Arm",
+   "Protect"
+  ],
+  "move_ids": [
+   "STONEEDGE",
+   "EARTHQUAKE",
+   "HAMMERARM"
+  ],
+  "role": "attacker",
+  "source": "engine"
+ },
  "Heracross": {
   "ability": "MOXIE",
   "nature": "Jolly",
@@ -3489,25 +3452,6 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
- },
- "Drapion": {
-  "ability": "SNIPER",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Poison Barb",
-  "moves": [
-   "Cross Poison",
-   "Night Slash",
-   "Fell Stinger",
-   "Protect"
-  ],
-  "move_ids": [
-   "CROSSPOISON",
-   "NIGHTSLASH",
-   "FELLSTINGER"
-  ],
-  "role": "attacker",
-  "source": "game"
  },
  "Dusclops": {
   "ability": "PRESSURE",
@@ -3585,6 +3529,44 @@
   "role": "attacker",
   "source": "game"
  },
+ "Drapion": {
+  "ability": "SNIPER",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Poison Barb",
+  "moves": [
+   "Cross Poison",
+   "Night Slash",
+   "Fell Stinger",
+   "Protect"
+  ],
+  "move_ids": [
+   "CROSSPOISON",
+   "NIGHTSLASH",
+   "FELLSTINGER"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Dachsbun": {
+  "ability": "WELLBAKEDBODY",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Fairy Feather",
+  "moves": [
+   "Yawn",
+   "Play Rough",
+   "Crunch",
+   "Protect"
+  ],
+  "move_ids": [
+   "YAWN",
+   "PLAYROUGH",
+   "CRUNCH"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Quagsire": {
   "ability": "UNAWARE",
   "nature": "Adamant",
@@ -3623,23 +3605,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Mightyena": {
-  "ability": "INTIMIDATE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
-  "moves": [
-   "Sucker Punch",
-   "Ice Fang",
-   "Protect"
-  ],
-  "move_ids": [
-   "SUCKERPUNCH",
-   "ICEFANG"
-  ],
-  "role": "attacker",
-  "source": "engine"
- },
  "Sandaconda": {
   "ability": "SHEDSKIN",
   "nature": "Adamant",
@@ -3674,25 +3639,6 @@
    "SUCKERPUNCH",
    "WOODHAMMER",
    "STONEEDGE"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Drapion (Aevian Form)": {
-  "ability": "FURCOAT",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Never-Melt Ice",
-  "moves": [
-   "Icicle Crash",
-   "Knock Off",
-   "Shelter",
-   "Protect"
-  ],
-  "move_ids": [
-   "ICICLECRASH",
-   "KNOCKOFF",
-   "SHELTER"
   ],
   "role": "attacker",
   "source": "game"
@@ -3735,43 +3681,41 @@
   "role": "attacker",
   "source": "game"
  },
- "Sawsbuck": {
-  "ability": "CHLOROPHYLL",
+ "Drapion (Aevian Form)": {
+  "ability": "FURCOAT",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
-  "item": "Silk Scarf",
+  "item": "Never-Melt Ice",
   "moves": [
-   "Headbutt",
-   "Horn Leech",
-   "Jump Kick",
+   "Icicle Crash",
+   "Knock Off",
+   "Shelter",
    "Protect"
   ],
   "move_ids": [
-   "HEADBUTT",
-   "HORNLEECH",
-   "JUMPKICK"
+   "ICICLECRASH",
+   "KNOCKOFF",
+   "SHELTER"
   ],
   "role": "attacker",
   "source": "game"
  },
- "Exploud": {
-  "ability": "SCRAPPY",
+ "Mightyena": {
+  "ability": "INTIMIDATE",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Charcoal",
+  "item": "Black Glasses",
   "moves": [
-   "Fire Fang",
-   "Crunch",
+   "Sucker Punch",
    "Ice Fang",
    "Protect"
   ],
   "move_ids": [
-   "FIREFANG",
-   "CRUNCH",
+   "SUCKERPUNCH",
    "ICEFANG"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "engine"
  },
  "Hypno": {
   "ability": "INSOMNIA",
@@ -3788,25 +3732,6 @@
    "POISONGAS",
    "ICEPUNCH",
    "ZENHEADBUTT"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Noctowl": {
-  "ability": "INSOMNIA",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Noctowl Crest",
-  "moves": [
-   "Roost",
-   "Moonblast",
-   "Confusion",
-   "Protect"
-  ],
-  "move_ids": [
-   "ROOST",
-   "MOONBLAST",
-   "CONFUSION"
   ],
   "role": "attacker",
   "source": "game"
@@ -3829,6 +3754,25 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
+ },
+ "Exploud": {
+  "ability": "SCRAPPY",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Charcoal",
+  "moves": [
+   "Fire Fang",
+   "Crunch",
+   "Ice Fang",
+   "Protect"
+  ],
+  "move_ids": [
+   "FIREFANG",
+   "CRUNCH",
+   "ICEFANG"
+  ],
+  "role": "attacker",
+  "source": "game"
  },
  "Cofagrigus": {
   "ability": "MUMMY",
@@ -3925,25 +3869,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Sirfetch'd": {
-  "ability": "STEADFAST",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
-  "moves": [
-   "Knock Off",
-   "First Impression",
-   "Leaf Blade",
-   "Protect"
-  ],
-  "move_ids": [
-   "KNOCKOFF",
-   "FIRSTIMPRESSION",
-   "LEAFBLADE"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Sceptile": {
   "ability": "UNBURDEN",
   "nature": "Timid",
@@ -3978,6 +3903,25 @@
    "REVELATIONDANCE",
    "AIRSLASH",
    "BATONPASS"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Sirfetch'd": {
+  "ability": "STEADFAST",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
+  "moves": [
+   "Knock Off",
+   "First Impression",
+   "Leaf Blade",
+   "Protect"
+  ],
+  "move_ids": [
+   "KNOCKOFF",
+   "FIRSTIMPRESSION",
+   "LEAFBLADE"
   ],
   "role": "attacker",
   "source": "game"
@@ -4020,6 +3964,25 @@
   "role": "attacker",
   "source": "game"
  },
+ "Noctowl": {
+  "ability": "INSOMNIA",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Noctowl Crest",
+  "moves": [
+   "Roost",
+   "Moonblast",
+   "Confusion",
+   "Protect"
+  ],
+  "move_ids": [
+   "ROOST",
+   "MOONBLAST",
+   "CONFUSION"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Toedscruel": {
   "ability": "MYCELIUMMIGHT",
   "nature": "Timid",
@@ -4039,47 +4002,24 @@
   "role": "attacker",
   "source": "game"
  },
- "Ribombee": {
-  "ability": "SHIELDDUST",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
-  "item": "Fairy Feather",
+ "Sawsbuck": {
+  "ability": "CHLOROPHYLL",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Silk Scarf",
   "moves": [
-   "Sticky Web",
-   "Moonblast",
-   "Pollen Puff",
+   "Headbutt",
+   "Horn Leech",
+   "Jump Kick",
    "Protect"
   ],
   "move_ids": [
-   "STICKYWEB",
-   "MOONBLAST",
-   "POLLENPUFF"
+   "HEADBUTT",
+   "HORNLEECH",
+   "JUMPKICK"
   ],
   "role": "attacker",
-  "source": "game+smogon"
- },
- "Roserade (Aevian Form)": {
-  "ability": "TECHNICIAN",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe / 4 HP",
-  "item": "Soft Sand",
-  "moves": [
-   "Mud Barrage",
-   "Vacuum Wave",
-   "Taunt",
-   "Protect"
-  ],
-  "move_ids": [
-   "MUDBARRAGE",
-   "VACUUMWAVE",
-   "SPIKES"
-  ],
-  "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Taunt replaces Spikes (doubles: hazards / Toxic are too slow)",
-   "Speed: outspeeds Togedemaru, Toxtricity only with full Speed"
-  ]
+  "source": "game"
  },
  "Aurorus": {
   "ability": "REFRIGERATE",
@@ -4115,6 +4055,25 @@
    "HURRICANE",
    "ROOST",
    "VOLTSWITCH"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
+ },
+ "Ribombee": {
+  "ability": "SHIELDDUST",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe",
+  "item": "Fairy Feather",
+  "moves": [
+   "Sticky Web",
+   "Moonblast",
+   "Pollen Puff",
+   "Protect"
+  ],
+  "move_ids": [
+   "STICKYWEB",
+   "MOONBLAST",
+   "POLLENPUFF"
   ],
   "role": "attacker",
   "source": "game+smogon"
@@ -4157,6 +4116,29 @@
   "role": "attacker",
   "source": "game"
  },
+ "Roserade (Aevian Form)": {
+  "ability": "TECHNICIAN",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe / 4 HP",
+  "item": "Soft Sand",
+  "moves": [
+   "Mud Barrage",
+   "Vacuum Wave",
+   "Taunt",
+   "Protect"
+  ],
+  "move_ids": [
+   "MUDBARRAGE",
+   "VACUUMWAVE",
+   "SPIKES"
+  ],
+  "role": "attacker",
+  "source": "your team",
+  "fight_why": [
+   "Taunt replaces Spikes (doubles: hazards / Toxic are too slow)",
+   "Speed: outspeeds Togedemaru, Toxtricity only with full Speed"
+  ]
+ },
  "Zebstrika": {
   "ability": "LIGHTNINGROD",
   "nature": "Jolly",
@@ -4172,6 +4154,25 @@
    "THUNDERWAVE",
    "FLAMECHARGE",
    "WILDCHARGE"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Meowstic": {
+  "ability": "KEENEYE",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe",
+  "item": "Twisted Spoon",
+  "moves": [
+   "Psyshock",
+   "Reflect",
+   "Shadow Ball",
+   "Protect"
+  ],
+  "move_ids": [
+   "PSYSHOCK",
+   "REFLECT",
+   "SHADOWBALL"
   ],
   "role": "attacker",
   "source": "game"
@@ -4194,25 +4195,6 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
- },
- "Meowstic": {
-  "ability": "KEENEYE",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
-  "item": "Twisted Spoon",
-  "moves": [
-   "Psyshock",
-   "Reflect",
-   "Shadow Ball",
-   "Protect"
-  ],
-  "move_ids": [
-   "PSYSHOCK",
-   "REFLECT",
-   "SHADOWBALL"
-  ],
-  "role": "attacker",
-  "source": "game"
  },
  "Coalossal": {
   "ability": "STEAMENGINE",
@@ -4246,44 +4228,6 @@
   "move_ids": [
    "BRAVEBIRD",
    "FACADE"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Pincurchin": {
-  "ability": "ELECTRICSURGE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Magnet",
-  "moves": [
-   "Recover",
-   "Zing Zap",
-   "Sucker Punch",
-   "Protect"
-  ],
-  "move_ids": [
-   "RECOVER",
-   "ZINGZAP",
-   "SUCKERPUNCH"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
- "Ariados": {
-  "ability": "SWARM",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Ariados Crest",
-  "moves": [
-   "Poison Jab",
-   "Megahorn",
-   "Sucker Punch",
-   "Protect"
-  ],
-  "move_ids": [
-   "POISONJAB",
-   "MEGAHORN",
-   "SUCKERPUNCH"
   ],
   "role": "attacker",
   "source": "game"
@@ -4345,6 +4289,44 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Ariados": {
+  "ability": "SWARM",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Ariados Crest",
+  "moves": [
+   "Poison Jab",
+   "Megahorn",
+   "Sucker Punch",
+   "Protect"
+  ],
+  "move_ids": [
+   "POISONJAB",
+   "MEGAHORN",
+   "SUCKERPUNCH"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Pincurchin": {
+  "ability": "ELECTRICSURGE",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Magnet",
+  "moves": [
+   "Recover",
+   "Zing Zap",
+   "Sucker Punch",
+   "Protect"
+  ],
+  "move_ids": [
+   "RECOVER",
+   "ZINGZAP",
+   "SUCKERPUNCH"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
+ },
  "Vespiquen": {
   "ability": "PRESSURE",
   "nature": "Adamant",
@@ -4364,24 +4346,24 @@
   "role": "attacker",
   "source": "game"
  },
- "Seismitoad": {
-  "ability": "POISONTOUCH",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Belt",
+ "Furret": {
+  "ability": "KEENEYE",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Furret Crest",
   "moves": [
-   "Drain Punch",
-   "Toxic",
-   "Surf",
+   "Follow Me",
+   "Super Fang",
+   "Baton Pass",
    "Protect"
   ],
   "move_ids": [
-   "DRAINPUNCH",
-   "TOXIC",
-   "SURF"
+   "SUPERFANG",
+   "BATONPASS",
+   "SUCKERPUNCH"
   ],
-  "role": "attacker",
-  "source": "game"
+  "role": "support",
+  "source": "your rules"
  },
  "Venomoth": {
   "ability": "TINTEDLENS",
@@ -4440,6 +4422,23 @@
   "role": "attacker",
   "source": "game"
  },
+ "Basculin (Blue-Striped)": {
+  "ability": "MOLDBREAKER",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Mystic Water",
+  "moves": [
+   "Wave Crash",
+   "Thrash",
+   "Protect"
+  ],
+  "move_ids": [
+   "WAVECRASH",
+   "THRASH"
+  ],
+  "role": "attacker",
+  "source": "engine"
+ },
  "Dugtrio (Alolan Form)": {
   "ability": "TANGLINGHAIR",
   "nature": "Jolly",
@@ -4458,42 +4457,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Furret": {
-  "ability": "KEENEYE",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Furret Crest",
-  "moves": [
-   "Follow Me",
-   "Super Fang",
-   "Baton Pass",
-   "Protect"
-  ],
-  "move_ids": [
-   "SUPERFANG",
-   "BATONPASS",
-   "SUCKERPUNCH"
-  ],
-  "role": "support",
-  "source": "your rules"
- },
- "Basculin (Blue-Striped)": {
-  "ability": "MOLDBREAKER",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Mystic Water",
-  "moves": [
-   "Wave Crash",
-   "Thrash",
-   "Protect"
-  ],
-  "move_ids": [
-   "WAVECRASH",
-   "THRASH"
-  ],
-  "role": "attacker",
-  "source": "engine"
  },
  "Wigglytuff": {
   "ability": "CUTECHARM",
@@ -4514,6 +4477,44 @@
   "role": "attacker",
   "source": "game"
  },
+ "Swampert": {
+  "ability": "TORRENT",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Hard Stone",
+  "moves": [
+   "Helping Hand",
+   "Rock Slide",
+   "Deluge",
+   "Protect"
+  ],
+  "move_ids": [
+   "EARTHQUAKE",
+   "ROCKSLIDE",
+   "HAMMERARM"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
+ "Seismitoad": {
+  "ability": "POISONTOUCH",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Belt",
+  "moves": [
+   "Drain Punch",
+   "Toxic",
+   "Surf",
+   "Protect"
+  ],
+  "move_ids": [
+   "DRAINPUNCH",
+   "TOXIC",
+   "SURF"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Furfrou": {
   "ability": "FURCOAT",
   "nature": "Jolly",
@@ -4529,63 +4530,6 @@
    "THUNDERWAVE",
    "SUCKERPUNCH",
    "HEADBUTT"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Floette": {
-  "ability": "FLOWERVEIL",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Miracle Seed",
-  "moves": [
-   "Wish",
-   "Magical Leaf",
-   "Moonblast",
-   "Protect"
-  ],
-  "move_ids": [
-   "WISH",
-   "MAGICALLEAF",
-   "MOONBLAST"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Lokix": {
-  "ability": "TINTEDLENS",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Silver Powder",
-  "moves": [
-   "First Impression",
-   "Sucker Punch",
-   "Axe Kick",
-   "Protect"
-  ],
-  "move_ids": [
-   "FIRSTIMPRESSION",
-   "SUCKERPUNCH",
-   "AXEKICK"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
- "Seviper": {
-  "ability": "SHEDSKIN",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Poison Barb",
-  "moves": [
-   "Poison Jab",
-   "Crunch",
-   "Ice Fang",
-   "Protect"
-  ],
-  "move_ids": [
-   "POISONJAB",
-   "CRUNCH",
-   "ICEFANG"
   ],
   "role": "attacker",
   "source": "game"
@@ -4628,40 +4572,40 @@
   "role": "attacker",
   "source": "game"
  },
- "Absol": {
-  "ability": "SUPERLUCK",
+ "Seviper": {
+  "ability": "SHEDSKIN",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
+  "item": "Poison Barb",
   "moves": [
-   "Night Slash",
-   "Swords Dance",
-   "Shadow Claw",
+   "Poison Jab",
+   "Crunch",
+   "Ice Fang",
    "Protect"
   ],
   "move_ids": [
-   "NIGHTSLASH",
-   "SWORDSDANCE",
-   "SHADOWCLAW"
+   "POISONJAB",
+   "CRUNCH",
+   "ICEFANG"
   ],
   "role": "attacker",
   "source": "game"
  },
- "Kecleon": {
-  "ability": "PROTEAN",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
+ "Floette": {
+  "ability": "FLOWERVEIL",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Miracle Seed",
   "moves": [
-   "Sucker Punch",
-   "Shadow Sneak",
-   "Slash",
+   "Wish",
+   "Magical Leaf",
+   "Moonblast",
    "Protect"
   ],
   "move_ids": [
-   "SUCKERPUNCH",
-   "SHADOWSNEAK",
-   "SLASH"
+   "WISH",
+   "MAGICALLEAF",
+   "MOONBLAST"
   ],
   "role": "attacker",
   "source": "game"
@@ -4685,25 +4629,6 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Carbink": {
-  "ability": "CLEARBODY",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Hard Stone",
-  "moves": [
-   "Light Screen",
-   "Rock Blast",
-   "Moonblast",
-   "Protect"
-  ],
-  "move_ids": [
-   "LIGHTSCREEN",
-   "ROCKBLAST",
-   "MOONBLAST"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Shiftry": {
   "ability": "WINDRIDER",
   "nature": "Adamant",
@@ -4723,21 +4648,40 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Obstagoon": {
-  "ability": "GUTS",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Silk Scarf",
+ "Kecleon": {
+  "ability": "PROTEAN",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
   "moves": [
-   "Obstruct",
-   "Facade",
-   "Knock Off",
+   "Sucker Punch",
+   "Shadow Sneak",
+   "Slash",
    "Protect"
   ],
   "move_ids": [
-   "OBSTRUCT",
-   "FACADE",
-   "KNOCKOFF"
+   "SUCKERPUNCH",
+   "SHADOWSNEAK",
+   "SLASH"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Absol": {
+  "ability": "SUPERLUCK",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
+  "moves": [
+   "Night Slash",
+   "Swords Dance",
+   "Shadow Claw",
+   "Protect"
+  ],
+  "move_ids": [
+   "NIGHTSLASH",
+   "SWORDSDANCE",
+   "SHADOWCLAW"
   ],
   "role": "attacker",
   "source": "game"
@@ -4780,25 +4724,6 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Grafaiai": {
-  "ability": "PRANKSTER",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Black Glasses",
-  "moves": [
-   "Parting Shot",
-   "Knock Off",
-   "Gunk Shot",
-   "Protect"
-  ],
-  "move_ids": [
-   "PARTINGSHOT",
-   "KNOCKOFF",
-   "GUNKSHOT"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Maractus": {
   "ability": "WATERABSORB",
   "nature": "Modest",
@@ -4833,6 +4758,25 @@
    "PSYCHIC",
    "RECOVER",
    "HYDROPUMP"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Grafaiai": {
+  "ability": "PRANKSTER",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Black Glasses",
+  "moves": [
+   "Parting Shot",
+   "Knock Off",
+   "Gunk Shot",
+   "Protect"
+  ],
+  "move_ids": [
+   "PARTINGSHOT",
+   "KNOCKOFF",
+   "GUNKSHOT"
   ],
   "role": "attacker",
   "source": "game"
@@ -4875,22 +4819,24 @@
   "role": "attacker",
   "source": "game"
  },
- "Spritzee": {
-  "ability": "AROMAVEIL",
+ "Stunfisk": {
+  "ability": "STATIC",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Fairy Feather",
+  "item": "Mystic Water",
   "moves": [
-   "Moonblast",
-   "Psychic",
+   "Muddy Water",
+   "Thunder Wave",
+   "Discharge",
    "Protect"
   ],
   "move_ids": [
-   "MOONBLAST",
-   "PSYCHIC"
+   "MUDDYWATER",
+   "THUNDERWAVE",
+   "DISCHARGE"
   ],
   "role": "attacker",
-  "source": "engine"
+  "source": "game"
  },
  "Gumshoos": {
   "ability": "STAKEOUT",
@@ -4911,78 +4857,21 @@
   "role": "attacker",
   "source": "game"
  },
- "Stunfisk": {
-  "ability": "STATIC",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Mystic Water",
-  "moves": [
-   "Muddy Water",
-   "Thunder Wave",
-   "Discharge",
-   "Protect"
-  ],
-  "move_ids": [
-   "MUDDYWATER",
-   "THUNDERWAVE",
-   "DISCHARGE"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Kangaskhan": {
-  "ability": "SCRAPPY",
+ "Obstagoon": {
+  "ability": "GUTS",
   "nature": "Jolly",
   "evs": "252 Atk / 252 Spe",
   "item": "Silk Scarf",
   "moves": [
-   "Fake Out",
-   "Sucker Punch",
-   "Power-Up Punch",
+   "Obstruct",
+   "Facade",
+   "Knock Off",
    "Protect"
   ],
   "move_ids": [
-   "FAKEOUT",
-   "SUCKERPUNCH",
-   "POWERUPPUNCH"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
- "Volbeat": {
-  "ability": "PRANKSTER",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Silver Powder",
-  "moves": [
-   "Lunge",
-   "Play Rough",
-   "Zen Headbutt",
-   "Protect"
-  ],
-  "move_ids": [
-   "LUNGE",
-   "PLAYROUGH",
-   "ZENHEADBUTT"
-  ],
-  "role": "attacker",
-  "source": "engine"
- },
- "Golisopod": {
-  "ability": "EMERGENCYEXIT",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Silver Powder",
-  "moves": [
-   "First Impression",
-   "Aqua Jet",
-   "Sucker Punch",
-   "Protect"
-  ],
-  "move_ids": [
-   "FIRSTIMPRESSION",
-   "AQUAJET",
-   "SUCKERPUNCH"
+   "OBSTRUCT",
+   "FACADE",
+   "KNOCKOFF"
   ],
   "role": "attacker",
   "source": "game"
@@ -5006,24 +4895,24 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Arbok": {
-  "ability": "INTIMIDATE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Never-Melt Ice",
+ "Lokix": {
+  "ability": "TINTEDLENS",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Silver Powder",
   "moves": [
-   "Glare",
-   "Ice Fang",
-   "Crunch",
+   "First Impression",
+   "Sucker Punch",
+   "Axe Kick",
    "Protect"
   ],
   "move_ids": [
-   "GLARE",
-   "ICEFANG",
-   "CRUNCH"
+   "FIRSTIMPRESSION",
+   "SUCKERPUNCH",
+   "AXEKICK"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "game+smogon"
  },
  "Minun": {
   "ability": "VOLTABSORB",
@@ -5063,25 +4952,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Wormadam (Sandy Cloak)": {
-  "ability": "ANTICIPATION",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Hard Stone",
-  "moves": [
-   "Rock Blast",
-   "Sucker Punch",
-   "Bulldoze",
-   "Protect"
-  ],
-  "move_ids": [
-   "ROCKBLAST",
-   "SUCKERPUNCH",
-   "BULLDOZE"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Avalugg (Hisuian Form)": {
   "ability": "STURDY",
   "nature": "Adamant",
@@ -5097,6 +4967,25 @@
    "ROCKSLIDE",
    "AVALANCHE",
    "RECOVER"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Golisopod": {
+  "ability": "EMERGENCYEXIT",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Silver Powder",
+  "moves": [
+   "First Impression",
+   "Aqua Jet",
+   "Sucker Punch",
+   "Protect"
+  ],
+  "move_ids": [
+   "FIRSTIMPRESSION",
+   "AQUAJET",
+   "SUCKERPUNCH"
   ],
   "role": "attacker",
   "source": "game"
@@ -5120,6 +5009,61 @@
   "role": "attacker",
   "source": "game"
  },
+ "Kangaskhan": {
+  "ability": "SCRAPPY",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Silk Scarf",
+  "moves": [
+   "Fake Out",
+   "Sucker Punch",
+   "Power-Up Punch",
+   "Protect"
+  ],
+  "move_ids": [
+   "FAKEOUT",
+   "SUCKERPUNCH",
+   "POWERUPPUNCH"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
+ },
+ "Carbink": {
+  "ability": "CLEARBODY",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Hard Stone",
+  "moves": [
+   "Light Screen",
+   "Rock Blast",
+   "Moonblast",
+   "Protect"
+  ],
+  "move_ids": [
+   "LIGHTSCREEN",
+   "ROCKBLAST",
+   "MOONBLAST"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Spritzee": {
+  "ability": "AROMAVEIL",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Fairy Feather",
+  "moves": [
+   "Moonblast",
+   "Psychic",
+   "Protect"
+  ],
+  "move_ids": [
+   "MOONBLAST",
+   "PSYCHIC"
+  ],
+  "role": "attacker",
+  "source": "engine"
+ },
  "Cryogonal": {
   "ability": "LEVITATE",
   "nature": "Timid",
@@ -5139,40 +5083,40 @@
   "role": "attacker",
   "source": "game"
  },
- "Mandibuzz": {
-  "ability": "OVERCOAT",
+ "Arbok": {
+  "ability": "INTIMIDATE",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Sitrus Berry",
+  "item": "Never-Melt Ice",
   "moves": [
-   "Tailwind",
-   "Knock Off",
-   "Roost",
+   "Glare",
+   "Ice Fang",
+   "Crunch",
    "Protect"
   ],
   "move_ids": [
-   "ROOST",
-   "TOXIC",
-   "KNOCKOFF"
+   "GLARE",
+   "ICEFANG",
+   "CRUNCH"
   ],
-  "role": "support",
-  "source": "your team"
+  "role": "attacker",
+  "source": "game"
  },
- "Wormadam (Trash Cloak)": {
+ "Wormadam (Sandy Cloak)": {
   "ability": "ANTICIPATION",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Metal Coat",
+  "item": "Hard Stone",
   "moves": [
-   "Iron Head",
+   "Rock Blast",
    "Sucker Punch",
-   "Bug Bite",
+   "Bulldoze",
    "Protect"
   ],
   "move_ids": [
-   "IRONHEAD",
+   "ROCKBLAST",
    "SUCKERPUNCH",
-   "BUGBITE"
+   "BULLDOZE"
   ],
   "role": "attacker",
   "source": "game"
@@ -5195,6 +5139,44 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Wormadam (Trash Cloak)": {
+  "ability": "ANTICIPATION",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Metal Coat",
+  "moves": [
+   "Iron Head",
+   "Sucker Punch",
+   "Bug Bite",
+   "Protect"
+  ],
+  "move_ids": [
+   "IRONHEAD",
+   "SUCKERPUNCH",
+   "BUGBITE"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Mandibuzz": {
+  "ability": "OVERCOAT",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Sitrus Berry",
+  "moves": [
+   "Tailwind",
+   "Knock Off",
+   "Roost",
+   "Protect"
+  ],
+  "move_ids": [
+   "ROOST",
+   "TOXIC",
+   "KNOCKOFF"
+  ],
+  "role": "support",
+  "source": "your team"
  },
  "Tentacruel": {
   "ability": "LIQUIDOOZE",
@@ -5230,6 +5212,25 @@
    "DOUBLEEDGE",
    "SHADOWCLAW",
    "EXTREMESPEED"
+  ],
+  "role": "attacker",
+  "source": "engine"
+ },
+ "Volbeat": {
+  "ability": "PRANKSTER",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Silver Powder",
+  "moves": [
+   "Lunge",
+   "Play Rough",
+   "Zen Headbutt",
+   "Protect"
+  ],
+  "move_ids": [
+   "LUNGE",
+   "PLAYROUGH",
+   "ZENHEADBUTT"
   ],
   "role": "attacker",
   "source": "engine"
@@ -5346,25 +5347,6 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Zoroark": {
-  "ability": "ILLUSION",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
-  "item": "Zoroark Crest",
-  "moves": [
-   "Sludge Bomb",
-   "Grass Knot",
-   "Night Daze",
-   "Protect"
-  ],
-  "move_ids": [
-   "SLUDGEBOMB",
-   "GRASSKNOT",
-   "NIGHTDAZE"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Scolipede": {
   "ability": "SPEEDBOOST",
   "nature": "Jolly",
@@ -5456,6 +5438,25 @@
    "NEEDLEARM",
    "PINMISSILE",
    "SANDATTACK"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Zoroark": {
+  "ability": "ILLUSION",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe",
+  "item": "Zoroark Crest",
+  "moves": [
+   "Sludge Bomb",
+   "Grass Knot",
+   "Night Daze",
+   "Protect"
+  ],
+  "move_ids": [
+   "SLUDGEBOMB",
+   "GRASSKNOT",
+   "NIGHTDAZE"
   ],
   "role": "attacker",
   "source": "game"
@@ -5665,25 +5666,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Raticate": {
-  "ability": "GUTS",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Silk Scarf",
-  "moves": [
-   "Facade",
-   "Crunch",
-   "Double-Edge",
-   "Protect"
-  ],
-  "move_ids": [
-   "FACADE",
-   "CRUNCH",
-   "DOUBLEEDGE"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Xatu": {
   "ability": "MAGICBOUNCE",
   "nature": "Timid",
@@ -5722,6 +5704,25 @@
   "role": "attacker",
   "source": "game"
  },
+ "Raticate": {
+  "ability": "GUTS",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Silk Scarf",
+  "moves": [
+   "Facade",
+   "Crunch",
+   "Double-Edge",
+   "Protect"
+  ],
+  "move_ids": [
+   "FACADE",
+   "CRUNCH",
+   "DOUBLEEDGE"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Cramorant": {
   "ability": "GULPMISSILE",
   "nature": "Jolly",
@@ -5740,63 +5741,6 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
- },
- "Kabutops": {
-  "ability": "SWIFTSWIM",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Silver Powder",
-  "moves": [
-   "X-Scissor",
-   "Aqua Jet",
-   "Night Slash",
-   "Protect"
-  ],
-  "move_ids": [
-   "XSCISSOR",
-   "AQUAJET",
-   "NIGHTSLASH"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Spidops": {
-  "ability": "STAKEOUT",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Silver Powder",
-  "moves": [
-   "First Impression",
-   "Sucker Punch",
-   "Circle Throw",
-   "Protect"
-  ],
-  "move_ids": [
-   "FIRSTIMPRESSION",
-   "SUCKERPUNCH",
-   "CIRCLETHROW"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Bibarel": {
-  "ability": "SIMPLE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Mystic Water",
-  "moves": [
-   "Aqua Jet",
-   "Swords Dance",
-   "Superpower",
-   "Protect"
-  ],
-  "move_ids": [
-   "AQUAJET",
-   "SWORDSDANCE",
-   "SUPERPOWER"
-  ],
-  "role": "attacker",
-  "source": "game"
  },
  "Fearow": {
   "ability": "SNIPER",
@@ -5836,20 +5780,20 @@
   "role": "attacker",
   "source": "game"
  },
- "Sandslash": {
-  "ability": "SANDRUSH",
+ "Kabutops": {
+  "ability": "SWIFTSWIM",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Soft Sand",
+  "item": "Silver Powder",
   "moves": [
-   "Dig",
-   "Swords Dance",
+   "X-Scissor",
+   "Aqua Jet",
    "Night Slash",
    "Protect"
   ],
   "move_ids": [
-   "DIG",
-   "SWORDSDANCE",
+   "XSCISSOR",
+   "AQUAJET",
    "NIGHTSLASH"
   ],
   "role": "attacker",
@@ -5874,43 +5818,24 @@
   "role": "attacker",
   "source": "game"
  },
- "Watchog": {
-  "ability": "ANALYTIC",
+ "Sandslash": {
+  "ability": "SANDRUSH",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Silk Scarf",
+  "item": "Soft Sand",
   "moves": [
-   "Hypnosis",
-   "Super Fang",
-   "Crunch",
+   "Dig",
+   "Swords Dance",
+   "Night Slash",
    "Protect"
   ],
   "move_ids": [
-   "HYPNOSIS",
-   "SUPERFANG",
-   "CRUNCH"
+   "DIG",
+   "SWORDSDANCE",
+   "NIGHTSLASH"
   ],
   "role": "attacker",
   "source": "game"
- },
- "Weezing": {
-  "ability": "LEVITATE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
-  "moves": [
-   "Pain Split",
-   "Assurance",
-   "Sludge Bomb",
-   "Protect"
-  ],
-  "move_ids": [
-   "PAINSPLIT",
-   "ASSURANCE",
-   "SLUDGEBOMB"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
  },
  "Stonjourner": {
   "ability": "POWERSPOT",
@@ -5950,24 +5875,43 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Alomomola": {
-  "ability": "REGENERATOR",
-  "nature": "Bold",
-  "evs": "252 HP / 252 Def",
-  "item": "Sitrus Berry",
+ "Watchog": {
+  "ability": "ANALYTIC",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Silk Scarf",
   "moves": [
-   "Wish",
-   "Wide Guard",
-   "Helping Hand",
+   "Hypnosis",
+   "Super Fang",
+   "Crunch",
    "Protect"
   ],
   "move_ids": [
-   "WISH",
-   "AQUAJET",
-   "WAKEUPSLAP"
+   "HYPNOSIS",
+   "SUPERFANG",
+   "CRUNCH"
   ],
-  "role": "support",
-  "source": "your team"
+  "role": "attacker",
+  "source": "game"
+ },
+ "Weezing": {
+  "ability": "LEVITATE",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
+  "moves": [
+   "Pain Split",
+   "Assurance",
+   "Sludge Bomb",
+   "Protect"
+  ],
+  "move_ids": [
+   "PAINSPLIT",
+   "ASSURANCE",
+   "SLUDGEBOMB"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
  },
  "Froslass (Aevian Form)": {
   "ability": "ADAPTABILITY",
@@ -6045,6 +5989,25 @@
   "role": "attacker",
   "source": "game"
  },
+ "Spidops": {
+  "ability": "STAKEOUT",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Silver Powder",
+  "moves": [
+   "First Impression",
+   "Sucker Punch",
+   "Circle Throw",
+   "Protect"
+  ],
+  "move_ids": [
+   "FIRSTIMPRESSION",
+   "SUCKERPUNCH",
+   "CIRCLETHROW"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Floatzel": {
   "ability": "SWIFTSWIM",
   "nature": "Jolly",
@@ -6060,6 +6023,44 @@
    "AQUAJET",
    "CRUNCH",
    "LIQUIDATION"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Alomomola": {
+  "ability": "REGENERATOR",
+  "nature": "Bold",
+  "evs": "252 HP / 252 Def",
+  "item": "Sitrus Berry",
+  "moves": [
+   "Wish",
+   "Wide Guard",
+   "Helping Hand",
+   "Protect"
+  ],
+  "move_ids": [
+   "WISH",
+   "AQUAJET",
+   "WAKEUPSLAP"
+  ],
+  "role": "support",
+  "source": "your team"
+ },
+ "Bibarel": {
+  "ability": "SIMPLE",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Mystic Water",
+  "moves": [
+   "Aqua Jet",
+   "Swords Dance",
+   "Superpower",
+   "Protect"
+  ],
+  "move_ids": [
+   "AQUAJET",
+   "SWORDSDANCE",
+   "SUPERPOWER"
   ],
   "role": "attacker",
   "source": "game"
@@ -6082,44 +6083,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Liepard": {
-  "ability": "LIMBER",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Black Glasses",
-  "moves": [
-   "Thunder Wave",
-   "Night Slash",
-   "Play Rough",
-   "Protect"
-  ],
-  "move_ids": [
-   "THUNDERWAVE",
-   "NIGHTSLASH",
-   "PLAYROUGH"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Swirlix": {
-  "ability": "SWEETVEIL",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Fairy Feather",
-  "moves": [
-   "Draining Kiss",
-   "Surf",
-   "Energy Ball",
-   "Protect"
-  ],
-  "move_ids": [
-   "DRAININGKISS",
-   "SURF",
-   "ENERGYBALL"
-  ],
-  "role": "attacker",
-  "source": "engine"
  },
  "Cherrim": {
   "ability": "FLOWERGIFT",
@@ -6158,25 +6121,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Comfey": {
-  "ability": "TRIAGE",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
-  "item": "Fairy Feather",
-  "moves": [
-   "Draining Kiss",
-   "Giga Drain",
-   "Leech Seed",
-   "Protect"
-  ],
-  "move_ids": [
-   "DRAININGKISS",
-   "GIGADRAIN",
-   "LEECHSEED"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
  },
  "Banette": {
   "ability": "INSOMNIA",
@@ -6235,6 +6179,25 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Liepard": {
+  "ability": "LIMBER",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Black Glasses",
+  "moves": [
+   "Thunder Wave",
+   "Night Slash",
+   "Play Rough",
+   "Protect"
+  ],
+  "move_ids": [
+   "THUNDERWAVE",
+   "NIGHTSLASH",
+   "PLAYROUGH"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Unfezant": {
   "ability": "BIGPECKS",
   "nature": "Jolly",
@@ -6272,6 +6235,25 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
+ },
+ "Swirlix": {
+  "ability": "SWEETVEIL",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Fairy Feather",
+  "moves": [
+   "Draining Kiss",
+   "Surf",
+   "Energy Ball",
+   "Protect"
+  ],
+  "move_ids": [
+   "DRAININGKISS",
+   "SURF",
+   "ENERGYBALL"
+  ],
+  "role": "attacker",
+  "source": "engine"
  },
  "Swoobat": {
   "ability": "UNAWARE",
@@ -6330,25 +6312,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Sharpedo": {
-  "ability": "SPEEDBOOST",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Black Glasses",
-  "moves": [
-   "Crunch",
-   "Bounce",
-   "Psychic Fangs",
-   "Protect"
-  ],
-  "move_ids": [
-   "CRUNCH",
-   "BOUNCE",
-   "PSYCHICFANGS"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Simipour": {
   "ability": "TORRENT",
   "nature": "Jolly",
@@ -6383,6 +6346,44 @@
    "POISONGAS",
    "FLAMEBURST",
    "VENOSHOCK"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Comfey": {
+  "ability": "TRIAGE",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe",
+  "item": "Fairy Feather",
+  "moves": [
+   "Draining Kiss",
+   "Giga Drain",
+   "Leech Seed",
+   "Protect"
+  ],
+  "move_ids": [
+   "DRAININGKISS",
+   "GIGADRAIN",
+   "LEECHSEED"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
+ },
+ "Sharpedo": {
+  "ability": "SPEEDBOOST",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Black Glasses",
+  "moves": [
+   "Crunch",
+   "Bounce",
+   "Psychic Fangs",
+   "Protect"
+  ],
+  "move_ids": [
+   "CRUNCH",
+   "BOUNCE",
+   "PSYCHICFANGS"
   ],
   "role": "attacker",
   "source": "game"
@@ -6501,25 +6502,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Dedenne": {
-  "ability": "PLUS",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
-  "item": "Dedenne Crest",
-  "moves": [
-   "Electroweb",
-   "Charm",
-   "Play Rough",
-   "Protect"
-  ],
-  "move_ids": [
-   "ELECTROWEB",
-   "CHARM",
-   "PLAYROUGH"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Glalie": {
   "ability": "INNERFOCUS",
   "nature": "Adamant",
@@ -6611,6 +6593,25 @@
    "LUNGE",
    "PSYCHIC",
    "AIRSLASH"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Dedenne": {
+  "ability": "PLUS",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe",
+  "item": "Dedenne Crest",
+  "moves": [
+   "Electroweb",
+   "Charm",
+   "Play Rough",
+   "Protect"
+  ],
+  "move_ids": [
+   "ELECTROWEB",
+   "CHARM",
+   "PLAYROUGH"
   ],
   "role": "attacker",
   "source": "game"
@@ -6782,25 +6783,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Purugly": {
-  "ability": "THICKFAT",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Silk Scarf",
-  "moves": [
-   "Fake Out",
-   "Sucker Punch",
-   "Hypnosis",
-   "Protect"
-  ],
-  "move_ids": [
-   "FAKEOUT",
-   "SUCKERPUNCH",
-   "HYPNOSIS"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Illumise": {
   "ability": "OBLIVIOUS",
   "nature": "Timid",
@@ -6816,6 +6798,25 @@
    "INFESTATION",
    "FLATTER",
    "SHADOWBALL"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Purugly": {
+  "ability": "THICKFAT",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Silk Scarf",
+  "moves": [
+   "Fake Out",
+   "Sucker Punch",
+   "Hypnosis",
+   "Protect"
+  ],
+  "move_ids": [
+   "FAKEOUT",
+   "SUCKERPUNCH",
+   "HYPNOSIS"
   ],
   "role": "attacker",
   "source": "game"
@@ -6839,25 +6840,6 @@
   "role": "attacker",
   "source": "engine"
  },
- "Persian": {
-  "ability": "TECHNICIAN",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Silk Scarf",
-  "moves": [
-   "Fake Out",
-   "Night Slash",
-   "Screech",
-   "Protect"
-  ],
-  "move_ids": [
-   "FAKEOUT",
-   "NIGHTSLASH",
-   "SCREECH"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Paras (Aevian Form)": {
   "ability": "RESUSCITATION",
   "nature": "Adamant",
@@ -6873,6 +6855,25 @@
    "SHADOWCLAW",
    "XSCISSOR",
    "CROSSPOISON"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
+ "Persian": {
+  "ability": "TECHNICIAN",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Silk Scarf",
+  "moves": [
+   "Fake Out",
+   "Night Slash",
+   "Screech",
+   "Protect"
+  ],
+  "move_ids": [
+   "FAKEOUT",
+   "NIGHTSLASH",
+   "SCREECH"
   ],
   "role": "attacker",
   "source": "game"
@@ -6913,25 +6914,6 @@
   "role": "attacker",
   "source": "engine"
  },
- "Lopunny": {
-  "ability": "LIMBER",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe",
-  "item": "Silk Scarf",
-  "moves": [
-   "Fake Out",
-   "Power-Up Punch",
-   "Thunder Wave",
-   "Protect"
-  ],
-  "move_ids": [
-   "FAKEOUT",
-   "POWERUPPUNCH",
-   "THUNDERWAVE"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
  "Karrablast": {
   "ability": "NOGUARD",
   "nature": "Adamant",
@@ -6950,6 +6932,25 @@
   ],
   "role": "attacker",
   "source": "engine"
+ },
+ "Lopunny": {
+  "ability": "LIMBER",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Silk Scarf",
+  "moves": [
+   "Fake Out",
+   "Power-Up Punch",
+   "Thunder Wave",
+   "Protect"
+  ],
+  "move_ids": [
+   "FAKEOUT",
+   "POWERUPPUNCH",
+   "THUNDERWAVE"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
  },
  "Farfetch'd": {
   "ability": "KEENEYE",

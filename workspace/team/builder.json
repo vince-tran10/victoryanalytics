@@ -400,24 +400,6 @@
      "teach": [
       "Roar"
      ]
-    },
-    {
-     "name": "Swampert",
-     "tier": "A",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 1 type"
-     ],
-     "tools": [
-      "Spread: Rock Slide"
-     ],
-     "sid": "SWAMPERT",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Roar"
-     ]
     }
    ]
   },
@@ -593,24 +575,6 @@
      "teach": []
     },
     {
-     "name": "Swampert",
-     "tier": "A",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 1 type"
-     ],
-     "tools": [
-      "Spread: Rock Slide"
-     ],
-     "sid": "SWAMPERT",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Curse"
-     ]
-    },
-    {
      "name": "Mismagius (Aevian Form)",
      "tier": "A",
      "stats": [
@@ -708,22 +672,6 @@
      "rec": true
     },
     {
-     "name": "Swampert",
-     "tier": "A",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 1 type"
-     ],
-     "tools": [
-      "Spread: Rock Slide"
-     ],
-     "teach": [],
-     "sid": "SWAMPERT",
-     "form": "0",
-     "pick": false,
-     "rec": false
-    },
-    {
      "name": "Muk (Alolan Form)",
      "tier": "S",
      "stats": [
@@ -743,16 +691,35 @@
      "rec": false
     },
     {
-     "name": "Zoroark",
-     "tier": "A",
+     "name": "Scrafty",
+     "tier": "B",
      "stats": [
-      "Resists 3 types",
+      "Resists 4 types",
       "Weak to 3 types",
       "Single target only"
      ],
-     "tools": [],
+     "tools": [
+      "Disrupt: Fake Out"
+     ],
      "teach": [],
-     "sid": "ZOROARK",
+     "sid": "SCRAFTY",
+     "form": "0",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Talonflame",
+     "tier": "B",
+     "stats": [
+      "Resists 7 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Speed control: Tailwind"
+     ],
+     "teach": [],
+     "sid": "TALONFLAME",
      "form": "0",
      "pick": false,
      "rec": false
@@ -798,6 +765,24 @@
      "teach": [],
      "sid": "CRAWDAUNT",
      "form": "0",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Zoroark (Hisuian Form)",
+     "tier": "B",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 1 type",
+      "Single target only"
+     ],
+     "tools": [
+      "Setup: Nasty Plot",
+      "Disrupt: Taunt"
+     ],
+     "teach": [],
+     "sid": "ZOROARK",
+     "form": "1",
      "pick": false,
      "rec": false
     }
@@ -862,8 +847,8 @@
    "Regenerator"
   ],
   "Swampert": [
-   "Attacker",
-   ""
+   "Support",
+   "Helping Hand"
   ],
   "Froslass-Aevian": [
    "Attacker",
@@ -1105,13 +1090,13 @@
    "Attacker",
    ""
   ],
-  "Hariyama": [
-   "Attacker",
-   ""
-  ],
   "Typhlosion": [
    "Lead",
    "outspeeds 81%"
+  ],
+  "Hariyama": [
+   "Attacker",
+   ""
   ],
   "Florges": [
    "Mid game",
@@ -1277,13 +1262,13 @@
    "Attacker",
    ""
   ],
-  "Ribombee": [
-   "Support",
-   "Sticky Web"
-  ],
   "Arctozolt": [
    "Attacker",
    ""
+  ],
+  "Ribombee": [
+   "Support",
+   "Sticky Web"
   ],
   "Centiskorch": [
    "Attacker",
@@ -1601,13 +1586,13 @@
    "Support",
    "Thunder Wave"
   ],
-  "Seismitoad": [
-   "Attacker",
-   ""
-  ],
   "Zebstrika": [
    "Support",
    "Thunder Wave"
+  ],
+  "Seismitoad": [
+   "Attacker",
+   ""
   ],
   "Tentacruel": [
    "Attacker",
@@ -1669,25 +1654,25 @@
    "Attacker",
    ""
   ],
-  "Lapras": [
-   "Attacker",
-   ""
-  ],
   "Leafeon": [
    "Closer",
    "Swords Dance"
+  ],
+  "Lapras": [
+   "Attacker",
+   ""
   ],
   "Stunfisk": [
    "Support",
    "Thunder Wave"
   ],
-  "Gogoat": [
-   "Attacker",
-   ""
-  ],
   "Victreebel": [
    "Support",
    "Sleep Powder"
+  ],
+  "Gogoat": [
+   "Attacker",
+   ""
   ],
   "Sirfetch'd": [
    "Attacker",
@@ -1709,13 +1694,13 @@
    "Attacker",
    ""
   ],
-  "Frosmoth": [
-   "Closer",
-   "Quiver Dance"
-  ],
   "Octillery": [
    "Attacker",
    ""
+  ],
+  "Frosmoth": [
+   "Closer",
+   "Quiver Dance"
   ],
   "Zangoose": [
    "Attacker",
@@ -1901,13 +1886,13 @@
    "Attacker",
    ""
   ],
-  "Absol": [
-   "Closer",
-   "Swords Dance"
-  ],
   "Rapidash": [
    "Attacker",
    ""
+  ],
+  "Absol": [
+   "Closer",
+   "Swords Dance"
   ],
   "Wormadam (Sandy Cloak)": [
    "Attacker",
@@ -2177,11 +2162,11 @@
    "Support",
    "Thunder Wave"
   ],
-  "Wailord": [
+  "Illumise": [
    "Attacker",
    ""
   ],
-  "Illumise": [
+  "Wailord": [
    "Attacker",
    ""
   ],
@@ -2225,11 +2210,11 @@
    "Doubles lead",
    "Fake Out"
   ],
-  "Mothim": [
+  "Kricketune": [
    "Attacker",
    ""
   ],
-  "Kricketune": [
+  "Mothim": [
    "Attacker",
    ""
   ],
@@ -2595,7 +2580,12 @@
   },
   "Swampert": {
    "s": [],
-   "d": []
+   "d": [
+    [
+     "B",
+     "Helping Hand"
+    ]
+   ]
   },
   "Froslass-Aevian": {
    "s": [
@@ -3616,6 +3606,20 @@
     ]
    ]
   },
+  "Typhlosion": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 100)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 100)"
+    ]
+   ]
+  },
   "Hariyama": {
    "s": [
     [
@@ -3635,20 +3639,6 @@
     [
      "E",
      "Knock Off"
-    ]
-   ]
-  },
-  "Typhlosion": {
-   "s": [
-    [
-     "A",
-     "Fast cleaner (Speed 100)"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Fast cleaner (Speed 100)"
     ]
    ]
   },
@@ -4246,15 +4236,6 @@
     ]
    ]
   },
-  "Ribombee": {
-   "s": [
-    [
-     "B",
-     "Sticky Web"
-    ]
-   ],
-   "d": []
-  },
   "Arctozolt": {
    "s": [],
    "d": [
@@ -4263,6 +4244,15 @@
      "Bulldoze"
     ]
    ]
+  },
+  "Ribombee": {
+   "s": [
+    [
+     "B",
+     "Sticky Web"
+    ]
+   ],
+   "d": []
   },
   "Centiskorch": {
    "s": [],
@@ -5492,10 +5482,6 @@
     ]
    ]
   },
-  "Seismitoad": {
-   "s": [],
-   "d": []
-  },
   "Zebstrika": {
    "s": [
     [
@@ -5517,6 +5503,10 @@
      "Thunder Wave"
     ]
    ]
+  },
+  "Seismitoad": {
+   "s": [],
+   "d": []
   },
   "Tentacruel": {
    "s": [
@@ -5740,10 +5730,6 @@
    "s": [],
    "d": []
   },
-  "Lapras": {
-   "s": [],
-   "d": []
-  },
   "Leafeon": {
    "s": [
     [
@@ -5757,6 +5743,10 @@
      "Swords Dance sweeper"
     ]
    ]
+  },
+  "Lapras": {
+   "s": [],
+   "d": []
   },
   "Stunfisk": {
    "s": [
@@ -5772,10 +5762,6 @@
     ]
    ]
   },
-  "Gogoat": {
-   "s": [],
-   "d": []
-  },
   "Victreebel": {
    "s": [
     [
@@ -5789,6 +5775,10 @@
      "Sleep Powder"
     ]
    ]
+  },
+  "Gogoat": {
+   "s": [],
+   "d": []
   },
   "Sirfetch'd": {
    "s": [
@@ -5860,6 +5850,10 @@
    "s": [],
    "d": []
   },
+  "Octillery": {
+   "s": [],
+   "d": []
+  },
   "Frosmoth": {
    "s": [
     [
@@ -5881,10 +5875,6 @@
      "Sp. Atk 125"
     ]
    ]
-  },
-  "Octillery": {
-   "s": [],
-   "d": []
   },
   "Zangoose": {
    "s": [],
@@ -6632,6 +6622,20 @@
     ]
    ]
   },
+  "Rapidash": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 105)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 105)"
+    ]
+   ]
+  },
   "Absol": {
    "s": [
     [
@@ -6651,20 +6655,6 @@
     [
      "C",
      "Attack 130"
-    ]
-   ]
-  },
-  "Rapidash": {
-   "s": [
-    [
-     "A",
-     "Fast cleaner (Speed 105)"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Fast cleaner (Speed 105)"
     ]
    ]
   },
@@ -7497,11 +7487,11 @@
     ]
    ]
   },
-  "Wailord": {
+  "Illumise": {
    "s": [],
    "d": []
   },
-  "Illumise": {
+  "Wailord": {
    "s": [],
    "d": []
   },
@@ -7645,6 +7635,10 @@
     ]
    ]
   },
+  "Kricketune": {
+   "s": [],
+   "d": []
+  },
   "Mothim": {
    "s": [
     [
@@ -7658,10 +7652,6 @@
      "Tinted Lens"
     ]
    ]
-  },
-  "Kricketune": {
-   "s": [],
-   "d": []
   },
   "Emolga": {
    "s": [
@@ -8269,22 +8259,22 @@
     ]
    },
    {
-    "name": "Swampert",
-    "tier": "A",
-    "score": 2.25,
-    "why": [
-     "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Poison, Steel",
-     "Used together in the real meta"
-    ]
-   },
-   {
     "name": "Amoonguss",
     "tier": "A",
     "score": 2.0,
     "why": [
      "Amoonguss draws attacks so Clefable attacks freely",
      "Amoonguss's sleep takes a foe out for Clefable",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Alomomola",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "Alomomola switches in on Steel hits aimed at Clefable and heals on the way out",
+     "Resists your weaknesses: Steel",
      "Used together in the real meta"
     ]
    }
@@ -8315,13 +8305,13 @@
     ]
    },
    {
-    "name": "Swampert",
+    "name": "Froslass-Aevian",
     "tier": "A",
     "score": 2.25,
     "why": [
-     "Speed split: Drapion-Aevian moves first, Swampert is the bulky one",
-     "Resists your weaknesses: Fire, Rock, Steel",
-     "You resist its weaknesses: Grass"
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Ground, Steel",
+     "You resist its weaknesses: Poison, Bug"
     ]
    }
   ],
@@ -8361,41 +8351,6 @@
      "You resist its weaknesses: Ice, Steel",
      "Shared weaknesses: Grass",
      "Slowbro's Surf can't hurt Gastrodon-Aevian (West)"
-    ]
-   }
-  ],
-  "Swampert": [
-   {
-    "name": "Amoonguss",
-    "tier": "A",
-    "score": 3.25,
-    "why": [
-     "Amoonguss draws attacks so Swampert attacks freely",
-     "Amoonguss's sleep takes a foe out for Swampert",
-     "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Grass",
-     "You resist its weaknesses: Fire",
-     "Used together in the real meta"
-    ]
-   },
-   {
-    "name": "Ninetales-Alola",
-    "tier": "A",
-    "score": 2.5,
-    "why": [
-     "Speed split: Ninetales-Alola moves first, Swampert is the bulky one",
-     "Physical + special: Intimidate or one screen can't stop both",
-     "You resist its weaknesses: Fire, Poison, Rock, Steel"
-    ]
-   },
-   {
-    "name": "Clefable",
-    "tier": "A",
-    "score": 2.25,
-    "why": [
-     "Physical + special: Intimidate or one screen can't stop both",
-     "You resist its weaknesses: Poison, Steel",
-     "Used together in the real meta"
     ]
    }
   ],
