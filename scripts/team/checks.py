@@ -81,7 +81,7 @@ if st.get('core') and st.get('core_check'):   # 16 Nov model: core of 4 for the 
         chk(f"Fight six passes the rules vs {fo['key']} (its attack types only)", not fo['weak3'] and not fo['nores'] and fo['n'] == 6,
             f"{fo['n']}/6 checked · 3+ weak {fo['weak3'] or 'none'}, unresisted {fo['nores'] or 'none'}"
             + (f" · one-off types (tiebreak only): {', '.join(fo.get('minor') or [])}" if fo.get('minor') else ''),
-            blocking=bool(fo['weak3']) or st.get('mode') != 'planner')   # 23 Nov: planner mode weighs resist gaps itself (warning); 3+ weak stays blocking
+            blocking=(bool(fo['weak3']) or st.get('mode') != 'planner') and (st.get('builder') or 'counter') != 'counter')   # 24 Nov: counter builder = one hard counter per foe; shared weaknesses are a warning   # 23 Nov: planner mode weighs resist gaps itself (warning); 3+ weak stays blocking
 else:
     chk('Team passes the chapter rules', tc.get('rank') is not None, f"#{tc.get('rank')} of {tc.get('of')}")
 if st.get('core') and os.path.exists('team/fight_plans.json'):   # 17 Nov: core model replaces the whole-chapter six search

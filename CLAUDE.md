@@ -108,6 +108,16 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   type, in SINGLES Protect replaced when another move adds 120+ effective power (no charge / recharge / self-KO / conditional moves);
   the CORE keeps Protect while a doubles fight is left. A core member may SIT OUT a fight only for +10 or more (shown on the Flex tab);
   the core stays the chapter's stars. Chips on Core + Flex = chapter_brief.good_for (role: why, field use, answers / beats).
+- **COUNTER BUILDER (Vincent, 24 Nov, LATEST; replaces Core / Flex / Team tabs):** nav = Fights · Builder · To do · Dex · Items · Community.
+  Builder (section 'splan', planner_tab.py) = upcoming fight + field + format + field plan / model check, then THEIR party in order with
+  YOUR dedicated hard counter in the same slot (slot N counters their N, so leads counter their leads): sprite, name, types, verdict
+  (Hard counter = deals 90%+ or outspeeds and one-shots, AND takes < 70% after their setup / Wins the 1-v-1 / Best you have), deals /
+  takes / faster, ability, item, nature, EVs, 4 moves, Why these moves, Other counters. planner.py COUNTER mode (state builder='counter',
+  default): no core lock; one-to-one assignment over each foe's top 10 (hard +10, 1-v-1 win +4, damage, a lead must survive both their
+  leads, flagged moves -4), run per field plan (keep / Flash break / alt field) and the best plan wins. The old checks (brief, mindset,
+  tips, details) = section 'schk' and the Core section 'sbuild' live on the Community tab. Field plans now include ability field changes:
+  Grassy Surge = Grassy Terrain for 5 turns (Battler.rb 2866); Blizzard freezes Murkwater (Icy layer, undone by EQ / fire / Scald moves).
+  Utility attacks (Clear Smog, Knock Off, Icy Wind, pivots...) and Grassy Glide on Grassy Terrain are never 'dead'; doubles replace hazards.
 - **MODEL CHECK BEFORE EVERY PICK (Vincent, 24 Nov, after Erick beat every six: 'think it ALL through'):** the engine must model the
   fight's real mechanics, not just its numbers. Fixed 24 Nov: Thunder Raid (3 hits 20/40/60 = 120, was scored 20), foe Megas (holder of
   its stone = Mega form stats / types / ability, montext MegaEvolutions), THEIR offensive abilities (Punk Rock, Adaptability...), field

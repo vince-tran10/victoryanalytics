@@ -280,7 +280,7 @@ class Engine:
             fm *= 1.5 if mtype == 'WATER' else 0.5 if mtype == 'FIRE' else 1.0
         if mid in ('FLOWERTRICK', 'FROSTBREATH', 'STORMTHROW', 'ZIPPYZAP'):
             fm *= 1.5   # always a critical hit
-        if att_is_me and ab == 'GRASSYSURGE' and mtype == 'GRASS':
+        if att_is_me and ab == 'GRASSYSURGE' and mtype == 'GRASS' and (_fo or battle['field']) != 'Grassy Terrain':
             fm *= 1.3   # Grassy Terrain on entry
         if not att_is_me:   # foe gems: 1.3x on the matching type; Acrobatics doubles once the gem is used
             it = (att.get('item') or '')

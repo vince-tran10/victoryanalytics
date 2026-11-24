@@ -61,7 +61,7 @@
     "foe": "Stoutland",
     "mon": "Golisopod (Aevian Form)",
     "ability": "SKILLLINK",
-    "dealt": 58,
+    "dealt": 79,
     "taken": 49,
     "ok": true,
     "setup": "Swords Dance",
@@ -163,7 +163,7 @@
      "Musharna (Aevian Form)",
      "Aurorus"
     ],
-    "score": 53.78,
+    "score": 53.99,
     "counters": 3
    },
    {
@@ -171,7 +171,7 @@
      "Musharna (Aevian Form)",
      "Drednaw"
     ],
-    "score": 53.67,
+    "score": 53.87,
     "counters": 3
    },
    {
@@ -179,7 +179,7 @@
      "Arcanine (Hisuian Form)",
      "Musharna (Aevian Form)"
     ],
-    "score": 53.66,
+    "score": 53.86,
     "counters": 3
    },
    {
@@ -187,7 +187,7 @@
      "Solrock (Solrock Dominant Fusion)",
      "Musharna (Aevian Form)"
     ],
-    "score": 53.64,
+    "score": 53.85,
     "counters": 3
    },
    {
@@ -195,7 +195,7 @@
      "Musharna (Aevian Form)",
      "Rampardos"
     ],
-    "score": 43.6,
+    "score": 43.8,
     "counters": 2
    },
    {
@@ -203,7 +203,7 @@
      "Musharna (Aevian Form)",
      "Lunatone (Lunatone Dominant Fusion)"
     ],
-    "score": 43.36,
+    "score": 43.56,
     "counters": 2
    },
    {
@@ -211,7 +211,7 @@
      "Florges",
      "Solrock (Solrock Dominant Fusion)"
     ],
-    "score": 33.75,
+    "score": 33.96,
     "counters": 4
    },
    {
@@ -219,7 +219,7 @@
      "Solrock (Solrock Dominant Fusion)",
      "Alcremie"
     ],
-    "score": 33.6,
+    "score": 33.81,
     "counters": 4
    },
    {
@@ -227,7 +227,7 @@
      "Musharna (Aevian Form)",
      "Sandslash (Alolan Form)"
     ],
-    "score": 23.7,
+    "score": 23.9,
     "counters": 3
    },
    {
@@ -235,7 +235,7 @@
      "Sylveon",
      "Solrock (Solrock Dominant Fusion)"
     ],
-    "score": 23.67,
+    "score": 23.88,
     "counters": 3
    },
    {
@@ -243,7 +243,7 @@
      "Clefable",
      "Solrock (Solrock Dominant Fusion)"
     ],
-    "score": 23.62,
+    "score": 23.82,
     "counters": 3
    },
    {
@@ -251,7 +251,7 @@
      "Azumarill",
      "Solrock (Solrock Dominant Fusion)"
     ],
-    "score": 23.58,
+    "score": 23.79,
     "counters": 3
    },
    {
@@ -259,7 +259,7 @@
      "Florges",
      "Lunatone (Lunatone Dominant Fusion)"
     ],
-    "score": 23.47,
+    "score": 23.67,
     "counters": 3
    },
    {
@@ -267,7 +267,7 @@
      "Sylveon",
      "Lunatone (Lunatone Dominant Fusion)"
     ],
-    "score": 23.46,
+    "score": 23.67,
     "counters": 3
    },
    {
@@ -275,31 +275,15 @@
      "Lunatone (Lunatone Dominant Fusion)",
      "Alcremie"
     ],
-    "score": 23.32,
+    "score": 23.52,
     "counters": 3
-   },
-   {
-    "swaps": [
-     "Copperajah",
-     "Musharna (Aevian Form)"
-    ],
-    "score": 13.43,
-    "counters": 2
-   },
-   {
-    "swaps": [
-     "Musharna (Aevian Form)",
-     "Golurk"
-    ],
-    "score": 13.4,
-    "counters": 2
    },
    {
     "swaps": [
      "Musharna (Aevian Form)",
      "Chandelure"
     ],
-    "score": 13.38,
+    "score": 13.77,
     "counters": 2
    },
    {
@@ -307,7 +291,23 @@
      "Musharna (Aevian Form)",
      "Palossand (Fiery Aevian Form)"
     ],
-    "score": 13.37,
+    "score": 13.76,
+    "counters": 2
+   },
+   {
+    "swaps": [
+     "Copperajah",
+     "Musharna (Aevian Form)"
+    ],
+    "score": 13.63,
+    "counters": 2
+   },
+   {
+    "swaps": [
+     "Musharna (Aevian Form)",
+     "Golurk"
+    ],
+    "score": 13.61,
     "counters": 2
    },
    {
@@ -315,7 +315,7 @@
      "Musharna (Aevian Form)",
      "Glalie (Aevian Form)"
     ],
-    "score": 13.35,
+    "score": 13.56,
     "counters": 2
    },
    {
@@ -323,7 +323,7 @@
      "Clefable",
      "Lunatone (Lunatone Dominant Fusion)"
     ],
-    "score": 13.33,
+    "score": 13.54,
     "counters": 2
    },
    {
@@ -331,7 +331,7 @@
      "Azumarill",
      "Lunatone (Lunatone Dominant Fusion)"
     ],
-    "score": 13.3,
+    "score": 13.51,
     "counters": 2
    },
    {
@@ -339,7 +339,7 @@
      "Musharna (Aevian Form)",
      "Revavroom"
     ],
-    "score": 13.24,
+    "score": 13.45,
     "counters": 2
    },
    {
@@ -347,7 +347,7 @@
      "Florges",
      "Drednaw"
     ],
-    "score": 3.78,
+    "score": 3.98,
     "counters": 4
    },
    {
@@ -355,7 +355,7 @@
      "Ninetales (Alolan Form)",
      "Solrock (Solrock Dominant Fusion)"
     ],
-    "score": 3.63,
+    "score": 3.83,
     "counters": 4
    },
    {
@@ -363,7 +363,7 @@
      "Alcremie",
      "Drednaw"
     ],
-    "score": 3.63,
+    "score": 3.83,
     "counters": 4
    },
    {
@@ -371,7 +371,7 @@
      "Florges",
      "Aurorus"
     ],
-    "score": -6.11,
+    "score": -5.9,
     "counters": 4
    },
    {
@@ -379,7 +379,7 @@
      "Florges",
      "Sandslash (Alolan Form)"
     ],
-    "score": -6.19,
+    "score": -5.99,
     "counters": 4
    },
    {
@@ -387,7 +387,7 @@
      "Florges",
      "Arcanine (Hisuian Form)"
     ],
-    "score": -6.23,
+    "score": -6.03,
     "counters": 4
    },
    {
@@ -395,7 +395,7 @@
      "Aurorus",
      "Alcremie"
     ],
-    "score": -6.26,
+    "score": -6.05,
     "counters": 4
    }
   ],
@@ -414,6 +414,28 @@
    "Toxtricity"
   ],
   "swaps": [
+   {
+    "name": "Glalie (Aevian Form)",
+    "ab": "GRASSYSURGE",
+    "moves": [
+     "Grassy Glide",
+     "Wood Hammer",
+     "Rock Slide"
+    ],
+    "setup": null,
+    "where": "Active",
+    "dump": 488,
+    "nature": "Adamant",
+    "evs": {
+     "Atk": 252,
+     "HP": 252,
+     "SpD": 4
+    },
+    "types": [
+     "GRASS",
+     "ROCK"
+    ]
+   },
    {
     "name": "Musharna (Aevian Form)",
     "ab": "TOUGHCLAWS",
@@ -436,67 +458,24 @@
     ]
    },
    {
-    "name": "Chandelure",
-    "ab": "FLASHFIRE",
+    "name": "Roserade (Aevian Form)",
+    "ab": "SANDVEIL",
     "moves": [
-     "Shadow Ball",
-     "Overheat"
+     "Mud Barrage",
+     "Vacuum Wave"
     ],
     "setup": null,
     "where": "Active",
-    "dump": 473,
+    "dump": 503,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
-     "HP": 252,
-     "SpD": 4
+     "Spe": 252,
+     "Def": 4
     },
     "types": [
-     "GHOST",
-     "FIRE"
-    ]
-   },
-   {
-    "name": "Dragalge",
-    "ab": "ADAPTABILITY",
-    "moves": [
-     "Sludge Bomb",
-     "Shadow Ball",
-     "Dragon Pulse"
-    ],
-    "setup": null,
-    "where": "Active",
-    "dump": 481,
-    "nature": "Modest",
-    "evs": {
-     "SpA": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "POISON",
-     "DRAGON"
-    ]
-   },
-   {
-    "name": "Swampert",
-    "ab": "TORRENT",
-    "moves": [
-     "Rock Slide",
-     "Deluge"
-    ],
-    "setup": null,
-    "where": "Active",
-    "dump": 509,
-    "nature": "Adamant",
-    "evs": {
-     "Atk": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "WATER",
-     "GROUND"
+     "GROUND",
+     "FIGHTING"
     ]
    },
    {
@@ -520,28 +499,6 @@
      "POISON",
      "DARK"
     ]
-   },
-   {
-    "name": "Gallade",
-    "ab": "SHARPNESS",
-    "moves": [
-     "Psycho Cut",
-     "Sacred Sword",
-     "X-Scissor"
-    ],
-    "setup": null,
-    "where": "Active",
-    "dump": 486,
-    "nature": "Adamant",
-    "evs": {
-     "Atk": 252,
-     "HP": 252,
-     "SpD": 4
-    },
-    "types": [
-     "PSYCHIC",
-     "FIGHTING"
-    ]
    }
   ],
   "counters": 3,
@@ -549,11 +506,11 @@
   "pairs": [
    {
     "foe": "Electivire",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 93,
-    "taken": 68,
-    "ok": true,
+    "mon": "Glalie (Aevian Form)",
+    "ability": "GRASSYSURGE",
+    "dealt": 103,
+    "taken": 81,
+    "ok": false,
     "setup": false,
     "wincons": []
    },
@@ -569,22 +526,22 @@
    },
    {
     "foe": "Magneton",
-    "mon": "Chandelure",
-    "ability": "FLASHFIRE",
-    "dealt": 130,
-    "taken": 71,
+    "mon": "Toxtricity (Aevian Form)",
+    "ability": "PUNKROCK",
+    "dealt": 102,
+    "taken": 95,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Togedemaru",
-    "mon": "Toxtricity (Aevian Form)",
-    "ability": "PUNKROCK",
-    "dealt": 130,
-    "taken": 169,
-    "ok": false,
-    "setup": false,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 54,
+    "taken": 44,
+    "ok": true,
+    "setup": "Swords Dance",
     "wincons": []
    },
    {
@@ -610,21 +567,20 @@
   ],
   "weak3": [
    "PSYCHIC",
-   "GHOST",
    "ICE"
   ],
   "nores": [],
   "leads": [
    "Golisopod (Aevian Form)",
-   "Musharna (Aevian Form)"
+   "Glalie (Aevian Form)"
   ],
   "lead_foes": [
    "Electivire",
    "Raichu"
   ],
-  "lead_taken": 121,
+  "lead_taken": 81,
   "sim": null,
-  "lead_ok": false,
+  "lead_ok": true,
   "alts": [
    {
     "swaps": [
@@ -632,6 +588,14 @@
      "Mabosstiff"
     ],
     "score": 53.55,
+    "counters": 5
+   },
+   {
+    "swaps": [
+     "Swampert",
+     "Mabosstiff"
+    ],
+    "score": 53.49,
     "counters": 5
    },
    {
@@ -684,10 +648,26 @@
    },
    {
     "swaps": [
+     "Swampert",
+     "Muk (Alolan Form)"
+    ],
+    "score": 43.74,
+    "counters": 4
+   },
+   {
+    "swaps": [
      "Turtonator",
      "Wyrdeer"
     ],
     "score": 43.74,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Swampert",
+     "Musharna (Aevian Form)"
+    ],
+    "score": 43.73,
     "counters": 4
    },
    {
@@ -700,10 +680,34 @@
    },
    {
     "swaps": [
+     "Swampert",
+     "Wyrdeer"
+    ],
+    "score": 43.68,
+    "counters": 4
+   },
+   {
+    "swaps": [
      "Turtonator",
      "Scrafty"
     ],
     "score": 43.67,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Swampert",
+     "Skuntank"
+    ],
+    "score": 43.63,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Scrafty",
+     "Swampert"
+    ],
+    "score": 43.61,
     "counters": 4
    },
    {
@@ -816,54 +820,6 @@
      "Zoroark"
     ],
     "score": 43.48,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Malamar",
-     "Mabosstiff"
-    ],
-    "score": 43.47,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Solrock (Solrock Dominant Fusion)",
-     "Mabosstiff"
-    ],
-    "score": 43.47,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Skuntank",
-     "Talonflame"
-    ],
-    "score": 43.46,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Skuntank",
-     "Mabosstiff"
-    ],
-    "score": 43.45,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Scrafty",
-     "Talonflame"
-    ],
-    "score": 43.44,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Scrafty",
-     "Mabosstiff"
-    ],
-    "score": 43.42,
     "counters": 4
    }
   ],

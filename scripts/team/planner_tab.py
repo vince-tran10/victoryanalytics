@@ -27,10 +27,14 @@ if P.get('break_field'):
 # 24 Nov (Vincent): the plan for the field (keep / break with Flash / change it, e.g. freeze Murkwater) + the model check, on top
 _pl = P.get('plan') or 'keep'
 _lead_alt = next((m['name'] for m in P['six'] if m.get('lead') and any(w.get('why', '').startswith('Turns the field') for w in m.get('why') or [])), None)
-_plan_txt = (f"Plan: freeze the field ({P.get('alt_field')}): {disp(_lead_alt) if _lead_alt else 'the lead'} uses Blizzard turn 1" if _pl == 'alt'
+_gs = next((m['name'] for m in P['six'] if m.get('lead') and (m.get('ability') or '').upper().replace(' ', '') == 'GRASSYSURGE'), None)
+_plan_txt = (f"Plan: {disp(_gs)} leads: Grassy Surge turns Murkwater into Grassy Terrain for 5 turns" if _pl == 'alt' and P.get('alt_field') == 'Grassy Terrain' and _gs
+             else f"Plan: freeze the field ({P.get('alt_field')}): {disp(_lead_alt) if _lead_alt else 'the lead'} uses Blizzard turn 1" if _pl == 'alt'
              else 'Plan: break the field with Flash turn 1' if _pl == 'break' else f"Plan: fight on {P.get('field') or 'no field'}")
 _alt = P.get('alt_plan') or {}
 h += f'<article class="plc"><h3>{E(_plan_txt)}</h3>'
+if _pl == 'alt' and P.get('alt_field') == 'Grassy Terrain':
+    h += '<div class="pans cno">After 5 turns it is Murkwater again: Ground moves fail and Electric is x1.3</div><div class="pans cok">While it lasts: no Electric x1.3, no poison chip, no Speed drop, Raichu loses Surge Surfer</div>'
 for fn_, mv_ in P.get('foe_break') or []:
     h += f'<div class="pans cno">{E(fn_)}: {E(mv_)} undoes it: KO it first or refreeze</div>'
 if _alt.get('six'):
@@ -38,6 +42,7 @@ if _alt.get('six'):
 _mg = P.get('model_gaps') or []
 h += ('<div class="pans cok">✓ Model check: every move, Mega and ability of theirs is modelled</div>' if not _mg
       else ''.join(f'<div class="pans cno">✗ Not modelled: {E(x)}</div>' for x in _mg)) + '</article>'
+HB = h; h = ''   # 24 Nov (Vincent): BUILDER = header + plan + one dedicated counter per foe; everything else moves to Community > Checks
 # their team
 h += '<article class="plc"><h3>Their team</h3><ol class="pfoes">' + ''.join(
     f'<li class="{"plead" if i < L else ""}"><span class="pn">{i + 1}</span>{SP.tag(f["sid"], "0", size="s")}<span>{E(f["name"])}</span></li>' for i, f in enumerate(foes)) + '</ol>'
@@ -189,9 +194,55 @@ css = '''<style id="plan-css">
 .plc ul.bl { padding: 0; margin: 0; list-style: none; display: grid; gap: 6px } .pho summary { cursor: pointer; font-weight: 700 } .pho ol { margin: 6px 0 0; padding-left: 20px; font-size: 13px; display: grid; gap: 3px }
 #splan + .pgrid, .pgrid { display: grid; gap: 14px }
 </style>'''
-sec = f'<section aria-labelledby="splan">\n  <h2 id="splan">Flex</h2>\n{css}<div class="pgrid">{h}</div>\n</section>\n'
+# ---- 24 Nov (Vincent): their party in order, and for each one YOUR dedicated hard counter in the same slot (leads counter their leads)
+_FB = P.get('fbuild') or {}; _MEM = {m['name']: m for m in P['six']}
+_IBJ = json.load(open('team/ideal_builds.json')) if os.path.exists('team/ideal_builds.json') else {}
+_FO = {f['name']: f for f in P['foes']}
+try: _ABN = {k: v.get('name', k) for k, v in json.load(open('gamedata/abiltext.json')).items()}
+except Exception: _ABN = {}
+rows_ = ''
+for k, c in enumerate(P.get('counters') or []):
+    m = _MEM.get(c['member']) or {}; fb = _FB.get(c['member']) or {}; ib = _IBJ.get(c['member']) or {}
+    f = _FO.get(c['foe']) or {}
+    verdict = 'Hard counter' if c['hard'] else ('Wins the 1-v-1' if c['win'] else 'Best you have')
+    lead_ = k < (2 if P['format'] == 'Doubles' else 1)
+    moves_ = fb.get('moves') or m.get('moves') or []
+    rows_ += (f'<li class="ctr{" ctr-lead" if lead_ else ""}"><div class="ctr-foe"><span class="pn">{k + 1}</span>{SP.tag(f.get("sid") or "", "0", size="s")}'
+              f'<span>{E(c["foe"])}</span>' + (f'<small class="pmuted">{E(c["setup"])}</small>' if c.get('setup') else '') + '<span class="ctr-arrow">→</span></div>'
+              f'<div class="ctr-me bc" data-dn="{E(disp(c["member"]))}" tabindex="0" role="button">'
+              f'<div class="bct"><span class="pn">{k + 1}</span>{SP.tag(m.get("sid") or "", m.get("form") or "0", size="m")}<b>{E(disp(c["member"]))}</b>'
+              + ('<span class="plt">Lead</span>' if lead_ else '') + '</div>'
+              + '<div class="ctr-types">' + ''.join(pill(t) for t in (m.get('types') or [])) + '</div>'
+              f'<div class="ctr-v {"ok" if c["hard"] else "mid" if c["win"] else "bad"}">{verdict}</div>'
+              f'<div class="bchips"><span class="bstat">Deals {c["deal"]}%</span><span class="bstat">Takes {c["take_b"]}%' + (f' after {E(c["setup"])}' if c.get('setup') and c['take_b'] != c['take'] else '') + '</span>'
+              f'<span class="bstat">{"Faster" if c["faster"] else "Slower"}</span></div>'
+              f'<ul class="ctr-b"><li><b>Ability</b> {E(_ABN.get((m.get("ability") or ib.get("ability") or "").upper().replace(" ", ""), (m.get("ability") or ib.get("ability") or "").title()))}</li>'
+              f'<li><b>Item</b> {E(fb.get("item") or ib.get("item") or "")}</li><li><b>Nature</b> {E(fb.get("nature") or ib.get("nature") or "")}</li>'
+              f'<li><b>EVs</b> {E(fb.get("evs") or ib.get("evs") or "")}</li></ul>'
+              '<div class="ctr-mv">' + ''.join(f'<span>{E(x)}</span>' for x in moves_) + '</div>'
+              + ''.join(f'<div class="pans">{E(w)}</div>' for w in fb.get('why', []) if 'replaces' in w)
+              + '<details class="pwhy" onclick="event.stopPropagation()"><summary>Why these moves</summary><ul>' + ''.join(
+                  f'<li class="{"pflag" if w["flag"] else ""}"><b>{E(w["move"])}</b><span>{E(w["why"])}</span></li>' for w in m.get('why') or []) + '</ul></details>'
+              + '<details class="pwhy" onclick="event.stopPropagation()"><summary>Other counters</summary><ul>' + ''.join(
+                  f'<li><b>{E(disp(a["name"]))}</b><span>{"Hard counter" if a["hard"] else "Not a hard counter"}: deals {a["deal"]}%, takes {a["take_b"]}%, {"faster" if a["faster"] else "slower"}'
+                  + (f' (already countering {E(a["used_for"])})' if a.get('used_for') else '') + '</span></li>' for a in c['alts']) + '</ul></details>'
+              + '</div></li>')
+nh = sum(1 for c in P.get('counters') or [] if c['hard'])
+HB += (f'<article class="plc"><h3>Their team → your counters</h3><div class="pmuted">{nh} of {len(P.get("counters") or [])} are hard counters</div>'
+       f'<ul class="ctrl">{rows_}</ul></article>')
+css += '''<style id="ctr-css">.ctrl { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px }
+.ctr { display: grid; gap: 6px; padding: 8px; border-radius: 12px; background: var(--panel-2) } .ctr-lead { box-shadow: inset 0 0 0 2px var(--accent) }
+.ctr-foe { display: flex; align-items: center; gap: 6px; font-weight: 700 } .ctr-arrow { margin-left: auto; color: var(--muted) }
+.ctr-me { display: grid; gap: 4px; background: var(--panel); border-radius: 10px; padding: 8px } .ctr-types { display: flex; gap: 4px }
+.ctr-v { font: 800 12px var(--body); text-transform: uppercase } .ctr-v.ok { color: #1f8a4c } .ctr-v.mid { color: #b45309 } .ctr-v.bad { color: #b3261e }
+.ctr-b { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; font-size: 12.5px } .ctr-b b { color: var(--muted); font-weight: 600; margin-right: 4px }
+.ctr-mv { display: grid; grid-template-columns: 1fr 1fr; gap: 4px } .ctr-mv span { font-size: 12.5px; padding: 4px 6px; border-radius: 8px; background: var(--panel-2) }
+</style>'''
+sec = f'<section aria-labelledby="splan">\n  <h2 id="splan">Builder</h2>\n{css}<div class="pgrid">{HB}</div>\n</section>\n'
+sec += f'<section aria-labelledby="schk">\n  <h2 id="schk">Checks: {E(TITLE.get(P["fight"], P["fight"]))}</h2>\n<div class="pgrid">{h}</div>\n</section>\n'
 page = open(OUT, encoding='utf-8').read()
 page = re.sub(r'<section aria-labelledby="splan">.*?</section>\s*', '', page, flags=re.S)
+page = re.sub(r'<section aria-labelledby="schk">.*?</section>\s*', '', page, flags=re.S)
 anchor = page.find('<section aria-labelledby="s1f">')
 page = page[:anchor] + sec + page[anchor:] if anchor >= 0 else page.replace('</main>', sec + '</main>')
 open(OUT, 'w', encoding='utf-8').write(page)

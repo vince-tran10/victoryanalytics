@@ -1,7 +1,245 @@
 {
  "fight": "erick",
+ "counters": [
+  {
+   "foe": "Electivire",
+   "member": "Glalie (Aevian Form)",
+   "deal": 118,
+   "take": 62,
+   "take_b": 62,
+   "faster": false,
+   "hard": true,
+   "win": true,
+   "setup": null,
+   "alts": [
+    {
+     "name": "Golisopod (Aevian Form)",
+     "deal": 150,
+     "take_b": 78,
+     "faster": false,
+     "hard": false,
+     "used_for": "Togedemaru"
+    },
+    {
+     "name": "Musharna (Aevian Form)",
+     "deal": 73,
+     "take_b": 71,
+     "faster": false,
+     "hard": false,
+     "used_for": "Raichu"
+    },
+    {
+     "name": "Solrock (Solrock Dominant Fusion)",
+     "deal": 145,
+     "take_b": 77,
+     "faster": false,
+     "hard": false,
+     "used_for": null
+    }
+   ]
+  },
+  {
+   "foe": "Raichu",
+   "member": "Musharna (Aevian Form)",
+   "deal": 150,
+   "take": 44,
+   "take_b": 44,
+   "faster": false,
+   "hard": true,
+   "win": true,
+   "setup": null,
+   "alts": [
+    {
+     "name": "Glalie (Aevian Form)",
+     "deal": 150,
+     "take_b": 51,
+     "faster": false,
+     "hard": true,
+     "used_for": "Electivire"
+    },
+    {
+     "name": "Golisopod (Aevian Form)",
+     "deal": 150,
+     "take_b": 48,
+     "faster": false,
+     "hard": true,
+     "used_for": "Togedemaru"
+    },
+    {
+     "name": "Muk (Alolan Form)",
+     "deal": 150,
+     "take_b": 23,
+     "faster": false,
+     "hard": true,
+     "used_for": "Chandelure"
+    }
+   ]
+  },
+  {
+   "foe": "Magneton",
+   "member": "Roserade (Aevian Form)",
+   "deal": 150,
+   "take": 61,
+   "take_b": 61,
+   "faster": true,
+   "hard": true,
+   "win": true,
+   "setup": null,
+   "alts": [
+    {
+     "name": "Golisopod (Aevian Form)",
+     "deal": 150,
+     "take_b": 47,
+     "faster": false,
+     "hard": true,
+     "used_for": "Togedemaru"
+    },
+    {
+     "name": "Gallade",
+     "deal": 111,
+     "take_b": 43,
+     "faster": true,
+     "hard": true,
+     "used_for": null
+    },
+    {
+     "name": "Emboar",
+     "deal": 95,
+     "take_b": 41,
+     "faster": false,
+     "hard": true,
+     "used_for": null
+    }
+   ]
+  },
+  {
+   "foe": "Togedemaru",
+   "member": "Golisopod (Aevian Form)",
+   "deal": 150,
+   "take": 33,
+   "take_b": 33,
+   "faster": false,
+   "hard": true,
+   "win": true,
+   "setup": null,
+   "alts": [
+    {
+     "name": "Swampert",
+     "deal": 99,
+     "take_b": 19,
+     "faster": false,
+     "hard": true,
+     "used_for": null
+    },
+    {
+     "name": "Vikavolt",
+     "deal": 126,
+     "take_b": 33,
+     "faster": false,
+     "hard": true,
+     "used_for": null
+    },
+    {
+     "name": "Scrafty",
+     "deal": 150,
+     "take_b": 59,
+     "faster": false,
+     "hard": true,
+     "used_for": null
+    }
+   ]
+  },
+  {
+   "foe": "Chandelure",
+   "member": "Muk (Alolan Form)",
+   "deal": 77,
+   "take": 34,
+   "take_b": 34,
+   "faster": false,
+   "hard": false,
+   "win": true,
+   "setup": null,
+   "alts": [
+    {
+     "name": "Sylveon",
+     "deal": 54,
+     "take_b": 44,
+     "faster": false,
+     "hard": false,
+     "used_for": null
+    },
+    {
+     "name": "Dragalge",
+     "deal": 53,
+     "take_b": 48,
+     "faster": false,
+     "hard": false,
+     "used_for": null
+    },
+    {
+     "name": "Glalie (Aevian Form)",
+     "deal": 85,
+     "take_b": 61,
+     "faster": false,
+     "hard": false,
+     "used_for": "Electivire"
+    }
+   ]
+  },
+  {
+   "foe": "Toxtricity",
+   "member": "Slowking (Galarian Form)",
+   "deal": 106,
+   "take": 49,
+   "take_b": 49,
+   "faster": false,
+   "hard": true,
+   "win": true,
+   "setup": null,
+   "alts": [
+    {
+     "name": "Golisopod (Aevian Form)",
+     "deal": 150,
+     "take_b": 52,
+     "faster": false,
+     "hard": true,
+     "used_for": "Togedemaru"
+    },
+    {
+     "name": "Roserade (Aevian Form)",
+     "deal": 150,
+     "take_b": 68,
+     "faster": true,
+     "hard": true,
+     "used_for": "Magneton"
+    },
+    {
+     "name": "Gallade",
+     "deal": 107,
+     "take_b": 55,
+     "faster": false,
+     "hard": true,
+     "used_for": null
+    }
+   ]
+  }
+ ],
  "model_gaps": [],
  "fbuild": {
+  "Glalie (Aevian Form)": {
+   "moves": [
+    "Grassy Glide",
+    "Wood Hammer",
+    "Rock Slide",
+    "Protect"
+   ],
+   "evs": "252 HP / 252 Atk / 4 Def",
+   "nature": "Adamant",
+   "item": "Miracle Seed",
+   "why": [
+    "Bulk + power: Speed EVs change no matchup here"
+   ]
+  },
   "Musharna (Aevian Form)": {
    "moves": [
     "Lovely Kiss",
@@ -16,65 +254,33 @@
     "Bulk + power: Speed EVs change no matchup here"
    ]
   },
-  "Gallade": {
+  "Roserade (Aevian Form)": {
    "moves": [
-    "Psycho Cut",
-    "Sacred Sword",
-    "X-Scissor",
+    "Mud Barrage",
+    "Vacuum Wave",
+    "Taunt",
+    "Protect"
+   ],
+   "evs": "252 SpA / 252 Spe / 4 HP",
+   "nature": "Timid",
+   "item": "Soft Sand",
+   "why": [
+    "Taunt replaces Spikes (doubles: hazards / Toxic are too slow)",
+    "Speed: outspeeds Togedemaru, Toxtricity only with full Speed"
+   ]
+  },
+  "Golisopod (Aevian Form)": {
+   "moves": [
+    "Bone Rush",
+    "Pin Missile",
+    "Swords Dance",
     "Protect"
    ],
    "evs": "252 Atk / 252 Spe / 4 HP",
    "nature": "Jolly",
-   "item": "Black Belt",
+   "item": "Soft Sand",
    "why": [
-    "Speed: outspeeds Electivire only with full Speed",
-    "Black Belt: boosts Sacred Sword, the best hit on 3 of their 6"
-   ]
-  },
-  "Dragalge": {
-   "moves": [
-    "Sludge Bomb",
-    "Shadow Ball",
-    "Dragon Pulse",
-    "Protect"
-   ],
-   "evs": "252 HP / 252 SpA / 4 Def",
-   "nature": "Modest",
-   "item": "Spell Tag",
-   "why": [
-    "Bulk + power: Speed EVs change no matchup here",
-    "Spell Tag: boosts Shadow Ball, the best hit on 3 of their 6"
-   ]
-  },
-  "Swampert": {
-   "moves": [
-    "Helping Hand",
-    "Rock Slide",
-    "Deluge",
-    "Protect"
-   ],
-   "evs": "252 HP / 252 Atk / 4 Def",
-   "nature": "Adamant",
-   "item": "Mystic Water",
-   "why": [
-    "Helping Hand replaces Earthquake (doubles: Earthquake also hits your partner)",
-    "Bulk + power: Speed EVs change no matchup here",
-    "Mystic Water: boosts Deluge, the best hit on 6 of their 6"
-   ]
-  },
-  "Chandelure": {
-   "moves": [
-    "Shadow Ball",
-    "Will-O-Wisp",
-    "Overheat",
-    "Protect"
-   ],
-   "evs": "252 HP / 252 SpA / 4 Def",
-   "nature": "Modest",
-   "item": "Charcoal",
-   "why": [
-    "Bulk + power: Speed EVs change no matchup here",
-    "Charcoal: boosts Overheat, the best hit on 4 of their 6"
+    "Speed: outspeeds Magneton only with full Speed"
    ]
   },
   "Muk (Alolan Form)": {
@@ -90,11 +296,23 @@
    "why": [
     "Bulk + power: Speed EVs change no matchup here"
    ]
+  },
+  "Slowking (Galarian Form)": {
+   "moves": [
+    "Sludge Bomb",
+    "Psychic",
+    "Thunder Wave",
+    "Protect"
+   ],
+   "evs": "252 HP / 252 SpA / 4 Def",
+   "nature": "Modest",
+   "item": "Poison Barb",
+   "why": [
+    "Bulk + power: Speed EVs change no matchup here"
+   ]
   }
  },
- "sitout": {
-  "Florges": "sits out this fight: the six without it scores 10+ higher"
- },
+ "sitout": {},
  "brief": [
   {
    "id": "erick:ability:Electivire:0",
@@ -107,34 +325,25 @@
    "ability": "MOTORDRIVE",
    "cov": [
     [
+     "Glalie (Aevian Form)",
+     "still hits it for 118%"
+    ],
+    [
      "Musharna (Aevian Form)",
      "still hits it for 73%"
     ],
     [
-     "Gallade",
-     "still hits it for 104%"
+     "Roserade (Aevian Form)",
+     "still hits it for 65%"
     ],
     [
-     "Dragalge",
-     "still hits it for 66%"
-    ],
-    [
-     "Swampert",
-     "still hits it for 67%"
+     "Golisopod (Aevian Form)",
+     "still hits it for 252%"
     ]
    ],
    "ok": true,
-   "core_ok": true,
-   "core_cov": [
-    [
-     "Musharna (Aevian Form)",
-     "still hits it for 73%"
-    ],
-    [
-     "Gallade",
-     "still hits it for 104%"
-    ]
-   ]
+   "core_ok": false,
+   "core_cov": []
   },
   {
    "id": "erick:item:Electivire:1",
@@ -147,18 +356,17 @@
    "item": "Assault Vest",
    "cov": [
     [
-     "Gallade",
-     "beats it (104%)"
+     "Glalie (Aevian Form)",
+     "beats it (118%)"
+    ],
+    [
+     "Golisopod (Aevian Form)",
+     "beats it (252%)"
     ]
    ],
    "ok": true,
-   "core_ok": true,
-   "core_cov": [
-    [
-     "Gallade",
-     "beats it (104%)"
-    ]
-   ]
+   "core_ok": false,
+   "core_cov": []
   },
   {
    "id": "erick:spread:Raichu:2",
@@ -173,11 +381,15 @@
    ],
    "cov": [
     [
-     "Dragalge",
+     "Glalie (Aevian Form)",
      "resists it"
     ],
     [
-     "Swampert",
+     "Roserade (Aevian Form)",
+     "resists it"
+    ],
+    [
+     "Golisopod (Aevian Form)",
      "resists it"
     ]
    ],
@@ -196,42 +408,33 @@
    "ability": "SURGESURFER",
    "cov": [
     [
+     "Glalie (Aevian Form)",
+     "still hits it for 175%"
+    ],
+    [
      "Musharna (Aevian Form)",
      "still hits it for 150%"
     ],
     [
-     "Gallade",
-     "still hits it for 182%"
+     "Roserade (Aevian Form)",
+     "still hits it for 114%"
     ],
     [
-     "Dragalge",
-     "still hits it for 116%"
-    ],
-    [
-     "Swampert",
-     "still hits it for 98%"
-    ],
-    [
-     "Chandelure",
-     "still hits it for 137%"
+     "Golisopod (Aevian Form)",
+     "still hits it for 370%"
     ],
     [
      "Muk (Alolan Form)",
      "still hits it for 158%"
+    ],
+    [
+     "Slowking (Galarian Form)",
+     "still hits it for 63%"
     ]
    ],
    "ok": true,
-   "core_ok": true,
-   "core_cov": [
-    [
-     "Musharna (Aevian Form)",
-     "still hits it for 150%"
-    ],
-    [
-     "Gallade",
-     "still hits it for 182%"
-    ]
-   ]
+   "core_ok": false,
+   "core_cov": []
   },
   {
    "id": "erick:item:Raichu:4",
@@ -242,8 +445,13 @@
    "how": "Protect / resist the Z-move; multi-hit or priority breaks Sash / Sturdy",
    "need": 1,
    "item": "Focus Sash",
-   "cov": [],
-   "ok": false,
+   "cov": [
+    [
+     "Golisopod (Aevian Form)",
+     "multi-hit breaks it"
+    ]
+   ],
+   "ok": true,
    "core_ok": false,
    "core_cov": []
   },
@@ -260,11 +468,15 @@
    ],
    "cov": [
     [
-     "Dragalge",
+     "Glalie (Aevian Form)",
      "resists it"
     ],
     [
-     "Swampert",
+     "Roserade (Aevian Form)",
+     "resists it"
+    ],
+    [
+     "Golisopod (Aevian Form)",
      "resists it"
     ]
    ],
@@ -281,8 +493,13 @@
    "how": "Plan around it",
    "need": 1,
    "ability": "STURDY",
-   "cov": [],
-   "ok": false,
+   "cov": [
+    [
+     "Golisopod (Aevian Form)",
+     "multi-hit breaks it"
+    ]
+   ],
+   "ok": true,
    "core_ok": false,
    "core_cov": []
   },
@@ -316,12 +533,16 @@
    "ability": "LIGHTNINGROD",
    "cov": [
     [
-     "Gallade",
-     "still hits it for 243%"
+     "Glalie (Aevian Form)",
+     "still hits it for 69%"
     ],
     [
-     "Chandelure",
-     "still hits it for 209%"
+     "Roserade (Aevian Form)",
+     "still hits it for 240%"
+    ],
+    [
+     "Golisopod (Aevian Form)",
+     "still hits it for 589%"
     ],
     [
      "Muk (Alolan Form)",
@@ -329,13 +550,8 @@
     ]
    ],
    "ok": true,
-   "core_ok": true,
-   "core_cov": [
-    [
-     "Gallade",
-     "still hits it for 243%"
-    ]
-   ]
+   "core_ok": false,
+   "core_cov": []
   },
   {
    "id": "erick:item:Togedemaru:9",
@@ -348,22 +564,17 @@
    "item": "Elemental Seed",
    "cov": [
     [
-     "Gallade",
-     "beats it (243%)"
+     "Roserade (Aevian Form)",
+     "beats it (240%)"
     ],
     [
-     "Chandelure",
-     "beats it (209%)"
+     "Golisopod (Aevian Form)",
+     "beats it (589%)"
     ]
    ],
    "ok": true,
-   "core_ok": true,
-   "core_cov": [
-    [
-     "Gallade",
-     "beats it (243%)"
-    ]
-   ]
+   "core_ok": false,
+   "core_cov": []
   },
   {
    "id": "erick:spread:Chandelure:10",
@@ -377,17 +588,8 @@
     "BURNINGJEALOUSY",
     "DISCHARGE"
    ],
-   "cov": [
-    [
-     "Dragalge",
-     "resists it"
-    ],
-    [
-     "Swampert",
-     "resists it"
-    ]
-   ],
-   "ok": true,
+   "cov": [],
+   "ok": false,
    "core_ok": false,
    "core_cov": []
   },
@@ -402,12 +604,12 @@
    "ability": "LEVITATE",
    "cov": [
     [
-     "Musharna (Aevian Form)",
-     "still hits it for 73%"
+     "Glalie (Aevian Form)",
+     "still hits it for 85%"
     ],
     [
-     "Chandelure",
-     "still hits it for 99%"
+     "Musharna (Aevian Form)",
+     "still hits it for 73%"
     ],
     [
      "Muk (Alolan Form)",
@@ -415,13 +617,8 @@
     ]
    ],
    "ok": true,
-   "core_ok": true,
-   "core_cov": [
-    [
-     "Musharna (Aevian Form)",
-     "still hits it for 73%"
-    ]
-   ]
+   "core_ok": false,
+   "core_cov": []
   },
   {
    "id": "erick:spread:Toxtricity:12",
@@ -436,11 +633,15 @@
    ],
    "cov": [
     [
-     "Dragalge",
+     "Glalie (Aevian Form)",
      "resists it"
     ],
     [
-     "Swampert",
+     "Roserade (Aevian Form)",
+     "resists it"
+    ],
+    [
+     "Golisopod (Aevian Form)",
      "resists it"
     ]
    ],
@@ -459,32 +660,62 @@
    "item": "Toxtricitite",
    "cov": [
     [
-     "Gallade",
-     "beats it (107%)"
+     "Roserade (Aevian Form)",
+     "beats it (191%)"
+    ],
+    [
+     "Golisopod (Aevian Form)",
+     "beats it (329%)"
+    ],
+    [
+     "Slowking (Galarian Form)",
+     "beats it (106%)"
     ]
    ],
    "ok": true,
-   "core_ok": true,
-   "core_cov": [
-    [
-     "Gallade",
-     "beats it (107%)"
-    ]
-   ]
+   "core_ok": false,
+   "core_cov": []
   },
   {
-   "id": "erick:speed:Raichu:14",
+   "id": "erick:speed:Electivire:14",
+   "fight": "erick",
+   "kind": "speed",
+   "foe": "Electivire",
+   "text": "Electivire: Speed 175",
+   "how": "Doubles: Tailwind / Trick Room / Icy Wind / Electroweb / paralysis",
+   "need": 1,
+   "spe": 175,
+   "cov": [
+    [
+     "Roserade (Aevian Form)",
+     "priority Vacuum Wave"
+    ]
+   ],
+   "ok": true,
+   "core_ok": false,
+   "core_cov": []
+  },
+  {
+   "id": "erick:speed:Raichu:15",
    "fight": "erick",
    "kind": "speed",
    "foe": "Raichu",
-   "text": "Raichu: Speed 410",
+   "text": "Raichu: Speed 205",
    "how": "Doubles: Tailwind / Trick Room / Icy Wind / Electroweb / paralysis",
    "need": 1,
-   "spe": 410,
+   "spe": 205,
    "cov": [
+    [
+     "Roserade (Aevian Form)",
+     "priority Vacuum Wave"
+    ],
     [
      "Muk (Alolan Form)",
      "priority Shadow Sneak"
+    ],
+    [
+     "Slowking (Galarian Form)",
+     "Thunder Wave, then Roserade (Aevian Form) one-shots it"
     ]
    ],
    "ok": true,
@@ -492,18 +723,26 @@
    "core_cov": []
   },
   {
-   "id": "erick:speed:Togedemaru:15",
+   "id": "erick:speed:Togedemaru:16",
    "fight": "erick",
    "kind": "speed",
    "foe": "Togedemaru",
-   "text": "Togedemaru: Speed 194",
+   "text": "Togedemaru: Speed 173",
    "how": "Doubles: Tailwind / Trick Room / Icy Wind / Electroweb / paralysis",
    "need": 1,
-   "spe": 194,
+   "spe": 173,
    "cov": [
+    [
+     "Roserade (Aevian Form)",
+     "priority Vacuum Wave"
+    ],
     [
      "Muk (Alolan Form)",
      "priority Shadow Sneak"
+    ],
+    [
+     "Slowking (Galarian Form)",
+     "Thunder Wave, then Roserade (Aevian Form) one-shots it"
     ]
    ],
    "ok": true,
@@ -511,7 +750,7 @@
    "core_cov": []
   },
   {
-   "id": "erick:type:ELECTRIC:16",
+   "id": "erick:type:ELECTRIC:17",
    "fight": "erick",
    "kind": "type",
    "foe": "ELECTRIC",
@@ -521,11 +760,15 @@
    "atype": "ELECTRIC",
    "cov": [
     [
-     "Dragalge",
+     "Glalie (Aevian Form)",
      "resists"
     ],
     [
-     "Swampert",
+     "Roserade (Aevian Form)",
+     "immune"
+    ],
+    [
+     "Golisopod (Aevian Form)",
      "immune"
     ]
    ],
@@ -534,7 +777,7 @@
    "core_cov": []
   },
   {
-   "id": "erick:type:POISON:17",
+   "id": "erick:type:POISON:18",
    "fight": "erick",
    "kind": "type",
    "foe": "POISON",
@@ -544,123 +787,89 @@
    "atype": "POISON",
    "cov": [
     [
-     "Dragalge",
+     "Roserade (Aevian Form)",
      "resists"
     ],
     [
-     "Swampert",
-     "resists"
-    ],
-    [
-     "Chandelure",
+     "Golisopod (Aevian Form)",
      "resists"
     ],
     [
      "Muk (Alolan Form)",
+     "resists"
+    ],
+    [
+     "Slowking (Galarian Form)",
      "resists"
     ]
    ],
    "ok": true,
    "core_ok": false,
-   "core_cov": []
-  },
-  {
-   "id": "erick:fieldblock:Murkwater Surface:18",
-   "fight": "erick",
-   "kind": "fieldblock",
-   "foe": "Murkwater Surface",
-   "text": "Murkwater Surface: Ground attacks fail",
-   "how": "Do not rely on Ground moves",
-   "need": 1,
-   "atype": "GROUND",
-   "cov": [],
-   "ok": true,
-   "core_ok": true,
-   "core_cov": []
-  },
-  {
-   "id": "erick:fieldexploit:Murkwater Surface:19",
-   "fight": "erick",
-   "kind": "fieldexploit",
-   "foe": "Murkwater Surface",
-   "text": "Murkwater Surface boosts: Electric, Poison, Water x1.3/1.5",
-   "how": "Bring a Pokemon whose best hit is field-boosted",
-   "need": 1,
-   "boosted": [
-    "ELECTRIC",
-    "POISON",
-    "WATER"
-   ],
-   "sound": false,
-   "cov": [
-    [
-     "Dragalge",
-     "Sludge Bomb"
-    ],
-    [
-     "Swampert",
-     "Deluge"
-    ],
-    [
-     "Muk (Alolan Form)",
-     "Clear Smog"
-    ]
-   ],
-   "ok": true,
-   "core_ok": false,
-   "core_cov": []
-  },
-  {
-   "id": "erick:fieldnote:Murkwater Surface:21",
-   "fight": "erick",
-   "kind": "fieldnote",
-   "foe": "Murkwater Surface",
-   "text": "End of turn Poison damage when grounded, and not Poison or Steel type.",
-   "how": "Plan around it",
-   "need": 1,
-   "cov": [
-    [
-     "Dragalge",
-     "immune to it"
-    ],
-    [
-     "Muk (Alolan Form)",
-     "immune to it"
-    ]
-   ],
-   "ok": null,
-   "core_ok": null,
    "core_cov": []
   }
  ],
  "flexwhy": {
-  "Dragalge": [
+  "Glalie (Aevian Form)": [
+   "Electivire: Motor Drive (absorbs Electric (+Speed))",
+   "Electivire: Assault Vest (special bulk x1.5: hit it physically)",
    "Raichu: spread Discharge",
+   "Raichu: Surge Surfer (Speed x2 on Electric Terrain)",
    "Magneton: spread Discharge",
-   "Chandelure: spread Burning Jealousy, Discharge",
+   "Togedemaru: Lightning Rod (absorbs Electric and pulls Electric moves to itself in doubles)",
+   "Chandelure: Levitate (immune to Ground)",
    "Toxtricity: spread Overdrive",
-   "Electric attacks from 6 (x1.3 on this field)",
-   "Poison attacks from 2 (x1.5 on this field)",
-   "Murkwater Surface boosts: Electric, Poison, Water x1.3/1.5"
+   "Electric attacks from 6 (x1.3 on this field)"
   ],
-  "Swampert": [
+  "Musharna (Aevian Form)": [
+   "Electivire: Motor Drive (absorbs Electric (+Speed))",
+   "Raichu: Surge Surfer (Speed x2 on Electric Terrain)",
+   "Chandelure: Levitate (immune to Ground)"
+  ],
+  "Roserade (Aevian Form)": [
+   "Electivire: Motor Drive (absorbs Electric (+Speed))",
    "Raichu: spread Discharge",
+   "Raichu: Surge Surfer (Speed x2 on Electric Terrain)",
    "Magneton: spread Discharge",
-   "Chandelure: spread Burning Jealousy, Discharge",
+   "Togedemaru: Lightning Rod (absorbs Electric and pulls Electric moves to itself in doubles)",
+   "Togedemaru: Elemental Seed (field seed: boosts it on entry)",
    "Toxtricity: spread Overdrive",
+   "Toxtricity: Toxtricitite (Mega Evolves)",
+   "Electivire: Speed 175",
+   "Raichu: Speed 205",
+   "Togedemaru: Speed 173",
    "Electric attacks from 6 (x1.3 on this field)",
-   "Poison attacks from 2 (x1.5 on this field)",
-   "Murkwater Surface boosts: Electric, Poison, Water x1.3/1.5"
+   "Poison attacks from 2 (x1.5 on this field)"
   ],
-  "Chandelure": [
+  "Golisopod (Aevian Form)": [
+   "Electivire: Motor Drive (absorbs Electric (+Speed))",
+   "Electivire: Assault Vest (special bulk x1.5: hit it physically)",
+   "Raichu: spread Discharge",
+   "Raichu: Surge Surfer (Speed x2 on Electric Terrain)",
+   "Raichu: Focus Sash (survives one hit from full HP)",
+   "Magneton: spread Discharge",
+   "Magneton: Sturdy (survives any one hit from full)",
+   "Togedemaru: Lightning Rod (absorbs Electric and pulls Electric moves to itself in doubles)",
+   "Togedemaru: Elemental Seed (field seed: boosts it on entry)",
+   "Toxtricity: spread Overdrive",
+   "Toxtricity: Toxtricitite (Mega Evolves)",
+   "Electric attacks from 6 (x1.3 on this field)",
    "Poison attacks from 2 (x1.5 on this field)"
   ],
   "Muk (Alolan Form)": [
+   "Raichu: Surge Surfer (Speed x2 on Electric Terrain)",
    "Togedemaru: Fell Stinger (+3)",
-   "Raichu: Speed 410",
-   "Togedemaru: Speed 194",
-   "Poison attacks from 2 (x1.5 on this field)",
-   "Murkwater Surface boosts: Electric, Poison, Water x1.3/1.5"
+   "Togedemaru: Lightning Rod (absorbs Electric and pulls Electric moves to itself in doubles)",
+   "Chandelure: Levitate (immune to Ground)",
+   "Raichu: Speed 205",
+   "Togedemaru: Speed 173",
+   "Poison attacks from 2 (x1.5 on this field)"
+  ],
+  "Slowking (Galarian Form)": [
+   "Raichu: Surge Surfer (Speed x2 on Electric Terrain)",
+   "Toxtricity: Toxtricitite (Mega Evolves)",
+   "Raichu: Speed 205",
+   "Togedemaru: Speed 173",
+   "Poison attacks from 2 (x1.5 on this field)"
   ]
  },
  "mind_core": [
@@ -691,7 +900,7 @@
   },
   {
    "ok": true,
-   "text": "Protect on almost everyone (2 of 2)",
+   "text": "Protect on almost everyone (0 of 0)",
    "who": []
   },
   {
@@ -705,20 +914,20 @@
    "ok": true,
    "text": "Electric immunity (6 of them use Electric)",
    "who": [
-    "Swampert"
+    "Roserade (Aevian Form)",
+    "Golisopod (Aevian Form)"
    ]
   },
   {
-   "ok": true,
+   "ok": false,
    "text": "Disruption: Fake Out / redirection / Intimidate / Snarl / Will-O-Wisp",
-   "who": [
-    "Chandelure"
-   ]
+   "who": []
   },
   {
    "ok": true,
    "text": "Speed control: Tailwind / Trick Room / Icy Wind / Electroweb / paralysis",
    "who": [
+    "Roserade (Aevian Form)",
     "Muk (Alolan Form)"
    ]
   },
@@ -726,7 +935,7 @@
    "ok": true,
    "text": "Spread attack",
    "who": [
-    "Swampert"
+    "Glalie (Aevian Form)"
    ]
   },
   {
@@ -745,8 +954,8 @@
    "who": []
   }
  ],
- "field": "Murkwater Surface",
- "fe": "MURKWATERSURFACE",
+ "field": "Grassy Terrain",
+ "fe": "GRASSY",
  "format": "Doubles",
  "foes": [
   {
@@ -853,19 +1062,23 @@
  ],
  "main": [
   "ELECTRIC",
-  "FIRE",
   "FIGHTING",
+  "FIRE",
   "GRASS",
   "STEEL",
   "BUG",
   "POISON"
  ],
  "atk": {
-  "ICE": [
-   "Electivire"
+  "FIGHTING": [
+   "Electivire",
+   "Raichu"
   ],
   "FIRE": [
    "Chandelure",
+   "Electivire"
+  ],
+  "ICE": [
    "Electivire"
   ],
   "ELECTRIC": [
@@ -875,10 +1088,6 @@
    "Raichu",
    "Togedemaru",
    "Toxtricity"
-  ],
-  "FIGHTING": [
-   "Electivire",
-   "Raichu"
   ],
   "PSYCHIC": [
    "Raichu"
@@ -930,7 +1139,7 @@
    "types": [
     "FIRE"
    ],
-   "w": 0.75
+   "w": 1.12
   },
   {
    "foe": "Electivire",
@@ -954,7 +1163,7 @@
    "types": [
     "ELECTRIC"
    ],
-   "w": 1.04
+   "w": 0.8
   },
   {
    "foe": "Raichu",
@@ -986,7 +1195,7 @@
    "types": [
     "ELECTRIC"
    ],
-   "w": 1.04
+   "w": 0.8
   },
   {
    "foe": "Magneton",
@@ -1026,7 +1235,7 @@
    "types": [
     "POISON"
    ],
-   "w": 1.2
+   "w": 0.8
   },
   {
    "foe": "Togedemaru",
@@ -1042,7 +1251,7 @@
    "types": [
     "FIRE"
    ],
-   "w": 0.7
+   "w": 1.05
   },
   {
    "foe": "Chandelure",
@@ -1050,7 +1259,7 @@
    "types": [
     "ELECTRIC"
    ],
-   "w": 1.04
+   "w": 0.8
   },
   {
    "foe": "Chandelure",
@@ -1058,7 +1267,7 @@
    "types": [
     "GRASS"
    ],
-   "w": 0.9
+   "w": 1.35
   },
   {
    "foe": "Chandelure",
@@ -1074,7 +1283,7 @@
    "types": [
     "ELECTRIC"
    ],
-   "w": 1.04
+   "w": 0.8
   },
   {
    "foe": "Toxtricity",
@@ -1082,7 +1291,7 @@
    "types": [
     "POISON"
    ],
-   "w": 1.35
+   "w": 0.9
   },
   {
    "foe": "Toxtricity",
@@ -1090,7 +1299,7 @@
    "types": [
     "ELECTRIC"
    ],
-   "w": 1.17
+   "w": 0.9
   }
  ],
  "lead_moves": [
@@ -1108,7 +1317,9 @@
   {
    "foe": "Electivire",
    "faster_than": 6,
-   "tools": []
+   "tools": [
+    "Roserade (Aevian Form): Vacuum Wave (priority)"
+   ]
   },
   {
    "foe": "Raichu",
@@ -1119,33 +1330,143 @@
   },
   {
    "foe": "Magneton",
-   "faster_than": 3,
-   "tools": []
+   "faster_than": 5,
+   "tools": [
+    "Roserade (Aevian Form): Vacuum Wave (priority)"
+   ]
   },
   {
    "foe": "Togedemaru",
    "faster_than": 6,
-   "tools": []
+   "tools": [
+    "Roserade (Aevian Form): Vacuum Wave (priority)"
+   ]
   },
   {
    "foe": "Chandelure",
-   "faster_than": 6,
+   "faster_than": 5,
    "tools": [
     "Muk (Alolan Form): Shadow Sneak (priority)"
    ]
   },
   {
    "foe": "Toxtricity",
-   "faster_than": 6,
+   "faster_than": 5,
    "tools": []
   }
  ],
  "tips": [],
  "six": [
   {
-   "core": true,
+   "core": false,
    "role": "Lead",
-   "job": null,
+   "job": "Field hijacker",
+   "name": "Glalie (Aevian Form)",
+   "tier": "S",
+   "types": [
+    "GRASS",
+    "ROCK"
+   ],
+   "sid": "GLALIE",
+   "form": "1",
+   "lead": true,
+   "where": "Active",
+   "moves": [
+    "Grassy Glide",
+    "Wood Hammer",
+    "Rock Slide",
+    "Protect"
+   ],
+   "ability": "GRASSYSURGE",
+   "take": [
+    62,
+    51,
+    93,
+    76,
+    61,
+    59
+   ],
+   "deal": [
+    118,
+    150,
+    31,
+    69,
+    85,
+    38
+   ],
+   "worst": 93,
+   "worst_foe": "Magneton",
+   "safe": 0,
+   "mult": {
+    "ELECTRIC": 0.5,
+    "FIGHTING": 2.0,
+    "FIRE": 1.0,
+    "GRASS": 1.0,
+    "STEEL": 2.0,
+    "BUG": 2.0,
+    "POISON": 1.0
+   },
+   "rm": [
+    2.0,
+    1.0,
+    2.0,
+    0.5,
+    0.5,
+    2.0,
+    1.0,
+    1.0,
+    0.5,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    1.0,
+    0.5,
+    1.0,
+    0.5,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    0.5
+   ],
+   "off": [
+    1.5,
+    1.5,
+    0.0,
+    0.0,
+    1.5,
+    0.0
+   ],
+   "answers": [],
+   "why": [
+    {
+     "move": "Grassy Glide",
+     "why": "Priority +1 on Grassy Terrain; x1.5 on this field; STAB; Priority +1 on Grassy Terrain: Grassy Surge sets it on entry (replaces Haunted Field for a few turns)",
+     "flag": false
+    },
+    {
+     "move": "Wood Hammer",
+     "why": "Your best hit on Electivire, Raichu, Magneton, Togedemaru, Chandelure, Toxtricity; x1.5 on this field; STAB",
+     "flag": false
+    },
+    {
+     "move": "Rock Slide",
+     "why": "STAB; hits both foes; Spread move that never hits your partner; 30% flinch",
+     "flag": false
+    },
+    {
+     "move": "Protect",
+     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
+     "flag": false
+    }
+   ],
+   "warn": []
+  },
+  {
+   "core": false,
+   "role": "Doubles lead",
+   "job": "Counter: Raichu",
    "name": "Musharna (Aevian Form)",
    "tier": "S",
    "types": [
@@ -1164,12 +1485,12 @@
    ],
    "ability": "TOUGHCLAWS",
    "take": [
-    93,
-    33,
+    71,
+    44,
     86,
     78,
-    49,
-    150
+    56,
+    110
    ],
    "deal": [
     73,
@@ -1179,13 +1500,13 @@
     73,
     33
    ],
-   "worst": 150,
+   "worst": 110,
    "worst_foe": "Toxtricity",
-   "safe": 2,
+   "safe": 1,
    "mult": {
     "ELECTRIC": 1.0,
-    "FIRE": 1.0,
     "FIGHTING": 1.0,
+    "FIRE": 1.0,
     "GRASS": 1.0,
     "STEEL": 2.0,
     "BUG": 1.0,
@@ -1250,206 +1571,100 @@
   },
   {
    "core": false,
-   "role": "Doubles lead",
-   "job": "Field hijacker",
-   "name": "Swampert",
-   "tier": "B",
-   "types": [
-    "WATER",
-    "GROUND"
-   ],
-   "sid": "SWAMPERT",
-   "form": "0",
-   "lead": true,
-   "where": "Active",
-   "moves": [
-    "Helping Hand",
-    "Rock Slide",
-    "Deluge",
-    "Protect"
-   ],
-   "ability": "TORRENT",
-   "take": [
-    32,
-    81,
-    28,
-    19,
-    150,
-    42
-   ],
-   "deal": [
-    67,
-    98,
-    6,
-    13,
-    24,
-    22
-   ],
-   "worst": 150,
-   "worst_foe": "Chandelure",
-   "safe": 4,
-   "mult": {
-    "ELECTRIC": 0.0,
-    "FIRE": 0.5,
-    "FIGHTING": 1.0,
-    "GRASS": 4.0,
-    "STEEL": 0.5,
-    "BUG": 1.0,
-    "POISON": 0.5
-   },
-   "rm": [
-    1.0,
-    0.5,
-    1.0,
-    0.0,
-    0.0,
-    1.0,
-    4.0,
-    1.0,
-    0.0,
-    0.5,
-    1.0,
-    1.0,
-    0.5,
-    0.5,
-    0.0,
-    0.5,
-    0.0,
-    4.0,
-    1.0,
-    0.0,
-    0.5,
-    0.0
-   ],
-   "off": [
-    1.5,
-    1.5,
-    1.5,
-    1.5,
-    1.5,
-    1.5
-   ],
-   "answers": [],
-   "why": [
-    {
-     "move": "Helping Hand",
-     "why": "Partner's attack x1.5 (goes first, priority +5)",
-     "flag": false
-    },
-    {
-     "move": "Rock Slide",
-     "why": "hits both foes; Spread move that never hits your partner; 30% flinch",
-     "flag": false
-    },
-    {
-     "move": "Deluge",
-     "why": "Your best hit on Electivire, Raichu, Magneton, Togedemaru, Chandelure, Toxtricity; x1.5 on this field; STAB; Goes last, power x2 (120) if that foe hit you first this turn",
-     "flag": false
-    },
-    {
-     "move": "Protect",
-     "why": "Always the 4th move: scout, stall their Tailwind turns, block double targets",
-     "flag": false
-    }
-   ],
-   "warn": []
-  },
-  {
-   "core": false,
    "role": "Mid game",
-   "job": "Counter: Chandelure, Toxtricity",
-   "name": "Dragalge",
-   "tier": "B",
+   "job": "Speed control",
+   "name": "Roserade (Aevian Form)",
+   "tier": "A",
    "types": [
-    "POISON",
-    "DRAGON"
+    "GROUND",
+    "FIGHTING"
    ],
-   "sid": "DRAGALGE",
-   "form": "0",
+   "sid": "ROSERADE",
+   "form": "1",
    "lead": false,
    "where": "Active",
    "moves": [
-    "Sludge Bomb",
-    "Shadow Ball",
-    "Dragon Pulse",
+    "Mud Barrage",
+    "Vacuum Wave",
+    "Taunt",
     "Protect"
    ],
-   "ability": "ADAPTABILITY",
+   "ability": "TECHNICIAN",
    "take": [
-    73,
-    73,
-    42,
-    47,
-    48,
-    48
+    121,
+    126,
+    61,
+    78,
+    150,
+    68
    ],
    "deal": [
-    66,
-    116,
-    24,
-    38,
-    53,
-    61
+    65,
+    114,
+    150,
+    150,
+    0,
+    150
    ],
-   "worst": 73,
-   "worst_foe": "Electivire",
-   "safe": 4,
+   "worst": 150,
+   "worst_foe": "Chandelure",
+   "safe": 0,
    "mult": {
-    "ELECTRIC": 0.5,
-    "FIRE": 0.5,
-    "FIGHTING": 0.5,
-    "GRASS": 0.25,
+    "ELECTRIC": 0.0,
+    "FIGHTING": 1.0,
+    "FIRE": 1.0,
+    "GRASS": 2.0,
     "STEEL": 1.0,
     "BUG": 0.5,
     "POISON": 0.5
    },
    "rm": [
-    0.5,
-    0.5,
+    1.0,
+    1.0,
     2.0,
-    0.5,
-    0.5,
-    0.5,
-    0.25,
+    0.0,
+    0.0,
+    1.0,
     2.0,
-    0.5,
+    2.0,
+    0.0,
     1.0,
     0.5,
     0.5,
     1.0,
     0.5,
-    0.5,
-    0.5,
-    0.5,
-    0.25,
+    0.0,
     1.0,
+    0.0,
+    2.0,
+    1.0,
+    0.0,
     0.5,
-    0.5,
-    0.5
+    0.0
    ],
    "off": [
-    1.5,
+    2.0,
+    2.0,
+    2.0,
     2.0,
     0.0,
-    0.0,
-    2.0,
-    0.0
+    2.0
    ],
    "answers": [],
    "why": [
     {
-     "move": "Sludge Bomb",
-     "why": "Your best hit on Electivire, Raichu; x1.5 on this field; STAB; no effect on Magneton, Togedemaru",
+     "move": "Mud Barrage",
+     "why": "Your best hit on Electivire, Raichu, Magneton, Togedemaru, Toxtricity; Super effective on Electivire, Raichu, Magneton, Togedemaru, Toxtricity; STAB; no effect on Chandelure",
      "flag": false
     },
     {
-     "move": "Shadow Ball",
-     "why": "Your best hit on Magneton, Togedemaru, Chandelure; Super effective on Raichu, Chandelure",
+     "move": "Vacuum Wave",
+     "why": "Priority +1: hits first (they outspeed it: Electivire, Raichu, Togedemaru); Super effective on Magneton, Togedemaru; STAB; no effect on Chandelure",
      "flag": false
     },
     {
-     "move": "Dragon Pulse",
-     "why": "Your best hit on Toxtricity; STAB",
+     "move": "Taunt",
+     "why": "Stops status / setup moves",
      "flag": false
     },
     {
@@ -1462,100 +1677,100 @@
   },
   {
    "core": false,
-   "role": "Mid game",
-   "job": "Counter: Raichu",
-   "name": "Chandelure",
-   "tier": "B",
+   "role": "Closer",
+   "job": "Counter: Raichu, Magneton",
+   "name": "Golisopod (Aevian Form)",
+   "tier": "S",
    "types": [
-    "GHOST",
-    "FIRE"
+    "BUG",
+    "GROUND"
    ],
-   "sid": "CHANDELURE",
-   "form": "0",
+   "sid": "GOLISOPOD",
+   "form": "1",
    "lead": false,
    "where": "Active",
    "moves": [
-    "Shadow Ball",
-    "Will-O-Wisp",
-    "Overheat",
+    "Bone Rush",
+    "Pin Missile",
+    "Swords Dance",
     "Protect"
    ],
-   "ability": "FLASHFIRE",
+   "ability": "SKILLLINK",
    "take": [
-    118,
+    78,
     48,
-    54,
-    96,
-    129,
-    92
+    47,
+    33,
+    72,
+    52
    ],
    "deal": [
-    55,
-    137,
-    134,
     150,
-    99,
-    83
+    150,
+    150,
+    150,
+    33,
+    150
    ],
-   "worst": 129,
-   "worst_foe": "Chandelure",
-   "safe": 1,
+   "worst": 78,
+   "worst_foe": "Electivire",
+   "safe": 3,
    "mult": {
-    "ELECTRIC": 1.0,
-    "FIRE": 0.5,
-    "FIGHTING": 0.0,
-    "GRASS": 0.5,
-    "STEEL": 0.5,
-    "BUG": 0.25,
+    "ELECTRIC": 0.0,
+    "FIGHTING": 0.5,
+    "FIRE": 2.0,
+    "GRASS": 1.0,
+    "STEEL": 1.0,
+    "BUG": 1.0,
     "POISON": 0.5
    },
    "rm": [
-    0.0,
-    0.0,
-    0.5,
-    1.0,
-    1.0,
-    0.0,
-    0.5,
-    1.0,
-    1.0,
-    0.5,
-    0.25,
-    0.25,
-    0.5,
-    0.5,
-    1.0,
-    0.0,
-    1.0,
     0.5,
     2.0,
+    2.0,
+    0.0,
+    0.0,
+    0.5,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0,
     1.0,
     0.5,
-    1.0
+    0.0,
+    2.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0
    ],
    "off": [
+    2.0,
+    2.0,
+    2.0,
+    2.0,
     0.0,
-    2.0,
-    2.0,
-    2.0,
-    2.0,
-    0.0
+    2.0
    ],
    "answers": [],
    "why": [
     {
-     "move": "Shadow Ball",
-     "why": "Your best hit on Raichu, Chandelure; Super effective on Raichu, Chandelure; STAB",
+     "move": "Bone Rush",
+     "why": "Your best hit on Electivire, Raichu, Magneton, Togedemaru, Toxtricity; Super effective on Electivire, Raichu, Magneton, Togedemaru, Toxtricity; STAB; no effect on Chandelure",
      "flag": false
     },
     {
-     "move": "Will-O-Wisp",
-     "why": "Utility move",
+     "move": "Pin Missile",
+     "why": "Your best hit on Chandelure; Super effective on Raichu; STAB",
      "flag": false
     },
     {
-     "move": "Overheat",
-     "why": "Your best hit on Electivire, Magneton, Togedemaru, Toxtricity; Super effective on Magneton, Togedemaru; STAB",
+     "move": "Swords Dance",
+     "why": "Attack +2",
      "flag": false
     },
     {
@@ -1588,12 +1803,12 @@
    ],
    "ability": "POISONTOUCH",
    "take": [
-    108,
-    30,
+    83,
+    23,
     40,
-    87,
-    45,
-    66
+    67,
+    34,
+    50
    ],
    "deal": [
     53,
@@ -1603,13 +1818,13 @@
     77,
     35
    ],
-   "worst": 108,
+   "worst": 83,
    "worst_foe": "Electivire",
    "safe": 3,
    "mult": {
     "ELECTRIC": 1.0,
-    "FIRE": 1.0,
     "FIGHTING": 1.0,
+    "FIRE": 1.0,
     "GRASS": 0.5,
     "STEEL": 1.0,
     "BUG": 1.0,
@@ -1640,7 +1855,7 @@
     1.0
    ],
    "off": [
-    1.5,
+    0.0,
     2.0,
     0.0,
     0.0,
@@ -1651,7 +1866,7 @@
    "why": [
     {
      "move": "Knock Off",
-     "why": "Your best hit on Raichu, Magneton, Togedemaru, Chandelure, Toxtricity; Super effective on Raichu, Chandelure; STAB; Removes their item (Electivire Assault Vest, Raichu Focus Sash, Chandelure Colbur Berry)",
+     "why": "Your best hit on Electivire, Raichu, Magneton, Togedemaru, Chandelure, Toxtricity; Super effective on Raichu, Chandelure; STAB; Removes their item (Electivire Assault Vest, Raichu Focus Sash, Chandelure Colbur Berry)",
      "flag": false
     },
     {
@@ -1661,7 +1876,7 @@
     },
     {
      "move": "Clear Smog",
-     "why": "Your best hit on Electivire; x1.5 on this field; STAB; Resets the target boosts (Luxray Howl); no effect on Magneton, Togedemaru",
+     "why": "STAB; Resets the target boosts (Luxray Howl); no effect on Magneton, Togedemaru",
      "flag": false
     },
     {
@@ -1673,101 +1888,101 @@
    "warn": []
   },
   {
-   "core": true,
+   "core": false,
    "role": "Mid game",
-   "job": null,
-   "name": "Gallade",
-   "tier": "B",
+   "job": "Counter: Raichu, Toxtricity",
+   "name": "Slowking (Galarian Form)",
+   "tier": "S",
    "types": [
-    "PSYCHIC",
-    "FIGHTING"
+    "POISON",
+    "PSYCHIC"
    ],
-   "sid": "GALLADE",
-   "form": "0",
+   "sid": "SLOWKING",
+   "form": "1",
    "lead": false,
    "where": "Active",
    "moves": [
-    "Psycho Cut",
-    "Sacred Sword",
-    "X-Scissor",
+    "Sludge Bomb",
+    "Psychic",
+    "Thunder Wave",
     "Protect"
    ],
-   "ability": "SHARPNESS",
+   "ability": "REGENERATOR",
    "take": [
-    146,
+    82,
+    34,
     38,
-    43,
-    118,
-    101,
-    82
+    67,
+    91,
+    49
    ],
    "deal": [
-    104,
-    150,
-    111,
-    150,
-    59,
-    107
+    35,
+    63,
+    21,
+    32,
+    45,
+    106
    ],
-   "worst": 146,
-   "worst_foe": "Electivire",
-   "safe": 2,
+   "worst": 91,
+   "worst_foe": "Chandelure",
+   "safe": 3,
    "mult": {
     "ELECTRIC": 1.0,
+    "FIGHTING": 0.25,
     "FIRE": 1.0,
-    "FIGHTING": 0.5,
-    "GRASS": 1.0,
+    "GRASS": 0.5,
     "STEEL": 1.0,
     "BUG": 1.0,
-    "POISON": 1.0
+    "POISON": 0.5
    },
    "rm": [
+    0.25,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.25,
     0.5,
     1.0,
     1.0,
     1.0,
     1.0,
+    1.0,
+    1.0,
     0.5,
     1.0,
     1.0,
     1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
+    0.5,
     2.0,
     1.0,
-    1.0,
+    0.5,
     1.0
    ],
    "off": [
     0.0,
-    2.0,
-    2.0,
-    2.0,
+    0.0,
+    0.0,
+    0.0,
     0.0,
     2.0
    ],
    "answers": [],
    "why": [
     {
-     "move": "Psycho Cut",
-     "why": "Your best hit on Chandelure, Toxtricity; Super effective on Toxtricity; STAB",
+     "move": "Sludge Bomb",
+     "why": "Your best hit on Electivire, Raichu; STAB; no effect on Magneton, Togedemaru",
      "flag": false
     },
     {
-     "move": "Sacred Sword",
-     "why": "Your best hit on Electivire, Magneton, Togedemaru; Super effective on Magneton, Togedemaru; STAB; no effect on Chandelure",
+     "move": "Psychic",
+     "why": "Your best hit on Electivire, Magneton, Togedemaru, Chandelure, Toxtricity; Super effective on Toxtricity; STAB",
      "flag": false
     },
     {
-     "move": "X-Scissor",
-     "why": "Your best hit on Raichu; Super effective on Raichu",
+     "move": "Thunder Wave",
+     "why": "Speed control: paralysis halves Speed, 25% full para; not Electivire, Raichu, Magneton, Togedemaru, Chandelure, Toxtricity",
      "flag": false
     },
     {
@@ -1781,346 +1996,373 @@
  ],
  "alts": [
   {
-   "score": 287.8,
+   "score": -1036.4,
    "in": [
-    "Golisopod (Aevian Form)"
-   ],
-   "out": [
-    "Dragalge"
-   ]
-  },
-  {
-   "score": 286.9,
-   "in": [
-    "Golisopod (Aevian Form)",
-    "Toxtricity (Aevian Form)"
-   ],
-   "out": [
     "Dragalge",
-    "Chandelure"
+    "Vikavolt",
+    "Swampert",
+    "Arcanine"
+   ],
+   "out": [
+    "Glalie (Aevian Form)",
+    "Musharna (Aevian Form)",
+    "Roserade (Aevian Form)",
+    "Slowking (Galarian Form)"
    ]
   },
   {
-   "score": 286.8,
+   "score": -1037.8,
    "in": [
-    "Toxtricity (Aevian Form)"
+    "Dragalge",
+    "Chandelure",
+    "Vikavolt",
+    "Emboar",
+    "Swampert"
    ],
    "out": [
-    "Chandelure"
+    "Glalie (Aevian Form)",
+    "Musharna (Aevian Form)",
+    "Roserade (Aevian Form)",
+    "Muk (Alolan Form)",
+    "Slowking (Galarian Form)"
+   ]
+  },
+  {
+   "score": -1038.3,
+   "in": [
+    "Dragalge",
+    "Chandelure",
+    "Vikavolt",
+    "Swampert"
+   ],
+   "out": [
+    "Glalie (Aevian Form)",
+    "Musharna (Aevian Form)",
+    "Roserade (Aevian Form)",
+    "Slowking (Galarian Form)"
    ]
   }
  ],
  "swaps": {
+  "Glalie (Aevian Form)": [],
   "Musharna (Aevian Form)": [
    {
-    "name": "Florges",
-    "gain": [],
-    "loss": [
-     "one-shot by Electivire",
-     "one-shot by Togedemaru",
-     "loses the check on Chandelure",
-     "fits the team worse ()"
-    ],
-    "tier": "B",
-    "sid": "FLORGES",
-    "form": "0",
-    "delta": -13.6,
-    "res": 4,
-    "se": 0,
-    "oneshot": [
-     "Electivire",
-     "Togedemaru",
-     "Toxtricity"
-    ]
-   }
-  ],
-  "Gallade": [
-   {
-    "name": "Florges",
-    "gain": [
-     "survives Chandelure"
-    ],
-    "loss": [
-     "loses the check on Magneton",
-     "one-shot by Toxtricity",
-     "loses Electivire: Assault Vest (special bulk x1.5: hit it physically)",
-     "loses Toxtricity: Toxtricitite (Mega Evolves)"
-    ],
-    "tier": "B",
-    "sid": "FLORGES",
-    "form": "0",
-    "delta": -36.3,
-    "res": 4,
-    "se": 0,
-    "oneshot": [
-     "Electivire",
-     "Togedemaru",
-     "Toxtricity"
-    ]
-   }
-  ],
-  "Dragalge": [
-   {
-    "name": "Golisopod (Aevian Form)",
-    "gain": [
-     "checks Raichu",
-     "answers Raichu: Focus Sash (survives one hit from full HP)",
-     "answers Magneton: Sturdy (survives any one hit from full)"
-    ],
-    "loss": [
-     "loses the check on Chandelure",
-     "loses the check on Toxtricity",
-     "uses the field less"
-    ],
-    "tier": "S",
-    "sid": "GOLISOPOD",
-    "form": "1",
-    "delta": -4.1,
-    "res": 11,
-    "se": 2,
-    "oneshot": []
-   },
-   {
-    "name": "Vikavolt",
-    "gain": [],
-    "loss": [
-     "loses the check on Chandelure",
-     "loses the check on Toxtricity",
-     "one-shot by Toxtricity",
-     "uses the field less"
-    ],
-    "tier": "B",
-    "sid": "VIKAVOLT",
-    "form": "0",
-    "delta": -8.6,
-    "res": 13,
-    "se": 3,
-    "oneshot": [
-     "Toxtricity"
-    ]
-   },
-   {
-    "name": "Clodsire",
+    "name": "Chandelure",
     "gain": [
      "checks Magneton",
-     "checks Togedemaru",
-     "answers Togedemaru: Fell Stinger (+3)"
+     "outspeeds and one-shots Magneton",
+     "survives Toxtricity",
+     "answers Togedemaru: Lightning Rod (absorbs Electric and pulls Electric moves to itself in doubles)"
     ],
     "loss": [
-     "loses the check on Chandelure",
-     "uses the field less",
-     "fits the team worse (both weak to Ground, both weak to Water)"
+     "one-shot by Chandelure"
     ],
     "tier": "B",
-    "sid": "CLODSIRE",
+    "sid": "CHANDELURE",
     "form": "0",
-    "delta": -17.9,
+    "delta": 83.8,
     "res": 13,
-    "se": 5,
-    "oneshot": []
-   }
-  ],
-  "Swampert": [
-   {
-    "name": "Golisopod (Aevian Form)",
-    "gain": [
-     "checks Raichu",
-     "survives Chandelure",
-     "answers Raichu: Focus Sash (survives one hit from full HP)",
-     "answers Magneton: Sturdy (survives any one hit from full)"
-    ],
-    "loss": [
-     "loses the check on Electivire",
-     "uses the field less",
-     "fits the team worse (both weak to Flying, both weak to Ice, both weak to Water)"
-    ],
-    "tier": "S",
-    "sid": "GOLISOPOD",
-    "form": "1",
-    "delta": -7.6,
-    "res": 11,
-    "se": 2,
-    "oneshot": []
-   },
-   {
-    "name": "Clodsire",
-    "gain": [
-     "checks Magneton",
-     "checks Togedemaru",
-     "survives Chandelure",
-     "checks Toxtricity"
-    ],
-    "loss": [
-     "loses the check on Electivire",
-     "uses the field less",
-     "fits the team worse (both weak to Ground, both weak to Ice, both weak to Water)"
-    ],
-    "tier": "B",
-    "sid": "CLODSIRE",
-    "form": "0",
-    "delta": -14.1,
-    "res": 13,
-    "se": 5,
-    "oneshot": []
-   },
-   {
-    "name": "Donphan",
-    "gain": [
-     "checks Togedemaru"
-    ],
-    "loss": [
-     "loses the check on Electivire",
-     "uses the field less",
-     "fits the team worse (both weak to Ice, both weak to Water)"
-    ],
-    "tier": "A",
-    "sid": "DONPHAN",
-    "form": "0",
-    "delta": -17.6,
-    "res": 9,
-    "se": 5,
+    "se": 4,
     "oneshot": [
      "Chandelure"
     ]
+   },
+   {
+    "name": "Arcanine",
+    "gain": [
+     "checks Magneton",
+     "outspeeds and one-shots Magneton",
+     "survives Toxtricity",
+     "answers Electivire: Assault Vest (special bulk x1.5: hit it physically)"
+    ],
+    "loss": [
+     "loses the check on Raichu"
+    ],
+    "tier": "B",
+    "sid": "ARCANINE",
+    "form": "0",
+    "delta": 64.2,
+    "res": 9,
+    "se": 2,
+    "oneshot": []
+   },
+   {
+    "name": "Dragalge",
+    "gain": [
+     "checks Chandelure",
+     "checks Toxtricity",
+     "survives Toxtricity",
+     "answers Raichu: spread Discharge"
+    ],
+    "loss": [
+     "loses the check on Raichu",
+     "fits the team worse (both weak to Ground, both weak to Ice)"
+    ],
+    "tier": "B",
+    "sid": "DRAGALGE",
+    "form": "0",
+    "delta": 58.4,
+    "res": 17,
+    "se": 2,
+    "oneshot": []
    }
   ],
-  "Chandelure": [
+  "Roserade (Aevian Form)": [
    {
-    "name": "Toxtricity (Aevian Form)",
+    "name": "Chandelure",
     "gain": [
-     "survives Chandelure",
-     "answers Murkwater Surface boosts: Electric, Poison, Water x1.3/1.5",
+     "survives Electivire",
+     "checks Raichu",
+     "survives Raichu",
+     "checks Magneton"
+    ],
+    "loss": [
+     "loses Electivire: Speed 175"
+    ],
+    "tier": "B",
+    "sid": "CHANDELURE",
+    "form": "0",
+    "delta": 52.2,
+    "res": 13,
+    "se": 4,
+    "oneshot": [
+     "Chandelure"
+    ]
+   },
+   {
+    "name": "Arcanine",
+    "gain": [
+     "survives Electivire",
+     "survives Raichu",
+     "checks Magneton",
+     "survives Chandelure"
+    ],
+    "loss": [],
+    "tier": "B",
+    "sid": "ARCANINE",
+    "form": "0",
+    "delta": 36.5,
+    "res": 9,
+    "se": 2,
+    "oneshot": []
+   },
+   {
+    "name": "Emboar",
+    "gain": [
+     "survives Electivire",
+     "survives Raichu",
+     "checks Magneton",
+     "survives Chandelure"
+    ],
+    "loss": [],
+    "tier": "B",
+    "sid": "EMBOAR",
+    "form": "0",
+    "delta": 23.9,
+    "res": 9,
+    "se": 4,
+    "oneshot": []
+   }
+  ],
+  "Golisopod (Aevian Form)": [
+   {
+    "name": "Chandelure",
+    "gain": [
+     "outspeeds and one-shots Magneton",
+     "answers Chandelure: Levitate (immune to Ground)",
      "uses the field more"
+    ],
+    "loss": [
+     "loses the check on Togedemaru",
+     "one-shot by Chandelure",
+     "loses Raichu: Focus Sash (survives one hit from full HP)",
+     "loses Magneton: Sturdy (survives any one hit from full)"
+    ],
+    "tier": "B",
+    "sid": "CHANDELURE",
+    "form": "0",
+    "delta": 53.7,
+    "res": 13,
+    "se": 4,
+    "oneshot": [
+     "Chandelure"
+    ]
+   },
+   {
+    "name": "Arcanine",
+    "gain": [
+     "outspeeds and one-shots Magneton",
+     "answers Chandelure: Levitate (immune to Ground)",
+     "answers Electivire: Speed 175",
+     "answers Raichu: Speed 205"
+    ],
+    "loss": [
+     "loses the check on Raichu",
+     "loses the check on Togedemaru",
+     "loses Raichu: Focus Sash (survives one hit from full HP)",
+     "loses Magneton: Sturdy (survives any one hit from full)"
+    ],
+    "tier": "B",
+    "sid": "ARCANINE",
+    "form": "0",
+    "delta": 32.1,
+    "res": 9,
+    "se": 2,
+    "oneshot": []
+   },
+   {
+    "name": "Swampert",
+    "gain": [
+     "answers Togedemaru: Fell Stinger (+3)",
+     "answers Chandelure: spread Burning Jealousy, Discharge"
     ],
     "loss": [
      "loses the check on Raichu",
      "one-shot by Raichu",
-     "one-shot by Togedemaru",
-     "one-shot by Toxtricity"
+     "one-shot by Chandelure",
+     "loses Raichu: Focus Sash (survives one hit from full HP)"
     ],
     "tier": "A",
-    "sid": "TOXTRICITY",
-    "form": "2",
-    "delta": -5.1,
-    "res": 14,
+    "sid": "SWAMPERT",
+    "form": "0",
+    "delta": 20.3,
+    "res": 13,
     "se": 2,
     "oneshot": [
-     "Electivire",
      "Raichu",
-     "Togedemaru",
-     "Toxtricity"
+     "Chandelure"
     ]
-   },
-   {
-    "name": "Leavanny (Aevian Form)",
-    "gain": [
-     "survives Electivire",
-     "survives Chandelure",
-     "answers Raichu: spread Discharge",
-     "answers Magneton: spread Discharge"
-    ],
-    "loss": [
-     "loses the check on Raichu",
-     "one-shot by Toxtricity",
-     "fits the team worse (both weak to Fairy, both weak to Flying, both weak to Ice)"
-    ],
-    "tier": "A",
-    "sid": "LEAVANNY",
-    "form": "1",
-    "delta": -10.0,
-    "res": 11,
-    "se": 1,
-    "oneshot": [
-     "Toxtricity"
-    ]
-   },
-   {
-    "name": "Golisopod (Aevian Form)",
-    "gain": [
-     "survives Electivire",
-     "survives Chandelure",
-     "answers Electivire: Motor Drive (absorbs Electric (+Speed))",
-     "answers Raichu: spread Discharge"
-    ],
-    "loss": [
-     "fits the team worse (both weak to Flying, both weak to Ice)"
-    ],
-    "tier": "S",
-    "sid": "GOLISOPOD",
-    "form": "1",
-    "delta": -10.3,
-    "res": 11,
-    "se": 2,
-    "oneshot": []
    }
   ],
   "Muk (Alolan Form)": [
    {
-    "name": "Mandibuzz",
-    "gain": [],
+    "name": "Chandelure",
+    "gain": [
+     "checks Magneton",
+     "outspeeds and one-shots Magneton",
+     "answers Electivire: Motor Drive (absorbs Electric (+Speed))",
+     "answers Togedemaru: Elemental Seed (field seed: boosts it on entry)"
+    ],
     "loss": [
-     "loses the check on Raichu",
-     "one-shot by Togedemaru",
      "loses the check on Chandelure",
-     "one-shot by Toxtricity"
+     "one-shot by Chandelure",
+     "loses Togedemaru: Fell Stinger (+3)"
     ],
     "tier": "B",
-    "sid": "MANDIBUZZ",
+    "sid": "CHANDELURE",
     "form": "0",
-    "delta": -2.8,
-    "res": 4,
-    "se": 2,
+    "delta": 47.4,
+    "res": 13,
+    "se": 4,
     "oneshot": [
-     "Electivire",
-     "Togedemaru",
-     "Toxtricity"
+     "Chandelure"
     ]
    },
    {
-    "name": "Azumarill",
+    "name": "Emboar",
     "gain": [
+     "checks Magneton",
      "answers Electivire: Motor Drive (absorbs Electric (+Speed))",
      "answers Togedemaru: Elemental Seed (field seed: boosts it on entry)",
-     "priority attack"
+     "answers Electivire: Speed 175"
     ],
     "loss": [
      "loses the check on Raichu",
-     "one-shot by Togedemaru",
      "loses the check on Chandelure",
-     "one-shot by Chandelure"
+     "loses Togedemaru: Fell Stinger (+3)",
+     "fits the team worse (both weak to Ground, both weak to Water)"
     ],
-    "tier": "A",
-    "sid": "AZUMARILL",
+    "tier": "B",
+    "sid": "EMBOAR",
     "form": "0",
-    "delta": -6.0,
-    "res": 7,
+    "delta": 28.3,
+    "res": 9,
+    "se": 4,
+    "oneshot": []
+   },
+   {
+    "name": "Arcanine",
+    "gain": [
+     "checks Magneton",
+     "outspeeds and one-shots Magneton",
+     "answers Electivire: Motor Drive (absorbs Electric (+Speed))",
+     "answers Electivire: Assault Vest (special bulk x1.5: hit it physically)"
+    ],
+    "loss": [
+     "loses the check on Raichu",
+     "loses the check on Chandelure",
+     "loses Togedemaru: Fell Stinger (+3)"
+    ],
+    "tier": "B",
+    "sid": "ARCANINE",
+    "form": "0",
+    "delta": 22.7,
+    "res": 9,
     "se": 2,
+    "oneshot": []
+   }
+  ],
+  "Slowking (Galarian Form)": [
+   {
+    "name": "Chandelure",
+    "gain": [
+     "checks Magneton",
+     "outspeeds and one-shots Magneton",
+     "answers Electivire: Motor Drive (absorbs Electric (+Speed))",
+     "answers Togedemaru: Lightning Rod (absorbs Electric and pulls Electric moves to itself in doubles)"
+    ],
+    "loss": [
+     "one-shot by Chandelure",
+     "loses the check on Toxtricity"
+    ],
+    "tier": "B",
+    "sid": "CHANDELURE",
+    "form": "0",
+    "delta": 69.9,
+    "res": 13,
+    "se": 4,
     "oneshot": [
-     "Electivire",
-     "Togedemaru",
-     "Chandelure",
-     "Toxtricity"
+     "Chandelure"
     ]
    },
    {
-    "name": "Golisopod (Aevian Form)",
+    "name": "Arcanine",
     "gain": [
-     "survives Electivire",
+     "checks Magneton",
+     "outspeeds and one-shots Magneton",
      "answers Electivire: Motor Drive (absorbs Electric (+Speed))",
-     "answers Raichu: spread Discharge",
-     "answers Raichu: Focus Sash (survives one hit from full HP)"
+     "answers Electivire: Assault Vest (special bulk x1.5: hit it physically)"
     ],
     "loss": [
-     "loses the check on Chandelure",
-     "loses Togedemaru: Fell Stinger (+3)",
-     "loses Raichu: Speed 410",
-     "loses Togedemaru: Speed 194"
+     "loses the check on Raichu",
+     "loses the check on Toxtricity",
+     "fits the team worse (both weak to Ground, both weak to Water)"
     ],
-    "tier": "S",
-    "sid": "GOLISOPOD",
-    "form": "1",
-    "delta": -12.3,
-    "res": 11,
+    "tier": "B",
+    "sid": "ARCANINE",
+    "form": "0",
+    "delta": 46.2,
+    "res": 9,
+    "se": 2,
+    "oneshot": []
+   },
+   {
+    "name": "Dragalge",
+    "gain": [
+     "checks Chandelure",
+     "answers Raichu: spread Discharge",
+     "answers Magneton: spread Discharge",
+     "answers Chandelure: spread Burning Jealousy, Discharge"
+    ],
+    "loss": [
+     "loses the check on Raichu",
+     "fits the team worse (both weak to Ground, both weak to Ice)"
+    ],
+    "tier": "B",
+    "sid": "DRAGALGE",
+    "form": "0",
+    "delta": 41.5,
+    "res": 17,
     "se": 2,
     "oneshot": []
    }
@@ -2128,11 +2370,26 @@
  },
  "poolfit": [
   {
+   "name": "Dragalge",
+   "tier": "B",
+   "sid": "DRAGALGE",
+   "form": "0",
+   "fit": 33.5,
+   "grade": "Great",
+   "res": 17,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
    "name": "Clodsire",
    "tier": "B",
    "sid": "CLODSIRE",
    "form": "0",
-   "fit": 37.3,
+   "fit": 31.9,
    "grade": "Great",
    "res": 13,
    "weak": 2,
@@ -2140,38 +2397,6 @@
    "se": 5,
    "oneshot": [],
    "in_six": false,
-   "where": "Active"
-  },
-  {
-   "name": "Dragalge",
-   "tier": "B",
-   "sid": "DRAGALGE",
-   "form": "0",
-   "fit": 36.8,
-   "grade": "Great",
-   "res": 17,
-   "weak": 2,
-   "nmoves": 22,
-   "se": 2,
-   "oneshot": [],
-   "in_six": true,
-   "where": "Active"
-  },
-  {
-   "name": "Swampert",
-   "tier": "B",
-   "sid": "SWAMPERT",
-   "form": "0",
-   "fit": 29.5,
-   "grade": "Great",
-   "res": 13,
-   "weak": 2,
-   "nmoves": 22,
-   "se": 0,
-   "oneshot": [
-    "Chandelure"
-   ],
-   "in_six": true,
    "where": "Active"
   },
   {
@@ -2179,17 +2404,33 @@
    "tier": "B",
    "sid": "CHANDELURE",
    "form": "0",
-   "fit": 28.4,
+   "fit": 27.3,
    "grade": "Great",
    "res": 13,
    "weak": 1,
    "nmoves": 22,
    "se": 4,
    "oneshot": [
-    "Electivire",
     "Chandelure"
    ],
-   "in_six": true,
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Vikavolt",
+   "tier": "B",
+   "sid": "VIKAVOLT",
+   "form": "0",
+   "fit": 26.3,
+   "grade": "Great",
+   "res": 13,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
    "where": "Active"
   },
   {
@@ -2197,81 +2438,76 @@
    "tier": "S",
    "sid": "GOLISOPOD",
    "form": "1",
-   "fit": 27.8,
+   "fit": 25.8,
    "grade": "Great",
    "res": 11,
    "weak": 3,
    "nmoves": 22,
-   "se": 2,
+   "se": 5,
+   "oneshot": [],
+   "in_six": true,
+   "where": "Active"
+  },
+  {
+   "name": "Emboar",
+   "tier": "B",
+   "sid": "EMBOAR",
+   "form": "0",
+   "fit": 22.0,
+   "grade": "Great",
+   "res": 9,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 4,
    "oneshot": [],
    "in_six": false,
    "where": "Active"
   },
   {
-   "name": "Golurk",
-   "tier": "B",
-   "sid": "GOLURK",
+   "name": "Swampert",
+   "tier": "A",
+   "sid": "SWAMPERT",
    "form": "0",
-   "fit": 26.8,
-   "grade": "Great",
-   "res": 13,
-   "weak": 4,
-   "nmoves": 22,
-   "se": 6,
-   "oneshot": [
-    "Chandelure"
-   ],
-   "in_six": false,
-   "where": "Party"
-  },
-  {
-   "name": "Vikavolt",
-   "tier": "B",
-   "sid": "VIKAVOLT",
-   "form": "0",
-   "fit": 25.1,
+   "fit": 21.4,
    "grade": "Great",
    "res": 13,
    "weak": 2,
    "nmoves": 22,
-   "se": 3,
+   "se": 2,
    "oneshot": [
-    "Toxtricity"
+    "Raichu",
+    "Chandelure"
    ],
    "in_six": false,
    "where": "Active"
   },
   {
-   "name": "Donphan",
-   "tier": "A",
-   "sid": "DONPHAN",
-   "form": "0",
-   "fit": 22.5,
+   "name": "Muk (Alolan Form)",
+   "tier": "S",
+   "sid": "MUK",
+   "form": "1",
+   "fit": 19.5,
    "grade": "Great",
-   "res": 9,
-   "weak": 3,
+   "res": 6,
+   "weak": 0,
    "nmoves": 22,
-   "se": 5,
-   "oneshot": [
-    "Chandelure"
-   ],
-   "in_six": false,
-   "where": "Overflow"
+   "se": 2,
+   "oneshot": [],
+   "in_six": true,
+   "where": "Party"
   },
   {
-   "name": "Palossand",
+   "name": "Arcanine",
    "tier": "B",
-   "sid": "PALOSSAND",
+   "sid": "ARCANINE",
    "form": "0",
-   "fit": 22.3,
+   "fit": 19.1,
    "grade": "Great",
-   "res": 13,
-   "weak": 4,
+   "res": 9,
+   "weak": 0,
    "nmoves": 22,
-   "se": 6,
-   "oneshot": [
-    "Chandelure"
-   ],
+   "se": 2,
+   "oneshot": [],
    "in_six": false,
    "where": "Active"
   },
@@ -2280,69 +2516,86 @@
    "tier": "A",
    "sid": "LEAVANNY",
    "form": "1",
-   "fit": 21.7,
+   "fit": 19.0,
    "grade": "Great",
    "res": 11,
    "weak": 1,
    "nmoves": 22,
    "se": 1,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Typhlosion",
+   "tier": "B",
+   "sid": "TYPHLOSION",
+   "form": "0",
+   "fit": 18.6,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 3,
    "oneshot": [
-    "Toxtricity"
+    "Electivire"
    ],
    "in_six": false,
    "where": "Active"
   },
   {
    "name": "Toxtricity (Aevian Form)",
-   "tier": "A",
+   "tier": "S",
    "sid": "TOXTRICITY",
    "form": "2",
-   "fit": 20.1,
-   "grade": "Great",
+   "fit": 18.2,
+   "grade": "Good",
    "res": 14,
    "weak": 1,
    "nmoves": 22,
    "se": 2,
    "oneshot": [
     "Electivire",
-    "Raichu",
-    "Togedemaru",
-    "Toxtricity"
+    "Raichu"
    ],
    "in_six": false,
    "where": "Party"
   },
   {
-   "name": "Muk (Alolan Form)",
-   "tier": "S",
-   "sid": "MUK",
-   "form": "1",
-   "fit": 20.1,
+   "name": "Golurk",
+   "tier": "B",
+   "sid": "GOLURK",
+   "form": "0",
+   "fit": 16.0,
    "grade": "Good",
-   "res": 6,
-   "weak": 0,
+   "res": 13,
+   "weak": 4,
    "nmoves": 22,
-   "se": 2,
+   "se": 6,
    "oneshot": [
-    "Electivire"
+    "Raichu",
+    "Chandelure"
    ],
-   "in_six": true,
+   "in_six": false,
    "where": "Party"
   },
   {
-   "name": "Gastrodon (West Aevian Form)",
-   "tier": "A",
-   "sid": "GASTRODON",
-   "form": "1",
-   "fit": 18.5,
+   "name": "Palossand",
+   "tier": "B",
+   "sid": "PALOSSAND",
+   "form": "0",
+   "fit": 16.0,
    "grade": "Good",
-   "res": 11,
-   "weak": 5,
+   "res": 13,
+   "weak": 4,
    "nmoves": 22,
-   "se": 5,
-   "oneshot": [],
+   "se": 6,
+   "oneshot": [
+    "Raichu",
+    "Chandelure"
+   ],
    "in_six": false,
-   "where": "Overflow"
+   "where": "Active"
   },
   {
    "name": "Slowking (Galarian Form)",
@@ -2355,43 +2608,8 @@
    "weak": 1,
    "nmoves": 22,
    "se": 1,
-   "oneshot": [
-    "Electivire"
-   ],
-   "in_six": false,
-   "where": "Active"
-  },
-  {
-   "name": "Amoonguss",
-   "tier": "A",
-   "sid": "AMOONGUSS",
-   "form": "0",
-   "fit": 14.9,
-   "grade": "Good",
-   "res": 11,
-   "weak": 4,
-   "nmoves": 22,
-   "se": 0,
    "oneshot": [],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
-   "name": "Emboar",
-   "tier": "B",
-   "sid": "EMBOAR",
-   "form": "0",
-   "fit": 14.1,
-   "grade": "Good",
-   "res": 9,
-   "weak": 1,
-   "nmoves": 22,
-   "se": 4,
-   "oneshot": [
-    "Electivire",
-    "Toxtricity"
-   ],
-   "in_six": false,
+   "in_six": true,
    "where": "Active"
   },
   {
@@ -2399,7 +2617,7 @@
    "tier": "A",
    "sid": "ROSERADE",
    "form": "1",
-   "fit": 12.5,
+   "fit": 11.0,
    "grade": "Good",
    "res": 11,
    "weak": 4,
@@ -2410,63 +2628,93 @@
     "Raichu",
     "Chandelure"
    ],
-   "in_six": false,
+   "in_six": true,
    "where": "Active"
   },
   {
-   "name": "Torterra",
-   "tier": "B",
-   "sid": "TORTERRA",
-   "form": "0",
-   "fit": 11.1,
+   "name": "Gastrodon (West Aevian Form)",
+   "tier": "A",
+   "sid": "GASTRODON",
+   "form": "1",
+   "fit": 9.9,
    "grade": "Good",
-   "res": 7,
+   "res": 11,
    "weak": 5,
    "nmoves": 22,
    "se": 5,
    "oneshot": [
-    "Electivire",
-    "Toxtricity"
+    "Chandelure"
    ],
    "in_six": false,
-   "where": "Active"
+   "where": "Overflow"
   },
   {
-   "name": "Typhlosion",
-   "tier": "B",
-   "sid": "TYPHLOSION",
+   "name": "Donphan",
+   "tier": "A",
+   "sid": "DONPHAN",
    "form": "0",
    "fit": 9.7,
    "grade": "Good",
    "res": 9,
-   "weak": 0,
+   "weak": 3,
    "nmoves": 22,
-   "se": 3,
+   "se": 5,
+   "oneshot": [
+    "Raichu",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Gallade",
+   "tier": "B",
+   "sid": "GALLADE",
+   "form": "0",
+   "fit": 8.5,
+   "grade": "Good",
+   "res": 2,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 4,
    "oneshot": [
     "Electivire",
-    "Togedemaru",
-    "Toxtricity"
+    "Chandelure"
    ],
    "in_six": false,
    "where": "Active"
   },
   {
-   "name": "Arcanine",
-   "tier": "B",
+   "name": "Arcanine (Hisuian Form)",
+   "tier": "A",
    "sid": "ARCANINE",
-   "form": "0",
-   "fit": 9.5,
+   "form": "1",
+   "fit": 7.9,
    "grade": "Good",
-   "res": 9,
-   "weak": 0,
+   "res": 7,
+   "weak": 2,
    "nmoves": 22,
    "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Party"
+  },
+  {
+   "name": "Amoonguss",
+   "tier": "A",
+   "sid": "AMOONGUSS",
+   "form": "0",
+   "fit": 7.7,
+   "grade": "Good",
+   "res": 11,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
    "oneshot": [
-    "Electivire",
-    "Toxtricity"
+    "Electivire"
    ],
    "in_six": false,
-   "where": "Active"
+   "where": "Overflow"
   },
   {
    "name": "Scrafty",
@@ -2484,71 +2732,66 @@
    "where": "Active"
   },
   {
-   "name": "Gallade",
+   "name": "Torterra",
    "tier": "B",
-   "sid": "GALLADE",
+   "sid": "TORTERRA",
    "form": "0",
    "fit": 7.2,
    "grade": "Good",
-   "res": 2,
-   "weak": 1,
-   "nmoves": 22,
-   "se": 4,
-   "oneshot": [
-    "Electivire",
-    "Togedemaru",
-    "Chandelure"
-   ],
-   "in_six": true,
-   "where": "Active"
-  },
-  {
-   "name": "Arcanine (Hisuian Form)",
-   "tier": "A",
-   "sid": "ARCANINE",
-   "form": "1",
-   "fit": 5.3,
-   "grade": "Good",
    "res": 7,
-   "weak": 2,
+   "weak": 5,
    "nmoves": 22,
-   "se": 2,
+   "se": 5,
    "oneshot": [
     "Electivire",
-    "Togedemaru"
+    "Toxtricity"
    ],
    "in_six": false,
-   "where": "Party"
+   "where": "Active"
   },
   {
    "name": "Reuniclus",
    "tier": "B",
    "sid": "REUNICLUS",
    "form": "0",
-   "fit": 3.8,
+   "fit": 4.5,
    "grade": "Good",
    "res": 3,
    "weak": 3,
    "nmoves": 22,
    "se": 3,
    "oneshot": [
-    "Electivire",
     "Chandelure"
    ],
    "in_six": false,
    "where": "Active"
   },
   {
-   "name": "Ampharos (Aevian Form)",
-   "tier": "A",
-   "sid": "AMPHAROS",
-   "form": "1",
-   "fit": 2.4,
+   "name": "Pangoro",
+   "tier": "B",
+   "sid": "PANGORO",
+   "form": "0",
+   "fit": 4.3,
    "grade": "Good",
-   "res": 8,
-   "weak": 4,
+   "res": 2,
+   "weak": 2,
    "nmoves": 22,
-   "se": 1,
+   "se": 4,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Hariyama",
+   "tier": "B",
+   "sid": "HARIYAMA",
+   "form": "0",
+   "fit": 3.5,
+   "grade": "Good",
+   "res": 2,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 4,
    "oneshot": [],
    "in_six": false,
    "where": "Active"
@@ -2558,7 +2801,7 @@
    "tier": "A",
    "sid": "MISMAGIUS",
    "form": "1",
-   "fit": 2.0,
+   "fit": 2.9,
    "grade": "Good",
    "res": 11,
    "weak": 4,
@@ -2573,18 +2816,18 @@
    "where": "Active"
   },
   {
-   "name": "Hariyama",
+   "name": "Sylveon",
    "tier": "B",
-   "sid": "HARIYAMA",
+   "sid": "SYLVEON",
    "form": "0",
-   "fit": 1.5,
-   "grade": "Good",
-   "res": 2,
-   "weak": 1,
+   "fit": 1.3,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 4,
    "nmoves": 22,
-   "se": 4,
+   "se": 2,
    "oneshot": [
-    "Electivire"
+    "Togedemaru"
    ],
    "in_six": false,
    "where": "Active"
@@ -2594,7 +2837,7 @@
    "tier": "S",
    "sid": "MUSHARNA",
    "form": "1",
-   "fit": 0.5,
+   "fit": -1.9,
    "grade": "Weak",
    "res": 2,
    "weak": 4,
@@ -2607,32 +2850,14 @@
    "where": "Party"
   },
   {
-   "name": "Pangoro",
-   "tier": "B",
-   "sid": "PANGORO",
-   "form": "0",
-   "fit": 0.3,
-   "grade": "Weak",
-   "res": 2,
-   "weak": 2,
-   "nmoves": 22,
-   "se": 4,
-   "oneshot": [
-    "Electivire",
-    "Toxtricity"
-   ],
-   "in_six": false,
-   "where": "Active"
-  },
-  {
-   "name": "Lapras (Aevian Form)",
-   "tier": "S",
-   "sid": "LAPRAS",
+   "name": "Ampharos (Aevian Form)",
+   "tier": "A",
+   "sid": "AMPHAROS",
    "form": "1",
-   "fit": 0.1,
+   "fit": -3.7,
    "grade": "Weak",
-   "res": 5,
-   "weak": 7,
+   "res": 8,
+   "weak": 4,
    "nmoves": 22,
    "se": 1,
    "oneshot": [],
@@ -2640,11 +2865,26 @@
    "where": "Active"
   },
   {
+   "name": "Glalie (Aevian Form)",
+   "tier": "S",
+   "sid": "GLALIE",
+   "form": "1",
+   "fit": -4.0,
+   "grade": "Weak",
+   "res": 7,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [],
+   "in_six": true,
+   "where": "Active"
+  },
+  {
    "name": "Drapion (Aevian Form)",
    "tier": "A",
    "sid": "DRAPION",
    "form": "1",
-   "fit": -1.1,
+   "fit": -4.0,
    "grade": "Weak",
    "res": 7,
    "weak": 5,
@@ -2653,6 +2893,24 @@
    "oneshot": [
     "Raichu",
     "Magneton",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Tsareena",
+   "tier": "B",
+   "sid": "TSAREENA",
+   "form": "0",
+   "fit": -5.1,
+   "grade": "Weak",
+   "res": 9,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
     "Toxtricity"
    ],
    "in_six": false,
@@ -2663,84 +2921,31 @@
    "tier": "B",
    "sid": "SOLROCK",
    "form": "1",
-   "fit": -3.1,
+   "fit": -6.2,
    "grade": "Weak",
    "res": 5,
    "weak": 7,
    "nmoves": 22,
    "se": 3,
    "oneshot": [
-    "Electivire",
     "Chandelure"
    ],
    "in_six": false,
    "where": "Active"
   },
   {
-   "name": "Glalie (Aevian Form)",
+   "name": "Lapras (Aevian Form)",
    "tier": "S",
-   "sid": "GLALIE",
+   "sid": "LAPRAS",
    "form": "1",
-   "fit": -3.9,
+   "fit": -6.7,
    "grade": "Weak",
-   "res": 7,
+   "res": 5,
    "weak": 7,
    "nmoves": 22,
-   "se": 0,
-   "oneshot": [],
-   "in_six": false,
-   "where": "Active"
-  },
-  {
-   "name": "Sylveon",
-   "tier": "B",
-   "sid": "SYLVEON",
-   "form": "0",
-   "fit": -4.5,
-   "grade": "Weak",
-   "res": 4,
-   "weak": 4,
-   "nmoves": 22,
-   "se": 2,
+   "se": 1,
    "oneshot": [
-    "Electivire",
-    "Togedemaru",
-    "Toxtricity"
-   ],
-   "in_six": false,
-   "where": "Active"
-  },
-  {
-   "name": "Tsareena",
-   "tier": "B",
-   "sid": "TSAREENA",
-   "form": "0",
-   "fit": -6.9,
-   "grade": "Weak",
-   "res": 9,
-   "weak": 7,
-   "nmoves": 22,
-   "se": 0,
-   "oneshot": [
-    "Toxtricity"
-   ],
-   "in_six": false,
-   "where": "Active"
-  },
-  {
-   "name": "Clefable",
-   "tier": "A",
-   "sid": "CLEFABLE",
-   "form": "0",
-   "fit": -11.9,
-   "grade": "Weak",
-   "res": 4,
-   "weak": 4,
-   "nmoves": 22,
-   "se": 0,
-   "oneshot": [
-    "Electivire",
-    "Toxtricity"
+    "Chandelure"
    ],
    "in_six": false,
    "where": "Active"
@@ -2750,7 +2955,7 @@
    "tier": "B",
    "sid": "FLORGES",
    "form": "0",
-   "fit": -13.0,
+   "fit": -7.0,
    "grade": "Weak",
    "res": 4,
    "weak": 4,
@@ -2758,7 +2963,23 @@
    "se": 0,
    "oneshot": [
     "Electivire",
-    "Togedemaru",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Clefable",
+   "tier": "A",
+   "sid": "CLEFABLE",
+   "form": "0",
+   "fit": -8.0,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
     "Toxtricity"
    ],
    "in_six": false,
@@ -2769,31 +2990,29 @@
    "tier": "B",
    "sid": "LUDICOLO",
    "form": "0",
-   "fit": -14.1,
+   "fit": -9.7,
    "grade": "Weak",
    "res": 2,
    "weak": 4,
    "nmoves": 22,
    "se": 0,
    "oneshot": [
-    "Electivire",
-    "Togedemaru",
     "Toxtricity"
    ],
    "in_six": false,
    "where": "Active"
   },
   {
-   "name": "Froslass (Aevian Form)",
-   "tier": "A",
-   "sid": "FROSLASS",
-   "form": "1",
-   "fit": -14.2,
+   "name": "Mandibuzz",
+   "tier": "B",
+   "sid": "MANDIBUZZ",
+   "form": "0",
+   "fit": -12.3,
    "grade": "Weak",
-   "res": 2,
-   "weak": 4,
+   "res": 4,
+   "weak": 8,
    "nmoves": 22,
-   "se": 0,
+   "se": 2,
    "oneshot": [
     "Electivire",
     "Togedemaru",
@@ -2807,7 +3026,7 @@
    "tier": "B",
    "sid": "MEOWSCARADA",
    "form": "0",
-   "fit": -14.3,
+   "fit": -12.8,
    "grade": "Weak",
    "res": 11,
    "weak": 9,
@@ -2816,6 +3035,88 @@
    "oneshot": [
     "Electivire",
     "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Veluza (Aevian Form)",
+   "tier": "S",
+   "sid": "VELUZA",
+   "form": "1",
+   "fit": -14.2,
+   "grade": "Weak",
+   "res": 7,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Clawitzer",
+   "tier": "B",
+   "sid": "CLAWITZER",
+   "form": "0",
+   "fit": -15.2,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Froslass (Aevian Form)",
+   "tier": "A",
+   "sid": "FROSLASS",
+   "form": "1",
+   "fit": -15.8,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Braviary",
+   "tier": "B",
+   "sid": "BRAVIARY",
+   "form": "0",
+   "fit": -16.9,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 8,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
     "Togedemaru",
     "Toxtricity"
    ],
@@ -2827,7 +3128,7 @@
    "tier": "A",
    "sid": "UNFEZANT",
    "form": "1",
-   "fit": -15.4,
+   "fit": -17.0,
    "grade": "Weak",
    "res": 6,
    "weak": 7,
@@ -2845,11 +3146,90 @@
    "where": "Active"
   },
   {
+   "name": "Slowking",
+   "tier": "A",
+   "sid": "SLOWKING",
+   "form": "0",
+   "fit": -17.1,
+   "grade": "Weak",
+   "res": 8,
+   "weak": 12,
+   "nmoves": 22,
+   "se": 3,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Vaporeon",
+   "tier": "B",
+   "sid": "VAPOREON",
+   "form": "0",
+   "fit": -17.6,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Azumarill",
+   "tier": "A",
+   "sid": "AZUMARILL",
+   "form": "0",
+   "fit": -20.2,
+   "grade": "Weak",
+   "res": 7,
+   "weak": 11,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Party"
+  },
+  {
+   "name": "Alomomola",
+   "tier": "S",
+   "sid": "ALOMOMOLA",
+   "form": "0",
+   "fit": -22.8,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
    "name": "Crabominable",
    "tier": "B",
    "sid": "CRABOMINABLE",
    "form": "0",
-   "fit": -16.4,
+   "fit": -23.3,
    "grade": "Weak",
    "res": 3,
    "weak": 7,
@@ -2858,87 +3238,46 @@
    "oneshot": [
     "Electivire",
     "Raichu",
-    "Magneton",
-    "Toxtricity"
+    "Magneton"
    ],
    "in_six": false,
    "where": "Active"
   },
   {
-   "name": "Veluza (Aevian Form)",
-   "tier": "S",
-   "sid": "VELUZA",
-   "form": "1",
-   "fit": -17.4,
+   "name": "Rampardos",
+   "tier": "B",
+   "sid": "RAMPARDOS",
+   "form": "0",
+   "fit": -24.8,
    "grade": "Weak",
-   "res": 7,
-   "weak": 7,
+   "res": 4,
+   "weak": 6,
    "nmoves": 22,
-   "se": 2,
+   "se": 0,
    "oneshot": [
     "Electivire",
     "Raichu",
     "Magneton",
     "Togedemaru",
-    "Chandelure",
-    "Toxtricity"
+    "Chandelure"
    ],
    "in_six": false,
    "where": "Active"
   },
   {
-   "name": "Clawitzer",
-   "tier": "B",
-   "sid": "CLAWITZER",
-   "form": "0",
-   "fit": -17.6,
+   "name": "Ninetales (Alolan Form)",
+   "tier": "A",
+   "sid": "NINETALES",
+   "form": "1",
+   "fit": -24.9,
    "grade": "Weak",
-   "res": 5,
-   "weak": 9,
+   "res": 3,
+   "weak": 6,
    "nmoves": 22,
-   "se": 4,
+   "se": 0,
    "oneshot": [
     "Electivire",
     "Magneton",
-    "Togedemaru",
-    "Chandelure",
-    "Toxtricity"
-   ],
-   "in_six": false,
-   "where": "Active"
-  },
-  {
-   "name": "Mandibuzz",
-   "tier": "B",
-   "sid": "MANDIBUZZ",
-   "form": "0",
-   "fit": -18.3,
-   "grade": "Weak",
-   "res": 4,
-   "weak": 8,
-   "nmoves": 22,
-   "se": 2,
-   "oneshot": [
-    "Electivire",
-    "Togedemaru",
-    "Toxtricity"
-   ],
-   "in_six": false,
-   "where": "Active"
-  },
-  {
-   "name": "Slowking",
-   "tier": "A",
-   "sid": "SLOWKING",
-   "form": "0",
-   "fit": -18.7,
-   "grade": "Weak",
-   "res": 8,
-   "weak": 12,
-   "nmoves": 22,
-   "se": 3,
-   "oneshot": [
-    "Electivire",
     "Togedemaru",
     "Toxtricity"
    ],
@@ -2950,7 +3289,7 @@
    "tier": "A",
    "sid": "SLOWBRO",
    "form": "0",
-   "fit": -19.7,
+   "fit": -25.5,
    "grade": "Weak",
    "res": 8,
    "weak": 12,
@@ -2958,128 +3297,7 @@
    "se": 1,
    "oneshot": [
     "Electivire",
-    "Togedemaru",
-    "Chandelure",
-    "Toxtricity"
-   ],
-   "in_six": false,
-   "where": "Active"
-  },
-  {
-   "name": "Vaporeon",
-   "tier": "B",
-   "sid": "VAPOREON",
-   "form": "0",
-   "fit": -20.6,
-   "grade": "Weak",
-   "res": 5,
-   "weak": 9,
-   "nmoves": 22,
-   "se": 2,
-   "oneshot": [
-    "Electivire",
-    "Togedemaru",
-    "Toxtricity"
-   ],
-   "in_six": false,
-   "where": "Active"
-  },
-  {
-   "name": "Azumarill",
-   "tier": "A",
-   "sid": "AZUMARILL",
-   "form": "0",
-   "fit": -21.7,
-   "grade": "Weak",
-   "res": 7,
-   "weak": 11,
-   "nmoves": 22,
-   "se": 2,
-   "oneshot": [
-    "Electivire",
-    "Togedemaru",
-    "Chandelure",
-    "Toxtricity"
-   ],
-   "in_six": false,
-   "where": "Party"
-  },
-  {
-   "name": "Rampardos",
-   "tier": "B",
-   "sid": "RAMPARDOS",
-   "form": "0",
-   "fit": -23.2,
-   "grade": "Weak",
-   "res": 4,
-   "weak": 6,
-   "nmoves": 22,
-   "se": 0,
-   "oneshot": [
-    "Electivire",
-    "Magneton",
-    "Togedemaru",
-    "Chandelure",
-    "Toxtricity"
-   ],
-   "in_six": false,
-   "where": "Active"
-  },
-  {
-   "name": "Ninetales (Alolan Form)",
-   "tier": "A",
-   "sid": "NINETALES",
-   "form": "1",
-   "fit": -25.3,
-   "grade": "Weak",
-   "res": 3,
-   "weak": 6,
-   "nmoves": 22,
-   "se": 0,
-   "oneshot": [
-    "Electivire",
-    "Magneton",
-    "Togedemaru",
-    "Toxtricity"
-   ],
-   "in_six": false,
-   "where": "Active"
-  },
-  {
-   "name": "Braviary",
-   "tier": "B",
-   "sid": "BRAVIARY",
-   "form": "0",
-   "fit": -25.4,
-   "grade": "Weak",
-   "res": 5,
-   "weak": 8,
-   "nmoves": 22,
-   "se": 2,
-   "oneshot": [
-    "Electivire",
-    "Magneton",
-    "Togedemaru",
-    "Chandelure",
-    "Toxtricity"
-   ],
-   "in_six": false,
-   "where": "Active"
-  },
-  {
-   "name": "Alomomola",
-   "tier": "S",
-   "sid": "ALOMOMOLA",
-   "form": "0",
-   "fit": -26.6,
-   "grade": "Weak",
-   "res": 5,
-   "weak": 9,
-   "nmoves": 22,
-   "se": 0,
-   "oneshot": [
-    "Electivire",
-    "Magneton",
+    "Raichu",
     "Togedemaru",
     "Chandelure",
     "Toxtricity"
@@ -3092,7 +3310,7 @@
    "tier": "B",
    "sid": "CRAWDAUNT",
    "form": "0",
-   "fit": -29.8,
+   "fit": -28.9,
    "grade": "Weak",
    "res": 7,
    "weak": 13,
@@ -3111,66 +3329,58 @@
   }
  ],
  "pool": 54,
- "score": 291.9,
- "cmp": 16.0,
+ "score": 330.3,
+ "cmp": 30.5,
  "break_field": null,
  "checks": {
-  "weak3": [],
-  "nores": [],
-  "res_lt2": [],
-  "no_se": [
-   "Electivire"
+  "weak3": [
+   "ICE"
   ],
+  "nores": [
+   "FIRE",
+   "ICE",
+   "STEEL"
+  ],
+  "res_lt2": [
+   "FIRE",
+   "STEEL",
+   "BUG"
+  ],
+  "no_se": [],
   "one_shot": [
    [
     "Musharna (Aevian Form)",
     "Toxtricity"
    ],
    [
-    "Gallade",
+    "Roserade (Aevian Form)",
     "Electivire"
    ],
    [
-    "Gallade",
-    "Togedemaru"
+    "Roserade (Aevian Form)",
+    "Raichu"
    ],
    [
-    "Gallade",
+    "Roserade (Aevian Form)",
     "Chandelure"
-   ],
-   [
-    "Swampert",
-    "Chandelure"
-   ],
-   [
-    "Chandelure",
-    "Electivire"
-   ],
-   [
-    "Chandelure",
-    "Chandelure"
-   ],
-   [
-    "Muk (Alolan Form)",
-    "Electivire"
    ]
   ],
   "unanswered": [
    "Spread attacks"
   ]
  },
- "plan": "keep",
- "alt_field": null,
+ "plan": "alt",
+ "alt_field": "Grassy Terrain",
  "foe_break": [],
  "alt_plan": {
-  "cmp": 7.5,
+  "cmp": 19.0,
   "six": [
-   "Chandelure",
-   "Ampharos (Aevian Form)",
-   "Gallade",
+   "Glalie (Aevian Form)",
    "Musharna (Aevian Form)",
-   "Golisopod (Aevian Form)",
-   "Azumarill"
+   "Chandelure",
+   "Golurk",
+   "Muk (Alolan Form)",
+   "Slowking (Galarian Form)"
   ],
   "break_field": false
  }

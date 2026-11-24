@@ -1,0 +1,13 @@
+Glalie (Aevian Form) | Active 60 | Grassy Surge  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'] | Focus Sash (already holding) | 
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Roserade (Aevian Form) | Active 60 | Sand Veil  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Mud Barrage', 'Vacuum Wave', 'Taunt', 'Protect'] | Sitrus Berry | Roserade (Item Sun Stone)
+Swampert | Active 60 | Torrent  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Hammer Arm', 'Rock Slide', 'Deluge', 'Protect'] | Soft Sand (already holding) | 
+Muk (Alolan Form) | Party 60 | Poison Touch  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Knock Off', 'Shadow Sneak', 'Clear Smog', 'Protect'] | Black Glasses (already holding) | 
+Golisopod (Aevian Form) | Active 60 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Bone Rush', 'Pin Missile', 'Swords Dance', 'Protect'] | Soft Sand (already holding) | 
+jenner 1.488 -> 1.265 leads ['Golisopod (Aevian Form)'] swaps [('Typhlosion', 'Swampert', 0.146), ('Pawmot', 'Swampert', 0.122), ('Passimian', 'Swampert', 0.121)]
+danni 1.569 -> 1.286 leads ['Golisopod (Aevian Form)'] swaps [('Chandelure', 'Swampert', 0.242), ('Toxtricity (Aevian Form)', 'Swampert', 0.224), ('Typhlosion', 'Swampert', 0.207)]
+troye 1.234 -> 1.195 leads ['Golisopod (Aevian Form)'] swaps [('Arcanine', 'Swampert', 0.14), ('Talonflame', 'Swampert', 0.116), ('Veluza (Aevian Form)', 'Swampert', 0.098)]
+zena 1.151 -> 1.443 leads ['Golisopod (Aevian Form)'] swaps [('Meganium', 'Swampert', 0.1), ('Venusaur', 'Swampert', 0.1), ('Decidueye', 'Swampert', 0.079)]
+marcie 1.292 -> 1.22 leads ['Golisopod (Aevian Form)'] swaps [('Leavanny (Aevian Form)', 'Swampert', 0.272), ('Leavanny', 'Swampert', 0.257), ('Scolipede', 'Swampert', 0.256)]
+jenner9 0.774 -> 0.576 leads ['Golisopod (Aevian Form)'] swaps [('Crabominable', 'Roserade (Aevian Form)', 0.179), ('Florges', 'Roserade (Aevian Form)', 0.164), ('Sylveon', 'Roserade (Aevian Form)', 0.164)]
+erick 0.667 -> 0.755 leads ['Glalie (Aevian Form)'] swaps [('Gallade', 'Roserade (Aevian Form)', 0.161), ('Camerupt', 'Roserade (Aevian Form)', 0.125), ('Typhlosion', 'Roserade (Aevian Form)', 0.122)]

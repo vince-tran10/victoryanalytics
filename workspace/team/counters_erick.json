@@ -6,11 +6,11 @@
   "pairs": [
    {
     "foe": "Electivire",
-    "mon": "Golisopod (Aevian Form)",
-    "ability": "SKILLLINK",
-    "dealt": 93,
-    "taken": 68,
-    "ok": true,
+    "mon": "Glalie (Aevian Form)",
+    "ability": "GRASSYSURGE",
+    "dealt": 103,
+    "taken": 81,
+    "ok": false,
     "setup": false,
     "wincons": []
    },
@@ -26,22 +26,22 @@
    },
    {
     "foe": "Magneton",
-    "mon": "Chandelure",
-    "ability": "FLASHFIRE",
-    "dealt": 130,
-    "taken": 71,
+    "mon": "Toxtricity (Aevian Form)",
+    "ability": "PUNKROCK",
+    "dealt": 102,
+    "taken": 95,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Togedemaru",
-    "mon": "Toxtricity (Aevian Form)",
-    "ability": "PUNKROCK",
-    "dealt": 130,
-    "taken": 169,
-    "ok": false,
-    "setup": false,
+    "mon": "Golisopod (Aevian Form)",
+    "ability": "SKILLLINK",
+    "dealt": 54,
+    "taken": 44,
+    "ok": true,
+    "setup": "Swords Dance",
     "wincons": []
    },
    {

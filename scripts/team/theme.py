@@ -874,7 +874,7 @@ IC = {
  'planner': '<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/>',
  'builder': '<path d="M4 20h16M6 16l4-10 4 6 4-8"/><circle cx="10" cy="6" r="1.5"/>',
  'dex': '<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="3"/><path d="M8.5 15h7M8.5 18h4"/>'}
-NAV = [('fights', 'Fights'), ('builder', 'Core'), ('planner', 'Flex'), ('team', 'Team'), ('todo', 'To do'), ('dex', 'Dex'), ('items', 'Items'), ('community', 'Community')]   # 22 Nov: Boxes folded into To do   # 22 Nov: Cores tab removed (Vincent)
+NAV = [('fights', 'Fights'), ('planner', 'Builder'), ('todo', 'To do'), ('dex', 'Dex'), ('items', 'Items'), ('community', 'Community')]   # 22 Nov: Boxes folded into To do   # 22 Nov: Cores tab removed (Vincent)
 nav = '<nav class="appnav" aria-label="Guide">' + ''.join(
     f'<button type="button" data-go="{k}"><svg viewBox="0 0 24 24" aria-hidden="true">{IC[k]}</svg><span>{t}</span></button>' for k, t in NAV) + '</nav>'
 seg = ('<div class="seg" role="group" aria-label="Dex lists"><button type="button" data-go="tiers">Pokémon</button>'
@@ -938,7 +938,7 @@ a { color: var(--link) }
 .viewtitle { max-width: 1120px; margin: 0 auto; font: 700 24px/1.1 var(--display); padding-block: 2px 12px; letter-spacing: .01em }
 @media (max-width: 720px) { .appbar-chips { display: none } .viewtitle { font-size: 21px } }
 /* navigation: bottom bar (phone), side rail (desktop) */
-.appnav { position: fixed; z-index: 25; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(8, 1fr);   /* 22 Nov: 5 tabs (Boxes folded into To do) */
+.appnav { position: fixed; z-index: 25; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(6, 1fr);   /* 22 Nov: 5 tabs (Boxes folded into To do) */
   background: var(--panel); border-top: 1px solid var(--line); box-shadow: 0 -4px 16px rgba(0,0,0,.06);
   padding: 6px max(6px, env(safe-area-inset-right, 0px)) calc(6px + env(safe-area-inset-bottom, 0px)) max(6px, env(safe-area-inset-left, 0px)) }
 .appnav button { display: grid; justify-items: center; gap: 2px; border: 0; background: none; color: var(--muted); font: 700 11px var(--body); padding: 6px 0; border-radius: 12px; cursor: pointer }
@@ -1286,7 +1286,7 @@ DEXJS = r'''<script id="dex-js">
 '''
 JS = r'''<script id="app-theme-js">
 (function(){
-  var NAMES = {team:'Team', planner:'Flex', builder:'Core', fights:'Fights', cores:'Cores', todo:'To do', community:'Community', items:'Items', boxes:'Boxes', tiers:'Dex · Pokémon', aevian:'Dex · Aevian', crests:'Dex · Crests', checks:'Checks & data'};
+  var NAMES = {team:'Team', planner:'Builder', builder:'Core', fights:'Fights', cores:'Cores', todo:'To do', community:'Community', items:'Items', boxes:'Boxes', tiers:'Dex · Pokémon', aevian:'Dex · Aevian', crests:'Dex · Crests', checks:'Checks & data'};
   var DEX = {tiers:1, aevian:1, crests:1};
   var orig = function(k){ return document.querySelector('#tabbar button[data-tab="'+k+'"]'); };
   function current(){ var b = document.querySelector('#tabbar button[aria-selected="true"]'); return b ? b.dataset.tab : 'fights'; }

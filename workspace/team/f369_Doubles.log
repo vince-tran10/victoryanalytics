@@ -1,0 +1,13 @@
+Glalie (Aevian Form) | Active 60 | Grassy Surge  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Helping Hand', 'Wood Hammer', 'Rock Slide', 'Protect'] | Focus Sash (already holding) | 
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Roserade (Aevian Form) | Active 60 | Sand Veil  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Mud Barrage', 'Vacuum Wave', 'Spikes', 'Protect'] | Sitrus Berry | Roserade (Item Sun Stone)
+Golurk | Party 60 | Iron Fist  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Shadow Punch', 'Helping Hand', 'Stomping Tantrum', 'Protect'] | Black Belt (already holding) | 
+Muk (Alolan Form) | Party 60 | Poison Touch  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Knock Off', 'Shadow Sneak', 'Gunk Shot', 'Protect'] | Black Glasses (already holding) | 
+Slowking (Galarian Form) | Active 60 | Regenerator  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Sludge Bomb', 'Psychic', 'Thunder Wave', 'Protect'] | Focus Sash (already holding) | 
+jenner 1.608 -> 1.321 leads ['Glalie (Aevian Form)', 'Musharna (Aevian Form)'] swaps [('Pawmot', 'Roserade (Aevian Form)', 0.225), ('Arcanine', 'Roserade (Aevian Form)', 0.22), ('Chandelure', 'Roserade (Aevian Form)', 0.219)]
+danni 1.694 -> 1.503 leads ['Roserade (Aevian Form)', 'Glalie (Aevian Form)'] swaps [('Chandelure', 'Golurk', 0.198), ('Arcanine', 'Golurk', 0.188), ('Toxtricity (Aevian Form)', 'Golurk', 0.176)]
+troye 1.373 -> 1.204 leads ['Roserade (Aevian Form)', 'Glalie (Aevian Form)'] swaps [('Arcanine', 'Slowking (Galarian Form)', 0.217), ('Veluza (Aevian Form)', 'Slowking (Galarian Form)', 0.15), ('Toxtricity (Aevian Form)', 'Slowking (Galarian Form)', 0.147)]
+zena 1.295 -> 1.508 leads ['Glalie (Aevian Form)', 'Roserade (Aevian Form)'] swaps [('Meganium', 'Slowking (Galarian Form)', 0.158), ('Venusaur', 'Slowking (Galarian Form)', 0.134), ('Leafeon', 'Slowking (Galarian Form)', 0.114)]
+marcie 1.412 -> 1.357 leads ['Slowking (Galarian Form)', 'Muk (Alolan Form)'] swaps [('Leavanny (Aevian Form)', 'Roserade (Aevian Form)', 0.259), ('Arcanine', 'Roserade (Aevian Form)', 0.209), ('Leavanny', 'Roserade (Aevian Form)', 0.195)]
+jenner9 0.923 -> 0.694 leads ['Musharna (Aevian Form)', 'Slowking (Galarian Form)'] swaps [('Crabominable', 'Roserade (Aevian Form)', 0.213), ('Chandelure', 'Roserade (Aevian Form)', 0.201), ('Hariyama', 'Roserade (Aevian Form)', 0.201)]
+erick 0.878 -> 0.87 leads ['Glalie (Aevian Form)', 'Muk (Alolan Form)'] swaps [('Chandelure', 'Roserade (Aevian Form)', 0.188), ('Palossand (Fiery Aevian Form)', 'Roserade (Aevian Form)', 0.175), ('Pawmot', 'Roserade (Aevian Form)', 0.173)]

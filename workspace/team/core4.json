@@ -7,7 +7,7 @@
    "form": "1",
    "blend": 0.769,
    "meta": 0.72,
-   "game": 0.939,
+   "game": 0.937,
    "types": [
     "DARK",
     "FAIRY"
@@ -37,30 +37,34 @@
    ]
   },
   {
-   "name": "Gallade",
-   "tier": "B",
-   "sid": "GALLADE",
-   "form": "0",
-   "blend": 0.562,
-   "meta": 0.348,
-   "game": 0.997,
+   "name": "Toxtricity (Aevian Form)",
+   "tier": "S",
+   "sid": "TOXTRICITY",
+   "form": "2",
+   "blend": 0.733,
+   "meta": 0.67,
+   "game": 0.908,
    "types": [
-    "PSYCHIC",
-    "FIGHTING"
+    "FIRE",
+    "POISON"
    ],
    "moves": [
-    "Psycho Cut",
-    "Sacred Sword",
-    "X-Scissor",
+    "Torch Song",
+    "Boomburst",
+    "Sludge Bomb",
     "Protect"
    ],
-   "ability": "SHARPNESS",
-   "aevian": false,
-   "where": "Active",
+   "ability": "PUNKROCK",
+   "aevian": true,
+   "where": "Party",
    "chips": [
     [
+     "tool",
+     "Punk Rock"
+    ],
+    [
      "stat",
-     "Resists Fighting / Rock"
+     "Resists Fire / Fighting"
     ]
    ]
   },
@@ -274,6 +278,10 @@
        "one-shots it"
       ],
       [
+       "Toxtricity-Aevian",
+       "one-shots it"
+      ],
+      [
        "Florges",
        "one-shots it"
       ]
@@ -295,6 +303,10 @@
        "beats it (101%)"
       ],
       [
+       "Toxtricity-Aevian",
+       "beats it (104%)"
+      ],
+      [
        "Florges",
        "beats it (112%)"
       ]
@@ -312,8 +324,8 @@
      "ability": "ADAPTABILITY",
      "cov": [
       [
-       "Gallade",
-       "still hits it for 155%"
+       "Toxtricity-Aevian",
+       "still hits it for 106%"
       ]
      ],
      "ok": true
@@ -329,8 +341,8 @@
      "item": "Choice Scarf",
      "cov": [
       [
-       "Gallade",
-       "beats it (155%)"
+       "Toxtricity-Aevian",
+       "beats it (106%)"
       ]
      ],
      "ok": true
@@ -348,10 +360,6 @@
       [
        "Musharna-Aevian",
        "still hits it for 124%"
-      ],
-      [
-       "Gallade",
-       "still hits it for 70%"
       ],
       [
        "Florges",
@@ -404,8 +412,8 @@
      "ability": "PLUS",
      "cov": [
       [
-       "Gallade",
-       "still hits it for 115%"
+       "Toxtricity-Aevian",
+       "still hits it for 190%"
       ]
      ],
      "ok": true
@@ -513,8 +521,13 @@
      "need": 1,
      "boosted": [],
      "sound": true,
-     "cov": [],
-     "ok": false
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "Boomburst"
+      ]
+     ],
+     "ok": true
     },
     {
      "id": "jenner9:fieldnote:Concert Venue:19",
@@ -657,10 +670,6 @@
       [
        "Musharna-Aevian",
        "still hits it for 73%"
-      ],
-      [
-       "Gallade",
-       "still hits it for 104%"
       ]
      ],
      "ok": true
@@ -674,13 +683,8 @@
      "how": "Plan around it",
      "need": 1,
      "item": "Assault Vest",
-     "cov": [
-      [
-       "Gallade",
-       "beats it (104%)"
-      ]
-     ],
-     "ok": true
+     "cov": [],
+     "ok": false
     },
     {
      "id": "erick:spread:Raichu:2",
@@ -711,8 +715,8 @@
        "still hits it for 150%"
       ],
       [
-       "Gallade",
-       "still hits it for 182%"
+       "Toxtricity-Aevian",
+       "still hits it for 98%"
       ],
       [
        "Florges",
@@ -782,8 +786,8 @@
      "ability": "LIGHTNINGROD",
      "cov": [
       [
-       "Gallade",
-       "still hits it for 243%"
+       "Toxtricity-Aevian",
+       "still hits it for 158%"
       ]
      ],
      "ok": true
@@ -799,8 +803,8 @@
      "item": "Elemental Seed",
      "cov": [
       [
-       "Gallade",
-       "beats it (243%)"
+       "Toxtricity-Aevian",
+       "beats it (158%)"
       ]
      ],
      "ok": true
@@ -860,13 +864,8 @@
      "how": "Plan around it",
      "need": 1,
      "item": "Toxtricitite",
-     "cov": [
-      [
-       "Gallade",
-       "beats it (107%)"
-      ]
-     ],
-     "ok": true
+     "cov": [],
+     "ok": false
     },
     {
      "id": "erick:speed:Raichu:14",
@@ -913,7 +912,12 @@
      "how": "Two of yours resist or are immune",
      "need": 2,
      "atype": "POISON",
-     "cov": [],
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "resists"
+      ]
+     ],
      "ok": false
     },
     {
@@ -942,8 +946,13 @@
       "WATER"
      ],
      "sound": false,
-     "cov": [],
-     "ok": false
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "Sludge Bomb"
+      ]
+     ],
+     "ok": true
     },
     {
      "id": "erick:fieldnote:Murkwater Surface:20",
@@ -964,7 +973,12 @@
      "text": "End of turn Poison damage when grounded, and not Poison or Steel type.",
      "how": "Plan around it",
      "need": 1,
-     "cov": [],
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "immune to it"
+      ]
+     ],
      "ok": null
     }
    ]
@@ -999,14 +1013,18 @@
    ],
    "power": 5.75
   },
-  "Gallade": {
-   "wins": 3,
-   "ohko": 8,
+  "Toxtricity (Aevian Form)": {
+   "wins": 4,
+   "ohko": 5,
    "n": 12,
    "beats": [
     [
-     "erick",
-     "Raichu"
+     "jenner9",
+     "Noivern"
+    ],
+    [
+     "jenner9",
+     "Klinklang"
     ],
     [
      "erick",
@@ -1014,10 +1032,10 @@
     ],
     [
      "erick",
-     "Toxtricity"
+     "Chandelure"
     ]
    ],
-   "power": 5.0
+   "power": 5.25
   },
   "Florges": {
    "wins": 5,
@@ -1051,55 +1069,55 @@
  "left": [
   "Spirit Jenner: Stoutland",
   "Spirit Jenner: Porygon-Z",
-  "Spirit Jenner: Klinklang",
   "Erick (Pulse Badge gym): Electivire",
-  "Erick (Pulse Badge gym): Togedemaru"
+  "Erick (Pulse Badge gym): Togedemaru",
+  "Erick (Pulse Badge gym): Toxtricity"
  ],
- "score": 18.45,
+ "score": 18.8,
  "parts": {
-  "strength": 16.25,
+  "strength": 16.5,
   "defense": 0,
   "offense": 2.1,
   "synergy": 0,
   "aevian": 0,
   "shared": [],
   "triple": [],
-  "resisted": 7,
+  "resisted": 12,
   "covered": 7,
   "uncovered": [],
   "why": []
  },
  "runners": [
   {
-   "out": "Gallade",
-   "in": "Arcanine (Hisuian Form)",
-   "delta": -0.25
+   "out": "Florges",
+   "in": "Gallade",
+   "delta": -0.2
   },
   {
-   "out": "Gallade",
+   "out": "Florges",
+   "in": "Arcanine (Hisuian Form)",
+   "delta": -0.45
+  },
+  {
+   "out": "Florges",
    "in": "Dragalge",
-   "delta": -0.8
+   "delta": -0.7
   },
   {
    "out": "Florges",
    "in": "Clefable",
    "delta": -1.0
-  },
-  {
-   "out": "Gallade",
-   "in": "Chandelure",
-   "delta": -1.0
   }
  ],
  "pool": 54,
  "singles": {
-  "Fast cleaner": null,
+  "Fast cleaner": "Toxtricity (Aevian Form)",
   "Bulky pivot": "Musharna (Aevian Form)",
   "Wallbreaker": "Musharna (Aevian Form)"
  },
  "doubles": {
   "Fake Out / redirection": null,
-  "Spread or speed control": null,
+  "Spread or speed control": "Toxtricity (Aevian Form)",
   "Bulky attacker": "Musharna (Aevian Form)"
  },
  "matrix": {
@@ -1123,25 +1141,25 @@
    "STEEL": 2.0,
    "FAIRY": 2.0
   },
-  "Gallade": {
+  "Toxtricity (Aevian Form)": {
    "NORMAL": 1.0,
-   "FIRE": 1.0,
-   "WATER": 1.0,
+   "FIRE": 0.5,
+   "WATER": 2.0,
    "ELECTRIC": 1.0,
-   "GRASS": 1.0,
-   "ICE": 1.0,
+   "GRASS": 0.25,
+   "ICE": 0.5,
    "FIGHTING": 0.5,
-   "POISON": 1.0,
-   "GROUND": 1.0,
-   "FLYING": 2.0,
-   "PSYCHIC": 1.0,
-   "BUG": 1.0,
-   "ROCK": 0.5,
-   "GHOST": 2.0,
+   "POISON": 0.5,
+   "GROUND": 4.0,
+   "FLYING": 1.0,
+   "PSYCHIC": 2.0,
+   "BUG": 0.25,
+   "ROCK": 2.0,
+   "GHOST": 1.0,
    "DRAGON": 1.0,
    "DARK": 1.0,
-   "STEEL": 1.0,
-   "FAIRY": 2.0
+   "STEEL": 0.5,
+   "FAIRY": 0.25
   },
   "Florges": {
    "NORMAL": 1.0,

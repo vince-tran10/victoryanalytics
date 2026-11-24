@@ -4,9 +4,9 @@
  "export_label": "23 Nov 15:58",
  "active_start": 468,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 347,
- "run": 361,
- "final": 365,
+ "roster": 355,
+ "run": 369,
+ "final": 373,
  "done": [
   "aelita",
   "narcissa1",
@@ -36,16 +36,16 @@
  ],
  "fight": "erick",
  "team": [
+  "Glalie (Aevian Form)",
   "Musharna (Aevian Form)",
-  "Swampert",
-  "Dragalge",
-  "Chandelure",
+  "Roserade (Aevian Form)",
+  "Golisopod (Aevian Form)",
   "Muk (Alolan Form)",
-  "Gallade"
+  "Slowking (Galarian Form)"
  ],
  "moves": {
   "Golisopod (Aevian Form)": [
-   "Shadow Claw",
+   "Bone Rush",
    "Pin Missile",
    "Swords Dance",
    "Protect"
@@ -124,7 +124,7 @@
   ],
   "Toxtricity (Aevian Form)": [
    "Torch Song",
-   "Will-O-Wisp",
+   "Boomburst",
    "Sludge Bomb",
    "Protect"
   ],
@@ -135,7 +135,7 @@
    "Protect"
   ],
   "Swampert": [
-   "Helping Hand",
+   "Hammer Arm",
    "Rock Slide",
    "Deluge",
    "Protect"
@@ -228,6 +228,12 @@
    "Shadow Punch",
    "Hammer Arm",
    "Stomping Tantrum",
+   "Protect"
+  ],
+  "Roserade (Aevian Form)": [
+   "Mud Barrage",
+   "Vacuum Wave",
+   "Taunt",
    "Protect"
   ]
  },
@@ -326,7 +332,8 @@
   "Lapras (Aevian Form)": "NOGUARD",
   "Veluza (Aevian Form)": "RECKLESS",
   "Gallade": "SHARPNESS",
-  "Golurk": "IRONFIST"
+  "Golurk": "IRONFIST",
+  "Roserade (Aevian Form)": "TECHNICIAN"
  },
  "crests_owned": [
   "Ariados Crest",
@@ -360,14 +367,23 @@
   "core": {
    "n": 6,
    "weak3": [],
-   "nores": [],
+   "nores": [
+    "FIRE",
+    "STEEL"
+   ],
    "minor": []
   },
   "fight": {
    "n": 6,
    "weak3": [],
-   "nores": [],
-   "minor": [],
+   "nores": [
+    "FIRE",
+    "STEEL"
+   ],
+   "minor": [
+    "ICE",
+    "ICE"
+   ],
    "key": "erick"
   }
  },
@@ -425,32 +441,23 @@
    }
   },
   "erick": {
-   "Toxtricity (Aevian Form)": {
-    "moves": [
-     "Torch Song",
-     "Will-O-Wisp",
-     "Sludge Bomb",
-     "Protect"
-    ],
-    "ability": "Punk Rock"
-   },
-   "Golisopod (Aevian Form)": {
-    "moves": [
-     "Shadow Claw",
-     "Pin Missile",
-     "Swords Dance",
-     "Protect"
-    ],
-    "ability": "Skill Link"
-   },
    "Swampert": {
     "moves": [
-     "Helping Hand",
+     "Hammer Arm",
      "Rock Slide",
      "Deluge",
      "Protect"
     ],
     "ability": "TORRENT"
+   },
+   "Roserade (Aevian Form)": {
+    "moves": [
+     "Mud Barrage",
+     "Vacuum Wave",
+     "Taunt",
+     "Protect"
+    ],
+    "ability": "TECHNICIAN"
    }
   }
  },
@@ -510,16 +517,10 @@
   "Zoroark Crest": 2
  },
  "base_moves": {
-  "Golisopod (Aevian Form)": [
-   "Bone Rush",
-   "Pin Missile",
-   "Swords Dance",
-   "Protect"
-  ],
-  "Toxtricity (Aevian Form)": [
-   "Torch Song",
-   "Boomburst",
-   "Sludge Bomb",
+  "Roserade (Aevian Form)": [
+   "Mud Barrage",
+   "Vacuum Wave",
+   "Spikes",
    "Protect"
   ],
   "Swampert": [

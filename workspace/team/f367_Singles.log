@@ -1,0 +1,13 @@
+Glalie (Aevian Form) | Active 60 | Grassy Surge  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Double-Edge', 'Wood Hammer', 'Rock Slide', 'Protect'] | Focus Sash (already holding) | 
+Golisopod (Aevian Form) | Active 60 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Shadow Claw', 'Pin Missile', 'Swords Dance', 'Protect'] | Soft Sand (already holding) | 
+Chandelure | Active 60 | Flash Fire  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Shadow Ball', 'Will-O-Wisp', 'Overheat', 'Protect'] | Sitrus Berry | 
+Golurk | Party 60 | Iron Fist  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Shadow Punch', 'Hammer Arm', 'Helping Hand', 'Protect'] | Black Belt (already holding) | 
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Slowking (Galarian Form) | Active 60 | Regenerator  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Sludge Bomb', 'Psychic', 'Thunder Wave', 'Protect'] | Focus Sash (already holding) | 
+jenner 1.488 -> 1.402 leads ['Chandelure'] swaps [('Typhlosion', 'Golurk', 0.064), ('Arcanine', 'Golurk', 0.059), ('Unfezant (Aevian Form Male)', 'Golisopod (Aevian Form)', 0.059)]
+danni 1.569 -> 1.567 leads ['Golurk'] swaps [('Bombirdier', 'Golisopod (Aevian Form)', 0.068), ('Crobat', 'Golisopod (Aevian Form)', 0.065), ('Arcanine', 'Golisopod (Aevian Form)', 0.062)]
+troye 1.234 -> 1.156 leads ['Glalie (Aevian Form)'] swaps [('Arcanine', 'Slowking (Galarian Form)', 0.131), ('Veluza (Aevian Form)', 'Slowking (Galarian Form)', 0.111), ('Talonflame', 'Slowking (Galarian Form)', 0.104)]
+zena 1.151 -> 1.298 leads ['Golisopod (Aevian Form)'] swaps [('Torterra', 'Slowking (Galarian Form)', 0.141), ('Diggersby', 'Slowking (Galarian Form)', 0.12), ('Mamoswine', 'Slowking (Galarian Form)', 0.111)]
+marcie 1.292 -> 1.395 leads ['Chandelure'] swaps [('Leavanny (Aevian Form)', 'Golurk', 0.128), ('Leavanny', 'Golurk', 0.113), ('Scolipede', 'Golurk', 0.112)]
+jenner9 0.774 -> 0.751 leads ['Glalie (Aevian Form)'] swaps [('Sylveon', 'Golisopod (Aevian Form)', 0.114), ('Florges', 'Slowking (Galarian Form)', 0.109), ('Vanilluxe', 'Slowking (Galarian Form)', 0.089)]
+erick 0.667 -> 0.934 leads ['Glalie (Aevian Form)'] swaps [('Camerupt', 'Musharna (Aevian Form)', 0.044), ('Shedinja', 'Musharna (Aevian Form)', 0.033), ('Scrafty', 'Musharna (Aevian Form)', 0.025)]

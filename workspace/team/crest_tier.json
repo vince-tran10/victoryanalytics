@@ -1,13 +1,13 @@
 {
- "anchor_low": 0.079,
- "anchor_median": 0.325,
+ "anchor_low": -0.16,
+ "anchor_median": 0.304,
  "team": {
+  "Glalie (Aevian Form)": 0.304,
   "Musharna (Aevian Form)": 0.325,
-  "Swampert": 0.079,
-  "Dragalge": 0.218,
-  "Chandelure": 0.379,
+  "Roserade (Aevian Form)": -0.16,
+  "Golisopod (Aevian Form)": 0.333,
   "Muk (Alolan Form)": 0.177,
-  "Gallade": 0.443
+  "Slowking (Galarian Form)": 0.254
  },
  "rows": [
   {
@@ -90,7 +90,7 @@
     "Grass Knot"
    ],
    "ability": "COMPETITIVE",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Reuniclus",
@@ -297,7 +297,7 @@
    "gain": 0.076,
    "attacks": [
     "Night Slash",
-    "Facade",
+    "Secret Power",
     "Ice Fang"
    ],
    "ability": "INTIMIDATE",
@@ -446,7 +446,7 @@
    "without": -0.067,
    "gain": 0.196,
    "attacks": [
-    "Facade",
+    "Secret Power",
     "Shadow Claw",
     "Low Sweep"
    ],
@@ -529,7 +529,7 @@
    "gain": 0.199,
    "attacks": [
     "Surf",
-    "Facade",
+    "Secret Power",
     "Deluge"
    ],
    "ability": "HYDRATION",
@@ -629,7 +629,7 @@
     "Play Rough"
    ],
    "ability": "STRONGJAW",
-   "tier": "B"
+   "tier": "A"
   },
   {
    "name": "Oricorio (Pom-Pom Style)",
@@ -645,7 +645,7 @@
     "Revelation Dance"
    ],
    "ability": "DANCER",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Ariados",
@@ -662,7 +662,7 @@
     "Poison Jab"
    ],
    "ability": "SNIPER",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Leafeon",
@@ -679,7 +679,7 @@
     "Double Kick"
    ],
    "ability": "CHLOROPHYLL",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Dedenne",
@@ -695,7 +695,7 @@
     "Volt Switch"
    ],
    "ability": "PLUS",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Simisage",
@@ -712,7 +712,7 @@
     "Low Kick"
    ],
    "ability": "GLUTTONY",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Zoroark",
@@ -725,10 +725,10 @@
    "gain": 0.086,
    "attacks": [
     "Sucker Punch",
-    "Facade"
+    "Secret Power"
    ],
    "ability": "HUGEPOWER",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Simipour",
@@ -745,7 +745,7 @@
     "Crunch"
    ],
    "ability": "TORRENT",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Castform",
@@ -762,7 +762,7 @@
     "Thief"
    ],
    "ability": "FORECAST",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Seviper",
@@ -779,7 +779,7 @@
     "Night Slash"
    ],
    "ability": "INFILTRATOR",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Zangoose",
@@ -796,7 +796,7 @@
     "Slash"
    ],
    "ability": "IMMUNITY",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Minun",
@@ -812,7 +812,7 @@
     "Signal Beam"
    ],
    "ability": "MINUS",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Oricorio (Sensu Style)",
@@ -828,7 +828,7 @@
     "Revelation Dance"
    ],
    "ability": "DANCER",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Plusle",
@@ -844,7 +844,7 @@
     "Signal Beam"
    ],
    "ability": "LIGHTNINGROD",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Oricorio",
@@ -860,7 +860,7 @@
     "Revelation Dance"
    ],
    "ability": "DANCER",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Ledian",
@@ -876,7 +876,7 @@
     "Air Slash"
    ],
    "ability": "SWARM",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Thievul",
@@ -893,7 +893,7 @@
     "Snarl"
    ],
    "ability": "STAKEOUT",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Fearow",
@@ -908,7 +908,7 @@
     "Drill Peck"
    ],
    "ability": "KEENEYE",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Oricorio (Pa'u Style)",
@@ -924,7 +924,7 @@
     "Revelation Dance"
    ],
    "ability": "DANCER",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Delcatty",
@@ -939,7 +939,7 @@
     "Double-Edge"
    ],
    "ability": "NORMALIZE",
-   "tier": "C"
+   "tier": "A"
   },
   {
    "name": "Cherrim",

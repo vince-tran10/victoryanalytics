@@ -27,12 +27,13 @@ if BREAK: FE = None
 # 24 Nov (Vincent, Erick 'freeze the field' tip): ALT plan = turn the field into another one with a move (fieldtext fieldChange, e.g.
 # Murkwater + Blizzard -> Icy Field); the lead must carry the move; the six is scored on the new field
 ALTFIELD = os.environ.get('PLAN_ALT') or ''
-ALT_FE = {'Icy Field': 'ICY', 'Water Surface': 'WATERSURFACE'}.get(ALTFIELD)
-ALTMOVES = set()
+ALT_FE = {'Icy Field': 'ICY', 'Water Surface': 'WATERSURFACE', 'Grassy Terrain': 'GRASSY'}.get(ALTFIELD)
+ALTMOVES = set(); ALTABIL = set()
 if ALTFIELD and FE and ALT_FE:
     ALTMOVES = set(((G.load('fieldtext').get(FE) or {}).get('fieldChange') or {}).get(ALT_FE) or [])
+    ALTABIL = {'GRASSY': {'GRASSYSURGE'}}.get(ALT_FE, set())   # 24 Nov: Grassy Surge sets Grassy Terrain on entry for 5 turns (Battler.rb 2866)
     FIELD = ALTFIELD; FE = ALT_FE
-ALT = bool(ALTMOVES)
+ALT = bool(ALTMOVES or ALTABIL)
 FMT = B9[FK][3] if FK in B9 else 'Doubles'
 E = engine.Engine(os.path.abspath('.'))
 MV = G.load('movetext'); BYNAME = {v['name'].lower(): k for k, v in MV.items()}
@@ -91,6 +92,8 @@ POOL += [n for n in (st.get('team') or []) if n in TA and n not in POOL and n in
 # 23 Nov (Vincent): ONE main core of 4 (core4.py, general, no opponent) + 2 flexes per fight
 CORE = [m['name'] for m in json.load(open('team/core4.json'))['core']] if os.path.exists('team/core4.json') and st.get('core_lock', True) else []
 CORE = [n for n in CORE if n in TA and n in C and FK in C[n]['matchups']]
+COUNTER = (st.get('builder') or 'counter') == 'counter'   # 24 Nov (Vincent): ONE dedicated hard counter per foe, our slot N vs their slot N
+if COUNTER: CORE = []
 POOL += [n for n in CORE if n not in POOL]   # the current six stays in the pool (tiers wobble)   # 23 Nov: the S / A moving into Active
 MOVE_OVR = {}   # planner-made move changes (Flash user) shown on the page
 def build(n):
@@ -201,7 +204,7 @@ def lead_q(p):   # every attack their leads carry: resisted by BOTH of ours (+),
     return q
 NP = len(NAMES)
 FLASH = np.array([bool({'FLASH', 'DAZZLINGGLEAM'} & set(C[n].get('legal') or [])) for n in NAMES])
-ALTCAN = np.array([bool(ALTMOVES & set(C[n].get('legal') or [])) for n in NAMES])   # can learn the field-changing move
+ALTCAN = np.array([bool(ALTMOVES & set(C[n].get('legal') or [])) or build(n)[1] in ALTABIL for n in NAMES])   # can change the field (move or ability)
 LQ = np.full((NP, NP), -99.0)
 for i in range(NP):
     for j in range(i + 1, NP):
@@ -281,6 +284,9 @@ def hits(m_, ab):   # 24 Nov audit: multi-hit moves (Skill Link = 5 hits; else 2
     if m_ == 'POPULATIONBOMB': return 10 if ab == 'SKILLLINK' else 6
     if m_ in ('TRIPLEAXEL',): return 4
     return 1
+UTIL_ATK = {'CLEARSMOG', 'KNOCKOFF', 'FAKEOUT', 'ICYWIND', 'ELECTROWEB', 'SNARL', 'NUZZLE', 'UTURN', 'VOLTSWITCH', 'FLIPTURN', 'RAPIDSPIN', 'MORTALSPIN',
+            'ROCKTOMB', 'MUDSHOT', 'LUNGE', 'BREAKINGSWIPE', 'STRUGGLEBUG', 'MYSTICALFIRE', 'SPIRITBREAK', 'FOULPLAY', 'SUPERFANG', 'SEISMICTOSS', 'NIGHTSHADE'}
+HAZ_D = {'STEALTHROCK', 'SPIKES', 'TOXICSPIKES', 'STICKYWEB', 'TOXIC'}
 def move_why(n, mname):
     mid = mvid(mname) or mname.upper().replace(' ', ''); d = MV.get(mid) or {}
     bp = int(d.get('basedamage') or 0)
@@ -323,6 +329,8 @@ def move_why(n, mname):
     if int(d.get('priority') or 0) > 0 and mid != 'FAKEOUT':   # 23 Nov audit: priority attacks have a job (Extreme Speed, Aqua Jet...)
         fast_ = [FN[j] for j in range(nF) if FASTF[NAMES.index(n), j]] if n in NAMES else []
         bits.insert(0, f'Priority +{d.get("priority")}: hits first' + (f' (they outspeed it: {", ".join(fast_[:3])})' if fast_ else ''))
+    if mid == 'GRASSYGLIDE' and (FE == 'GRASSY' or build(n)[1] == 'GRASSYSURGE'): bits.insert(0, 'Priority +1 on Grassy Terrain'); best_on = best_on or ['priority']
+    if mid in UTIL_ATK: best_on = best_on or ['utility']
     flag = not best_on and mid not in EXTRA and not (int(d.get('priority') or 0) > 0 and mid != 'FAKEOUT') and not (FMT == 'Doubles' and d.get('target') == 'AllOpposing')
     return ('; '.join(bits) or 'Neutral coverage', flag)
 
@@ -515,7 +523,7 @@ SEED_DENIED = [f['name'] for k, f in enumerate(FOES) if k not in L and _seed and
                and (f.get('ability') or '').upper().replace(' ', '') in SEED_ABUSE]
 KO_RACE = any(t_.startswith('ko:') and fidx(t_[3:]) in L for tt in TIPS for t_ in tt['needs'])   # Flash costs a turn in the race
 def cmp_score(ix):   # field-neutral comparison (alt plan: -3 per foe move that undoes the new field, -2 for the turn spent)
-    return _cmp0(ix) - ((3 * len(FOE_BREAK) + 2) if ALT else 0)
+    return _cmp0(ix) - ((3 * len(FOE_BREAK) + (1 if ALTABIL else 2)) if ALT else 0) - (999 if ALT and not ALTCAN[list(ix)[:len(L)]].any() else 0)
 def _cmp0(ix):   # field-neutral comparison of the two plans: safe switch-ins, one-shots, super-effective coverage, guide tips, denied seeds
     ix = list(ix); return float(1.5 * tips_met(ix) + (4 * len(SEED_DENIED) if BREAK else 0) - (5 if BREAK and KO_RACE else 0) + 1.5 * np.minimum(SAFE[ix].sum(0), 3).sum() - 4 * DEAD[ix].sum() + 3 * np.minimum((OFF[ix] >= 2).sum(0), 2).sum() - 2 * ((RM[ix] > 1).sum(0) >= 3).sum())
 best = list(res[0][1])
@@ -535,6 +543,38 @@ for _it in range(12):
         if _imp: break
     if not _imp: break
 res = [(_bv, tuple(best))] + res
+COUNTERS = []
+if COUNTER:   # 24 Nov (Vincent): the six = one dedicated hard counter per foe (one-to-one), in THEIR party order
+    def _q(i, j):
+        hk = math.ceil(100 / max(DEAL[i][j], 1)); hd = math.ceil(100 / max(TAKE_B[i][j], 1))
+        win = hk < hd or (hk == hd and FAST[i][j])
+        hard = (DEAL[i][j] >= 90 or (FAST[i][j] and DEAL[i][j] >= 100)) and TAKE_B[i][j] < 70
+        q = 10 * hard + 4 * win + min(DEAL[i][j], 150) / 100 - min(TAKE_B[i][j], 150) / 100 - 4 * FLAGN[i] + .3 * AEV[i] + .2 * TIER[i]
+        if j < len(L) and any(TAKE[i][k] >= 100 for k in L): q -= 8   # a lead must survive both of their leads
+        if ALT and j < len(L) and ALTCAN[i]: q += 6   # the freeze plan needs its field move on a lead
+        return q
+    QM = np.array([[_q(i, j) for j in range(nF)] for i in range(NP)])
+    _cand = [list(np.argsort(-QM[:, j])[:10]) for j in range(nF)]
+    _bestv, _besta = -1e9, None
+    def _rec(j, used, tot, pick):
+        global _bestv, _besta
+        if j == nF:
+            if tot > _bestv: _bestv, _besta = tot, list(pick)
+            return
+        for i in _cand[j]:
+            if i in used: continue
+            _rec(j + 1, used | {i}, tot + QM[i][j], pick + [i])
+    _rec(0, set(), 0.0, [])
+    best = [int(i) for i in _besta]
+    for j, i in enumerate(best):
+        hk = math.ceil(100 / max(DEAL[i][j], 1)); hd = math.ceil(100 / max(TAKE_B[i][j], 1))
+        alts_ = [int(a) for a in np.argsort(-QM[:, j]) if a != i][:3]
+        COUNTERS.append(dict(foe=FN[j], member=NAMES[i], deal=int(DEAL[i][j]), take=int(TAKE[i][j]), take_b=int(TAKE_B[i][j]), faster=bool(FAST[i][j]),
+                             hard=bool((DEAL[i][j] >= 90 or (FAST[i][j] and DEAL[i][j] >= 100)) and TAKE_B[i][j] < 70),
+                             win=bool(hk < hd or (hk == hd and FAST[i][j])), setup=FSETM[j],
+                             alts=[dict(name=NAMES[a], deal=int(DEAL[a][j]), take_b=int(TAKE_B[a][j]), faster=bool(FAST[a][j]),
+                                        hard=bool((DEAL[a][j] >= 90 or (FAST[a][j] and DEAL[a][j] >= 100)) and TAKE_B[a][j] < 70),
+                                        used_for=next((FN[k] for k, x in enumerate(best) if x == a), None)) for a in alts_]))
 if BREAK and not os.environ.get('PLAN_SIX') and os.path.exists('team/planner_keep.json'):   # 23 Nov: also try the keep plan's six with Flash
     _k = [m['name'] for m in json.load(open('team/planner_keep.json'))['six']]
     if all(x in NAMES for x in _k):
@@ -556,6 +596,8 @@ _setup_ids = {'SWORDSDANCE', 'NASTYPLOT', 'DRAGONDANCE', 'QUIVERDANCE', 'CALMMIN
 def _is_closer(i): return bool({mvid(x) for x in build(NAMES[i])[2]} & _setup_ids)
 # 23 Nov (Vincent): slots 3-6 by role: mid game first, then closers; a flex closer before a core-only closer (core / flex does not matter otherwise)
 order = list(leads) + sorted([i for i in best if i not in leads], key=lambda i: (_is_closer(i), NAMES[i] in CORE, -ind[i]))
+if COUNTER:   # our slot N counters their slot N: leads counter their leads
+    leads = tuple(best[:len(L)]); order = list(best)
 FLASHER = None
 if BREAK:
     fl = [i for i in leads if FLASH[i]] or [i for i in best if FLASH[i]]
@@ -721,6 +763,8 @@ for i in best:
                   and (MV.get(m) or {}).get('category') == ('physical' if phys else 'special') and int((MV.get(m) or {}).get('accuracy') or 100) >= 80]
         def _dead(m_, kept):
             if ALT and m_ in ICEBREAK: return True
+            if m_ in UTIL_ATK: return False   # utility attacks have a job beyond damage
+            if m_ == 'GRASSYGLIDE' and (FE == 'GRASSY' or build(n)[1] == 'GRASSYSURGE'): return False   # priority on Grassy Terrain
             if ALT and m_ in ALTMOVES: return False
             if FMT == 'Doubles' and (MV.get(m_) or {}).get('target') == 'AllOpposing': return False   # hits both foes: has a job in doubles
             return all(_ep(m_, f) < max([_ep(x, f) for x in kept if x != m_] or [0]) or _ep(m_, f) == 0 for f in FOES) and int((MV.get(m_) or {}).get('priority') or 0) <= 0
@@ -743,7 +787,12 @@ for i in best:
                 mn[mn.index(slot)] = MV[bestm]['name']
                 why_.append(f"{MV[bestm]['name']} replaces {slot}" + (' (singles: Protect matters less)' if is_prot else ' (it was the best hit on no foe)')
                             + f": better hit on {', '.join(hit_[:3])}")
-    if ALT and ALTCAN[i] and i == leads[0] and not (ALTMOVES & {_mid(x) for x in mn}):   # the lead freezes the field turn 1
+    if FMT == 'Doubles':   # 24 Nov: hazards / slow status are dead slots in doubles: a support move with a job instead
+        for slot in list(mn):
+            if _mid(slot) in HAZ_D:
+                u_ = _util(n, {_mid(x) for x in mn})
+                if u_: mn[mn.index(slot)] = MV[u_]['name']; why_.append(f"{MV[u_]['name']} replaces {slot} (doubles: hazards / Toxic are too slow)")
+    if ALT and ALTMOVES and ALTCAN[i] and i == leads[0] and not (ALTMOVES & {_mid(x) for x in mn}) and build(n)[1] not in ALTABIL:   # the lead changes the field turn 1
         am_ = next(m for m in ['BLIZZARD', 'GLACIATE', 'SUBZEROSLAMMER', 'WHIRLPOOL', 'PURIFY', 'TIDYUP'] if m in ALTMOVES and m in set(C[n].get('legal') or []))
         drop_ = min([x for x in mn if x != 'Protect'], key=lambda x: sum(_ep(_mid(x), f) for f in FOES))
         mn[mn.index(drop_)] = MV[am_]['name']; why_.append(f"{MV[am_]['name']} replaces {drop_}: turns the field into {ALTFIELD} on turn 1")
@@ -776,7 +825,7 @@ BRIEF_OUT = [dict(f, cov=[[a, b] for a, b in cv], ok=ok, core_ok=_bc_core.get(f[
 FLEXWHY = {NAMES[i]: [f['text'] for f, cv, ok in bcheck(best) if ok and any(a == NAMES[i] for a, _ in cv) and not _bc_core.get(f['id']) and f['kind'] not in ('fieldnote', 'fieldblock')]
            for i in best if NAMES[i] not in CORE}
 MODEL_GAPS = CB.model_gaps(FK, E)
-out = dict(fight=FK, model_gaps=MODEL_GAPS, fbuild=FBUILD, sitout=SITOUT_WHY, brief=BRIEF_OUT, flexwhy=FLEXWHY, mind_core=mind_items(_core_ix), mind_six=mind_items(best), field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], types=f['types'], moves=f['moves'], item=f.get('item'), ability=f.get('ability'),
+out = dict(fight=FK, counters=COUNTERS, model_gaps=MODEL_GAPS, fbuild=FBUILD, sitout=SITOUT_WHY, brief=BRIEF_OUT, flexwhy=FLEXWHY, mind_core=mind_items(_core_ix), mind_six=mind_items(best), field=FIELD, fe=FE, format=FMT, foes=[dict(name=f['name'], types=f['types'], moves=f['moves'], item=f.get('item'), ability=f.get('ability'),
            sid=f['species'], form=f.get('form')) for f in FOES], main=MAIN, atk={t: sorted(v) for t, v in ATK.items()},
            wins=[dict(win=w, foes=fs, answered_by=[NAMES[i] for i in best if ANS[i, j]]) for j, (w, fs) in enumerate(WINS)],
            emoves=[dict(foe=FN[fi], move=(MV.get(m) or {}).get('name', m), types=[t for t in mtypes(m) if t], w=round(float(w), 2)) for (fi, m, w) in EM],
@@ -804,13 +853,14 @@ out = dict(fight=FK, model_gaps=MODEL_GAPS, fbuild=FBUILD, sitout=SITOUT_WHY, br
 out['plan'] = 'alt' if ALT else 'break' if BREAK else 'keep'
 out['alt_field'] = ALTFIELD if ALT else None
 out['foe_break'] = FOE_BREAK if ALT else []
-OUTF = 'team/planner_alt.json' if ALT else 'team/planner_break.json' if BREAK else 'team/planner_keep.json'
+OUTF = f'team/planner_alt_{ALT_FE}.json' if ALT else 'team/planner_break.json' if BREAK else 'team/planner_keep.json'
 json.dump(out, open(OUTF, 'w'), indent=1, ensure_ascii=False)
 _other = 'team/planner_keep.json' if BREAK else 'team/planner_break.json'
 APPLY = os.environ.get('PLAN_APPLY')   # the second run decides: the plan with the higher field-neutral score wins
 if APPLY:
     if not BREAKABLE and os.path.exists('team/planner_break.json') and not BREAK: os.remove('team/planner_break.json')
-    _plans = [out] + [json.load(open(f_)) for f_ in ('team/planner_keep.json', 'team/planner_break.json', 'team/planner_alt.json')
+    import glob as _gl
+    _plans = [out] + [json.load(open(f_)) for f_ in ['team/planner_keep.json', 'team/planner_break.json'] + sorted(_gl.glob('team/planner_alt_*.json'))
                       if os.path.exists(f_) and f_ != OUTF and json.load(open(f_)).get('fight') == FK]
     win_ = max(_plans, key=lambda p_: p_['cmp'])   # 24 Nov: keep / break / alt field: the best field-neutral score wins
     _o = next((p_ for p_ in _plans if p_ is not win_), None)

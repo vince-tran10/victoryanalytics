@@ -65,6 +65,19 @@
   "rating": 0.72
  },
  {
+  "name": "Toxtricity-A",
+  "sid": "TOXTRICITY",
+  "form": "2",
+  "l1": "A-",
+  "l2": "A",
+  "net": 4,
+  "t0": "S",
+  "m0": 0.66,
+  "t1": "S",
+  "m1": 0.67,
+  "rating": 0.67
+ },
+ {
   "name": "Unfezant-A",
   "sid": "UNFEZANT",
   "form": "1",
@@ -89,19 +102,6 @@
   "t1": "A",
   "m1": 0.77,
   "rating": 0.77
- },
- {
-  "name": "Toxtricity-A",
-  "sid": "TOXTRICITY",
-  "form": "2",
-  "l1": "A-",
-  "l2": "A",
-  "net": 4,
-  "t0": "S",
-  "m0": 0.66,
-  "t1": "A",
-  "m1": 0.67,
-  "rating": 0.67
  },
  {
   "name": "Roserade-A",

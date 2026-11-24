@@ -1,9 +1,9 @@
 {
  "Gallade": {
   "ability": "SHARPNESS",
-  "nature": "Jolly",
-  "evs": "252 Atk / 252 Spe / 4 HP",
-  "item": "Black Belt",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Twisted Spoon",
   "moves": [
    "Psycho Cut",
    "Sacred Sword",
@@ -16,10 +16,28 @@
    "LEAFBLADE"
   ],
   "role": "attacker",
+  "source": "your team"
+ },
+ "Golisopod (Aevian Form)": {
+  "ability": "Skill Link",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe / 4 HP",
+  "item": "Soft Sand",
+  "moves": [
+   "Bone Rush",
+   "Pin Missile",
+   "Swords Dance",
+   "Protect"
+  ],
+  "move_ids": [
+   "PINMISSILE",
+   "ROCKBLAST",
+   "BONERUSH"
+  ],
+  "role": "attacker",
   "source": "your team",
   "fight_why": [
-   "Speed: outspeeds Electivire only with full Speed",
-   "Black Belt: boosts Sacred Sword, the best hit on 3 of their 6"
+   "Speed: outspeeds Magneton only with full Speed"
   ]
  },
  "Crabominable": {
@@ -82,8 +100,8 @@
  "Chandelure": {
   "ability": "FLASHFIRE",
   "nature": "Modest",
-  "evs": "252 HP / 252 SpA / 4 Def",
-  "item": "Charcoal",
+  "evs": "252 HP / 252 SpA",
+  "item": "Spell Tag",
   "moves": [
    "Shadow Ball",
    "Will-O-Wisp",
@@ -96,11 +114,7 @@
    "OVERHEAT"
   ],
   "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Bulk + power: Speed EVs change no matchup here",
-   "Charcoal: boosts Overheat, the best hit on 4 of their 6"
-  ]
+  "source": "your team"
  },
  "Hariyama": {
   "ability": "GUTS",
@@ -276,7 +290,7 @@
  "Glalie (Aevian Form)": {
   "ability": "GRASSYSURGE",
   "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
+  "evs": "252 HP / 252 Atk / 4 Def",
   "item": "Miracle Seed",
   "moves": [
    "Grassy Glide",
@@ -290,7 +304,10 @@
    "HELPINGHAND"
   ],
   "role": "attacker",
-  "source": "your team"
+  "source": "your team",
+  "fight_why": [
+   "Bulk + power: Speed EVs change no matchup here"
+  ]
  },
  "Pangoro": {
   "ability": "IRONFIST",
@@ -349,6 +366,25 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Toxtricity (Aevian Form)": {
+  "ability": "Punk Rock",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe",
+  "item": "Charcoal",
+  "moves": [
+   "Torch Song",
+   "Boomburst",
+   "Sludge Bomb",
+   "Protect"
+  ],
+  "move_ids": [
+   "SLUDGEBOMB",
+   "TORCHSONG",
+   "BOOMBURST"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
  "Grapploct": {
   "ability": "LIMBER",
   "nature": "Adamant",
@@ -386,25 +422,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Golisopod (Aevian Form)": {
-  "ability": "Skill Link",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Spell Tag",
-  "moves": [
-   "Shadow Claw",
-   "Pin Missile",
-   "Swords Dance",
-   "Protect"
-  ],
-  "move_ids": [
-   "PINMISSILE",
-   "ROCKBLAST",
-   "BONERUSH"
-  ],
-  "role": "attacker",
-  "source": "your team"
  },
  "Typhlosion": {
   "ability": "BLAZE",
@@ -500,25 +517,6 @@
    "MOONBLAST",
    "SYNTHESIS",
    "GIGADRAIN"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
- "Toxtricity (Aevian Form)": {
-  "ability": "Punk Rock",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
-  "item": "Charcoal",
-  "moves": [
-   "Torch Song",
-   "Will-O-Wisp",
-   "Sludge Bomb",
-   "Protect"
-  ],
-  "move_ids": [
-   "SLUDGEBOMB",
-   "TORCHSONG",
-   "BOOMBURST"
   ],
   "role": "attacker",
   "source": "your team"
@@ -754,8 +752,8 @@
  "Dragalge": {
   "ability": "ADAPTABILITY",
   "nature": "Modest",
-  "evs": "252 HP / 252 SpA / 4 Def",
-  "item": "Spell Tag",
+  "evs": "252 HP / 252 SpA",
+  "item": "Poison Barb",
   "moves": [
    "Sludge Bomb",
    "Shadow Ball",
@@ -768,11 +766,7 @@
    "SURF"
   ],
   "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Bulk + power: Speed EVs change no matchup here",
-   "Spell Tag: boosts Shadow Ball, the best hit on 3 of their 6"
-  ]
+  "source": "your team"
  },
  "Heatmor": {
   "ability": "GLUTTONY",
@@ -794,7 +788,7 @@
  "Slowking (Galarian Form)": {
   "ability": "Regenerator",
   "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
+  "evs": "252 HP / 252 SpA / 4 Def",
   "item": "Poison Barb",
   "moves": [
    "Sludge Bomb",
@@ -808,7 +802,10 @@
    "PSYCHIC"
   ],
   "role": "attacker",
-  "source": "your team"
+  "source": "your team",
+  "fight_why": [
+   "Bulk + power: Speed EVs change no matchup here"
+  ]
  },
  "Lucario": {
   "ability": "INNERFOCUS",
@@ -1891,6 +1888,25 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Swampert": {
+  "ability": "TORRENT",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Belt",
+  "moves": [
+   "Hammer Arm",
+   "Rock Slide",
+   "Deluge",
+   "Protect"
+  ],
+  "move_ids": [
+   "EARTHQUAKE",
+   "ROCKSLIDE",
+   "HAMMERARM"
+  ],
+  "role": "attacker",
+  "source": "your team"
  },
  "Drifblim": {
   "ability": "UNBURDEN",
@@ -4045,12 +4061,12 @@
  "Roserade (Aevian Form)": {
   "ability": "TECHNICIAN",
   "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
+  "evs": "252 SpA / 252 Spe / 4 HP",
   "item": "Soft Sand",
   "moves": [
    "Mud Barrage",
    "Vacuum Wave",
-   "Spikes",
+   "Taunt",
    "Protect"
   ],
   "move_ids": [
@@ -4059,7 +4075,11 @@
    "SPIKES"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "your team",
+  "fight_why": [
+   "Taunt replaces Spikes (doubles: hazards / Toxic are too slow)",
+   "Speed: outspeeds Togedemaru, Toxtricity only with full Speed"
+  ]
  },
  "Aurorus": {
   "ability": "REFRIGERATE",
@@ -4493,30 +4513,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Swampert": {
-  "ability": "TORRENT",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk / 4 Def",
-  "item": "Mystic Water",
-  "moves": [
-   "Helping Hand",
-   "Rock Slide",
-   "Deluge",
-   "Protect"
-  ],
-  "move_ids": [
-   "EARTHQUAKE",
-   "ROCKSLIDE",
-   "HAMMERARM"
-  ],
-  "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Helping Hand replaces Earthquake (doubles: Earthquake also hits your partner)",
-   "Bulk + power: Speed EVs change no matchup here",
-   "Mystic Water: boosts Deluge, the best hit on 6 of their 6"
-  ]
  },
  "Furfrou": {
   "ability": "FURCOAT",
