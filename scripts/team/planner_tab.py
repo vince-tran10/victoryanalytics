@@ -24,6 +24,20 @@ h = f'<div class="pl-head"><b>{E(TITLE.get(P["fight"], P["fight"]))}</b><span cl
 if P.get('break_field'):
     bf = P['break_field']
     h += f'<div class="pbreak">Turn 1: {E(disp(bf["user"]))} uses {E(bf["move"])} to break the field</div>'
+# 24 Nov (Vincent): the plan for the field (keep / break with Flash / change it, e.g. freeze Murkwater) + the model check, on top
+_pl = P.get('plan') or 'keep'
+_lead_alt = next((m['name'] for m in P['six'] if m.get('lead') and any(w.get('why', '').startswith('Turns the field') for w in m.get('why') or [])), None)
+_plan_txt = (f"Plan: freeze the field ({P.get('alt_field')}): {disp(_lead_alt) if _lead_alt else 'the lead'} uses Blizzard turn 1" if _pl == 'alt'
+             else 'Plan: break the field with Flash turn 1' if _pl == 'break' else f"Plan: fight on {P.get('field') or 'no field'}")
+_alt = P.get('alt_plan') or {}
+h += f'<article class="plc"><h3>{E(_plan_txt)}</h3>'
+for fn_, mv_ in P.get('foe_break') or []:
+    h += f'<div class="pans cno">{E(fn_)}: {E(mv_)} undoes it: KO it first or refreeze</div>'
+if _alt.get('six'):
+    h += f'<div class="pmuted">Other plan scored lower ({_alt.get("cmp")} vs {P.get("cmp")}): {E(", ".join(disp(x) for x in _alt["six"]))}</div>'
+_mg = P.get('model_gaps') or []
+h += ('<div class="pans cok">✓ Model check: every move, Mega and ability of theirs is modelled</div>' if not _mg
+      else ''.join(f'<div class="pans cno">✗ Not modelled: {E(x)}</div>' for x in _mg)) + '</article>'
 # their team
 h += '<article class="plc"><h3>Their team</h3><ol class="pfoes">' + ''.join(
     f'<li class="{"plead" if i < L else ""}"><span class="pn">{i + 1}</span>{SP.tag(f["sid"], "0", size="s")}<span>{E(f["name"])}</span></li>' for i, f in enumerate(foes)) + '</ol>'

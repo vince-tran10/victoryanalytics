@@ -239,7 +239,13 @@ def main():
         json.dump(dict(st, export=new), open(STATE, 'w'), indent=1, ensure_ascii=False)
         print(sh(['../scripts/team/core4.py'], env).strip())   # 23 Nov: the general core of 4 first (the planner locks it)
         print(sh(['../scripts/team/planner.py'], dict(env, BASE_RUN=f'r{run}')).strip())   # plan A: keep the field
-        print(sh(['../scripts/team/planner.py'], dict(env, BASE_RUN=f'r{run}', PLAN_BREAK='1', PLAN_APPLY='1')).strip())   # plan B: Flash breaks it; the better plan wins
+        for _f in ('team/planner_alt.json',):
+            if os.path.exists(_f): os.remove(_f)
+        _ALTF = {'Murkwater Surface': 'Icy Field'}   # 24 Nov: fields a move can turn into a better one (fieldtext fieldChange), e.g. Blizzard freezes Murkwater
+        _fe = next((b[2] for b in __import__('bosses').CH9 if b[0] == st.get('fight')), '')
+        if _ALTF.get(_fe):
+            print(sh(['../scripts/team/planner.py'], dict(env, BASE_RUN=f'r{run}', PLAN_ALT=_ALTF[_fe])).strip())   # plan C: change the field
+        print(sh(['../scripts/team/planner.py'], dict(env, BASE_RUN=f'r{run}', PLAN_BREAK='1', PLAN_APPLY='1')).strip())   # plan B: Flash breaks it; the best plan wins
         _s3 = json.load(open(STATE))
         for _k in ('team', 'moves', 'abilities', 'base_moves', 'plan_builds', 'items_seen', 'crests_owned'):   # 24 Nov: keep everything the planner / item scripts write
             if _k in _s3: st[_k] = _s3[_k]

@@ -2,7 +2,7 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 4,
+  "counters": 3,
   "pairs": [
    {
     "foe": "Electivire",
@@ -16,20 +16,20 @@
    },
    {
     "foe": "Raichu",
-    "mon": "Muk (Alolan Form)",
-    "ability": "POISONTOUCH",
+    "mon": "Musharna (Aevian Form)",
+    "ability": "TOUGHCLAWS",
     "dealt": 130,
-    "taken": 40,
+    "taken": 43,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Magneton",
-    "mon": "Gallade",
-    "ability": "SHARPNESS",
-    "dealt": 111,
-    "taken": 57,
+    "mon": "Chandelure",
+    "ability": "FLASHFIRE",
+    "dealt": 130,
+    "taken": 71,
     "ok": true,
     "setup": false,
     "wincons": []
@@ -39,8 +39,8 @@
     "mon": "Toxtricity (Aevian Form)",
     "ability": "PUNKROCK",
     "dealt": 130,
-    "taken": 43,
-    "ok": true,
+    "taken": 169,
+    "ok": false,
     "setup": false,
     "wincons": []
    },
@@ -59,7 +59,7 @@
     "mon": "Slowking (Galarian Form)",
     "ability": "REGENERATOR",
     "dealt": 106,
-    "taken": 73,
+    "taken": 84,
     "ok": false,
     "setup": false,
     "wincons": []

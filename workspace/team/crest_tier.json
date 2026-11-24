@@ -1,13 +1,13 @@
 {
- "anchor_low": 0.207,
- "anchor_median": 0.355,
+ "anchor_low": 0.079,
+ "anchor_median": 0.325,
  "team": {
-  "Muk (Alolan Form)": 0.207,
-  "Gallade": 0.501,
-  "Dragalge": 0.287,
-  "Toxtricity (Aevian Form)": 0.355,
-  "Golisopod (Aevian Form)": 0.298,
-  "Azumarill": 0.492
+  "Musharna (Aevian Form)": 0.325,
+  "Swampert": 0.079,
+  "Dragalge": 0.218,
+  "Chandelure": 0.379,
+  "Muk (Alolan Form)": 0.177,
+  "Gallade": 0.443
  },
  "rows": [
   {
@@ -16,9 +16,9 @@
    "held": false,
    "where": "Active",
    "dump": 477,
-   "with_crest": 0.575,
-   "without": 0.408,
-   "gain": 0.167,
+   "with_crest": 0.596,
+   "without": 0.404,
+   "gain": 0.193,
    "attacks": [
     "Close Combat",
     "Ice Hammer"
@@ -32,9 +32,9 @@
    "held": false,
    "where": "Overflow",
    "dump": 460,
-   "with_crest": 0.542,
-   "without": 0.276,
-   "gain": 0.266,
+   "with_crest": 0.501,
+   "without": 0.251,
+   "gain": 0.25,
    "attacks": [
     "Double-Edge",
     "Psyshield Bash",
@@ -49,9 +49,9 @@
    "held": false,
    "where": "Overflow",
    "dump": 111,
-   "with_crest": 0.443,
-   "without": 0.093,
-   "gain": 0.35,
+   "with_crest": 0.421,
+   "without": 0.085,
+   "gain": 0.336,
    "attacks": [
     "Outrage",
     "Superpower"
@@ -65,9 +65,9 @@
    "held": false,
    "where": "Active",
    "dump": 470,
-   "with_crest": 0.376,
-   "without": 0.28,
-   "gain": 0.095,
+   "with_crest": 0.403,
+   "without": 0.302,
+   "gain": 0.101,
    "attacks": [
     "Frost Breath",
     "Discharge"
@@ -81,9 +81,9 @@
    "held": false,
    "where": "Overflow",
    "dump": 128,
-   "with_crest": 0.327,
-   "without": 0.18,
-   "gain": 0.147,
+   "with_crest": 0.317,
+   "without": 0.152,
+   "gain": 0.165,
    "attacks": [
     "Surf",
     "Icy Wind",
@@ -98,9 +98,9 @@
    "held": false,
    "where": "Active",
    "dump": 502,
-   "with_crest": 0.324,
-   "without": 0.215,
-   "gain": 0.109,
+   "with_crest": 0.292,
+   "without": 0.187,
+   "gain": 0.105,
    "attacks": [
     "Psychic",
     "Shadow Ball"
@@ -109,46 +109,14 @@
    "tier": "A"
   },
   {
-   "name": "Cryogonal",
-   "crest": "Cryogonal Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 89,
-   "with_crest": 0.312,
-   "without": 0.095,
-   "gain": 0.217,
-   "attacks": [
-    "Ice Beam"
-   ],
-   "ability": "LEVITATE",
-   "tier": "A"
-  },
-  {
-   "name": "Silvally",
-   "crest": "Silvally Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 360,
-   "with_crest": 0.299,
-   "without": 0.232,
-   "gain": 0.067,
-   "attacks": [
-    "Multi-Attack",
-    "Fire Fang",
-    "Crunch"
-   ],
-   "ability": "RKSSYSTEM",
-   "tier": "A"
-  },
-  {
    "name": "Furret",
    "crest": "Furret Crest",
    "held": true,
    "where": "Overflow",
    "dump": 143,
-   "with_crest": 0.297,
-   "without": -0.005,
-   "gain": 0.303,
+   "with_crest": 0.287,
+   "without": -0.075,
+   "gain": 0.361,
    "attacks": [
     "Double-Edge",
     "Sucker Punch"
@@ -157,14 +125,61 @@
    "tier": "A"
   },
   {
+   "name": "Glaceon",
+   "crest": "Glaceon Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 118,
+   "with_crest": 0.287,
+   "without": 0.266,
+   "gain": 0.021,
+   "attacks": [
+    "Frost Breath",
+    "Shadow Ball"
+   ],
+   "ability": "ICEBODY",
+   "tier": "A"
+  },
+  {
+   "name": "Cryogonal",
+   "crest": "Cryogonal Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 89,
+   "with_crest": 0.282,
+   "without": 0.116,
+   "gain": 0.165,
+   "attacks": [
+    "Ice Beam"
+   ],
+   "ability": "LEVITATE",
+   "tier": "A"
+  },
+  {
+   "name": "Typhlosion",
+   "crest": "Typhlosion Crest",
+   "held": false,
+   "where": "Active",
+   "dump": 514,
+   "with_crest": 0.276,
+   "without": 0.21,
+   "gain": 0.066,
+   "attacks": [
+    "Eruption",
+    "Thrash"
+   ],
+   "ability": "FLASHFIRE",
+   "tier": "A"
+  },
+  {
    "name": "Torterra",
    "crest": "Torterra Crest",
    "held": false,
    "where": "Active",
    "dump": 512,
-   "with_crest": 0.294,
-   "without": 0.188,
-   "gain": 0.106,
+   "with_crest": 0.275,
+   "without": 0.171,
+   "gain": 0.104,
    "attacks": [
     "Wood Hammer",
     "Superpower",
@@ -179,8 +194,8 @@
    "held": false,
    "where": "Active",
    "dump": 501,
-   "with_crest": 0.293,
-   "without": 0.258,
+   "with_crest": 0.269,
+   "without": 0.234,
    "gain": 0.035,
    "attacks": [
     "Head Smash",
@@ -191,19 +206,20 @@
    "tier": "A"
   },
   {
-   "name": "Feraligatr",
-   "crest": "Feraligatr Crest",
+   "name": "Silvally",
+   "crest": "Silvally Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 134,
-   "with_crest": 0.293,
-   "without": 0.194,
-   "gain": 0.1,
+   "dump": 360,
+   "with_crest": 0.265,
+   "without": 0.202,
+   "gain": 0.062,
    "attacks": [
-    "Crunch",
-    "Ice Fang"
+    "Multi-Attack",
+    "Fire Fang",
+    "Crunch"
    ],
-   "ability": "SHEERFORCE",
+   "ability": "RKSSYSTEM",
    "tier": "A"
   },
   {
@@ -212,9 +228,9 @@
    "held": false,
    "where": "Overflow",
    "dump": 78,
-   "with_crest": 0.274,
-   "without": 0.197,
-   "gain": 0.077,
+   "with_crest": 0.261,
+   "without": 0.185,
+   "gain": 0.076,
    "attacks": [
     "Shadow Ball",
     "Grass Knot"
@@ -223,62 +239,14 @@
    "tier": "A"
   },
   {
-   "name": "Probopass",
-   "crest": "Probopass Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 268,
-   "with_crest": 0.271,
-   "without": 0.181,
-   "gain": 0.09,
-   "attacks": [
-    "Power Gem",
-    "Body Press"
-   ],
-   "ability": "SANDFORCE",
-   "tier": "A"
-  },
-  {
-   "name": "Gothitelle",
-   "crest": "Gothitelle Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 163,
-   "with_crest": 0.27,
-   "without": 0.206,
-   "gain": 0.064,
-   "attacks": [
-    "Psychic",
-    "Shadow Ball"
-   ],
-   "ability": "SHADOWTAG",
-   "tier": "A"
-  },
-  {
-   "name": "Glaceon",
-   "crest": "Glaceon Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 118,
-   "with_crest": 0.262,
-   "without": 0.244,
-   "gain": 0.019,
-   "attacks": [
-    "Frost Breath",
-    "Shadow Ball"
-   ],
-   "ability": "ICEBODY",
-   "tier": "A"
-  },
-  {
    "name": "Shiinotic",
    "crest": "Shiinotic Crest",
    "held": false,
    "where": "Overflow",
    "dump": 253,
-   "with_crest": 0.253,
-   "without": 0.212,
-   "gain": 0.041,
+   "with_crest": 0.243,
+   "without": 0.201,
+   "gain": 0.042,
    "attacks": [
     "Moonblast",
     "Giga Drain"
@@ -287,35 +255,35 @@
    "tier": "A"
   },
   {
-   "name": "Typhlosion",
-   "crest": "Typhlosion Crest",
+   "name": "Gothitelle",
+   "crest": "Gothitelle Crest",
    "held": false,
-   "where": "Active",
-   "dump": 514,
-   "with_crest": 0.251,
-   "without": 0.259,
-   "gain": -0.008,
+   "where": "Overflow",
+   "dump": 163,
+   "with_crest": 0.235,
+   "without": 0.176,
+   "gain": 0.059,
    "attacks": [
-    "Eruption"
+    "Psychic",
+    "Shadow Ball"
    ],
-   "ability": "FLASHFIRE",
+   "ability": "SHADOWTAG",
    "tier": "A"
   },
   {
-   "name": "Noctowl",
-   "crest": "Noctowl Crest",
+   "name": "Feraligatr",
+   "crest": "Feraligatr Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 177,
-   "with_crest": 0.238,
-   "without": 0.149,
-   "gain": 0.089,
+   "dump": 134,
+   "with_crest": 0.219,
+   "without": 0.121,
+   "gain": 0.098,
    "attacks": [
-    "Moonblast",
-    "Air Slash",
-    "Shadow Ball"
+    "Crunch",
+    "Ice Fang"
    ],
-   "ability": "TINTEDLENS",
+   "ability": "SHEERFORCE",
    "tier": "A"
   },
   {
@@ -324,49 +292,15 @@
    "held": false,
    "where": "Overflow",
    "dump": 221,
-   "with_crest": 0.221,
-   "without": 0.143,
-   "gain": 0.078,
+   "with_crest": 0.216,
+   "without": 0.14,
+   "gain": 0.076,
    "attacks": [
     "Night Slash",
-    "Secret Power",
+    "Facade",
     "Ice Fang"
    ],
    "ability": "INTIMIDATE",
-   "tier": "A"
-  },
-  {
-   "name": "Hypno",
-   "crest": "Hypno Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 180,
-   "with_crest": 0.22,
-   "without": 0.174,
-   "gain": 0.046,
-   "attacks": [
-    "Psychic",
-    "Fire Punch",
-    "Ice Punch"
-   ],
-   "ability": "INSOMNIA",
-   "tier": "A"
-  },
-  {
-   "name": "Zoroark (Hisuian Form)",
-   "crest": "Zoroark Crest",
-   "held": true,
-   "where": "Active",
-   "dump": 521,
-   "with_crest": 0.218,
-   "without": 0.013,
-   "gain": 0.205,
-   "attacks": [
-    "Secret Power",
-    "Shadow Claw",
-    "Low Sweep"
-   ],
-   "ability": "HUGEPOWER",
    "tier": "A"
   },
   {
@@ -375,8 +309,8 @@
    "held": false,
    "where": "Overflow",
    "dump": 71,
-   "with_crest": 0.217,
-   "without": 0.091,
+   "with_crest": 0.213,
+   "without": 0.087,
    "gain": 0.126,
    "attacks": [
     "Petal Dance",
@@ -386,86 +320,54 @@
    "tier": "A"
   },
   {
-   "name": "Beheeyem",
-   "crest": "Beheeyem Crest",
+   "name": "Probopass",
+   "crest": "Probopass Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 126,
-   "with_crest": 0.201,
-   "without": 0.147,
-   "gain": 0.054,
+   "dump": 268,
+   "with_crest": 0.213,
+   "without": 0.126,
+   "gain": 0.087,
    "attacks": [
-    "Psybeam",
-    "Shadow Ball",
-    "Signal Beam"
+    "Power Gem",
+    "Body Press"
    ],
-   "ability": "TELEPATHY",
-   "tier": "B"
+   "ability": "SANDFORCE",
+   "tier": "A"
   },
   {
-   "name": "Swalot",
-   "crest": "Swalot Crest",
+   "name": "Hypno",
+   "crest": "Hypno Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 390,
-   "with_crest": 0.184,
-   "without": 0.169,
-   "gain": 0.014,
+   "dump": 180,
+   "with_crest": 0.197,
+   "without": 0.154,
+   "gain": 0.043,
    "attacks": [
-    "Gunk Shot",
-    "Bullet Seed",
-    "Power-Up Punch"
+    "Psychic",
+    "Fire Punch",
+    "Ice Punch"
    ],
-   "ability": "GLUTTONY",
-   "tier": "B"
+   "ability": "INSOMNIA",
+   "tier": "A"
   },
   {
-   "name": "Simisear",
-   "crest": "Simisear Crest",
+   "name": "Noctowl",
+   "crest": "Noctowl Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 362,
-   "with_crest": 0.18,
-   "without": 0.125,
-   "gain": 0.054,
+   "dump": 177,
+   "with_crest": 0.195,
+   "without": 0.11,
+   "gain": 0.085,
    "attacks": [
-    "Flare Blitz"
+    "Moonblast",
+    "Air Slash",
+    "Shadow Ball"
    ],
-   "ability": "BLAZE",
-   "tier": "B"
-  },
-  {
-   "name": "Claydol",
-   "crest": "Claydol Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 23,
-   "with_crest": 0.178,
-   "without": 0.04,
-   "gain": 0.139,
-   "attacks": [
-    "Psybeam",
-    "Mud Barrage",
-    "Signal Beam"
-   ],
-   "ability": "LEVITATE",
-   "tier": "B"
-  },
-  {
-   "name": "Cinccino",
-   "crest": "Cinccino Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 74,
-   "with_crest": 0.176,
-   "without": -0.025,
-   "gain": 0.201,
-   "attacks": [
-    "Tail Slap",
-    "Rock Blast"
-   ],
-   "ability": "SKILLLINK",
-   "tier": "C"
+   "ability": "TINTEDLENS",
+   "tier": "A"
   },
   {
    "name": "Magcargo",
@@ -473,80 +375,83 @@
    "held": false,
    "where": "Overflow",
    "dump": 225,
-   "with_crest": 0.172,
-   "without": 0.17,
-   "gain": 0.003,
+   "with_crest": 0.184,
+   "without": 0.147,
+   "gain": 0.038,
    "attacks": [
-    "Overheat"
+    "Overheat",
+    "Ancient Power"
    ],
    "ability": "WEAKARMOR",
-   "tier": "D"
+   "tier": "A"
   },
   {
-   "name": "Sawsbuck",
-   "crest": "Sawsbuck Crest",
+   "name": "Claydol",
+   "crest": "Claydol Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 340,
-   "with_crest": 0.147,
-   "without": 0.002,
-   "gain": 0.145,
+   "dump": 23,
+   "with_crest": 0.164,
+   "without": 0.036,
+   "gain": 0.128,
    "attacks": [
-    "Double-Edge",
-    "Jump Kick",
-    "Megahorn"
+    "Psybeam",
+    "Mud Barrage",
+    "Signal Beam"
    ],
-   "ability": "SAPSIPPER",
-   "tier": "C"
+   "ability": "LEVITATE",
+   "tier": "A"
   },
   {
-   "name": "Phione",
-   "crest": "Phione Crest",
+   "name": "Beheeyem",
+   "crest": "Beheeyem Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 126,
+   "with_crest": 0.156,
+   "without": 0.103,
+   "gain": 0.053,
+   "attacks": [
+    "Psybeam",
+    "Shadow Ball",
+    "Signal Beam"
+   ],
+   "ability": "TELEPATHY",
+   "tier": "A"
+  },
+  {
+   "name": "Swalot",
+   "crest": "Swalot Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 390,
+   "with_crest": 0.147,
+   "without": 0.134,
+   "gain": 0.013,
+   "attacks": [
+    "Gunk Shot",
+    "Bullet Seed",
+    "Rock Smash"
+   ],
+   "ability": "GLUTTONY",
+   "tier": "A"
+  },
+  {
+   "name": "Zoroark (Hisuian Form)",
+   "crest": "Zoroark Crest",
    "held": true,
    "where": "Active",
-   "dump": 500,
-   "with_crest": 0.137,
-   "without": -0.019,
-   "gain": 0.157,
+   "dump": 521,
+   "with_crest": 0.129,
+   "without": -0.067,
+   "gain": 0.196,
    "attacks": [
-    "Surf",
-    "Secret Power",
-    "Deluge"
+    "Facade",
+    "Shadow Claw",
+    "Low Sweep"
    ],
-   "ability": "HYDRATION",
-   "tier": "C"
-  },
-  {
-   "name": "Skuntank",
-   "crest": "Skuntank Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 368,
-   "with_crest": 0.134,
-   "without": 0.124,
-   "gain": 0.01,
-   "attacks": [
-    "Sucker Punch"
-   ],
-   "ability": "STENCH",
-   "tier": "D"
-  },
-  {
-   "name": "Boltund",
-   "crest": "Boltund Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 42,
-   "with_crest": 0.132,
-   "without": 0.036,
-   "gain": 0.096,
-   "attacks": [
-    "Crunch",
-    "Thunder Fang",
-    "Play Rough"
-   ],
-   "ability": "STRONGJAW",
-   "tier": "C"
+   "ability": "HUGEPOWER",
+   "tier": "A"
   },
   {
    "name": "Bastiodon",
@@ -554,15 +459,15 @@
    "held": false,
    "where": "Overflow",
    "dump": 28,
-   "with_crest": 0.132,
-   "without": 0.116,
+   "with_crest": 0.127,
+   "without": 0.112,
    "gain": 0.015,
    "attacks": [
     "Iron Head",
     "Rock Blast"
    ],
    "ability": "SOUNDPROOF",
-   "tier": "D"
+   "tier": "A"
   },
   {
    "name": "Whiscash",
@@ -570,7 +475,7 @@
    "held": true,
    "where": "Active",
    "dump": 519,
-   "with_crest": 0.13,
+   "with_crest": 0.124,
    "without": null,
    "gain": null,
    "attacks": [
@@ -579,23 +484,72 @@
     "Bounce"
    ],
    "ability": "OBLIVIOUS",
-   "tier": "D"
+   "tier": "A"
   },
   {
-   "name": "Vespiquen",
-   "crest": "Vespiquen Crest",
+   "name": "Sawsbuck",
+   "crest": "Sawsbuck Crest",
    "held": false,
    "where": "Overflow",
-   "dump": 434,
-   "with_crest": 0.129,
-   "without": 0.129,
-   "gain": 0.0,
+   "dump": 340,
+   "with_crest": 0.117,
+   "without": -0.05,
+   "gain": 0.167,
    "attacks": [
-    "Attack Order",
-    "Air Slash"
+    "Double-Edge",
+    "Jump Kick",
+    "Megahorn"
    ],
-   "ability": "PRESSURE",
-   "tier": "D"
+   "ability": "SAPSIPPER",
+   "tier": "A"
+  },
+  {
+   "name": "Skuntank",
+   "crest": "Skuntank Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 368,
+   "with_crest": 0.103,
+   "without": 0.094,
+   "gain": 0.009,
+   "attacks": [
+    "Sucker Punch"
+   ],
+   "ability": "STENCH",
+   "tier": "A"
+  },
+  {
+   "name": "Phione",
+   "crest": "Phione Crest",
+   "held": true,
+   "where": "Active",
+   "dump": 500,
+   "with_crest": 0.102,
+   "without": -0.096,
+   "gain": 0.199,
+   "attacks": [
+    "Surf",
+    "Facade",
+    "Deluge"
+   ],
+   "ability": "HYDRATION",
+   "tier": "A"
+  },
+  {
+   "name": "Cinccino",
+   "crest": "Cinccino Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 74,
+   "with_crest": 0.098,
+   "without": -0.093,
+   "gain": 0.191,
+   "attacks": [
+    "Tail Slap",
+    "Rock Blast"
+   ],
+   "ability": "SKILLLINK",
+   "tier": "A"
   },
   {
    "name": "Sunflora",
@@ -603,15 +557,31 @@
    "held": false,
    "where": "Overflow",
    "dump": 387,
-   "with_crest": 0.106,
-   "without": 0.106,
+   "with_crest": 0.094,
+   "without": 0.094,
    "gain": 0.0,
    "attacks": [
     "Leaf Storm",
     "Sludge Bomb"
    ],
    "ability": "SOLARPOWER",
-   "tier": "D"
+   "tier": "A"
+  },
+  {
+   "name": "Vespiquen",
+   "crest": "Vespiquen Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 434,
+   "with_crest": 0.088,
+   "without": 0.088,
+   "gain": 0.0,
+   "attacks": [
+    "Attack Order",
+    "Air Slash"
+   ],
+   "ability": "PRESSURE",
+   "tier": "A"
   },
   {
    "name": "Electrode",
@@ -619,15 +589,47 @@
    "held": false,
    "where": "Overflow",
    "dump": 124,
-   "with_crest": 0.103,
-   "without": -0.066,
-   "gain": 0.168,
+   "with_crest": 0.087,
+   "without": -0.126,
+   "gain": 0.212,
    "attacks": [
     "Electro Ball",
     "Signal Beam"
    ],
    "ability": "AFTERMATH",
-   "tier": "C"
+   "tier": "A"
+  },
+  {
+   "name": "Simisear",
+   "crest": "Simisear Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 362,
+   "with_crest": 0.079,
+   "without": 0.035,
+   "gain": 0.045,
+   "attacks": [
+    "Flare Blitz"
+   ],
+   "ability": "BLAZE",
+   "tier": "A"
+  },
+  {
+   "name": "Boltund",
+   "crest": "Boltund Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 42,
+   "with_crest": 0.071,
+   "without": -0.022,
+   "gain": 0.092,
+   "attacks": [
+    "Crunch",
+    "Thunder Fang",
+    "Play Rough"
+   ],
+   "ability": "STRONGJAW",
+   "tier": "B"
   },
   {
    "name": "Oricorio (Pom-Pom Style)",
@@ -635,9 +637,9 @@
    "held": false,
    "where": "Overflow",
    "dump": 280,
-   "with_crest": 0.1,
-   "without": 0.024,
-   "gain": 0.076,
+   "with_crest": 0.019,
+   "without": -0.051,
+   "gain": 0.069,
    "attacks": [
     "Hurricane",
     "Revelation Dance"
@@ -651,8 +653,8 @@
    "held": true,
    "where": "Overflow",
    "dump": 18,
-   "with_crest": 0.071,
-   "without": 0.071,
+   "with_crest": 0.015,
+   "without": 0.015,
    "gain": 0.0,
    "attacks": [
     "Megahorn",
@@ -663,30 +665,13 @@
    "tier": "D"
   },
   {
-   "name": "Simipour",
-   "crest": "Simipour Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 361,
-   "with_crest": 0.052,
-   "without": -0.159,
-   "gain": 0.211,
-   "attacks": [
-    "Aqua Tail",
-    "Low Kick",
-    "Crunch"
-   ],
-   "ability": "TORRENT",
-   "tier": "C"
-  },
-  {
    "name": "Leafeon",
    "crest": "Leafeon Crest",
    "held": false,
    "where": "Overflow",
    "dump": 118,
-   "with_crest": 0.05,
-   "without": 0.01,
+   "with_crest": -0.004,
+   "without": -0.043,
    "gain": 0.04,
    "attacks": [
     "Leaf Blade",
@@ -697,13 +682,113 @@
    "tier": "C"
   },
   {
+   "name": "Dedenne",
+   "crest": "Dedenne Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 95,
+   "with_crest": -0.011,
+   "without": -0.127,
+   "gain": 0.116,
+   "attacks": [
+    "Play Rough",
+    "Volt Switch"
+   ],
+   "ability": "PLUS",
+   "tier": "C"
+  },
+  {
+   "name": "Simisage",
+   "crest": "Simisage Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 287,
+   "with_crest": -0.025,
+   "without": -0.204,
+   "gain": 0.179,
+   "attacks": [
+    "Seed Bomb",
+    "Crunch",
+    "Low Kick"
+   ],
+   "ability": "GLUTTONY",
+   "tier": "C"
+  },
+  {
+   "name": "Zoroark",
+   "crest": "Zoroark Crest",
+   "held": true,
+   "where": "Active",
+   "dump": 520,
+   "with_crest": -0.026,
+   "without": -0.112,
+   "gain": 0.086,
+   "attacks": [
+    "Sucker Punch",
+    "Facade"
+   ],
+   "ability": "HUGEPOWER",
+   "tier": "C"
+  },
+  {
+   "name": "Simipour",
+   "crest": "Simipour Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 361,
+   "with_crest": -0.032,
+   "without": -0.19,
+   "gain": 0.158,
+   "attacks": [
+    "Aqua Tail",
+    "Low Kick",
+    "Crunch"
+   ],
+   "ability": "TORRENT",
+   "tier": "C"
+  },
+  {
+   "name": "Castform",
+   "crest": "Castform Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 60,
+   "with_crest": -0.033,
+   "without": -0.056,
+   "gain": 0.023,
+   "attacks": [
+    "Headbutt",
+    "Fire Blast",
+    "Thief"
+   ],
+   "ability": "FORECAST",
+   "tier": "C"
+  },
+  {
+   "name": "Seviper",
+   "crest": "Seviper Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 347,
+   "with_crest": -0.035,
+   "without": -0.021,
+   "gain": -0.014,
+   "attacks": [
+    "Poison Jab",
+    "Fire Fang",
+    "Night Slash"
+   ],
+   "ability": "INFILTRATOR",
+   "tier": "D"
+  },
+  {
    "name": "Zangoose",
    "crest": "Zangoose Crest",
    "held": false,
    "where": "Overflow",
    "dump": 465,
-   "with_crest": 0.034,
-   "without": 0.034,
+   "with_crest": -0.036,
+   "without": -0.036,
    "gain": 0.0,
    "attacks": [
     "Close Combat",
@@ -714,128 +799,13 @@
    "tier": "D"
   },
   {
-   "name": "Simisage",
-   "crest": "Simisage Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 287,
-   "with_crest": 0.03,
-   "without": -0.155,
-   "gain": 0.185,
-   "attacks": [
-    "Seed Bomb",
-    "Crunch",
-    "Low Kick"
-   ],
-   "ability": "GLUTTONY",
-   "tier": "C"
-  },
-  {
-   "name": "Seviper",
-   "crest": "Seviper Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 347,
-   "with_crest": 0.015,
-   "without": 0.025,
-   "gain": -0.01,
-   "attacks": [
-    "Poison Jab",
-    "Fire Fang",
-    "Night Slash"
-   ],
-   "ability": "INFILTRATOR",
-   "tier": "D"
-  },
-  {
-   "name": "Oricorio (Sensu Style)",
-   "crest": "Oricorio Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 282,
-   "with_crest": 0.014,
-   "without": -0.048,
-   "gain": 0.061,
-   "attacks": [
-    "Hurricane",
-    "Revelation Dance"
-   ],
-   "ability": "DANCER",
-   "tier": "C"
-  },
-  {
-   "name": "Oricorio",
-   "crest": "Oricorio Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 279,
-   "with_crest": 0.006,
-   "without": -0.04,
-   "gain": 0.045,
-   "attacks": [
-    "Air Slash",
-    "Revelation Dance"
-   ],
-   "ability": "DANCER",
-   "tier": "C"
-  },
-  {
-   "name": "Dedenne",
-   "crest": "Dedenne Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 95,
-   "with_crest": 0.004,
-   "without": -0.12,
-   "gain": 0.124,
-   "attacks": [
-    "Play Rough",
-    "Volt Switch"
-   ],
-   "ability": "PLUS",
-   "tier": "C"
-  },
-  {
-   "name": "Castform",
-   "crest": "Castform Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 60,
-   "with_crest": -0.002,
-   "without": -0.026,
-   "gain": 0.024,
-   "attacks": [
-    "Headbutt",
-    "Fire Blast",
-    "Thief"
-   ],
-   "ability": "FORECAST",
-   "tier": "C"
-  },
-  {
-   "name": "Zoroark",
-   "crest": "Zoroark Crest",
-   "held": true,
-   "where": "Active",
-   "dump": 520,
-   "with_crest": -0.004,
-   "without": -0.091,
-   "gain": 0.087,
-   "attacks": [
-    "Sucker Punch",
-    "Secret Power"
-   ],
-   "ability": "HUGEPOWER",
-   "tier": "C"
-  },
-  {
    "name": "Minun",
    "crest": "Minun Crest",
    "held": false,
    "where": "Overflow",
    "dump": 251,
-   "with_crest": -0.016,
-   "without": -0.016,
+   "with_crest": -0.039,
+   "without": -0.039,
    "gain": 0.0,
    "attacks": [
     "Electro Ball",
@@ -845,13 +815,29 @@
    "tier": "D"
   },
   {
+   "name": "Oricorio (Sensu Style)",
+   "crest": "Oricorio Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 282,
+   "with_crest": -0.068,
+   "without": -0.124,
+   "gain": 0.056,
+   "attacks": [
+    "Hurricane",
+    "Revelation Dance"
+   ],
+   "ability": "DANCER",
+   "tier": "C"
+  },
+  {
    "name": "Plusle",
    "crest": "Plusle Crest",
    "held": false,
    "where": "Overflow",
    "dump": 307,
-   "with_crest": -0.021,
-   "without": -0.021,
+   "with_crest": -0.077,
+   "without": -0.077,
    "gain": 0.0,
    "attacks": [
     "Electro Ball",
@@ -861,13 +847,45 @@
    "tier": "D"
   },
   {
+   "name": "Oricorio",
+   "crest": "Oricorio Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 279,
+   "with_crest": -0.089,
+   "without": -0.13,
+   "gain": 0.041,
+   "attacks": [
+    "Air Slash",
+    "Revelation Dance"
+   ],
+   "ability": "DANCER",
+   "tier": "C"
+  },
+  {
+   "name": "Ledian",
+   "crest": "Ledian Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 206,
+   "with_crest": -0.099,
+   "without": -0.104,
+   "gain": 0.005,
+   "attacks": [
+    "Bug Buzz",
+    "Air Slash"
+   ],
+   "ability": "SWARM",
+   "tier": "D"
+  },
+  {
    "name": "Thievul",
    "crest": "Thievul Crest",
    "held": false,
    "where": "Overflow",
    "dump": 263,
-   "with_crest": -0.039,
-   "without": -0.098,
+   "with_crest": -0.106,
+   "without": -0.164,
    "gain": 0.058,
    "attacks": [
     "Foul Play",
@@ -878,14 +896,29 @@
    "tier": "C"
   },
   {
+   "name": "Fearow",
+   "crest": "Fearow Crest",
+   "held": false,
+   "where": "Overflow",
+   "dump": 373,
+   "with_crest": -0.121,
+   "without": -0.197,
+   "gain": 0.076,
+   "attacks": [
+    "Drill Peck"
+   ],
+   "ability": "KEENEYE",
+   "tier": "C"
+  },
+  {
    "name": "Oricorio (Pa'u Style)",
    "crest": "Oricorio Crest",
    "held": false,
    "where": "Overflow",
    "dump": 281,
-   "with_crest": -0.04,
-   "without": -0.134,
-   "gain": 0.093,
+   "with_crest": -0.122,
+   "without": -0.206,
+   "gain": 0.083,
    "attacks": [
     "Hurricane",
     "Revelation Dance"
@@ -894,45 +927,14 @@
    "tier": "C"
   },
   {
-   "name": "Fearow",
-   "crest": "Fearow Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 373,
-   "with_crest": -0.052,
-   "without": -0.131,
-   "gain": 0.08,
-   "attacks": [
-    "Drill Peck"
-   ],
-   "ability": "KEENEYE",
-   "tier": "C"
-  },
-  {
-   "name": "Ledian",
-   "crest": "Ledian Crest",
-   "held": false,
-   "where": "Overflow",
-   "dump": 206,
-   "with_crest": -0.063,
-   "without": -0.069,
-   "gain": 0.006,
-   "attacks": [
-    "Bug Buzz",
-    "Air Slash"
-   ],
-   "ability": "SWARM",
-   "tier": "D"
-  },
-  {
    "name": "Delcatty",
    "crest": "Delcatty Crest",
    "held": false,
    "where": "Overflow",
    "dump": 366,
-   "with_crest": -0.069,
-   "without": -0.154,
-   "gain": 0.086,
+   "with_crest": -0.136,
+   "without": -0.218,
+   "gain": 0.082,
    "attacks": [
     "Double-Edge"
    ],
@@ -945,8 +947,8 @@
    "held": false,
    "where": "Overflow",
    "dump": 68,
-   "with_crest": -0.165,
-   "without": -0.165,
+   "with_crest": -0.168,
+   "without": -0.168,
    "gain": 0.0,
    "attacks": [
     "Giga Drain"

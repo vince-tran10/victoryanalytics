@@ -80,6 +80,34 @@ def calc_stats(bs, evs, nature, level=CAP, iv=31):
     return out
 
 
+try:   # 24 Nov: (species id, mega stone id) -> Mega form name, from his game's montext
+    _MT = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'workspace', 'gamedata', 'montext.json')))
+    _MEGA = {(sp, st_): fn for sp, forms in _MT.items() if isinstance(forms, dict) for f_ in forms.values() if isinstance(f_, dict)
+             for st_, fn in (f_.get('MegaEvolutions') or {}).items()}
+except Exception:
+    _MEGA = {}
+
+try: _FTX = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'workspace', 'gamedata', 'fieldtext.json')))
+except Exception: _FTX = {}
+def field_speed(mon, battle):   # 24 Nov audit: field speed rules (fieldnotetext): Murkwater x0.75 grounded non-Water, Swift Swim / Surge Surfer x2
+    if os.environ.get('NOFIELD'): return 1.0
+    f_ = battle.get('field') or ''; ab = (mon.get('ability') or '').upper().replace(' ', '')
+    air = 'FLYING' in (mon.get('types') or []) or ab == 'LEVITATE' or mon.get('item') == 'Air Balloon'
+    _m0 = field_speed_seed(mon, f_)
+    if f_ == 'Murkwater Surface' and not air:
+        if ab in ('SWIFTSWIM', 'SURGESURFER'): return 2.0 * _m0
+        if 'WATER' not in (mon.get('types') or []): return 0.75 * _m0
+    if f_ in ('Electric Terrain', 'Electric Field') and ab == 'SURGESURFER': return 2.0
+    return _m0
+def field_speed_seed(mon, f_):
+    mult = 1.0
+    it = re.sub(r'[^A-Z]', '', (mon.get('item') or '').upper())
+    if it.endswith('SEED'):   # its field seed's Speed stages (fieldtext seed.stats '5')
+        sd = (_FTX.get(_G2FE.get(f_) or '', {}) or {}).get('seed') or {}
+        if sd.get('seedtype') == it and (sd.get('stats') or {}).get('5'):
+            k = int(sd['stats']['5']); mult *= (2 + k) / 2
+    return mult
+
 class Engine:
     def __init__(self, base):
         self.D = Data(base)
@@ -119,7 +147,7 @@ class Engine:
     def move_id(self, name):
         return self.byname.get((name or '').strip().lower())
 
-    def build_foe(self, m, battle):
+    def build_foe(self, m, battle):   # noqa (Mega table below)
         name = m['specie']
         sid = self.rev.get(name) or self.rev.get(name.split(' ')[0])
         types = [t.upper() for t in re.split(r'[/ ]', m.get('types') or '') if t]
@@ -145,6 +173,15 @@ class Engine:
                 if reg in (f.get('FormName') or ''):
                     form = k; bs = dict(zip(STATS, f['BaseStats']))
                     types = [x for x in [f.get('Type1'), f.get('Type2')] if x]
+        # 24 Nov audit: a foe holding its Mega Stone fights as the Mega (stats, types, ability) from montext MegaEvolutions
+        _it = re.sub(r'[^A-Z]', '', (m.get('heldItem') or '').upper())
+        _mega_ab = None
+        if sid and _it and _MEGA.get((sid, _it)):
+            for k in [k for k in self.D.sp[sid] if k.isdigit()]:
+                f = self.D.form(sid, k)
+                if f.get('FormName') == _MEGA[(sid, _it)]:
+                    form = k; bs = dict(zip(STATS, f['BaseStats'])); types = [x for x in [f.get('Type1'), f.get('Type2')] if x]
+                    _mega_ab = (f.get('Abilities') or [None])[0]
         if name == 'Silvally' and 'Memory' in (m.get('heldItem') or ''):
             types = [m['heldItem'].split()[0].upper()]
         if name == 'Minior':
@@ -178,7 +215,7 @@ class Engine:
             if mid == 'MULTIATTACK':
                 mv['Type'] = types[0]
             moves.append((mid, mv))
-        ability = norm_ab(m.get('ability'))
+        ability = norm_ab(_mega_ab or m.get('ability'))
         # N shields = N+1 full HP bars (game: Battler.rb pbReduceHP heals to full on a shield break; overflow is lost)
         hp_mult = (int(m['bars']) if m.get('bars') else 1 + (int(m['shields']) if str(m.get('shields') or '').isdigit() else 0)) if m.get('boss') else 1
         disp_name = name + (m.get('phase_label') or '')
@@ -202,14 +239,14 @@ class Engine:
         acc = int(mv.get('Accuracy') or 0)
         if 0 < acc < 100:
             accf = acc / 100
-            if att.get('ability') == 'NOGUARD' or dfn.get('ability') == 'NOGUARD':
+            if att.get('ability') == 'NOGUARD' or dfn.get('ability') == 'NOGUARD' or (mid == 'BLIZZARD' and att.get('ability') == 'SNOWWARNING'):   # snow: Blizzard can't miss
                 p = p / accf
             elif not os.environ.get('NOFIELD') and FIELD.get(battle['field'], {}).get('gravity'):
                 p = p / accf * min(1.0, accf * 1.67)
         mtype = mv['Type']
         mult = 1.0
         ab = att['ability']
-        if att_is_me:
+        if True:   # 24 Nov audit: THEIR abilities count too (Punk Rock, Adaptability, Huge Power...)
             t2, am, stab_o = ability_move_mult(ab, (mid, dict(mv, _power=p, _drawback=1.0)), mtype, att['types'])
             mtype = t2; mult *= am
             if ab in ('PUNKROCK', 'JUNGLEBEAT') and 'Soundmove' in (mv.get('DataFlags') or []) and not os.environ.get('NOFIELD') \
@@ -253,7 +290,7 @@ class Engine:
                 fm *= 2
         mult *= fm
         # stats
-        am_stat = ability_stat_mult(ab) if att_is_me else (1, 1, 1)
+        am_stat = ability_stat_mult(ab)   # 24 Nov: for both sides
         if mv['MoveName'] == 'Body Press':
             A = att['stats']['Def']
         elif cat == 'Physical':
@@ -589,8 +626,8 @@ class Engine:
                         taken, takenmv = d, mv['MoveName']
                 if me.get('crest') == 'FURRET' and taken > 0:   # Furret Crest: a Substitute on entry (1/4 HP) eats the first hit
                     taken = 100 / (math.ceil(75 / taken) + 1)
-                my_spe = me['stats']['Spe']
-                foe_spe = foe['stats']['Spe'] * (1.5 if foe['item'] == 'Choice Scarf' else 1)
+                my_spe = me['stats']['Spe'] * field_speed(me, b)
+                foe_spe = foe['stats']['Spe'] * (1.5 if foe['item'] == 'Choice Scarf' else 1) * field_speed(foe, b)
                 if foe.get('ability') == 'SPEEDBOOST':
                     foe_spe *= 1.5   # one boost (Protect turn 1)
                 elif foe.get('ability') == 'UNBURDEN' and (foe.get('item') or '').endswith((' Gem', 'Berry', 'Seed')):

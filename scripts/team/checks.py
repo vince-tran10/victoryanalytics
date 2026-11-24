@@ -86,9 +86,15 @@ else:
     chk('Team passes the chapter rules', tc.get('rank') is not None, f"#{tc.get('rank')} of {tc.get('of')}")
 if st.get('core') and os.path.exists('team/fight_plans.json'):   # 17 Nov: core model replaces the whole-chapter six search
     FP = {k: v for k, v in json.load(open('team/fight_plans.json')).items() if k not in set(st.get('done') or [])}
-    bad = [f"{k}: {' + '.join(v['leads'])} takes {v['lead_taken']}% vs {' + '.join(v['lead_foes'])}" for k, v in FP.items() if not v['lead_ok']]
-    chk('Every fight plan: the lead survives the opening Pokémon (slot 1 singles, slots 1-2 doubles)', not bad,
-        '; '.join(bad) or ', '.join(f"{k} {' + '.join(v['leads'])} ({v['lead_taken']}%)" for k, v in FP.items()))
+    if st.get('mode') == 'planner' and os.path.exists('team/planner.json'):   # 24 Nov: planner mode checks the PLANNER's leads (the six he plays)
+        _P = json.load(open('team/planner.json')); _L = 2 if _P['format'] == 'Doubles' else 1
+        _ld = [m for m in _P['six'] if m.get('lead')]
+        bad = [f"{m['name']} takes {max(m['take'][:_L])}% from {', '.join(f['name'] for f in _P['foes'][:_L])}" for m in _ld if max(m['take'][:_L]) >= 100]
+        chk('The planned lead(s) survive one hit from their lead(s)', not bad, '; '.join(bad) or ', '.join(f"{m['name']} (max {max(m['take'][:_L])}%)" for m in _ld))
+    else:
+        bad = [f"{k}: {' + '.join(v['leads'])} takes {v['lead_taken']}% vs {' + '.join(v['lead_foes'])}" for k, v in FP.items() if not v['lead_ok']]
+        chk('Every fight plan: the lead survives the opening Pokémon (slot 1 singles, slots 1-2 doubles)', not bad,
+            '; '.join(bad) or ', '.join(f"{k} {' + '.join(v['leads'])} ({v['lead_taken']}%)" for k, v in FP.items()))
     rb = [f"{k}: {', '.join(v['weak3'] + v['nores'])}" for k, v in FP.items() if v['weak3'] or v['nores']]
     chk('Every fight plan passes rules (b)(c) vs its own attack types', not rb, '; '.join(rb) or 'all pass', blocking=False)
     chk('Fight plans: counters per fight (one dedicated counter per foe)', all(v['counters'] >= v['n'] - 2 for v in FP.values()),

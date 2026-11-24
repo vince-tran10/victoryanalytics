@@ -1,0 +1,13 @@
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Swampert | Active 60 | Torrent  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Earthquake', 'Rock Slide', 'Deluge', 'Protect'] | Soft Sand (already holding) | 
+Dragalge | Active 60 | Adaptability  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Sludge Bomb', 'Shadow Ball', 'Dragon Pulse', 'Protect'] | Focus Sash (already holding) | 
+Amoonguss | Active 60 | Regenerator  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Spore', 'Rage Powder', 'Clear Smog', 'Protect'] | Sitrus Berry (already holding) | 
+Gallade | Active 60 | Sharpness  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Psycho Cut', 'Sacred Sword', 'X-Scissor', 'Protect'] | Sitrus Berry (already holding) | 
+Azumarill | Party 60 | Huge Power  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Play Rough', 'Aqua Jet', 'Belly Drum', 'Superpower'] | Fairy Feather (already holding) | 
+jenner 1.608 -> 1.562 leads ['Azumarill', 'Gallade'] swaps [('Arcanine', 'Dragalge', 0.096), ('Pawmot', 'Dragalge', 0.095), ('Toxtricity (Aevian Form)', 'Dragalge', 0.085)]
+danni 1.694 -> 1.606 leads ['Gallade', 'Azumarill'] swaps [('Arcanine', 'Azumarill', 0.137), ('Chandelure', 'Azumarill', 0.134), ('Toxtricity (Aevian Form)', 'Dragalge', 0.124)]
+troye 1.373 -> 1.229 leads ['Gallade', 'Azumarill'] swaps [('Arcanine', 'Dragalge', 0.222), ('Talonflame', 'Swampert', 0.178), ('Toxtricity (Aevian Form)', 'Dragalge', 0.177)]
+zena 1.295 -> 1.436 leads ['Gallade', 'Swampert'] swaps [('Meganium', 'Dragalge', 0.194), ('Venusaur', 'Dragalge', 0.17), ('Leafeon', 'Dragalge', 0.15)]
+marcie 1.412 -> 1.43 leads ['Dragalge', 'Gallade'] swaps [('Leavanny (Aevian Form)', 'Musharna (Aevian Form)', 0.167), ('Toxtricity (Aevian Form)', 'Musharna (Aevian Form)', 0.131), ('Arcanine', 'Azumarill', 0.13)]
+jenner9 0.923 -> 0.911 leads ['Gallade', 'Azumarill'] swaps [('Chandelure', 'Dragalge', 0.119), ('Palossand (Fiery Aevian Form)', 'Dragalge', 0.117), ('Sylveon', 'Dragalge', 0.116)]
+erick 0.878 -> 0.982 leads ['Gallade', 'Musharna (Aevian Form)'] swaps [('Scrafty', 'Azumarill', 0.128), ('Palossand (Fiery Aevian Form)', 'Azumarill', 0.11), ('Pawmot', 'Azumarill', 0.11)]

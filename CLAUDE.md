@@ -108,6 +108,16 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   type, in SINGLES Protect replaced when another move adds 120+ effective power (no charge / recharge / self-KO / conditional moves);
   the CORE keeps Protect while a doubles fight is left. A core member may SIT OUT a fight only for +10 or more (shown on the Flex tab);
   the core stays the chapter's stars. Chips on Core + Flex = chapter_brief.good_for (role: why, field use, answers / beats).
+- **MODEL CHECK BEFORE EVERY PICK (Vincent, 24 Nov, after Erick beat every six: 'think it ALL through'):** the engine must model the
+  fight's real mechanics, not just its numbers. Fixed 24 Nov: Thunder Raid (3 hits 20/40/60 = 120, was scored 20), foe Megas (holder of
+  its stone = Mega form stats / types / ability, montext MegaEvolutions), THEIR offensive abilities (Punk Rock, Adaptability...), field
+  speed (Murkwater x0.75 grounded non-Water; Swift Swim / Surge Surfer x2; field-seed Speed stages), Snow Warning Blizzard can't miss.
+  chapter_brief.model_gaps() lists anything still unmodelled (multi-hit moves scored as one hit, unused Mega Stones, abilities with no
+  rule): shown at the top of the Flex tab ('✓ Model check' / '✗ Not modelled'); fix gaps BEFORE recommending.
+  FIELD PLANS: planner scores keep / Flash-break / ALT field (PLAN_ALT, e.g. Murkwater + Blizzard -> Icy Field; update.py _ALTF) and the
+  best field-neutral cmp wins (alt: -3 per foe move that undoes it, -2 for the turn). Alt plan: lead carries the field move, moves that
+  undo the new field are flagged + replaced (core too). Doubles leads: HARD rule, neither lead one-shot by their leads; spread moves that
+  hit only foes count as useful; checks.py tests the PLANNER's leads in planner mode.
 - **ITEMS TAB + OWNED (Vincent, 24 Nov, latest):** he has EVERY type booster, every berry, Focus Sash (unlimited), plus items seen held
   (state items_seen), crests up to the previous chapter + told / held (state crests_owned; feeds tier_all) and walkthrough Mega Stones
   (not used); NOT Leftovers / Life Orb / Choice items. scripts/team/items_owned.py = one source (ideal_builds, make_report5, planner);

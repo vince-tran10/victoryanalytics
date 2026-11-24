@@ -121,7 +121,8 @@ def brief(fk, speeds=None):
 
 def foe_speeds(E, fk):
     bt = next((b for b in E.battles if b['key'] == fk), None)
-    return {f['name']: int(f['stats']['Spe'] * (1.5 if f.get('item') == 'Choice Scarf' else 1)) for f in (bt['foes'] if bt else [])}
+    import engine as _eng
+    return {f['name']: int(f['stats']['Spe'] * (1.5 if f.get('item') == 'Choice Scarf' else 1) * _eng.field_speed(f, bt)) for f in (bt['foes'] if bt else [])}
 
 
 def eff(E, atype, types, ab=''):
@@ -253,3 +254,27 @@ def good_for(tags, fmt='Singles', field_move=None, beats=None, answers=None):
     if answers: out.append('Answers ' + ', '.join(answers[:2]) + (f' +{len(answers) - 2}' if len(answers) > 2 else ''))
     if beats and len(out) < 3: out.append('Beats ' + ', '.join(beats[:2]) + (f' +{len(beats) - 2}' if len(beats) > 2 else ''))
     return out[:3]
+
+
+def model_gaps(fk, E):
+    """24 Nov (Vincent: 'think it ALL through'): what the damage model does NOT handle for this fight, listed before any pick:
+    multi-hit / escalating moves scored as one hit, Mega Stones not used as the Mega, abilities the engine has no rule for"""
+    import recommend as R
+    src = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'engine.py')).read() + open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'recommend.py')).read()
+    bt = next((b for b in E.battles if b['key'] == fk), None)
+    out = []
+    for f in (bt['foes'] if bt else []):
+        for m, mv in f['moves']:
+            d = MV.get(m) or {}
+            desc = (d.get('desc') or '').lower()
+            if re.search(r'times|in a row|two to five|2-5|twice|three', desc) and 'turn' not in desc and int(d.get('basedamage') or 0) > 0:
+                p, _ = R.move_base_value(m, mv, {'weight': 50, 'spe': 100, 'setup': False})
+                if p <= int(d.get('basedamage') or 0) * 1.3:
+                    out.append(f"{f['name']}: {d.get('name', m)} hits more than once but is scored as one hit")
+        it = (f.get('item') or '')
+        if it.endswith('ite') and it != 'Eviolite' and 'Mega' not in (E.D.form(f['sid'], f['form']).get('FormName') or '') and 'Giga' not in (E.D.form(f['sid'], f['form']).get('FormName') or ''):
+            out.append(f"{f['name']}: holds {it} but is scored in its normal form")
+        ab = f.get('ability') or ''
+        if ab and f"'{ab}'" not in src:
+            out.append(f"{f['name']}: {ab.title()} has no rule in the damage / speed model")
+    return out

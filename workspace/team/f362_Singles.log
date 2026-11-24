@@ -1,0 +1,13 @@
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Swampert | Active 60 | Torrent  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Helping Hand', 'Helping Hand', 'Deluge', 'Protect'] | Soft Sand (already holding) | 
+Dragalge | Active 60 | Adaptability  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Sludge Bomb', 'Shadow Ball', 'Dragon Pulse', 'Protect'] | Focus Sash (already holding) | 
+Amoonguss | Active 60 | Regenerator  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Spore', 'Rage Powder', 'Clear Smog', 'Protect'] | Sitrus Berry (already holding) | 
+Gallade | Active 60 | Sharpness  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Psycho Cut', 'Sacred Sword', 'X-Scissor', 'Protect'] | Sitrus Berry (already holding) | 
+Azumarill | Party 60 | Huge Power  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Play Rough', 'Aqua Jet', 'Belly Drum', 'Superpower'] | Fairy Feather (already holding) | 
+jenner 1.488 -> 1.402 leads ['Gallade'] swaps [('Typhlosion', 'Swampert', 0.079), ('Arcanine', 'Swampert', 0.073), ('Pawmot', 'Swampert', 0.073)]
+danni 1.569 -> 1.436 leads ['Gallade'] swaps [('Chandelure', 'Swampert', 0.124), ('Crobat', 'Swampert', 0.117), ('Arcanine', 'Swampert', 0.114)]
+troye 1.234 -> 1.076 leads ['Gallade'] swaps [('Arcanine', 'Swampert', 0.204), ('Talonflame', 'Swampert', 0.178), ('Typhlosion', 'Swampert', 0.15)]
+zena 1.151 -> 1.194 leads ['Gallade'] swaps [('Torterra', 'Swampert', 0.19), ('Meganium', 'Swampert', 0.171), ('Venusaur', 'Swampert', 0.171)]
+marcie 1.292 -> 1.275 leads ['Dragalge'] swaps [('Leavanny (Aevian Form)', 'Swampert', 0.166), ('Leavanny', 'Swampert', 0.155), ('Scolipede', 'Swampert', 0.139)]
+jenner9 0.774 -> 0.711 leads ['Gallade'] swaps [('Sylveon', 'Dragalge', 0.126), ('Florges', 'Dragalge', 0.102), ('Vanilluxe', 'Dragalge', 0.096)]
+erick 0.667 -> 0.774 leads ['Swampert'] swaps [('Camerupt', 'Azumarill', 0.138), ('Golurk', 'Azumarill', 0.11), ('Scrafty', 'Azumarill', 0.11)]

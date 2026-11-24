@@ -1,0 +1,13 @@
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Chandelure | Active 60 | Flash Fire  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Shadow Ball', 'Will-O-Wisp', 'Overheat', 'Protect'] | Sitrus Berry | 
+Dragalge | Active 60 | Adaptability  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Sludge Bomb', 'Shadow Ball', 'Dragon Pulse', 'Protect'] | Focus Sash (already holding) | 
+Swampert | Active 60 | Torrent  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Helping Hand', 'Rock Slide', 'Deluge', 'Protect'] | Soft Sand (already holding) | 
+Muk (Alolan Form) | Party 60 | Poison Touch  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Knock Off', 'Shadow Sneak', 'Clear Smog', 'Protect'] | Black Glasses (already holding) | 
+Gallade | Active 60 | Sharpness  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Psycho Cut', 'Sacred Sword', 'X-Scissor', 'Protect'] | Sitrus Berry (already holding) | 
+jenner 1.488 -> 1.407 leads ['Chandelure'] swaps [('Azumarill', 'Swampert', 0.054), ('Arcanine', 'Swampert', 0.049), ('Typhlosion', 'Swampert', 0.047)]
+danni 1.569 -> 1.556 leads ['Gallade'] swaps [('Bombirdier', 'Swampert', 0.057), ('Arcanine', 'Swampert', 0.056), ('Crobat', 'Swampert', 0.054)]
+troye 1.234 -> 1.107 leads ['Gallade'] swaps [('Arcanine', 'Swampert', 0.164), ('Clawitzer', 'Swampert', 0.132), ('Passimian', 'Swampert', 0.131)]
+zena 1.151 -> 1.247 leads ['Gallade'] swaps [('Torterra', 'Swampert', 0.195), ('Meganium', 'Swampert', 0.164), ('Venusaur', 'Swampert', 0.164)]
+marcie 1.292 -> 1.33 leads ['Dragalge'] swaps [('Leavanny (Aevian Form)', 'Swampert', 0.119), ('Glalie (Aevian Form)', 'Swampert', 0.117), ('Golisopod (Aevian Form)', 'Swampert', 0.105)]
+jenner9 0.774 -> 0.734 leads ['Gallade'] swaps [('Sylveon', 'Dragalge', 0.14), ('Florges', 'Dragalge', 0.129), ('Vanilluxe', 'Dragalge', 0.109)]
+erick 0.667 -> 0.844 leads ['Swampert'] swaps [('Camerupt', 'Chandelure', 0.075), ('Golurk', 'Musharna (Aevian Form)', 0.051), ('Glalie (Aevian Form)', 'Musharna (Aevian Form)', 0.039)]

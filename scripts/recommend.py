@@ -258,6 +258,8 @@ def move_base_value(mid, m, ctx):
         p *= 3.1
     elif mid == 'TRIPLEAXEL':
         p = 94
+    elif mid == 'THUNDERRAID':   # 24 Nov audit: Rejuvenation move, 3 hits 20 / 40 / 60 (function 0BF, 100% accurate)
+        p = 120
     elif mid == 'TRIPLEKICK':
         p = 47
     elif mid == 'SURGINGSTRIKES':

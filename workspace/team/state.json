@@ -4,9 +4,9 @@
  "export_label": "23 Nov 15:58",
  "active_start": 468,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 340,
- "run": 354,
- "final": 358,
+ "roster": 347,
+ "run": 361,
+ "final": 365,
  "done": [
   "aelita",
   "narcissa1",
@@ -36,12 +36,12 @@
  ],
  "fight": "erick",
  "team": [
-  "Muk (Alolan Form)",
-  "Gallade",
+  "Musharna (Aevian Form)",
+  "Swampert",
   "Dragalge",
-  "Toxtricity (Aevian Form)",
-  "Golisopod (Aevian Form)",
-  "Azumarill"
+  "Chandelure",
+  "Muk (Alolan Form)",
+  "Gallade"
  ],
  "moves": {
   "Golisopod (Aevian Form)": [
@@ -136,7 +136,7 @@
   ],
   "Swampert": [
    "Helping Hand",
-   "Helping Hand",
+   "Rock Slide",
    "Deluge",
    "Protect"
   ],
@@ -248,30 +248,30 @@
  },
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
-  "rank": 96398,
-  "of": 527934,
-  "gap": 17.99,
+  "rank": 143477,
+  "of": 476060,
+  "gap": 22.1,
   "top": [
    {
-    "score": 1.0603,
-    "pct": 118.0,
+    "score": 0.9901,
+    "pct": 122.1,
     "team": [
-     "Gallade",
-     "Golisopod-A",
-     "Chandelure",
      "Scrafty",
+     "Chandelure",
+     "Hariyama",
      "Florges",
-     "Sylveon"
+     "Whiscash",
+     "Ninetales (Alolan Form)"
     ],
     "misses": []
    },
    {
-    "score": 1.0601,
-    "pct": 118.0,
+    "score": 0.9884,
+    "pct": 121.9,
     "team": [
      "Gallade",
-     "Chandelure",
      "Scrafty",
+     "Chandelure",
      "Florges",
      "Sylveon",
      "Whiscash"
@@ -279,15 +279,15 @@
     "misses": []
    },
    {
-    "score": 1.0548,
-    "pct": 117.4,
+    "score": 0.9848,
+    "pct": 121.4,
     "team": [
-     "Golisopod-A",
-     "Chandelure",
+     "Gallade",
      "Scrafty",
-     "Hariyama",
+     "Chandelure",
      "Florges",
-     "Sylveon"
+     "Whiscash",
+     "Ninetales (Alolan Form)"
     ],
     "misses": []
    }
@@ -425,15 +425,6 @@
    }
   },
   "erick": {
-   "Swampert": {
-    "moves": [
-     "Helping Hand",
-     "Helping Hand",
-     "Deluge",
-     "Protect"
-    ],
-    "ability": "TORRENT"
-   },
    "Toxtricity (Aevian Form)": {
     "moves": [
      "Torch Song",
@@ -451,6 +442,15 @@
      "Protect"
     ],
     "ability": "Skill Link"
+   },
+   "Swampert": {
+    "moves": [
+     "Helping Hand",
+     "Rock Slide",
+     "Deluge",
+     "Protect"
+    ],
+    "ability": "TORRENT"
    }
   }
  },

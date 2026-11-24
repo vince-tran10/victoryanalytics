@@ -1,0 +1,13 @@
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Chandelure | Active 60 | Flash Fire  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Shadow Ball', 'Will-O-Wisp', 'Overheat', 'Protect'] | Sitrus Berry | 
+Dragalge | Active 60 | Adaptability  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Sludge Bomb', 'Shadow Ball', 'Dragon Pulse', 'Protect'] | Focus Sash (already holding) | 
+Swampert | Active 60 | Torrent  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Helping Hand', 'Rock Slide', 'Deluge', 'Protect'] | Soft Sand (already holding) | 
+Muk (Alolan Form) | Party 60 | Poison Touch  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Knock Off', 'Shadow Sneak', 'Clear Smog', 'Protect'] | Black Glasses (already holding) | 
+Gallade | Active 60 | Sharpness  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Psycho Cut', 'Sacred Sword', 'X-Scissor', 'Protect'] | Sitrus Berry (already holding) | 
+jenner 1.488 -> 1.407 leads ['Chandelure'] swaps [('Azumarill', 'Swampert', 0.054), ('Arcanine', 'Swampert', 0.049), ('Typhlosion', 'Swampert', 0.047)]
+danni 1.694 -> 1.71 leads ['Chandelure', 'Gallade'] swaps [('Arcanine', 'Dragalge', 0.086), ('Vivillon', 'Dragalge', 0.081), ('Mr. Mime', 'Swampert', 0.06)]
+troye 1.373 -> 1.259 leads ['Gallade', 'Chandelure'] swaps [('Arcanine', 'Musharna (Aevian Form)', 0.182), ('Hariyama', 'Swampert', 0.145), ('Clawitzer', 'Dragalge', 0.133)]
+zena 1.151 -> 1.247 leads ['Gallade'] swaps [('Torterra', 'Swampert', 0.195), ('Meganium', 'Swampert', 0.164), ('Venusaur', 'Swampert', 0.164)]
+marcie 1.412 -> 1.482 leads ['Dragalge', 'Chandelure'] swaps [('Leavanny (Aevian Form)', 'Musharna (Aevian Form)', 0.15), ('Glalie (Aevian Form)', 'Swampert', 0.114), ('Golisopod (Aevian Form)', 'Swampert', 0.103)]
+jenner9 0.774 -> 0.734 leads ['Gallade'] swaps [('Sylveon', 'Dragalge', 0.14), ('Florges', 'Dragalge', 0.129), ('Vanilluxe', 'Dragalge', 0.109)]
+erick 0.878 -> 1.054 leads ['Gallade', 'Musharna (Aevian Form)'] swaps [('Scrafty', 'Musharna (Aevian Form)', 0.069), ('Hitmontop', 'Musharna (Aevian Form)', 0.065), ('Raichu', 'Musharna (Aevian Form)', 0.055)]

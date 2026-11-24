@@ -1,0 +1,13 @@
+Chandelure | Active 60 | Flash Fire  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Shadow Ball', 'Will-O-Wisp', 'Overheat', 'Protect'] | Sitrus Berry | 
+Muk (Alolan Form) | Party 60 | Poison Touch  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Knock Off', 'Shadow Sneak', 'Clear Smog', 'Protect'] | Black Glasses (already holding) | 
+Dragalge | Active 60 | Adaptability  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Sludge Bomb', 'Shadow Ball', 'Dragon Pulse', 'Protect'] | Focus Sash (already holding) | 
+Gallade | Active 60 | Sharpness  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Psycho Cut', 'Sacred Sword', 'X-Scissor', 'Protect'] | Sitrus Berry (already holding) | 
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Golisopod (Aevian Form) | Active 60 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Shadow Claw', 'Pin Missile', 'Swords Dance', 'Protect'] | Soft Sand (already holding) | 
+jenner 1.488 -> 1.407 leads ['Chandelure'] swaps [('Azumarill', 'Muk (Alolan Form)', 0.054), ('Arcanine', 'Muk (Alolan Form)', 0.049), ('Typhlosion', 'Muk (Alolan Form)', 0.047)]
+danni 1.569 -> 1.556 leads ['Gallade'] swaps [('Bombirdier', 'Muk (Alolan Form)', 0.057), ('Arcanine', 'Golisopod (Aevian Form)', 0.056), ('Crobat', 'Golisopod (Aevian Form)', 0.054)]
+troye 1.234 -> 1.135 leads ['Gallade'] swaps [('Arcanine', 'Musharna (Aevian Form)', 0.136), ('Clawitzer', 'Golisopod (Aevian Form)', 0.104), ('Passimian', 'Golisopod (Aevian Form)', 0.103)]
+zena 1.151 -> 1.272 leads ['Gallade'] swaps [('Torterra', 'Golisopod (Aevian Form)', 0.17), ('Meganium', 'Dragalge', 0.151), ('Venusaur', 'Dragalge', 0.151)]
+marcie 1.292 -> 1.435 leads ['Dragalge'] swaps [('Leavanny (Aevian Form)', 'Musharna (Aevian Form)', 0.09), ('Leavanny', 'Musharna (Aevian Form)', 0.075), ('Scolipede', 'Musharna (Aevian Form)', 0.073)]
+jenner9 0.774 -> 0.754 leads ['Gallade'] swaps [('Sylveon', 'Dragalge', 0.132), ('Florges', 'Dragalge', 0.123), ('Vanilluxe', 'Dragalge', 0.103)]
+erick 0.667 -> 0.876 leads ['Golisopod (Aevian Form)'] swaps [('Camerupt', 'Chandelure', 0.075), ('Golurk', 'Musharna (Aevian Form)', 0.051), ('Scrafty', 'Musharna (Aevian Form)', 0.038)]

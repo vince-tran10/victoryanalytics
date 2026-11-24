@@ -1,0 +1,13 @@
+Muk (Alolan Form) | Party 60 | Poison Touch  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Knock Off', 'Shadow Sneak', 'Clear Smog', 'Protect'] | Black Glasses (already holding) | 
+Gallade | Active 60 | Sharpness  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Psycho Cut', 'Sacred Sword', 'X-Scissor', 'Protect'] | Sitrus Berry (already holding) | 
+Dragalge | Active 60 | Adaptability  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Sludge Bomb', 'Shadow Ball', 'Dragon Pulse', 'Protect'] | Focus Sash (already holding) | 
+Toxtricity (Aevian Form) | Party 60 | Punk Rock  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Torch Song', 'Will-O-Wisp', 'Sludge Bomb', 'Protect'] | Focus Sash (already holding) | 
+Golisopod (Aevian Form) | Active 60 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Shadow Claw', 'Pin Missile', 'Swords Dance', 'Protect'] | Soft Sand (already holding) | 
+Azumarill | Party 60 | Huge Power  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Play Rough', 'Aqua Jet', 'Belly Drum', 'Superpower'] | Fairy Feather (already holding) | 
+jenner 1.488 -> 1.435 leads ['Gallade'] swaps [('Unfezant (Aevian Form Male)', 'Muk (Alolan Form)', 0.061), ('Passimian', 'Muk (Alolan Form)', 0.049), ('Typhlosion', 'Muk (Alolan Form)', 0.037)]
+danni 1.569 -> 1.541 leads ['Gallade'] swaps [('Rampardos', 'Golisopod (Aevian Form)', 0.059), ('Chandelure', 'Golisopod (Aevian Form)', 0.056), ('Bombirdier', 'Golisopod (Aevian Form)', 0.051)]
+troye 1.234 -> 1.224 leads ['Gallade'] swaps [('Arcanine', 'Muk (Alolan Form)', 0.09), ('Talonflame', 'Muk (Alolan Form)', 0.059), ('Brambleghast', 'Golisopod (Aevian Form)', 0.056)]
+zena 1.151 -> 1.243 leads ['Gallade'] swaps [('Torterra', 'Toxtricity (Aevian Form)', 0.184), ('Meganium', 'Toxtricity (Aevian Form)', 0.175), ('Venusaur', 'Toxtricity (Aevian Form)', 0.175)]
+marcie 1.292 -> 1.486 leads ['Toxtricity (Aevian Form)'] swaps [('Leavanny (Aevian Form)', 'Azumarill', 0.057), ('Glalie (Aevian Form)', 'Azumarill', 0.044), ('Leavanny', 'Azumarill', 0.042)]
+jenner9 0.774 -> 0.734 leads ['Gallade'] swaps [('Florges', 'Dragalge', 0.126), ('Sylveon', 'Dragalge', 0.125), ('Vanilluxe', 'Dragalge', 0.099)]
+erick 0.667 -> 0.782 leads ['Golisopod (Aevian Form)'] swaps [('Camerupt', 'Azumarill', 0.124), ('Golurk', 'Azumarill', 0.102), ('Scrafty', 'Azumarill', 0.095)]
