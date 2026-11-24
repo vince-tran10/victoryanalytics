@@ -4,9 +4,9 @@
  "export_label": "23 Nov 15:58",
  "active_start": 468,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 326,
- "run": 340,
- "final": 344,
+ "roster": 340,
+ "run": 354,
+ "final": 358,
  "done": [
   "aelita",
   "narcissa1",
@@ -34,18 +34,18 @@
   "spector",
   "spector2"
  ],
- "fight": "jenner9",
+ "fight": "erick",
  "team": [
-  "Arcanine (Hisuian Form)",
-  "Golurk",
   "Muk (Alolan Form)",
+  "Gallade",
+  "Dragalge",
   "Toxtricity (Aevian Form)",
-  "Musharna (Aevian Form)",
+  "Golisopod (Aevian Form)",
   "Azumarill"
  ],
  "moves": {
   "Golisopod (Aevian Form)": [
-   "Bone Rush",
+   "Shadow Claw",
    "Pin Missile",
    "Swords Dance",
    "Protect"
@@ -124,7 +124,7 @@
   ],
   "Toxtricity (Aevian Form)": [
    "Torch Song",
-   "Boomburst",
+   "Will-O-Wisp",
    "Sludge Bomb",
    "Protect"
   ],
@@ -135,8 +135,8 @@
    "Protect"
   ],
   "Swampert": [
-   "Earthquake",
-   "Rock Slide",
+   "Helping Hand",
+   "Helping Hand",
    "Deluge",
    "Protect"
   ],
@@ -172,8 +172,8 @@
   ],
   "Dragalge": [
    "Sludge Bomb",
+   "Shadow Ball",
    "Dragon Pulse",
-   "Surf",
    "Protect"
   ],
   "Palossand": [
@@ -248,46 +248,46 @@
  },
  "artifact": "https://claude.ai/artifact/DvaTJ8A4uqwsyDihPii6DS",
  "team_check": {
-  "rank": 81547,
-  "of": 540740,
-  "gap": 16.59,
+  "rank": 96398,
+  "of": 527934,
+  "gap": 17.99,
   "top": [
    {
-    "score": 1.0477,
-    "pct": 116.6,
-    "team": [
-     "Gallade",
-     "Chandelure",
-     "Hariyama",
-     "Florges",
-     "Vikavolt",
-     "Musharna-A"
-    ],
-    "misses": []
-   },
-   {
-    "score": 1.0441,
-    "pct": 116.2,
+    "score": 1.0603,
+    "pct": 118.0,
     "team": [
      "Gallade",
      "Golisopod-A",
      "Chandelure",
-     "Hariyama",
+     "Scrafty",
      "Florges",
-     "Musharna-A"
+     "Sylveon"
     ],
     "misses": []
    },
    {
-    "score": 1.044,
-    "pct": 116.2,
+    "score": 1.0601,
+    "pct": 118.0,
     "team": [
      "Gallade",
-     "Azumarill",
      "Chandelure",
      "Scrafty",
      "Florges",
-     "Vikavolt"
+     "Sylveon",
+     "Whiscash"
+    ],
+    "misses": []
+   },
+   {
+    "score": 1.0548,
+    "pct": 117.4,
+    "team": [
+     "Golisopod-A",
+     "Chandelure",
+     "Scrafty",
+     "Hariyama",
+     "Florges",
+     "Sylveon"
     ],
     "misses": []
    }
@@ -329,8 +329,24 @@
   "Golurk": "IRONFIST"
  },
  "crests_owned": [
+  "Ariados Crest",
   "Dedenne Crest",
-  "Phione Crest"
+  "Electrode Crest",
+  "Fearow Crest",
+  "Furret Crest",
+  "Minun Crest",
+  "Noctowl Crest",
+  "Phione Crest",
+  "Plusle Crest",
+  "Relicanth Crest",
+  "Silvally Crest",
+  "Simipour Crest",
+  "Simisage Crest",
+  "Simisear Crest",
+  "Swalot Crest",
+  "Thievul Crest",
+  "Whiscash Crest",
+  "Zoroark Crest"
  ],
  "cap": 60,
  "chapter": 9,
@@ -352,7 +368,7 @@
    "weak3": [],
    "nores": [],
    "minor": [],
-   "key": "jenner9"
+   "key": "erick"
   }
  },
  "plan_swaps": {},
@@ -406,6 +422,35 @@
      "Protect"
     ],
     "ability": "ILLUSION"
+   }
+  },
+  "erick": {
+   "Swampert": {
+    "moves": [
+     "Helping Hand",
+     "Helping Hand",
+     "Deluge",
+     "Protect"
+    ],
+    "ability": "TORRENT"
+   },
+   "Toxtricity (Aevian Form)": {
+    "moves": [
+     "Torch Song",
+     "Will-O-Wisp",
+     "Sludge Bomb",
+     "Protect"
+    ],
+    "ability": "Punk Rock"
+   },
+   "Golisopod (Aevian Form)": {
+    "moves": [
+     "Shadow Claw",
+     "Pin Missile",
+     "Swords Dance",
+     "Protect"
+    ],
+    "ability": "Skill Link"
    }
   }
  },
@@ -463,5 +508,25 @@
   "Charcoal": 1,
   "Whiscash Crest": 1,
   "Zoroark Crest": 2
+ },
+ "base_moves": {
+  "Golisopod (Aevian Form)": [
+   "Bone Rush",
+   "Pin Missile",
+   "Swords Dance",
+   "Protect"
+  ],
+  "Toxtricity (Aevian Form)": [
+   "Torch Song",
+   "Boomburst",
+   "Sludge Bomb",
+   "Protect"
+  ],
+  "Swampert": [
+   "Earthquake",
+   "Rock Slide",
+   "Deluge",
+   "Protect"
+  ]
  }
 }

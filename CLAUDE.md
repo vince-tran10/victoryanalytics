@@ -108,6 +108,16 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   type, in SINGLES Protect replaced when another move adds 120+ effective power (no charge / recharge / self-KO / conditional moves);
   the CORE keeps Protect while a doubles fight is left. A core member may SIT OUT a fight only for +10 or more (shown on the Flex tab);
   the core stays the chapter's stars. Chips on Core + Flex = chapter_brief.good_for (role: why, field use, answers / beats).
+- **ITEMS TAB + OWNED (Vincent, 24 Nov, latest):** he has EVERY type booster, every berry, Focus Sash (unlimited), plus items seen held
+  (state items_seen), crests up to the previous chapter + told / held (state crests_owned; feeds tier_all) and walkthrough Mega Stones
+  (not used); NOT Leftovers / Life Orb / Choice items. scripts/team/items_owned.py = one source (ideal_builds, make_report5, planner);
+  scripts/team/items_tab.py = 'Items' tab (six holds, boosters, berries, other, crests, Mega Stones, not owned). Item per fight = booster of
+  the attack that is the best hit on the most foes (ties: STAB, power).
+- **24 Nov (Erick):** Jenner skipped until Lv 65 (state.fight = erick; Jenner stays on the chapter list). Planner fixes: multi-hit moves
+  (Skill Link 5 hits) in move values, one-for-one polish swaps over the WHOLE pool after the search, doubles: moves that also hit the
+  partner (Boomburst / Earthquake / Surf) swapped, a replacement must be the best hit on 1+ foe else a support move with a job, per-fight
+  builds start from base_moves, plan_builds = {fight: {name: {moves, ability}}}; update.py keeps base_moves / plan_builds / items_seen /
+  crests_owned written by sub-scripts.
 - **ITEMS (Vincent, 23 Nov): only items he has.** No bag data: owned = items held by anything in ANY export so far (state items_seen, max count seen at once; 24 Nov: taking an item off puts it in the bag) (he has NO
   Choice items). ideal_builds.py swaps unowned items for an owned booster of another attack, then Focus Sash (Spe 85+) / Sitrus, and
   allocates the six's items by count (his state.items first, then core, then flexes; item_wanted keeps the ideal one). make_report5 best_item

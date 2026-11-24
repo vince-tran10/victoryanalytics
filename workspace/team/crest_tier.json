@@ -1,12 +1,12 @@
 {
  "anchor_low": 0.207,
- "anchor_median": 0.425,
+ "anchor_median": 0.355,
  "team": {
-  "Arcanine (Hisuian Form)": 0.425,
-  "Golurk": 0.402,
   "Muk (Alolan Form)": 0.207,
-  "Toxtricity (Aevian Form)": 0.432,
-  "Musharna (Aevian Form)": 0.34,
+  "Gallade": 0.501,
+  "Dragalge": 0.287,
+  "Toxtricity (Aevian Form)": 0.355,
+  "Golisopod (Aevian Form)": 0.298,
   "Azumarill": 0.492
  },
  "rows": [
@@ -73,7 +73,7 @@
     "Discharge"
    ],
    "ability": "FILTER",
-   "tier": "A"
+   "tier": "S"
   },
   {
    "name": "Empoleon",
@@ -329,7 +329,7 @@
    "gain": 0.078,
    "attacks": [
     "Night Slash",
-    "Facade",
+    "Secret Power",
     "Ice Fang"
    ],
    "ability": "INTIMIDATE",
@@ -362,7 +362,7 @@
    "without": 0.013,
    "gain": 0.205,
    "attacks": [
-    "Facade",
+    "Secret Power",
     "Shadow Claw",
     "Low Sweep"
    ],
@@ -414,7 +414,7 @@
    "attacks": [
     "Gunk Shot",
     "Bullet Seed",
-    "Rock Smash"
+    "Power-Up Punch"
    ],
    "ability": "GLUTTONY",
    "tier": "B"
@@ -510,7 +510,7 @@
    "gain": 0.157,
    "attacks": [
     "Surf",
-    "Facade",
+    "Secret Power",
     "Deluge"
    ],
    "ability": "HYDRATION",
@@ -805,7 +805,7 @@
    "without": -0.026,
    "gain": 0.024,
    "attacks": [
-    "Facade",
+    "Headbutt",
     "Fire Blast",
     "Thief"
    ],
@@ -823,7 +823,7 @@
    "gain": 0.087,
    "attacks": [
     "Sucker Punch",
-    "Facade"
+    "Secret Power"
    ],
    "ability": "HUGEPOWER",
    "tier": "C"

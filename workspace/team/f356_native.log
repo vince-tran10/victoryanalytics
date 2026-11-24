@@ -1,0 +1,13 @@
+Chandelure | Active 60 | Flash Fire  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Shadow Ball', 'Will-O-Wisp', 'Overheat', 'Protect'] | Sitrus Berry | 
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Swampert | Active 60 | Torrent  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Earthquake', 'Rock Slide', 'Deluge', 'Protect'] | Soft Sand (already holding) | 
+Toxtricity (Aevian Form) | Party 60 | Punk Rock  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Torch Song', 'Boomburst', 'Sludge Bomb', 'Protect'] | Focus Sash (already holding) | 
+Golisopod (Aevian Form) | Active 60 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Shadow Claw', 'Pin Missile', 'Swords Dance', 'Protect'] | Soft Sand (already holding) | 
+Azumarill | Party 60 | Huge Power  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Play Rough', 'Aqua Jet', 'Belly Drum', 'Superpower'] | Fairy Feather (already holding) | 
+jenner 1.488 -> 1.493 leads ['Chandelure'] swaps [('Unfezant (Aevian Form Male)', 'Golisopod (Aevian Form)', 0.052), ('Passimian', 'Golisopod (Aevian Form)', 0.033), ('Typhlosion', 'Swampert', 0.021)]
+danni 1.696 -> 1.75 leads ['Chandelure', 'Toxtricity (Aevian Form)'] swaps [('Arcanine', 'Swampert', 0.061), ('Vivillon', 'Swampert', 0.061), ('Raichu', 'Swampert', 0.06)]
+troye 1.382 -> 1.332 leads ['Chandelure', 'Toxtricity (Aevian Form)'] swaps [('Clawitzer', 'Swampert', 0.137), ('Hariyama', 'Swampert', 0.123), ('Ludicolo', 'Swampert', 0.114)]
+zena 1.151 -> 1.246 leads ['Swampert'] swaps [('Meganium', 'Toxtricity (Aevian Form)', 0.195), ('Venusaur', 'Toxtricity (Aevian Form)', 0.195), ('Decidueye', 'Toxtricity (Aevian Form)', 0.174)]
+marcie 1.417 -> 1.55 leads ['Toxtricity (Aevian Form)', 'Chandelure'] swaps [('Leavanny (Aevian Form)', 'Swampert', 0.144), ('Vivillon', 'Swampert', 0.098), ('Orbeetle', 'Swampert', 0.091)]
+jenner9 0.834 -> 0.821 leads ['Azumarill'] swaps [('Sylveon', 'Swampert', 0.134), ('Florges', 'Swampert', 0.097), ('Frosmoth', 'Swampert', 0.076)]
+erick 1.064 -> 1.132 leads ['Golisopod (Aevian Form)', 'Musharna (Aevian Form)'] swaps [('Gallade', 'Azumarill', 0.093), ('Hitmontop', 'Azumarill', 0.072), ('Lapras (Aevian Form)', 'Azumarill', 0.069)]

@@ -1,0 +1,13 @@
+Chandelure | Active 60 | Flash Fire  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Shadow Ball', 'Will-O-Wisp', 'Overheat', 'Protect'] | Sitrus Berry | 
+Muk (Alolan Form) | Party 60 | Poison Touch  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Knock Off', 'Shadow Sneak', 'Clear Smog', 'Protect'] | Black Glasses (already holding) | 
+Swampert | Active 60 | Torrent  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Hammer Arm', 'Rock Slide', 'Deluge', 'Protect'] | Soft Sand (already holding) | 
+Toxtricity (Aevian Form) | Party 60 | Punk Rock  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Torch Song', 'Boomburst', 'Sludge Bomb', 'Protect'] | Focus Sash (already holding) | 
+Gallade | Active 60 | Sharpness  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Psycho Cut', 'Sacred Sword', 'X-Scissor', 'Protect'] | Sitrus Berry (already holding) | 
+Golisopod (Aevian Form) | Active 60 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Shadow Claw', 'X-Scissor', 'Swords Dance', 'Protect'] | Soft Sand (already holding) | 
+jenner 1.488 -> 1.321 leads ['Chandelure'] swaps [('Azumarill', 'Swampert', 0.149), ('Dachsbun', 'Swampert', 0.137), ('Musharna (Aevian Form)', 'Swampert', 0.126)]
+danni 1.571 -> 1.603 leads ['Gallade'] swaps [('Bombirdier', 'Swampert', 0.044), ('Rampardos', 'Swampert', 0.035), ('Arcanine', 'Swampert', 0.031)]
+troye 1.243 -> 1.163 leads ['Gallade'] swaps [('Clawitzer', 'Swampert', 0.121), ('Passimian', 'Swampert', 0.119), ('Brambleghast', 'Swampert', 0.115)]
+zena 1.151 -> 1.234 leads ['Gallade'] swaps [('Torterra', 'Toxtricity (Aevian Form)', 0.204), ('Meganium', 'Toxtricity (Aevian Form)', 0.173), ('Venusaur', 'Toxtricity (Aevian Form)', 0.173)]
+marcie 1.297 -> 1.385 leads ['Toxtricity (Aevian Form)'] swaps [('Glalie (Aevian Form)', 'Swampert', 0.117), ('Sunflora', 'Swampert', 0.086), ('Leavanny (Aevian Form)', 'Swampert', 0.084)]
+jenner9 0.834 -> 0.721 leads ['Gallade'] swaps [('Florges', 'Swampert', 0.203), ('Sylveon', 'Swampert', 0.17), ('Clefable', 'Swampert', 0.12)]
+erick 0.866 -> 1.036 leads ['Gallade'] swaps [('Shedinja', 'Toxtricity (Aevian Form)', 0.045), ('Slowking (Galarian Form)', 'Toxtricity (Aevian Form)', 0.038), ('Solrock (Solrock Dominant Fusion)', 'Toxtricity (Aevian Form)', 0.036)]

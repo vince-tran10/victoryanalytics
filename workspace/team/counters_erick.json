@@ -2,7 +2,7 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 5,
+  "counters": 4,
   "pairs": [
    {
     "foe": "Electivire",
@@ -16,20 +16,20 @@
    },
    {
     "foe": "Raichu",
-    "mon": "Slowking (Galarian Form)",
-    "ability": "REGENERATOR",
-    "dealt": 95,
-    "taken": 45,
+    "mon": "Muk (Alolan Form)",
+    "ability": "POISONTOUCH",
+    "dealt": 130,
+    "taken": 40,
     "ok": true,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Magneton",
-    "mon": "Turtonator",
-    "ability": "SHELLARMOR",
-    "dealt": 92,
-    "taken": 38,
+    "mon": "Gallade",
+    "ability": "SHARPNESS",
+    "dealt": 111,
+    "taken": 57,
     "ok": true,
     "setup": false,
     "wincons": []
@@ -46,20 +46,20 @@
    },
    {
     "foe": "Chandelure",
-    "mon": "Mabosstiff",
-    "ability": "INTIMIDATE",
-    "dealt": 104,
-    "taken": 108,
-    "ok": true,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 11,
+    "taken": 70,
+    "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Toxtricity",
-    "mon": "Amoonguss",
+    "mon": "Slowking (Galarian Form)",
     "ability": "REGENERATOR",
-    "dealt": 12,
-    "taken": 100,
+    "dealt": 106,
+    "taken": 73,
     "ok": false,
     "setup": false,
     "wincons": []

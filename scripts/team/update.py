@@ -240,7 +240,9 @@ def main():
         print(sh(['../scripts/team/core4.py'], env).strip())   # 23 Nov: the general core of 4 first (the planner locks it)
         print(sh(['../scripts/team/planner.py'], dict(env, BASE_RUN=f'r{run}')).strip())   # plan A: keep the field
         print(sh(['../scripts/team/planner.py'], dict(env, BASE_RUN=f'r{run}', PLAN_BREAK='1', PLAN_APPLY='1')).strip())   # plan B: Flash breaks it; the better plan wins
-        _s3 = json.load(open(STATE)); st['team'] = _s3['team']; st['moves'] = _s3['moves']; st['abilities'] = _s3['abilities']
+        _s3 = json.load(open(STATE))
+        for _k in ('team', 'moves', 'abilities', 'base_moves', 'plan_builds', 'items_seen', 'crests_owned'):   # 24 Nov: keep everything the planner / item scripts write
+            if _k in _s3: st[_k] = _s3[_k]
     # 6) team rules + team search
     stat = json.loads(sh(['../scripts/team/chapter_rules.py', '.', '30', '--status'], env))
     print(f"Chapter rules: {stat['fights']} hard fights; 3+ weak {stat['weak3'] or 'none'}; unresisted {stat['nores'] or 'none'}; "
@@ -274,6 +276,7 @@ def main():
     sh(['../scripts/team/builder.py', OUT], pe)   # 22 Nov: Team Builder tab (how each core slot was picked)
     sh(['../scripts/team/community_tab.py', OUT], pe)
     sh(['../scripts/team/core4.py', OUT], pe)   # 23 Nov: Core Builder = best general 4 (replaces the slot cards)
+    sh(['../scripts/team/items_tab.py', OUT], pe)   # 24 Nov: Items tab (everything he owns)
     sh(['../scripts/team/planner_tab.py', OUT], pe)   # 23 Nov: Team Planner tab (the six for the next fight)   # 23 Nov: Community tab (saved community inputs, consolidated)
     # 22 Nov (Vincent): Cores tab removed; cores.py no longer runs (CORES=1 to run it for chat)
     if os.environ.get('CORES'): sh(['../scripts/team/cores.py', OUT], pe)

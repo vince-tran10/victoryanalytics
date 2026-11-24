@@ -32,26 +32,6 @@
      ]
     },
     {
-     "name": "Toxtricity (Aevian Form)",
-     "tier": "S",
-     "stats": [
-      "Outspeeds 80%",
-      "Takes 2 hits to KO",
-      "Resists 8 types",
-      "Weak to 4 types"
-     ],
-     "tools": [
-      "Spread: Boomburst"
-     ],
-     "sid": "TOXTRICITY",
-     "form": "2",
-     "pick": true,
-     "rec": false,
-     "teach": [
-      "Taunt"
-     ]
-    },
-    {
      "name": "Arcanine (Hisuian Form)",
      "tier": "A",
      "stats": [
@@ -70,6 +50,27 @@
      "pick": false,
      "rec": false,
      "teach": []
+    },
+    {
+     "name": "Toxtricity (Aevian Form)",
+     "tier": "A",
+     "stats": [
+      "Outspeeds 80%",
+      "Takes 2 hits to KO",
+      "Resists 8 types",
+      "Weak to 4 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Status: Will-O-Wisp"
+     ],
+     "sid": "TOXTRICITY",
+     "form": "2",
+     "pick": true,
+     "rec": false,
+     "teach": [
+      "Taunt"
+     ]
     }
    ]
   },
@@ -323,16 +324,17 @@
      ]
     },
     {
-     "name": "Swampert",
+     "name": "Silvally",
      "tier": "A",
      "stats": [
-      "Resists 5 types",
-      "Weak to 1 type"
+      "Resists 1 type",
+      "Weak to 1 type",
+      "Single target only"
      ],
      "tools": [
-      "Spread: Earthquake"
+      "Status: Thunder Wave"
      ],
-     "sid": "SWAMPERT",
+     "sid": "SILVALLY",
      "form": "0",
      "pick": false,
      "rec": false,
@@ -534,24 +536,6 @@
      ]
     },
     {
-     "name": "Swampert",
-     "tier": "A",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 1 type"
-     ],
-     "tools": [
-      "Spread: Earthquake"
-     ],
-     "sid": "SWAMPERT",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Curse"
-     ]
-    },
-    {
      "name": "Mismagius (Aevian Form)",
      "tier": "A",
      "stats": [
@@ -625,11 +609,46 @@
   },
   {
    "slot": 5,
-   "title": "Flex 1 · Mid game · Spirit Jenner",
-   "pick": "Arcanine (Hisuian Form)",
-   "rec": "Arcanine (Hisuian Form)",
+   "title": "Flex 1 · Mid game · Erick",
+   "pick": "Muk (Alolan Form)",
+   "rec": "Muk (Alolan Form)",
    "flex": true,
    "cands": [
+    {
+     "name": "Muk (Alolan Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 1 type",
+      "Single target only"
+     ],
+     "tools": [
+      "Counters: Raichu",
+      "Stat reset: Clear Smog",
+      "Disrupt: Knock Off",
+      "Priority: Shadow Sneak"
+     ],
+     "teach": [],
+     "sid": "MUK",
+     "form": "1",
+     "pick": true,
+     "rec": true
+    },
+    {
+     "name": "Veluza (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "teach": [],
+     "sid": "VELUZA",
+     "form": "1",
+     "pick": false,
+     "rec": false
+    },
     {
      "name": "Arcanine (Hisuian Form)",
      "tier": "A",
@@ -639,93 +658,28 @@
       "Single target only"
      ],
      "tools": [
-      "Counters: Noivern",
       "Priority: Extreme Speed"
      ],
      "teach": [],
      "sid": "ARCANINE",
      "form": "1",
-     "pick": true,
-     "rec": true
-    },
-    {
-     "name": "Musharna (Aevian Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "teach": [],
-     "sid": "MUSHARNA",
-     "form": "1",
      "pick": false,
      "rec": false
     },
     {
-     "name": "Clefable",
+     "name": "Silvally",
      "tier": "A",
      "stats": [
-      "Resists 4 types",
-      "Weak to 2 types",
+      "Resists 1 type",
+      "Weak to 1 type",
       "Single target only"
      ],
      "tools": [
-      "Support: Safeguard"
+      "Status: Thunder Wave"
      ],
      "teach": [],
-     "sid": "CLEFABLE",
+     "sid": "SILVALLY",
      "form": "0",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Gastrodon (West Aevian Form)",
-     "tier": "A",
-     "stats": [
-      "Resists 7 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "teach": [],
-     "sid": "GASTRODON",
-     "form": "1",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Glalie (Aevian Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 2 types",
-      "Weak to 4 types"
-     ],
-     "tools": [
-      "Spread: Rock Slide",
-      "Priority: Grassy Glide"
-     ],
-     "teach": [],
-     "sid": "GLALIE",
-     "form": "1",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Ninetales (Alolan Form)",
-     "tier": "A",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 4 types"
-     ],
-     "tools": [
-      "Spread: Blizzard",
-      "Screens: Aurora Veil"
-     ],
-     "teach": [],
-     "sid": "NINETALES",
-     "form": "1",
      "pick": false,
      "rec": false
     }
@@ -733,25 +687,44 @@
   },
   {
    "slot": 6,
-   "title": "Flex 2 · Closer · Spirit Jenner",
-   "pick": "Golurk",
-   "rec": "Golurk",
+   "title": "Flex 2 · Closer · Erick",
+   "pick": "Gallade",
+   "rec": "Gallade",
    "flex": true,
    "cands": [
     {
-     "name": "Golurk",
+     "name": "Gallade",
      "tier": "B",
      "stats": [
-      "Resists 6 types",
-      "Weak to 5 types",
+      "Resists 2 types",
+      "Weak to 3 types",
       "Single target only"
      ],
-     "tools": [],
+     "tools": [
+      "Counters: Magneton"
+     ],
      "teach": [],
-     "sid": "GOLURK",
+     "sid": "GALLADE",
      "form": "0",
      "pick": true,
      "rec": true
+    },
+    {
+     "name": "Palossand (Fiery Aevian Form)",
+     "tier": "B",
+     "stats": [
+      "Resists 9 types",
+      "Weak to 5 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Setup: Iron Defense"
+     ],
+     "teach": [],
+     "sid": "PALOSSAND",
+     "form": "2",
+     "pick": false,
+     "rec": false
     },
     {
      "name": "Azumarill",
@@ -772,35 +745,19 @@
      "rec": false
     },
     {
-     "name": "Palossand (Fiery Aevian Form)",
+     "name": "Crawdaunt",
      "tier": "B",
      "stats": [
-      "Resists 9 types",
+      "Resists 7 types",
       "Weak to 5 types",
       "Single target only"
      ],
      "tools": [
-      "Setup: Iron Defense"
+      "Setup: Swords Dance",
+      "Disrupt: Knock Off"
      ],
      "teach": [],
-     "sid": "PALOSSAND",
-     "form": "2",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Revavroom",
-     "tier": "B",
-     "stats": [
-      "Resists 10 types",
-      "Weak to 2 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Setup: Shift Gear"
-     ],
-     "teach": [],
-     "sid": "REVAVROOM",
+     "sid": "CRAWDAUNT",
      "form": "0",
      "pick": false,
      "rec": false
@@ -866,8 +823,8 @@
    "Regenerator"
   ],
   "Swampert": [
-   "Attacker",
-   ""
+   "Support",
+   "Helping Hand"
   ],
   "Froslass-Aevian": [
    "Attacker",
@@ -1109,13 +1066,13 @@
    "Attacker",
    ""
   ],
-  "Hariyama": [
-   "Attacker",
-   ""
-  ],
   "Typhlosion": [
    "Lead",
    "outspeeds 81%"
+  ],
+  "Hariyama": [
+   "Attacker",
+   ""
   ],
   "Florges": [
    "Mid game",
@@ -1161,13 +1118,13 @@
    "Doubles lead",
    "Tailwind"
   ],
-  "Emboar": [
-   "Attacker",
-   ""
-  ],
   "Silvally": [
    "Support",
    "Thunder Wave"
+  ],
+  "Emboar": [
+   "Attacker",
+   ""
   ],
   "Lickilicky": [
    "Attacker",
@@ -1465,11 +1422,11 @@
    "Attacker",
    ""
   ],
-  "Marowak": [
+  "Mismagius": [
    "Attacker",
    ""
   ],
-  "Mismagius": [
+  "Marowak": [
    "Attacker",
    ""
   ],
@@ -1605,11 +1562,11 @@
    "Attacker",
    ""
   ],
-  "Electrode-Hisui": [
+  "Zebstrika": [
    "Support",
    "Thunder Wave"
   ],
-  "Zebstrika": [
+  "Electrode-Hisui": [
    "Support",
    "Thunder Wave"
   ],
@@ -1673,13 +1630,13 @@
    "Attacker",
    ""
   ],
-  "Lapras": [
-   "Attacker",
-   ""
-  ],
   "Leafeon": [
    "Closer",
    "Swords Dance"
+  ],
+  "Lapras": [
+   "Attacker",
+   ""
   ],
   "Stunfisk": [
    "Support",
@@ -1749,13 +1706,13 @@
    "Attacker",
    ""
   ],
-  "Tauros": [
-   "Doubles lead",
-   "Intimidate"
-  ],
   "Medicham": [
    "Attacker",
    ""
+  ],
+  "Tauros": [
+   "Doubles lead",
+   "Intimidate"
   ],
   "Claydol": [
    "Attacker",
@@ -1850,8 +1807,8 @@
    ""
   ],
   "Swalot": [
-   "Support",
-   "Yawn"
+   "Attacker",
+   ""
   ],
   "Pinsir": [
    "Closer",
@@ -1897,11 +1854,11 @@
    "Support",
    "Sleep Powder"
   ],
-  "Oricorio": [
+  "Simipour": [
    "Attacker",
    ""
   ],
-  "Simipour": [
+  "Oricorio": [
    "Attacker",
    ""
   ],
@@ -1981,11 +1938,11 @@
    "Attacker",
    ""
   ],
-  "Cramorant": [
+  "Noctowl": [
    "Attacker",
    ""
   ],
-  "Noctowl": [
+  "Cramorant": [
    "Attacker",
    ""
   ],
@@ -2085,13 +2042,13 @@
    "Attacker",
    ""
   ],
-  "Wormadam": [
-   "Closer",
-   "Quiver Dance"
-  ],
   "Electrode": [
    "Support",
    "Thunder Wave"
+  ],
+  "Wormadam": [
+   "Closer",
+   "Quiver Dance"
   ],
   "Chatot": [
    "Attacker",
@@ -2601,8 +2558,8 @@
    "s": [],
    "d": [
     [
-     "A",
-     "Spread attacker (Earthquake)"
+     "B",
+     "Helping Hand / Helping Hand"
     ]
    ]
   },
@@ -2660,10 +2617,6 @@
     ]
    ],
    "d": [
-    [
-     "A",
-     "Spread attacker (Boomburst)"
-    ],
     [
      "C",
      "Punk Rock"
@@ -3621,6 +3574,20 @@
     ]
    ]
   },
+  "Typhlosion": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 100)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 100)"
+    ]
+   ]
+  },
   "Hariyama": {
    "s": [
     [
@@ -3640,20 +3607,6 @@
     [
      "E",
      "Knock Off"
-    ]
-   ]
-  },
-  "Typhlosion": {
-   "s": [
-    [
-     "A",
-     "Fast cleaner (Speed 100)"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Fast cleaner (Speed 100)"
     ]
    ]
   },
@@ -3809,6 +3762,20 @@
     ]
    ]
   },
+  "Silvally": {
+   "s": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ]
+  },
   "Emboar": {
    "s": [
     [
@@ -3828,20 +3795,6 @@
     [
      "C",
      "Reckless"
-    ]
-   ]
-  },
-  "Silvally": {
-   "s": [
-    [
-     "B",
-     "Thunder Wave"
-    ]
-   ],
-   "d": [
-    [
-     "B",
-     "Thunder Wave"
     ]
    ]
   },
@@ -4980,10 +4933,6 @@
     ]
    ]
   },
-  "Marowak": {
-   "s": [],
-   "d": []
-  },
   "Mismagius": {
    "s": [
     [
@@ -4997,6 +4946,10 @@
      "Fast cleaner (Speed 105)"
     ]
    ]
+  },
+  "Marowak": {
+   "s": [],
+   "d": []
   },
   "Primeape": {
    "s": [],
@@ -5487,20 +5440,6 @@
    "s": [],
    "d": []
   },
-  "Electrode-Hisui": {
-   "s": [
-    [
-     "B",
-     "Thunder Wave"
-    ]
-   ],
-   "d": [
-    [
-     "B",
-     "Thunder Wave"
-    ]
-   ]
-  },
   "Zebstrika": {
    "s": [
     [
@@ -5517,6 +5456,20 @@
      "A",
      "Fast cleaner (Speed 116)"
     ],
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ]
+  },
+  "Electrode-Hisui": {
+   "s": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ],
+   "d": [
     [
      "B",
      "Thunder Wave"
@@ -5745,10 +5698,6 @@
    "s": [],
    "d": []
   },
-  "Lapras": {
-   "s": [],
-   "d": []
-  },
   "Leafeon": {
    "s": [
     [
@@ -5762,6 +5711,10 @@
      "Swords Dance sweeper"
     ]
    ]
+  },
+  "Lapras": {
+   "s": [],
+   "d": []
   },
   "Stunfisk": {
    "s": [
@@ -5995,6 +5948,20 @@
     ]
    ]
   },
+  "Medicham": {
+   "s": [
+    [
+     "C",
+     "Pure Power"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Pure Power"
+    ]
+   ]
+  },
   "Tauros": {
    "s": [
     [
@@ -6014,20 +5981,6 @@
     [
      "D",
      "Intimidate"
-    ]
-   ]
-  },
-  "Medicham": {
-   "s": [
-    [
-     "C",
-     "Pure Power"
-    ]
-   ],
-   "d": [
-    [
-     "C",
-     "Pure Power"
     ]
    ]
   },
@@ -6396,14 +6349,14 @@
   "Swalot": {
    "s": [
     [
-     "B",
-     "Yawn"
+     "A",
+     "Acid Armor sweeper"
     ]
    ],
    "d": [
     [
-     "B",
-     "Yawn"
+     "A",
+     "Acid Armor sweeper"
     ]
    ]
   },
@@ -6611,6 +6564,10 @@
     ]
    ]
   },
+  "Simipour": {
+   "s": [],
+   "d": []
+  },
   "Oricorio": {
    "s": [
     [
@@ -6632,10 +6589,6 @@
      "Baton Pass"
     ]
    ]
-  },
-  "Simipour": {
-   "s": [],
-   "d": []
   },
   "Absol": {
    "s": [
@@ -6901,11 +6854,11 @@
    "s": [],
    "d": []
   },
-  "Cramorant": {
+  "Noctowl": {
    "s": [],
    "d": []
   },
-  "Noctowl": {
+  "Cramorant": {
    "s": [],
    "d": []
   },
@@ -7211,20 +7164,6 @@
    "s": [],
    "d": []
   },
-  "Wormadam": {
-   "s": [
-    [
-     "A",
-     "Quiver Dance sweeper"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Quiver Dance sweeper"
-    ]
-   ]
-  },
   "Electrode": {
    "s": [
     [
@@ -7236,6 +7175,20 @@
     [
      "B",
      "Thunder Wave / Electroweb"
+    ]
+   ]
+  },
+  "Wormadam": {
+   "s": [
+    [
+     "A",
+     "Quiver Dance sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Quiver Dance sweeper"
     ]
    ]
   },
@@ -8053,7 +8006,7 @@
   "Glalie-Aevian": [
    {
     "name": "Toxtricity-Aevian",
-    "tier": "S",
+    "tier": "A",
     "score": 2.5,
     "why": [
      "Speed split: Toxtricity-Aevian moves first, Glalie-Aevian is the bulky one",
@@ -8097,7 +8050,7 @@
    },
    {
     "name": "Toxtricity-Aevian",
-    "tier": "S",
+    "tier": "A",
     "score": 2.75,
     "why": [
      "Musharna-Aevian's sleep takes a foe out for Toxtricity-Aevian",
@@ -8274,22 +8227,22 @@
     ]
    },
    {
-    "name": "Swampert",
-    "tier": "A",
-    "score": 2.25,
-    "why": [
-     "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Poison, Steel",
-     "Used together in the real meta"
-    ]
-   },
-   {
     "name": "Amoonguss",
     "tier": "A",
     "score": 2.0,
     "why": [
      "Amoonguss draws attacks so Clefable attacks freely",
      "Amoonguss's sleep takes a foe out for Clefable",
+     "Used together in the real meta"
+    ]
+   },
+   {
+    "name": "Alomomola",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "Alomomola switches in on Steel hits aimed at Clefable and heals on the way out",
+     "Resists your weaknesses: Steel",
      "Used together in the real meta"
     ]
    }
@@ -8366,41 +8319,6 @@
      "You resist its weaknesses: Ice, Steel",
      "Shared weaknesses: Grass",
      "Slowbro's Surf can't hurt Gastrodon-Aevian (West)"
-    ]
-   }
-  ],
-  "Swampert": [
-   {
-    "name": "Amoonguss",
-    "tier": "A",
-    "score": 3.25,
-    "why": [
-     "Amoonguss draws attacks so Swampert attacks freely",
-     "Amoonguss's sleep takes a foe out for Swampert",
-     "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Grass",
-     "You resist its weaknesses: Fire",
-     "Used together in the real meta"
-    ]
-   },
-   {
-    "name": "Ninetales-Alola",
-    "tier": "A",
-    "score": 2.5,
-    "why": [
-     "Speed split: Ninetales-Alola moves first, Swampert is the bulky one",
-     "Physical + special: Intimidate or one screen can't stop both",
-     "You resist its weaknesses: Fire, Poison, Rock, Steel"
-    ]
-   },
-   {
-    "name": "Clefable",
-    "tier": "A",
-    "score": 2.25,
-    "why": [
-     "Physical + special: Intimidate or one screen can't stop both",
-     "You resist its weaknesses: Poison, Steel",
-     "Used together in the real meta"
     ]
    }
   ],
@@ -8504,7 +8422,7 @@
    },
    {
     "name": "Toxtricity-Aevian",
-    "tier": "S",
+    "tier": "A",
     "score": 2.75,
     "why": [
      "Speed split: Toxtricity-Aevian moves first, Gastrodon-Aevian (West) is the bulky one",
@@ -8574,14 +8492,13 @@
     ]
    },
    {
-    "name": "Mismagius-Aevian",
-    "tier": "A",
-    "score": 2.75,
+    "name": "Glalie-Aevian",
+    "tier": "S",
+    "score": 2.5,
     "why": [
+     "Speed split: Toxtricity-Aevian moves first, Glalie-Aevian is the bulky one",
      "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Water, Ground",
-     "You resist its weaknesses: Fire, Ice",
-     "Toxtricity-Aevian's Boomburst can't hurt Mismagius-Aevian"
+     "You resist its weaknesses: Ice, Fighting, Bug, Steel"
     ]
    }
   ],
@@ -8718,7 +8635,7 @@
    },
    {
     "name": "Toxtricity-Aevian",
-    "tier": "S",
+    "tier": "A",
     "score": 2.0,
     "why": [
      "Resists your weaknesses: Fighting, Bug, Fairy",
@@ -8817,14 +8734,13 @@
     ]
    },
    {
-    "name": "Toxtricity-Aevian",
-    "tier": "S",
+    "name": "Azumarill",
+    "tier": "A",
     "score": 2.75,
     "why": [
-     "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Fire, Ice",
-     "You resist its weaknesses: Water, Ground",
-     "Toxtricity-Aevian's Boomburst can't hurt Mismagius-Aevian"
+     "Speed split: Mismagius-Aevian moves first, Azumarill is the bulky one",
+     "Resists your weaknesses: Fire, Ice, Dark",
+     "You resist its weaknesses: Electric, Grass"
     ]
    }
   ],
@@ -8860,6 +8776,44 @@
      "Physical + special: Intimidate or one screen can't stop both",
      "Resists your weaknesses: Water, Ground, Steel",
      "You resist its weaknesses: Poison, Bug"
+    ]
+   }
+  ],
+  "Silvally": [
+   {
+    "name": "Slowking-Galar",
+    "tier": "S",
+    "score": 2.0,
+    "why": [
+     "Slowking-Galar switches in on Fighting hits aimed at Silvally and heals on the way out",
+     "Speed split: Silvally moves first, Slowking-Galar is the bulky one",
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Fighting",
+     "You resist its weaknesses: Ghost"
+    ]
+   },
+   {
+    "name": "Amoonguss",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Amoonguss draws attacks so Silvally attacks freely",
+     "Amoonguss's sleep takes a foe out for Silvally",
+     "Speed split: Silvally moves first, Amoonguss is the bulky one",
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Fighting"
+    ]
+   },
+   {
+    "name": "Slowbro",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Slowbro switches in on Fighting hits aimed at Silvally and heals on the way out",
+     "Speed split: Silvally moves first, Slowbro is the bulky one",
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Fighting",
+     "You resist its weaknesses: Ghost"
     ]
    }
   ]

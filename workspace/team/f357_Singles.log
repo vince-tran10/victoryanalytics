@@ -1,0 +1,13 @@
+Chandelure | Active 60 | Flash Fire  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Shadow Ball', 'Will-O-Wisp', 'Overheat', 'Protect'] | Sitrus Berry | 
+Gallade | Active 60 | Sharpness  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Psycho Cut', 'Sacred Sword', 'X-Scissor', 'Protect'] | Sitrus Berry (already holding) | 
+Swampert | Active 60 | Torrent  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Helping Hand', 'Helping Hand', 'Deluge', 'Protect'] | Soft Sand (already holding) | 
+Mandibuzz | Active 60 | Overcoat  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Tailwind', 'Knock Off', 'Roost', 'Protect'] | Sitrus Berry (already holding) | 
+Toxtricity (Aevian Form) | Party 60 | Punk Rock  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Torch Song', 'Will-O-Wisp', 'Sludge Bomb', 'Protect'] | Focus Sash (already holding) | 
+Golisopod (Aevian Form) | Active 60 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Shadow Claw', 'Pin Missile', 'Swords Dance', 'Protect'] | Soft Sand (already holding) | 
+jenner 1.488 -> 1.328 leads ['Chandelure'] swaps [('Azumarill', 'Swampert', 0.142), ('Dachsbun', 'Swampert', 0.131), ('Musharna (Aevian Form)', 'Swampert', 0.12)]
+danni 1.571 -> 1.601 leads ['Gallade'] swaps [('Bombirdier', 'Swampert', 0.045), ('Rampardos', 'Swampert', 0.035), ('Arcanine', 'Swampert', 0.031)]
+troye 1.243 -> 1.158 leads ['Gallade'] swaps [('Clawitzer', 'Swampert', 0.115), ('Arcanine', 'Swampert', 0.113), ('Passimian', 'Swampert', 0.113)]
+zena 1.151 -> 1.18 leads ['Gallade'] swaps [('Torterra', 'Toxtricity (Aevian Form)', 0.194), ('Meganium', 'Toxtricity (Aevian Form)', 0.165), ('Venusaur', 'Toxtricity (Aevian Form)', 0.165)]
+marcie 1.297 -> 1.461 leads ['Toxtricity (Aevian Form)'] swaps [('Leavanny (Aevian Form)', 'Swampert', 0.084), ('Leavanny', 'Swampert', 0.069), ('Scolipede', 'Swampert', 0.068)]
+jenner9 0.834 -> 0.675 leads ['Gallade'] swaps [('Florges', 'Swampert', 0.227), ('Sylveon', 'Swampert', 0.195), ('Azumarill', 'Swampert', 0.146)]
+erick 0.866 -> 0.997 leads ['Gallade'] swaps [('Shedinja', 'Mandibuzz', 0.052), ('Scrafty', 'Mandibuzz', 0.05), ('Muk (Alolan Form)', 'Mandibuzz', 0.046)]

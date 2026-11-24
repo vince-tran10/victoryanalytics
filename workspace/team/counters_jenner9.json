@@ -8,7 +8,7 @@
     "foe": "Stoutland",
     "mon": "Golisopod (Aevian Form)",
     "ability": "SKILLLINK",
-    "dealt": 79,
+    "dealt": 58,
     "taken": 49,
     "ok": true,
     "setup": "Swords Dance",
@@ -16,8 +16,7 @@
      {
       "what": "Setup",
       "answers": [
-       "Clear Smog (Amoonguss)",
-       "Clear Smog (Muk)"
+       "Clear Smog (Amoonguss)"
       ]
      }
     ]
@@ -34,44 +33,44 @@
      {
       "what": "Healing",
       "answers": [
-       "Knock Off (Muk)"
+       "teach Gastro Acid (Musharna)"
       ]
      }
     ]
    },
    {
     "foe": "Noivern",
-    "mon": "Arcanine (Hisuian Form)",
-    "ability": "ROCKHEAD",
-    "dealt": 120,
-    "taken": 60,
+    "mon": "Aurorus",
+    "ability": "SNOWWARNING",
+    "dealt": 130,
+    "taken": 39,
     "ok": true,
     "setup": false,
     "wincons": [
      {
       "what": "Healing",
       "answers": [
-       "Knock Off (Muk)"
+       "teach Gastro Acid (Musharna)"
       ]
      }
     ]
    },
    {
     "foe": "Porygon-Z",
-    "mon": "Golurk",
-    "ability": "IRONFIST",
-    "dealt": 99,
-    "taken": 83,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 14,
+    "taken": 122,
     "ok": false,
     "setup": false,
     "wincons": []
    },
    {
     "foe": "Kommo-o",
-    "mon": "Amoonguss",
-    "ability": "REGENERATOR",
-    "dealt": 10,
-    "taken": 88,
+    "mon": "Musharna (Aevian Form)",
+    "ability": "TOUGHCLAWS",
+    "dealt": 125,
+    "taken": 70,
     "ok": false,
     "setup": false,
     "wincons": []
@@ -88,8 +87,7 @@
      {
       "what": "Setup",
       "answers": [
-       "Clear Smog (Amoonguss)",
-       "Clear Smog (Muk)"
+       "Clear Smog (Amoonguss)"
       ]
      }
     ]

@@ -1,0 +1,13 @@
+Chandelure | Active 60 | Flash Fire  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Shadow Ball', 'Will-O-Wisp', 'Overheat', 'Protect'] | Sitrus Berry | 
+Muk (Alolan Form) | Party 60 | Poison Touch  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Knock Off', 'Shadow Sneak', 'Clear Smog', 'Protect'] | Black Glasses (already holding) | 
+Swampert | Active 60 | Torrent  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Hammer Arm', 'Rock Slide', 'Deluge', 'Protect'] | Soft Sand (already holding) | 
+Toxtricity (Aevian Form) | Party 60 | Punk Rock  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Torch Song', 'Boomburst', 'Sludge Bomb', 'Protect'] | Focus Sash (already holding) | 
+Gallade | Active 60 | Sharpness  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Psycho Cut', 'Sacred Sword', 'X-Scissor', 'Protect'] | Sitrus Berry (already holding) | 
+Golisopod (Aevian Form) | Active 60 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Shadow Claw', 'X-Scissor', 'Swords Dance', 'Protect'] | Soft Sand (already holding) | 
+jenner 1.608 -> 1.467 leads ['Gallade', 'Chandelure'] swaps [('Clefable', 'Swampert', 0.166), ('Dachsbun', 'Swampert', 0.157), ('Azumarill', 'Swampert', 0.157)]
+danni 1.696 -> 1.757 leads ['Gallade', 'Chandelure'] swaps [('Vivillon', 'Swampert', 0.063), ('Arcanine', 'Swampert', 0.061), ('Mr. Mime', 'Swampert', 0.06)]
+troye 1.382 -> 1.325 leads ['Gallade', 'Chandelure'] swaps [('Arcanine', 'Swampert', 0.138), ('Hariyama', 'Swampert', 0.137), ('Clawitzer', 'Swampert', 0.137)]
+zena 1.295 -> 1.421 leads ['Gallade', 'Chandelure'] swaps [('Meganium', 'Swampert', 0.185), ('Venusaur', 'Swampert', 0.163), ('Roserade', 'Swampert', 0.151)]
+marcie 1.417 -> 1.538 leads ['Toxtricity (Aevian Form)', 'Chandelure'] swaps [('Leavanny (Aevian Form)', 'Swampert', 0.144), ('Glalie (Aevian Form)', 'Swampert', 0.114), ('Vivillon', 'Swampert', 0.098)]
+jenner9 0.974 -> 0.848 leads ['Gallade', 'Toxtricity (Aevian Form)'] swaps [('Florges', 'Swampert', 0.243), ('Clefable', 'Swampert', 0.198), ('Sylveon', 'Swampert', 0.191)]
+erick 1.064 -> 1.239 leads ['Gallade', 'Muk (Alolan Form)'] swaps [('Hitmontop', 'Toxtricity (Aevian Form)', 0.073), ('Raichu', 'Toxtricity (Aevian Form)', 0.064), ('Leavanny (Aevian Form)', 'Toxtricity (Aevian Form)', 0.064)]

@@ -1,0 +1,13 @@
+Arcanine (Hisuian Form) | Party 60 | Rock Head  | Adamant {'Atk': 252, 'Spe': 252, 'Def': 4} | ['Flare Blitz', 'Extreme Speed', 'Head Smash', 'Protect'] | Silk Scarf (already holding) | 
+Golurk | Party 60 | Iron Fist  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Shadow Punch', 'Hammer Arm', 'Stomping Tantrum', 'Protect'] | Black Belt (already holding) | 
+Muk (Alolan Form) | Party 60 | Poison Touch  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Knock Off', 'Shadow Sneak', 'Clear Smog', 'Protect'] | Black Glasses (already holding) | 
+Toxtricity (Aevian Form) | Party 60 | Punk Rock  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Torch Song', 'Boomburst', 'Sludge Bomb', 'Protect'] | Focus Sash (already holding) | 
+Musharna (Aevian Form) | Party 60 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Spell Tag (already holding) | 
+Azumarill | Party 60 | Huge Power  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Play Rough', 'Aqua Jet', 'Belly Drum', 'Superpower'] | Fairy Feather (already holding) | 
+jenner 1.488 -> 1.488 leads ['Arcanine (Hisuian Form)'] swaps [('Unfezant (Aevian Form Male)', 'Muk (Alolan Form)', 0.055), ('Passimian', 'Muk (Alolan Form)', 0.035), ('Typhlosion', 'Muk (Alolan Form)', 0.024)]
+danni 1.571 -> 1.571 leads ['Golurk'] swaps [('Chandelure', 'Muk (Alolan Form)', 0.058), ('Rampardos', 'Azumarill', 0.047), ('Bombirdier', 'Musharna (Aevian Form)', 0.046)]
+troye 1.243 -> 1.243 leads ['Golurk'] swaps [('Golisopod (Aevian Form)', 'Musharna (Aevian Form)', 0.103), ('Clawitzer', 'Musharna (Aevian Form)', 0.078), ('Jellicent', 'Musharna (Aevian Form)', 0.075)]
+zena 1.151 -> 1.151 leads ['Arcanine (Hisuian Form)'] swaps [('Meganium', 'Toxtricity (Aevian Form)', 0.232), ('Venusaur', 'Toxtricity (Aevian Form)', 0.232), ('Torterra', 'Toxtricity (Aevian Form)', 0.223)]
+marcie 1.297 -> 1.297 leads ['Toxtricity (Aevian Form)'] swaps [('Glalie (Aevian Form)', 'Azumarill', 0.144), ('Golisopod (Aevian Form)', 'Azumarill', 0.14), ('Sunflora', 'Azumarill', 0.111)]
+jenner9 0.834 -> 0.834 leads ['Azumarill'] swaps [('Sylveon', 'Muk (Alolan Form)', 0.117), ('Florges', 'Musharna (Aevian Form)', 0.088), ('Frosmoth', 'Muk (Alolan Form)', 0.076)]
+erick 0.866 -> 0.866 leads ['Azumarill'] swaps [('Gallade', 'Azumarill', 0.143), ('Chandelure', 'Toxtricity (Aevian Form)', 0.077), ('Solrock (Solrock Dominant Fusion)', 'Azumarill', 0.076)]

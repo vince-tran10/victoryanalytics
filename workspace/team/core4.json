@@ -5,9 +5,9 @@
    "tier": "S",
    "sid": "MUSHARNA",
    "form": "1",
-   "blend": 0.768,
+   "blend": 0.769,
    "meta": 0.72,
-   "game": 0.934,
+   "game": 0.939,
    "types": [
     "DARK",
     "FAIRY"
@@ -38,19 +38,19 @@
   },
   {
    "name": "Toxtricity (Aevian Form)",
-   "tier": "S",
+   "tier": "A",
    "sid": "TOXTRICITY",
    "form": "2",
-   "blend": 0.732,
+   "blend": 0.71,
    "meta": 0.67,
-   "game": 0.905,
+   "game": 0.832,
    "types": [
     "FIRE",
     "POISON"
    ],
    "moves": [
     "Torch Song",
-    "Boomburst",
+    "Will-O-Wisp",
     "Sludge Bomb",
     "Protect"
    ],
@@ -75,7 +75,7 @@
    "form": "0",
    "blend": 0.562,
    "meta": 0.348,
-   "game": 0.995,
+   "game": 0.997,
    "types": [
     "PSYCHIC",
     "FIGHTING"
@@ -252,7 +252,7 @@
      "cov": [
       [
        "Toxtricity-Aevian",
-       "beats it (74%)"
+       "beats it (65%)"
       ]
      ],
      "ok": true
@@ -268,10 +268,6 @@
      "cov": [
       [
        "Musharna-Aevian",
-       "one-shots it"
-      ],
-      [
-       "Toxtricity-Aevian",
        "one-shots it"
       ]
      ],
@@ -290,10 +286,6 @@
       [
        "Musharna-Aevian",
        "beats it (101%)"
-      ],
-      [
-       "Toxtricity-Aevian",
-       "beats it (104%)"
       ]
      ],
      "ok": true
@@ -310,7 +302,7 @@
      "cov": [
       [
        "Toxtricity-Aevian",
-       "still hits it for 106%"
+       "still hits it for 92%"
       ],
       [
        "Gallade",
@@ -329,10 +321,6 @@
      "need": 1,
      "item": "Choice Scarf",
      "cov": [
-      [
-       "Toxtricity-Aevian",
-       "beats it (106%)"
-      ],
       [
        "Gallade",
        "beats it (155%)"
@@ -513,7 +501,7 @@
      "cov": [
       [
        "Toxtricity-Aevian",
-       "Boomburst"
+       "Torch Song"
       ]
      ],
      "ok": true
@@ -1045,17 +1033,13 @@
    "power": 6.75
   },
   "Toxtricity (Aevian Form)": {
-   "wins": 7,
-   "ohko": 5,
+   "wins": 6,
+   "ohko": 3,
    "n": 12,
    "beats": [
     [
      "jenner9",
      "Appletun"
-    ],
-    [
-     "jenner9",
-     "Noivern"
     ],
     [
      "jenner9",
@@ -1078,7 +1062,7 @@
      "Chandelure"
     ]
    ],
-   "power": 8.25
+   "power": 6.75
   },
   "Gallade": {
    "wins": 5,
@@ -1113,9 +1097,9 @@
   "Spirit Jenner: Stoutland",
   "Spirit Jenner: Porygon-Z"
  ],
- "score": 25.2,
+ "score": 23.7,
  "parts": {
-  "strength": 22.0,
+  "strength": 20.5,
   "defense": 0,
   "offense": 3.0,
   "synergy": 0,
@@ -1134,9 +1118,9 @@
    "delta": -0.6
   },
   {
-   "out": "Musharna (Aevian Form)",
+   "out": "Toxtricity (Aevian Form)",
    "in": "Chandelure",
-   "delta": -1.15
+   "delta": -0.85
   },
   {
    "out": "Gallade",
@@ -1157,7 +1141,7 @@
  },
  "doubles": {
   "Fake Out / redirection": null,
-  "Spread or speed control": "Toxtricity (Aevian Form)",
+  "Spread or speed control": null,
   "Bulky attacker": "Musharna (Aevian Form)"
  },
  "matrix": {

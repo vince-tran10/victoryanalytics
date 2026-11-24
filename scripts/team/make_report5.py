@@ -458,7 +458,8 @@ BOOSTER = {'FIRE': 'Charcoal', 'WATER': 'Mystic Water', 'GRASS': 'Miracle Seed',
            'STEEL': 'Metal Coat', 'FAIRY': 'Fairy Feather', 'NORMAL': 'Silk Scarf'}
 try:
     import current_box as _cbo
-    OWNED_ITEMS = {x['item'] for x in _cbo.parse(NEWX) if x.get('item')} | set((json.load(open(os.path.join(_TD, 'state.json'))).get('items_seen') or {}) if os.path.exists(os.path.join(_TD, 'state.json')) else set())
+    import items_owned as _IO
+    OWNED_ITEMS = _IO.owned(json.load(open(os.path.join(_TD, 'state.json'))))[1]
 except Exception:
     OWNED_ITEMS = set()
 def best_item(attacks, phys):
