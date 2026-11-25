@@ -855,3 +855,6 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 25 Nov (Jenner, Erick beaten, cap 65): Z-moves, ability capsules per fight, Unaware / Intimidate vs setup, recoil, singles lead 1-v-1,
   seed attack stages, partner-only moves dead in singles. Six: Copperajah (lead vs Stoutland), Ninetales-A, Aurorus, Glalie-A, Florges,
   Palossand-Fiery-A. 0 flagged moves. Porygon-Z has no 1-v-1 winner: Choice-lock play.
+
+- 25 Nov (Builder v3): game field notes on top, foldable matchup cards (threat / counter / game plan from the six's real builds).
+  Engine level bug fixed (owned mons were Lv 55): Jenner six now Glalie-A (lead), Ninetales-A, Lapras-A, Golurk, Musharna-A, Toxtricity-A; 6/6 hard.

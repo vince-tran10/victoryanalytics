@@ -239,6 +239,17 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   flagged moves cost -1 (not -4) in the counter pick (fbuild replaces them). Plan bullets: Grassy Surge overlay (Grassy Glide priority),
   Substitute, Choice Scarf + Trick. Nothing in his boxes wins a straight 1-v-1 vs Scarf Adaptability Porygon-Z (play the Choice lock).
 
+- **BUILDER v3 (Vincent, 25 Nov, LATEST layout):** 1) 'Field: <name>' card = the game's OWN field notes (scripts/gamedata/field_notes.py parses
+  fieldnotetext.rb, placeholders resolved from fieldtext; stage chips; 'Affects: <who>' when a note touches either team's moves / abilities);
+  2) field plan + model check; 3) 'Matchups': one <details open> card per slot, the summary row keeps both sprites + names when folded; body =
+  their Pokémon (Lv, types, ability, item, nature, EVs, stats, Speed here, moves, 'Why it is a threat') | yours (same + verdict chips, 'How it
+  counters') | numbered game plan | folded Why these moves / Other counters. planner.py re-scores the six with their REAL builds (engine
+  spread_for honours c['_spread']; item, ability, moves) and writes threat / how / plan from those numbers (lead line, free switch on a Choice
+  lock immunity, setup turn = free hit, speed-boost flips, Substitute, healing vs damage, Z-move immunity, resets only if the six has them).
+  Field-note entry Def boosts (Concert: Soundproof / Punk Rock / Heavy Metal / Solid Rock / Rock Head) = physical hits x2/3, both sides.
+  ENGINE BUG FIXED 25 Nov: calc_stats / stat bound level=CAP (55) at import, so every owned Pokémon was scored at Lv 55 under a 60 / 65 cap;
+  CAP now comes from state.json at import and is read at call time.
+
 ## Fight protocol (Vincent, 14 Nov — do this BEFORE recommending any team or lineup)
 **Guide tips (Vincent, 23 Nov): ALWAYS factored in.** Every walkthrough / community tip he sends goes into workspace/team/fight_tips.json
 (per fight: tip text + needs); planner.py scores them (+3 per tip met) and the Planner tab shows 'Guide tips: N of M covered' (collapsed)

@@ -180,7 +180,7 @@ def describe(m):
     evo = m['evo']
     return dict(
         name=m['name'], owned_as=src['raw'], where=src['where'], dump=src['dump'], level=lv,
-        levels_needed=max(0, 55 - lv), evolve=evo, types='/'.join(t.capitalize() for t in m['types']),
+        levels_needed=max(0, __import__('engine').CAP - lv), evolve=evo, types='/'.join(t.capitalize() for t in m['types']),
         base=m['base'], ability=names.get(m['ability'], m['ability']),
         ability_now=src.get('ability'), ability_change=m.get('ability_changed', False),
         nature=m['nature'], evs=m['evs'], stats55=m['stats'], moves=m.get('final_moves') or full_moveset(m),

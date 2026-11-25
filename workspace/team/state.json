@@ -4,9 +4,9 @@
  "export_label": "24 Nov 15:33",
  "active_start": 470,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 377,
- "run": 391,
- "final": 395,
+ "roster": 384,
+ "run": 398,
+ "final": 402,
  "done": [
   "aelita",
   "narcissa1",
@@ -37,12 +37,12 @@
  ],
  "fight": "jenner9",
  "team": [
-  "Copperajah",
-  "Ninetales (Alolan Form)",
-  "Aurorus",
   "Glalie (Aevian Form)",
-  "Florges",
-  "Palossand (Fiery Aevian Form)"
+  "Ninetales (Alolan Form)",
+  "Lapras (Aevian Form)",
+  "Golurk",
+  "Musharna (Aevian Form)",
+  "Toxtricity (Aevian Form)"
  ],
  "moves": {
   "Golisopod (Aevian Form)": [
@@ -467,9 +467,7 @@
    "weak3": [],
    "nores": [],
    "minor": [
-    "FIGHTING",
-    "STEEL",
-    "GHOST"
+    "STEEL"
    ],
    "key": "jenner9"
   }
@@ -611,15 +609,6 @@
     ],
     "ability": "REFRIGERATE"
    },
-   "Glalie (Aevian Form)": {
-    "moves": [
-     "Grassy Glide",
-     "Wood Hammer",
-     "Rock Slide",
-     "Ice Fang"
-    ],
-    "ability": "GRASSYSURGE"
-   },
    "Florges": {
     "moves": [
      "Moonblast",
@@ -628,6 +617,15 @@
      "Protect"
     ],
     "ability": "FLOWERVEIL"
+   },
+   "Glalie (Aevian Form)": {
+    "moves": [
+     "Grassy Glide",
+     "Wood Hammer",
+     "Rock Slide",
+     "Ice Fang"
+    ],
+    "ability": "GRASSYSURGE"
    }
   }
  },

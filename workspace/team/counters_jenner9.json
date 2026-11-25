@@ -2,16 +2,16 @@
  "preview": false,
  "plan": true,
  "current": {
-  "counters": 3,
+  "counters": 4,
   "pairs": [
    {
     "foe": "Stoutland",
     "mon": "Golisopod (Aevian Form)",
     "ability": "SKILLLINK",
-    "dealt": 69,
-    "taken": 49,
+    "dealt": 95,
+    "taken": 36,
     "ok": true,
-    "setup": "Swords Dance",
+    "setup": false,
     "wincons": [
      {
       "what": "Setup",
@@ -25,39 +25,43 @@
     "foe": "Appletun",
     "mon": "Slowking (Galarian Form)",
     "ability": "REGENERATOR",
-    "dealt": 58,
-    "taken": 53,
+    "dealt": 79,
+    "taken": 38,
     "ok": false,
     "setup": false,
     "wincons": [
      {
       "what": "Healing",
-      "answers": []
+      "answers": [
+       "teach Gastro Acid (Musharna)"
+      ]
      }
     ]
    },
    {
     "foe": "Noivern",
-    "mon": "Copperajah",
-    "ability": "SHEERFORCE",
-    "dealt": 77,
-    "taken": 41,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 19,
+    "taken": 56,
     "ok": false,
     "setup": false,
     "wincons": [
      {
       "what": "Healing",
-      "answers": []
+      "answers": [
+       "teach Gastro Acid (Musharna)"
+      ]
      }
     ]
    },
    {
     "foe": "Porygon-Z",
-    "mon": "Amoonguss",
-    "ability": "REGENERATOR",
-    "dealt": 14,
-    "taken": 122,
-    "ok": false,
+    "mon": "Glalie (Aevian Form)",
+    "ability": "GRASSYSURGE",
+    "dealt": 126,
+    "taken": 45,
+    "ok": true,
     "setup": false,
     "wincons": []
    },
@@ -65,8 +69,8 @@
     "foe": "Kommo-o",
     "mon": "Ninetales (Alolan Form)",
     "ability": "SNOWWARNING",
-    "dealt": 110,
-    "taken": 93,
+    "dealt": 130,
+    "taken": 68,
     "ok": true,
     "setup": false,
     "wincons": []
@@ -76,7 +80,7 @@
     "mon": "Toxtricity (Aevian Form)",
     "ability": "PUNKROCK",
     "dealt": 130,
-    "taken": 58,
+    "taken": 42,
     "ok": true,
     "setup": false,
     "wincons": [

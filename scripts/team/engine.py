@@ -16,6 +16,9 @@ import crests
 from bosses import load_battles, load_battles_walk, FIELD, HIGH_STRIKER
 
 CAP = 55
+try:   # 25 Nov audit: the level cap comes from state.json (was a fixed 55, so his Pokémon were scored at Lv 55 under a 60 / 65 cap)
+    CAP = int(os.environ.get('CAP') or json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'workspace', 'team', 'state.json'))).get('cap') or CAP)
+except Exception: pass
 EXTRA_LEGAL = {'TOXTRICITY': ['TORCHSONG']}   # 22 Nov (Vincent, confirmed in-game): Toxtricity-Aevian learns Torch Song
 def _legal_item(it):   # 22 Nov legality: a crest from a later chapter (wiki list in community.py) is ignored for his mons
     try:
@@ -65,7 +68,8 @@ def norm_ab(a):
     return re.sub(r'[^A-Z]', '', (a or '').upper())
 
 
-def stat(base, ev, nat_mult, level=CAP, iv=31, hp=False):
+def stat(base, ev, nat_mult, level=None, iv=31, hp=False):
+    level = level or CAP   # read at call time (engine.CAP can be changed after import)
     if hp:
         if base == 1:
             return 1
@@ -73,7 +77,8 @@ def stat(base, ev, nat_mult, level=CAP, iv=31, hp=False):
     return math.floor((math.floor((2 * base + iv + ev // 4) * level / 100) + 5) * nat_mult)
 
 
-def calc_stats(bs, evs, nature, level=CAP, iv=31):
+def calc_stats(bs, evs, nature, level=None, iv=31):
+    level = level or CAP
     up, down = NATURES.get(nature, (None, None))
     out = {}
     for s in STATS:
@@ -550,6 +555,7 @@ class Engine:
                     evo=evo_text, gate=gate, level=CAP, src=mon)
 
     def spread_for(self, me):
+        if me.get('_spread'): return me['_spread']   # 25 Nov: the planner re-scores the six with their REAL builds (EVs / nature)
         bs = me['base']
         # decide category by best damage potential later; default by base stats
         phys = bs['Atk'] * (2 if me['ability'] in ('HUGEPOWER', 'PUREPOWER') else 1)

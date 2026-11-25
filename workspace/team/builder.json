@@ -10,13 +10,13 @@
    "slot": 1,
    "title": "Core 1 · Lead",
    "pick": "Toxtricity (Aevian Form)",
-   "rec": "Veluza (Aevian Form)",
+   "rec": "Toxtricity (Aevian Form)",
    "cands": [
     {
      "name": "Veluza (Aevian Form)",
      "tier": "S",
      "stats": [
-      "Outspeeds 85%",
+      "Outspeeds 93%",
       "Takes 2 hits to KO",
       "Resists 5 types",
       "Weak to 3 types",
@@ -26,7 +26,7 @@
      "sid": "VELUZA",
      "form": "1",
      "pick": false,
-     "rec": true,
+     "rec": false,
      "teach": [
       "Extreme Speed"
      ]
@@ -35,7 +35,7 @@
      "name": "Toxtricity (Aevian Form)",
      "tier": "S",
      "stats": [
-      "Outspeeds 80%",
+      "Outspeeds 90%",
       "Takes 2 hits to KO",
       "Resists 8 types",
       "Weak to 4 types"
@@ -46,7 +46,7 @@
      "sid": "TOXTRICITY",
      "form": "2",
      "pick": true,
-     "rec": false,
+     "rec": true,
      "teach": [
       "Taunt"
      ]
@@ -55,7 +55,7 @@
      "name": "Arcanine (Hisuian Form)",
      "tier": "A",
      "stats": [
-      "Outspeeds 74%",
+      "Outspeeds 87%",
       "Takes 2 hits to KO",
       "Resists 7 types",
       "Weak to 4 types",
@@ -72,43 +72,85 @@
      "teach": []
     },
     {
-     "name": "Arcanine",
-     "tier": "B",
+     "name": "Unfezant (Aevian Form Male)",
+     "tier": "A",
      "stats": [
-      "Outspeeds 79%",
+      "Outspeeds 90%",
       "Takes 2 hits to KO",
       "Resists 6 types",
-      "Weak to 3 types",
+      "Weak to 7 types"
+     ],
+     "tools": [
+      "Spread: Rock Slide"
+     ],
+     "sid": "UNFEZANT",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Quick Attack",
+      "Taunt"
+     ]
+    },
+    {
+     "name": "Silvally",
+     "tier": "A",
+     "stats": [
+      "Outspeeds 90%",
+      "Takes 3 hits to KO",
+      "Resists 1 type",
+      "Weak to 1 type",
       "Single target only"
      ],
      "tools": [
-      "Intimidate",
-      "Priority: Extreme Speed"
+      "Pivot: Parting Shot"
      ],
-     "sid": "ARCANINE",
+     "sid": "SILVALLY",
      "form": "0",
      "pick": false,
      "rec": false,
      "teach": []
     },
     {
-     "name": "Typhlosion",
-     "tier": "B",
+     "name": "Zoroark",
+     "tier": "A",
      "stats": [
-      "Outspeeds 81%",
+      "Outspeeds 92%",
       "Takes 2 hits to KO",
-      "Resists 6 types",
-      "Weak to 3 types"
+      "Resists 3 types",
+      "Weak to 3 types",
+      "Single target only"
      ],
-     "tools": [
-      "Spread: Eruption"
-     ],
-     "sid": "TYPHLOSION",
+     "tools": [],
+     "sid": "ZOROARK",
      "form": "0",
      "pick": false,
      "rec": false,
      "teach": [
-      "Quick Attack"
+      "Sucker Punch",
+      "Taunt"
+     ]
+    },
+    {
+     "name": "Zoroark (Hisuian Form)",
+     "tier": "A",
+     "stats": [
+      "Outspeeds 95%",
+      "Takes 2 hits to KO",
+      "Resists 5 types",
+      "Weak to 1 type",
+      "Single target only"
+     ],
+     "tools": [
+      "Taunt",
+      "Setup: Nasty Plot"
+     ],
+     "sid": "ZOROARK",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Shadow Sneak"
      ]
     }
    ]
@@ -138,6 +180,25 @@
      "rec": false,
      "teach": [
       "Rage Powder"
+     ]
+    },
+    {
+     "name": "Unfezant (Aevian Form Male)",
+     "tier": "A",
+     "stats": [
+      "3 of 4 weak to Water/Ground",
+      "Resists 6 types",
+      "Weak to 7 types"
+     ],
+     "tools": [
+      "Spread: Rock Slide"
+     ],
+     "sid": "UNFEZANT",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Tailwind"
      ]
     },
     {
@@ -203,7 +264,7 @@
    "slot": 3,
    "title": "Core 3 · Mid game",
    "pick": "Slowking (Galarian Form)",
-   "rec": "Alomomola",
+   "rec": "Slowking (Galarian Form)",
    "why": [],
    "cands": [
     {
@@ -221,7 +282,7 @@
      "sid": "SLOWKING",
      "form": "1",
      "pick": true,
-     "rec": false,
+     "rec": true,
      "teach": [
       "Slack Off"
      ]
@@ -249,25 +310,6 @@
      ]
     },
     {
-     "name": "Alomomola",
-     "tier": "S",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 2 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Wish",
-      "Regenerator",
-      "Support: Wide Guard"
-     ],
-     "sid": "ALOMOMOLA",
-     "form": "0",
-     "pick": false,
-     "rec": true,
-     "teach": []
-    },
-    {
      "name": "Glalie (Aevian Form)",
      "tier": "S",
      "stats": [
@@ -285,6 +327,23 @@
      "rec": false,
      "teach": [
       "Synthesis"
+     ]
+    },
+    {
+     "name": "Musharna (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "sid": "MUSHARNA",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Moonlight"
      ]
     },
     {
@@ -309,20 +368,41 @@
      ]
     },
     {
-     "name": "Musharna (Aevian Form)",
-     "tier": "S",
+     "name": "Alomomola",
+     "tier": "A",
      "stats": [
       "Resists 4 types",
-      "Weak to 3 types",
+      "Weak to 2 types",
       "Single target only"
      ],
-     "tools": [],
-     "sid": "MUSHARNA",
-     "form": "1",
+     "tools": [
+      "Wish",
+      "Regenerator",
+      "Support: Wide Guard"
+     ],
+     "sid": "ALOMOMOLA",
+     "form": "0",
+     "pick": false,
+     "rec": false,
+     "teach": []
+    },
+    {
+     "name": "Silvally",
+     "tier": "A",
+     "stats": [
+      "Resists 1 type",
+      "Weak to 1 type",
+      "Single target only"
+     ],
+     "tools": [
+      "Parting Shot"
+     ],
+     "sid": "SILVALLY",
+     "form": "0",
      "pick": false,
      "rec": false,
      "teach": [
-      "Moonlight"
+      "Roar"
      ]
     },
     {
@@ -360,45 +440,6 @@
      "rec": false,
      "teach": [
       "Slack Off"
-     ]
-    },
-    {
-     "name": "Silvally",
-     "tier": "A",
-     "stats": [
-      "Resists 1 type",
-      "Weak to 1 type",
-      "Single target only"
-     ],
-     "tools": [
-      "Status: Thunder Wave"
-     ],
-     "sid": "SILVALLY",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Roar"
-     ]
-    },
-    {
-     "name": "Donphan",
-     "tier": "A",
-     "stats": [
-      "3 of 4 weak to Water/Ice",
-      "Resists 3 types",
-      "Weak to 3 types"
-     ],
-     "tools": [
-      "Spread: Earthquake",
-      "Priority: Ice Shard"
-     ],
-     "sid": "DONPHAN",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Roar"
      ]
     }
    ]
@@ -465,6 +506,23 @@
      "teach": []
     },
     {
+     "name": "Musharna (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "sid": "MUSHARNA",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Curse"
+     ]
+    },
+    {
      "name": "Muk (Alolan Form)",
      "tier": "S",
      "stats": [
@@ -479,23 +537,6 @@
       "Disrupt: Knock Off"
      ],
      "sid": "MUK",
-     "form": "1",
-     "pick": false,
-     "rec": false,
-     "teach": [
-      "Curse"
-     ]
-    },
-    {
-     "name": "Musharna (Aevian Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 3 types",
-      "Single target only"
-     ],
-     "tools": [],
-     "sid": "MUSHARNA",
      "form": "1",
      "pick": false,
      "rec": false,
@@ -594,21 +635,22 @@
      "teach": []
     },
     {
-     "name": "Zoroark",
+     "name": "Zoroark (Hisuian Form)",
      "tier": "A",
      "stats": [
-      "Resists 3 types",
-      "Weak to 3 types",
+      "Resists 5 types",
+      "Weak to 1 type",
       "Single target only"
      ],
-     "tools": [],
+     "tools": [
+      "Nasty Plot (+2)",
+      "Disrupt: Taunt"
+     ],
      "sid": "ZOROARK",
-     "form": "0",
+     "form": "1",
      "pick": false,
      "rec": false,
-     "teach": [
-      "Nasty Plot"
-     ]
+     "teach": []
     },
     {
      "name": "Mismagius (Aevian Form)",
@@ -644,45 +686,31 @@
      "pick": false,
      "rec": false,
      "teach": []
-    },
-    {
-     "name": "Donphan",
-     "tier": "A",
-     "stats": [
-      "Resists 3 types",
-      "Weak to 3 types"
-     ],
-     "tools": [
-      "Priority: Ice Shard (+0.8)",
-      "Spread: Earthquake"
-     ],
-     "sid": "DONPHAN",
-     "form": "0",
-     "pick": false,
-     "rec": false,
-     "teach": []
     }
    ]
   },
   {
    "slot": 5,
    "title": "Flex 1 · Mid game · Spirit Jenner",
-   "pick": "Copperajah",
-   "rec": "Copperajah",
+   "pick": "Glalie (Aevian Form)",
+   "rec": "Glalie (Aevian Form)",
    "flex": true,
    "cands": [
     {
-     "name": "Copperajah",
-     "tier": "B",
+     "name": "Glalie (Aevian Form)",
+     "tier": "S",
      "stats": [
-      "Resists 11 types",
-      "Weak to 3 types",
-      "Single target only"
+      "Resists 2 types",
+      "Weak to 4 types"
      ],
-     "tools": [],
+     "tools": [
+      "Spread: Rock Slide",
+      "Counters: Porygon-Z",
+      "Priority: Grassy Glide"
+     ],
      "teach": [],
-     "sid": "COPPERAJAH",
-     "form": "0",
+     "sid": "GLALIE",
+     "form": "1",
      "pick": true,
      "rec": true
     },
@@ -719,23 +747,6 @@
      "rec": false
     },
     {
-     "name": "Clefable",
-     "tier": "A",
-     "stats": [
-      "Resists 4 types",
-      "Weak to 2 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Support: Safeguard"
-     ],
-     "teach": [],
-     "sid": "CLEFABLE",
-     "form": "0",
-     "pick": false,
-     "rec": false
-    },
-    {
      "name": "Gastrodon (West Aevian Form)",
      "tier": "A",
      "stats": [
@@ -751,19 +762,19 @@
      "rec": false
     },
     {
-     "name": "Glalie (Aevian Form)",
-     "tier": "S",
+     "name": "Clefable",
+     "tier": "A",
      "stats": [
-      "Resists 2 types",
-      "Weak to 4 types"
+      "Resists 4 types",
+      "Weak to 2 types",
+      "Single target only"
      ],
      "tools": [
-      "Spread: Rock Slide",
-      "Priority: Grassy Glide"
+      "Support: Safeguard"
      ],
      "teach": [],
-     "sid": "GLALIE",
-     "form": "1",
+     "sid": "CLEFABLE",
+     "form": "0",
      "pick": false,
      "rec": false
     }
@@ -793,6 +804,24 @@
      "form": "1",
      "pick": true,
      "rec": true
+    },
+    {
+     "name": "Lapras (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "Resists 5 types",
+      "Weak to 7 types"
+     ],
+     "tools": [
+      "Spread: Rock Slide",
+      "Status: Sing",
+      "Setup: Dragon Dance"
+     ],
+     "teach": [],
+     "sid": "LAPRAS",
+     "form": "1",
+     "pick": false,
+     "rec": false
     },
     {
      "name": "Azumarill",
@@ -856,7 +885,7 @@
   ],
   "Veluza-Aevian": [
    "Lead",
-   "outspeeds 85%"
+   "outspeeds 93%"
   ],
   "Slowking-Galar": [
    "Mid game",
@@ -892,7 +921,7 @@
   ],
   "Arcanine-Hisui": [
    "Lead",
-   "outspeeds 74%"
+   "outspeeds 87%"
   ],
   "Clefable": [
    "Support",
@@ -923,12 +952,12 @@
    ""
   ],
   "Ninetales-Alola": [
-   "Support",
-   "Snow Warning setter"
+   "Lead",
+   "outspeeds 94%"
   ],
   "Toxtricity-Aevian": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 90%"
   ],
   "Donphan": [
    "Attacker",
@@ -943,8 +972,8 @@
    "Tailwind"
   ],
   "Zoroark-Hisui": [
-   "Closer",
-   "Nasty Plot"
+   "Lead",
+   "outspeeds 95%"
   ],
   "Palossand-Aevian (Rocky)": [
    "Attacker",
@@ -983,8 +1012,8 @@
    "Follow Me"
   ],
   "Zoroark": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 92%"
   ],
   "Mamoswine": [
    "Attacker",
@@ -995,8 +1024,8 @@
    "Will-O-Wisp"
   ],
   "Flamigo": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 87%"
   ],
   "Torterra": [
    "Closer",
@@ -1004,19 +1033,19 @@
   ],
   "Revavroom": [
    "Lead",
-   "outspeeds 74%"
+   "outspeeds 87%"
   ],
   "Lokix": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 88%"
   ],
   "Venusaur": [
    "Support",
    "Sleep Powder"
   ],
   "Talonflame": [
-   "Doubles lead",
-   "Tailwind"
+   "Lead",
+   "outspeeds 98%"
   ],
   "Vaporeon": [
    "Mid game",
@@ -1059,16 +1088,16 @@
    "Tailwind"
   ],
   "Roserade-Aevian": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 87%"
   ],
   "Copperajah": [
    "Attacker",
    ""
   ],
   "Meowscarada": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 96%"
   ],
   "Empoleon": [
    "Mid game",
@@ -1082,13 +1111,13 @@
    "Mid game",
    "Wish"
   ],
-  "Ninetales": [
-   "Support",
-   "Drought setter"
-  ],
   "Scrafty": [
    "Doubles lead",
    "Fake Out"
+  ],
+  "Ninetales": [
+   "Support",
+   "Drought setter"
   ],
   "Quagsire": [
    "Attacker",
@@ -1108,25 +1137,29 @@
   ],
   "Nidoking": [
    "Lead",
-   "outspeeds 74%"
+   "outspeeds 85%"
   ],
   "Malamar": [
    "Attacker",
    ""
   ],
   "Mismagius-Aevian": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 92%"
   ],
   "Rampardos": [
    "Attacker",
    ""
   ],
   "Yanmega": [
+   "Lead",
+   "outspeeds 90%"
+  ],
+  "Clawitzer": [
    "Attacker",
    ""
   ],
-  "Clawitzer": [
+  "Decidueye": [
    "Attacker",
    ""
   ],
@@ -1134,11 +1167,11 @@
    "Mid game",
    "Recover"
   ],
-  "Decidueye": [
+  "Ursaring": [
    "Attacker",
    ""
   ],
-  "Ursaring": [
+  "Dragalge": [
    "Attacker",
    ""
   ],
@@ -1146,29 +1179,25 @@
    "Doubles lead",
    "Intimidate"
   ],
-  "Dragalge": [
+  "Hariyama": [
    "Attacker",
    ""
   ],
   "Typhlosion": [
    "Lead",
-   "outspeeds 81%"
+   "outspeeds 91%"
   ],
   "Florges": [
    "Mid game",
    "Synthesis"
-  ],
-  "Hariyama": [
-   "Attacker",
-   ""
   ],
   "Solrock (Solrock Dominant Fusion)": [
    "Attacker",
    ""
   ],
   "Unfezant-Aevian": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 90%"
   ],
   "Ludicolo": [
    "Attacker",
@@ -1203,8 +1232,8 @@
    "Tailwind"
   ],
   "Silvally": [
-   "Support",
-   "Thunder Wave"
+   "Lead",
+   "outspeeds 90%"
   ],
   "Emboar": [
    "Attacker",
@@ -1218,11 +1247,15 @@
    "Attacker",
    ""
   ],
+  "Wyrdeer": [
+   "Doubles lead",
+   "Intimidate"
+  ],
   "Drednaw": [
    "Attacker",
    ""
   ],
-  "Wyrdeer": [
+  "Mabosstiff": [
    "Doubles lead",
    "Intimidate"
   ],
@@ -1230,11 +1263,11 @@
    "Mid game",
    "Slack Off"
   ],
-  "Mabosstiff": [
-   "Doubles lead",
-   "Intimidate"
-  ],
   "Diggersby": [
+   "Attacker",
+   ""
+  ],
+  "Kingler": [
    "Attacker",
    ""
   ],
@@ -1242,17 +1275,13 @@
    "Support",
    "Toxic Spikes"
   ],
-  "Kingler": [
+  "Grapploct": [
    "Attacker",
    ""
   ],
   "Walrein": [
    "Closer",
    "Curse"
-  ],
-  "Grapploct": [
-   "Attacker",
-   ""
   ],
   "Tatsugiri": [
    "Closer",
@@ -1266,13 +1295,13 @@
    "Attacker",
    ""
   ],
-  "Camerupt": [
-   "Support",
-   "Yawn"
-  ],
   "Heatmor": [
    "Attacker",
    ""
+  ],
+  "Camerupt": [
+   "Support",
+   "Yawn"
   ],
   "Mantine": [
    "Attacker",
@@ -1302,11 +1331,11 @@
    "Mid game",
    "Regenerator"
   ],
-  "Tyrantrum": [
-   "Attacker",
-   ""
-  ],
   "Toxicroak": [
+   "Lead",
+   "outspeeds 85%"
+  ],
+  "Tyrantrum": [
    "Attacker",
    ""
   ],
@@ -1315,20 +1344,20 @@
    "Tailwind"
   ],
   "Kilowattrel": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 97%"
   ],
   "Cradily": [
-   "Mid game",
-   "Recover"
-  ],
-  "Jellicent": [
    "Mid game",
    "Recover"
   ],
   "Veluza": [
    "Attacker",
    ""
+  ],
+  "Jellicent": [
+   "Mid game",
+   "Recover"
   ],
   "Ribombee": [
    "Support",
@@ -1347,14 +1376,18 @@
    "Coil"
   ],
   "Omastar": [
-   "Attacker",
-   ""
+   "Closer",
+   "Shell Smash"
   ],
   "Cursola": [
    "Attacker",
    ""
   ],
   "Throh": [
+   "Attacker",
+   ""
+  ],
+  "Hitmonchan": [
    "Attacker",
    ""
   ],
@@ -1366,61 +1399,57 @@
    "Attacker",
    ""
   ],
-  "Hitmonchan": [
-   "Attacker",
-   ""
-  ],
   "Oinkologne": [
    "Attacker",
    ""
   ],
   "Espeon": [
-   "Attacker",
-   ""
-  ],
-  "Mudsdale": [
-   "Mid game",
-   "Roar"
+   "Lead",
+   "outspeeds 95%"
   ],
   "Drampa": [
    "Support",
    "Glare"
   ],
   "Dodrio": [
-   "Closer",
-   "Swords Dance"
+   "Lead",
+   "outspeeds 95%"
+  ],
+  "Mudsdale": [
+   "Mid game",
+   "Roar"
   ],
   "Jolteon": [
-   "Support",
-   "Yawn"
-  ],
-  "Cofagrigus": [
-   "Support",
-   "Will-O-Wisp"
+   "Lead",
+   "outspeeds 97%"
   ],
   "Cetitan": [
    "Closer",
    "Belly Drum"
   ],
+  "Cofagrigus": [
+   "Support",
+   "Will-O-Wisp"
+  ],
   "Marowak-Alola": [
    "Attacker",
    ""
   ],
-  "Bruxish": [
+  "Feraligatr": [
    "Attacker",
    ""
   ],
-  "Passimian": [
-   "Closer",
-   "Bulk Up"
+  "Bruxish": [
+   "Lead",
+   "outspeeds 88%"
   ],
   "Appletun": [
    "Mid game",
    "Recover"
   ],
-  "Feraligatr": [
-   "Attacker",
-   ""
+  "Passimian": [
+   "Closer",
+   "Bulk Up"
   ],
   "Carracosta": [
    "Closer",
@@ -1431,8 +1460,8 @@
    ""
   ],
   "Pyroar": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 92%"
   ],
   "Pidgeot": [
    "Doubles lead",
@@ -1463,36 +1492,36 @@
    ""
   ],
   "Squawkabilly (White Plumage)": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 88%"
   ],
   "Dusclops": [
    "Support",
    "Will-O-Wisp"
   ],
   "Dubwool": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 85%"
   ],
   "Klinklang": [
-   "Closer",
-   "Shift Gear"
+   "Lead",
+   "outspeeds 87%"
   ],
   "Comfey": [
    "Attacker",
    ""
   ],
   "Simisear": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 91%"
   ],
   "Boltund": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 96%"
   ],
   "Barraskewda": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 98%"
   ],
   "Drapion": [
    "Attacker",
@@ -1510,23 +1539,23 @@
    "Doubles lead",
    "Intimidate"
   ],
-  "Slaking": [
-   "Attacker",
-   ""
-  ],
   "Bombirdier": [
    "Attacker",
    ""
   ],
-  "Marowak": [
+  "Slaking": [
    "Attacker",
    ""
   ],
   "Mismagius": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 93%"
   ],
   "Primeape": [
+   "Lead",
+   "outspeeds 90%"
+  ],
+  "Marowak": [
    "Attacker",
    ""
   ],
@@ -1547,28 +1576,28 @@
    "Spore"
   ],
   "Starmie": [
-   "Attacker",
-   ""
-  ],
-  "Lucario": [
-   "Closer",
-   "Calm Mind"
+   "Lead",
+   "outspeeds 96%"
   ],
   "Arctovish": [
    "Support",
    "Aurora Veil"
   ],
-  "Seaking": [
-   "Attacker",
-   ""
+  "Lucario": [
+   "Lead",
+   "outspeeds 87%"
   ],
-  "Skuntank": [
+  "Seaking": [
    "Attacker",
    ""
   ],
   "Druddigon": [
    "Support",
    "Glare"
+  ],
+  "Skuntank": [
+   "Attacker",
+   ""
   ],
   "Aurorus": [
    "Support",
@@ -1579,70 +1608,70 @@
    "Reflect"
   ],
   "Basculin (Blue-Striped)": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 90%"
   ],
   "Drifblim": [
    "Doubles lead",
    "Tailwind"
   ],
-  "Vileplume": [
-   "Attacker",
-   ""
-  ],
   "Tropius": [
    "Support",
    "Wide Guard"
   ],
-  "Golduck": [
+  "Vileplume": [
    "Attacker",
    ""
   ],
   "Roserade": [
-   "Support",
-   "Sleep Powder"
+   "Lead",
+   "outspeeds 87%"
   ],
-  "Muk": [
-   "Attacker",
-   ""
+  "Golduck": [
+   "Lead",
+   "outspeeds 85%"
   ],
   "Chimecho": [
    "Attacker",
    ""
   ],
-  "Cinccino": [
+  "Muk": [
    "Attacker",
    ""
+  ],
+  "Cinccino": [
+   "Lead",
+   "outspeeds 95%"
   ],
   "Paras-Aevian": [
    "Attacker",
    ""
   ],
+  "Orbeetle": [
+   "Lead",
+   "outspeeds 87%"
+  ],
   "Sudowoodo": [
    "Attacker",
    ""
-  ],
-  "Orbeetle": [
-   "Support",
-   "Reflect"
   ],
   "Stunfisk-Galar": [
    "Support",
    "Yawn"
   ],
-  "Swanna": [
-   "Attacker",
-   ""
-  ],
   "Pawmot": [
-   "Doubles lead",
-   "Fake Out"
+   "Lead",
+   "outspeeds 92%"
   ],
-  "Alcremie": [
-   "Attacker",
-   ""
+  "Swanna": [
+   "Lead",
+   "outspeeds 90%"
   ],
   "Heliolisk": [
+   "Lead",
+   "outspeeds 94%"
+  ],
+  "Alcremie": [
    "Attacker",
    ""
   ],
@@ -1655,12 +1684,12 @@
    "Electric Surge setter"
   ],
   "Electrode-Hisui": [
-   "Support",
-   "Thunder Wave"
+   "Lead",
+   "outspeeds 98%"
   ],
   "Zebstrika": [
-   "Support",
-   "Thunder Wave"
+   "Lead",
+   "outspeeds 96%"
   ],
   "Seismitoad": [
    "Attacker",
@@ -1679,8 +1708,8 @@
    "Snow Warning setter"
   ],
   "Electabuzz": [
-   "Support",
-   "Thunder Wave"
+   "Lead",
+   "outspeeds 92%"
   ],
   "Abomasnow": [
    "Support",
@@ -1699,8 +1728,8 @@
    "Fake Out"
   ],
   "Brambleghast": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 87%"
   ],
   "Raticate-Alola": [
    "Attacker",
@@ -1751,8 +1780,8 @@
    ""
   ],
   "Klawf": [
-   "Closer",
-   "Swords Dance"
+   "Attacker",
+   ""
   ],
   "Audino": [
    "Attacker",
@@ -1766,37 +1795,41 @@
    "Attacker",
    ""
   ],
-  "Octillery": [
-   "Attacker",
-   ""
+  "Zangoose": [
+   "Lead",
+   "outspeeds 87%"
   ],
   "Frosmoth": [
    "Closer",
    "Quiver Dance"
   ],
-  "Zangoose": [
+  "Octillery": [
    "Attacker",
    ""
+  ],
+  "Heracross": [
+   "Lead",
+   "outspeeds 85%"
   ],
   "Graveler": [
    "Attacker",
    ""
   ],
-  "Heracross": [
-   "Closer",
-   "Swords Dance"
-  ],
   "Swellow": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 97%"
   ],
   "Dachsbun": [
    "Support",
    "Yawn"
   ],
   "Houndoom": [
-   "Closer",
-   "Nasty Plot"
+   "Lead",
+   "outspeeds 90%"
+  ],
+  "Medicham": [
+   "Attacker",
+   ""
   ],
   "Oricorio (Pom-Pom Style)": [
    "Attacker",
@@ -1805,10 +1838,6 @@
   "Tauros": [
    "Doubles lead",
    "Intimidate"
-  ],
-  "Medicham": [
-   "Attacker",
-   ""
   ],
   "Claydol": [
    "Attacker",
@@ -1819,12 +1848,12 @@
    ""
   ],
   "Floatzel": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 96%"
   ],
   "Meowstic": [
-   "Support",
-   "Reflect"
+   "Attacker",
+   ""
   ],
   "Turtonator": [
    "Closer",
@@ -1838,13 +1867,13 @@
    "Doubles lead",
    "Intimidate"
   ],
-  "Shiinotic": [
-   "Support",
-   "Spore"
-  ],
   "Beheeyem": [
    "Attacker",
    ""
+  ],
+  "Shiinotic": [
+   "Support",
+   "Spore"
   ],
   "Mawile": [
    "Doubles lead",
@@ -1859,8 +1888,8 @@
    "Aurora Veil"
   ],
   "Mr. Mime": [
-   "Support",
-   "Reflect"
+   "Lead",
+   "outspeeds 87%"
   ],
   "Hypno": [
    "Attacker",
@@ -1887,8 +1916,8 @@
    ""
   ],
   "Fearow": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 92%"
   ],
   "Grafaiai": [
    "Attacker",
@@ -1911,16 +1940,16 @@
    "Swords Dance"
   ],
   "Manectric": [
-   "Support",
-   "Thunder Wave"
+   "Lead",
+   "outspeeds 92%"
   ],
   "Sandslash-Alola": [
    "Attacker",
    ""
   ],
   "Sceptile": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 96%"
   ],
   "Carbink": [
    "Support",
@@ -1931,8 +1960,8 @@
    "Roost"
   ],
   "Venomoth": [
-   "Support",
-   "Sleep Powder"
+   "Lead",
+   "outspeeds 87%"
   ],
   "Corsola": [
    "Attacker",
@@ -1955,12 +1984,12 @@
    ""
   ],
   "Oricorio": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 88%"
   ],
   "Rapidash": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 92%"
   ],
   "Absol": [
    "Closer",
@@ -1995,6 +2024,10 @@
    ""
   ],
   "Xatu": [
+   "Lead",
+   "outspeeds 90%"
+  ],
+  "Seviper": [
    "Attacker",
    ""
   ],
@@ -2002,25 +2035,21 @@
    "Attacker",
    ""
   ],
-  "Seviper": [
-   "Attacker",
-   ""
-  ],
   "Sawsbuck": [
-   "Attacker",
-   ""
-  ],
-  "Eldegoss": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 90%"
   ],
   "Shiftry": [
    "Doubles lead",
    "Fake Out"
   ],
+  "Eldegoss": [
+   "Attacker",
+   ""
+  ],
   "Minun": [
-   "Closer",
-   "Nasty Plot"
+   "Lead",
+   "outspeeds 90%"
   ],
   "Persian-Alola": [
    "Attacker",
@@ -2042,29 +2071,25 @@
    "Attacker",
    ""
   ],
+  "Linoone": [
+   "Lead",
+   "outspeeds 91%"
+  ],
   "Kangaskhan": [
    "Doubles lead",
    "Fake Out"
-  ],
-  "Linoone": [
-   "Attacker",
-   ""
   ],
   "Lumineon": [
    "Attacker",
    ""
   ],
   "Oricorio (Sensu Style)": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 88%"
   ],
   "Thievul": [
    "Attacker",
    ""
-  ],
-  "Mightyena": [
-   "Doubles lead",
-   "Intimidate"
   ],
   "Kabutops": [
    "Attacker",
@@ -2073,6 +2098,10 @@
   "Vespiquen": [
    "Attacker",
    ""
+  ],
+  "Mightyena": [
+   "Doubles lead",
+   "Intimidate"
   ],
   "Boldore": [
    "Attacker",
@@ -2098,13 +2127,13 @@
    "Attacker",
    ""
   ],
-  "Jynx": [
-   "Attacker",
-   ""
-  ],
   "Arbok": [
    "Doubles lead",
    "Intimidate"
+  ],
+  "Jynx": [
+   "Attacker",
+   ""
   ],
   "Dugtrio-Alola": [
    "Attacker",
@@ -2127,16 +2156,16 @@
    "Yawn"
   ],
   "Plusle": [
-   "Closer",
-   "Nasty Plot"
+   "Lead",
+   "outspeeds 90%"
   ],
   "Salazzle": [
-   "Closer",
-   "Nasty Plot"
+   "Lead",
+   "outspeeds 96%"
   ],
   "Unfezant": [
-   "Attacker",
-   ""
+   "Doubles lead",
+   "Tailwind"
   ],
   "Electrode": [
    "Support",
@@ -2150,13 +2179,13 @@
    "Attacker",
    ""
   ],
-  "Wormadam (Trash Cloak)": [
-   "Attacker",
-   ""
-  ],
   "Morpeko": [
    "Doubles lead",
    "Fake Out"
+  ],
+  "Wormadam (Trash Cloak)": [
+   "Attacker",
+   ""
   ],
   "Sharpedo": [
    "Attacker",
@@ -2167,8 +2196,8 @@
    ""
   ],
   "Raticate": [
-   "Attacker",
-   ""
+   "Lead",
+   "outspeeds 90%"
   ],
   "Simisage": [
    "Attacker",
@@ -2206,6 +2235,14 @@
    "Closer",
    "Calm Mind"
   ],
+  "Oricorio (Pa'u Style)": [
+   "Attacker",
+   ""
+  ],
+  "Beedrill": [
+   "Attacker",
+   ""
+  ],
   "Cacturne": [
    "Attacker",
    ""
@@ -2213,14 +2250,6 @@
   "Cherrim": [
    "Support",
    "Helping Hand"
-  ],
-  "Beedrill": [
-   "Attacker",
-   ""
-  ],
-  "Oricorio (Pa'u Style)": [
-   "Attacker",
-   ""
   ],
   "Banette": [
    "Attacker",
@@ -2274,19 +2303,19 @@
    "Attacker",
    ""
   ],
-  "Lopunny": [
-   "Doubles lead",
-   "Fake Out"
-  ],
   "Purugly": [
    "Doubles lead",
    "Fake Out"
   ],
-  "Kricketune": [
+  "Lopunny": [
+   "Doubles lead",
+   "Fake Out"
+  ],
+  "Mothim": [
    "Attacker",
    ""
   ],
-  "Mothim": [
+  "Kricketune": [
    "Attacker",
    ""
   ],
@@ -2350,23 +2379,23 @@
    "Mid game",
    "Recover"
   ],
-  "Pachirisu": [
-   "Doubles lead",
-   "Follow Me"
-  ],
   "Delcatty": [
    "Doubles lead",
    "Fake Out"
+  ],
+  "Pachirisu": [
+   "Doubles lead",
+   "Follow Me"
   ],
   "Shelmet": [
    "Attacker",
    ""
   ],
-  "Delibird": [
+  "Luvdisc": [
    "Attacker",
    ""
   ],
-  "Luvdisc": [
+  "Delibird": [
    "Attacker",
    ""
   ],
@@ -3085,18 +3114,8 @@
    ]
   },
   "Talonflame": {
-   "s": [
-    [
-     "B",
-     "Tailwind"
-    ]
-   ],
-   "d": [
-    [
-     "B",
-     "Tailwind"
-    ]
-   ]
+   "s": [],
+   "d": []
   },
   "Vaporeon": {
    "s": [
@@ -3412,20 +3431,6 @@
     ]
    ]
   },
-  "Ninetales": {
-   "s": [
-    [
-     "B",
-     "Drought setter"
-    ]
-   ],
-   "d": [
-    [
-     "B",
-     "Drought setter"
-    ]
-   ]
-  },
   "Scrafty": {
    "s": [
     [
@@ -3437,6 +3442,20 @@
     [
      "D",
      "Intimidate / Fake Out"
+    ]
+   ]
+  },
+  "Ninetales": {
+   "s": [
+    [
+     "B",
+     "Drought setter"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Drought setter"
     ]
    ]
   },
@@ -3594,6 +3613,10 @@
     ]
    ]
   },
+  "Decidueye": {
+   "s": [],
+   "d": []
+  },
   "Reuniclus": {
    "s": [
     [
@@ -3624,10 +3647,6 @@
     ]
    ]
   },
-  "Decidueye": {
-   "s": [],
-   "d": []
-  },
   "Ursaring": {
    "s": [
     [
@@ -3639,6 +3658,20 @@
     [
      "C",
      "Attack 130"
+    ]
+   ]
+  },
+  "Dragalge": {
+   "s": [
+    [
+     "C",
+     "Adaptability"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Adaptability"
     ]
    ]
   },
@@ -3660,17 +3693,25 @@
     ]
    ]
   },
-  "Dragalge": {
+  "Hariyama": {
    "s": [
     [
      "C",
-     "Adaptability"
+     "Guts"
+    ],
+    [
+     "E",
+     "Knock Off"
     ]
    ],
    "d": [
     [
      "C",
-     "Adaptability"
+     "Guts"
+    ],
+    [
+     "E",
+     "Knock Off"
     ]
    ]
   },
@@ -3699,28 +3740,6 @@
     [
      "D",
      "Synthesis"
-    ]
-   ]
-  },
-  "Hariyama": {
-   "s": [
-    [
-     "C",
-     "Guts"
-    ],
-    [
-     "E",
-     "Knock Off"
-    ]
-   ],
-   "d": [
-    [
-     "C",
-     "Guts"
-    ],
-    [
-     "E",
-     "Knock Off"
     ]
    ]
   },
@@ -3865,14 +3884,14 @@
   "Silvally": {
    "s": [
     [
-     "B",
-     "Thunder Wave"
+     "D",
+     "Parting Shot"
     ]
    ],
    "d": [
     [
-     "B",
-     "Thunder Wave"
+     "D",
+     "Parting Shot"
     ]
    ]
   },
@@ -3916,20 +3935,6 @@
    "s": [],
    "d": []
   },
-  "Drednaw": {
-   "s": [
-    [
-     "C",
-     "Strong Jaw"
-    ]
-   ],
-   "d": [
-    [
-     "C",
-     "Strong Jaw"
-    ]
-   ]
-  },
   "Wyrdeer": {
    "s": [
     [
@@ -3952,17 +3957,17 @@
     ]
    ]
   },
-  "Bellibolt": {
+  "Drednaw": {
    "s": [
     [
-     "D",
-     "Slack Off"
+     "C",
+     "Strong Jaw"
     ]
    ],
    "d": [
     [
-     "D",
-     "Slack Off"
+     "C",
+     "Strong Jaw"
     ]
    ]
   },
@@ -3988,6 +3993,20 @@
     ]
    ]
   },
+  "Bellibolt": {
+   "s": [
+    [
+     "D",
+     "Slack Off"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Slack Off"
+    ]
+   ]
+  },
   "Diggersby": {
    "s": [
     [
@@ -3999,6 +4018,20 @@
     [
      "C",
      "Huge Power"
+    ]
+   ]
+  },
+  "Kingler": {
+   "s": [
+    [
+     "C",
+     "Attack 130"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Attack 130"
     ]
    ]
   },
@@ -4020,17 +4053,17 @@
     ]
    ]
   },
-  "Kingler": {
+  "Grapploct": {
    "s": [
     [
-     "C",
-     "Attack 130"
+     "A",
+     "Priority cleaner (Sucker Punch)"
     ]
    ],
    "d": [
     [
-     "C",
-     "Attack 130"
+     "A",
+     "Priority cleaner (Sucker Punch)"
     ]
    ]
   },
@@ -4045,20 +4078,6 @@
     [
      "A",
      "Curse sweeper"
-    ]
-   ]
-  },
-  "Grapploct": {
-   "s": [
-    [
-     "A",
-     "Priority cleaner (Sucker Punch)"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Priority cleaner (Sucker Punch)"
     ]
    ]
   },
@@ -4092,6 +4111,10 @@
    "s": [],
    "d": []
   },
+  "Heatmor": {
+   "s": [],
+   "d": []
+  },
   "Camerupt": {
    "s": [
     [
@@ -4105,10 +4128,6 @@
      "Yawn"
     ]
    ]
-  },
-  "Heatmor": {
-   "s": [],
-   "d": []
   },
   "Mantine": {
    "s": [],
@@ -4222,6 +4241,20 @@
     ]
    ]
   },
+  "Toxicroak": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ]
+   ]
+  },
   "Tyrantrum": {
    "s": [
     [
@@ -4237,20 +4270,6 @@
     [
      "C",
      "Attack 121"
-    ]
-   ]
-  },
-  "Toxicroak": {
-   "s": [
-    [
-     "A",
-     "Priority cleaner (Sucker Punch)"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Priority cleaner (Sucker Punch)"
     ]
    ]
   },
@@ -4328,20 +4347,6 @@
     ]
    ]
   },
-  "Jellicent": {
-   "s": [
-    [
-     "D",
-     "Recover"
-    ]
-   ],
-   "d": [
-    [
-     "D",
-     "Recover"
-    ]
-   ]
-  },
   "Veluza": {
    "s": [
     [
@@ -4356,6 +4361,20 @@
     ]
    ]
   },
+  "Jellicent": {
+   "s": [
+    [
+     "D",
+     "Recover"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Recover"
+    ]
+   ]
+  },
   "Ribombee": {
    "s": [
     [
@@ -4367,12 +4386,7 @@
   },
   "Arctozolt": {
    "s": [],
-   "d": [
-    [
-     "B",
-     "Bulldoze"
-    ]
-   ]
+   "d": []
   },
   "Centiskorch": {
    "s": [],
@@ -4393,11 +4407,16 @@
    ]
   },
   "Omastar": {
-   "s": [],
+   "s": [
+    [
+     "A",
+     "Shell Smash sweeper"
+    ]
+   ],
    "d": [
     [
      "A",
-     "Rain abuser"
+     "Shell Smash sweeper"
     ]
    ]
   },
@@ -4441,6 +4460,28 @@
     ]
    ]
   },
+  "Hitmonchan": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Bullet Punch)"
+    ],
+    [
+     "C",
+     "Iron Fist"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Bullet Punch)"
+    ],
+    [
+     "C",
+     "Iron Fist"
+    ]
+   ]
+  },
   "Umbreon": {
    "s": [
     [
@@ -4461,28 +4502,6 @@
     [
      "A",
      "Spread attacker (Discharge)"
-    ]
-   ]
-  },
-  "Hitmonchan": {
-   "s": [
-    [
-     "A",
-     "Priority cleaner (Bullet Punch)"
-    ],
-    [
-     "C",
-     "Iron Fist"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Priority cleaner (Bullet Punch)"
-    ],
-    [
-     "C",
-     "Iron Fist"
     ]
    ]
   },
@@ -4517,32 +4536,6 @@
     [
      "E",
      "Magic Bounce"
-    ]
-   ]
-  },
-  "Mudsdale": {
-   "s": [
-    [
-     "C",
-     "Attack 125"
-    ],
-    [
-     "E",
-     "Roar"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Spread attacker (Earthquake)"
-    ],
-    [
-     "C",
-     "Attack 125"
-    ],
-    [
-     "E",
-     "Roar"
     ]
    ]
   },
@@ -4586,6 +4579,32 @@
     ]
    ]
   },
+  "Mudsdale": {
+   "s": [
+    [
+     "C",
+     "Attack 125"
+    ],
+    [
+     "E",
+     "Roar"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Spread attacker (Earthquake)"
+    ],
+    [
+     "C",
+     "Attack 125"
+    ],
+    [
+     "E",
+     "Roar"
+    ]
+   ]
+  },
   "Jolteon": {
    "s": [
     [
@@ -4608,20 +4627,6 @@
     ]
    ]
   },
-  "Cofagrigus": {
-   "s": [
-    [
-     "D",
-     "Will-O-Wisp"
-    ]
-   ],
-   "d": [
-    [
-     "D",
-     "Will-O-Wisp"
-    ]
-   ]
-  },
   "Cetitan": {
    "s": [
     [
@@ -4636,9 +4641,37 @@
     ]
    ]
   },
+  "Cofagrigus": {
+   "s": [
+    [
+     "D",
+     "Will-O-Wisp"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Will-O-Wisp"
+    ]
+   ]
+  },
   "Marowak-Alola": {
    "s": [],
    "d": []
+  },
+  "Feraligatr": {
+   "s": [
+    [
+     "C",
+     "Sheer Force"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Sheer Force"
+    ]
+   ]
   },
   "Bruxish": {
    "s": [
@@ -4651,6 +4684,20 @@
     [
      "C",
      "Strong Jaw"
+    ]
+   ]
+  },
+  "Appletun": {
+   "s": [
+    [
+     "D",
+     "Recover"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Recover"
     ]
    ]
   },
@@ -4673,42 +4720,6 @@
     [
      "C",
      "Attack 120"
-    ]
-   ]
-  },
-  "Appletun": {
-   "s": [
-    [
-     "D",
-     "Recover"
-    ]
-   ],
-   "d": [
-    [
-     "D",
-     "Recover"
-    ]
-   ]
-  },
-  "Feraligatr": {
-   "s": [
-    [
-     "A",
-     "Priority cleaner (Aqua Jet)"
-    ],
-    [
-     "C",
-     "Sheer Force"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Priority cleaner (Aqua Jet)"
-    ],
-    [
-     "C",
-     "Sheer Force"
     ]
    ]
   },
@@ -5055,28 +5066,6 @@
     ]
    ]
   },
-  "Slaking": {
-   "s": [
-    [
-     "A",
-     "Fast cleaner (Speed 100)"
-    ],
-    [
-     "C",
-     "Attack 160"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Fast cleaner (Speed 100)"
-    ],
-    [
-     "C",
-     "Attack 160"
-    ]
-   ]
-  },
   "Bombirdier": {
    "s": [
     [
@@ -5099,9 +5088,27 @@
     ]
    ]
   },
-  "Marowak": {
-   "s": [],
-   "d": []
+  "Slaking": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 100)"
+    ],
+    [
+     "C",
+     "Attack 160"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 100)"
+    ],
+    [
+     "C",
+     "Attack 160"
+    ]
+   ]
   },
   "Mismagius": {
    "s": [
@@ -5118,6 +5125,10 @@
    ]
   },
   "Primeape": {
+   "s": [],
+   "d": []
+  },
+  "Marowak": {
    "s": [],
    "d": []
   },
@@ -5199,20 +5210,6 @@
     ]
    ]
   },
-  "Lucario": {
-   "s": [
-    [
-     "A",
-     "Calm Mind sweeper"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Calm Mind sweeper"
-    ]
-   ]
-  },
   "Arctovish": {
    "s": [
     [
@@ -5227,26 +5224,26 @@
     ]
    ]
   },
+  "Lucario": {
+   "s": [
+    [
+     "A",
+     "Calm Mind sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Calm Mind sweeper"
+    ]
+   ]
+  },
   "Seaking": {
    "s": [],
    "d": [
     [
      "A",
      "Rain abuser"
-    ]
-   ]
-  },
-  "Skuntank": {
-   "s": [
-    [
-     "A",
-     "Priority cleaner (Sucker Punch)"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Priority cleaner (Sucker Punch)"
     ]
    ]
   },
@@ -5277,6 +5274,20 @@
     [
      "C",
      "Attack 120"
+    ]
+   ]
+  },
+  "Skuntank": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Sucker Punch)"
     ]
    ]
   },
@@ -5352,10 +5363,6 @@
     ]
    ]
   },
-  "Vileplume": {
-   "s": [],
-   "d": []
-  },
   "Tropius": {
    "s": [
     [
@@ -5374,7 +5381,7 @@
     ]
    ]
   },
-  "Golduck": {
+  "Vileplume": {
    "s": [],
    "d": []
   },
@@ -5400,19 +5407,9 @@
     ]
    ]
   },
-  "Muk": {
-   "s": [
-    [
-     "A",
-     "Acid Armor sweeper"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Acid Armor sweeper"
-    ]
-   ]
+  "Golduck": {
+   "s": [],
+   "d": []
   },
   "Chimecho": {
    "s": [
@@ -5425,6 +5422,20 @@
     [
      "E",
      "Perish Song"
+    ]
+   ]
+  },
+  "Muk": {
+   "s": [
+    [
+     "A",
+     "Acid Armor sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Acid Armor sweeper"
     ]
    ]
   },
@@ -5454,6 +5465,20 @@
    "s": [],
    "d": []
   },
+  "Orbeetle": {
+   "s": [
+    [
+     "B",
+     "Reflect"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Reflect"
+    ]
+   ]
+  },
   "Sudowoodo": {
    "s": [
     [
@@ -5476,20 +5501,6 @@
     ]
    ]
   },
-  "Orbeetle": {
-   "s": [
-    [
-     "B",
-     "Reflect"
-    ]
-   ],
-   "d": [
-    [
-     "B",
-     "Reflect"
-    ]
-   ]
-  },
   "Stunfisk-Galar": {
    "s": [
     [
@@ -5503,10 +5514,6 @@
      "Yawn"
     ]
    ]
-  },
-  "Swanna": {
-   "s": [],
-   "d": []
   },
   "Pawmot": {
    "s": [
@@ -5527,10 +5534,24 @@
     [
      "C",
      "Iron Fist"
-    ],
+    ]
+   ]
+  },
+  "Swanna": {
+   "s": [],
+   "d": []
+  },
+  "Heliolisk": {
+   "s": [
     [
-     "D",
-     "Fake Out"
+     "A",
+     "Fast cleaner (Speed 109)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 109)"
     ]
    ]
   },
@@ -5549,20 +5570,6 @@
     [
      "B",
      "Decorate"
-    ]
-   ]
-  },
-  "Heliolisk": {
-   "s": [
-    [
-     "A",
-     "Fast cleaner (Speed 109)"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Fast cleaner (Speed 109)"
     ]
    ]
   },
@@ -5639,8 +5646,18 @@
    ]
   },
   "Seismitoad": {
-   "s": [],
-   "d": []
+   "s": [
+    [
+     "E",
+     "Rain Dance"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Rain Dance"
+    ]
+   ]
   },
   "Tentacruel": {
    "s": [
@@ -5945,18 +5962,8 @@
    ]
   },
   "Klawf": {
-   "s": [
-    [
-     "A",
-     "Swords Dance sweeper"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Swords Dance sweeper"
-    ]
-   ]
+   "s": [],
+   "d": []
   },
   "Audino": {
    "s": [],
@@ -5984,7 +5991,7 @@
    "s": [],
    "d": []
   },
-  "Octillery": {
+  "Zangoose": {
    "s": [],
    "d": []
   },
@@ -6010,9 +6017,31 @@
     ]
    ]
   },
-  "Zangoose": {
+  "Octillery": {
    "s": [],
    "d": []
+  },
+  "Heracross": {
+   "s": [
+    [
+     "A",
+     "Moxie cleaner"
+    ],
+    [
+     "C",
+     "Attack 125"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Moxie cleaner"
+    ],
+    [
+     "C",
+     "Attack 125"
+    ]
+   ]
   },
   "Graveler": {
    "s": [
@@ -6025,28 +6054,6 @@
     [
      "E",
      "Sturdy"
-    ]
-   ]
-  },
-  "Heracross": {
-   "s": [
-    [
-     "A",
-     "Swords Dance sweeper"
-    ],
-    [
-     "C",
-     "Attack 125"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Swords Dance sweeper"
-    ],
-    [
-     "C",
-     "Attack 125"
     ]
    ]
   },
@@ -6092,6 +6099,20 @@
     ]
    ]
   },
+  "Medicham": {
+   "s": [
+    [
+     "C",
+     "Pure Power"
+    ]
+   ],
+   "d": [
+    [
+     "C",
+     "Pure Power"
+    ]
+   ]
+  },
   "Oricorio (Pom-Pom Style)": {
    "s": [
     [
@@ -6133,20 +6154,6 @@
     [
      "D",
      "Intimidate"
-    ]
-   ]
-  },
-  "Medicham": {
-   "s": [
-    [
-     "C",
-     "Pure Power"
-    ]
-   ],
-   "d": [
-    [
-     "C",
-     "Pure Power"
     ]
    ]
   },
@@ -6203,14 +6210,14 @@
   "Meowstic": {
    "s": [
     [
-     "B",
-     "Reflect"
+     "E",
+     "Misty Terrain"
     ]
    ],
    "d": [
     [
-     "B",
-     "Reflect"
+     "E",
+     "Misty Terrain"
     ]
    ]
   },
@@ -6280,20 +6287,6 @@
     ]
    ]
   },
-  "Shiinotic": {
-   "s": [
-    [
-     "B",
-     "Spore"
-    ]
-   ],
-   "d": [
-    [
-     "B",
-     "Spore"
-    ]
-   ]
-  },
   "Beheeyem": {
    "s": [
     [
@@ -6305,6 +6298,20 @@
     [
      "C",
      "Sp. Atk 125"
+    ]
+   ]
+  },
+  "Shiinotic": {
+   "s": [
+    [
+     "B",
+     "Spore"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Spore"
     ]
    ]
   },
@@ -6911,6 +6918,10 @@
     ]
    ]
   },
+  "Seviper": {
+   "s": [],
+   "d": []
+  },
   "Bastiodon": {
    "s": [
     [
@@ -6925,30 +6936,12 @@
     ]
    ]
   },
-  "Seviper": {
-   "s": [],
-   "d": []
-  },
   "Sawsbuck": {
    "s": [],
    "d": [
     [
      "A",
      "Sun abuser"
-    ]
-   ]
-  },
-  "Eldegoss": {
-   "s": [
-    [
-     "E",
-     "Leech Seed"
-    ]
-   ],
-   "d": [
-    [
-     "E",
-     "Leech Seed"
     ]
    ]
   },
@@ -6967,6 +6960,20 @@
     [
      "D",
      "Fake Out"
+    ]
+   ]
+  },
+  "Eldegoss": {
+   "s": [
+    [
+     "E",
+     "Leech Seed"
+    ]
+   ],
+   "d": [
+    [
+     "E",
+     "Leech Seed"
     ]
    ]
   },
@@ -7024,6 +7031,10 @@
    "s": [],
    "d": []
   },
+  "Linoone": {
+   "s": [],
+   "d": []
+  },
   "Kangaskhan": {
    "s": [
     [
@@ -7041,10 +7052,6 @@
      "Fake Out"
     ]
    ]
-  },
-  "Linoone": {
-   "s": [],
-   "d": []
   },
   "Lumineon": {
    "s": [
@@ -7086,6 +7093,24 @@
     ]
    ]
   },
+  "Kabutops": {
+   "s": [
+    [
+     "A",
+     "Priority cleaner (Aqua Jet)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Priority cleaner (Aqua Jet)"
+    ]
+   ]
+  },
+  "Vespiquen": {
+   "s": [],
+   "d": []
+  },
   "Mightyena": {
    "s": [
     [
@@ -7107,24 +7132,6 @@
      "Intimidate"
     ]
    ]
-  },
-  "Kabutops": {
-   "s": [
-    [
-     "A",
-     "Priority cleaner (Aqua Jet)"
-    ]
-   ],
-   "d": [
-    [
-     "A",
-     "Priority cleaner (Aqua Jet)"
-    ]
-   ]
-  },
-  "Vespiquen": {
-   "s": [],
-   "d": []
   },
   "Boldore": {
    "s": [
@@ -7190,20 +7197,6 @@
     ]
    ]
   },
-  "Jynx": {
-   "s": [
-    [
-     "B",
-     "Lovely Kiss"
-    ]
-   ],
-   "d": [
-    [
-     "B",
-     "Lovely Kiss"
-    ]
-   ]
-  },
   "Arbok": {
    "s": [
     [
@@ -7223,6 +7216,20 @@
     [
      "D",
      "Intimidate"
+    ]
+   ]
+  },
+  "Jynx": {
+   "s": [
+    [
+     "B",
+     "Lovely Kiss"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Lovely Kiss"
     ]
    ]
   },
@@ -7312,19 +7319,29 @@
    "s": [
     [
      "A",
-     "Nasty Plot sweeper"
+     "Fast cleaner (Speed 117)"
     ]
    ],
    "d": [
     [
      "A",
-     "Nasty Plot sweeper"
+     "Fast cleaner (Speed 117)"
     ]
    ]
   },
   "Unfezant": {
-   "s": [],
-   "d": []
+   "s": [
+    [
+     "B",
+     "Tailwind"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Tailwind"
+    ]
+   ]
   },
   "Electrode": {
    "s": [
@@ -7358,10 +7375,6 @@
    "s": [],
    "d": []
   },
-  "Wormadam (Trash Cloak)": {
-   "s": [],
-   "d": []
-  },
   "Morpeko": {
    "s": [
     [
@@ -7379,6 +7392,10 @@
      "Fake Out"
     ]
    ]
+  },
+  "Wormadam (Trash Cloak)": {
+   "s": [],
+   "d": []
   },
   "Sharpedo": {
    "s": [
@@ -7432,10 +7449,6 @@
     ]
    ],
    "d": [
-    [
-     "B",
-     "Bulldoze"
-    ],
     [
      "E",
      "Snowscape"
@@ -7546,6 +7559,14 @@
     ]
    ]
   },
+  "Oricorio (Pa'u Style)": {
+   "s": [],
+   "d": []
+  },
+  "Beedrill": {
+   "s": [],
+   "d": []
+  },
   "Cacturne": {
    "s": [],
    "d": []
@@ -7558,14 +7579,6 @@
      "Helping Hand"
     ]
    ]
-  },
-  "Beedrill": {
-   "s": [],
-   "d": []
-  },
-  "Oricorio (Pa'u Style)": {
-   "s": [],
-   "d": []
   },
   "Banette": {
    "s": [
@@ -7729,24 +7742,6 @@
    "s": [],
    "d": []
   },
-  "Lopunny": {
-   "s": [
-    [
-     "B",
-     "Thunder Wave"
-    ]
-   ],
-   "d": [
-    [
-     "B",
-     "Thunder Wave"
-    ],
-    [
-     "D",
-     "Fake Out"
-    ]
-   ]
-  },
   "Purugly": {
    "s": [
     [
@@ -7765,9 +7760,23 @@
     ]
    ]
   },
-  "Kricketune": {
-   "s": [],
-   "d": []
+  "Lopunny": {
+   "s": [
+    [
+     "B",
+     "Thunder Wave"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Thunder Wave"
+    ],
+    [
+     "D",
+     "Fake Out"
+    ]
+   ]
   },
   "Mothim": {
    "s": [
@@ -7782,6 +7791,10 @@
      "Tinted Lens"
     ]
    ]
+  },
+  "Kricketune": {
+   "s": [],
+   "d": []
   },
   "Emolga": {
    "s": [
@@ -7960,6 +7973,19 @@
     ]
    ]
   },
+  "Delcatty": {
+   "s": [],
+   "d": [
+    [
+     "B",
+     "Helping Hand"
+    ],
+    [
+     "D",
+     "Fake Out"
+    ]
+   ]
+  },
   "Pachirisu": {
    "s": [
     [
@@ -7974,28 +8000,15 @@
     ]
    ]
   },
-  "Delcatty": {
-   "s": [],
-   "d": [
-    [
-     "B",
-     "Helping Hand"
-    ],
-    [
-     "D",
-     "Fake Out"
-    ]
-   ]
-  },
   "Shelmet": {
    "s": [],
    "d": []
   },
-  "Delibird": {
+  "Luvdisc": {
    "s": [],
    "d": []
   },
-  "Luvdisc": {
+  "Delibird": {
    "s": [],
    "d": []
   },
@@ -8020,7 +8033,7 @@
   "Golisopod-Aevian": [
    {
     "name": "Alomomola",
-    "tier": "S",
+    "tier": "A",
     "score": 2.75,
     "why": [
      "Alomomola switches in on Fire, Water hits aimed at Golisopod-Aevian and heals on the way out",
@@ -8188,7 +8201,7 @@
    },
    {
     "name": "Alomomola",
-    "tier": "S",
+    "tier": "A",
     "score": 2.0,
     "why": [
      "Alomomola switches in on Ice, Steel hits aimed at Glalie-Aevian and heals on the way out",
@@ -8400,7 +8413,7 @@
    },
    {
     "name": "Alomomola",
-    "tier": "S",
+    "tier": "A",
     "score": 2.0,
     "why": [
      "Alomomola switches in on Steel hits aimed at Clefable and heals on the way out",
@@ -8665,40 +8678,38 @@
     ]
    }
   ],
-  "Donphan": [
+  "Zoroark-Hisui": [
    {
     "name": "Amoonguss",
     "tier": "A",
-    "score": 2.5,
+    "score": 3.0,
     "why": [
-     "Amoonguss draws attacks so Donphan attacks freely",
-     "Amoonguss's sleep takes a foe out for Donphan",
-     "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Water, Grass",
-     "Shared weaknesses: Ice",
-     "Used together in the real meta"
+     "Amoonguss's redirection buys Zoroark-Hisui its setup turn",
+     "Amoonguss's sleep gives Zoroark-Hisui free turns",
+     "Amoonguss resets foe boosts that would stop Zoroark-Hisui's sweep",
+     "Speed split: Zoroark-Hisui moves first, Amoonguss is the bulky one"
     ]
    },
    {
-    "name": "Ninetales-Alola",
-    "tier": "A",
+    "name": "Musharna-Aevian",
+    "tier": "S",
     "score": 2.0,
     "why": [
-     "Speed split: Ninetales-Alola moves first, Donphan is the bulky one",
+     "Musharna-Aevian's sleep gives Zoroark-Hisui free turns",
+     "Speed split: Zoroark-Hisui moves first, Musharna-Aevian is the bulky one",
      "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Ice",
-     "You resist its weaknesses: Poison, Rock"
+     "Resists your weaknesses: Dark",
+     "You resist its weaknesses: Poison"
     ]
    },
    {
-    "name": "Froslass-Aevian",
-    "tier": "A",
+    "name": "Glalie-Aevian",
+    "tier": "S",
     "score": 1.5,
     "why": [
-     "Speed split: Froslass-Aevian moves first, Donphan is the bulky one",
+     "Speed split: Zoroark-Hisui moves first, Glalie-Aevian is the bulky one",
      "Physical + special: Intimidate or one screen can't stop both",
-     "Resists your weaknesses: Water",
-     "You resist its weaknesses: Poison"
+     "You resist its weaknesses: Fighting, Bug"
     ]
    }
   ],

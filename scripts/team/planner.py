@@ -4,7 +4,7 @@ Replaces the fixed core-of-4 + 2 flexes. Workflow it encodes:
   types resisted, nothing hits 3+)  3 answers to each win condition  4 offense second  5 leads = the pair that beats their lead
   pair. Data: per-foe matchups from the engine run (field rules incl. the type-chart overrides), types via engine.chart_eff.
 usage (from workspace/): python3 -I ../scripts/team/planner.py   -> team/planner.json (+ state team when mode == 'planner')"""
-import itertools, json, math, os, pickle, sys
+import itertools, json, math, os, pickle, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'gamedata'))
 import numpy as np
@@ -67,6 +67,8 @@ def mvid(n): return BYNAME.get((n or '').lower())
 fmoves = []
 for f in FOES:
     ids = [mvid(n) for n in f['moves']]; fmoves.append({i for i in ids if i})
+    if re.search(r'ium Z$', f.get('item') or ''):   # 25 Nov: a species Z-Crystal adds its Z-move (the AI uses it)
+        fmoves[-1] |= {z for z, d in MV.items() if (d.get('zmovedata') or {}).get('basemove') in fmoves[-1]}
 ATK = {}   # attack type -> foes using it (damaging moves; field typeMods add a 2nd type)
 for f, ms in zip(FOES, fmoves):
     for m in ms:
@@ -157,6 +159,23 @@ for _j, _f in enumerate(FOES):   # 25 Nov audit (Jenner: Noivern Synthetic Seed 
     if _SEED.get('seedtype') and (_f.get('item') or '').upper().replace(' ', '') == _SEED['seedtype']:
         _k = max(int((_SEED.get('stats') or {}).get('1', 0)), int((_SEED.get('stats') or {}).get('3', 0)))
         if _k > 0: TAKE[:, _j] = np.minimum(150, TAKE[:, _j] * (2 + _k) / 2); SEED_ATK[_f['name']] = _k
+# 25 Nov audit (Jenner: Soundproof Kommo-o): field notes 'X boost Defense upon switching in' = +1 Def on entry (Concert: Soundproof, Punk Rock,
+# Heavy Metal, Solid Rock, Rock Head): physical hits on that Pokémon x2/3, both sides
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'gamedata'))
+import field_notes as _FN0
+ENTRY_DEF = set()
+for _nt in (_FN0.notes(FE) if FE else []):
+    if 'boost Defense upon switching in' in (_nt['text'] or '') and 'Special' not in (_nt['text'] or ''): ENTRY_DEF |= set(_nt['abilities'])
+def _physw(ms): a_ = [m for m in ms if int((MV.get(m) or {}).get('basedamage') or 0) > 0]; return bool(a_) and sum((MV.get(m) or {}).get('category') == 'physical' for m in a_) * 2 >= len(a_)
+if ENTRY_DEF:
+    for _j, _f in enumerate(FOES):
+        if (_f.get('ability') or '').upper().replace(' ', '') in ENTRY_DEF:
+            for _i, _n in enumerate(POOL):
+                if _physw({mvid(x) or x for x in build(_n)[2]}): DEAL[_i][_j] *= 2 / 3
+    for _i, _n in enumerate(POOL):
+        if build(_n)[1] in ENTRY_DEF:
+            for _j in range(nF):
+                if _physw(fmoves[_j]): TAKE[_i][_j] *= 2 / 3
 MULT = np.array([[E.chart_eff(t, TA[n]['types'], FE) for t in MAIN] for n in NAMES]) if MAIN else np.zeros((len(NAMES), 0))
 ALLT = sorted(ATK)
 MALL = np.array([[E.chart_eff(t, TA[n]['types'], FE) for t in ALLT] for n in NAMES])
@@ -1068,6 +1087,158 @@ if COUNTER:   # 24 Nov: game plans from the FINAL builds (field-undoing moves re
         if j in BREAKERS:
             c['role'] = 'Field keeper'
             c['plan'] = [c['plan'][0], f"{dict(FOE_BREAK).get(FN[j])} melts the ice back to Murkwater: KO {FN[j]} the turn it comes in" + ('' if FAST[i][j] and _hits(i, j)[0] == 1 else ' (not a sure one-shot: refreeze with Blizzard)')]
+# ---- 25 Nov (Vincent: 'make sure the game plan actually makes sense'): re-score the six with their REAL builds (EVs, nature, item, ability,
+# moves), then write per matchup: why their Pokémon is a threat, how ours counters it, and a turn-by-turn game plan from those numbers.
+import copy as _cpy, re
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'gamedata'))
+import field_notes as _FN
+from kits import disp as disp_
+FNOTES = _FN.notes(FE0 if not ALT else (ALT_FE or FE0)) if (FE0 or ALT_FE) else []
+def _pev(t): return {k: int(v) for v, k in re.findall(r'(\d+)\s*(HP|Atk|Def|SpA|SpD|Spe)', t or '')}
+FINAL, FSTATS, FSPE = {}, {}, {}
+if COUNTER:
+    _bk = E.battles; E.battles = [b for b in _bk if b['key'] == FK]
+    for i in best:
+        n = NAMES[i]; fb = FBUILD.get(n) or {}; ab_ = fb.get('ability') or build(n)[1]
+        c0 = next((v for v in _VAR.get(n, []) if v['ability'] == ab_), C[n]); c = _cpy.deepcopy(c0); c['ability'] = ab_ or c['ability']
+        evs = _pev(fb.get('evs')) or None; nat = fb.get('nature')
+        ids_ = {mvid(x) or x.upper().replace(' ', '') for x in (fb.get('moves') or build(n)[2])}
+        ids_ = {x for x in ids_ if int((MV.get(x) or {}).get('basedamage') or 0) > 0} & set(c.get('legal') or [])
+        if evs and nat:
+            phys_ = sum((MV.get(x) or {}).get('category') == 'physical' for x in ids_) >= sum((MV.get(x) or {}).get('category') == 'special' for x in ids_)
+            c['_spread'] = ('Physical' if phys_ else 'Special', evs, nat)
+        if fb.get('item'): c['item'] = fb['item']
+        if ids_:
+            E.evaluate(c, moveset=ids_)
+            FINAL[n] = {x['foe']: x for x in c['matchups'].get(FK, [])}
+            FSTATS[n] = c['stats']; FSPE[n] = c['stats']['Spe'] * engine.field_speed(c, _bt or {})
+            for j in range(nF):
+                r = FINAL[n].get(FN[j])
+                if not r: continue
+                t_ = min(150, r['deff'] * ((2 + SEED_ATK[FN[j]]) / 2 if FN[j] in SEED_ATK else 1) * (2 / 3 if ab_ in ENTRY_DEF and _physw(fmoves[j]) else 1))
+                DEAL[i][j] = min(150, r['off'] * (2 / 3 if (FOES[j].get('ability') or '').upper().replace(' ', '') in ENTRY_DEF and _physw(ids_) else 1))
+                TAKE[i][j] = t_; FAST[i][j] = bool(r['faster'])
+                k_ = FSTG[j]
+                if not k_ or ab_ == 'UNAWARE': TAKE_B[i][j] = t_
+                elif ab_ == 'INTIMIDATE' and any((MV.get(m) or {}).get('category') == 'physical' for m in fmoves[j]): TAKE_B[i][j] = min(150, t_ / .8 * (1 + k_) / 2)
+                else: TAKE_B[i][j] = min(150, t_ * (2 + k_) / 2)
+    E.battles = _bk
+
+def _eff_txt(i, j):   # its moves vs our types / ability: immune / resisted lists
+    n = NAMES[i]; ab_ = build(n)[1]; im, rs, se = [], [], []
+    for m in fmoves[j]:
+        if int((MV.get(m) or {}).get('basedamage') or 0) <= 0: continue
+        e = meff(m, TA[n]['types'], ab_); nm_ = (MV.get(m) or {}).get('longname') or (MV.get(m) or {}).get('name', m)
+        (im if e == 0 else rs if e < 1 else se if e > 1 else []).append(nm_)
+    return im, rs, se
+def _foe_setup_txt(j):
+    out_ = []
+    for m in fmoves[j]:
+        nm_ = (MV.get(m) or {}).get('name', m)
+        if m in FSETUP and FSETUP[m]:
+            k_ = FSETUP[m] + (1 if m in _SB else 0)
+            out_.append(f"{nm_}: " + ('+1 Atk and +2 Speed' if m == 'SHIFTGEAR' else '+1 Atk and +1 Speed' if m == 'DRAGONDANCE' else f'+{k_}' + (' Atk and Sp. Atk' if m in ('WORKUP', 'GROWTH') else '')) + (' (boosted by the field)' if m in _SB else ''))
+        if (MV.get(m) or {}).get('zmovedata'): nm_ = (MV.get(m) or {}).get('longname') or nm_; out_.append(f"{nm_} (Z-move, once): {int((MV.get(m) or {}).get('basedamage') or 0)} power" + (', sound x1.5 here' if (MV.get(m) or {}).get('soundmove') and SOUNDB > 1 else '') + ', then +1 to all its stats')
+    return out_
+SIXN = [NAMES[i] for i in best]
+_ourmv = {(MV.get(mvid(x)) or {}).get('name'): NAMES[i] for i in best for x in (FBUILD.get(NAMES[i]) or {}).get('moves', [])}
+def _fnote_hits(names_mv, abil):
+    out_ = []
+    for nt in FNOTES:
+        hit_m = [_FN.mname(m) for m in nt['moves'] if _FN.mname(m) in names_mv]
+        hit_a = [_FN.aname(a) for a in nt['abilities'] if a == abil]
+        if hit_m or hit_a:
+            t_ = re.sub(r'<[^>]+>', '', _FN.to_html(nt['title'])).replace('&amp;', '&')
+            out_.append(f"Field: {t_.strip()}: {', '.join(hit_m + hit_a)}")
+    return out_
+THREAT, HOW = {}, {}
+if COUNTER:
+    for j, c in enumerate(COUNTERS):
+        i = NAMES.index(c['member']); f = FOES[j]; fab = (f.get('ability') or '').upper().replace(' ', ''); fit = f.get('item') or ''
+        fd = FOE_STATS[j] or {}
+        th = []
+        spe_f = SPE_F[j]; faster_than = [disp_(NAMES[k]) for k in best if FSPE.get(NAMES[k], SPE_M[k]) < spe_f]
+        th.append(f"Speed {int(spe_f)} here" + (f" (Choice Scarf)" if fit == 'Choice Scarf' else '') + (f": faster than {len(faster_than)} of your six" if faster_than else ': slower than all of your six'))
+        hits_ = sorted([(TAKE_B[k][j], NAMES[k], (FINAL.get(NAMES[k], {}).get(FN[j]) or {}).get('defmv')) for k in best], reverse=True)
+        ko_ = [f"{disp_(n_)} ({int(t_)}%, {mv_})" for t_, n_, mv_ in hits_ if t_ >= 100]
+        if ko_: th.append('One-shots ' + ', '.join(ko_[:3]))
+        else: th.append(f"Hardest hit on your six: {hits_[0][2]} on {disp_(hits_[0][1])} ({int(hits_[0][0])}%)")
+        th += _foe_setup_txt(j)
+        if fit == 'Choice Scarf' and 'TRICK' in fmoves[j]: th.append('Trick: swaps its Choice Scarf onto you and locks you into one move')
+        elif fit.startswith('Choice'): th.append(f'{fit}: locked into one move until it switches')
+        if fit == 'Focus Sash' or fab == 'STURDY': th.append(f"{'Focus Sash' if fit == 'Focus Sash' else 'Sturdy'}: lives any one hit from full HP")
+        if fit == 'Air Balloon': th.append('Air Balloon: immune to Ground moves until it is hit')
+        if fit.endswith('ite') and fit != 'Eviolite': th.append(f'Mega Evolves ({fit}): ' + _FN.aname(((_bt or {}).get('foes') or [{}] * nF)[j].get('ability') or fab) + ' as a Mega')
+        if RESIST_B.get(fit): th.append(f'{fit}: halves the first super-effective {RESIST_B[fit].title()} hit')
+        if fit.endswith('Seed') and FN[j] in SEED_ATK: th.append(f'{fit}: +{SEED_ATK[FN[j]]} attack on entry')
+        if {'RECOVER', 'ROOST', 'SLACKOFF', 'SOFTBOILED', 'MOONLIGHT', 'SYNTHESIS', 'MORNINGSUN', 'SHOREUP', 'STRENGTHSAP'} & fmoves[j]: th.append('Heals 50% with ' + ', '.join(MV[m]['name'] for m in fmoves[j] if m in {'RECOVER', 'ROOST', 'SLACKOFF', 'SOFTBOILED', 'MOONLIGHT', 'SYNTHESIS', 'MORNINGSUN', 'SHOREUP', 'STRENGTHSAP'}))
+        if 'SUBSTITUTE' in fmoves[j]: th.append('Substitute: a doll that blocks your next hit (costs it 25% HP)')
+        if fab == 'SOUNDPROOF':
+            snd_ = [mn for mn, nn in _ourmv.items() if mn and (MV.get(mvid(mn)) or {}).get('soundmove')]
+            th.append('Soundproof: immune to sound moves' + (f" ({', '.join(snd_)})" if snd_ else ''))
+        if fab == 'ADAPTABILITY': th.append('Adaptability: STAB x2')
+        if fab == 'SCRAPPY': th.append('Scrappy: its Normal / Fighting moves hit Ghost types')
+        if fab == 'INFILTRATOR': th.append('Infiltrator: ignores Substitute and screens (Aurora Veil)')
+        th += _fnote_hits({(MV.get(m) or {}).get('name') for m in fmoves[j]}, fab)
+        THREAT[FN[j]] = th; c['threat'] = th
+        # how ours counters it
+        n = NAMES[i]; ab_ = build(n)[1]; hk, hd = _hits(i, j); mv_ = _bestmv(i, j)
+        c.update(deal=int(DEAL[i][j]), take=int(TAKE[i][j]), take_b=int(TAKE_B[i][j]), faster=bool(FAST[i][j]), hard=_hard(i, j), hk=hk, hd=hd, move=mv_,
+                 win=bool(hk < hd or (hk == hd and FAST[i][j]) or (FSTG[j] and not FAST[i][j] and hk <= hd)), duo=int(min(DUO[i][j], 999)))
+        im, rs, se = _eff_txt(i, j)
+        hw = []
+        if im: hw.append(f"Immune to {', '.join(im)}")
+        if rs: hw.append(f"Resists {', '.join(rs)}")
+        if se: hw.append(f"Weak to {', '.join(se)}: watch for it")
+        my_s = FSPE.get(n, SPE_M[i])
+        hw.append(f"{'Faster' if FAST[i][j] else 'Slower'}: Speed {int(my_s)} vs {int(spe_f)}")
+        hw.append(f"{mv_}: {int(DEAL[i][j])}% a hit, " + ('one-shots it' if hk == 1 else f'{hk} hits to KO'))
+        hw.append(f"Takes ~{int(TAKE_B[i][j])}% from its best hit" + (f' after {FSETM[j]}' if FSETM[j] and TAKE_B[i][j] != TAKE[i][j] else '') + f': it needs {hd} hit{"s" if hd > 1 else ""}')
+        if ab_ == 'UNAWARE' and FSTG[j]: hw.append('Unaware: ignores its boosts')
+        if ab_ == 'INTIMIDATE': hw.append('Intimidate: -1 Atk on entry')
+        hw += _fnote_hits({(MV.get(mvid(x)) or {}).get('name') for x in (FBUILD.get(n) or {}).get('moves', [])}, ab_)
+        HOW[FN[j]] = hw; c['how'] = hw
+        # the game plan, from the same numbers
+        if c.get('role') in ('Freezer', 'Freezer support'): continue
+        gp = []
+        safe_in = TAKE_B[i][j] < 50
+        if j < len(L): gp.append(f"Lead with {disp_(n)}: it faces {FN[j]} on turn 1")
+        else: gp.append(f"Switch {disp_(n)} in on {FN[j]}: it takes ~{int(TAKE_B[i][j])}%" if safe_in else f"Bring {disp_(n)} in after a faint (a free switch): switching into {FN[j]}'s hit costs ~{int(TAKE_B[i][j])}%")
+        if fit.startswith('Choice') and im and j >= len(L): gp[-1] = f"Free switch: once {FN[j]} is locked into {' or '.join(im)}, switch {disp_(n)} in (immune)"
+        _spd_m = next((m for m in fmoves[j] if m in ('SHIFTGEAR', 'DRAGONDANCE', 'AGILITY', 'ROCKPOLISH', 'QUIVERDANCE', 'AUTOTOMIZE')), None)
+        _sb = SPE_F[j] * (2 if _spd_m in ('SHIFTGEAR', 'AGILITY', 'ROCKPOLISH', 'AUTOTOMIZE') else 1.5) if _spd_m else 0
+        _spd_flip = bool(_spd_m and _sb > FSPE.get(n, SPE_M[i]))
+        st_ = FSTG[j]; sub_ = 'SUBSTITUTE' in fmoves[j]; heal_ = bool({'RECOVER', 'ROOST', 'SLACKOFF', 'SOFTBOILED', 'SYNTHESIS'} & fmoves[j])
+        sash_ = _sash_foe(j) and not _multi_me(i)
+        if fit.startswith('Choice') and im and j >= len(L):
+            gp.append(f"Locked into {' or '.join(im)} it cannot touch you: {mv_} ({int(DEAL[i][j])}%) {'KOs it' if hk == 1 else f'in {hk} hits'}")
+            gp.append(f"If it comes in fresh instead, it moves first: ~{int(TAKE[i][j])}% from {(FINAL.get(n, {}).get(FN[j]) or {}).get('defmv') or 'its best move'}; you survive" if TAKE[i][j] < 100 else "If it comes in fresh, it one-shots you: only switch in on the locked move")
+        elif FAST[i][j] and _spd_flip:
+            gp.append(f"Before {MV[_spd_m]['name']}: you move first and {mv_} ({int(DEAL[i][j])}%) {'KOs it' if hk == 1 else f'needs {hk} hits'}")
+            gp.append(f"After {MV[_spd_m]['name']} it moves first ({int(_sb)} Speed): ~{int(TAKE_B[i][j])}%" + (f", you survive and {mv_} KOs it" if TAKE_B[i][j] < 100 and hk == 1 else ''))
+        elif FAST[i][j]:
+            if hk == 1 and not sash_: gp.append(f"You move first: {mv_} KOs it before it acts" + (' (unless it is behind a Substitute)' if sub_ else ''))
+            elif hk == 1 and sash_: gp.append(f"You move first: {mv_} leaves it at 1 HP (Focus Sash / Sturdy); hit it again next turn")
+            else: gp.append(f"You move first: {mv_} for {int(DEAL[i][j])}% each turn; it needs {hd} hits on you, you need {hk}: {'you win the race' if hk <= hd else 'you lose the race: chip it first'}")
+        else:
+            if st_ and FSETM[j] != 'Fell Stinger':
+                gp.append(f"If it uses {FSETM[j]} first: free {mv_} ({int(DEAL[i][j])}%)" + (', it is KO\'d' if hk == 1 else f', then it hits you for ~{int(TAKE_B[i][j])}%'))
+                gp.append(f"If it attacks first: ~{int(TAKE[i][j])}% from {(FINAL.get(n, {}).get(FN[j]) or {}).get('defmv') or 'its best move'}, then {mv_}" + (' KOs it' if hk == 1 else ''))
+            else:
+                gp.append(f"It moves first: ~{int(TAKE[i][j])}% from {(FINAL.get(n, {}).get(FN[j]) or {}).get('defmv') or 'its best move'}, then {mv_} ({int(DEAL[i][j])}%)")
+            win_ = hk <= hd - (0 if st_ else 1) if not st_ else hk <= hd
+            if not (st_ and hk == 1 and FSETM[j] != 'Fell Stinger') or not win_: gp.append(f"{mv_} {'KOs it' if hk == 1 else f'KOs it in {hk} hits'}" + (' (it is at 1 HP after the first: Focus Sash / Sturdy)' if sash_ and hk == 2 else '')
+                      + ('' if win_ else f": you lose this race (it needs {hd} on you): chip it with another Pokémon first"))
+        if sub_: gp.append(f"If it uses Substitute (25% of its HP): break the doll with your weaker move, then {mv_}" + (' (Shift Gear makes it faster after that)' if 'SHIFTGEAR' in fmoves[j] else ''))
+        if heal_: gp.append(f"It heals 50%: {mv_} ({int(DEAL[i][j])}%) {'out-damages the heal, keep attacking' if DEAL[i][j] > 50 else 'does NOT out-damage the heal: you need more power'}")
+        if fit == 'Choice Scarf' and 'TRICK' in fmoves[j]: gp.append('If it Tricks you the Scarf: you are locked into your next move; pick the move you want to keep clicking')
+        _fz = [(MV.get(m) or {}) for m in fmoves[j] if (MV.get(m) or {}).get('zmovedata')]
+        if _fz:
+            ez = meff(next(m for m in fmoves[j] if (MV.get(m) or {}).get('zmovedata')), TA[n]['types'], ab_)
+            gp.append(f"{_fz[0].get('longname') or _fz[0].get('name')} (its Z-move): " + ('you are immune' if ez == 0 else 'Protect blocks most of it (1/4 gets through): Protect the turn it comes in'))
+        _rs = [NAMES[k] for k in best if _has(k, {'HAZE', 'CLEARSMOG', 'ROAR', 'WHIRLWIND', 'DRAGONTAIL'})]
+        if st_ and FSETM[j] != 'Fell Stinger' and _rs: gp.append(f"Boosted and loose? {disp_(_rs[0])} resets it ({', '.join(x for x in (FBUILD.get(_rs[0]) or {}).get('moves', []) if (mvid(x) or '') in {'HAZE', 'CLEARSMOG', 'ROAR', 'WHIRLWIND', 'DRAGONTAIL'})})")
+        c['plan'] = gp[:5]
 _core_ix = [i for i in best if NAMES[i] in CORE]
 _bc_core = {f['id']: ok for f, _, ok in bcheck(_core_ix)}
 _bcc = {f['id']: cv for f, cv, _ in bcheck(_core_ix)}
@@ -1082,7 +1253,7 @@ for j, f in enumerate(FOES):
     evl = f.get('ev') or []
     _mg = bool(ef.get('form') and ef.get('form') != '0' and (f.get('item') or '').endswith('ite') and f.get('item') != 'Eviolite')
     FOE_DETAIL.append(dict(name=f['name'], level=f.get('level'), types=ef.get('types') or f['types'],
-                           ability=((ef.get('ability') or '').replace('PUNKROCK', 'Punk Rock').title() + ' (Mega)') if _mg else f.get('ability'), item=f.get('item'),
+                           ability=(_FN.aname(ef.get('ability') or '') + ' (Mega)') if _mg else f.get('ability'), item=f.get('item'),
                            nature=f.get('nature'), evs=' / '.join(f'{v} {k}' for k, v in zip(['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'], evl) if v) if evl else 'min(85, Lv x 1.5) each',
                            stats=ef.get('stats'), spe_field=int(SPE_F[j]) if j < len(SPE_F) else None, moves=f['moves'], sid=f.get('species'),
                            mega=bool(ef.get('form') and ef.get('form') != '0' and (f.get('item') or '').endswith('ite') and f.get('item') != 'Eviolite')))
@@ -1130,6 +1301,9 @@ if FMT == 'Doubles' and len(leads) == 2:   # 24 Nov (focus fire): what each lead
         return out_
     out['lead_duo'] = {NAMES[a]: dict(pct=_dl(a, b), hits=_hits_l(a, b), rod_partner=bool(LROD[b] and not LROD[a])) for a, b in (leads, leads[::-1])}
 out['foe_rod'] = FOE_ROD
+out['field_notes'] = [dict(n_, title_html=_FN.to_html(n_['title']), text_html=_FN.to_html(n_['text'])) for n_ in FNOTES]
+out['six_stats'] = {n_: dict(stats=FSTATS[n_], spe_field=int(FSPE[n_])) for n_ in FSTATS}
+out['field_key'] = (ALT_FE if ALT else FE0)
 out['breaker_opts'] = {FN[j]: [(NAMES[i], int(DEAL[i][j]), int(TAKE_B[i][j]), bool(FAST[i][j])) for i in np.argsort(-DEAL[:, j]) if FAST[i][j]][:12] for j in sorted(BREAKERS)} if ALT else {}
 if ALT and FMT == 'Doubles':
     _fz = sorted([(max(duo_lead(a_, b_), 0), NAMES[a_], NAMES[b_], int(duo_lead(b_, a_)), SNOWW[a_]) for a_ in range(NP) if ALTCAN[a_] for b_ in [max((b for b in range(NP) if b != a_), key=lambda b: -duo_lead(b, a_))]])[:20]

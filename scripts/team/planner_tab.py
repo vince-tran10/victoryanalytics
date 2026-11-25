@@ -206,55 +206,95 @@ def _dn(t):
     return t
 _IBJ = json.load(open('team/ideal_builds.json')) if os.path.exists('team/ideal_builds.json') else {}
 _FO = {f['name']: f for f in P['foes']}
-try: _ABN = {k: v.get('name', k) for k, v in json.load(open('gamedata/abiltext.json')).items()}
+try: _ABN = {k: v.get('fullName') or v.get('name', k) for k, v in json.load(open('gamedata/abiltext.json')).items()}
 except Exception: _ABN = {}
+# ---- 25 Nov (Vincent): Builder = 1) the FULL field (the game's own field notes) 2) one card per matchup: their Pokémon + stats + why it is a
+# threat, your counter + stats + how it counters, the game plan. Tap a card's header to fold it; the folded row keeps both sprites and names.
+_FB = P.get('fbuild') or {}; _MEM = {m['name']: m for m in P['six']}
+def _dn(t):
+    for x in P['six']: t = t.replace(x['name'], disp(x['name']))
+    return t
+_IBJ = json.load(open('team/ideal_builds.json')) if os.path.exists('team/ideal_builds.json') else {}
+_FO = {f['name']: f for f in P['foes']}; _FDT = {f['name']: f for f in P.get('foe_detail') or []}
+try: _ABN = {k: v.get('fullName') or v.get('name', k) for k, v in json.load(open('gamedata/abiltext.json')).items()}
+except Exception: _ABN = {}
+def _abn(a): return _ABN.get((a or '').upper().replace(' ', ''), (a or '').title())
+def _stats(st_, spe_here=None):
+    return ('<div class="mu-st">' + ''.join(f'<span><small>{x}</small><b>{st_.get(x, "?")}</b></span>' for x in ('HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'))
+            + (f'<span class="mu-sh"><small>Speed here</small><b>{int(spe_here)}</b></span>' if spe_here and int(spe_here) != st_.get('Spe') else '') + '</div>')
+# 1) the field, everything the game says about it
+_fnotes = P.get('field_notes') or []
+_names_all = {x for f in P['foes'] for x in f.get('moves') or []} | {x for fb in _FB.values() for x in fb.get('moves') or []}
+_abil_all = {(f.get('ability') or '').upper().replace(' ', '') for f in P['foes']} | {(_FB.get(m['name'], {}).get('ability') or m.get('ability') or '').upper().replace(' ', '') for m in P['six']}
+_fh = ''
+for nt in _fnotes:
+    who = []
+    for f in P['foes']:
+        if (f.get('ability') or '').upper().replace(' ', '') in (nt.get('abilities') or []): who.append(f['name'])
+        if any(x in (nt.get('moves') or []) for x in [(_E.move_id(mn) or '') for mn in f.get('moves') or []]): who.append(f['name'])
+    for m in P['six']:
+        ab_ = (_FB.get(m['name'], {}).get('ability') or m.get('ability') or '').upper().replace(' ', '')
+        if ab_ in (nt.get('abilities') or []) or any((_E.move_id(mn) or '') in (nt.get('moves') or []) for mn in _FB.get(m['name'], {}).get('moves') or []): who.append(disp(m['name']))
+    who = list(dict.fromkeys(who))
+    _fh += (f'<li class="{"fn-hit" if who else ""}"><div class="fn-t">{nt.get("title_html", "")}'
+            + (f'<span class="fn-stage">Hype {E(nt["stage"])}</span>' if nt.get('stage') and 'CONCERT' in (P.get('field_key') or '') else (f'<span class="fn-stage">{E(nt["stage"])}</span>' if nt.get('stage') else '')) + '</div>'
+            + (f'<div class="fn-x">{nt.get("text_html", "")}</div>' if nt.get('text_html') else '')
+            + (f'<div class="fn-who">Affects: {E(", ".join(who))}</div>' if who else '') + '</li>')
+_fld = P.get('real_field') or P.get('field') or 'No field'
+FIELD_HTML = (f'<details class="plc mu-field" open><summary><h3>Field: {E(_fld)}</h3><span class="pmuted">{len(_fnotes)} effects (the game\'s own field notes)</span></summary>'
+              f'<ul class="fnl">{_fh}</ul></details>') if _fnotes else ''
+HB = HB.replace('<article class="plc"><h3>Plan', FIELD_HTML + '<article class="plc"><h3>Plan', 1) if FIELD_HTML else HB
+# 2) one card per matchup
 rows_ = ''
+_six_st = P.get('six_stats') or {}
 for k, c in enumerate(P.get('counters') or []):
     m = _MEM.get(c['member']) or {}; fb = _FB.get(c['member']) or {}; ib = _IBJ.get(c['member']) or {}
-    f = _FO.get(c['foe']) or {}
+    f = _FO.get(c['foe']) or {}; fd = _FDT.get(c['foe']) or {}
     verdict = 'Hard counter' if c['hard'] else ('Wins the 1-v-1' if c['win'] else 'Best you have')
     if c.get('role'): verdict = c['role'] + ' · ' + verdict
+    vcls = "ok" if c["hard"] else "mid" if c["win"] else "bad"
     _ld = (P.get('lead_duo') or {}).get(c['member'])
     lead_ = k < (2 if P['format'] == 'Doubles' else 1)
     moves_ = fb.get('moves') or m.get('moves') or []
-    rows_ += (f'<li class="ctr{" ctr-lead" if lead_ else ""}"><div class="ctr-foe"><span class="pn">{k + 1}</span>{SP.tag(f.get("sid") or "", "0", size="s")}'
-              f'<span>{E(c["foe"])}</span>' + (f'<small class="pmuted">{E(c["setup"])}</small>' if c.get('setup') else '') + '<span class="ctr-arrow">→</span></div>'
-              f'<div class="ctr-me bc" data-dn="{E(disp(c["member"]))}" tabindex="0" role="button">'
-              f'<div class="bct"><span class="pn">{k + 1}</span>{SP.tag(m.get("sid") or "", m.get("form") or "0", size="m")}<b>{E(disp(c["member"]))}</b>'
-              + ('<span class="plt">Lead</span>' if lead_ else '') + '</div>'
-              + '<div class="ctr-types">' + ''.join(pill(t) for t in (m.get('types') or [])) + '</div>'
-              f'<div class="ctr-v {"ok" if c["hard"] else "mid" if c["win"] else "bad"}">{verdict}</div>'
-              f'<div class="bchips"><span class="bstat">Deals {c["deal"]}%</span><span class="bstat">Takes {c["take_b"]}%' + (f' after {E(c["setup"])}' if c.get('setup') and c['take_b'] != c['take'] else '') + '</span>'
-              f'<span class="bstat">{"Faster" if c["faster"] else "Slower"}</span>'
-              + (f'<span class="bstat{" bad" if _ld["pct"] >= 85 else ""}">Turn 1, both leads on it: ~{_ld["pct"]}%</span>' if _ld and lead_
-                 else f'<span class="bstat{" bad" if c.get("duo", 0) >= 100 else ""}">With a 2nd foe: ~{min(c["duo"], 300)}%</span>' if c.get('duo') is not None and P['format'] == 'Doubles' else '') + '</div>'
-              f'<ul class="ctr-b"><li><b>Ability</b> {E(_ABN.get((fb.get("ability") or m.get("ability") or ib.get("ability") or "").upper().replace(" ", ""), (fb.get("ability") or m.get("ability") or ib.get("ability") or "").title()))}</li>'
-              f'<li><b>Item</b> {E(fb.get("item") or ib.get("item") or "")}</li><li><b>Nature</b> {E(fb.get("nature") or ib.get("nature") or "")}</li>'
-              f'<li><b>EVs</b> {E(fb.get("evs") or ib.get("evs") or "")}</li></ul>'
-              '<div class="ctr-mv">' + ''.join(f'<span>{E(x)}</span>' for x in moves_) + '</div>'
-              + ''.join(f'<div class="pans">{E(w)}</div>' for w in fb.get('why', []) if 'replaces' in w)
-              + '<div class="psub">Game plan</div><ul class="ctr-plan">' + ''.join(f'<li>{E(_dn(b))}</li>' for b in c.get('plan') or []) + '</ul>'
-              + '<details class="pwhy" onclick="event.stopPropagation()"><summary>Why these moves</summary><ul>' + ''.join(
+    ab_ = fb.get('ability') or m.get('ability') or ib.get('ability') or ''
+    ss = _six_st.get(c['member']) or {}
+    foe_html = (f'<div class="mu-side mu-foe"><div class="mu-h">{SP.tag(fd.get("sid") or f.get("sid") or "", "0", size="m")}<b>{E(c["foe"])}</b>'
+                f'<span class="pchip">Lv {fd.get("level") or ""}</span>' + ('<span class="pchip">Mega</span>' if fd.get('mega') else '') + '</div>'
+                '<div class="ctr-types">' + ''.join(pill(t) for t in fd.get('types') or f.get('types') or []) + '</div>'
+                f'<ul class="ctr-b"><li><b>Ability</b> {E(fd.get("ability") or "")}</li><li><b>Item</b> {E(fd.get("item") or "none")}</li>'
+                f'<li><b>Nature</b> {E((fd.get("nature") or "").title())}</li><li><b>EVs</b> {E(fd.get("evs") or "")}</li></ul>'
+                + _stats(fd.get('stats') or {}, fd.get('spe_field'))
+                + '<div class="ctr-mv">' + ''.join(f'<span>{E(x)}</span>' for x in fd.get('moves') or f.get('moves') or []) + '</div>'
+                + '<div class="psub">Why it is a threat</div><ul class="mu-bl mu-red">' + ''.join(f'<li>{E(_dn(x))}</li>' for x in c.get('threat') or []) + '</ul></div>')
+    me_html = (f'<div class="mu-side mu-me bc" data-dn="{E(disp(c["member"]))}" tabindex="0" role="button"><div class="mu-h">{SP.tag(m.get("sid") or "", m.get("form") or "0", size="m")}<b>{E(disp(c["member"]))}</b>'
+               + ('<span class="plt">Lead</span>' if lead_ else '') + '</div>'
+               '<div class="ctr-types">' + ''.join(pill(t) for t in (m.get('types') or [])) + '</div>'
+               f'<div class="ctr-v {vcls}">{verdict}</div>'
+               f'<div class="bchips"><span class="bstat">Deals {c["deal"]}%</span><span class="bstat">Takes {c["take_b"]}%' + (f' after {E(c["setup"])}' if c.get('setup') and c['take_b'] != c['take'] else '') + '</span>'
+               f'<span class="bstat">{"Faster" if c["faster"] else "Slower"}</span>'
+               + (f'<span class="bstat{" bad" if _ld["pct"] >= 85 else ""}">Turn 1, both leads on it: ~{_ld["pct"]}%</span>' if _ld and lead_
+                  else f'<span class="bstat{" bad" if c.get("duo", 0) >= 100 else ""}">With a 2nd foe: ~{min(c["duo"], 300)}%</span>' if c.get('duo') is not None and P['format'] == 'Doubles' else '') + '</div>'
+               f'<ul class="ctr-b"><li><b>Ability</b> {E(_abn(ab_))}</li>'
+               f'<li><b>Item</b> {E(fb.get("item") or ib.get("item") or "")}</li><li><b>Nature</b> {E(fb.get("nature") or ib.get("nature") or "")}</li>'
+               f'<li><b>EVs</b> {E(fb.get("evs") or ib.get("evs") or "")}</li></ul>'
+               + (_stats(ss.get('stats') or {}, ss.get('spe_field')) if ss else '')
+               + '<div class="ctr-mv">' + ''.join(f'<span>{E(x)}</span>' for x in moves_) + '</div>'
+               + ''.join(f'<div class="pans">{E(w)}</div>' for w in fb.get('why', []) if 'replaces' in w or 'capsule' in w)
+               + '<div class="psub">How it counters</div><ul class="mu-bl mu-grn">' + ''.join(f'<li>{E(_dn(x))}</li>' for x in c.get('how') or []) + '</ul></div>')
+    rows_ += (f'<li><details class="mu{" mu-lead" if lead_ else ""}" open><summary class="mu-sum"><span class="pn">{k + 1}</span>'
+              f'{SP.tag(fd.get("sid") or f.get("sid") or "", "0", size="s")}<span class="mu-fn">{E(c["foe"])}</span><span class="mu-vs">vs</span>'
+              f'{SP.tag(m.get("sid") or "", m.get("form") or "0", size="s")}<span class="mu-mn">{E(disp(c["member"]))}</span>'
+              + ('<span class="plt">Lead</span>' if lead_ else '') + f'<span class="mu-dot {vcls}" title="{E(verdict)}"></span></summary>'
+              f'<div class="mu-body"><div class="mu-grid">{foe_html}{me_html}</div>'
+              + '<div class="psub">Game plan</div><ol class="ctr-plan">' + ''.join(f'<li>{E(_dn(b))}</li>' for b in c.get('plan') or []) + '</ol>'
+              + '<details class="pwhy"><summary>Why these moves</summary><ul>' + ''.join(
                   f'<li class="{"pflag" if w["flag"] else ""}"><b>{E(w["move"])}</b><span>{E(w["why"])}</span></li>' for w in m.get('why') or []) + '</ul></details>'
-              + '<details class="pwhy" onclick="event.stopPropagation()"><summary>Other counters</summary><ul>' + ''.join(
+              + '<details class="pwhy"><summary>Other counters</summary><ul>' + ''.join(
                   f'<li><b>{E(disp(a["name"]))}</b><span>{"Hard counter" if a["hard"] else "Not a hard counter"}: deals {a["deal"]}%, takes {a["take_b"]}%, {"faster" if a["faster"] else "slower"}'
                   + (f' (already countering {E(a["used_for"])})' if a.get('used_for') else '') + '</span></li>' for a in c['alts']) + '</ul></details>'
-              + '</div></li>')
+              + '</div></details></li>')
 nh = sum(1 for c in P.get('counters') or [] if c['hard'])
-# 24 Nov (Vincent): their six in full detail (level, types, ability, item, nature, EVs, stats, moves) before the counters
-_fd = ''
-for k, f in enumerate(P.get('foe_detail') or []):
-    st_ = f.get('stats') or {}
-    _fd += (f'<li class="fdt"><div class="bct"><span class="pn">{k + 1}</span>{SP.tag(f.get("sid") or "", "0", size="m")}<b>{E(f["name"])}</b>'
-            f'<span class="pchip">Lv {f.get("level")}</span>' + ('<span class="pchip">Mega</span>' if f.get('mega') else '') + '</div>'
-            '<div class="ctr-types">' + ''.join(pill(t) for t in f.get('types') or []) + '</div>'
-            f'<ul class="ctr-b"><li><b>Ability</b> {E(f.get("ability") or "")}</li><li><b>Item</b> {E(f.get("item") or "none")}</li>'
-            f'<li><b>Nature</b> {E((f.get("nature") or "").title())}</li><li><b>EVs</b> {E(f.get("evs") or "")}</li>'
-            '<li><b>Stats</b> ' + E(' / '.join(f'{st_.get(x, "?")} {x}' for x in ('HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'))) + '</li>'
-            + (f'<li><b>Speed here</b> {f["spe_field"]}</li>' if f.get('spe_field') and st_.get('Spe') and f['spe_field'] != st_.get('Spe') else '') + '</ul>'
-            '<div class="ctr-mv">' + ''.join(f'<span>{E(x)}</span>' for x in f.get('moves') or []) + '</div></li>')
-HB += f'<article class="plc"><h3>Their team</h3><ul class="ctrl">{_fd}</ul></article>'
-HB += (f'<article class="plc"><h3>Your hard counters</h3><div class="pmuted">{nh} of {len(P.get("counters") or [])} are hard counters</div>'
+HB += (f'<article class="plc"><h3>Matchups</h3><div class="pmuted">{nh} of {len(P.get("counters") or [])} are hard counters · tap a header to fold it</div>'
        f'<ul class="ctrl">{rows_}</ul></article>')
 css += '''<style id="ctr-css">.ctrl { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px }
 .ctr { display: grid; gap: 6px; padding: 8px; border-radius: 12px; background: var(--panel-2) } .ctr-lead { box-shadow: inset 0 0 0 2px var(--accent) }
@@ -263,7 +303,24 @@ css += '''<style id="ctr-css">.ctrl { list-style: none; margin: 0; padding: 0; d
 .ctr-v { font: 800 12px var(--body); text-transform: uppercase } .ctr-v.ok { color: #1f8a4c } .ctr-v.mid { color: #b45309 } .ctr-v.bad { color: #b3261e }
 .ctr-b { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; font-size: 12.5px } .ctr-b b { color: var(--muted); font-weight: 600; margin-right: 4px }
 .ctr-plan { margin: 0; padding-left: 18px; display: grid; gap: 3px; font-size: 13px } .fdt { display: grid; gap: 4px; padding: 8px; border-radius: 12px; background: var(--panel-2) }
-.ctr-mv { display: grid; grid-template-columns: 1fr 1fr; gap: 4px } .ctr-mv span { font-size: 12.5px; padding: 4px 6px; border-radius: 8px; background: var(--panel-2) }
+.ctr-mv { display: grid; grid-template-columns: 1fr 1fr; gap: 4px } .ctr-mv span { font-size: 12.5px; padding: 4px 6px; border-radius: 8px; background: var(--panel) }
+.mu { border-radius: 12px; background: var(--panel-2) } .mu-lead { box-shadow: inset 0 0 0 2px var(--accent) }
+.mu-sum { display: flex; align-items: center; gap: 6px; padding: 8px; cursor: pointer; list-style: none; font-weight: 700; flex-wrap: nowrap; min-width: 0 }
+.mu-fn, .mu-mn { min-width: 0; font-size: 13.5px; line-height: 1.15; overflow-wrap: anywhere }
+.mu-sum::-webkit-details-marker { display: none } .mu-sum::after { content: '▾'; margin-left: 4px; color: var(--muted) } .mu:not([open]) .mu-sum::after { content: '▸' }
+.mu-vs { color: var(--muted); font-weight: 600; font-size: 12px } .mu-dot { width: 10px; height: 10px; border-radius: 50%; margin-left: auto }
+.mu-dot.ok { background: #1f8a4c } .mu-dot.mid { background: #b45309 } .mu-dot.bad { background: #b3261e }
+.mu-body { display: grid; gap: 8px; padding: 0 8px 10px } .mu-grid { display: grid; gap: 8px; grid-template-columns: minmax(0, 1fr) }
+@media (min-width: 720px) { .mu-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) } } .fnl li { overflow-wrap: anywhere }
+.mu-side { display: grid; gap: 5px; align-content: start; background: var(--panel); border-radius: 10px; padding: 8px } .mu-foe { box-shadow: inset 3px 0 0 #b3261e } .mu-me { box-shadow: inset 3px 0 0 #1f8a4c }
+.mu-h { display: flex; align-items: center; gap: 6px } .pgrid > *, .ctrl > li, .mu, .mu-body, .mu-grid > *, .fnl li { min-width: 0 } .mu-st { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 3px; font-size: 11.5px; text-align: center }
+.mu-st span { background: var(--panel-2); border-radius: 6px; padding: 2px 0; display: grid } .mu-st small { color: var(--muted); font-size: 10px } .mu-st .mu-sh { grid-column: span 2 }
+.mu-bl { margin: 0; padding-left: 18px; display: grid; gap: 3px; font: 400 12.5px/1.4 var(--body); color: var(--ink) } .mu-red li::marker { color: #b3261e } .mu-grn li::marker { color: #1f8a4c }
+.mu-field summary { cursor: pointer; list-style: none; display: grid; gap: 2px } .mu-field summary::-webkit-details-marker { display: none }
+.fnl { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 6px } .fnl li { padding: 6px 8px; border-radius: 8px; background: var(--panel-2); font-size: 12.5px; display: grid; gap: 2px }
+.fnl li.fn-hit { box-shadow: inset 3px 0 0 var(--accent) } .fn-t { font-weight: 600 } .fn-x { color: var(--muted) } .fn-who { font-weight: 700; color: var(--accent); font-size: 11.5px }
+.fn-stage { margin-left: 6px; font-size: 10.5px; padding: 1px 6px; border-radius: 99px; background: rgba(127,127,127,.18); font-weight: 600 }
+.fn-green { color: #1f8a4c } .fn-red { color: #b3261e } .fn-orange { color: #b45309 }
 </style>'''
 sec = f'<section aria-labelledby="splan">\n  <h2 id="splan">Builder</h2>\n{css}<div class="pgrid">{HB}</div>\n</section>\n'
 sec += f'<section aria-labelledby="schk">\n  <h2 id="schk">Checks: {E(TITLE.get(P["fight"], P["fight"]))}</h2>\n<div class="pgrid">{h}</div>\n</section>\n'

@@ -1,0 +1,12 @@
+Copperajah | Overflow 65 | Sheer Force  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Iron Head', 'Play Rough', 'Double-Edge', 'Protect'] | Metal Coat (already holding) | 
+Ninetales (Alolan Form) | Active 65 | Snow Warning  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Aurora Veil', 'Moonblast', 'Blizzard', 'Protect'] | Icy Rock (already holding) | 
+Aurorus | Overflow 65 | Snow Warning  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Aurora Veil', 'Ice Beam', 'Ancient Power', 'Protect'] | Sitrus Berry | 
+Glalie (Aevian Form) | Party 65 | Grassy Surge  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'] | Miracle Seed (already holding) | 
+Florges | Active 65 | Flower Veil  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Moonblast', 'Synthesis', 'Giga Drain', 'Protect'] | Fairy Feather (already holding) | 
+Palossand (Fiery Aevian Form) | Overflow 65 | Steam Engine  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Shadow Ball', 'Iron Defense', 'Overheat', 'Protect'] | Sitrus Berry | Palossand (Level 42)
+jenner 1.637 -> 1.615 leads ['Glalie (Aevian Form)', 'Copperajah'] swaps [('Chandelure', 'Aurorus', 0.158), ('Arcanine', 'Aurorus', 0.153), ('Passimian', 'Aurorus', 0.151)]
+danni 1.717 -> 1.822 leads ['Glalie (Aevian Form)', 'Copperajah'] swaps [('Arcanine', 'Ninetales (Alolan Form)', 0.086), ('Wyrdeer', 'Copperajah', 0.077), ('Scrafty', 'Copperajah', 0.075)]
+troye 1.596 -> 1.495 leads ['Palossand (Fiery Aevian Form)', 'Copperajah'] swaps [('Arcanine', 'Ninetales (Alolan Form)', 0.231), ('Toxtricity (Aevian Form)', 'Ninetales (Alolan Form)', 0.135), ('Luxray', 'Ninetales (Alolan Form)', 0.113)]
+zena 1.728 -> 1.749 leads ['Florges', 'Glalie (Aevian Form)'] swaps [('Scrafty', 'Ninetales (Alolan Form)', 0.072), ('Toedscruel', 'Ninetales (Alolan Form)', 0.068), ('Mamoswine', 'Ninetales (Alolan Form)', 0.066)]
+marcie 1.659 -> 1.651 leads ['Palossand (Fiery Aevian Form)', 'Copperajah'] swaps [('Leavanny (Aevian Form)', 'Aurorus', 0.204), ('Chandelure', 'Aurorus', 0.172), ('Arcanine', 'Aurorus', 0.164)]
+jenner9 1.233 -> 1.388 leads ['Florges', 'Ninetales (Alolan Form)'] swaps [('Arcanine', 'Aurorus', 0.089), ('Hariyama', 'Aurorus', 0.077), ('Pawmot', 'Aurorus', 0.075)]

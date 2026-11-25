@@ -17,25 +17,6 @@
  ],
  "weak3": [],
  "nores": [],
- "misses": [
-  {
-   "foe": "Stoutland",
-   "fight": "jenner9",
-   "best": "Glalie (Aevian Form)",
-   "dmg": 78
-  },
-  {
-   "foe": "Porygon-Z",
-   "fight": "jenner9",
-   "best": "Glalie (Aevian Form)",
-   "dmg": 92
-  },
-  {
-   "foe": "Klinklang",
-   "fight": "jenner9",
-   "best": "Glalie (Aevian Form)",
-   "dmg": 35
-  }
- ],
+ "misses": [],
  "n_types": 11
 }
