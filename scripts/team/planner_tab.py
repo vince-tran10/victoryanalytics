@@ -41,7 +41,7 @@ if _pl == 'alt' and P.get('alt_field') == 'Icy Field':
     h += '<div class="pans cok">On Icy Field: no Electric x1.3, Ground moves work, no Speed drop, Raichu loses Surge Surfer</div><div class="pans cno">Never use Earthquake, Bulldoze, Scald or fire spread moves: they melt it</div>'
 for fn_, mv_ in P.get('foe_break') or []:
     h += f'<div class="pans cno">{E(fn_)}: {E(mv_)} undoes it: KO it first or refreeze</div>'
-if _alt.get('six'):
+if _alt.get('six') and _alt['six'] != [m_['name'] for m_ in P['six']] and (P.get('forced') or (_alt.get('cmp') or 0) < (P.get('cmp') or 0)):
     h += (f'<div class="pmuted">Without freezing (the game tip says freeze): {E(", ".join(disp(x) for x in _alt["six"]))}</div>' if P.get('forced')
           else f'<div class="pmuted">Other plan scored lower ({_alt.get("cmp")} vs {P.get("cmp")}): {E(", ".join(disp(x) for x in _alt["six"]))}</div>')
 _mg = P.get('model_gaps') or []
@@ -241,9 +241,14 @@ for nt in _fnotes:
             + (f'<div class="fn-x">{nt.get("text_html", "")}</div>' if nt.get('text_html') else '')
             + (f'<div class="fn-who">Affects: {E(", ".join(who))}</div>' if who else '') + '</li>')
 _fld = P.get('real_field') or P.get('field') or 'No field'
-FIELD_HTML = (f'<details class="plc mu-field" open><summary><h3>Field: {E(_fld)}</h3><span class="pmuted">{len(_fnotes)} effects (the game\'s own field notes)</span></summary>'
-              f'<ul class="fnl">{_fh}</ul></details>') if _fnotes else ''
-HB = HB.replace('<article class="plc"><h3>Plan', FIELD_HTML + '<article class="plc"><h3>Plan', 1) if FIELD_HTML else HB
+# 25 Nov (Vincent): field analysis + plan + model check in ONE card, folded by default (it is the write-up behind the team build)
+_pm = re.search(r'<article class="plc"><h3>(Plan[^<]*)</h3>(.*?)</article>', HB, re.S)
+_ptitle, _pbody = (_pm.group(1), _pm.group(2)) if _pm else ('', '')
+FIELD_HTML = (f'<details class="plc mu-field"><summary><h3>Field and plan: {E(_fld)}</h3><span class="pmuted">{E(_ptitle)}</span>'
+              f'<span class="pmuted">{len(_fnotes)} field effects · tap to open</span></summary>'
+              f'<div class="psub">{E(_ptitle)}</div>{_pbody}'
+              f'<div class="psub">Field effects (the game\'s own field notes)</div><ul class="fnl">{_fh}</ul></details>')
+HB = HB.replace(_pm.group(0), FIELD_HTML, 1) if _pm else HB + FIELD_HTML
 # 2) one card per matchup
 rows_ = ''
 _six_st = P.get('six_stats') or {}
@@ -281,10 +286,10 @@ for k, c in enumerate(P.get('counters') or []):
                + '<div class="ctr-mv">' + ''.join(f'<span>{E(x)}</span>' for x in moves_) + '</div>'
                + ''.join(f'<div class="pans">{E(w)}</div>' for w in fb.get('why', []) if 'replaces' in w or 'capsule' in w)
                + '<div class="psub">How it counters</div><ul class="mu-bl mu-grn">' + ''.join(f'<li>{E(_dn(x))}</li>' for x in c.get('how') or []) + '</ul></div>')
-    rows_ += (f'<li><details class="mu{" mu-lead" if lead_ else ""}" open><summary class="mu-sum"><span class="pn">{k + 1}</span>'
+    rows_ += (f'<li><details class="mu{" mu-lead" if lead_ else ""}"><summary class="mu-sum"><span class="pn">{k + 1}</span>'
               f'{SP.tag(fd.get("sid") or f.get("sid") or "", "0", size="s")}<span class="mu-fn">{E(c["foe"])}</span><span class="mu-vs">vs</span>'
-              f'{SP.tag(m.get("sid") or "", m.get("form") or "0", size="s")}<span class="mu-mn">{E(disp(c["member"]))}</span>'
-              + ('<span class="plt">Lead</span>' if lead_ else '') + f'<span class="mu-dot {vcls}" title="{E(verdict)}"></span></summary>'
+              f'{SP.tag(m.get("sid") or "", m.get("form") or "0", size="s")}<span class="mu-mn">{E(disp(c["member"]))}' + (' <span class="plt">Lead</span>' if lead_ else '') + '</span>'
+              + f'<span class="mu-dot {vcls}" title="{E(verdict)}"></span></summary>'
               f'<div class="mu-body"><div class="mu-grid">{foe_html}{me_html}</div>'
               + '<div class="psub">Game plan</div><ol class="ctr-plan">' + ''.join(f'<li>{E(_dn(b))}</li>' for b in c.get('plan') or []) + '</ol>'
               + '<details class="pwhy"><summary>Why these moves</summary><ul>' + ''.join(
@@ -294,7 +299,7 @@ for k, c in enumerate(P.get('counters') or []):
                   + (f' (already countering {E(a["used_for"])})' if a.get('used_for') else '') + '</span></li>' for a in c['alts']) + '</ul></details>'
               + '</div></details></li>')
 nh = sum(1 for c in P.get('counters') or [] if c['hard'])
-HB += (f'<article class="plc"><h3>Matchups</h3><div class="pmuted">{nh} of {len(P.get("counters") or [])} are hard counters · tap a header to fold it</div>'
+HB += (f'<article class="plc"><h3>Matchups</h3><div class="pmuted">{nh} of {len(P.get("counters") or [])} are hard counters · tap one to open it</div>'
        f'<ul class="ctrl">{rows_}</ul></article>')
 css += '''<style id="ctr-css">.ctrl { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px }
 .ctr { display: grid; gap: 6px; padding: 8px; border-radius: 12px; background: var(--panel-2) } .ctr-lead { box-shadow: inset 0 0 0 2px var(--accent) }
@@ -306,7 +311,9 @@ css += '''<style id="ctr-css">.ctrl { list-style: none; margin: 0; padding: 0; d
 .ctr-mv { display: grid; grid-template-columns: 1fr 1fr; gap: 4px } .ctr-mv span { font-size: 12.5px; padding: 4px 6px; border-radius: 8px; background: var(--panel) }
 .mu { border-radius: 12px; background: var(--panel-2) } .mu-lead { box-shadow: inset 0 0 0 2px var(--accent) }
 .mu-sum { display: flex; align-items: center; gap: 6px; padding: 8px; cursor: pointer; list-style: none; font-weight: 700; flex-wrap: nowrap; min-width: 0 }
-.mu-fn, .mu-mn { min-width: 0; font-size: 13.5px; line-height: 1.15; overflow-wrap: anywhere }
+.mu-fn, .mu-mn { min-width: 0; font-size: 13px; line-height: 1.15; overflow-wrap: normal; word-break: normal }
+.mu-sum { display: grid !important; grid-template-columns: auto auto minmax(0, 1fr) auto auto minmax(0, 1fr) auto auto; column-gap: 5px }
+.mu-sum .plt { font-size: 9.5px }
 .mu-sum::-webkit-details-marker { display: none } .mu-sum::after { content: '▾'; margin-left: 4px; color: var(--muted) } .mu:not([open]) .mu-sum::after { content: '▸' }
 .mu-vs { color: var(--muted); font-weight: 600; font-size: 12px } .mu-dot { width: 10px; height: 10px; border-radius: 50%; margin-left: auto }
 .mu-dot.ok { background: #1f8a4c } .mu-dot.mid { background: #b45309 } .mu-dot.bad { background: #b3261e }

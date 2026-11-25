@@ -52,6 +52,19 @@
   "rating": 0.73
  },
  {
+  "name": "Roserade-A",
+  "sid": "ROSERADE",
+  "form": "1",
+  "l1": "S",
+  "l2": "A",
+  "net": 2,
+  "t0": "A",
+  "m0": 0.75,
+  "t1": "S",
+  "m1": 0.75,
+  "rating": 0.75
+ },
+ {
   "name": "Musharna-A",
   "sid": "MUSHARNA",
   "form": "1",
@@ -78,19 +91,6 @@
   "rating": 0.67
  },
  {
-  "name": "Roserade-A",
-  "sid": "ROSERADE",
-  "form": "1",
-  "l1": "S",
-  "l2": "A",
-  "net": 2,
-  "t0": "A",
-  "m0": 0.75,
-  "t1": "S",
-  "m1": 0.75,
-  "rating": 0.75
- },
- {
   "name": "Unfezant-A",
   "sid": "UNFEZANT",
   "form": "1",
@@ -99,7 +99,7 @@
   "net": 2,
   "t0": "B",
   "m0": 0.45,
-  "t1": "A",
+  "t1": "S",
   "m1": 0.69,
   "rating": 0.69
  },
@@ -117,45 +117,6 @@
   "rating": 0.77
  },
  {
-  "name": "Froslass-A",
-  "sid": "FROSLASS",
-  "form": "1",
-  "l1": "S+",
-  "l2": "Supreme",
-  "net": 2,
-  "t0": "A",
-  "m0": 0.74,
-  "t1": "A",
-  "m1": 0.85,
-  "rating": 0.85
- },
- {
-  "name": "Leavanny-A",
-  "sid": "LEAVANNY",
-  "form": "1",
-  "l1": "S+",
-  "l2": "Amazing (A+)",
-  "net": 0,
-  "t0": "B",
-  "m0": 0.6,
-  "t1": "A",
-  "m1": 0.73,
-  "rating": 0.73
- },
- {
-  "name": "Ampharos-A",
-  "sid": "AMPHAROS",
-  "form": "1",
-  "l1": "S",
-  "l2": "B",
-  "net": 1,
-  "t0": "B",
-  "m0": 0.5,
-  "t1": "A",
-  "m1": 0.59,
-  "rating": 0.59
- },
- {
   "name": "Gastrodon-A West",
   "sid": "GASTRODON",
   "form": "1",
@@ -169,6 +130,19 @@
   "rating": 0.47
  },
  {
+  "name": "Froslass-A",
+  "sid": "FROSLASS",
+  "form": "1",
+  "l1": "S+",
+  "l2": "Supreme",
+  "net": 2,
+  "t0": "A",
+  "m0": 0.74,
+  "t1": "A",
+  "m1": 0.85,
+  "rating": 0.85
+ },
+ {
   "name": "Mismagius-A",
   "sid": "MISMAGIUS",
   "form": "1",
@@ -180,6 +154,32 @@
   "t1": "A",
   "m1": 0.66,
   "rating": 0.66
+ },
+ {
+  "name": "Leavanny-A",
+  "sid": "LEAVANNY",
+  "form": "1",
+  "l1": "S+",
+  "l2": "Amazing (A+)",
+  "net": 0,
+  "t0": "B",
+  "m0": 0.6,
+  "t1": "B",
+  "m1": 0.73,
+  "rating": 0.73
+ },
+ {
+  "name": "Ampharos-A",
+  "sid": "AMPHAROS",
+  "form": "1",
+  "l1": "S",
+  "l2": "B",
+  "net": 1,
+  "t0": "B",
+  "m0": 0.5,
+  "t1": "B",
+  "m1": 0.59,
+  "rating": 0.59
  },
  {
   "name": "Palossand-A Fiery",

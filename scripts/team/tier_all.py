@@ -131,15 +131,19 @@ for c in crest_c:
 fights_sorted = sorted(s for s, _ in best.values())
 # 22 Nov (Vincent): in-game part = EVERY hard fight in the game (engine run with nothing marked done: ALL_RUN), not just Ch9
 ALLS = {}
+CTR = {}   # 25 Nov (Vincent: tiers factor in the community rules): share of hard-fight foes it hard-counters (deals 90%+ and takes < 70%, or outspeeds and one-shots)
+_TF = set(st.get('tier_fights') or [])   # Ch10 hook: when set, the in-game part and counters use ONLY these fight keys (his hard-fight list)
 if os.environ.get('ALL_RUN') and os.path.exists(f"team/{os.environ['ALL_RUN']}_native.json.pkl"):
     for c in pickle.load(open(f"team/{os.environ['ALL_RUN']}_native.json.pkl", 'rb'))['cands']:
         if c['gate']: continue
-        tot = tw = 0
+        tot = tw = 0; nc_ = nf_ = 0
         for k_, rows_ in c['matchups'].items():
-            if not rows_: continue
+            if not rows_ or (_TF and k_ not in _TF): continue
+            nf_ += len(rows_); nc_ += sum(1 for r_ in rows_ if (r_['off'] >= 90 and r_['deff'] < 70) or (r_.get('faster') and r_['off'] >= 100))
             n_ = len(rows_); tot += sum(r_['q'] for r_ in rows_) / n_ - .35 * sum(r_['deff'] >= 100 for r_ in rows_) / n_; tw += 1
         v_ = tot / tw if tw else 0
         if c['name'] not in ALLS or v_ > ALLS[c['name']]: ALLS[c['name']] = v_
+        if nf_: CTR[c['name']] = max(CTR.get(c['name'], 0), nc_ / nf_)
 ALL_SORTED = sorted(ALLS.values())
 N_ALL = len(next(iter(pickle.load(open(f"team/{os.environ['ALL_RUN']}_native.json.pkl", 'rb'))['cands']))['matchups']) if ALLS else 0
 def allpct(name):
@@ -150,6 +154,25 @@ def pct(s):
     import bisect
     return bisect.bisect_left(fights_sorted, s) / max(1, len(fights_sorted) - 1)
 
+CTR_SORTED = sorted(CTR.values())
+# mindset kit (community_inputs.json 'mindset': singles / doubles / Rejuvenation): what the BUILD he would run brings to a team
+_IBK = json.load(open('team/ideal_builds.json')) if os.path.exists('team/ideal_builds.json') else {}
+_MVT = json.load(open('gamedata/movetext.json'))
+_BYN = {v['name'].lower(): k for k, v in _MVT.items()}
+KIT_CHECKS = [
+    ('Speed control', lambda ms, ab, ty: ms & {'THUNDERWAVE', 'ICYWIND', 'ELECTROWEB', 'TAILWIND', 'TRICKROOM', 'GLARE', 'NUZZLE', 'STICKYWEB', 'SCARYFACE', 'BULLDOZE', 'STRINGSHOT'}),
+    ('STAB priority', lambda ms, ab, ty: {m for m in ms if int(_MVT.get(m, {}).get('priority') or 0) > 0 and int(_MVT.get(m, {}).get('basedamage') or 0) > 0 and _MVT[m].get('type') in ty and m != 'FAKEOUT'}
+                                          or ({'GRASSYGLIDE'} & ms and ab == 'GRASSYSURGE' and 'GRASS' in ty)),
+    ('Pivot / sustain', lambda ms, ab, ty: (ms & {'UTURN', 'VOLTSWITCH', 'FLIPTURN', 'PARTINGSHOT', 'TELEPORT', 'CHILLYRECEPTION', 'RECOVER', 'ROOST', 'SLACKOFF', 'SOFTBOILED', 'MOONLIGHT', 'SYNTHESIS', 'MORNINGSUN', 'WISH', 'STRENGTHSAP', 'SHOREUP'}) or ({'REGENERATOR'} & {ab})),
+    ('Immunity', lambda ms, ab, ty: ({'FLYING', 'GROUND', 'GHOST', 'DARK', 'FAIRY', 'NORMAL', 'STEEL'} & set(ty)) or ({'LEVITATE', 'VOLTABSORB', 'LIGHTNINGROD', 'MOTORDRIVE', 'WATERABSORB', 'STORMDRAIN', 'FLASHFIRE', 'SAPSIPPER', 'EARTHEATER', 'SOUNDPROOF', 'WELLBAKEDBODY', 'DRYSKIN'} & {ab})),
+    ('Disruption', lambda ms, ab, ty: (ms & {'FAKEOUT', 'FOLLOWME', 'RAGEPOWDER', 'WIDEGUARD', 'TAUNT', 'ENCORE', 'HAZE', 'CLEARSMOG', 'ROAR', 'WHIRLWIND', 'KNOCKOFF', 'SPORE', 'SLEEPPOWDER', 'YAWN', 'WILLOWISP'}) or ({'INTIMIDATE', 'UNAWARE'} & {ab})),
+    ('Win condition', lambda ms, ab, ty: (ms & (set(SETUP_X) | {'TORCHSONG', 'POWERUPPUNCH', 'FLAMECHARGE', 'TRAILBLAZE', 'METEORBEAM', 'CHARGEBEAM', 'RAPIDSPIN', 'AQUASTEP', 'ESPERWING', 'SPINOUT'})) or ({'SPEEDBOOST', 'MOXIE', 'BEASTBOOST', 'SKILLLINK', 'PROTEAN', 'LIBERO', 'HUGEPOWER', 'PUREPOWER', 'ADAPTABILITY'} & {ab})),
+]
+def kit_of(name, c):
+    b = _IBK.get(name) or {}
+    ms = {_BYN.get(m.lower()) or m.upper().replace(' ', '') for m in (b.get('moves') or [])} or set(c.get('attacks') or [])
+    ab = (b.get('ability') or c.get('ability') or '').upper().replace(' ', ''); ty = c['types']
+    return [k for k, f in KIT_CHECKS if f(ms, ab, ty)]
 rows = []
 def row(name, s, c, kind, crest=''):
     sp = name.split(' (')[0]
@@ -163,14 +186,21 @@ def row(name, s, c, kind, crest=''):
     fp = min(1.0, pct(s))
     ap = allpct(name)
     gp = ap if ap is not None else fp
-    blend = .7 * general + .3 * gp   # 22 Nov (Vincent): 70% meta dominance + 30% in-game across every hard fight
+    import bisect
+    cp = bisect.bisect_left(CTR_SORTED, CTR.get(name, 0)) / max(1, len(CTR_SORTED) - 1) if CTR_SORTED else 0
+    kit = kit_of(name, c)
+    team = .6 * cp + .4 * len(kit) / len(KIT_CHECKS)
+    # 25 Nov (Vincent: factor in the community rules: tier lists, mindsets, counters): 55% meta / community rating, 20% in-game across the
+    # hard fights, 25% team value (hard counters + mindset kit)
+    blend = .55 * general + .2 * gp + .25 * team
     src = c['src'] if isinstance(c['src'], dict) else {}
     rows.append(dict(name=name, kind=kind, crest=crest, zoro_partner=c.get('zoro_partner'), sid=c['sid'], form=str(c.get('form', '0')), types=c['types'], base=c['base'], bst=bst,
                      fight=round(s, 3), fight_pct=round(fp, 3), meta=round(meta, 3), meta_label=lab, general=round(general, 3),
                      blend=round(blend, 3), game_pct=round(gp, 3), n_all=N_ALL, ability=c['ability'], abilities=c['abilities'], nature=c['nature'], evs=c['evs'],
                      cat=c['cat'], attacks=[C.D.moves[m]['MoveName'] for m in c['attacks']], legal=sorted(c['legal']),
                      where=src.get('where'), dump=src.get('dump'), owned_as=c.get('owned_as'), evo=c.get('evo'),
-                     per_fight=per_fight(c), counters=counters(c), stats=c['stats'], tags=sorted(c.get('tags') or [])))
+                     per_fight=per_fight(c), counters=counters(c), stats=c['stats'], tags=sorted(c.get('tags') or []),
+                     ctr_share=round(CTR.get(name, 0), 3), ctr_pct=round(cp, 3), kit=kit, team=round(team, 3)))
 for n, (s, c) in best.items():
     _k = kind_of(c)
     if _k == 'crest' and 'Whiscash Crest' not in owned_crests: _k = 'regular'   # held but not obtainable yet
@@ -178,7 +208,7 @@ for n, (s, c) in best.items():
 for n, (s, c, cname) in crest_best.items():
     row(n, s, c, 'crest', cname)
 
-CUT = [('S', .72), ('A', .58), ('B', .41), ('C', .27), ('D', -9)]   # 22 Nov: recalibrated for 70% meta dominance + 30% all-fight in-game
+CUT = [('S', .675), ('A', .58), ('B', .44), ('C', .29), ('D', -9)]   # 25 Nov: recalibrated (same tier sizes) for 55% meta + 20% in-game + 25% team value
 for r in rows:
     r['tier'] = next(t for t, v in CUT if r['blend'] >= v)
 rows.sort(key=lambda r: -r['blend'])

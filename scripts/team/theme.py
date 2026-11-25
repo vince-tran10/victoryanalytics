@@ -760,6 +760,9 @@ def why_tier(r, ab_id, moves):   # 22 Nov (Vincent): just the main rationale, no
         fmt = re.sub(r'\s+[\d.]+%$', '', labs[0]); u = float(re.search(r'([\d.]+)%', labs[0]).group(1))
         out.append(('A staple in ' if u >= 10 else 'Used in ' if u >= 3 else 'Niche in ') + fmt + (f' ({u:.0f}% of teams)' if u >= 1 else ''))
     elif labs: out.append(labs[0])
+    if r.get('ctr_share') is not None:   # 25 Nov: the community rules part of the tier (hard counters + mindset kit)
+        out.append(f"Hard counters {round(100 * r['ctr_share'])}% of the hard-fight Pokémon (top {max(1, round(100 * (1 - (r.get('ctr_pct') or 0))))}% of your box)")
+    if r.get('kit'): out.append('Team kit: ' + ', '.join(r['kit']))
     gp = r.get('game_pct')
     if gp is not None and gp >= .85: out.append('One of the strongest in your box across the game\'s fights')
     elif gp is not None and gp <= .25 and (DROLES.get(disp(r['name'])) or ['Attacker'])[0] in ('Attacker', 'Lead', 'Closer'):
@@ -874,10 +877,10 @@ IC = {
  'planner': '<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/>',
  'builder': '<path d="M4 20h16M6 16l4-10 4 6 4-8"/><circle cx="10" cy="6" r="1.5"/>',
  'dex': '<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="9" r="3"/><path d="M8.5 15h7M8.5 18h4"/>'}
-NAV = [('fights', 'Fights'), ('planner', 'Builder'), ('todo', 'To do'), ('dex', 'Dex'), ('items', 'Items'), ('community', 'Community')]   # 22 Nov: Boxes folded into To do   # 22 Nov: Cores tab removed (Vincent)
+NAV = [('fights', 'Fights'), ('planner', 'Builder'), ('todo', 'To do'), ('dex', 'Tiers'), ('items', 'Items'), ('community', 'Community')]   # 22 Nov: Boxes folded into To do   # 22 Nov: Cores tab removed (Vincent)
 nav = '<nav class="appnav" aria-label="Guide">' + ''.join(
     f'<button type="button" data-go="{k}"><svg viewBox="0 0 24 24" aria-hidden="true">{IC[k]}</svg><span>{t}</span></button>' for k, t in NAV) + '</nav>'
-seg = ('<div class="seg" role="group" aria-label="Dex lists"><button type="button" data-go="tiers">Pokémon</button>'
+seg = ('<div class="seg" role="group" aria-label="Tier lists"><button type="button" data-go="tiers">Pokémon</button>'
        '<button type="button" data-go="aevian">Aevian</button><button type="button" data-go="crests">Crests</button></div>')
 page = re.sub(r'(<div class="tabp" id="panel-(tiers|aevian|crests)"[^>]*>)', lambda m: m.group(1) + seg, page)
 page = page.replace('</header>', '</header>' + nav, 1)
@@ -1286,7 +1289,7 @@ DEXJS = r'''<script id="dex-js">
 '''
 JS = r'''<script id="app-theme-js">
 (function(){
-  var NAMES = {team:'Team', planner:'Builder', builder:'Core', fights:'Fights', cores:'Cores', todo:'To do', community:'Community', items:'Items', boxes:'Boxes', tiers:'Dex · Pokémon', aevian:'Dex · Aevian', crests:'Dex · Crests', checks:'Checks & data'};
+  var NAMES = {team:'Team', planner:'Builder', builder:'Core', fights:'Fights', cores:'Cores', todo:'To do', community:'Community', items:'Items', boxes:'Boxes', tiers:'Tiers · Pokémon', aevian:'Tiers · Aevian', crests:'Tiers · Crests', checks:'Checks & data'};
   var DEX = {tiers:1, aevian:1, crests:1};
   var orig = function(k){ return document.querySelector('#tabbar button[data-tab="'+k+'"]'); };
   function current(){ var b = document.querySelector('#tabbar button[aria-selected="true"]'); return b ? b.dataset.tab : 'fights'; }

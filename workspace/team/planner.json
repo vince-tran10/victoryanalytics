@@ -215,9 +215,9 @@
      "used_for": "Klinklang"
     },
     {
-     "name": "Arcanine (Hisuian Form)",
+     "name": "Unfezant (Aevian Form Male)",
      "deal": 74,
-     "take_b": 41,
+     "take_b": 86,
      "faster": true,
      "hard": false,
      "used_for": null
@@ -1294,10 +1294,14 @@
   "DRAGON",
   "PSYCHIC",
   "FIGHTING",
-  "ELECTRIC",
-  "STEEL"
+  "STEEL",
+  "ELECTRIC"
  ],
  "atk": {
+  "PSYCHIC": [
+   "Porygon-Z",
+   "Stoutland"
+  ],
   "DARK": [
    "Stoutland"
   ],
@@ -1307,21 +1311,17 @@
    "Porygon-Z",
    "Stoutland"
   ],
-  "PSYCHIC": [
-   "Porygon-Z",
-   "Stoutland"
-  ],
-  "GRASS": [
-   "Appletun"
+  "FIGHTING": [
+   "Appletun",
+   "Kommo-o"
   ],
   "DRAGON": [
    "Appletun",
    "Kommo-o",
    "Noivern"
   ],
-  "FIGHTING": [
-   "Appletun",
-   "Kommo-o"
+  "GRASS": [
+   "Appletun"
   ],
   "FLYING": [
    "Noivern"
@@ -1332,10 +1332,10 @@
   "FIRE": [
    "Kommo-o"
   ],
-  "ELECTRIC": [
+  "STEEL": [
    "Klinklang"
   ],
-  "STEEL": [
+  "ELECTRIC": [
    "Klinklang"
   ]
  },
@@ -1676,8 +1676,8 @@
     "DRAGON": 1.0,
     "PSYCHIC": 1.0,
     "FIGHTING": 2.0,
-    "ELECTRIC": 0.5,
-    "STEEL": 2.0
+    "STEEL": 2.0,
+    "ELECTRIC": 0.5
    },
    "rm": [
     1.0,
@@ -1778,8 +1778,8 @@
     "DRAGON": 0.0,
     "PSYCHIC": 1.0,
     "FIGHTING": 1.0,
-    "ELECTRIC": 1.0,
-    "STEEL": 4.0
+    "STEEL": 4.0,
+    "ELECTRIC": 1.0
    },
    "rm": [
     0.5,
@@ -1880,8 +1880,8 @@
     "DRAGON": 1.0,
     "PSYCHIC": 0.5,
     "FIGHTING": 1.0,
-    "ELECTRIC": 1.0,
-    "STEEL": 2.0
+    "STEEL": 2.0,
+    "ELECTRIC": 1.0
    },
    "rm": [
     2.0,
@@ -1982,8 +1982,8 @@
     "DRAGON": 1.0,
     "PSYCHIC": 1.0,
     "FIGHTING": 0.0,
-    "ELECTRIC": 0.0,
-    "STEEL": 1.0
+    "STEEL": 1.0,
+    "ELECTRIC": 0.0
    },
    "rm": [
     2.0,
@@ -2084,8 +2084,8 @@
     "DRAGON": 0.0,
     "PSYCHIC": 0.0,
     "FIGHTING": 1.0,
-    "ELECTRIC": 1.0,
-    "STEEL": 2.0
+    "STEEL": 2.0,
+    "ELECTRIC": 1.0
    },
    "rm": [
     0.25,
@@ -2186,8 +2186,8 @@
     "DRAGON": 1.0,
     "PSYCHIC": 2.0,
     "FIGHTING": 0.5,
-    "ELECTRIC": 1.0,
-    "STEEL": 0.5
+    "STEEL": 0.5,
+    "ELECTRIC": 1.0
    },
    "rm": [
     1.0,
@@ -2246,6 +2246,21 @@
  ],
  "alts": [
   {
+   "score": 377.4,
+   "in": [
+    "Copperajah",
+    "Azumarill",
+    "Togedemaru",
+    "Florges"
+   ],
+   "out": [
+    "Glalie (Aevian Form)",
+    "Ninetales (Alolan Form)",
+    "Golurk",
+    "Musharna (Aevian Form)"
+   ]
+  },
+  {
    "score": 375.6,
    "in": [
     "Copperajah",
@@ -2275,23 +2290,6 @@
     "Ninetales (Alolan Form)",
     "Lapras (Aevian Form)",
     "Golurk"
-   ]
-  },
-  {
-   "score": 373.1,
-   "in": [
-    "Copperajah",
-    "Azumarill",
-    "Togedemaru",
-    "Florges",
-    "Shuckle"
-   ],
-   "out": [
-    "Glalie (Aevian Form)",
-    "Ninetales (Alolan Form)",
-    "Lapras (Aevian Form)",
-    "Golurk",
-    "Musharna (Aevian Form)"
    ]
   }
  ],
@@ -3046,21 +3044,6 @@
    "where": "Overflow"
   },
   {
-   "name": "Shuckle",
-   "tier": "B",
-   "sid": "SHUCKLE",
-   "form": "0",
-   "fit": 19.7,
-   "grade": "Great",
-   "res": 4,
-   "weak": 1,
-   "nmoves": 19,
-   "se": 2,
-   "oneshot": [],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
    "name": "Lapras (Aevian Form)",
    "tier": "S",
    "sid": "LAPRAS",
@@ -3089,6 +3072,21 @@
    "oneshot": [
     "Klinklang"
    ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Shuckle",
+   "tier": "C",
+   "sid": "SHUCKLE",
+   "form": "0",
+   "fit": 19.1,
+   "grade": "Great",
+   "res": 4,
+   "weak": 1,
+   "nmoves": 19,
+   "se": 2,
+   "oneshot": [],
    "in_six": false,
    "where": "Overflow"
   },
@@ -3122,23 +3120,6 @@
    "se": 1,
    "oneshot": [
     "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
-   "name": "Alcremie",
-   "tier": "C",
-   "sid": "ALCREMIE",
-   "form": "0",
-   "fit": 17.5,
-   "grade": "Great",
-   "res": 7,
-   "weak": 1,
-   "nmoves": 19,
-   "se": 3,
-   "oneshot": [
-    "Klinklang"
    ],
    "in_six": false,
    "where": "Overflow"
@@ -3197,6 +3178,23 @@
    "where": "Overflow"
   },
   {
+   "name": "Alcremie",
+   "tier": "D",
+   "sid": "ALCREMIE",
+   "form": "0",
+   "fit": 16.9,
+   "grade": "Great",
+   "res": 7,
+   "weak": 1,
+   "nmoves": 19,
+   "se": 3,
+   "oneshot": [
+    "Klinklang"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Coalossal",
    "tier": "D",
    "sid": "COALOSSAL",
@@ -3208,40 +3206,6 @@
    "nmoves": 19,
    "se": 2,
    "oneshot": [],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
-   "name": "Muk (Alolan Form)",
-   "tier": "S",
-   "sid": "MUK",
-   "form": "1",
-   "fit": 16.1,
-   "grade": "Great",
-   "res": 5,
-   "weak": 0,
-   "nmoves": 19,
-   "se": 1,
-   "oneshot": [],
-   "in_six": false,
-   "where": "Active"
-  },
-  {
-   "name": "Comfey",
-   "tier": "C",
-   "sid": "COMFEY",
-   "form": "0",
-   "fit": 16.0,
-   "grade": "Great",
-   "res": 7,
-   "weak": 1,
-   "nmoves": 19,
-   "se": 3,
-   "oneshot": [
-    "Noivern",
-    "Porygon-Z",
-    "Klinklang"
-   ],
    "in_six": false,
    "where": "Overflow"
   },
@@ -3314,18 +3278,35 @@
    "where": "Overflow"
   },
   {
-   "name": "Lunatone (Lunatone Dominant Fusion)",
-   "tier": "B",
-   "sid": "LUNATONE",
+   "name": "Muk (Alolan Form)",
+   "tier": "A",
+   "sid": "MUK",
    "form": "1",
-   "fit": 14.7,
+   "fit": 15.5,
    "grade": "Great",
-   "res": 8,
-   "weak": 4,
+   "res": 5,
+   "weak": 0,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Comfey",
+   "tier": "D",
+   "sid": "COMFEY",
+   "form": "0",
+   "fit": 15.4,
+   "grade": "Great",
+   "res": 7,
+   "weak": 1,
    "nmoves": 19,
    "se": 3,
    "oneshot": [
-    "Kommo-o"
+    "Noivern",
+    "Porygon-Z",
+    "Klinklang"
    ],
    "in_six": false,
    "where": "Overflow"
@@ -3346,6 +3327,23 @@
    ],
    "in_six": false,
    "where": "Active"
+  },
+  {
+   "name": "Lunatone (Lunatone Dominant Fusion)",
+   "tier": "C",
+   "sid": "LUNATONE",
+   "form": "1",
+   "fit": 14.1,
+   "grade": "Great",
+   "res": 8,
+   "weak": 4,
+   "nmoves": 19,
+   "se": 3,
+   "oneshot": [
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Shiinotic",
@@ -3448,23 +3446,6 @@
    "where": "Overflow"
   },
   {
-   "name": "Marowak (Alolan Form)",
-   "tier": "B",
-   "sid": "MAROWAK",
-   "form": "1",
-   "fit": 13.5,
-   "grade": "Great",
-   "res": 9,
-   "weak": 2,
-   "nmoves": 19,
-   "se": 1,
-   "oneshot": [
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
    "name": "Floette",
    "tier": "D",
    "sid": "FLOETTE",
@@ -3490,6 +3471,23 @@
    "fit": 13.0,
    "grade": "Great",
    "res": 6,
+   "weak": 2,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Marowak (Alolan Form)",
+   "tier": "C",
+   "sid": "MAROWAK",
+   "form": "1",
+   "fit": 12.9,
+   "grade": "Great",
+   "res": 9,
    "weak": 2,
    "nmoves": 19,
    "se": 1,
@@ -3709,24 +3707,6 @@
    "where": "Overflow"
   },
   {
-   "name": "Luxray",
-   "tier": "C",
-   "sid": "LUXRAY",
-   "form": "0",
-   "fit": 10.7,
-   "grade": "Great",
-   "res": 3,
-   "weak": 0,
-   "nmoves": 19,
-   "se": 3,
-   "oneshot": [
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
    "name": "Archeops",
    "tier": "D",
    "sid": "ARCHEOPS",
@@ -3740,6 +3720,25 @@
    "oneshot": [
     "Kommo-o",
     "Klinklang"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Graveler",
+   "tier": "C",
+   "sid": "GRAVELER",
+   "form": "0",
+   "fit": 10.6,
+   "grade": "Great",
+   "res": 7,
+   "weak": 4,
+   "nmoves": 19,
+   "se": 4,
+   "oneshot": [
+    "Appletun",
+    "Noivern",
+    "Kommo-o"
    ],
    "in_six": false,
    "where": "Overflow"
@@ -3813,6 +3812,24 @@
    "where": "Party"
   },
   {
+   "name": "Luxray",
+   "tier": "D",
+   "sid": "LUXRAY",
+   "form": "0",
+   "fit": 10.1,
+   "grade": "Great",
+   "res": 3,
+   "weak": 0,
+   "nmoves": 19,
+   "se": 3,
+   "oneshot": [
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Wigglytuff",
    "tier": "D",
    "sid": "WIGGLYTUFF",
@@ -3832,23 +3849,19 @@
    "where": "Overflow"
   },
   {
-   "name": "Graveler",
-   "tier": "D",
-   "sid": "GRAVELER",
-   "form": "0",
+   "name": "Slowking (Galarian Form)",
+   "tier": "S",
+   "sid": "SLOWKING",
+   "form": "1",
    "fit": 10.0,
    "grade": "Great",
-   "res": 7,
-   "weak": 4,
+   "res": 3,
+   "weak": 2,
    "nmoves": 19,
-   "se": 4,
-   "oneshot": [
-    "Appletun",
-    "Noivern",
-    "Kommo-o"
-   ],
+   "se": 2,
+   "oneshot": [],
    "in_six": false,
-   "where": "Overflow"
+   "where": "Party"
   },
   {
    "name": "Hypno",
@@ -3864,21 +3877,6 @@
    "oneshot": [],
    "in_six": false,
    "where": "Overflow"
-  },
-  {
-   "name": "Slowking (Galarian Form)",
-   "tier": "S",
-   "sid": "SLOWKING",
-   "form": "1",
-   "fit": 10.0,
-   "grade": "Great",
-   "res": 3,
-   "weak": 2,
-   "nmoves": 19,
-   "se": 2,
-   "oneshot": [],
-   "in_six": false,
-   "where": "Party"
   },
   {
    "name": "Minior",
@@ -3950,30 +3948,12 @@
    "where": "Overflow"
   },
   {
-   "name": "Aerodactyl",
-   "tier": "C",
-   "sid": "AERODACTYL",
-   "form": "0",
-   "fit": 9.4,
-   "grade": "Great",
-   "res": 6,
-   "weak": 2,
-   "nmoves": 19,
-   "se": 3,
-   "oneshot": [
-    "Kommo-o",
-    "Klinklang"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
    "name": "Palossand (Icy Aevian Form)",
    "tier": "B",
    "sid": "PALOSSAND",
    "form": "3",
    "fit": 9.4,
-   "grade": "Good",
+   "grade": "Great",
    "res": 6,
    "weak": 4,
    "nmoves": 19,
@@ -4058,26 +4038,29 @@
    "where": "Overflow"
   },
   {
-   "name": "Grumpig",
-   "tier": "C",
-   "sid": "GRUMPIG",
+   "name": "Aerodactyl",
+   "tier": "D",
+   "sid": "AERODACTYL",
    "form": "0",
-   "fit": 8.4,
+   "fit": 8.8,
    "grade": "Good",
-   "res": 4,
+   "res": 6,
    "weak": 2,
    "nmoves": 19,
-   "se": 2,
-   "oneshot": [],
+   "se": 3,
+   "oneshot": [
+    "Kommo-o",
+    "Klinklang"
+   ],
    "in_six": false,
    "where": "Overflow"
   },
   {
    "name": "Kilowattrel",
-   "tier": "C",
+   "tier": "B",
    "sid": "KILOWATTREL",
    "form": "0",
-   "fit": 8.2,
+   "fit": 8.8,
    "grade": "Good",
    "res": 5,
    "weak": 0,
@@ -4092,21 +4075,19 @@
    "where": "Overflow"
   },
   {
-   "name": "Palossand",
-   "tier": "B",
-   "sid": "PALOSSAND",
+   "name": "Grumpig",
+   "tier": "C",
+   "sid": "GRUMPIG",
    "form": "0",
-   "fit": 7.8,
+   "fit": 8.4,
    "grade": "Good",
-   "res": 7,
-   "weak": 3,
+   "res": 4,
+   "weak": 2,
    "nmoves": 19,
-   "se": 1,
-   "oneshot": [
-    "Kommo-o"
-   ],
+   "se": 2,
+   "oneshot": [],
    "in_six": false,
-   "where": "Active"
+   "where": "Overflow"
   },
   {
    "name": "Bellossom",
@@ -4197,6 +4178,23 @@
    "where": "Overflow"
   },
   {
+   "name": "Palossand",
+   "tier": "C",
+   "sid": "PALOSSAND",
+   "form": "0",
+   "fit": 7.2,
+   "grade": "Good",
+   "res": 7,
+   "weak": 3,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
    "name": "Talonflame",
    "tier": "B",
    "sid": "TALONFLAME",
@@ -4216,6 +4214,23 @@
    "where": "Overflow"
   },
   {
+   "name": "Wyrdeer",
+   "tier": "B",
+   "sid": "WYRDEER",
+   "form": "0",
+   "fit": 7.1,
+   "grade": "Good",
+   "res": 3,
+   "weak": 1,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Oranguru",
    "tier": "C",
    "sid": "ORANGURU",
@@ -4227,24 +4242,6 @@
    "nmoves": 19,
    "se": 1,
    "oneshot": [],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
-   "name": "Feraligatr",
-   "tier": "B",
-   "sid": "FERALIGATR",
-   "form": "0",
-   "fit": 7.0,
-   "grade": "Good",
-   "res": 2,
-   "weak": 2,
-   "nmoves": 19,
-   "se": 6,
-   "oneshot": [
-    "Porygon-Z",
-    "Kommo-o"
-   ],
    "in_six": false,
    "where": "Overflow"
   },
@@ -4338,23 +4335,6 @@
    "where": "Active"
   },
   {
-   "name": "Wyrdeer",
-   "tier": "C",
-   "sid": "WYRDEER",
-   "form": "0",
-   "fit": 6.5,
-   "grade": "Good",
-   "res": 3,
-   "weak": 1,
-   "nmoves": 19,
-   "se": 1,
-   "oneshot": [
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
    "name": "Stoutland",
    "tier": "C",
    "sid": "STOUTLAND",
@@ -4372,21 +4352,22 @@
    "where": "Overflow"
   },
   {
-   "name": "Reuniclus",
-   "tier": "B",
-   "sid": "REUNICLUS",
+   "name": "Feraligatr",
+   "tier": "C",
+   "sid": "FERALIGATR",
    "form": "0",
-   "fit": 6.3,
+   "fit": 6.4,
    "grade": "Good",
-   "res": 4,
+   "res": 2,
    "weak": 2,
    "nmoves": 19,
-   "se": 1,
+   "se": 6,
    "oneshot": [
+    "Porygon-Z",
     "Kommo-o"
    ],
    "in_six": false,
-   "where": "Active"
+   "where": "Overflow"
   },
   {
    "name": "Gothitelle",
@@ -4399,6 +4380,23 @@
    "weak": 2,
    "nmoves": 19,
    "se": 1,
+   "oneshot": [
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Gimmighoul",
+   "tier": "D",
+   "sid": "GIMMIGHOUL",
+   "form": "0",
+   "fit": 6.3,
+   "grade": "Good",
+   "res": 6,
+   "weak": 2,
+   "nmoves": 19,
+   "se": 0,
    "oneshot": [
     "Kommo-o"
    ],
@@ -4442,21 +4440,23 @@
    "where": "Overflow"
   },
   {
-   "name": "Gimmighoul",
-   "tier": "D",
-   "sid": "GIMMIGHOUL",
-   "form": "0",
+   "name": "Unfezant (Aevian Form Male)",
+   "tier": "S",
+   "sid": "UNFEZANT",
+   "form": "1",
    "fit": 6.3,
    "grade": "Good",
    "res": 6,
-   "weak": 2,
+   "weak": 6,
    "nmoves": 19,
-   "se": 0,
+   "se": 4,
    "oneshot": [
+    "Appletun",
+    "Porygon-Z",
     "Kommo-o"
    ],
    "in_six": false,
-   "where": "Overflow"
+   "where": "Active"
   },
   {
    "name": "Mantine",
@@ -4531,25 +4531,6 @@
    ],
    "in_six": false,
    "where": "Active"
-  },
-  {
-   "name": "Overqwil",
-   "tier": "B",
-   "sid": "OVERQWIL",
-   "form": "0",
-   "fit": 5.9,
-   "grade": "Good",
-   "res": 5,
-   "weak": 0,
-   "nmoves": 19,
-   "se": 1,
-   "oneshot": [
-    "Noivern",
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
   },
   {
    "name": "Oricorio (Sensu Style)",
@@ -4641,19 +4622,17 @@
    "where": "Overflow"
   },
   {
-   "name": "Unfezant (Aevian Form Male)",
-   "tier": "A",
-   "sid": "UNFEZANT",
-   "form": "1",
+   "name": "Reuniclus",
+   "tier": "C",
+   "sid": "REUNICLUS",
+   "form": "0",
    "fit": 5.7,
    "grade": "Good",
-   "res": 6,
-   "weak": 6,
+   "res": 4,
+   "weak": 2,
    "nmoves": 19,
-   "se": 4,
+   "se": 1,
    "oneshot": [
-    "Appletun",
-    "Porygon-Z",
     "Kommo-o"
    ],
    "in_six": false,
@@ -4673,6 +4652,42 @@
    "oneshot": [
     "Noivern",
     "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Overqwil",
+   "tier": "C",
+   "sid": "OVERQWIL",
+   "form": "0",
+   "fit": 5.3,
+   "grade": "Good",
+   "res": 5,
+   "weak": 0,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Flareon",
+   "tier": "B",
+   "sid": "FLAREON",
+   "form": "0",
+   "fit": 5.2,
+   "grade": "Good",
+   "res": 3,
+   "weak": 0,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [
     "Kommo-o"
    ],
    "in_six": false,
@@ -4714,24 +4729,6 @@
    "where": "Active"
   },
   {
-   "name": "Carracosta",
-   "tier": "C",
-   "sid": "CARRACOSTA",
-   "form": "0",
-   "fit": 4.8,
-   "grade": "Good",
-   "res": 6,
-   "weak": 4,
-   "nmoves": 19,
-   "se": 1,
-   "oneshot": [
-    "Appletun",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
    "name": "Omastar",
    "tier": "C",
    "sid": "OMASTAR",
@@ -4753,6 +4750,24 @@
    "name": "Barbaracle",
    "tier": "C",
    "sid": "BARBARACLE",
+   "form": "0",
+   "fit": 4.8,
+   "grade": "Good",
+   "res": 6,
+   "weak": 4,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [
+    "Appletun",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Carracosta",
+   "tier": "C",
+   "sid": "CARRACOSTA",
    "form": "0",
    "fit": 4.8,
    "grade": "Good",
@@ -4835,23 +4850,6 @@
    "where": "Overflow"
   },
   {
-   "name": "Flareon",
-   "tier": "C",
-   "sid": "FLAREON",
-   "form": "0",
-   "fit": 4.6,
-   "grade": "Good",
-   "res": 3,
-   "weak": 0,
-   "nmoves": 19,
-   "se": 1,
-   "oneshot": [
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
    "name": "Slowbro",
    "tier": "A",
    "sid": "SLOWBRO",
@@ -4897,24 +4895,6 @@
    "nmoves": 19,
    "se": 1,
    "oneshot": [
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
-   "name": "Slowbro (Galarian Form)",
-   "tier": "C",
-   "sid": "SLOWBRO",
-   "form": "1",
-   "fit": 4.2,
-   "grade": "Good",
-   "res": 3,
-   "weak": 2,
-   "nmoves": 19,
-   "se": 2,
-   "oneshot": [
-    "Porygon-Z",
     "Kommo-o"
    ],
    "in_six": false,
@@ -4990,21 +4970,6 @@
    "where": "Overflow"
   },
   {
-   "name": "Muk",
-   "tier": "C",
-   "sid": "MUK",
-   "form": "0",
-   "fit": 4.0,
-   "grade": "Good",
-   "res": 3,
-   "weak": 2,
-   "nmoves": 19,
-   "se": 1,
-   "oneshot": [],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
    "name": "Mightyena",
    "tier": "D",
    "sid": "MIGHTYENA",
@@ -5018,23 +4983,6 @@
    "oneshot": [
     "Noivern",
     "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
-   "name": "Meganium",
-   "tier": "C",
-   "sid": "MEGANIUM",
-   "form": "0",
-   "fit": 4.0,
-   "grade": "Good",
-   "res": 2,
-   "weak": 2,
-   "nmoves": 19,
-   "se": 1,
-   "oneshot": [
     "Kommo-o"
    ],
    "in_six": false,
@@ -5059,6 +5007,23 @@
    "where": "Overflow"
   },
   {
+   "name": "Beheeyem",
+   "tier": "D",
+   "sid": "BEHEEYEM",
+   "form": "0",
+   "fit": 3.6,
+   "grade": "Good",
+   "res": 4,
+   "weak": 2,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Bellibolt",
    "tier": "C",
    "sid": "BELLIBOLT",
@@ -5076,17 +5041,18 @@
    "where": "Overflow"
   },
   {
-   "name": "Beheeyem",
+   "name": "Slowbro (Galarian Form)",
    "tier": "D",
-   "sid": "BEHEEYEM",
-   "form": "0",
+   "sid": "SLOWBRO",
+   "form": "1",
    "fit": 3.6,
    "grade": "Good",
-   "res": 4,
+   "res": 3,
    "weak": 2,
    "nmoves": 19,
-   "se": 1,
+   "se": 2,
    "oneshot": [
+    "Porygon-Z",
     "Kommo-o"
    ],
    "in_six": false,
@@ -5112,23 +5078,6 @@
    "where": "Overflow"
   },
   {
-   "name": "Tropius",
-   "tier": "C",
-   "sid": "TROPIUS",
-   "form": "0",
-   "fit": 3.6,
-   "grade": "Good",
-   "res": 3,
-   "weak": 2,
-   "nmoves": 19,
-   "se": 2,
-   "oneshot": [
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
    "name": "Spidops",
    "tier": "D",
    "sid": "SPIDOPS",
@@ -5142,6 +5091,23 @@
    "oneshot": [
     "Noivern",
     "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Tropius",
+   "tier": "C",
+   "sid": "TROPIUS",
+   "form": "0",
+   "fit": 3.6,
+   "grade": "Good",
+   "res": 3,
+   "weak": 2,
+   "nmoves": 19,
+   "se": 2,
+   "oneshot": [
     "Kommo-o"
    ],
    "in_six": false,
@@ -5184,6 +5150,38 @@
    "where": "Overflow"
   },
   {
+   "name": "Muk",
+   "tier": "D",
+   "sid": "MUK",
+   "form": "0",
+   "fit": 3.5,
+   "grade": "Good",
+   "res": 3,
+   "weak": 2,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Meganium",
+   "tier": "D",
+   "sid": "MEGANIUM",
+   "form": "0",
+   "fit": 3.4,
+   "grade": "Good",
+   "res": 2,
+   "weak": 2,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Salazzle",
    "tier": "D",
    "sid": "SALAZZLE",
@@ -5194,25 +5192,6 @@
    "weak": 2,
    "nmoves": 19,
    "se": 3,
-   "oneshot": [
-    "Noivern",
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
-   "name": "Skuntank",
-   "tier": "C",
-   "sid": "SKUNTANK",
-   "form": "0",
-   "fit": 3.1,
-   "grade": "Good",
-   "res": 5,
-   "weak": 0,
-   "nmoves": 19,
-   "se": 0,
    "oneshot": [
     "Noivern",
     "Porygon-Z",
@@ -5294,9 +5273,9 @@
    "where": "Active"
   },
   {
-   "name": "Boltund",
+   "name": "Electabuzz",
    "tier": "C",
-   "sid": "BOLTUND",
+   "sid": "ELECTABUZZ",
    "form": "0",
    "fit": 2.8,
    "grade": "Good",
@@ -5332,9 +5311,9 @@
    "where": "Overflow"
   },
   {
-   "name": "Electabuzz",
+   "name": "Boltund",
    "tier": "C",
-   "sid": "ELECTABUZZ",
+   "sid": "BOLTUND",
    "form": "0",
    "fit": 2.8,
    "grade": "Good",
@@ -5403,6 +5382,23 @@
    "where": "Overflow"
   },
   {
+   "name": "Chimecho",
+   "tier": "C",
+   "sid": "CHIMECHO",
+   "form": "0",
+   "fit": 2.7,
+   "grade": "Good",
+   "res": 4,
+   "weak": 2,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Pyroar",
    "tier": "C",
    "sid": "PYROAR",
@@ -5416,23 +5412,6 @@
    "oneshot": [
     "Noivern",
     "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
-   "name": "Chimecho",
-   "tier": "C",
-   "sid": "CHIMECHO",
-   "form": "0",
-   "fit": 2.7,
-   "grade": "Good",
-   "res": 4,
-   "weak": 2,
-   "nmoves": 19,
-   "se": 1,
-   "oneshot": [
     "Kommo-o"
    ],
    "in_six": false,
@@ -5521,6 +5500,25 @@
    "nmoves": 19,
    "se": 2,
    "oneshot": [
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Skuntank",
+   "tier": "D",
+   "sid": "SKUNTANK",
+   "form": "0",
+   "fit": 2.5,
+   "grade": "Good",
+   "res": 5,
+   "weak": 0,
+   "nmoves": 19,
+   "se": 0,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
     "Kommo-o"
    ],
    "in_six": false,
@@ -5835,25 +5833,6 @@
    "where": "Overflow"
   },
   {
-   "name": "Drapion",
-   "tier": "C",
-   "sid": "DRAPION",
-   "form": "0",
-   "fit": 1.3,
-   "grade": "Good",
-   "res": 5,
-   "weak": 0,
-   "nmoves": 19,
-   "se": 1,
-   "oneshot": [
-    "Noivern",
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
    "name": "Orbeetle",
    "tier": "C",
    "sid": "ORBEETLE",
@@ -6012,16 +5991,16 @@
    "where": "Overflow"
   },
   {
-   "name": "Pincurchin",
-   "tier": "C",
-   "sid": "PINCURCHIN",
+   "name": "Drapion",
+   "tier": "D",
+   "sid": "DRAPION",
    "form": "0",
-   "fit": 0.6,
-   "grade": "Weak",
-   "res": 3,
+   "fit": 0.7,
+   "grade": "Good",
+   "res": 5,
    "weak": 0,
    "nmoves": 19,
-   "se": 0,
+   "se": 1,
    "oneshot": [
     "Noivern",
     "Porygon-Z",
@@ -6065,23 +6044,6 @@
    "where": "Overflow"
   },
   {
-   "name": "Tentacruel",
-   "tier": "C",
-   "sid": "TENTACRUEL",
-   "form": "0",
-   "fit": 0.6,
-   "grade": "Weak",
-   "res": 4,
-   "weak": 3,
-   "nmoves": 19,
-   "se": 1,
-   "oneshot": [
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
    "name": "Yanmega",
    "tier": "B",
    "sid": "YANMEGA",
@@ -6093,26 +6055,6 @@
    "nmoves": 19,
    "se": 3,
    "oneshot": [
-    "Noivern",
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
-   "name": "Toxicroak",
-   "tier": "C",
-   "sid": "TOXICROAK",
-   "form": "0",
-   "fit": 0.5,
-   "grade": "Weak",
-   "res": 4,
-   "weak": 3,
-   "nmoves": 19,
-   "se": 4,
-   "oneshot": [
-    "Stoutland",
     "Noivern",
     "Porygon-Z",
     "Kommo-o"
@@ -6136,6 +6078,26 @@
     "Porygon-Z",
     "Kommo-o",
     "Klinklang"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Toxicroak",
+   "tier": "C",
+   "sid": "TOXICROAK",
+   "form": "0",
+   "fit": 0.5,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 3,
+   "nmoves": 19,
+   "se": 4,
+   "oneshot": [
+    "Stoutland",
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
    ],
    "in_six": false,
    "where": "Overflow"
@@ -6181,9 +6143,9 @@
    "where": "Overflow"
   },
   {
-   "name": "Seviper",
+   "name": "Arbok",
    "tier": "D",
-   "sid": "SEVIPER",
+   "sid": "ARBOK",
    "form": "0",
    "fit": 0.3,
    "grade": "Weak",
@@ -6200,9 +6162,9 @@
    "where": "Overflow"
   },
   {
-   "name": "Arbok",
+   "name": "Seviper",
    "tier": "D",
-   "sid": "ARBOK",
+   "sid": "SEVIPER",
    "form": "0",
    "fit": 0.3,
    "grade": "Weak",
@@ -6237,23 +6199,6 @@
    "where": "Overflow"
   },
   {
-   "name": "Amoonguss",
-   "tier": "A",
-   "sid": "AMOONGUSS",
-   "form": "0",
-   "fit": 0.1,
-   "grade": "Weak",
-   "res": 4,
-   "weak": 4,
-   "nmoves": 19,
-   "se": 1,
-   "oneshot": [
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
    "name": "Walrein",
    "tier": "C",
    "sid": "WALREIN",
@@ -6265,6 +6210,44 @@
    "nmoves": 19,
    "se": 3,
    "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Xatu",
+   "tier": "C",
+   "sid": "XATU",
+   "form": "0",
+   "fit": 0.0,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 3,
+   "nmoves": 19,
+   "se": 2,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Pincurchin",
+   "tier": "D",
+   "sid": "PINCURCHIN",
+   "form": "0",
+   "fit": 0.0,
+   "grade": "Weak",
+   "res": 3,
+   "weak": 0,
+   "nmoves": 19,
+   "se": 0,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
+   ],
    "in_six": false,
    "where": "Overflow"
   },
@@ -6298,6 +6281,23 @@
    "weak": 3,
    "nmoves": 19,
    "se": 3,
+   "oneshot": [
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Tentacruel",
+   "tier": "D",
+   "sid": "TENTACRUEL",
+   "form": "0",
+   "fit": -0.0,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 3,
+   "nmoves": 19,
+   "se": 1,
    "oneshot": [
     "Kommo-o"
    ],
@@ -6344,18 +6344,17 @@
    "where": "Overflow"
   },
   {
-   "name": "Ninetales",
+   "name": "Diggersby",
    "tier": "B",
-   "sid": "NINETALES",
+   "sid": "DIGGERSBY",
    "form": "0",
    "fit": -0.3,
    "grade": "Weak",
-   "res": 3,
-   "weak": 0,
+   "res": 2,
+   "weak": 3,
    "nmoves": 19,
-   "se": 1,
+   "se": 3,
    "oneshot": [
-    "Noivern",
     "Porygon-Z",
     "Kommo-o"
    ],
@@ -6399,9 +6398,9 @@
    "where": "Overflow"
   },
   {
-   "name": "Venusaur",
+   "name": "Amoonguss",
    "tier": "B",
-   "sid": "VENUSAUR",
+   "sid": "AMOONGUSS",
    "form": "0",
    "fit": -0.5,
    "grade": "Weak",
@@ -6416,36 +6415,17 @@
    "where": "Overflow"
   },
   {
-   "name": "Ampharos (Aevian Form)",
-   "tier": "A",
-   "sid": "AMPHAROS",
-   "form": "1",
-   "fit": -0.5,
-   "grade": "Weak",
-   "res": 2,
-   "weak": 3,
-   "nmoves": 19,
-   "se": 3,
-   "oneshot": [
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Active"
-  },
-  {
-   "name": "Lopunny",
-   "tier": "D",
-   "sid": "LOPUNNY",
+   "name": "Venusaur",
+   "tier": "B",
+   "sid": "VENUSAUR",
    "form": "0",
    "fit": -0.5,
    "grade": "Weak",
-   "res": 1,
-   "weak": 2,
+   "res": 4,
+   "weak": 4,
    "nmoves": 19,
-   "se": 3,
+   "se": 1,
    "oneshot": [
-    "Noivern",
-    "Porygon-Z",
     "Kommo-o"
    ],
    "in_six": false,
@@ -6471,16 +6451,16 @@
    "where": "Overflow"
   },
   {
-   "name": "Xatu",
+   "name": "Lopunny",
    "tier": "D",
-   "sid": "XATU",
+   "sid": "LOPUNNY",
    "form": "0",
-   "fit": -0.6,
+   "fit": -0.5,
    "grade": "Weak",
-   "res": 5,
-   "weak": 3,
+   "res": 1,
+   "weak": 2,
    "nmoves": 19,
-   "se": 2,
+   "se": 3,
    "oneshot": [
     "Noivern",
     "Porygon-Z",
@@ -6528,6 +6508,25 @@
    "where": "Overflow"
   },
   {
+   "name": "Ninetales",
+   "tier": "C",
+   "sid": "NINETALES",
+   "form": "0",
+   "fit": -0.9,
+   "grade": "Weak",
+   "res": 3,
+   "weak": 0,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Heatmor",
    "tier": "C",
    "sid": "HEATMOR",
@@ -6547,42 +6546,6 @@
    "where": "Overflow"
   },
   {
-   "name": "Diggersby",
-   "tier": "C",
-   "sid": "DIGGERSBY",
-   "form": "0",
-   "fit": -0.9,
-   "grade": "Weak",
-   "res": 2,
-   "weak": 3,
-   "nmoves": 19,
-   "se": 3,
-   "oneshot": [
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
-   "name": "Lurantis",
-   "tier": "C",
-   "sid": "LURANTIS",
-   "form": "0",
-   "fit": -1.0,
-   "grade": "Weak",
-   "res": 2,
-   "weak": 2,
-   "nmoves": 19,
-   "se": 1,
-   "oneshot": [
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
    "name": "Weezing",
    "tier": "D",
    "sid": "WEEZING",
@@ -6591,6 +6554,25 @@
    "grade": "Weak",
    "res": 3,
    "weak": 2,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Marowak",
+   "tier": "C",
+   "sid": "MAROWAK",
+   "form": "0",
+   "fit": -1.1,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 1,
    "nmoves": 19,
    "se": 1,
    "oneshot": [
@@ -6621,23 +6603,21 @@
    "where": "Overflow"
   },
   {
-   "name": "Marowak",
-   "tier": "C",
-   "sid": "MAROWAK",
-   "form": "0",
+   "name": "Ampharos (Aevian Form)",
+   "tier": "B",
+   "sid": "AMPHAROS",
+   "form": "1",
    "fit": -1.1,
    "grade": "Weak",
-   "res": 1,
-   "weak": 1,
+   "res": 2,
+   "weak": 3,
    "nmoves": 19,
-   "se": 1,
+   "se": 3,
    "oneshot": [
-    "Noivern",
-    "Porygon-Z",
     "Kommo-o"
    ],
    "in_six": false,
-   "where": "Overflow"
+   "where": "Active"
   },
   {
    "name": "Clawitzer",
@@ -6805,9 +6785,9 @@
    "where": "Overflow"
   },
   {
-   "name": "Leafeon",
+   "name": "Tangrowth",
    "tier": "C",
-   "sid": "LEAFEON",
+   "sid": "TANGROWTH",
    "form": "0",
    "fit": -1.5,
    "grade": "Weak",
@@ -6824,9 +6804,9 @@
    "where": "Overflow"
   },
   {
-   "name": "Tangrowth",
+   "name": "Leafeon",
    "tier": "C",
-   "sid": "TANGROWTH",
+   "sid": "LEAFEON",
    "form": "0",
    "fit": -1.5,
    "grade": "Weak",
@@ -6851,6 +6831,24 @@
    "grade": "Weak",
    "res": 6,
    "weak": 4,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Lurantis",
+   "tier": "D",
+   "sid": "LURANTIS",
+   "form": "0",
+   "fit": -1.6,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 2,
    "nmoves": 19,
    "se": 1,
    "oneshot": [
@@ -6955,17 +6953,18 @@
    "where": "Overflow"
   },
   {
-   "name": "Seaking",
+   "name": "Fearow",
    "tier": "C",
-   "sid": "SEAKING",
+   "sid": "FEAROW",
    "form": "0",
    "fit": -2.1,
    "grade": "Weak",
    "res": 2,
-   "weak": 2,
+   "weak": 1,
    "nmoves": 19,
-   "se": 1,
+   "se": 3,
    "oneshot": [
+    "Noivern",
     "Porygon-Z",
     "Kommo-o"
    ],
@@ -7159,18 +7158,17 @@
    "where": "Overflow"
   },
   {
-   "name": "Fearow",
+   "name": "Seaking",
    "tier": "D",
-   "sid": "FEAROW",
+   "sid": "SEAKING",
    "form": "0",
    "fit": -2.7,
    "grade": "Weak",
    "res": 2,
-   "weak": 1,
+   "weak": 2,
    "nmoves": 19,
-   "se": 3,
+   "se": 1,
    "oneshot": [
-    "Noivern",
     "Porygon-Z",
     "Kommo-o"
    ],
@@ -7235,23 +7233,6 @@
    ],
    "in_six": false,
    "where": "Overflow"
-  },
-  {
-   "name": "Ludicolo",
-   "tier": "B",
-   "sid": "LUDICOLO",
-   "form": "0",
-   "fit": -2.9,
-   "grade": "Weak",
-   "res": 1,
-   "weak": 1,
-   "nmoves": 19,
-   "se": 0,
-   "oneshot": [
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Active"
   },
   {
    "name": "Sandslash",
@@ -7348,6 +7329,23 @@
    ],
    "in_six": false,
    "where": "Overflow"
+  },
+  {
+   "name": "Ludicolo",
+   "tier": "C",
+   "sid": "LUDICOLO",
+   "form": "0",
+   "fit": -3.5,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 1,
+   "nmoves": 19,
+   "se": 0,
+   "oneshot": [
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Active"
   },
   {
    "name": "Tauros (Paldean Combat Breed)",
@@ -7613,9 +7611,9 @@
    "where": "Overflow"
   },
   {
-   "name": "Audino",
+   "name": "Greedent",
    "tier": "D",
-   "sid": "AUDINO",
+   "sid": "GREEDENT",
    "form": "0",
    "fit": -4.7,
    "grade": "Weak",
@@ -7630,9 +7628,9 @@
    "where": "Overflow"
   },
   {
-   "name": "Greedent",
+   "name": "Audino",
    "tier": "D",
-   "sid": "GREEDENT",
+   "sid": "AUDINO",
    "form": "0",
    "fit": -4.7,
    "grade": "Weak",
@@ -7705,6 +7703,25 @@
    "where": "Overflow"
   },
   {
+   "name": "Beautifly",
+   "tier": "D",
+   "sid": "BEAUTIFLY",
+   "form": "0",
+   "fit": -5.0,
+   "grade": "Weak",
+   "res": 3,
+   "weak": 3,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Turtonator",
    "tier": "D",
    "sid": "TURTONATOR",
@@ -7717,25 +7734,6 @@
    "se": 4,
    "oneshot": [
     "Appletun",
-    "Noivern",
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
-   "name": "Beautifly",
-   "tier": "D",
-   "sid": "BEAUTIFLY",
-   "form": "0",
-   "fit": -5.0,
-   "grade": "Weak",
-   "res": 3,
-   "weak": 3,
-   "nmoves": 19,
-   "se": 1,
-   "oneshot": [
     "Noivern",
     "Porygon-Z",
     "Kommo-o"
@@ -7891,25 +7889,6 @@
    "where": "Overflow"
   },
   {
-   "name": "Golduck",
-   "tier": "C",
-   "sid": "GOLDUCK",
-   "form": "0",
-   "fit": -5.6,
-   "grade": "Weak",
-   "res": 2,
-   "weak": 2,
-   "nmoves": 19,
-   "se": 1,
-   "oneshot": [
-    "Noivern",
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
    "name": "Oinkologne",
    "tier": "C",
    "sid": "OINKOLOGNE",
@@ -7986,44 +7965,6 @@
    "where": "Overflow"
   },
   {
-   "name": "Passimian",
-   "tier": "C",
-   "sid": "PASSIMIAN",
-   "form": "0",
-   "fit": -5.7,
-   "grade": "Weak",
-   "res": 1,
-   "weak": 3,
-   "nmoves": 19,
-   "se": 3,
-   "oneshot": [
-    "Noivern",
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
-   "name": "Purugly",
-   "tier": "D",
-   "sid": "PURUGLY",
-   "form": "0",
-   "fit": -5.7,
-   "grade": "Weak",
-   "res": 1,
-   "weak": 2,
-   "nmoves": 19,
-   "se": 0,
-   "oneshot": [
-    "Noivern",
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
    "name": "Delcatty",
    "tier": "D",
    "sid": "DELCATTY",
@@ -8046,6 +7987,44 @@
    "name": "Persian",
    "tier": "D",
    "sid": "PERSIAN",
+   "form": "0",
+   "fit": -5.7,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 19,
+   "se": 0,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Passimian",
+   "tier": "C",
+   "sid": "PASSIMIAN",
+   "form": "0",
+   "fit": -5.7,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 3,
+   "nmoves": 19,
+   "se": 3,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Purugly",
+   "tier": "D",
+   "sid": "PURUGLY",
    "form": "0",
    "fit": -5.7,
    "grade": "Weak",
@@ -8120,16 +8099,16 @@
    "where": "Overflow"
   },
   {
-   "name": "Zangoose",
-   "tier": "C",
-   "sid": "ZANGOOSE",
+   "name": "Golduck",
+   "tier": "D",
+   "sid": "GOLDUCK",
    "form": "0",
-   "fit": -6.0,
+   "fit": -6.2,
    "grade": "Weak",
-   "res": 1,
+   "res": 2,
    "weak": 2,
    "nmoves": 19,
-   "se": 3,
+   "se": 1,
    "oneshot": [
     "Noivern",
     "Porygon-Z",
@@ -8250,9 +8229,9 @@
    "where": "Overflow"
   },
   {
-   "name": "Victreebel",
+   "name": "Roserade",
    "tier": "C",
-   "sid": "VICTREEBEL",
+   "sid": "ROSERADE",
    "form": "0",
    "fit": -6.6,
    "grade": "Weak",
@@ -8269,16 +8248,16 @@
    "where": "Overflow"
   },
   {
-   "name": "Roserade",
-   "tier": "C",
-   "sid": "ROSERADE",
+   "name": "Zangoose",
+   "tier": "D",
+   "sid": "ZANGOOSE",
    "form": "0",
    "fit": -6.6,
    "grade": "Weak",
-   "res": 4,
-   "weak": 4,
+   "res": 1,
+   "weak": 2,
    "nmoves": 19,
-   "se": 1,
+   "se": 3,
    "oneshot": [
     "Noivern",
     "Porygon-Z",
@@ -8442,6 +8421,25 @@
    "where": "Overflow"
   },
   {
+   "name": "Victreebel",
+   "tier": "D",
+   "sid": "VICTREEBEL",
+   "form": "0",
+   "fit": -7.2,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 4,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Dewgong",
    "tier": "D",
    "sid": "DEWGONG",
@@ -8515,6 +8513,25 @@
    "where": "Active"
   },
   {
+   "name": "Crobat",
+   "tier": "B",
+   "sid": "CROBAT",
+   "form": "0",
+   "fit": -7.3,
+   "grade": "Weak",
+   "res": 3,
+   "weak": 3,
+   "nmoves": 19,
+   "se": 2,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
    "name": "Cherrim",
    "tier": "D",
    "sid": "CHERRIM",
@@ -8534,9 +8551,9 @@
    "where": "Overflow"
   },
   {
-   "name": "Plusle",
+   "name": "Minun",
    "tier": "D",
-   "sid": "PLUSLE",
+   "sid": "MINUN",
    "form": "0",
    "fit": -7.5,
    "grade": "Weak",
@@ -8554,9 +8571,9 @@
    "where": "Overflow"
   },
   {
-   "name": "Minun",
+   "name": "Plusle",
    "tier": "D",
-   "sid": "MINUN",
+   "sid": "PLUSLE",
    "form": "0",
    "fit": -7.5,
    "grade": "Weak",
@@ -8654,25 +8671,6 @@
    "where": "Overflow"
   },
   {
-   "name": "Crobat",
-   "tier": "C",
-   "sid": "CROBAT",
-   "form": "0",
-   "fit": -7.9,
-   "grade": "Weak",
-   "res": 3,
-   "weak": 3,
-   "nmoves": 19,
-   "se": 2,
-   "oneshot": [
-    "Noivern",
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Active"
-  },
-  {
    "name": "Sawsbuck",
    "tier": "D",
    "sid": "SAWSBUCK",
@@ -8714,6 +8712,24 @@
    "where": "Overflow"
   },
   {
+   "name": "Phione",
+   "tier": "D",
+   "sid": "PHIONE",
+   "form": "0",
+   "fit": -8.2,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 2,
+   "nmoves": 19,
+   "se": 1,
+   "oneshot": [
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
    "name": "Breloom",
    "tier": "C",
    "sid": "BRELOOM",
@@ -8731,24 +8747,6 @@
    ],
    "in_six": false,
    "where": "Overflow"
-  },
-  {
-   "name": "Phione",
-   "tier": "D",
-   "sid": "PHIONE",
-   "form": "0",
-   "fit": -8.2,
-   "grade": "Weak",
-   "res": 2,
-   "weak": 2,
-   "nmoves": 19,
-   "se": 1,
-   "oneshot": [
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Active"
   },
   {
    "name": "Lumineon",
@@ -8809,19 +8807,22 @@
    "where": "Overflow"
   },
   {
-   "name": "Silvally",
-   "tier": "B",
-   "sid": "SILVALLY",
+   "name": "Swellow",
+   "tier": "C",
+   "sid": "SWELLOW",
    "form": "0",
-   "fit": -8.5,
+   "fit": -8.3,
    "grade": "Weak",
-   "res": 1,
-   "weak": 2,
+   "res": 2,
+   "weak": 1,
    "nmoves": 19,
-   "se": 0,
+   "se": 2,
    "oneshot": [
+    "Appletun",
+    "Noivern",
     "Porygon-Z",
-    "Kommo-o"
+    "Kommo-o",
+    "Klinklang"
    ],
    "in_six": false,
    "where": "Overflow"
@@ -8959,27 +8960,6 @@
    "where": "Overflow"
   },
   {
-   "name": "Swellow",
-   "tier": "D",
-   "sid": "SWELLOW",
-   "form": "0",
-   "fit": -8.9,
-   "grade": "Weak",
-   "res": 2,
-   "weak": 1,
-   "nmoves": 19,
-   "se": 2,
-   "oneshot": [
-    "Appletun",
-    "Noivern",
-    "Porygon-Z",
-    "Kommo-o",
-    "Klinklang"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
    "name": "Ariados",
    "tier": "D",
    "sid": "ARIADOS",
@@ -8999,18 +8979,17 @@
    "where": "Overflow"
   },
   {
-   "name": "Watchog",
-   "tier": "D",
-   "sid": "WATCHOG",
+   "name": "Silvally",
+   "tier": "C",
+   "sid": "SILVALLY",
    "form": "0",
-   "fit": -9.2,
+   "fit": -9.1,
    "grade": "Weak",
    "res": 1,
    "weak": 2,
    "nmoves": 19,
    "se": 0,
    "oneshot": [
-    "Noivern",
     "Porygon-Z",
     "Kommo-o"
    ],
@@ -9018,76 +8997,19 @@
    "where": "Overflow"
   },
   {
-   "name": "Castform",
-   "tier": "D",
-   "sid": "CASTFORM",
+   "name": "Tatsugiri",
+   "tier": "B",
+   "sid": "TATSUGIRI",
    "form": "0",
    "fit": -9.2,
    "grade": "Weak",
-   "res": 1,
-   "weak": 2,
+   "res": 2,
+   "weak": 4,
    "nmoves": 19,
-   "se": 0,
+   "se": 3,
    "oneshot": [
+    "Appletun",
     "Noivern",
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
-   "name": "Spinda",
-   "tier": "D",
-   "sid": "SPINDA",
-   "form": "0",
-   "fit": -9.2,
-   "grade": "Weak",
-   "res": 1,
-   "weak": 2,
-   "nmoves": 19,
-   "se": 0,
-   "oneshot": [
-    "Noivern",
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
-   "name": "Porygon",
-   "tier": "D",
-   "sid": "PORYGON",
-   "form": "0",
-   "fit": -9.2,
-   "grade": "Weak",
-   "res": 1,
-   "weak": 2,
-   "nmoves": 19,
-   "se": 0,
-   "oneshot": [
-    "Noivern",
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
-   "name": "Ditto",
-   "tier": "D",
-   "sid": "DITTO",
-   "form": "0",
-   "fit": -9.2,
-   "grade": "Weak",
-   "res": 1,
-   "weak": 2,
-   "nmoves": 19,
-   "se": 0,
-   "oneshot": [
-    "Noivern",
-    "Porygon-Z",
     "Kommo-o"
    ],
    "in_six": false,
@@ -9134,6 +9056,101 @@
    "where": "Overflow"
   },
   {
+   "name": "Watchog",
+   "tier": "D",
+   "sid": "WATCHOG",
+   "form": "0",
+   "fit": -9.2,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 19,
+   "se": 0,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Ditto",
+   "tier": "D",
+   "sid": "DITTO",
+   "form": "0",
+   "fit": -9.2,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 19,
+   "se": 0,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Castform",
+   "tier": "D",
+   "sid": "CASTFORM",
+   "form": "0",
+   "fit": -9.2,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 19,
+   "se": 0,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Porygon",
+   "tier": "D",
+   "sid": "PORYGON",
+   "form": "0",
+   "fit": -9.2,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 19,
+   "se": 0,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Spinda",
+   "tier": "D",
+   "sid": "SPINDA",
+   "form": "0",
+   "fit": -9.2,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 19,
+   "se": 0,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Unfezant",
    "tier": "D",
    "sid": "UNFEZANT",
@@ -9153,26 +9170,6 @@
    "where": "Overflow"
   },
   {
-   "name": "Leavanny (Aevian Form)",
-   "tier": "A",
-   "sid": "LEAVANNY",
-   "form": "1",
-   "fit": -9.7,
-   "grade": "Weak",
-   "res": 4,
-   "weak": 5,
-   "nmoves": 19,
-   "se": 3,
-   "oneshot": [
-    "Appletun",
-    "Noivern",
-    "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Active"
-  },
-  {
    "name": "Machoke",
    "tier": "D",
    "sid": "MACHOKE",
@@ -9186,25 +9183,6 @@
    "oneshot": [
     "Noivern",
     "Porygon-Z",
-    "Kommo-o"
-   ],
-   "in_six": false,
-   "where": "Overflow"
-  },
-  {
-   "name": "Tatsugiri",
-   "tier": "C",
-   "sid": "TATSUGIRI",
-   "form": "0",
-   "fit": -9.8,
-   "grade": "Weak",
-   "res": 2,
-   "weak": 4,
-   "nmoves": 19,
-   "se": 3,
-   "oneshot": [
-    "Appletun",
-    "Noivern",
     "Kommo-o"
    ],
    "in_six": false,
@@ -9291,6 +9269,26 @@
    "where": "Overflow"
   },
   {
+   "name": "Leavanny (Aevian Form)",
+   "tier": "B",
+   "sid": "LEAVANNY",
+   "form": "1",
+   "fit": -10.3,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 5,
+   "nmoves": 19,
+   "se": 3,
+   "oneshot": [
+    "Appletun",
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
    "name": "Clamperl",
    "tier": "D",
    "sid": "CLAMPERL",
@@ -9374,10 +9372,10 @@
   },
   {
    "name": "Slaking",
-   "tier": "C",
+   "tier": "D",
    "sid": "SLAKING",
    "form": "0",
-   "fit": -11.6,
+   "fit": -12.2,
    "grade": "Weak",
    "res": 1,
    "weak": 2,
@@ -9408,26 +9406,6 @@
    ],
    "in_six": false,
    "where": "Overflow"
-  },
-  {
-   "name": "Crabominable",
-   "tier": "B",
-   "sid": "CRABOMINABLE",
-   "form": "0",
-   "fit": -12.8,
-   "grade": "Weak",
-   "res": 1,
-   "weak": 7,
-   "nmoves": 19,
-   "se": 6,
-   "oneshot": [
-    "Noivern",
-    "Porygon-Z",
-    "Kommo-o",
-    "Klinklang"
-   ],
-   "in_six": false,
-   "where": "Active"
   },
   {
    "name": "Chatot",
@@ -9487,6 +9465,26 @@
    ],
    "in_six": false,
    "where": "Overflow"
+  },
+  {
+   "name": "Crabominable",
+   "tier": "C",
+   "sid": "CRABOMINABLE",
+   "form": "0",
+   "fit": -13.4,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 7,
+   "nmoves": 19,
+   "se": 6,
+   "oneshot": [
+    "Noivern",
+    "Porygon-Z",
+    "Kommo-o",
+    "Klinklang"
+   ],
+   "in_six": false,
+   "where": "Active"
   },
   {
    "name": "Jynx",
@@ -9635,7 +9633,7 @@
   }
  ],
  "pool": 383,
- "score": 386.8,
+ "score": 386.4,
  "cmp": 23.0,
  "break_field": null,
  "checks": {

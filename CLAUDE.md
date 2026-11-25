@@ -250,6 +250,13 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   ENGINE BUG FIXED 25 Nov: calc_stats / stat bound level=CAP (55) at import, so every owned Pokémon was scored at Lv 55 under a 60 / 65 cap;
   CAP now comes from state.json at import and is read at call time.
 
+- **TIERS TAB (Vincent, 25 Nov; was 'Dex'):** nav label 'Tiers', still three lists (Pokémon / Aevian / Crests). tier_all.py score = 55% meta /
+  community rating + 20% in-game (every hard fight, ALL_RUN) + 25% TEAM VALUE (the community rules): 60% hard-counter share of hard-fight foes
+  (percentile) + 40% mindset kit from the ideal build (Speed control, STAB priority, Pivot / sustain, Immunity, Disruption, Win condition).
+  Cut-offs S .675 / A .58 / B .44 / C .29 (same tier sizes as before). Sheet 'Why' adds the counter share + kit. Ch10 HOOK: state
+  tier_fights = [fight keys] limits the in-game part and counters to his hard-fight list (he will send Ch10's).
+  Builder: 'Field and plan' = ONE folded card (plan + model check + the game's field notes); matchup cards start folded.
+
 ## Fight protocol (Vincent, 14 Nov — do this BEFORE recommending any team or lineup)
 **Guide tips (Vincent, 23 Nov): ALWAYS factored in.** Every walkthrough / community tip he sends goes into workspace/team/fight_tips.json
 (per fight: tip text + needs); planner.py scores them (+3 per tip met) and the Planner tab shows 'Guide tips: N of M covered' (collapsed)
