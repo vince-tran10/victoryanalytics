@@ -215,17 +215,17 @@
      "used_for": "Klinklang"
     },
     {
-     "name": "Unfezant (Aevian Form Male)",
+     "name": "Arcanine (Hisuian Form)",
      "deal": 74,
-     "take_b": 86,
+     "take_b": 41,
      "faster": true,
      "hard": false,
      "used_for": null
     }
    ],
    "threat": [
-    "Speed 165 here: faster than 4 of your six",
-    "One-shots Ninetales-Alola (136%, Return), Toxtricity-Aevian (104%, Psychic Fangs), Golurk (102%, Crunch)",
+    "Speed 165 here: faster than 5 of your six",
+    "One-shots Sylveon (111%, Return), Toxtricity-Aevian (104%, Psychic Fangs), Golurk (102%, Crunch)",
     "Work Up: +2 Atk and Sp. Atk (boosted by the field)",
     "Chople Berry: halves the first super-effective Fighting hit",
     "Scrappy: its Normal / Fighting moves hit Ghost types",
@@ -241,30 +241,30 @@
   },
   {
    "foe": "Appletun",
-   "member": "Ninetales (Alolan Form)",
-   "deal": 145,
-   "take": 43,
-   "take_b": 43,
+   "member": "Sylveon",
+   "deal": 118,
+   "take": 26,
+   "take_b": 26,
    "faster": true,
    "hard": true,
-   "duo": 43,
+   "duo": 26,
    "eimm": false,
    "lrod": false,
    "win": true,
    "setup": null,
    "hk": 1,
-   "hd": 3,
-   "move": "Blizzard",
+   "hd": 4,
+   "move": "Hyper Voice",
    "plan": [
-    "Switch Ninetales-Alola in on Appletun: it takes ~43%",
-    "You move first: Blizzard KOs it before it acts",
-    "It heals 50%: Blizzard (145%) out-damages the heal, keep attacking"
+    "Switch Sylveon in on Appletun: it takes ~26%",
+    "You move first: Hyper Voice KOs it before it acts",
+    "It heals 50%: Hyper Voice (118%) out-damages the heal, keep attacking"
    ],
    "alts": [
     {
-     "name": "Sylveon",
-     "deal": 118,
-     "take_b": 26,
+     "name": "Ninetales (Alolan Form)",
+     "deal": 132,
+     "take_b": 43,
      "faster": true,
      "hard": true,
      "used_for": null
@@ -278,9 +278,9 @@
      "used_for": null
     },
     {
-     "name": "Frosmoth",
-     "deal": 107,
-     "take_b": 35,
+     "name": "Beartic",
+     "deal": 94,
+     "take_b": 50,
      "faster": true,
      "hard": true,
      "used_for": null
@@ -294,9 +294,11 @@
    ],
    "how": [
     "Immune to Draco Meteor",
-    "Faster: Speed 227 vs 50",
-    "Blizzard: 145% a hit, one-shots it",
-    "Takes ~43% from its best hit: it needs 3 hits"
+    "Resists Body Press",
+    "Faster: Speed 103 vs 50",
+    "Hyper Voice: 118% a hit, one-shots it",
+    "Takes ~26% from its best hit: it needs 4 hits",
+    "Field: Certain attacks raise Hype 1 Stage: Hyper Voice"
    ]
   },
   {
@@ -348,8 +350,8 @@
     }
    ],
    "threat": [
-    "Speed 219 here: faster than 5 of your six",
-    "One-shots Ninetales-Alola (101%, Boomburst)",
+    "Speed 219 here: faster than 6 of your six",
+    "Hardest hit on your six: Dragon Pulse on Toxtricity-Aevian (81%)",
     "Synthetic Seed: +1 attack on entry",
     "Heals 50% with Roost",
     "Infiltrator: ignores Substitute and screens (Aurora Veil)",
@@ -395,17 +397,17 @@
      "used_for": "Stoutland"
     },
     {
-     "name": "Copperajah",
-     "deal": 101,
-     "take_b": 48,
+     "name": "Chandelure",
+     "deal": 115,
+     "take_b": 64,
      "faster": false,
      "hard": true,
      "used_for": null
     },
     {
-     "name": "Chandelure",
-     "deal": 115,
-     "take_b": 64,
+     "name": "Copperajah",
+     "deal": 101,
+     "take_b": 48,
      "faster": false,
      "hard": true,
      "used_for": null
@@ -413,7 +415,7 @@
    ],
    "threat": [
     "Speed 270 here (Choice Scarf): faster than 6 of your six",
-    "One-shots Ninetales-Alola (111%, Uproar)",
+    "Hardest hit on your six: Psychic on Toxtricity-Aevian (96%)",
     "Trick: swaps its Choice Scarf onto you and locks you into one move",
     "Adaptability: STAB x2",
     "Field: Certain attacks raise Hype 1 Stage: Uproar"
@@ -463,7 +465,7 @@
      "take_b": 67,
      "faster": true,
      "hard": true,
-     "used_for": "Appletun"
+     "used_for": null
     },
     {
      "name": "Azumarill",
@@ -475,10 +477,10 @@
     }
    ],
    "threat": [
-    "Speed 166 here: faster than 4 of your six",
+    "Speed 166 here: faster than 5 of your six",
     "One-shots Golurk (121%, Clangorous Soulblaze), Glalie-Aevian (108%, Clangorous Soulblaze)",
     "Clangorous Soulblaze (Z-move, once): 185 power, sound x1.5 here, then +1 to all its stats",
-    "Soundproof: immune to sound moves (Sing, Torch Song, Boomburst)",
+    "Soundproof: immune to sound moves (Hyper Voice, Sing, Torch Song, Boomburst)",
     "Field: Certain attacks raise Hype 1 Stage: Boomburst, Clanging Scales",
     "Field: Certain abilities + ▲ Defense: Soundproof"
    ],
@@ -538,8 +540,8 @@
     }
    ],
    "threat": [
-    "Speed 185 here: faster than 4 of your six",
-    "One-shots Ninetales-Alola (150%, Gear Grind), Lapras-Aevian (141%, Gear Grind), Musharna-Aevian (131%, Gear Grind)",
+    "Speed 185 here: faster than 5 of your six",
+    "One-shots Sylveon (150%, Gear Grind), Lapras-Aevian (141%, Gear Grind), Musharna-Aevian (131%, Gear Grind)",
     "Shift Gear: +1 Atk and +2 Speed",
     "Air Balloon: immune to Ground moves until it is hit",
     "Substitute: a doll that blocks your next hit (costs it 25% HP)",
@@ -573,19 +575,18 @@
    ],
    "ability": null
   },
-  "Ninetales (Alolan Form)": {
+  "Sylveon": {
    "moves": [
-    "Aurora Veil",
-    "Moonblast",
-    "Blizzard",
+    "Hyper Voice",
+    "Shadow Ball",
+    "Wish",
     "Protect"
    ],
-   "evs": "252 SpA / 252 Spe / 4 HP",
-   "nature": "Timid",
-   "item": "Never-Melt Ice",
+   "evs": "252 HP / 252 SpA / 4 Def",
+   "nature": "Modest",
+   "item": "Silk Scarf",
    "why": [
-    "Speed: outspeeds Kommo-o only with full Speed",
-    "Never-Melt Ice: boosts Blizzard, the best hit on 5 of their 6"
+    "Bulk + power: Speed EVs change no matchup here"
    ],
    "ability": null
   },
@@ -688,7 +689,7 @@
    "need": 1,
    "cov": [
     [
-     "Ninetales (Alolan Form)",
+     "Sylveon",
      "one-shots it"
     ]
    ],
@@ -707,8 +708,8 @@
    "item": "Appletunite",
    "cov": [
     [
-     "Ninetales (Alolan Form)",
-     "beats it (132%)"
+     "Sylveon",
+     "beats it (118%)"
     ],
     [
      "Toxtricity (Aevian Form)",
@@ -729,7 +730,7 @@
    "need": 1,
    "cov": [
     [
-     "Ninetales (Alolan Form)",
+     "Sylveon",
      "one-shots it"
     ],
     [
@@ -760,8 +761,8 @@
    "item": "Synthetic Seed",
    "cov": [
     [
-     "Ninetales (Alolan Form)",
-     "beats it (240%)"
+     "Sylveon",
+     "beats it (216%)"
     ],
     [
      "Lapras (Aevian Form)",
@@ -795,8 +796,8 @@
      "still hits it for 126%"
     ],
     [
-     "Ninetales (Alolan Form)",
-     "still hits it for 61%"
+     "Sylveon",
+     "still hits it for 110%"
     ],
     [
      "Golurk",
@@ -830,6 +831,10 @@
      "beats it (126%)"
     ],
     [
+     "Sylveon",
+     "beats it (110%)"
+    ],
+    [
      "Golurk",
      "beats it (135%)"
     ],
@@ -853,10 +858,6 @@
    "ability": "SOUNDPROOF",
    "cov": [
     [
-     "Ninetales (Alolan Form)",
-     "still hits it for 149%"
-    ],
-    [
      "Musharna (Aevian Form)",
      "still hits it for 170%"
     ]
@@ -875,10 +876,6 @@
    "need": 1,
    "item": "Kommonium Z",
    "cov": [
-    [
-     "Ninetales (Alolan Form)",
-     "beats it (149%)"
-    ],
     [
      "Musharna (Aevian Form)",
      "beats it (170%)"
@@ -986,13 +983,8 @@
    "how": "Singles: outspeed and KO, priority, or paralyse it then outspeed",
    "need": 1,
    "spe": 166,
-   "cov": [
-    [
-     "Ninetales (Alolan Form)",
-     "outspeeds and one-shots it"
-    ]
-   ],
-   "ok": true,
+   "cov": [],
+   "ok": false,
    "core_ok": false,
    "core_cov": []
   },
@@ -1053,7 +1045,7 @@
    "atype": "DRAGON",
    "cov": [
     [
-     "Ninetales (Alolan Form)",
+     "Sylveon",
      "immune"
     ],
     [
@@ -1077,6 +1069,10 @@
    "sound": true,
    "cov": [
     [
+     "Sylveon",
+     "Hyper Voice"
+    ],
+    [
      "Toxtricity (Aevian Form)",
      "Torch Song"
     ]
@@ -1093,16 +1089,15 @@
    "Porygon-Z: Choice Scarf (Speed x1.5 (locked into one move))",
    "Normal attacks from 4"
   ],
-  "Ninetales (Alolan Form)": [
+  "Sylveon": [
    "Appletun heals (Recover)",
    "Appletun: Appletunite (Mega Evolves)",
    "Noivern heals (Roost)",
    "Noivern: Synthetic Seed (field seed: boosts it on entry)",
    "Porygon-Z: Adaptability (STAB x2: hits very hard)",
-   "Kommo-o: Soundproof (immune to sound moves)",
-   "Kommo-o: Kommonium Z (Z-move: one huge hit, once)",
-   "Kommo-o: Speed 166",
-   "Dragon attacks from 3"
+   "Porygon-Z: Choice Scarf (Speed x1.5 (locked into one move))",
+   "Dragon attacks from 3",
+   "Concert Venue boosts: sound moves x1.5"
   ],
   "Lapras (Aevian Form)": [
    "Noivern heals (Roost)",
@@ -1175,9 +1170,11 @@
    "who": []
   },
   {
-   "ok": false,
+   "ok": true,
    "text": "Safe switch (Regenerator / recovery / pivot)",
-   "who": []
+   "who": [
+    "Sylveon"
+   ]
   },
   {
    "ok": false,
@@ -1298,7 +1295,8 @@
   "STEEL"
  ],
  "atk": {
-  "DARK": [
+  "PSYCHIC": [
+   "Porygon-Z",
    "Stoutland"
   ],
   "NORMAL": [
@@ -1307,21 +1305,20 @@
    "Porygon-Z",
    "Stoutland"
   ],
-  "PSYCHIC": [
-   "Porygon-Z",
+  "DARK": [
    "Stoutland"
   ],
-  "FIGHTING": [
-   "Appletun",
-   "Kommo-o"
+  "GRASS": [
+   "Appletun"
   ],
   "DRAGON": [
    "Appletun",
    "Kommo-o",
    "Noivern"
   ],
-  "GRASS": [
-   "Appletun"
+  "FIGHTING": [
+   "Appletun",
+   "Kommo-o"
   ],
   "FLYING": [
    "Noivern"
@@ -1523,7 +1520,7 @@
    ],
    "Appletun": [
     "Glalie (Aevian Form)",
-    "Ninetales (Alolan Form)",
+    "Sylveon",
     "Musharna (Aevian Form)"
    ],
    "Noivern": [
@@ -1542,13 +1539,11 @@
     "Toxtricity (Aevian Form)"
    ],
    "Appletun": [
-    "Ninetales (Alolan Form)"
+    "Sylveon"
    ],
    "Noivern": [],
    "Porygon-Z": [],
-   "Kommo-o": [
-    "Ninetales (Alolan Form)"
-   ],
+   "Kommo-o": [],
    "Klinklang": [
     "Toxtricity (Aevian Form)"
    ]
@@ -1574,7 +1569,7 @@
   },
   "myspeed": {
    "Glalie (Aevian Form)": 90,
-   "Ninetales (Alolan Form)": 207,
+   "Sylveon": 103,
    "Lapras (Aevian Form)": 103,
    "Golurk": 96,
    "Musharna (Aevian Form)": 62,
@@ -1589,7 +1584,9 @@
    "Klinklang": []
   },
   "priority": [],
-  "pivot": [],
+  "pivot": [
+   "Sylveon"
+  ],
   "hazards": [],
   "immune": {
    "ELECTRIC": [
@@ -1600,7 +1597,7 @@
  "speed": [
   {
    "foe": "Stoutland",
-   "faster_than": 4,
+   "faster_than": 5,
    "tools": []
   },
   {
@@ -1620,12 +1617,12 @@
   },
   {
    "foe": "Kommo-o",
-   "faster_than": 4,
+   "faster_than": 5,
    "tools": []
   },
   {
    "foe": "Klinklang",
-   "faster_than": 4,
+   "faster_than": 5,
    "tools": []
   }
  ],
@@ -1737,56 +1734,55 @@
    "core": false,
    "role": "Mid game",
    "job": "Counter: Appletun",
-   "name": "Ninetales (Alolan Form)",
-   "tier": "A",
+   "name": "Sylveon",
+   "tier": "B",
    "types": [
-    "ICE",
     "FAIRY"
    ],
-   "sid": "NINETALES",
-   "form": "1",
+   "sid": "SYLVEON",
+   "form": "0",
    "lead": false,
-   "where": "Active",
+   "where": "Party",
    "moves": [
-    "Aurora Veil",
-    "Moonblast",
-    "Blizzard",
+    "Hyper Voice",
+    "Shadow Ball",
+    "Wish",
     "Protect"
    ],
-   "ability": "SNOWWARNING",
+   "ability": "PIXILATE",
    "take": [
-    68,
-    43,
-    101,
-    111,
-    67,
-    150
+    55,
+    26,
+    59,
+    65,
+    39,
+    119
    ],
    "deal": [
-    59,
-    145,
+    98,
+    118,
     150,
-    67,
-    135,
-    34
+    110,
+    25,
+    56
    ],
-   "worst": 150,
+   "worst": 119,
    "worst_foe": "Klinklang",
-   "safe": 1,
+   "safe": 2,
    "mult": {
     "NORMAL": 1.0,
     "DRAGON": 0.0,
     "PSYCHIC": 1.0,
-    "FIGHTING": 1.0,
+    "FIGHTING": 0.5,
     "ELECTRIC": 1.0,
-    "STEEL": 4.0
+    "STEEL": 2.0
    },
    "rm": [
     0.5,
     1.0,
     1.0,
     1.0,
-    1.0,
+    0.5,
     0.0,
     1.0,
     1.0,
@@ -1794,37 +1790,37 @@
     1.0,
     1.0,
     1.0,
-    1.0,
+    0.5,
     1.0,
     0.0,
     0.0,
+    1.0,
     2.0,
-    4.0,
     1.0
    ],
    "off": [
+    1.5,
+    1.5,
+    1.5,
+    1.5,
     0.0,
-    2.0,
-    2.0,
-    0.0,
-    2.0,
     0.0
    ],
    "answers": [],
    "why": [
     {
-     "move": "Aurora Veil",
-     "why": "Utility move",
+     "move": "Hyper Voice",
+     "why": "Your best hit on Stoutland, Appletun, Noivern, Porygon-Z; x1.5 on this field; hits both foes; no effect on Kommo-o",
      "flag": false
     },
     {
-     "move": "Moonblast",
-     "why": "Your best hit on Kommo-o; Super effective on Appletun, Noivern, Kommo-o; STAB",
+     "move": "Shadow Ball",
+     "why": "Your best hit on Kommo-o, Klinklang; no effect on Stoutland, Porygon-Z",
      "flag": false
     },
     {
-     "move": "Blizzard",
-     "why": "Your best hit on Stoutland, Appletun, Noivern, Porygon-Z, Klinklang; Super effective on Appletun, Noivern, Kommo-o; STAB; hits both foes",
+     "move": "Wish",
+     "why": "Heals 50% next turn, to itself or whoever switches in",
      "flag": false
     },
     {
@@ -2255,7 +2251,7 @@
    ],
    "out": [
     "Glalie (Aevian Form)",
-    "Ninetales (Alolan Form)",
+    "Sylveon",
     "Golurk",
     "Musharna (Aevian Form)"
    ]
@@ -2271,7 +2267,7 @@
    ],
    "out": [
     "Glalie (Aevian Form)",
-    "Ninetales (Alolan Form)",
+    "Sylveon",
     "Lapras (Aevian Form)",
     "Golurk",
     "Musharna (Aevian Form)"
@@ -2287,7 +2283,7 @@
    ],
    "out": [
     "Glalie (Aevian Form)",
-    "Ninetales (Alolan Form)",
+    "Sylveon",
     "Lapras (Aevian Form)",
     "Golurk"
    ]
@@ -2311,7 +2307,7 @@
     "tier": "D",
     "sid": "PROBOPASS",
     "form": "0",
-    "delta": 71.7,
+    "delta": 71.6,
     "res": 11,
     "se": 1,
     "oneshot": []
@@ -2331,7 +2327,7 @@
     "tier": "C",
     "sid": "KLINKLANG",
     "form": "0",
-    "delta": 60.3,
+    "delta": 70.6,
     "res": 13,
     "se": 0,
     "oneshot": []
@@ -2351,7 +2347,7 @@
     "tier": "D",
     "sid": "TOGEDEMARU",
     "form": "0",
-    "delta": 56.6,
+    "delta": 68.9,
     "res": 14,
     "se": 1,
     "oneshot": [
@@ -2359,7 +2355,7 @@
     ]
    }
   ],
-  "Ninetales (Alolan Form)": [
+  "Sylveon": [
    {
     "name": "Dedenne",
     "gain": [
@@ -2370,13 +2366,14 @@
     ],
     "loss": [
      "loses the check on Appletun",
-     "loses Appletun heals (Recover)",
-     "fits the team worse (both weak to Ground, both weak to Poison)"
+     "one-shot by Noivern",
+     "one-shot by Porygon-Z",
+     "loses Appletun heals (Recover)"
     ],
     "tier": "D",
     "sid": "DEDENNE",
     "form": "0",
-    "delta": 66.5,
+    "delta": 50.6,
     "res": 9,
     "se": 3,
     "oneshot": [
@@ -2387,19 +2384,20 @@
    {
     "name": "Azumarill",
     "gain": [
-     "survives Noivern",
-     "survives Porygon-Z",
      "survives Klinklang",
-     "answers Porygon-Z: Choice Scarf (Speed x1.5 (locked into one move))"
+     "answers Kommo-o: Soundproof (immune to sound moves)",
+     "answers Kommo-o: Kommonium Z (Z-move: one huge hit, once)",
+     "answers Klinklang: Plus (raises the crowd Hype on entry)"
     ],
     "loss": [
      "loses the check on Appletun",
-     "loses Appletun heals (Recover)"
+     "loses Appletun heals (Recover)",
+     "uses the field less"
     ],
     "tier": "A",
     "sid": "AZUMARILL",
     "form": "0",
-    "delta": 61.2,
+    "delta": 45.4,
     "res": 8,
     "se": 6,
     "oneshot": []
@@ -2408,20 +2406,20 @@
     "name": "Probopass",
     "gain": [
      "checks Noivern",
-     "survives Noivern",
-     "survives Porygon-Z",
-     "survives Klinklang"
+     "survives Klinklang",
+     "answers Normal attacks from 4",
+     "speed control"
     ],
     "loss": [
      "loses the check on Appletun",
      "loses Appletun heals (Recover)",
-     "loses Kommo-o: Speed 166",
+     "uses the field less",
      "fits the team worse (both weak to Fighting, both weak to Water)"
     ],
     "tier": "D",
     "sid": "PROBOPASS",
     "form": "0",
-    "delta": 57.2,
+    "delta": 41.3,
     "res": 11,
     "se": 1,
     "oneshot": []
@@ -2444,25 +2442,6 @@
     "oneshot": []
    },
    {
-    "name": "Azumarill",
-    "gain": [
-     "answers Appletun: Appletunite (Mega Evolves)",
-     "answers Porygon-Z: Adaptability (STAB x2: hits very hard)",
-     "answers Porygon-Z: Choice Scarf (Speed x1.5 (locked into one move))",
-     "answers Kommo-o: Soundproof (immune to sound moves)"
-    ],
-    "loss": [
-     "loses the check on Noivern"
-    ],
-    "tier": "A",
-    "sid": "AZUMARILL",
-    "form": "0",
-    "delta": 57.4,
-    "res": 8,
-    "se": 6,
-    "oneshot": []
-   },
-   {
     "name": "Klinklang",
     "gain": [
      "answers Porygon-Z: Adaptability (STAB x2: hits very hard)",
@@ -2475,10 +2454,31 @@
     "tier": "C",
     "sid": "KLINKLANG",
     "form": "0",
-    "delta": 55.1,
+    "delta": 65.3,
     "res": 13,
     "se": 0,
     "oneshot": []
+   },
+   {
+    "name": "Togedemaru",
+    "gain": [
+     "answers Dragon attacks from 3",
+     "uses the field more",
+     "speed control"
+    ],
+    "loss": [
+     "loses the check on Noivern",
+     "one-shot by Kommo-o"
+    ],
+    "tier": "D",
+    "sid": "TOGEDEMARU",
+    "form": "0",
+    "delta": 63.6,
+    "res": 14,
+    "se": 1,
+    "oneshot": [
+     "Kommo-o"
+    ]
    }
   ],
   "Golurk": [
@@ -2496,34 +2496,33 @@
     "tier": "A",
     "sid": "AZUMARILL",
     "form": "0",
-    "delta": 66.4,
+    "delta": 72.4,
     "res": 8,
     "se": 6,
     "oneshot": []
    },
    {
+    "name": "Togedemaru",
+    "gain": [
+     "answers Dragon attacks from 3",
+     "uses the field more",
+     "speed control"
+    ],
+    "loss": [],
+    "tier": "D",
+    "sid": "TOGEDEMARU",
+    "form": "0",
+    "delta": 67.6,
+    "res": 14,
+    "se": 1,
+    "oneshot": [
+     "Kommo-o"
+    ]
+   },
+   {
     "name": "Probopass",
     "gain": [
      "checks Noivern",
-     "survives Kommo-o",
-     "answers Dragon attacks from 3",
-     "speed control"
-    ],
-    "loss": [
-     "uses the field less",
-     "fits the team worse (both weak to Fighting, both weak to Water)"
-    ],
-    "tier": "D",
-    "sid": "PROBOPASS",
-    "form": "0",
-    "delta": 66.4,
-    "res": 11,
-    "se": 1,
-    "oneshot": []
-   },
-   {
-    "name": "Klinklang",
-    "gain": [
      "survives Kommo-o",
      "answers Dragon attacks from 3",
      "speed control"
@@ -2531,35 +2530,16 @@
     "loss": [
      "uses the field less"
     ],
-    "tier": "C",
-    "sid": "KLINKLANG",
+    "tier": "D",
+    "sid": "PROBOPASS",
     "form": "0",
-    "delta": 55.1,
-    "res": 13,
-    "se": 0,
+    "delta": 66.4,
+    "res": 11,
+    "se": 1,
     "oneshot": []
    }
   ],
   "Musharna (Aevian Form)": [
-   {
-    "name": "Probopass",
-    "gain": [
-     "checks Noivern",
-     "answers Normal attacks from 4",
-     "speed control"
-    ],
-    "loss": [
-     "loses the check on Appletun",
-     "fits the team worse (both weak to Fighting, both weak to Water)"
-    ],
-    "tier": "D",
-    "sid": "PROBOPASS",
-    "form": "0",
-    "delta": 46.1,
-    "res": 11,
-    "se": 1,
-    "oneshot": []
-   },
    {
     "name": "Azumarill",
     "gain": [
@@ -2574,7 +2554,7 @@
     "tier": "A",
     "sid": "AZUMARILL",
     "form": "0",
-    "delta": 44.2,
+    "delta": 48.2,
     "res": 8,
     "se": 6,
     "oneshot": []
@@ -2590,17 +2570,43 @@
     "loss": [
      "loses the check on Appletun",
      "one-shot by Noivern",
-     "one-shot by Porygon-Z"
+     "one-shot by Porygon-Z",
+     "loses Kommo-o: Soundproof (immune to sound moves)"
     ],
     "tier": "D",
     "sid": "DEDENNE",
     "form": "0",
-    "delta": 36.0,
+    "delta": 42.0,
     "res": 9,
     "se": 3,
     "oneshot": [
      "Noivern",
      "Porygon-Z"
+    ]
+   },
+   {
+    "name": "Ribombee",
+    "gain": [
+     "outspeeds and one-shots Noivern",
+     "outspeeds and one-shots Kommo-o",
+     "answers Appletun: Appletunite (Mega Evolves)",
+     "answers Stoutland: Speed 165"
+    ],
+    "loss": [
+     "one-shot by Noivern",
+     "one-shot by Porygon-Z",
+     "one-shot by Klinklang"
+    ],
+    "tier": "C",
+    "sid": "RIBOMBEE",
+    "form": "0",
+    "delta": 39.1,
+    "res": 8,
+    "se": 3,
+    "oneshot": [
+     "Noivern",
+     "Porygon-Z",
+     "Klinklang"
     ]
    }
   ],
@@ -2621,7 +2627,7 @@
     "tier": "D",
     "sid": "TOGEDEMARU",
     "form": "0",
-    "delta": 16.1,
+    "delta": 22.4,
     "res": 14,
     "se": 1,
     "oneshot": [
@@ -2644,7 +2650,7 @@
     "tier": "C",
     "sid": "KLINKLANG",
     "form": "0",
-    "delta": 15.8,
+    "delta": 22.1,
     "res": 13,
     "se": 0,
     "oneshot": []
@@ -2666,7 +2672,7 @@
     "tier": "D",
     "sid": "DEDENNE",
     "form": "0",
-    "delta": 9.5,
+    "delta": 19.5,
     "res": 9,
     "se": 3,
     "oneshot": [
@@ -3104,7 +3110,7 @@
    "oneshot": [
     "Klinklang"
    ],
-   "in_six": false,
+   "in_six": true,
    "where": "Party"
   },
   {
@@ -3686,7 +3692,7 @@
     "Porygon-Z",
     "Klinklang"
    ],
-   "in_six": true,
+   "in_six": false,
    "where": "Active"
   },
   {
@@ -9634,7 +9640,7 @@
  ],
  "pool": 383,
  "score": 386.4,
- "cmp": 23.0,
+ "cmp": 32.5,
  "break_field": null,
  "checks": {
   "weak3": [
@@ -9651,15 +9657,7 @@
     "Kommo-o"
    ],
    [
-    "Ninetales (Alolan Form)",
-    "Noivern"
-   ],
-   [
-    "Ninetales (Alolan Form)",
-    "Porygon-Z"
-   ],
-   [
-    "Ninetales (Alolan Form)",
+    "Sylveon",
     "Klinklang"
    ],
    [
@@ -10036,16 +10034,16 @@
    },
    "spe_field": 90
   },
-  "Ninetales (Alolan Form)": {
+  "Sylveon": {
    "stats": {
-    "HP": 190,
-    "Atk": 100,
-    "Def": 122,
-    "SpA": 171,
-    "SpD": 155,
-    "Spe": 227
+    "HP": 259,
+    "Atk": 98,
+    "Def": 110,
+    "SpA": 229,
+    "SpD": 194,
+    "Spe": 103
    },
-   "spe_field": 227
+   "spe_field": 103
   },
   "Lapras (Aevian Form)": {
    "stats": {
@@ -10098,10 +10096,10 @@
  "alt_field": null,
  "foe_break": [],
  "alt_plan": {
-  "cmp": 23.0,
+  "cmp": 32.5,
   "six": [
    "Glalie (Aevian Form)",
-   "Ninetales (Alolan Form)",
+   "Sylveon",
    "Lapras (Aevian Form)",
    "Golurk",
    "Musharna (Aevian Form)",

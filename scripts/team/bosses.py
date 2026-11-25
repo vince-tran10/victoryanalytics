@@ -233,6 +233,17 @@ CH9 = [
 ]
 
 
+CH10 = [   # 25 Nov (Vincent's list): hard fights of Chapter 10; the rest are general trainers (counters should not be 100% niche)
+    ('clown', 'Clown Caricature (boss) – Dark Crystal Cavern', 'Dark Crystal Cavern', 'Singles', 1.0,
+     'Boss Lv 64, 3 shields: Giratina -> Pidgey -> Blacephalon (+1 all stats, Mind Blown / Nasty Plot) -> Porygon-Z (Wonder Guard, Toxic Orb). Guide: stall with Protect + Light Screen, Toxic finishes the last form.'),
+    ('flora', 'Botanist Flora (Rose Badge) – Bewitched Woods', 'Bewitched Woods', 'Singles', 1.0,
+     'Lv 64-68 Grass team, Uproot (-2 Sp. Def), Mega Venusaur, Spore / Grass Whistle; field boosts Grass. Rose Badge: cap 70, TM53 Energy Ball. You fight Flora OR Florin.'),
+    ('florin', 'Botanist Florin (Rose Badge) – Bewitched Woods', 'Bewitched Woods', 'Singles', 1.0,
+     'Lv 63-65 glass cannons: Swift Swim Ludicolo + Rain Dance, Leafeon Crest, Grassy Surge Glalie-A, Sash Technician Breloom, Mega Sceptile. You fight Flora OR Florin.'),
+]
+CHAPTERS = {9: CH9, 10: CH10}
+
+
 # ---------------------------------------------------------------- game data (exact) overrides, when available
 try:
     sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'gamedata'))

@@ -130,26 +130,35 @@ for c in crest_c:
 
 fights_sorted = sorted(s for s, _ in best.values())
 # 22 Nov (Vincent): in-game part = EVERY hard fight in the game (engine run with nothing marked done: ALL_RUN), not just Ch9
-ALLS = {}
+ALLS = {}; HARDS = {}
 CTR = {}   # 25 Nov (Vincent: tiers factor in the community rules): share of hard-fight foes it hard-counters (deals 90%+ and takes < 70%, or outspeeds and one-shots)
 _TF = set(st.get('tier_fights') or [])   # Ch10 hook: when set, the in-game part and counters use ONLY these fight keys (his hard-fight list)
 if os.environ.get('ALL_RUN') and os.path.exists(f"team/{os.environ['ALL_RUN']}_native.json.pkl"):
     for c in pickle.load(open(f"team/{os.environ['ALL_RUN']}_native.json.pkl", 'rb'))['cands']:
         if c['gate']: continue
-        tot = tw = 0; nc_ = nf_ = 0
+        tot = tw = 0; nc_ = nf_ = 0; th_ = twh_ = 0; nch_ = nfh_ = 0
         for k_, rows_ in c['matchups'].items():
-            if not rows_ or (_TF and k_ not in _TF): continue
-            nf_ += len(rows_); nc_ += sum(1 for r_ in rows_ if (r_['off'] >= 90 and r_['deff'] < 70) or (r_.get('faster') and r_['off'] >= 100))
+            if not rows_: continue
+            _cn = sum(1 for r_ in rows_ if (r_['off'] >= 90 and r_['deff'] < 70) or (r_.get('faster') and r_['off'] >= 100))
+            nf_ += len(rows_); nc_ += _cn
+            if _TF and k_ in _TF:   # his hard fights of the chapter
+                n2_ = len(rows_); th_ += sum(r_['q'] for r_ in rows_) / n2_ - .35 * sum(r_['deff'] >= 100 for r_ in rows_) / n2_; twh_ += 1; nfh_ += n2_; nch_ += _cn
             n_ = len(rows_); tot += sum(r_['q'] for r_ in rows_) / n_ - .35 * sum(r_['deff'] >= 100 for r_ in rows_) / n_; tw += 1
         v_ = tot / tw if tw else 0
         if c['name'] not in ALLS or v_ > ALLS[c['name']]: ALLS[c['name']] = v_
-        if nf_: CTR[c['name']] = max(CTR.get(c['name'], 0), nc_ / nf_)
+        if twh_: HARDS[c['name']] = max(HARDS.get(c['name'], -9), th_ / twh_)
+        sh_ = (.7 * nch_ / nfh_ + .3 * nc_ / nf_) if (nfh_ and nf_) else (nc_ / nf_ if nf_ else 0)   # Ch10: 70% hard fights / 30% every fight
+        CTR[c['name']] = max(CTR.get(c['name'], 0), sh_)
 ALL_SORTED = sorted(ALLS.values())
 N_ALL = len(next(iter(pickle.load(open(f"team/{os.environ['ALL_RUN']}_native.json.pkl", 'rb'))['cands']))['matchups']) if ALLS else 0
+HARD_SORTED = sorted(HARDS.values())
 def allpct(name):
     import bisect
     if name not in ALLS: return None
-    return bisect.bisect_left(ALL_SORTED, ALLS[name]) / max(1, len(ALL_SORTED) - 1)
+    a_ = bisect.bisect_left(ALL_SORTED, ALLS[name]) / max(1, len(ALL_SORTED) - 1)
+    if name in HARDS and HARD_SORTED:   # 25 Nov (Vincent, Ch10): in-game = 70% his chapter hard fights + 30% every fight (not 100% niche)
+        return .7 * bisect.bisect_left(HARD_SORTED, HARDS[name]) / max(1, len(HARD_SORTED) - 1) + .3 * a_
+    return a_
 def pct(s):
     import bisect
     return bisect.bisect_left(fights_sorted, s) / max(1, len(fights_sorted) - 1)

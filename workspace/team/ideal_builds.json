@@ -678,7 +678,7 @@
  "Sylveon": {
   "ability": "PIXILATE",
   "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
+  "evs": "252 HP / 252 SpA / 4 Def",
   "item": "Silk Scarf",
   "moves": [
    "Hyper Voice",
@@ -692,7 +692,10 @@
    "WISH"
   ],
   "role": "attacker",
-  "source": "your team"
+  "source": "your team",
+  "fight_why": [
+   "Bulk + power: Speed EVs change no matchup here"
+  ]
  },
  "Lunatone (Lunatone Dominant Fusion)": {
   "ability": "LUNARIDOL",
@@ -1890,8 +1893,8 @@
  "Ninetales (Alolan Form)": {
   "ability": "SNOWWARNING",
   "nature": "Timid",
-  "evs": "252 SpA / 252 Spe / 4 HP",
-  "item": "Never-Melt Ice",
+  "evs": "252 SpA / 252 Spe",
+  "item": "Fairy Feather",
   "moves": [
    "Aurora Veil",
    "Moonblast",
@@ -1904,11 +1907,7 @@
    "BLIZZARD"
   ],
   "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Speed: outspeeds Kommo-o only with full Speed",
-   "Never-Melt Ice: boosts Blizzard, the best hit on 5 of their 6"
-  ]
+  "source": "your team"
  },
  "Appletun": {
   "ability": "THICKFAT",

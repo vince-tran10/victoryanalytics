@@ -23,11 +23,11 @@
    },
    {
     "foe": "Appletun",
-    "mon": "Slowking (Galarian Form)",
-    "ability": "REGENERATOR",
-    "dealt": 79,
-    "taken": 38,
-    "ok": false,
+    "mon": "Sylveon",
+    "ability": "PIXILATE",
+    "dealt": 119,
+    "taken": 26,
+    "ok": true,
     "setup": false,
     "wincons": [
      {
@@ -40,10 +40,10 @@
    },
    {
     "foe": "Noivern",
-    "mon": "Amoonguss",
+    "mon": "Slowking (Galarian Form)",
     "ability": "REGENERATOR",
-    "dealt": 19,
-    "taken": 56,
+    "dealt": 72,
+    "taken": 46,
     "ok": false,
     "setup": false,
     "wincons": [
@@ -67,11 +67,11 @@
    },
    {
     "foe": "Kommo-o",
-    "mon": "Ninetales (Alolan Form)",
-    "ability": "SNOWWARNING",
-    "dealt": 130,
-    "taken": 68,
-    "ok": true,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 13,
+    "taken": 107,
+    "ok": false,
     "setup": false,
     "wincons": []
    },

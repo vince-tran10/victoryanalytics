@@ -1,9 +1,9 @@
 {
  "anchor_low": 0.4,
- "anchor_median": 0.498,
+ "anchor_median": 0.581,
  "team": {
   "Glalie (Aevian Form)": 0.474,
-  "Ninetales (Alolan Form)": 0.498,
+  "Sylveon": 0.629,
   "Lapras (Aevian Form)": 0.4,
   "Golurk": 0.439,
   "Musharna (Aevian Form)": 0.581,
@@ -89,7 +89,7 @@
     "Discharge"
    ],
    "ability": "FILTER",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Cryogonal",
@@ -104,7 +104,7 @@
     "Ice Beam"
    ],
    "ability": "LEVITATE",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Typhlosion",
@@ -120,7 +120,7 @@
     "Thrash"
    ],
    "ability": "FLASHFIRE",
-   "tier": "S"
+   "tier": "A"
   },
   {
    "name": "Shiinotic",
@@ -812,7 +812,7 @@
    "attacks": [
     "Close Combat",
     "Slash",
-    "Shadow Claw"
+    "Night Slash"
    ],
    "ability": "IMMUNITY",
    "tier": "D"

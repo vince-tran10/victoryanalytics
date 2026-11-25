@@ -96,5 +96,61 @@
    ],
    "src": "Vincent"
   }
+ ],
+ "clown": [
+  {
+   "tip": "The first three forms hit hard: stall with Protect and Light Screen (guide)",
+   "needs": [
+    "move:LIGHTSCREEN/REFLECT/AURORAVEIL"
+   ],
+   "src": "BIGJRA walkthrough"
+  },
+  {
+   "tip": "Let it die from Toxic damage: the last form (Porygon-Z, Wonder Guard) holds a Toxic Orb (guide)",
+   "needs": [
+    "move:TOXIC/WILLOWISP/TOXICSPIKES"
+   ],
+   "src": "BIGJRA walkthrough"
+  }
+ ],
+ "flora": [
+  {
+   "tip": "Uproot (-2 Sp. Def) makes a defensive wall hard: sweep instead (guide)",
+   "needs": [
+    "move:SWORDSDANCE/NASTYPLOT/DRAGONDANCE/CALMMIND/QUIVERDANCE/SHELLSMASH/BULKUP"
+   ],
+   "src": "BIGJRA walkthrough"
+  },
+  {
+   "tip": "Hit with the types super effective on Grass, or field-boosted Dark / Fairy (guide)",
+   "needs": [
+    "atk_type:FIRE/ICE/FLYING/BUG/POISON",
+    "atk_type:DARK/FAIRY"
+   ],
+   "src": "BIGJRA walkthrough"
+  }
+ ],
+ "florin": [
+  {
+   "tip": "Change the weather right away (guide)",
+   "needs": [
+    "weather"
+   ],
+   "src": "BIGJRA walkthrough"
+  },
+  {
+   "tip": "Dark and Fairy moves are the key to heavy damage (guide)",
+   "needs": [
+    "atk_type:DARK/FAIRY"
+   ],
+   "src": "BIGJRA walkthrough"
+  },
+  {
+   "tip": "Ice moves with Hail are particularly potent (guide)",
+   "needs": [
+    "atk_type:ICE"
+   ],
+   "src": "BIGJRA walkthrough"
+  }
  ]
 }

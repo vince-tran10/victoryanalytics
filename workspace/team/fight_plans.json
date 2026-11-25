@@ -34,23 +34,22 @@
     ]
    },
    {
-    "name": "Ninetales (Alolan Form)",
-    "ab": "SNOWWARNING",
+    "name": "Sylveon",
+    "ab": "PIXILATE",
     "moves": [
-     "Moonblast",
-     "Blizzard"
+     "Hyper Voice",
+     "Shadow Ball"
     ],
     "setup": null,
-    "where": "Active",
-    "dump": 501,
+    "where": "Party",
+    "dump": 5,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
-     "Spe": 252,
-     "Def": 4
+     "HP": 252,
+     "SpD": 4
     },
     "types": [
-     "ICE",
      "FAIRY"
     ]
    },
@@ -141,11 +140,11 @@
    },
    {
     "foe": "Appletun",
-    "mon": "Slowking (Galarian Form)",
-    "ability": "REGENERATOR",
-    "dealt": 79,
-    "taken": 38,
-    "ok": false,
+    "mon": "Sylveon",
+    "ability": "PIXILATE",
+    "dealt": 119,
+    "taken": 26,
+    "ok": true,
     "setup": false,
     "wincons": [
      {
@@ -158,10 +157,10 @@
    },
    {
     "foe": "Noivern",
-    "mon": "Amoonguss",
+    "mon": "Slowking (Galarian Form)",
     "ability": "REGENERATOR",
-    "dealt": 19,
-    "taken": 56,
+    "dealt": 72,
+    "taken": 46,
     "ok": false,
     "setup": false,
     "wincons": [
@@ -185,11 +184,11 @@
    },
    {
     "foe": "Kommo-o",
-    "mon": "Ninetales (Alolan Form)",
-    "ability": "SNOWWARNING",
-    "dealt": 130,
-    "taken": 68,
-    "ok": true,
+    "mon": "Amoonguss",
+    "ability": "REGENERATOR",
+    "dealt": 13,
+    "taken": 107,
+    "ok": false,
     "setup": false,
     "wincons": []
    },
@@ -214,7 +213,6 @@
   "weak3": [
    "DARK",
    "GHOST",
-   "FIRE",
    "STEEL"
   ],
   "nores": [],

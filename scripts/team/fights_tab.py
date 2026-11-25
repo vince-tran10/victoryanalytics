@@ -24,6 +24,13 @@ def _stats(st_, spe_here=None):
             + (f'<span class="mu-sh"><small>Speed here</small><b>{int(spe_here)}</b></span>' if spe_here and int(spe_here) != st_.get('Spe') else '') + '</div>')
 
 
+def _form_idx(f):   # Aevian / regional forms: index of the form name in his montext (sprite sheet column)
+    try:
+        forms = list((json.load(open(os.path.join(FN.GD, 'montext.json'))).get(f.get('species') or '') or {}).keys())
+        return str(forms.index(f.get('form'))) if f.get('form') in forms else '0'
+    except Exception: return '0'
+
+
 def _foes(k, P):
     """their team: the planner's detail for the next fight (Mega forms, field Speed), else computed from the game data"""
     if P.get('fight') == k and P.get('foe_detail'):
@@ -36,8 +43,24 @@ def _foes(k, P):
         out.append(dict(name=f['name'], level=f.get('level'), types=f.get('types') or [], ability=f.get('ability'), item=f.get('item'),
                         nature=f.get('nature'), evs=' / '.join(f'{v} {s}' for s, v in zip(STATS, f.get('ev') or []) if v), stats=stt,
                         moves=f.get('moves') or [], mega=bool((f.get('item') or '').endswith('ite') and f.get('item') != 'Eviolite'),
-                        shields=f.get('shields'), sprite=SP.tag(f.get('species') or '', '0', size='m')))
+                        shields=f.get('shields'), sprite=SP.tag(f.get('species') or '', _form_idx(f), size='m')))
     return out
+
+
+_TT = None
+def face(k, foes):
+    """the trainer's battle portrait (Graphics/Trainers/trainer<ttype ID>.png from his Characters zip, kept out of git), else the boss / ace sprite"""
+    global _TT
+    ent = (G.FIGHTS.get(k) or [None])[0]
+    if ent and ent[0] != 'boss':
+        if _TT is None:
+            try: _TT = {m.group(1): int(m.group(2)) for m in re.finditer(r':(\w+) => \{\s*:ID => (\d+)', open(os.path.join(FN.GD, 'ttypetext.rb'), encoding='utf-8').read())}
+            except Exception: _TT = {}
+        fp = os.path.join(FN.GD, 'Trainers', f'trainer{_TT.get(ent[1], -1):03d}.png')
+        if os.path.exists(fp):
+            import base64
+            return f'<img class="fx-face" alt="" src="data:image/png;base64,{base64.b64encode(open(fp, "rb").read()).decode()}">'
+    return (foes[0] if ent and ent[0] == 'boss' and foes else foes[-1] if foes else {}).get('sprite', '')
 
 
 def _zmove(f):   # a species Z-Crystal: the AI uses its Z-move (Battle_AI checkZMoves)
@@ -77,12 +100,17 @@ def html_(st, names):
     done = set(st.get('done') or [])
     nxt = st.get('fight')
     cards = ''
-    for i, (k, label, field, fmt, _w, note) in enumerate(bosses.CH9):
+    ch_now = int(st.get('chapter') or 9); _last = None
+    _rows = [(c_, r_) for c_ in sorted(bosses.CHAPTERS) if c_ >= ch_now for r_ in bosses.CHAPTERS[c_]]   # this chapter, then the next ones (Ch10 list)
+    for ch_, (k, label, field, fmt, _w, note) in _rows:
+        if ch_ != _last and len({c_ for c_, _ in _rows}) > 1:
+            cards += f'<div class="fx-group">Chapter {ch_}' + (' · coming up' if ch_ > ch_now else '') + '</div>'
+        _last = ch_
         is_done = k in done
         try: foes = _foes(k, P)
         except Exception: foes = []
         name = names.get(k, label.split(' – ')[0])
-        ace = foes[-1]['sprite'] if foes else ''
+        ace = face(k, foes)
         head = (f'<summary class="fx-sum">{ace}<span class="fx-t"><b>{E(name)}</b><span class="fchips"><span class="fchip">{E(fmt)}</span>'
                 f'<span class="fchip">{E(field)}</span>' + ('<span class="fchip boss">Boss</span>' if '(boss)' in label else '') + '</span></span>'
                 + ('<span class="fx-done" title="Beaten">✓</span>' if is_done else '<span class="fx-next">Next</span>' if k == nxt else '') + '</summary>')
@@ -108,6 +136,8 @@ def html_(st, names):
 .fx { border-radius: 14px; background: var(--panel); box-shadow: 0 1px 2px rgba(0,0,0,.08) } .fx-isnext { box-shadow: inset 0 0 0 2px var(--accent) }
 .fx-sum { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 8px; padding: 10px; cursor: pointer; list-style: none }
 .fx-sum::-webkit-details-marker { display: none } .fx-t { display: grid; gap: 3px; min-width: 0 } .fchips { display: flex; flex-wrap: wrap; gap: 4px }
+.fx-face { width: 56px; height: 56px; object-fit: cover; object-position: 50% 30%; image-rendering: pixelated; border-radius: 12px; background: var(--panel-2) }
+.fx-group { font: 800 12px var(--body); text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 8px 2px 0 }
 .fx-done { width: 26px; height: 26px; border-radius: 50%; background: #1f8a4c; color: #fff; display: grid; place-items: center; font-weight: 800 }
 .fx-next { font: 800 11px var(--body); color: var(--accent); text-transform: uppercase }
 .fx-body { display: grid; gap: 8px; padding: 0 10px 12px; min-width: 0 } .fx-meta { display: flex; flex-wrap: wrap; gap: 12px; font-size: 13px } .fx-meta b { color: var(--muted); font-weight: 600 }

@@ -6,7 +6,8 @@ MAP = {'Mountain': 'MOUNTAIN', 'Mountain Field': 'MOUNTAIN', 'Volcanic Top': 'VO
        'Wasteland': 'WASTELAND', 'Beach Field': 'ASHENBEACH', 'Factory Field': 'FACTORY', 'Concert Venue': 'CONCERT1',
        'Water Surface': 'WATERSURFACE', 'Short-Circuit Field': 'SHORTCIRCUIT', 'Forest Field': 'FOREST', 'Swamp Field': 'SWAMP',
        'Big Top Arena': 'BIGTOP', 'Deep Earth Field': 'DEEPEARTH', 'Corrupted Cave': 'CORRUPTED',
-       'Blessed Field': 'HOLY', 'Haunted Field': 'HAUNTED', 'Murkwater Surface': 'MURKWATERSURFACE', 'Icy Field': 'ICY', 'Grassy Terrain': 'GRASSY'}
+       'Blessed Field': 'HOLY', 'Haunted Field': 'HAUNTED', 'Murkwater Surface': 'MURKWATERSURFACE', 'Icy Field': 'ICY', 'Grassy Terrain': 'GRASSY',
+       'Dark Crystal Cavern': 'DARKCRYSTALCAVERN', 'Bewitched Woods': 'BEWITCHED'}   # 25 Nov: Chapter 10
 def game_field(key):
     f = G.load('fieldtext')[key]
     types = {t: float(m) for m, ts in f.get('typeBoosts', {}).items() for t in ts}

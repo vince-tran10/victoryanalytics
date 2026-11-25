@@ -56,7 +56,7 @@ def _split(args):
 def _str(tok):
     m = re.fullmatch(r'"(.*)"', tok.strip(), re.S)
     if not m: return None
-    return m.group(1).encode().decode('unicode_escape') if '\\' in m.group(1) else m.group(1)
+    return m.group(1).replace('\\n', '\n').replace('\\"', '"').replace('\\\\', '\\')   # keep UTF-8 (é) intact
 
 
 def _field_moves(expr):

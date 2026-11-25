@@ -777,16 +777,7 @@
      "form": "0",
      "pick": false,
      "rec": false
-    }
-   ]
-  },
-  {
-   "slot": 6,
-   "title": "Flex 2 · Closer · Spirit Jenner",
-   "pick": "Ninetales (Alolan Form)",
-   "rec": "Ninetales (Alolan Form)",
-   "flex": true,
-   "cands": [
+    },
     {
      "name": "Ninetales (Alolan Form)",
      "tier": "A",
@@ -796,12 +787,38 @@
      ],
      "tools": [
       "Spread: Blizzard",
-      "Counters: Kommo-o",
       "Screens: Aurora Veil"
      ],
      "teach": [],
      "sid": "NINETALES",
      "form": "1",
+     "pick": false,
+     "rec": false
+    }
+   ]
+  },
+  {
+   "slot": 6,
+   "title": "Flex 2 · Closer · Spirit Jenner",
+   "pick": "Sylveon",
+   "rec": "Sylveon",
+   "flex": true,
+   "cands": [
+    {
+     "name": "Sylveon",
+     "tier": "B",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 2 types"
+     ],
+     "tools": [
+      "Spread: Hyper Voice",
+      "Counters: Appletun",
+      "Recovery: Wish"
+     ],
+     "teach": [],
+     "sid": "SYLVEON",
+     "form": "0",
      "pick": true,
      "rec": true
     },

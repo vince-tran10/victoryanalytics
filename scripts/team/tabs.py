@@ -38,7 +38,7 @@ if(push)history.replaceState(null,'','#'+k);}
 bs.forEach(function(b,i){b.addEventListener('click',function(){show(b.dataset.tab,true);window.scrollTo(0,0)});
 b.addEventListener('keydown',function(e){var j=e.key==='ArrowRight'?i+1:e.key==='ArrowLeft'?i-1:-9;if(j>-9){j=(j+bs.length)%bs.length;bs[j].focus();show(bs[j].dataset.tab,true)}})});
 var start=(location.hash||'').slice(1);if(!start){try{start=localStorage.getItem('ch8-tab')||''}catch(e){}}
-show(start||'fights',false);
+show(start||'tiers',false);
 var f=document.getElementById('boxfind');if(f)f.addEventListener('focus',function(){show('boxes',true)});})();
 </script>'''
 page = page.replace('</style>', '</style>\n' + css, 1)

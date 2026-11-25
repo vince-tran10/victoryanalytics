@@ -264,6 +264,17 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   and his notes, with who on the recommended six covers each; they score in the planner's pick). Ch10: he will send the hard-fight list +
   tips; add them to bosses / fight_tips and every card follows this layout.
 
+- **NAV ORDER (Vincent, 25 Nov):** Tiers (what he has) · Fights (all fights) · Builder (fills the gaps from tiers + fights) · To do ·
+  Items · Community (references). Tiers opens first.
+- **CHAPTER 10 (Vincent, 25 Nov, prepared, NOT switched: Jenner still next):** hard fights = bosses.CH10 / gamedata.FIGHTS: 'clown' (Clown
+  Caricature boss DARCHGIRATINA, Dark Crystal Cavern), 'flora' (LEADER_FLORA) and 'florin' (LEADER_FLORIN), Bewitched Woods, singles; Flora
+  OR Florin (story choice): plan both. Rose Badge = cap 70 + TM53 Energy Ball. Guide tips in fight_tips.json (planner need kinds move: /
+  atk_type: / weather). Everything else in Ch10 = general trainers: NOT on the Fights tab, but counter picks get general usefulness as a
+  TIEBREAK (planner _q + .5 x tier game_pct). Tiers in Ch10: set state tier_fights = ['clown', 'flora', 'florin'] at the switch -> in-game
+  part and counter share = 70% those hard fights + 30% every fight. At the switch also: chapter 10, add CH10 to the engine battles (bosses
+  load: CH9 loop), mark jenner9 done. Fights tab shows this chapter then 'Chapter 10 · coming up'. TRAINER FACES: his Characters zip
+  (trainer<ttype ID>.png = battle portraits, ttypetext.rb :ID) copied to workspace/gamedata/Trainers (out of git); bosses use the boss sprite.
+
 ## Fight protocol (Vincent, 14 Nov — do this BEFORE recommending any team or lineup)
 **Guide tips (Vincent, 23 Nov): ALWAYS factored in.** Every walkthrough / community tip he sends goes into workspace/team/fight_tips.json
 (per fight: tip text + needs); planner.py scores them (+3 per tip met) and the Planner tab shows 'Guide tips: N of M covered' (collapsed)

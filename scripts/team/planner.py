@@ -180,6 +180,7 @@ MULT = np.array([[E.chart_eff(t, TA[n]['types'], FE) for t in MAIN] for n in NAM
 ALLT = sorted(ATK)
 MALL = np.array([[E.chart_eff(t, TA[n]['types'], FE) for t in ALLT] for n in NAMES])
 TIER = np.array([RK[TA[n]['tier']] for n in NAMES], float)
+GPCT = np.array([float(TA[n].get('game_pct') or 0) for n in NAMES])   # 25 Nov (Vincent): general usefulness across all fights = a TIEBREAK in counter picks
 AEV = np.array(['Aevian' in n for n in NAMES], float)   # 23 Nov (Vincent): prefer Aevian forms (unique, often stronger): a tiebreak bonus
 ANS = np.zeros((len(NAMES), len(WINS)))
 for i, n in enumerate(NAMES):
@@ -330,6 +331,12 @@ def meets(i, need):
         if E.chart_eff(arg, TA[n]['types'], FE) == 0: return f'{"/".join(t.title() for t in TA[n]["types"])} type: immune to {arg.title()}'
         return ab.title().replace('rod', ' Rod') if engine.FOE_ABIL_IMMUNE.get(ab) == arg else None
     if kind == 'ability': return ab.title() if ab == arg else None
+    if kind == 'move': return mn(set(arg.split('/')))   # 25 Nov (Ch10 tips): one of these moves on its build
+    if kind == 'atk_type':
+        ts_ = set(arg.split('/'))
+        return next((x for x in mnames if (MV.get(mvid(x)) or {}).get('type') in ts_ and int((MV.get(mvid(x)) or {}).get('basedamage') or 0) > 0), None)
+    if kind == 'weather':
+        return (ab.title() if ab in ('DROUGHT', 'DRIZZLE', 'SANDSTREAM', 'SNOWWARNING', 'ORICHALCUMPULSE') else None) or mn({'SUNNYDAY', 'RAINDANCE', 'SANDSTORM', 'HAIL', 'SNOWSCAPE', 'CHILLYRECEPTION'})
     if kind == 'field': return next((x for x in mnames if (mvid(x) or '') in ALTMOVES), None) if ALT and ALTFIELD == arg else None
     j = fidx(arg)
     if j is None: return None
@@ -724,7 +731,7 @@ if COUNTER:   # 24 Nov (Vincent): the six = one dedicated hard counter per foe (
         hk, hd = _hits(i, j)
         win = hk < hd or (hk == hd and FAST[i][j])
         hard1 = (DEAL[i][j] >= 90 or (FAST[i][j] and DEAL[i][j] >= 100)) and TAKE_B[i][j] < 70
-        q = 10 * _hard(i, j) + 5 * (hard1 and not _hard(i, j)) + 4 * win + min(DEAL[i][j], 150) / 100 - min(TAKE_B[i][j], 150) / 100 - 1 * FLAGN[i] + .3 * AEV[i] + .2 * TIER[i]
+        q = .5 * GPCT[i] + 10 * _hard(i, j) + 5 * (hard1 and not _hard(i, j)) + 4 * win + min(DEAL[i][j], 150) / 100 - min(TAKE_B[i][j], 150) / 100 - 1 * FLAGN[i] + .3 * AEV[i] + .2 * TIER[i]
         if j < len(L) and any(TAKE[i][k] >= 100 for k in L): q -= 8   # a lead must survive both of their leads
         if ALT and j < len(L) and ALTCAN[i]: q += 6 + 2 * SNOWW[i]   # the freeze plan needs its field move on a lead (Snow Warning: Blizzard never misses)
         if FMT == 'Singles' and j == 0:   # 25 Nov: in singles slot 1 IS the lead: it must win the opening 1-v-1 (their setup turn counted)

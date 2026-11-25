@@ -862,3 +862,5 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 25 Nov: Builder field + plan merged into one folded card, matchups start folded. Dex renamed Tiers (3 lists kept); tier score adds team value (hard-counter share + mindset kit, 25%). Ch10 hook: state tier_fights.
 
 - 25 Nov: Fights tab rebuilt (fights_tab.py): folded card per Ch9 fight, green check on beaten ones; Jenner = full example (field effects, their six with stats / items, guide tips area).
+
+- 25 Nov: nav Tiers first; Ch10 hard fights added (Clown Caricature, Flora, Florin) with guide tips, not switched yet; trainer faces on fight cards; general usefulness = counter tiebreak; Ch10 tier hook 70/30.

@@ -4,9 +4,9 @@
  "export_label": "24 Nov 15:33",
  "active_start": 470,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 391,
- "run": 405,
- "final": 409,
+ "roster": 393,
+ "run": 407,
+ "final": 411,
  "done": [
   "aelita",
   "narcissa1",
@@ -38,7 +38,7 @@
  "fight": "jenner9",
  "team": [
   "Glalie (Aevian Form)",
-  "Ninetales (Alolan Form)",
+  "Sylveon",
   "Lapras (Aevian Form)",
   "Golurk",
   "Musharna (Aevian Form)",

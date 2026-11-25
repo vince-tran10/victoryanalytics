@@ -93,6 +93,10 @@ FIGHTS = {
     'jenner9':  [('Jenner', 'SPIRITJENNER', 0)],
     'amanda':   [('Amanda', 'TRAINER_AMANDA', 2)],
     'erick':    [('Erick', 'LEADER_ERICK', 0)],
+    # Chapter 10 (Vincent's hard-fight list, 25 Nov): the Rose Badge is Flora OR Florin (depends on the story choice): both planned
+    'clown':    [('boss', 'DARCHGIRATINA')],
+    'flora':    [('Flora', 'LEADER_FLORA', 0)],
+    'florin':   [('Florin', 'LEADER_FLORIN', 0)],
 }
 PARTNER = {'darkgardevoir': ('Melia', 'ENIGMA_1', 0), 'garbodor': ('Melia', 'ENIGMA_1', 0)}
 
