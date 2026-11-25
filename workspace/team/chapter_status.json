@@ -19,25 +19,24 @@
   "Bug",
   "Poison"
  ],
- "weak3": [
-  "STEEL"
- ],
+ "weak3": [],
  "nores": [
   "FIRE",
+  "GRASS",
   "STEEL"
  ],
  "misses": [
   {
-   "foe": "Stoutland",
+   "foe": "Noivern",
    "fight": "jenner9",
-   "best": "Golisopod (Aevian Form)",
-   "dmg": 79
+   "best": "Scrafty",
+   "dmg": 42
   },
   {
-   "foe": "Porygon-Z",
+   "foe": "Kommo-o",
    "fight": "jenner9",
    "best": "Golisopod (Aevian Form)",
-   "dmg": 94
+   "dmg": 44
   }
  ],
  "n_types": 14

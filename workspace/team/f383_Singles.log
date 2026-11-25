@@ -1,0 +1,13 @@
+Ampharos (Aevian Form) | Active 60 | Filter  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Power Gem', 'Signal Beam', 'Blizzard', 'Protect'] | Sitrus Berry (already holding) | 
+Scrafty | Active 60 | Moxie  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Crunch', 'High Jump Kick', 'Fake Out', 'Protect'] | Black Glasses (already holding) | 
+Camerupt | Overflow 60 | Solid Rock  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Yawn', 'Earth Power', 'Lava Plume', 'Protect'] | Focus Sash (already holding) | 
+Quagsire | Overflow 60 | Unaware  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Earthquake', 'Recover', 'Aqua Tail', 'Protect'] | Sitrus Berry | 
+Zoroark (Hisuian Form) | Active 60 | Illusion  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Bitter Malice', 'Nasty Plot', 'Taunt', 'Protect'] | Zoroark Crest (already holding) | 
+Gastrodon | Active 60 | Storm Drain  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Earth Power', 'Muddy Water', 'Yawn', 'Protect'] | Sitrus Berry (already holding) | 
+jenner 1.302 -> 0.935 leads ['Camerupt'] swaps [('Flamigo', 'Zoroark (Hisuian Form)', 0.332), ('Braviary', 'Zoroark (Hisuian Form)', 0.296), ('Azumarill', 'Zoroark (Hisuian Form)', 0.278)]
+danni 1.449 -> 1.32 leads ['Scrafty'] swaps [('Chandelure', 'Quagsire', 0.222), ('Arcanine', 'Quagsire', 0.185), ('Toxtricity (Aevian Form)', 'Quagsire', 0.183)]
+troye 1.189 -> 1.082 leads ['Gastrodon'] swaps [('Arcanine', 'Zoroark (Hisuian Form)', 0.216), ('Toxtricity (Aevian Form)', 'Zoroark (Hisuian Form)', 0.149), ('Talonflame', 'Zoroark (Hisuian Form)', 0.136)]
+zena 1.453 -> 1.151 leads ['Quagsire'] swaps [('Decidueye', 'Zoroark (Hisuian Form)', 0.264), ('Meganium', 'Zoroark (Hisuian Form)', 0.259), ('Venusaur', 'Zoroark (Hisuian Form)', 0.259)]
+marcie 1.394 -> 0.815 leads ['Ampharos (Aevian Form)'] swaps [('Leavanny', 'Quagsire', 0.402), ('Leavanny (Aevian Form)', 'Quagsire', 0.401), ('Meowscarada', 'Quagsire', 0.374)]
+jenner9 0.727 -> 0.494 leads ['Scrafty'] swaps [('Florges', 'Zoroark (Hisuian Form)', 0.213), ('Sylveon', 'Zoroark (Hisuian Form)', 0.174), ('Vanilluxe', 'Zoroark (Hisuian Form)', 0.164)]
+erick 0.815 -> 0.744 leads ['Quagsire'] swaps [('Glalie (Aevian Form)', 'Zoroark (Hisuian Form)', 0.142), ('Gallade', 'Zoroark (Hisuian Form)', 0.141), ('Chandelure', 'Zoroark (Hisuian Form)', 0.117)]

@@ -59,24 +59,24 @@
   "role": "attacker",
   "source": "your team"
  },
- "Crabominable": {
-  "ability": "IRONFIST",
+ "Glalie (Aevian Form)": {
+  "ability": "GRASSYSURGE",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Never-Melt Ice",
+  "item": "Miracle Seed",
   "moves": [
-   "Ice Hammer",
-   "Crabhammer",
-   "Close Combat",
+   "Grassy Glide",
+   "Wood Hammer",
+   "Rock Slide",
    "Protect"
   ],
   "move_ids": [
-   "ICEHAMMER",
-   "CRABHAMMER",
-   "CLOSECOMBAT"
+   "ROCKSLIDE",
+   "WOODHAMMER",
+   "HELPINGHAND"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "your team"
  },
  "Arcanine": {
   "ability": "INTIMIDATE",
@@ -117,10 +117,10 @@
   "source": "your team"
  },
  "Scrafty": {
-  "ability": "MOXIE",
+  "ability": "INTIMIDATE",
   "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
+  "evs": "252 HP / 252 Atk / 4 Def",
+  "item": "Black Belt",
   "moves": [
    "Crunch",
    "High Jump Kick",
@@ -133,7 +133,30 @@
    "FAKEOUT"
   ],
   "role": "attacker",
-  "source": "your team"
+  "source": "your team",
+  "fight_why": [
+   "Bulk + power: Speed EVs change no matchup here",
+   "Black Belt: boosts High Jump Kick, the best hit on 3 of their 6"
+  ]
+ },
+ "Crabominable": {
+  "ability": "IRONFIST",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Never-Melt Ice",
+  "moves": [
+   "Ice Hammer",
+   "Crabhammer",
+   "Close Combat",
+   "Protect"
+  ],
+  "move_ids": [
+   "ICEHAMMER",
+   "CRABHAMMER",
+   "CLOSECOMBAT"
+  ],
+  "role": "attacker",
+  "source": "game"
  },
  "Solrock (Solrock Dominant Fusion)": {
   "ability": "SOLARIDOL",
@@ -153,6 +176,25 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Toxtricity (Aevian Form)": {
+  "ability": "Punk Rock",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe",
+  "item": "Charcoal",
+  "moves": [
+   "Torch Song",
+   "Boomburst",
+   "Sludge Bomb",
+   "Protect"
+  ],
+  "move_ids": [
+   "SLUDGEBOMB",
+   "TORCHSONG",
+   "BOOMBURST"
+  ],
+  "role": "attacker",
+  "source": "your team"
  },
  "Arcanine (Hisuian Form)": {
   "ability": "ROCKHEAD",
@@ -230,28 +272,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Glalie (Aevian Form)": {
-  "ability": "GRASSYSURGE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk / 4 Def",
-  "item": "Miracle Seed",
-  "moves": [
-   "Grassy Glide",
-   "Wood Hammer",
-   "Rock Slide",
-   "Protect"
-  ],
-  "move_ids": [
-   "ROCKSLIDE",
-   "WOODHAMMER",
-   "HELPINGHAND"
-  ],
-  "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Bulk + power: Speed EVs change no matchup here"
-  ]
- },
  "Braviary": {
   "ability": "SHEERFORCE",
   "nature": "Adamant",
@@ -308,25 +328,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Toxtricity (Aevian Form)": {
-  "ability": "Punk Rock",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
-  "item": "Charcoal",
-  "moves": [
-   "Torch Song",
-   "Boomburst",
-   "Sludge Bomb",
-   "Protect"
-  ],
-  "move_ids": [
-   "SLUDGEBOMB",
-   "TORCHSONG",
-   "BOOMBURST"
-  ],
-  "role": "attacker",
-  "source": "your team"
  },
  "Hitmonchan": {
   "ability": "IRONFIST",
@@ -407,7 +408,7 @@
  "Musharna (Aevian Form)": {
   "ability": "TOUGHCLAWS",
   "nature": "Adamant",
-  "evs": "252 HP / 252 Atk / 4 Def",
+  "evs": "252 HP / 252 Atk",
   "item": "Spell Tag",
   "moves": [
    "Lovely Kiss",
@@ -421,10 +422,7 @@
    "PLAYROUGH"
   ],
   "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Bulk + power: Speed EVs change no matchup here"
-  ]
+  "source": "your team"
  },
  "Revavroom": {
   "ability": "FILTER",
@@ -462,7 +460,7 @@
    "MUDSHOT"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "your team"
  },
  "Florges": {
   "ability": "FLOWERVEIL",
@@ -578,6 +576,25 @@
   "role": "attacker",
   "source": "engine"
  },
+ "Slowking (Galarian Form)": {
+  "ability": "Regenerator",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Poison Barb",
+  "moves": [
+   "Sludge Bomb",
+   "Psychic",
+   "Thunder Wave",
+   "Protect"
+  ],
+  "move_ids": [
+   "SLUDGEBOMB",
+   "CHILLYRECEPTION",
+   "PSYCHIC"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
  "Rampardos": {
   "ability": "MOLDBREAKER",
   "nature": "Adamant",
@@ -635,6 +652,25 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Dragalge": {
+  "ability": "ADAPTABILITY",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Poison Barb",
+  "moves": [
+   "Sludge Bomb",
+   "Shadow Ball",
+   "Dragon Pulse",
+   "Protect"
+  ],
+  "move_ids": [
+   "SLUDGEBOMB",
+   "DRAGONPULSE",
+   "SURF"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
  "Clefable": {
   "ability": "MAGICGUARD",
   "nature": "Modest",
@@ -654,21 +690,21 @@
   "role": "attacker",
   "source": "your team"
  },
- "Dragalge": {
-  "ability": "ADAPTABILITY",
+ "Sylveon": {
+  "ability": "PIXILATE",
   "nature": "Modest",
   "evs": "252 HP / 252 SpA",
-  "item": "Poison Barb",
+  "item": "Silk Scarf",
   "moves": [
-   "Sludge Bomb",
+   "Hyper Voice",
    "Shadow Ball",
-   "Dragon Pulse",
+   "Wish",
    "Protect"
   ],
   "move_ids": [
-   "SLUDGEBOMB",
-   "DRAGONPULSE",
-   "SURF"
+   "HYPERVOICE",
+   "SHADOWBALL",
+   "WISH"
   ],
   "role": "attacker",
   "source": "your team"
@@ -747,32 +783,10 @@
   "role": "attacker",
   "source": "game"
  },
- "Slowking (Galarian Form)": {
-  "ability": "Regenerator",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA / 4 Def",
-  "item": "Poison Barb",
-  "moves": [
-   "Sludge Bomb",
-   "Psychic",
-   "Thunder Wave",
-   "Protect"
-  ],
-  "move_ids": [
-   "SLUDGEBOMB",
-   "CHILLYRECEPTION",
-   "PSYCHIC"
-  ],
-  "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Bulk + power: Speed EVs change no matchup here"
-  ]
- },
  "Camerupt": {
   "ability": "SOLIDROCK",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe / 4 HP",
   "item": "Soft Sand",
   "moves": [
    "Yawn",
@@ -786,29 +800,10 @@
    "LAVAPLUME"
   ],
   "role": "attacker",
-  "source": "game"
- },
- "Sylveon": {
-  "ability": "PIXILATE",
-  "nature": "Calm",
-  "evs": "252 HP / 252 SpD / 4 SpA",
-  "item": "Spell Tag",
-  "moves": [
-   "Hyper Voice",
-   "Shadow Ball",
-   "Wish",
-   "Protect"
-  ],
-  "move_ids": [
-   "HYPERVOICE",
-   "SHADOWBALL",
-   "WISH"
-  ],
-  "role": "attacker",
   "source": "your team",
   "fight_why": [
-   "Wall: their attacks are mostly special",
-   "Spell Tag: boosts Shadow Ball, the best hit on 4 of their 6"
+   "Overheat replaces Lava Plume: Lava Plume would undo Icy Field",
+   "Speed: outspeeds Magneton only with full Speed"
   ]
  },
  "Dudunsparce": {
@@ -1551,8 +1546,8 @@
  "Ampharos (Aevian Form)": {
   "ability": "FILTER",
   "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Hard Stone",
+  "evs": "252 HP / 252 SpA / 4 Def",
+  "item": "Never-Melt Ice",
   "moves": [
    "Power Gem",
    "Signal Beam",
@@ -1565,7 +1560,13 @@
    "BLIZZARD"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "your team",
+  "fight_why": [
+   "Icy Wind replaces Power Gem (no attack of its own beats its other moves here)",
+   "Haze replaces Signal Beam (no attack of its own beats its other moves here)",
+   "Bulk + power: Speed EVs change no matchup here",
+   "Never-Melt Ice: boosts Blizzard, the best hit on 6 of their 6"
+  ]
  },
  "Exeggutor": {
   "ability": "CHLOROPHYLL",
@@ -1795,25 +1796,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Ampharos": {
-  "ability": "STATIC",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Dragon Fang",
-  "moves": [
-   "Dragon Pulse",
-   "Power Gem",
-   "Discharge",
-   "Protect"
-  ],
-  "move_ids": [
-   "DRAGONPULSE",
-   "POWERGEM",
-   "DISCHARGE"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Drifblim": {
   "ability": "UNBURDEN",
   "nature": "Modest",
@@ -1962,6 +1944,25 @@
   "role": "attacker",
   "source": "engine"
  },
+ "Ampharos": {
+  "ability": "STATIC",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Dragon Fang",
+  "moves": [
+   "Dragon Pulse",
+   "Power Gem",
+   "Discharge",
+   "Protect"
+  ],
+  "move_ids": [
+   "DRAGONPULSE",
+   "POWERGEM",
+   "DISCHARGE"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Vaporeon": {
   "ability": "WATERABSORB",
   "nature": "Modest",
@@ -2037,25 +2038,6 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
- },
- "Throh": {
-  "ability": "GUTS",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Belt",
-  "moves": [
-   "Circle Throw",
-   "Knock Off",
-   "Bulldoze",
-   "Protect"
-  ],
-  "move_ids": [
-   "CIRCLETHROW",
-   "KNOCKOFF",
-   "BULLDOZE"
-  ],
-  "role": "attacker",
-  "source": "game"
  },
  "Stoutland": {
   "ability": "INTIMIDATE",
@@ -2227,6 +2209,25 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Roserade (Aevian Form)": {
+  "ability": "TECHNICIAN",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe",
+  "item": "Soft Sand",
+  "moves": [
+   "Mud Barrage",
+   "Vacuum Wave",
+   "Taunt",
+   "Protect"
+  ],
+  "move_ids": [
+   "MUDBARRAGE",
+   "VACUUMWAVE",
+   "SPIKES"
+  ],
+  "role": "attacker",
+  "source": "your team"
  },
  "Hitmontop": {
   "ability": "TECHNICIAN",
@@ -2794,25 +2795,6 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Stunfisk (Galarian Form)": {
-  "ability": "MIMICRY",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Soft Sand",
-  "moves": [
-   "Earthquake",
-   "Yawn",
-   "Snap Trap",
-   "Protect"
-  ],
-  "move_ids": [
-   "EARTHQUAKE",
-   "YAWN",
-   "SNAPTRAP"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Electrode (Hisuian Form)": {
   "ability": "AFTERMATH",
   "nature": "Timid",
@@ -3037,6 +3019,23 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Throh": {
+  "ability": "GUTS",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Belt",
+  "moves": [
+   "Circle Throw",
+   "Bulldoze",
+   "Protect"
+  ],
+  "move_ids": [
+   "CIRCLETHROW",
+   "BULLDOZE"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Roserade": {
   "ability": "NATURALCURE",
   "nature": "Timid",
@@ -3115,8 +3114,8 @@
  },
  "Gastrodon": {
   "ability": "STORMDRAIN",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
+  "nature": "Timid",
+  "evs": "252 SpA / 252 Spe / 4 HP",
   "item": "Sitrus Berry",
   "moves": [
    "Earth Power",
@@ -3130,26 +3129,10 @@
    "SLUDGEBOMB"
   ],
   "role": "attacker",
-  "source": "your rules"
- },
- "Garbodor": {
-  "ability": "STENCH",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Poison Barb",
-  "moves": [
-   "Gunk Shot",
-   "Body Slam",
-   "Toxic",
-   "Protect"
-  ],
-  "move_ids": [
-   "GUNKSHOT",
-   "BODYSLAM",
-   "TOXIC"
-  ],
-  "role": "attacker",
-  "source": "game"
+  "source": "your team",
+  "fight_why": [
+   "Speed: outspeeds Magneton only with full Speed"
+  ]
  },
  "Raticate (Alolan Form)": {
   "ability": "HUSTLE",
@@ -3453,6 +3436,25 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Garbodor": {
+  "ability": "STENCH",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Poison Barb",
+  "moves": [
+   "Gunk Shot",
+   "Body Slam",
+   "Toxic",
+   "Protect"
+  ],
+  "move_ids": [
+   "GUNKSHOT",
+   "BODYSLAM",
+   "TOXIC"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Dusclops": {
   "ability": "PRESSURE",
   "nature": "Adamant",
@@ -3584,7 +3586,7 @@
    "AQUATAIL"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "your team"
  },
  "Turtonator": {
   "ability": "SHELLARMOR",
@@ -3792,6 +3794,25 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Swampert": {
+  "ability": "TORRENT",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Hard Stone",
+  "moves": [
+   "Helping Hand",
+   "Rock Slide",
+   "Deluge",
+   "Protect"
+  ],
+  "move_ids": [
+   "EARTHQUAKE",
+   "ROCKSLIDE",
+   "HAMMERARM"
+  ],
+  "role": "attacker",
+  "source": "your team"
  },
  "Probopass": {
   "ability": "STURDY",
@@ -4116,29 +4137,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Roserade (Aevian Form)": {
-  "ability": "TECHNICIAN",
-  "nature": "Timid",
-  "evs": "252 SpA / 252 Spe / 4 HP",
-  "item": "Soft Sand",
-  "moves": [
-   "Mud Barrage",
-   "Vacuum Wave",
-   "Taunt",
-   "Protect"
-  ],
-  "move_ids": [
-   "MUDBARRAGE",
-   "VACUUMWAVE",
-   "SPIKES"
-  ],
-  "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Taunt replaces Spikes (doubles: hazards / Toxic are too slow)",
-   "Speed: outspeeds Togedemaru, Toxtricity only with full Speed"
-  ]
- },
  "Zebstrika": {
   "ability": "LIGHTNINGROD",
   "nature": "Jolly",
@@ -4195,6 +4193,25 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
+ },
+ "Carracosta": {
+  "ability": "SOLIDROCK",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Hard Stone",
+  "moves": [
+   "Curse",
+   "Rock Slide",
+   "Aqua Tail",
+   "Protect"
+  ],
+  "move_ids": [
+   "CURSE",
+   "ROCKSLIDE",
+   "AQUATAIL"
+  ],
+  "role": "attacker",
+  "source": "game"
  },
  "Coalossal": {
   "ability": "STEAMENGINE",
@@ -4477,25 +4494,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Swampert": {
-  "ability": "TORRENT",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Hard Stone",
-  "moves": [
-   "Helping Hand",
-   "Rock Slide",
-   "Deluge",
-   "Protect"
-  ],
-  "move_ids": [
-   "EARTHQUAKE",
-   "ROCKSLIDE",
-   "HAMMERARM"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Seismitoad": {
   "ability": "POISONTOUCH",
   "nature": "Adamant",
@@ -4692,7 +4690,7 @@
   "evs": "252 HP / 252 Atk",
   "item": "Never-Melt Ice",
   "moves": [
-   "Recover",
+   "Blizzard",
    "Avalanche",
    "Rapid Spin",
    "Protect"
@@ -4703,7 +4701,7 @@
    "RAPIDSPIN"
   ],
   "role": "attacker",
-  "source": "game+smogon"
+  "source": "your team"
  },
  "Bellibolt": {
   "ability": "ELECTROMORPHOSIS",
@@ -4875,6 +4873,25 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Stunfisk (Galarian Form)": {
+  "ability": "MIMICRY",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Soft Sand",
+  "moves": [
+   "Earthquake",
+   "Yawn",
+   "Snap Trap",
+   "Protect"
+  ],
+  "move_ids": [
+   "EARTHQUAKE",
+   "YAWN",
+   "SNAPTRAP"
+  ],
+  "role": "attacker",
+  "source": "your team"
  },
  "Salazzle": {
   "ability": "CORROSION",
@@ -5590,6 +5607,25 @@
   "role": "attacker",
   "source": "game+smogon"
  },
+ "Aerodactyl": {
+  "ability": "ROCKHEAD",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Hard Stone",
+  "moves": [
+   "Rock Slide",
+   "Ice Fang",
+   "Iron Head",
+   "Protect"
+  ],
+  "move_ids": [
+   "ROCKSLIDE",
+   "ICEFANG",
+   "IRONHEAD"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
+ },
  "Porygon": {
   "ability": "DOWNLOAD",
   "nature": "Modest",
@@ -6144,7 +6180,7 @@
  "Zoroark (Hisuian Form)": {
   "ability": "ILLUSION",
   "nature": "Timid",
-  "evs": "252 SpA / 252 Spe",
+  "evs": "252 SpA / 252 Spe / 4 HP",
   "item": "Zoroark Crest",
   "moves": [
    "Bitter Malice",
@@ -6158,7 +6194,10 @@
    "GRASSKNOT"
   ],
   "role": "attacker",
-  "source": "your team"
+  "source": "your team",
+  "fight_why": [
+   "Speed: outspeeds Raichu only with full Speed"
+  ]
  },
  "Beedrill": {
   "ability": "SWARM",
@@ -6368,6 +6407,25 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
+ },
+ "Archeops": {
+  "ability": "DEFEATIST",
+  "nature": "Jolly",
+  "evs": "252 Atk / 252 Spe",
+  "item": "Hard Stone",
+  "moves": [
+   "Rock Slide",
+   "U-turn",
+   "Tailwind",
+   "Protect"
+  ],
+  "move_ids": [
+   "ROCKSLIDE",
+   "UTURN",
+   "TAILWIND"
+  ],
+  "role": "attacker",
+  "source": "game"
  },
  "Sharpedo": {
   "ability": "SPEEDBOOST",

@@ -1,0 +1,194 @@
+[
+ {
+  "dump": 3,
+  "owned": "Roserade-Aevian",
+  "level": 60,
+  "now_ability": "Technician",
+  "now_moves": [
+   "Mud Barrage",
+   "Vacuum Wave",
+   "Taunt",
+   "Protect"
+  ],
+  "final": "Roserade (Aevian Form)",
+  "evolve": "",
+  "gate": "",
+  "types": "Ground/Fighting",
+  "score": 0.438,
+  "tier": "C",
+  "ability": "Dry Skin",
+  "capsule": true,
+  "nature": "Modest",
+  "evs": {
+   "SpA": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Focus Blast",
+   "Mud Barrage",
+   "Work Up",
+   "Protect"
+  ],
+  "move_src": {
+   "Focus Blast": "Egg",
+   "Mud Barrage": "known",
+   "Work Up": "TM01",
+   "Protect": "known"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.61,
+   "danni": 0.88,
+   "troye": 0.76,
+   "zena": 0.84,
+   "marcie": 0.51,
+   "jenner9": -0.09,
+   "erick": 0.32
+  }
+ },
+ {
+  "dump": 11,
+  "owned": "Aerodactyl",
+  "level": 60,
+  "now_ability": "Rock Head",
+  "now_moves": [
+   "Stone Edge",
+   "Agility",
+   "Hyper Beam",
+   "Giga Impact"
+  ],
+  "final": "Aerodactyl",
+  "evolve": "",
+  "gate": "",
+  "types": "Rock/Flying",
+  "score": 0.342,
+  "tier": "D",
+  "ability": "Rock Head",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Stone Edge",
+   "Wing Attack",
+   "Fire Fang",
+   "Protect"
+  ],
+  "move_src": {
+   "Stone Edge": "known",
+   "Wing Attack": "Lv 10",
+   "Fire Fang": "TM141",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.49,
+   "danni": 0.96,
+   "troye": 0.42,
+   "zena": 0.49,
+   "marcie": 0.29,
+   "jenner9": 0.14,
+   "erick": -0.0
+  }
+ },
+ {
+  "dump": 17,
+  "owned": "Archen",
+  "level": 60,
+  "now_ability": "Defeatist",
+  "now_moves": [
+   "Tailwind",
+   "Dragon Claw",
+   "Thrash",
+   "Endeavor"
+  ],
+  "final": "Archeops",
+  "evolve": "Archeops (Level 37)",
+  "gate": "",
+  "types": "Rock/Flying",
+  "score": 0.362,
+  "tier": "D",
+  "ability": "Defeatist",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "Spe": 252,
+   "Def": 4
+  },
+  "moves": [
+   "Head Smash",
+   "Pluck",
+   "Tailwind",
+   "Protect"
+  ],
+  "move_src": {
+   "Head Smash": "Egg",
+   "Pluck": "Lv 15",
+   "Tailwind": "known",
+   "Protect": "TM17"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.58,
+   "danni": 1.06,
+   "troye": 0.48,
+   "zena": 0.48,
+   "marcie": 0.34,
+   "jenner9": 0.07,
+   "erick": 0.05
+  }
+ },
+ {
+  "dump": 414,
+  "owned": "Tirtouga",
+  "level": 60,
+  "now_ability": "Solid Rock",
+  "now_moves": [
+   "Aqua Tail",
+   "Rain Dance",
+   "Hydro Pump",
+   "Shell Smash"
+  ],
+  "final": "Carracosta",
+  "evolve": "Carracosta (Level 37)",
+  "gate": "",
+  "types": "Water/Rock",
+  "score": 0.327,
+  "tier": "D",
+  "ability": "Solid Rock",
+  "capsule": false,
+  "nature": "Adamant",
+  "evs": {
+   "Atk": 252,
+   "HP": 252,
+   "SpD": 4
+  },
+  "moves": [
+   "Rock Blast",
+   "Aqua Tail",
+   "Crunch",
+   "Protect"
+  ],
+  "move_src": {
+   "Rock Blast": "TM134",
+   "Aqua Tail": "known",
+   "Crunch": "Lv 27",
+   "Protect": "Lv 1"
+  },
+  "best": [],
+  "per": {
+   "jenner": 0.38,
+   "danni": 0.77,
+   "troye": 0.39,
+   "zena": 0.61,
+   "marcie": 0.18,
+   "jenner9": 0.11,
+   "erick": 0.18
+  }
+ }
+]

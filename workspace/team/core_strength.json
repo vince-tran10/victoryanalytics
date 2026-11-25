@@ -1600,6 +1600,18 @@
   "Torterra": {
    "blend": 0.512,
    "tier": "B"
+  },
+  "Aerodactyl": {
+   "blend": 0.377,
+   "tier": "C"
+  },
+  "Archeops": {
+   "blend": 0.375,
+   "tier": "C"
+  },
+  "Carracosta": {
+   "blend": 0.347,
+   "tier": "C"
   }
  }
 }

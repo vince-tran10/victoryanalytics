@@ -215,6 +215,20 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   Lesson: Geara & Zetta (Volcanic Top) was lost with a six picked without eruption damage or tag-battle targeting.
 - Meta / Smogon builds preferred (SV + National Dex data in `workspace/smogon`; doubles data for doubles roles).
 
+- **ERICK REDO (Vincent, 25 Nov, after Musharna died to Discharge + Thunder Raid turn 1; 'think it ALL through'):**
+  OVERLAYS: Rejuv has Overlays = true (SystemConstants.rb); Grassy / Electric / Misty / Psychic Terrain (and Rainbow) are OVERLAY fields: a
+  surge ability or terrain move lays them ON TOP of the field for N turns (Battle_Field.rb setField), the field underneath stays (Grassy
+  Surge does NOT replace Murkwater). Only fieldChange moves change the field (Blizzard: Murkwater -> Icy, layered; Icy's Earthquake / fire
+  / Scald moves pop it back to Murkwater). FOCUS FIRE (doubles): engine rows carry defmvs (every foe move's damage); planner duo_lead = what a
+  lead takes when BOTH their leads hit it on turn 1, on the REAL field (the freeze happens after Raichu moves); hard rule < 85% (no Sash
+  credit vs two attackers); lead pair picked first from the whole pool (pair_t1: partner support Fake Out / Wide Guard / Follow Me / Rage
+  Powder, Lightning Rod redirect of single-target Electric, Battler.rb 5081); back counters show 'With a 2nd foe' (+ median other hit);
+  in doubles a hard counter also needs that < 100. Their Lightning Rod pulls OUR single-target Electric moves (flagged + replaced); their
+  Motor Drive / Lightning Rod absorbers make our Electric support moves useless. Electric immunity (Ground / LR / Volt Absorb / Motor Drive)
+  +3 when 3+ foes use Electric (game tip). Field breaker foe (Chandelure Burning Jealousy) = outspeed + one-shot it (+8). Mimicry = pure field
+  type (Icy -> Ice, Murkwater -> Poison; engine + planner). State: pool_all (debug: every owned mon, any box / tier), field_plan
+  {erick: 'Icy Field'} (his chosen plan wins), fight_tips erick = the 3 game tips. Blizzard has NO Ch1-8 TM: only level-up learners freeze.
+
 ## Fight protocol (Vincent, 14 Nov — do this BEFORE recommending any team or lineup)
 **Guide tips (Vincent, 23 Nov): ALWAYS factored in.** Every walkthrough / community tip he sends goes into workspace/team/fight_tips.json
 (per fight: tip text + needs); planner.py scores them (+3 per tip met) and the Planner tab shows 'Guide tips: N of M covered' (collapsed)

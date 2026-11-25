@@ -66,5 +66,35 @@
     "spread_attack"
    ]
   }
+ ],
+ "erick": [
+  {
+   "tip": "Ground types are a good defensive option against his paralysis (game tip)",
+   "needs": [
+    "immune:ELECTRIC"
+   ],
+   "src": "game"
+  },
+  {
+   "tip": "Freezing the field into Icy Field cancels most of its attack and defense boosts (game tip)",
+   "needs": [
+    "field:Icy Field"
+   ],
+   "src": "game"
+  },
+  {
+   "tip": "Pokémon with Lightning Rod can be useful (game tip)",
+   "needs": [
+    "ability:LIGHTNINGROD"
+   ],
+   "src": "game"
+  },
+  {
+   "tip": "Outspeed and one-shot Chandelure before Burning Jealousy melts the ice (Colbur Berry counted)",
+   "needs": [
+    "ko:Chandelure"
+   ],
+   "src": "Vincent"
+  }
  ]
 }

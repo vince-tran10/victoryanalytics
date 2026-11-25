@@ -606,8 +606,12 @@ class Engine:
         if moveset is not None:
             damaging = [(m, mv) for m, mv in damaging if m in moveset]
         res = {}
+        me0 = me
         for b in self.battles:
             rows = []
+            me = me0   # 24 Nov audit (Erick): Mimicry = pure field type (Battle_Field.rb pbMimicry): Icy -> Ice, Murkwater -> Poison
+            _mt = None if os.environ.get('NOFIELD') else (_FTX.get(_G2FE.get(b['field']) or '', {}) or {}).get('mimicry')
+            if me0.get('ability') == 'MIMICRY' and _mt: me = dict(me0, types=[_mt])
             for foe in b['foes']:
                 foe['my_intimidate_vs'] = False
                 best, bestmv = 0.0, ''
@@ -622,12 +626,14 @@ class Engine:
                         best, bestmv = d, mv['MoveName']
                 foe_for_def = dict(foe)
                 taken, takenmv = 0.0, ''
+                defmvs = {}   # 24 Nov (Erick, focus fire): every foe move's damage on us (two attackers, Lightning Rod redirects)
                 me_def = dict(me)
                 me_def['hp_mult'] = 1
                 for mid, mv in foe['moves']:
                     d = self.damage_pct(foe, me_def, mid, mv, b, False)
                     if me['ability'] == 'INTIMIDATE' and mv['Category'] == 'Physical':
                         d *= 0.8
+                    defmvs[mv['MoveName']] = round(d, 1)
                     if d > taken:
                         taken, takenmv = d, mv['MoveName']
                 if me.get('crest') == 'FURRET' and taken > 0:   # Furret Crest: a Substitute on entry (1/4 HP) eats the first hit
@@ -644,9 +650,10 @@ class Engine:
                 # win the 1v1? (who KOs first)
                 wins = hits_to_ko < hits_to_die or (hits_to_ko == hits_to_die and faster)
                 q = min(best, 120) / 100 * (1.15 if faster else 1.0) * (1 - min(taken, 100) / 200)
-                rows.append(dict(foe=foe['name'], off=best, offmv=bestmv, deff=taken, defmv=takenmv,
+                rows.append(dict(foe=foe['name'], off=best, offmv=bestmv, deff=taken, defmv=takenmv, defmvs=defmvs,
                                  faster=faster, wins=wins, q=q, hko=hits_to_ko, hdie=hits_to_die))
             res[b['key']] = rows
+        me = me0
         me['matchups'] = res
         # best 4 moves overall for the chapter (by sum of contribution across battles)
         return me

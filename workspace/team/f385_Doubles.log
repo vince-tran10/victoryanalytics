@@ -1,0 +1,13 @@
+Ampharos (Aevian Form) | Active 60 | Filter  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Power Gem', 'Signal Beam', 'Blizzard', 'Protect'] | Sitrus Berry (already holding) | 
+Scrafty | Active 60 | Moxie  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Crunch', 'High Jump Kick', 'Fake Out', 'Protect'] | Black Glasses (already holding) | 
+Camerupt | Overflow 60 | Solid Rock  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Yawn', 'Earth Power', 'Lava Plume', 'Protect'] | Focus Sash (already holding) | 
+Vikavolt | Active 60 | Levitate  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Bug Buzz', 'Thunderbolt', 'Mud Shot', 'Protect'] | Magnet (already holding) | 
+Zoroark (Hisuian Form) | Active 60 | Illusion  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Bitter Malice', 'Nasty Plot', 'Taunt', 'Protect'] | Zoroark Crest (already holding) | 
+Gastrodon | Active 60 | Storm Drain  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Earth Power', 'Muddy Water', 'Yawn', 'Protect'] | Sitrus Berry (already holding) | 
+jenner 1.463 -> 1.14 leads ['Vikavolt', 'Scrafty'] swaps [('Flamigo', 'Zoroark (Hisuian Form)', 0.317), ('Clefable', 'Zoroark (Hisuian Form)', 0.277), ('Braviary', 'Zoroark (Hisuian Form)', 0.276)]
+danni 1.604 -> 1.518 leads ['Scrafty', 'Vikavolt'] swaps [('Chandelure', 'Gastrodon', 0.239), ('Toxtricity (Aevian Form)', 'Gastrodon', 0.221), ('Arcanine', 'Gastrodon', 0.218)]
+troye 1.349 -> 1.293 leads ['Camerupt', 'Vikavolt'] swaps [('Arcanine', 'Zoroark (Hisuian Form)', 0.195), ('Toxtricity (Aevian Form)', 'Zoroark (Hisuian Form)', 0.165), ('Talonflame', 'Zoroark (Hisuian Form)', 0.128)]
+zena 1.611 -> 1.336 leads ['Camerupt', 'Gastrodon'] swaps [('Decidueye', 'Zoroark (Hisuian Form)', 0.258), ('Venusaur', 'Zoroark (Hisuian Form)', 0.244), ('Meganium', 'Zoroark (Hisuian Form)', 0.239)]
+marcie 1.544 -> 1.334 leads ['Vikavolt', 'Ampharos (Aevian Form)'] swaps [('Leavanny (Aevian Form)', 'Gastrodon', 0.279), ('Arcanine', 'Gastrodon', 0.218), ('Toxtricity (Aevian Form)', 'Gastrodon', 0.217)]
+jenner9 0.89 -> 0.769 leads ['Vikavolt', 'Ampharos (Aevian Form)'] swaps [('Florges', 'Zoroark (Hisuian Form)', 0.193), ('Clefable', 'Zoroark (Hisuian Form)', 0.172), ('Azumarill', 'Zoroark (Hisuian Form)', 0.154)]
+erick 0.986 -> 0.859 leads ['Scrafty', 'Vikavolt'] swaps [('Gallade', 'Vikavolt', 0.182), ('Chandelure', 'Zoroark (Hisuian Form)', 0.175), ('Glalie (Aevian Form)', 'Zoroark (Hisuian Form)', 0.141)]

@@ -241,7 +241,8 @@ def main():
         print(sh(['../scripts/team/planner.py'], dict(env, BASE_RUN=f'r{run}')).strip())   # plan A: keep the field
         import glob as _gl
         for _f in _gl.glob('team/planner_alt*.json'): os.remove(_f)
-        _ALTF = {'Murkwater Surface': ['Icy Field', 'Grassy Terrain']}   # 24 Nov: fields a move / ability can turn this one into (Blizzard freezes it; Grassy Surge 5 turns)
+        _ALTF = {'Murkwater Surface': ['Icy Field']}   # 24 Nov: fields a MOVE turns this one into (Blizzard freezes it). Grassy Surge is NOT one: Overlays = true
+        # (SystemConstants.rb) and Grassy is an overlay field, so setField lays Grassy Terrain ON TOP of Murkwater for 5 turns (Battle_Field.rb setField)
         _fe = next((b[2] for b in __import__('bosses').CH9 if b[0] == st.get('fight')), '')
         for _af in _ALTF.get(_fe, []):
             print(sh(['../scripts/team/planner.py'], dict(env, BASE_RUN=f'r{run}', PLAN_ALT=_af)).strip())   # plan C: change the field

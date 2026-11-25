@@ -1,0 +1,13 @@
+Ampharos (Aevian Form) | Active 60 | Filter  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Power Gem', 'Signal Beam', 'Blizzard', 'Protect'] | Sitrus Berry (already holding) | 
+Scrafty | Active 60 | Moxie  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Crunch', 'High Jump Kick', 'Fake Out', 'Protect'] | Black Glasses (already holding) | 
+Camerupt | Overflow 60 | Solid Rock  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Yawn', 'Earth Power', 'Lava Plume', 'Protect'] | Focus Sash (already holding) | 
+Golisopod (Aevian Form) | Party 60 | Skill Link  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Bone Rush', 'Pin Missile', 'Swords Dance', 'Protect'] | Silver Powder (already holding) | 
+Zoroark (Hisuian Form) | Active 60 | Illusion  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Bitter Malice', 'Nasty Plot', 'Taunt', 'Protect'] | Zoroark Crest (already holding) | 
+Gastrodon | Active 60 | Storm Drain  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Earth Power', 'Muddy Water', 'Yawn', 'Protect'] | Sitrus Berry (already holding) | 
+jenner 1.302 -> 1.084 leads ['Golisopod (Aevian Form)'] swaps [('Flamigo', 'Zoroark (Hisuian Form)', 0.224), ('Azumarill', 'Zoroark (Hisuian Form)', 0.192), ('Braviary', 'Zoroark (Hisuian Form)', 0.191)]
+danni 1.449 -> 1.373 leads ['Scrafty'] swaps [('Chandelure', 'Gastrodon', 0.177), ('Toxtricity (Aevian Form)', 'Gastrodon', 0.157), ('Crobat', 'Ampharos (Aevian Form)', 0.142)]
+troye 1.189 -> 1.184 leads ['Golisopod (Aevian Form)'] swaps [('Arcanine', 'Zoroark (Hisuian Form)', 0.147), ('Talonflame', 'Zoroark (Hisuian Form)', 0.115), ('Toxtricity (Aevian Form)', 'Zoroark (Hisuian Form)', 0.111)]
+zena 1.453 -> 1.29 leads ['Golisopod (Aevian Form)'] swaps [('Meganium', 'Zoroark (Hisuian Form)', 0.205), ('Venusaur', 'Zoroark (Hisuian Form)', 0.205), ('Decidueye', 'Zoroark (Hisuian Form)', 0.184)]
+marcie 1.394 -> 1.18 leads ['Golisopod (Aevian Form)'] swaps [('Leavanny (Aevian Form)', 'Gastrodon', 0.25), ('Leavanny', 'Gastrodon', 0.238), ('Scolipede', 'Gastrodon', 0.223)]
+jenner9 0.727 -> 0.585 leads ['Golisopod (Aevian Form)'] swaps [('Florges', 'Zoroark (Hisuian Form)', 0.181), ('Ninetales (Alolan Form)', 'Zoroark (Hisuian Form)', 0.138), ('Azumarill', 'Zoroark (Hisuian Form)', 0.129)]
+erick 0.815 -> 0.825 leads ['Golisopod (Aevian Form)'] swaps [('Gallade', 'Zoroark (Hisuian Form)', 0.12), ('Glalie (Aevian Form)', 'Zoroark (Hisuian Form)', 0.101), ('Chandelure', 'Zoroark (Hisuian Form)', 0.101)]

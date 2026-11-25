@@ -521,6 +521,25 @@
      "teach": []
     },
     {
+     "name": "Roserade (Aevian Form)",
+     "tier": "S",
+     "stats": [
+      "3 of 4 weak to Psychic",
+      "Resists 5 types",
+      "Weak to 6 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Priority: Vacuum Wave (+0.8)",
+      "Disrupt: Taunt"
+     ],
+     "sid": "ROSERADE",
+     "form": "1",
+     "pick": false,
+     "rec": false,
+     "teach": []
+    },
+    {
      "name": "Azumarill",
      "tier": "A",
      "stats": [
@@ -592,25 +611,6 @@
      ]
     },
     {
-     "name": "Roserade (Aevian Form)",
-     "tier": "A",
-     "stats": [
-      "3 of 4 weak to Psychic",
-      "Resists 5 types",
-      "Weak to 6 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Priority: Vacuum Wave (+0.8)",
-      "Disrupt: Taunt"
-     ],
-     "sid": "ROSERADE",
-     "form": "1",
-     "pick": false,
-     "rec": false,
-     "teach": []
-    },
-    {
      "name": "Arcanine (Hisuian Form)",
      "tier": "A",
      "stats": [
@@ -650,23 +650,22 @@
   {
    "slot": 5,
    "title": "Flex 1 · Mid game · Erick",
-   "pick": "Glalie (Aevian Form)",
-   "rec": "Glalie (Aevian Form)",
+   "pick": "Ampharos (Aevian Form)",
+   "rec": "Ampharos (Aevian Form)",
    "flex": true,
    "cands": [
     {
-     "name": "Glalie (Aevian Form)",
-     "tier": "S",
+     "name": "Ampharos (Aevian Form)",
+     "tier": "A",
      "stats": [
-      "Resists 2 types",
+      "Resists 3 types",
       "Weak to 4 types"
      ],
      "tools": [
-      "Spread: Rock Slide",
-      "Priority: Grassy Glide"
+      "Spread: Blizzard"
      ],
      "teach": [],
-     "sid": "GLALIE",
+     "sid": "AMPHAROS",
      "form": "1",
      "pick": true,
      "rec": true
@@ -691,36 +690,34 @@
      "rec": false
     },
     {
-     "name": "Scrafty",
-     "tier": "B",
+     "name": "Musharna (Aevian Form)",
+     "tier": "S",
      "stats": [
       "Resists 4 types",
       "Weak to 3 types",
       "Single target only"
      ],
-     "tools": [
-      "Disrupt: Fake Out"
-     ],
+     "tools": [],
      "teach": [],
-     "sid": "SCRAFTY",
-     "form": "0",
+     "sid": "MUSHARNA",
+     "form": "1",
      "pick": false,
      "rec": false
     },
     {
-     "name": "Talonflame",
-     "tier": "B",
+     "name": "Glalie (Aevian Form)",
+     "tier": "S",
      "stats": [
-      "Resists 7 types",
-      "Weak to 3 types",
-      "Single target only"
+      "Resists 2 types",
+      "Weak to 4 types"
      ],
      "tools": [
-      "Speed control: Tailwind"
+      "Spread: Rock Slide",
+      "Priority: Grassy Glide"
      ],
      "teach": [],
-     "sid": "TALONFLAME",
-     "form": "0",
+     "sid": "GLALIE",
+     "form": "1",
      "pick": false,
      "rec": false
     }
@@ -729,62 +726,27 @@
   {
    "slot": 6,
    "title": "Flex 2 · Closer · Erick",
-   "pick": "Musharna (Aevian Form)",
-   "rec": "Musharna (Aevian Form)",
+   "pick": "Scrafty",
+   "rec": "Scrafty",
    "flex": true,
    "cands": [
     {
-     "name": "Musharna (Aevian Form)",
-     "tier": "S",
+     "name": "Scrafty",
+     "tier": "B",
      "stats": [
       "Resists 4 types",
       "Weak to 3 types",
       "Single target only"
      ],
      "tools": [
-      "Counters: Raichu"
+      "Counters: Raichu",
+      "Disrupt: Fake Out"
      ],
      "teach": [],
-     "sid": "MUSHARNA",
-     "form": "1",
+     "sid": "SCRAFTY",
+     "form": "0",
      "pick": true,
      "rec": true
-    },
-    {
-     "name": "Crawdaunt",
-     "tier": "B",
-     "stats": [
-      "Resists 7 types",
-      "Weak to 5 types",
-      "Single target only"
-     ],
-     "tools": [
-      "Setup: Swords Dance",
-      "Disrupt: Knock Off"
-     ],
-     "teach": [],
-     "sid": "CRAWDAUNT",
-     "form": "0",
-     "pick": false,
-     "rec": false
-    },
-    {
-     "name": "Zoroark (Hisuian Form)",
-     "tier": "B",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 1 type",
-      "Single target only"
-     ],
-     "tools": [
-      "Setup: Nasty Plot",
-      "Disrupt: Taunt"
-     ],
-     "teach": [],
-     "sid": "ZOROARK",
-     "form": "1",
-     "pick": false,
-     "rec": false
     }
    ]
   }
@@ -1070,13 +1032,13 @@
    "Attacker",
    ""
   ],
-  "Decidueye": [
-   "Attacker",
-   ""
-  ],
   "Reuniclus": [
    "Mid game",
    "Recover"
+  ],
+  "Decidueye": [
+   "Attacker",
+   ""
   ],
   "Ursaring": [
    "Attacker",
@@ -1234,6 +1196,10 @@
    "Attacker",
    ""
   ],
+  "Aerodactyl": [
+   "Attacker",
+   ""
+  ],
   "Tangrowth": [
    "Mid game",
    "Regenerator"
@@ -1245,6 +1211,10 @@
   "Toxicroak": [
    "Attacker",
    ""
+  ],
+  "Archeops": [
+   "Doubles lead",
+   "Tailwind"
   ],
   "Kilowattrel": [
    "Attacker",
@@ -1262,13 +1232,13 @@
    "Attacker",
    ""
   ],
-  "Arctozolt": [
-   "Attacker",
-   ""
-  ],
   "Ribombee": [
    "Support",
    "Sticky Web"
+  ],
+  "Arctozolt": [
+   "Attacker",
+   ""
   ],
   "Centiskorch": [
    "Attacker",
@@ -1353,6 +1323,10 @@
   "Feraligatr": [
    "Attacker",
    ""
+  ],
+  "Carracosta": [
+   "Closer",
+   "Curse"
   ],
   "Glaceon": [
    "Attacker",
@@ -1466,13 +1440,13 @@
    "Doubles lead",
    "Fake Out"
   ],
-  "Sunflora": [
-   "Attacker",
-   ""
-  ],
   "Toedscruel": [
    "Support",
    "Spore"
+  ],
+  "Sunflora": [
+   "Attacker",
+   ""
   ],
   "Starmie": [
    "Attacker",
@@ -1546,10 +1520,6 @@
    "Attacker",
    ""
   ],
-  "Stunfisk-Galar": [
-   "Support",
-   "Yawn"
-  ],
   "Sudowoodo": [
    "Attacker",
    ""
@@ -1557,6 +1527,10 @@
   "Orbeetle": [
    "Support",
    "Reflect"
+  ],
+  "Stunfisk-Galar": [
+   "Support",
+   "Yawn"
   ],
   "Swanna": [
    "Attacker",
@@ -1911,8 +1885,8 @@
    "Swords Dance"
   ],
   "Avalugg": [
-   "Mid game",
-   "Recover"
+   "Attacker",
+   ""
   ],
   "Leavanny": [
    "Closer",
@@ -2178,13 +2152,13 @@
    "Support",
    "Spore"
   ],
-  "Masquerain": [
-   "Doubles lead",
-   "Intimidate"
-  ],
   "Dewgong": [
    "Doubles lead",
    "Fake Out"
+  ],
+  "Masquerain": [
+   "Doubles lead",
+   "Intimidate"
   ],
   "Wugtrio": [
    "Attacker",
@@ -3357,18 +3331,14 @@
   "Scrafty": {
    "s": [
     [
-     "A",
-     "Moxie cleaner"
+     "D",
+     "Intimidate"
     ]
    ],
    "d": [
     [
-     "A",
-     "Moxie cleaner"
-    ],
-    [
      "D",
-     "Fake Out"
+     "Intimidate / Fake Out"
     ]
    ]
   },
@@ -3526,10 +3496,6 @@
     ]
    ]
   },
-  "Decidueye": {
-   "s": [],
-   "d": []
-  },
   "Reuniclus": {
    "s": [
     [
@@ -3559,6 +3525,10 @@
      "Magic Guard"
     ]
    ]
+  },
+  "Decidueye": {
+   "s": [],
+   "d": []
   },
   "Ursaring": {
    "s": [
@@ -4118,6 +4088,20 @@
     ]
    ]
   },
+  "Aerodactyl": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 130)"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 130)"
+    ]
+   ]
+  },
   "Tangrowth": {
    "s": [
     [
@@ -4169,6 +4153,44 @@
     [
      "A",
      "Priority cleaner (Sucker Punch)"
+    ]
+   ]
+  },
+  "Archeops": {
+   "s": [
+    [
+     "A",
+     "Fast cleaner (Speed 110)"
+    ],
+    [
+     "B",
+     "Tailwind"
+    ],
+    [
+     "C",
+     "Attack 140"
+    ],
+    [
+     "D",
+     "U-turn"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Fast cleaner (Speed 110)"
+    ],
+    [
+     "B",
+     "Tailwind"
+    ],
+    [
+     "C",
+     "Attack 140"
+    ],
+    [
+     "D",
+     "U-turn"
     ]
    ]
   },
@@ -4236,15 +4258,6 @@
     ]
    ]
   },
-  "Arctozolt": {
-   "s": [],
-   "d": [
-    [
-     "B",
-     "Bulldoze"
-    ]
-   ]
-  },
   "Ribombee": {
    "s": [
     [
@@ -4253,6 +4266,15 @@
     ]
    ],
    "d": []
+  },
+  "Arctozolt": {
+   "s": [],
+   "d": [
+    [
+     "B",
+     "Bulldoze"
+    ]
+   ]
   },
   "Centiskorch": {
    "s": [],
@@ -4303,7 +4325,7 @@
     ],
     [
      "E",
-     "Circle Throw / Knock Off"
+     "Circle Throw"
     ]
    ],
    "d": [
@@ -4317,7 +4339,7 @@
     ],
     [
      "E",
-     "Circle Throw / Knock Off"
+     "Circle Throw"
     ]
    ]
   },
@@ -4589,6 +4611,20 @@
     [
      "C",
      "Sheer Force"
+    ]
+   ]
+  },
+  "Carracosta": {
+   "s": [
+    [
+     "A",
+     "Curse sweeper"
+    ]
+   ],
+   "d": [
+    [
+     "A",
+     "Curse sweeper"
     ]
    ]
   },
@@ -5019,6 +5055,20 @@
     ]
    ]
   },
+  "Toedscruel": {
+   "s": [
+    [
+     "B",
+     "Spore"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Spore"
+    ]
+   ]
+  },
   "Sunflora": {
    "s": [
     [
@@ -5034,20 +5084,6 @@
     [
      "E",
      "Sunny Day"
-    ]
-   ]
-  },
-  "Toedscruel": {
-   "s": [
-    [
-     "B",
-     "Spore"
-    ]
-   ],
-   "d": [
-    [
-     "B",
-     "Spore"
     ]
    ]
   },
@@ -5320,20 +5356,6 @@
    "s": [],
    "d": []
   },
-  "Stunfisk-Galar": {
-   "s": [
-    [
-     "B",
-     "Yawn"
-    ]
-   ],
-   "d": [
-    [
-     "B",
-     "Yawn"
-    ]
-   ]
-  },
   "Sudowoodo": {
    "s": [
     [
@@ -5367,6 +5389,20 @@
     [
      "B",
      "Reflect"
+    ]
+   ]
+  },
+  "Stunfisk-Galar": {
+   "s": [
+    [
+     "B",
+     "Yawn"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Yawn"
     ]
    ]
   },
@@ -6712,18 +6748,14 @@
   "Avalugg": {
    "s": [
     [
-     "D",
-     "Recover"
-    ],
-    [
      "E",
      "Sturdy / Rapid Spin"
     ]
    ],
    "d": [
     [
-     "D",
-     "Recover"
+     "A",
+     "Spread attacker (Blizzard)"
     ],
     [
      "E",
@@ -7531,20 +7563,6 @@
     ]
    ]
   },
-  "Masquerain": {
-   "s": [
-    [
-     "D",
-     "Intimidate"
-    ]
-   ],
-   "d": [
-    [
-     "D",
-     "Intimidate"
-    ]
-   ]
-  },
   "Dewgong": {
    "s": [
     [
@@ -7560,6 +7578,20 @@
     [
      "E",
      "Perish Song"
+    ]
+   ]
+  },
+  "Masquerain": {
+   "s": [
+    [
+     "D",
+     "Intimidate"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Intimidate"
     ]
    ]
   },

@@ -5,9 +5,9 @@
    "tier": "S",
    "sid": "MUSHARNA",
    "form": "1",
-   "blend": 0.769,
+   "blend": 0.77,
    "meta": 0.72,
-   "game": 0.939,
+   "game": 0.94,
    "types": [
     "DARK",
     "FAIRY"
@@ -37,34 +37,38 @@
    ]
   },
   {
-   "name": "Toxtricity (Aevian Form)",
-   "tier": "S",
-   "sid": "TOXTRICITY",
-   "form": "2",
-   "blend": 0.733,
-   "meta": 0.67,
-   "game": 0.908,
+   "name": "Chandelure",
+   "tier": "B",
+   "sid": "CHANDELURE",
+   "form": "0",
+   "blend": 0.527,
+   "meta": 0.294,
+   "game": 0.99,
    "types": [
-    "FIRE",
-    "POISON"
+    "GHOST",
+    "FIRE"
    ],
    "moves": [
-    "Torch Song",
-    "Boomburst",
-    "Sludge Bomb",
+    "Shadow Ball",
+    "Will-O-Wisp",
+    "Overheat",
     "Protect"
    ],
-   "ability": "PUNKROCK",
-   "aevian": true,
-   "where": "Party",
+   "ability": "FLASHFIRE",
+   "aevian": false,
+   "where": "Active",
    "chips": [
     [
      "tool",
-     "Punk Rock"
+     "Burns"
     ],
     [
      "stat",
-     "Resists Fire / Fighting"
+     "Immune Fire / Fighting"
+    ],
+    [
+     "stat",
+     "Resists Ice / Fairy"
     ]
    ]
   },
@@ -73,9 +77,9 @@
    "tier": "B",
    "sid": "FLORGES",
    "form": "0",
-   "blend": 0.423,
+   "blend": 0.421,
    "meta": 0.15,
-   "game": 0.913,
+   "game": 0.906,
    "types": [
     "FAIRY"
    ],
@@ -278,10 +282,6 @@
        "one-shots it"
       ],
       [
-       "Toxtricity-Aevian",
-       "one-shots it"
-      ],
-      [
        "Florges",
        "one-shots it"
       ]
@@ -303,10 +303,6 @@
        "beats it (101%)"
       ],
       [
-       "Toxtricity-Aevian",
-       "beats it (104%)"
-      ],
-      [
        "Florges",
        "beats it (112%)"
       ]
@@ -324,8 +320,8 @@
      "ability": "ADAPTABILITY",
      "cov": [
       [
-       "Toxtricity-Aevian",
-       "still hits it for 106%"
+       "Chandelure",
+       "still hits it for 84%"
       ]
      ],
      "ok": true
@@ -339,13 +335,8 @@
      "how": "Plan around it",
      "need": 1,
      "item": "Choice Scarf",
-     "cov": [
-      [
-       "Toxtricity-Aevian",
-       "beats it (106%)"
-      ]
-     ],
-     "ok": true
+     "cov": [],
+     "ok": false
     },
     {
      "id": "jenner9:ability:Kommo-o:7",
@@ -412,8 +403,8 @@
      "ability": "PLUS",
      "cov": [
       [
-       "Toxtricity-Aevian",
-       "still hits it for 190%"
+       "Chandelure",
+       "still hits it for 173%"
       ]
      ],
      "ok": true
@@ -487,7 +478,12 @@
      "how": "Two of yours resist or are immune",
      "need": 2,
      "atype": "NORMAL",
-     "cov": [],
+     "cov": [
+      [
+       "Chandelure",
+       "immune"
+      ]
+     ],
      "ok": false
     },
     {
@@ -521,13 +517,8 @@
      "need": 1,
      "boosted": [],
      "sound": true,
-     "cov": [
-      [
-       "Toxtricity-Aevian",
-       "Boomburst"
-      ]
-     ],
-     "ok": true
+     "cov": [],
+     "ok": false
     },
     {
      "id": "jenner9:fieldnote:Concert Venue:19",
@@ -670,6 +661,10 @@
       [
        "Musharna-Aevian",
        "still hits it for 73%"
+      ],
+      [
+       "Chandelure",
+       "still hits it for 66%"
       ]
      ],
      "ok": true
@@ -715,8 +710,8 @@
        "still hits it for 150%"
       ],
       [
-       "Toxtricity-Aevian",
-       "still hits it for 98%"
+       "Chandelure",
+       "still hits it for 137%"
       ],
       [
        "Florges",
@@ -786,8 +781,8 @@
      "ability": "LIGHTNINGROD",
      "cov": [
       [
-       "Toxtricity-Aevian",
-       "still hits it for 158%"
+       "Chandelure",
+       "still hits it for 251%"
       ]
      ],
      "ok": true
@@ -803,8 +798,8 @@
      "item": "Elemental Seed",
      "cov": [
       [
-       "Toxtricity-Aevian",
-       "beats it (158%)"
+       "Chandelure",
+       "beats it (251%)"
       ]
      ],
      "ok": true
@@ -837,6 +832,10 @@
       [
        "Musharna-Aevian",
        "still hits it for 73%"
+      ],
+      [
+       "Chandelure",
+       "still hits it for 99%"
       ]
      ],
      "ok": true
@@ -864,8 +863,13 @@
      "how": "Plan around it",
      "need": 1,
      "item": "Toxtricitite",
-     "cov": [],
-     "ok": false
+     "cov": [
+      [
+       "Chandelure",
+       "beats it (100%)"
+      ]
+     ],
+     "ok": true
     },
     {
      "id": "erick:speed:Raichu:14",
@@ -914,7 +918,7 @@
      "atype": "POISON",
      "cov": [
       [
-       "Toxtricity-Aevian",
+       "Chandelure",
        "resists"
       ]
      ],
@@ -946,13 +950,8 @@
       "WATER"
      ],
      "sound": false,
-     "cov": [
-      [
-       "Toxtricity-Aevian",
-       "Sludge Bomb"
-      ]
-     ],
-     "ok": true
+     "cov": [],
+     "ok": false
     },
     {
      "id": "erick:fieldnote:Murkwater Surface:20",
@@ -973,12 +972,7 @@
      "text": "End of turn Poison damage when grounded, and not Poison or Steel type.",
      "how": "Plan around it",
      "need": 1,
-     "cov": [
-      [
-       "Toxtricity-Aevian",
-       "immune to it"
-      ]
-     ],
+     "cov": [],
      "ok": null
     }
    ]
@@ -1013,18 +1007,18 @@
    ],
    "power": 5.75
   },
-  "Toxtricity (Aevian Form)": {
+  "Chandelure": {
    "wins": 4,
    "ohko": 5,
    "n": 12,
    "beats": [
     [
      "jenner9",
-     "Noivern"
+     "Klinklang"
     ],
     [
-     "jenner9",
-     "Klinklang"
+     "erick",
+     "Raichu"
     ],
     [
      "erick",
@@ -1032,7 +1026,7 @@
     ],
     [
      "erick",
-     "Chandelure"
+     "Toxtricity"
     ]
    ],
    "power": 5.25
@@ -1070,38 +1064,37 @@
   "Spirit Jenner: Stoutland",
   "Spirit Jenner: Porygon-Z",
   "Erick (Pulse Badge gym): Electivire",
-  "Erick (Pulse Badge gym): Togedemaru",
-  "Erick (Pulse Badge gym): Toxtricity"
+  "Erick (Pulse Badge gym): Togedemaru"
  ],
- "score": 18.8,
+ "score": 19.0,
  "parts": {
   "strength": 16.5,
   "defense": 0,
-  "offense": 2.1,
+  "offense": 2.4,
   "synergy": 0,
   "aevian": 0,
   "shared": [],
   "triple": [],
-  "resisted": 12,
-  "covered": 7,
+  "resisted": 13,
+  "covered": 8,
   "uncovered": [],
   "why": []
  },
  "runners": [
   {
    "out": "Florges",
+   "in": "Toxtricity (Aevian Form)",
+   "delta": -0.15
+  },
+  {
+   "out": "Florges",
    "in": "Arcanine (Hisuian Form)",
-   "delta": -0.45
+   "delta": -0.75
   },
   {
    "out": "Florges",
    "in": "Gallade",
-   "delta": -0.45
-  },
-  {
-   "out": "Florges",
-   "in": "Dragalge",
-   "delta": -0.7
+   "delta": -0.75
   },
   {
    "out": "Florges",
@@ -1111,13 +1104,13 @@
  ],
  "pool": 52,
  "singles": {
-  "Fast cleaner": "Toxtricity (Aevian Form)",
+  "Fast cleaner": null,
   "Bulky pivot": "Musharna (Aevian Form)",
   "Wallbreaker": "Musharna (Aevian Form)"
  },
  "doubles": {
   "Fake Out / redirection": null,
-  "Spread or speed control": "Toxtricity (Aevian Form)",
+  "Spread or speed control": null,
   "Bulky attacker": "Musharna (Aevian Form)"
  },
  "matrix": {
@@ -1141,25 +1134,25 @@
    "STEEL": 2.0,
    "FAIRY": 2.0
   },
-  "Toxtricity (Aevian Form)": {
-   "NORMAL": 1.0,
-   "FIRE": 0.5,
+  "Chandelure": {
+   "NORMAL": 0.0,
+   "FIRE": 0,
    "WATER": 2.0,
    "ELECTRIC": 1.0,
-   "GRASS": 0.25,
+   "GRASS": 0.5,
    "ICE": 0.5,
-   "FIGHTING": 0.5,
+   "FIGHTING": 0.0,
    "POISON": 0.5,
-   "GROUND": 4.0,
+   "GROUND": 2.0,
    "FLYING": 1.0,
-   "PSYCHIC": 2.0,
+   "PSYCHIC": 1.0,
    "BUG": 0.25,
    "ROCK": 2.0,
-   "GHOST": 1.0,
+   "GHOST": 2.0,
    "DRAGON": 1.0,
-   "DARK": 1.0,
+   "DARK": 2.0,
    "STEEL": 0.5,
-   "FAIRY": 0.25
+   "FAIRY": 0.5
   },
   "Florges": {
    "NORMAL": 1.0,

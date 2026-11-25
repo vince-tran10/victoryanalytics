@@ -29,17 +29,21 @@ if P.get('break_field'):
 _pl = P.get('plan') or 'keep'
 _lead_alt = next((m['name'] for m in P['six'] if m.get('lead') and any(w.get('why', '').startswith('Turns the field') for w in m.get('why') or [])), None)
 _gs = next((m['name'] for m in P['six'] if m.get('lead') and (m.get('ability') or '').upper().replace(' ', '') == 'GRASSYSURGE'), None)
-_plan_txt = (f"Plan: {disp(_gs)} leads: Grassy Surge turns Murkwater into Grassy Terrain for 5 turns" if _pl == 'alt' and P.get('alt_field') == 'Grassy Terrain' and _gs
-             else f"Plan: freeze the field ({P.get('alt_field')}): {disp(_lead_alt) if _lead_alt else 'the lead'} uses Blizzard turn 1" if _pl == 'alt'
+_lead_alt = P.get('freezer') or _lead_alt
+_plan_txt = (f"Plan: freeze the field ({P.get('alt_field')}): {disp(_lead_alt) if _lead_alt else 'the lead'} uses Blizzard turn 1" if _pl == 'alt'
              else 'Plan: break the field with Flash turn 1' if _pl == 'break' else f"Plan: fight on {P.get('field') or 'no field'}")
 _alt = P.get('alt_plan') or {}
 h += f'<article class="plc"><h3>{E(_plan_txt)}</h3>'
-if _pl == 'alt' and P.get('alt_field') == 'Grassy Terrain':
-    h += '<div class="pans cno">After 5 turns it is Murkwater again: Ground moves fail and Electric is x1.3</div><div class="pans cok">While it lasts: no Electric x1.3, no poison chip, no Speed drop, Raichu loses Surge Surfer</div>'
+_ls = P.get('lead_support')
+if _pl == 'alt' and _ls:
+    h += f'<div class="pans cok">Turn 1: {E(disp(_ls["member"]))} uses {E(_ls["move"])}' + (f' on {E(_ls["flinch"])}' if _ls.get('flinch') else '') + f' so {E(disp(_lead_alt))} lives to freeze</div>'
+if _pl == 'alt' and P.get('alt_field') == 'Icy Field':
+    h += '<div class="pans cok">On Icy Field: no Electric x1.3, Ground moves work, no Speed drop, Raichu loses Surge Surfer</div><div class="pans cno">Never use Earthquake, Bulldoze, Scald or fire spread moves: they melt it</div>'
 for fn_, mv_ in P.get('foe_break') or []:
     h += f'<div class="pans cno">{E(fn_)}: {E(mv_)} undoes it: KO it first or refreeze</div>'
 if _alt.get('six'):
-    h += f'<div class="pmuted">Other plan scored lower ({_alt.get("cmp")} vs {P.get("cmp")}): {E(", ".join(disp(x) for x in _alt["six"]))}</div>'
+    h += (f'<div class="pmuted">Without freezing (the game tip says freeze): {E(", ".join(disp(x) for x in _alt["six"]))}</div>' if P.get('forced')
+          else f'<div class="pmuted">Other plan scored lower ({_alt.get("cmp")} vs {P.get("cmp")}): {E(", ".join(disp(x) for x in _alt["six"]))}</div>')
 _mg = P.get('model_gaps') or []
 h += ('<div class="pans cok">✓ Model check: every move, Mega and ability of theirs is modelled</div>' if not _mg
       else ''.join(f'<div class="pans cno">✗ Not modelled: {E(x)}</div>' for x in _mg)) + '</article>'
@@ -197,6 +201,9 @@ css = '''<style id="plan-css">
 </style>'''
 # ---- 24 Nov (Vincent): their party in order, and for each one YOUR dedicated hard counter in the same slot (leads counter their leads)
 _FB = P.get('fbuild') or {}; _MEM = {m['name']: m for m in P['six']}
+def _dn(t):
+    for x in P['six']: t = t.replace(x['name'], disp(x['name']))
+    return t
 _IBJ = json.load(open('team/ideal_builds.json')) if os.path.exists('team/ideal_builds.json') else {}
 _FO = {f['name']: f for f in P['foes']}
 try: _ABN = {k: v.get('name', k) for k, v in json.load(open('gamedata/abiltext.json')).items()}
@@ -206,6 +213,8 @@ for k, c in enumerate(P.get('counters') or []):
     m = _MEM.get(c['member']) or {}; fb = _FB.get(c['member']) or {}; ib = _IBJ.get(c['member']) or {}
     f = _FO.get(c['foe']) or {}
     verdict = 'Hard counter' if c['hard'] else ('Wins the 1-v-1' if c['win'] else 'Best you have')
+    if c.get('role'): verdict = c['role'] + ' · ' + verdict
+    _ld = (P.get('lead_duo') or {}).get(c['member'])
     lead_ = k < (2 if P['format'] == 'Doubles' else 1)
     moves_ = fb.get('moves') or m.get('moves') or []
     rows_ += (f'<li class="ctr{" ctr-lead" if lead_ else ""}"><div class="ctr-foe"><span class="pn">{k + 1}</span>{SP.tag(f.get("sid") or "", "0", size="s")}'
@@ -216,13 +225,15 @@ for k, c in enumerate(P.get('counters') or []):
               + '<div class="ctr-types">' + ''.join(pill(t) for t in (m.get('types') or [])) + '</div>'
               f'<div class="ctr-v {"ok" if c["hard"] else "mid" if c["win"] else "bad"}">{verdict}</div>'
               f'<div class="bchips"><span class="bstat">Deals {c["deal"]}%</span><span class="bstat">Takes {c["take_b"]}%' + (f' after {E(c["setup"])}' if c.get('setup') and c['take_b'] != c['take'] else '') + '</span>'
-              f'<span class="bstat">{"Faster" if c["faster"] else "Slower"}</span></div>'
-              f'<ul class="ctr-b"><li><b>Ability</b> {E(_ABN.get((m.get("ability") or ib.get("ability") or "").upper().replace(" ", ""), (m.get("ability") or ib.get("ability") or "").title()))}</li>'
+              f'<span class="bstat">{"Faster" if c["faster"] else "Slower"}</span>'
+              + (f'<span class="bstat{" bad" if _ld["pct"] >= 85 else ""}">Turn 1, both leads on it: ~{_ld["pct"]}%</span>' if _ld and lead_
+                 else f'<span class="bstat{" bad" if c.get("duo", 0) >= 100 else ""}">With a 2nd foe: ~{min(c["duo"], 300)}%</span>' if c.get('duo') is not None and P['format'] == 'Doubles' else '') + '</div>'
+              f'<ul class="ctr-b"><li><b>Ability</b> {E(_ABN.get((fb.get("ability") or m.get("ability") or ib.get("ability") or "").upper().replace(" ", ""), (fb.get("ability") or m.get("ability") or ib.get("ability") or "").title()))}</li>'
               f'<li><b>Item</b> {E(fb.get("item") or ib.get("item") or "")}</li><li><b>Nature</b> {E(fb.get("nature") or ib.get("nature") or "")}</li>'
               f'<li><b>EVs</b> {E(fb.get("evs") or ib.get("evs") or "")}</li></ul>'
               '<div class="ctr-mv">' + ''.join(f'<span>{E(x)}</span>' for x in moves_) + '</div>'
               + ''.join(f'<div class="pans">{E(w)}</div>' for w in fb.get('why', []) if 'replaces' in w)
-              + '<div class="psub">Game plan</div><ul class="ctr-plan">' + ''.join(f'<li>{E(b)}</li>' for b in c.get('plan') or []) + '</ul>'
+              + '<div class="psub">Game plan</div><ul class="ctr-plan">' + ''.join(f'<li>{E(_dn(b))}</li>' for b in c.get('plan') or []) + '</ul>'
               + '<details class="pwhy" onclick="event.stopPropagation()"><summary>Why these moves</summary><ul>' + ''.join(
                   f'<li class="{"pflag" if w["flag"] else ""}"><b>{E(w["move"])}</b><span>{E(w["why"])}</span></li>' for w in m.get('why') or []) + '</ul></details>'
               + '<details class="pwhy" onclick="event.stopPropagation()"><summary>Other counters</summary><ul>' + ''.join(

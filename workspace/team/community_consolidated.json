@@ -78,6 +78,19 @@
   "rating": 0.67
  },
  {
+  "name": "Roserade-A",
+  "sid": "ROSERADE",
+  "form": "1",
+  "l1": "S",
+  "l2": "A",
+  "net": 2,
+  "t0": "A",
+  "m0": 0.75,
+  "t1": "S",
+  "m1": 0.75,
+  "rating": 0.75
+ },
+ {
   "name": "Drapion-A",
   "sid": "DRAPION",
   "form": "1",
@@ -102,19 +115,6 @@
   "t1": "A",
   "m1": 0.69,
   "rating": 0.69
- },
- {
-  "name": "Roserade-A",
-  "sid": "ROSERADE",
-  "form": "1",
-  "l1": "S",
-  "l2": "A",
-  "net": 2,
-  "t0": "A",
-  "m0": 0.75,
-  "t1": "A",
-  "m1": 0.75,
-  "rating": 0.75
  },
  {
   "name": "Froslass-A",

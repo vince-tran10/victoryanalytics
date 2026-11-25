@@ -31,7 +31,7 @@ ALT_FE = {'Icy Field': 'ICY', 'Water Surface': 'WATERSURFACE', 'Grassy Terrain':
 ALTMOVES = set(); ALTABIL = set()
 if ALTFIELD and FE and ALT_FE:
     ALTMOVES = set(((G.load('fieldtext').get(FE) or {}).get('fieldChange') or {}).get(ALT_FE) or [])
-    ALTABIL = {'GRASSY': {'GRASSYSURGE'}}.get(ALT_FE, set())   # 24 Nov: Grassy Surge sets Grassy Terrain on entry for 5 turns (Battler.rb 2866)
+    ALTABIL = set()   # 24 Nov: NOT Grassy Surge: in Rejuv (Overlays = true) terrains are overlays, the field underneath stays
     FIELD = ALTFIELD; FE = ALT_FE
 ALT = bool(ALTMOVES or ALTABIL)
 FMT = B9[FK][3] if FK in B9 else 'Doubles'
@@ -89,6 +89,8 @@ for c in pickle.load(open(f'team/{run}{"n" if BREAK else ""}_native.json.pkl', '
 POOL = [n for n, r in TA.items() if r.get('where') in ('Party', 'Active') and r['tier'] in ('S', 'A', 'B') and n in C and FK in C[n]['matchups']]
 POOL += [n for n, r in TA.items() if r.get('where') == 'Overflow' and r['tier'] in ('S', 'A') and n not in POOL and n in C and FK in C[n]['matchups']]
 POOL += [n for n in (st.get('team') or []) if n in TA and n not in POOL and n in C and FK in C[n]['matchups']]
+if st.get('pool_all', True):   # 24 Nov (Vincent: 'search all boxes, I have debug mode'): every owned Pokémon, any box, any tier
+    POOL += [n for n in TA if n not in POOL and n in C and FK in C[n]['matchups']]
 # 23 Nov (Vincent): ONE main core of 4 (core4.py, general, no opponent) + 2 flexes per fight
 CORE = [m['name'] for m in json.load(open('team/core4.json'))['core']] if os.path.exists('team/core4.json') and st.get('core_lock', True) else []
 CORE = [n for n in CORE if n in TA and n in C and FK in C[n]['matchups']]
@@ -103,6 +105,12 @@ def build(n):
     ms = MOVE_OVR.get(n) or _pb or (st.get('base_moves') or {}).get(n) or (st.get('moves') or {}).get(n) or b.get('moves') or TA[n].get('attacks') or []
     ab = (st.get('abilities') or {}).get(n) or b.get('ability') or TA[n].get('ability') or ''
     return {mvid(m) or m.upper().replace(' ', '') for m in ms}, ab.upper().replace(' ', ''), ms
+ICEBREAK = set(((G.load('fieldtext').get(ALT_FE) or {}).get('fieldChange') or {}).get('INDOOR', []) +
+               sum([v for k, v in ((G.load('fieldtext').get(ALT_FE) or {}).get('fieldChange') or {}).items()], [])) if ALTMOVES else set()
+_MIM = (FT or {}).get('mimicry')   # 24 Nov audit: Mimicry = pure field type (Battle_Field.rb pbMimicry)
+for n in POOL:
+    if _AB(n) == 'MIMICRY' and _MIM: TA[n] = dict(TA[n], types=[_MIM])
+DM0 = {n: {x['foe']: dict(x.get('defmvs') or {}) for x in C[n]['matchups'][FK]} for n in POOL}   # turn 1 is ALWAYS on the real field
 if ALT:   # re-score the pool on the new field (same engine, field swapped)
     import copy as _cp
     sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'gamedata'))
@@ -113,13 +121,16 @@ if ALT:   # re-score the pool on the new field (same engine, field swapped)
     for n in POOL:
         c = _cp.deepcopy(C[n]); ids = {mvid(x) or x.upper().replace(' ', '') for x in build(n)[2]} & set(c.get('legal') or [])
         ids = {x for x in ids if int((MV.get(x) or {}).get('basedamage') or 0) > 0}
+        for x in [x for x in ids if x in ICEBREAK]:   # 24 Nov: a move that undoes the new field is never clicked: score its same-type replacement
+            ids.discard(x); d0 = MV.get(x) or {}
+            rp_ = [y for y in (c.get('legal') or []) if y not in ICEBREAK and (MV.get(y) or {}).get('type') == d0.get('type') and (MV.get(y) or {}).get('category') == d0.get('category')
+                   and int((MV.get(y) or {}).get('basedamage') or 0) >= 60 and int((MV.get(y) or {}).get('accuracy') or 100) >= 80 and (MV.get(y) or {}).get('target') != 'AllNonUsers']
+            if rp_: ids.add(max(rp_, key=lambda y: int(MV[y].get('basedamage') or 0)))
         if ids:
             E.evaluate(c, moveset=ids); C[n] = c
     E.battles = _keep
     for b in E.battles:
         if b['key'] == FK: b['field'] = ALTFIELD
-ICEBREAK = set(((G.load('fieldtext').get(FE) or {}).get('fieldChange') or {}).get('INDOOR', []) +
-               sum([v for k, v in ((G.load('fieldtext').get(FE) or {}).get('fieldChange') or {}).items()], [])) if ALT else set()
 nF = len(FOES); FN = [f['name'] for f in FOES]
 TAKE, DEAL, FAST, NAMES = [], [], [], []
 for n in POOL:
@@ -138,6 +149,55 @@ for i, n in enumerate(NAMES):
     for j, (w, _) in enumerate(WINS):
         a = WIN[w][1]
         if ms & a.get('moves', set()) or ab in a.get('abil', set()) or set(TA[n]['types']) & a.get('types', set()): ANS[i, j] = 1
+# ---- 24 Nov (Vincent, Erick loss: Raichu's Discharge AND Electivire's Thunder Raid both hit Musharna turn 1, Sash never mattered):
+# DOUBLES FOCUS FIRE. Leads: both of their leads hit the same target on turn 1, on the REAL field (the freeze happens after that).
+# Lightning Rod on our side pulls their single-target Electric moves to itself (Battler.rb 5081), spread moves (Discharge) are not pulled.
+def _ab(i): return build(NAMES[i])[1]
+FOE_EABS = [f['name'] for f in FOES if (f.get('ability') or '').upper().replace(' ', '') in ('LIGHTNINGROD', 'MOTORDRIVE', 'VOLTABSORB')]   # their Electric absorbers
+FOE_ROD = [f['name'] for f in FOES if (f.get('ability') or '').upper().replace(' ', '') == 'LIGHTNINGROD']   # pulls OUR single-target Electric moves in doubles
+LROD = np.array([_ab(i) == 'LIGHTNINGROD' for i in range(len(NAMES))])
+EIMM = np.array([('GROUND' in TA[n]['types']) or _ab(i) in ('LIGHTNINGROD', 'VOLTABSORB', 'MOTORDRIVE') for i, n in enumerate(NAMES)])   # no Electric damage, no paralysis from it
+ELEC_FOES = sum(1 for ms in fmoves if any((MV.get(m) or {}).get('type') == 'ELECTRIC' and int((MV.get(m) or {}).get('basedamage') or 0) > 0 for m in ms))
+def _st(mn): d = MV.get(mvid(mn)) or {}; return d.get('target') not in SPREAD_T
+# turn-1 support a partner can bring (debug mode: any legal move can be taught): Fake Out flinches one lead, Wide Guard blocks spread moves,
+# Follow Me / Rage Powder pull single-target moves (Battler.rb redirection); Lightning Rod pulls single-target Electric moves
+SUPM = {'FAKEOUT': 'Fake Out', 'WIDEGUARD': 'Wide Guard', 'FOLLOWME': 'Follow Me', 'RAGEPOWDER': 'Rage Powder'}
+def _sup(b): return [m for m in SUPM if m in set(C[NAMES[b]].get('legal') or [])]
+def _ok(mn, sup, rod):   # does this foe move still reach our member, given the partner's turn-1 support?
+    d = MV.get(mvid(mn)) or {}; st_ = d.get('target') not in SPREAD_T
+    if rod and d.get('type') == 'ELECTRIC' and st_: return False
+    if sup == 'WIDEGUARD' and not st_: return False
+    if sup in ('FOLLOWME', 'RAGEPOWDER') and st_: return False
+    return True
+def _hit0(i, k, rod_partner, sup=None):   # their foe k's best hit on member i on turn 1
+    dm = DM0.get(NAMES[i], {}).get(FN[k]) or {}
+    vals = [v for mn, v in dm.items() if _ok(mn, sup, rod_partner)]
+    return max(vals or [0.0])
+def pair_t1(a, b):   # -> (% freezer a takes, % partner b takes, partner's support move, flinched foe) on turn 1, best support option
+    ra = bool(LROD[b] and not LROD[a]); rb = bool(LROD[a] and not LROD[b])
+    opts = [(sum(_hit0(a, k, ra) for k in L), sum(_hit0(b, k, rb) for k in L), None, None)]
+    for m in _sup(b):
+        if m == 'FAKEOUT':
+            for k in L:   # flinch one lead: both of ours take only the other lead's hits
+                opts.append((sum(_hit0(a, x, ra) for x in L if x != k), sum(_hit0(b, x, rb) for x in L if x != k), m, FN[k]))
+        elif m == 'WIDEGUARD':
+            opts.append((sum(_hit0(a, k, ra, m) for k in L), sum(_hit0(b, k, rb, m) for k in L), m, None))
+        else:   # Follow Me / Rage Powder: single-target hits go to b, spread moves still hit a
+            opts.append((sum(_hit0(a, k, ra, m) for k in L), sum(_hit0(b, k, rb) for k in L), m, None))
+    return min(opts, key=lambda o: max(o[0], o[1]))
+def duo_sup(a, b):
+    o = pair_t1(a, b); return o[0], o[2]
+LEAD_SUP = None
+LEAD_MAX = 85   # 24 Nov: average rolls; 85% leaves room for a high roll / Discharge paralysis turn
+def duo_lead(a, b):   # % member a takes on turn 1 when BOTH of their leads target it (partner b)
+    return sum(_hit0(a, k, bool(LROD[b] and not LROD[a])) for k in L) if FMT == 'Doubles' else TAKE[a][0]
+def duo_mv(a, b):
+    out_ = []
+    for k in L:
+        dm = DM0.get(NAMES[a], {}).get(FN[k]) or {}; rp = bool(LROD[b] and not LROD[a])
+        c_ = [(v, mn) for mn, v in dm.items() if not (rp and (MV.get(mvid(mn)) or {}).get('type') == 'ELECTRIC' and _st(mn))]
+        if c_: out_.append(max(c_))
+    return out_
 SAFE = TAKE < 50          # takes under half from that foe's best move
 DEAD = TAKE >= 100        # one-shot by it
 # ---- 23 Nov (Vincent, after losing again): 1) RESIST THE MOVES THEY HAVE, 2) HIT EVERY FOE SUPER EFFECTIVELY (or with a field-boosted move),
@@ -228,6 +288,11 @@ def meets(i, need):
     if kind == 'anti_sleep': return mn(ANTISLEEP_M) or (ab.title() if ab in ANTISLEEP_A else None)
     if kind == 'anti_perish': return mn({'TAUNT'}) or ('Ghost type: switches out of traps' if 'GHOST' in TA[n]['types'] else None) or ('Soundproof' if ab == 'SOUNDPROOF' else None)
     if kind == 'resist': return f'resists {arg.title()}' if E.chart_eff(arg, TA[n]['types'], FE) < 1 else None
+    if kind == 'immune':   # 24 Nov (Erick tip): immune to that type (type chart or absorbing ability): no damage, no paralysis from it
+        if E.chart_eff(arg, TA[n]['types'], FE) == 0: return f'{"/".join(t.title() for t in TA[n]["types"])} type: immune to {arg.title()}'
+        return ab.title().replace('rod', ' Rod') if engine.FOE_ABIL_IMMUNE.get(ab) == arg else None
+    if kind == 'ability': return ab.title() if ab == arg else None
+    if kind == 'field': return next((x for x in mnames if (mvid(x) or '') in ALTMOVES), None) if ALT and ALTFIELD == arg else None
     j = fidx(arg)
     if j is None: return None
     if kind == 'answer': return f'takes {int(TAKE[i][j])}%, deals {int(DEAL[i][j])}%' if TAKE[i][j] < 50 and (DEAL[i][j] >= 60 or OFF[i][j] >= 2) else None
@@ -270,7 +335,7 @@ WHY_STATUS = {
 EXTRA = {'DELUGE': 'Goes last, power x2 (120) if that foe hit you first this turn', 'KNOCKOFF': 'Removes their item (Focus Sash, Life Orb, Ghost Gem)',
          'CLEARSMOG': 'Resets the target boosts (Luxray Howl)', 'SHADOWSNEAK': 'Priority +1: finishes a weakened foe first',
          'FAKEOUT': 'Flinches on its first turn: a free hit, x1.5 on Concert Venue',
-         'GRASSYGLIDE': 'Priority +1 on Grassy Terrain: Grassy Surge sets it on entry (replaces Haunted Field for a few turns)',
+         'GRASSYGLIDE': 'Priority +1 on Grassy Terrain: Grassy Surge lays it on top of the field for 5 turns (an overlay: the field stays)',
          'AQUAJET': 'Priority +1', 'ROCKSLIDE': 'Spread move that never hits your partner; 30% flinch', 'EARTHQUAKE': 'Also hits your partner: only next to a Flying / Levitate partner'}
 _ITEMS = [f"{f['name']} {f['item']}" for f in FOES if f.get('item') and 'Seed' not in f['item'] and 'ite' != f['item'][-3:]]
 EXTRA['KNOCKOFF'] = 'Removes their item' + (' (' + ', '.join(_ITEMS) + ')' if _ITEMS else '')
@@ -326,6 +391,8 @@ def move_why(n, mname):
         return (f'Turns the field into {ALTFIELD} (turn 1)', False)
     if ALT and mid in ICEBREAK:
         return (f'Undoes {ALTFIELD}: do not use it here', True)
+    if FOE_ROD and FMT == 'Doubles' and d.get('type') == 'ELECTRIC' and d.get('target') not in SPREAD_T and int(d.get('basedamage') or 0) > 0:
+        return (f"{', '.join(FOE_ROD)}'s Lightning Rod pulls it", True)
     if int(d.get('priority') or 0) > 0 and mid != 'FAKEOUT':   # 23 Nov audit: priority attacks have a job (Extreme Speed, Aqua Jet...)
         fast_ = [FN[j] for j in range(nF) if FASTF[NAMES.index(n), j]] if n in NAMES else []
         bits.insert(0, f'Priority +{d.get("priority")}: hits first' + (f' (they outspeed it: {", ".join(fast_[:3])})' if fast_ else ''))
@@ -357,7 +424,7 @@ def sc_on(i, j):   # member i's speed tool that works on foe j (name) or None
     return None
 SCM = np.array([[sc_on(i, j) is not None for j in range(nF)] for i in range(NP)])
 FASTF = ~FAST   # foe faster than member
-FLAGN = np.array([sum(move_why(n, mv_)[1] for mv_ in build(n)[2]) for n in NAMES], float)   # moves that do nothing here
+FLAGN = np.array([sum(move_why(n, mv_)[1] for mv_ in build(n)[2] if (mvid(mv_) or mv_.upper().replace(' ', '')) not in ICEBREAK) for n in NAMES], float)   # field-undoing moves get replaced (fbuild)   # moves that do nothing here
 ind = (2 * ((RM < 1) * W).sum(1) - 3 * ((RM > 1) * W).sum(1) + 1.5 * (OFF >= 2).sum(1) + .7 * (OFF > 0).sum(1)
        + 1.5 * SAFE.sum(1) - 2 * DEAD.sum(1) + .6 * TIER + LQ.max(1).clip(-5, 99) * .5 + .8 * AEV - 4 * FLAGN)
 top = list(np.argsort(-ind)[:min(24, NP)])
@@ -589,36 +656,66 @@ def _plan2(i, j):   # 24 Nov (Vincent): two bullets: how this counter beats it (
     else: b2 = f'Its moves: {", ".join(mvs)}'
     return [b1, b2]
 RESIST_B = engine.RESIST_BERRY
+# 24 Nov (focus fire): a back counter also takes a second foe's hit in doubles: its foe's (boosted) hit + the typical other foe's hit
+DUO = np.array([[TAKE_B[i][j] + (float(np.median([TAKE[i][k] for k in range(nF) if k != j])) if FMT == 'Doubles' and nF > 1 else 0) for j in range(nF)] for i in range(NP)])
+SNOWW = np.array([_ab(i) == 'SNOWWARNING' for i in range(NP)])   # Blizzard can't miss in snow (Battle_Move accuracy)
+BREAKERS = {fidx(fn_) for fn_, _ in FOE_BREAK} if ALT else set()
+def _hard(i, j):
+    h = (DEAL[i][j] >= 90 or (FAST[i][j] and DEAL[i][j] >= 100)) and TAKE_B[i][j] < 70
+    return bool(h and (FMT != 'Doubles' or DUO[i][j] < 100))
 if COUNTER:   # 24 Nov (Vincent): the six = one dedicated hard counter per foe (one-to-one), in THEIR party order
     def _q(i, j):
         hk, hd = _hits(i, j)
         win = hk < hd or (hk == hd and FAST[i][j])
-        hard = (DEAL[i][j] >= 90 or (FAST[i][j] and DEAL[i][j] >= 100)) and TAKE_B[i][j] < 70
-        q = 10 * hard + 4 * win + min(DEAL[i][j], 150) / 100 - min(TAKE_B[i][j], 150) / 100 - 4 * FLAGN[i] + .3 * AEV[i] + .2 * TIER[i]
+        hard1 = (DEAL[i][j] >= 90 or (FAST[i][j] and DEAL[i][j] >= 100)) and TAKE_B[i][j] < 70
+        q = 10 * _hard(i, j) + 5 * (hard1 and not _hard(i, j)) + 4 * win + min(DEAL[i][j], 150) / 100 - min(TAKE_B[i][j], 150) / 100 - 4 * FLAGN[i] + .3 * AEV[i] + .2 * TIER[i]
         if j < len(L) and any(TAKE[i][k] >= 100 for k in L): q -= 8   # a lead must survive both of their leads
-        if ALT and j < len(L) and ALTCAN[i]: q += 6   # the freeze plan needs its field move on a lead
+        if ALT and j < len(L) and ALTCAN[i]: q += 6 + 2 * SNOWW[i]   # the freeze plan needs its field move on a lead (Snow Warning: Blizzard never misses)
+        if ELEC_FOES >= 3 and EIMM[i]: q += 3 + 2 * (j < len(L)) + 2 * (LROD[i] and j < len(L))   # game tip: Ground types / Lightning Rod vs their paralysis
+        if j in BREAKERS:   # the foe that undoes the new field: outspeed and one-shot it before it moves (its berry / Sash counted)
+            q += 8 if (FAST[i][j] and hk == 1) else -4
         return q
     QM = np.array([[_q(i, j) for j in range(nF)] for i in range(NP)])
     _cand = [list(np.argsort(-QM[:, j])[:10]) for j in range(nF)]
-    _bestv, _besta = -1e9, None
+    _bestv, _besta = -1e9, None; LEAD_SUP = None
     def _rec(j, used, tot, pick):
         global _bestv, _besta
+        if FMT == 'Doubles' and j == len(L) and len(pick) == 2:   # the lead pair: neither dies to BOTH their leads on turn 1
+            a, b = pick
+            tot += -25 * ((duo_lead(a, b) >= 100) + (duo_lead(b, a) >= 100))
+            if ALT and not (ALTCAN[a] or ALTCAN[b]): tot -= 30
         if j == nF:
             if tot > _bestv: _bestv, _besta = tot, list(pick)
             return
         for i in _cand[j]:
             if i in used: continue
             _rec(j + 1, used | {i}, tot + QM[i][j], pick + [i])
-    _rec(0, set(), 0.0, [])
+    if FMT == 'Doubles' and nF > 2:   # 24 Nov (focus fire): pick the LEAD PAIR first from the whole pool: neither lead dies to both their leads
+        _lc = list(dict.fromkeys(sorted(range(NP), key=lambda i: -max(QM[i][0], QM[i][1]))[:60] + ([i for i in range(NP) if ALTCAN[i]] if ALT else [])))
+        _pairs = []
+        for a_ in _lc:
+            for b_ in _lc:
+                if a_ == b_ or (ALT and not (ALTCAN[a_] or ALTCAN[b_])): continue
+                if ALT and ALTCAN[a_]: da, db, sa, fl_ = pair_t1(a_, b_); sb = None   # the freezer may get its partner's support turn 1
+                elif ALT and ALTCAN[b_]: db, da, sb, fl_ = pair_t1(b_, a_); sa = None
+                else: da, db, sa, sb, fl_ = duo_lead(a_, b_), duo_lead(b_, a_), None, None, None
+                if da >= LEAD_MAX or db >= LEAD_MAX: continue
+                _pairs.append((QM[a_][0] + QM[b_][1] - (max(da, db) / 50) - 4 * (ally_hit(a_, b_) >= 2 or ally_hit(b_, a_) >= 2) - 1.5 * bool(sa or sb), a_, b_, sa or sb))
+        _pairs = sorted(_pairs, key=lambda x: -x[0])[:25]
+        for v_, a_, b_, s_ in _pairs:
+            _bv0 = _bestv; _rec(2, {a_, b_}, v_, [a_, b_])
+            if _bestv > _bv0: LEAD_SUP = (b_ if ALTCAN[a_] else a_, s_) if s_ else None
+        LEAD_OK = bool(_pairs)
+    if _besta is None: _rec(0, set(), 0.0, [])
     best = [int(i) for i in _besta]
     for j, i in enumerate(best):
         hk, hd = _hits(i, j)
         alts_ = [int(a) for a in np.argsort(-QM[:, j]) if a != i][:3]
         COUNTERS.append(dict(foe=FN[j], member=NAMES[i], deal=int(DEAL[i][j]), take=int(TAKE[i][j]), take_b=int(TAKE_B[i][j]), faster=bool(FAST[i][j]),
-                             hard=bool((DEAL[i][j] >= 90 or (FAST[i][j] and DEAL[i][j] >= 100)) and TAKE_B[i][j] < 70),
+                             hard=_hard(i, j), duo=int(min(DUO[i][j], 999)), eimm=bool(EIMM[i]), lrod=bool(LROD[i]),
                              win=bool(hk < hd or (hk == hd and FAST[i][j])), setup=FSETM[j], hk=hk, hd=hd, move=_bestmv(i, j), plan=_plan2(i, j),
                              alts=[dict(name=NAMES[a], deal=int(DEAL[a][j]), take_b=int(TAKE_B[a][j]), faster=bool(FAST[a][j]),
-                                        hard=bool((DEAL[a][j] >= 90 or (FAST[a][j] and DEAL[a][j] >= 100)) and TAKE_B[a][j] < 70),
+                                        hard=_hard(a, j),
                                         used_for=next((FN[k] for k, x in enumerate(best) if x == a), None)) for a in alts_]))
 if BREAK and not os.environ.get('PLAN_SIX') and os.path.exists('team/planner_keep.json'):   # 23 Nov: also try the keep plan's six with Flash
     _k = [m['name'] for m in json.load(open('team/planner_keep.json'))['six']]
@@ -626,7 +723,8 @@ if BREAK and not os.environ.get('PLAN_SIX') and os.path.exists('team/planner_kee
         _ki = [NAMES.index(x) for x in _k]
         if FLASH[_ki].any() and cmp_score(_ki) > cmp_score(best): best = _ki
 if FMT == 'Doubles':
-    _safe = [p for p in itertools.combinations(best, 2) if max(TAKE[i][j] for i in p for j in L) < 100 and LQ[p[0]][p[1]] > -90]   # 24 Nov: hard rule, nobody one-shot turn 1
+    _safe = [p for p in itertools.combinations(best, 2) if duo_lead(p[0], p[1]) < 100 and duo_lead(p[1], p[0]) < 100 and LQ[p[0]][p[1]] > -90]   # 24 Nov: hard rule, neither lead dies to BOTH their leads turn 1
+    if COUNTER and duo_lead(best[0], best[1]) < 100 and duo_lead(best[1], best[0]) < 100 and LQ[best[0]][best[1]] > -90: _safe = [(best[0], best[1])]   # counter mode: slots 1-2 ARE the leads
     leads = max(_safe or list(itertools.combinations(best, 2)), key=lambda p: LQ[p[0]][p[1]] if _safe else -max(TAKE[i][j] for i in p for j in L))
     leads = tuple(sorted(leads, key=lambda i: -lead_q((i,))))
 else:   # singles fight: slot 1 leads (best vs their lead), slot 2 = the doubles partner for later doubles fights
@@ -637,6 +735,7 @@ else:   # singles fight: slot 1 leads (best vs their lead), slot 2 = the doubles
         return hk < hd_plain or (hk == hd_plain and FAST[i][0])
     _l1 = max(best, key=lambda i: 5 * _lead_win(i) + DEAL[i][0] / 100 - TAKE_B[i][0] / 100 + (100 if ALT and ALTCAN[i] else 0))
     leads = (_l1,)   # 23 Nov: singles has one lead; slot 2 follows the mid game / closer order
+FREEZER = max([i for i in leads if ALTCAN[i]] or [leads[0]], key=lambda i: (SNOWW[i], -max(TAKE[i][k] for k in L))) if ALT else None   # who changes the field turn 1
 _setup_ids = {'SWORDSDANCE', 'NASTYPLOT', 'DRAGONDANCE', 'QUIVERDANCE', 'CALMMIND', 'BULKUP', 'CURSE', 'SHELLSMASH', 'COIL', 'BELLYDRUM', 'SHIFTGEAR'}
 def _is_closer(i): return bool({mvid(x) for x in build(NAMES[i])[2]} & _setup_ids)
 # 23 Nov (Vincent): slots 3-6 by role: mid game first, then closers; a flex closer before a core-only closer (core / flex does not matter otherwise)
@@ -759,7 +858,7 @@ UTIL_S = ['WILLOWISP', 'THUNDERWAVE', 'GLARE', 'NASTYPLOT', 'SWORDSDANCE', 'CALM
 def _util(n, have):   # a support move with a job here, when no attack is the best hit on any foe
     L_ = set(C[n].get('legal') or [])
     for u in (UTIL_D if FMT == 'Doubles' else UTIL_S):
-        if u in L_ and u not in have and u in MV: return u
+        if u in L_ and u not in have and u in MV and not (FOE_EABS and (MV.get(u) or {}).get('type') == 'ELECTRIC'): return u
     return None
 BADSWAP = {'FOCUSPUNCH', 'HYPERBEAM', 'GIGAIMPACT', 'SKYATTACK', 'SOLARBEAM', 'SOLARBLADE', 'METEORBEAM', 'EXPLOSION', 'SELFDESTRUCT', 'MISTYEXPLOSION',
            'FUTURESIGHT', 'DOOMDESIRE', 'BELCH', 'LASTRESORT', 'DREAMEATER', 'SYNCHRONOISE', 'OUTRAGE', 'THRASH', 'PETALDANCE', 'RAGINGFURY', 'FLING',
@@ -779,6 +878,16 @@ for i in best:
     def _ep(m_, f):
         d_ = MV.get(m_) or {}; b_ = int(d_.get('basedamage') or 0) * hits(m_, ab) * (1.5 if m_ == 'DELUGE' else 1)   # Deluge doubles only when hit first: count x1.5
         return b_ * (1.5 if d_.get('type') in TA[n]['types'] else 1) * meff(m_, f['types'], (f.get('ability') or '').upper().replace(' ', '')) * fbm(m_, ab) if b_ > 0 else 0
+    if ALT:   # 24 Nov: a move that undoes the new field (Earthquake, Eruption, Scald...) -> the best legal SAME-TYPE move that doesn't, else any attack
+        for slot in list(mn):
+            m0 = _mid(slot)
+            if m0 not in ICEBREAK: continue
+            d0 = MV.get(m0) or {}; keep_ = [_mid(x) for x in mn if _mid(x) != m0 and int((MV.get(_mid(x)) or {}).get('basedamage') or 0) > 0]
+            cands_ = [c_ for c_ in (C[n].get('legal') or []) if int((MV.get(c_) or {}).get('basedamage') or 0) >= 60 and c_ not in ICEBREAK and c_ not in BADSWAP and c_ not in keep_
+                      and (MV.get(c_) or {}).get('category') == d0.get('category') and int((MV.get(c_) or {}).get('accuracy') or 100) >= 80
+                      and (FMT == 'Singles' or (MV.get(c_) or {}).get('target') != 'AllNonUsers')]
+            bm_ = max(cands_, key=lambda c_: ((MV.get(c_) or {}).get('type') == d0.get('type'), sum(_ep(c_, f) for f in FOES)), default=None) or _util(n, {_mid(x) for x in mn})
+            if bm_: mn[mn.index(slot)] = MV[bm_]['name']; why_.append(f"{MV[bm_]['name']} replaces {slot}: {slot} would undo {ALTFIELD}")
     if FMT == 'Doubles':   # 24 Nov audit: in doubles a move that also hits the PARTNER (Boomburst, Earthquake, Surf...) is swapped for a legal one that doesn't
         for slot in list(mn):
             m0 = _mid(slot)
@@ -786,7 +895,7 @@ for i in best:
             ids_ = [_mid(x) for x in mn if int((MV.get(_mid(x)) or {}).get('basedamage') or 0) > 0]
             keep_ = [x for x in ids_ if x != m0]; ktypes = {(MV.get(x) or {}).get('type') for x in keep_}
             cat_ = (MV.get(m0) or {}).get('category')
-            cands_ = [c_ for c_ in (C[n].get('legal') or []) if int((MV.get(c_) or {}).get('basedamage') or 0) >= 60 and c_ not in BADSWAP and c_ not in keep_
+            cands_ = [c_ for c_ in (C[n].get('legal') or []) if int((MV.get(c_) or {}).get('basedamage') or 0) >= 60 and c_ not in BADSWAP and not (ALT and c_ in ICEBREAK) and c_ not in keep_
                       and (MV.get(c_) or {}).get('type') not in ktypes and (MV.get(c_) or {}).get('target') != 'AllNonUsers' and (MV.get(c_) or {}).get('category') == cat_ and int((MV.get(c_) or {}).get('accuracy') or 100) >= 80]
             val = lambda c_: sum(max(_ep(c_, f), 0) for f in FOES) + (40 * len(FOES) if (MV.get(c_) or {}).get('type') not in ktypes else 0)
             _bo = lambda c_: sum(1 for f in FOES if _ep(c_, f) > 0 and _ep(c_, f) >= max([_ep(x, f) for x in keep_] or [0]))
@@ -795,7 +904,7 @@ for i in best:
             if bestm:
                 mn[mn.index(slot)] = MV[bestm]['name']
                 why_.append(f"{MV[bestm]['name']} replaces {slot} (doubles: {slot} also hits your partner)")
-    if ALT and n in CORE:   # the core keeps its build, but never a move that undoes the field
+    if False:   # (replaced above for every member)
         for slot in list(mn):
             if _mid(slot) in ICEBREAK:
                 keep_ = [_mid(x) for x in mn if _mid(x) != _mid(slot) and int((MV.get(_mid(x)) or {}).get('basedamage') or 0) > 0]
@@ -804,10 +913,11 @@ for i in best:
                 bm_ = max(cands_, key=lambda c_: sum(_ep(c_, f) for f in FOES), default=None) or _util(n, {_mid(x) for x in mn})
                 if bm_: mn[mn.index(slot)] = MV[bm_]['name']; why_.append(f"{MV[bm_]['name']} replaces {slot}: {slot} would undo {ALTFIELD}")
     if n not in CORE:   # flexes are built for THIS fight: dead attacks (best hit on no foe) and, in singles, Protect make way for better moves
-        legal_ = [m for m in (C[n].get('legal') or []) if int((MV.get(m) or {}).get('basedamage') or 0) >= 40 and m not in BADSWAP
+        legal_ = [m for m in (C[n].get('legal') or []) if int((MV.get(m) or {}).get('basedamage') or 0) >= 40 and m not in BADSWAP and not (ALT and m in ICEBREAK)
                   and (MV.get(m) or {}).get('category') == ('physical' if phys else 'special') and int((MV.get(m) or {}).get('accuracy') or 100) >= 80]
         def _dead(m_, kept):
             if ALT and m_ in ICEBREAK: return True
+            if FOE_ROD and FMT == 'Doubles' and (MV.get(m_) or {}).get('type') == 'ELECTRIC' and (MV.get(m_) or {}).get('target') not in SPREAD_T: return True   # their Lightning Rod pulls it
             if m_ in UTIL_ATK: return False   # utility attacks have a job beyond damage
             if m_ == 'GRASSYGLIDE' and (FE == 'GRASSY' or build(n)[1] == 'GRASSYSURGE'): return False   # priority on Grassy Terrain
             if ALT and m_ in ALTMOVES: return False
@@ -824,8 +934,11 @@ for i in best:
             bestm = max(cands_, key=gain, default=None)
             if not (bestm and gain(bestm) >= (120 if is_prot else 1)) and not is_prot:   # no attack helps: a support move with a job
                 u_ = _util(n, {_mid(x) for x in mn})
+                if not u_ and cands_ and FOE_ROD and (MV.get(m0) or {}).get('type') == 'ELECTRIC':   # pulled by their Lightning Rod: any other attack
+                    u_ = max([c_ for c_ in cands_ if (MV.get(c_) or {}).get('type') != 'ELECTRIC'] or [None], key=lambda c_: sum(_ep(c_, f) for f in FOES) if c_ else 0)
                 if u_:
-                    mn[mn.index(slot)] = MV[u_]['name']; why_.append(f"{MV[u_]['name']} replaces {slot} (no attack of its own beats its other moves here)")
+                    _rod = bool(FOE_ROD and (MV.get(m0) or {}).get('type') == 'ELECTRIC' and (MV.get(m0) or {}).get('target') not in SPREAD_T)
+                    mn[mn.index(slot)] = MV[u_]['name']; why_.append(f"{MV[u_]['name']} replaces {slot}" + (f" ({', '.join(FOE_ROD)}'s Lightning Rod pulls {slot})" if _rod else " (no attack of its own beats its other moves here)"))
                 continue
             if bestm and gain(bestm) >= (120 if is_prot else 1):
                 hit_ = [f['name'] for f in FOES if _ep(bestm, f) > max([_ep(x, f) for x in keep_] or [0])]
@@ -837,7 +950,10 @@ for i in best:
             if _mid(slot) in HAZ_D:
                 u_ = _util(n, {_mid(x) for x in mn})
                 if u_: mn[mn.index(slot)] = MV[u_]['name']; why_.append(f"{MV[u_]['name']} replaces {slot} (doubles: hazards / Toxic are too slow)")
-    if ALT and ALTMOVES and ALTCAN[i] and i == leads[0] and not (ALTMOVES & {_mid(x) for x in mn}) and build(n)[1] not in ALTABIL:   # the lead changes the field turn 1
+    if LEAD_SUP and i == LEAD_SUP[0] and SUPM[LEAD_SUP[1]] not in mn:   # 24 Nov (focus fire): the freezer's partner protects it on turn 1
+        drop_ = min([x for x in mn if x != 'Protect'], key=lambda x: sum(_ep(_mid(x), f) for f in FOES))
+        mn[mn.index(drop_)] = SUPM[LEAD_SUP[1]]; why_.append(f"{SUPM[LEAD_SUP[1]]} replaces {drop_}: turn 1 it keeps {NAMES[FREEZER]} alive to freeze the field")
+    if ALT and ALTMOVES and ALTCAN[i] and i == FREEZER and not (ALTMOVES & {_mid(x) for x in mn}) and build(n)[1] not in ALTABIL:   # the lead changes the field turn 1
         am_ = next(m for m in ['BLIZZARD', 'GLACIATE', 'SUBZEROSLAMMER', 'WHIRLPOOL', 'PURIFY', 'TIDYUP'] if m in ALTMOVES and m in set(C[n].get('legal') or []))
         drop_ = min([x for x in mn if x != 'Protect'], key=lambda x: sum(_ep(_mid(x), f) for f in FOES))
         mn[mn.index(drop_)] = MV[am_]['name']; why_.append(f"{MV[am_]['name']} replaces {drop_}: turns the field into {ALTFIELD} on turn 1")
@@ -862,7 +978,27 @@ for i in best:
     _cur = (IB.get(n) or {}).get('item') or ''
     item_ = _cur if (_cur.endswith('Crest') or _cur in ('Focus Sash', 'Sitrus Berry') or (st.get('items') or {}).get(n)) else (BOOSTER_.get((MV.get(_top) or {}).get('type')) if _top else _cur) or _cur
     if item_ != _cur and _top: why_.append(f"{item_}: boosts {MV[_top]['name']}, the best hit on {_cnt[_top]} of their {nF}")
-    FBUILD[n] = dict(moves=mn, evs=evs_, nature=nat_, item=item_, why=why_)
+    ab_new = None
+    if FMT == 'Doubles' and i in leads and 'INTIMIDATE' in (C[n].get('abilities') or []) and ab != 'INTIMIDATE' \
+            and any((MV.get(m_) or {}).get('category') == 'physical' and int((MV.get(m_) or {}).get('basedamage') or 0) > 0 for k in L for m_ in fmoves[k]):
+        ab_new = 'INTIMIDATE'; why_.append(f"Intimidate (ability capsule) over {ab.title()}: cuts {', '.join(FN[k] for k in L if any((MV.get(m_) or {}).get('category') == 'physical' for m_ in fmoves[k]))}'s physical hits on turn 1")
+    FBUILD[n] = dict(moves=mn, evs=evs_, nature=nat_, item=item_, why=why_, ability=ab_new)
+if COUNTER:   # 24 Nov: game plans from the FINAL builds (field-undoing moves replaced), plus the freezer / support / field-breaker turn-1 jobs
+    for n_, fb_ in FBUILD.items(): MOVE_OVR[n_] = fb_['moves']
+    for j, c in enumerate(COUNTERS):
+        i = NAMES.index(c['member']); c['move'] = _bestmv(i, j); c['plan'] = _plan2(i, j)
+        if ALT and FREEZER is not None and i == FREEZER:
+            c['role'] = 'Freezer'
+            c['plan'] = [f"Turn 1: Blizzard{' (Snow Warning: never misses)' if SNOWW[i] else ' (70% accurate)'} hits both and turns Murkwater into {ALTFIELD}",
+                         f"After that: {', '.join(x for x in FBUILD[NAMES[i]]['moves'] if x not in ('Blizzard', 'Protect'))}; Electric no longer boosted, Raichu loses Surge Surfer speed"]
+        if LEAD_SUP and i == LEAD_SUP[0]:
+            o_ = pair_t1(FREEZER, i); c['role'] = 'Freezer support'
+            c['plan'] = [f"Turn 1: {SUPM[LEAD_SUP[1]]}" + (f" on {o_[3]}: it flinches, so only {', '.join(FN[k] for k in L if FN[k] != o_[3])} can hit {NAMES[FREEZER]}" if o_[3] else f": keeps {NAMES[FREEZER]} alive")
+                         + f" ({NAMES[FREEZER]} takes ~{int(o_[0])}%, you take ~{int(o_[1])}%)",
+                         c['plan'][0]]
+        if j in BREAKERS:
+            c['role'] = 'Field keeper'
+            c['plan'] = [c['plan'][0], f"{dict(FOE_BREAK).get(FN[j])} melts the ice back to Murkwater: KO {FN[j]} the turn it comes in" + ('' if FAST[i][j] and _hits(i, j)[0] == 1 else ' (not a sure one-shot: refreeze with Blizzard)')]
 _core_ix = [i for i in best if NAMES[i] in CORE]
 _bc_core = {f['id']: ok for f, _, ok in bcheck(_core_ix)}
 _bcc = {f['id']: cv for f, cv, _ in bcheck(_core_ix)}
@@ -907,6 +1043,36 @@ out = dict(fight=FK, foe_detail=FOE_DETAIL, real_field=B9[FK][2] if FK in B9 els
                        one_shot=[(NAMES[i], FN[j]) for i in best for j in range(nF) if DEAD[i, j]],
                        unanswered=[w for j, (w, _) in enumerate(WINS) if not ANS[best].max(0)[j]]))
 out['plan'] = 'alt' if ALT else 'break' if BREAK else 'keep'
+if FMT == 'Doubles' and len(leads) == 2:   # 24 Nov (focus fire): what each lead takes when BOTH their leads hit it on turn 1 (real field)
+    def _dl(a, b):
+        if LEAD_SUP:
+            fz = FREEZER; pt = LEAD_SUP[0]; o = pair_t1(fz, pt)
+            return int(o[0] if a == fz else o[1])
+        return int(duo_lead(a, b))
+    out['lead_support'] = dict(member=NAMES[LEAD_SUP[0]], move=SUPM[LEAD_SUP[1]], flinch=pair_t1(FREEZER, LEAD_SUP[0])[3]) if LEAD_SUP else None
+    def _hits_l(a, b):
+        o = pair_t1(FREEZER, LEAD_SUP[0]) if LEAD_SUP else (0, 0, None, None)
+        sup = LEAD_SUP[1] if LEAD_SUP and LEAD_SUP[0] == b and o[2] != 'FAKEOUT' else None; rp = bool(LROD[b] and not LROD[a]); out_ = []
+        for k in L:
+            if o[2] == 'FAKEOUT' and FN[k] == o[3]: out_.append(dict(foe=FN[k], pct=0, move=None, flinched=True)); continue
+            dm = DM0.get(NAMES[a], {}).get(FN[k]) or {}
+            c_ = sorted([(v, mn) for mn, v in dm.items() if _ok(mn, sup, rp)], reverse=True)
+            out_.append(dict(foe=FN[k], pct=int(c_[0][0]) if c_ else 0, move=c_[0][1] if c_ else None))
+        return out_
+    out['lead_duo'] = {NAMES[a]: dict(pct=_dl(a, b), hits=_hits_l(a, b), rod_partner=bool(LROD[b] and not LROD[a])) for a, b in (leads, leads[::-1])}
+out['foe_rod'] = FOE_ROD
+out['breaker_opts'] = {FN[j]: [(NAMES[i], int(DEAL[i][j]), int(TAKE_B[i][j]), bool(FAST[i][j])) for i in np.argsort(-DEAL[:, j]) if FAST[i][j]][:12] for j in sorted(BREAKERS)} if ALT else {}
+if ALT and FMT == 'Doubles':
+    _fz = sorted([(max(duo_lead(a_, b_), 0), NAMES[a_], NAMES[b_], int(duo_lead(b_, a_)), SNOWW[a_]) for a_ in range(NP) if ALTCAN[a_] for b_ in [max((b for b in range(NP) if b != a_), key=lambda b: -duo_lead(b, a_))]])[:20]
+    _fs = []
+    for a_ in [i for i in range(NP) if ALTCAN[i]]:
+        for b_ in range(NP):
+            if b_ == a_: continue
+            da, db, sa, fl_ = pair_t1(a_, b_)
+            _fs.append((max(da, db), NAMES[a_], int(da), NAMES[b_], int(db), sa, fl_))
+    out['freezer_sup'] = [x[1:] for x in sorted(_fs)[:25]]
+    out['freezer_opts'] = [(n_, int(d_), pn_, pd_, bool(sw_)) for d_, n_, pn_, pd_, sw_ in _fz]
+out['freezer'] = NAMES[FREEZER] if ALT and FREEZER is not None else None
 out['alt_field'] = ALTFIELD if ALT else None
 out['foe_break'] = FOE_BREAK if ALT else []
 OUTF = f'team/planner_alt_{ALT_FE}.json' if ALT else 'team/planner_break.json' if BREAK else 'team/planner_keep.json'
@@ -919,6 +1085,10 @@ if APPLY:
     _plans = [out] + [json.load(open(f_)) for f_ in ['team/planner_keep.json', 'team/planner_break.json'] + sorted(_gl.glob('team/planner_alt_*.json'))
                       if os.path.exists(f_) and f_ != OUTF and json.load(open(f_)).get('fight') == FK]
     win_ = max(_plans, key=lambda p_: p_['cmp'])   # 24 Nov: keep / break / alt field: the best field-neutral score wins
+    _fp = (st.get('field_plan') or {}).get(FK)   # 24 Nov (Vincent, Erick: the game's own tip 'freeze it' = top priority): a field plan he chose wins
+    if _fp:
+        _w2 = next((p_ for p_ in _plans if p_.get('alt_field') == _fp), None)
+        if _w2 is not None and _w2 is not win_: _w2['forced'] = True; win_ = _w2
     _o = next((p_ for p_ in _plans if p_ is not win_), None)
     win_['alt_plan'] = dict(cmp=(_o or out)['cmp'] if win_ is out else out['cmp'], six=[m['name'] for m in ((_o or out)['six'] if win_ is out else out['six'])],
                             break_field=bool(((_o or {}) if win_ is out else out).get('break_field')))
@@ -934,10 +1104,12 @@ if APPLY and st.get('mode') == 'planner':   # the planner's six IS the team (lea
         bm = (st.get('base_moves') or {}).get(n) or (st.get('moves') or {}).get(n) or (IB.get(n) or {}).get('moves')
         st.setdefault('plan_builds', {}).setdefault(FK, {}).pop(n, None)
         if fb['moves'] != bm:
-            st.setdefault('base_moves', {})[n] = bm; st['plan_builds'][FK][n] = dict(moves=fb['moves'], ability=(st.get('abilities') or {}).get(n) or (IB.get(n) or {}).get('ability')); st['moves'][n] = fb['moves']
+            st.setdefault('base_moves', {})[n] = bm; st['plan_builds'][FK][n] = dict(moves=fb['moves'], ability=fb.get('ability') or (st.get('abilities') or {}).get(n) or (IB.get(n) or {}).get('ability')); st['moves'][n] = fb['moves']
+        if fb.get('ability'): st.setdefault('abilities', {})[n] = fb['ability']
         elif n in (st.get('base_moves') or {}):
             st['moves'][n] = st['base_moves'][n]
         if n in IB: IB[n].update(evs=fb['evs'], nature=fb['nature'], fight_why=fb['why'], moves=st['moves'].get(n, IB[n].get('moves')), item=fb.get('item') or IB[n].get('item'))
+        if n in IB and fb.get('ability'): IB[n]['ability'] = fb['ability']
     json.dump(IB, open('team/ideal_builds.json', 'w'), indent=1, ensure_ascii=False)
     for n in six:
         b = IB.get(n) or {}

@@ -180,20 +180,23 @@
  "counters": [
   {
    "foe": "Electivire",
-   "member": "Glalie (Aevian Form)",
-   "deal": 102,
-   "take": 87,
-   "take_b": 87,
+   "member": "Ampharos (Aevian Form)",
+   "deal": 35,
+   "take": 51,
+   "take_b": 51,
    "faster": false,
    "hard": false,
-   "win": true,
+   "duo": 100,
+   "eimm": false,
+   "lrod": false,
+   "win": false,
    "setup": null,
-   "hk": 1,
+   "hk": 3,
    "hd": 2,
-   "move": "Wood Hammer",
+   "move": "Blizzard",
    "plan": [
-    "Slower: take its hit (87%), then Wood Hammer (102%): 1 hit to KO it",
-    "Doubles: focus it with both your Pokémon if your counter cannot KO it alone"
+    "Turn 1: Blizzard (70% accurate) hits both and turns Murkwater into Icy Field",
+    "After that: Icy Wind, Haze; Electric no longer boosted, Raichu loses Surge Surfer speed"
    ],
    "alts": [
     {
@@ -205,39 +208,43 @@
      "used_for": "Togedemaru"
     },
     {
-     "name": "Musharna (Aevian Form)",
-     "deal": 73,
-     "take_b": 71,
+     "name": "Mudsdale",
+     "deal": 139,
+     "take_b": 84,
      "faster": false,
      "hard": false,
-     "used_for": "Raichu"
+     "used_for": null
     },
     {
-     "name": "Lapras (Aevian Form)",
-     "deal": 51,
-     "take_b": 68,
+     "name": "Swampert",
+     "deal": 53,
+     "take_b": 46,
      "faster": false,
      "hard": false,
      "used_for": null
     }
-   ]
+   ],
+   "role": "Freezer"
   },
   {
    "foe": "Raichu",
-   "member": "Musharna (Aevian Form)",
+   "member": "Scrafty",
    "deal": 150,
-   "take": 25,
-   "take_b": 25,
+   "take": 48,
+   "take_b": 48,
    "faster": false,
-   "hard": true,
+   "hard": false,
+   "duo": 104,
+   "eimm": false,
+   "lrod": false,
    "win": true,
    "setup": null,
    "hk": 2,
-   "hd": 4,
-   "move": "Shadow Claw",
+   "hd": 3,
+   "move": "Crunch",
    "plan": [
-    "Slower: take its hit (25%), then Shadow Claw (150%): 2 hits to KO it; Focus Sash / Sturdy: it lives the first hit at 1 HP, hit it again",
-    "Discharge hits both of yours: Protect the partner that it hits super effectively"
+    "Turn 1: Fake Out on Electivire: it flinches, so only Raichu can hit Ampharos (Aevian Form) (Ampharos (Aevian Form) takes ~43%, you take ~48%)",
+    "Slower: take its hit (48%), then Crunch (150%): 2 hits to KO it; Focus Sash / Sturdy: it lives the first hit at 1 HP, hit it again"
    ],
    "alts": [
     {
@@ -245,7 +252,7 @@
      "deal": 150,
      "take_b": 41,
      "faster": false,
-     "hard": true,
+     "hard": false,
      "used_for": "Togedemaru"
     },
     {
@@ -257,54 +264,58 @@
      "used_for": null
     },
     {
-     "name": "Scrafty",
+     "name": "Centiskorch",
      "deal": 150,
-     "take_b": 48,
+     "take_b": 39,
      "faster": false,
      "hard": true,
      "used_for": null
     }
-   ]
+   ],
+   "role": "Freezer support"
   },
   {
    "foe": "Magneton",
-   "member": "Gallade",
-   "deal": 111,
-   "take": 43,
-   "take_b": 43,
-   "faster": true,
+   "member": "Camerupt",
+   "deal": 150,
+   "take": 46,
+   "take_b": 46,
+   "faster": false,
    "hard": true,
+   "duo": 99,
+   "eimm": true,
+   "lrod": false,
    "win": true,
    "setup": null,
    "hk": 2,
    "hd": 3,
-   "move": "Sacred Sword",
+   "move": "Earth Power",
    "plan": [
-    "Faster: Sacred Sword (111% a hit), 2 hits to KO it; it needs 3 on you; Focus Sash / Sturdy: it lives the first hit at 1 HP, hit it again",
+    "Slower: take its hit (46%), then Earth Power (150%): 2 hits to KO it; Focus Sash / Sturdy: it lives the first hit at 1 HP, hit it again",
     "Discharge hits both of yours: Protect the partner that it hits super effectively"
    ],
    "alts": [
     {
-     "name": "Hariyama",
-     "deal": 94,
-     "take_b": 50,
+     "name": "Gastrodon",
+     "deal": 150,
+     "take_b": 34,
      "faster": false,
      "hard": true,
+     "used_for": "Toxtricity"
+    },
+    {
+     "name": "Gallade",
+     "deal": 133,
+     "take_b": 43,
+     "faster": true,
+     "hard": false,
      "used_for": null
     },
     {
-     "name": "Golisopod (Aevian Form)",
-     "deal": 150,
-     "take_b": 71,
+     "name": "Emboar",
+     "deal": 95,
+     "take_b": 41,
      "faster": false,
-     "hard": false,
-     "used_for": "Togedemaru"
-    },
-    {
-     "name": "Roserade (Aevian Form)",
-     "deal": 150,
-     "take_b": 91,
-     "faster": true,
      "hard": false,
      "used_for": null
     }
@@ -317,7 +328,10 @@
    "take": 33,
    "take_b": 33,
    "faster": false,
-   "hard": true,
+   "hard": false,
+   "duo": 104,
+   "eimm": true,
+   "lrod": false,
    "win": true,
    "setup": "Fell Stinger",
    "hk": 1,
@@ -329,47 +343,50 @@
    ],
    "alts": [
     {
-     "name": "Vikavolt",
-     "deal": 126,
-     "take_b": 33,
-     "faster": false,
-     "hard": true,
-     "used_for": null
-    },
-    {
-     "name": "Scrafty",
+     "name": "Gastrodon",
      "deal": 150,
-     "take_b": 59,
+     "take_b": 23,
      "faster": false,
      "hard": true,
-     "used_for": null
+     "used_for": "Toxtricity"
     },
     {
-     "name": "Arcanine",
-     "deal": 131,
-     "take_b": 65,
+     "name": "Camerupt",
+     "deal": 150,
+     "take_b": 28,
      "faster": false,
      "hard": true,
+     "used_for": "Magneton"
+    },
+    {
+     "name": "Sandaconda",
+     "deal": 150,
+     "take_b": 35,
+     "faster": false,
+     "hard": false,
      "used_for": null
     }
    ]
   },
   {
    "foe": "Chandelure",
-   "member": "Crabominable",
-   "deal": 94,
-   "take": 66,
-   "take_b": 66,
-   "faster": false,
-   "hard": true,
-   "win": false,
+   "member": "Zoroark (Hisuian Form)",
+   "deal": 126,
+   "take": 85,
+   "take_b": 85,
+   "faster": true,
+   "hard": false,
+   "duo": 209,
+   "eimm": false,
+   "lrod": false,
+   "win": true,
    "setup": null,
-   "hk": 2,
+   "hk": 1,
    "hd": 2,
-   "move": "Ice Hammer",
+   "move": "Bitter Malice",
    "plan": [
-    "Slower: take its hit (66%), then Ice Hammer (94%): 2 hits to KO it",
-    "Discharge, Burning Jealousy hits both of yours: Protect the partner that it hits super effectively"
+    "Faster: Bitter Malice one-shots it (126%) before it moves",
+    "Burning Jealousy melts the ice back to Murkwater: KO Chandelure the turn it comes in"
    ],
    "alts": [
     {
@@ -378,7 +395,15 @@
      "take_b": 37,
      "faster": false,
      "hard": false,
-     "used_for": "Raichu"
+     "used_for": null
+    },
+    {
+     "name": "Sylveon",
+     "deal": 65,
+     "take_b": 39,
+     "faster": false,
+     "hard": false,
+     "used_for": null
     },
     {
      "name": "Drapion (Aevian Form)",
@@ -387,106 +412,109 @@
      "faster": true,
      "hard": false,
      "used_for": null
-    },
-    {
-     "name": "Sylveon",
-     "deal": 54,
-     "take_b": 39,
-     "faster": false,
-     "hard": false,
-     "used_for": null
     }
-   ]
+   ],
+   "role": "Field keeper"
   },
   {
    "foe": "Toxtricity",
-   "member": "Slowking (Galarian Form)",
-   "deal": 106,
-   "take": 49,
-   "take_b": 49,
+   "member": "Gastrodon",
+   "deal": 150,
+   "take": 39,
+   "take_b": 39,
    "faster": false,
    "hard": true,
+   "duo": 94,
+   "eimm": true,
+   "lrod": false,
    "win": true,
    "setup": null,
    "hk": 1,
    "hd": 3,
-   "move": "Psychic",
+   "move": "Earth Power",
    "plan": [
-    "Slower: take its hit (49%), then Psychic (106%): 1 hit to KO it",
+    "Slower: take its hit (39%), then Earth Power (150%): 1 hit to KO it",
     "Mega Evolves with Toxtricitite: expect its Mega stats from turn 1"
    ],
    "alts": [
+    {
+     "name": "Camerupt",
+     "deal": 150,
+     "take_b": 51,
+     "faster": false,
+     "hard": false,
+     "used_for": "Magneton"
+    },
+    {
+     "name": "Slowking (Galarian Form)",
+     "deal": 106,
+     "take_b": 49,
+     "faster": false,
+     "hard": false,
+     "used_for": null
+    },
     {
      "name": "Gallade",
      "deal": 107,
      "take_b": 55,
      "faster": false,
-     "hard": true,
-     "used_for": "Magneton"
-    },
-    {
-     "name": "Clodsire",
-     "deal": 109,
-     "take_b": 61,
-     "faster": false,
-     "hard": true,
-     "used_for": null
-    },
-    {
-     "name": "Golisopod (Aevian Form)",
-     "deal": 150,
-     "take_b": 79,
-     "faster": false,
      "hard": false,
-     "used_for": "Togedemaru"
+     "used_for": null
     }
    ]
   }
  ],
  "model_gaps": [],
  "fbuild": {
-  "Glalie (Aevian Form)": {
+  "Ampharos (Aevian Form)": {
    "moves": [
-    "Grassy Glide",
-    "Wood Hammer",
-    "Rock Slide",
+    "Icy Wind",
+    "Haze",
+    "Blizzard",
+    "Protect"
+   ],
+   "evs": "252 HP / 252 SpA / 4 Def",
+   "nature": "Modest",
+   "item": "Never-Melt Ice",
+   "why": [
+    "Icy Wind replaces Power Gem (no attack of its own beats its other moves here)",
+    "Haze replaces Signal Beam (no attack of its own beats its other moves here)",
+    "Bulk + power: Speed EVs change no matchup here",
+    "Never-Melt Ice: boosts Blizzard, the best hit on 6 of their 6"
+   ],
+   "ability": null
+  },
+  "Scrafty": {
+   "moves": [
+    "Crunch",
+    "High Jump Kick",
+    "Fake Out",
     "Protect"
    ],
    "evs": "252 HP / 252 Atk / 4 Def",
    "nature": "Adamant",
-   "item": "Miracle Seed",
-   "why": [
-    "Bulk + power: Speed EVs change no matchup here"
-   ]
-  },
-  "Musharna (Aevian Form)": {
-   "moves": [
-    "Lovely Kiss",
-    "Shadow Claw",
-    "Play Rough",
-    "Protect"
-   ],
-   "evs": "252 HP / 252 Atk / 4 Def",
-   "nature": "Adamant",
-   "item": "Spell Tag",
-   "why": [
-    "Bulk + power: Speed EVs change no matchup here"
-   ]
-  },
-  "Gallade": {
-   "moves": [
-    "Psycho Cut",
-    "Sacred Sword",
-    "X-Scissor",
-    "Protect"
-   ],
-   "evs": "252 Atk / 252 Spe / 4 HP",
-   "nature": "Jolly",
    "item": "Black Belt",
    "why": [
-    "Speed: outspeeds Toxtricity only with full Speed",
-    "Black Belt: boosts Sacred Sword, the best hit on 3 of their 6"
-   ]
+    "Bulk + power: Speed EVs change no matchup here",
+    "Black Belt: boosts High Jump Kick, the best hit on 3 of their 6"
+   ],
+   "ability": null
+  },
+  "Camerupt": {
+   "moves": [
+    "Yawn",
+    "Earth Power",
+    "Overheat",
+    "Protect"
+   ],
+   "evs": "252 SpA / 252 Spe / 4 HP",
+   "nature": "Timid",
+   "item": "Soft Sand",
+   "why": [
+    "Overheat replaces Lava Plume: Lava Plume would undo Icy Field",
+    "Speed: outspeeds Magneton only with full Speed"
+   ],
+   "ability": null
   },
   "Golisopod (Aevian Form)": {
    "moves": [
@@ -500,36 +528,38 @@
    "item": "Soft Sand",
    "why": [
     "Speed: outspeeds Magneton only with full Speed"
-   ]
+   ],
+   "ability": null
   },
-  "Crabominable": {
+  "Zoroark (Hisuian Form)": {
    "moves": [
-    "Ice Hammer",
-    "Bulldoze",
-    "Close Combat",
+    "Bitter Malice",
+    "Nasty Plot",
+    "Taunt",
     "Protect"
    ],
-   "evs": "252 Atk / 252 Spe / 4 HP",
-   "nature": "Jolly",
-   "item": "Never-Melt Ice",
+   "evs": "252 SpA / 252 Spe / 4 HP",
+   "nature": "Timid",
+   "item": "Zoroark Crest",
    "why": [
-    "Bulldoze replaces Crabhammer (it was the best hit on no foe): better hit on Toxtricity",
+    "Speed: outspeeds Raichu only with full Speed"
+   ],
+   "ability": null
+  },
+  "Gastrodon": {
+   "moves": [
+    "Earth Power",
+    "Muddy Water",
+    "Yawn",
+    "Protect"
+   ],
+   "evs": "252 SpA / 252 Spe / 4 HP",
+   "nature": "Timid",
+   "item": "Sitrus Berry",
+   "why": [
     "Speed: outspeeds Magneton only with full Speed"
-   ]
-  },
-  "Slowking (Galarian Form)": {
-   "moves": [
-    "Sludge Bomb",
-    "Psychic",
-    "Thunder Wave",
-    "Protect"
    ],
-   "evs": "252 HP / 252 SpA / 4 Def",
-   "nature": "Modest",
-   "item": "Poison Barb",
-   "why": [
-    "Bulk + power: Speed EVs change no matchup here"
-   ]
+   "ability": null
   }
  },
  "sitout": {},
@@ -545,24 +575,20 @@
    "ability": "MOTORDRIVE",
    "cov": [
     [
-     "Glalie (Aevian Form)",
-     "still hits it for 102%"
+     "Scrafty",
+     "still hits it for 72%"
     ],
     [
-     "Musharna (Aevian Form)",
-     "still hits it for 73%"
-    ],
-    [
-     "Gallade",
-     "still hits it for 104%"
+     "Camerupt",
+     "still hits it for 69%"
     ],
     [
      "Golisopod (Aevian Form)",
-     "still hits it for 252%"
+     "still hits it for 210%"
     ],
     [
-     "Crabominable",
-     "still hits it for 129%"
+     "Gastrodon",
+     "still hits it for 63%"
     ]
    ],
    "ok": true,
@@ -580,20 +606,8 @@
    "item": "Assault Vest",
    "cov": [
     [
-     "Glalie (Aevian Form)",
-     "beats it (102%)"
-    ],
-    [
-     "Gallade",
-     "beats it (104%)"
-    ],
-    [
      "Golisopod (Aevian Form)",
-     "beats it (252%)"
-    ],
-    [
-     "Crabominable",
-     "beats it (129%)"
+     "beats it (210%)"
     ]
    ],
    "ok": true,
@@ -613,11 +627,19 @@
    ],
    "cov": [
     [
-     "Glalie (Aevian Form)",
+     "Ampharos (Aevian Form)",
+     "resists it"
+    ],
+    [
+     "Camerupt",
      "resists it"
     ],
     [
      "Golisopod (Aevian Form)",
+     "resists it"
+    ],
+    [
+     "Gastrodon",
      "resists it"
     ]
    ],
@@ -636,28 +658,28 @@
    "ability": "SURGESURFER",
    "cov": [
     [
-     "Glalie (Aevian Form)",
-     "still hits it for 152%"
+     "Ampharos (Aevian Form)",
+     "still hits it for 63%"
     ],
     [
-     "Musharna (Aevian Form)",
-     "still hits it for 150%"
+     "Scrafty",
+     "still hits it for 176%"
     ],
     [
-     "Gallade",
-     "still hits it for 182%"
+     "Camerupt",
+     "still hits it for 123%"
     ],
     [
      "Golisopod (Aevian Form)",
-     "still hits it for 370%"
+     "still hits it for 325%"
     ],
     [
-     "Crabominable",
-     "still hits it for 191%"
+     "Zoroark (Hisuian Form)",
+     "still hits it for 174%"
     ],
     [
-     "Slowking (Galarian Form)",
-     "still hits it for 63%"
+     "Gastrodon",
+     "still hits it for 112%"
     ]
    ],
    "ok": true,
@@ -696,11 +718,19 @@
    ],
    "cov": [
     [
-     "Glalie (Aevian Form)",
+     "Ampharos (Aevian Form)",
+     "resists it"
+    ],
+    [
+     "Camerupt",
      "resists it"
     ],
     [
      "Golisopod (Aevian Form)",
+     "resists it"
+    ],
+    [
+     "Gastrodon",
      "resists it"
     ]
    ],
@@ -736,8 +766,13 @@
    "how": "KO it before it boosts twice, or Haze / Clear Smog / Encore / Unaware / phazing",
    "need": 1,
    "stage": 3,
-   "cov": [],
-   "ok": false,
+   "cov": [
+    [
+     "Ampharos (Aevian Form)",
+     "Haze"
+    ]
+   ],
+   "ok": true,
    "core_ok": false,
    "core_cov": []
   },
@@ -752,20 +787,24 @@
    "ability": "LIGHTNINGROD",
    "cov": [
     [
-     "Glalie (Aevian Form)",
-     "still hits it for 60%"
+     "Scrafty",
+     "still hits it for 169%"
     ],
     [
-     "Gallade",
-     "still hits it for 243%"
+     "Camerupt",
+     "still hits it for 257%"
     ],
     [
      "Golisopod (Aevian Form)",
-     "still hits it for 589%"
+     "still hits it for 491%"
     ],
     [
-     "Crabominable",
-     "still hits it for 270%"
+     "Zoroark (Hisuian Form)",
+     "still hits it for 91%"
+    ],
+    [
+     "Gastrodon",
+     "still hits it for 236%"
     ]
    ],
    "ok": true,
@@ -783,16 +822,20 @@
    "item": "Elemental Seed",
    "cov": [
     [
-     "Gallade",
-     "beats it (243%)"
+     "Scrafty",
+     "beats it (169%)"
+    ],
+    [
+     "Camerupt",
+     "beats it (257%)"
     ],
     [
      "Golisopod (Aevian Form)",
-     "beats it (589%)"
+     "beats it (491%)"
     ],
     [
-     "Crabominable",
-     "beats it (270%)"
+     "Gastrodon",
+     "beats it (236%)"
     ]
    ],
    "ok": true,
@@ -811,8 +854,17 @@
     "BURNINGJEALOUSY",
     "DISCHARGE"
    ],
-   "cov": [],
-   "ok": false,
+   "cov": [
+    [
+     "Camerupt",
+     "resists it"
+    ],
+    [
+     "Gastrodon",
+     "resists it"
+    ]
+   ],
+   "ok": true,
    "core_ok": false,
    "core_cov": []
   },
@@ -827,16 +879,8 @@
    "ability": "LEVITATE",
    "cov": [
     [
-     "Glalie (Aevian Form)",
-     "still hits it for 74%"
-    ],
-    [
-     "Musharna (Aevian Form)",
-     "still hits it for 73%"
-    ],
-    [
-     "Crabominable",
-     "still hits it for 94%"
+     "Zoroark (Hisuian Form)",
+     "still hits it for 126%"
     ]
    ],
    "ok": true,
@@ -856,11 +900,19 @@
    ],
    "cov": [
     [
-     "Glalie (Aevian Form)",
+     "Ampharos (Aevian Form)",
+     "resists it"
+    ],
+    [
+     "Camerupt",
      "resists it"
     ],
     [
      "Golisopod (Aevian Form)",
+     "resists it"
+    ],
+    [
+     "Gastrodon",
      "resists it"
     ]
    ],
@@ -879,16 +931,20 @@
    "item": "Toxtricitite",
    "cov": [
     [
-     "Gallade",
-     "beats it (107%)"
+     "Camerupt",
+     "beats it (206%)"
     ],
     [
      "Golisopod (Aevian Form)",
-     "beats it (329%)"
+     "beats it (274%)"
     ],
     [
-     "Slowking (Galarian Form)",
-     "beats it (106%)"
+     "Zoroark (Hisuian Form)",
+     "beats it (73%)"
+    ],
+    [
+     "Gastrodon",
+     "beats it (188%)"
     ]
    ],
    "ok": true,
@@ -906,8 +962,8 @@
    "spe": 175,
    "cov": [
     [
-     "Slowking (Galarian Form)",
-     "Thunder Wave, then Gallade one-shots it"
+     "Ampharos (Aevian Form)",
+     "Icy Wind"
     ]
    ],
    "ok": true,
@@ -925,8 +981,8 @@
    "spe": 205,
    "cov": [
     [
-     "Slowking (Galarian Form)",
-     "Thunder Wave, then Gallade one-shots it"
+     "Ampharos (Aevian Form)",
+     "Icy Wind"
     ]
    ],
    "ok": true,
@@ -942,8 +998,13 @@
    "how": "Doubles: Tailwind / Trick Room / Icy Wind / Electroweb / paralysis",
    "need": 1,
    "spe": 346,
-   "cov": [],
-   "ok": false,
+   "cov": [
+    [
+     "Ampharos (Aevian Form)",
+     "Icy Wind"
+    ]
+   ],
+   "ok": true,
    "core_ok": false,
    "core_cov": []
   },
@@ -958,11 +1019,19 @@
    "atype": "ELECTRIC",
    "cov": [
     [
-     "Glalie (Aevian Form)",
+     "Ampharos (Aevian Form)",
      "resists"
     ],
     [
+     "Camerupt",
+     "immune"
+    ],
+    [
      "Golisopod (Aevian Form)",
+     "immune"
+    ],
+    [
+     "Gastrodon",
      "immune"
     ]
    ],
@@ -981,11 +1050,19 @@
    "atype": "POISON",
    "cov": [
     [
+     "Camerupt",
+     "resists"
+    ],
+    [
      "Golisopod (Aevian Form)",
      "resists"
     ],
     [
-     "Slowking (Galarian Form)",
+     "Zoroark (Hisuian Form)",
+     "resists"
+    ],
+    [
+     "Gastrodon",
      "resists"
     ]
    ],
@@ -1003,8 +1080,12 @@
    "stage": 0,
    "cov": [
     [
-     "Musharna (Aevian Form)",
-     "takes the boosted hit (37%)"
+     "Ampharos (Aevian Form)",
+     "Haze"
+    ],
+    [
+     "Zoroark (Hisuian Form)",
+     "outspeeds and one-shots it"
     ]
    ],
    "ok": true,
@@ -1013,30 +1094,36 @@
   }
  ],
  "flexwhy": {
-  "Glalie (Aevian Form)": [
+  "Ampharos (Aevian Form)": [
+   "Raichu: spread Discharge",
+   "Raichu: Surge Surfer (Speed x2 on Electric Terrain)",
+   "Magneton: spread Discharge",
+   "Togedemaru: Fell Stinger (+3)",
+   "Toxtricity: spread Overdrive",
+   "Electivire: Speed 175",
+   "Raichu: Speed 205",
+   "Togedemaru: Speed 346",
+   "Electric attacks from 6 (x1.3 on this field)",
+   "Chandelure: Burning Jealousy undoes Icy Field"
+  ],
+  "Scrafty": [
    "Electivire: Motor Drive (absorbs Electric (+Speed))",
-   "Electivire: Assault Vest (special bulk x1.5: hit it physically)",
+   "Raichu: Surge Surfer (Speed x2 on Electric Terrain)",
+   "Togedemaru: Lightning Rod (absorbs Electric and pulls Electric moves to itself in doubles)",
+   "Togedemaru: Elemental Seed (field seed: boosts it on entry)"
+  ],
+  "Camerupt": [
+   "Electivire: Motor Drive (absorbs Electric (+Speed))",
    "Raichu: spread Discharge",
    "Raichu: Surge Surfer (Speed x2 on Electric Terrain)",
    "Magneton: spread Discharge",
    "Togedemaru: Lightning Rod (absorbs Electric and pulls Electric moves to itself in doubles)",
-   "Chandelure: Levitate (immune to Ground)",
-   "Toxtricity: spread Overdrive",
-   "Electric attacks from 6 (x1.3 on this field)"
-  ],
-  "Musharna (Aevian Form)": [
-   "Electivire: Motor Drive (absorbs Electric (+Speed))",
-   "Raichu: Surge Surfer (Speed x2 on Electric Terrain)",
-   "Chandelure: Levitate (immune to Ground)",
-   "Chandelure: Burning Jealousy undoes Icy Field"
-  ],
-  "Gallade": [
-   "Electivire: Motor Drive (absorbs Electric (+Speed))",
-   "Electivire: Assault Vest (special bulk x1.5: hit it physically)",
-   "Raichu: Surge Surfer (Speed x2 on Electric Terrain)",
-   "Togedemaru: Lightning Rod (absorbs Electric and pulls Electric moves to itself in doubles)",
    "Togedemaru: Elemental Seed (field seed: boosts it on entry)",
-   "Toxtricity: Toxtricitite (Mega Evolves)"
+   "Chandelure: spread Burning Jealousy, Discharge",
+   "Toxtricity: spread Overdrive",
+   "Toxtricity: Toxtricitite (Mega Evolves)",
+   "Electric attacks from 6 (x1.3 on this field)",
+   "Poison attacks from 2 (x1.5 on this field)"
   ],
   "Golisopod (Aevian Form)": [
    "Electivire: Motor Drive (absorbs Electric (+Speed))",
@@ -1053,19 +1140,25 @@
    "Electric attacks from 6 (x1.3 on this field)",
    "Poison attacks from 2 (x1.5 on this field)"
   ],
-  "Crabominable": [
-   "Electivire: Motor Drive (absorbs Electric (+Speed))",
-   "Electivire: Assault Vest (special bulk x1.5: hit it physically)",
+  "Zoroark (Hisuian Form)": [
    "Raichu: Surge Surfer (Speed x2 on Electric Terrain)",
    "Togedemaru: Lightning Rod (absorbs Electric and pulls Electric moves to itself in doubles)",
-   "Togedemaru: Elemental Seed (field seed: boosts it on entry)",
-   "Chandelure: Levitate (immune to Ground)"
-  ],
-  "Slowking (Galarian Form)": [
-   "Raichu: Surge Surfer (Speed x2 on Electric Terrain)",
+   "Chandelure: Levitate (immune to Ground)",
    "Toxtricity: Toxtricitite (Mega Evolves)",
-   "Electivire: Speed 175",
-   "Raichu: Speed 205",
+   "Poison attacks from 2 (x1.5 on this field)",
+   "Chandelure: Burning Jealousy undoes Icy Field"
+  ],
+  "Gastrodon": [
+   "Electivire: Motor Drive (absorbs Electric (+Speed))",
+   "Raichu: spread Discharge",
+   "Raichu: Surge Surfer (Speed x2 on Electric Terrain)",
+   "Magneton: spread Discharge",
+   "Togedemaru: Lightning Rod (absorbs Electric and pulls Electric moves to itself in doubles)",
+   "Togedemaru: Elemental Seed (field seed: boosts it on entry)",
+   "Chandelure: spread Burning Jealousy, Discharge",
+   "Toxtricity: spread Overdrive",
+   "Toxtricity: Toxtricitite (Mega Evolves)",
+   "Electric attacks from 6 (x1.3 on this field)",
    "Poison attacks from 2 (x1.5 on this field)"
   ]
  },
@@ -1111,24 +1204,32 @@
    "ok": true,
    "text": "Electric immunity (6 of them use Electric)",
    "who": [
-    "Golisopod (Aevian Form)"
+    "Camerupt",
+    "Golisopod (Aevian Form)",
+    "Gastrodon"
    ]
   },
   {
-   "ok": false,
+   "ok": true,
    "text": "Disruption: Fake Out / redirection / Intimidate / Snarl / Will-O-Wisp",
-   "who": []
+   "who": [
+    "Ampharos (Aevian Form)",
+    "Scrafty"
+   ]
   },
   {
-   "ok": false,
+   "ok": true,
    "text": "Speed control: Tailwind / Trick Room / Icy Wind / Electroweb / paralysis",
-   "who": []
+   "who": [
+    "Ampharos (Aevian Form)"
+   ]
   },
   {
    "ok": true,
    "text": "Spread attack",
    "who": [
-    "Glalie (Aevian Form)"
+    "Ampharos (Aevian Form)",
+    "Gastrodon"
    ]
   },
   {
@@ -1255,8 +1356,8 @@
  ],
  "main": [
   "ELECTRIC",
-  "FIRE",
   "FIGHTING",
+  "FIRE",
   "GRASS",
   "BUG",
   "STEEL",
@@ -1271,15 +1372,15 @@
    "Togedemaru",
    "Toxtricity"
   ],
-  "FIRE": [
-   "Chandelure",
-   "Electivire"
-  ],
   "FIGHTING": [
    "Electivire",
    "Raichu"
   ],
   "ICE": [
+   "Electivire"
+  ],
+  "FIRE": [
+   "Chandelure",
    "Electivire"
   ],
   "GRASS": [
@@ -1509,103 +1610,161 @@
  "speed": [
   {
    "foe": "Electivire",
-   "faster_than": 6,
-   "tools": []
+   "faster_than": 5,
+   "tools": [
+    "Ampharos (Aevian Form): Icy Wind"
+   ]
   },
   {
    "foe": "Raichu",
    "faster_than": 6,
-   "tools": []
+   "tools": [
+    "Ampharos (Aevian Form): Icy Wind"
+   ]
   },
   {
    "foe": "Magneton",
    "faster_than": 5,
-   "tools": []
+   "tools": [
+    "Ampharos (Aevian Form): Icy Wind"
+   ]
   },
   {
    "foe": "Togedemaru",
    "faster_than": 6,
-   "tools": []
+   "tools": [
+    "Ampharos (Aevian Form): Icy Wind"
+   ]
   },
   {
    "foe": "Chandelure",
-   "faster_than": 6,
-   "tools": []
+   "faster_than": 5,
+   "tools": [
+    "Ampharos (Aevian Form): Icy Wind"
+   ]
   },
   {
    "foe": "Toxtricity",
-   "faster_than": 6,
-   "tools": []
+   "faster_than": 5,
+   "tools": [
+    "Ampharos (Aevian Form): Icy Wind"
+   ]
   }
  ],
- "tips": [],
+ "tips": [
+  {
+   "tip": "Ground types are a good defensive option against his paralysis (game tip)",
+   "needs": [
+    {
+     "need": "immune:ELECTRIC",
+     "met_by": [
+      "Camerupt: Fire/Ground type: immune to Electric",
+      "Golisopod (Aevian Form): Bug/Ground type: immune to Electric",
+      "Gastrodon: Water/Ground type: immune to Electric"
+     ]
+    }
+   ]
+  },
+  {
+   "tip": "Freezing the field into Icy Field cancels most of its attack and defense boosts (game tip)",
+   "needs": [
+    {
+     "need": "field:Icy Field",
+     "met_by": [
+      "Ampharos (Aevian Form): Blizzard"
+     ]
+    }
+   ]
+  },
+  {
+   "tip": "Pokémon with Lightning Rod can be useful (game tip)",
+   "needs": [
+    {
+     "need": "ability:LIGHTNINGROD",
+     "met_by": []
+    }
+   ]
+  },
+  {
+   "tip": "Outspeed and one-shot Chandelure before Burning Jealousy melts the ice (Colbur Berry counted)",
+   "needs": [
+    {
+     "need": "ko:Chandelure",
+     "met_by": [
+      "Zoroark (Hisuian Form): deals 126%",
+      "Ampharos (Aevian Form): deals 45%"
+     ]
+    }
+   ]
+  }
+ ],
  "six": [
   {
    "core": false,
    "role": "Lead",
-   "job": "Counter",
-   "name": "Glalie (Aevian Form)",
-   "tier": "S",
+   "job": "Field hijacker",
+   "name": "Ampharos (Aevian Form)",
+   "tier": "A",
    "types": [
-    "GRASS",
-    "ROCK"
+    "ICE",
+    "ELECTRIC"
    ],
-   "sid": "GLALIE",
+   "sid": "AMPHAROS",
    "form": "1",
    "lead": true,
    "where": "Active",
    "moves": [
-    "Grassy Glide",
-    "Wood Hammer",
-    "Rock Slide",
+    "Icy Wind",
+    "Haze",
+    "Blizzard",
     "Protect"
    ],
-   "ability": "GRASSYSURGE",
+   "ability": "FILTER",
    "take": [
-    87,
     51,
-    93,
-    76,
-    55,
-    80
+    43,
+    49,
+    41,
+    57,
+    62
    ],
    "deal": [
-    102,
-    150,
-    27,
-    60,
-    74,
-    33
+    35,
+    63,
+    21,
+    33,
+    45,
+    53
    ],
-   "worst": 93,
-   "worst_foe": "Magneton",
-   "safe": 0,
+   "worst": 62,
+   "worst_foe": "Toxtricity",
+   "safe": 3,
    "mult": {
     "ELECTRIC": 0.5,
-    "FIRE": 1.0,
     "FIGHTING": 2.0,
+    "FIRE": 2.0,
     "GRASS": 1.0,
-    "BUG": 2.0,
-    "STEEL": 2.0,
+    "BUG": 1.0,
+    "STEEL": 1.0,
     "POISON": 1.0
    },
    "rm": [
     2.0,
-    1.0,
     2.0,
     0.5,
     0.5,
+    0.5,
     2.0,
     1.0,
     1.0,
     0.5,
-    2.0,
-    2.0,
-    2.0,
-    2.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
     1.0,
     0.5,
-    1.0,
+    2.0,
     0.5,
     1.0,
     1.0,
@@ -1614,28 +1773,28 @@
     0.5
    ],
    "off": [
+    1.5,
+    1.5,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0
+    1.5,
+    1.5
    ],
    "answers": [],
    "why": [
     {
-     "move": "Grassy Glide",
-     "why": "Priority +1 on Grassy Terrain; STAB; Priority +1 on Grassy Terrain: Grassy Surge sets it on entry (replaces Haunted Field for a few turns)",
+     "move": "Icy Wind",
+     "why": "x1.5 on this field; STAB; hits both foes",
      "flag": false
     },
     {
-     "move": "Wood Hammer",
-     "why": "Your best hit on Electivire, Raichu, Magneton, Togedemaru, Chandelure; STAB",
+     "move": "Haze",
+     "why": "Resets every stat change",
      "flag": false
     },
     {
-     "move": "Rock Slide",
-     "why": "Your best hit on Toxtricity; STAB; hits both foes; Spread move that never hits your partner; 30% flinch",
+     "move": "Blizzard",
+     "why": "Turns the field into Icy Field (turn 1)",
      "flag": false
     },
     {
@@ -1649,99 +1808,99 @@
   {
    "core": false,
    "role": "Doubles lead",
-   "job": "Counter: Raichu, Chandelure",
-   "name": "Musharna (Aevian Form)",
-   "tier": "S",
+   "job": "Counter: Raichu, Magneton",
+   "name": "Scrafty",
+   "tier": "B",
    "types": [
     "DARK",
-    "FAIRY"
+    "FIGHTING"
    ],
-   "sid": "MUSHARNA",
-   "form": "1",
+   "sid": "SCRAFTY",
+   "form": "0",
    "lead": true,
-   "where": "Party",
+   "where": "Active",
    "moves": [
-    "Lovely Kiss",
-    "Shadow Claw",
-    "Play Rough",
+    "Crunch",
+    "High Jump Kick",
+    "Fake Out",
     "Protect"
    ],
-   "ability": "TOUGHCLAWS",
+   "ability": "INTIMIDATE",
    "take": [
-    71,
-    25,
-    86,
-    78,
-    37,
-    110
+    72,
+    48,
+    44,
+    59,
+    38,
+    56
    ],
    "deal": [
-    73,
+    72,
     150,
-    27,
-    59,
-    73,
-    33
+    75,
+    150,
+    43,
+    39
    ],
-   "worst": 110,
-   "worst_foe": "Toxtricity",
-   "safe": 2,
+   "worst": 72,
+   "worst_foe": "Electivire",
+   "safe": 3,
    "mult": {
     "ELECTRIC": 1.0,
+    "FIGHTING": 2.0,
     "FIRE": 1.0,
-    "FIGHTING": 1.0,
     "GRASS": 1.0,
     "BUG": 1.0,
-    "STEEL": 2.0,
-    "POISON": 2.0
+    "STEEL": 1.0,
+    "POISON": 1.0
    },
    "rm": [
+    2.0,
     1.0,
     1.0,
     1.0,
     1.0,
-    1.0,
-    1.0,
+    2.0,
     1.0,
     0.0,
     1.0,
-    2.0,
     1.0,
     1.0,
-    2.0,
-    2.0,
+    1.0,
+    1.0,
+    1.0,
     1.0,
     1.0,
     1.0,
     1.0,
     0.5,
     1.0,
-    2.0,
+    1.0,
     1.0
    ],
    "off": [
     0.0,
     2.0,
-    0.0,
-    0.0,
+    2.0,
+    2.0,
     2.0,
     0.0
    ],
    "answers": [],
    "why": [
     {
-     "move": "Lovely Kiss",
-     "why": "Puts one foe to sleep (75% accurate)",
+     "move": "Crunch",
+     "why": "Your best hit on Raichu, Chandelure, Toxtricity; Super effective on Raichu, Chandelure; STAB",
      "flag": false
     },
     {
-     "move": "Shadow Claw",
-     "why": "Your best hit on Raichu, Magneton, Togedemaru, Chandelure, Toxtricity; Super effective on Raichu, Chandelure",
+     "move": "High Jump Kick",
+     "why": "Your best hit on Electivire, Magneton, Togedemaru; Super effective on Magneton, Togedemaru; STAB; no effect on Chandelure",
      "flag": false
     },
     {
-     "move": "Play Rough",
-     "why": "Your best hit on Electivire; STAB",
+     "move": "Fake Out",
+     "why": "Flinches on its first turn: a free hit, x1.5 on Concert Venue; no effect on Chandelure",
      "flag": false
     },
     {
@@ -1755,78 +1914,78 @@
   {
    "core": false,
    "role": "Mid game",
-   "job": "Counter: Raichu, Magneton",
-   "name": "Gallade",
-   "tier": "B",
+   "job": "Counter: Magneton, Togedemaru",
+   "name": "Camerupt",
+   "tier": "C",
    "types": [
-    "PSYCHIC",
-    "FIGHTING"
+    "FIRE",
+    "GROUND"
    ],
-   "sid": "GALLADE",
+   "sid": "CAMERUPT",
    "form": "0",
    "lead": false,
-   "where": "Active",
+   "where": "Overflow",
    "moves": [
-    "Psycho Cut",
-    "Sacred Sword",
-    "X-Scissor",
+    "Yawn",
+    "Earth Power",
+    "Overheat",
     "Protect"
    ],
-   "ability": "SHARPNESS",
+   "ability": "SOLIDROCK",
    "take": [
-    112,
-    38,
-    43,
-    91,
-    101,
-    55
+    66,
+    53,
+    46,
+    28,
+    70,
+    51
    ],
    "deal": [
-    104,
+    69,
+    123,
     150,
-    111,
     150,
-    59,
-    107
+    28,
+    150
    ],
-   "worst": 112,
-   "worst_foe": "Electivire",
+   "worst": 70,
+   "worst_foe": "Chandelure",
    "safe": 2,
    "mult": {
-    "ELECTRIC": 1.0,
-    "FIRE": 1.0,
-    "FIGHTING": 0.5,
+    "ELECTRIC": 0.0,
+    "FIGHTING": 1.0,
+    "FIRE": 0.5,
     "GRASS": 1.0,
-    "BUG": 1.0,
-    "STEEL": 1.0,
-    "POISON": 1.0
+    "BUG": 0.5,
+    "STEEL": 0.5,
+    "POISON": 0.5
    },
    "rm": [
-    0.5,
-    1.0,
-    1.0,
-    1.0,
     1.0,
     0.5,
     1.0,
+    0.0,
+    0.0,
     1.0,
     1.0,
     1.0,
+    0.0,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.0,
+    0.5,
+    0.0,
     1.0,
     1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    2.0,
-    1.0,
-    1.0,
-    1.0
+    0.0,
+    0.5,
+    0.0
    ],
    "off": [
-    0.0,
+    2.0,
     2.0,
     2.0,
     2.0,
@@ -1836,18 +1995,18 @@
    "answers": [],
    "why": [
     {
-     "move": "Psycho Cut",
-     "why": "Your best hit on Chandelure, Toxtricity; Super effective on Toxtricity; STAB",
+     "move": "Yawn",
+     "why": "Sleep next turn or forces a switch",
      "flag": false
     },
     {
-     "move": "Sacred Sword",
-     "why": "Your best hit on Electivire, Magneton, Togedemaru; Super effective on Magneton, Togedemaru; STAB; no effect on Chandelure",
+     "move": "Earth Power",
+     "why": "Your best hit on Electivire, Raichu, Magneton, Togedemaru, Toxtricity; Super effective on Electivire, Raichu, Magneton, Togedemaru, Toxtricity; STAB; no effect on Chandelure",
      "flag": false
     },
     {
-     "move": "X-Scissor",
-     "why": "Your best hit on Raichu; Super effective on Raichu",
+     "move": "Overheat",
+     "why": "Your best hit on Chandelure; Super effective on Magneton, Togedemaru; STAB",
      "flag": false
     },
     {
@@ -1871,7 +2030,7 @@
    "sid": "GOLISOPOD",
    "form": "1",
    "lead": false,
-   "where": "Active",
+   "where": "Party",
    "moves": [
     "Bone Rush",
     "Pin Missile",
@@ -1892,7 +2051,7 @@
     150,
     150,
     150,
-    33,
+    40,
     150
    ],
    "worst": 79,
@@ -1900,8 +2059,8 @@
    "safe": 2,
    "mult": {
     "ELECTRIC": 0.0,
-    "FIRE": 2.0,
     "FIGHTING": 0.5,
+    "FIRE": 2.0,
     "GRASS": 1.0,
     "BUG": 1.0,
     "STEEL": 1.0,
@@ -1966,100 +2125,100 @@
   },
   {
    "core": false,
-   "role": "Mid game",
+   "role": "Closer",
    "job": "Field hijacker",
-   "name": "Crabominable",
-   "tier": "B",
+   "name": "Zoroark (Hisuian Form)",
+   "tier": "C",
    "types": [
-    "FIGHTING",
-    "ICE"
+    "NORMAL",
+    "GHOST"
    ],
-   "sid": "CRABOMINABLE",
-   "form": "0",
+   "sid": "ZOROARK",
+   "form": "1",
    "lead": false,
    "where": "Active",
    "moves": [
-    "Ice Hammer",
-    "Crabhammer",
-    "Close Combat",
+    "Bitter Malice",
+    "Nasty Plot",
+    "Taunt",
     "Protect"
    ],
-   "ability": "IRONFIST",
+   "ability": "ILLUSION",
    "take": [
-    84,
-    100,
-    114,
-    92,
-    66,
-    72
+    150,
+    85,
+    97,
+    129,
+    85,
+    124
    ],
    "deal": [
-    129,
+    48,
     150,
-    120,
-    150,
-    94,
-    84
+    58,
+    91,
+    126,
+    73
    ],
-   "worst": 114,
-   "worst_foe": "Magneton",
+   "worst": 150,
+   "worst_foe": "Electivire",
    "safe": 0,
    "mult": {
     "ELECTRIC": 1.0,
-    "FIRE": 2.0,
-    "FIGHTING": 2.0,
+    "FIGHTING": 0.0,
+    "FIRE": 1.0,
     "GRASS": 1.0,
     "BUG": 0.5,
-    "STEEL": 2.0,
-    "POISON": 1.0
+    "STEEL": 1.0,
+    "POISON": 0.5
    },
    "rm": [
-    2.0,
-    2.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.5,
+    0.5,
+    1.0,
     0.5,
     1.0,
     1.0,
-    2.0,
     1.0,
-    2.0,
     1.0,
-    2.0,
+    0.0,
+    1.0,
     0.5,
-    0.5,
-    2.0,
-    1.0,
-    1.0,
-    2.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
     1.0
    ],
    "off": [
     1.5,
-    1.5,
-    2.0,
     2.0,
     1.5,
+    1.5,
+    2.0,
     1.5
    ],
    "answers": [],
    "why": [
     {
-     "move": "Ice Hammer",
-     "why": "Your best hit on Electivire, Raichu, Chandelure, Toxtricity; x1.5 on this field; STAB",
+     "move": "Bitter Malice",
+     "why": "Your best hit on Electivire, Raichu, Magneton, Togedemaru, Chandelure, Toxtricity; Super effective on Raichu, Chandelure; x1.5 on this field; STAB",
      "flag": false
     },
     {
-     "move": "Crabhammer",
-     "why": "Neutral coverage",
-     "flag": true
+     "move": "Nasty Plot",
+     "why": "Sp. Atk +2",
+     "flag": false
     },
     {
-     "move": "Close Combat",
-     "why": "Your best hit on Magneton, Togedemaru; Super effective on Magneton, Togedemaru; STAB; no effect on Chandelure",
+     "move": "Taunt",
+     "why": "Stops status / setup moves",
      "flag": false
     },
     {
@@ -2073,99 +2232,99 @@
   {
    "core": false,
    "role": "Mid game",
-   "job": "Counter: Raichu, Toxtricity",
-   "name": "Slowking (Galarian Form)",
-   "tier": "S",
+   "job": "Counter: Magneton, Togedemaru",
+   "name": "Gastrodon",
+   "tier": "B",
    "types": [
-    "POISON",
-    "PSYCHIC"
+    "WATER",
+    "GROUND"
    ],
-   "sid": "SLOWKING",
-   "form": "1",
+   "sid": "GASTRODON",
+   "form": "0",
    "lead": false,
-   "where": "Active",
+   "where": "Overflow",
    "moves": [
-    "Sludge Bomb",
-    "Psychic",
-    "Thunder Wave",
+    "Earth Power",
+    "Muddy Water",
+    "Yawn",
     "Protect"
    ],
-   "ability": "REGENERATOR",
+   "ability": "STORMDRAIN",
    "take": [
-    82,
+    55,
+    83,
     34,
-    38,
-    67,
-    91,
-    49
+    23,
+    150,
+    39
    ],
    "deal": [
-    35,
     63,
-    21,
-    32,
-    45,
-    106
+    112,
+    150,
+    150,
+    25,
+    150
    ],
-   "worst": 91,
+   "worst": 150,
    "worst_foe": "Chandelure",
    "safe": 3,
    "mult": {
-    "ELECTRIC": 1.0,
-    "FIRE": 1.0,
-    "FIGHTING": 0.25,
-    "GRASS": 0.5,
+    "ELECTRIC": 0.0,
+    "FIGHTING": 1.0,
+    "FIRE": 0.5,
+    "GRASS": 4.0,
     "BUG": 1.0,
-    "STEEL": 1.0,
+    "STEEL": 0.5,
     "POISON": 0.5
    },
    "rm": [
-    0.25,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    0.25,
-    0.5,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
-    1.0,
     1.0,
     0.5,
     1.0,
+    0.0,
+    0.0,
+    1.0,
+    4.0,
+    1.0,
+    0.0,
+    0.5,
     1.0,
     1.0,
     0.5,
-    2.0,
-    1.0,
     0.5,
-    1.0
+    0.0,
+    0.5,
+    0.0,
+    4.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0
    ],
    "off": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
     0.0,
     2.0
    ],
    "answers": [],
    "why": [
     {
-     "move": "Sludge Bomb",
-     "why": "Your best hit on Electivire, Raichu; STAB; no effect on Magneton, Togedemaru",
+     "move": "Earth Power",
+     "why": "Your best hit on Electivire, Raichu, Magneton, Togedemaru, Toxtricity; Super effective on Electivire, Raichu, Magneton, Togedemaru, Toxtricity; STAB; no effect on Chandelure",
      "flag": false
     },
     {
-     "move": "Psychic",
-     "why": "Your best hit on Electivire, Magneton, Togedemaru, Chandelure, Toxtricity; Super effective on Toxtricity; STAB",
+     "move": "Muddy Water",
+     "why": "Your best hit on Chandelure; STAB; hits both foes",
      "flag": false
     },
     {
-     "move": "Thunder Wave",
-     "why": "Speed control: paralysis halves Speed, 25% full para; not Electivire, Raichu, Magneton, Togedemaru, Chandelure, Toxtricity",
+     "move": "Yawn",
+     "why": "Sleep next turn or forces a switch",
      "flag": false
     },
     {
@@ -2179,459 +2338,99 @@
  ],
  "alts": [
   {
-   "score": 321.4,
+   "score": -1007.8,
    "in": [
-    "Chandelure",
+    "Turtonator",
+    "Dragalge",
+    "Luxray",
     "Muk (Alolan Form)",
-    "Swampert",
-    "Roserade (Aevian Form)",
-    "Ampharos (Aevian Form)"
+    "Bronzong"
    ],
    "out": [
-    "Glalie (Aevian Form)",
-    "Musharna (Aevian Form)",
-    "Gallade",
-    "Crabominable",
-    "Slowking (Galarian Form)"
+    "Ampharos (Aevian Form)",
+    "Scrafty",
+    "Camerupt",
+    "Zoroark (Hisuian Form)",
+    "Gastrodon"
    ]
   },
   {
-   "score": 321.2,
+   "score": -1013.4,
    "in": [
-    "Vikavolt",
-    "Chandelure",
     "Dragalge",
+    "Luxray",
     "Muk (Alolan Form)",
-    "Roserade (Aevian Form)",
-    "Ampharos (Aevian Form)"
+    "Bronzong"
    ],
    "out": [
-    "Glalie (Aevian Form)",
-    "Musharna (Aevian Form)",
-    "Gallade",
-    "Golisopod (Aevian Form)",
-    "Crabominable",
-    "Slowking (Galarian Form)"
+    "Ampharos (Aevian Form)",
+    "Scrafty",
+    "Zoroark (Hisuian Form)",
+    "Gastrodon"
    ]
   },
   {
-   "score": 316.9,
+   "score": -1013.7,
    "in": [
+    "Turtonator",
     "Chandelure",
-    "Dragalge",
     "Muk (Alolan Form)",
-    "Roserade (Aevian Form)",
-    "Ampharos (Aevian Form)"
+    "Bronzong"
    ],
    "out": [
-    "Glalie (Aevian Form)",
-    "Musharna (Aevian Form)",
-    "Gallade",
-    "Crabominable",
-    "Slowking (Galarian Form)"
+    "Ampharos (Aevian Form)",
+    "Scrafty",
+    "Zoroark (Hisuian Form)",
+    "Gastrodon"
    ]
   }
  ],
  "swaps": {
-  "Glalie (Aevian Form)": [
+  "Ampharos (Aevian Form)": [
    {
-    "name": "Ampharos (Aevian Form)",
+    "name": "Abomasnow",
     "gain": [
-     "checks Raichu",
-     "uses the field more"
-    ],
-    "loss": [],
-    "tier": "A",
-    "sid": "AMPHAROS",
-    "form": "1",
-    "delta": 1370.0,
-    "res": 8,
-    "se": 1,
-    "oneshot": []
-   },
-   {
-    "name": "Ninetales (Alolan Form)",
-    "gain": [
-     "uses the field more"
+     "answers Electivire: Motor Drive (absorbs Electric (+Speed))",
+     "priority attack"
     ],
     "loss": [
-     "one-shot by Electivire",
-     "one-shot by Magneton",
-     "one-shot by Togedemaru",
-     "one-shot by Toxtricity"
-    ],
-    "tier": "A",
-    "sid": "NINETALES",
-    "form": "1",
-    "delta": 1305.4,
-    "res": 3,
-    "se": 0,
-    "oneshot": [
-     "Electivire",
-     "Magneton",
-     "Togedemaru",
-     "Toxtricity"
-    ]
-   },
-   {
-    "name": "Azumarill",
-    "gain": [
-     "answers Togedemaru: Elemental Seed (field seed: boosts it on entry)",
-     "answers Electivire: Speed 175",
-     "answers Raichu: Speed 205",
-     "answers Togedemaru: Speed 346"
-    ],
-    "loss": [
-     "one-shot by Electivire",
-     "one-shot by Togedemaru",
+     "loses the check on Raichu",
      "one-shot by Toxtricity",
-     "loses Electric attacks from 6 (x1.3 on this field)"
+     "loses Togedemaru: Fell Stinger (+3)",
+     "loses Togedemaru: Speed 346"
     ],
-    "tier": "A",
-    "sid": "AZUMARILL",
+    "tier": "C",
+    "sid": "ABOMASNOW",
     "form": "0",
-    "delta": 90.4,
-    "res": 7,
-    "se": 2,
-    "oneshot": [
-     "Electivire",
-     "Togedemaru",
-     "Toxtricity"
-    ]
-   }
-  ],
-  "Musharna (Aevian Form)": [
-   {
-    "name": "Ampharos (Aevian Form)",
-    "gain": [
-     "survives Toxtricity",
-     "answers Raichu: spread Discharge",
-     "answers Magneton: spread Discharge",
-     "answers Toxtricity: spread Overdrive"
-    ],
-    "loss": [
-     "loses the check on Chandelure",
-     "loses Chandelure: Burning Jealousy undoes Icy Field"
-    ],
-    "tier": "A",
-    "sid": "AMPHAROS",
-    "form": "1",
-    "delta": 1329.0,
-    "res": 8,
-    "se": 1,
-    "oneshot": []
-   },
-   {
-    "name": "Ninetales (Alolan Form)",
-    "gain": [
-     "uses the field more"
-    ],
-    "loss": [
-     "one-shot by Electivire",
-     "loses the check on Raichu",
-     "one-shot by Magneton",
-     "one-shot by Togedemaru"
-    ],
-    "tier": "A",
-    "sid": "NINETALES",
-    "form": "1",
-    "delta": 1298.6,
-    "res": 3,
+    "delta": -33.2,
+    "res": 9,
     "se": 0,
     "oneshot": [
-     "Electivire",
-     "Magneton",
-     "Togedemaru",
      "Toxtricity"
     ]
    },
    {
-    "name": "Azumarill",
-    "gain": [
-     "answers Togedemaru: Lightning Rod (absorbs Electric and pulls Electric moves to itself in doubles)",
-     "answers Togedemaru: Elemental Seed (field seed: boosts it on entry)",
-     "answers Electivire: Speed 175",
-     "answers Raichu: Speed 205"
-    ],
-    "loss": [
-     "one-shot by Electivire",
-     "loses the check on Raichu",
-     "one-shot by Togedemaru",
-     "loses the check on Chandelure"
-    ],
-    "tier": "A",
-    "sid": "AZUMARILL",
-    "form": "0",
-    "delta": 93.6,
-    "res": 7,
-    "se": 2,
-    "oneshot": [
-     "Electivire",
-     "Togedemaru",
-     "Toxtricity"
-    ]
-   }
-  ],
-  "Gallade": [
-   {
-    "name": "Ampharos (Aevian Form)",
-    "gain": [
-     "survives Electivire",
-     "survives Chandelure",
-     "answers Raichu: spread Discharge",
-     "answers Magneton: spread Discharge"
-    ],
-    "loss": [
-     "loses the check on Magneton"
-    ],
-    "tier": "A",
-    "sid": "AMPHAROS",
-    "form": "1",
-    "delta": 1327.3,
-    "res": 8,
-    "se": 1,
-    "oneshot": []
-   },
-   {
-    "name": "Ninetales (Alolan Form)",
-    "gain": [
-     "survives Chandelure",
-     "uses the field more"
-    ],
-    "loss": [
-     "loses the check on Raichu",
-     "loses the check on Magneton",
-     "one-shot by Magneton",
-     "one-shot by Togedemaru"
-    ],
-    "tier": "A",
-    "sid": "NINETALES",
-    "form": "1",
-    "delta": 1316.7,
-    "res": 3,
-    "se": 0,
-    "oneshot": [
-     "Electivire",
-     "Magneton",
-     "Togedemaru",
-     "Toxtricity"
-    ]
-   },
-   {
-    "name": "Azumarill",
-    "gain": [
-     "survives Chandelure",
-     "answers Chandelure: Levitate (immune to Ground)",
-     "answers Electivire: Speed 175",
-     "answers Raichu: Speed 205"
-    ],
-    "loss": [
-     "loses the check on Raichu",
-     "loses the check on Magneton",
-     "one-shot by Togedemaru",
-     "one-shot by Toxtricity"
-    ],
-    "tier": "A",
-    "sid": "AZUMARILL",
-    "form": "0",
-    "delta": 89.7,
-    "res": 7,
-    "se": 2,
-    "oneshot": [
-     "Electivire",
-     "Togedemaru",
-     "Toxtricity"
-    ]
-   }
-  ],
-  "Golisopod (Aevian Form)": [
-   {
-    "name": "Ampharos (Aevian Form)",
-    "gain": [
-     "uses the field more"
-    ],
-    "loss": [
-     "loses the check on Togedemaru",
-     "loses Raichu: Focus Sash (survives one hit from full HP)",
-     "loses Magneton: Sturdy (survives any one hit from full)",
-     "loses Poison attacks from 2 (x1.5 on this field)"
-    ],
-    "tier": "A",
-    "sid": "AMPHAROS",
-    "form": "1",
-    "delta": 1294.3,
-    "res": 8,
-    "se": 1,
-    "oneshot": []
-   },
-   {
-    "name": "Ninetales (Alolan Form)",
-    "gain": [
-     "uses the field more"
-    ],
-    "loss": [
-     "one-shot by Electivire",
-     "loses the check on Raichu",
-     "one-shot by Magneton",
-     "loses the check on Togedemaru"
-    ],
-    "tier": "A",
-    "sid": "NINETALES",
-    "form": "1",
-    "delta": 1277.7,
-    "res": 3,
-    "se": 0,
-    "oneshot": [
-     "Electivire",
-     "Magneton",
-     "Togedemaru",
-     "Toxtricity"
-    ]
-   },
-   {
-    "name": "Azumarill",
-    "gain": [
-     "answers Chandelure: Levitate (immune to Ground)",
-     "answers Electivire: Speed 175",
-     "answers Raichu: Speed 205",
-     "answers Togedemaru: Speed 346"
-    ],
-    "loss": [
-     "one-shot by Electivire",
-     "loses the check on Raichu",
-     "loses the check on Togedemaru",
-     "one-shot by Togedemaru"
-    ],
-    "tier": "A",
-    "sid": "AZUMARILL",
-    "form": "0",
-    "delta": 26.7,
-    "res": 7,
-    "se": 2,
-    "oneshot": [
-     "Electivire",
-     "Togedemaru",
-     "Toxtricity"
-    ]
-   }
-  ],
-  "Crabominable": [
-   {
-    "name": "Ampharos (Aevian Form)",
-    "gain": [
-     "checks Raichu",
-     "survives Raichu",
-     "survives Magneton",
-     "answers Raichu: spread Discharge"
-    ],
-    "loss": [],
-    "tier": "A",
-    "sid": "AMPHAROS",
-    "form": "1",
-    "delta": 1400.5,
-    "res": 8,
-    "se": 1,
-    "oneshot": []
-   },
-   {
-    "name": "Ninetales (Alolan Form)",
-    "gain": [
-     "survives Raichu",
-     "uses the field more"
-    ],
+    "name": "Frosmoth",
+    "gain": [],
     "loss": [
      "one-shot by Electivire",
      "one-shot by Togedemaru",
-     "one-shot by Toxtricity"
+     "loses Togedemaru: Fell Stinger (+3)",
+     "loses Electivire: Speed 175"
     ],
-    "tier": "A",
-    "sid": "NINETALES",
-    "form": "1",
-    "delta": 1353.8,
-    "res": 3,
-    "se": 0,
-    "oneshot": [
-     "Electivire",
-     "Magneton",
-     "Togedemaru",
-     "Toxtricity"
-    ]
-   },
-   {
-    "name": "Azumarill",
-    "gain": [
-     "survives Raichu",
-     "survives Magneton",
-     "answers Electivire: Speed 175",
-     "answers Raichu: Speed 205"
-    ],
-    "loss": [
-     "one-shot by Electivire",
-     "one-shot by Togedemaru",
-     "one-shot by Toxtricity",
-     "uses the field less"
-    ],
-    "tier": "A",
-    "sid": "AZUMARILL",
+    "tier": "C",
+    "sid": "FROSMOTH",
     "form": "0",
-    "delta": 123.9,
-    "res": 7,
-    "se": 2,
-    "oneshot": [
-     "Electivire",
-     "Togedemaru",
-     "Toxtricity"
-    ]
-   }
-  ],
-  "Slowking (Galarian Form)": [
-   {
-    "name": "Ampharos (Aevian Form)",
-    "gain": [
-     "answers Raichu: spread Discharge",
-     "answers Magneton: spread Discharge",
-     "answers Toxtricity: spread Overdrive",
-     "answers Electric attacks from 6 (x1.3 on this field)"
-    ],
-    "loss": [
-     "loses the check on Toxtricity",
-     "loses Poison attacks from 2 (x1.5 on this field)",
-     "fits the team worse (both weak to Fighting, both weak to Fire)"
-    ],
-    "tier": "A",
-    "sid": "AMPHAROS",
-    "form": "1",
-    "delta": 1286.0,
-    "res": 8,
-    "se": 1,
-    "oneshot": []
-   },
-   {
-    "name": "Ninetales (Alolan Form)",
-    "gain": [
-     "uses the field more"
-    ],
-    "loss": [
-     "one-shot by Electivire",
-     "loses the check on Raichu",
-     "one-shot by Magneton",
-     "one-shot by Togedemaru"
-    ],
-    "tier": "A",
-    "sid": "NINETALES",
-    "form": "1",
-    "delta": 1277.4,
+    "delta": -89.3,
     "res": 3,
-    "se": 0,
+    "se": 1,
     "oneshot": [
      "Electivire",
-     "Magneton",
-     "Togedemaru",
-     "Toxtricity"
+     "Togedemaru"
     ]
    },
    {
-    "name": "Azumarill",
+    "name": "Beartic",
     "gain": [
      "answers Electivire: Motor Drive (absorbs Electric (+Speed))",
      "answers Togedemaru: Lightning Rod (absorbs Electric and pulls Electric moves to itself in doubles)",
@@ -2639,40 +2438,382 @@
      "answers Chandelure: Levitate (immune to Ground)"
     ],
     "loss": [
-     "one-shot by Electivire",
      "loses the check on Raichu",
-     "one-shot by Togedemaru",
-     "loses the check on Toxtricity"
+     "one-shot by Magneton",
+     "loses Togedemaru: Fell Stinger (+3)",
+     "uses the field less"
     ],
-    "tier": "A",
-    "sid": "AZUMARILL",
+    "tier": "C",
+    "sid": "BEARTIC",
     "form": "0",
-    "delta": 51.8,
-    "res": 7,
+    "delta": -104.2,
+    "res": 1,
     "se": 2,
     "oneshot": [
-     "Electivire",
-     "Togedemaru",
-     "Toxtricity"
+     "Magneton"
     ]
+   }
+  ],
+  "Scrafty": [
+   {
+    "name": "Palossand (Fiery Aevian Form)",
+    "gain": [
+     "answers Chandelure: Levitate (immune to Ground)",
+     "answers Poison attacks from 2 (x1.5 on this field)"
+    ],
+    "loss": [
+     "loses the check on Chandelure",
+     "one-shot by Chandelure",
+     "fits the team worse (both weak to Dark, both weak to Ground, both weak to Water)"
+    ],
+    "tier": "B",
+    "sid": "PALOSSAND",
+    "form": "2",
+    "delta": 34.2,
+    "res": 13,
+    "se": 4,
+    "oneshot": [
+     "Chandelure"
+    ]
+   },
+   {
+    "name": "Centiskorch",
+    "gain": [],
+    "loss": [
+     "loses the check on Chandelure",
+     "fits the team worse (both weak to Rock, both weak to Water)"
+    ],
+    "tier": "C",
+    "sid": "CENTISKORCH",
+    "form": "0",
+    "delta": 31.4,
+    "res": 11,
+    "se": 4,
+    "oneshot": []
+   },
+   {
+    "name": "Chandelure",
+    "gain": [
+     "answers Chandelure: Levitate (immune to Ground)",
+     "answers Poison attacks from 2 (x1.5 on this field)"
+    ],
+    "loss": [
+     "loses the check on Chandelure",
+     "one-shot by Chandelure",
+     "fits the team worse (both weak to Dark, both weak to Ground, both weak to Water)"
+    ],
+    "tier": "B",
+    "sid": "CHANDELURE",
+    "form": "0",
+    "delta": 27.8,
+    "res": 13,
+    "se": 4,
+    "oneshot": [
+     "Chandelure"
+    ]
+   }
+  ],
+  "Camerupt": [
+   {
+    "name": "Palossand (Fiery Aevian Form)",
+    "gain": [
+     "checks Raichu",
+     "answers Chandelure: Levitate (immune to Ground)"
+    ],
+    "loss": [
+     "loses the check on Togedemaru",
+     "one-shot by Chandelure"
+    ],
+    "tier": "B",
+    "sid": "PALOSSAND",
+    "form": "2",
+    "delta": 13.4,
+    "res": 13,
+    "se": 4,
+    "oneshot": [
+     "Chandelure"
+    ]
+   },
+   {
+    "name": "Turtonator",
+    "gain": [],
+    "loss": [],
+    "tier": "D",
+    "sid": "TURTONATOR",
+    "form": "0",
+    "delta": 7.3,
+    "res": 15,
+    "se": 2,
+    "oneshot": []
+   },
+   {
+    "name": "Chandelure",
+    "gain": [
+     "checks Raichu",
+     "answers Chandelure: Levitate (immune to Ground)"
+    ],
+    "loss": [
+     "loses the check on Togedemaru",
+     "one-shot by Chandelure"
+    ],
+    "tier": "B",
+    "sid": "CHANDELURE",
+    "form": "0",
+    "delta": 6.4,
+    "res": 13,
+    "se": 4,
+    "oneshot": [
+     "Chandelure"
+    ]
+   }
+  ],
+  "Golisopod (Aevian Form)": [
+   {
+    "name": "Dragalge",
+    "gain": [
+     "checks Chandelure",
+     "answers Chandelure: spread Burning Jealousy, Discharge",
+     "answers Chandelure: Levitate (immune to Ground)",
+     "answers Chandelure: Burning Jealousy undoes Icy Field"
+    ],
+    "loss": [
+     "one-shot by Electivire",
+     "loses the check on Raichu",
+     "loses the check on Togedemaru",
+     "loses Electivire: Assault Vest (special bulk x1.5: hit it physically)"
+    ],
+    "tier": "B",
+    "sid": "DRAGALGE",
+    "form": "0",
+    "delta": 3.4,
+    "res": 17,
+    "se": 2,
+    "oneshot": [
+     "Electivire"
+    ]
+   },
+   {
+    "name": "Palossand (Fiery Aevian Form)",
+    "gain": [
+     "checks Magneton",
+     "answers Chandelure: Levitate (immune to Ground)"
+    ],
+    "loss": [
+     "loses the check on Togedemaru",
+     "one-shot by Chandelure",
+     "loses Electivire: Assault Vest (special bulk x1.5: hit it physically)",
+     "loses Raichu: Focus Sash (survives one hit from full HP)"
+    ],
+    "tier": "B",
+    "sid": "PALOSSAND",
+    "form": "2",
+    "delta": 2.0,
+    "res": 13,
+    "se": 4,
+    "oneshot": [
+     "Chandelure"
+    ]
+   },
+   {
+    "name": "Turtonator",
+    "gain": [
+     "checks Magneton",
+     "answers Chandelure: spread Burning Jealousy, Discharge"
+    ],
+    "loss": [
+     "loses the check on Raichu",
+     "loses Electivire: Assault Vest (special bulk x1.5: hit it physically)",
+     "loses Raichu: Focus Sash (survives one hit from full HP)",
+     "loses Magneton: Sturdy (survives any one hit from full)"
+    ],
+    "tier": "D",
+    "sid": "TURTONATOR",
+    "form": "0",
+    "delta": -0.4,
+    "res": 15,
+    "se": 2,
+    "oneshot": []
+   }
+  ],
+  "Zoroark (Hisuian Form)": [
+   {
+    "name": "Palossand (Fiery Aevian Form)",
+    "gain": [
+     "survives Electivire",
+     "checks Raichu",
+     "checks Magneton",
+     "survives Togedemaru"
+    ],
+    "loss": [
+     "one-shot by Chandelure",
+     "uses the field less"
+    ],
+    "tier": "B",
+    "sid": "PALOSSAND",
+    "form": "2",
+    "delta": 40.7,
+    "res": 13,
+    "se": 4,
+    "oneshot": [
+     "Chandelure"
+    ]
+   },
+   {
+    "name": "Chandelure",
+    "gain": [
+     "survives Electivire",
+     "checks Raichu",
+     "checks Magneton",
+     "survives Togedemaru"
+    ],
+    "loss": [
+     "one-shot by Chandelure",
+     "uses the field less"
+    ],
+    "tier": "B",
+    "sid": "CHANDELURE",
+    "form": "0",
+    "delta": 34.3,
+    "res": 13,
+    "se": 4,
+    "oneshot": [
+     "Chandelure"
+    ]
+   },
+   {
+    "name": "Marowak (Alolan Form)",
+    "gain": [
+     "survives Electivire",
+     "checks Magneton",
+     "survives Togedemaru",
+     "survives Toxtricity"
+    ],
+    "loss": [
+     "one-shot by Chandelure",
+     "uses the field less"
+    ],
+    "tier": "C",
+    "sid": "MAROWAK",
+    "form": "1",
+    "delta": 29.9,
+    "res": 13,
+    "se": 6,
+    "oneshot": [
+     "Chandelure"
+    ]
+   }
+  ],
+  "Gastrodon": [
+   {
+    "name": "Dragalge",
+    "gain": [
+     "checks Chandelure",
+     "survives Chandelure",
+     "answers Chandelure: Levitate (immune to Ground)",
+     "answers Chandelure: Burning Jealousy undoes Icy Field"
+    ],
+    "loss": [
+     "one-shot by Electivire",
+     "loses the check on Magneton",
+     "loses the check on Togedemaru",
+     "loses the check on Toxtricity"
+    ],
+    "tier": "B",
+    "sid": "DRAGALGE",
+    "form": "0",
+    "delta": 19.5,
+    "res": 17,
+    "se": 2,
+    "oneshot": [
+     "Electivire"
+    ]
+   },
+   {
+    "name": "Palossand (Fiery Aevian Form)",
+    "gain": [
+     "checks Raichu",
+     "answers Chandelure: Levitate (immune to Ground)"
+    ],
+    "loss": [
+     "loses the check on Togedemaru",
+     "loses the check on Toxtricity"
+    ],
+    "tier": "B",
+    "sid": "PALOSSAND",
+    "form": "2",
+    "delta": 19.5,
+    "res": 13,
+    "se": 4,
+    "oneshot": [
+     "Chandelure"
+    ]
+   },
+   {
+    "name": "Turtonator",
+    "gain": [
+     "survives Chandelure"
+    ],
+    "loss": [
+     "loses the check on Toxtricity",
+     "fits the team worse (both weak to Ground)"
+    ],
+    "tier": "D",
+    "sid": "TURTONATOR",
+    "form": "0",
+    "delta": 18.6,
+    "res": 15,
+    "se": 2,
+    "oneshot": []
    }
   ]
  },
  "poolfit": [
   {
-   "name": "Vikavolt",
-   "tier": "B",
-   "sid": "VIKAVOLT",
+   "name": "Camerupt",
+   "tier": "C",
+   "sid": "CAMERUPT",
    "form": "0",
-   "fit": 30.3,
+   "fit": 35.2,
    "grade": "Great",
-   "res": 13,
-   "weak": 2,
+   "res": 15,
+   "weak": 0,
    "nmoves": 22,
    "se": 5,
    "oneshot": [],
+   "in_six": true,
+   "where": "Overflow"
+  },
+  {
+   "name": "Palossand (Fiery Aevian Form)",
+   "tier": "B",
+   "sid": "PALOSSAND",
+   "form": "2",
+   "fit": 29.7,
+   "grade": "Great",
+   "res": 13,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [
+    "Chandelure"
+   ],
    "in_six": false,
-   "where": "Active"
+   "where": "Overflow"
+  },
+  {
+   "name": "Turtonator",
+   "tier": "D",
+   "sid": "TURTONATOR",
+   "form": "0",
+   "fit": 28.5,
+   "grade": "Great",
+   "res": 15,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Chandelure",
@@ -2692,6 +2833,70 @@
    "where": "Active"
   },
   {
+   "name": "Centiskorch",
+   "tier": "C",
+   "sid": "CENTISKORCH",
+   "form": "0",
+   "fit": 28.1,
+   "grade": "Great",
+   "res": 11,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Gastrodon",
+   "tier": "B",
+   "sid": "GASTRODON",
+   "form": "0",
+   "fit": 27.3,
+   "grade": "Great",
+   "res": 13,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Chandelure"
+   ],
+   "in_six": true,
+   "where": "Overflow"
+  },
+  {
+   "name": "Marowak (Alolan Form)",
+   "tier": "C",
+   "sid": "MAROWAK",
+   "form": "1",
+   "fit": 26.6,
+   "grade": "Great",
+   "res": 13,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 6,
+   "oneshot": [
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Vikavolt",
+   "tier": "B",
+   "sid": "VIKAVOLT",
+   "form": "0",
+   "fit": 26.3,
+   "grade": "Great",
+   "res": 13,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
    "name": "Golisopod (Aevian Form)",
    "tier": "S",
    "sid": "GOLISOPOD",
@@ -2704,6 +2909,40 @@
    "se": 5,
    "oneshot": [],
    "in_six": true,
+   "where": "Party"
+  },
+  {
+   "name": "Nidoqueen",
+   "tier": "C",
+   "sid": "NIDOQUEEN",
+   "form": "0",
+   "fit": 25.8,
+   "grade": "Great",
+   "res": 13,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 6,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Clodsire",
+   "tier": "B",
+   "sid": "CLODSIRE",
+   "form": "0",
+   "fit": 25.7,
+   "grade": "Great",
+   "res": 13,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
    "where": "Active"
   },
   {
@@ -2724,19 +2963,81 @@
    "where": "Active"
   },
   {
-   "name": "Clodsire",
-   "tier": "B",
-   "sid": "CLODSIRE",
+   "name": "Luxray",
+   "tier": "D",
+   "sid": "LUXRAY",
    "form": "0",
-   "fit": 21.7,
+   "fit": 24.5,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Runerigus",
+   "tier": "C",
+   "sid": "RUNERIGUS",
+   "form": "0",
+   "fit": 23.1,
+   "grade": "Great",
+   "res": 13,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 6,
+   "oneshot": [
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Seismitoad",
+   "tier": "C",
+   "sid": "SEISMITOAD",
+   "form": "0",
+   "fit": 20.1,
    "grade": "Great",
    "res": 13,
    "weak": 2,
    "nmoves": 22,
-   "se": 5,
+   "se": 2,
    "oneshot": [
-    "Electivire"
+    "Chandelure"
    ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Magnezone",
+   "tier": "B",
+   "sid": "MAGNEZONE",
+   "form": "0",
+   "fit": 20.0,
+   "grade": "Great",
+   "res": 17,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Emboar",
+   "tier": "C",
+   "sid": "EMBOAR",
+   "form": "0",
+   "fit": 19.3,
+   "grade": "Great",
+   "res": 9,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [],
    "in_six": false,
    "where": "Active"
   },
@@ -2753,7 +3054,39 @@
    "se": 2,
    "oneshot": [],
    "in_six": false,
-   "where": "Party"
+   "where": "Active"
+  },
+  {
+   "name": "Typhlosion",
+   "tier": "B",
+   "sid": "TYPHLOSION",
+   "form": "0",
+   "fit": 18.3,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 3,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Mudsdale",
+   "tier": "C",
+   "sid": "MUDSDALE",
+   "form": "0",
+   "fit": 18.2,
+   "grade": "Great",
+   "res": 9,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Palossand",
@@ -2805,6 +3138,23 @@
    "where": "Active"
   },
   {
+   "name": "Bronzong",
+   "tier": "C",
+   "sid": "BRONZONG",
+   "form": "0",
+   "fit": 17.8,
+   "grade": "Great",
+   "res": 8,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Golurk",
    "tier": "B",
    "sid": "GOLURK",
@@ -2820,7 +3170,24 @@
     "Chandelure"
    ],
    "in_six": false,
-   "where": "Party"
+   "where": "Active"
+  },
+  {
+   "name": "Wormadam (Sandy Cloak)",
+   "tier": "D",
+   "sid": "WORMADAM",
+   "form": "1",
+   "fit": 17.6,
+   "grade": "Great",
+   "res": 11,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 6,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Toxtricity (Aevian Form)",
@@ -2838,7 +3205,59 @@
     "Raichu"
    ],
    "in_six": false,
-   "where": "Party"
+   "where": "Active"
+  },
+  {
+   "name": "Nidoking",
+   "tier": "B",
+   "sid": "NIDOKING",
+   "form": "0",
+   "fit": 16.7,
+   "grade": "Great",
+   "res": 13,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Druddigon",
+   "tier": "C",
+   "sid": "DRUDDIGON",
+   "form": "0",
+   "fit": 16.1,
+   "grade": "Great",
+   "res": 11,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Pincurchin",
+   "tier": "C",
+   "sid": "PINCURCHIN",
+   "form": "0",
+   "fit": 15.3,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Slowking (Galarian Form)",
@@ -2846,31 +3265,363 @@
    "sid": "SLOWKING",
    "form": "1",
    "fit": 15.0,
-   "grade": "Good",
+   "grade": "Great",
    "res": 6,
    "weak": 1,
    "nmoves": 22,
    "se": 1,
    "oneshot": [],
-   "in_six": true,
-   "where": "Active"
+   "in_six": false,
+   "where": "Party"
   },
   {
-   "name": "Typhlosion",
+   "name": "Bellibolt",
    "tier": "B",
-   "sid": "TYPHLOSION",
+   "sid": "BELLIBOLT",
    "form": "0",
-   "fit": 14.3,
-   "grade": "Good",
+   "fit": 14.5,
+   "grade": "Great",
    "res": 9,
    "weak": 0,
    "nmoves": 22,
-   "se": 3,
+   "se": 0,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Quagsire",
+   "tier": "B",
+   "sid": "QUAGSIRE",
+   "form": "0",
+   "fit": 14.3,
+   "grade": "Great",
+   "res": 13,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Raichu",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Muk",
+   "tier": "C",
+   "sid": "MUK",
+   "form": "0",
+   "fit": 14.1,
+   "grade": "Great",
+   "res": 8,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Rapidash",
+   "tier": "D",
+   "sid": "RAPIDASH",
+   "form": "0",
+   "fit": 14.1,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Jolteon",
+   "tier": "C",
+   "sid": "JOLTEON",
+   "form": "0",
+   "fit": 13.8,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Skuntank",
+   "tier": "C",
+   "sid": "SKUNTANK",
+   "form": "0",
+   "fit": 13.8,
+   "grade": "Great",
+   "res": 6,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Wormadam (Trash Cloak)",
+   "tier": "D",
+   "sid": "WORMADAM",
+   "form": "2",
+   "fit": 13.7,
+   "grade": "Great",
+   "res": 10,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Flareon",
+   "tier": "B",
+   "sid": "FLAREON",
+   "form": "0",
+   "fit": 13.6,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 2,
    "oneshot": [
     "Electivire"
    ],
    "in_six": false,
-   "where": "Active"
+   "where": "Overflow"
+  },
+  {
+   "name": "Electrode",
+   "tier": "D",
+   "sid": "ELECTRODE",
+   "form": "0",
+   "fit": 13.5,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Claydol",
+   "tier": "D",
+   "sid": "CLAYDOL",
+   "form": "0",
+   "fit": 13.4,
+   "grade": "Great",
+   "res": 12,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Electivire",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Magcargo",
+   "tier": "C",
+   "sid": "MAGCARGO",
+   "form": "0",
+   "fit": 13.2,
+   "grade": "Great",
+   "res": 7,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Eelektross",
+   "tier": "C",
+   "sid": "EELEKTROSS",
+   "form": "0",
+   "fit": 12.8,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Sandaconda",
+   "tier": "C",
+   "sid": "SANDACONDA",
+   "form": "0",
+   "fit": 12.7,
+   "grade": "Great",
+   "res": 9,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Ampharos",
+   "tier": "C",
+   "sid": "AMPHAROS",
+   "form": "0",
+   "fit": 12.4,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Sandslash",
+   "tier": "D",
+   "sid": "SANDSLASH",
+   "form": "0",
+   "fit": 12.3,
+   "grade": "Great",
+   "res": 9,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 6,
+   "oneshot": [
+    "Magneton",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Dugtrio (Alolan Form)",
+   "tier": "D",
+   "sid": "DUGTRIO",
+   "form": "1",
+   "fit": 12.2,
+   "grade": "Great",
+   "res": 14,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 6,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Scovillain",
+   "tier": "C",
+   "sid": "SCOVILLAIN",
+   "form": "0",
+   "fit": 12.2,
+   "grade": "Great",
+   "res": 11,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Ninetales",
+   "tier": "B",
+   "sid": "NINETALES",
+   "form": "0",
+   "fit": 12.1,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Arbok",
+   "tier": "D",
+   "sid": "ARBOK",
+   "form": "0",
+   "fit": 12.1,
+   "grade": "Great",
+   "res": 8,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Raichu"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Dusclops",
+   "tier": "C",
+   "sid": "DUSCLOPS",
+   "form": "0",
+   "fit": 12.0,
+   "grade": "Great",
+   "res": 6,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Pawmot",
+   "tier": "C",
+   "sid": "PAWMOT",
+   "form": "0",
+   "fit": 11.8,
+   "grade": "Great",
+   "res": 11,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Raichu",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Gastrodon (West Aevian Form)",
@@ -2878,11 +3629,145 @@
    "sid": "GASTRODON",
    "form": "1",
    "fit": 11.6,
-   "grade": "Good",
+   "grade": "Great",
    "res": 11,
    "weak": 5,
    "nmoves": 22,
    "se": 5,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Heatmor",
+   "tier": "C",
+   "sid": "HEATMOR",
+   "form": "0",
+   "fit": 11.6,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Ampharos (Aevian Form)",
+   "tier": "A",
+   "sid": "AMPHAROS",
+   "form": "1",
+   "fit": 11.5,
+   "grade": "Great",
+   "res": 8,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [],
+   "in_six": true,
+   "where": "Active"
+  },
+  {
+   "name": "Forretress",
+   "tier": "D",
+   "sid": "FORRETRESS",
+   "form": "0",
+   "fit": 11.5,
+   "grade": "Great",
+   "res": 10,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Magmar",
+   "tier": "D",
+   "sid": "MAGMAR",
+   "form": "0",
+   "fit": 11.4,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Shedinja",
+   "tier": "D",
+   "sid": "SHEDINJA",
+   "form": "0",
+   "fit": 11.4,
+   "grade": "Great",
+   "res": 8,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Zoroark (Hisuian Form)",
+   "tier": "C",
+   "sid": "ZOROARK",
+   "form": "1",
+   "fit": 11.4,
+   "grade": "Great",
+   "res": 7,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": true,
+   "where": "Active"
+  },
+  {
+   "name": "Hitmontop",
+   "tier": "C",
+   "sid": "HITMONTOP",
+   "form": "0",
+   "fit": 11.3,
+   "grade": "Great",
+   "res": 2,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 6,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Togedemaru",
+   "tier": "D",
+   "sid": "TOGEDEMARU",
+   "form": "0",
+   "fit": 11.3,
+   "grade": "Great",
+   "res": 17,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
    "oneshot": [
     "Electivire"
    ],
@@ -2895,7 +3780,7 @@
    "sid": "LEAVANNY",
    "form": "1",
    "fit": 10.9,
-   "grade": "Good",
+   "grade": "Great",
    "res": 11,
    "weak": 1,
    "nmoves": 22,
@@ -2909,12 +3794,200 @@
    "where": "Active"
   },
   {
-   "name": "Roserade (Aevian Form)",
+   "name": "Weezing",
+   "tier": "D",
+   "sid": "WEEZING",
+   "form": "0",
+   "fit": 10.7,
+   "grade": "Great",
+   "res": 8,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Raichu"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Donphan",
    "tier": "A",
+   "sid": "DONPHAN",
+   "form": "0",
+   "fit": 10.6,
+   "grade": "Great",
+   "res": 9,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Salandit",
+   "tier": "D",
+   "sid": "SALANDIT",
+   "form": "0",
+   "fit": 10.6,
+   "grade": "Great",
+   "res": 13,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Simisear",
+   "tier": "C",
+   "sid": "SIMISEAR",
+   "form": "0",
+   "fit": 10.5,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Overqwil",
+   "tier": "B",
+   "sid": "OVERQWIL",
+   "form": "0",
+   "fit": 10.4,
+   "grade": "Great",
+   "res": 6,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Zebstrika",
+   "tier": "C",
+   "sid": "ZEBSTRIKA",
+   "form": "0",
+   "fit": 10.3,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Spidops",
+   "tier": "D",
+   "sid": "SPIDOPS",
+   "form": "0",
+   "fit": 10.1,
+   "grade": "Great",
+   "res": 4,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Manectric",
+   "tier": "D",
+   "sid": "MANECTRIC",
+   "form": "0",
+   "fit": 10.1,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Electabuzz",
+   "tier": "C",
+   "sid": "ELECTABUZZ",
+   "form": "0",
+   "fit": 10.1,
+   "grade": "Great",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Seviper",
+   "tier": "D",
+   "sid": "SEVIPER",
+   "form": "0",
+   "fit": 10.1,
+   "grade": "Great",
+   "res": 8,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Arctozolt",
+   "tier": "C",
+   "sid": "ARCTOZOLT",
+   "form": "0",
+   "fit": 10.0,
+   "grade": "Great",
+   "res": 8,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Roserade (Aevian Form)",
+   "tier": "S",
    "sid": "ROSERADE",
    "form": "1",
-   "fit": 9.2,
-   "grade": "Good",
+   "fit": 9.8,
+   "grade": "Great",
    "res": 11,
    "weak": 4,
    "nmoves": 22,
@@ -2926,7 +3999,119 @@
     "Toxtricity"
    ],
    "in_six": false,
-   "where": "Active"
+   "where": "Party"
+  },
+  {
+   "name": "Drapion",
+   "tier": "C",
+   "sid": "DRAPION",
+   "form": "0",
+   "fit": 9.8,
+   "grade": "Great",
+   "res": 6,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Swalot",
+   "tier": "D",
+   "sid": "SWALOT",
+   "form": "0",
+   "fit": 9.8,
+   "grade": "Great",
+   "res": 8,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Diggersby",
+   "tier": "C",
+   "sid": "DIGGERSBY",
+   "form": "0",
+   "fit": 9.7,
+   "grade": "Great",
+   "res": 10,
+   "weak": 5,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Revavroom",
+   "tier": "B",
+   "sid": "REVAVROOM",
+   "form": "0",
+   "fit": 9.7,
+   "grade": "Good",
+   "res": 9,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Decidueye",
+   "tier": "B",
+   "sid": "DECIDUEYE",
+   "form": "0",
+   "fit": 9.2,
+   "grade": "Good",
+   "res": 11,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Pyroar",
+   "tier": "C",
+   "sid": "PYROAR",
+   "form": "0",
+   "fit": 9.1,
+   "grade": "Good",
+   "res": 10,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Garbodor",
+   "tier": "C",
+   "sid": "GARBODOR",
+   "form": "0",
+   "fit": 8.9,
+   "grade": "Good",
+   "res": 8,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Scrafty",
@@ -2940,8 +4125,44 @@
    "nmoves": 22,
    "se": 4,
    "oneshot": [],
-   "in_six": false,
+   "in_six": true,
    "where": "Active"
+  },
+  {
+   "name": "Marowak",
+   "tier": "C",
+   "sid": "MAROWAK",
+   "form": "0",
+   "fit": 8.7,
+   "grade": "Good",
+   "res": 9,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Boltund",
+   "tier": "C",
+   "sid": "BOLTUND",
+   "form": "0",
+   "fit": 8.7,
+   "grade": "Good",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Gallade",
@@ -2958,8 +4179,59 @@
     "Electivire",
     "Chandelure"
    ],
-   "in_six": true,
+   "in_six": false,
    "where": "Active"
+  },
+  {
+   "name": "Slowbro (Galarian Form)",
+   "tier": "C",
+   "sid": "SLOWBRO",
+   "form": "1",
+   "fit": 8.2,
+   "grade": "Good",
+   "res": 6,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Coalossal",
+   "tier": "D",
+   "sid": "COALOSSAL",
+   "form": "0",
+   "fit": 8.0,
+   "grade": "Good",
+   "res": 7,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Beedrill",
+   "tier": "D",
+   "sid": "BEEDRILL",
+   "form": "0",
+   "fit": 7.9,
+   "grade": "Good",
+   "res": 8,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 6,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Arcanine (Hisuian Form)",
@@ -2974,7 +4246,73 @@
    "se": 2,
    "oneshot": [],
    "in_six": false,
-   "where": "Party"
+   "where": "Active"
+  },
+  {
+   "name": "Toxicroak",
+   "tier": "C",
+   "sid": "TOXICROAK",
+   "form": "0",
+   "fit": 7.7,
+   "grade": "Good",
+   "res": 8,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Cofagrigus",
+   "tier": "C",
+   "sid": "COFAGRIGUS",
+   "form": "0",
+   "fit": 7.6,
+   "grade": "Good",
+   "res": 6,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Throh",
+   "tier": "D",
+   "sid": "THROH",
+   "form": "0",
+   "fit": 7.5,
+   "grade": "Good",
+   "res": 2,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Pachirisu",
+   "tier": "D",
+   "sid": "PACHIRISU",
+   "form": "0",
+   "fit": 7.3,
+   "grade": "Good",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Amoonguss",
@@ -2994,20 +4332,437 @@
    "where": "Overflow"
   },
   {
-   "name": "Donphan",
-   "tier": "A",
-   "sid": "DONPHAN",
+   "name": "Dustox",
+   "tier": "D",
+   "sid": "DUSTOX",
    "form": "0",
-   "fit": 6.6,
+   "fit": 7.1,
+   "grade": "Good",
+   "res": 8,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Malamar",
+   "tier": "B",
+   "sid": "MALAMAR",
+   "form": "0",
+   "fit": 6.9,
+   "grade": "Good",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Magneton"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Grapploct",
+   "tier": "C",
+   "sid": "GRAPPLOCT",
+   "form": "0",
+   "fit": 6.9,
+   "grade": "Good",
+   "res": 2,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Dugtrio",
+   "tier": "D",
+   "sid": "DUGTRIO",
+   "form": "0",
+   "fit": 6.8,
    "grade": "Good",
    "res": 9,
    "weak": 3,
    "nmoves": 22,
-   "se": 5,
+   "se": 6,
    "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
     "Chandelure",
     "Toxtricity"
    ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Tyrantrum",
+   "tier": "C",
+   "sid": "TYRANTRUM",
+   "form": "0",
+   "fit": 6.7,
+   "grade": "Good",
+   "res": 11,
+   "weak": 5,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Drampa",
+   "tier": "C",
+   "sid": "DRAMPA",
+   "form": "0",
+   "fit": 6.7,
+   "grade": "Good",
+   "res": 12,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Venusaur",
+   "tier": "B",
+   "sid": "VENUSAUR",
+   "form": "0",
+   "fit": 6.5,
+   "grade": "Good",
+   "res": 11,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Stunfisk",
+   "tier": "C",
+   "sid": "STUNFISK",
+   "form": "0",
+   "fit": 6.4,
+   "grade": "Good",
+   "res": 11,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Torterra",
+   "tier": "B",
+   "sid": "TORTERRA",
+   "form": "0",
+   "fit": 6.3,
+   "grade": "Good",
+   "res": 7,
+   "weak": 5,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Houndoom",
+   "tier": "C",
+   "sid": "HOUNDOOM",
+   "form": "0",
+   "fit": 6.2,
+   "grade": "Good",
+   "res": 9,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Salazzle",
+   "tier": "D",
+   "sid": "SALAZZLE",
+   "form": "0",
+   "fit": 6.2,
+   "grade": "Good",
+   "res": 13,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Dedenne",
+   "tier": "D",
+   "sid": "DEDENNE",
+   "form": "0",
+   "fit": 6.1,
+   "grade": "Good",
+   "res": 11,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Banette",
+   "tier": "D",
+   "sid": "BANETTE",
+   "form": "0",
+   "fit": 6.0,
+   "grade": "Good",
+   "res": 6,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Palossand (Rocky Aevian Form)",
+   "tier": "B",
+   "sid": "PALOSSAND",
+   "form": "1",
+   "fit": 5.9,
+   "grade": "Good",
+   "res": 8,
+   "weak": 5,
+   "nmoves": 22,
+   "se": 6,
+   "oneshot": [
+    "Magneton",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Raichu",
+   "tier": "C",
+   "sid": "RAICHU",
+   "form": "0",
+   "fit": 5.9,
+   "grade": "Good",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Pinsir",
+   "tier": "D",
+   "sid": "PINSIR",
+   "form": "0",
+   "fit": 5.9,
+   "grade": "Good",
+   "res": 4,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 3,
+   "oneshot": [
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Scolipede",
+   "tier": "D",
+   "sid": "SCOLIPEDE",
+   "form": "0",
+   "fit": 5.7,
+   "grade": "Good",
+   "res": 8,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Cursola",
+   "tier": "C",
+   "sid": "CURSOLA",
+   "form": "0",
+   "fit": 5.6,
+   "grade": "Good",
+   "res": 6,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Minun",
+   "tier": "D",
+   "sid": "MINUN",
+   "form": "0",
+   "fit": 5.3,
+   "grade": "Good",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Pangoro",
+   "tier": "C",
+   "sid": "PANGORO",
+   "form": "0",
+   "fit": 5.2,
+   "grade": "Good",
+   "res": 2,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Mismagius",
+   "tier": "C",
+   "sid": "MISMAGIUS",
+   "form": "0",
+   "fit": 5.0,
+   "grade": "Good",
+   "res": 6,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Passimian",
+   "tier": "C",
+   "sid": "PASSIMIAN",
+   "form": "0",
+   "fit": 4.9,
+   "grade": "Good",
+   "res": 2,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [
+    "Raichu"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Perrserker",
+   "tier": "C",
+   "sid": "PERRSERKER",
+   "form": "0",
+   "fit": 4.7,
+   "grade": "Good",
+   "res": 10,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Gothitelle",
+   "tier": "B",
+   "sid": "GOTHITELLE",
+   "form": "0",
+   "fit": 4.5,
+   "grade": "Good",
+   "res": 3,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 3,
+   "oneshot": [
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Hypno",
+   "tier": "D",
+   "sid": "HYPNO",
+   "form": "0",
+   "fit": 4.5,
+   "grade": "Good",
+   "res": 3,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [],
    "in_six": false,
    "where": "Overflow"
   },
@@ -3029,19 +4784,155 @@
    "where": "Active"
   },
   {
-   "name": "Ampharos (Aevian Form)",
-   "tier": "A",
-   "sid": "AMPHAROS",
-   "form": "1",
+   "name": "Klinklang",
+   "tier": "C",
+   "sid": "KLINKLANG",
+   "form": "0",
    "fit": 4.3,
    "grade": "Good",
-   "res": 8,
+   "res": 10,
    "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Palossand (Icy Aevian Form)",
+   "tier": "B",
+   "sid": "PALOSSAND",
+   "form": "3",
+   "fit": 4.2,
+   "grade": "Good",
+   "res": 7,
+   "weak": 5,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Magneton"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Medicham",
+   "tier": "D",
+   "sid": "MEDICHAM",
+   "form": "0",
+   "fit": 4.2,
+   "grade": "Good",
+   "res": 2,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 3,
+   "oneshot": [
+    "Electivire",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Toedscruel",
+   "tier": "C",
+   "sid": "TOEDSCRUEL",
+   "form": "0",
+   "fit": 4.2,
+   "grade": "Good",
+   "res": 7,
+   "weak": 5,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Oranguru",
+   "tier": "C",
+   "sid": "ORANGURU",
+   "form": "0",
+   "fit": 4.1,
+   "grade": "Good",
+   "res": 2,
+   "weak": 2,
    "nmoves": 22,
    "se": 1,
    "oneshot": [],
    "in_six": false,
-   "where": "Active"
+   "where": "Overflow"
+  },
+  {
+   "name": "Shuckle",
+   "tier": "B",
+   "sid": "SHUCKLE",
+   "form": "0",
+   "fit": 4.0,
+   "grade": "Good",
+   "res": 2,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Grumpig",
+   "tier": "C",
+   "sid": "GRUMPIG",
+   "form": "0",
+   "fit": 3.9,
+   "grade": "Good",
+   "res": 3,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 3,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Chimecho",
+   "tier": "C",
+   "sid": "CHIMECHO",
+   "form": "0",
+   "fit": 3.9,
+   "grade": "Good",
+   "res": 3,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 3,
+   "oneshot": [
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Blissey",
+   "tier": "C",
+   "sid": "BLISSEY",
+   "form": "0",
+   "fit": 3.9,
+   "grade": "Good",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Hariyama",
@@ -3059,23 +4950,214 @@
    "where": "Active"
   },
   {
-   "name": "Torterra",
-   "tier": "B",
-   "sid": "TORTERRA",
+   "name": "Mawile",
+   "tier": "D",
+   "sid": "MAWILE",
    "form": "0",
-   "fit": 2.3,
+   "fit": 3.5,
    "grade": "Good",
-   "res": 7,
-   "weak": 5,
+   "res": 8,
+   "weak": 2,
    "nmoves": 22,
-   "se": 5,
+   "se": 2,
    "oneshot": [
-    "Electivire",
-    "Magneton",
+    "Chandelure",
     "Toxtricity"
    ],
    "in_six": false,
-   "where": "Active"
+   "where": "Overflow"
+  },
+  {
+   "name": "Plusle",
+   "tier": "D",
+   "sid": "PLUSLE",
+   "form": "0",
+   "fit": 3.3,
+   "grade": "Good",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Hitmonchan",
+   "tier": "C",
+   "sid": "HITMONCHAN",
+   "form": "0",
+   "fit": 3.3,
+   "grade": "Good",
+   "res": 2,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Brambleghast",
+   "tier": "C",
+   "sid": "BRAMBLEGHAST",
+   "form": "0",
+   "fit": 3.1,
+   "grade": "Good",
+   "res": 11,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Venomoth",
+   "tier": "D",
+   "sid": "VENOMOTH",
+   "form": "0",
+   "fit": 3.1,
+   "grade": "Good",
+   "res": 8,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Bastiodon",
+   "tier": "D",
+   "sid": "BASTIODON",
+   "form": "0",
+   "fit": 3.1,
+   "grade": "Good",
+   "res": 6,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Lucario",
+   "tier": "C",
+   "sid": "LUCARIO",
+   "form": "0",
+   "fit": 2.9,
+   "grade": "Good",
+   "res": 9,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Kangaskhan",
+   "tier": "D",
+   "sid": "KANGASKHAN",
+   "form": "0",
+   "fit": 2.8,
+   "grade": "Good",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Wyrdeer",
+   "tier": "C",
+   "sid": "WYRDEER",
+   "form": "0",
+   "fit": 2.6,
+   "grade": "Good",
+   "res": 2,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Pumpkaboo",
+   "tier": "D",
+   "sid": "PUMPKABOO",
+   "form": "0",
+   "fit": 2.5,
+   "grade": "Good",
+   "res": 11,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Phantump",
+   "tier": "D",
+   "sid": "PHANTUMP",
+   "form": "0",
+   "fit": 2.5,
+   "grade": "Good",
+   "res": 11,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Copperajah",
+   "tier": "B",
+   "sid": "COPPERAJAH",
+   "form": "0",
+   "fit": 2.4,
+   "grade": "Good",
+   "res": 10,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Drapion (Aevian Form)",
@@ -3096,12 +5178,190 @@
    "where": "Active"
   },
   {
+   "name": "Gimmighoul",
+   "tier": "D",
+   "sid": "GIMMIGHOUL",
+   "form": "0",
+   "fit": 2.0,
+   "grade": "Good",
+   "res": 6,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Vileplume",
+   "tier": "C",
+   "sid": "VILEPLUME",
+   "form": "0",
+   "fit": 1.9,
+   "grade": "Good",
+   "res": 11,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Grafaiai",
+   "tier": "D",
+   "sid": "GRAFAIAI",
+   "form": "0",
+   "fit": 1.9,
+   "grade": "Good",
+   "res": 7,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Volbeat",
+   "tier": "D",
+   "sid": "VOLBEAT",
+   "form": "0",
+   "fit": 1.7,
+   "grade": "Good",
+   "res": 4,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Probopass",
+   "tier": "C",
+   "sid": "PROBOPASS",
+   "form": "0",
+   "fit": 1.7,
+   "grade": "Good",
+   "res": 6,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Musharna",
+   "tier": "C",
+   "sid": "MUSHARNA",
+   "form": "0",
+   "fit": 1.5,
+   "grade": "Good",
+   "res": 3,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Charcadet",
+   "tier": "D",
+   "sid": "CHARCADET",
+   "form": "0",
+   "fit": 1.4,
+   "grade": "Good",
+   "res": 9,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Oricorio (Pom-Pom Style)",
+   "tier": "D",
+   "sid": "ORICORIO",
+   "form": "1",
+   "fit": 1.4,
+   "grade": "Good",
+   "res": 8,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Audino",
+   "tier": "D",
+   "sid": "AUDINO",
+   "form": "0",
+   "fit": 1.4,
+   "grade": "Good",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Meowstic",
+   "tier": "D",
+   "sid": "MEOWSTIC",
+   "form": "0",
+   "fit": 1.3,
+   "grade": "Good",
+   "res": 3,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 3,
+   "oneshot": [
+    "Electivire",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Sylveon",
    "tier": "B",
    "sid": "SYLVEON",
    "form": "0",
    "fit": 1.3,
-   "grade": "Weak",
+   "grade": "Good",
    "res": 4,
    "weak": 4,
    "nmoves": 22,
@@ -3110,7 +5370,258 @@
     "Togedemaru"
    ],
    "in_six": false,
-   "where": "Active"
+   "where": "Party"
+  },
+  {
+   "name": "Wormadam",
+   "tier": "D",
+   "sid": "WORMADAM",
+   "form": "0",
+   "fit": 1.3,
+   "grade": "Good",
+   "res": 11,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Umbreon",
+   "tier": "C",
+   "sid": "UMBREON",
+   "form": "0",
+   "fit": 1.3,
+   "grade": "Good",
+   "res": 2,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Orbeetle",
+   "tier": "C",
+   "sid": "ORBEETLE",
+   "form": "0",
+   "fit": 1.2,
+   "grade": "Good",
+   "res": 5,
+   "weak": 5,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Ariados",
+   "tier": "D",
+   "sid": "ARIADOS",
+   "form": "0",
+   "fit": 1.1,
+   "grade": "Good",
+   "res": 8,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Dudunsparce",
+   "tier": "B",
+   "sid": "DUDUNSPARCE",
+   "form": "0",
+   "fit": 1.1,
+   "grade": "Good",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Tatsugiri",
+   "tier": "C",
+   "sid": "TATSUGIRI",
+   "form": "0",
+   "fit": 0.7,
+   "grade": "Good",
+   "res": 4,
+   "weak": 0,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Slaking",
+   "tier": "C",
+   "sid": "SLAKING",
+   "form": "0",
+   "fit": 0.5,
+   "grade": "Good",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Oinkologne",
+   "tier": "C",
+   "sid": "OINKOLOGNE",
+   "form": "0",
+   "fit": 0.5,
+   "grade": "Good",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Greedent",
+   "tier": "C",
+   "sid": "GREEDENT",
+   "form": "0",
+   "fit": 0.5,
+   "grade": "Good",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Stoutland",
+   "tier": "C",
+   "sid": "STOUTLAND",
+   "form": "0",
+   "fit": 0.5,
+   "grade": "Good",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Roserade",
+   "tier": "C",
+   "sid": "ROSERADE",
+   "form": "0",
+   "fit": 0.4,
+   "grade": "Good",
+   "res": 11,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Victreebel",
+   "tier": "C",
+   "sid": "VICTREEBEL",
+   "form": "0",
+   "fit": 0.4,
+   "grade": "Good",
+   "res": 11,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Lokix",
+   "tier": "B",
+   "sid": "LOKIX",
+   "form": "0",
+   "fit": 0.2,
+   "grade": "Good",
+   "res": 4,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Exploud",
+   "tier": "D",
+   "sid": "EXPLOUD",
+   "form": "0",
+   "fit": 0.2,
+   "grade": "Good",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Espeon",
+   "tier": "C",
+   "sid": "ESPEON",
+   "form": "0",
+   "fit": -0.1,
+   "grade": "Good",
+   "res": 3,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 3,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Musharna (Aevian Form)",
@@ -3118,7 +5629,7 @@
    "sid": "MUSHARNA",
    "form": "1",
    "fit": -0.4,
-   "grade": "Weak",
+   "grade": "Good",
    "res": 2,
    "weak": 4,
    "nmoves": 22,
@@ -3126,8 +5637,337 @@
    "oneshot": [
     "Toxtricity"
    ],
-   "in_six": true,
+   "in_six": false,
    "where": "Party"
+  },
+  {
+   "name": "Heracross",
+   "tier": "D",
+   "sid": "HERACROSS",
+   "form": "0",
+   "fit": -0.5,
+   "grade": "Good",
+   "res": 6,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Raichu"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Thievul",
+   "tier": "D",
+   "sid": "THIEVUL",
+   "form": "0",
+   "fit": -0.5,
+   "grade": "Good",
+   "res": 2,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 6,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Kecleon",
+   "tier": "D",
+   "sid": "KECLEON",
+   "form": "0",
+   "fit": -0.6,
+   "grade": "Good",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Ursaring",
+   "tier": "C",
+   "sid": "URSARING",
+   "form": "0",
+   "fit": -1.0,
+   "grade": "Good",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Silvally",
+   "tier": "C",
+   "sid": "SILVALLY",
+   "form": "0",
+   "fit": -1.0,
+   "grade": "Good",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Appletun",
+   "tier": "C",
+   "sid": "APPLETUN",
+   "form": "0",
+   "fit": -1.3,
+   "grade": "Good",
+   "res": 9,
+   "weak": 5,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Frosmoth",
+   "tier": "C",
+   "sid": "FROSMOTH",
+   "form": "0",
+   "fit": -1.4,
+   "grade": "Good",
+   "res": 3,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Mamoswine",
+   "tier": "B",
+   "sid": "MAMOSWINE",
+   "form": "0",
+   "fit": -1.6,
+   "grade": "Good",
+   "res": 9,
+   "weak": 8,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Magneton",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Heliolisk",
+   "tier": "C",
+   "sid": "HELIOLISK",
+   "form": "0",
+   "fit": -1.6,
+   "grade": "Good",
+   "res": 10,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Altaria",
+   "tier": "D",
+   "sid": "ALTARIA",
+   "form": "0",
+   "fit": -1.9,
+   "grade": "Good",
+   "res": 8,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Lickilicky",
+   "tier": "C",
+   "sid": "LICKILICKY",
+   "form": "0",
+   "fit": -2.0,
+   "grade": "Good",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Noivern",
+   "tier": "B",
+   "sid": "NOIVERN",
+   "form": "0",
+   "fit": -2.2,
+   "grade": "Good",
+   "res": 8,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Armaldo",
+   "tier": "D",
+   "sid": "ARMALDO",
+   "form": "0",
+   "fit": -2.2,
+   "grade": "Good",
+   "res": 2,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Magneton"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Illumise",
+   "tier": "D",
+   "sid": "ILLUMISE",
+   "form": "0",
+   "fit": -2.3,
+   "grade": "Good",
+   "res": 4,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Kricketune",
+   "tier": "D",
+   "sid": "KRICKETUNE",
+   "form": "0",
+   "fit": -2.3,
+   "grade": "Good",
+   "res": 4,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Parasect",
+   "tier": "D",
+   "sid": "PARASECT",
+   "form": "0",
+   "fit": -2.4,
+   "grade": "Good",
+   "res": 11,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Shelmet",
+   "tier": "D",
+   "sid": "SHELMET",
+   "form": "0",
+   "fit": -2.5,
+   "grade": "Good",
+   "res": 4,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Lurantis",
+   "tier": "C",
+   "sid": "LURANTIS",
+   "form": "0",
+   "fit": -2.5,
+   "grade": "Good",
+   "res": 9,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Beheeyem",
+   "tier": "D",
+   "sid": "BEHEEYEM",
+   "form": "0",
+   "fit": -2.9,
+   "grade": "Good",
+   "res": 3,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Mismagius (Aevian Form)",
@@ -3135,7 +5975,7 @@
    "sid": "MISMAGIUS",
    "form": "1",
    "fit": -2.9,
-   "grade": "Weak",
+   "grade": "Good",
    "res": 11,
    "weak": 4,
    "nmoves": 22,
@@ -3148,6 +5988,57 @@
    ],
    "in_six": false,
    "where": "Active"
+  },
+  {
+   "name": "Exeggutor",
+   "tier": "C",
+   "sid": "EXEGGUTOR",
+   "form": "0",
+   "fit": -2.9,
+   "grade": "Good",
+   "res": 12,
+   "weak": 8,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Magneton",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Furfrou",
+   "tier": "D",
+   "sid": "FURFROU",
+   "form": "0",
+   "fit": -3.1,
+   "grade": "Good",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Crustle",
+   "tier": "C",
+   "sid": "CRUSTLE",
+   "form": "0",
+   "fit": -3.1,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Magneton"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Solrock (Solrock Dominant Fusion)",
@@ -3167,6 +6058,77 @@
    "where": "Active"
   },
   {
+   "name": "Sirfetch'd",
+   "tier": "C",
+   "sid": "SIRFETCHD",
+   "form": "0",
+   "fit": -3.5,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Raichu"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Hitmonlee",
+   "tier": "C",
+   "sid": "HITMONLEE",
+   "form": "0",
+   "fit": -3.5,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Gumshoos",
+   "tier": "D",
+   "sid": "GUMSHOOS",
+   "form": "0",
+   "fit": -3.7,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Graveler (Alolan Form)",
+   "tier": "D",
+   "sid": "GRAVELER",
+   "form": "1",
+   "fit": -3.7,
+   "grade": "Weak",
+   "res": 11,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Raichu",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Lapras (Aevian Form)",
    "tier": "S",
    "sid": "LAPRAS",
@@ -3180,6 +6142,391 @@
    "oneshot": [],
    "in_six": false,
    "where": "Active"
+  },
+  {
+   "name": "Paras (Aevian Form)",
+   "tier": "D",
+   "sid": "PARAS",
+   "form": "1",
+   "fit": -4.1,
+   "grade": "Weak",
+   "res": 8,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Leavanny",
+   "tier": "D",
+   "sid": "LEAVANNY",
+   "form": "0",
+   "fit": -4.4,
+   "grade": "Weak",
+   "res": 11,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Machoke",
+   "tier": "D",
+   "sid": "MACHOKE",
+   "form": "0",
+   "fit": -4.5,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Raichu"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Dachsbun",
+   "tier": "D",
+   "sid": "DACHSBUN",
+   "form": "0",
+   "fit": -4.5,
+   "grade": "Weak",
+   "res": 6,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Magneton",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Zangoose",
+   "tier": "D",
+   "sid": "ZANGOOSE",
+   "form": "0",
+   "fit": -4.7,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Sandslash (Alolan Form)",
+   "tier": "D",
+   "sid": "SANDSLASH",
+   "form": "1",
+   "fit": -4.7,
+   "grade": "Weak",
+   "res": 8,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Meganium",
+   "tier": "C",
+   "sid": "MEGANIUM",
+   "form": "0",
+   "fit": -4.9,
+   "grade": "Weak",
+   "res": 9,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Klawf",
+   "tier": "C",
+   "sid": "KLAWF",
+   "form": "0",
+   "fit": -5.0,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Magneton",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Watchog",
+   "tier": "D",
+   "sid": "WATCHOG",
+   "form": "0",
+   "fit": -5.1,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Primeape",
+   "tier": "C",
+   "sid": "PRIMEAPE",
+   "form": "0",
+   "fit": -5.1,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 4,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Lopunny",
+   "tier": "D",
+   "sid": "LOPUNNY",
+   "form": "0",
+   "fit": -5.1,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Castform",
+   "tier": "D",
+   "sid": "CASTFORM",
+   "form": "0",
+   "fit": -5.1,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Tauros",
+   "tier": "D",
+   "sid": "TAUROS",
+   "form": "0",
+   "fit": -5.3,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Glalie",
+   "tier": "D",
+   "sid": "GLALIE",
+   "form": "0",
+   "fit": -5.6,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Magneton"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Graveler",
+   "tier": "C",
+   "sid": "GRAVELER",
+   "form": "0",
+   "fit": -5.8,
+   "grade": "Weak",
+   "res": 11,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Raichu",
+    "Magneton",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Rhydon",
+   "tier": "C",
+   "sid": "RHYDON",
+   "form": "0",
+   "fit": -5.8,
+   "grade": "Weak",
+   "res": 11,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Raichu",
+    "Magneton",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Kilowattrel",
+   "tier": "C",
+   "sid": "KILOWATTREL",
+   "form": "0",
+   "fit": -6.0,
+   "grade": "Weak",
+   "res": 8,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Kadabra",
+   "tier": "D",
+   "sid": "KADABRA",
+   "form": "0",
+   "fit": -6.2,
+   "grade": "Weak",
+   "res": 3,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 3,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Seaking",
+   "tier": "C",
+   "sid": "SEAKING",
+   "form": "0",
+   "fit": -6.3,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Tauros (Paldean Combat Breed)",
+   "tier": "D",
+   "sid": "TAUROS",
+   "form": "1",
+   "fit": -6.3,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Raichu"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Karrablast",
+   "tier": "D",
+   "sid": "KARRABLAST",
+   "form": "0",
+   "fit": -6.3,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Tsareena",
@@ -3200,6 +6547,167 @@
    "where": "Active"
   },
   {
+   "name": "Jellicent",
+   "tier": "C",
+   "sid": "JELLICENT",
+   "form": "0",
+   "fit": -6.4,
+   "grade": "Weak",
+   "res": 11,
+   "weak": 10,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Dubwool",
+   "tier": "C",
+   "sid": "DUBWOOL",
+   "form": "0",
+   "fit": -6.5,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Emolga",
+   "tier": "D",
+   "sid": "EMOLGA",
+   "form": "0",
+   "fit": -6.6,
+   "grade": "Weak",
+   "res": 8,
+   "weak": 1,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Maractus",
+   "tier": "D",
+   "sid": "MARACTUS",
+   "form": "0",
+   "fit": -6.8,
+   "grade": "Weak",
+   "res": 9,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Spinda",
+   "tier": "D",
+   "sid": "SPINDA",
+   "form": "0",
+   "fit": -7.1,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Cradily",
+   "tier": "C",
+   "sid": "CRADILY",
+   "form": "0",
+   "fit": -7.1,
+   "grade": "Weak",
+   "res": 7,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Electrode (Hisuian Form)",
+   "tier": "C",
+   "sid": "ELECTRODE",
+   "form": "1",
+   "fit": -7.2,
+   "grade": "Weak",
+   "res": 11,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Raticate (Alolan Form)",
+   "tier": "C",
+   "sid": "RATICATE",
+   "form": "1",
+   "fit": -7.2,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Eldegoss",
+   "tier": "D",
+   "sid": "ELDEGOSS",
+   "form": "0",
+   "fit": -7.5,
+   "grade": "Weak",
+   "res": 9,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Glalie (Aevian Form)",
    "tier": "S",
    "sid": "GLALIE",
@@ -3211,8 +6719,115 @@
    "nmoves": 22,
    "se": 0,
    "oneshot": [],
-   "in_six": true,
-   "where": "Active"
+   "in_six": false,
+   "where": "Party"
+  },
+  {
+   "name": "Golisopod",
+   "tier": "C",
+   "sid": "GOLISOPOD",
+   "form": "0",
+   "fit": -7.5,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Carbink",
+   "tier": "D",
+   "sid": "CARBINK",
+   "form": "0",
+   "fit": -7.7,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Magneton",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Alcremie",
+   "tier": "C",
+   "sid": "ALCREMIE",
+   "form": "0",
+   "fit": -7.7,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Mightyena",
+   "tier": "D",
+   "sid": "MIGHTYENA",
+   "form": "0",
+   "fit": -7.9,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Morpeko",
+   "tier": "D",
+   "sid": "MORPEKO",
+   "form": "0",
+   "fit": -7.9,
+   "grade": "Weak",
+   "res": 11,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Lunatone (Lunatone Dominant Fusion)",
+   "tier": "C",
+   "sid": "LUNATONE",
+   "form": "1",
+   "fit": -8.0,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 3,
+   "oneshot": [
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Clefable",
@@ -3230,6 +6845,132 @@
    ],
    "in_six": false,
    "where": "Active"
+  },
+  {
+   "name": "Carnivine",
+   "tier": "C",
+   "sid": "CARNIVINE",
+   "form": "0",
+   "fit": -8.0,
+   "grade": "Weak",
+   "res": 9,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Tentacruel",
+   "tier": "C",
+   "sid": "TENTACRUEL",
+   "form": "0",
+   "fit": -8.2,
+   "grade": "Weak",
+   "res": 11,
+   "weak": 8,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Mabosstiff",
+   "tier": "C",
+   "sid": "MABOSSTIFF",
+   "form": "0",
+   "fit": -8.7,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Linoone",
+   "tier": "D",
+   "sid": "LINOONE",
+   "form": "0",
+   "fit": -9.1,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Porygon",
+   "tier": "D",
+   "sid": "PORYGON",
+   "form": "0",
+   "fit": -9.1,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Persian",
+   "tier": "D",
+   "sid": "PERSIAN",
+   "form": "0",
+   "fit": -9.1,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Purugly",
+   "tier": "D",
+   "sid": "PURUGLY",
+   "form": "0",
+   "fit": -9.1,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Florges",
@@ -3270,6 +7011,57 @@
    "where": "Active"
   },
   {
+   "name": "Obstagoon",
+   "tier": "D",
+   "sid": "OBSTAGOON",
+   "form": "0",
+   "fit": -9.3,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Persian (Alolan Form)",
+   "tier": "D",
+   "sid": "PERSIAN",
+   "form": "1",
+   "fit": -9.3,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Stunfisk (Galarian Form)",
+   "tier": "D",
+   "sid": "STUNFISK",
+   "form": "1",
+   "fit": -9.3,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Slowking",
    "tier": "A",
    "sid": "SLOWKING",
@@ -3286,6 +7078,190 @@
    ],
    "in_six": false,
    "where": "Active"
+  },
+  {
+   "name": "Beartic",
+   "tier": "C",
+   "sid": "BEARTIC",
+   "form": "0",
+   "fit": -9.5,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Magneton"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Sawsbuck",
+   "tier": "D",
+   "sid": "SAWSBUCK",
+   "form": "0",
+   "fit": -10.1,
+   "grade": "Weak",
+   "res": 10,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Leafeon",
+   "tier": "C",
+   "sid": "LEAFEON",
+   "form": "0",
+   "fit": -10.2,
+   "grade": "Weak",
+   "res": 9,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Arboliva",
+   "tier": "C",
+   "sid": "ARBOLIVA",
+   "form": "0",
+   "fit": -10.4,
+   "grade": "Weak",
+   "res": 10,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Simisage",
+   "tier": "D",
+   "sid": "SIMISAGE",
+   "form": "0",
+   "fit": -10.6,
+   "grade": "Weak",
+   "res": 9,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Tangrowth",
+   "tier": "C",
+   "sid": "TANGROWTH",
+   "form": "0",
+   "fit": -10.9,
+   "grade": "Weak",
+   "res": 9,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Bellossom",
+   "tier": "C",
+   "sid": "BELLOSSOM",
+   "form": "0",
+   "fit": -10.9,
+   "grade": "Weak",
+   "res": 9,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Gogoat",
+   "tier": "C",
+   "sid": "GOGOAT",
+   "form": "0",
+   "fit": -10.9,
+   "grade": "Weak",
+   "res": 9,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Sunflora",
+   "tier": "C",
+   "sid": "SUNFLORA",
+   "form": "0",
+   "fit": -10.9,
+   "grade": "Weak",
+   "res": 9,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Cherrim",
+   "tier": "D",
+   "sid": "CHERRIM",
+   "form": "0",
+   "fit": -11.0,
+   "grade": "Weak",
+   "res": 9,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Clawitzer",
@@ -3307,6 +7283,198 @@
    "where": "Active"
   },
   {
+   "name": "Tropius",
+   "tier": "C",
+   "sid": "TROPIUS",
+   "form": "0",
+   "fit": -11.1,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 5,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Breloom",
+   "tier": "C",
+   "sid": "BRELOOM",
+   "form": "0",
+   "fit": -11.1,
+   "grade": "Weak",
+   "res": 9,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Talonflame",
+   "tier": "B",
+   "sid": "TALONFLAME",
+   "form": "0",
+   "fit": -11.1,
+   "grade": "Weak",
+   "res": 10,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Delcatty",
+   "tier": "D",
+   "sid": "DELCATTY",
+   "form": "0",
+   "fit": -11.1,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Ribombee",
+   "tier": "C",
+   "sid": "RIBOMBEE",
+   "form": "0",
+   "fit": -11.1,
+   "grade": "Weak",
+   "res": 6,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Spritzee",
+   "tier": "D",
+   "sid": "SPRITZEE",
+   "form": "0",
+   "fit": -11.1,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Abomasnow",
+   "tier": "C",
+   "sid": "ABOMASNOW",
+   "form": "0",
+   "fit": -11.2,
+   "grade": "Weak",
+   "res": 9,
+   "weak": 10,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Absol",
+   "tier": "D",
+   "sid": "ABSOL",
+   "form": "0",
+   "fit": -11.3,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Furret",
+   "tier": "D",
+   "sid": "FURRET",
+   "form": "0",
+   "fit": -11.5,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Wigglytuff",
+   "tier": "D",
+   "sid": "WIGGLYTUFF",
+   "form": "0",
+   "fit": -11.7,
+   "grade": "Weak",
+   "res": 3,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Ludicolo",
    "tier": "B",
    "sid": "LUDICOLO",
@@ -3322,6 +7490,225 @@
    ],
    "in_six": false,
    "where": "Active"
+  },
+  {
+   "name": "Shiinotic",
+   "tier": "D",
+   "sid": "SHIINOTIC",
+   "form": "0",
+   "fit": -11.9,
+   "grade": "Weak",
+   "res": 11,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Mantine",
+   "tier": "C",
+   "sid": "MANTINE",
+   "form": "0",
+   "fit": -12.1,
+   "grade": "Weak",
+   "res": 8,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Cinccino",
+   "tier": "C",
+   "sid": "CINCCINO",
+   "form": "0",
+   "fit": -12.5,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Cacturne",
+   "tier": "D",
+   "sid": "CACTURNE",
+   "form": "0",
+   "fit": -12.5,
+   "grade": "Weak",
+   "res": 11,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Oricorio",
+   "tier": "D",
+   "sid": "ORICORIO",
+   "form": "0",
+   "fit": -12.7,
+   "grade": "Weak",
+   "res": 10,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Comfey",
+   "tier": "C",
+   "sid": "COMFEY",
+   "form": "0",
+   "fit": -12.7,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Shiftry",
+   "tier": "D",
+   "sid": "SHIFTRY",
+   "form": "0",
+   "fit": -12.7,
+   "grade": "Weak",
+   "res": 11,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Unown",
+   "tier": "D",
+   "sid": "UNOWN",
+   "form": "0",
+   "fit": -12.8,
+   "grade": "Weak",
+   "res": 3,
+   "weak": 3,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Raticate",
+   "tier": "D",
+   "sid": "RATICATE",
+   "form": "0",
+   "fit": -13.1,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Jynx",
+   "tier": "D",
+   "sid": "JYNX",
+   "form": "0",
+   "fit": -13.2,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 3,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Ambipom",
+   "tier": "D",
+   "sid": "AMBIPOM",
+   "form": "0",
+   "fit": -13.5,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Veluza (Aevian Form)",
@@ -3364,6 +7751,42 @@
    "where": "Active"
   },
   {
+   "name": "Feraligatr",
+   "tier": "C",
+   "sid": "FERALIGATR",
+   "form": "0",
+   "fit": -14.7,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Glaceon",
+   "tier": "C",
+   "sid": "GLACEON",
+   "form": "0",
+   "fit": -14.8,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Magneton"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Crabominable",
    "tier": "B",
    "sid": "CRABOMINABLE",
@@ -3378,8 +7801,83 @@
     "Raichu",
     "Magneton"
    ],
-   "in_six": true,
+   "in_six": false,
    "where": "Active"
+  },
+  {
+   "name": "Avalugg",
+   "tier": "D",
+   "sid": "AVALUGG",
+   "form": "0",
+   "fit": -15.4,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Magneton"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Ditto",
+   "tier": "D",
+   "sid": "DITTO",
+   "form": "0",
+   "fit": -15.5,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 2,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Sudowoodo",
+   "tier": "C",
+   "sid": "SUDOWOODO",
+   "form": "0",
+   "fit": -15.6,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Magneton",
+    "Chandelure"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Floette",
+   "tier": "D",
+   "sid": "FLOETTE",
+   "form": "0",
+   "fit": -15.8,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Froslass (Aevian Form)",
@@ -3399,6 +7897,21 @@
    ],
    "in_six": false,
    "where": "Active"
+  },
+  {
+   "name": "Cetitan",
+   "tier": "C",
+   "sid": "CETITAN",
+   "form": "0",
+   "fit": -15.8,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Vaporeon",
@@ -3435,7 +7948,142 @@
     "Toxtricity"
    ],
    "in_six": false,
-   "where": "Party"
+   "where": "Active"
+  },
+  {
+   "name": "Noctowl",
+   "tier": "D",
+   "sid": "NOCTOWL",
+   "form": "0",
+   "fit": -16.8,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 8,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Jumpluff",
+   "tier": "D",
+   "sid": "JUMPLUFF",
+   "form": "0",
+   "fit": -17.2,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 5,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Swirlix",
+   "tier": "D",
+   "sid": "SWIRLIX",
+   "form": "0",
+   "fit": -17.3,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Mr. Mime",
+   "tier": "D",
+   "sid": "MRMIME",
+   "form": "0",
+   "fit": -17.3,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 5,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Onix",
+   "tier": "D",
+   "sid": "ONIX",
+   "form": "0",
+   "fit": -17.4,
+   "grade": "Weak",
+   "res": 11,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Raichu",
+    "Magneton",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Cryogonal",
+   "tier": "D",
+   "sid": "CRYOGONAL",
+   "form": "0",
+   "fit": -17.4,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Lapras",
+   "tier": "C",
+   "sid": "LAPRAS",
+   "form": "0",
+   "fit": -17.5,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 11,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Unfezant (Aevian Form Male)",
@@ -3460,11 +8108,68 @@
    "where": "Active"
   },
   {
+   "name": "Drifblim",
+   "tier": "C",
+   "sid": "DRIFBLIM",
+   "form": "0",
+   "fit": -17.7,
+   "grade": "Weak",
+   "res": 8,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Vanilluxe",
+   "tier": "C",
+   "sid": "VANILLUXE",
+   "form": "0",
+   "fit": -17.9,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Magneton"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Avalugg (Hisuian Form)",
+   "tier": "D",
+   "sid": "AVALUGG",
+   "form": "1",
+   "fit": -18.0,
+   "grade": "Weak",
+   "res": 3,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Raichu",
+    "Magneton",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Ninetales (Alolan Form)",
    "tier": "A",
    "sid": "NINETALES",
    "form": "1",
-   "fit": -18.4,
+   "fit": -18.0,
    "grade": "Weak",
    "res": 3,
    "weak": 6,
@@ -3478,6 +8183,84 @@
    ],
    "in_six": false,
    "where": "Active"
+  },
+  {
+   "name": "Phione",
+   "tier": "D",
+   "sid": "PHIONE",
+   "form": "0",
+   "fit": -18.1,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Eiscue",
+   "tier": "D",
+   "sid": "EISCUE",
+   "form": "0",
+   "fit": -18.4,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Magneton"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Qwilfish",
+   "tier": "D",
+   "sid": "QWILFISH",
+   "form": "0",
+   "fit": -18.8,
+   "grade": "Weak",
+   "res": 11,
+   "weak": 8,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Ledian",
+   "tier": "D",
+   "sid": "LEDIAN",
+   "form": "0",
+   "fit": -18.9,
+   "grade": "Weak",
+   "res": 6,
+   "weak": 10,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Braviary",
@@ -3497,6 +8280,25 @@
    ],
    "in_six": false,
    "where": "Active"
+  },
+  {
+   "name": "Sceptile",
+   "tier": "D",
+   "sid": "SCEPTILE",
+   "form": "0",
+   "fit": -19.0,
+   "grade": "Weak",
+   "res": 9,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   },
   {
    "name": "Slowbro",
@@ -3519,6 +8321,443 @@
    "where": "Active"
   },
   {
+   "name": "Liepard",
+   "tier": "D",
+   "sid": "LIEPARD",
+   "form": "0",
+   "fit": -19.3,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Aurorus",
+   "tier": "C",
+   "sid": "AURORUS",
+   "form": "0",
+   "fit": -19.4,
+   "grade": "Weak",
+   "res": 3,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Fearow",
+   "tier": "D",
+   "sid": "FEAROW",
+   "form": "0",
+   "fit": -19.5,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 8,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Pyukumuku",
+   "tier": "D",
+   "sid": "PYUKUMUKU",
+   "form": "0",
+   "fit": -19.6,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Kingler",
+   "tier": "C",
+   "sid": "KINGLER",
+   "form": "0",
+   "fit": -19.9,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 3,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Wishiwashi",
+   "tier": "D",
+   "sid": "WISHIWASHI",
+   "form": "0",
+   "fit": -20.1,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Crobat",
+   "tier": "C",
+   "sid": "CROBAT",
+   "form": "0",
+   "fit": -20.4,
+   "grade": "Weak",
+   "res": 8,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Bombirdier",
+   "tier": "C",
+   "sid": "BOMBIRDIER",
+   "form": "0",
+   "fit": -20.4,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 8,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Empoleon",
+   "tier": "B",
+   "sid": "EMPOLEON",
+   "form": "0",
+   "fit": -20.4,
+   "grade": "Weak",
+   "res": 8,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Veluza",
+   "tier": "C",
+   "sid": "VELUZA",
+   "form": "0",
+   "fit": -20.5,
+   "grade": "Weak",
+   "res": 8,
+   "weak": 12,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Boldore",
+   "tier": "D",
+   "sid": "BOLDORE",
+   "form": "0",
+   "fit": -20.6,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Raichu",
+    "Magneton",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Oricorio (Sensu Style)",
+   "tier": "D",
+   "sid": "ORICORIO",
+   "form": "3",
+   "fit": -20.7,
+   "grade": "Weak",
+   "res": 8,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Swanna",
+   "tier": "C",
+   "sid": "SWANNA",
+   "form": "0",
+   "fit": -21.1,
+   "grade": "Weak",
+   "res": 8,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Dodrio",
+   "tier": "C",
+   "sid": "DODRIO",
+   "form": "0",
+   "fit": -21.5,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 8,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Cramorant",
+   "tier": "D",
+   "sid": "CRAMORANT",
+   "form": "0",
+   "fit": -21.7,
+   "grade": "Weak",
+   "res": 8,
+   "weak": 7,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Corsola",
+   "tier": "D",
+   "sid": "CORSOLA",
+   "form": "0",
+   "fit": -22.4,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 11,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Octillery",
+   "tier": "C",
+   "sid": "OCTILLERY",
+   "form": "0",
+   "fit": -22.5,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Bruxish",
+   "tier": "C",
+   "sid": "BRUXISH",
+   "form": "0",
+   "fit": -22.5,
+   "grade": "Weak",
+   "res": 8,
+   "weak": 12,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Starmie",
+   "tier": "C",
+   "sid": "STARMIE",
+   "form": "0",
+   "fit": -22.5,
+   "grade": "Weak",
+   "res": 8,
+   "weak": 12,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Wugtrio",
+   "tier": "D",
+   "sid": "WUGTRIO",
+   "form": "0",
+   "fit": -22.7,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Floatzel",
+   "tier": "D",
+   "sid": "FLOATZEL",
+   "form": "0",
+   "fit": -22.7,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Alomomola",
    "tier": "S",
    "sid": "ALOMOMOLA",
@@ -3534,6 +8773,89 @@
     "Magneton",
     "Togedemaru",
     "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Active"
+  },
+  {
+   "name": "Lumineon",
+   "tier": "D",
+   "sid": "LUMINEON",
+   "form": "0",
+   "fit": -22.9,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Flamigo",
+   "tier": "B",
+   "sid": "FLAMIGO",
+   "form": "0",
+   "fit": -23.0,
+   "grade": "Weak",
+   "res": 6,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Vespiquen",
+   "tier": "D",
+   "sid": "VESPIQUEN",
+   "form": "0",
+   "fit": -23.1,
+   "grade": "Weak",
+   "res": 6,
+   "weak": 10,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Zoroark",
+   "tier": "D",
+   "sid": "ZOROARK",
+   "form": "0",
+   "fit": -23.3,
+   "grade": "Weak",
+   "res": 2,
+   "weak": 4,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
     "Toxtricity"
    ],
    "in_six": false,
@@ -3560,6 +8882,441 @@
    "where": "Active"
   },
   {
+   "name": "Pidgeot",
+   "tier": "C",
+   "sid": "PIDGEOT",
+   "form": "0",
+   "fit": -23.9,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 8,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Farfetch'd",
+   "tier": "D",
+   "sid": "FARFETCHD",
+   "form": "0",
+   "fit": -24.1,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 8,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Golduck",
+   "tier": "C",
+   "sid": "GOLDUCK",
+   "form": "0",
+   "fit": -24.2,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Toucannon",
+   "tier": "D",
+   "sid": "TOUCANNON",
+   "form": "0",
+   "fit": -24.5,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 8,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Stonjourner",
+   "tier": "D",
+   "sid": "STONJOURNER",
+   "form": "0",
+   "fit": -24.6,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 6,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Raichu",
+    "Magneton",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Barraskewda",
+   "tier": "C",
+   "sid": "BARRASKEWDA",
+   "form": "0",
+   "fit": -24.7,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Carracosta",
+   "tier": "C",
+   "sid": "CARRACOSTA",
+   "form": "0",
+   "fit": -24.8,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 11,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Mothim",
+   "tier": "D",
+   "sid": "MOTHIM",
+   "form": "0",
+   "fit": -24.9,
+   "grade": "Weak",
+   "res": 6,
+   "weak": 10,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Oricorio (Pa'u Style)",
+   "tier": "D",
+   "sid": "ORICORIO",
+   "form": "2",
+   "fit": -25.0,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Wailord",
+   "tier": "D",
+   "sid": "WAILORD",
+   "form": "0",
+   "fit": -25.1,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Beautifly",
+   "tier": "D",
+   "sid": "BEAUTIFLY",
+   "form": "0",
+   "fit": -25.1,
+   "grade": "Weak",
+   "res": 6,
+   "weak": 10,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Butterfree",
+   "tier": "D",
+   "sid": "BUTTERFREE",
+   "form": "0",
+   "fit": -25.1,
+   "grade": "Weak",
+   "res": 6,
+   "weak": 10,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Vivillon",
+   "tier": "D",
+   "sid": "VIVILLON",
+   "form": "0",
+   "fit": -25.1,
+   "grade": "Weak",
+   "res": 6,
+   "weak": 10,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Masquerain",
+   "tier": "D",
+   "sid": "MASQUERAIN",
+   "form": "0",
+   "fit": -25.3,
+   "grade": "Weak",
+   "res": 6,
+   "weak": 10,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Bibarel",
+   "tier": "D",
+   "sid": "BIBAREL",
+   "form": "0",
+   "fit": -25.6,
+   "grade": "Weak",
+   "res": 6,
+   "weak": 11,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Squawkabilly (White Plumage)",
+   "tier": "C",
+   "sid": "SQUAWKABILLY",
+   "form": "3",
+   "fit": -25.9,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 8,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Archeops",
+   "tier": "D",
+   "sid": "ARCHEOPS",
+   "form": "0",
+   "fit": -25.9,
+   "grade": "Weak",
+   "res": 6,
+   "weak": 10,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Minior",
+   "tier": "D",
+   "sid": "MINIOR",
+   "form": "0",
+   "fit": -26.1,
+   "grade": "Weak",
+   "res": 6,
+   "weak": 10,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Chatot",
+   "tier": "D",
+   "sid": "CHATOT",
+   "form": "0",
+   "fit": -26.5,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 8,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Unfezant",
+   "tier": "D",
+   "sid": "UNFEZANT",
+   "form": "0",
+   "fit": -26.5,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 8,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Swellow",
+   "tier": "D",
+   "sid": "SWELLOW",
+   "form": "0",
+   "fit": -26.5,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 8,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
    "name": "Crawdaunt",
    "tier": "B",
    "sid": "CRAWDAUNT",
@@ -3579,47 +9336,416 @@
    ],
    "in_six": false,
    "where": "Active"
+  },
+  {
+   "name": "Xatu",
+   "tier": "D",
+   "sid": "XATU",
+   "form": "0",
+   "fit": -26.8,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Clamperl",
+   "tier": "D",
+   "sid": "CLAMPERL",
+   "form": "0",
+   "fit": -27.1,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Omastar",
+   "tier": "C",
+   "sid": "OMASTAR",
+   "form": "0",
+   "fit": -27.8,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 11,
+   "nmoves": 22,
+   "se": 5,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Simipour",
+   "tier": "D",
+   "sid": "SIMIPOUR",
+   "form": "0",
+   "fit": -28.7,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Swoobat",
+   "tier": "D",
+   "sid": "SWOOBAT",
+   "form": "0",
+   "fit": -28.8,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Barbaracle",
+   "tier": "C",
+   "sid": "BARBARACLE",
+   "form": "0",
+   "fit": -28.8,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 11,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Drednaw",
+   "tier": "C",
+   "sid": "DREDNAW",
+   "form": "0",
+   "fit": -29.0,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 11,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Kabutops",
+   "tier": "D",
+   "sid": "KABUTOPS",
+   "form": "0",
+   "fit": -29.0,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 11,
+   "nmoves": 22,
+   "se": 2,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Combee",
+   "tier": "D",
+   "sid": "COMBEE",
+   "form": "0",
+   "fit": -29.1,
+   "grade": "Weak",
+   "res": 6,
+   "weak": 10,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Walrein",
+   "tier": "C",
+   "sid": "WALREIN",
+   "form": "0",
+   "fit": -29.8,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 11,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Arctovish",
+   "tier": "C",
+   "sid": "ARCTOVISH",
+   "form": "0",
+   "fit": -29.8,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 11,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Yanmega",
+   "tier": "B",
+   "sid": "YANMEGA",
+   "form": "0",
+   "fit": -29.9,
+   "grade": "Weak",
+   "res": 6,
+   "weak": 10,
+   "nmoves": 22,
+   "se": 1,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Basculin (Blue-Striped)",
+   "tier": "C",
+   "sid": "BASCULIN",
+   "form": "1",
+   "fit": -30.5,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Luvdisc",
+   "tier": "D",
+   "sid": "LUVDISC",
+   "form": "0",
+   "fit": -31.1,
+   "grade": "Weak",
+   "res": 5,
+   "weak": 9,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Sharpedo",
+   "tier": "D",
+   "sid": "SHARPEDO",
+   "form": "0",
+   "fit": -31.7,
+   "grade": "Weak",
+   "res": 7,
+   "weak": 13,
+   "nmoves": 22,
+   "se": 3,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Aerodactyl",
+   "tier": "C",
+   "sid": "AERODACTYL",
+   "form": "0",
+   "fit": -32.7,
+   "grade": "Weak",
+   "res": 6,
+   "weak": 10,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Dewgong",
+   "tier": "D",
+   "sid": "DEWGONG",
+   "form": "0",
+   "fit": -33.2,
+   "grade": "Weak",
+   "res": 1,
+   "weak": 11,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Togedemaru",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
+  },
+  {
+   "name": "Delibird",
+   "tier": "D",
+   "sid": "DELIBIRD",
+   "form": "0",
+   "fit": -34.3,
+   "grade": "Weak",
+   "res": 4,
+   "weak": 11,
+   "nmoves": 22,
+   "se": 0,
+   "oneshot": [
+    "Electivire",
+    "Raichu",
+    "Magneton",
+    "Togedemaru",
+    "Chandelure",
+    "Toxtricity"
+   ],
+   "in_six": false,
+   "where": "Overflow"
   }
  ],
- "pool": 52,
- "score": 334.7,
- "cmp": -986.0,
+ "pool": 383,
+ "score": 378.4,
+ "cmp": 36.0,
  "break_field": null,
  "checks": {
-  "weak3": [
-   "STEEL"
-  ],
+  "weak3": [],
   "nores": [
-   "FIRE",
-   "STEEL"
+   "GRASS"
   ],
   "res_lt2": [
-   "FIRE",
-   "GRASS",
-   "BUG",
-   "STEEL"
+   "GRASS"
   ],
   "no_se": [],
   "one_shot": [
    [
-    "Musharna (Aevian Form)",
-    "Toxtricity"
-   ],
-   [
-    "Gallade",
+    "Zoroark (Hisuian Form)",
     "Electivire"
    ],
    [
-    "Gallade",
+    "Zoroark (Hisuian Form)",
+    "Togedemaru"
+   ],
+   [
+    "Zoroark (Hisuian Form)",
+    "Toxtricity"
+   ],
+   [
+    "Gastrodon",
     "Chandelure"
-   ],
-   [
-    "Crabominable",
-    "Raichu"
-   ],
-   [
-    "Crabominable",
-    "Magneton"
    ]
   ],
   "unanswered": [
@@ -3627,6 +9753,415 @@
   ]
  },
  "plan": "alt",
+ "lead_support": {
+  "member": "Scrafty",
+  "move": "Fake Out",
+  "flinch": "Electivire"
+ },
+ "lead_duo": {
+  "Ampharos (Aevian Form)": {
+   "pct": 43,
+   "hits": [
+    {
+     "foe": "Electivire",
+     "pct": 0,
+     "move": null,
+     "flinched": true
+    },
+    {
+     "foe": "Raichu",
+     "pct": 43,
+     "move": "Psychic"
+    }
+   ],
+   "rod_partner": false
+  },
+  "Scrafty": {
+   "pct": 48,
+   "hits": [
+    {
+     "foe": "Electivire",
+     "pct": 0,
+     "move": null,
+     "flinched": true
+    },
+    {
+     "foe": "Raichu",
+     "pct": 48,
+     "move": "Focus Blast"
+    }
+   ],
+   "rod_partner": false
+  }
+ },
+ "foe_rod": [
+  "Togedemaru"
+ ],
+ "breaker_opts": {
+  "Chandelure": [
+   [
+    "Zoroark (Hisuian Form)",
+    126,
+    85,
+    true
+   ],
+   [
+    "Mismagius (Aevian Form)",
+    89,
+    150,
+    true
+   ],
+   [
+    "Mismagius",
+    80,
+    142,
+    true
+   ],
+   [
+    "Veluza (Aevian Form)",
+    69,
+    134,
+    true
+   ],
+   [
+    "Bruxish",
+    63,
+    150,
+    true
+   ],
+   [
+    "Arcanine (Hisuian Form)",
+    62,
+    70,
+    true
+   ],
+   [
+    "Unfezant (Aevian Form Male)",
+    62,
+    150,
+    true
+   ],
+   [
+    "Espeon",
+    60,
+    148,
+    true
+   ],
+   [
+    "Drapion (Aevian Form)",
+    59,
+    86,
+    true
+   ],
+   [
+    "Electrode (Hisuian Form)",
+    58,
+    88,
+    true
+   ],
+   [
+    "Kadabra",
+    57,
+    150,
+    true
+   ],
+   [
+    "Cryogonal",
+    57,
+    49,
+    true
+   ]
+  ]
+ },
+ "freezer_sup": [
+  [
+   "Frosmoth",
+   23,
+   "Gothitelle",
+   34,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Frosmoth",
+   23,
+   "Ludicolo",
+   40,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Ampharos (Aevian Form)",
+   43,
+   "Gothitelle",
+   34,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Ampharos (Aevian Form)",
+   43,
+   "Ludicolo",
+   40,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Ampharos (Aevian Form)",
+   43,
+   "Scrafty",
+   48,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Frosmoth",
+   23,
+   "Scrafty",
+   48,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Ampharos (Aevian Form)",
+   43,
+   "Mr. Mime",
+   48,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Frosmoth",
+   23,
+   "Mr. Mime",
+   48,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Ampharos (Aevian Form)",
+   43,
+   "Jynx",
+   48,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Frosmoth",
+   23,
+   "Jynx",
+   48,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Ampharos (Aevian Form)",
+   43,
+   "Kecleon",
+   48,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Frosmoth",
+   23,
+   "Kecleon",
+   48,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Ninetales (Alolan Form)",
+   50,
+   "Gothitelle",
+   34,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Ninetales (Alolan Form)",
+   50,
+   "Jynx",
+   48,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Ninetales (Alolan Form)",
+   50,
+   "Kecleon",
+   48,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Ninetales (Alolan Form)",
+   50,
+   "Ludicolo",
+   40,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Ninetales (Alolan Form)",
+   50,
+   "Mr. Mime",
+   48,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Ninetales (Alolan Form)",
+   50,
+   "Scrafty",
+   48,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Ampharos (Aevian Form)",
+   43,
+   "Meowstic",
+   51,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Frosmoth",
+   23,
+   "Meowstic",
+   51,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Ninetales (Alolan Form)",
+   50,
+   "Meowstic",
+   51,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Cetitan",
+   53,
+   "Gothitelle",
+   34,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Cetitan",
+   53,
+   "Jynx",
+   48,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Cetitan",
+   53,
+   "Kecleon",
+   48,
+   "FAKEOUT",
+   "Electivire"
+  ],
+  [
+   "Cetitan",
+   53,
+   "Ludicolo",
+   40,
+   "FAKEOUT",
+   "Electivire"
+  ]
+ ],
+ "freezer_opts": [
+  [
+   "Ampharos (Aevian Form)",
+   94,
+   "Bellibolt",
+   86,
+   false
+  ],
+  [
+   "Avalugg",
+   136,
+   "Bellibolt",
+   86,
+   false
+  ],
+  [
+   "Cetitan",
+   145,
+   "Bellibolt",
+   86,
+   false
+  ],
+  [
+   "Glaceon",
+   153,
+   "Bellibolt",
+   86,
+   false
+  ],
+  [
+   "Beartic",
+   162,
+   "Bellibolt",
+   86,
+   false
+  ],
+  [
+   "Vanilluxe",
+   171,
+   "Bellibolt",
+   86,
+   true
+  ],
+  [
+   "Abomasnow",
+   203,
+   "Bellibolt",
+   86,
+   true
+  ],
+  [
+   "Ninetales (Alolan Form)",
+   204,
+   "Bellibolt",
+   86,
+   true
+  ],
+  [
+   "Castform",
+   206,
+   "Bellibolt",
+   86,
+   false
+  ],
+  [
+   "Frosmoth",
+   220,
+   "Bellibolt",
+   86,
+   false
+  ],
+  [
+   "Sandslash (Alolan Form)",
+   260,
+   "Bellibolt",
+   86,
+   false
+  ],
+  [
+   "Avalugg (Hisuian Form)",
+   267,
+   "Bellibolt",
+   86,
+   false
+  ]
+ ],
+ "freezer": "Ampharos (Aevian Form)",
  "alt_field": "Icy Field",
  "foe_break": [
   [

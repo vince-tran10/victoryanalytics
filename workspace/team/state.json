@@ -1,12 +1,12 @@
 {
  "_doc": "Read/written by scripts/team/update.py. Edit by hand only to change the six or its moves.",
- "export": "party_and_boxes_2026-11-23_1558.txt",
- "export_label": "23 Nov 15:58",
- "active_start": 468,
+ "export": "party_and_boxes_2026-11-24_1533.txt",
+ "export_label": "24 Nov 15:33",
+ "active_start": 470,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 362,
- "run": 376,
- "final": 380,
+ "roster": 368,
+ "run": 382,
+ "final": 386,
  "done": [
   "aelita",
   "narcissa1",
@@ -36,12 +36,12 @@
  ],
  "fight": "erick",
  "team": [
-  "Glalie (Aevian Form)",
-  "Musharna (Aevian Form)",
-  "Roserade (Aevian Form)",
+  "Ampharos (Aevian Form)",
+  "Scrafty",
+  "Camerupt",
   "Golisopod (Aevian Form)",
-  "Sylveon",
-  "Slowking (Galarian Form)"
+  "Zoroark (Hisuian Form)",
+  "Gastrodon"
  ],
  "moves": {
   "Golisopod (Aevian Form)": [
@@ -247,6 +247,48 @@
    "Dual Chop",
    "Swords Dance",
    "Protect"
+  ],
+  "Avalugg": [
+   "Blizzard",
+   "Avalanche",
+   "Rapid Spin",
+   "Protect"
+  ],
+  "Camerupt": [
+   "Yawn",
+   "Earth Power",
+   "Lava Plume",
+   "Protect"
+  ],
+  "Vikavolt": [
+   "Bug Buzz",
+   "Thunderbolt",
+   "Mud Shot",
+   "Protect"
+  ],
+  "Gastrodon": [
+   "Earth Power",
+   "Muddy Water",
+   "Yawn",
+   "Protect"
+  ],
+  "Ampharos (Aevian Form)": [
+   "Power Gem",
+   "Signal Beam",
+   "Blizzard",
+   "Protect"
+  ],
+  "Quagsire": [
+   "Earthquake",
+   "Recover",
+   "Aqua Tail",
+   "Protect"
+  ],
+  "Stunfisk (Galarian Form)": [
+   "Earthquake",
+   "Yawn",
+   "Snap Trap",
+   "Protect"
   ]
  },
  "promote": "team/promote_1108.json",
@@ -323,7 +365,7 @@
   "Florges": "FLOWERVEIL",
   "Oranguru": "INNERFOCUS",
   "Armarouge": "WEAKARMOR",
-  "Scrafty": "MOXIE",
+  "Scrafty": "INTIMIDATE",
   "Zoroark (Hisuian Form)": "ILLUSION",
   "Amoonguss": "Regenerator",
   "Slowking (Galarian Form)": "Regenerator",
@@ -347,7 +389,14 @@
   "Golurk": "IRONFIST",
   "Roserade (Aevian Form)": "TECHNICIAN",
   "Sylveon": "PIXILATE",
-  "Leavanny (Aevian Form)": "INTIMIDATE"
+  "Leavanny (Aevian Form)": "INTIMIDATE",
+  "Avalugg": "STURDY",
+  "Camerupt": "SOLIDROCK",
+  "Vikavolt": "LEVITATE",
+  "Gastrodon": "STORMDRAIN",
+  "Ampharos (Aevian Form)": "FILTER",
+  "Quagsire": "UNAWARE",
+  "Stunfisk (Galarian Form)": "MIMICRY"
  },
  "crests_owned": [
   "Ariados Crest",
@@ -380,28 +429,19 @@
  "core_check": {
   "core": {
    "n": 6,
-   "weak3": [
-    "STEEL"
-   ],
+   "weak3": [],
    "nores": [
-    "FIRE",
-    "STEEL"
+    "GRASS"
    ],
    "minor": []
   },
   "fight": {
    "n": 6,
-   "weak3": [
-    "STEEL"
-   ],
+   "weak3": [],
    "nores": [
-    "FIRE",
-    "STEEL"
+    "GRASS"
    ],
-   "minor": [
-    "ICE",
-    "ICE"
-   ],
+   "minor": [],
    "key": "erick"
   }
  },
@@ -476,6 +516,51 @@
      "Protect"
     ],
     "ability": "TECHNICIAN"
+   },
+   "Avalugg": {
+    "moves": [
+     "Blizzard",
+     "Avalanche",
+     "Rapid Spin",
+     "Protect"
+    ],
+    "ability": "STURDY"
+   },
+   "Quagsire": {
+    "moves": [
+     "Deluge",
+     "Recover",
+     "Aqua Tail",
+     "Protect"
+    ],
+    "ability": "UNAWARE"
+   },
+   "Stunfisk (Galarian Form)": {
+    "moves": [
+     "Deluge",
+     "Yawn",
+     "Revenge",
+     "Protect"
+    ],
+    "ability": "MIMICRY"
+   },
+   "Ampharos (Aevian Form)": {
+    "moves": [
+     "Icy Wind",
+     "Haze",
+     "Blizzard",
+     "Protect"
+    ],
+    "ability": "FILTER"
+   },
+   "Camerupt": {
+    "moves": [
+     "Yawn",
+     "Earth Power",
+     "Overheat",
+     "Protect"
+    ],
+    "ability": "SOLIDROCK"
    }
   }
  },
@@ -546,6 +631,40 @@
    "Rock Slide",
    "Deluge",
    "Protect"
+  ],
+  "Avalugg": [
+   "Recover",
+   "Avalanche",
+   "Rapid Spin",
+   "Protect"
+  ],
+  "Camerupt": [
+   "Yawn",
+   "Earth Power",
+   "Lava Plume",
+   "Protect"
+  ],
+  "Ampharos (Aevian Form)": [
+   "Power Gem",
+   "Signal Beam",
+   "Blizzard",
+   "Protect"
+  ],
+  "Quagsire": [
+   "Earthquake",
+   "Recover",
+   "Aqua Tail",
+   "Protect"
+  ],
+  "Stunfisk (Galarian Form)": [
+   "Earthquake",
+   "Yawn",
+   "Snap Trap",
+   "Protect"
   ]
- }
+ },
+ "field_plan": {
+  "erick": "Icy Field"
+ },
+ "pool_all": true
 }
