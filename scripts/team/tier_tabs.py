@@ -54,10 +54,14 @@ def table(rs, head3, extra_fn, compact_from='C'):
 
 rows = T['rows']
 cuts = ' · '.join(f"{t} ≥ {v:.2f}" for t, v in T['cut'][:-1])
-LEG = (f"<li>One scale for all three tier tabs: score = 0.6 × fights + 0.4 × meta. Cut-offs {cuts}.</li>"
-       "<li>Fights = measured on the remaining Ch9 hard fights (exact game data, fields), as a percentile of your boxes. "
-       "Meta = Smogon tier + usage (singles and doubles) and base-stat total; Aevians use their kit's OP stars.</li>"
-       "<li>Every Pokémon is scored at Lv 60 with its best legal build (Ch1–8 TMs, tutors ≤ 8 badges, Relearner, egg).</li>")
+import json as _j   # 25 Nov (Vincent): ranked lists, no letter grades; how the ranking is made, one point per line
+_cap = (_j.load(open('team/state.json')).get('cap') if os.path.exists('team/state.json') else 65)
+LEG = ("<li>Each list is ranked best first: Pokémon, Aevian and Crests separately.</li>"
+       "<li>55%: meta and community rating (Smogon usage, community tier lists and forum posts, crest ratings).</li>"
+       "<li>20%: how it does in the game's hard fights (exact game data and fields).</li>"
+       "<li>25%: team value: how many hard-fight Pokémon it hard-counters, plus its kit (speed control, priority, pivot, immunity, disruption, win condition).</li>"
+       f"<li>Every Pokémon is scored at Lv {_cap} with its best legal build.</li>"
+       "<li>Tap one to see why it ranks where it does and its ideal build.</li>")
 
 # --- Crests
 def crest_extra(r):
@@ -67,8 +71,8 @@ def crest_extra(r):
     zp = f"<div class='ok'>Best last slot: {E(disp(r['zoro_partner']))}</div>" if r.get('zoro_partner') else ''
     return f"{E(r['crest'])}{gain}{zp}<div class='legend'>{E(CDESC.get(r['crest'], '')[:150])}</div>"
 crest_rows = [r for r in rows if r['kind'] == 'crest']
-s6 = (f'<section aria-labelledby="s6">\n  <h2 id="s6">Crests</h2>\n  <ul class="legend">{LEG}<li>Only crests you hold. '
-      f'Gain = fight score with vs without the crest. Zoroark / Furret crest effects are situational (not in the damage model).</li></ul>\n'
+s6 = (f'<section aria-labelledby="s6">\n  <h2 id="s6">Crests</h2>\n  <ul class="legend">{LEG}<li>Only crests you hold (or can get by this chapter).</li>'
+      f'<li>Zoroark and Furret crest effects are situational: not in the damage numbers.</li></ul>\n'
       f'  {table(crest_rows, "Crest", crest_extra, "Z")}\n</section>\n')
 
 # --- Aevians
@@ -78,13 +82,13 @@ def aev_extra(r):
     return (f"<span class='op'>{'★' * op}{'☆' * (3 - op)}</span> {E(sig)}<div class='legend'>Like: {E(meta)}. Catch: {E(catch)}</div>")
 aev_rows = [r for r in rows if r['kind'] == 'aevian']
 s7 = (f'<section aria-labelledby="s7">\n  <h2 id="s7">Aevian forms</h2>\n  <ul class="legend">{LEG}'
-      f'<li>OP ★ = how broken the kit is (signature move / ability) vs meta Pokémon with the same tools.</li></ul>\n'
+      f'</ul>\n'
       f'  {table(aev_rows, "Kit (learn level)", aev_extra, "Z")}\n</section>\n')
 
 # --- Everything else
 reg_rows = [r for r in rows if r['kind'] == 'regular']
 s8 = (f'<section aria-labelledby="s8">\n  <h2 id="s8">Tier list (all other Pokémon)</h2>\n  <ul class="legend">{LEG}'
-      f'<li>Regional forms and fusions included; crests and Aevians have their own tabs. C and D tiers are folded.</li></ul>\n'
+      f'<li>Regional forms and fusions included.</li><li>Crests and Aevians have their own lists.</li></ul>\n'
       f'  {table(reg_rows, "Meta (Smogon)", lambda r: E(r["meta_label"]))}\n</section>\n')
 
 CSS = ('.tlx td, .tlx th { padding: 5px 8px; border-bottom: 1px solid var(--line); text-align: left; font-size: 13px; vertical-align: top }'

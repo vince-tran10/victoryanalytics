@@ -864,3 +864,5 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 25 Nov: Fights tab rebuilt (fights_tab.py): folded card per Ch9 fight, green check on beaten ones; Jenner = full example (field effects, their six with stats / items, guide tips area).
 
 - 25 Nov: nav Tiers first; Ch10 hard fights added (Clown Caricature, Flora, Florin) with guide tips, not switched yet; trainer faces on fight cards; general usefulness = counter tiebreak; Ch10 tier hook 70/30.
+
+- 25 Nov (export 24 Nov 20:54, Jenner audit): items follow the move's REAL type after -ate abilities (items_owned.atype, blocking C&A check); counter item = booster of its move on its foe (Lapras-A Hard Stone: Noivern 90% -> 109%); planner if/elif bug that reset per-fight moves fixed (Glalie Ice Fang now on To do); Tiers = ranked lists, no letter grades.

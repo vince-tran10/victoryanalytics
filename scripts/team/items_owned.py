@@ -7,6 +7,20 @@ import json, os, re
 BOOSTERS = {'NORMAL': 'Silk Scarf', 'FIRE': 'Charcoal', 'WATER': 'Mystic Water', 'GRASS': 'Miracle Seed', 'ELECTRIC': 'Magnet', 'ICE': 'Never-Melt Ice',
             'FIGHTING': 'Black Belt', 'POISON': 'Poison Barb', 'GROUND': 'Soft Sand', 'FLYING': 'Sharp Beak', 'PSYCHIC': 'Twisted Spoon', 'BUG': 'Silver Powder',
             'ROCK': 'Hard Stone', 'GHOST': 'Spell Tag', 'DRAGON': 'Dragon Fang', 'DARK': 'Black Glasses', 'STEEL': 'Metal Coat', 'FAIRY': 'Fairy Feather'}
+ATE = {'PIXILATE': 'FAIRY', 'REFRIGERATE': 'ICE', 'AERILATE': 'FLYING', 'GALVANIZE': 'ELECTRIC', 'DRAGONIZE': 'DRAGON'}
+
+
+def atype(mtype, ability='', sound=False):
+    """25 Nov (Vincent: 'Sylveon with Silk Scarf?'): the type a move REALLY hits with after its user's ability. -ate abilities turn
+    Normal moves into their type (Pixilate Hyper Voice = Fairy -> Fairy Feather), Normalize turns every move Normal, Liquid Voice
+    turns sound moves Water. Use this for items, STAB and type effectiveness, never the raw move type."""
+    ab = (ability or '').upper().replace(' ', '')
+    if ab in ATE and mtype == 'NORMAL': return ATE[ab]
+    if ab == 'NORMALIZE': return 'NORMAL'
+    if ab == 'LIQUIDVOICE' and sound: return 'WATER'
+    return mtype
+
+
 NOT_OWNED = ['Leftovers', 'Life Orb', 'Choice Band', 'Choice Specs', 'Choice Scarf']
 STANDARD = ['Focus Sash']
 GD = 'gamedata'

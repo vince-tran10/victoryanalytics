@@ -794,6 +794,22 @@
      "form": "1",
      "pick": false,
      "rec": false
+    },
+    {
+     "name": "Ampharos (Aevian Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 3 types",
+      "Weak to 4 types"
+     ],
+     "tools": [
+      "Spread: Blizzard"
+     ],
+     "teach": [],
+     "sid": "AMPHAROS",
+     "form": "1",
+     "pick": false,
+     "rec": false
     }
    ]
   },
@@ -821,24 +837,6 @@
      "form": "0",
      "pick": true,
      "rec": true
-    },
-    {
-     "name": "Lapras (Aevian Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 7 types"
-     ],
-     "tools": [
-      "Spread: Rock Slide",
-      "Status: Sing",
-      "Setup: Dragon Dance"
-     ],
-     "teach": [],
-     "sid": "LAPRAS",
-     "form": "1",
-     "pick": false,
-     "rec": false
     },
     {
      "name": "Azumarill",
@@ -8702,6 +8700,38 @@
      "Physical + special: Intimidate or one screen can't stop both",
      "Resists your weaknesses: Grass, Poison",
      "You resist its weaknesses: Dark"
+    ]
+   }
+  ],
+  "Ampharos-Aevian": [
+   {
+    "name": "Slowbro",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Slowbro switches in on Fire, Fighting hits aimed at Ampharos-Aevian and heals on the way out",
+     "Resists your weaknesses: Fire, Fighting",
+     "You resist its weaknesses: Electric"
+    ]
+   },
+   {
+    "name": "Slowking",
+    "tier": "A",
+    "score": 2.0,
+    "why": [
+     "Slowking switches in on Fire, Fighting hits aimed at Ampharos-Aevian and heals on the way out",
+     "Resists your weaknesses: Fire, Fighting",
+     "You resist its weaknesses: Electric"
+    ]
+   },
+   {
+    "name": "Azumarill",
+    "tier": "A",
+    "score": 1.75,
+    "why": [
+     "Physical + special: Intimidate or one screen can't stop both",
+     "Resists your weaknesses: Fire, Fighting",
+     "You resist its weaknesses: Electric"
     ]
    }
   ],

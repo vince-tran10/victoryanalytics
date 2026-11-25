@@ -134,6 +134,23 @@ GAPS = ['Boss delayed actions (Manaphy dims its +3 SpA after 2 turns) and player
         'Non-hard fights (grunts, Jenner, Marcie…) still use walkthrough data']
 
 ok_n = sum(1 for c in checks if c[1]); n = len(checks)
+# 25 Nov (Vincent: 'Sylveon with Silk Scarf?'): a type booster must boost a move's REAL type after the ability (Pixilate Hyper Voice = Fairy)
+try:
+    import items_owned as _IOc
+    _MVc = json.load(open('gamedata/movetext.json')); _BYc = {v['name'].lower(): k for k, v in _MVc.items()}
+    _IBc = json.load(open('team/ideal_builds.json')) if os.path.exists('team/ideal_builds.json') else {}
+    _bad = []
+    for _n in st.get('team') or []:
+        _it = ((st.get('items') or {}).get(_n) or (_IBc.get(_n) or {}).get('item') or '')
+        _bt = {v: k for k, v in _IOc.BOOSTERS.items()}.get(_it)
+        if not _bt: continue
+        _ab = (st.get('abilities') or {}).get(_n) or (_IBc.get(_n) or {}).get('ability') or ''
+        _ts = {_IOc.atype(_MVc[m]['type'], _ab, bool(_MVc[m].get('soundmove'))) for m in (_BYc.get(x.lower()) for x in (st.get('moves') or {}).get(_n, []))
+               if m and int(_MVc[m].get('basedamage') or 0) > 0}
+        if _bt not in _ts: _bad.append(f"{_n}: {_it} boosts {_bt.title()}, its attacks are {', '.join(sorted(t.title() for t in _ts))}")
+    chk('Every type booster boosts a real attack type (after -ate abilities)', not _bad, '; '.join(_bad))
+except Exception as _e:
+    chk('Every type booster boosts a real attack type (after -ate abilities)', False, f'check failed: {_e}', blocking=False)
 rows = ''.join(f'<tr><td>{"<span class=ok>✓</span>" if ok else ("<span class=bad>✗</span>" if blk else "<span class=warn>!</span>")}</td>'
                f'<td>{E(nm)}</td><td class="legend">{E(d)}</td></tr>' for nm, ok, d, blk in checks)
 tbl = lambda head, rws: (f'<div class="tablewrap"><table class="cat"><thead><tr>{"".join("<th>" + h + "</th>" for h in head)}</tr></thead>'

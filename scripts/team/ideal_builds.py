@@ -54,6 +54,9 @@ FIXED = {'Lapras (Aevian Form)': dict(ability='NOGUARD', moves=['Rock Slide', 'Z
 NO = {'PROTECT', 'DETECT', 'TRICK', 'SWITCHEROO', 'FLING', 'LASTRESORT', 'FRUSTRATION', 'RETURN', 'HIDDENPOWER', 'NATUREPOWER',
       'SECRETPOWER', 'SOLARBEAM', 'SKYATTACK', 'FOCUSPUNCH', 'EXPLOSION', 'SELFDESTRUCT', 'FINALGAMBIT', 'MEMENTO', 'HEALINGWISH',
       'LUNARDANCE', 'DOUBLETEAM', 'MINIMIZE', 'ATTRACT', 'SWAGGER', 'CONFIDE', 'REST', 'SLEEPTALK', 'SNORE', 'GIGAIMPACT', 'HYPERBEAM'}
+def _bty(x, ab):   # 25 Nov: the booster of the type the move REALLY has after the ability (Pixilate Hyper Voice -> Fairy Feather)
+    import items_owned as _IOa
+    return BOOSTER.get(_IOa.atype(D.moves[x]['Type'], ab, 'Soundmove' in (D.moves[x].get('DataFlags') or [])))
 BOOSTER = {'STEEL': 'Metal Coat', 'FIGHTING': 'Black Belt', 'ROCK': 'Hard Stone', 'GROUND': 'Soft Sand', 'DRAGON': 'Dragon Fang',
            'DARK': 'Black Glasses', 'ELECTRIC': 'Magnet', 'WATER': 'Mystic Water', 'ICE': 'Never-Melt Ice', 'POISON': 'Poison Barb',
            'FAIRY': 'Fairy Feather', 'FIRE': 'Charcoal', 'GRASS': 'Miracle Seed', 'FLYING': 'Sharp Beak', 'BUG': 'Silver Powder',
@@ -140,7 +143,7 @@ def best_for(c):
     cid = crests.CREST_OF.get(c['sid'])
     crest = I[cid]['name'] if cid in CREST_IDS else None
     main = next((p for p in picks if D.moves[p]['Category'] != 'Status'), None)
-    item = crest or ('Sitrus Berry' if role == 'support' else BOOSTER.get(D.moves[main]['Type'], 'Sitrus Berry') if main else 'Sitrus Berry')
+    item = crest or ('Sitrus Berry' if role == 'support' else (_bty(main, ab) or 'Sitrus Berry') if main else 'Sitrus Berry')
     fast = c['base']['Spe'] >= 85
     stat_ = 'Atk' if phys else 'SpA'
     nat = ('Jolly' if phys else 'Timid') if fast else ('Adamant' if phys else 'Modest')
@@ -161,12 +164,12 @@ for c in sorted(cands, key=lambda c: c['gate'] != ''):
         # 22 Nov audit: the item follows the moves it actually runs (Golisopod-A was left with Silver Powder for a dropped Pin Missile lead)
         _atk = [mid(m) for m in b['moves'] if mid(m) in D.moves and D.moves[mid(m)]['Category'] != 'Status']
         if not (b.get('item') or '').endswith('Crest') and b.get('item') not in ('Sitrus Berry', 'Focus Sash') and _atk:
-            b['item'] = BOOSTER.get(D.moves[_atk[0]]['Type'], b['item'])
+            b['item'] = _bty(_atk[0], b.get('ability')) or b['item']
     if (st.get('items') or {}).get(c['name']): b['item'] = st['items'][c['name']]
     # 23 Nov (Vincent): only items he actually has (held by something in his export); else an owned booster of another attack, Sash, Sitrus
     if b.get('item') and b['item'] not in OWNED_ITEMS and not b['item'].endswith('Crest'):
         _atk = [mid(m) for m in b['moves'] if mid(m) in D.moves and D.moves[mid(m)]['Category'] != 'Status']
-        _alt = next((BOOSTER[D.moves[x]['Type']] for x in _atk if BOOSTER.get(D.moves[x]['Type']) in OWNED_ITEMS), None)
+        _alt = next((_bty(x, b.get('ability')) for x in _atk if _bty(x, b.get('ability')) in OWNED_ITEMS), None)
         b['item_wanted'] = b['item']
         b['item'] = _alt or ('Focus Sash' if (c.get('base') or {}).get('Spe', 0) >= 85 and 'Focus Sash' in OWNED_ITEMS else 'Sitrus Berry')
     out[c['name']] = b
@@ -181,7 +184,7 @@ for n in sorted([x for x in (st.get('team') or []) if x in out], key=lambda x: x
     if not it or it.endswith('Crest') or (st.get('items') or {}).get(n): continue
     if _CNT[it] > 0: _CNT[it] -= 1; continue
     _atk = [mid(m) for m in b['moves'] if mid(m) in D.moves and D.moves[mid(m)]['Category'] != 'Status']
-    alt = next((BOOSTER[D.moves[x]['Type']] for x in _atk if _CNT[BOOSTER.get(D.moves[x]['Type'])] > 0), None) \
+    alt = next((_bty(x, b.get('ability')) for x in _atk if _bty(x, b.get('ability')) and _CNT[_bty(x, b.get('ability'))] > 0), None) \
         or next((x for x in ('Focus Sash', 'Sitrus Berry') if _CNT[x] > 0), None)
     if alt: b.setdefault('item_wanted', it); b['item'] = alt; _CNT[alt] -= 1
 json.dump(out, open('team/ideal_builds.json', 'w'), indent=1, ensure_ascii=False)

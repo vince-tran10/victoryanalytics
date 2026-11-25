@@ -275,6 +275,16 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   load: CH9 loop), mark jenner9 done. Fights tab shows this chapter then 'Chapter 10 · coming up'. TRAINER FACES: his Characters zip
   (trainer<ttype ID>.png = battle portraits, ttypetext.rb :ID) copied to workspace/gamedata/Trainers (out of git); bosses use the boss sprite.
 
+- **ITEM = THE MOVE'S REAL TYPE (Vincent, 25 Nov: 'Sylveon with Silk Scarf? Pixilate makes it Fairy. Don't make this mistake again'):**
+  a move's type is the type AFTER its user's ability: Pixilate / Refrigerate / Aerilate / Galvanize / Dragonize turn Normal moves into
+  their type, Normalize makes every move Normal, Liquid Voice makes sound moves Water. items_owned.atype() is the ONE helper; planner
+  (atm / mtypes / meff / STAB / item), ideal_builds (_bty) and make_report5 best_item all use it. checks.py BLOCKS publishing when a
+  six member's type booster boosts none of its real attack types. A counter's item = booster of the move it uses on ITS foe (Lapras-A
+  vs Noivern: Rock Slide -> Hard Stone, 90% -> 109%).
+- **TIERS PAGE (Vincent, 25 Nov):** no S / A / B / C / D letters and no scores on the page: each list (Pokémon / Aevian / Crests) is ONE
+  ranked grid (#1 best); role names under tiles (no A-E letters); the sheet shows '#N of M' and 'Why it ranks #N'. Tier letters and blend
+  scores stay internal (tier_all.json, planner, builder).
+
 ## Fight protocol (Vincent, 14 Nov — do this BEFORE recommending any team or lineup)
 **Guide tips (Vincent, 23 Nov): ALWAYS factored in.** Every walkthrough / community tip he sends goes into workspace/team/fight_tips.json
 (per fight: tip text + needs); planner.py scores them (+3 per tip met) and the Planner tab shows 'Guide tips: N of M covered' (collapsed)

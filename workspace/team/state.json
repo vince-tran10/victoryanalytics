@@ -1,12 +1,12 @@
 {
  "_doc": "Read/written by scripts/team/update.py. Edit by hand only to change the six or its moves.",
- "export": "party_and_boxes_2026-11-24_1533.txt",
- "export_label": "24 Nov 15:33",
- "active_start": 470,
+ "export": "party_and_boxes_2026-11-24_2054.txt",
+ "export_label": "24 Nov 20:54",
+ "active_start": 475,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 393,
- "run": 407,
- "final": 411,
+ "roster": 399,
+ "run": 413,
+ "final": 417,
  "done": [
   "aelita",
   "narcissa1",
@@ -151,7 +151,7 @@
    "Grassy Glide",
    "Wood Hammer",
    "Rock Slide",
-   "Protect"
+   "Ice Fang"
   ],
   "Musharna (Aevian Form)": [
    "Lovely Kiss",

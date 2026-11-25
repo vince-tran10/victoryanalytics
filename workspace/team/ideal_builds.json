@@ -78,25 +78,6 @@
   "role": "attacker",
   "source": "your team"
  },
- "Emboar": {
-  "ability": "RECKLESS",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Charcoal",
-  "moves": [
-   "Flare Blitz",
-   "Sucker Punch",
-   "Superpower",
-   "Protect"
-  ],
-  "move_ids": [
-   "FLAREBLITZ",
-   "SUCKERPUNCH",
-   "SUPERPOWER"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
  "Golisopod (Aevian Form)": {
   "ability": "Skill Link",
   "nature": "Adamant",
@@ -116,6 +97,25 @@
   "role": "attacker",
   "source": "your team"
  },
+ "Emboar": {
+  "ability": "RECKLESS",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Charcoal",
+  "moves": [
+   "Flare Blitz",
+   "Sucker Punch",
+   "Superpower",
+   "Protect"
+  ],
+  "move_ids": [
+   "FLAREBLITZ",
+   "SUCKERPUNCH",
+   "SUPERPOWER"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Braviary": {
   "ability": "SHEERFORCE",
   "nature": "Adamant",
@@ -134,6 +134,25 @@
   ],
   "role": "attacker",
   "source": "game+smogon"
+ },
+ "Scrafty": {
+  "ability": "INTIMIDATE",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Black Glasses",
+  "moves": [
+   "Crunch",
+   "High Jump Kick",
+   "Fake Out",
+   "Protect"
+  ],
+  "move_ids": [
+   "CRUNCH",
+   "HIJUMPKICK",
+   "HEADSMASH"
+  ],
+  "role": "attacker",
+  "source": "your team"
  },
  "Arcanine": {
   "ability": "INTIMIDATE",
@@ -210,6 +229,29 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Musharna (Aevian Form)": {
+  "ability": "TOUGHCLAWS",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk / 4 Def",
+  "item": "Fairy Feather",
+  "moves": [
+   "Lovely Kiss",
+   "Shadow Claw",
+   "Play Rough",
+   "Protect"
+  ],
+  "move_ids": [
+   "LOVELYKISS",
+   "SHADOWCLAW",
+   "PLAYROUGH"
+  ],
+  "role": "attacker",
+  "source": "your team",
+  "fight_why": [
+   "Bulk + power: Speed EVs change no matchup here",
+   "Fairy Feather: boosts Play Rough, the best hit on 5 of their 6"
+  ]
  },
  "Arcanine (Hisuian Form)": {
   "ability": "ROCKHEAD",
@@ -353,7 +395,7 @@
    "Grassy Glide",
    "Wood Hammer",
    "Rock Slide",
-   "Protect"
+   "Ice Fang"
   ],
   "move_ids": [
    "ROCKSLIDE",
@@ -385,25 +427,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Scrafty": {
-  "ability": "INTIMIDATE",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Black Glasses",
-  "moves": [
-   "Crunch",
-   "High Jump Kick",
-   "Fake Out",
-   "Protect"
-  ],
-  "move_ids": [
-   "CRUNCH",
-   "HIJUMPKICK",
-   "HEADSMASH"
-  ],
-  "role": "attacker",
-  "source": "your team"
  },
  "Vikavolt": {
   "ability": "LEVITATE",
@@ -481,29 +504,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Musharna (Aevian Form)": {
-  "ability": "TOUGHCLAWS",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk / 4 Def",
-  "item": "Fairy Feather",
-  "moves": [
-   "Lovely Kiss",
-   "Shadow Claw",
-   "Play Rough",
-   "Protect"
-  ],
-  "move_ids": [
-   "LOVELYKISS",
-   "SHADOWCLAW",
-   "PLAYROUGH"
-  ],
-  "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Bulk + power: Speed EVs change no matchup here",
-   "Fairy Feather: boosts Play Rough, the best hit on 5 of their 6"
-  ]
- },
  "Flareon": {
   "ability": "GUTS",
   "nature": "Adamant",
@@ -522,6 +522,28 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Sylveon": {
+  "ability": "PIXILATE",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA / 4 Def",
+  "item": "Fairy Feather",
+  "moves": [
+   "Hyper Voice",
+   "Shadow Ball",
+   "Wish",
+   "Protect"
+  ],
+  "move_ids": [
+   "HYPERVOICE",
+   "SHADOWBALL",
+   "WISH"
+  ],
+  "role": "attacker",
+  "source": "your team",
+  "fight_why": [
+   "Bulk + power: Speed EVs change no matchup here"
+  ]
  },
  "Crobat": {
   "ability": "INFILTRATOR",
@@ -674,28 +696,6 @@
   ],
   "role": "attacker",
   "source": "game"
- },
- "Sylveon": {
-  "ability": "PIXILATE",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA / 4 Def",
-  "item": "Silk Scarf",
-  "moves": [
-   "Hyper Voice",
-   "Shadow Ball",
-   "Wish",
-   "Protect"
-  ],
-  "move_ids": [
-   "HYPERVOICE",
-   "SHADOWBALL",
-   "WISH"
-  ],
-  "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Bulk + power: Speed EVs change no matchup here"
-  ]
  },
  "Lunatone (Lunatone Dominant Fusion)": {
   "ability": "LUNARIDOL",
@@ -1170,6 +1170,25 @@
   "role": "support",
   "source": "game"
  },
+ "Camerupt": {
+  "ability": "SOLIDROCK",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Soft Sand",
+  "moves": [
+   "Yawn",
+   "Earth Power",
+   "Lava Plume",
+   "Protect"
+  ],
+  "move_ids": [
+   "YAWN",
+   "EARTHPOWER",
+   "LAVAPLUME"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
  "Unfezant (Aevian Form Male)": {
   "ability": "ROCKHEAD",
   "nature": "Jolly",
@@ -1226,6 +1245,29 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Lapras (Aevian Form)": {
+  "ability": "NOGUARD",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk / 4 Def",
+  "item": "Hard Stone",
+  "moves": [
+   "Rock Slide",
+   "Zen Headbutt",
+   "Dragon Dance",
+   "Sing"
+  ],
+  "move_ids": [
+   "STONEEDGE",
+   "SING",
+   "ZENHEADBUTT"
+  ],
+  "role": "attacker",
+  "source": "your team",
+  "fight_why": [
+   "Bulk + power: Speed EVs change no matchup here",
+   "Hard Stone: boosts Rock Slide, its hit on Noivern"
+  ]
  },
  "Hitmonlee": {
   "ability": "LIMBER",
@@ -1565,29 +1607,6 @@
   "role": "attacker",
   "source": "game"
  },
- "Lapras (Aevian Form)": {
-  "ability": "NOGUARD",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk / 4 Def",
-  "item": "Twisted Spoon",
-  "moves": [
-   "Rock Slide",
-   "Zen Headbutt",
-   "Dragon Dance",
-   "Sing"
-  ],
-  "move_ids": [
-   "STONEEDGE",
-   "SING",
-   "ZENHEADBUTT"
-  ],
-  "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Bulk + power: Speed EVs change no matchup here",
-   "Twisted Spoon: boosts Zen Headbutt, the best hit on 5 of their 6"
-  ]
- },
  "Drifblim": {
   "ability": "UNBURDEN",
   "nature": "Modest",
@@ -1721,25 +1740,6 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Camerupt": {
-  "ability": "SOLIDROCK",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Soft Sand",
-  "moves": [
-   "Yawn",
-   "Earth Power",
-   "Lava Plume",
-   "Protect"
-  ],
-  "move_ids": [
-   "YAWN",
-   "EARTHPOWER",
-   "LAVAPLUME"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Farfetch'd": {
   "ability": "KEENEYE",
   "nature": "Adamant",
@@ -1774,6 +1774,25 @@
    "KNOCKOFF",
    "CRABHAMMER",
    "SWORDSDANCE"
+  ],
+  "role": "attacker",
+  "source": "your team"
+ },
+ "Ampharos (Aevian Form)": {
+  "ability": "FILTER",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Hard Stone",
+  "moves": [
+   "Power Gem",
+   "Signal Beam",
+   "Blizzard",
+   "Protect"
+  ],
+  "move_ids": [
+   "POWERGEM",
+   "SIGNALBEAM",
+   "BLIZZARD"
   ],
   "role": "attacker",
   "source": "your team"
@@ -2458,25 +2477,6 @@
   "role": "attacker",
   "source": "game+smogon"
  },
- "Ampharos (Aevian Form)": {
-  "ability": "FILTER",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Hard Stone",
-  "moves": [
-   "Power Gem",
-   "Signal Beam",
-   "Blizzard",
-   "Protect"
-  ],
-  "move_ids": [
-   "POWERGEM",
-   "SIGNALBEAM",
-   "BLIZZARD"
-  ],
-  "role": "attacker",
-  "source": "your team"
- },
  "Meowscarada": {
   "ability": "PROTEAN",
   "nature": "Jolly",
@@ -2644,25 +2644,6 @@
    "RECOVER",
    "SHADOWBALL",
    "PSYSHOCK"
-  ],
-  "role": "attacker",
-  "source": "game+smogon"
- },
- "Ludicolo": {
-  "ability": "SWIFTSWIM",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Miracle Seed",
-  "moves": [
-   "Giga Drain",
-   "Surf",
-   "Rain Dance",
-   "Protect"
-  ],
-  "move_ids": [
-   "GIGADRAIN",
-   "SURF",
-   "RAINDANCE"
   ],
   "role": "attacker",
   "source": "game+smogon"
@@ -3364,6 +3345,25 @@
   "role": "attacker",
   "source": "engine"
  },
+ "Ludicolo": {
+  "ability": "SWIFTSWIM",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA",
+  "item": "Miracle Seed",
+  "moves": [
+   "Giga Drain",
+   "Surf",
+   "Rain Dance",
+   "Protect"
+  ],
+  "move_ids": [
+   "GIGADRAIN",
+   "SURF",
+   "RAINDANCE"
+  ],
+  "role": "attacker",
+  "source": "game+smogon"
+ },
  "Swellow": {
   "ability": "GUTS",
   "nature": "Jolly",
@@ -3894,6 +3894,25 @@
   "role": "attacker",
   "source": "game"
  },
+ "Garbodor": {
+  "ability": "STENCH",
+  "nature": "Adamant",
+  "evs": "252 HP / 252 Atk",
+  "item": "Poison Barb",
+  "moves": [
+   "Gunk Shot",
+   "Body Slam",
+   "Toxic",
+   "Protect"
+  ],
+  "move_ids": [
+   "GUNKSHOT",
+   "BODYSLAM",
+   "TOXIC"
+  ],
+  "role": "attacker",
+  "source": "game"
+ },
  "Carnivine": {
   "ability": "LEVITATE",
   "nature": "Adamant",
@@ -4097,25 +4116,6 @@
   "move_ids": [
    "CIRCLETHROW",
    "BULLDOZE"
-  ],
-  "role": "attacker",
-  "source": "game"
- },
- "Garbodor": {
-  "ability": "STENCH",
-  "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Poison Barb",
-  "moves": [
-   "Gunk Shot",
-   "Body Slam",
-   "Toxic",
-   "Protect"
-  ],
-  "move_ids": [
-   "GUNKSHOT",
-   "BODYSLAM",
-   "TOXIC"
   ],
   "role": "attacker",
   "source": "game"
@@ -6012,7 +6012,7 @@
   "ability": "GALVANIZE",
   "nature": "Adamant",
   "evs": "252 HP / 252 Atk",
-  "item": "Silk Scarf",
+  "item": "Magnet",
   "moves": [
    "Magnet Rise",
    "Facade",

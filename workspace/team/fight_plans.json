@@ -17,7 +17,8 @@
     "moves": [
      "Grassy Glide",
      "Wood Hammer",
-     "Rock Slide"
+     "Rock Slide",
+     "Ice Fang"
     ],
     "setup": null,
     "where": "Party",
@@ -42,7 +43,7 @@
     ],
     "setup": null,
     "where": "Party",
-    "dump": 5,
+    "dump": 2,
     "nature": "Modest",
     "evs": {
      "SpA": 252,
@@ -61,8 +62,8 @@
      "Zen Headbutt"
     ],
     "setup": "Dragon Dance",
-    "where": "Active",
-    "dump": 494,
+    "where": "Party",
+    "dump": 3,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -83,8 +84,8 @@
      "Stomping Tantrum"
     ],
     "setup": null,
-    "where": "Active",
-    "dump": 492,
+    "where": "Party",
+    "dump": 4,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -105,7 +106,7 @@
     ],
     "setup": null,
     "where": "Party",
-    "dump": 2,
+    "dump": 5,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -125,7 +126,7 @@
     "foe": "Stoutland",
     "mon": "Golisopod (Aevian Form)",
     "ability": "SKILLLINK",
-    "dealt": 95,
+    "dealt": 107,
     "taken": 36,
     "ok": true,
     "setup": false,
@@ -142,7 +143,7 @@
     "foe": "Appletun",
     "mon": "Sylveon",
     "ability": "PIXILATE",
-    "dealt": 119,
+    "dealt": 130,
     "taken": 26,
     "ok": true,
     "setup": false,
@@ -237,14 +238,6 @@
    {
     "swaps": [
      "Musharna (Aevian Form)",
-     "Lapras (Aevian Form)"
-    ],
-    "score": 64.85,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Musharna (Aevian Form)",
      "Solrock (Solrock Dominant Fusion)"
     ],
     "score": 64.82,
@@ -260,8 +253,8 @@
    },
    {
     "swaps": [
-     "Arcanine (Hisuian Form)",
-     "Musharna (Aevian Form)"
+     "Musharna (Aevian Form)",
+     "Arcanine (Hisuian Form)"
     ],
     "score": 64.76,
     "counters": 4
@@ -287,15 +280,7 @@
      "Sylveon",
      "Solrock (Solrock Dominant Fusion)"
     ],
-    "score": 34.85,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Gastrodon (West Aevian Form)",
-     "Lapras (Aevian Form)"
-    ],
-    "score": 34.84,
+    "score": 34.86,
     "counters": 4
    },
    {
@@ -388,46 +373,6 @@
    },
    {
     "swaps": [
-     "Florges",
-     "Lapras (Aevian Form)"
-    ],
-    "score": 24.93,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Sylveon",
-     "Lapras (Aevian Form)"
-    ],
-    "score": 24.87,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Alcremie",
-     "Lapras (Aevian Form)"
-    ],
-    "score": 24.86,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Clefable",
-     "Lapras (Aevian Form)"
-    ],
-    "score": 24.83,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Azumarill",
-     "Lapras (Aevian Form)"
-    ],
-    "score": 24.8,
-    "counters": 4
-   },
-   {
-    "swaps": [
      "Aurorus",
      "Gastrodon (West Aevian Form)"
     ],
@@ -436,16 +381,16 @@
    },
    {
     "swaps": [
-     "Ninetales (Alolan Form)",
-     "Solrock (Solrock Dominant Fusion)"
+     "Sylveon",
+     "Musharna (Aevian Form)"
     ],
-    "score": 4.83,
+    "score": 4.84,
     "counters": 4
    },
    {
     "swaps": [
-     "Sylveon",
-     "Musharna (Aevian Form)"
+     "Ninetales (Alolan Form)",
+     "Solrock (Solrock Dominant Fusion)"
     ],
     "score": 4.83,
     "counters": 4
@@ -464,6 +409,62 @@
      "Palossand (Icy Aevian Form)"
     ],
     "score": 4.78,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Gastrodon (West Aevian Form)",
+     "Sandslash (Alolan Form)"
+    ],
+    "score": 4.78,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Gastrodon (West Aevian Form)",
+     "Barbaracle"
+    ],
+    "score": 4.78,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Arcanine (Hisuian Form)",
+     "Gastrodon (West Aevian Form)"
+    ],
+    "score": 4.76,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Musharna (Aevian Form)",
+     "Arcanine"
+    ],
+    "score": 4.74,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Musharna (Aevian Form)",
+     "Alcremie"
+    ],
+    "score": 4.73,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Musharna (Aevian Form)",
+     "Typhlosion"
+    ],
+    "score": 4.72,
+    "counters": 4
+   },
+   {
+    "swaps": [
+     "Musharna (Aevian Form)",
+     "Walrein"
+    ],
+    "score": 4.72,
     "counters": 4
    }
   ],

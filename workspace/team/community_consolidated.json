@@ -143,6 +143,19 @@
   "rating": 0.85
  },
  {
+  "name": "Ampharos-A",
+  "sid": "AMPHAROS",
+  "form": "1",
+  "l1": "S",
+  "l2": "B",
+  "net": 1,
+  "t0": "B",
+  "m0": 0.5,
+  "t1": "A",
+  "m1": 0.59,
+  "rating": 0.59
+ },
+ {
   "name": "Mismagius-A",
   "sid": "MISMAGIUS",
   "form": "1",
@@ -167,19 +180,6 @@
   "t1": "B",
   "m1": 0.73,
   "rating": 0.73
- },
- {
-  "name": "Ampharos-A",
-  "sid": "AMPHAROS",
-  "form": "1",
-  "l1": "S",
-  "l2": "B",
-  "net": 1,
-  "t0": "B",
-  "m0": 0.5,
-  "t1": "B",
-  "m1": 0.59,
-  "rating": 0.59
  },
  {
   "name": "Palossand-A Fiery",

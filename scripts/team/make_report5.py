@@ -462,12 +462,13 @@ try:
     OWNED_ITEMS = _IO.owned(json.load(open(os.path.join(_TD, 'state.json'))))[1]
 except Exception:
     OWNED_ITEMS = set()
-def best_item(attacks, phys):
+def best_item(attacks, phys, ability=''):
     """23 Nov (Vincent): only items he has (held in his export): booster of the first attack whose booster he owns, else Sitrus."""
     for m in attacks:
         v = SX.MV.get(m) or {}
         if v.get('Category') in ('Physical', 'Special'):
-            b_ = BOOSTER.get((v.get('Type') or '').upper())
+            import items_owned as _IOb   # 25 Nov: the type after the ability (Pixilate Hyper Voice = Fairy Feather)
+            b_ = BOOSTER.get(_IOb.atype((v.get('Type') or '').upper(), ability, 'Soundmove' in (v.get('DataFlags') or [])))
             if b_ and (not OWNED_ITEMS or b_ in OWNED_ITEMS): return b_
     return 'Sitrus Berry'
 def plan_moves(have, target, phys, ability):
@@ -755,7 +756,7 @@ for d in cur:
             _iss.append(f"Ability: {d.get('ability')} → {d['capsule'][0]} (Ability Capsule)")
         if (d.get('level') or CAP) < CAP: _iss.append(f"Lv {d['level']} → {CAP}")
         _tb = next((t for t in TEAM if t[1] == d['final']), None)   # a team species: its build follows the team set
-        _itm = _tb[6] if _tb else best_item([m for m in list(d['attacks'])[:3]], _ph)
+        _itm = _tb[6] if _tb else best_item([m for m in list(d['attacks'])[:3]], _ph, ((d.get('capsule') or [None])[0] or d.get('ability') or ''))
         if _itm and (d.get('item') or '') != _itm: _iss.append(f"Item: {d.get('item') or 'none'} → {_itm}")
         _tgt = [m for m, _ in _tb[7] if m != 'Protect'] if _tb else list(d['attacks'])[:3]
         _iss += plan_moves(d['moves'], _tgt, _ph, d.get('ability'))

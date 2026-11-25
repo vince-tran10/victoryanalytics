@@ -36,6 +36,7 @@ if ALTFIELD and FE and ALT_FE:
 ALT = bool(ALTMOVES or ALTABIL)
 FMT = B9[FK][3] if FK in B9 else 'Doubles'
 E = engine.Engine(os.path.abspath('.'))
+import items_owned as _IO0
 MV = G.load('movetext'); BYNAME = {v['name'].lower(): k for k, v in MV.items()}
 FT = G.load('fieldtext').get(FE or '', {}) if FE else {}
 TYPEMODS = {mv: t for t, ms in (FT.get('typeMods') or {}).items() for mv in ms}
@@ -251,9 +252,11 @@ def fbm(m, ab=''):   # field (+ Punk Rock) multiplier of move m: type boost x da
     f = TB.get(d.get('type'), 1) * DMODS.get(m, 1) * (SOUNDB if snd else 1)
     if snd and ab in ('PUNKROCK',): f *= 1.5 if FIELD in ('Concert Venue', 'Big Top Arena', 'Cave') and not BREAK else 1.3   # Battle_Move.rb 1845
     return f
-def mtypes(m): d = MV.get(m) or {}; return [d.get('type')] + ([TYPEMODS[m]] if m in TYPEMODS else [])
-def meff(m, types, ab=''):
-    ts = mtypes(m)
+def atm(m, aab=''):   # the move's real type after its USER's ability (Pixilate Hyper Voice = Fairy): items_owned.atype
+    d = MV.get(m) or {}; return _IO0.atype(d.get('type'), aab, bool(d.get('soundmove')))
+def mtypes(m, aab=''): return [atm(m, aab)] + ([TYPEMODS[m]] if m in TYPEMODS else [])
+def meff(m, types, ab='', aab=''):
+    ts = mtypes(m, aab)
     if ab in ABSORB and ABSORB[ab] in ts: return 0.0
     snd = bool((MV.get(m) or {}).get('soundmove'))
     if snd and ab == 'SOUNDPROOF': return 0.0
@@ -279,7 +282,7 @@ for i, n in enumerate(NAMES):
         for m in ms:
             d = MV.get(m) or {}
             if int(d.get('basedamage') or 0) <= 0: continue
-            e = meff(m, f['types'], (f.get('ability') or '').upper().replace(' ', ''))
+            e = meff(m, f['types'], (f.get('ability') or '').upper().replace(' ', ''), ab_)
             fb = fbm(m, ab_)
             best_ = max(best_, 2 if e >= 2 else 1.5 if (fb >= 1.5 and e >= 1) else 0)
         OFF[i, fi] = best_
@@ -287,7 +290,7 @@ L = [0, 1] if FMT == 'Doubles' else [0]
 LM = [k for k, (fi, _, _) in enumerate(EM) if fi in L]   # their leads' attacks
 SPR = [[mvid(m) for m in build(n)[2] if mvid(m) and (MV.get(mvid(m)) or {}).get('target') == 'AllNonUsers' and int((MV.get(mvid(m)) or {}).get('basedamage') or 0) > 0] for n in NAMES]
 def ally_hit(a, b):   # a's spread moves that also hit partner b (Earthquake, Surf, Discharge...)
-    e = [meff(m, TA[NAMES[b]]['types'], ABS_[b]) for m in SPR[a]]
+    e = [meff(m, TA[NAMES[b]]['types'], ABS_[b], ABS_[a]) for m in SPR[a]]
     return max(e) if e else 0
 def lead_q(p):   # every attack their leads carry: resisted by BOTH of ours (+), anything super effective on either (heavy -)
     p = list(p); r = RM[p][:, LM]
@@ -345,7 +348,7 @@ def meets(i, need):
     if kind == 'priority_vs':
         for x in mnames:
             d = MV.get(mvid(x)) or {}
-            if int(d.get('priority') or 0) > 0 and int(d.get('basedamage') or 0) > 0 and meff(mvid(x), FOES[j]['types']) >= 1: return x
+            if int(d.get('priority') or 0) > 0 and int(d.get('basedamage') or 0) > 0 and meff(mvid(x), FOES[j]['types'], '', ab) >= 1: return x
     return None
 NEEDS = sorted({nd for t in TIPS for nd in t['needs']})
 TM = np.array([[1 if meets(i, nd) else 0 for nd in NEEDS] for i in range(len(NAMES))]) if NEEDS else np.zeros((len(NAMES), 0))
@@ -414,10 +417,10 @@ def move_why(n, mname):
         if mid in SLEEP and (FE or '').startswith('CONCERT'):   # Concert Venue: sleep fails at Hype 3+ (fieldnotetext)
             w_ += '; fails once Hype reaches 3 (their sound moves / Work Up raise it): use it early'
         return (w_, False)
-    se = [f['name'] for f in FOES if meff(mid, f['types'], (f.get('ability') or '').upper().replace(' ', '')) >= 2]
-    imm = [f['name'] for f in FOES if meff(mid, f['types'], (f.get('ability') or '').upper().replace(' ', '')) == 0]
+    se = [f['name'] for f in FOES if meff(mid, f['types'], (f.get('ability') or '').upper().replace(' ', ''), build(n)[1]) >= 2]
+    imm = [f['name'] for f in FOES if meff(mid, f['types'], (f.get('ability') or '').upper().replace(' ', ''), build(n)[1]) == 0]
     fb = fbm(mid, build(n)[1]) if not BREAK else 1
-    stab = d.get('type') in TA[n]['types']
+    stab = atm(mid, build(n)[1]) in TA[n]['types']
     bits = []
     if se: bits.append('Super effective on ' + ', '.join(se))
     if fb > 1: bits.append(f'x{fb:g} on this field')
@@ -428,7 +431,7 @@ def move_why(n, mname):
     def epow(m_, f):   # effective power of move m_ on foe f: power x STAB x type x field
         d_ = MV.get(m_) or {}; b_ = int(d_.get('basedamage') or 0) * (2 if m_ == 'DELUGE' else 1) * hits(m_, build(n)[1]) * (1.5 if m_ == 'DELUGE' else 1) / (2 if m_ == 'DELUGE' else 1)
         if b_ <= 0: return 0
-        return b_ * (1.5 if d_.get('type') in TA[n]['types'] else 1) * meff(m_, f['types'], (f.get('ability') or '').upper().replace(' ', '')) * (1 if BREAK else fbm(m_, build(n)[1]))
+        return b_ * (1.5 if atm(m_, build(n)[1]) in TA[n]['types'] else 1) * meff(m_, f['types'], (f.get('ability') or '').upper().replace(' ', ''), build(n)[1]) * (1 if BREAK else fbm(m_, build(n)[1]))
     mine = [mvid(x) or x.upper().replace(' ', '') for x in build(n)[2]]
     best_on = [f['name'] for f in FOES if epow(mid, f) > 0 and epow(mid, f) >= max(epow(x, f) for x in mine)]
     if best_on: bits.insert(0, 'Your best hit on ' + ', '.join(best_on))
@@ -466,7 +469,7 @@ def sc_on(i, j):   # member i's speed tool that works on foe j (name) or None
             if m == 'STICKYWEB' and 'FLYING' in ft: continue
             return x
         if int(d.get('priority') or 0) > 0 and int(d.get('basedamage') or 0) > 0 and m != 'FAKEOUT' \
-                and (meff(m, f['types'], fab) >= 2 or (d.get('type') in TA[n]['types'] and meff(m, f['types'], fab) >= 1)):
+                and (meff(m, f['types'], fab) >= 2 or (atm(m, build(n)[1]) in TA[n]['types'] and meff(m, f['types'], fab, build(n)[1]) >= 1)):
             return x + ' (priority)'
     return None
 SCM = np.array([[sc_on(i, j) is not None for j in range(nF)] for i in range(NP)])
@@ -504,7 +507,7 @@ CHECK = (TAKE_B < 50) & ((DEAL >= 60) | (OFF >= 2))        # member checks foe: 
 REVK = FAST & (DEAL >= 100)                                 # outspeeds and one-shots it
 def _has(i, ids): return bool({mvid(x) for x in build(NAMES[i])[2]} & ids)
 PRIO = np.array([any(int((MV.get(mvid(x)) or {}).get('priority') or 0) > 0 and int((MV.get(mvid(x)) or {}).get('basedamage') or 0) > 0
-                     and mvid(x) != 'FAKEOUT' and ((MV.get(mvid(x)) or {}).get('type') in TA[n]['types'] or int((MV.get(mvid(x)) or {}).get('basedamage') or 0) >= 80) for x in build(n)[2]) for n in NAMES])
+                     and mvid(x) != 'FAKEOUT' and (atm(mvid(x), build(n)[1]) in TA[n]['types'] or int((MV.get(mvid(x)) or {}).get('basedamage') or 0) >= 80) for x in build(n)[2]) for n in NAMES])
 PIVOT = np.array([build(n)[1] == 'REGENERATOR' or _has(i, {'UTURN', 'VOLTSWITCH', 'FLIPTURN', 'PARTINGSHOT', 'TELEPORT', 'RECOVER', 'ROOST', 'SLACKOFF',
                   'SOFTBOILED', 'MOONLIGHT', 'SYNTHESIS', 'WISH', 'SHOREUP', 'STRENGTHSAP'}) for i, n in enumerate(NAMES)])
 HAZ = np.array([_has(i, {'STEALTHROCK', 'SPIKES', 'TOXICSPIKES', 'STICKYWEB', 'KNOCKOFF'}) for i in range(NP)])
@@ -532,7 +535,7 @@ def _fieldv(i):
         for m in build(n)[0]:
             d = MV.get(m) or {}; b_ = int(d.get('basedamage') or 0)
             if b_ <= 0: continue
-            v = b_ * (1.5 if d.get('type') in TA[n]['types'] else 1) * meff(m, f['types'], (f.get('ability') or '').upper().replace(' ', '')) * fbm(m, ab)
+            v = b_ * (1.5 if atm(m, ab) in TA[n]['types'] else 1) * meff(m, f['types'], (f.get('ability') or '').upper().replace(' ', ''), ab) * fbm(m, ab)
             if v > best_: best_, fb_ = v, fbm(m, ab)
         c += best_ > 0 and fb_ >= 1.5
     return c
@@ -689,7 +692,7 @@ def _bestmv(i, j):
     for m in build(n)[0]:
         d_ = MV.get(m) or {}; b_ = int(d_.get('basedamage') or 0)
         if b_ <= 0: continue
-        v = b_ * hits(m, ab) * (1.5 if d_.get('type') in TA[n]['types'] else 1) * meff(m, f['types'], (f.get('ability') or '').upper().replace(' ', '')) * fbm(m, ab)
+        v = b_ * hits(m, ab) * (1.5 if atm(m, ab) in TA[n]['types'] else 1) * meff(m, f['types'], (f.get('ability') or '').upper().replace(' ', ''), ab) * fbm(m, ab)
         if v > best_[0]: best_ = (v, d_.get('name'))
     return best_[1]
 def _plan2(i, j):   # 24 Nov (Vincent): two bullets: how this counter beats it (speed / KO / Sash), then its item / ability / format trap
@@ -951,7 +954,7 @@ for i in best:
     phys = sum((MV.get(m) or {}).get('category') == 'physical' for m in atk_) >= sum((MV.get(m) or {}).get('category') == 'special' for m in atk_)
     def _ep(m_, f):
         d_ = MV.get(m_) or {}; b_ = int(d_.get('basedamage') or 0) * hits(m_, ab) * (1.5 if m_ == 'DELUGE' else 1)   # Deluge doubles only when hit first: count x1.5
-        return b_ * (1.5 if d_.get('type') in TA[n]['types'] else 1) * meff(m_, f['types'], (f.get('ability') or '').upper().replace(' ', '')) * fbm(m_, ab) if b_ > 0 else 0
+        return b_ * (1.5 if atm(m_, ab) in TA[n]['types'] else 1) * meff(m_, f['types'], (f.get('ability') or '').upper().replace(' ', ''), ab) * fbm(m_, ab) if b_ > 0 else 0
     if ALT:   # 24 Nov: a move that undoes the new field (Earthquake, Eruption, Scald...) -> the best legal SAME-TYPE move that doesn't, else any attack
         for slot in list(mn):
             m0 = _mid(slot)
@@ -1057,10 +1060,18 @@ for i in best:
     # 24 Nov: the item boosts the attack that is the best hit on the most foes in THIS fight (not the first one listed)
     _ids = [_mid(x) for x in mn if int((MV.get(_mid(x)) or {}).get('basedamage') or 0) > 0]
     _cnt = {x: sum(1 for f in FOES if _ep(x, f) > 0 and _ep(x, f) >= max(_ep(y, f) for y in _ids)) for x in _ids}
-    _top = max(_ids, key=lambda x: (_cnt[x], (MV.get(x) or {}).get('type') in TA[n]['types'], int((MV.get(x) or {}).get('basedamage') or 0)), default=None)
+    _top = max(_ids, key=lambda x: (_cnt[x], atm(x, ab) in TA[n]['types'], int((MV.get(x) or {}).get('basedamage') or 0)), default=None)
     _cur = (IB.get(n) or {}).get('item') or ''
-    item_ = _cur if (_cur.endswith('Crest') or _cur in ('Focus Sash', 'Sitrus Berry') or (st.get('items') or {}).get(n)) else (BOOSTER_.get((MV.get(_top) or {}).get('type')) if _top else _cur) or _cur
+    item_ = _cur if (_cur.endswith('Crest') or _cur in ('Focus Sash', 'Sitrus Berry') or (st.get('items') or {}).get(n)) else (BOOSTER_.get(atm(_top, ab)) if _top else _cur) or _cur
     if item_ != _cur and _top: why_.append(f"{item_}: boosts {MV[_top]['name']}, the best hit on {_cnt[_top]} of their {nF}")
+    if COUNTER and i in best and _ids and not (_cur.endswith('Crest') or _cur in ('Focus Sash', 'Sitrus Berry') or (st.get('items') or {}).get(n)):
+        # 25 Nov audit (Lapras-A held Twisted Spoon for Zen Headbutt; its job is Noivern with Rock Slide): a counter's item boosts the move
+        # it uses on ITS foe (the real type after the ability)
+        _jf = best.index(i); _mv_j = max(_ids, key=lambda x: _ep(x, FOES[_jf]))
+        _it_j = BOOSTER_.get(atm(_mv_j, ab))
+        if _it_j and _it_j != item_:
+            why_ = [w for w in why_ if not w.startswith(f'{item_}: boosts')]
+            item_ = _it_j; why_.append(f"{item_}: boosts {MV[_mv_j]['name']}, its hit on {FN[_jf]}")
     ab_new = None
     if n in ABIL_OVR and ABIL_OVR[n] != ((st.get('abilities') or {}).get(n) or (IB.get(n) or {}).get('ability') or '').upper().replace(' ', ''):
         ab_new = ABIL_OVR[n]; why_.append(f"{ab_new.title()} (ability capsule): the better ability in this fight")
@@ -1237,7 +1248,7 @@ if COUNTER:
             if not (st_ and hk == 1 and FSETM[j] != 'Fell Stinger') or not win_: gp.append(f"{mv_} {'KOs it' if hk == 1 else f'KOs it in {hk} hits'}" + (' (it is at 1 HP after the first: Focus Sash / Sturdy)' if sash_ and hk == 2 else '')
                       + ('' if win_ else f": you lose this race (it needs {hd} on you): chip it with another Pokémon first"))
         if sub_: gp.append(f"If it uses Substitute (25% of its HP): break the doll with your weaker move, then {mv_}" + (' (Shift Gear makes it faster after that)' if 'SHIFTGEAR' in fmoves[j] else ''))
-        if heal_: gp.append(f"It heals 50%: {mv_} ({int(DEAL[i][j])}%) {'out-damages the heal, keep attacking' if DEAL[i][j] > 50 else 'does NOT out-damage the heal: you need more power'}")
+        if heal_ and hk > 1: gp.append(f"It heals 50%: {mv_} ({int(DEAL[i][j])}%) {'out-damages the heal, keep attacking' if DEAL[i][j] > 50 else 'does NOT out-damage the heal: you need more power'}")
         if fit == 'Choice Scarf' and 'TRICK' in fmoves[j]: gp.append('If it Tricks you the Scarf: you are locked into your next move; pick the move you want to keep clicking')
         _fz = [(MV.get(m) or {}) for m in fmoves[j] if (MV.get(m) or {}).get('zmovedata')]
         if _fz:
@@ -1355,9 +1366,9 @@ if APPLY and st.get('mode') == 'planner':   # the planner's six IS the team (lea
         st.setdefault('plan_builds', {}).setdefault(FK, {}).pop(n, None)
         if fb['moves'] != bm:
             st.setdefault('base_moves', {})[n] = bm; st['plan_builds'][FK][n] = dict(moves=fb['moves'], ability=fb.get('ability') or (st.get('abilities') or {}).get(n) or (IB.get(n) or {}).get('ability')); st['moves'][n] = fb['moves']
-        if fb.get('ability'): st.setdefault('abilities', {})[n] = fb['ability']
         elif n in (st.get('base_moves') or {}):
             st['moves'][n] = st['base_moves'][n]
+        if fb.get('ability'): st.setdefault('abilities', {})[n] = fb['ability']   # 25 Nov: was wedged between if / elif and reset the moves
         if n in IB: IB[n].update(evs=fb['evs'], nature=fb['nature'], fight_why=fb['why'], moves=st['moves'].get(n, IB[n].get('moves')), item=fb.get('item') or IB[n].get('item'))
         if n in IB and fb.get('ability'): IB[n]['ability'] = fb['ability']
     json.dump(IB, open('team/ideal_builds.json', 'w'), indent=1, ensure_ascii=False)
