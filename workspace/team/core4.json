@@ -37,66 +37,58 @@
    ]
   },
   {
-   "name": "Chandelure",
-   "tier": "B",
-   "sid": "CHANDELURE",
-   "form": "0",
-   "blend": 0.527,
-   "meta": 0.294,
-   "game": 0.99,
+   "name": "Toxtricity (Aevian Form)",
+   "tier": "S",
+   "sid": "TOXTRICITY",
+   "form": "2",
+   "blend": 0.742,
+   "meta": 0.67,
+   "game": 0.937,
    "types": [
-    "GHOST",
-    "FIRE"
+    "FIRE",
+    "POISON"
    ],
    "moves": [
-    "Shadow Ball",
-    "Will-O-Wisp",
-    "Overheat",
+    "Torch Song",
+    "Boomburst",
+    "Sludge Bomb",
     "Protect"
    ],
-   "ability": "FLASHFIRE",
-   "aevian": false,
+   "ability": "PUNKROCK",
+   "aevian": true,
    "where": "Active",
    "chips": [
     [
      "tool",
-     "Burns"
+     "Punk Rock"
     ],
     [
      "stat",
-     "Immune Fire / Fighting"
-    ],
-    [
-     "stat",
-     "Resists Ice / Fairy"
+     "Resists Fire / Fighting"
     ]
    ]
   },
   {
-   "name": "Florges",
-   "tier": "B",
-   "sid": "FLORGES",
+   "name": "Clefable",
+   "tier": "A",
+   "sid": "CLEFABLE",
    "form": "0",
-   "blend": 0.421,
-   "meta": 0.15,
-   "game": 0.906,
+   "blend": 0.668,
+   "meta": 0.614,
+   "game": 0.828,
    "types": [
     "FAIRY"
    ],
    "moves": [
     "Moonblast",
-    "Synthesis",
-    "Giga Drain",
+    "Flash",
+    "Safeguard",
     "Protect"
    ],
-   "ability": "FLOWERVEIL",
+   "ability": "MAGICGUARD",
    "aevian": false,
    "where": "Active",
    "chips": [
-    [
-     "tool",
-     "Recovery"
-    ],
     [
      "stat",
      "Immune Dragon"
@@ -111,8 +103,7 @@
  "n": 3,
  "mode": "chapter",
  "rem": [
-  "Spirit Jenner",
-  "Erick (Pulse Badge gym)"
+  "Spirit Jenner"
  ],
  "checks": [
   {
@@ -260,13 +251,8 @@
      "how": "Plan around it",
      "need": 1,
      "item": "Appletunite",
-     "cov": [
-      [
-       "Florges",
-       "beats it (61%)"
-      ]
-     ],
-     "ok": true
+     "cov": [],
+     "ok": false
     },
     {
      "id": "jenner9:heal:Noivern:3",
@@ -282,7 +268,11 @@
        "one-shots it"
       ],
       [
-       "Florges",
+       "Toxtricity-Aevian",
+       "one-shots it"
+      ],
+      [
+       "Clefable",
        "one-shots it"
       ]
      ],
@@ -303,8 +293,12 @@
        "beats it (101%)"
       ],
       [
-       "Florges",
-       "beats it (112%)"
+       "Toxtricity-Aevian",
+       "beats it (104%)"
+      ],
+      [
+       "Clefable",
+       "beats it (101%)"
       ]
      ],
      "ok": true
@@ -320,8 +314,8 @@
      "ability": "ADAPTABILITY",
      "cov": [
       [
-       "Chandelure",
-       "still hits it for 84%"
+       "Toxtricity-Aevian",
+       "still hits it for 110%"
       ]
      ],
      "ok": true
@@ -335,8 +329,13 @@
      "how": "Plan around it",
      "need": 1,
      "item": "Choice Scarf",
-     "cov": [],
-     "ok": false
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "beats it (110%)"
+      ]
+     ],
+     "ok": true
     },
     {
      "id": "jenner9:ability:Kommo-o:7",
@@ -353,8 +352,8 @@
        "still hits it for 124%"
       ],
       [
-       "Florges",
-       "still hits it for 160%"
+       "Clefable",
+       "still hits it for 145%"
       ]
      ],
      "ok": true
@@ -374,8 +373,8 @@
        "beats it (124%)"
       ],
       [
-       "Florges",
-       "beats it (160%)"
+       "Clefable",
+       "beats it (145%)"
       ]
      ],
      "ok": true
@@ -403,8 +402,8 @@
      "ability": "PLUS",
      "cov": [
       [
-       "Chandelure",
-       "still hits it for 173%"
+       "Toxtricity-Aevian",
+       "still hits it for 228%"
       ]
      ],
      "ok": true
@@ -478,12 +477,7 @@
      "how": "Two of yours resist or are immune",
      "need": 2,
      "atype": "NORMAL",
-     "cov": [
-      [
-       "Chandelure",
-       "immune"
-      ]
-     ],
+     "cov": [],
      "ok": false
     },
     {
@@ -501,7 +495,7 @@
        "immune"
       ],
       [
-       "Florges",
+       "Clefable",
        "immune"
       ]
      ],
@@ -517,8 +511,13 @@
      "need": 1,
      "boosted": [],
      "sound": true,
-     "cov": [],
-     "ok": false
+     "cov": [
+      [
+       "Toxtricity-Aevian",
+       "Boomburst"
+      ]
+     ],
+     "ok": true
     },
     {
      "id": "jenner9:fieldnote:Concert Venue:19",
@@ -532,457 +531,13 @@
      "ok": null
     }
    ]
-  },
-  {
-   "fight": "erick",
-   "title": "Erick (Pulse Badge gym)",
-   "format": "Doubles",
-   "field": "Murkwater Surface",
-   "foes": [
-    {
-     "name": "Electivire",
-     "sid": "ELECTIVIRE",
-     "form": "Normal Form",
-     "item": "Assault Vest",
-     "ability": "Motor Drive",
-     "moves": [
-      "Thunder Raid",
-      "Ice Punch",
-      "Cross Chop",
-      "Fire Punch"
-     ],
-     "types": [
-      "ELECTRIC"
-     ],
-     "spe": 131
-    },
-    {
-     "name": "Raichu",
-     "sid": "RAICHU",
-     "form": "Alolan Form",
-     "item": "Focus Sash",
-     "ability": "Surge Surfer",
-     "moves": [
-      "Discharge",
-      "Psychic",
-      "Focus Blast",
-      "Grass Knot"
-     ],
-     "types": [
-      "ELECTRIC",
-      "PSYCHIC"
-     ],
-     "spe": 410
-    },
-    {
-     "name": "Magneton",
-     "sid": "MAGNETON",
-     "form": "Normal Form",
-     "item": "Eviolite",
-     "ability": "Sturdy",
-     "moves": [
-      "Hidden Power (Ice)",
-      "Signal Beam",
-      "Discharge",
-      "Flash Cannon"
-     ],
-     "types": [
-      "ELECTRIC",
-      "STEEL"
-     ],
-     "spe": 78
-    },
-    {
-     "name": "Togedemaru",
-     "sid": "TOGEDEMARU",
-     "form": "Normal Form",
-     "item": "Elemental Seed",
-     "ability": "Lightning Rod",
-     "moves": [
-      "Thunder Raid",
-      "Iron Head",
-      "Fell Stinger",
-      "Poison Jab"
-     ],
-     "types": [
-      "ELECTRIC",
-      "STEEL"
-     ],
-     "spe": 194
-    },
-    {
-     "name": "Chandelure",
-     "sid": "CHANDELURE",
-     "form": "Aevian Form",
-     "item": "Colbur Berry",
-     "ability": "Levitate",
-     "moves": [
-      "Burning Jealousy",
-      "Discharge",
-      "Shadow Ball",
-      "Energy Ball"
-     ],
-     "types": [
-      "GHOST",
-      "ELECTRIC"
-     ],
-     "spe": 117
-    },
-    {
-     "name": "Toxtricity",
-     "sid": "TOXTRICITY",
-     "form": "Amped Form",
-     "item": "Toxtricitite",
-     "ability": "Static",
-     "moves": [
-      "Overdrive",
-      "Sludge Bomb",
-      "Thunderbolt",
-      "Hidden Power (Ice)"
-     ],
-     "types": [
-      "ELECTRIC",
-      "POISON"
-     ],
-     "spe": 105
-    }
-   ],
-   "factors": [
-    {
-     "id": "erick:ability:Electivire:0",
-     "fight": "erick",
-     "kind": "ability",
-     "foe": "Electivire",
-     "text": "Electivire: Motor Drive (absorbs Electric (+Speed))",
-     "how": "Hit it with something its ability does not block",
-     "need": 1,
-     "ability": "MOTORDRIVE",
-     "cov": [
-      [
-       "Musharna-Aevian",
-       "still hits it for 73%"
-      ],
-      [
-       "Chandelure",
-       "still hits it for 66%"
-      ]
-     ],
-     "ok": true
-    },
-    {
-     "id": "erick:item:Electivire:1",
-     "fight": "erick",
-     "kind": "item",
-     "foe": "Electivire",
-     "text": "Electivire: Assault Vest (special bulk x1.5: hit it physically)",
-     "how": "Plan around it",
-     "need": 1,
-     "item": "Assault Vest",
-     "cov": [],
-     "ok": false
-    },
-    {
-     "id": "erick:spread:Raichu:2",
-     "fight": "erick",
-     "kind": "spread",
-     "foe": "Raichu",
-     "text": "Raichu: spread Discharge",
-     "how": "Wide Guard, or resist / immune to it",
-     "need": 1,
-     "moves": [
-      "DISCHARGE"
-     ],
-     "cov": [],
-     "ok": false
-    },
-    {
-     "id": "erick:ability:Raichu:3",
-     "fight": "erick",
-     "kind": "ability",
-     "foe": "Raichu",
-     "text": "Raichu: Surge Surfer (Speed x2 on Electric Terrain)",
-     "how": "Plan around it",
-     "need": 1,
-     "ability": "SURGESURFER",
-     "cov": [
-      [
-       "Musharna-Aevian",
-       "still hits it for 150%"
-      ],
-      [
-       "Chandelure",
-       "still hits it for 137%"
-      ],
-      [
-       "Florges",
-       "still hits it for 80%"
-      ]
-     ],
-     "ok": true
-    },
-    {
-     "id": "erick:item:Raichu:4",
-     "fight": "erick",
-     "kind": "item",
-     "foe": "Raichu",
-     "text": "Raichu: Focus Sash (survives one hit from full HP)",
-     "how": "Protect / resist the Z-move; multi-hit or priority breaks Sash / Sturdy",
-     "need": 1,
-     "item": "Focus Sash",
-     "cov": [],
-     "ok": false
-    },
-    {
-     "id": "erick:spread:Magneton:5",
-     "fight": "erick",
-     "kind": "spread",
-     "foe": "Magneton",
-     "text": "Magneton: spread Discharge",
-     "how": "Wide Guard, or resist / immune to it",
-     "need": 1,
-     "moves": [
-      "DISCHARGE"
-     ],
-     "cov": [],
-     "ok": false
-    },
-    {
-     "id": "erick:ability:Magneton:6",
-     "fight": "erick",
-     "kind": "ability",
-     "foe": "Magneton",
-     "text": "Magneton: Sturdy (survives any one hit from full)",
-     "how": "Plan around it",
-     "need": 1,
-     "ability": "STURDY",
-     "cov": [],
-     "ok": false
-    },
-    {
-     "id": "erick:setup:Togedemaru:7",
-     "fight": "erick",
-     "kind": "setup",
-     "foe": "Togedemaru",
-     "text": "Togedemaru: Fell Stinger (+3)",
-     "how": "KO it before it boosts twice, or Haze / Clear Smog / Encore / Unaware / phazing",
-     "need": 1,
-     "stage": 3,
-     "cov": [],
-     "ok": false
-    },
-    {
-     "id": "erick:ability:Togedemaru:8",
-     "fight": "erick",
-     "kind": "ability",
-     "foe": "Togedemaru",
-     "text": "Togedemaru: Lightning Rod (absorbs Electric and pulls Electric moves to itself in doubles)",
-     "how": "Hit it with something its ability does not block",
-     "need": 1,
-     "ability": "LIGHTNINGROD",
-     "cov": [
-      [
-       "Chandelure",
-       "still hits it for 251%"
-      ]
-     ],
-     "ok": true
-    },
-    {
-     "id": "erick:item:Togedemaru:9",
-     "fight": "erick",
-     "kind": "item",
-     "foe": "Togedemaru",
-     "text": "Togedemaru: Elemental Seed (field seed: boosts it on entry)",
-     "how": "Plan around it",
-     "need": 1,
-     "item": "Elemental Seed",
-     "cov": [
-      [
-       "Chandelure",
-       "beats it (251%)"
-      ]
-     ],
-     "ok": true
-    },
-    {
-     "id": "erick:spread:Chandelure:10",
-     "fight": "erick",
-     "kind": "spread",
-     "foe": "Chandelure",
-     "text": "Chandelure: spread Burning Jealousy, Discharge",
-     "how": "Wide Guard, or resist / immune to it",
-     "need": 1,
-     "moves": [
-      "BURNINGJEALOUSY",
-      "DISCHARGE"
-     ],
-     "cov": [],
-     "ok": false
-    },
-    {
-     "id": "erick:ability:Chandelure:11",
-     "fight": "erick",
-     "kind": "ability",
-     "foe": "Chandelure",
-     "text": "Chandelure: Levitate (immune to Ground)",
-     "how": "Hit it with something its ability does not block",
-     "need": 1,
-     "ability": "LEVITATE",
-     "cov": [
-      [
-       "Musharna-Aevian",
-       "still hits it for 73%"
-      ],
-      [
-       "Chandelure",
-       "still hits it for 99%"
-      ]
-     ],
-     "ok": true
-    },
-    {
-     "id": "erick:spread:Toxtricity:12",
-     "fight": "erick",
-     "kind": "spread",
-     "foe": "Toxtricity",
-     "text": "Toxtricity: spread Overdrive",
-     "how": "Wide Guard, or resist / immune to it",
-     "need": 1,
-     "moves": [
-      "OVERDRIVE"
-     ],
-     "cov": [],
-     "ok": false
-    },
-    {
-     "id": "erick:item:Toxtricity:13",
-     "fight": "erick",
-     "kind": "item",
-     "foe": "Toxtricity",
-     "text": "Toxtricity: Toxtricitite (Mega Evolves)",
-     "how": "Plan around it",
-     "need": 1,
-     "item": "Toxtricitite",
-     "cov": [
-      [
-       "Chandelure",
-       "beats it (100%)"
-      ]
-     ],
-     "ok": true
-    },
-    {
-     "id": "erick:speed:Raichu:14",
-     "fight": "erick",
-     "kind": "speed",
-     "foe": "Raichu",
-     "text": "Raichu: Speed 410",
-     "how": "Doubles: Tailwind / Trick Room / Icy Wind / Electroweb / paralysis",
-     "need": 1,
-     "spe": 410,
-     "cov": [],
-     "ok": false
-    },
-    {
-     "id": "erick:speed:Togedemaru:15",
-     "fight": "erick",
-     "kind": "speed",
-     "foe": "Togedemaru",
-     "text": "Togedemaru: Speed 194",
-     "how": "Doubles: Tailwind / Trick Room / Icy Wind / Electroweb / paralysis",
-     "need": 1,
-     "spe": 194,
-     "cov": [],
-     "ok": false
-    },
-    {
-     "id": "erick:type:ELECTRIC:16",
-     "fight": "erick",
-     "kind": "type",
-     "foe": "ELECTRIC",
-     "text": "Electric attacks from 6 (x1.3 on this field)",
-     "how": "Two of yours resist or are immune",
-     "need": 2,
-     "atype": "ELECTRIC",
-     "cov": [],
-     "ok": false
-    },
-    {
-     "id": "erick:type:POISON:17",
-     "fight": "erick",
-     "kind": "type",
-     "foe": "POISON",
-     "text": "Poison attacks from 2 (x1.5 on this field)",
-     "how": "Two of yours resist or are immune",
-     "need": 2,
-     "atype": "POISON",
-     "cov": [
-      [
-       "Chandelure",
-       "resists"
-      ]
-     ],
-     "ok": false
-    },
-    {
-     "id": "erick:fieldblock:Murkwater Surface:18",
-     "fight": "erick",
-     "kind": "fieldblock",
-     "foe": "Murkwater Surface",
-     "text": "Murkwater Surface: Ground attacks fail",
-     "how": "Do not rely on Ground moves",
-     "need": 1,
-     "atype": "GROUND",
-     "cov": [],
-     "ok": true
-    },
-    {
-     "id": "erick:fieldexploit:Murkwater Surface:19",
-     "fight": "erick",
-     "kind": "fieldexploit",
-     "foe": "Murkwater Surface",
-     "text": "Murkwater Surface boosts: Electric, Poison, Water x1.3/1.5",
-     "how": "Bring a Pokemon whose best hit is field-boosted",
-     "need": 1,
-     "boosted": [
-      "ELECTRIC",
-      "POISON",
-      "WATER"
-     ],
-     "sound": false,
-     "cov": [],
-     "ok": false
-    },
-    {
-     "id": "erick:fieldnote:Murkwater Surface:20",
-     "fight": "erick",
-     "kind": "fieldnote",
-     "foe": "Murkwater Surface",
-     "text": "Speed x0.75 unless Water type, airborne or Swift Swim / Surge Surfer",
-     "how": "Plan around it",
-     "need": 1,
-     "cov": [],
-     "ok": null
-    },
-    {
-     "id": "erick:fieldnote:Murkwater Surface:21",
-     "fight": "erick",
-     "kind": "fieldnote",
-     "foe": "Murkwater Surface",
-     "text": "End of turn Poison damage when grounded, and not Poison or Steel type.",
-     "how": "Plan around it",
-     "need": 1,
-     "cov": [],
-     "ok": null
-    }
-   ]
   }
  ],
  "power": {
   "Musharna (Aevian Form)": {
-   "wins": 5,
-   "ohko": 3,
-   "n": 12,
+   "wins": 3,
+   "ohko": 2,
+   "n": 6,
    "beats": [
     [
      "jenner9",
@@ -995,46 +550,30 @@
     [
      "jenner9",
      "Kommo-o"
-    ],
-    [
-     "erick",
-     "Raichu"
-    ],
-    [
-     "erick",
-     "Chandelure"
     ]
    ],
-   "power": 5.75
+   "power": 3.5
   },
-  "Chandelure": {
-   "wins": 4,
-   "ohko": 5,
-   "n": 12,
+  "Toxtricity (Aevian Form)": {
+   "wins": 2,
+   "ohko": 3,
+   "n": 6,
    "beats": [
+    [
+     "jenner9",
+     "Noivern"
+    ],
     [
      "jenner9",
      "Klinklang"
-    ],
-    [
-     "erick",
-     "Raichu"
-    ],
-    [
-     "erick",
-     "Magneton"
-    ],
-    [
-     "erick",
-     "Toxtricity"
     ]
    ],
-   "power": 5.25
+   "power": 2.75
   },
-  "Florges": {
-   "wins": 5,
+  "Clefable": {
+   "wins": 3,
    "ohko": 2,
-   "n": 12,
+   "n": 6,
    "beats": [
     [
      "jenner9",
@@ -1047,70 +586,60 @@
     [
      "jenner9",
      "Kommo-o"
-    ],
-    [
-     "erick",
-     "Raichu"
-    ],
-    [
-     "erick",
-     "Chandelure"
     ]
    ],
-   "power": 5.5
+   "power": 3.5
   }
  },
  "left": [
   "Spirit Jenner: Stoutland",
-  "Spirit Jenner: Porygon-Z",
-  "Erick (Pulse Badge gym): Electivire",
-  "Erick (Pulse Badge gym): Togedemaru"
+  "Spirit Jenner: Porygon-Z"
  ],
- "score": 19.0,
+ "score": 11.15,
  "parts": {
-  "strength": 16.5,
+  "strength": 9.75,
   "defense": 0,
-  "offense": 2.4,
+  "offense": 1.2,
   "synergy": 0,
   "aevian": 0,
   "shared": [],
   "triple": [],
-  "resisted": 13,
-  "covered": 8,
+  "resisted": 12,
+  "covered": 4,
   "uncovered": [],
   "why": []
  },
  "runners": [
   {
-   "out": "Florges",
-   "in": "Toxtricity (Aevian Form)",
-   "delta": -0.15
+   "out": "Clefable",
+   "in": "Ninetales (Alolan Form)",
+   "delta": 0.0
   },
   {
-   "out": "Florges",
-   "in": "Arcanine (Hisuian Form)",
+   "out": "Clefable",
+   "in": "Florges",
+   "delta": 0.0
+  },
+  {
+   "out": "Clefable",
+   "in": "Rampardos",
+   "delta": -0.7
+  },
+  {
+   "out": "Clefable",
+   "in": "Azumarill",
    "delta": -0.75
-  },
-  {
-   "out": "Florges",
-   "in": "Gallade",
-   "delta": -0.75
-  },
-  {
-   "out": "Florges",
-   "in": "Clefable",
-   "delta": -1.0
   }
  ],
  "pool": 52,
  "singles": {
-  "Fast cleaner": null,
+  "Fast cleaner": "Toxtricity (Aevian Form)",
   "Bulky pivot": "Musharna (Aevian Form)",
   "Wallbreaker": "Musharna (Aevian Form)"
  },
  "doubles": {
   "Fake Out / redirection": null,
-  "Spread or speed control": null,
+  "Spread or speed control": "Toxtricity (Aevian Form)",
   "Bulky attacker": "Musharna (Aevian Form)"
  },
  "matrix": {
@@ -1134,27 +663,27 @@
    "STEEL": 2.0,
    "FAIRY": 2.0
   },
-  "Chandelure": {
-   "NORMAL": 0.0,
-   "FIRE": 0,
+  "Toxtricity (Aevian Form)": {
+   "NORMAL": 1.0,
+   "FIRE": 0.5,
    "WATER": 2.0,
    "ELECTRIC": 1.0,
-   "GRASS": 0.5,
+   "GRASS": 0.25,
    "ICE": 0.5,
-   "FIGHTING": 0.0,
+   "FIGHTING": 0.5,
    "POISON": 0.5,
-   "GROUND": 2.0,
+   "GROUND": 4.0,
    "FLYING": 1.0,
-   "PSYCHIC": 1.0,
+   "PSYCHIC": 2.0,
    "BUG": 0.25,
    "ROCK": 2.0,
-   "GHOST": 2.0,
+   "GHOST": 1.0,
    "DRAGON": 1.0,
-   "DARK": 2.0,
+   "DARK": 1.0,
    "STEEL": 0.5,
-   "FAIRY": 0.5
+   "FAIRY": 0.25
   },
-  "Florges": {
+  "Clefable": {
    "NORMAL": 1.0,
    "FIRE": 1.0,
    "WATER": 1.0,

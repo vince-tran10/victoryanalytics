@@ -851,3 +851,7 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
   (both their leads on one target turn 1, real field), Fake Out / Wide Guard / redirection support for the freezer, Lightning Rod both ways,
   Mimicry, pool = all boxes. Six: Ampharos-A (Blizzard freezer) + Scrafty (Intimidate, Fake Out Electivire) lead; Camerupt, Golisopod-A,
   Zoroark-H (outspeeds + one-shots Chandelure before Burning Jealousy), Gastrodon. 0 flagged moves.
+
+- 25 Nov (Jenner, Erick beaten, cap 65): Z-moves, ability capsules per fight, Unaware / Intimidate vs setup, recoil, singles lead 1-v-1,
+  seed attack stages, partner-only moves dead in singles. Six: Copperajah (lead vs Stoutland), Ninetales-A, Aurorus, Glalie-A, Florges,
+  Palossand-Fiery-A. 0 flagged moves. Porygon-Z has no 1-v-1 winner: Choice-lock play.

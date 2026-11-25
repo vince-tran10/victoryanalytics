@@ -91,6 +91,8 @@ try:   # 24 Nov: (species id, mega stone id) -> Mega form name, from his game's 
 except Exception:
     _MEGA = {}
 
+try: _MVT = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'workspace', 'gamedata', 'movetext.json')))
+except Exception: _MVT = {}
 try: _FTX = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'workspace', 'gamedata', 'fieldtext.json')))
 except Exception: _FTX = {}
 def field_speed(mon, battle):   # 24 Nov audit: field speed rules (fieldnotetext): Murkwater x0.75 grounded non-Water, Swift Swim / Surge Surfer x2
@@ -219,6 +221,12 @@ class Engine:
             if mid == 'MULTIATTACK':
                 mv['Type'] = types[0]
             moves.append((mid, mv))
+        # 25 Nov audit (Jenner): a species Z-Crystal (Kommonium Z...) gives the AI its Z-move (Battle_AI checkZMoves): movetext zmovedata
+        if _it.endswith('IUMZ') or _it.endswith('INIUMZ'):
+            for zid, zd in (_MVT or {}).items():
+                zm = zd.get('zmovedata') or {}
+                if zm.get('basemove') in [x for x, _ in moves] and (not zm.get('species') or sid in zm['species']) and zid in self.D.moves:
+                    moves.append((zid, dict(self.D.moves[zid])))
         ability = norm_ab(_mega_ab or m.get('ability'))
         # N shields = N+1 full HP bars (game: Battler.rb pbReduceHP heals to full on a shield break; overflow is lost)
         hp_mult = (int(m['bars']) if m.get('bars') else 1 + (int(m['shields']) if str(m.get('shields') or '').isdigit() else 0)) if m.get('boss') else 1

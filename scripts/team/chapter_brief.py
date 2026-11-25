@@ -274,6 +274,8 @@ def model_gaps(fk, E):
         it = (f.get('item') or '')
         if it.endswith('ite') and it != 'Eviolite' and 'Mega' not in (E.D.form(f['sid'], f['form']).get('FormName') or '') and 'Giga' not in (E.D.form(f['sid'], f['form']).get('FormName') or ''):
             out.append(f"{f['name']}: holds {it} but is scored in its normal form")
+        if re.search(r'ium Z$|inium Z$', it) and not any((MV.get(m) or {}).get('zmovedata') for m, _ in f['moves']):   # 25 Nov: Z-Crystal, Z-move not scored
+            out.append(f"{f['name']}: holds {it} but its Z-move is not scored")
         ab = f.get('ability') or ''
         if ab and f"'{ab}'" not in src:
             out.append(f"{f['name']}: {ab.title()} has no rule in the damage / speed model")

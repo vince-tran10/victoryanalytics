@@ -83,9 +83,22 @@ IB = json.load(open('team/ideal_builds.json')) if os.path.exists('team/ideal_bui
 run = os.environ.get('BASE_RUN') or f"r{st['run']}"
 _AB = lambda n: ((st.get('abilities') or {}).get(n) or (IB.get(n) or {}).get('ability') or '').upper().replace(' ', '')
 C = {}   # 23 Nov: one engine candidate per (name, ability); keep the one whose ability the BUILD runs (Tox = Punk Rock, not Galvanize)
+_VAR = {}
 for c in pickle.load(open(f'team/{run}{"n" if BREAK else ""}_native.json.pkl', 'rb'))['cands']:
     if c.get('gate'): continue
+    _VAR.setdefault(c['name'], []).append(c)
     if c['name'] not in C or (c['ability'] == _AB(c['name']) and C[c['name']]['ability'] != _AB(c['name'])): C[c['name']] = c
+# 25 Nov audit (Jenner: Soundproof Abomasnow vs Uproar): debug mode = Ability Capsule, so each Pokémon fights with its best legal ability
+# for THIS fight (sum over their six of damage dealt minus damage taken, +15 margin over the build's ability); the capsule is shown
+ABIL_OVR = {}
+def _vsc(c):
+    mu = c['matchups'].get(FK) or []
+    return sum(min(x['off'], 100) - min(x['deff'], 100) for x in mu)
+for n_, vs_ in _VAR.items():
+    if n_ not in C or FK not in C[n_]['matchups'] or C[n_].get('crest'): continue
+    b_ = max(vs_, key=_vsc)
+    if b_['ability'] != C[n_]['ability'] and FK in b_['matchups'] and _vsc(b_) > _vsc(C[n_]) + 15:
+        C[n_] = b_; ABIL_OVR[n_] = b_['ability']
 POOL = [n for n, r in TA.items() if r.get('where') in ('Party', 'Active') and r['tier'] in ('S', 'A', 'B') and n in C and FK in C[n]['matchups']]
 POOL += [n for n, r in TA.items() if r.get('where') == 'Overflow' and r['tier'] in ('S', 'A') and n not in POOL and n in C and FK in C[n]['matchups']]
 POOL += [n for n in (st.get('team') or []) if n in TA and n not in POOL and n in C and FK in C[n]['matchups']]
@@ -103,7 +116,7 @@ def build(n):
     _pb = ((st.get('plan_builds') or {}).get(FK) or {}).get(n)
     _pb = _pb.get('moves') if isinstance(_pb, dict) else _pb
     ms = MOVE_OVR.get(n) or _pb or (st.get('base_moves') or {}).get(n) or (st.get('moves') or {}).get(n) or b.get('moves') or TA[n].get('attacks') or []
-    ab = (st.get('abilities') or {}).get(n) or b.get('ability') or TA[n].get('ability') or ''
+    ab = ABIL_OVR.get(n) or (st.get('abilities') or {}).get(n) or b.get('ability') or TA[n].get('ability') or ''
     return {mvid(m) or m.upper().replace(' ', '') for m in ms}, ab.upper().replace(' ', ''), ms
 ICEBREAK = set(((G.load('fieldtext').get(ALT_FE) or {}).get('fieldChange') or {}).get('INDOOR', []) +
                sum([v for k, v in ((G.load('fieldtext').get(ALT_FE) or {}).get('fieldChange') or {}).items()], [])) if ALTMOVES else set()
@@ -138,6 +151,12 @@ for n in POOL:
     TAKE.append([min(150, mu[f]['deff']) if f in mu else 100 for f in FN]); DEAL.append([min(150, mu[f]['off']) if f in mu else 0 for f in FN])
     FAST.append([bool(mu[f]['faster']) if f in mu else False for f in FN]); NAMES.append(n)
 TAKE, DEAL, FAST = np.array(TAKE, float), np.array(DEAL, float), np.array(FAST)
+_SEED = (FT or {}).get('seed') or {}
+SEED_ATK = {}
+for _j, _f in enumerate(FOES):   # 25 Nov audit (Jenner: Noivern Synthetic Seed = +1 Sp. Atk on entry): their field seed's attack stages
+    if _SEED.get('seedtype') and (_f.get('item') or '').upper().replace(' ', '') == _SEED['seedtype']:
+        _k = max(int((_SEED.get('stats') or {}).get('1', 0)), int((_SEED.get('stats') or {}).get('3', 0)))
+        if _k > 0: TAKE[:, _j] = np.minimum(150, TAKE[:, _j] * (2 + _k) / 2); SEED_ATK[_f['name']] = _k
 MULT = np.array([[E.chart_eff(t, TA[n]['types'], FE) for t in MAIN] for n in NAMES]) if MAIN else np.zeros((len(NAMES), 0))
 ALLT = sorted(ATK)
 MALL = np.array([[E.chart_eff(t, TA[n]['types'], FE) for t in ALLT] for n in NAMES])
@@ -391,6 +410,8 @@ def move_why(n, mname):
         return (f'Turns the field into {ALTFIELD} (turn 1)', False)
     if ALT and mid in ICEBREAK:
         return (f'Undoes {ALTFIELD}: do not use it here', True)
+    if FMT == 'Singles' and mid in {'DECORATE', 'AROMATICMIST', 'HELPINGHAND', 'COACHING', 'HOLDHANDS', 'AFTERYOU', 'ALLYSWITCH', 'FOLLOWME', 'RAGEPOWDER', 'WIDEGUARD', 'QUICKGUARD', 'SPOTLIGHT', 'INSTRUCT'}:
+        return ('Only targets a partner: fails in singles', True)
     if FOE_ROD and FMT == 'Doubles' and d.get('type') == 'ELECTRIC' and d.get('target') not in SPREAD_T and int(d.get('basedamage') or 0) > 0:
         return (f"{', '.join(FOE_ROD)}'s Lightning Rod pulls it", True)
     if int(d.get('priority') or 0) > 0 and mid != 'FAKEOUT':   # 23 Nov audit: priority attacks have a job (Extreme Speed, Aqua Jet...)
@@ -442,7 +463,15 @@ def _fstage(ms): return max([FSETUP[m] + (1 if m in _SB else 0) for m in ms if m
 FSTG = [_fstage(ms) for ms in fmoves]
 FSETM = [next((MV[m]['name'] for m in ms if m in FSETUP), None) for ms in fmoves]
 TAKE_B = np.minimum(150, TAKE * np.array([(2 + k) / 2 for k in FSTG]))
+for _i, _n in enumerate(NAMES):   # 25 Nov audit (Jenner Work Up +2): Unaware ignores their boosts; Intimidate takes one stage off a physical boost
+    _a = build(_n)[1]
+    for _j, _k in enumerate(FSTG):
+        if not _k: continue
+        if _a == 'UNAWARE': TAKE_B[_i][_j] = TAKE[_i][_j]
+        elif _a == 'INTIMIDATE' and any((MV.get(m) or {}).get('category') == 'physical' and int((MV.get(m) or {}).get('basedamage') or 0) > 0 for m in fmoves[_j]):
+            TAKE_B[_i][_j] = min(150, TAKE[_i][_j] / 0.8 * (2 + _k - 1) / 2)
 _bt = next((b for b in E.battles if b['key'] == FK), None)
+FOE_STATS = [ (f_.get('stats') or {}) for f_ in (_bt['foes'] if _bt else [])] + [{}] * 6
 SPE_F = np.array([(f_['stats']['Spe'] * (1.5 if f_.get('item') == 'Choice Scarf' else 1) * engine.field_speed(f_, _bt)) for f_ in (_bt['foes'] if _bt else [])] or [0] * nF, float)[:nF]
 SPE_M = np.array([C[n]['stats']['Spe'] * engine.field_speed(dict(C[n], ability=build(n)[1]), _bt or {}) for n in NAMES], float)   # 24 Nov: field speed rules
 CHECK = (TAKE_B < 50) & ((DEAL >= 60) | (OFF >= 2))        # member checks foe: walls it after its boost and hits it hard
@@ -616,8 +645,16 @@ def _sash_foe(j): return (FOES[j].get('item') == 'Focus Sash') or (FOES[j].get('
 def _multi_me(i): return bool(build(NAMES[i])[0] & (MULTI25 | MULTI2))
 def _sash_me(i): return ((IB.get(NAMES[i]) or {}).get('item') == 'Focus Sash') or build(NAMES[i])[1] == 'STURDY'
 def _foe_multi(j): return bool(set(fmoves[j]) & FOE_MULTI)
+RECOIL = {'HEADSMASH': .5, 'LIGHTOFRUIN': .5, 'WOODHAMMER': 1 / 3, 'BRAVEBIRD': 1 / 3, 'FLAREBLITZ': 1 / 3, 'DOUBLEEDGE': 1 / 3, 'VOLTTACKLE': 1 / 3,
+          'WAVECRASH': 1 / 3, 'HEADCHARGE': .25, 'TAKEDOWN': .25, 'WILDCHARGE': .25, 'SUBMISSION': .25}
+def _recoil(i, j):   # 25 Nov audit (Rampardos Head Smash): % of OUR HP lost to recoil per hit of our best move on foe j
+    if build(NAMES[i])[1] in ('ROCKHEAD', 'MAGICGUARD'): return 0.0
+    mv_ = _bestmv(i, j); m_ = BYNAME.get((mv_ or '').lower())
+    if m_ not in RECOIL: return 0.0
+    hpf = (FOE_STATS[j] or {}).get('HP') or 100; hpm = ((C[NAMES[i]].get('stats') or {}).get('HP')) or 100
+    return min(DEAL[i][j], 100) * RECOIL[m_] * hpf / hpm
 def _hits(i, j):   # (hits we need, hits we can take), Focus Sash / Sturdy keep a mon at 1 HP from full unless hit by a multi-hit move
-    hk = math.ceil(100 / max(DEAL[i][j], 1)); hd = math.ceil(100 / max(TAKE_B[i][j], 1))
+    hk = math.ceil(100 / max(DEAL[i][j], 1)); hd = math.ceil(100 / max(TAKE_B[i][j] + _recoil(i, j), 1))
     if hk == 1 and _sash_foe(j) and not _multi_me(i): hk = 2
     if hd == 1 and _sash_me(i) and not _foe_multi(j): hd = 2
     return hk, hd
@@ -668,14 +705,22 @@ if COUNTER:   # 24 Nov (Vincent): the six = one dedicated hard counter per foe (
         hk, hd = _hits(i, j)
         win = hk < hd or (hk == hd and FAST[i][j])
         hard1 = (DEAL[i][j] >= 90 or (FAST[i][j] and DEAL[i][j] >= 100)) and TAKE_B[i][j] < 70
-        q = 10 * _hard(i, j) + 5 * (hard1 and not _hard(i, j)) + 4 * win + min(DEAL[i][j], 150) / 100 - min(TAKE_B[i][j], 150) / 100 - 4 * FLAGN[i] + .3 * AEV[i] + .2 * TIER[i]
+        q = 10 * _hard(i, j) + 5 * (hard1 and not _hard(i, j)) + 4 * win + min(DEAL[i][j], 150) / 100 - min(TAKE_B[i][j], 150) / 100 - 1 * FLAGN[i] + .3 * AEV[i] + .2 * TIER[i]
         if j < len(L) and any(TAKE[i][k] >= 100 for k in L): q -= 8   # a lead must survive both of their leads
         if ALT and j < len(L) and ALTCAN[i]: q += 6 + 2 * SNOWW[i]   # the freeze plan needs its field move on a lead (Snow Warning: Blizzard never misses)
+        if FMT == 'Singles' and j == 0:   # 25 Nov: in singles slot 1 IS the lead: it must win the opening 1-v-1 (their setup turn counted)
+            k_ = FSTG[0]; hd_b = math.ceil(100 / max((TAKE_B[i][0] + _recoil(i, 0)) * 1.1, 1)); hd_p = math.ceil(100 / max((TAKE[i][0] + _recoil(i, 0)) * 1.1, 1))   # +10%: high roll / crit margin
+            lw_ = (hk <= 1 or hk <= hd_b) if k_ else (hk < hd_p or (hk == hd_p and FAST[i][0]))
+            q += 6 if lw_ else -6
         if ELEC_FOES >= 3 and EIMM[i]: q += 3 + 2 * (j < len(L)) + 2 * (LROD[i] and j < len(L))   # game tip: Ground types / Lightning Rod vs their paralysis
         if j in BREAKERS:   # the foe that undoes the new field: outspeed and one-shot it before it moves (its berry / Sash counted)
             q += 8 if (FAST[i][j] and hk == 1) else -4
         return q
     QM = np.array([[_q(i, j) for j in range(nF)] for i in range(NP)])
+    if os.environ.get('QDEBUG') and os.environ.get('QWHO') in NAMES:
+        _w = NAMES.index(os.environ['QWHO']); print('QWHO', [(FN[j], int(DEAL[_w][j]), int(TAKE_B[_w][j]), bool(FAST[_w][j]), _hits(_w, j), round(float(QM[_w][j]), 1)) for j in range(nF)], FLAGN[_w], build(NAMES[_w]))
+    if os.environ.get('QDEBUG'):
+        for j in range(nF): print('QDBG', FN[j], [(NAMES[i], round(float(QM[i][j]), 1)) for i in np.argsort(-QM[:, j])[:8]])
     _cand = [list(np.argsort(-QM[:, j])[:10]) for j in range(nF)]
     _bestv, _besta = -1e9, None; LEAD_SUP = None
     def _rec(j, used, tot, pick):
@@ -854,10 +899,13 @@ def _mid(x): return mvid(x) or (x or '').upper().replace(' ', '').replace('-', '
 UTIL_D = ['SNARL', 'WILLOWISP', 'ICYWIND', 'ELECTROWEB', 'TAILWIND', 'HELPINGHAND', 'FOLLOWME', 'RAGEPOWDER', 'WIDEGUARD', 'NASTYPLOT', 'SWORDSDANCE',
           'CALMMIND', 'BULKUP', 'TAUNT', 'ENCORE', 'YAWN', 'THUNDERWAVE', 'HAZE', 'CLEARSMOG', 'ROAR']
 UTIL_S = ['WILLOWISP', 'THUNDERWAVE', 'GLARE', 'NASTYPLOT', 'SWORDSDANCE', 'CALMMIND', 'BULKUP', 'DRAGONDANCE', 'TAUNT', 'ENCORE', 'YAWN', 'HAZE',
-          'CLEARSMOG', 'ROAR', 'TOXIC', 'RECOVER', 'ROOST', 'SLACKOFF']
+          'CLEARSMOG', 'ROAR', 'TOXIC', 'RECOVER', 'ROOST', 'SLACKOFF', 'SYNTHESIS', 'MOONLIGHT', 'WISH', 'LIGHTSCREEN', 'REFLECT', 'AROMATHERAPY', 'HEALBELL']
+ALLY_ONLY = {'DECORATE', 'AROMATICMIST', 'HELPINGHAND', 'COACHING', 'HOLDHANDS', 'AFTERYOU', 'ALLYSWITCH', 'FOLLOWME', 'RAGEPOWDER', 'WIDEGUARD',
+             'QUICKGUARD', 'SPOTLIGHT', 'INSTRUCT', 'MATBLOCK', 'CRAFTYSHIELD'}
 def _util(n, have):   # a support move with a job here, when no attack is the best hit on any foe
     L_ = set(C[n].get('legal') or [])
-    for u in (UTIL_D if FMT == 'Doubles' else UTIL_S):
+    _fb = [x for x in ((FT or {}).get('statusBuffs') or []) if x in ('ACIDARMOR', 'WORKUP', 'HOWL', 'DRAGONCHEER', 'IRONDEFENSE', 'AMNESIA', 'CALMMIND', 'NASTYPLOT', 'SWORDSDANCE', 'BULKUP', 'COSMICPOWER', 'DEFENDORDER')]
+    for u in _fb + (UTIL_D if FMT == 'Doubles' else UTIL_S):   # 25 Nov: a field-boosted status move first (Concert Acid Armor = +3 Def)
         if u in L_ and u not in have and u in MV and not (FOE_EABS and (MV.get(u) or {}).get('type') == 'ELECTRIC'): return u
     return None
 BADSWAP = {'FOCUSPUNCH', 'HYPERBEAM', 'GIGAIMPACT', 'SKYATTACK', 'SOLARBEAM', 'SOLARBLADE', 'METEORBEAM', 'EXPLOSION', 'SELFDESTRUCT', 'MISTYEXPLOSION',
@@ -945,6 +993,15 @@ for i in best:
                 mn[mn.index(slot)] = MV[bestm]['name']
                 why_.append(f"{MV[bestm]['name']} replaces {slot}" + (' (singles: Protect matters less)' if is_prot else ' (it was the best hit on no foe)')
                             + f": better hit on {', '.join(hit_[:3])}")
+    if FMT == 'Singles':   # 25 Nov audit (Alcremie Decorate / Aromatic Mist): moves that only target an ally fail in singles
+        for slot in list(mn):
+            if _mid(slot) in ALLY_ONLY or (_mid(slot) == 'AURORAVEIL' and ab != 'SNOWWARNING'):   # Aurora Veil fails without snow: only its own Snow Warning is sure
+                u_ = _util(n, {_mid(x) for x in mn})
+                if not u_:   # no support move with a job: its best legal attack of a new type
+                    _kt = {(MV.get(_mid(x)) or {}).get('type') for x in mn}
+                    _c2 = [c_ for c_ in legal_ if c_ not in {_mid(x) for x in mn} and (MV.get(c_) or {}).get('type') not in _kt]
+                    u_ = max(_c2, key=lambda c_: sum(_ep(c_, f) for f in FOES), default=None)
+                if u_: mn[mn.index(slot)] = MV[u_]['name']; why_.append(f"{MV[u_]['name']} replaces {slot} (" + ('Aurora Veil fails without snow' if _mid(slot) == 'AURORAVEIL' else f'singles: {slot} only targets a partner') + ')')
     if FMT == 'Doubles':   # 24 Nov: hazards / slow status are dead slots in doubles: a support move with a job instead
         for slot in list(mn):
             if _mid(slot) in HAZ_D:
@@ -979,6 +1036,8 @@ for i in best:
     item_ = _cur if (_cur.endswith('Crest') or _cur in ('Focus Sash', 'Sitrus Berry') or (st.get('items') or {}).get(n)) else (BOOSTER_.get((MV.get(_top) or {}).get('type')) if _top else _cur) or _cur
     if item_ != _cur and _top: why_.append(f"{item_}: boosts {MV[_top]['name']}, the best hit on {_cnt[_top]} of their {nF}")
     ab_new = None
+    if n in ABIL_OVR and ABIL_OVR[n] != ((st.get('abilities') or {}).get(n) or (IB.get(n) or {}).get('ability') or '').upper().replace(' ', ''):
+        ab_new = ABIL_OVR[n]; why_.append(f"{ab_new.title()} (ability capsule): the better ability in this fight")
     if FMT == 'Doubles' and i in leads and 'INTIMIDATE' in (C[n].get('abilities') or []) and ab != 'INTIMIDATE' \
             and any((MV.get(m_) or {}).get('category') == 'physical' and int((MV.get(m_) or {}).get('basedamage') or 0) > 0 for k in L for m_ in fmoves[k]):
         ab_new = 'INTIMIDATE'; why_.append(f"Intimidate (ability capsule) over {ab.title()}: cuts {', '.join(FN[k] for k in L if any((MV.get(m_) or {}).get('category') == 'physical' for m_ in fmoves[k]))}'s physical hits on turn 1")
@@ -987,6 +1046,16 @@ if COUNTER:   # 24 Nov: game plans from the FINAL builds (field-undoing moves re
     for n_, fb_ in FBUILD.items(): MOVE_OVR[n_] = fb_['moves']
     for j, c in enumerate(COUNTERS):
         i = NAMES.index(c['member']); c['move'] = _bestmv(i, j); c['plan'] = _plan2(i, j)
+        _fm = {MV.get(m, {}).get('name') for m in fmoves[j]}
+        if FMT == 'Singles' and j == 0 and FSTG[0]:   # the lead's 1-v-1 counts their setup turn as our free hit
+            hk_, _ = _hits(i, 0); c['win'] = bool(hk_ <= math.ceil(100 / max((TAKE_B[i][0] + _recoil(i, 0)) * 1.1, 1)))
+            if c['win']: c['plan'][0] = f"Turn 1: {c['move']} ({c['deal']}%) while it uses {FSETM[0]}; it then hits you for ~{c['take_b']}%; {c['move']} again KOs it" if c['hk'] == 2 else c['plan'][0]
+        if build(NAMES[i])[1] == 'GRASSYSURGE' and 'Grassy Glide' in FBUILD.get(NAMES[i], {}).get('moves', []):   # overlay: priority + x1.3 Grass
+            c['plan'][0] = 'Grassy Surge lays Grassy Terrain for 5 turns: Grassy Glide moves first (+1 priority) and Grass moves hit x1.3. ' + c['plan'][0]
+        if 'Substitute' in _fm: c['plan'][1] = 'Substitute: break the doll with your weaker move first, then hit it with the strong one'
+        if 'Trick' in _fm and (FOES[j].get('item') or '').startswith('Choice'): c['plan'][1] = (f"{FOES[j].get('item')} + Trick: it can swap the Scarf onto you and lock you into one move."
+            " Once it is locked into a move, switch to something immune to it")
+        if FN[j] in SEED_ATK: c['plan'][1] = f"{FOES[j].get('item')}: +{SEED_ATK[FN[j]]} attack on entry (counted in what you take)"
         if ALT and FREEZER is not None and i == FREEZER:
             c['role'] = 'Freezer'
             c['plan'] = [f"Turn 1: Blizzard{' (Snow Warning: never misses)' if SNOWW[i] else ' (70% accurate)'} hits both and turns Murkwater into {ALTFIELD}",

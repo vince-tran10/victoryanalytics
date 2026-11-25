@@ -76,37 +76,6 @@
   "note": "not in engine (beaten or not tracked)"
  },
  "erick": {
-  "label": "Erick (Pulse Badge gym) – Murkwater Surface",
-  "game_src": [
-   "Erick (LEADER_ERICK #0)"
-  ],
-  "n_game": 6,
-  "n_guide": 6,
-  "rows": [
-   {
-    "mon": "Electivire",
-    "diff": []
-   },
-   {
-    "mon": "Raichu",
-    "diff": []
-   },
-   {
-    "mon": "Magneton",
-    "diff": []
-   },
-   {
-    "mon": "Togedemaru",
-    "diff": []
-   },
-   {
-    "mon": "Chandelure",
-    "diff": []
-   },
-   {
-    "mon": "Toxtricity",
-    "diff": []
-   }
-  ]
+  "note": "not in engine (beaten or not tracked)"
  }
 }

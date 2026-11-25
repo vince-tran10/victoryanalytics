@@ -594,6 +594,23 @@
      "teach": []
     },
     {
+     "name": "Zoroark",
+     "tier": "A",
+     "stats": [
+      "Resists 3 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "sid": "ZOROARK",
+     "form": "0",
+     "pick": false,
+     "rec": false,
+     "teach": [
+      "Nasty Plot"
+     ]
+    },
+    {
      "name": "Mismagius (Aevian Form)",
      "tier": "A",
      "stats": [
@@ -649,45 +666,25 @@
   },
   {
    "slot": 5,
-   "title": "Flex 1 · Mid game · Erick",
-   "pick": "Ampharos (Aevian Form)",
-   "rec": "Ampharos (Aevian Form)",
+   "title": "Flex 1 · Mid game · Spirit Jenner",
+   "pick": "Copperajah",
+   "rec": "Copperajah",
    "flex": true,
    "cands": [
     {
-     "name": "Ampharos (Aevian Form)",
-     "tier": "A",
+     "name": "Copperajah",
+     "tier": "B",
      "stats": [
-      "Resists 3 types",
-      "Weak to 4 types"
-     ],
-     "tools": [
-      "Spread: Blizzard"
-     ],
-     "teach": [],
-     "sid": "AMPHAROS",
-     "form": "1",
-     "pick": true,
-     "rec": true
-    },
-    {
-     "name": "Muk (Alolan Form)",
-     "tier": "S",
-     "stats": [
-      "Resists 5 types",
-      "Weak to 1 type",
+      "Resists 11 types",
+      "Weak to 3 types",
       "Single target only"
      ],
-     "tools": [
-      "Stat reset: Clear Smog",
-      "Disrupt: Knock Off",
-      "Priority: Shadow Sneak"
-     ],
+     "tools": [],
      "teach": [],
-     "sid": "MUK",
-     "form": "1",
-     "pick": false,
-     "rec": false
+     "sid": "COPPERAJAH",
+     "form": "0",
+     "pick": true,
+     "rec": true
     },
     {
      "name": "Musharna (Aevian Form)",
@@ -700,6 +697,55 @@
      "tools": [],
      "teach": [],
      "sid": "MUSHARNA",
+     "form": "1",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Arcanine (Hisuian Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 7 types",
+      "Weak to 4 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Priority: Extreme Speed"
+     ],
+     "teach": [],
+     "sid": "ARCANINE",
+     "form": "1",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Clefable",
+     "tier": "A",
+     "stats": [
+      "Resists 4 types",
+      "Weak to 2 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Support: Safeguard"
+     ],
+     "teach": [],
+     "sid": "CLEFABLE",
+     "form": "0",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Gastrodon (West Aevian Form)",
+     "tier": "A",
+     "stats": [
+      "Resists 7 types",
+      "Weak to 3 types",
+      "Single target only"
+     ],
+     "tools": [],
+     "teach": [],
+     "sid": "GASTRODON",
      "form": "1",
      "pick": false,
      "rec": false
@@ -725,28 +771,80 @@
   },
   {
    "slot": 6,
-   "title": "Flex 2 · Closer · Erick",
-   "pick": "Scrafty",
-   "rec": "Scrafty",
+   "title": "Flex 2 · Closer · Spirit Jenner",
+   "pick": "Ninetales (Alolan Form)",
+   "rec": "Ninetales (Alolan Form)",
    "flex": true,
    "cands": [
     {
-     "name": "Scrafty",
-     "tier": "B",
+     "name": "Ninetales (Alolan Form)",
+     "tier": "A",
      "stats": [
       "Resists 4 types",
+      "Weak to 4 types"
+     ],
+     "tools": [
+      "Spread: Blizzard",
+      "Counters: Kommo-o",
+      "Screens: Aurora Veil"
+     ],
+     "teach": [],
+     "sid": "NINETALES",
+     "form": "1",
+     "pick": true,
+     "rec": true
+    },
+    {
+     "name": "Azumarill",
+     "tier": "A",
+     "stats": [
+      "Resists 7 types",
       "Weak to 3 types",
       "Single target only"
      ],
      "tools": [
-      "Counters: Raichu",
-      "Disrupt: Fake Out"
+      "Setup: Belly Drum",
+      "Priority: Aqua Jet"
      ],
      "teach": [],
-     "sid": "SCRAFTY",
+     "sid": "AZUMARILL",
      "form": "0",
-     "pick": true,
-     "rec": true
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Palossand (Fiery Aevian Form)",
+     "tier": "B",
+     "stats": [
+      "Resists 9 types",
+      "Weak to 5 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Setup: Iron Defense"
+     ],
+     "teach": [],
+     "sid": "PALOSSAND",
+     "form": "2",
+     "pick": false,
+     "rec": false
+    },
+    {
+     "name": "Revavroom",
+     "tier": "B",
+     "stats": [
+      "Resists 10 types",
+      "Weak to 2 types",
+      "Single target only"
+     ],
+     "tools": [
+      "Setup: Shift Gear"
+     ],
+     "teach": [],
+     "sid": "REVAVROOM",
+     "form": "0",
+     "pick": false,
+     "rec": false
     }
    ]
   }
@@ -1056,13 +1154,13 @@
    "Lead",
    "outspeeds 81%"
   ],
-  "Hariyama": [
-   "Attacker",
-   ""
-  ],
   "Florges": [
    "Mid game",
    "Synthesis"
+  ],
+  "Hariyama": [
+   "Attacker",
+   ""
   ],
   "Solrock (Solrock Dominant Fusion)": [
    "Attacker",
@@ -1172,11 +1270,11 @@
    "Support",
    "Yawn"
   ],
-  "Mantine": [
+  "Heatmor": [
    "Attacker",
    ""
   ],
-  "Heatmor": [
+  "Mantine": [
    "Attacker",
    ""
   ],
@@ -1440,13 +1538,13 @@
    "Doubles lead",
    "Fake Out"
   ],
-  "Toedscruel": [
-   "Support",
-   "Spore"
-  ],
   "Sunflora": [
    "Attacker",
    ""
+  ],
+  "Toedscruel": [
+   "Support",
+   "Spore"
   ],
   "Starmie": [
    "Attacker",
@@ -1484,13 +1582,13 @@
    "Attacker",
    ""
   ],
-  "Vileplume": [
-   "Attacker",
-   ""
-  ],
   "Drifblim": [
    "Doubles lead",
    "Tailwind"
+  ],
+  "Vileplume": [
+   "Attacker",
+   ""
   ],
   "Tropius": [
    "Support",
@@ -1984,11 +2082,11 @@
    "Attacker",
    ""
   ],
-  "Kecleon": [
+  "Spritzee": [
    "Attacker",
    ""
   ],
-  "Spritzee": [
+  "Kecleon": [
    "Attacker",
    ""
   ],
@@ -2152,13 +2250,13 @@
    "Support",
    "Spore"
   ],
-  "Dewgong": [
-   "Doubles lead",
-   "Fake Out"
-  ],
   "Masquerain": [
    "Doubles lead",
    "Intimidate"
+  ],
+  "Dewgong": [
+   "Doubles lead",
+   "Fake Out"
   ],
   "Wugtrio": [
    "Attacker",
@@ -3590,6 +3688,20 @@
     ]
    ]
   },
+  "Florges": {
+   "s": [
+    [
+     "D",
+     "Synthesis"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Synthesis"
+    ]
+   ]
+  },
   "Hariyama": {
    "s": [
     [
@@ -3609,20 +3721,6 @@
     [
      "E",
      "Knock Off"
-    ]
-   ]
-  },
-  "Florges": {
-   "s": [
-    [
-     "D",
-     "Synthesis"
-    ]
-   ],
-   "d": [
-    [
-     "D",
-     "Synthesis"
     ]
    ]
   },
@@ -4008,11 +4106,11 @@
     ]
    ]
   },
-  "Mantine": {
+  "Heatmor": {
    "s": [],
    "d": []
   },
-  "Heatmor": {
+  "Mantine": {
    "s": [],
    "d": []
   },
@@ -5055,20 +5153,6 @@
     ]
    ]
   },
-  "Toedscruel": {
-   "s": [
-    [
-     "B",
-     "Spore"
-    ]
-   ],
-   "d": [
-    [
-     "B",
-     "Spore"
-    ]
-   ]
-  },
   "Sunflora": {
    "s": [
     [
@@ -5084,6 +5168,20 @@
     [
      "E",
      "Sunny Day"
+    ]
+   ]
+  },
+  "Toedscruel": {
+   "s": [
+    [
+     "B",
+     "Spore"
+    ]
+   ],
+   "d": [
+    [
+     "B",
+     "Spore"
     ]
    ]
   },
@@ -5232,10 +5330,6 @@
     ]
    ]
   },
-  "Vileplume": {
-   "s": [],
-   "d": []
-  },
   "Drifblim": {
    "s": [
     [
@@ -5257,6 +5351,10 @@
      "Tailwind"
     ]
    ]
+  },
+  "Vileplume": {
+   "s": [],
+   "d": []
   },
   "Tropius": {
    "s": [
@@ -7046,6 +7144,10 @@
    "s": [],
    "d": []
   },
+  "Spritzee": {
+   "s": [],
+   "d": []
+  },
   "Kecleon": {
    "s": [
     [
@@ -7059,10 +7161,6 @@
      "Priority cleaner (Sucker Punch)"
     ]
    ]
-  },
-  "Spritzee": {
-   "s": [],
-   "d": []
   },
   "Minior": {
    "s": [
@@ -7563,6 +7661,20 @@
     ]
    ]
   },
+  "Masquerain": {
+   "s": [
+    [
+     "D",
+     "Intimidate"
+    ]
+   ],
+   "d": [
+    [
+     "D",
+     "Intimidate"
+    ]
+   ]
+  },
   "Dewgong": {
    "s": [
     [
@@ -7578,20 +7690,6 @@
     [
      "E",
      "Perish Song"
-    ]
-   ]
-  },
-  "Masquerain": {
-   "s": [
-    [
-     "D",
-     "Intimidate"
-    ]
-   ],
-   "d": [
-    [
-     "D",
-     "Intimidate"
     ]
    ]
   },

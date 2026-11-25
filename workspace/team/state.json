@@ -4,9 +4,9 @@
  "export_label": "24 Nov 15:33",
  "active_start": 470,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 368,
- "run": 382,
- "final": 386,
+ "roster": 377,
+ "run": 391,
+ "final": 395,
  "done": [
   "aelita",
   "narcissa1",
@@ -32,16 +32,17 @@
   "amanda",
   "karrina",
   "spector",
-  "spector2"
+  "spector2",
+  "erick"
  ],
- "fight": "erick",
+ "fight": "jenner9",
  "team": [
-  "Ampharos (Aevian Form)",
-  "Scrafty",
-  "Camerupt",
-  "Golisopod (Aevian Form)",
-  "Zoroark (Hisuian Form)",
-  "Gastrodon"
+  "Copperajah",
+  "Ninetales (Alolan Form)",
+  "Aurorus",
+  "Glalie (Aevian Form)",
+  "Florges",
+  "Palossand (Fiery Aevian Form)"
  ],
  "moves": {
   "Golisopod (Aevian Form)": [
@@ -289,6 +290,30 @@
    "Yawn",
    "Snap Trap",
    "Protect"
+  ],
+  "Ninetales (Alolan Form)": [
+   "Aurora Veil",
+   "Moonblast",
+   "Blizzard",
+   "Protect"
+  ],
+  "Alcremie": [
+   "Decorate",
+   "Aromatic Mist",
+   "Dazzling Gleam",
+   "Protect"
+  ],
+  "Palossand (Fiery Aevian Form)": [
+   "Shadow Ball",
+   "Iron Defense",
+   "Overheat",
+   "Protect"
+  ],
+  "Rampardos": [
+   "Head Smash",
+   "Rock Polish",
+   "Double-Edge",
+   "Protect"
   ]
  },
  "promote": "team/promote_1108.json",
@@ -396,7 +421,11 @@
   "Gastrodon": "STORMDRAIN",
   "Ampharos (Aevian Form)": "FILTER",
   "Quagsire": "UNAWARE",
-  "Stunfisk (Galarian Form)": "MIMICRY"
+  "Stunfisk (Galarian Form)": "MIMICRY",
+  "Ninetales (Alolan Form)": "SNOWWARNING",
+  "Alcremie": "SWEETVEIL",
+  "Palossand (Fiery Aevian Form)": "FLAMEBODY",
+  "Rampardos": "MOLDBREAKER"
  },
  "crests_owned": [
   "Ariados Crest",
@@ -418,7 +447,7 @@
   "Whiscash Crest",
   "Zoroark Crest"
  ],
- "cap": 60,
+ "cap": 65,
  "chapter": 9,
  "core": [
   "Toxtricity (Aevian Form)",
@@ -430,19 +459,19 @@
   "core": {
    "n": 6,
    "weak3": [],
-   "nores": [
-    "GRASS"
-   ],
+   "nores": [],
    "minor": []
   },
   "fight": {
    "n": 6,
    "weak3": [],
-   "nores": [
-    "GRASS"
+   "nores": [],
+   "minor": [
+    "FIGHTING",
+    "STEEL",
+    "GHOST"
    ],
-   "minor": [],
-   "key": "erick"
+   "key": "jenner9"
   }
  },
  "plan_swaps": {},
@@ -562,6 +591,44 @@
     ],
     "ability": "SOLIDROCK"
    }
+  },
+  "jenner9": {
+   "Alcremie": {
+    "moves": [
+     "Recover",
+     "Giga Drain",
+     "Dazzling Gleam",
+     "Protect"
+    ],
+    "ability": "SWEETVEIL"
+   },
+   "Aurorus": {
+    "moves": [
+     "Thunder Wave",
+     "Ice Beam",
+     "Mud Shot",
+     "Protect"
+    ],
+    "ability": "REFRIGERATE"
+   },
+   "Glalie (Aevian Form)": {
+    "moves": [
+     "Grassy Glide",
+     "Wood Hammer",
+     "Rock Slide",
+     "Ice Fang"
+    ],
+    "ability": "GRASSYSURGE"
+   },
+   "Florges": {
+    "moves": [
+     "Moonblast",
+     "Synthesis",
+     "Wish",
+     "Protect"
+    ],
+    "ability": "FLOWERVEIL"
+   }
   }
  },
  "plan_pairs": {
@@ -660,6 +727,30 @@
    "Earthquake",
    "Yawn",
    "Snap Trap",
+   "Protect"
+  ],
+  "Glalie (Aevian Form)": [
+   "Grassy Glide",
+   "Wood Hammer",
+   "Rock Slide",
+   "Protect"
+  ],
+  "Aurorus": [
+   "Aurora Veil",
+   "Ice Beam",
+   "Ancient Power",
+   "Protect"
+  ],
+  "Alcremie": [
+   "Decorate",
+   "Aromatic Mist",
+   "Dazzling Gleam",
+   "Protect"
+  ],
+  "Florges": [
+   "Moonblast",
+   "Synthesis",
+   "Giga Drain",
    "Protect"
   ]
  },

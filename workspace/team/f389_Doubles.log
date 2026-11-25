@@ -1,0 +1,12 @@
+Copperajah | Overflow 65 | Sheer Force  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Iron Head', 'Play Rough', 'Double-Edge', 'Protect'] | Metal Coat (already holding) | 
+Ninetales (Alolan Form) | Active 65 | Snow Warning  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Aurora Veil', 'Moonblast', 'Blizzard', 'Protect'] | Icy Rock (already holding) | 
+Sylveon | Party 65 | Pixilate  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Hyper Voice', 'Shadow Ball', 'Wish', 'Protect'] | Spell Tag (already holding) | 
+Glalie (Aevian Form) | Party 65 | Grassy Surge  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'] | Miracle Seed (already holding) | 
+Alcremie | Overflow 65 | Sweet Veil  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Decorate', 'Aromatic Mist', 'Dazzling Gleam', 'Protect'] | Sitrus Berry | Alcremie (Level 42)
+Palossand (Fiery Aevian Form) | Overflow 65 | Steam Engine  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Shadow Ball', 'Iron Defense', 'Overheat', 'Protect'] | Sitrus Berry | Palossand (Level 42)
+jenner 1.463 -> 1.379 leads ['Glalie (Aevian Form)', 'Copperajah'] swaps [('Flamigo', 'Ninetales (Alolan Form)', 0.15), ('Azumarill', 'Ninetales (Alolan Form)', 0.149), ('Clefable', 'Ninetales (Alolan Form)', 0.139)]
+danni 1.604 -> 1.627 leads ['Glalie (Aevian Form)', 'Copperajah'] swaps [('Chandelure', 'Sylveon', 0.133), ('Arcanine', 'Sylveon', 0.129), ('Bombirdier', 'Sylveon', 0.107)]
+troye 1.349 -> 1.278 leads ['Palossand (Fiery Aevian Form)', 'Glalie (Aevian Form)'] swaps [('Arcanine', 'Ninetales (Alolan Form)', 0.243), ('Toxtricity (Aevian Form)', 'Ninetales (Alolan Form)', 0.153), ('Veluza (Aevian Form)', 'Ninetales (Alolan Form)', 0.151)]
+zena 1.611 -> 1.451 leads ['Glalie (Aevian Form)', 'Copperajah'] swaps [('Venusaur', 'Sylveon', 0.142), ('Roserade (Aevian Form)', 'Sylveon', 0.138), ('Meganium', 'Sylveon', 0.136)]
+marcie 1.544 -> 1.451 leads ['Palossand (Fiery Aevian Form)', 'Copperajah'] swaps [('Leavanny (Aevian Form)', 'Ninetales (Alolan Form)', 0.253), ('Arcanine', 'Ninetales (Alolan Form)', 0.191), ('Leavanny', 'Ninetales (Alolan Form)', 0.182)]
+jenner9 0.854 -> 1.048 leads ['Sylveon', 'Ninetales (Alolan Form)'] swaps [('Florges', 'Alcremie', 0.06), ('Clefable', 'Alcremie', 0.056), ('Arcanine', 'Alcremie', 0.055)]

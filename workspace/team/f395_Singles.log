@@ -1,0 +1,12 @@
+Copperajah | Overflow 65 | Sheer Force  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Iron Head', 'Play Rough', 'Double-Edge', 'Protect'] | Metal Coat (already holding) | 
+Ninetales (Alolan Form) | Active 65 | Snow Warning  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Aurora Veil', 'Moonblast', 'Blizzard', 'Protect'] | Icy Rock (already holding) | 
+Aurorus | Overflow 65 | Snow Warning  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Aurora Veil', 'Ice Beam', 'Ancient Power', 'Protect'] | Sitrus Berry | 
+Glalie (Aevian Form) | Party 65 | Grassy Surge  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Protect'] | Miracle Seed (already holding) | 
+Florges | Active 65 | Flower Veil  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Moonblast', 'Synthesis', 'Giga Drain', 'Protect'] | Fairy Feather (already holding) | 
+Palossand (Fiery Aevian Form) | Overflow 65 | Steam Engine  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Shadow Ball', 'Iron Defense', 'Overheat', 'Protect'] | Sitrus Berry | Palossand (Level 42)
+jenner 1.302 -> 1.249 leads ['Glalie (Aevian Form)'] swaps [('Typhlosion', 'Aurorus', 0.165), ('Unfezant (Aevian Form Male)', 'Aurorus', 0.142), ('Chandelure', 'Aurorus', 0.137)]
+danni 1.449 -> 1.448 leads ['Glalie (Aevian Form)'] swaps [('Chandelure', 'Aurorus', 0.131), ('Bombirdier', 'Aurorus', 0.105), ('Crobat', 'Aurorus', 0.1)]
+troye 1.189 -> 1.064 leads ['Glalie (Aevian Form)'] swaps [('Arcanine', 'Aurorus', 0.224), ('Toxtricity (Aevian Form)', 'Aurorus', 0.162), ('Talonflame', 'Aurorus', 0.162)]
+zena 1.453 -> 1.321 leads ['Copperajah'] swaps [('Roserade (Aevian Form)', 'Palossand (Fiery Aevian Form)', 0.123), ('Diggersby', 'Palossand (Fiery Aevian Form)', 0.117), ('Torterra', 'Palossand (Fiery Aevian Form)', 0.113)]
+marcie 1.394 -> 1.28 leads ['Palossand (Fiery Aevian Form)'] swaps [('Leavanny (Aevian Form)', 'Ninetales (Alolan Form)', 0.167), ('Leavanny', 'Ninetales (Alolan Form)', 0.155), ('Scolipede', 'Ninetales (Alolan Form)', 0.139)]
+jenner9 0.693 -> 0.915 leads ['Glalie (Aevian Form)'] swaps [('Chandelure', 'Aurorus', 0.029), ('Sylveon', 'Aurorus', 0.023)]

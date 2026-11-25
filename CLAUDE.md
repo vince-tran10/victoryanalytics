@@ -229,6 +229,16 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   type (Icy -> Ice, Murkwater -> Poison; engine + planner). State: pool_all (debug: every owned mon, any box / tier), field_plan
   {erick: 'Icy Field'} (his chosen plan wins), fight_tips erick = the 3 game tips. Blizzard has NO Ch1-8 TM: only level-up learners freeze.
 
+- **JENNER (Vincent, 25 Nov; Erick beaten, cap 65; singles, Concert Venue, last Ch9 fight):** same counter logic. Engine: foe species
+  Z-Crystal = its Z-move (Battle_AI checkZMoves; Kommo-o Clangorous Soulblaze 185 sound), model_gaps flags an unscored Z-move; compare.py
+  ignores Z-moves. Planner: Ability Capsule per fight (ABIL_OVR: best legal ability by sum dealt - taken, +15 over the build's); Unaware
+  ignores their boosts, Intimidate takes one stage off a physical boost; recoil (Head Smash 1/2, Wood Hammer / Double-Edge... 1/3, Rock Head
+  exempt) counts in 1-v-1s; singles slot 1 = lead must win the opening 1-v-1 (their setup turn = our free hit, +10% roll margin); their
+  field seed's attack stages (Synthetic Seed +1 SpA) raise what we take; singles: partner-only moves (Decorate, Aromatic Mist...) and
+  Aurora Veil without its own Snow Warning are replaced; field-boosted status moves (Concert Acid Armor +3) come first as support picks;
+  flagged moves cost -1 (not -4) in the counter pick (fbuild replaces them). Plan bullets: Grassy Surge overlay (Grassy Glide priority),
+  Substitute, Choice Scarf + Trick. Nothing in his boxes wins a straight 1-v-1 vs Scarf Adaptability Porygon-Z (play the Choice lock).
+
 ## Fight protocol (Vincent, 14 Nov — do this BEFORE recommending any team or lineup)
 **Guide tips (Vincent, 23 Nov): ALWAYS factored in.** Every walkthrough / community tip he sends goes into workspace/team/fight_tips.json
 (per fight: tip text + needs); planner.py scores them (+3 per tip met) and the Planner tab shows 'Guide tips: N of M covered' (collapsed)

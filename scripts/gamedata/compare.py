@@ -30,7 +30,7 @@ for key in G.FIGHTS:
         if norm(f['item']) != norm(g['item']): d.append(f"item {f['item'] or '-'} → {g['item'] or '-'}")
         if norm(raw.get('ability')) != norm(g['ability']): d.append(f"ability {raw.get('ability') or '-'} → {g['ability']}")
         if norm(raw.get('nature')) != norm(g['nature']): d.append(f"nature {raw.get('nature') or '-'} → {g['nature']}")
-        em = sorted(norm(m[1]['MoveName']) for m in f['moves']); gm = sorted(norm(re.sub(r' \(.*\)$', '', m)) for m in g['moves'])
+        em = sorted(norm(m[1]['MoveName']) for m in f['moves'] if m[1].get('Effect') != '808' and not str(m[1].get('PP')) == '0'); gm = sorted(norm(re.sub(r' \(.*\)$', '', m)) for m in g['moves'])
         if em != gm: d.append(f"moves {[m[1]['MoveName'] for m in f['moves']]} → {g['moves']}")
         ft = sorted(t.upper() for t in f['types']); gt = sorted(g['types'])
         if ft != gt: d.append(f"types {'/'.join(f['types'])} → {'/'.join(g['types'])}")

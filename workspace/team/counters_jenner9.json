@@ -32,26 +32,22 @@
     "wincons": [
      {
       "what": "Healing",
-      "answers": [
-       "teach Gastro Acid (Musharna)"
-      ]
+      "answers": []
      }
     ]
    },
    {
     "foe": "Noivern",
-    "mon": "Aurorus",
-    "ability": "SNOWWARNING",
-    "dealt": 130,
-    "taken": 39,
-    "ok": true,
+    "mon": "Copperajah",
+    "ability": "SHEERFORCE",
+    "dealt": 77,
+    "taken": 41,
+    "ok": false,
     "setup": false,
     "wincons": [
      {
       "what": "Healing",
-      "answers": [
-       "teach Gastro Acid (Musharna)"
-      ]
+      "answers": []
      }
     ]
    },
@@ -67,11 +63,11 @@
    },
    {
     "foe": "Kommo-o",
-    "mon": "Musharna (Aevian Form)",
-    "ability": "TOUGHCLAWS",
-    "dealt": 125,
-    "taken": 70,
-    "ok": false,
+    "mon": "Ninetales (Alolan Form)",
+    "ability": "SNOWWARNING",
+    "dealt": 110,
+    "taken": 93,
+    "ok": true,
     "setup": false,
     "wincons": []
    },
