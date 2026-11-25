@@ -391,7 +391,7 @@
    "attacks": [
     "Crunch",
     "Ice Fang",
-    "Secret Power"
+    "Facade"
    ],
    "ability": "INTIMIDATE",
    "tier": "C"
@@ -582,7 +582,7 @@
    "gain": 0.106,
    "attacks": [
     "Sucker Punch",
-    "Secret Power"
+    "Facade"
    ],
    "ability": "HUGEPOWER",
    "tier": "C"
@@ -710,7 +710,7 @@
    "gain": 0.155,
    "attacks": [
     "Surf",
-    "Secret Power",
+    "Facade",
     "Signal Beam"
    ],
    "ability": "HYDRATION",
@@ -812,7 +812,7 @@
    "attacks": [
     "Close Combat",
     "Slash",
-    "Night Slash"
+    "Shadow Claw"
    ],
    "ability": "IMMUNITY",
    "tier": "D"
@@ -844,7 +844,7 @@
    "without": 0.047,
    "gain": 0.083,
    "attacks": [
-    "Secret Power",
+    "Facade",
     "Fire Blast",
     "Blizzard"
    ],

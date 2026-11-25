@@ -483,7 +483,7 @@
     "Field: Certain abilities + ▲ Defense: Soundproof"
    ],
    "how": [
-    "Immune to Clanging Scales, Clangorous Soulblaze",
+    "Immune to Clangorous Soulblaze, Clanging Scales",
     "Slower: Speed 62 vs 166",
     "Play Rough: 136% a hit, one-shots it",
     "Takes ~51% from its best hit: it needs 2 hits"
@@ -1078,7 +1078,7 @@
    "cov": [
     [
      "Toxtricity (Aevian Form)",
-     "Boomburst"
+     "Torch Song"
     ]
    ],
    "ok": true,
@@ -1294,20 +1294,20 @@
   "DRAGON",
   "PSYCHIC",
   "FIGHTING",
-  "STEEL",
-  "ELECTRIC"
+  "ELECTRIC",
+  "STEEL"
  ],
  "atk": {
-  "PSYCHIC": [
-   "Porygon-Z",
-   "Stoutland"
-  ],
   "DARK": [
    "Stoutland"
   ],
   "NORMAL": [
    "Kommo-o",
    "Noivern",
+   "Porygon-Z",
+   "Stoutland"
+  ],
+  "PSYCHIC": [
    "Porygon-Z",
    "Stoutland"
   ],
@@ -1332,10 +1332,10 @@
   "FIRE": [
    "Kommo-o"
   ],
-  "STEEL": [
+  "ELECTRIC": [
    "Klinklang"
   ],
-  "ELECTRIC": [
+  "STEEL": [
    "Klinklang"
   ]
  },
@@ -1676,8 +1676,8 @@
     "DRAGON": 1.0,
     "PSYCHIC": 1.0,
     "FIGHTING": 2.0,
-    "STEEL": 2.0,
-    "ELECTRIC": 0.5
+    "ELECTRIC": 0.5,
+    "STEEL": 2.0
    },
    "rm": [
     1.0,
@@ -1778,8 +1778,8 @@
     "DRAGON": 0.0,
     "PSYCHIC": 1.0,
     "FIGHTING": 1.0,
-    "STEEL": 4.0,
-    "ELECTRIC": 1.0
+    "ELECTRIC": 1.0,
+    "STEEL": 4.0
    },
    "rm": [
     0.5,
@@ -1880,8 +1880,8 @@
     "DRAGON": 1.0,
     "PSYCHIC": 0.5,
     "FIGHTING": 1.0,
-    "STEEL": 2.0,
-    "ELECTRIC": 1.0
+    "ELECTRIC": 1.0,
+    "STEEL": 2.0
    },
    "rm": [
     2.0,
@@ -1982,8 +1982,8 @@
     "DRAGON": 1.0,
     "PSYCHIC": 1.0,
     "FIGHTING": 0.0,
-    "STEEL": 1.0,
-    "ELECTRIC": 0.0
+    "ELECTRIC": 0.0,
+    "STEEL": 1.0
    },
    "rm": [
     2.0,
@@ -2084,8 +2084,8 @@
     "DRAGON": 0.0,
     "PSYCHIC": 0.0,
     "FIGHTING": 1.0,
-    "STEEL": 2.0,
-    "ELECTRIC": 1.0
+    "ELECTRIC": 1.0,
+    "STEEL": 2.0
    },
    "rm": [
     0.25,
@@ -2186,8 +2186,8 @@
     "DRAGON": 1.0,
     "PSYCHIC": 2.0,
     "FIGHTING": 0.5,
-    "STEEL": 0.5,
-    "ELECTRIC": 1.0
+    "ELECTRIC": 1.0,
+    "STEEL": 0.5
    },
    "rm": [
     1.0,

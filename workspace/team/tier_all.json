@@ -2174,7 +2174,7 @@
    "cat": "Physical",
    "attacks": [
     "Sucker Punch",
-    "Secret Power"
+    "Facade"
    ],
    "legal": [
     "AGILITY",
@@ -19437,7 +19437,7 @@
    "cat": "Physical",
    "attacks": [
     "Surf",
-    "Secret Power",
+    "Facade",
     "Signal Beam"
    ],
    "legal": [

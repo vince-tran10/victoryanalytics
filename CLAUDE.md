@@ -257,6 +257,13 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   tier_fights = [fight keys] limits the in-game part and counters to his hard-fight list (he will send Ch10's).
   Builder: 'Field and plan' = ONE folded card (plan + model check + the game's field notes); matchup cards start folded.
 
+- **FIGHTS TAB (Vincent, 25 Nov; Ch9 pilot, the standard for Ch10):** scripts/team/fights_tab.py (called by theme.py). Every fight of the
+  chapter = a FOLDED card (sprite of their ace, name, format / field chips, green ✓ when beaten, 'Next' on state.fight). Beaten fights stay
+  light (their team + one-line note). Upcoming fights open to: format, field, note, 'Field effects' (the game's own notes, folded), 'Their
+  team' (Lv, types, ability, item, Z-move, nature, EVs, stats, Speed here, moves) and 'Guide tips' (team/fight_tips.json: walkthrough tips
+  and his notes, with who on the recommended six covers each; they score in the planner's pick). Ch10: he will send the hard-fight list +
+  tips; add them to bosses / fight_tips and every card follows this layout.
+
 ## Fight protocol (Vincent, 14 Nov — do this BEFORE recommending any team or lineup)
 **Guide tips (Vincent, 23 Nov): ALWAYS factored in.** Every walkthrough / community tip he sends goes into workspace/team/fight_tips.json
 (per fight: tip text + needs); planner.py scores them (+3 per tip met) and the Planner tab shows 'Guide tips: N of M covered' (collapsed)

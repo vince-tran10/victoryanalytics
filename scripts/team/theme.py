@@ -547,8 +547,9 @@ if FP and st.get('fight') in FP:   # 21 Nov (Vincent, trial): party cards warn a
         if x_ < 1:
             page = page.replace(f'<!--MW:{n_}-->', f'<div class="mw">{E(mv_)} ' + ('fails' if x_ == 0 else f'×{x_:g}') + f' on {E(_fld)}</div><!--MW:{n_}-->', 1)
 page = re.sub(r'<!--MW:[^>]*-->', '', page)
-if FP:
-    page = re.sub(r'(<section aria-labelledby="s1f">\s*<h2 id="s1f">.*?</h2>).*?</section>', lambda m: m.group(1) + fight_cards() + '</section>', page, count=1, flags=re.S)
+if FP or True:   # 25 Nov (Vincent): folded cards for EVERY fight of the chapter, green check when beaten (fights_tab.py, Ch10 pilot)
+    import fights_tab as _FT
+    page = re.sub(r'(<section aria-labelledby="s1f">\s*<h2 id="s1f">.*?</h2>).*?</section>', lambda m: m.group(1) + _FT.html_(st, FIGHT_NAME) + '</section>', page, count=1, flags=re.S)
     page = re.sub(r'<section aria-labelledby="sctr">.*?</section>\s*', '', page, count=1, flags=re.S)
 
 page = page.replace('<th>Best opener (matchup)</th>', '').replace('<th>Your six</th>', '')
