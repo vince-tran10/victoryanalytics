@@ -281,9 +281,9 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   (atm / mtypes / meff / STAB / item), ideal_builds (_bty) and make_report5 best_item all use it. checks.py BLOCKS publishing when a
   six member's type booster boosts none of its real attack types. A counter's item = booster of the move it uses on ITS foe (Lapras-A
   vs Noivern: Rock Slide -> Hard Stone, 90% -> 109%).
-- **TIERS PAGE (Vincent, 25 Nov):** no S / A / B / C / D letters and no scores on the page: each list (Pokémon / Aevian / Crests) is ONE
-  ranked grid (#1 best); role names under tiles (no A-E letters); the sheet shows '#N of M' and 'Why it ranks #N'. Tier letters and blend
-  scores stay internal (tier_all.json, planner, builder).
+- **TIERS PAGE (Vincent, 25 Nov, final):** KEEP the S / A / B / C / D tier groups (best first inside each), but NO win-con role labels
+  (Win con / Enabler / Wallbreaker...) and no role filters on the page or in the sheet; roles stay internal (planner / builder use them).
+  No blend scores shown. Sheet = 'S tier', 'Why S tier', ideal build.
 
 ## Fight protocol (Vincent, 14 Nov — do this BEFORE recommending any team or lineup)
 **Guide tips (Vincent, 23 Nov): ALWAYS factored in.** Every walkthrough / community tip he sends goes into workspace/team/fight_tips.json

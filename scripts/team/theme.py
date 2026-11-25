@@ -820,16 +820,17 @@ page = page.replace('</body>', SHEET + TMJS + '</body>') if '</body>' in page el
 RSHORT = {'Lead': 'Lead', 'Doubles lead': 'Dbl lead', 'Mid game': 'Mid', 'Closer': 'Closer', 'Support': 'Support', 'Attacker': 'Attacker'}
 def dex_tiles(kind):
     rows_ = [r for r in json.load(open('team/tier_all.json'))['rows'] if r['kind'] == kind]
-    present = [k for k in 'ABCDE' if any(k in tag_letters(disp(r['name'])) for r in rows_)]
-    bar = ('<div class="drole-bar" role="group" aria-label="Filter by win-con role"><button type="button" class="drf on" data-role="">All</button>'
-           + ''.join('<button type="button" class="drf" data-role="' + k + '">' + TAGN[k] + '</button>' for k in present) + '</div>')
-    # 25 Nov (Vincent): no S / A / B letters and no scores on the page: ONE ranked list (best first); the reasons live in the sheet
-    rk_ = sorted(rows_, key=lambda r: -r['blend'])
-    tiles = ''.join('<button type="button" class="dtile" data-dn="' + E(disp(r['name'])) + '" data-role="' + E(tag_letters(disp(r['name']))) + '">'
-                    + '<b class="drank">' + str(k_ + 1) + '</b>' + SP.tag(r.get('sid'), r.get('form', '0'), size='m')
-                    + '<span>' + E(disp(r['name'])) + '</span><em class="drole">' + (' · '.join(TAGN[x] for x in tag_letters(disp(r['name']))) or 'Attacker') + '</em></button>'
-                    for k_, r in enumerate(rk_))
-    return bar + '<div class="dtier"><div class="dgrid">' + tiles + '</div></div>'
+    # 25 Nov (Vincent, final): S / A / B / C / D tier groups, best first inside each; NO role labels or role filters on the page
+    # (win-con roles stay internal: planner / builder use them when building teams and counters)
+    rk_ = sorted(rows_, key=lambda r: -r['blend']); out_ = ''
+    for t_ in 'SABCD':
+        tr_ = [r for r in rk_ if r['tier'] == t_]
+        if not tr_: continue
+        tiles = ''.join('<button type="button" class="dtile" data-dn="' + E(disp(r['name'])) + '">' + SP.tag(r.get('sid'), r.get('form', '0'), size='m')
+                        + '<span>' + E(disp(r['name'])) + '</span></button>' for r in tr_)
+        out_ += ('<div class="dtier"><h3 class="dth"><span class="tier t' + t_ + '">' + t_ + '</span> ' + t_ + ' Tier <span class="dcount">' + str(len(tr_)) + '</span></h3>'
+                 '<div class="dgrid">' + tiles + '</div></div>')
+    return out_
 for _sec, _kind in (('s6', 'crest'), ('s7', 'aevian'), ('s8', 'regular')):
     page = re.sub(rf'(<section aria-labelledby="{_sec}">\s*<h2 id="{_sec}">.*?</h2>\s*(?:<ul class="legend">.*?</ul>)?).*?(</section>)',
                   lambda m_, k_=_kind: m_.group(1) + dex_tiles(k_) + m_.group(2), page, count=1, flags=re.S)
@@ -1256,11 +1257,11 @@ DEXJS = r'''<script id="dex-js">
       return '<div style="background:hsl('+h+' 65% 45% / .22);box-shadow:inset 0 -3px 0 hsl('+h+' 70% 45%)" title="better than '+p+'% of your box"><small>'+k+'</small>'+d.b[k]+'<em>'+p+'%</em></div>'; }).join('');
     function row(k,v,f){ return '<li>'+k+': '+esc(v)+((d.y&&d.y[f])?'<span class="ds-diff"> (yours: '+esc(d.y[f])+')</span>':'')+'</li>'; }
     body.innerHTML = '<div class="ds-head"><i class="spr sp-'+d.sp+'" aria-hidden="true"></i><div><h3 id="ds-name">'+esc(name)+'</h3>'
-      + '<div class="ds-sub"><b>#'+d.rk+'</b> of '+d.rn+' '+esc(d.kd)+'</div>'
+      + '<div class="ds-sub"><span class="tier t'+d.t+'">'+d.t+'</span> '+d.t+' tier</div>'
       + '<div class="ds-sub">'+d.ty.map(function(t){return t[0]+t.slice(1).toLowerCase();}).join('/')+'</div>'
       + (d.m ? '<div class="ds-sub">'+esc(d.m)+'</div>' : '') + '</div></div><div class="ds-stats">'+st+'</div>'
-      + '<div class="ds-sec">Win-con roles</div><ul class="ds-b ds-wt">'+((d.wt&&d.wt.length)?d.wt.map(function(w){ return '<li><span><b>'+esc(w[1])+'</b>: '+esc(w[2])+(w[3]?' <em>('+w[3]+')</em>':'')+'</span></li>'; }).join(''):'<li>Plain attacker: no win-con job in its build</li>')+'</ul>'
-      + '<div class="ds-sec">Why it ranks #'+d.rk+'</div><ul class="ds-b ds-why">'+d.why.map(function(w){ return '<li>'+esc(w)+'</li>'; }).join('')+'</ul>'
+
+      + '<div class="ds-sec">Why '+d.t+' tier</div><ul class="ds-b ds-why">'+d.why.map(function(w){ return '<li>'+esc(w)+'</li>'; }).join('')+'</ul>'
       + ((d.pc && d.pc.length) ? '<div class="ds-sec">What players say</div><ul class="ds-b ds-pc">'+d.pc.map(function(p){ return '<li class="'+(p[0]>0?'pc-up':p[0]<0?'pc-dn':'pc-nt')+'"><b>'+(p[0]>0?'▲':p[0]<0?'▼':'•')+'</b> '+esc(p[1])+'</li>'; }).join('')+'</ul>' : '')
       + '<div class="ds-sec">'+esc(d.src)+'</div><ul class="ds-b">'+row('Ability',d.a,'a')+(d.n?row('Nature',d.n,'n'):'')+(d.e?row('EVs',d.e,'e'):'')+(d.it?row('Item',d.it,'it'):'')
       + d.mv.map(function(m,i){ var yv=(d.y&&d.y.mv)||[]; var mine=yv.indexOf(m)<0 && ((d.y&&d.y.mv)!==undefined); return '<li>Move '+(i+1)+': '+esc(m)+'</li>'; }).join('')

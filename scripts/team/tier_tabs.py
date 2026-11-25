@@ -56,7 +56,7 @@ rows = T['rows']
 cuts = ' · '.join(f"{t} ≥ {v:.2f}" for t, v in T['cut'][:-1])
 import json as _j   # 25 Nov (Vincent): ranked lists, no letter grades; how the ranking is made, one point per line
 _cap = (_j.load(open('team/state.json')).get('cap') if os.path.exists('team/state.json') else 65)
-LEG = ("<li>Each list is ranked best first: Pokémon, Aevian and Crests separately.</li>"
+LEG = ("<li>Pokémon, Aevian and Crests are separate lists, grouped S to D, best first in each tier.</li>"
        "<li>55%: meta and community rating (Smogon usage, community tier lists and forum posts, crest ratings).</li>"
        "<li>20%: how it does in the game's hard fights (exact game data and fields).</li>"
        "<li>25%: team value: how many hard-fight Pokémon it hard-counters, plus its kit (speed control, priority, pivot, immunity, disruption, win condition).</li>"

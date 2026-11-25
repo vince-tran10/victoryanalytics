@@ -1,0 +1,12 @@
+Glalie (Aevian Form) | Party 65 | Grassy Surge  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Ice Fang'] | Miracle Seed (already holding) | 
+Sylveon | Party 65 | Pixilate  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Hyper Voice', 'Shadow Ball', 'Wish', 'Protect'] | Fairy Feather (already holding) | 
+Lapras (Aevian Form) | Party 65 | No Guard  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Rock Slide', 'Zen Headbutt', 'Dragon Dance', 'Sing'] | Twisted Spoon (already holding) | 
+Golurk | Party 65 | Iron Fist  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Shadow Punch', 'Hammer Arm', 'Stomping Tantrum', 'Protect'] | Black Belt (already holding) | 
+Musharna (Aevian Form) | Party 65 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Fairy Feather (already holding) | 
+Toxtricity (Aevian Form) | Party 65 | Punk Rock  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Torch Song', 'Boomburst', 'Sludge Bomb', 'Protect'] | Charcoal (already holding) | 
+jenner 1.515 -> 1.515 leads ['Glalie (Aevian Form)'] swaps [('Gallade', 'Sylveon', 0.077), ('Chandelure', 'Lapras (Aevian Form)', 0.058), ('Passimian', 'Sylveon', 0.057)]
+danni 1.861 -> 1.861 leads ['Toxtricity (Aevian Form)', 'Lapras (Aevian Form)'] swaps [('Scrafty', 'Sylveon', 0.085), ('Arcanine', 'Sylveon', 0.066), ('Leavanny (Aevian Form)', 'Sylveon', 0.063)]
+troye 1.611 -> 1.611 leads ['Toxtricity (Aevian Form)', 'Golurk'] swaps [('Arcanine', 'Sylveon', 0.148), ('Tauros (Paldean Combat Breed)', 'Sylveon', 0.145), ('Scrafty', 'Sylveon', 0.092)]
+zena 1.492 -> 1.492 leads ['Toxtricity (Aevian Form)'] swaps [('Gallade', 'Golurk', 0.101), ('Decidueye', 'Golurk', 0.098), ('Tsareena', 'Musharna (Aevian Form)', 0.086)]
+marcie 1.761 -> 1.761 leads ['Toxtricity (Aevian Form)', 'Glalie (Aevian Form)'] swaps [('Leavanny (Aevian Form)', 'Lapras (Aevian Form)', 0.174), ('Arcanine', 'Lapras (Aevian Form)', 0.126), ('Scovillain', 'Lapras (Aevian Form)', 0.124)]
+jenner9 1.228 -> 1.228 leads ['Glalie (Aevian Form)'] swaps [('Florges', 'Lapras (Aevian Form)', 0.052), ('Ninetales (Alolan Form)', 'Lapras (Aevian Form)', 0.038), ('Azumarill', 'Golurk', 0.037)]

@@ -483,7 +483,7 @@
     "Field: Certain abilities + ▲ Defense: Soundproof"
    ],
    "how": [
-    "Immune to Clanging Scales, Clangorous Soulblaze",
+    "Immune to Clangorous Soulblaze, Clanging Scales",
     "Slower: Speed 62 vs 166",
     "Play Rough: 136% a hit, one-shots it",
     "Takes ~51% from its best hit: it needs 2 hits"
@@ -1320,13 +1320,13 @@
    "Appletun",
    "Kommo-o"
   ],
-  "GRASS": [
-   "Appletun"
-  ],
   "DRAGON": [
    "Appletun",
    "Kommo-o",
    "Noivern"
+  ],
+  "GRASS": [
+   "Appletun"
   ],
   "FLYING": [
    "Noivern"
