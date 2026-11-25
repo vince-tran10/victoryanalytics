@@ -55,15 +55,16 @@
     ]
    },
    {
-    "name": "Lapras (Aevian Form)",
-    "ab": "NOGUARD",
+    "name": "Solrock (Solrock Dominant Fusion)",
+    "ab": "SOLARIDOL",
     "moves": [
-     "Rock Slide",
-     "Zen Headbutt"
+     "Zen Headbutt",
+     "Flare Blitz",
+     "Stone Edge"
     ],
-    "setup": "Dragon Dance",
-    "where": "Party",
-    "dump": 3,
+    "setup": null,
+    "where": "Active",
+    "dump": 512,
     "nature": "Adamant",
     "evs": {
      "Atk": 252,
@@ -76,25 +77,25 @@
     ]
    },
    {
-    "name": "Golurk",
-    "ab": "IRONFIST",
+    "name": "Frosmoth",
+    "ab": "ICESCALES",
     "moves": [
-     "Shadow Punch",
-     "Hammer Arm",
-     "Stomping Tantrum"
+     "Bug Buzz",
+     "Icy Wind",
+     "Aurora Beam"
     ],
-    "setup": null,
-    "where": "Party",
-    "dump": 4,
-    "nature": "Adamant",
+    "setup": "Quiver Dance",
+    "where": "Overflow",
+    "dump": 143,
+    "nature": "Modest",
     "evs": {
-     "Atk": 252,
+     "SpA": 252,
      "HP": 252,
      "SpD": 4
     },
     "types": [
-     "GROUND",
-     "GHOST"
+     "ICE",
+     "BUG"
     ]
    },
    {
@@ -151,7 +152,7 @@
      {
       "what": "Healing",
       "answers": [
-       "teach Gastro Acid (Musharna)"
+       "teach Heal Block (Solrock)"
       ]
      }
     ]
@@ -168,7 +169,7 @@
      {
       "what": "Healing",
       "answers": [
-       "teach Gastro Acid (Musharna)"
+       "teach Heal Block (Solrock)"
       ]
      }
     ]
@@ -212,8 +213,8 @@
    }
   ],
   "weak3": [
-   "DARK",
-   "GHOST",
+   "FLYING",
+   "FIRE",
    "STEEL"
   ],
   "nores": [],
@@ -336,7 +337,7 @@
      "Copperajah",
      "Musharna (Aevian Form)"
     ],
-    "score": 34.73,
+    "score": 34.77,
     "counters": 4
    },
    {
@@ -429,6 +430,14 @@
    },
    {
     "swaps": [
+     "Copperajah",
+     "Gastrodon (West Aevian Form)"
+    ],
+    "score": 4.76,
+    "counters": 4
+   },
+   {
+    "swaps": [
      "Arcanine (Hisuian Form)",
      "Gastrodon (West Aevian Form)"
     ],
@@ -455,14 +464,6 @@
     "swaps": [
      "Musharna (Aevian Form)",
      "Typhlosion"
-    ],
-    "score": 4.72,
-    "counters": 4
-   },
-   {
-    "swaps": [
-     "Musharna (Aevian Form)",
-     "Walrein"
     ],
     "score": 4.72,
     "counters": 4

@@ -201,7 +201,7 @@
    "Iron Head",
    "Play Rough",
    "Double-Edge",
-   "Protect"
+   "Superpower"
   ],
   "move_ids": [
    "IRONHEAD",
@@ -412,8 +412,8 @@
  "Solrock (Solrock Dominant Fusion)": {
   "ability": "SOLARIDOL",
   "nature": "Adamant",
-  "evs": "252 HP / 252 Atk",
-  "item": "Twisted Spoon",
+  "evs": "252 HP / 252 Atk / 4 Def",
+  "item": "Hard Stone",
   "moves": [
    "Zen Headbutt",
    "Flare Blitz",
@@ -426,7 +426,11 @@
    "STONEEDGE"
   ],
   "role": "attacker",
-  "source": "game"
+  "source": "your team",
+  "fight_why": [
+   "Bulk + power: Speed EVs change no matchup here",
+   "Hard Stone: boosts Stone Edge, the best hit on 4 of their 6"
+  ]
  },
  "Vikavolt": {
   "ability": "LEVITATE",
@@ -738,8 +742,8 @@
  "Golurk": {
   "ability": "IRONFIST",
   "nature": "Adamant",
-  "evs": "252 HP / 252 Atk / 4 Def",
-  "item": "Black Belt",
+  "evs": "252 HP / 252 Atk",
+  "item": "Spell Tag",
   "moves": [
    "Shadow Punch",
    "Hammer Arm",
@@ -752,11 +756,7 @@
    "SHADOWPUNCH"
   ],
   "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Bulk + power: Speed EVs change no matchup here",
-   "Black Belt: boosts Hammer Arm, the best hit on 3 of their 6"
-  ]
+  "source": "your team"
  },
  "Pangoro": {
   "ability": "IRONFIST",
@@ -1249,7 +1249,7 @@
  "Lapras (Aevian Form)": {
   "ability": "NOGUARD",
   "nature": "Adamant",
-  "evs": "252 HP / 252 Atk / 4 Def",
+  "evs": "252 HP / 252 Atk",
   "item": "Hard Stone",
   "moves": [
    "Rock Slide",
@@ -1263,11 +1263,7 @@
    "ZENHEADBUTT"
   ],
   "role": "attacker",
-  "source": "your team",
-  "fight_why": [
-   "Bulk + power: Speed EVs change no matchup here",
-   "Hard Stone: boosts Rock Slide, its hit on Noivern"
-  ]
+  "source": "your team"
  },
  "Hitmonlee": {
   "ability": "LIMBER",
@@ -1530,6 +1526,31 @@
   ],
   "role": "attacker",
   "source": "game"
+ },
+ "Frosmoth": {
+  "ability": "ICESCALES",
+  "nature": "Modest",
+  "evs": "252 HP / 252 SpA / 4 Def",
+  "item": "Silver Powder",
+  "moves": [
+   "Bug Buzz",
+   "Quiver Dance",
+   "Stun Spore",
+   "Aurora Beam"
+  ],
+  "move_ids": [
+   "BUGBUZZ",
+   "QUIVERDANCE",
+   "GIGADRAIN"
+  ],
+  "role": "attacker",
+  "source": "your team",
+  "fight_why": [
+   "Aurora Beam replaces Protect (singles: Protect matters less): better hit on Noivern, Kommo-o",
+   "Protect replaces Giga Drain (Giga Drain is the best hit on none of them)",
+   "Bulk + power: Speed EVs change no matchup here",
+   "Stun Spore replaces Protect: the six had no priority or speed control; it works on Stoutland, Noivern, Porygon-Z, Kommo-o, Klinklang"
+  ]
  },
  "Grumpig": {
   "ability": "THICKFAT",
@@ -2212,25 +2233,6 @@
   ],
   "role": "attacker",
   "source": "engine"
- },
- "Frosmoth": {
-  "ability": "ICESCALES",
-  "nature": "Modest",
-  "evs": "252 HP / 252 SpA",
-  "item": "Silver Powder",
-  "moves": [
-   "Bug Buzz",
-   "Quiver Dance",
-   "Giga Drain",
-   "Protect"
-  ],
-  "move_ids": [
-   "BUGBUZZ",
-   "QUIVERDANCE",
-   "GIGADRAIN"
-  ],
-  "role": "attacker",
-  "source": "game"
  },
  "Noivern": {
   "ability": "INFILTRATOR",

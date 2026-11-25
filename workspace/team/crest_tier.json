@@ -1,11 +1,11 @@
 {
- "anchor_low": 0.397,
+ "anchor_low": 0.474,
  "anchor_median": 0.625,
  "team": {
   "Glalie (Aevian Form)": 0.474,
   "Sylveon": 0.668,
-  "Lapras (Aevian Form)": 0.397,
-  "Golurk": 0.439,
+  "Solrock (Solrock Dominant Fusion)": 0.534,
+  "Frosmoth": 0.623,
   "Musharna (Aevian Form)": 0.625,
   "Toxtricity (Aevian Form)": 0.709
  },
@@ -168,7 +168,7 @@
     "Shadow Ball"
    ],
    "ability": "MAGICGUARD",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Torterra",
@@ -185,7 +185,7 @@
     "Thrash"
    ],
    "ability": "SHELLARMOR",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Zoroark (Hisuian Form)",
@@ -201,7 +201,7 @@
     "Shadow Ball"
    ],
    "ability": "SHEERFORCE",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Probopass",
@@ -217,7 +217,7 @@
     "Body Press"
    ],
    "ability": "SANDFORCE",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Rampardos",
@@ -233,7 +233,7 @@
     "Thrash"
    ],
    "ability": "MOLDBREAKER",
-   "tier": "A"
+   "tier": "B"
   },
   {
    "name": "Noctowl",
@@ -249,7 +249,7 @@
     "Moonblast"
    ],
    "ability": "TINTEDLENS",
-   "tier": "A"
+   "tier": "C"
   },
   {
    "name": "Hypno",
@@ -266,7 +266,7 @@
     "Ice Punch"
    ],
    "ability": "INSOMNIA",
-   "tier": "B"
+   "tier": "C"
   },
   {
    "name": "Feraligatr",
@@ -282,7 +282,7 @@
     "Ice Fang"
    ],
    "ability": "SHEERFORCE",
-   "tier": "B"
+   "tier": "D"
   },
   {
    "name": "Furret",
@@ -298,7 +298,7 @@
     "Sucker Punch"
    ],
    "ability": "FRISK",
-   "tier": "B"
+   "tier": "C"
   },
   {
    "name": "Gothitelle",
@@ -314,7 +314,7 @@
     "Shadow Ball"
    ],
    "ability": "SHADOWTAG",
-   "tier": "B"
+   "tier": "C"
   },
   {
    "name": "Cinccino",
@@ -330,7 +330,7 @@
     "Rock Blast"
    ],
    "ability": "SKILLLINK",
-   "tier": "B"
+   "tier": "C"
   },
   {
    "name": "Silvally",
@@ -346,7 +346,7 @@
     "Fire Fang"
    ],
    "ability": "RKSSYSTEM",
-   "tier": "B"
+   "tier": "C"
   },
   {
    "name": "Oricorio (Sensu Style)",
@@ -361,7 +361,7 @@
     "Hurricane"
    ],
    "ability": "DANCER",
-   "tier": "B"
+   "tier": "C"
   },
   {
    "name": "Dedenne",

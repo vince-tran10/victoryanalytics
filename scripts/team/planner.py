@@ -238,6 +238,11 @@ def duo_mv(a, b):
         c_ = [(v, mn) for mn, v in dm.items() if not (rp and (MV.get(mvid(mn)) or {}).get('type') == 'ELECTRIC' and _st(mn))]
         if c_: out_.append(max(c_))
     return out_
+# 25 Nov (Vincent, Concert Venue Hype): the engine scores this field at Hype 1 (lowest rolls, both sides). Hype rises during the fight
+# (Hype 4 = highest rolls), so what WE TAKE is scored at Hype 4 (worst case) and what we deal stays at Hype 1; pages show both ends
+_ROLL = float((engine.FIELD.get(FIELD) or {}).get('roll') or 0.925) if FIELD else 0.925
+HYPE_HI = (1 / _ROLL) if _ROLL < 0.9 else 1.0
+if HYPE_HI > 1: TAKE = np.minimum(150, TAKE * HYPE_HI)
 SAFE = TAKE < 50          # takes under half from that foe's best move
 DEAD = TAKE >= 100        # one-shot by it
 # ---- 23 Nov (Vincent, after losing again): 1) RESIST THE MOVES THEY HAVE, 2) HIT EVERY FOE SUPER EFFECTIVELY (or with a field-boosted move),
@@ -366,7 +371,7 @@ def tips_met(ix):
 # 23 Nov (Vincent: 'explain your rationale for each move'): every move of the six gets a reason from the data, and an attack that does
 # nothing special in this fight (no super-effective target, no field boost, no STAB) is FLAGGED so a bad move can't slip through.
 WHY_STATUS = {
- 'PROTECT': 'Always the 4th move: scout, stall their Tailwind turns, block double targets',
+ 'PROTECT': 'Protect: scout and stall',
  'DETECT': 'Protect: scout and stall', 'WISH': 'Heals 50% next turn, to itself or whoever switches in',
  'WIDEGUARD': 'Blocks spread attacks for both of yours (goes first, priority +3)',
  'HELPINGHAND': "Partner's attack x1.5 (goes first, priority +5)",
@@ -380,6 +385,16 @@ WHY_STATUS = {
  'NUZZLE': 'Speed control: paralysis + chip', 'TOXIC': 'Badly poisons: beats Recover / Roost stallers (not Poison / Steel types)',
  'HAZE': 'Resets every stat change', 'YAWN': 'Sleep next turn or forces a switch', 'SING': 'Puts one foe to sleep', 'STUNSPORE': 'Speed control: paralysis',
 }
+def _protect_why():   # 25 Nov (review: 'Protect text is doubles-only'): what Protect does in THIS fight, by format and their team
+    bits = []
+    if FMT == 'Doubles': bits += ['Blocks a double target', 'stalls their Tailwind / Trick Room turns'] if any(fm & {'TAILWIND', 'TRICKROOM'} for fm in fmoves) else ['Blocks a double target while your partner moves']
+    if any((f.get('item') or '').startswith('Choice') for f in FOES): bits.append('scouts which move a Choice item locks them into')
+    if any(fm & set(FSETUP) for fm in fmoves): bits.append('stalls a turn while they set up, so you see it coming')
+    if any((MV.get(m) or {}).get('zmovedata') for fm in fmoves for m in fm): bits.append('blocks most of a Z-move (a quarter gets through)')
+    if FE and FE.startswith('CONCERT'): bits.append('a free turn does not change Hype')
+    t_ = '; '.join(bits) or 'Scouts their move and stalls a turn'
+    return t_[0].upper() + t_[1:]
+
 EXTRA = {'DELUGE': 'Goes last, power x2 (120) if that foe hit you first this turn', 'KNOCKOFF': 'Removes their item (Focus Sash, Life Orb, Ghost Gem)',
          'CLEARSMOG': 'Resets the target boosts (Luxray Howl)', 'SHADOWSNEAK': 'Priority +1: finishes a weakened foe first',
          'FAKEOUT': 'Flinches on its first turn: a free hit, x1.5 on Concert Venue',
@@ -488,6 +503,8 @@ FSETUP = {'WORKUP': 1, 'HOWL': 1, 'SWORDSDANCE': 2, 'NASTYPLOT': 2, 'DRAGONDANCE
           'COIL': 1, 'CURSE': 1, 'GROWTH': 1, 'TAILGLOW': 3, 'SHELLSMASH': 2, 'VICTORYDANCE': 1, 'CLANGOROUSSOUL': 1, 'FILLETAWAY': 2, 'TIDYUP': 1,
           'BELLYDRUM': 6, 'GEOMANCY': 2, 'FELLSTINGER': 0}   # Fell Stinger boosts only on a KO: a warning, not a pre-boost
 _SB = set((FT.get('statusBuffs') or []) if not BREAK else [])
+WHY_STATUS['PROTECT'] = _protect_why(); WHY_STATUS['DETECT'] = WHY_STATUS['PROTECT']
+
 def _fstage(ms): return max([FSETUP[m] + (1 if m in _SB else 0) for m in ms if m in FSETUP] or [0])
 FSTG = [_fstage(ms) for ms in fmoves]
 FSETM = [next((MV[m]['name'] for m in ms if m in FSETUP), None) for ms in fmoves]
@@ -1011,6 +1028,7 @@ for i in best:
             bestm = max(cands_, key=gain, default=None)
             if not (bestm and gain(bestm) >= (120 if is_prot else 1)) and not is_prot:   # no attack helps: a support move with a job
                 u_ = _util(n, {_mid(x) for x in mn})
+                if not u_ and 'Protect' not in mn and 'PROTECT' in set(C[n].get('legal') or []) | {'PROTECT'}: u_ = 'PROTECT'   # 25 Nov: nothing better: Protect (scout / stall) beats a dead attack
                 if not u_ and cands_ and FOE_ROD and (MV.get(m0) or {}).get('type') == 'ELECTRIC':   # pulled by their Lightning Rod: any other attack
                     u_ = max([c_ for c_ in cands_ if (MV.get(c_) or {}).get('type') != 'ELECTRIC'] or [None], key=lambda c_: sum(_ep(c_, f) for f in FOES) if c_ else 0)
                 if u_:
@@ -1022,6 +1040,15 @@ for i in best:
                 mn[mn.index(slot)] = MV[bestm]['name']
                 why_.append(f"{MV[bestm]['name']} replaces {slot}" + (' (singles: Protect matters less)' if is_prot else ' (it was the best hit on no foe)')
                             + f": better hit on {', '.join(hit_[:3])}")
+    if n not in CORE:   # 25 Nov audit (Frosmoth Giga Drain): a second pass, a move can die once another one is added (singles Protect swap)
+        _ids2 = [_mid(x) for x in mn if int((MV.get(_mid(x)) or {}).get('basedamage') or 0) > 0]
+        for slot in list(mn):
+            m0 = _mid(slot)
+            if m0 in _ids2 and _dead(m0, _ids2) and move_why(n, slot)[1]:
+                u_ = 'PROTECT' if 'Protect' not in mn else _util(n, {_mid(x) for x in mn})
+                if u_:
+                    mn[mn.index(slot)] = MV[u_]['name']; why_.append(f"{MV[u_]['name']} replaces {slot} ({slot} is the best hit on none of them)")
+                    _ids2 = [x for x in _ids2 if x != m0]
     if FMT == 'Singles':   # 25 Nov audit (Alcremie Decorate / Aromatic Mist): moves that only target an ally fail in singles
         for slot in list(mn):
             if _mid(slot) in ALLY_ONLY or (_mid(slot) == 'AURORAVEIL' and ab != 'SNOWWARNING'):   # Aurora Veil fails without snow: only its own Snow Warning is sure
@@ -1105,6 +1132,48 @@ if COUNTER:   # 24 Nov: game plans from the FINAL builds (field-undoing moves re
         if j in BREAKERS:
             c['role'] = 'Field keeper'
             c['plan'] = [c['plan'][0], f"{dict(FOE_BREAK).get(FN[j])} melts the ice back to Murkwater: KO {FN[j]} the turn it comes in" + ('' if FAST[i][j] and _hits(i, j)[0] == 1 else ' (not a sure one-shot: refreeze with Blizzard)')]
+# ---- 25 Nov (Vincent, review feedback: 'no speed answer for Noivern / Porygon-Z / Kommo-o'): in SINGLES the six must carry at least
+# one priority attack or speed-control move that WORKS on their fast threats (foes faster than half the six). Debug mode: if none does,
+# teach the best one to a member, replacing its least useful move (never the move it uses on its own foe, never a setup move).
+SPEED_FIX = None
+if COUNTER and FMT == 'Singles' and FBUILD:
+    for n_, fb_ in FBUILD.items(): MOVE_OVR[n_] = fb_['moves']
+    FTH = [j for j in range(nF) if sum(1 for i in best if not FAST[i][j]) * 2 >= len(best)]
+    def _sc_ok(m, i, j):
+        f = FOES[j]; ft = set(f['types']); fab = (f.get('ability') or '').upper().replace(' ', ''); d = MV.get(m) or {}; n = NAMES[i]
+        if m in SCSET:
+            if m in ('THUNDERWAVE', 'NUZZLE', 'ZAPCANNON') and (ft & {'ELECTRIC', 'GROUND'} or fab == 'LIMBER'): return False
+            if m == 'GLARE' and ('ELECTRIC' in ft or fab == 'LIMBER'): return False
+            if m in ('ELECTROWEB', 'BULLDOZE', 'ICYWIND') and meff(m, f['types'], fab, build(n)[1]) == 0: return False
+            if m == 'STICKYWEB' and 'FLYING' in ft: return False
+            return m not in ('TRICKROOM',)
+        return int(d.get('priority') or 0) > 0 and int(d.get('basedamage') or 0) > 0 and m != 'FAKEOUT' and meff(m, f['types'], fab, build(n)[1]) >= 1
+    _have = [(NAMES[i], sc_on(i, j), FN[j]) for i in best for j in FTH if sc_on(i, j)]
+    if _have:   # the six already has one: name it on the page
+        _n0, _m0 = _have[0][0], _have[0][1]
+        SPEED_FIX = dict(member=_n0, move=_m0.replace(' (priority)', ''), replaces=None, on=[f for n_, m_, f in _have if n_ == _n0 and m_ == _m0])
+    if FTH and not any(sc_on(i, j) for i in best for j in FTH):
+        _cands = []
+        for i in best:
+            n = NAMES[i]; mn = list(FBUILD[n]['moves']); j0 = best.index(i)
+            def _epf(x, f, n=n):
+                d_ = MV.get(x) or {}; b_ = int(d_.get('basedamage') or 0)
+                return b_ * (1.5 if atm(x, build(n)[1]) in TA[n]['types'] else 1) * meff(x, f['types'], (f.get('ability') or '').upper().replace(' ', ''), build(n)[1]) if b_ else 0
+            keep_m = max([x for x in mn if int((MV.get(_mid(x)) or {}).get('basedamage') or 0) > 0] or [None], key=lambda x: _epf(_mid(x), FOES[j0]) if x else 0)
+            slots = [x for x in mn if x != keep_m and _mid(x) not in _setup_ids and _mid(x) not in {'NOGUARD'}]
+            if not slots: continue
+            slot = 'Protect' if 'Protect' in slots else min(slots, key=lambda x: sum(_epf(_mid(x), f) for f in FOES))
+            for m in (C[n].get('legal') or []):
+                if m in BADSWAP or _mid(slot) == m or m in {_mid(x) for x in mn}: continue
+                hit = [FN[j] for j in FTH if _sc_ok(m, i, j)]
+                if not hit: continue
+                pri = int((MV.get(m) or {}).get('priority') or 0) > 0
+                _cands.append((len(hit), pri and len(hit) >= 1, -sum(_epf(_mid(slot), f) for f in FOES) / 100, n, slot, m, hit))
+        if _cands:
+            k_, _, _, n, slot, m, hit = max(_cands, key=lambda c: (c[0], c[1], c[2]))
+            mn = FBUILD[n]['moves']; mn[mn.index(slot)] = MV[m]['name']
+            FBUILD[n]['why'].append(f"{MV[m]['name']} replaces {slot}: the six had no priority or speed control; it works on {', '.join(hit)}")
+            SPEED_FIX = dict(member=n, move=MV[m]['name'], replaces=slot, on=hit); MOVE_OVR[n] = mn
 # ---- 25 Nov (Vincent: 'make sure the game plan actually makes sense'): re-score the six with their REAL builds (EVs, nature, item, ability,
 # moves), then write per matchup: why their Pokémon is a threat, how ours counters it, and a turn-by-turn game plan from those numbers.
 import copy as _cpy, re
@@ -1133,7 +1202,7 @@ if COUNTER:
             for j in range(nF):
                 r = FINAL[n].get(FN[j])
                 if not r: continue
-                t_ = min(150, r['deff'] * ((2 + SEED_ATK[FN[j]]) / 2 if FN[j] in SEED_ATK else 1) * (2 / 3 if ab_ in ENTRY_DEF and _physw(fmoves[j]) else 1))
+                t_ = min(150, r['deff'] * HYPE_HI * ((2 + SEED_ATK[FN[j]]) / 2 if FN[j] in SEED_ATK else 1) * (2 / 3 if ab_ in ENTRY_DEF and _physw(fmoves[j]) else 1))
                 DEAL[i][j] = min(150, r['off'] * (2 / 3 if (FOES[j].get('ability') or '').upper().replace(' ', '') in ENTRY_DEF and _physw(ids_) else 1))
                 TAKE[i][j] = t_; FAST[i][j] = bool(r['faster'])
                 k_ = FSTG[j]
@@ -1202,7 +1271,8 @@ if COUNTER:
         # how ours counters it
         n = NAMES[i]; ab_ = build(n)[1]; hk, hd = _hits(i, j); mv_ = _bestmv(i, j)
         c.update(deal=int(DEAL[i][j]), take=int(TAKE[i][j]), take_b=int(TAKE_B[i][j]), faster=bool(FAST[i][j]), hard=_hard(i, j), hk=hk, hd=hd, move=mv_,
-                 win=bool(hk < hd or (hk == hd and FAST[i][j]) or (FSTG[j] and not FAST[i][j] and hk <= hd)), duo=int(min(DUO[i][j], 999)))
+                 win=bool(hk < hd or (hk == hd and FAST[i][j]) or (FSTG[j] and not FAST[i][j] and hk <= hd)), duo=int(min(DUO[i][j], 999)),
+                 deal_hi=int(min(150, DEAL[i][j] * HYPE_HI)), take_lo=int(TAKE_B[i][j] / HYPE_HI), hype=HYPE_HI > 1)
         im, rs, se = _eff_txt(i, j)
         hw = []
         if im: hw.append(f"Immune to {', '.join(im)}")
@@ -1319,6 +1389,8 @@ if FMT == 'Doubles' and len(leads) == 2:   # 24 Nov (focus fire): what each lead
         return out_
     out['lead_duo'] = {NAMES[a]: dict(pct=_dl(a, b), hits=_hits_l(a, b), rod_partner=bool(LROD[b] and not LROD[a])) for a, b in (leads, leads[::-1])}
 out['foe_rod'] = FOE_ROD
+out['speed_fix'] = SPEED_FIX
+out['hype_hi'] = HYPE_HI
 out['field_notes'] = [dict(n_, title_html=_FN.to_html(n_['title']), text_html=_FN.to_html(n_['text'])) for n_ in FNOTES]
 out['six_stats'] = {n_: dict(stats=FSTATS[n_], spe_field=int(FSPE[n_])) for n_ in FSTATS}
 out['field_key'] = (ALT_FE if ALT else FE0)

@@ -378,16 +378,19 @@ for d in cur:
         ACTIONS[d['n']] = 'Move out of the party, back to the Active box'
         team_todo.append((f"{d['species']}: move out of the party, back to the Active box", 'high'))
 CF_HTML = ''
+try: _ALIAS = {_r['name']: _r['owned_as'] for _r in json.load(open(os.path.join(os.path.dirname(os.path.abspath(F9N)), 'tier_all.json')))['rows'] if _r.get('owned_as')}
+except Exception: _ALIAS = {}
 if CF:
     rows_, todo_cf = [], []
     for nm_, ab_, nat_, evs_, item_, mv_, note_ in CF['six']:
-        d = party.get(nm_)
+        d = party.get(nm_) or party.get(_ALIAS.get(nm_) or '')
         if d:
             issues = verify_mon(d, ab_, nat_, evs_, item_, [(m, 0) for m in mv_])
         else:
             pre, how = CF_PREEVO.get(nm_, (nm_, ''))
-            if any(x['species'] == nm_ for x in cur): pre, how = nm_, ''   # already evolved
-            d0 = min((x for x in cur if x['species'] == pre), key=lambda x: (x['box'] == 'Overflow', -(x.get('level') or 0)), default=None)
+            _al = {nm_, _ALIAS.get(nm_)}   # 25 Nov audit: export names fusions / special forms differently (Solrock-Idol = Solrock Dominant Fusion)
+            if any(x['species'] in _al for x in cur): pre, how = nm_, ''   # already evolved
+            d0 = min((x for x in cur if x['species'] == pre or (pre == nm_ and x['species'] in _al)), key=lambda x: (x['box'] == 'Overflow', -(x.get('level') or 0)), default=None)
             if d0 and how:
                 import current_box as _cbx
                 _raw = next((x for x in _cbx.parse(NEWX) if x['n'] == d0['n']), {})   # the export's real ability, not the engine's evolved guess

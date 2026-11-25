@@ -1,0 +1,12 @@
+Glalie (Aevian Form) | Party 65 | Grassy Surge  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Grassy Glide', 'Wood Hammer', 'Rock Slide', 'Ice Fang'] | Miracle Seed (already holding) | 
+Sylveon | Party 65 | Pixilate  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Hyper Voice', 'Shadow Ball', 'Wish', 'Protect'] | Fairy Feather (already holding) | 
+Solrock (Solrock Dominant Fusion) | Active 65 | Solar Idol  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Zen Headbutt', 'Flare Blitz', 'Stone Edge', 'Protect'] | Hard Stone (already holding) | 
+Frosmoth | Overflow 65 | Ice Scales  | Modest {'SpA': 252, 'HP': 252, 'SpD': 4} | ['Bug Buzz', 'Quiver Dance', 'Icy Wind', 'Aurora Beam'] | Sitrus Berry | 
+Musharna (Aevian Form) | Party 65 | Tough Claws  | Adamant {'Atk': 252, 'HP': 252, 'SpD': 4} | ['Lovely Kiss', 'Shadow Claw', 'Play Rough', 'Protect'] | Fairy Feather (already holding) | 
+Toxtricity (Aevian Form) | Party 65 | Punk Rock  | Modest {'SpA': 252, 'Spe': 252, 'Def': 4} | ['Torch Song', 'Boomburst', 'Sludge Bomb', 'Protect'] | Charcoal (already holding) | 
+jenner 1.515 -> 1.468 leads ['Glalie (Aevian Form)'] swaps [('Gallade', 'Frosmoth', 0.123), ('Chandelure', 'Frosmoth', 0.104), ('Passimian', 'Frosmoth', 0.104)]
+danni 1.861 -> 1.841 leads ['Toxtricity (Aevian Form)', 'Glalie (Aevian Form)'] swaps [('Scrafty', 'Sylveon', 0.096), ('Leavanny (Aevian Form)', 'Sylveon', 0.071), ('Arcanine', 'Sylveon', 0.068)]
+troye 1.611 -> 1.564 leads ['Toxtricity (Aevian Form)', 'Glalie (Aevian Form)'] swaps [('Tauros (Paldean Combat Breed)', 'Frosmoth', 0.186), ('Arcanine', 'Frosmoth', 0.168), ('Scrafty', 'Frosmoth', 0.136)]
+zena 1.492 -> 1.485 leads ['Toxtricity (Aevian Form)'] swaps [('Decidueye', 'Solrock (Solrock Dominant Fusion)', 0.103), ('Gallade', 'Solrock (Solrock Dominant Fusion)', 0.102), ('Tsareena', 'Solrock (Solrock Dominant Fusion)', 0.091)]
+marcie 1.761 -> 1.784 leads ['Toxtricity (Aevian Form)', 'Frosmoth'] swaps [('Leavanny (Aevian Form)', 'Solrock (Solrock Dominant Fusion)', 0.131), ('Scrafty', 'Solrock (Solrock Dominant Fusion)', 0.088), ('Arcanine', 'Solrock (Solrock Dominant Fusion)', 0.088)]
+jenner9 1.228 -> 1.25 leads ['Glalie (Aevian Form)'] swaps [('Azumarill', 'Solrock (Solrock Dominant Fusion)', 0.038), ('Arcanine', 'Solrock (Solrock Dominant Fusion)', 0.031), ('Florges', 'Frosmoth', 0.026)]

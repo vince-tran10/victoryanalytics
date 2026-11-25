@@ -2,7 +2,7 @@
 usage: python3 -I tabs.py report.html"""
 import re, sys
 TABS = [('fights', 'Fights', ['s1f', 'sctr']), ('planner', 'Planner', ['splan']), ('team', 'Team', ['s1']), 
-        ('todo', 'To do', ['s3', 's4']), ('items', 'Items', ['sitem']), ('community', 'Community', ['scomm', 'schk', 'sbuild']), ('tiers', 'Tier list', ['s8']), ('crests', 'Crest tiers', ['s6']),
+        ('todo', 'To do', ['s3', 's4']), ('items', 'Items', ['sitem']), ('community', 'Community', ['scomm']), ('tiers', 'Tier list', ['s8']), ('crests', 'Crest tiers', ['s6']),
         ('aevian', 'Aevian tiers', ['s7']), ('checks', 'C&A checks', ['s5'])]
 p = sys.argv[1]; page = open(p, encoding='utf-8').read()
 if 'id="tabbar"' in page:

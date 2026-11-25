@@ -868,3 +868,5 @@ python3 -I ../scripts/team/box_audit.py ../output/chapter8_report.html <new expo
 - 25 Nov (export 24 Nov 20:54, Jenner audit): items follow the move's REAL type after -ate abilities (items_owned.atype, blocking C&A check); counter item = booster of its move on its foe (Lapras-A Hard Stone: Noivern 90% -> 109%); planner if/elif bug that reset per-fight moves fixed (Glalie Ice Fang now on To do); Tiers = ranked lists, no letter grades.
 
 - 25 Nov: Tiers page back to S-D groups (best first in each); win-con role labels / filters removed from the page and sheet (kept internal).
+
+- 25 Nov (review feedback): Hype ranges + worst-case Hype 4 damage taken, required speed answer (singles), tiers 40/35/25, old core / flex views and checks removed, per-fight Protect text, Solrock-Idol name match. Jenner six now Glalie-A, Sylveon, Solrock (Fusion), Frosmoth (Stun Spore), Musharna-A, Toxtricity-A; 6/6 hard at Hype 4, 0 flags.

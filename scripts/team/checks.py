@@ -15,7 +15,12 @@ text = lambda s: ' '.join(re.sub(r'<[^>]+>', ' ', s).split())
 
 # ------------------------------------------------------------- automatic checks
 checks = []   # (name, ok, detail, blocking)
-def chk(name, ok, detail='', blocking=True): checks.append((name, bool(ok), detail, blocking))
+_COUNTER = (st.get('builder') or 'counter') == 'counter'
+_LEGACY = ('Synergy: the team states one identity', 'Builder: my suggestion', 'Core of 4', 'Every fight plan passes rules', 'Fight plans: counters per fight',
+           'Team passes the chapter rules', 'Team is within 1% of the best six', 'Every fight plan: the lead survives')
+def chk(name, ok, detail='', blocking=True):
+    if _COUNTER and name.startswith(_LEGACY): return   # 25 Nov (Vincent): the old core / flex views are gone; only the Builder's six is checked
+    checks.append((name, bool(ok), detail, blocking))
 todo = sec('s3').group(0) if sec('s3') else ''
 team = sec('s1').group(0) if sec('s1') else ''
 cards = re.findall(r'<div class="tgroup pcard"><h3>(.*?) <span', todo)

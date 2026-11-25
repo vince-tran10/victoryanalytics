@@ -201,7 +201,7 @@ def row(name, s, c, kind, crest=''):
     team = .6 * cp + .4 * len(kit) / len(KIT_CHECKS)
     # 25 Nov (Vincent: factor in the community rules: tier lists, mindsets, counters): 55% meta / community rating, 20% in-game across the
     # hard fights, 25% team value (hard counters + mindset kit)
-    blend = .55 * general + .2 * gp + .25 * team
+    blend = .4 * general + .35 * gp + .25 * team   # 25 Nov (Vincent, review): in-game matchups count more: 40 / 35 / 25
     src = c['src'] if isinstance(c['src'], dict) else {}
     rows.append(dict(name=name, kind=kind, crest=crest, zoro_partner=c.get('zoro_partner'), sid=c['sid'], form=str(c.get('form', '0')), types=c['types'], base=c['base'], bst=bst,
                      fight=round(s, 3), fight_pct=round(fp, 3), meta=round(meta, 3), meta_label=lab, general=round(general, 3),
@@ -217,7 +217,7 @@ for n, (s, c) in best.items():
 for n, (s, c, cname) in crest_best.items():
     row(n, s, c, 'crest', cname)
 
-CUT = [('S', .675), ('A', .58), ('B', .44), ('C', .29), ('D', -9)]   # 25 Nov: recalibrated (same tier sizes) for 55% meta + 20% in-game + 25% team value
+CUT = [('S', .702), ('A', .616), ('B', .516), ('C', .331), ('D', -9)]   # 25 Nov: recalibrated (same tier sizes) for 40 / 35 / 25   # 25 Nov: recalibrated (same tier sizes) for 55% meta + 20% in-game + 25% team value
 for r in rows:
     r['tier'] = next(t for t, v in CUT if r['blend'] >= v)
 rows.sort(key=lambda r: -r['blend'])

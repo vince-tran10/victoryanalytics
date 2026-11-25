@@ -285,6 +285,17 @@ State (beaten fights, the six and its moves, box overrides, last export, file co
   (Win con / Enabler / Wallbreaker...) and no role filters on the page or in the sheet; roles stay internal (planner / builder use them).
   No blend scores shown. Sheet = 'S tier', 'Why S tier', ideal build.
 
+- **REVIEW FIXES (Vincent, 25 Nov, after outside feedback):** (1) CONCERT HYPE: damage shown as a range Hype 1 (min rolls) to Hype 4
+  (max rolls); what WE take is scored at Hype 4 (planner HYPE_HI = 1 / field roll), what we deal at Hype 1, so 'hard counter' holds at
+  their best rolls; plan card says so. (2) SPEED ANSWER REQUIRED (singles): the six must carry a priority attack or speed-control move
+  that works on their fast threats (foes faster than half the six); if none, the planner teaches the best one (SPEED_FIX, says what it
+  replaces); the plan card names the answer. (3) TIERS = 40% meta / community + 35% in-game hard fights + 25% team value; cut-offs
+  S .702 / A .616 / B .516 / C .331 (same tier sizes). (4) OLD VIEWS REMOVED in counter mode: Community 'Checks' (schk) and 'Core'
+  (sbuild) sections are not built; checks.py drops the legacy core / flex / builder-suggestion checks (_LEGACY). (5) Protect's reason is
+  written per fight and format (Choice scout, setup stall, Z-move block, doubles only: double targets / Tailwind). (6) Dead moves get a
+  second pass after the singles Protect swap; fallback = Protect. (7) make_report5 matches special export names (Solrock-Idol =
+  Solrock Dominant Fusion) through tier_all owned_as.
+
 ## Fight protocol (Vincent, 14 Nov — do this BEFORE recommending any team or lineup)
 **Guide tips (Vincent, 23 Nov): ALWAYS factored in.** Every walkthrough / community tip he sends goes into workspace/team/fight_tips.json
 (per fight: tip text + needs); planner.py scores them (+3 per tip met) and the Planner tab shows 'Guide tips: N of M covered' (collapsed)

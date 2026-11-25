@@ -248,5 +248,6 @@ sec = f'<section aria-labelledby="sbuild">\n  <h2 id="sbuild">Core</h2>\n{css}<d
 page = open(OUT, encoding='utf-8').read()
 page = re.sub(r'<section aria-labelledby="sbuild">.*?</section>\s*', '', page, flags=re.S)
 anchor = page.find('<section aria-labelledby="s1f">')
-page = page[:anchor] + sec + page[anchor:] if anchor >= 0 else page.replace('</main>', sec + '</main>')
+if (json.load(open('team/state.json')).get('builder') or 'counter') != 'counter':   # 25 Nov (Vincent): the old Core view is removed in counter mode
+    page = page[:anchor] + sec + page[anchor:] if anchor >= 0 else page.replace('</main>', sec + '</main>')
 open(OUT, 'w', encoding='utf-8').write(page)

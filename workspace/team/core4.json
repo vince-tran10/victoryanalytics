@@ -5,7 +5,7 @@
    "tier": "S",
    "sid": "TOXTRICITY",
    "form": "2",
-   "blend": 0.704,
+   "blend": 0.74,
    "meta": 0.67,
    "game": 0.903,
    "types": [
@@ -34,10 +34,10 @@
   },
   {
    "name": "Azumarill",
-   "tier": "A",
+   "tier": "S",
    "sid": "AZUMARILL",
    "form": "0",
-   "blend": 0.622,
+   "blend": 0.704,
    "meta": 0.453,
    "game": 0.974,
    "types": [
@@ -70,10 +70,10 @@
   },
   {
    "name": "Sylveon",
-   "tier": "B",
+   "tier": "A",
    "sid": "SYLVEON",
    "form": "0",
-   "blend": 0.573,
+   "blend": 0.654,
    "meta": 0.367,
    "game": 0.94,
    "types": [
@@ -595,7 +595,7 @@
      "cov": [
       [
        "Toxtricity-Aevian",
-       "Torch Song"
+       "Boomburst"
       ],
       [
        "Sylveon",
@@ -714,8 +714,8 @@
  "runners": [
   {
    "out": "Sylveon",
-   "in": "Ninetales (Alolan Form)",
-   "delta": -0.25
+   "in": "Revavroom",
+   "delta": 0.0
   },
   {
    "out": "Sylveon",
@@ -724,16 +724,16 @@
   },
   {
    "out": "Sylveon",
-   "in": "Rampardos",
+   "in": "Ninetales (Alolan Form)",
    "delta": -0.25
   },
   {
    "out": "Sylveon",
-   "in": "Golisopod (Aevian Form)",
-   "delta": -0.4
+   "in": "Rampardos",
+   "delta": -0.25
   }
  ],
- "pool": 49,
+ "pool": 50,
  "singles": {
   "Fast cleaner": "Toxtricity (Aevian Form)",
   "Bulky pivot": "Sylveon",

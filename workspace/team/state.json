@@ -4,9 +4,9 @@
  "export_label": "24 Nov 20:54",
  "active_start": 475,
  "base_export": "party_and_boxes_2026-11-05.txt",
- "roster": 401,
- "run": 415,
- "final": 419,
+ "roster": 408,
+ "run": 422,
+ "final": 426,
  "done": [
   "aelita",
   "narcissa1",
@@ -39,8 +39,8 @@
  "team": [
   "Glalie (Aevian Form)",
   "Sylveon",
-  "Lapras (Aevian Form)",
-  "Golurk",
+  "Solrock (Solrock Dominant Fusion)",
+  "Frosmoth",
   "Musharna (Aevian Form)",
   "Toxtricity (Aevian Form)"
  ],
@@ -55,7 +55,7 @@
    "Iron Head",
    "Play Rough",
    "Double-Edge",
-   "Protect"
+   "Superpower"
   ],
   "Muk (Alolan Form)": [
    "Knock Off",
@@ -314,6 +314,18 @@
    "Rock Polish",
    "Double-Edge",
    "Protect"
+  ],
+  "Solrock (Solrock Dominant Fusion)": [
+   "Zen Headbutt",
+   "Flare Blitz",
+   "Stone Edge",
+   "Protect"
+  ],
+  "Frosmoth": [
+   "Bug Buzz",
+   "Quiver Dance",
+   "Stun Spore",
+   "Aurora Beam"
   ]
  },
  "promote": "team/promote_1108.json",
@@ -425,7 +437,9 @@
   "Ninetales (Alolan Form)": "SNOWWARNING",
   "Alcremie": "SWEETVEIL",
   "Palossand (Fiery Aevian Form)": "FLAMEBODY",
-  "Rampardos": "MOLDBREAKER"
+  "Rampardos": "MOLDBREAKER",
+  "Solrock (Solrock Dominant Fusion)": "SOLARIDOL",
+  "Frosmoth": "ICESCALES"
  },
  "crests_owned": [
   "Ariados Crest",
@@ -618,6 +632,15 @@
     ],
     "ability": "FLOWERVEIL"
    },
+   "Copperajah": {
+    "moves": [
+     "Iron Head",
+     "Play Rough",
+     "Double-Edge",
+     "Superpower"
+    ],
+    "ability": "Sheer Force"
+   },
    "Glalie (Aevian Form)": {
     "moves": [
      "Grassy Glide",
@@ -626,6 +649,15 @@
      "Ice Fang"
     ],
     "ability": "GRASSYSURGE"
+   },
+   "Frosmoth": {
+    "moves": [
+     "Bug Buzz",
+     "Quiver Dance",
+     "Stun Spore",
+     "Aurora Beam"
+    ],
+    "ability": "ICESCALES"
    }
   }
  },
@@ -748,6 +780,24 @@
   "Florges": [
    "Moonblast",
    "Synthesis",
+   "Giga Drain",
+   "Protect"
+  ],
+  "Copperajah": [
+   "Iron Head",
+   "Play Rough",
+   "Double-Edge",
+   "Protect"
+  ],
+  "Musharna (Aevian Form)": [
+   "Lovely Kiss",
+   "Shadow Claw",
+   "Play Rough",
+   "Protect"
+  ],
+  "Frosmoth": [
+   "Bug Buzz",
+   "Quiver Dance",
    "Giga Drain",
    "Protect"
   ]

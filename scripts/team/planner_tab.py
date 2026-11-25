@@ -44,6 +44,11 @@ for fn_, mv_ in P.get('foe_break') or []:
 if _alt.get('six') and _alt['six'] != [m_['name'] for m_ in P['six']] and (P.get('forced') or (_alt.get('cmp') or 0) < (P.get('cmp') or 0)):
     h += (f'<div class="pmuted">Without freezing (the game tip says freeze): {E(", ".join(disp(x) for x in _alt["six"]))}</div>' if P.get('forced')
           else f'<div class="pmuted">Other plan scored lower ({_alt.get("cmp")} vs {P.get("cmp")}): {E(", ".join(disp(x) for x in _alt["six"]))}</div>')
+if P.get('hype_hi', 1) > 1:   # 25 Nov: Concert Venue Hype, damage as a range
+    h += '<div class="pans">Damage ranges: Hype 1 (lowest rolls) to Hype 4 (highest rolls)</div><div class="pans">A hard counter must hold against their Hype 4 damage</div>'
+_sf = P.get('speed_fix')
+if _sf: h += (f'<div class="pans cok">Speed answer: {E(disp(_sf["member"]))}\'s {E(_sf["move"])}' + (f' (teach it, replaces {E(_sf["replaces"])})' if _sf.get('replaces') else '')
+              + f'</div><div class="pans cok">Works on {E(", ".join(_sf["on"]))}</div>')
 _mg = P.get('model_gaps') or []
 h += ('<div class="pans cok">✓ Model check: every move, Mega and ability of theirs is modelled</div>' if not _mg
       else ''.join(f'<div class="pans cno">✗ Not modelled: {E(x)}</div>' for x in _mg)) + '</article>'
@@ -275,7 +280,9 @@ for k, c in enumerate(P.get('counters') or []):
                + ('<span class="plt">Lead</span>' if lead_ else '') + '</div>'
                '<div class="ctr-types">' + ''.join(pill(t) for t in (m.get('types') or [])) + '</div>'
                f'<div class="ctr-v {vcls}">{verdict}</div>'
-               f'<div class="bchips"><span class="bstat">Deals {c["deal"]}%</span><span class="bstat">Takes {c["take_b"]}%' + (f' after {E(c["setup"])}' if c.get('setup') and c['take_b'] != c['take'] else '') + '</span>'
+               + (f'<div class="bchips"><span class="bstat">Deals {c["deal"]}–{c.get("deal_hi", c["deal"])}%</span><span class="bstat">Takes {c.get("take_lo", c["take_b"])}–{c["take_b"]}%'
+                  if c.get('hype') else f'<div class="bchips"><span class="bstat">Deals {c["deal"]}%</span><span class="bstat">Takes {c["take_b"]}%')
+               + (f' after {E(c["setup"])}' if c.get('setup') and c['take_b'] != c['take'] else '') + '</span>'
                f'<span class="bstat">{"Faster" if c["faster"] else "Slower"}</span>'
                + (f'<span class="bstat{" bad" if _ld["pct"] >= 85 else ""}">Turn 1, both leads on it: ~{_ld["pct"]}%</span>' if _ld and lead_
                   else f'<span class="bstat{" bad" if c.get("duo", 0) >= 100 else ""}">With a 2nd foe: ~{min(c["duo"], 300)}%</span>' if c.get('duo') is not None and P['format'] == 'Doubles' else '') + '</div>'
@@ -330,7 +337,7 @@ css += '''<style id="ctr-css">.ctrl { list-style: none; margin: 0; padding: 0; d
 .fn-green { color: #1f8a4c } .fn-red { color: #b3261e } .fn-orange { color: #b45309 }
 </style>'''
 sec = f'<section aria-labelledby="splan">\n  <h2 id="splan">Builder</h2>\n{css}<div class="pgrid">{HB}</div>\n</section>\n'
-sec += f'<section aria-labelledby="schk">\n  <h2 id="schk">Checks: {E(TITLE.get(P["fight"], P["fight"]))}</h2>\n<div class="pgrid">{h}</div>\n</section>\n'
+# 25 Nov (Vincent): the old 'Checks' view (core / flex / mindset) is removed: the Builder's six is the one plan
 page = open(OUT, encoding='utf-8').read()
 page = re.sub(r'<section aria-labelledby="splan">.*?</section>\s*', '', page, flags=re.S)
 page = re.sub(r'<section aria-labelledby="schk">.*?</section>\s*', '', page, flags=re.S)
